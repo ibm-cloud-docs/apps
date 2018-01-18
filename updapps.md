@@ -82,6 +82,7 @@ After you configure the custom domain in {{site.data.keyword.Bluemix_notm}}, you
   2. Map the custom domain name to the secure endpoint for the {{site.data.keyword.Bluemix_notm}} region where your application is running. Use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
 
     * US-SOUTH: `secure.us-south.bluemix.net`
+    * US-EAST: `secure.us-east.bluemix.net`
     * EU-DE: `secure.eu-de.bluemix.net`
     * EU-GB: `secure.eu-gb.bluemix.net`
     * AU-SYD: `secure.au-syd.bluemix.net`
