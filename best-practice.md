@@ -82,3 +82,4 @@ Your app might be installed frequently on-demand on the dynamic cloud environmen
 Capture your app installation as a uniform set of scripts that are independent of the operating system. Keep your app installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the app installation.
 
 For more information about cloud-ready apps, see [The 12-factor app ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
+
