@@ -285,3 +285,4 @@ In this example, *Blue* is the previously deployed application and *Green* is th
 {: #general}
 
 [Blue-green deployments ![External link icon](../icons/launch-glyph.svg "External link icon")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
