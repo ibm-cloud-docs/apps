@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-01-25"
 
 ---
 
@@ -26,7 +26,7 @@ Domains provide the URL route that is allocated to your organization in {{site.d
 
 You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by using either the {{site.data.keyword.Bluemix_notm}} user interface, or the bluemix command line interface.
 
-### Use the {{site.data.keyword.Bluemix_notm}} user interface:
+### Using the {{site.data.keyword.Bluemix_notm}} console
 
   1. Create a custom domain for your organization.
 
@@ -45,7 +45,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 	3. Click **Add route**, and specify the route that you want to use for the application.
 	4. Click **Save**.
 
-### Use the bluemix command line interface:
+### Using the bluemix command line interface
 
   1. Create a custom domain for your organization by typing the following command:
 
