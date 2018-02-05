@@ -25,7 +25,7 @@ Running multiple instances is recommended to avoid downtime in a single region, 
 
 {{site.data.keyword.Bluemix_notm}} paid pricing plan offers a number of different account types with *optional* paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.Bluemix_notm}}, consider enrolling in this option.
 
-With or without paid support, you can get help as described at [support](../get-support/howtogetsupport.html), offers insurance against unforeseen issues.
+With or without paid support, you can get help as described at [support](../get-support/howtogetsupport.html), which offers insurance against unforeseen issues.
 
 ## Developing cloud-ready apps
 {: #cloud-ready-apps}
