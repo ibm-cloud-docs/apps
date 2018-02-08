@@ -1,0 +1,40 @@
+
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
+アプリの作成
+
+    {: .navgroup id="learn"}
+    index.md
+    best-practice.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    アプリの開発
+        [Eclipse ツールを使用した開発](../starters/deploy_eclipsetools.html)
+
+    {: .topicgroup}
+    アプリの開発
+        install_cli.md
+        ../starters/upload_app.md
+
+    reqnsi.md
+    hosting.md
+
+    {: .topicgroup}
+    アプリの管理
+        mngapps.md
+        updapps.md
+
+    {: .topicgroup}
+    アプリの保護
+        overview.md
+        secapps.md
+        deployment.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [アプリの管理に関するトラブルシューティング](../troubleshoot/ts_apps.html)
+    {: .navgroup-end}
