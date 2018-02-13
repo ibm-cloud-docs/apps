@@ -1,0 +1,3 @@
+test translation package note
+thisfile.md
+thatfile.md
