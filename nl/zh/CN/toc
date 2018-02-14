@@ -1,0 +1,40 @@
+
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
+创建应用程序
+
+    {: .navgroup id="learn"}
+    index.md
+    best-practice.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    开发应用程序
+        [使用 Eclipse Tools 进行开发](../starters/deploy_eclipsetools.html)
+
+    {: .topicgroup}
+    部署应用程序
+        install_cli.md
+        ../starters/upload_app.md
+
+    reqnsi.md
+    hosting.md
+
+    {: .topicgroup}
+    管理应用程序
+        mngapps.md
+        updapps.md
+
+    {: .topicgroup}
+    确保应用程序安全
+        overview.md
+        secapps.md
+        deployment.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [有关管理应用程序的故障诊断](../troubleshoot/ts_apps.html)
+    {: .navgroup-end}
