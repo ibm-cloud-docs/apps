@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-25"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,10 +17,10 @@ lastupdated: "2018-01-25"
 You can use the command line or {{site.data.keyword.Bluemix}} Continous Delivery to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the built-in buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
 {:shortdesc}
 
-##Creating and using a custom domain
+## Creating and using a custom domain
 {: #domain}
 
-For CF apps and container groups, you can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
+For Cloud Foundry apps and container groups, you can use a custom domain in the URL of your application instead of the default {{site.data.keyword.Bluemix_notm}} system domain that is mybluemix.net.
 
 Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must register the custom domain on a public DNS server, configure the custom domain in {{site.data.keyword.Bluemix_notm}}, and then map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on the public DNS server. After your custom domain is mapped to the {{site.data.keyword.Bluemix_notm}} system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
 
