@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -14,19 +14,19 @@ lastupdated: "2018-01-18"
 # アプリの更新
 {: #updatingapps}
 
-コマンド・ラインまたは {{site.data.keyword.Bluemix}} Continous Delivery を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
+コマンド・ラインまたは {{site.data.keyword.Bluemix}} Continous Delivery を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
-##カスタム・ドメインの作成と使用
+## カスタム・ドメインの作成と使用
 {: #domain}
 
-CF アプリおよびコンテナー・グループには、デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL 内で使用できます。
+Cloud Foundry アプリおよびコンテナー・グループには、デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL 内で使用できます。
 
 ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
 
 {{site.data.keyword.Bluemix_notm}} でのカスタム・ドメインの作成と使用は、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、または bluemix コマンド・ライン・インターフェースを使用して行います。
 
-### {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する
+### {{site.data.keyword.Bluemix_notm}} コンソールの使用
 
   1. 自分の組織のカスタム・ドメインを作成します。
 
@@ -45,7 +45,7 @@ CF アプリおよびコンテナー・グループには、デフォルトの {
 	3. **「経路の追加」**をクリックし、アプリケーションに使用する経路を指定します。
 	4. **「保存」**をクリックします。
 
-### bluemix コマンド・ライン・インターフェースを使用する
+### bluemix コマンド・ライン・インターフェースの使用
 
   1. 次のコマンドを入力して、自分の組織のカスタム・ドメインを作成します。
 
@@ -285,3 +285,4 @@ bluemix app route-delete domain -n hostname -f
 {: #general}
 
 [Blue-Green デプロイメント ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
