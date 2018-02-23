@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,16 +17,16 @@ lastupdated: "2018-01-18"
 명령행 또는 {{site.data.keyword.Bluemix}} Continous Delivery를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우 심지어 Node.js와 같은 기본 제공 빌드팩의 경우에도 -c 매개변수를 제공하여 애플리케이션 시작에 사용할 명령을 지정해야 합니다.
 {:shortdesc}
 
-##사용자 정의 도메인 작성 및 사용
+## 사용자 정의 도메인 작성 및 사용
 {: #domain}
 
-CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{site.data.keyword.Bluemix_notm}} 시스템 도메인(mybluemix.net) 대신 사용자 정의 도메인을 사용할 수 있습니다.
+Cloud Foundry 앱 및 컨테이너 그룹의 경우에는 기본 {{site.data.keyword.Bluemix_notm}} 시스템 도메인인 mybluemix.net 대신에 애플리케이션의 URL에서 사용자 정의 도메인을 사용할 수 있습니다. 
 
 도메인은 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공합니다. 사용자 정의 도메인을 사용하려면 공용 DNS 서버에 사용자 정의 도메인을 등록하고, {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 다음 해당 사용자 도메인을 공용 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑해야 합니다. 사용자 정의 도메인이 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑되면 사용자 정의 도메인에 대한 요청이 {{site.data.keyword.Bluemix_notm}}의 애플리케이션으로 라우팅됩니다.
 
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 bluemix 명령행 인터페이스를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 작성하고 사용할 수 있습니다.
 
-### {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 사용:
+### {{site.data.keyword.Bluemix_notm}} 콘솔 사용
 
   1. 조직의 사용자 정의 도메인을 작성하십시오.
 
@@ -45,7 +45,7 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
 	3. **라우트 추가**를 클릭하고 애플리케이션에 사용할 라우트를 지정하십시오.
 	4. **저장**을 클릭하십시오.
 
-### bluemix 명령행 인터페이스 사용:
+### bluemix 명령행 인터페이스 사용
 
   1. 다음 명령을 입력하여 조직의 사용자 정의 도메인을 작성하십시오.
 
@@ -53,7 +53,7 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
     bluemix app domain-create <your org name> mydomain
     ```
 
-    *organization_name*: 조직 이름입니다. 
+    *organization_name*: 조직 이름입니다.
 
     *mydomain*: 사용하려는 사용자 정의 도메인 이름입니다.
 
@@ -68,13 +68,13 @@ CF 앱 및 컨테이너 그룹의 경우, 애플리케이션의 URL에 기본 {{
      cf ic route map -n host_name -d mydomain mycontainergroup
      ```
 
-    *myapp*: CF 앱의 경우, 애플리케이션의 이름입니다. 
+    *myapp*: CF 앱의 경우, 애플리케이션의 이름입니다.
 
     *mydomain*: 사용자 정의 도메인의 이름(예: `www.mydomain.mybluemix.net`)입니다.
 
     *host_name*: 애플리케이션에 사용할 라우트의 호스트 이름입니다.
 
-    *mycontainergroup*: 컨테이너 그룹의 경우, 컨테이너 그룹의 이름입니다. 
+    *mycontainergroup*: 컨테이너 그룹의 경우, 컨테이너 그룹의 이름입니다.
 
 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성한 후에는 사용자 정의 도메인을 등록된 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인으로 맵핑해야 합니다.
 
@@ -169,7 +169,7 @@ bluemix app route-delete domain -n hostname -f
   bluemix app delete Green -f
   ```
 
-  **bluemix app route-map**명령을 사용하여 영역의 라우트를 나열하십시오.
+  **bluemix app route-map** 명령을 사용하여 영역의 라우트를 나열하십시오.
 
   ```
   ...
@@ -250,7 +250,7 @@ bluemix app route-delete domain -n hostname -f
   ...
   ```
 
-  결과: CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Green.mybluemix.net` 및 `Blue.mybluemix.net`에 응답합니다. 
+  결과: CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Green.mybluemix.net` 및 `Blue.mybluemix.net`에 응답합니다.
 
 5. *Green* 앱에 대한 `Green.mybluemix.net` 라우트를 제거하십시오.
 
@@ -258,7 +258,7 @@ bluemix app route-delete domain -n hostname -f
   bluemix app route-unmap Green mybluemix.net -n Green
   ```
 
-  결과: CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Blue.mybluemix.net`에 응답합니다. 
+  결과: CF 라우터가 *Blue* 앱에 대한 트래픽 전송을 중지합니다. *Green* 앱이 URL `Blue.mybluemix.net`에 응답합니다.
 
 6. 선택사항: 애플리케이션의 이전 버전(*Blue*)을 삭제하려면 `bluemix app delete` 명령을 사용하십시오.
 
@@ -285,3 +285,4 @@ bluemix app route-delete domain -n hostname -f
 {: #general}
 
 [Blue-Green 배치 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
