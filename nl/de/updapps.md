@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,16 +17,16 @@ lastupdated: "2018-01-18"
 Sie können die Befehlszeile oder {{site.data.keyword.Bluemix}} Continuous Delivery verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die integrierten Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
 {:shortdesc}
 
-##Angepasste Domäne erstellen und verwenden
+## Angepasste Domäne erstellen und verwenden
 {: #domain}
 
-Sie können für CF-Apps und Containergruppen in der URL Ihrer Anwendung eine angepasste Domäne anstelle der standardmäßigen {{site.data.keyword.Bluemix_notm}}-Systemdomäne (mybluemix.net) verwenden.
+Sie können für Cloud Foundry-Apps und -Containergruppen in der URL Ihrer Anwendung eine angepasste Domäne anstelle der standardmäßigen {{site.data.keyword.Bluemix_notm}}-Systemdomäne (mybluemix.net) verwenden.
 
 Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren, die angepasste Domäne in {{site.data.keyword.Bluemix_notm}} konfigurieren und die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zuordnen. Nachdem Ihre angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne zugeordnet wurde, werden Anforderungen für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} weitergeleitet.
 
 Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstellen und verwenden, indem Sie entweder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle 'bluemix' verwenden.
 
-### Verwendung der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle:
+### {{site.data.keyword.Bluemix_notm}}-Konsole verwenden
 
   1. Erstellen Sie eine angepasste Domäne für Ihre Organisation.
 
@@ -45,7 +45,7 @@ Sie können eine angepasste Domäne in {{site.data.keyword.Bluemix_notm}} erstel
 	3. Klicken Sie auf **Route hinzufügen**. Geben Sie die Route an, die Sie für die Anwendung verwenden möchten.
 	4. Klicken Sie auf **Speichern**.
 
-### Verwendung der Befehlszeilenschnittstelle 'bluemix':
+### Bluemix-Befehlszeilenschnittstelle verwenden
 
   1. Erstellen Sie eine angepasste Domäne für Ihre Organisation, indem Sie den folgenden Befehl eingeben:
 
@@ -288,3 +288,4 @@ In diesem Beispiel ist *Blue* die zuvor bereitgestellte Anwendung, und *Green* i
 {: #general}
 
 [Blue-Green-Bereitstellungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
