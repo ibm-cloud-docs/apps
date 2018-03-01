@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-15"
+lastupdated: "2018-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ You can create and use a custom domain in {{site.data.keyword.Bluemix_notm}} by 
 
 	2. On the **DOMAINS** tab, click **ADD DOMAIN**, and enter your custom domain name, and click **SAVE**.
 
-	**Note**: For example, you can use `mycompany.com` to associate the route `www.mycompany.com` to your app. You can also use `example.mycompany.com`to associate the route `www.example.mycompany.com` to your app.
+	**Note**: For example, you can use `*.mycompany.com` to associate the route `www.mycompany.com` to your app. You can also use `example.mycompany.com`to associate the route `www.example.mycompany.com` to your app.
 
   2. Add the route with the custom domain to an application.
 
