@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-01"
 
 ---
 
@@ -18,10 +18,10 @@ In {{site.data.keyword.Bluemix}}, you can build enterprise-level mobile and web 
 
 Go to [bluemix.net](bluemix.net). Enter your email, name, company, region, phone number, and you're done. You don't need a credit card to sign up for a free account. Feel free to look around.
 
-## Step 2: Look through the catalog
+## Step 2: Browse the catalog
 {: #catalog}
 
-The {{site.data.keyword.Bluemix_notm}} catalog lists the infrastructure and platform resources it offers. You can start building your app by selecting a virtual machine, container, or Cloudant, a Cloud Foundry app. If you need platform resources, {{site.data.keyword.Bluemix_notm}} also offers boilerplates, which provide runtimes and other services to help you start building.
+The {{site.data.keyword.Bluemix_notm}} catalog lists the infrastructure and platform resources it offers. You can start building your app by selecting a virtual machine, container, or Cloudant, a Cloud Foundry app. If you need platform resources, {{site.data.keyword.Bluemix_notm}} also offers [boilerplates](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=blueprints), which provide runtimes and other services to help you start building.
 
 ## Step 3: Create a resource
 {: #resource}
