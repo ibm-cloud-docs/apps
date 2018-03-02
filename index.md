@@ -49,4 +49,4 @@ In your dashboard, click your app, and then click **Getting Started**, which can
 ## Next steps
 {: #next}
 
-After your app is developed, use our [best practices](best-practice.html) and [cloud readiness](cloud-ready.html) guides to make sure your app is ready for {{site.data.keyword.Bluemix_notm}}. Then, [deploy](../starters/install_cli.html) your app.
+After your app is developed, use our [best practices](best-practice.html) guide to make sure your app is ready for {{site.data.keyword.Bluemix_notm}}. Then, [deploy](../starters/install_cli.html) your app.
