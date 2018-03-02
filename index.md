@@ -7,6 +7,7 @@ lastupdated: "2018-03-01"
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
 # Creating apps in {{site.data.keyword.Bluemix_notm}}
 {: #create}
@@ -16,7 +17,7 @@ In {{site.data.keyword.Bluemix}}, you can build enterprise-level mobile and web 
 ## Step 1: Sign up for an {{site.data.keyword.Bluemix_notm}} account
 {: #sign-up}
 
-Go to [bluemix.net](bluemix.net). Enter your email, name, company, region, phone number, and you're done. You don't need a credit card to sign up for a free account. Feel free to look around.
+Go to [console.bluemix.net ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net){:new_window}. Enter your email, name, company, region, phone number, and you're done. You don't need a credit card to sign up for a free account. Feel free to look around.
 
 ## Step 2: Browse the catalog
 {: #catalog}
