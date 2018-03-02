@@ -18,7 +18,7 @@ Running multiple instances is recommended to avoid downtime in a single region, 
 ## Monitoring options
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} makes it easy to monitor your application with services like [Monitoring and Analytics](/docs/services/monana/index.html) and [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}. Check out [monitoring and logging](../monitor_log/logging.html#monitoring_logging_bluemix_apps) for more information.
+{{site.data.keyword.Bluemix_notm}} makes it easy to monitor your application with services like [Monitoring and Analytics](/docs/services/monana/index.html) and [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}. Check out [monitoring and logging](../monitor_log/logging.html#logging) for more information.
 
 ## Support options
 {: #support}
