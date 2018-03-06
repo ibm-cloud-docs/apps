@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,16 +17,16 @@ lastupdated: "2018-01-18"
 您可以使用命令行或 {{site.data.keyword.Bluemix}} Continuous Delivery 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于内置 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
 {:shortdesc}
 
-##创建并使用定制域
+## 创建并使用定制域
 {: #domain}
 
-对于 CF 应用程序和容器组，您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
+对于 Cloud Foundry 应用程序和容器组，您可以在应用程序的 URL 中使用定制域，而不使用缺省 {{site.data.keyword.Bluemix_notm}} 系统域，即 mybluemix.net。
 
 域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在公共 DNS 服务器上注册定制域，在 {{site.data.keyword.Bluemix_notm}} 中配置定制域，然后将定制域映射到公共 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到 {{site.data.keyword.Bluemix_notm}} 系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
 
 可以使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 bluemix 命令行界面在 {{site.data.keyword.Bluemix_notm}} 中创建并使用定制域。
 
-### 使用 {{site.data.keyword.Bluemix_notm}} 用户界面：
+### 使用 {{site.data.keyword.Bluemix_notm}} 控制台
 
   1. 为组织创建定制域。
 
@@ -45,7 +45,7 @@ lastupdated: "2018-01-18"
 	3. 单击**添加路径**，然后指定要用于应用程序的路径。
 	4. 单击**保存**。
 
-### 使用 bluemix 命令行界面：
+### 使用 bluemix 命令行界面
 
   1. 通过输入以下命令，为组织创建定制域：
 
@@ -286,3 +286,4 @@ bluemix app route-delete domain -n hostname -f
 {: #general}
 
 [Blue-green deployments ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+

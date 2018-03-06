@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -17,16 +17,16 @@ lastupdated: "2018-01-18"
 您可以使用指令行或 {{site.data.keyword.Bluemix}} Continous Delivery，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是內建建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
 {:shortdesc}
 
-##建立及使用自訂網域
+## 建立及使用自訂網域
 {: #domain}
 
-對於 CF 應用程式及容器群組，您可以在應用程式的 URL 中使用自訂網域，而不使用預設的 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
+對於 Cloud Foundry 應用程式及容器群組，您可以在應用程式的 URL 中使用自訂網域，而不使用預設的 {{site.data.keyword.Bluemix_notm}} 系統網域（即 mybluemix.net）。
 
 網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域，然後將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至 {{site.data.keyword.Bluemix_notm}} 系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 bluemix 指令行介面，在 {{site.data.keyword.Bluemix_notm}} 中建立及使用自訂網域。
 
-### 使用 {{site.data.keyword.Bluemix_notm}} 使用者介面：
+### 使用 {{site.data.keyword.Bluemix_notm}} 主控台
 
   1. 建立組織的自訂網域。
 
@@ -45,7 +45,7 @@ lastupdated: "2018-01-18"
 	3. 按一下**新增路徑**，然後指定您要用於應用程式的路徑。
 	4. 按一下**儲存**。
 
-### 使用 bluemix 指令行介面：
+### 使用 Bluemix 指令行介面
 
   1. 鍵入下列指令以建立組織的自訂網域：
 
@@ -286,3 +286,4 @@ bluemix app route-delete domain -n hostname -f
 {: #general}
 
 [藍綠部署 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
