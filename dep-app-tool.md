@@ -1,31 +1,39 @@
 ---
-
 copyright:
 
-  years: 2015，2017, 2018
+  years: 2018
 
 lastupdated: "2018-03-16"
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:prereq: .prereq}
-{:download: .download}
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}  
+{:screen: .screen}  
+{:codeblock: .codeblock}  
 {:pre: .pre}
-{:app_name: data-hd-keyref="app_name"}
-{:app_key: data-hd-keyref="app_key"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:host: data-hd-keyref="host"}
-{:org_name: data-hd-keyref="org_name"}
-{:route: data-hd-keyref="route"}
-{:space_name: data-hd-keyref="space_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:user_ID: data-hd-keyref="user_ID"}
+{:tip: .tip}
 
-# Deploying apps with the command line interface
+# Deploying apps
+{: #deploy}
+
+You can deploy your apps with a toolchain or a command line interface. A toolchain is a set of tool integrations. The command line interface is a simple way to deploy your apps and service instances.
+{: shortdesc}
+
+## Deploying apps with toolchains
+{: #toolchains_getting_started}
+
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. To learn more about toolchains, see [Creating toolchains](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+
+With a properly configured toolchain, deploying your app is trivial:  a build-deploy cycle will automatically kick off with each merge to the Master branch in your repo.
+
+All toolchains created from an {{site.data.keyword.Bluemix}} developer dashboard will be configured for automatic deployment.
+{: tip}
+
+## Deploying apps with the command line interface
+{: #cli}
+
+IBM Cloud provides a robust CLI as well as plug-ins and developer tool extensions that integrate with the CLI.
 
 Use {{site.data.keyword.Bluemix_notm}} command line interface to deploy your apps and service instances.
 {:shortdesc}
@@ -43,13 +51,13 @@ After you install the command line interface, you can get started:
 
   1. {: download} Download the code for your app to a new directory to set up your development environment.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download application code" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_starter-code.svg" alt="Download application code" /></a>
 
   2. Change to the directory where your code is located.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  Make changes to your app code as you see fit. For example, if you are using a {{site.data.keyword.Bluemix}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit "Thanks for creating ..." to say something new. Ensure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix_notm}}.
+  3.  Make changes to your app code. For example, if you're using a {{site.data.keyword.Bluemix_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit "Thanks for creating ..." to say something new. Ensure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix_notm}}.
 
     Take note of the `manifest.yml` file. When deploying your app back to {{site.data.keyword.Bluemix_notm}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters.
 
@@ -67,7 +75,7 @@ After you install the command line interface, you can get started:
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Note**: You must add single or double quotation marks around `username`, `org_name`, and  `space_name` if the value contains a space, for example, `-o "my org"`.
+  **Note**: If the value contains a space, you must add single or double quotation marks around `username`, `org_name`, and  `space_name`, for example, `-o "my org"`.
 
   5. From <var class="keyword varname">your_new_directory</var>, redeploy your app to {{site.data.keyword.Bluemix_notm}} by using the `bluemix app push` command. For more information about the `bx app push` command, see [Uploading your application](/docs/starters/upload_app.html).
 

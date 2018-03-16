@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -51,7 +51,7 @@ Not running (red)
 </strong>
 </dt>
 <dd>
-Your app is not running. The red icon indicates that the app is started, but no instance is running.
+Your app isn’t running. The red icon indicates that the app is started, but no instance is running.
 </dd>
 </dl>
 
@@ -60,6 +60,6 @@ Your app is not running. The red icon indicates that the app is started, but no 
 
 You can view more information about an app by clicking the name of it in your dashboard. Then, you can see the app's Overview page.
 
-On the apps Overview page, after an app is deployed, you can start, stop, restart, or in the case of web applications, modify the number of instances and the amount of memory that is used by the app. For web applications, {{site.data.keyword.Bluemix_notm}} does not automatically scale your app based on its load, so you must manage it yourself.
+On the apps Overview page, after an app is deployed, you can start, stop, restart, or in the case of web applications, modify the number of instances and the amount of memory that is used by the app. For web applications, {{site.data.keyword.Bluemix_notm}} doesn’t automatically scale your app based on its load, so you must manage it yourself.
 
-Apps can be redeployed if an update is made. The mechanism for updating the app is the same mechanism that is used to deploy it originally. {{site.data.keyword.Bluemix_notm}} stops all running instances and replaces them with new instances automatically.
+If an update is made, apps can be redeployed. The mechanism for updating the app is the same mechanism that is used to deploy it originally. {{site.data.keyword.Bluemix_notm}} stops all running instances and replaces them with new instances automatically.

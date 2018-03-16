@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,16 +12,21 @@ lastupdated: "2018-01-18"
 # Adding a service to your app
 {: #add_service}
 
-To add a service to your application, request an instance of the service and configure the application to interact with the service.
+If you created a project using {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, then you had a chance to add resources from the project overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your project.
 {: shortdesc}
+
+You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your project from the project overview page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.Bluemix_notm}} catalog.
+
+##Discovering services
+{: #discover_services}
 
 You can see all the services that are available in {{site.data.keyword.Bluemix_notm}} in the following ways:
 
-* From the {{site.data.keyword.Bluemix_notm}} console. View the {{site.data.keyword.Bluemix_notm}} Catalog.
-* From the bluemix command line interface. Use the **bluemix service offerings** command.
+* From the {{site.data.keyword.Bluemix_notm}} console. View the {{site.data.keyword.Bluemix_notm}} catalog.
+* From the bluemix command line interface. Use the `bluemix service offerings` command.
 * From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-You can select the service that you need when you develop applications. Upon your selection, {{site.data.keyword.Bluemix_notm}} interacts with the service and takes necessary steps to provision resources of the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
+You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.Bluemix_notm}} interacts with the service and takes necessary steps to provision services of the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
 
 {{site.data.keyword.Bluemix_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
@@ -30,21 +35,21 @@ You can also use services that are hosted in other regions if those services are
 ## Requesting a new service instance
 {: #req_instance}
 
-To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} user interface or the bluemix command line interface.
+To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} user interface or the {{site.data.keyword.Bluemix_notm}} command line interface.
 
 **Note:** When you specify the service name, avoid using characters other than alphabetic or numeric characters, because results might be unpredictable.
 
 If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a service instance, complete the following steps:
 
-1. In the {{site.data.keyword.Bluemix_notm}} **Catalog**, click the tile for the service that you want to add. The service details page opens.
+1. In the {{site.data.keyword.Bluemix_notm}} catalog, click the tile for the service that you want to add. The service details page opens.
 
-2. Type a name in the **Service name** field. A default service name is provided. You can change the name in the field, or leave it unchanged.
+2. Type a name in the **Service name** field. A default name is provided. You can change the name in the field, or leave it unchanged.
 
-3. Complete additional fields or selections, and then click **CREATE**.
+3. Complete more fields or selections, and then click **CREATE**.
 
-If you use the bluemix command line interface to request a service instance, complete the following steps:
+If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, complete the following steps:
 
-1. Use the **bluemix service offerings** command to find the name and the plan of the service that you require.
+1. Use the `bluemix service offerings`**` command to find the name and the plan of the service that you require.
 
 2. Use the following command to create a service instance, where service_name is the name of the service, service_plan is the plan of the service, and service_instance is the name that you want to use for this service instance.
 
@@ -52,7 +57,7 @@ If you use the bluemix command line interface to request a service instance, com
 bluemix service create service_name service_plan service_instance
 ```
 
-3. Use the following command to bind the service instance to an application, where appname is the name of the application, and service_instance is the name of the service instance.
+3. Use the following command to bind the service instance to an application, where *appname* is the name of the application, and service_instance is the name of the service instance.
 
 ```
 bluemix service bind appname service_instance
@@ -71,7 +76,7 @@ Each service might require a different mechanism for communicating with applicat
 * To interact with mobile back-end services, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services typically work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
 * To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} does not automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](/docs/troubleshoot/ts_apps.html) troubleshooting topic for more information.
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. See the [Apps won't be automatically restarted](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted) troubleshooting topic for more information.
 
 ## Enabling external apps
 {: #accser_external}
@@ -123,9 +128,9 @@ The following services provide service keys for you to use externally:
 To enable an external app or third-party tool to use a {{site.data.keyword.Bluemix_notm}} service, complete the following steps:
 
 1. Request an instance of the service.
-    1. On the Dashboard in the {{site.data.keyword.Bluemix_notm}} user interface, click **Create Resource**. The Catalog displays.
-    2. From the Catalog, select the service that you want by clicking the service tile. The service details page opens.
-    3. In the service window, leave the default **Connect to:**: list selection as **Leave unbound**. This selection means that the service is not connected to a {{site.data.keyword.Bluemix_notm}} app.
+    1. On the Dashboard in the {{site.data.keyword.Bluemix_notm}} user interface, click **Create Resource**. The catalog displays.
+    2. From the catalog, select the service that you want by clicking the service tile. The service details page opens.
+    3. In the service window, leave the default **Connect to:**: list selection as **Leave unbound**. This selection means that the service isn’t connected to a {{site.data.keyword.Bluemix_notm}} app.
     4. Make any other selections as needed. Then, click **Create**. A service instance is created, and the service Dashboard displays.
 2. In the service Dashboard, you can select **Service Credentials** to view or add credentials in JSON format. Select a set of credentials and click **View Credentials** in the Actions column. Use the API key that is displayed as the credentials to connect to the service instance.
 
@@ -136,12 +141,12 @@ Your application that runs outside of {{site.data.keyword.Bluemix_notm}} can now
 ## Creating a user-provided service instance
 {: #user_provide_services}
 
-You might have resources that are managed outside of {{site.data.keyword.Bluemix_notm}}. If you have credentials to access those external resources from the internet, you can create {{site.data.keyword.Bluemix_notm}} user-provided service instances to represent and communicate with your external resources.
+You might have services that are managed outside of {{site.data.keyword.Bluemix_notm}}. If you have credentials to access those external services from the internet, you can create {{site.data.keyword.Bluemix_notm}} user-provided service instances to represent and communicate with your external services.
 
 To create a user-provided service instance and bind it to an application, complete the following steps:
 
-1. Create a user-provided service instance by using either the **bluemix service user-provided-create** command:
-    * To create a general user-provided service instance, use the **-p** option, and separate the parameter names with commas. The bx command line interface then prompts you for each parameter in turn. For example:
+1. Create a user-provided service instance by using either the `bluemix service user-provided-create` command:
+    * To create a general user-provided service instance, use the **-p** option, and separate the parameter names with commas. The `bx` command line interface then prompts you for each parameter in turn. For example:
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -153,7 +158,7 @@ To create a user-provided service instance and bind it to an application, comple
         OK
         ```
 
-    * To create a service instance that drains information to a third-party log management software, use the **-l** option, and specify the destination that the third-party log management software provides. For example:
+    * To create a service instance that drains information to a third-party log management software, use the `-l` option, and specify the destination that the third-party log management software provides. For example:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -161,9 +166,9 @@ To create a user-provided service instance and bind it to an application, comple
         OK
         ```
 
-    If you want to update one or more parameters of the user-provided service instance, use either the **bluemix service user-provided-update**.
+    If you want to update one or more parameters of the user-provided service instance, use either the `bluemix service user-provided-update`.
 
-    * To update a general user-provided service instance, use the **-p** option, and specify the parameter keys and values in a json object. For example:
+    * To update a general user-provided service instance, use the **-p** option, and specify the parameter keys and values in a JSON object. For example:
 
         ```
         bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -171,7 +176,7 @@ To create a user-provided service instance and bind it to an application, comple
         OK
         ```
 
-    * To create a service instance that drains information to a third-party log management software, use the -l option. For example:
+    * To create a service instance that drains information to a third-party log management software, use the `-l` option. For example:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -187,4 +192,4 @@ To create a user-provided service instance and bind it to an application, comple
 	OK
 	```
 
-You can now configure your application to use the external resources. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service](#config){: new_window}.
+You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service](#config){: new_window}.
