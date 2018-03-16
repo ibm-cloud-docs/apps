@@ -21,14 +21,14 @@ You can create a custom application using services and a runtime. You can see ho
 ## Step 1: Install the tools
 {: #before-you-begin}
 
-Install the [developer tools ![External link icon](../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+Install the [developer tools ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 ## Create a project
 {: #create-devex}
 
 Create a project in the {{site.data.keyword.Bluemix}} {{site.data.keyword.dev_console}}:
 
-1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create Project** to create a custom application.
+1. From the [**Starter Kits** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create Project** to create a custom application.
 
 2. Enter your project name. For this tutorial, use `CustomProject`.   
 
@@ -160,4 +160,4 @@ bx dev deploy --target <container>
 {: codeblock}
 
 ### See your app running
-Once the application is deployed, you’ll see a URL similar to `abc-devhost.mybluemix.net` in the DevOps pipeline or in the terminal (if you’re using command line). Visit this URL in your browser.
+Once the application is deployed, you’ll see a URL similar to `abc-devhost.mybluemix.net` in the DevOps pipeline or in the terminal (if you’re using command line). Visit that URL in your browser.

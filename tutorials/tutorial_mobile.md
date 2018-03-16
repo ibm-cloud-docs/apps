@@ -37,7 +37,7 @@ You can create a project by using one of the following methods:
 
 1. Create a {{site.data.keyword.dev_console}} project in {{site.data.keyword.Bluemix}}.
 
-    1. From the [**Starter Kits** ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on the capabilities you want. For example, for a Watson Language application, go to **Watson Language** and click **Select Starter Kit**.
+    1. From the [**Starter Kits** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on the capabilities you want. For example, for a Watson Language application, go to **Watson Language** and click **Select Starter Kit**.
 
     2. Enter your project name. For this tutorial, use `WatsonProject`.   
 
@@ -56,13 +56,13 @@ You can create a project by using one of the following methods:
 
 4. Enter your service name and click **Create**.
 
-5. For more information about configuring authentication, see [Configuring identity providers ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
+5. For more information about configuring authentication, see [Configuring identity providers ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/appid/identity-providers.html){: new_window}.
 
-6. For more information about configuring analytics, see [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
+6. For more information about configuring analytics, see [Getting started with {{site.data.keyword.mobileanalytics_short}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/mobileanalytics/index.html){: new_window}.
 
-7. For more information about configuring {{site.data.keyword.cloudant_short_notm}}, see [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
+7. For more information about configuring {{site.data.keyword.cloudant_short_notm}}, see [Getting started with {{site.data.keyword.cloudant_short_notm}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/Cloudant/index.html){: new_window}.
 
-8. For more information about configuring {{site.data.keyword.objectstorageshort}}, see [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
+8. For more information about configuring {{site.data.keyword.objectstorageshort}}, see [Getting started with {{site.data.keyword.objectstorageshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/ObjectStorage/index.html){: new_window}.
 
 9. For more information about adding push notifications, see the Push [notifications documentation](/docs/services/mobilepush/c_overview_push.html#overview-push).
 

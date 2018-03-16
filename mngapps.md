@@ -18,7 +18,7 @@ Your dashboard in the {{site.data.keyword.Bluemix}} console provides summary inf
 ## Understanding the status of your app
 {: #status}
 
-From your dashboard, you can view the status of each application:
+From your dashboard, you can view the status of each application. In the state column for each application, you can see whether the instances of app are running.
 
 <dl>
 <dt>
