@@ -23,7 +23,7 @@ You can use a starter kit to quickly get your app started and prepare it for fut
 Starter kits are available in many categories, including:
 
 * [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple developer console](https://console.bluemix.net/developer/appledevelopment)
+* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
 * [Mobile](https://console.bluemix.net/developer/mobile){:new_window}
 * [Web App](https://console.bluemix.net/developer/appservice){:new_window}
 * [Security](https://console.bluemix.net/developer/security){:new_window}
@@ -32,7 +32,9 @@ Starter kits are available in many categories, including:
 
 ## Before you begin
 
-[Sign up](https://console.bluemix.net){: new_window} for an {{site.data.keyword.cloud_notm}} account. Enter your email, name, company, region, and phone number. You don't need a credit card to sign up for a free account.
+[Sign up](https://console.bluemix.net){: new_window} for an {{site.data.keyword.cloud_notm}} account. Enter your email, name, company, region, and phone number.
+
+You don't need a credit card to sign up for a free account, but entering a credit card gives you access to more resources and makes it easier for you to fully understand all {{site.data.keyword.cloud_notm}} has to offer.
 
 ## Step 1: Create a project
 {: #project}
@@ -56,7 +58,7 @@ To inspect your code, click **Download Code** on the project details page. Check
 ## Step 2: Add resources
 {: #addResources}
 
-In most cases, resources are automatically provisioned for you. You can also manually add new or existing resources to your app by clicking **Add Resource** on the project details page.
+Most starter kits instruct {{site.data.keyword.cloud_notm}} to automatically provision resources for you. You can also associate more resources with your app by clicking **Add Resource** on the project details page.
 
 To develop and run your app locally, use the [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
