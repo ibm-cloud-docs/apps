@@ -26,6 +26,8 @@ The Web App pattern produces projects that serve web content such as HTML, JavaS
 * Basic - serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
 
+You can find starter kits for Web App pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+
 ## Backend for Frontend
 {: #bff}
 
@@ -37,14 +39,21 @@ The BFF manages data persistence, caching, and integration with high-value servi
 
 The BFF exposes an API most commonly using a REST pattern, but you can design your BFF to work from a messaging architecture using {{site.data.keyword.messagehub}}.
 
-There are several BFF starter kits that you can choose from depending on your language and framework requirements.
+There are several BFF starter kits that you can choose from depending on your language and framework requirements.  You can find starter kits for BFF pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Microservice
 {: #microservice}
 
 Microservice projects provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated projects contain all the dependencies required both for the microservice itself, as well as for any attached cloud service.
 
-There are several micro-service starter kits that you can choose from depending on your language and framework requirements.
+There are several micro-service starter kits that you can choose from depending on your language and framework requirements.  You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+
+## Mobile
+{: #mobile}
+
+Mobile projects are different from the other patterns because they have a significant client-side component. The pattern may include direct connection to mobile services like push notifications, authentication, and mobile analytics, known as Mobile Backend as a Service or MBaaS pattern, or may have a dedicated [Backend for Frontend](#bff).  
+
+{{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift, Android, and Cordova. You can find starter kits for Mobile pattern on the [{{site.data.keyword.cloud_notm}} Mobile developer dashboard](https://console.bluemix.net/developer/mobile/dashboard).
 
 ## Languages
 {: #languages}

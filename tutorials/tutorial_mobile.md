@@ -18,7 +18,7 @@ lastupdated: "2018-03-16"
 You can create a mobile project from a mobile basic starter. You'll see how to install the tools you need, and the steps to run the project in Xcode and Android Studio.
 {: shortdesc}
 
-## Step 1: Install the tools
+## Install the tools
 {: #before-you-begin}
 
 Install the [developer tools](/docs/cli/idt/index.html#add-cli){: new_window}.
@@ -32,7 +32,7 @@ You can create a project by using one of the following methods:
 - Local command-driven [{{site.data.keyword.dev_cli_notm}}](#create-cli)
 
 
-## Creating a project by using the {{site.data.keyword.dev_console}}
+## Creating a project with the {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Create a {{site.data.keyword.dev_console}} project in {{site.data.keyword.Bluemix}}.
@@ -45,7 +45,7 @@ You can create a project by using one of the following methods:
 
     4. Click **Create Project**.
 
-## Optional: Add services
+### Optional: Add services
 {: #add-services}
 
 1. Select your project in the **Projects** page.
@@ -66,7 +66,7 @@ You can create a project by using one of the following methods:
 
 9. For more information about adding push notifications, see the Push [notifications documentation](/docs/services/mobilepush/c_overview_push.html#overview-push).
 
-## Generate your project code
+### Generate your project code
 {: #generate-code}
 
 1. Select your project in the **Projects** page.
@@ -74,7 +74,7 @@ You can create a project by using one of the following methods:
 2. Click **Download Code** to download your project archive.
 
 
-## Begin working on your app
+### Begin working on your app
 {: #code}
 
 Begin working with your downloaded project:
@@ -86,7 +86,7 @@ Begin working with your downloaded project:
 3. Use the {{site.data.keyword.dev_cli_notm}} to proceed.
 
 
-## Creating a project by using the {{site.data.keyword.dev_cli_notm}}
+## Creating a project with the {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
 1. Ensure that you install the [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html).
@@ -111,7 +111,7 @@ Begin working with your downloaded project:
 
 5. When your `MobileBasicProject` is successfully created and saved, navigate to the `MobileBasicProject/MobileBasicProject-Swift` folder.
 
-## Running your Swift project in Xcode
+### Running your Swift project in Xcode
 {: #run_swift}
 
 1. Open the `README.md` file in a markdown viewer to review the steps to configure your project.
@@ -125,7 +125,7 @@ Begin working with your downloaded project:
 
 4. Run your app.
 
-## Running your Cordova project in Xcode
+### Running your Cordova project in Xcode
 {: #run_cordova_xcode}
 
 If you opted to use Cordova as your implementation language, then follow these instructions.
@@ -137,7 +137,7 @@ If you opted to use Cordova as your implementation language, then follow these i
 3. Run your app.
 
 
-## Running your Cordova project in Android Studio
+### Running your Cordova project in Android Studio
 {: #run_cordova_studio}
 
 Use this section if you chose to use Cordova as your mobile app's platform.
@@ -151,7 +151,7 @@ Use this section if you chose to use Cordova as your mobile app's platform.
 4. Run your app.
 
 
-## Running your Android project in Android Studio
+### Running your Android project in Android Studio
 {: #run_android}
 
 Use this section if you chose to use Android as your mobile app's platform.

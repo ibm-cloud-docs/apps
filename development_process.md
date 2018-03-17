@@ -47,7 +47,7 @@ The basic functions for {{site.data.keyword.dev_cli_notm}} are `bx dev build` an
 ##Deliver and manage in {{site.data.keyword.cloud_notm}}
 {: #deliver_and_manage}
 
-Merging changes to your cloud repository starts a build and deployment cycle in the DevOps toolchain that you previously. Your app is running in the cloud after a few minutes.
+Merging changes to your cloud repository starts a build and deployment cycle in the DevOps toolchain that you created previously. Your app is running in the cloud after a few minutes.
 
 To check status of your DevOps pipeline, use your Delivery Pipeline dashboard. To check the overall status of your app, see the {{site.data.keyword.cloud_notm}} dashboard for your account.
 {: tip}
