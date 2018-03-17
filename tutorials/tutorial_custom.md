@@ -28,7 +28,7 @@ Install the [developer tools ![External link icon](../../icons/launch-glyph.svg 
 
 Create a project in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
-1. From the [**Starter Kits** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create Project** to create a custom application.
+1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create Project** to create a custom application.
 
 2. Enter your project name. For this tutorial, use `CustomProject`.   
 

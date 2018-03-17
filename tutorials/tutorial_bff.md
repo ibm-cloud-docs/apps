@@ -28,7 +28,7 @@ Install the [developer tools ![External link icon](../../icons/launch-glyph.svg 
 
 Create a project in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
-1. From the [**Starter Kits** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
+1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
 
 2. Enter your project name. For this tutorial, use `ExpressBackend`.
 

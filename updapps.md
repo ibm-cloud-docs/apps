@@ -30,7 +30,7 @@ Complete the following steps to create a custom domain for your org by using the
 2. Click the name of the org for which you're creating a custom domain.
 3. Click the **Domains** tab.
 4. Click **Add a domain**, and enter your domain name and select the region.
-5. Confirm your updates by clicking **Add**.
+5. Confirm your updates. Click **Add**. 
 
 As an example, you can use `*.mycompany.com` to associate the route `www.mybluemix.com` to your app. You can also use `example.mycompany.com` to associate the route `www.example.mybluemix.com` to your app.
 {: tip}

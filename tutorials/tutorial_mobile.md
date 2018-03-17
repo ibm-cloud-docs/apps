@@ -37,7 +37,7 @@ You can create a project by using one of the following methods:
 
 1. Create a {{site.data.keyword.dev_console}} project in {{site.data.keyword.Bluemix}}.
 
-    1. From the [**Starter Kits** ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on the capabilities you want. For example, for a Watson Language application, go to **Watson Language** and click **Select Starter Kit**.
+    1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a Starter Kit based on the capabilities you want. For example, for a Watson Language application, go to **Watson Language** and click **Select Starter Kit**.
 
     2. Enter your project name. For this tutorial, use `WatsonProject`.   
 
