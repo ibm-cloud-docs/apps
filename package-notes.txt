@@ -1,2 +1,4 @@
-Topics from /cloudnative, which was covered by a different project number are now in /apps.
+Topics from /cloudnative, which was covered by a different project number - D057 - are now in /apps.
 Topics from that repo are now in /cli and /overview.
+
+Other topics moved from one directory to another also. 
