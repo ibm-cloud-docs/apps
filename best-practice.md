@@ -75,7 +75,7 @@ Avoid the OS-specific dependencies; instead, use services that are provided by t
 
 Your app might be installed frequently on-demand on the dynamic cloud environment. The installation process must be scripted and reliable, and the configuration data must be externalized from the scripts.
 
-Capture your app installation as a uniform set of scripts that is independent of the operating system. Keep your app installation small and porset of scripts that isrent automation techniques. Also, minimize the dependencies that are required by the app installation.
+Capture your app installation as a uniform set of scripts that is independent of the operating system. Keep your app installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the app installation.
 
 For more information about cloud-ready apps, see [The 12-factor app ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
