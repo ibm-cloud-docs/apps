@@ -26,7 +26,7 @@ You can see all the services that are available in {{site.data.keyword.Bluemix_n
 * From the bluemix command line interface. Use the `bluemix service offerings` command.
 * From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.Bluemix_notm}} interacts with the service and takes necessary steps to provision services of the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
+You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.Bluemix_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
 
 {{site.data.keyword.Bluemix_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
