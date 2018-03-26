@@ -1,0 +1,40 @@
+
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
+Creazione di applicazioni
+
+    {: .navgroup id="learn"}
+    index.md
+    best-practice.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    {: .topicgroup}
+    Sviluppo di applicazioni
+        [Sviluppo con Eclipse Tools](../starters/deploy_eclipsetools.html)
+
+    {: .topicgroup}
+    Distribuzione delle applicazioni
+        install_cli.md
+        ../starters/upload_app.md
+
+    reqnsi.md
+    hosting.md
+
+    {: .topicgroup}
+    Gestione delle applicazioni
+        mngapps.md
+        updapps.md
+
+    {: .topicgroup}
+    Protezione delle applicazioni
+        overview.md
+        secapps.md
+        deployment.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [Risoluzione dei problemi relativi alla gestione delle applicazioni](../troubleshoot/ts_apps.html)
+    {: .navgroup-end}
