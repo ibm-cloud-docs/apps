@@ -2,50 +2,70 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
 
-# {{site.data.keyword.Bluemix_notm}}에서 앱 작성
+# 시작하기 튜토리얼
 {: #create}
 
-{{site.data.keyword.Bluemix}}에서 엔터프라이즈 레벨 모바일 및 웹 애플리케이션을 빌드하고 {{site.data.keyword.Bluemix_notm}}로 호스팅되는 클라우드 확장을 활용할 수 있습니다. {{site.data.keyword.Bluemix}} 콘솔 및 명령행 도구를 사용하여 앱을 빌드 및 실행하고 배치할 수 있습니다. 이 엔드 투 엔드 개발 시나리오에 따라 시작하십시오.
+{{site.data.keyword.Bluemix}}에서 엔터프라이즈 레벨 모바일 및 웹 애플리케이션을 빌드하고 {{site.data.keyword.Bluemix_notm}}로 호스팅되는 클라우드 확장을 활용할 수 있습니다. {{site.data.keyword.Bluemix}} 콘솔 및 명령행 도구를 사용하여 앱을 빌드 및 실행하고 배치할 수 있습니다. 시작하는 방법에는 사용자 대신 프로세스를 관리하는 스타터 킷을 사용하여 프로젝트를 작성하는 것, 또는 원하는 것이 무엇인지 아는 경우 필요한 리소스로 앱을 빌드하는 것의 두 가지 방법이 있습니다.
+{:shortdesc}
 
-## 1단계: {{site.data.keyword.Bluemix_notm}} 계정 등록
-{: #sign-up}
+스타터 킷을 사용하여 앱을 사용 가능하도록 신속히 작성하고 이후의 개발을 위해 준비할 수 있습니다. 스타터 킷 및 프로그래밍 언어를 선택하고, 프로젝트를 작성한 후 즉각적 검토를 위해 코드를 다운로드하십시오. 앱을 신속히 배치하기 위해 DevOps 도구 체인을 작성할 수도 있습니다. 
 
-[bluemix.net](bluemix.net)으로 이동하십시오. 이메일, 이름, 회사, 지역, 전화번호만 입력하면 됩니다. 무료 계정을 등록하는 데 신용카드가 필요하지 않습니다. 편하게 둘러보십시오.
+스타터 킷은 다음 항목을 포함한 다양한 카테고리에서 사용 가능합니다. 
 
-## 2단계: 카탈로그 살펴보기
-{: #catalog}
+* [Watson](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [모바일](https://console.bluemix.net/developer/mobile){:new_window}
+* [웹 앱](https://console.bluemix.net/developer/appservice){:new_window}
+* [보안](https://console.bluemix.net/developer/security){:new_window}
+<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
+* [금융](https://console.bluemix.net/developer/finance){:new_window}
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그는 제공하는 인프라 및 플랫폼 리소스를 나열합니다. 가상 머신, 컨테이너 또는 Cloudant, Cloud Foundry 앱을 선택하여 앱 빌드를 시작할 수 있습니다. 플랫폼 리소스가 필요한 경우 {{site.data.keyword.Bluemix_notm}}는 런타임 및 기타 서비스를 제공하여 빌드 시작을 지원하는 표준 유형도 제공합니다.
+## 시작하기 전에
 
-## 3단계: 리소스 작성
-{: #resource}
+{{site.data.keyword.cloud_notm}} 계정에 [등록](https://console.bluemix.net){: new_window}하십시오. 이메일, 이름, 회사, 지역 및 전화번호를 입력하십시오. 
 
-1. [대시보드](https://console.bluemix.net/dashboard/apps/)에서 **리소스 작성**을 클릭하십시오.
+무료 계정을 등록하는 데는 신용카드가 필요하지 않지만, 신용카드 정보를 입력하면 더 많은 리소스에 액세스할 수 있으며 {{site.data.keyword.cloud_notm}}에서 제공하는 모든 항목을 더 쉽게 알아볼 수 있습니다. 
 
-2. 카탈로그의 플랫폼 섹션에서 앱을 선택하십시오. 그런 다음 런타임을 선택하십시오. 예를 들어, IBM 빌드팩에서 지원하는 IBM 런타임 환경(예: Liberty for Java)을 선택할 수 있습니다. 또한 오픈 소스 및 써드파티 빌드팩에 의존하는 커뮤니티 런타임(예: Tomcat)도 선택할 수 있습니다.
+## 1단계: 프로젝트 작성
+{: #project}
 
-  * [Containers 시작하기](../containers/container_index.html)
-  * [Openwhisk 시작하기](../openwhisk/index.html)
-  * [Cloud Foundry 앱 작성](../cfapps/index.html#creating_cloud_foundry_apps)
+1. **메뉴** 아이콘 ![메뉴 아이콘](../icons/icon_hamburger.svg) > **웹 앱**을 클릭하십시오. 
 
-3. 앱 이름, 호스트 이름을 입력한 후 가격 책정 플랜을 선택하십시오.
+2. **웹에서 시작** 섹션에서 **시작하기**를 클릭하십시오. 
 
-4. 개발 스타일을 선택하십시오. 원하는 텍스트 편집기에서 앱을 편집하고 {{site.data.keyword.Bluemix_notm}} 명령행을 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} DevOps Services를 사용하여 브라우저에서 애플리케이션을 배치하거나 Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 Eclipse 통합 개발 환경에서 애플리케이션에 대해 작업할 수도 있습니다.
+3. 원하는 스타터 킷을 선택하고, 세부사항을 읽은 후 **프로젝트 작성**을 클릭하십시오. 
 
-## 4단계: 코드 추가 시작
-{: #code}
+  스타터 킷에 무엇이 포함되어 있는지 보려면 앱 서비스 스타터 킷 대시보드에서 타일을 펼치십시오.
+  {: tip}
 
-각 앱은 작업 시작에 필요한 모든 소프트웨어 및 컨텐츠를 가져오는 데 도움이 되는 시작하기 섹션과 함께 제공합니다.
+4. 프로젝트 이름을 지정하고, 언어를 선택한 후 **프로젝트 작성**을 클릭하십시오. 
 
-앱을 개발하는 데 필요한 소프트웨어를 가져오고, 소스 코드를 가리키고, 처음으로 앱 배치 시 지원할 수 있도록 대시보드에서 앱을 클릭한 후 **시작하기**를 클릭하십시오.
+시작이 좋습니다! 앱이 작성되었습니다. 
 
-## 다음 단계
-{: #next}
+코드를 검토하려면 프로젝트 세부사항 페이지에서 **코드 다운로드**를 클릭하십시오. 다운로드된 압축 파일에 있는 `README.md` 파일을 확인하여 스타터 앱을 실행하기 위해 추가 조치를 수행해야 하는지 알아보십시오.
+{: tip}
 
-앱이 개발되면 [우수 사례](best-practice.html) 및 [클라우드 준비성](cloud-ready.html) 안내서를 사용하여 앱이 {{site.data.keyword.Bluemix_notm}}를 실행할 준비가 되었는지 확인하십시오. 그런 다음 앱 [배치](../starters/install_cli.html)를 수행하십시오.
+## 2단계: 리소스 추가
+{: #addResources}
+
+대부분의 스타터 킷은 사용자를 위해 리소스를 자동으로 프로비저닝하도록 {{site.data.keyword.cloud_notm}}에 지시합니다. 프로젝트 세부사항 페이지에서 **리소스 추가**를 클릭하여 더 많은 리소스를 앱과 연관시킬 수도 있습니다. 
+
+앱을 로컬로 개발하고 실행하려는 경우에는 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)을 사용하십시오.
+{: tip}
+
+## 3단계: {{site.data.keyword.cloud_notm}}에 배치
+{: #deploy}
+
+프로젝트 세부사항 페이지의 **클라우드에 배치**를 클릭하고, 배치 방법(예: Kubernetes 클러스터 또는 Cloud Foundry 앱)을 선택한 후 **작성**을 클릭하십시오. {{site.data.keyword.cloud_notm}}가 Git 저장소와 지속적 Delivery Pipeline을 모두 갖춘 공개 도구 체인을 자동으로 작성합니다. 새 도구 체인의 파이프라인 컴포넌트를 확인하고 첫 빌드 및 배치 프로세스를 시작하고 나면 몇 분 내에 새 앱이 실행되는 것을 볼 수 있습니다. 
+
+이제 반복 배치 및 지속적 딜리버리를 수행할 준비가 되었습니다. 

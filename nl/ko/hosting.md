@@ -2,34 +2,33 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2017-01-26"
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
-# 앱 호스팅
+# 앱 마이그레이션 및 호스팅
 {: #hosting}
 
-기존 앱이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 IBM Cloud에 기존 앱을 호스팅할 수 있습니다. 기존 앱의 경우에는 {{site.data.keyword.Bluemix_notm}} 인프라를 활용하여 {{site.data.keyword.Bluemix_notm}}용으로 별도 개발된 앱을 호스팅할 수 있습니다.
-{:shortdesc}
+기존 앱이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 {{site.data.keyword.Bluemix}}에 기존 앱을 호스팅할 수 있습니다. 앱을 클라우드 환경으로 한 번에 전환하는 대신 {{site.data.keyword.Bluemix_notm}}에 증분식으로 마이그레이션할 수도 있습니다. 
 
 ## 앱 마이그레이션
+{: #migrating}
+
+앱에서 온프레미스 데이터 또는 서비스에 액세스해야 하는 경우에는 [{{site.data.keyword.SecureGatewayfull}}](../services/SecureGateway/secure_gateway.html)를 사용하여 {{site.data.keyword.Bluemix_notm}} 조직과 엔터프라이즈 백엔드 네트워크 간에 보안 터널을 설정할 수 있습니다. 세부사항은 [Reaching enterprise backend with {{site.data.keyword.Bluemix_notm}} Secure Gateway via console ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg)을 참조하십시오.
+
+마이그레이션에 대해 도움이 필요한 경우에는 [IBM Cloud Migration Services](https://www.ibm.com/cloud/migration-services){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 사용할 수 있습니다. 
+
+## 앱 호스팅
 {: #ht_hostapp}
 
-기존 앱의 경우에는 앱을 클라우드 환경으로 완전히 이동하는 대신에 점진적으로 앱을 {{site.data.keyword.Bluemix_notm}}에 마이그레이션할 수 있습니다. 우선 앱의 일부를 마이그레이션한 후에 클라우드 통합 서비스를 사용하여 기존 데이터 또는 SOR(System of Record)에 연결할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} [카탈로그](https://console.bluemix.net/catalog/?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서는 Kubernetes 또는 Cloud Foundry와 같은 관리 환경을 선택하거나, 베어메탈 또는 가상 서버에서 직접 앱을 호스팅할 수 있습니다. 
 
-{{site.data.keyword.Bluemix_notm}} 앱의 경우 백엔드 데이터 또는 서비스에 액세스해야 할 수 있습니다(예: SOR(System of Record)). {{site.data.keyword.Bluemix_notm}}에서 Secure Gateway 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}} 조직 및 엔터프라이즈 백엔드 네트워크 간의 보안 터널을 설정할 수 있습니다. 서비스를 사용하면 {{site.data.keyword.Bluemix_notm}}의 앱이 백엔드 네트워크의 데이터 및 서비스에 액세스할 수 있습니다. 세부사항은 [Reaching enterprise backend with Bluemix Secure Gateway via console ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}을 참조하십시오.
+가상 배치에서는 앱의 오퍼레이션 대부분이 {{site.data.keyword.Bluemix_notm}}에 의해 관리됩니다. 지리적 지역 간에 워크로드가 분산되어 있으며 {{site.data.keyword.Bluemix_notm}} 하이퍼바이저를 사용하여 배치를 관리하려는 경우에는 [가상](../vsi/vsi_about.html) 배치가 최상입니다. 고성능을 위해 전용 실제 서버에 대한 직접 액세스가 필요한 경우에는 [베어메탈](../bare-metal/index.html) 배치가 가장 좋습니다. 
 
-{{site.data.keyword.Bluemix_notm}}는 기존 앱을 호스팅하고 필요한 모든 인프라를 제공할 수 있습니다. [카탈로그](https://console.bluemix.net/catalog/?taxonomyNavigation=apps)에서, 베어메탈 서버 또는 가상 서버에서 앱을 호스팅하는지 여부를 선택할 수 있습니다. 고성능을 위해 전용 실제 서버가 필요한 경우에는 [베어메탈](../bare-metal/index.html#about-bare-metal-servers) 배치가 최상입니다. 지리적 지역 간에 워크로드가 분산되어 있으며 {{site.data.keyword.Bluemix_notm}} 하이퍼바이저를 사용하여 배치를 관리하려는 경우에는 [가상](/vsi/vsi_index.html#provisioning-a-virtual-server) 배치가 최상입니다. 
-
-한 번에 모두 또는 컴포넌트별로 앱의 파트를 {{site.data.keyword.Bluemix_notm}}에 마이그레이션할 수 있습니다. 앱을 마이그레이션할 때 IBM에서 제공하는 일부 서비스를 살펴 보십시오.
-
-* 블록 스토리지, 파일 스토리지 또는 오브젝트 스토리지에서 적합한 [스토리지](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage) 유형을 선택하십시오.
-* 필요한 [네트워크](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork) 유형을 선택하십시오.
-* {{site.data.keyword.Bluemix_notm}} Kubernetes 기술을 활용하려면 [컨테이너](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers) 서비스를 선택하십시오.
-
-## 다음 단계
-{: #next-steps}
-
-둘 이상의 지역에서 서비스를 호스팅할 수 있으면 앱이 호스팅되는 지역을 선택할 수 있습니다. 이를 수행하려면 {{site.data.keyword.Bluemix_notm}}에서 앱의 사용자 정의 URL 정보를 등록하고 추가하십시오. 그리고 앱이 호스팅된 지역을 선택하십시오. 앱을 배치하는 방법에 대한 자세한 정보는 [앱 업데이트](updapps.html)를 참조하십시오. 
+다음과 같이 다양한 옵션이 제공됩니다. 
+* 블록 스토리지, 파일 스토리지 또는 오브젝트 스토리지 중 필요한 [스토리지](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 유형을 선택합니다. 
+* 필요한 [네트워크](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 유형을 선택합니다. 
+* {{site.data.keyword.Bluemix_notm}} Kubernetes 기술을 활용하는 데 필요한 [컨테이너화](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 서비스를 선택합니다. 
