@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -18,7 +18,7 @@ Le tableau de bord de la console {{site.data.keyword.Bluemix}} fournit des infor
 ## Comprendre le statut d'une application
 {: #status}
 
-Depuis le tableau de bord, vous pouvez afficher le statut de chaque application :
+Depuis le tableau de bord, vous pouvez afficher le statut de chaque application. La colonne d'état de chaque application vous pouvez de voir si les instances de cette application sont en cours d'exécution.
 
 <dl>
 <dt>
@@ -64,5 +64,5 @@ Vous pouvez afficher des informations sur une application en cliquant sur son no
 
 Sur la page Vue d'ensemble de l'application, une fois l'application déployée, vous pouvez démarrer, arrêter, redémarrer ou, dans le cas des applications Web, modifier le nombre d'instances et la quantité de mémoire utilisée par l'application. Pour les applications Web, {{site.data.keyword.Bluemix_notm}} n'ajuste pas automatiquement votre application en fonction de sa charge, et vous devez donc gérer cet aspect vous-même.
 
-Les applications peuvent être redéployées si une mise à jour est effectuée. Le mécanisme de mise à jour de l'application est identique au mécanisme utilisé pour déployer initialement l'application. {{site.data.keyword.Bluemix_notm}}
+Si une mise à jour est effectuée, les applications peuvent être redéployées. Le mécanisme de mise à jour de l'application est identique au mécanisme utilisé pour déployer initialement l'application. {{site.data.keyword.Bluemix_notm}}
 arrête toutes les instances en cours d'exécution et les remplace automatiquement par de nouvelles instances.

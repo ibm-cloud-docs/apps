@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,18 +12,22 @@ lastupdated: "2018-01-18"
 # Ajout d'un service à votre application
 {: #add_service}
 
-Pour ajouter un service à votre application, demandez une instance de ce service et configurez l'application afin qu'elle interagisse avec le service.
+Si vous avez créé un projet à l'aide de la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, vous avez eu la possibilité d'ajouter des ressources à partir de la page de présentation du projet. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.Bluemix_notm}} en dehors du contexte de votre projet.
 {: shortdesc}
+
+Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre projet à partir de la page de présentation du projet. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.Bluemix_notm}}. 
+
+##Reconnaissance de services
+{: #discover_services}
 
 Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.Bluemix_notm}} comme suit :
 
-* Depuis la console {{site.data.keyword.Bluemix_notm}}. Affichez le catalogue {{site.data.keyword.Bluemix_notm}}.
-* Depuis l'interface de ligne de commande bluemix. Utilisez la commande **bluemix service offerings**.
+* Depuis la console {{site.data.keyword.Bluemix_notm}}. Affichez le catalogue {{site.data.keyword.Bluemix_notm}}. 
+* Depuis l'interface de ligne de commande bluemix. Utilisez la commande `bluemix service offerings`.
 * Depuis votre propre application. Utilisez l'[API Services GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois la sélection effectuée,
-{{site.data.keyword.Bluemix_notm}} interagit avec le service et effectue les opérations nécessaires pour mettre à
-disposition les ressources du service. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
+{{site.data.keyword.Bluemix_notm}} interagit avec le service et exécute les tâches nécessaires à la mise à disposition des services du service. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
 
 {{site.data.keyword.Bluemix_notm}} fournit les ressources d'un service à votre application par le biais d'une
 instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
@@ -36,7 +40,7 @@ applications externes et des outils tiers](#accser_external).
 ## Demande de nouvelle instance de service
 {: #req_instance}
 
-Pour demander une nouvelle instance de service, vous devez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande bluemix.
+Pour demander une nouvelle instance de service, vous devez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
 
 **Remarque :** lorsque vous spécifiez le nom du service, évitez d'utiliser des caractères autres que des caractères alphabétiques
 ou numériques, car vous risquez de
@@ -44,16 +48,16 @@ générer des résultats imprévisibles.
 
 Si vous utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
-1. Dans le **catalogue** {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service à ajouter. La page des détails du service s'ouvre.
+1. Dans le catalogue {{site.data.keyword.Bluemix_notm}}, cliquez sur la vignette du service que vous souhaitez ajouter. La page des détails du service s'ouvre.
 
-2. Entrez un nom dans la zone **Nom du service**. Un nom de service par défaut est fourni. Vous pouvez le changer dans la zone ou le
+2. Entrez un nom dans la zone **Nom du service**. Un nom par défaut est fourni. Vous pouvez le changer dans la zone ou le
 conserver.
 
-3. Renseignez les autres zones et effectuez les sélections requises, puis cliquez sur **Créer**.
+3. Renseignez les autres zones ou effectuez les sélections requises, puis cliquez sur **Créer**.
 
-Si vous utilisez l'interface de ligne de commande bluemix pour demander une instance de service, procédez comme suit :
+Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
-1. Utilisez la commande **bluemix service offerings** pour rechercher le nom et le plan du service dont vous avez besoin.
+1. Utilisez la commande `bluemix service offerings`**` pour rechercher le nom et le plan du service dont vous avez besoin. 
 
 2. Utilisez la commande suivante pour créer une instance de service, où nom_service est le nom du service, plan_service est le plan du service et
 instance_service est le nom à utiliser pour cette instance de service :
@@ -62,7 +66,7 @@ instance_service est le nom à utiliser pour cette instance de service :
 bluemix service create service_name service_plan service_instance
 ```
 
-3. Utilisez la commande suivante pour lier l'instance de service à une application, où nom_app est le nom de l'application et instance_service est
+3. Utilisez la commande suivante pour lier l'instance de service à une application, où *appname* est le nom de l'application et service_instance est
 le nom de l'instance de service :
 
 ```
@@ -97,7 +101,7 @@ d'un objet JSON. La variable contient les données d'exécution requises pour in
 Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et
 d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Voir la rubrique de traitement des incidents
 [Les applications ne sont pas redémarrées
-automatiquement](/docs/troubleshoot/ts_apps.html#ts_topmenubar) pour plus d'informations.
+automatiquement](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted) pour plus d'informations.
 
 ## Activation d'applications externes
 {: #accser_external}
@@ -163,12 +167,12 @@ service {{site.data.keyword.Bluemix_notm}}.
 ## Création d'une instance de service fournie par l'utilisateur
 {: #user_provide_services}
 
-Certaines de vos ressources peuvent être gérées hors de {{site.data.keyword.Bluemix_notm}}. Si vous disposez des données d'identification permettant d'accéder à ces ressources externes depuis Internet, vous pouvez créer des instances de service {{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos ressources externes et de communiquer avec elles.
+Certains de vos services peuvent être gérés en dehors de {{site.data.keyword.Bluemix_notm}}. Si vous disposez des données d'identification permettant d'accéder à ces services externes depuis Internet, vous pouvez créer des instances de service {{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos services externes et de communiquer avec eux. 
 
 Pour créer une instance de service fournie par l'utilisateur et la lier à une application, procédez comme suit :
 
-1. Créez une instance de service fournie par l'utilisateur avec la commande **bluemix service user-provided-create** :
-    * Pour créer une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et séparez les noms de paramètre par une virgule. L'interface de ligne de commande bx vous invite alors à entrer chaque paramètre. Exemple :
+1. Créez une instance de service fournie par l'utilisateur avec la commande `bluemix service user-provided-create` :
+    * Pour créer une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et séparez les noms de paramètre par une virgule. L'interface de ligne de commande `bx` vous invite alors à entrer chacun des paramètres. Exemple :
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -180,7 +184,7 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option **-l** et spécifiez la destination fournie par le logiciel de gestion de journal tiers. Exemple :
+    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l` et spécifiez la destination fournie par le logiciel de gestion de journal tiers. Exemple :
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -188,9 +192,9 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-    Pour mettre à jour un ou plusieurs paramètres de l'instance de service fournie par l'utilisateur, utilisez la commande **bluemix service user-provided-update**.
+    Pour mettre à jour un ou plusieurs paramètres de l'instance de service fournie par l'utilisateur, utilisez la commande `bluemix service user-provided-update`.
 
-    * Pour mettre à jour une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et spécifiez les clés et les valeurs des paramètres dans un objet json. Exemple :
+    * Pour mettre à jour une instance de service fournie par l'utilisateur générale, utilisez l'option **-p** et spécifiez les clés et les valeurs des paramètres dans un objet JSON. Exemple :
 
         ```
         bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -198,7 +202,8 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option -l. Exemple :
+    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l`.
+Exemple :
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -214,4 +219,4 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
 	OK
 	```
 
-A présent, vous pouvez configurer votre application afin d'utiliser les ressources externes. Pour des informations sur la configuration de votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](#config){: new_window}.
+A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](#config){: new_window}.

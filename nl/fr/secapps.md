@@ -1,25 +1,22 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Sécurisation des applications
-{: #securingapps}
-
+# Création de demandes de signature de certificat
+{: #ssl_csr}
 
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
-
-## Création de demandes de signature de certificat
-{: #ssl_csr}
 
 Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.Bluemix}}, vous devez créer une demande de signature
 de certificat sur votre serveur.
@@ -29,41 +26,44 @@ publique et des informations associées. En général, les demandes de signature
 certificat inclut une clé publique ainsi qu'un nom usuel, une organisation, une ville, un état, un pays et une adresse électronique. Les demandes de
 certificat SSL ne sont acceptées qu'avec une longueur de clé de demande de signature de certificat de 2048 bits.
 
+## Informations obligatoires
+
 Pour que la demande de signature de certificat soit valide, les informations suivantes doivent être indiquées lors de sa génération :
 
-#### Nom du pays
+### Nom du pays
 
   Code à deux chiffres qui représente le pays ou la région. Par exemple, "US" représente les Etats-Unis. Pour les autres pays ou régions, reportez-vous à la [liste des codes de pays ISO ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.iso.org/obp/ui/#search){:new_window} avant de créer la demande de signature de certificat.
 
-#### Etat ou province
+### Etat ou province
 
   Nom entier non abrégé de l'état ou de la province.
 
-#### Localité
+### Localité
 
   Nom entier de la ville.
 
-#### Organisation
+### Organisation
 
   Nom entier de l'entreprise ou de la société tel qu'enregistré juridiquement auprès de votre localité, ou votre nom. Pour les sociétés, veillez à inclure le suffixe d'enregistrement, par exemple SARL, EURL ou SCI.
 
-#### Unité organisationnelle
+### Unité organisationnelle
 
   Nom de la branche de votre société qui commande le certificat, par exemple Comptabilité ou Marketing.
 
-#### Nom usuel
+### Nom usuel
 
   Nom de domaine complet pour lequel vous demandez le certificat SSL.
 
-Les méthodes de création d'une demande de signature de certificat (CSR) varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec l'[outil de ligne de commande OpenSSL![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.openssl.org/){:new_window}:
+Les méthodes de création d'une demande de signature de certificat varient selon le système d'exploitation. L'exemple suivant montre comment créer une demande de signature de certificat avec l'[outil de ligne de commande OpenSSL![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
 
-**Remarque :** l'implémentation d'OpenSSL SHA-512 dépend du support de compilateur pour le type entier 64 bits. Vous pouvez utiliser
+L'implémentation d'OpenSSL SHA-512 dépend du support de compilateur pour le type entier 64 bits. Vous pouvez utiliser
 l'option SHA-1 pour les applications qui présentent des problèmes de compatibilité avec le certificat SHA-256.
+{: tip}
 
 Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme. Après avoir créé la demande de signature de certificat, vous pouvez générer votre certificat SSL auprès d'une autorité de certification publique.
 
@@ -73,11 +73,11 @@ Un certificat est émis par un organisme de certification et il est signé numé
 Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialité des communications avec votre
 application et empêcher les écoutes clandestines, les altérations et les falsifications de messages
 
-Dans {{site.data.keyword.Bluemix_notm}}, pour chaque organisation dont le propriétaire de compte bénéficie
+Pour chaque organisation dans {{site.data.keyword.Bluemix_notm}} dont le propriétaire de compte bénéficie
 d'un plan Paiement à la carte ou Abonnement, vous avez droit à quatre téléchargements de certificat. Pour chaque organisation dont le propriétaire de compte bénéficie d'un compte d'essai gratuit, vous devez mettre à niveau votre compte pour pouvoir télécharger un certificat.
 
 Pour
-pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat. Voir [Création de demandes de signature de certificat](#ssl_csr).
+pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat.
 
 Lorsque vous utilisez un domaine personnalisé, pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}} :
 
@@ -151,10 +151,10 @@ Name Indication) du protocole TLS (Transport Layer Security). Par conséquent, l
 {{site.data.keyword.Bluemix_notm}} protégées par des certificats personnalisés doit prendre en charge
 l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} et [Sécurisation des données avec TLS](/docs/get-support/appsectls.html).
 
-  #### Magasin de clés de confiance pour les certificats client
+  #### Fichier de clés certifiées de certificat client
 
-  Ce magasin est un fichier contenant les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Si vous activez
-l'option de demande de certificat client, téléchargez un fichier de magasin de clés de confiance pour les certificats client.
+  Le fichier de clés certifiées de certificat client est un fichier contenant les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Si vous activez
+l'option de demande de certificat client, téléchargez un fichier de clés certifiées de certificat client. 
 
    Les types de certificat suivants sont pris en charge dans
 {{site.data.keyword.Bluemix_notm}}:
@@ -163,4 +163,4 @@ l'option de demande de certificat client, téléchargez un fichier de magasin de
 	  * DER (.der ou .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines** pour supprimer ou remplacer un certificat pour un domaine personnalisé.
+Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines**.

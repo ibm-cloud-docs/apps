@@ -1,31 +1,39 @@
 ---
-
 copyright:
 
-  years: 2015，2017, 2018
+  years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-17"
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:prereq: .prereq}
-{:download: .download}
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}  
+{:screen: .screen}  
+{:codeblock: .codeblock}  
 {:pre: .pre}
-{:app_name: data-hd-keyref="app_name"}
-{:app_key: data-hd-keyref="app_key"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:host: data-hd-keyref="host"}
-{:org_name: data-hd-keyref="org_name"}
-{:route: data-hd-keyref="route"}
-{:space_name: data-hd-keyref="space_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:user_ID: data-hd-keyref="user_ID"}
+{:tip: .tip}
 
-# Déploiement d'applications avec l'interface de ligne de commande
+# Déploiement d'applications
+{: #deploy}
+
+Vous pouvez déployer vos applications avec une chaîne d'outils ou une interface de ligne de commande. Une chaîne d'outils est un ensemble d'intégrations d'outils. L'interface de ligne de commande constitue un moyen simple de déployer vos applciations et vos instances de service.
+{: shortdesc}
+
+## Déploiement d'applications avec des chaînes d'outils
+{: #toolchains_getting_started}
+
+Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux manières, soit  à l'aide d'un modèle, soit à partir d'une application. Pour en savoir plus sur les chaînes d'outils, voir[Création de chaînes d'outils](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+
+Avec une chaîne d'outils correctement configurée, le déploiement de votre application devient un jeu d'enfants : un cycle de création/déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. 
+
+Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.Bluemix}} seront configurées pour un déploiement automatique.
+{: tip}
+
+## Déploiement d'applications avec l'interface de ligne de commande
+{: #cli}
+
+IBM Cloud fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande. 
 
 Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour déployer vos applications et instances de service.
 {:shortdesc}
@@ -43,13 +51,13 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   1. {: download} Téléchargez le code de votre application dans un nouveau répertoire afin de configurer votre environnement de développement.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_starter-code.svg" alt="Télécharger le code de l'application" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"></a>
 
   2. Placez-vous dans le répertoire dans lequel se trouve votre code.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">votre_nouveau_répertoire</var></code></pre>
 
-  3.  Modifiez le code de votre application si nécessaire. Par exemple, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute en local avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
+  3.  Modifiez le code de votre application. Par exemple, si vous utilisez un exemple d'application {{site.data.keyword.Bluemix_notm}} qui contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute en local avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
 
     Tenez compte du fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels.
 
@@ -67,7 +75,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Remarque **: vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
+  **Remarque **: si la valeur contient un espace, vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`. Par exemple, `-o "my org"`.
 
   5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bluemix app push`. Pour plus d'informations sur la commande `bx app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
 
