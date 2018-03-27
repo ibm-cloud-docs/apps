@@ -7,34 +7,53 @@ Criando aplicativos
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
+    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Desenvolvendo aplicativos
-        [Desenvolvendo com o Eclipse Tools](../starters/deploy_eclipsetools.html)
+    Desenvolvendo apps
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_custom.md
+        tutorials/tutorial_mobile.md
 
-    {: .topicgroup}
-    Implementando aplicativos
-        install_cli.md
-        ../starters/upload_app.md
-
+    dep-app-tool.md
     reqnsi.md
+    mngapps.md
+    updapps.md
+    secapps.md
+    building-apps.md
     hosting.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Referência de linha de comandos do IBM Cloud Developer Tools](https://console.bluemix.net/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    Gerenciando aplicativos
-        mngapps.md
-        updapps.md
+    Painéis do desenvolvedor do IBM Cloud
+        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
+        [Finanças](https://console.bluemix.net/developer/finance/dashboard)
+        [Dispositivo móvel](https://console.bluemix.net/developer/mobile/dashboard)
+        [Segurança](https://console.bluemix.net/developer/security/dashboard)
+        [Watson](https://console.bluemix.net/developer/watson/dashboard)
+        [Apps da web](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Protegendo aplicativos
-        overview.md
-        secapps.md
-        deployment.md
+    Conteúdo do projeto
+        projects/compose_file.md
+        projects/java_project_contents.md
+        projects/node_project_contents.md
+        projects/python_project_contents.md
+        projects/swift_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolução de problemas para gerenciar aplicativos](../troubleshoot/ts_apps.html)
+    ../troubleshoot/ts_createapps.md
+    ../troubleshoot/ts_apps.md
+    [Canal de ferramentas do desenvolvedor do IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

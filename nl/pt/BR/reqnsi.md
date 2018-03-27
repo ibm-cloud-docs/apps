@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,19 +12,22 @@ lastupdated: "2018-01-18"
 # Incluindo um serviço em seu app
 {: #add_service}
 
-Para incluir um serviço em seu aplicativo, solicite uma instância do serviço e configure o aplicativo para interagir com o serviço.
+Se você criou um projeto usando o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, teve uma chance de incluir recursos da página de visão geral do projeto. No entanto, também é possível provisioná-los diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}, fora do contexto de seu projeto.
 {: shortdesc}
+
+É possível solicitar uma instância do recurso e usá-la de forma independente de seu app ou incluir a instância de recurso em seu projeto por meio da página de visão geral do projeto. É possível provisionar um tipo específico de recurso (um serviço) diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}.
+
+##Descobrindo serviços
+{: #discover_services}
 
 É possível ver todos os serviços que estão disponíveis no {{site.data.keyword.Bluemix_notm}} das maneiras a seguir:
 
-* No console do {{site.data.keyword.Bluemix_notm}}. Visualize o Catálogo do {{site.data.keyword.Bluemix_notm}}.
-* Na interface da linha de comandos bluemix. Use o comando **bluemix service offerings**.
+* No console do {{site.data.keyword.Bluemix_notm}}. Visualize o catálogo do {{site.data.keyword.Bluemix_notm}}.
+* Na interface da linha de comandos bluemix. Use o comando `bluemix service offerings`.
 * A partir de seu próprio aplicativo. Use a [API de Serviços GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 É possível selecionar o serviço necessário ao desenvolver
-aplicativos. Na seleção, o
-{{site.data.keyword.Bluemix_notm}} interage com o serviço e
-executa as etapas necessárias para fornecer os recursos do serviço. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
+aplicativos. Logo que você o seleciona, o {{site.data.keyword.Bluemix_notm}} interage com o serviço e executa as etapas necessárias para provisionar serviços do serviço. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
 e um serviço de notificação push para aplicativos móveis gera
 informações de configuração.
 
@@ -41,22 +44,22 @@ codifica aplicativos externos ou ferramentas de terceiros para usar os serviços
 ## Solicitando uma nova instância de serviço
 {: #req_instance}
 
-Para solicitar uma nova instância de serviço, deve-se usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos bluemix.
+Para solicitar uma nova instância de serviço, deve-se usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** Ao especificar o nome do serviço, evite usar caracteres que não sejam caracteres alfabéticos ou numéricos, pois os resultados poderão ser imprevisíveis.
 
 Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
-1. No **Catálogo** do {{site.data.keyword.Bluemix_notm}}, clique no ladrilho para o serviço que você deseja incluir. A página de detalhes do serviço é aberta.
+1. No catálogo do {{site.data.keyword.Bluemix_notm}}, clique no tile para o serviço que você deseja incluir. A página de detalhes do serviço é aberta.
 
-2. Digite um nome no campo **Nome do serviço**. Um nome de serviço padrão é fornecido. É possível alterar o nome no campo ou
+2. Digite um nome no campo **Nome do serviço**. Um nome padrão é fornecido. É possível alterar o nome no campo ou
 mantê-lo inalterado.
 
-3. Preencha os campos ou seleções adicionais e, em seguida, clique em **CREATE**.
+3. Conclua mais campos ou seleções e, em seguida, clique em **CRIAR**.
 
-Se você usar a interface da linha de comandos bluemix para solicitar uma instância de serviço, conclua as etapas a seguir:
+Se você usar a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
-1. Use o comando **bluemix service offerings** para localizar o nome e o plano do serviço que você requer.
+1. Use o comando `bluemix service offerings`**` para localizar o nome e o plano do serviço que você requer.
 
 2. Use o comando a seguir para criar uma instância de serviço, em que service_name é o nome do serviço, service_plan é o plano do serviço e service_instance é o nome que você deseja usar para essa instância de serviço.
 
@@ -64,7 +67,7 @@ Se você usar a interface da linha de comandos bluemix para solicitar uma instâ
 bluemix service create service_name service_plan service_instance
 ```
 
-3. Use o comando a seguir para ligar a instância de serviço a um aplicativo, em que appname é o nome do aplicativo e service_instance é o nome da instância de serviço.
+3. Use o comando a seguir para ligar a instância de serviço a um aplicativo, em que *appname* é o nome do aplicativo e service_instance é o nome da instância de serviço.
 
 ```
 bluemix service bind appname service_instance
@@ -103,9 +106,8 @@ para interagir com os serviços aos quais o aplicativo está ligado. O
 formato dos dados é diferente para serviços diferentes. Talvez seja necessário ler a documentação do serviço sobre
 o que deve-se esperar e como interpretar cada parte de informação.
 
-Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.Bluemix_notm}}
-não reinicia automaticamente o aplicativo para recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades,
-exceções e falhas de conexão. Consulte o tópico de resolução de problemas [Aplicativos não serão reiniciados automaticamente](/docs/troubleshoot/ts_apps.html#ts_topmenubar) para obter informações adicionais.
+Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.Bluemix_notm}} não reinicia automaticamente o aplicativo para recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades,
+exceções e falhas de conexão. Veja o tópico de resolução de problemas [Os apps não serão reiniciados automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted) para obter mais informações.
 
 ## Ativando aplicativos externos
 {: #accser_external}
@@ -159,8 +161,8 @@ Os serviços a seguir fornecem chaves de serviço para você usar externamente:
 Para ativar um app externo ou ferramenta de terceiro para usar um serviço do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 
 1. Solicite uma instância do serviço.
-    1. No Painel na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique em **Criar recurso**. O Catálogo é exibido.
-    2. No Catálogo, selecione o serviço desejado clicando no ladrilho do serviço. A página de detalhes do serviço é aberta.
+    1. No Painel na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique em **Criar recurso**. O catálogo é exibido.
+    2. No catálogo, selecione o serviço desejado clicando no tile do serviço. A página de detalhes do serviço é aberta.
     3. Na janela de serviço, deixe a seleção de lista padrão **Conectar-se a:** como **Deixar desvinculado**. Essa seleção significa que o serviço não está conectado a um app {{site.data.keyword.Bluemix_notm}}.
     4. Faça qualquer outra seleção conforme necessário. Em seguida, clique em **Criar**. Uma instância de serviço é criada e o Painel de serviço é exibido.
 2. No Painel de serviço, é possível selecionar **Credenciais de serviço** para visualizar ou incluir credenciais no formato JSON. Selecione um conjunto de credenciais e clique em **Visualizar credenciais** na coluna Ações. Use a chave de API que é exibida como as credenciais para se conectar à instância de serviço.
@@ -174,12 +176,12 @@ acessar o serviço do {{site.data.keyword.Bluemix_notm}}.
 ## Criando uma instância de serviço fornecida pelo usuário
 {: #user_provide_services}
 
-É possível ter recursos que são gerenciados fora do {{site.data.keyword.Bluemix_notm}}. Se você tiver credenciais para acessar esses recursos externos a partir da Internet, é possível criar instâncias de serviço fornecido pelo usuário do {{site.data.keyword.Bluemix_notm}} para representar e se comunicar com os seus recursos externos.
+Você pode ter serviços que são gerenciados fora do {{site.data.keyword.Bluemix_notm}}. Se você tiver credenciais para acessar esses serviços externos na Internet, será possível criar instâncias de serviço fornecido pelo usuário do {{site.data.keyword.Bluemix_notm}} para representar e se comunicar com seus serviços externos.
 
 Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um aplicativo, conclua as etapas a seguir:
 
-1. Crie uma instância de serviço fornecida pelo usuário usando o comando **bluemix service user-provided-create**:
-    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. Você é, então, solicitado pela interface da linha de comandos bx para cada parâmetro sucessivamente. Por
+1. Crie uma instância de serviço fornecido pelo usuário usando o comando `bluemix service user-provided-create`:
+    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. A interface da linha de comandos `bx` solicita você para cada parâmetro sucessivamente. Por
 exemplo:
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
@@ -192,7 +194,7 @@ exemplo:
         OK
         ```
 
-    * Para criar uma instância de serviço que drene informações para um software de gerenciamento de log de terceiro, use a opção **-l** e especifique o destino que o software de gerenciamento de log de terceiro fornece. Por
+    * Para criar uma instância de serviço que drene informações para um software de gerenciamento de log de terceiro, use a opção `-l` e especifique o destino que o software de gerenciamento de log de terceiro fornece. Por
 exemplo:
 
         ```
@@ -201,10 +203,9 @@ exemplo:
         OK
         ```
 
-    Se você desejar atualizar um ou mais parâmetros da instância de serviço fornecida pelo usuário, use o **bluemix service user-provided-update**.
+    Se você desejar atualizar um ou mais parâmetros da instância de serviço fornecida pelo usuário, use o `bluemix service user-provided-update`.
 
-    * Para atualizar uma instância de serviço geral fornecida pelo usuário, use a opção **-p**
-e especifique as chaves e valores de parâmetro em um objeto json. Por
+    * Para atualizar uma instância de serviço fornecido pelo usuário geral, use a opção **-p** e especifique as chaves e os valores de parâmetro em um objeto JSON. Por
 exemplo:
 
         ```
@@ -213,7 +214,8 @@ exemplo:
         OK
         ```
 
-    * Para criar uma instância de serviço que drene informações para um software de gerenciamento de log de terceiro, use a opção -l. Por
+    * Para criar uma instância de serviço que drena informações para um software de
+gerenciamento de log de terceiro, use a opção `-l`. Por
 exemplo:
 
         ```
@@ -231,4 +233,4 @@ exemplo:
 	OK
 	```
 
-Agora é possível configurar o seu aplicativo para usar os recursos externos. Para obter informações sobre como configurar seu aplicativo para interagir com um serviço, veja [Configurando seu aplicativo para interagir com um serviço](#config){: new_window}.
+Agora é possível configurar o seu aplicativo para usar os serviços externos. Para obter informações sobre como configurar seu aplicativo para interagir com um serviço, veja [Configurando seu aplicativo para interagir com um serviço](#config){: new_window}.

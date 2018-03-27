@@ -1,31 +1,40 @@
 ---
-
 copyright:
 
-  years: 2015，2017, 2018
+  years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-17"
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:prereq: .prereq}
-{:download: .download}
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}  
+{:screen: .screen}  
+{:codeblock: .codeblock}  
 {:pre: .pre}
-{:app_name: data-hd-keyref="app_name"}
-{:app_key: data-hd-keyref="app_key"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:host: data-hd-keyref="host"}
-{:org_name: data-hd-keyref="org_name"}
-{:route: data-hd-keyref="route"}
-{:space_name: data-hd-keyref="space_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:user_ID: data-hd-keyref="user_ID"}
+{:tip: .tip}
 
-# Implementando aplicativos com a interface da linha de comandos
+# Implementando apps
+{: #deploy}
+
+É possível implementar seus apps com uma cadeia de ferramentas ou uma interface da linha de comandos. Uma cadeia de ferramentas é um conjunto de integrações de ferramentas. A interface da linha de comandos é uma maneira simples de implementar seus apps e instâncias de serviço.
+{: shortdesc}
+
+## Implementando apps com cadeias de ferramentas
+{: #toolchains_getting_started}
+
+As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
+ferramentas a partir de um app. Para saber mais sobre cadeias de ferramentas, veja [Criando cadeias de ferramentas](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+
+Com uma cadeia de ferramentas configurada adequadamente, a implementação de seu app é trivial: um ciclo de construção/implementação dará início automaticamente com cada mesclagem para a ramificação principal em seu repositório.
+
+Todas as cadeias de ferramentas criadas em um painel do desenvolvedor do {{site.data.keyword.Bluemix}} serão configuradas para implementação automática.
+{: tip}
+
+## Implementando aplicativos com a interface da linha de comandos
+{: #cli}
+
+O IBM Cloud fornece uma CLI robusta, bem como plug-ins e extensões de ferramentas do desenvolvedor que se integram com a CLI.
 
 Use a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para implementar seus aplicativos e instâncias de serviço.
 {:shortdesc}
@@ -43,13 +52,13 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   1. {: download} Faça download do código do app em um novo diretório para configurar seu ambiente de desenvolvimento.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_starter-code.svg" alt="Fazer download do código do aplicativo" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"></a>
 
   2. Mude para o diretório no qual o seu código está localizado.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  Faça mudanças no código de seu app conforme necessário. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.Bluemix}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar "Obrigado por criar..." para dizer algo novo. Assegure-se de que o app seja executado localmente antes de implementá-lo de volta no {{site.data.keyword.Bluemix_notm}}.
+  3.  Faça mudanças em seu código de app. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.Bluemix_notm}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar "Obrigado por criar..." para dizer algo novo. Assegure-se de que o app seja executado localmente antes de implementá-lo de volta no {{site.data.keyword.Bluemix_notm}}.
 
     Anote o arquivo `manifest.yml`. Ao implementar seu app de volta no {{site.data.keyword.Bluemix_notm}}, esse arquivo será usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros essenciais.
 
@@ -67,7 +76,7 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Nota**: deve-se incluir aspas simples ou duplas ao redor `username`, `org_name` e `space_name` se o valor contém um espaço, por exemplo, `-o "my org"`.
+  **Nota**: quando o valor contém um espaço, deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name`, por exemplo, `-o "my org"`.
 
   5. Em <var class="keyword varname">your_new_directory</var>, reimplemente seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `bluemix app push`. Para obter mais informações sobre o comando `bx app push`, veja [Fazendo upload de seu aplicativo](/docs/starters/upload_app.html).
 
