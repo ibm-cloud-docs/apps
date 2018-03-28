@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,17 +12,21 @@ lastupdated: "2018-01-18"
 # Cómo añadir un servicio a la app
 {: #add_service}
 
-Para añadir un servicio a su aplicación, solicite una instancia del servicio y configure la aplicación para que interactúe con el servicio.
+Si ha creado un proyecto utilizando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general del proyecto. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su proyecto.
 {: shortdesc}
+
+Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso al proyecto de la página de visión general del proyecto. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}.
+
+##Descubrimiento de servicios
+{: #discover_services}
 
 Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} de las maneras siguientes:
 
-* Desde la consola de {{site.data.keyword.Bluemix_notm}}. Consulte el Catálogo de {{site.data.keyword.Bluemix_notm}}.
-* Desde la interfaz de línea de mandatos bluemix. Utilice el mandato **bluemix service offerings**.
+* Desde la consola de {{site.data.keyword.Bluemix_notm}}. Visualice el catálogo de {{site.data.keyword.Bluemix_notm}}.
+* Desde la interfaz de línea de mandatos bluemix. Utilice el mandato `bluemix service offerings`.
 * Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Puede seleccionar el servicio que necesita cuando desarrolla app. En la selección,
-{{site.data.keyword.Bluemix_notm}} plan del servicio interactúa con el servicio y realiza los pasos necesarios para suministrar los recursos al servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
+Puede seleccionar el servicio que necesita cuando desarrolla app. Una vez seleccionado, {{site.data.keyword.Bluemix_notm}} interactúa con el servicio y realiza los pasos necesarios para suministrar los recursos del servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
 
 {{site.data.keyword.Bluemix_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre app web.
 
@@ -31,31 +35,29 @@ También puede utilizar servicios que estén alojados en otras regiones si estos
 ## Solicitud de una nueva instancia de servicio
 {: #req_instance}
 
-Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos
-bluemix.
+Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser erróneos.
 
 Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. En el **Catálogo** de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico correspondiente al servicio que desea añadir. Se abre la página de detalles del servicio.
+1. En el catálogo de {{site.data.keyword.Bluemix_notm}}, pulse en el mosaico del servicio que desea añadir. Se abre la página de detalles del servicio.
 
-2. Especifique un nombre en el campo **Nombre de servicio**. Se proporciona un nombre de servicio predeterminado. Puede modificar el nombre en el campo o dejarlo tal cual.
+2. Especifique un nombre en el campo **Nombre de servicio**. Se proporciona un nombre predeterminado. Puede modificar el nombre en el campo o dejarlo tal cual.
 
-3. Rellene los otros campos o selecciones y, a continuación, pulse **CREAR**.
+3. Cumplimente más campos o selecciones y, a continuación, pulse **CREAR**.
 
-Si utiliza la interfaz de línea de mandatos bluemix para solicitar una instancia de servicio, siga los siguientes pasos:
+Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. Utilice el mandato **bluemix service offerings** para encontrar el nombre y el plan del servicio que necesita.
+1. Utilice el mandato `bluemix service offerings` para encontrar el nombre y el plan del servicio que necesita.
 
-2. Utilice el mandato siguiente para crear una instancia de servicio, done nombre_servicio es el nombre del servicio, plan_servicio es el plan del servicio e
-instancia_servicio es el nombre que desea utilizar para esta instancia de servicio.
+2. Utilice el mandato siguiente para crear una instancia de servicio, done service_name es el nombre del servicio, service_plan es el plan del servicio y service_instance es el nombre que desea utilizar para esta instancia de servicio.
 
 ```
 bluemix service create service_name service_plan service_instance
 ```
 
-3. Utilice el siguiente mandato para enlazar una instancia de servicio a una aplicación, donde nombre_app es el nombre de la aplicación e instancia_servicio es el nombre de la instancia de servicio.
+3. Utilice el siguiente mandato para enlazar una instancia de servicio a una aplicación, donde *appname* es el nombre de la aplicación y service_instance es el nombre de la instancia de servicio.
 
 ```
 bluemix service bind appname service_instance
@@ -75,7 +77,7 @@ Cada servicio puede requerir un mecanismo diferente para comunicarse con las apl
 * Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
 * Para interactuar con app web o código en la nube del servidor para app móviles, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
 
-Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte el tema de resolución de problemas [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_topmenubar).
+Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte el tema de resolución de problemas [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
 
 ## Habilitación de apps externas
 {: #accser_external}
@@ -128,8 +130,8 @@ Los siguientes servicios proporcionan claves de servicio que puede utilizar de f
 Para habilitar una app externa o una herramienta de terceros para que utilice un servicio {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
 1. Solicite una instancia del servicio.
-    1. En el Panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pulse **Crear recurso**. Se visualiza el Catálogo.
-    2. En el Catálogo, seleccione el servicio que desee pulsando el mosaico del servicio. Se abre la página de detalles del servicio.
+    1. En el Panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pulse **Crear recurso**. Se visualiza el catálogo.
+    2. En el catálogo, seleccione el servicio que desee pulsando el mosaico del servicio. Se abre la página de detalles del servicio.
     3. En la ventana de servicio, deje la selección de lista predeterminada **Conectar a:** como **Dejar sin enlazar**. Esta selección significa que el servicio no se conecta a una app de {{site.data.keyword.Bluemix_notm}}.
     4. Realice las selecciones que necesite. A continuación, pulse en **Crear**. Se creará una instancia de servicio y se mostrará el Panel de control del servicio.
 2. En el Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Seleccione un conjunto de credenciales y pulse **Ver credenciales** en la columna de acciones. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
@@ -141,12 +143,12 @@ La aplicación que se ejecuta fuera de {{site.data.keyword.Bluemix_notm}} ahora 
 ## Creación de una instancia del servicio proporcionada por el usuario
 {: #user_provide_services}
 
-Es posible que tenga recursos gestionados fuera de {{site.data.keyword.Bluemix_notm}}. Si tiene credenciales para acceder a estos recursos externos desde Internet, puede crear instancias de servicio proporcionadas por el usuario de {{site.data.keyword.Bluemix_notm}} para representar y comunicarse con los recursos externos.
+Es posible que tenga servicios gestionados fuera de {{site.data.keyword.Bluemix_notm}}. Si tiene credenciales para acceder a estos servicios externos desde Internet, puede crear instancias de servicio proporcionadas por el usuario de {{site.data.keyword.Bluemix_notm}} para representar y comunicarse con los servicios externos.
 
 Para crear una instancia de servicio proporcionada por el usuario y enlazarla a una aplicación, siga los pasos siguientes:
 
-1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato **bluemix service user-provided-create**:
-    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos bx le solicitará de uno en uno cada parámetro. Por ejemplo:
+1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato `bluemix service user-provided-create`:
+    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos `bx` le solicitará de uno en uno cada parámetro. Por ejemplo:
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -158,7 +160,7 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción **-l** y especifique el destino que proporciona el software de gestión de registro del otro proveedor. Por ejemplo:
+    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l` y especifique el destino que proporciona el software de gestión de registro del otro proveedor. Por ejemplo:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -166,9 +168,9 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato **bluemix service user-provided-update**.
+    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato `bluemix service user-provided-update`.
 
-    * Para actualizar una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y especifique las claves y valores de parámetros en un objeto json. Por ejemplo:
+    * Para actualizar una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y especifique las claves y valores de parámetros en un objeto JSON. Por ejemplo:
 
         ```
         bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -176,7 +178,7 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción -l. Por ejemplo:
+    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l`. Por ejemplo:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -192,4 +194,4 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
 	OK
 	```
 
-Ahora puede configurar la aplicación para que utilice recursos externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](#config){: new_window}.
+Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](#config){: new_window}.

@@ -1,58 +1,56 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Protección de apps
-{: #securingapps}
-
+# Creación de solicitudes de firma de certificado
+{: #ssl_csr}
 
 Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
-## Creación de solicitudes de firma de certificado
-{: #ssl_csr}
-
-Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe
-crear una solicitud de firma de certificado (CSR) en el servidor.
+Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe crear una solicitud de firma de certificado (CSR) en el servidor.
 
 Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
 y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública,
 así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
 sólo están aceptadas con una longitud de claves CSR de 2048 bits.
 
+## Información necesaria
+
 Para que la CSR sea válida, se debe especificar la siguiente información al generar la CSR:
 
-#### Nombre de país
+### Nombre de país
 
   Un código de dos dígitos que representa el país o la región. Por ejemplo, "US" representa los Estados Unidos. Para otros países o regiones, consulte la [lista de códigos de países ISO ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.iso.org/obp/ui/#search){:new_window} antes de crear la CSR.
 
-#### Estado o provincia
+### Estado o provincia
 
   El nombre completo no abreviado del estado o de la provincia.
 
-#### Localidad
+### Localidad
 
   El nombre completo del pueblo o ciudad.
 
-#### Organización
+### Organización
 
   El nombre completo de la empresa, como esté registrada legalmente en su localidad, o el nombre personal. Para las empresas, asegúrese de incluir el sufijo de registro, como por ejemplo Ltd., Inc. o NV.
 
-#### Unidad organizativa
+### Unidad organizativa
 
   Nombre de la rama de su empresa que está pidiendo el certificado, como por ejemplo Contabilidad o
 Marketing.
 
-#### Nombre común
+### Nombre común
 
   Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.
 
@@ -64,7 +62,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
 
-**Nota:** La implementación SHA-512 de OpenSSL depende del soporte del compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
+La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
+{: tip}
 
 Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública.
 
@@ -76,7 +75,7 @@ Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunica
 Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario de cuenta que tenga un plan de tipo Pague según uso o un plan de suscripción, tiene derecho a cuatro cargas de certificado. Por cada organización con un propietario de cuenta que tenga una cuenta de prueba gratuita, debe actualizar su cuenta para cargar un certificado.
 
 Para poder cargar los certificados, debe crear una
-solicitud de firma de certificado. Consulte [Creación de solicitudes de firma de certificado](#ssl_csr).
+solicitud de firma de certificado.
 
 Cuando utiliza un dominio personalizado, para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.Bluemix_notm}}:
 
@@ -146,4 +145,4 @@ protege mediante una contraseña.
 	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios** para sustituir o reemplazar un certificado para un dominio personalizado.
+Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios**.

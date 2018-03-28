@@ -2,50 +2,70 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
 
-# Creación de apps en {{site.data.keyword.Bluemix_notm}}
+# Guía de aprendizaje de iniciación
 {: #create}
 
-En {{site.data.keyword.Bluemix}}, puede crear aplicaciones web y móviles a nivel de empresa y aprovechar las extensiones de nube alojadas por {{site.data.keyword.Bluemix_notm}}. Puede utilizar la consola de {{site.data.keyword.Bluemix}} y las herramientas de línea de mandatos para crear, ejecutar y desplegar las apps. Para empezar, puede seguir este caso de ejemplo completo de desarrollo.
+En {{site.data.keyword.Bluemix}}, puede crear aplicaciones web y móviles a nivel de empresa y aprovechar las extensiones de nube alojadas por {{site.data.keyword.Bluemix_notm}}. Puede utilizar la consola de {{site.data.keyword.Bluemix}} y las herramientas de línea de mandatos para crear, ejecutar y desplegar las apps. Puede empezar de dos formas: creando un proyecto con un kit de iniciación que gestiona el proceso en su nombre, o si conoce exactamente lo que necesita, compilando su app con los recursos que necesite.
+{:shortdesc}
 
-## Paso 1: Registrarse para una cuenta de {{site.data.keyword.Bluemix_notm}}
-{: #sign-up}
+Utilice un kit de iniciación para empezar rápidamente su app y prepárela para el futuro desarrollo. Elija un kit de iniciación y un lenguaje de programación, cree un proyecto y, a continuación, descargue el código para una inspección inmediata. También puede crear una cadena de herramientas de DevOps en la que desplegar la app rápidamente.
 
-Vaya a [bluemix.net](bluemix.net). Escriba su correo electrónico, nombre, empresa, región, número de teléfono y ya habrá acabado. No necesita una tarjeta de crédito para registrarse para una cuenta gratuita. No dude en mirarlo todo.
+Los kits de iniciación están disponibles para muchas categoría, entre otras:
 
-## Paso 2: Buscar a través del catálogo
-{: #catalog}
+* [Watson](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Móvil](https://console.bluemix.net/developer/mobile){:new_window}
+* [App web](https://console.bluemix.net/developer/appservice){:new_window}
+* [Seguridad](https://console.bluemix.net/developer/security){:new_window}
+<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
+* [Finanzas](https://console.bluemix.net/developer/finance){:new_window}
 
-El catálogo de {{site.data.keyword.Bluemix_notm}} lista los recursos de infraestructura y de plataforma que ofrece. Puede empezar a crear su app seleccionando una máquina virtual, un contenedor, o Cloudant, una app de Cloud Foundry. Si necesita recursos de plataforma, {{site.data.keyword.Bluemix_notm}} también ofrece contenedores modelo, que proporcionan ejecución y otros servicios para ayudar a empezar la creación.
+## Antes de empezar
 
-## Paso 3: Crear un recurso
-{: #resource}
+[Regístrese](https://console.bluemix.net){: new_window} para una cuenta de {{site.data.keyword.cloud_notm}}. Especifique su correo electrónico, nombre, empresa, región, y número de teléfono.
 
-1. En el [panel de control](https://console.bluemix.net/dashboard/apps/), pulse **Crear recurso**.
+No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gratuita, sin embargo, si especifica una tarjeta de crédito tendrá acceso a más recursos y facilitará la compresión completa de todo lo que {{site.data.keyword.cloud_notm}} tiene que ofrecer.
 
-2. Desde el catálogo, seleccione una app desde la sección Plataforma. A continuación, elija su ejecución. Por ejemplo, puede elegir un entorno de ejecución de IBM, como Liberty for Java, que están soportados por los paquetes de compilación de IBM. También puede elegir ejecuciones de Comunidad, como Tomcat, que se basan en paquetes de compilación de código abierto y de terceros.
+## Paso 1: Crear un proyecto
+{: #project}
 
-  * [Iniciación a Containers](../containers/container_index.html)
-  * [Iniciación a Openwhisk](../openwhisk/index.html)
-  * [Creación de apps de Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
+1. Pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) > **Apps web**.
 
-3. Especifique el nombre de la app, el nombre de host y elija su plan de precios.
+2. Pulse **Iniciación** en la sección **Empezar desde web**.
 
-4. Seleccione el estilo de desarrollo. Puede editar la app en el editor de texto que prefiera y utilizar la línea de mandatos de {{site.data.keyword.Bluemix_notm}} para desplegarla en {{site.data.keyword.Bluemix_notm}}. También puede utilizar {{site.data.keyword.Bluemix_notm}} DevOps Services para desplegar la aplicación desde un navegador o utilizar Eclipse Tools for {{site.data.keyword.Bluemix_notm}} para trabajar en aplicaciones en el entorno de desarrollo integrado de Eclipse.
+3. Seleccione el kit de iniciación que desee, lea los detalles y pulse **Crear proyecto**.
 
-## Paso 4: Empezar añadiendo código
-{: #code}
+  Para ver lo que se incluye en el kit de iniciación, expanda el mosaico en el panel de control de Kits de iniciación de App Service.
+  {: tip}
 
-Cada app viene con una sección de iniciación que le ayuda a obtener todo el software y el contenido que necesita para empezar a trabajar.
+4. Dele un nombre al proyecto, seleccione su lenguaje y pulse **Crear proyecto**.
 
-En el panel de control, pulse la app y, a continuación, pulse **Iniciación**, que puede ayudarle a obtener el software que necesitará para desarrollar su app, apuntarle hacia el código fuente y ayudarle a desplegar la app por primera vez.
+Acaba de crear una app.
 
-## Pasos siguientes
-{: #next}
+Para inspeccionar el código, pulse **Descargar código** en la página de detalles del proyecto. Compruebe el archivo `README.md` en el archivo comprimido descargado para averiguar si es necesario realizar algo más para ejecutar su app de inicio.
+{: tip}
 
-Una vez que se haya desarrollado su app, utilice nuestras guías [mejores prácticas](best-practice.html) y [disposición de nube](cloud-ready.html) para asegurarse de que la app está lista para {{site.data.keyword.Bluemix_notm}}. A continuación, [despliegue](../starters/install_cli.html) la app.
+## Paso 2: Añadir recursos
+{: #addResources}
+
+La mayoría de los kits de iniciación indican a {{site.data.keyword.cloud_notm}} iniciar de forma automática el suministro de recursos en su nombre. También es posible asociar más recursos a su app pulsando **Añadir recurso** en la página de detalles del proyecto.
+
+Para desarrollar y ejecutar la app de forma local, utilice [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
+{: tip}
+
+## Paso 3: Desplegar en {{site.data.keyword.cloud_notm}}
+{: #deploy}
+
+Pulse **Desplegar en la nube** en la página de detalles del proyecto, seleccione un método de despliegue (por ejemplo, clúster de Kubernetes o app de Cloud Foundry) y, a continuación, pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua. Visualice el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos en ejecución su nueva app.
+
+Estará ahora preparado para el desarrollo iterativo y la entrega continua.
