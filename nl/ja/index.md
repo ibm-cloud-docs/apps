@@ -2,50 +2,69 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
 
-# {{site.data.keyword.Bluemix_notm}} でのアプリの作成
+# 概説チュートリアル
 {: #create}
 
-{{site.data.keyword.Bluemix}} では、エンタープライズレベルのモバイル・アプリケーションおよび Web アプリケーションを作成し、{{site.data.keyword.Bluemix_notm}} でホストされているクラウド拡張機能を利用できます。 アプリを作成、実行、およびデプロイするには、{{site.data.keyword.Bluemix}} コンソールおよびコマンド・ライン・ツールを使用できます。 このエンドツーエンド開発シナリオに従って作業を開始してください。
+{{site.data.keyword.Bluemix}} では、エンタープライズレベルのモバイル・アプリケーションおよび Web アプリケーションを作成し、{{site.data.keyword.Bluemix_notm}} でホストされているクラウド拡張機能を利用できます。 アプリを作成、実行、およびデプロイするには、{{site.data.keyword.Bluemix}} コンソールおよびコマンド・ライン・ツールを使用できます。 開始するには、プロセスを管理するスターター・キットを使用してプロジェクトを作成するか、欲しいものが分かっている場合は必要なリソースを使用してアプリをビルドするかの 2 つの方法のいずれかを実行します。
+{:shortdesc}
 
-## ステップ 1: {{site.data.keyword.Bluemix_notm}} アカウントの登録
-{: #sign-up}
+スターター・キットを使用して、アプリを素早く開始し、今後の開発に備えることができます。スターター・キットとプログラミング言語を選択し、プロジェクトを作成してから、即時検査用のコードをダウンロードします。また、DevOps ツールチェーンを作成して、アプリを素早くデプロイすることができます。
 
-[bluemix.net](bluemix.net) にアクセスします。 E メール、名前、会社、地域、電話番号を入力すれば完了です。 無料アカウントの登録では、クレジット・カードは必要ありません。 ご自由にお試しください。
+スターター・キットは、以下の多くのカテゴリーで使用可能です。
 
-## ステップ 2: カタログの確認
-{: #catalog}
+* [Watson](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [モバイル](https://console.bluemix.net/developer/mobile){:new_window}
+* [Web アプリ](https://console.bluemix.net/developer/appservice){:new_window}
+* [セキュリティー](https://console.bluemix.net/developer/security){:new_window}
+<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
+* [金融](https://console.bluemix.net/developer/finance){:new_window}
 
-{{site.data.keyword.Bluemix_notm}} カタログには、提供されているインフラストラクチャーおよびプラットフォームのリソースがリストされています。 仮想マシン、コンテナー、または Cloudant、および Cloud Foundry アプリを選択して、自分のアプリの作成を開始できます。 プラットフォーム・リソースが必要な場合、{{site.data.keyword.Bluemix_notm}} には、作成の開始を支援するためのランタイムやその他のサービスを提供するボイラープレートも用意されています。
+## 始める前に
 
-## ステップ 3: リソースの作成
-{: #resource}
+{{site.data.keyword.cloud_notm}} アカウントに[登録](https://console.bluemix.net){: new_window}します。E メール、名前、会社、地域、電話番号を入力します。
 
-1. [ダッシュボード](https://console.bluemix.net/dashboard/apps/)で**「リソースの作成」**をクリックします。
+無料アカウントの登録にクレジット・カードは必要ありませんが、クレジット・カードを入力すると、より多くのリソースへのアクセスが可能になり、{{site.data.keyword.cloud_notm}} で提供されるすべてのものを十分に理解しやすくなります。
 
-2. カタログで、「プラットフォーム」セクションからアプリを選択します。 次にランタイムを選択します。 例えば、IBM ビルドパックによってサポートされている、Liberty for Java などの IBM ランタイム環境を選択できます。 また、オープン・ソースとサード・パーティーのビルドパックに依存する、Tomcat などのコミュニティー・ランタイムも選択できます。
+## ステップ 1: プロジェクトの作成
+{: #project}
 
-  * [コンテナーの概説](../containers/container_index.html)
-  * [Openwhisk の概説](../openwhisk/index.html)
-  * [Cloud Foundry アプリの作成](../cfapps/index.html#creating_cloud_foundry_apps)
+1. **メニュー**・アイコン![メニュー・アイコン](../icons/icon_hamburger.svg) > **「Web アプリ」**をクリックします。
 
-3. アプリ名とホスト名を入力し、価格設定プランを選択します。
+2. **「Web から開始 (Start from the Web)」**セクションで**「開始」**をクリックします。
 
-4. 開発スタイルを選択します。 好みのテキスト・エディターでアプリを編集し、{{site.data.keyword.Bluemix_notm}} コマンド・ラインを使用してそのアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできます。 また、{{site.data.keyword.Bluemix_notm}} DevOps Services を使用してブラウザーからアプリケーションをデプロイしたり、Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用して Eclipse 統合開発環境でアプリケーションの作業を行うこともできます。
+3. 任意のスターター・キットを選択し、詳細を読み、**「プロジェクトの作成 (Create project)」**をクリックします。
 
-## ステップ 4: コードの追加の開始
-{: #code}
+  スターター・キットに含まれる内容を表示するには、アプリ・サービス・スターター・キットのダッシュボード上のタイルを展開します。{: tip}
 
-各アプリには、作業を開始するために必要なすべてのソフトウェアとコンテンツの取得に役立つ「開始」セクションが備えられています。
+4. プロジェクトに名前を付け、言語を選択して、**「プロジェクトの作成 (Create Project)」**をクリックします。
 
-ダッシュボードでアプリをクリックし、次に**「開始」**をクリックします。これは、アプリの開発に必要なソフトウェアの取得を助け、ソース・コードを示し、ユーザーが初めてアプリをデプロイするのを支援します。
+素晴らしいスタートです。これでアプリが作成されました。
 
-## 次のステップ
-{: #next}
+コードを検査するには、プロジェクトの詳細ページで**「コードのダウンロード (Download Code)」**をクリックします。ダウンロードした圧縮ファイルの中の `README.md` を参照して、スターター・アプリを実行するためにさらに操作が必要かどうかを確認します。
+{: tip}
 
-アプリが開発されたら、[ベスト・プラクティス](best-practice.html)と[クラウド対応](cloud-ready.html)のガイドを使用して、アプリの {{site.data.keyword.Bluemix_notm}} へのデプロイ準備ができていることを確認してください。 その後にアプリを[デプロイ](../starters/install_cli.html)します。
+## ステップ 2: リソースの追加
+{: #addResources}
+
+ほとんどのスターター・キットは、自動的にリソースをプロビジョンするよう {{site.data.keyword.cloud_notm}} に指示します。プロジェクトの詳細ページの**「リソースの追加」**をクリックして、さらにリソースをアプリに関連付けることもできます。
+
+アプリをローカルで開発および実行するには、[{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)を使用します。
+{: tip}
+
+## ステップ 3: {{site.data.keyword.cloud_notm}} へのデプロイ
+{: #deploy}
+
+プロジェクトの詳細ページで**「クラウドにデプロイ (Deploy to Cloud)」**をクリックし、デプロイメント方式 (例えば、Kubernetes クラスターや Cloud Foundry アプリ) を選択して、**「作成」**をクリックします。{{site.data.keyword.cloud_notm}} は、Git リポジトリーと継続的なデリバリー・パイプラインを備えたオープン・ツールチェーンを自動的に作成します。新しいツールチェーンのパイプライン・コンポーネントを表示して最初のビルドとデプロイのプロセスを開始すると、数分後には新しいアプリが実行されているのを見ることができます。
+
+これで、反復型開発と継続的デリバリーのための設定ができました。

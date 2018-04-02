@@ -1,31 +1,39 @@
 ---
-
 copyright:
 
-  years: 2015，2017, 2018
+  years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-17"
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:prereq: .prereq}
-{:download: .download}
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}  
+{:screen: .screen}  
+{:codeblock: .codeblock}  
 {:pre: .pre}
-{:app_name: data-hd-keyref="app_name"}
-{:app_key: data-hd-keyref="app_key"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:host: data-hd-keyref="host"}
-{:org_name: data-hd-keyref="org_name"}
-{:route: data-hd-keyref="route"}
-{:space_name: data-hd-keyref="space_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:user_ID: data-hd-keyref="user_ID"}
+{:tip: .tip}
 
-# コマンド・ライン・インターフェースを使用したアプリのデプロイ
+# アプリのデプロイ
+{: #deploy}
+
+アプリは、ツールチェーンやコマンド・ライン・インターフェースを使用してデプロイできます。ツールチェーンは、ツール統合の集合です。 コマンド・ライン・インターフェースは、アプリとサービス・インスタンスをデプロイするための簡単な方法です。
+{: shortdesc}
+
+## ツールチェーンを使用したアプリのデプロイ
+{: #toolchains_getting_started}
+
+オープン・ツールチェーンは、{{site.data.keyword.Bluemix}} の Public 環境および Dedicated 環境で使用可能です。ツールチェーンの作成方法には、テンプレートを使用した作成と、アプリからの作成の 2 とおりの方法があります。ツールチェーンについて詳しくは、[ツールチェーンの作成](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)を参照してください。
+
+適切に構成されたツールチェーンを使用する場合、アプリのデプロイは非常に簡単です。リポジトリー内のマスター・ブランチへのマージが行われるたびに、ビルドおよびデプロイのサイクルが自動的に開始されます。
+
+{{site.data.keyword.Bluemix}} 開発者ダッシュボードから作成されるツールチェーンは、すべて自動デプロイメント用に構成されます。
+{: tip}
+
+## コマンド・ライン・インターフェースを使用したアプリのデプロイ
+{: #cli}
+
+IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグインおよび開発者ツール拡張機能も提供します。
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを使用して、アプリおよびサービス・インスタンスをデプロイします。
 {:shortdesc}
@@ -43,13 +51,13 @@ lastupdated: "2018-03-16"
 
   1. {: download} 開発環境をセットアップするため、アプリのコードを新規ディレクトリーにダウンロードします。
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_starter-code.svg" alt="アプリケーション・コードのダウンロード" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開く)"></a>
 
   2. コードが置かれているディレクトリーに移動します。
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  適切なアプリ・コードを変更します。 例えば、{{site.data.keyword.Bluemix}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。 アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
+  3.  アプリ・コードを変更します。例えば、{{site.data.keyword.Bluemix_notm}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。 アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
 
     `manifest.yml` ファイルをメモします。 アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、およびその他の重要なパラメーターを判別します。
 
@@ -67,7 +75,7 @@ lastupdated: "2018-03-16"
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **注**: `username`、`org_name`、および `space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
+  **注**: `username`、`org_name`、`space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
 
   5. `bluemix app push` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。 `bx app push` コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
 

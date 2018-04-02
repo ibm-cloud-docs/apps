@@ -7,34 +7,53 @@
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
+    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     アプリの開発
-        [Eclipse ツールを使用した開発](../starters/deploy_eclipsetools.html)
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_custom.md
+        tutorials/tutorial_mobile.md
 
-    {: .topicgroup}
-    アプリの開発
-        install_cli.md
-        ../starters/upload_app.md
-
+    dep-app-tool.md
     reqnsi.md
+    mngapps.md
+    updapps.md
+    secapps.md
+    building-apps.md
     hosting.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud Developer Tools コマンド・ラインのリファレンス](https://console.bluemix.net/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    アプリの管理
-        mngapps.md
-        updapps.md
+    IBM Cloud 開発者ダッシュボード
+        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
+        [金融](https://console.bluemix.net/developer/finance/dashboard)
+        [モバイル](https://console.bluemix.net/developer/mobile/dashboard)
+        [セキュリティー](https://console.bluemix.net/developer/security/dashboard)
+        [Watson](https://console.bluemix.net/developer/watson/dashboard)
+        [Web アプリ](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    アプリの保護
-        overview.md
-        secapps.md
-        deployment.md
+    プロジェクト・コンテンツ
+        projects/compose_file.md
+        projects/java_project_contents.md
+        projects/node_project_contents.md
+        projects/python_project_contents.md
+        projects/swift_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [アプリの管理に関するトラブルシューティング](../troubleshoot/ts_apps.html)
+    ../troubleshoot/ts_createapps.md
+    ../troubleshoot/ts_apps.md
+    [IBM Cloud Slack 開発者ツール・チャネル](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [スタック・オーバーフロー](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
