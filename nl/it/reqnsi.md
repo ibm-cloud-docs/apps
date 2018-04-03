@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,18 +12,23 @@ lastupdated: "2018-01-18"
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
 
-Per aggiungere un servizio alla tua applicazione, richiedi un'istanza del servizio e configura l'applicazione in modo che interagisca con il servizio.
+Se hai creato un progetto utilizzando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto una possibilità di aggiungere le risorse dalla pagina della panoramica del progetto. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto del tuo progetto.
 {: shortdesc}
+
+Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa al tuo progetto dalla pagina della panoramica del progetto. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}. 
+
+##Rilevamento servizi 
+{: #discover_services}
 
 Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.Bluemix_notm}}
 nei seguenti modi:
 
-* Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
-* Dall'interfaccia della riga di comando Bluemix. Utilizza il comando **bluemix service offerings**.
+* Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}. 
+* Dall'interfaccia della riga di comando Bluemix. Utilizza il comando `bluemix service offerings`.
 * Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Dopo la tua selezione, {{site.data.keyword.Bluemix_notm}} interagisce con il servizio ed
-effettua le operazioni necessarie per eseguire il provisioning delle risorse del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
+Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Dopo averlo selezionato, {{site.data.keyword.Bluemix_notm}} interagisce con il servizio ed
+effettua le operazioni necessarie per eseguire il provisioning dei servizi del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione.
 
 {{site.data.keyword.Bluemix_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le
@@ -37,22 +42,22 @@ esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyw
 ## Richiesta di una nuova istanza del servizio
 {: #req_instance}
 
-Per richiedere una nuova istanza del servizio, devi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando bluemix.
+Per richiedere una nuova istanza del servizio, devi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}}.
 
 **Nota:** quando specifichi il nome servizio, evita di utilizzare caratteri che non siano alfabetici o numerici; in caso contrario, i risultati potrebbero essere imprevedibili.
 
 Se utilizzi l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
 per richiedere un'istanza del servizio, completa la seguente procedura:
 
-1. Nel {{site.data.keyword.Bluemix_notm}} **Catalogo**, fai clic sul tile per il servizio che vuoi aggiungere. Viene visualizzata la pagina dei dettagli.
+1. Nel catalogo {{site.data.keyword.Bluemix_notm}}, fai clic sul tile del servizio che desideri aggiungere. Viene visualizzata la pagina dei dettagli.
 
-2. Immetti un nome nel campo **Nome servizio**. Viene fornito un nome servizio predefinito. Puoi modificare il nome nel campo o lasciarlo invariato.
+2. Immetti un nome nel campo **Nome servizio**. Viene fornito un nome predefinito. Puoi modificare il nome nel campo o lasciarlo invariato.
 
-3. Completa le selezioni o i campi aggiuntivi e fai quindi clic su **CREA**.
+3. Completa le selezioni o i campi aggiuntivi e fai quindi clic su **CREA**. 
 
-Se utilizzi l'interfaccia della riga di comando bluemix per richiedere un'istanza del servizio, completa la seguente procedura:
+Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
 
-1. Utilizza il comando **bluemix service offerings** per trovare il nome e il piano del servizio di cui hai bisogno.
+1. Utilizza il comando `bluemix service offerings`**` per trovare il nome e il piano del servizio di cui hai bisogno.
 
 2. Utilizza il seguente comando per creare un'istanza del servizio, dove nome_servizio è il nome del servizio, piano_servizio è il piano del servizio e istanza_servizio è il nome da utilizzare per questa istanza del servizio.
 
@@ -60,7 +65,7 @@ Se utilizzi l'interfaccia della riga di comando bluemix per richiedere un'istanz
 bluemix service create nome_servizio piano_servizio istanza_servizio
 ```
 
-3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove nome_applicazione è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
+3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove *appname* è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
 
 ```
 bluemix service bind appname istanza_servizio
@@ -96,7 +101,7 @@ diversi servizi. Potresti dover leggere la documentazione del servizio in merito
 e come interpretare ogni elemento di informazione.
 
 Se si verifica un arresto anomalo di un servizio di cui esegui il bind a un'applicazione,
-l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi l'argomento di risoluzione dei problemi relativo al fatto che [le applicazioni non verranno riavviate automaticamente](/docs/troubleshoot/ts_apps.html#ts_topmenubar).
+l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi l'argomento di risoluzione dei problemi relativo al fatto che [le applicazioni non verranno riavviate automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
 
 ## Abilitazione di applicazioni esterne
 {: #accser_external}
@@ -152,9 +157,9 @@ a utilizzare un servizio {{site.data.keyword.Bluemix_notm}},
 completa la seguente procedura:
 
 1. Richiedi un'istanza del servizio.
-    1. Nel Dashboard dell'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, fai clic su **Crea risorsa**. Viene visualizzato il Catalogo.
-    2. Dal Catalogo, seleziona il servizio che vuoi facendo clic sul relativo tile. Viene visualizzata la pagina dei dettagli.
-    3. Nella finestra del servizio, lascia la selezione predefinita dell'elenco **Connetti a:**: su **Lascia senza binding**. Questa selezione significa che il servizio non viene connesso a un'applicazione {{site.data.keyword.Bluemix_notm}}.
+    1. Nel Dashboard dell'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, fai clic su **Crea risorsa**. Viene visualizzato il catalogo. 
+    2. Dal catalogo, seleziona il servizio che vuoi facendo clic sul relativo tile. Viene visualizzata la pagina dei dettagli.
+    3. Nella finestra del servizio, lascia la selezione predefinita dell'elenco **Connetti a:**: su **Lascia senza binding**. Questa selezione significa che il servizio non viene connesso a un'applicazione {{site.data.keyword.Bluemix_notm}}. 
     4. Opera le altre selezioni come necessario. Quindi, fai clic su **Crea**. Viene creata un'istanza del servizio e viene visualizzato il dashboard del servizio.
 2. Nel Dashboard del servizio, puoi selezionare **Credenziali del servizio** per visualizzare o aggiungere credenziali in formato JSON. Seleziona un insieme di credenziali e fai clic su **Visualizza credenziali** nella colonna Azioni. Utilizza la chiave API visualizzata come credenziali per stabilire una
 connessione all'istanza del servizio.
@@ -167,13 +172,13 @@ ora accedere al servizio {{site.data.keyword.Bluemix_notm}}.
 ## Creazione di un'istanza del servizio fornito dall'utente
 {: #user_provide_services}
 
-Puoi avere delle risorse che sono gestite esternamente a {{site.data.keyword.Bluemix_notm}}. Se hai delle credenziali per accedere a queste risorse esterne da Internet, puoi creare delle istanze del servizio fornito dall'utente {{site.data.keyword.Bluemix_notm}} per rappresentare le risorse esterne e comunicare con esse.
+Puoi avere dei servizi che sono gestiti esternamente a {{site.data.keyword.Bluemix_notm}}. Se hai delle credenziali per accedere a questi servizi esterni da internet, puoi creare delle istanze del servizio fornito dall'utente {{site.data.keyword.Bluemix_notm}} per rappresentare le risorse esterne e comunicare con esse. 
 
 Per creare un'istanza del servizio fornito dall'utente ed eseguirne il bind a un'applicazione, completa la seguente procedura:
 
-1. Crea un'istanza del servizio fornito dall'utente utilizzando il comando **bluemix service user-provided-create**:
+1. Crea un'istanza del servizio fornito dall'utente utilizzando il comando `bluemix service user-provided-create`:
     * Per creare un'istanza del servizio fornito dall'utente generale, utilizza l'opzione **-p** e
-separa i nomi parametro con delle virgole. L'interfaccia della riga di comando bx ti richiede quindi ciascun parametro alla volta. Ad esempio:
+separa i nomi parametro con delle virgole. L'interfaccia della riga di comando `bx` richiede quindi ciascun parametro alla volta. Ad esempio:
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -186,7 +191,7 @@ separa i nomi parametro con delle virgole. L'interfaccia della riga di comando b
         ```
 
     * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti,
-utilizza l'opzione **-l** e specifica la destinazione fornita dal software di gestione di log di terze parti. Ad esempio:
+utilizza l'opzione `-l` e specifica la destinazione fornita dal software di gestione di log di terze parti. Ad esempio:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -194,10 +199,10 @@ utilizza l'opzione **-l** e specifica la destinazione fornita dal software di ge
         OK
         ```
 
-    Se vuoi aggiornare uno o più parametri dell'istanza del servizio fornito dall'utente, utilizza il comando **bluemix service user-provided-update**.
+    Se vuoi aggiornare uno o più parametri dell'istanza del servizio fornito dall'utente, utilizza il comando `bluemix service user-provided-update`.
 
     * Per aggiornare un'istanza del servizio fornito dall'utente, utilizza l'opzione **-p**
-e specifica le chiavi e i valori di parametro in un oggetto json. Ad esempio:
+e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
 
         ```
         bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -205,7 +210,7 @@ e specifica le chiavi e i valori di parametro in un oggetto json. Ad esempio:
         OK
         ```
 
-    * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti, utilizza l'opzione -l. Ad esempio:
+    * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti, utilizza l'opzione `-l`. Ad esempio:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -221,4 +226,4 @@ e specifica le chiavi e i valori di parametro in un oggetto json. Ad esempio:
 	OK
 	```
 
-Ora puoi configurare la tua applicazione per utilizzare le risorse esterne. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio](#config){: new_window}.
+Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio](#config){: new_window}.
