@@ -1,31 +1,39 @@
 ---
-
 copyright:
 
-  years: 2015，2017, 2018
+  years: 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-17"
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:prereq: .prereq}
-{:download: .download}
+{:new_window: target="_blank"}  
+{:shortdesc: .shortdesc}  
+{:screen: .screen}  
+{:codeblock: .codeblock}  
 {:pre: .pre}
-{:app_name: data-hd-keyref="app_name"}
-{:app_key: data-hd-keyref="app_key"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:host: data-hd-keyref="host"}
-{:org_name: data-hd-keyref="org_name"}
-{:route: data-hd-keyref="route"}
-{:space_name: data-hd-keyref="space_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:user_ID: data-hd-keyref="user_ID"}
+{:tip: .tip}
 
-# Apps mit der Befehlszeilenschnittstelle bereitstellen
+# Apps bereitstellen
+{: #deploy}
+
+Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittstelle bereitstellen. Eine Toolchain ist ein Satz von Toolintegrationen. Die Befehlszeilenschnittstelle ist eine einfache Möglichkeit, Ihre Apps und Serviceinstanzen bereitzustellen.
+{: shortdesc}
+
+## Apps mit Toolchains bereitstellen
+{: #toolchains_getting_started}
+
+Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started). 
+
+Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Zusammenführvorgang mit dem Masterzweig ihn Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst. 
+
+Alle in einem {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolchains werden für die automatische Bereitstellung konfiguriert.
+{: tip}
+
+## Apps mit der Befehlszeilenschnittstelle bereitstellen
+{: #cli}
+
+IBM Cloud bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden. 
 
 Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
 {:shortdesc}
@@ -43,13 +51,13 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   1. {: download} Laden Sie den Code für Ihre App in ein neues Verzeichnis herunter, um Ihre Entwicklungsumgebung einzurichten.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_starter-code.svg" alt="Anwendungscode herunterladen" /> </a>
+    <a class="xref" href="http://bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
 
   2. Wechseln Sie in das Verzeichnis, in dem sich Ihr Code befindet.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">neues_Verzeichnis</var></code></pre>
 
-  3.  Nehmen Sie die gewünschten Änderungen an Ihrem App-Code vor. Beispiel: Wenn Sie eine {{site.data.keyword.Bluemix}}-Beispielanwendung verwenden und Ihre App die Datei `src/main/webapp/index.html` enthält, können Sie sie ändern und den Dankestext für die Erstellung in einen anderen Text ändern. Stellen Sie sicher, dass sich die App lokal ausführen lässt, bevor sie wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
+  3.  Nehmen Sie Änderungen an Ihrem App-Code vor. Beispiel: Wenn Sie eine {{site.data.keyword.Bluemix_notm}}-Beispielanwendung verwenden und Ihre App die Datei `src/main/webapp/index.html` enthält, können Sie sie ändern und den Dankestext für die Erstellung in einen anderen Text ändern. Stellen Sie sicher, dass sich die App lokal ausführen lässt, bevor sie wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
 
     Beachten Sie die Datei `manifest.yml`. Wenn Ihre App wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, dient diese Datei zum Ermitteln der URL, der Speicherzuordnung, der Anzahl von Instanzen und anderer wichtiger Parameter für Ihre Anwendung.
 
@@ -67,7 +75,7 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
 
-  **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`. 
+  **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
 
   5. Führen Sie unter <var class="keyword varname">neues_Verzeichnis</var> mit dem Befehl `bluemix app push` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen zum Befehl `bx app push` finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
 

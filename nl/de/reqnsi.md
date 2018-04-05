@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,16 +12,21 @@ lastupdated: "2018-01-18"
 # Service zur App hinzufügen
 {: #add_service}
 
-Um einen Service für Ihre Anwendung hinzuzufügen, fordern Sie eine Instanz des Service an und konfigurieren Sie die Anwendung für die Interaktion mit dem Service.
+Wenn Sie ein Projekt mithilfe der {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} erstellt haben, hatten Sie die Möglichkeit, Ressourcen von der Projektübersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihres Projekts.
 {: shortdesc}
+
+Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der Projektübersichtseite zu Ihrem Projekt hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen. 
+
+##Services entdecken
+{: #discover_services}
 
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren Services anzuzeigen:
 
-* Über die {{site.data.keyword.Bluemix_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
-* Über die Befehlszeilenschnittstelle 'bluemix'. Verwenden Sie hier den Befehl **bluemix service offerings**.
+* Über die {{site.data.keyword.Bluemix_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an. 
+* Über die Befehlszeilenschnittstelle 'bluemix'. Verwenden Sie hier den Befehl `bluemix service offerings`.
 * Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Auf Ihre Auswahl hin interagiert {{site.data.keyword.Bluemix_notm}} mit dem Service und unternimmt die notwendigen Schritte zur Bereitstellung von Ressourcen dieses Service. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
+Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Auf Ihre Auswahl hin stellt {{site.data.keyword.Bluemix_notm}} den Service bereit. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
 
 {{site.data.keyword.Bluemix_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
 genutzt werden.
@@ -34,24 +39,24 @@ zur Verwendung von {{site.data.keyword.Bluemix_notm}}-Services codieren. Weitere
 ## Neue Serviceinstanz anfordern
 {: #req_instance}
 
-Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle 'bluemix' verwenden.
+Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden. 
 
 **Hinweis:** Bei der Angabe des Servicenamens sollten Sie nur alphabetische oder numerische Zeichen verwenden, da es sonst zu unvorhersehbaren
 Ergebnissen kommen kann.
 
 Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 
-1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-**Katalog** auf die Kachel für den Service, der hinzugefügt werden soll. Die Seite mit den Servicedetails wird geöffnet.
+1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Katalog auf die Kachel für den Service, den Sie hinzufügen möchten. Die Seite mit den Servicedetails wird geöffnet. 
 
-2. Geben Sie in das Feld **Servicename** einen Namen ein. Es wird ein Standardservicename zur Verfügung gestellt. Sie können den Namen
+2. Geben Sie in das Feld **Servicename** einen Namen ein. Es wird ein Standardname bereitgestellt. Sie können den Namen
 in dem Feld ändern oder ihn unverändert übernehmen.
 
 3. Füllen Sie ggf. weitere Felder aus bzw. treffen Sie weitere Auswahlen und klicken Sie
-anschließend auf **Erstellen**.
+anschließend auf **Erstellen**. 
 
-Wenn Sie zum Anfordern einer Serviceinstanz die Befehlszeilenschnittstelle 'bluemix' verwenden, führen Sie die folgenden Schritte durch:
+Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, führen Sie die folgenden Schritte durch: 
 
-1. Verwenden Sie den Befehl **bluemix service offerings**, um den Namen und den Plan des benötigten Service zu suchen.
+1. Verwenden Sie den Befehl `bluemix service offerings`**`, um den Namen und den Plan des benötigten Service zu suchen. 
 
 2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'service_name' der Name des Service, 'service_plan' der Plan
 des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
@@ -60,7 +65,7 @@ des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz v
 bluemix service create service_name service_plan service_instance
 ```
 
-3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist 'appname' der Name der Anwendung und 'service_instance' der Name
+3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist *appname* der Name der Anwendung und 'service_instance' der Name
 der Serviceinstanz.
 
 ```
@@ -80,7 +85,7 @@ Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen
 * Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie z. B. der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden kann.
 * Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
-Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie im Abschnitt, in dem beschrieben wird, dass [Apps nicht automatisch neu gestartet werden](/docs/troubleshoot/ts_apps.html#ts_topmenubar).
+Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie im Abschnitt, in dem beschrieben wird, dass [Apps nicht automatisch neu gestartet werden](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
 
 ## Externe Apps aktivieren
 {: #accser_external}
@@ -132,9 +137,9 @@ Die folgenden Services stellen Serviceschlüssel bereit, die Sie extern verwende
 Um einer externen App oder einem Tool eines anderen Anbieters die Verwendung eines {{site.data.keyword.Bluemix_notm}}-Service zu ermöglichen, führen Sie die folgenden Schritte durch:
 
 1. Fordern Sie eine Instanz des Service an.
-    1. Klicken Sie auf dem Dashboard in der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}} auf **Ressource erstellen**. Daraufhin wird der Katalog angezeigt.
+    1. Klicken Sie auf dem Dashboard in der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}} auf **Ressource erstellen**. Daraufhin wird der Katalog angezeigt. 
     2. Wählen Sie im Katalog den gewünschten Service aus, indem Sie auf die Kachel für den Service klicken. Die Seite mit den Servicedetails wird geöffnet.
-    3. Lassen Sie im Servicefenster für die Liste **Verbindung herstellen zu:** den Standardwert **Nicht binden** ausgewählt. Diese Auswahl bedeutet, dass keine Verbindung zwischen dem Service und einer {{site.data.keyword.Bluemix_notm}}-App hergestellt wird.
+    3. Lassen Sie im Servicefenster für die Liste **Verbindung herstellen zu:** den Standardwert **Nicht binden** ausgewählt. Diese Auswahl bedeutet, dass keine Verbindung zwischen dem Service und einer {{site.data.keyword.Bluemix_notm}}-App hergestellt wird. 
     4. Wählen Sie die anderen Optionen je nach Bedarf entsprechend aus. Klicken Sie anschließend auf **Erstellen**. Es wird eine Serviceinstanz erstellt und das Service-Dashboard wird angezeigt.
 2. Im Service-Dashboard können Sie die Option **Serviceberechtigungsnachweise** auswählen, um Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Wählen Sie eine Reihe von Berechtigungsnachweisen aus und klicken Sie in der Spalte 'Aktionen' auf **Berechtigungsnachweise anzeigen**. Verwenden Sie den angezeigten API-Schlüssel als Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
 
@@ -145,12 +150,12 @@ Ihre Anwendung, die außerhalb von {{site.data.keyword.Bluemix_notm}} ausgeführ
 ## Vom Benutzer zur Verfügung gestellte Serviceinstanz erstellen
 {: #user_provide_services}
 
-Sie verfügen möglicherweise über Ressourcen, die außerhalb von {{site.data.keyword.Bluemix_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Ressourcen über das Internet verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.Bluemix_notm}}-Serviceinstanzen erstellen, die Ihre externen Ressourcen darstellen und die Kommunikation mit diesen Ressourcen ermöglichen.
+Sie verfügen möglicherweise über Services, die außerhalb von {{site.data.keyword.Bluemix_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Services über das Internet verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.Bluemix_notm}}-Serviceinstanzen erstellen, die Ihre externen Services darstellen und die Kommunikation mit diesen Services ermöglichen. 
 
 Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gestellte Serviceinstanz zu erstellen und an eine Anwendung zu binden:
 
-1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie den Befehl **bluemix service user-provided-create** verwenden:
-    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die bx-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
+1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie den Befehl `bluemix service user-provided-create` verwenden:
+    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die `bx`-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -162,7 +167,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option **-l** und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option `-l` und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -170,7 +175,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz aktualisieren möchten, verwenden Sie den Befehl **bluemix service user-provided-update**.
+    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz aktualisieren möchten, verwenden Sie den Befehl `bluemix service user-provided-update`.
 
     * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
 
@@ -180,7 +185,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option -l. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option `-l`. Beispiel:
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -196,4 +201,4 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
 	OK
 	```
 
-Sie können Ihre Anwendung nun für die Verwendung der externen Ressourcen konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren](#config){: new_window}.
+Sie können Ihre Anwendung nun für die Verwendung der externen Services konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren](#config){: new_window}.

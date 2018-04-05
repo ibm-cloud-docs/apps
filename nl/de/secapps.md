@@ -1,55 +1,54 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-03-16"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Apps schützen
-{: #securingapps}
-
+# Zertifikatssignieranforderungen erstellen
+{: #ssl_csr}
 
 Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und den Zugriff auf die Anwendungen beschränken.
 {:shortdesc}
 
-## Zertifikatssignieranforderungen erstellen
-{: #ssl_csr}
-
-Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf Ihrem Server eine Zertifikatssignieranforderung (CSR) erstellen.
+Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf Ihrem Server eine Zertifikatssignieranforderung (CSR) erstellen. 
 
 Bei einer CSR handelt es sich um eine Nachricht, die an eine Zertifizierungsstelle gesendet wird, um die Signierung eines öffentlichen Schlüssels und der zugehörigen Informationen anzufordern. Am häufigsten haben CSRs das Format des PKCS-Standards #10. Die CSR umfasst einen öffentlichen Schlüssel sowie einen allgemeinen Namen, eine Organisation, eine Stadt, ein Bundesland, ein Land sowie eine E-Mail-Adresse. SSL-Zertifikatsanforderungen werden nur mit einer CSR-Schlüssellänge von 2048 Bits akzeptiert.
 
+## Erforderliche Informationen
+
 Damit die CSR gültig ist, müssen bei ihrer Generierung die folgenden Angaben gemacht werden:
 
-#### Landesname
+### Landesname
 
   Ein zweistelliger Code, der für das Land oder die Region steht. Die Abkürzung 'US' steht z. B. für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.iso.org/obp/ui/#search){:new_window} zurate.
 
-#### Bundesland oder Kanton
+### Bundesland oder Kanton
 
   Der vollständige und ungekürzte Name des Bundeslands oder des Kantons.
 
-#### Standort
+### Standort
 
   Der vollständige Name der Stadt.
 
-#### Organisation
+### Organisation
 
   Der vollständige Name des Geschäfts oder des Unternehmens, das an Ihrem Standort rechtsgültig registriert ist, oder ein persönlicher Name. Bei Unternehmen müssen Sie sicherstellen, dass das Registrierungssuffix mit angegeben wird, z. B. Ltd., Inc. oder NV.
 
-#### Organisationseinheit
+### Organisationseinheit
 
   Der Name der Abteilung Ihres Unternehmens, die das Zertifikat anfordert, z. B. Buchhaltung oder Marketing.
 
-#### Allgemeiner Name
+### Allgemeiner Name
 
-  Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.
+  Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern. 
 
 Die Methoden für die Erstellung einer CSR variieren in Abhängigkeit von Ihrem Betriebssystem. Das folgende Beispiel zeigt, wie eine CSR mithilfe des [OpenSSL-Befehlszeilentools ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.openssl.org/){:new_window} erstellt wird:
 
@@ -58,7 +57,8 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
 
-**Hinweis:** Die OpenSSL-Implementierung SHA-512 ist von der Compilerunterstützung für den ganzzahligen 64-Bit-Typ abhängig. Sie können die SHA-1-Option für Anwendungen verwenden, die Kompatibilitätsprobleme mit dem SHA-256-Zertifikat haben.
+Die OpenSSL-Implementierung SHA-512 ist von der Compilerunterstützung für den ganzzahligen 64-Bit-Typ abhängig. Sie können die SHA-1-Option für Anwendungen verwenden, die Kompatibilitätsprobleme mit dem SHA-256-Zertifikat haben.
+{: tip}
 
 Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert. Nach dem Erstellen der Zertifikatssignieranforderung (Certificate Signing Request, CSR) können Sie Ihr SSL-Zertifikat bei einer öffentlichen Zertifizierungsstelle generieren.
 
@@ -69,7 +69,7 @@ Sie können ein Sicherheitsprotokoll anwenden, um die Kommunikation für Ihre An
 
 Für jede Organisation in {{site.data.keyword.Bluemix_notm}} mit einem Kontoeigner, der einen Plan mit nutzungsabhängiger Zahlung oder einen Abonnementplan besitzt, dürfen Sie vier Zertifikate hochladen. Für jede Organisation mit einem Kontoeigner, der ein Konto für eine kostenlose Testversion besitzt, müssen Sie Ihr Konto aktualisieren, um ein Zertifikat hochzuladen.
 
-Bevor Sie Zertifikate hochladen können, müssen Sie eine Zertifikatssignieranforderung erstellen. Siehe [Zertifikatssignieranforderungen erstellen](#ssl_csr).
+Bevor Sie Zertifikate hochladen können, müssen Sie eine Zertifikatssignieranforderung erstellen.
 
 Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist.
 
@@ -86,11 +86,11 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 2. Wählen Sie den Namen für Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Wählen Sie die Dropdown-Liste **Routen** und anschließend die Option **Domänen verwalten** aus.
+3. Wählen Sie das Pulldown-Menü **Routen** und anschließend die Option **Domänen verwalten** aus. 
 
 3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
 
-4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat hochzuladen. Sie können auch das Kontrollkästchen auswählen, um Anforderungen eines Clientzertifikats zu aktivieren. Wenn Sie die Option zum Anfordern eines Clientzertifikats aktivieren, müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
+4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat hochzuladen. Sie können auch das Kontrollkästchen auswählen, um Anforderungen eines Clientzertifikats zu aktivieren. Wenn Sie die Option zum Anfordern eines Clientzertifikats aktivieren, müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert. 
 
   #### Zertifikat
 
@@ -129,7 +129,7 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
   #### Truststore für Clientzertifikate
 
-  Der Truststore für Clientzertifikate ist eine Datei, in der die Clientzertifikate für die Benutzer enthalten sind, denen Sie Zugriff auf Ihre Anwendung gewähren möchten. Wenn Sie die Option zum Anfordern eines Clientzertifikats aktivieren, müssen Sie eine Truststore-Datei für Clientzertifikate hochladen.
+  Der Truststore für Clientzertifikate ist eine Datei, in der die Clientzertifikate für die Benutzer enthalten sind, denen Sie Zugriff auf Ihre Anwendung gewähren möchten. Wenn Sie die Option zum Anfordern eines Clientzertifikats aktivieren, müssen Sie eine Truststore-Datei für Clientzertifikate hochladen. 
 
    Die folgenden Zertifikatstypen werden in {{site.data.keyword.Bluemix_notm}} unterstützt:
 
@@ -137,4 +137,4 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 	  * DER (.der oder .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**, um ein Zertifikat für eine angepasste Domäne zu löschen oder zu ersetzen.
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**. 

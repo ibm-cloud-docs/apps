@@ -7,34 +7,53 @@ Apps erstellen
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
+    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Apps entwickeln
-        [Entwicklung mit Eclipse-Tools](../starters/deploy_eclipsetools.html)
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_custom.md
+        tutorials/tutorial_mobile.md
 
-    {: .topicgroup}
-    Apps bereitstellen
-        install_cli.md
-        ../starters/upload_app.md
-
+    dep-app-tool.md
     reqnsi.md
+    mngapps.md
+    updapps.md
+    secapps.md
+    building-apps.md
     hosting.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud Developer Tools-Befehlszeilenreferenz](https://console.bluemix.net/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    Apps verwalten
-        mngapps.md
-        updapps.md
+    IBM Cloud-Entwicklerdashboards
+        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
+        [Finanzen](https://console.bluemix.net/developer/finance/dashboard)
+        [Mobile](https://console.bluemix.net/developer/mobile/dashboard)
+        [Sicherheit](https://console.bluemix.net/developer/security/dashboard)
+        [Watson](https://console.bluemix.net/developer/watson/dashboard)
+        [Web-Apps](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Apps schützen
-        overview.md
-        secapps.md
-        deployment.md
+    Projektinhalte
+        projects/compose_file.md
+        projects/java_project_contents.md
+        projects/node_project_contents.md
+        projects/python_project_contents.md
+        projects/swift_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Fehlerbehebung für die Verwaltung von Apps](../troubleshoot/ts_apps.html)
+    ../troubleshoot/ts_createapps.md
+    ../troubleshoot/ts_apps.md
+    [Kanal für IBM Cloud Slack-Entwicklertools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
