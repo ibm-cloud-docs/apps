@@ -7,34 +7,53 @@
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
+    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     開發應用程式
-        [使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_custom.md
+        tutorials/tutorial_mobile.md
 
-    {: .topicgroup}
-    部署應用程式
-        install_cli.md
-        ../starters/upload_app.md
-
+    dep-app-tool.md
     reqnsi.md
+    mngapps.md
+    updapps.md
+    secapps.md
+    building-apps.md
     hosting.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud Developer Tools 指令行參考資料](https://console.bluemix.net/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    管理應用程式
-        mngapps.md
-        updapps.md
+    IBM 開發人員儀表板
+        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
+        [財務](https://console.bluemix.net/developer/finance/dashboard)
+        [行動](https://console.bluemix.net/developer/mobile/dashboard)
+        [安全](https://console.bluemix.net/developer/security/dashboard)
+        [Watson](https://console.bluemix.net/developer/watson/dashboard)
+        [Web 應用程式](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    保護應用程式安全
-        overview.md
-        secapps.md
-        deployment.md
+    專案內容
+        projects/compose_file.md
+        projects/java_project_contents.md
+        projects/node_project_contents.md
+        projects/python_project_contents.md
+        projects/swift_project_contents.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [管理應用程式疑難排解](../troubleshoot/ts_apps.html)
+    ../troubleshoot/ts_createapps.md
+    ../troubleshoot/ts_apps.md
+    [IBM Cloud Slack 開發人員工具頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

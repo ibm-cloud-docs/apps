@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-03-16"
 
 ---
 
@@ -12,16 +12,21 @@ lastupdated: "2018-01-18"
 # 向应用程序添加服务
 {: #add_service}
 
-要向应用程序添加服务，请请求此服务的实例，并将应用程序配置为与此服务进行交互。
+如果使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 创建了项目，那么您有机会在“项目概述”页面中添加资源。但是，您也可以在项目上下文外部直接通过 {{site.data.keyword.Bluemix_notm}}“目录”对其进行供应。
 {: shortdesc}
+
+您可以请求资源的实例，并独立于应用程序使用该实例，也可以在“项目概述”页面中将资源实例添加到项目。您可以直接在 {{site.data.keyword.Bluemix_notm}}“目录”中供应特定类型的资源（服务）。
+
+##发现服务
+{: #discover_services}
 
 通过下列方式，您可以在 {{site.data.keyword.Bluemix_notm}} 中查看所有可用服务：
 
 * 通过 {{site.data.keyword.Bluemix_notm}} 控制台。查看 {{site.data.keyword.Bluemix_notm}}“目录”。
-* 通过 bluemix 命令行界面。使用 **bluemix service offerings** 命令。
+* 通过 bluemix 命令行界面。使用 `bluemix service offerings` 命令。
 * 从您自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
-在开发应用程序时，您可以选择所需的服务。在您进行选择后，{{site.data.keyword.Bluemix_notm}} 将与该服务进行交互，并执行必要的步骤以供应服务的资源。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
+在开发应用程序时，您可以选择所需的服务。选择服务后，{{site.data.keyword.Bluemix_notm}} 将与该服务进行交互，并执行必要的步骤来供应该服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
 
 {{site.data.keyword.Bluemix_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。可以跨 Web 应用程序共享服务实例。
 
@@ -30,21 +35,21 @@ lastupdated: "2018-01-18"
 ## 请求新的服务实例
 {: #req_instance}
 
-要请求新的服务实例，必须使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 bluemix 命令行界面。
+要请求新的服务实例，必须使用 {{site.data.keyword.Bluemix_notm}} 用户界面或 {{site.data.keyword.Bluemix_notm}} 命令行界面。
 
 **注：**指定服务名称时，请避免使用非字母或数字字符，因为结果可能难以预料。
 
 如果使用 {{site.data.keyword.Bluemix_notm}} 用户界面请求服务实例，请完成以下步骤：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} **目录**中，单击要添加的服务的磁贴。这将打开服务详细信息页面。
+1. 在 {{site.data.keyword.Bluemix_notm}}“目录”中，单击要添加的服务的磁贴。这将打开服务详细信息页面。
 
-2. 在**服务名称**字段中输入名称。系统提供了缺省服务名称。您可以更改该字段中的名称，也可以保留不变。
+2. 在**服务名称**字段中输入名称。系统提供了缺省名称。您可以更改该字段中的名称，也可以保留不变。
 
-3. 完成其他字段或选择，然后单击**创建**。
+3. 填写更多字段或完成更多选择，然后单击**创建**。
 
-如果使用 bluemix 命令行界面请求服务实例，请完成以下步骤：
+如果使用 {{site.data.keyword.Bluemix_notm}} 命令行界面请求服务实例，请完成以下步骤：
 
-1. 使用 **bluemix service offerings** 命令查找所需服务的名称和套餐。
+1. 使用 `bluemix service offerings`**` 命令查找所需服务的名称和套餐。
 
 2. 使用以下命令创建服务实例，其中 service_name 是服务的名称；service_plan 是服务的套餐；service_instance 是您希望用于此服务实例的名称。
 
@@ -52,7 +57,7 @@ lastupdated: "2018-01-18"
 bluemix service create service_name service_plan service_instance
 ```
 
-3. 使用以下命令将服务实例绑定到应用程序，其中 appname 是应用程序的名称；service_instance 是服务实例的名称。
+3. 使用以下命令将服务实例绑定到应用程序，其中 *appname* 是应用程序的名称；service_instance 是服务实例的名称。
 
 ```
 bluemix service bind appname service_instance
@@ -71,7 +76,7 @@ bluemix service bind appname service_instance
 * 要与移动后端服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者名称和使用应用程序的用户。
 * 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
-如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/troubleshoot/ts_apps.html#ts_topmenubar)故障诊断主题。
+如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)故障诊断主题。
 
 ## 启用外部应用程序
 {: #accser_external}
@@ -124,9 +129,9 @@ bluemix service bind appname service_instance
 
 1. 请求服务的实例。
     1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中的“仪表板”上，单击**创建资源**。这将显示“目录”。
-    2. 在“目录”中，通过单击服务磁贴来选择所需的服务。这将打开服务详细信息页面。
+    2. 在“目录”中，通过单击相应服务磁贴来选择所需的服务。这将打开服务详细信息页面。
     3. 在“服务”窗口中，将缺省**连接到：**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
-    4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务仪表板。
+    4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务“仪表板”。
 2. 在服务仪表板中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。选择一组凭证，然后单击“操作”列中的**查看凭证**。使用显示的 API 密钥作为凭证来连接到服务实例。
 
 在 {{site.data.keyword.Bluemix_notm}} 外部运行的应用程序现在可以访问 {{site.data.keyword.Bluemix_notm}} 服务。
@@ -136,12 +141,12 @@ bluemix service bind appname service_instance
 ## 创建用户提供的服务实例
 {: #user_provide_services}
 
-您可能有一些资源是在 {{site.data.keyword.Bluemix_notm}} 外部管理的。如果您拥有从因特网访问这些外部资源的凭证，那么可以创建用户提供的 {{site.data.keyword.Bluemix_notm}} 服务实例来代表外部资源并与这些资源进行通信。
+您可能有一些服务是在 {{site.data.keyword.Bluemix_notm}} 外部管理的。如果您拥有从因特网访问这些外部服务的凭证，那么可以创建用户提供的 {{site.data.keyword.Bluemix_notm}} 服务实例来代表外部服务并与这些服务进行通信。
 
 要创建用户提供的服务实例并将其绑定到应用程序，请完成以下步骤：
 
-1. 使用 **bluemix service user-provided-create** 命令创建用户提供的服务实例：
-    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，bx 命令行界面会依次提示您提供每个参数的值。例如：
+1. 使用 `bluemix service user-provided-create` 命令创建用户提供的服务实例：
+    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，`bx` 命令行界面会依次提示您提供每个参数的值。例如：
         ```
         bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
@@ -153,7 +158,7 @@ bluemix service bind appname service_instance
         OK
         ```
 
-    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 **-l** 选项，然后指定第三方日志管理软件提供的目标。例如：
+    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项，然后指定第三方日志管理软件提供的目标。例如：
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example.com
@@ -161,9 +166,9 @@ bluemix service bind appname service_instance
         OK
         ```
 
-    如果要更新用户提供的服务实例的一个或多个参数，请使用 **bluemix service user-provided-update** 命令。
+    如果要更新用户提供的服务实例的一个或多个参数，请使用 `bluemix service user-provided-update` 命令。
 
-    * 要更新一般用户提供的服务实例，请使用 **-p** 选项，并在 json 对象中指定参数键和值。例如：
+    * 要更新用户提供的常规服务实例，请使用 **-p** 选项，并在 JSON 对象中指定参数键和值。例如：
 
         ```
         bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -171,7 +176,7 @@ bluemix service bind appname service_instance
         OK
         ```
 
-    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 -l 选项。例如：
+    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项。例如：
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com
@@ -187,4 +192,4 @@ bluemix service bind appname service_instance
 	OK
 	```
 
-现在，您可以将应用程序配置为使用外部资源。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互](#config){: new_window}。
+现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互](#config){: new_window}。
