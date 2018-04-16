@@ -1,4 +1,6 @@
-Topics from /cloudnative, which was covered by a different project number - D057 - are now in /apps.
-Topics from that repo are now in /cli and /overview.
+There are several files that have moved since the last translation shipment.
 
-Other topics moved from one directory to another also. 
+overview/cf.md moved to /cfapps, but is due to be removed
+glossary/index.md moved to overview/glossary/index.md
+terms-of-use/notices.md moved to overview/terms-of-use/notices.md
+whats-new/index.md moved to overview/whats-new/index.md
