@@ -52,8 +52,8 @@ Creating apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ../troubleshoot/ts_createapps.md
-    ../troubleshoot/ts_apps.md
+    [Troubleshooting for creating apps](../troubleshoot/ts_createapps.html)
+    [Troubleshooting for managing apps](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
