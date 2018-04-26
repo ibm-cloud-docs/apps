@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Compose ファイル
 {: #compose-file}
 
-次の情報は、Compose プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。スターター・キットを作成すると、以下のファイルが作成されます。{{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
+次の情報は、Compose プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
 {:shortdesc}
 
 [Compose](https://docs.docker.com/compose/overview/) ファイルは、複数コンテナーのアプリケーションを実行するための情報を定義します。
 
 使用する Compose ファイルのバージョンは、`version: '2'` のように 2.0 以降を指定する必要があります。
 
-また、サービスを定義する必要があります。以下は、Node プロジェクトからの例です。
+また、サービスを定義する必要があります。 以下は、Node プロジェクトからの例です。
 ```
 services:
   web:
@@ -52,9 +52,9 @@ services:
 
 以下に、最も関連性の高い構成をリストします。
 
-* build: context 属性と dockerfile 属性はデフォルト値であるためここでは不要ですが、この形式で上書きできます。context 属性は、dockerfile 属性で指定された Dockerfile の名前へのパスを定義します。
+* build: context 属性と dockerfile 属性はデフォルト値であるためここでは不要ですが、この形式で上書きできます。 context 属性は、dockerfile 属性で指定された Dockerfile の名前へのパスを定義します。
 
-* tty: この属性を指定することで、コンテナーがすぐに終了することなく稼働したままとなるようにできます。これは、Docker-Compose サポートに必要です。
+* tty: この属性を指定することで、コンテナーがすぐに終了することなく稼働したままとなるようにできます。 これは、Docker-Compose サポートに必要です。
 
 * command: この属性は、コンテナー内部で実行されるコマンドを指定します。
 

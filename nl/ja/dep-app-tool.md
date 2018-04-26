@@ -17,13 +17,13 @@ lastupdated: "2018-03-17"
 # アプリのデプロイ
 {: #deploy}
 
-アプリは、ツールチェーンやコマンド・ライン・インターフェースを使用してデプロイできます。ツールチェーンは、ツール統合の集合です。 コマンド・ライン・インターフェースは、アプリとサービス・インスタンスをデプロイするための簡単な方法です。
+アプリは、ツールチェーンやコマンド・ライン・インターフェースを使用してデプロイできます。 ツールチェーンは、ツール統合の集合です。 コマンド・ライン・インターフェースは、アプリとサービス・インスタンスをデプロイするための簡単な方法です。
 {: shortdesc}
 
 ## ツールチェーンを使用したアプリのデプロイ
 {: #toolchains_getting_started}
 
-オープン・ツールチェーンは、{{site.data.keyword.Bluemix}} の Public 環境および Dedicated 環境で使用可能です。ツールチェーンの作成方法には、テンプレートを使用した作成と、アプリからの作成の 2 とおりの方法があります。ツールチェーンについて詳しくは、[ツールチェーンの作成](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)を参照してください。
+オープン・ツールチェーンは、{{site.data.keyword.Bluemix}} の Public 環境および Dedicated 環境で使用可能です。 ツールチェーンの作成方法には、テンプレートを使用した作成と、アプリからの作成の 2 とおりの方法があります。 ツールチェーンについて詳しくは、[ツールチェーンの作成](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)を参照してください。
 
 適切に構成されたツールチェーンを使用する場合、アプリのデプロイは非常に簡単です。リポジトリー内のマスター・ブランチへのマージが行われるたびに、ビルドおよびデプロイのサイクルが自動的に開始されます。
 
@@ -57,7 +57,7 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  アプリ・コードを変更します。例えば、{{site.data.keyword.Bluemix_notm}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。 アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
+  3.  アプリ・コードを変更します。 例えば、{{site.data.keyword.Bluemix_notm}} サンプル・アプリケーションを使用していて、アプリに `src/main/webapp/index.html` ファイルが含まれている場合、それを編集して「Thanks for creating ...」を何か別の内容に変更します。 アプリを {{site.data.keyword.Bluemix_notm}} に戻してデプロイする前に、ローカルで稼働することを確認してください。
 
     `manifest.yml` ファイルをメモします。 アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、このファイルを使用してアプリケーションの URL、メモリー割り振り、インスタンス数、およびその他の重要なパラメーターを判別します。
 

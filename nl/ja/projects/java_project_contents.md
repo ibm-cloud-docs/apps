@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Java プロジェクト・ファイル
 {: #java-project-files}
 
-次の情報は、Java プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。スターター・キットを作成すると、以下のファイルが作成されます。{{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
+次の情報は、Java プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
 {:shortdesc}
 
 ## Spring

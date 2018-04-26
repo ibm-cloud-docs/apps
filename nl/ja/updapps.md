@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # カスタム・ドメインの作成と使用
 {: #updatingapps}
 
-コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
+コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
 ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
@@ -30,9 +30,9 @@ lastupdated: "2018-03-16"
 2. カスタム・ドメインを作成する組織の名前をクリックします。
 3. **「ドメイン」**タブをクリックします。
 4. **「ドメインの追加 (Add a domain)」**をクリックして、ドメイン名を入力して地域を選択します。
-5. 更新を確認します。**「追加」**をクリックします。 
+5. 更新を確認します。 **「追加」**をクリックします。 
 
-例えば、`*.mycompany.com` を使用して経路 `www.mybluemix.com` をアプリに関連付けることができます。`example.mycompany.com` を使用して、経路 `www.example.mybluemix.com` をアプリに関連付けることもできます。
+例えば、`*.mycompany.com` を使用して経路 `www.mybluemix.com` をアプリに関連付けることができます。 `example.mycompany.com` を使用して、経路 `www.example.mybluemix.com` をアプリに関連付けることもできます。
 {: tip}
 
 カスタム・ドメインを使用した経路をアプリケーションに追加します。

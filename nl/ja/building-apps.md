@@ -21,7 +21,7 @@ lastupdated: "2018-03-16"
 ## 言語の選択
 {: #catalog}
 
-{{site.data.keyword.Bluemix_notm}} カタログには、使用できるインフラストラクチャーおよびプラットフォームのリソースがリストされています。仮想マシン、コンテナー、または Cloudant、および Cloud Foundry アプリを選択して、自分のアプリの作成を開始できます。 プラットフォーム・リソースが必要な場合、{{site.data.keyword.Bluemix_notm}} には、作成の開始を支援するためのランタイムやその他のサービスを提供する[ボイラープレート](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=blueprints)も用意されています。
+{{site.data.keyword.Bluemix_notm}} カタログには、使用できるインフラストラクチャーおよびプラットフォームのリソースがリストされています。 仮想マシン、コンテナー、または Cloudant、および Cloud Foundry アプリを選択して、自分のアプリの作成を開始できます。 プラットフォーム・リソースが必要な場合、{{site.data.keyword.Bluemix_notm}} には、作成の開始を支援するためのランタイムやその他のサービスを提供する[ボイラープレート](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=blueprints)も用意されています。
 
 ## リソースの作成
 {: #resource}
@@ -48,7 +48,7 @@ lastupdated: "2018-03-16"
 ## 次のステップ
 {: #next}
 
-ユーザーのニーズに合うように、引き続きアプリをカスタマイズします。ビジネスの成果を挙げるためにアプリを拡張するための次の提案を確認してください。
+ユーザーのニーズに合うように、引き続きアプリをカスタマイズします。 ビジネスの成果を挙げるためにアプリを拡張するための次の提案を確認してください。
 
 * [ベスト・プラクティス](best-practice.html)・ガイドで説明した[セキュリティー](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[モニタリング](https://console.bluemix.net/catalog/?category=devops){:new_window}、および可用性の向上を追加することで、アプリの堅牢性を高めることができます。
 * [Watson コグニティブ・サービス](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}および[高度な分析と機械学習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}を使用して、アプリをよりスマートにします。
