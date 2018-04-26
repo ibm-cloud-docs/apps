@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -20,11 +20,11 @@ You can secure your applications by uploading SSL certificates and restricting a
 
 Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server.
 
-A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, as well as a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
+A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
 ## Required information
 
-For the CSR to be valid, the following information must be entered when generating the CSR:
+For the CSR to be valid, the following information must be entered when you generate the CSR:
 
 ### Country name
 
@@ -67,7 +67,7 @@ A certificate is issued by a certificate authority and is digitally signed by th
 
 You can apply a security protocol to provide communication privacy for your application to prevent eavesdropping, tampering, and message forgery.
 
-For every organization in {{site.data.keyword.Bluemix_notm}} with an account owner who has a Pay as you Go or Subscription plan in place, you’re allowed four certificate uploads. For every organization with an account owner who has a free trial account, you must upgrade your account in order to upload a certificate.
+For every organization in {{site.data.keyword.Bluemix_notm}} with an account owner who has a Pay as you Go or Subscription plan in place, you’re allowed four certificate uploads. For every organization with an account owner who has a free trial account, you must upgrade your account to upload a certificate.
 
 Before you can upload certificates, you must create a certificate signing request.
 
@@ -84,13 +84,13 @@ To upload a certificate for your application:
 
 1. Go to your dashboard.
 
-2. Select the name for your app to open the app details view.
+2. Select your app to open the app details view.
 
-3. Select the **Routes** pull-down, and then select **Manage domains**.
+3. Select the **Routes** pull-down, and then for your organization, in the action column, select **Domains** from the additional actions menu.
 
 3. For your custom domain, click **Upload Certificate**.
 
-4. Browse to upload a certificate, private key, and optionally an intermediate certificate. You can also select the check box to enable requests of a client certificate. If you enable the option to request a client certificate, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
+4. Browse to upload a certificate, private key, and optionally an intermediate certificate or client certificate. To enable the client certificate truststore, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
 
   #### Certificate
 
@@ -123,9 +123,9 @@ To upload a certificate for your application:
 
   #### Enable request of client certificate
 
-    If you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
+    If you enable this option by uploading a client certificate truststore file, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
 
   #### Client certificate truststore
 
@@ -134,7 +134,8 @@ To upload a certificate for your application:
    The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
       * PEM (pem, .crt, .cer, and .cert)
-	  * DER (.der or .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Orgs**. Then, click **View Details** > **Edit Org** > **Domains**.
+For more information see, [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+
+To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, click **View Details** > **Edit Org** > **Domains**. In the additional actions menu for the organization, click **Remove from Org**.
