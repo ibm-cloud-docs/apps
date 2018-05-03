@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Common architectures for cloud apps
 {: #patterns}
 
-Starter kits on {{site.data.keyword.cloud_notm}} help you produce apps with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create a project from a starter kit, you’re choosing one of several different pattern types along with components, like a runtime, to populate the pattern.
+Starter kits on {{site.data.keyword.cloud_notm}} help you produce apps with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components, like a runtime, to populate the pattern.
 {:shortdesc}
 
 ## Web App
 {: #web}
 
-The Web App pattern produces projects that serve web content such as HTML, JavaScript, and stylesheets to the web server. There are several Web App starter kits.
+The Web App pattern produces apps that serve web content such as HTML, JavaScript, and stylesheets to the web server. There are several Web App starter kits.
 
 * Basic - serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
@@ -44,14 +44,14 @@ There are several BFF starter kits that you can choose from depending on your la
 ## Microservice
 {: #microservice}
 
-Microservice projects provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated projects contain all the dependencies required both for the microservice itself, as well as for any attached cloud service.
+Microservice apps provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated apps contain all the dependencies required both for the microservice itself, as well as for any attached cloud service.
 
 There are several micro-service starter kits that you can choose from depending on your language and framework requirements.  You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
-Mobile projects are different from the other patterns because they have a significant client-side component. The pattern may include direct connection to mobile services like push notifications, authentication, and mobile analytics, known as Mobile Backend as a Service or MBaaS pattern, or may have a dedicated [Backend for Frontend](#bff).  
+Mobile apps are different from the other patterns because they have a significant client-side component. The pattern may include direct connection to mobile services like push notifications, authentication, and mobile analytics, known as Mobile Backend as a Service or MBaaS pattern, or may have a dedicated [Backend for Frontend](#bff).  
 
 {{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift, Android, and Cordova. You can find starter kits for Mobile pattern on the [{{site.data.keyword.cloud_notm}} Mobile developer dashboard](https://console.bluemix.net/developer/mobile/dashboard).
 

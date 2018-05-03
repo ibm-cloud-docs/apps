@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Adding a service to your app
 {: #add_service}
 
-If you created a project using {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, then you had a chance to add resources from the project overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your project.
+If you created an app using {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, then you had a chance to add resources from the app overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
-You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your project from the project overview page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.Bluemix_notm}} catalog.
+You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the app overview page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.Bluemix_notm}} catalog.
 
 ##Discovering services
 {: #discover_services}
@@ -49,7 +49,7 @@ If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a se
 
 If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, complete the following steps:
 
-1. Use the `bluemix service offerings`**` command to find the name and the plan of the service that you require.
+1. Use the `bluemix service offerings` command to find the name and the plan of the service that you require.
 
 2. Use the following command to create a service instance, where service_name is the name of the service, service_plan is the plan of the service, and service_instance is the name that you want to use for this service instance.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Let's take a closer look at the best way to use {{site.data.keyword.cloud_notm}}
 ##Get started
 {: #get_started}
 
-Get started building your app from the {{site.data.keyword.cloud_notm}} developer dashboards, where you can select a starter kit related to your use case and choose a programming language. {{site.data.keyword.cloud_notm}} uses instructions from the starter kit to automatically provision the resources you need and to create a language-specific, runtime-agnostic app project that is the basis for your production app. To complete the getting started phase, click **Deploy to Cloud** from the developer dashboard. One click creates a DevOps toolchain complete with a code repository that's populated with your app source code and deployment pipeline.
+Get started building your app from the {{site.data.keyword.cloud_notm}} developer dashboards, where you can select a starter kit related to your use case and choose a programming language. {{site.data.keyword.cloud_notm}} uses instructions from the starter kit to automatically provision the resources you need and to create a language-specific, runtime-agnostic app app that is the basis for your production app. To complete the getting started phase, click **Deploy to Cloud** from the developer dashboard. One click creates a DevOps toolchain complete with a code repository that's populated with your app source code and deployment pipeline.
 
 ![Get started](images/dev_get_started.png "Get started") Figure 2. Getting started flow
 
@@ -37,7 +37,7 @@ When you use the **Deploy to Cloud** button to set up your DevOps toolchain, sel
 ##Develop locally
 {: #develop_locally}
 
-After you create your starter app project and toolchain, you start your development locally. Clone the code from your repository to a local workstation and import into your IDE. Use the {{site.data.keyword.dev_cli_notm}} to build, run, and test your cloud app on your local machine. The {{site.data.keyword.dev_cli_notm}} creates and manages a local container for you. When you’re ready to see your app running on the cloud, push to your cloud repository and merge your changes.
+After you create your starter app app and toolchain, you start your development locally. Clone the code from your repository to a local workstation and import into your IDE. Use the {{site.data.keyword.dev_cli_notm}} to build, run, and test your cloud app on your local machine. The {{site.data.keyword.dev_cli_notm}} creates and manages a local container for you. When you’re ready to see your app running on the cloud, push to your cloud repository and merge your changes.
 
 ![Develop locally](images/dev_code_locally.png "Develop locally") Figure 3. Developing locally flow
 

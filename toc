@@ -43,7 +43,7 @@ Creating apps
         [Web Apps](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Project contents
+    App contents
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
