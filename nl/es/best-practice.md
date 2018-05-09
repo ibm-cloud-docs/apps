@@ -112,7 +112,7 @@ por la infraestructura middleware o proveedores de servicios.
 Su app se podría instalar con frecuencia a demanda en el entorno de nube dinámico. El proceso de instalación debe ser mediante script y fiable, y los datos
 de configuración se deben externalizar de los scripts.
 
-Capture la instalación de la app como un conjunto uniforme de scripts independientes del sistema operativo. Mantenga reducida la instalación de la app y adáptese a distintas técnicas de automatización. Además, minimice las dependencias necesarias para la instalación
+Capture la instalación de la app como un conjunto uniforme de scripts independientes del sistema operativo. Mantenga la instalación de su app en un tamaño reducido y portátil para adaptarse a distintas técnicas de automatización. Además, minimice las dependencias necesarias para la instalación
 de apps.
 
 Para obtener más información sobre apps listas para la nube, consulte [The 12-factor app ![icono de enlace externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.

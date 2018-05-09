@@ -26,7 +26,7 @@ Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} 
 * Desde la interfaz de línea de mandatos bluemix. Utilice el mandato `bluemix service offerings`.
 * Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Puede seleccionar el servicio que necesita cuando desarrolla app. Una vez seleccionado, {{site.data.keyword.Bluemix_notm}} interactúa con el servicio y realiza los pasos necesarios para suministrar los recursos del servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
+Puede seleccionar el servicio que necesita cuando desarrolla app. Cuando lo haya seleccionado, {{site.data.keyword.Bluemix_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
 
 {{site.data.keyword.Bluemix_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre app web.
 
