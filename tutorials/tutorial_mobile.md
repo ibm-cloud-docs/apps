@@ -21,7 +21,7 @@ You can create a mobile app from a mobile basic starter. You'll see how to insta
 ## Install the tools
 {: #before-you-begin}
 
-Install the [developer tools](/docs/cli/idt/index.html#add-cli){: new_window}.
+Install the [developer tools](/docs/cli/idt/index.html#create){: new_window}.
 
 ## Choose how to create your app
 {: #choose_how}
