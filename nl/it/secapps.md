@@ -18,7 +18,7 @@ lastupdated: "2018-03-16"
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}
 
-Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.Bluemix}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server. 
+Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.Bluemix}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server.
 
 Un CSR è un messaggio che viene inviato a un'autorità di certificazione per richiedere la firma di una chiave pubblica
 e le informazioni associate. Più comunemente, i CSR sono in formato PKCS #10. Il CSR include una chiave pubblica,
@@ -54,7 +54,7 @@ Marketing.
 
 ### Nome comune
 
-  Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL. 
+  Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.
 
 I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.openssl.org/){:new_window}:
 
@@ -98,12 +98,12 @@ Per caricare un certificato per la tua applicazione:
 
 2. Seleziona il nome della tua applicazione per visualizzarne la pagina dei dettagli.
 
-3. Seleziona l'elenco a discesa **Rotte** e fai clic su **Gestisci domini**. 
+3. Seleziona l'elenco a discesa **Rotte** e fai clic su **Gestisci domini**.
 
 3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
 
 4. Sfoglia per caricare un certificato, una chiave privata e,
-facoltativamente, un certificato intermedio. Puoi anche selezionare la casella di spunta per abilitare le richieste di un certificato client. Se abiliti l'opzione di richiesta di un certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato. 
+facoltativamente, un certificato intermedio. Puoi anche selezionare la casella di spunta per abilitare le richieste di un certificato client. Se abiliti l'opzione di richiesta di un certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
 
   #### Certificato
 
@@ -152,9 +152,9 @@ client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}}
 protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione
 TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html).
 
-  #### Truststore certificato client 
+  #### Truststore certificato client
 
-  Il truststore certificato client è un file che contiene i certificati client per gli utenti a cui desideri consentire l'accesso alla tua applicazione. Se abiliti l'opzione di richiesta di un certificato client, carica un file truststore certificato client. 
+  Il truststore certificato client è un file che contiene i certificati client per gli utenti a cui desideri consentire l'accesso alla tua applicazione. Se abiliti l'opzione di richiesta di un certificato client, carica un file truststore certificato client.
 
    In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
 
@@ -162,4 +162,4 @@ TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link
 	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Per eliminare un certificato o sostituire un certificato esistente con uno nuovo, vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**. Fai quindi clic su **Visualizza dettagli** > **Modifica organizzazione** > **Domini**. 
+Per eliminare un certificato o sostituire un certificato esistente con uno nuovo, vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**. Fai quindi clic su **Visualizza dettagli** > **Modifica organizzazione** > **Domini**.

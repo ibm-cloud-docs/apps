@@ -18,9 +18,9 @@ lastupdated: "2018-03-16"
 In {{site.data.keyword.Bluemix}}, puoi creare applicazioni mobili e web a livello aziendale e sfruttare le estensioni cloud ospitate da {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare la console {{site.data.keyword.Bluemix}} e gli strumenti della riga di comando per creare, eseguire e distribuire le tue applicazioni. Puoi iniziare in uno dei seguenti due modi: creare un progetto con un kit starter che gestisce il processo per te o se sai quello che vuoi, creare la tua applicazione con le risorse necessarie.
 {:shortdesc}
 
-Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua applicazione e a prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un progetto e poi scarica il codice per l'ispezione immediata. Puoi anche creare una toolchain DevOps per distribuire la tua applicazione velocemente. 
+Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua applicazione e a prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un progetto e poi scarica il codice per l'ispezione immediata. Puoi anche creare una toolchain DevOps per distribuire la tua applicazione velocemente.
 
-I kit starter sono disponibili in molte categorie, tra cui: 
+I kit starter sono disponibili in molte categorie, tra cui:
 
 * [Watson](https://console.bluemix.net/developer/watson){:new_window}
 * [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
@@ -32,7 +32,7 @@ I kit starter sono disponibili in molte categorie, tra cui:
 
 ## Prima di iniziare
 
-[Registrati](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono. 
+[Registrati](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono.
 
 Non ti serve una carta di credito per registrare un account gratuito, ma inserirla ti fornisce l'accesso a più risorse e ti rende più semplice sapere tutto quello che {{site.data.keyword.cloud_notm}} ha da offrire.
 
@@ -43,22 +43,22 @@ Non ti serve una carta di credito per registrare un account gratuito, ma inserir
 
 2. Fai clic su **Inizia subito** nella sezione **Inizia dal web**.
 
-3. Seleziona un kit starter di tua scelta, leggi i dettagli e fai clic su **Crea progetto**. 
+3. Seleziona un kit starter di tua scelta, leggi i dettagli e fai clic su **Crea progetto**.
 
   Per visualizzare ciò che è incluso nel kit starter, espandi il tile nel dashboard dei kit starter del servizio dell'applicazione.
   {: tip}
 
 4. Fornisci un nome al progetto, seleziona il tuo linguaggio e fai clic su **Crea progetto**.
 
-Ottimo inizio! Hai appena creato un'applicazione. 
+Ottimo inizio! Hai appena creato un'applicazione.
 
 Per esaminare il tuo codice, fai clic su **Scarica codice** nella pagina dei dettagli del progetto. Controlla il file `README.md` nel file compresso scaricato per scoprire se devi effettuare ulteriori azioni per avere la tua applicazione starter in esecuzione.
 {: tip}
 
-## Passo 2: Aggiungi risorse 
+## Passo 2: Aggiungi risorse
 {: #addResources}
 
-La maggior parte dei kit starter indicano a {{site.data.keyword.cloud_notm}} di eseguire automaticamente il provisioning delle risorse al tuo posto. Puoi anche associare ulteriori risorse alla tua applicazione facendo clic su **Aggiungi risorsa** nella pagina dei dettagli del progetto. 
+La maggior parte dei kit starter indicano a {{site.data.keyword.cloud_notm}} di eseguire automaticamente il provisioning delle risorse al tuo posto. Puoi anche associare ulteriori risorse alla tua applicazione facendo clic su **Aggiungi risorsa** nella pagina dei dettagli del progetto.
 
 Per sviluppare ed eseguire la tua applicazione localmente, utilizza la [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
@@ -66,6 +66,6 @@ Per sviluppare ed eseguire la tua applicazione localmente, utilizza la [{{site.d
 ## Passo 3: Distribuisci a {{site.data.keyword.cloud_notm}}
 {: #deploy}
 
-Fai clic su **Distribuisci a Cloud** nella pagina dei dettagli del progetto, seleziona un metodo di distribuzione (ad esempio cluster Kubernetes o applicazione Cloud Foundry) e fai clic su **Crea**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta che dispone di un repository Git e della pipeline di fornitura continua. Visualizza il componente pipeline della tua nuova toolchain per iniziare a creare e distribuire il processo in modo che puoi visualizzare la tua nuova applicazione in esecuzione in pochi minuti. 
+Fai clic su **Distribuisci a Cloud** nella pagina dei dettagli del progetto, seleziona un metodo di distribuzione (ad esempio cluster Kubernetes o applicazione Cloud Foundry) e fai clic su **Crea**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta che dispone di un repository Git e della pipeline di fornitura continua. Visualizza il componente pipeline della tua nuova toolchain per iniziare a creare e distribuire il processo in modo che puoi visualizzare la tua nuova applicazione in esecuzione in pochi minuti.
 
-Ora sei pronto per lo sviluppo iterativo e la distribuzione continua. 
+Ora sei pronto per lo sviluppo iterativo e la distribuzione continua.

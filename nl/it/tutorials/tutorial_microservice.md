@@ -12,7 +12,7 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creazione di un microservizio 
+# Creazione di un microservizio
 {: #tutorial}
 
 Puoi creare un progetto da uno starter di base del microservizio. Utilizza questi starter per creare un backend del microservizio per Node, Java o Python con una scelta di framework web. Puoi vedere come installare gli strumenti di cui hai bisogno, creare ed eseguire il progetto localmente e distribuirlo al cloud.
@@ -66,7 +66,7 @@ La fornitura continua è abilitata per alcune applicazioni. Potresti voler abili
 
 3. Seleziona un metodo di distribuzione. Puoi scegliere uno tra:
 
-	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente. 
+	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
 
 	* Distribuisci utilizzando Cloud Foundry, dove non devi gestire l'infrastruttura sottostante.
 
@@ -122,7 +122,7 @@ Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'appl
   ```
   {: codeblock}
 
-3. Puoi accedere all'applicazione utilizzando `curl` sul tuo server: 
+3. Puoi accedere all'applicazione utilizzando `curl` sul tuo server:
 
 	```
 	curl http://localhost:9080

@@ -20,18 +20,18 @@ Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utili
 
 I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}} e quindi associarlo al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
 associato il tuo dominio personalizzato al dominio di sistema,
-le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.Bluemix_notm}}. 
+le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.Bluemix_notm}}.
 
-Puoi creare e utilizzare un dominio personalizzato utilizzando la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando 
+Puoi creare e utilizzare un dominio personalizzato utilizzando la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando
 
 ## Utilizzo della console {{site.data.keyword.Bluemix_notm}}
 
-Completa la seguente procedura per creare un dominio personalizzato per la tua organizzazione utilizzando la console: 
+Completa la seguente procedura per creare un dominio personalizzato per la tua organizzazione utilizzando la console:
 
 1. Vai a **Gestisci** &gt; **Account** &gt; **Organizzazioni Cloud Foundry**.
-2. Fai clic sul nome dell'organizzazione per cui stai creando un dominio personalizzato. 
+2. Fai clic sul nome dell'organizzazione per cui stai creando un dominio personalizzato.
 3. Fai clic sulla scheda **Domini**.
-4. Fai clic su **Aggiungi un dominio** e immetti il tuo nome del dominio e seleziona la regione. 
+4. Fai clic su **Aggiungi un dominio** e immetti il tuo nome del dominio e seleziona la regione.
 5. Conferma i tuoi aggiornamenti. Fai clic su **Aggiungi**. 
 
 Come esempio, puoi utilizzare `*.mycompany.com` per associare la rotta `www.mybluemix.com` alla tua applicazione. Puoi anche utilizzare `example.mycompany.com` per associare la rotta `www.example.mybluemix.com` all'applicazione.
@@ -42,9 +42,9 @@ Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) &gt; **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
 2. Dal menu **Rotte**, seleziona **Modifica rotte**.
 3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
-4. Conferma i tuoi aggiornamenti facendo clic su **Salva**. 
+4. Conferma i tuoi aggiornamenti facendo clic su **Salva**.
 
-## Utilizzo della interfaccia riga di comando {{site.data.keyword.Bluemix_notm}} 
+## Utilizzo della interfaccia riga di comando {{site.data.keyword.Bluemix_notm}}
 
 1. Crea un dominio personalizzato per la tua organizzazione digitando il
 seguente comando:
@@ -78,14 +78,14 @@ Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_n
   * EUROPA REGNO UNITO: `secure.eu-gb.bluemix.net`
   * AU-SYD: `secure.au-syd.bluemix.net`
 
-In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione myapp: 
+In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione myapp:
 
 ```
 http://nome_host.mio_dominio
 
 ```
 
-Per rimuovere una rotta orfana, immetti il seguente comando: 
+Per rimuovere una rotta orfana, immetti il seguente comando:
 
 ```
 bluemix app route-delete domain -n hostname -f

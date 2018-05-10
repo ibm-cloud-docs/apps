@@ -12,7 +12,7 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creazione di un'applicazione di base con un kit starter 
+# Creazione di un'applicazione di base con un kit starter
 {: #tutorial}
 
 Puoi creare un progetto da uno starter web di base. Utilizza questi starter per configurare un server web semplice per Node, Java o Python con una scelta di framework web. Puoi vedere come installare gli strumenti di cui hai bisogno, creare ed eseguire il progetto localmente e distribuirlo al cloud.
@@ -67,7 +67,7 @@ La fornitura continua è abilitata per alcune applicazioni. Potresti voler abili
 
 3. Seleziona un metodo di distribuzione. Puoi scegliere uno tra:
 
-	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente. 
+	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
 
 	* Distribuisci utilizzando Cloud Foundry, dove non devi gestire l'infrastruttura sottostante.
 
@@ -97,7 +97,7 @@ Inizia ad utilizzare il tuo progetto scaricato:
 
 2. Importa il progetto nella tua IDE.
 
-3. Modifica il codice adattandolo. 
+3. Modifica il codice adattandolo.
 
 4. Utilizza {{site.data.keyword.dev_cli_notm}} per creare ed eseguire il tuo codice localmente.
 
@@ -109,14 +109,14 @@ Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'appl
 
 ### Utilizzo di {{site.data.keyword.dev_cli_short}}
 
-1. Installa le dipendenze del nodo: 
+1. Installa le dipendenze del nodo:
 
   ```
   npm install
   ```
   {: codeblock}
 
-2. Integra il tuo codice frontend in un modulo: 
+2. Integra il tuo codice frontend in un modulo:
 
   ```
   gulp
@@ -137,7 +137,7 @@ Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'appl
   ```
   {: codeblock}
 
-5. Apri il tuo browser in `http://localhost: 3000` (il numero porta potrebbe essere differente a seconda del runtime scelto). 
+5. Apri il tuo browser in `http://localhost: 3000` (il numero porta potrebbe essere differente a seconda del runtime scelto).
 
 
 ## Passo 6: Distribuisci al cloud
@@ -146,7 +146,7 @@ Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'appl
 ### Distribuisci utilizzando una toolchain
 Esistono diversi modi per distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} ma l'utilizzo di una toolchain DevOps è il modo migliore per distribuire le applicazioni di produzione. Una toolchain DevOps consente di automatizzare facilmente le distribuzioni a più ambienti e di aggiungere rapidamente i servizi di monitoraggio, registrazione e segnalazione per aiutarti nella gestione della tua applicazione come cresce.
 
-Con una toolchain correttamente configurata, viene automaticamente avviato un ciclo di distribuzione-creazione con ogni unione al ramo master nel tuo repository. Tutte le toolchain create da un dashboard di sviluppo {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
+Con una toolchain correttamente configurata, un ciclo di creazione-distribuzione viene avviato automaticamente con tutte le unioni al ramo master nel tuo repository. Tutte le toolchain create da un dashboard di sviluppo {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
 
 Puoi anche distribuire manualmente la tua applicazione dalla tua toolchain DevOps:
 

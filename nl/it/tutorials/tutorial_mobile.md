@@ -12,7 +12,7 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creazione di un'applicazione mobile con un kit starter 
+# Creazione di un'applicazione mobile con un kit starter
 {: #tutorial}
 
 Puoi creare un progetto mobile da uno starter di base mobile. Vedrai come installare gli strumenti di cui hai bisogno e i passi per eseguire il progetto in Xcode e Android Studio.
@@ -24,10 +24,10 @@ Puoi creare un progetto mobile da uno starter di base mobile. Vedrai come instal
 Installa gli [strumenti sviluppatore](/docs/cli/idt/index.html#add-cli){: new_window}.
 
 
-## Scegli come creare il tuo progetto 
+## Scegli come creare il tuo progetto
 {: #choose_how}
 
-Puoi creare un progetto utilizzando uno dei seguenti metodi: 
+Puoi creare un progetto utilizzando uno dei seguenti metodi:
 - [{{site.data.keyword.dev_console}} basata sul web](#create-devex)
 - [{{site.data.keyword.dev_cli_notm}} controllata dai comandi](#create-cli)
 
@@ -45,7 +45,7 @@ Puoi creare un progetto utilizzando uno dei seguenti metodi:
 
     4. Fai clic su **Create Project**.
 
-### Facoltativo: aggiungi servizi 
+### Facoltativo: aggiungi servizi
 {: #add-services}
 
 1. Seleziona il tuo progetto nella pagina **Projects**.
@@ -54,7 +54,7 @@ Puoi creare un progetto utilizzando uno dei seguenti metodi:
 
 3. Seleziona il tipo di servizio che desideri. Per questa esercitazione, seleziona **Security** > **Next** > **App ID** > **Next**.
 
-4. Immetti il nome del tuo servizio e fai clic su **Create**. 
+4. Immetti il nome del tuo servizio e fai clic su **Create**.
 
 5. Per ulteriori informazioni sulla configurazione dell'autenticazione, consulta [Configurazione dei provider di identità ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](/docs/services/appid/identity-providers.html){: new_window}.
 
@@ -66,7 +66,7 @@ Puoi creare un progetto utilizzando uno dei seguenti metodi:
 
 9. Per ulteriori informazioni sull'aggiunta di notifiche push, vedi la [documentazione delle notifiche push](/docs/services/mobilepush/c_overview_push.html#overview-push).
 
-### Genera il tuo codice del progetto 
+### Genera il tuo codice del progetto
 {: #generate-code}
 
 1. Seleziona il tuo progetto nella pagina **Projects**.
@@ -74,14 +74,14 @@ Puoi creare un progetto utilizzando uno dei seguenti metodi:
 2. Fai clic su **Download Code** per scaricare il tuo archivio del progetto.
 
 
-### Inizia ad utilizzare la tua applicazione 
+### Inizia ad utilizzare la tua applicazione
 {: #code}
 
 Inizia ad utilizzare il tuo progetto scaricato:
 
 1. Espandi il file archiviato.
 
-2. Passa alla nuova directory del progetto. 
+2. Passa alla nuova directory del progetto.
 
 3. Utilizza la {{site.data.keyword.dev_cli_notm}} per continuare.
 
@@ -91,35 +91,35 @@ Inizia ad utilizzare il tuo progetto scaricato:
 
 1. Assicurati di installare la [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html).
 
-2. Nella tua finestra del terminale, passa a una directory locale di tua scelta ed esegui il seguente comando. 
+2. Nella tua finestra del terminale, passa a una directory locale di tua scelta ed esegui il seguente comando.
 
 	```
 	bx dev create
 	```
 	{: codeblock}
 
-3. Fornisci i seguenti valori quando richiesto: 
+3. Fornisci i seguenti valori quando richiesto:
 
-	* Seleziona un tipo di progetto "Mobile Client", opzione 2 
-	* Seleziona che la lingua di implementazione è "iOS Swift", opzione 3 
-	* Seleziona il kit starter di "Mobile App: Basic", opzione 1 
+	* Seleziona un tipo di progetto "Mobile Client", opzione 2
+	* Seleziona che la lingua di implementazione è "iOS Swift", opzione 3
+	* Seleziona il kit starter di "Mobile App: Basic", opzione 1
 	* Immetti un nome per il tuo progetto: `MobileBasicProject`
 
-    Nota: i numeri di selezione effettivi potrebbe cambiare con i miglioramenti degli strumenti. 
+    Nota: i numeri di selezione effettivi potrebbe cambiare con i miglioramenti degli strumenti.
 
-4. Se vuoi aggiungere servizi al tuo progetto, immetti `y` quando viene domandato e rispondi alle rimanenti domande. 
+4. Se vuoi aggiungere servizi al tuo progetto, immetti `y` quando viene domandato e rispondi alle rimanenti domande.
 
 5. Quando il tuo `MobileBasicProject` è stato creato e salvato correttamente, passa alla cartella `MobileBasicProject/MobileBasicProject-Swift`.
 
 ### Esecuzione del tuo progetto Swift in Xcode
 {: #run_swift}
 
-1. Apri il file `README.md` in un visualizzatore markdown per rivedere le istruzioni per configurare il tuo progetto. 
+1. Apri il file `README.md` in un visualizzatore markdown per rivedere le istruzioni per configurare il tuo progetto.
 
-2. Apri il tuo terminale e passa alla tua cartella del progetto ed esegui i seguenti comandi: 
+2. Apri il tuo terminale e passa alla tua cartella del progetto ed esegui i seguenti comandi:
     1. Esegui `pod setup` se hai bisogno di configurare il repository CocoaPods.
     2. Esegui `pod update` se hai bisogno di aggiornare i tuoi pod esistenti.
-    3. Esegui `pod install` per installare i pod per il tuo progetto. 
+    3. Esegui `pod install` per installare i pod per il tuo progetto.
 
 3. Apri il tuo progetto Xcode `<projectname>.xcworkspace`.
 
@@ -128,7 +128,7 @@ Inizia ad utilizzare il tuo progetto scaricato:
 ### Esecuzione del tuo progetto Cordova in Xcode
 {: #run_cordova_xcode}
 
-Se hai scelto di utilizzare Cordova come il tuo linguaggio di implementazione, segui queste istruzioni. 
+Se hai scelto di utilizzare Cordova come il tuo linguaggio di implementazione, segui queste istruzioni.
 
 1. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
 
@@ -140,7 +140,7 @@ Se hai scelto di utilizzare Cordova come il tuo linguaggio di implementazione, s
 ### Esecuzione del tuo progetto Cordova in Android Studio
 {: #run_cordova_studio}
 
-Utilizza questa sezione se scegli di utilizzare Cordova come piattaforma della tua applicazione mobile. 
+Utilizza questa sezione se scegli di utilizzare Cordova come piattaforma della tua applicazione mobile.
 
 1. Estrai il file `BasicProject-Cordova.zip`.
 
@@ -154,7 +154,7 @@ Utilizza questa sezione se scegli di utilizzare Cordova come piattaforma della t
 ### Esecuzione del tuo progetto Android in Android Studio
 {: #run_android}
 
-Utilizza questa sezione se scegli di utilizzare Android come piattaforma della tua applicazione mobile. 
+Utilizza questa sezione se scegli di utilizzare Android come piattaforma della tua applicazione mobile.
 
 1. Apri il file `README.md` in un visualizzatore Markdown per configurare il tuo progetto.
 

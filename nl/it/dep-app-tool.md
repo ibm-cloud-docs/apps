@@ -20,7 +20,7 @@ lastupdated: "2018-03-17"
 Puoi distribuire le tue applicazioni con una toolchain o un'interfaccia riga di comando. Una toolchain è un insieme di integrazioni dello strumento. L'interfaccia riga di comando è un modo semplice per distribuire le tue applicazioni e istanze del servizio.
 {: shortdesc}
 
-## Distribuzione delle applicazioni con le toolchain 
+## Distribuzione delle applicazioni con le toolchain
 {: #toolchains_getting_started}
 
 Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
@@ -44,7 +44,7 @@ Prima di iniziare, scarica e installa l'interfaccia di riga di comando {{site.da
 <a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica l'interfaccia riga di comando Bluemix" /> </a>
 </p>
 
-**Limitazione:** lo strumento della riga di comando non è supportato da Cygwin.  Utilizzalo in una finestra della riga di comando diversa da quella di Cygwin.
+**Limitazione:** lo strumento della riga di comando non è supportato da Cygwin. Utilizzalo in una finestra della riga di comando diversa da quella di Cygwin.
 {:prereq}
 
 Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
@@ -71,7 +71,7 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  Se stai utilizzando un ID federato, usa l'opzione `-sso`. 
+  Se stai utilizzando un ID federato, usa l'opzione `-sso`.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 

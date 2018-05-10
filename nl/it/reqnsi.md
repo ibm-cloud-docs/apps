@@ -15,20 +15,19 @@ lastupdated: "2018-03-16"
 Se hai creato un progetto utilizzando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto una possibilità di aggiungere le risorse dalla pagina della panoramica del progetto. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto del tuo progetto.
 {: shortdesc}
 
-Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa al tuo progetto dalla pagina della panoramica del progetto. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}. 
+Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa al tuo progetto dalla pagina della panoramica del progetto. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}.
 
-##Rilevamento servizi 
+##Rilevamento servizi
 {: #discover_services}
 
 Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.Bluemix_notm}}
 nei seguenti modi:
 
-* Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}. 
+* Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
 * Dall'interfaccia della riga di comando Bluemix. Utilizza il comando `bluemix service offerings`.
 * Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Dopo averlo selezionato, {{site.data.keyword.Bluemix_notm}} interagisce con il servizio ed
-effettua le operazioni necessarie per eseguire il provisioning dei servizi del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
+Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Una volta selezionato, {{site.data.keyword.Bluemix_notm}} esegue il provisioning del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione.
 
 {{site.data.keyword.Bluemix_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le
@@ -53,7 +52,7 @@ per richiedere un'istanza del servizio, completa la seguente procedura:
 
 2. Immetti un nome nel campo **Nome servizio**. Viene fornito un nome predefinito. Puoi modificare il nome nel campo o lasciarlo invariato.
 
-3. Completa le selezioni o i campi aggiuntivi e fai quindi clic su **CREA**. 
+3. Completa le selezioni o i campi aggiuntivi e fai quindi clic su **CREA**.
 
 Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
 
@@ -157,9 +156,9 @@ a utilizzare un servizio {{site.data.keyword.Bluemix_notm}},
 completa la seguente procedura:
 
 1. Richiedi un'istanza del servizio.
-    1. Nel Dashboard dell'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, fai clic su **Crea risorsa**. Viene visualizzato il catalogo. 
+    1. Nel Dashboard dell'interfaccia utente di {{site.data.keyword.Bluemix_notm}}, fai clic su **Crea risorsa**. Viene visualizzato il catalogo.
     2. Dal catalogo, seleziona il servizio che vuoi facendo clic sul relativo tile. Viene visualizzata la pagina dei dettagli.
-    3. Nella finestra del servizio, lascia la selezione predefinita dell'elenco **Connetti a:**: su **Lascia senza binding**. Questa selezione significa che il servizio non viene connesso a un'applicazione {{site.data.keyword.Bluemix_notm}}. 
+    3. Nella finestra del servizio, lascia la selezione predefinita dell'elenco **Connetti a:**: su **Lascia senza binding**. Questa selezione significa che il servizio non viene connesso a un'applicazione {{site.data.keyword.Bluemix_notm}}.
     4. Opera le altre selezioni come necessario. Quindi, fai clic su **Crea**. Viene creata un'istanza del servizio e viene visualizzato il dashboard del servizio.
 2. Nel Dashboard del servizio, puoi selezionare **Credenziali del servizio** per visualizzare o aggiungere credenziali in formato JSON. Seleziona un insieme di credenziali e fai clic su **Visualizza credenziali** nella colonna Azioni. Utilizza la chiave API visualizzata come credenziali per stabilire una
 connessione all'istanza del servizio.
@@ -172,7 +171,7 @@ ora accedere al servizio {{site.data.keyword.Bluemix_notm}}.
 ## Creazione di un'istanza del servizio fornito dall'utente
 {: #user_provide_services}
 
-Puoi avere dei servizi che sono gestiti esternamente a {{site.data.keyword.Bluemix_notm}}. Se hai delle credenziali per accedere a questi servizi esterni da internet, puoi creare delle istanze del servizio fornito dall'utente {{site.data.keyword.Bluemix_notm}} per rappresentare le risorse esterne e comunicare con esse. 
+Puoi avere dei servizi che sono gestiti esternamente a {{site.data.keyword.Bluemix_notm}}. Se hai delle credenziali per accedere a questi servizi esterni da internet, puoi creare delle istanze del servizio fornito dall'utente {{site.data.keyword.Bluemix_notm}} per rappresentare le risorse esterne e comunicare con esse.
 
 Per creare un'istanza del servizio fornito dall'utente ed eseguirne il bind a un'applicazione, completa la seguente procedura:
 

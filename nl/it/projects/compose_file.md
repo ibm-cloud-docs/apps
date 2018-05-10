@@ -51,9 +51,9 @@ services:
 
 `web` e `mongo` sono i servizi specificati e ognuno di loro ha configurazioni, che sono definite nella [documentazione](https://docs.docker.com/compose/compose-file/compose-file-v2/) Docker-Compose.
 
-Le configurazioni più rilevanti sono di seguito elencate: 
+Le configurazioni più rilevanti sono di seguito elencate:
 
-* build: gli attributi contesto e dockerfile non sono qui necessari poiché sono i valori predefiniti, ma possono essere sovrascritti in questo formato. L'attributo di contesto definisce il percorso al nome del Dockerfile specificato nell'attributo dockerfile. 
+* build: gli attributi contesto e dockerfile non sono qui necessari poiché sono i valori predefiniti, ma possono essere sovrascritti in questo formato. L'attributo di contesto definisce il percorso al nome del Dockerfile specificato nell'attributo dockerfile.
 
 * tty: specificando questo attributo, i contenitori possono rimanere in esecuzione e non uscire immediatamente. Questo è obbligatorio per il supporto Docker-Compose.
 

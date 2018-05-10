@@ -68,7 +68,7 @@ La fornitura continua è abilitata per alcune applicazioni. Potresti voler abili
 
 3. Seleziona un metodo di distribuzione. Puoi scegliere uno tra:
 
-	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente. 
+	* Distribuisci a un cluster Kubernetes. Esegui il provisioning di un cluster di host, nodi di lavoro richiamati, per distribuire e gestire i contenitori dell'applicazione ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
 
 	* Distribuisci utilizzando Cloud Foundry, dove non devi gestire l'infrastruttura sottostante.
 
@@ -124,7 +124,7 @@ Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'appl
   ```
   {: codeblock}
 
-3. Apri il tuo browser in `http://localhost: 3000` (il numero porta potrebbe essere differente a seconda del runtime scelto). 
+3. Apri il tuo browser in `http://localhost: 3000` (il numero porta potrebbe essere differente a seconda del runtime scelto).
 
 
 ## Passo 6: Distribuisci al cloud

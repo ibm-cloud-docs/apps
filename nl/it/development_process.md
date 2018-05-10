@@ -12,7 +12,7 @@ lastupdated: "2018-03-16"
 {:pre: .pre}
 {:tip: .tip}
 
-# Le fasi consigliate di sviluppo cloud 
+# Le fasi consigliate di sviluppo cloud
 {: #development_process}
 
 Gli sviluppatori dell'applicazione cloud passano attraverso quattro fasi fondamentali nel processo di sviluppo: inizio, codice, fornitura e gestione. Il flusso è interattivo e rapido. L'obiettivo è di produrre un'applicazione un minimo utilizzabile e di utilizzare il feedback dall'applicazione di produzione per eseguire l'iterazione in modo continuo del codice o del ciclo di fornitura finché la tua applicazione trova il favore degli utenti.
@@ -47,7 +47,7 @@ Le funzioni di base per {{site.data.keyword.dev_cli_notm}} sono `bx dev build` e
 ##Fornisci e gestisci in {{site.data.keyword.cloud_notm}}
 {: #deliver_and_manage}
 
-L'unione delle modifiche al tuo repository cloud avvia un ciclo di creazione e distribuzione nella toolchain DevOps che hai creato precedentemente. La tua applicazione è in esecuzione nel cloud dopo pochi minuti. 
+L'unione delle modifiche al tuo repository cloud avvia un ciclo di creazione e distribuzione nella toolchain DevOps che hai creato precedentemente. La tua applicazione è in esecuzione nel cloud dopo pochi minuti.
 
 Per controllare lo stato della tua pipeline DevOps, utilizza il tuo dashboard Delivery Pipeline. Per controllare lo stato generale della tua applicazione, consulta il dashboard {{site.data.keyword.cloud_notm}} per il tuo account.
 {: tip}

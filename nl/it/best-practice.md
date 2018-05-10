@@ -18,7 +18,7 @@ In un ambiente non cloud, la tua applicazione potrebbe utilizzare una particolar
 
 Crea la tua applicazione in modo che sia il più possibile generica e senza stati, per impedire che l'applicazione subisca modifiche di scalabilità.
 
-## Supponiamo che il file system locale non sia permanente 
+## Supponiamo che il file system locale non sia permanente
 
 Poiché un'istanza dell'applicazione può essere spostata, eliminata o duplicata sul cloud in qualsiasi momento, non fare affidamento sui file che vengono scritti nel file system. Se un'applicazione utilizza il file system locale come cache delle informazioni utilizzate di frequente, inclusi i log delle applicazioni, le informazioni vengono perse quando l'istanza viene arrestata e riavviata in una posizione diversa o in un'altra VM.
 
@@ -43,17 +43,17 @@ serie di file di proprietà rappresenta un miglioramento, ma resta inappropriato
 di un servizio esterno o la delega dell'intera funzione di instradamento
 al bus di un servizio o a un programma di bilanciamento dei carichi con un nome virtuale.
 
-## Crea la tua applicazione utilizzando un'architettura a più regioni 
+## Crea la tua applicazione utilizzando un'architettura a più regioni
 {: #multiregion}
 
-Esegui più istanze per evitare tempi di inattività in una singola regione, ma per fornire un'applicazione ancora più solida, valuta la possibilità di utilizzare un'architettura a più regioni. 
+Esegui più istanze per evitare tempi di inattività in una singola regione, ma per fornire un'applicazione ancora più solida, valuta la possibilità di utilizzare un'architettura a più regioni.
 
-## Assicurati di stare monitorando le tue applicazioni 
+## Assicurati di stare monitorando le tue applicazioni
 {: #monitoring}
 
 {{site.data.keyword.Bluemix_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic ![Icona link esterno](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}. Per ulteriori informazioni, vedi [Monitoraggio e registrazione](../monitor_log/logging.html#logging).
 
-## Approfitta delle opzioni di supporto 
+## Approfitta delle opzioni di supporto
 {: #support}
 
 Il piano prezzi a pagamento di {{site.data.keyword.Bluemix_notm}} offre una serie di diversi tipi di account con supporto a pagamento facoltativo. Indipendentemente dal tuo tipo di account, se prevedi di portare un'applicazione in produzione su {{site.data.keyword.Bluemix_notm}}, considera questa opzione.
@@ -69,7 +69,7 @@ Puoi invece affidarti ai prodotti open source o commerciali esistenti e lasciare
 ## Utilizza protocolli standard
 
 Non utilizzare protocolli oscuri che
-richiedono una configurazione aggiuntiva per la resilienza. 
+richiedono una configurazione aggiuntiva per la resilienza.
 
 Le applicazioni basate su protocolli standard hanno maggiore resilienza con gli elementi della configurazione delegati alla piattaforma. I protocolli standard includono HTTP, SSL,
 database standard, accodamento e connessioni ai servizi Web.
@@ -89,7 +89,7 @@ o da fornitori di servizi.
 Nell'ambiente cloud dinamico, la tua applicazione potrebbe essere installata frequentemente su richiesta. Il processo di installazione deve avere script ed essere affidabile e i dati della configurazione
 devono essere esternalizzati dagli script.
 
-Acquisisci l'istallazione della tua applicazione come una serie uniforme di script indipendenti dal sistema operativo. Mantieni l'installazione della tua applicazione piccola e portatile in modo da adattarsi a diverse tecniche di automazione. Inoltre, riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
+Acquisisci l'istallazione della tua applicazione come una serie uniforme di script indipendenti dal sistema operativo. Fa in modo che le dimensioni dell'installazione della tua applicazione restino contenute e preservane la portabilità, in modo che si adegui a differenti tecniche di automazione. Inoltre, riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
 
 Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor app ![Icona link esterno](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 

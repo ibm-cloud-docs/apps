@@ -18,7 +18,7 @@ Il tuo dashboard nella console {{site.data.keyword.Bluemix}} fornisce delle info
 ## Descrizione dello stato della tua applicazione
 {: #status}
 
-Dal tuo dashboard, puoi visualizzare lo stato di ciascuna applicazione. Nella colonna dello stato di ogni applicazione, puoi vedere se le istanze dell'applicazione sono in esecuzione. 
+Dal tuo dashboard, puoi visualizzare lo stato di ciascuna applicazione. Nella colonna dello stato di ogni applicazione, puoi vedere se le istanze dell'applicazione sono in esecuzione.
 
 <dl>
 <dt>
