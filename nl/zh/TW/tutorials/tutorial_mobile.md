@@ -37,7 +37,7 @@ lastupdated: "2018-03-16"
 
 1. 在 {{site.data.keyword.Bluemix}} 中建立 {{site.data.keyword.dev_console}} 專案。
 
-    1. 從 {{site.data.keyword.dev_console}} 的 [入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，根據您要的功能選取入門範本套件。例如，若為 Watson 應用程式，請移至 **Watson 語言**，然後按一下**選取入門範本套件**。
+    1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，根據您要的功能選取入門範本套件。例如，若為 Watson 應用程式，請移至 **Watson 語言**，然後按一下**選取入門範本套件**。
 
     2. 輸入專案名稱。針對本指導教學，請使用 `WatsonProject`。   
 
@@ -52,7 +52,7 @@ lastupdated: "2018-03-16"
 
 2. 按一下**新增服務**。
 
-3. 選取您要的服務類型。就本指導教學來說，請選取**安全** > **下一步** > **App ID** > **下一步**。
+3. 選取您要的服務類型。針對本指導教學，請選取**安全** > **下一步** > **App ID** > **下一步**。
 
 4. 輸入您的服務名稱，然後按一下**建立**。
 

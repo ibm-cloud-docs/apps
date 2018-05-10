@@ -27,7 +27,7 @@ lastupdated: "2018-03-16"
 * 從 bluemix 指令行介面。使用 `bluemix service offerings` 指令。
 * 從您自己的應用程式。使用 [GET /v2/services 服務 API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
-在開發應用程式時，您可以選取需要的服務。選取之後，{{site.data.keyword.Bluemix_notm}} 會與服務互動，並採取必要的步驟以佈建服務資源。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
+在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.Bluemix_notm}} 會佈建服務。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
 
 {{site.data.keyword.Bluemix_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。

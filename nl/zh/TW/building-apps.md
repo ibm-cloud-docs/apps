@@ -50,7 +50,7 @@ lastupdated: "2018-03-16"
 
 繼續自訂應用程式，以便符合您的需要。請查看下列建議，以擴充您的應用程式來達到商業結果：
 
-* 新增我們[最佳作法](best-practice.html)手冊中所概述的[安全](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[監視](https://console.bluemix.net/catalog/?category=devops){:new_window}及可用性改進功能，使您的應用程式更加健全。
+* 新增我們[最佳作法](best-practice.html)手冊中所概述的[安全](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[監視](https://console.bluemix.net/catalog/?category=devops){:new_window}及可用性改進功能，使您的應用程式更強健。
 * 使用 [Watson 認知服務](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}及[進階分析與機器學習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}，使您的應用程式更加聰明。
 * 提升[行動](https://console.bluemix.net/catalog/?category=mobile){:new_window}力。
 * 嘗試[物聯網](https://console.bluemix.net/catalog/?category=iot){:new_window}。

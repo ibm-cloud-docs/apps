@@ -52,8 +52,8 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ../troubleshoot/ts_createapps.md
-    ../troubleshoot/ts_apps.md
-    [IBM Cloud Slack 開發人員工具頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [建立應用程式的疑難排解](../troubleshoot/ts_createapps.html)
+    [管理應用程式的疑難排解](../troubleshoot/ts_apps.html)
+    [IBM Cloud Slack developer-tools 頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

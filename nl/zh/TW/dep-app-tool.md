@@ -33,7 +33,7 @@ lastupdated: "2018-03-17"
 ## 使用指令行介面部署應用程式
 {: #cli}
 
-IBM Cloud 提供一個健全的 CLI，以及與 CLI 整合的外掛程式和開發人員工具延伸規格。
+IBM Cloud 提供強健的 CLI，以及與 CLI 整合的外掛程式和開發人員工具延伸規格。
 
 使用 {{site.data.keyword.Bluemix_notm}} 指令行介面，以部署應用程式及服務實例。
 {:shortdesc}

@@ -28,7 +28,7 @@ lastupdated: "2018-03-16"
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中建立專案：
 
-1. 從 {{site.data.keyword.dev_console}} 的 [入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，選取您的語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
+1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
 
 2. 輸入專案名稱。針對本指導教學，請使用 `MicroserviceProject`。   
 
@@ -50,7 +50,7 @@ lastupdated: "2018-03-16"
 
 1. 從**專案詳細資料**視圖，按一下**新增資源**。
 
-2. 選取您要的服務類型。就本指導教學來說，請選取**資料** > **下一步** > **Cloudant NoSQL DB** > **下一步**。
+2. 選取您要的服務類型。針對本指導教學，請選取**資料** > **下一步** > **Cloudant NoSQL DB** > **下一步**。
 
 4. 按一下**建立**。
 
@@ -65,11 +65,11 @@ lastupdated: "2018-03-16"
 
 2. 按一下**部署至雲端**。
 
-3. 選取部署方法。您可以選擇任一者：
+3. 選取部署方法。您可以選擇任一項：
 
 	* 部署至 Kubernetes 叢集。佈建主機的叢集（稱為工作者節點），以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
 
-	* 使用 Cloud Foundry 部署，如此便不需要管理基礎基礎架構。
+	* 使用 Cloud Foundry 部署，如此便不需要管理基礎的基礎架構。
 
 ## 步驟 3：產生專案程式碼
 {: #generate-code}
@@ -145,7 +145,7 @@ lastupdated: "2018-03-16"
 
 2. 按一下**檢視工具鏈**。
 
-3. 檢視您的 Delivery Pipeline，您可以在其中啟動建置、管理部署及檢視日誌和歷程。
+3. 檢視您的交付管線，您可以在其中啟動建置、管理部署，以及檢視日誌和歷程。
 
 ### 使用 {{site.data.keyword.dev_cli_short}} 部署
 如果您選擇不使用工具鏈，則也可以使用 {{site.data.keyword.dev_cli_short}} 來進行部署。
