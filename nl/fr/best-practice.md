@@ -9,7 +9,8 @@ lastupdated: "2018-03-16"
 # Qu'est-ce qui caractérise une bonne application ?
 {: #best-practice}
 
-Créez votre application dans {{site.data.keyword.Bluemix_notm}} pour bénéficier de tout ce qu'un cloud peut offrir. Les meilleures pratiques décrites ci-après vous aideront à développer des applications prêtes pour le cloud. {:shortdesc}
+Créez votre application dans {{site.data.keyword.Bluemix_notm}} pour bénéficier de tout ce qu'un cloud peut offrir. Les meilleures pratiques décrites ci-après vous aideront à développer des applications prêtes pour le cloud.
+{:shortdesc}
 
 ## Créez une application indépendante de la topologie
 

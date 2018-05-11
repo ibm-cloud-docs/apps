@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 * 通过 bluemix 命令行界面。使用 `bluemix service offerings` 命令。
 * 从您自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
-在开发应用程序时，您可以选择所需的服务。选择服务后，{{site.data.keyword.Bluemix_notm}} 将与该服务进行交互，并执行必要的步骤来供应该服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
+在开发应用程序时，您可以选择所需的服务。选择服务后，{{site.data.keyword.Bluemix_notm}} 会供应该服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
 
 {{site.data.keyword.Bluemix_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。可以跨 Web 应用程序共享服务实例。
 

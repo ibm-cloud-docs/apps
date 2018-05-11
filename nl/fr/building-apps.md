@@ -50,7 +50,7 @@ Dans votre tableau de bord, cliquez sur votre application, puis cliquez sur **In
 
 Continuez à personnaliser votre application en fonction de vos besoins. Consultez les suggestions suivantes afin d'étendre votre application dans le but d'atteindre des résultats métier :
 
-* Rendez votre application plus robuste en ajoutant des améliorations liées à la [sécurité](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, à la [surveillance](https://console.bluemix.net/catalog/?category=devops){:new_window} et à la disponibilité décrites dans notre guide sur les [meilleures pratiques](best-practice.html). 
+* Rendez votre application plus robuste en ajoutant des améliorations liées à la [sécurité](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, à la [surveillance](https://console.bluemix.net/catalog/?category=devops){:new_window} et à la disponibilité décrites dans notre guide sur les [meilleures pratiques](best-practice.html).
 * Rendez votre application plus intelligente grâce à des [services cognitifs Watson](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} et [des analyses évoluées et un apprentissage automatique](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
 * Accédez à la section [Mobile](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
 * Expérimentez [Internet of Things](https://console.bluemix.net/catalog/?category=iot){:new_window}.

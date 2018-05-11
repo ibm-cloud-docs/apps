@@ -23,9 +23,9 @@ Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittst
 ## Apps mit Toolchains bereitstellen
 {: #toolchains_getting_started}
 
-Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started). 
+Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
-Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Zusammenführvorgang mit dem Masterzweig ihn Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst. 
+Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Zusammenführvorgang mit dem Masterzweig ihn Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
 
 Alle in einem {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolchains werden für die automatische Bereitstellung konfiguriert.
 {: tip}
@@ -33,7 +33,7 @@ Alle in einem {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolc
 ## Apps mit der Befehlszeilenschnittstelle bereitstellen
 {: #cli}
 
-IBM Cloud bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden. 
+IBM Cloud bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden.
 
 Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
 {:shortdesc}
@@ -71,7 +71,7 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">Benutzername</var> -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var></code></pre>
 
-  Wenn Sie eine eingebundene ID nutzen, verwenden Sie die Option `-sso`. 
+  Wenn Sie eine eingebundene ID nutzen, verwenden Sie die Option `-sso`.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
 

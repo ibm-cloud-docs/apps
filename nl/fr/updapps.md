@@ -22,20 +22,19 @@ commande à utiliser pour démarrer votre application.
 Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer le domaine personnalisé sur un serveur DNS public, configurer ce domaine dans {{site.data.keyword.Bluemix_notm}}, puis mapper ce domaine au domaine de système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine de système, les demandes de votre domaine personnalisé sont acheminées vers votre application
 dans {{site.data.keyword.Bluemix_notm}}.
 
-Vous pouvez créer et utiliser un domaine personnalisé en utilisant la console ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
+Vous pouvez créer et utiliser un domaine personnalisé en utilisant la console ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 ## Utilisation de la console {{site.data.keyword.Bluemix_notm}}
 
 Procédez comme suit pour créer un domaine personnalisé pour votre organisation à l'aide de la console :
 
 1. Accédez à **Gérer** &gt; **Compte** &gt; **Organisations Cloud Foundry**.
-2. Cliquez sur le nom de l'organisation pour laquelle vous créez un domaine personnalisé. 
-3. Cliquez sur l'onglet **Domaines**. 
-4. Cliquez sur **Ajouter un domaine**, entrez le nom de votre domaine et sélectionnez la région. 
+2. Cliquez sur le nom de l'organisation pour laquelle vous créez un domaine personnalisé.
+3. Cliquez sur l'onglet **Domaines**.
+4. Cliquez sur **Ajouter un domaine**, entrez le nom de votre domaine et sélectionnez la région.
 5. Confirmez vos mises à jour. Cliquez sur **Ajouter**. 
 
-Par exemple, vous pouvez utiliser `*.mycompany.com` pour associer la route `www.mybluemix.com` à votre application.
-Vous pouvez également utiliser `example.mycompany.com` pour associer la route `www.example.mybluemix.com` à votre application.
+Par exemple, vous pouvez utiliser `*.mycompany.com` pour associer la route `www.mybluemix.com` à votre application. Vous pouvez également utiliser `example.mycompany.com` pour associer la route `www.example.mybluemix.com` à votre application.
 {: tip}
 
 Ajoutez la route avec le domaine personnalisé à une application.

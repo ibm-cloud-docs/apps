@@ -63,7 +63,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></code></pre>
 
-  Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`. 
+  Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 

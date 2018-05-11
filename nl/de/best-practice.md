@@ -9,7 +9,8 @@ lastupdated: "2018-03-16"
 # Best Practices für die App-Erstellung
 {: #best-practice}
 
-Erstellen Sie Ihre App in {{site.data.keyword.Bluemix_notm}}, um alle Vorteile einer Cloud zu nutzen. Die in diesem Abschnitt vorgestellten Best Practices unterstützen Sie dabei, Ihre Apps für die Cloud vorzubereiten. {:shortdesc}
+Erstellen Sie Ihre App in {{site.data.keyword.Bluemix_notm}}, um alle Vorteile einer Cloud zu nutzen. Die in diesem Abschnitt vorgestellten Best Practices unterstützen Sie dabei, Ihre Apps für die Cloud vorzubereiten.
+{:shortdesc}
 
 ## App entsprechend erstellen, dass sie unabhängig von der Topologie ist
 
@@ -38,7 +39,7 @@ Das Extrahieren von umgebungsspezifischen Abhängigkeiten in eine Reihe von Eige
 ## App mithilfe einer Architektur mit mehreren Regionen erstellen
 {: #multiregion}
 
-Führen Sie mehrere Instanzen aus, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren Anwendung kann es jedoch sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen. 
+Führen Sie mehrere Instanzen aus, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren Anwendung kann es jedoch sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen.
 
 ## Überwachung Ihrer Apps sicherstellen
 {: #monitoring}
@@ -60,7 +61,7 @@ Sie können stattdessen auf vorhandene Open Source-Produkte oder kostenpflichtig
 
 ## Standardprotokolle verwenden
 
-Verwenden Sie nicht eingeschränkt lesbare Protokolle, für die eine zusätzliche Konfiguration erforderlich ist, damit sie dauerhaft verfügbar sind. 
+Verwenden Sie nicht eingeschränkt lesbare Protokolle, für die eine zusätzliche Konfiguration erforderlich ist, damit sie dauerhaft verfügbar sind.
 
 Apps, die auf Standardprotokollen basieren, sind ausfallsicherer, wenn die Konfigurationselemente an die Plattform delegiert werden. Zu den Standardprotokollen gehören HTTP, SSL, Standarddatenbanken, Warteschlangensteuerung und Web-Service-Verbindungen.
 

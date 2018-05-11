@@ -15,19 +15,18 @@ lastupdated: "2018-03-16"
 Si vous avez créé un projet à l'aide de la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, vous avez eu la possibilité d'ajouter des ressources à partir de la page de présentation du projet. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.Bluemix_notm}} en dehors du contexte de votre projet.
 {: shortdesc}
 
-Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre projet à partir de la page de présentation du projet. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.Bluemix_notm}}. 
+Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre projet à partir de la page de présentation du projet. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.Bluemix_notm}}.
 
 ##Reconnaissance de services
 {: #discover_services}
 
 Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.Bluemix_notm}} comme suit :
 
-* Depuis la console {{site.data.keyword.Bluemix_notm}}. Affichez le catalogue {{site.data.keyword.Bluemix_notm}}. 
+* Depuis la console {{site.data.keyword.Bluemix_notm}}. Affichez le catalogue {{site.data.keyword.Bluemix_notm}}.
 * Depuis l'interface de ligne de commande bluemix. Utilisez la commande `bluemix service offerings`.
 * Depuis votre propre application. Utilisez l'[API Services GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois la sélection effectuée,
-{{site.data.keyword.Bluemix_notm}} interagit avec le service et exécute les tâches nécessaires à la mise à disposition des services du service. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
+Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois le service sélectionné, {{site.data.keyword.Bluemix_notm}} met le service à disposition. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
 
 {{site.data.keyword.Bluemix_notm}} fournit les ressources d'un service à votre application par le biais d'une
 instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
@@ -40,7 +39,7 @@ applications externes et des outils tiers](#accser_external).
 ## Demande de nouvelle instance de service
 {: #req_instance}
 
-Pour demander une nouvelle instance de service, vous devez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. 
+Pour demander une nouvelle instance de service, vous devez utiliser l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 **Remarque :** lorsque vous spécifiez le nom du service, évitez d'utiliser des caractères autres que des caractères alphabétiques
 ou numériques, car vous risquez de
@@ -57,7 +56,7 @@ conserver.
 
 Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
-1. Utilisez la commande `bluemix service offerings`**` pour rechercher le nom et le plan du service dont vous avez besoin. 
+1. Utilisez la commande `bluemix service offerings`**` pour rechercher le nom et le plan du service dont vous avez besoin.
 
 2. Utilisez la commande suivante pour créer une instance de service, où nom_service est le nom du service, plan_service est le plan du service et
 instance_service est le nom à utiliser pour cette instance de service :
@@ -167,7 +166,7 @@ service {{site.data.keyword.Bluemix_notm}}.
 ## Création d'une instance de service fournie par l'utilisateur
 {: #user_provide_services}
 
-Certains de vos services peuvent être gérés en dehors de {{site.data.keyword.Bluemix_notm}}. Si vous disposez des données d'identification permettant d'accéder à ces services externes depuis Internet, vous pouvez créer des instances de service {{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos services externes et de communiquer avec eux. 
+Certains de vos services peuvent être gérés en dehors de {{site.data.keyword.Bluemix_notm}}. Si vous disposez des données d'identification permettant d'accéder à ces services externes depuis Internet, vous pouvez créer des instances de service {{site.data.keyword.Bluemix_notm}} fournies par l'utilisateur afin de représenter vos services externes et de communiquer avec eux.
 
 Pour créer une instance de service fournie par l'utilisateur et la lier à une application, procédez comme suit :
 
@@ -202,8 +201,7 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l`.
-Exemple :
+    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l`. Exemple :
 
         ```
         bluemix service user-provided-create testups2 -l syslog://example2.com

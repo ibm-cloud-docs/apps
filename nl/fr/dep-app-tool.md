@@ -25,7 +25,7 @@ Vous pouvez déployer vos applications avec une chaîne d'outils ou une interfac
 
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux manières, soit  à l'aide d'un modèle, soit à partir d'une application. Pour en savoir plus sur les chaînes d'outils, voir[Création de chaînes d'outils](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
 
-Avec une chaîne d'outils correctement configurée, le déploiement de votre application devient un jeu d'enfants : un cycle de création/déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. 
+Avec une chaîne d'outils correctement configurée, le déploiement de votre application devient un jeu d'enfants : un cycle de création/déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel.
 
 Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.Bluemix}} seront configurées pour un déploiement automatique.
 {: tip}
@@ -33,7 +33,7 @@ Toutes les chaînes d'outils créées à partir d'un tableau de bord de dévelop
 ## Déploiement d'applications avec l'interface de ligne de commande
 {: #cli}
 
-IBM Cloud fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande. 
+IBM Cloud fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande.
 
 Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour déployer vos applications et instances de service.
 {:shortdesc}
@@ -71,7 +71,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></code></pre>
 
-  Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`. 
+  Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 

@@ -20,14 +20,14 @@ Les développeurs d'application en cloud passent par quatre phases fondamentales
 
 ![Flux de développement](images/dev_flow_overview.png "Flux de développement") Figure 1. Phases du processus de développement
 
-Dans certains cas, la phase d'exécution est distincte, mais ici, nous l'avons combinée avec les phases de distribution et de gestion. 
+Dans certains cas, la phase d'exécution est distincte, mais ici, nous l'avons combinée avec les phases de distribution et de gestion.
 
-Examinons de plus près le meilleur moyen d'utiliser {{site.data.keyword.cloud_notm}} dans votre flux de développement. 
+Examinons de plus près le meilleur moyen d'utiliser {{site.data.keyword.cloud_notm}} dans votre flux de développement.
 
 ##Mise en route
 {: #get_started}
 
-Commencez à générer votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre cas d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour automatiquement mettre à disposition les ressources dont vous avez besoin et pour créer un projet d'application indépendant de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code rempli avec votre code source d'application et votre pipeline de déploiement. 
+Commencez à générer votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre cas d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour automatiquement mettre à disposition les ressources dont vous avez besoin et pour créer un projet d'application indépendant de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code rempli avec votre code source d'application et votre pipeline de déploiement.
 
 ![Mise en route](images/dev_get_started.png "Mise en route") Figure 2. Flux de mise en route
 
@@ -37,7 +37,7 @@ Lorsque vous utilisez le bouton **Déployer dans le cloud** pour configurer votr
 ##Développement en local
 {: #develop_locally}
 
-Après avoir créé votre projet d'application de démarrage et votre chaîne d'outils, vous commencez votre développement en local. Clonez le code à partir de votre référentiel sur un poste de travail local et importez-le dans votre interface IDE. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour générer, exécuter et tester votre application en cloud sur votre machine locale. Le plug-in {{site.data.keyword.dev_cli_notm}} crée et gère un conteneur local pour vous. Lorsque vous êtes prêt à voir votre application s'exécuter sur le cloud, envoyez le contenu à votre référentiel cloud et fusionnez vos modifications. 
+Après avoir créé votre projet d'application de démarrage et votre chaîne d'outils, vous commencez votre développement en local. Clonez le code à partir de votre référentiel sur un poste de travail local et importez-le dans votre interface IDE. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour générer, exécuter et tester votre application en cloud sur votre machine locale. Le plug-in {{site.data.keyword.dev_cli_notm}} crée et gère un conteneur local pour vous. Lorsque vous êtes prêt à voir votre application s'exécuter sur le cloud, envoyez le contenu à votre référentiel cloud et fusionnez vos modifications.
 
 ![Développement en local](images/dev_code_locally.png "Développement en local") Figure 3. Flux de développement en local
 
@@ -52,7 +52,7 @@ La fusion des modifications apportées à votre référentiel cloud entraîne le
 Pour vérifier le statut de votre pipeline DevOps, utilisez votre tableau de bord de pipeline de distribution. Pour vérifier le statut général de votre application, consultez le tableau de bord {{site.data.keyword.cloud_notm}} pour votre compte.
 {: tip}
 
-La chaîne d'outils produite par votre démarche de mise en route possède les composants de base dont vous avez besoin pour une distribution continue collaborative qui repose sur une équipe. Cependant, {{site.data.keyword.cloud_notm}} offre un ensemble étendu de services DevOps que vous pouvez ajouter à votre chaîne d'outils afin d'améliorer la distribution, la surveillance, la journalisation et les alertes. 
+La chaîne d'outils produite par votre démarche de mise en route possède les composants de base dont vous avez besoin pour une distribution continue collaborative qui repose sur une équipe. Cependant, {{site.data.keyword.cloud_notm}} offre un ensemble étendu de services DevOps que vous pouvez ajouter à votre chaîne d'outils afin d'améliorer la distribution, la surveillance, la journalisation et les alertes.
 
 ![Distribution et gestion](images/dev_deliver_and_manage.png "Distribution et gestion") Figure 4. Flux de distribution et de gestion
 

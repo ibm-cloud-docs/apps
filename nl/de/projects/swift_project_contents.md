@@ -16,7 +16,7 @@ lastupdated: "2018-03-16"
 Für Swift-Projekte stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden.
 {:shortdesc}
 
-In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einem generierten Swift-Projekt enthalten sind. 
+In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einem generierten Swift-Projekt enthalten sind.
 
 | Verzeichnis und Datei                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|

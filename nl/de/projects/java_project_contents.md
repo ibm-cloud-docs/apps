@@ -21,7 +21,7 @@ Für Java-Projekte stellen die folgenden Informationen einen Bestand der Kompone
 ## Spring
 {: #spring-project-files}
 
-In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Spring-Projekt enthalten sind. 
+In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Spring-Projekt enthalten sind.
 
 | Verzeichnis und Datei                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -63,7 +63,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 ## Liberty
 {: #liberty-project-files}
 
-In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Liberty-Projekt enthalten sind. 
+In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Liberty-Projekt enthalten sind.
 
 | Verzeichnis/Datei                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|

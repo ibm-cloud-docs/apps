@@ -48,7 +48,7 @@ Vous pouvez créer un projet en utilisant l'une des méthodes suivantes :
 ### Facultatif : Ajouter des services
 {: #add-services}
 
-1. Sélectionnez votre projet sur la page **Projets**. 
+1. Sélectionnez votre projet sur la page **Projets**.
 
 2. Cliquez sur **Ajouter un service**.
 
@@ -69,9 +69,9 @@ Vous pouvez créer un projet en utilisant l'une des méthodes suivantes :
 ### Générer le code de votre projet
 {: #generate-code}
 
-1. Sélectionnez votre projet sur la page **Projets**. 
+1. Sélectionnez votre projet sur la page **Projets**.
 
-2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre projet. 
+2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre projet.
 
 
 ### Commencer à utiliser votre application
@@ -105,59 +105,59 @@ Commencez à utiliser le projet que vous avez téléchargé :
 	* Sélectionnez le kit de démarrage "Mobile App: Basic", option 1
 	* Entrez le nom suivant pour votre projet : `MobileBasicProject`
 
-    Remarque : les numéros de sélection pourront changer dans le cadre d'améliorations apportées aux outils. 
+    Remarque : les numéros de sélection pourront changer dans le cadre d'améliorations apportées aux outils.
 
 4. Si vous voulez ajouter des services à votre projet, répondez par l'affirmative à la question qui vous est posée, puis répondez aux questions suivantes.
 
-5. Lorsque votre projet `MobileBasicProject` est créé et sauvegardé, accédez au dossier `MobileBasicProject/MobileBasicProject-Swift`. 
+5. Lorsque votre projet `MobileBasicProject` est créé et sauvegardé, accédez au dossier `MobileBasicProject/MobileBasicProject-Swift`.
 
 ### Exécution de votre projet Swift dans Xcode
 {: #run_swift}
 
-1. Ouvrez le fichier `README.md` dans un visualiser Markdown pour passer en revue les étapes nécessaires pour configurer votre projet. 
+1. Ouvrez le fichier `README.md` dans un visualiser Markdown pour passer en revue les étapes nécessaires pour configurer votre projet.
 
 2. Ouvrez votre terminal et accédez au dossier de votre projet, puis exécutez les commandes suivantes :
-    1. Exécutez `pod setup` si vous devez configurer votre référentiel CocoaPods. 
-    2. Exécutez `pod update` si vous devez mettre à jour vos pods existants. 
+    1. Exécutez `pod setup` si vous devez configurer votre référentiel CocoaPods.
+    2. Exécutez `pod update` si vous devez mettre à jour vos pods existants.
     3. Exécutez `pod install` afin d'installer les pods pour votre projet.
 
-3. Ouvrez votre espace de travail Xcode `<projectname>.xcworkspace`. 
+3. Ouvrez votre espace de travail Xcode `<projectname>.xcworkspace`.
 
-4. Exécutez votre application. 
+4. Exécutez votre application.
 
 ### Exécution de votre projet Cordova dans Xcode
 {: #run_cordova_xcode}
 
 Si vous avez choisi d'utiliser Cordova comme langage d'implémentation, suivez les instructions ci-dessous :
 
-1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet. 
+1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet.
 
 2. Ouvrez votre projet `platforms/ios` dans Xcode.
 
-3. Exécutez votre application. 
+3. Exécutez votre application.
 
 
 ### Exécution de votre projet Cordova dans Android Studio
 {: #run_cordova_studio}
 
-Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme de votre application mobile. 
+Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme de votre application mobile.
 
 1. Décompressez le fichier `BasicProject-Cordova.zip`.
 
-2. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet. 
+2. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet.
 
 3. Ouvrez votre projet `platforms/android` dans Android Studio.
 
-4. Exécutez votre application. 
+4. Exécutez votre application.
 
 
 ### Exécution de votre projet Android dans Android Studio
 {: #run_android}
 
-Utilisez cette section si vous avez choisi d'utiliser Android comme plateforme de votre application mobile. 
+Utilisez cette section si vous avez choisi d'utiliser Android comme plateforme de votre application mobile.
 
-1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet. 
+1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre projet.
 
 2. Ouvrez votre projet `BasicProject-Android` dans Android Studio.
 
-3. Exécutez votre application. 
+3. Exécutez votre application.

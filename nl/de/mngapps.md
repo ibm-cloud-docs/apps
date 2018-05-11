@@ -18,7 +18,7 @@ Ihr Dashboard in der {{site.data.keyword.Bluemix}}-Konsole stellt Übersichtsinf
 ## Status der App verstehen
 {: #status}
 
-In Ihrem Dashboard können Sie den Status jeder Anwendung anzeigen. In der Statusspalte jeder Anwendung können Sie sehen, ob die Instanzen der App ausgeführt werden. 
+In Ihrem Dashboard können Sie den Status jeder Anwendung anzeigen. In der Statusspalte jeder Anwendung können Sie sehen, ob die Instanzen der App ausgeführt werden.
 
 <dl>
 <dt>
@@ -60,6 +60,6 @@ Ihre App wird nicht ausgeführt. Das rote Symbol gibt an, dass die App zwar gest
 
 Sie können weitere Informationen zu einer App anzeigen, indem Sie auf den Namen der App in Ihrem Dashboard klicken. Daraufhin wird die Seite 'Übersicht' der App angezeigt.
 
-Nachdem eine App bereitgestellt wurde, können Sie sie über die Seite 'Übersicht' starten, stoppen oder erneut starten oder - im Falle von Webanwendungen - die Anzahl der Instanzen sowie die von der App verwendete Speichermenge ändern. {{site.data.keyword.Bluemix_notm}} führt für Webanwendungen keine automatische Skalierung der Apps auf Basis der jeweiligen Auslastung durch, weshalb Sie sie selbst verwalten müssen. 
+Nachdem eine App bereitgestellt wurde, können Sie sie über die Seite 'Übersicht' starten, stoppen oder erneut starten oder - im Falle von Webanwendungen - die Anzahl der Instanzen sowie die von der App verwendete Speichermenge ändern. {{site.data.keyword.Bluemix_notm}} führt für Webanwendungen keine automatische Skalierung der Apps auf Basis der jeweiligen Auslastung durch, weshalb Sie sie selbst verwalten müssen.
 
 Nach einer Aktualisierung können Apps erneut bereitgestellt werden. Der Mechanismus zum Aktualisieren der App ist mit dem identisch, der für die ursprüngliche Bereitstellung verwendet wurde. {{site.data.keyword.Bluemix_notm}} stoppt alle aktiven Instanzen und ersetzt sie automatisch durch neue Instanzen.

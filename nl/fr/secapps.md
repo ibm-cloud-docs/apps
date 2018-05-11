@@ -154,7 +154,7 @@ l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [s
   #### Fichier de clés certifiées de certificat client
 
   Le fichier de clés certifiées de certificat client est un fichier contenant les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Si vous activez
-l'option de demande de certificat client, téléchargez un fichier de clés certifiées de certificat client. 
+l'option de demande de certificat client, téléchargez un fichier de clés certifiées de certificat client.
 
    Les types de certificat suivants sont pris en charge dans
 {{site.data.keyword.Bluemix_notm}}:

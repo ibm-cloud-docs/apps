@@ -23,7 +23,7 @@ Pour les projets Java, les informations ci-après répertorient ce que l'on trou
 
 Le tableau suivant répertorie les répertoires et les fichiers inclus dans un projet Java Spring généré :
 
-| Répertoire et fichier                                  | Description                       |
+| Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
 |**`./`**                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Fichier Maven POM |
@@ -65,7 +65,7 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans un p
 
 Le tableau suivant répertorie les répertoires et les fichiers inclus dans un projet Java Liberty généré :
 
-| Répertoire et fichier                                | Description                       |
+| Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
 |**`./`**                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Fichier Maven POM |

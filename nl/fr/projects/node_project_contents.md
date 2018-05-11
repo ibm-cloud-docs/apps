@@ -18,7 +18,7 @@ Pour les projets Node.js, les informations ci-après répertorient ce que l'on t
 
 Le tableau suivant répertorie les répertoires et les fichiers couramment inclus dans un projet Node.js généré :
 
-| Répertoire et fichier                                  | Description                       |
+| Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
 |<b>`./`</b>                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package.json | Fichier de métadonnées |

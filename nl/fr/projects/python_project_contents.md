@@ -16,9 +16,9 @@ lastupdated: "2018-03-16"
 Pour les projets Python, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit.
 {:shortdesc}
 
-Le tableau suivant répertorie les répertoires et les fichiers couramment inclus dans un projet Python généré : 
+Le tableau suivant répertorie les répertoires et les fichiers couramment inclus dans un projet Python généré :
 
-| Répertoire et fichier                                  | Description                       |
+| Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
 |<b>`./`</b>                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements.txt | Packages Python requis |

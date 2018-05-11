@@ -18,7 +18,7 @@ Pour les projets Swift, les informations ci-après répertorient ce que l'on tro
 
 Le tableau suivant répertorie les répertoires et les fichiers couramment inclus dans un projet Swift généré :
 
-| Répertoire et fichier                                  | Description                       |
+| Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
 |<b>`./`</b>                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Package.swift| Fichier de définition de dépendance Swift |

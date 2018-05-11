@@ -17,7 +17,7 @@ lastupdated: "2018-03-16"
 Pour les projets Compose, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit.
 {:shortdesc}
 
-Le fichier [Compose](https://docs.docker.com/compose/overview/)d définit des informations permettant d'exécuter des applications multi-conteneur. 
+Le fichier [Compose](https://docs.docker.com/compose/overview/)d définit des informations permettant d'exécuter des applications multi-conteneur.
 
 Vous devez spécifier la version 2.0 ou une version ultérieure pour le fichier Compose utilisé, par exemple, `version: '2'`
 
@@ -52,12 +52,12 @@ services:
 
 Les configurations les plus pertinentes sont répertoriées ci-dessous :
 
-* build : les attributs context et dockerfile sont inutiles ici car il s'agit des valeurs par défaut, mais ils peuvent être remplacés dans ce format. L'attribut context définit le chemin d'accès au nom du fichier Dockerfile spécifié dans l'attribut dockerfile. 
+* build : les attributs context et dockerfile sont inutiles ici car il s'agit des valeurs par défaut, mais ils peuvent être remplacés dans ce format. L'attribut context définit le chemin d'accès au nom du fichier Dockerfile spécifié dans l'attribut dockerfile.
 
-* tty : avec cet attribut, les conteneurs peuvent rester actifs et ne pas se terminer immédiatement. Cet attribut est requis pour le support Docker-Compose. 
+* tty : avec cet attribut, les conteneurs peuvent rester actifs et ne pas se terminer immédiatement. Cet attribut est requis pour le support Docker-Compose.
 
-* command : cet attribut spécifie la commande à exécuter dans les conteneurs. 
+* command : cet attribut spécifie la commande à exécuter dans les conteneurs.
 
-* image et container_name : ces attributs spécifient les noms de l'image et des conteneurs, respectivement. 
+* image et container_name : ces attributs spécifient les noms de l'image et des conteneurs, respectivement.
 
 
