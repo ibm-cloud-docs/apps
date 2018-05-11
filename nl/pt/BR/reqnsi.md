@@ -27,7 +27,7 @@ Se você criou um projeto usando o {{site.data.keyword.Bluemix_notm}} {{site.dat
 * A partir de seu próprio aplicativo. Use a [API de Serviços GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 É possível selecionar o serviço necessário ao desenvolver
-aplicativos. Logo que você o seleciona, o {{site.data.keyword.Bluemix_notm}} interage com o serviço e executa as etapas necessárias para provisionar serviços do serviço. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
+aplicativos. Depois de selecioná-lo, o {{site.data.keyword.Bluemix_notm}} provisiona o serviço. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
 e um serviço de notificação push para aplicativos móveis gera
 informações de configuração.
 

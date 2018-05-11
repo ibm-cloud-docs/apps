@@ -75,7 +75,7 @@ Evite as dependências específicas do sistema operacional; em vez disso, use se
 
 Seu app pode ser instalado frequentemente sob demanda no ambiente de nuvem dinâmica. O processo de instalação deve ser por script e confiável, e os dados da configuração devem ser exteriorizados a partir dos scripts.
 
-Capture sua instalação do aplicativo como um conjunto uniforme de scripts que é independente do sistema operacional. Mantenha a instalação do app pequena e pré-configurada de scripts com técnicas de automação. Além disso, minimize as dependências que são requeridas pela instalação do app.
+Capture sua instalação do aplicativo como um conjunto uniforme de scripts que é independente do sistema operacional. Mantenha a instalação do app pequena e móvel para adaptar-se a diferentes técnicas de automação. Além disso, minimize as dependências que são requeridas pela instalação do app.
 
 Para obter mais informações sobre apps prontos para nuvem, veja [O app de 12 fatores ![Ícone de link externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
 
