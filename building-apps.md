@@ -26,7 +26,7 @@ The {{site.data.keyword.Bluemix_notm}} catalog lists the infrastructure and plat
 ## Creating a resource
 {: #resource}
 
-1. In your [dashboard](https://console.bluemix.net/dashboard/apps/), click **Create resource**.
+1. In your [dashboard](https://console.bluemix.net/), click **Create resource**.
 
 2. From the catalog, select an app from the Platform section. Then, choose your runtime. For example, you can choose an IBM runtime environment, such as Liberty for Java, which is supported by IBM build packs. You can also choose Community runtimes, such as Tomcat, which relies on open source and third-party build packs.
 
