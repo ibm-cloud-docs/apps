@@ -52,8 +52,8 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ../troubleshoot/ts_createapps.md
-    ../troubleshoot/ts_apps.md
-    [IBM Cloud Slack developer-tools 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [앱 작성에 대한 문제점 해결](../troubleshoot/ts_createapps.html)
+    [앱 관리에 대한 문제점 해결](../troubleshoot/ts_apps.html)
+    [IBM Cloud Slack 개발자-도구 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

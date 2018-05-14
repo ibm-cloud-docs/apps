@@ -21,9 +21,9 @@ Java 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}에�
 ## Spring
 {: #spring-project-files}
 
-다음 표에는 생성된 Java Spring 프로젝트에 포함되는 디렉토리 및 파일이 나열되어 있습니다. 
+다음 표에는 생성된 Java Spring 프로젝트에 포함되는 디렉토리 및 파일이 나열되어 있습니다.
 
-| 디렉토리 및 파일                                | 설명                       |
+| 디렉토리 및 파일                                     | 설명                       |
 |:------------------------------------------------|:------------------------------------------|
 |**`./`**                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Maven pom 파일 |
@@ -63,9 +63,9 @@ Java 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}에�
 ## Liberty
 {: #liberty-project-files}
 
-다음 표에는 생성된 Java Liberty 프로젝트에 포함되는 디렉토리 및 파일이 나열되어 있습니다. 
+다음 표에는 생성된 Java Liberty 프로젝트에 포함되는 디렉토리 및 파일이 나열되어 있습니다.
 
-| 디렉토리 / 파일                                 | 설명                       |
+| 디렉토리 / 파일                                     | 설명                       |
 |:------------------------------------------------|:------------------------------------------|
 |**`./`**                                             |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Maven pom 파일 |

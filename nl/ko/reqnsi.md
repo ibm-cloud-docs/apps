@@ -15,18 +15,18 @@ lastupdated: "2018-03-16"
 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}을 사용하여 프로젝트를 작성한 경우에는 프로젝트 개요 페이지에서 리소스를 추가할 수 있습니다. 또한 프로젝트의 컨텍스트에 속하지 않는 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 리소스를 프로비저닝할 수도 있습니다.
 {: shortdesc}
 
-사용자는 리소스의 인스턴스를 요청하고 이를 앱으로부터 독립적으로 사용하거나, 프로젝트 개요 페이지에서 프로젝트에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스(서비스)를 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다. 
+사용자는 리소스의 인스턴스를 요청하고 이를 앱으로부터 독립적으로 사용하거나, 프로젝트 개요 페이지에서 프로젝트에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스(서비스)를 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다.
 
 ##서비스 발견
 {: #discover_services}
 
 다음 방법으로 {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 모든 서비스를 확인할 수 있습니다.
 
-* {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.Bluemix_notm}} 카탈로그를 봅니다. 
+* {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.Bluemix_notm}} 카탈로그를 봅니다.
 * bluemix 명령행 인터페이스에서 `bluemix service offerings` 명령을 사용합니다.
 * 사용자 고유 애플리케이션: [GET /v2/services 서비스 API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}를 사용합니다.
 
-애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 선택하면 {{site.data.keyword.Bluemix_notm}}에서 서비스와 상호작용하여 서비스의 서비스를 프로비저닝하는 데 필요한 단계를 수행합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다.
+애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 이를 선택하면 {{site.data.keyword.Bluemix_notm}}가 서비스를 프로비저닝합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다.
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
@@ -35,7 +35,7 @@ lastupdated: "2018-03-16"
 ## 새 서비스 인스턴스 요청
 {: #req_instance}
 
-새 서비스 인스턴스를 요청하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용해야 합니다. 
+새 서비스 인스턴스를 요청하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용해야 합니다.
 
 **참고:** 서비스 이름을 지정하는 경우 영문자 또는 숫자만 사용하십시오. 그렇지 않을 경우 예측할 수 없는 결과가 초래될 수 있습니다.
 
@@ -45,11 +45,11 @@ lastupdated: "2018-03-16"
 
 2. **서비스 이름** 필드에 이름을 입력하십시오. 기본 이름이 제공됩니다. 필드에서 이름을 변경하거나, 기본 이름을 그대로 사용할 수 있습니다.
 
-3. 추가 필드 또는 선택사항을 완료한 후 **작성**을 클릭하십시오. 
+3. 추가 필드 또는 선택사항을 완료한 후 **작성**을 클릭하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오. 
+{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오.
 
-1. `bluemix service offerings`**` 명령을 사용하여 필요한 서비스의 이름과 플랜을 찾으십시오. 
+1. `bluemix service offerings`**` 명령을 사용하여 필요한 서비스의 이름과 플랜을 찾으십시오.
 
 2. 다음 명령을 사용하여 서비스 인스턴스를 작성하십시오. 여기서 service_name은 서비스 이름이고, service_plan은 서비스 플랜이며, service_instance는 이 서비스 인스턴스에 사용할 이름입니다.
 
@@ -57,7 +57,7 @@ lastupdated: "2018-03-16"
 bluemix service create service_name service_plan service_instance
 ```
 
-3. 다음 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인드하십시오. 여기서 *appname*은 애플리케이션의 이름이고 service_instance는 서비스 인스턴스의 이름입니다. 
+3. 다음 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인드하십시오. 여기서 *appname*은 애플리케이션의 이름이고 service_instance는 서비스 인스턴스의 이름입니다.
 
 ```
 bluemix service bind appname service_instance
@@ -128,9 +128,9 @@ bluemix service bind appname service_instance
 외부 앱이나 써드파티 도구에서 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 하려면 다음 단계를 완료하십시오.
 
 1. 서비스의 인스턴스를 요청하십시오.
-    1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 대시보드에서 **리소스 작성**을 클릭하십시오. 카탈로그가 표시됩니다. 
+    1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 대시보드에서 **리소스 작성**을 클릭하십시오. 카탈로그가 표시됩니다.
     2. 카탈로그에서 서비스 타일을 클릭하여 원하는 서비스를 선택하십시오. 서비스 세부사항 페이지가 열립니다.
-    3. 서비스 창에서 기본 **연결 대상:**: 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다. 
+    3. 서비스 창에서 기본 **연결 대상:**: 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다.
     4. 필요에 따라 기타 선택사항을 작성하십시오. 그런 다음 **작성**을 클릭하십시오. 서비스 인스턴스가 작성되고 서비스 대시보드가 표시됩니다.
 2. 서비스 대시보드에서 **서비스 신임 정보**를 선택하여 JSON 형식의 신임 정보를 보거나 추가할 수 있습니다. 신임 정보 세트를 선택하고 조치 열에서 **신임 정보 보기**를 클릭하십시오. 표시되는 API 키를 신임 정보로 사용하여 서비스 인스턴스에 연결하십시오.
 
@@ -141,7 +141,7 @@ bluemix service bind appname service_instance
 ## 사용자 제공 서비스 인스턴스 작성
 {: #user_provide_services}
 
-{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 서비스가 있을 수 있습니다. 인터넷에서 이들 외부 서비스에 액세스하기 위한 신임 정보를 가지고 있는 경우에는 {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 서비스를 표시하고 통신할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 서비스가 있을 수 있습니다. 인터넷에서 이들 외부 서비스에 액세스하기 위한 신임 정보를 가지고 있는 경우에는 {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 서비스를 표시하고 통신할 수 있습니다.
 
 사용자 제공 서비스 인스턴스를 작성하고 애플리케이션에 바인딩하려면 다음 단계를 완료하십시오.
 

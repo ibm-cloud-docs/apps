@@ -63,11 +63,11 @@ lastupdated: "2018-03-16"
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  연합 ID를 사용 중인 경우에는 `-sso` 옵션을 사용하십시오. 
+  연합 ID를 사용 중인 경우에는 `-sso` 옵션을 사용하십시오.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **참고**: 값에 간격이 포함되어 있는 경우에는 `-o "my org"`와 같이 `username`, `org_name` 및 `space_name` 앞뒤에 작은따옴표 또는 큰따옴표를 추가해야 합니다. 
+  **참고**: 값에 간격이 포함되어 있는 경우에는 `-o "my org"`와 같이 `username`, `org_name` 및 `space_name` 앞뒤에 작은따옴표 또는 큰따옴표를 추가해야 합니다.
 
   5. <var class="keyword varname">your_new_directory</var>에서 `bluemix app push` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. `bx app push` 명령에 대한 자세한 정보는 [애플리케이션 업로드](/docs/starters/upload_app.html)를 참조하십시오.
 
