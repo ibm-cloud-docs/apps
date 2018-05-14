@@ -51,7 +51,7 @@ After you install the command line interface, you can get started:
 
   1. {: download} Download the code for your app to a new directory to set up your development environment.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Opens in a new tab or window)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Opens in a new tab or window)"></a>
 
   2. Change to the directory where your code is located.
 
