@@ -23,6 +23,7 @@ Creating apps
 
     dep-app-tool.md
     reqnsi.md
+    [Managing connections](../resources/connecting_apps.html)
     mngapps.md
     updapps.md
     secapps.md
