@@ -15,7 +15,7 @@ lastupdated: "2018-05-02"
 # Creating a microservice
 {: #tutorial}
 
-You can a app from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. You can see how to install the tools you need, build and run the app locally and deploy it to the cloud.
+You can create an app from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. You can see how to install the tools you need, build and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1: Install the tools
