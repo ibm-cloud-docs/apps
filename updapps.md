@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -47,13 +47,13 @@ Add the route with the custom domain to an application.
 1. Create a custom domain for your organization by typing the following command:
 
    ```
-   bluemix app domain-create <your org name> mydomain
+   ibmcloud app domain-create <your org name> mydomain
    ```
 
 2. Add the route with the custom domain to an application. For CF apps, type the following command:
 
    ```
-   bluemix app route-map myapp mydomain -n host_name
+   ibmcloud app route-map myapp mydomain -n host_name
 
    ```
 
@@ -85,10 +85,10 @@ http://host_name.mydomain
 To remove an orphaned route, run the following command:
 
 ```
-bluemix app route-delete domain -n hostname -f
+ibmcloud app route-delete domain -n hostname -f
 
 ```
 {: tip}
 
-`domain` is the name of your domain, and `hostname` is the host name of the route for your application. For more information about the **bluemix app route-delete** command, type `bluemix app route-delete -h`.
+`domain` is the name of your domain, and `hostname` is the host name of the route for your application. For more information about the **ibmcloud app route-delete** command, type `ibmcloud app route-delete -h`.
 
