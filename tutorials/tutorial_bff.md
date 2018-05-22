@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -110,14 +110,14 @@ Add your own code, build, and run the app. You can run the application locally o
 1. To build the app in your current app directory, enter the following command:
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. To run the app in your current app directory, enter the following command:
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -164,14 +164,14 @@ If you choose not to use a toolchain, you can also deploy using the {{site.data.
 To deploy your app to Cloud Foundry, enter the following command:
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 To deploy your app to a Kubernetes cluster, enter the following command:
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 
