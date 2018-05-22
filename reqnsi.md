@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ You can request an instance of the resource and use it independently of your app
 You can see all the services that are available in {{site.data.keyword.Bluemix_notm}} in the following ways:
 
 * From the {{site.data.keyword.Bluemix_notm}} console. View the {{site.data.keyword.Bluemix_notm}} catalog.
-* From the bluemix command line interface. Use the `bluemix service offerings` command.
+* From the ibmcloud command line interface. Use the `ibmcloud service offerings` command.
 * From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.Bluemix_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
@@ -49,18 +49,18 @@ If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a se
 
 If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, complete the following steps:
 
-1. Use the `bluemix service offerings` command to find the name and the plan of the service that you require.
+1. Use the `ibmcloud service offerings` command to find the name and the plan of the service that you require.
 
 2. Use the following command to create a service instance, where service_name is the name of the service, service_plan is the plan of the service, and service_instance is the name that you want to use for this service instance.
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. Use the following command to bind the service instance to an application, where *appname* is the name of the application, and service_instance is the name of the service instance.
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services](#accser_external){: new_window}.
@@ -145,10 +145,10 @@ You might have services that are managed outside of {{site.data.keyword.Bluemix_
 
 To create a user-provided service instance and bind it to an application, complete the following steps:
 
-1. Create a user-provided service instance by using either the `bluemix service user-provided-create` command:
-    * To create a general user-provided service instance, use the **-p** option, and separate the parameter names with commas. The `bx` command line interface then prompts you for each parameter in turn. For example:
+1. Create a user-provided service instance by using either the `ibmcloud service user-provided-create` command:
+    * To create a general user-provided service instance, use the **-p** option, and separate the parameter names with commas. The `ibmcloud` command line interface then prompts you for each parameter in turn. For example:
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -161,17 +161,17 @@ To create a user-provided service instance and bind it to an application, comple
     * To create a service instance that drains information to a third-party log management software, use the `-l` option, and specify the destination that the third-party log management software provides. For example:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    If you want to update one or more parameters of the user-provided service instance, use either the `bluemix service user-provided-update`.
+    If you want to update one or more parameters of the user-provided service instance, use either the `ibmcloud service user-provided-update`.
 
     * To update a general user-provided service instance, use the **-p** option, and specify the parameter keys and values in a JSON object. For example:
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -179,15 +179,15 @@ To create a user-provided service instance and bind it to an application, comple
     * To create a service instance that drains information to a third-party log management software, use the `-l` option. For example:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Bind the service instance to your application by using the `bluemix service bind` command. For example:
+2. Bind the service instance to your application by using the `ibmcloud service bind` command. For example:
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```
