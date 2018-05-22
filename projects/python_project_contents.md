@@ -13,40 +13,52 @@ lastupdated: "2018-05-22"
 # Python app Files
 {: #python-project-files}
 
-For Python apps, the following information is an inventory of what you typically find in {{site.data.keyword.Bluemix}}. When you create a starter kit, these files are created for you. If you're migrating an app to host in {{site.data.keyword.Bluemix_notm}}, you might want to review this information to avoid potential conflicts. 
+For Python apps, the following information is an inventory of what you typically find in {{site.data.keyword.Bluemix}}. When you create a starter kit, these files are created for you. If you're migrating an app to host in {{site.data.keyword.Bluemix_notm}}, you might want to review this information to avoid potential conflicts.
 {:shortdesc}
 
 The following table lists the common directories and files that are included in a generated Python app.
 
-| Directory and File                                     | Description                       |
+| Root directory                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements.txt | Required Python packages |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setup.py | Python installer script |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI configuration options |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry deployment file |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description of app |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Swagger specification for describing REST APIs |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html | Skeleton markup for web applications |
-|<b>`./server/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__init__.py | Marks directories as Python package directories |
-|<b>`./tests/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app_tests.py | Python server test cases |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud pipeline definition |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud toolchain definition |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm chart |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm chart values |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Deployment template |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Service template |
-{: caption="Table 1. Contents of a generated Python app" caption-side="top"}
+| requirements.txt | Required Python packages |
+| setup.py | Python installer script |
+| cli-config.yml | CLI configuration options |
+| manifest.yml | Cloud Foundry deployment file |
+| Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
+| Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
+| LICENSE | License file |
+| README.md | Description of app |
+{: caption="Table 1. Contents of a generated Python app root directory" caption-side="top"}
+
+| `./public/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| swagger.yml | Swagger specification for describing REST APIs |
+| index.html | Skeleton markup for web applications |
+{: caption="Table 2. Contents of a generated Python app public directory" caption-side="top"}
+
+| `./server/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `__init__.py` | Marks directories as Python package directories |
+{: caption="Table 3. Contents of a generated Python app server directory" caption-side="top"}
+
+| `./tests/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| app_tests.py | Python server test cases |
+{: caption="Table 4. Contents of a generated Python app tests directory" caption-side="top"}
+
+| `./.bluemix/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Container build script |
+| deploy.json | Deployment information |
+| kube_deploy.sh | Kubernetes deployment script |
+| pipeline.yml | IBM Cloud pipeline definition |
+| toolchain.yml | IBM Cloud toolchain definition |
+{: caption="Table 5. Contents of a generated Python app bluemix directory" caption-side="top"}
+
+| `./chart/<projectname>/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm chart |
+| `./chart/<projectname>/values.yaml` | Helm chart values |
+| `./chart/<projectname>/templates/deployment.yaml` | Deployment template |
+| `./chart/<projectname>/templates/service.yaml` | Service template |
+{: caption="Table 6. Contents of a generated Python app chart directory" caption-side="top"}

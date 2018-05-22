@@ -18,37 +18,44 @@ For Node.js apps, the following information is an inventory of what you typicall
 
 The following table lists the common directories and files that are included in a generated Node.js app.
 
-| Directory and File                                     | Description                       |
+| Root directory                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package.json | Metadata file |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI configuration options |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry deployment file |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | App service configuration for Docker Compose |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Webpack configuration for build related information |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description of app |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Swagger specification for describing REST APIs |
-|<b>`./public/index.html`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html | Skeleton markup for web applications |
-|<b>`./public/server/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.js | Server implementation file |
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | Integration test for Express server |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud pipeline definition |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud toolchain definition |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm chart |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm chart values |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Deployment template |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Service template |
-{: caption="Table 1. Contents of a generated Node.js app" caption-side="top"}
+|package.json | Metadata file |
+|cli-config.yml | CLI configuration options |
+|manifest.yml | Cloud Foundry deployment file |
+|Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
+|Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
+|docker-compose.yml | App service configuration for Docker Compose |
+|webpack.config.js | Webpack configuration for build related information |
+| LICENSE | License file |
+|README.md | Description of app |
+{: caption="Table 1. Contents of a generated Node.js app root directory" caption-side="top"}
 
+| `./public/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `./public/swagger.yml` | Swagger specification for describing REST APIs |
+| `./public/index.html` | Skeleton markup for web applications |
+|`./public/server/server.js` | Server implementation file |
+{: caption="Table 2. Contents of a generated Node.js app public directory" caption-side="top"}
+
+| `./test/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| test-server.js | Integration test for Express server |
+{: caption="Table 3. Contents of a generated Node.js app test directory" caption-side="top"}
+
+| `./.bluemix/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Container build script |
+| deploy.json | Deployment information |
+| kube_deploy.sh | Kubernetes deployment script |
+| pipeline.yml | IBM Cloud pipeline definition |
+| toolchain.yml | IBM Cloud toolchain definition |
+{: caption="Table 4. Contents of a generated Node.js app bluemix directory" caption-side="top"}
+
+| `./chart/<projectname>/` directory | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm chart |
+| `./chart/<projectname>/values.yaml` | Helm chart values |
+| `./chart/<projectname>/templates/deployment.yaml` | Deployment template |
+| `./chart/<projectname>/templates/service.yaml` | Service template |
+{: caption="Table 5. Contents of a generated Node.js app chart directory" caption-side="top"}
