@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-05-22"
 
 ---
 {:new_window: target="_blank"}
@@ -41,7 +41,7 @@ After you create your starter app and toolchain, you start your development loca
 
 ![Develop locally](images/dev_code_locally.png "Develop locally") Figure 3. Developing locally flow
 
-The basic functions for {{site.data.keyword.dev_cli_notm}} are `bx dev build` and `bx dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html) for more details.
+The basic functions for {{site.data.keyword.dev_cli_notm}} are `ibmcloud dev build` and `ibmcloud dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html) for more details.
 {: tip}
 
 ##Deliver and manage in {{site.data.keyword.cloud_notm}}
