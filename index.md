@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2018-05-02"
 # Getting started tutorial
 {: #create}
 
-In {{site.data.keyword.Bluemix}}, you can build enterprise-level mobile and web applications and take advantage of cloud extensions hosted by {{site.data.keyword.Bluemix_notm}}. You can use the {{site.data.keyword.Bluemix}} console and command line tools to build, run and deploy your apps. You can get started in one of two ways: create a app with a starter kit that manages the process for you, or if you know what you want, build your app with the resources you need.
+In {{site.data.keyword.Bluemix}}, you can build enterprise-level mobile and web applications and take advantage of cloud extensions that are hosted by {{site.data.keyword.Bluemix_notm}}. You can use the {{site.data.keyword.Bluemix}} console and command line tools to build, run, and deploy your apps. You can get started in two ways: create an app with a starter kit that manages the process for you, or if you know what you want, build your app with the resources you need.
 {:shortdesc}
 
-You can use a starter kit to quickly get your app started and prepare it for future development. Choose a starter kit and programming language, create a app, and then set up a DevOps toolchain to automatically deploy your app. You can also download the code for immediate inspection.
+You can use a starter kit to quickly get your app started and prepare it for future development. Choose a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app. You can also download the code for immediate inspection.
 
 Starter kits are available in many categories, including:
 
@@ -34,9 +34,9 @@ Starter kits are available in many categories, including:
 
 [Sign up](https://console.bluemix.net){: new_window} for an {{site.data.keyword.cloud_notm}} account. Enter your email, name, company, region, and phone number.
 
-You don't need a credit card to sign up for a free account, but entering a credit card gives you access to more resources and makes it easier for you to fully understand all {{site.data.keyword.cloud_notm}} has to offer.
+You don't need a credit card to sign up for a free account, but entering a credit card gives you access to more resources and makes it easier for you to fully understand all {{site.data.keyword.cloud_notm}} offers.
 
-## Step 1: Create a app
+## Step 1: Create an app
 {: #project}
 
 1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) > **Web Apps**.

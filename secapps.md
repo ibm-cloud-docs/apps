@@ -86,7 +86,7 @@ To upload a certificate for your application:
 
 2. Select your app to open the app details view.
 
-3. Select the **Routes** pull-down, and then for your organization, in the action column, select **Domains** from the additional actions menu.
+3. Select the **Routes** drop-down, and then for your organization, in the action column, select **Domains** from the additional actions menu.
 
 3. For your custom domain, click **Upload Certificate**.
 

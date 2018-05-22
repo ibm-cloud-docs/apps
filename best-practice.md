@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
 # What makes a good app?
 {: #best-practice}
 
-Build your app in {{site.data.keyword.Bluemix_notm}} to take advantage of all the things cloud has to offer. These best practices can help you ensure your apps are cloud-ready.
+Build your app in {{site.data.keyword.Bluemix_notm}} to take advantage of all the things cloud offers. These best practices can help you ensure that your apps are cloud-ready.
 {:shortdesc}
 
 ## Build your app to be independent of topology
@@ -18,9 +18,9 @@ In a non-cloud environment, your app might use a particular deployment topology.
 
 Build your app to be as generic and stateless as possible to keep your app from being affected by scalability changes.
 
-## Assume that the local file system isn't permanent
+## Assume that the local File System isn't permanent
 
-Because an app instance can be moved, deleted, or duplicated at any time on cloud, don't rely on the files that are written to the file system. If an app uses the local file system as a cache of frequently used information including app logs, the information is lost when the instance is shut down and restarted at a different location or a different VM.
+Because an app instance can be moved, deleted, or duplicated on cloud, don't rely on the files that are written to the file system. If an app uses the local file system as a cache of frequently used information including app logs, the information is lost when the instance is shut down and restarted at a different location or a different VM.
 
 You can store information in a service, such as an SQL or NoSQL database instead of the local file system. In a dynamic cloud environment, it's also critical to have your logs available on a service that outlives the app instances where the logs are generated.
 
@@ -28,7 +28,7 @@ You can store information in a service, such as an SQL or NoSQL database instead
 
 The state of your system is defined by your databases and shared storage, and not by each individual running app instance. Statefulness of any sort limits the scalability of an app. Try to minimize the impact of session state by storing it in a centralized location on the server.
 
-If you can't eliminate session state entirely, push it out to a highly available store that is external to your app server. The stores include IBM WebSphere Extreme Scale, Redis, or Memcached, or an external database.
+If you can't eliminate session state entirely, push it out to a highly available store that is external to your app server. The stores include IBM WebSphere eXtreme Scale, Redis, or Memcached, or an external database.
 
 ## Use an external service registry to resolve service endpoints
 
@@ -36,7 +36,7 @@ Don't assume that the services your app uses are allocated particular host names
 
 Extracting environment-specific dependencies into a set of property files is an improvement, but it’s still inadequate. The best practice is to use an external service registry to resolve service endpoints, or delegate the entire routing function to a service bus or a load balancer with a virtual name.
 
-## Build your app using a multi-region architecture
+## Build your app by using a multi-region architecture
 {: #multiregion}
 
 Run multiple instances to avoid downtime in a single region, but to deliver an even more robust application, consider a multi-region architecture.
@@ -63,7 +63,7 @@ You can rely on existing open source or commercial products instead, and leave P
 
 Don't use obscure protocols that require extra configuration for resiliency.
 
-Apps based on standard protocols are more resilient with the configuration items delegated to the platform. The standard protocols include HTTP, SSL, standard database, queuing, and web service connections.
+Apps based on standard protocols are more resilient with the configuration items that are delegated to the platform. The standard protocols include HTTP, SSL, standard database, queuing, and web service connections.
 
 ## Use compatibility libraries instead of OS-specific features
 

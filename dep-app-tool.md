@@ -3,14 +3,14 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-21"
 
 ---
 
-{:new_window: target="_blank"}  
-{:shortdesc: .shortdesc}  
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -25,9 +25,9 @@ You can deploy your apps with a toolchain or a command line interface. A toolcha
 
 Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. To learn more about toolchains, see [Creating toolchains](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
 
-With a properly configured toolchain, deploying your app is trivial:  a build-deploy cycle will automatically kick off with each merge to the Master branch in your repo.
+With a properly configured toolchain, deploying your app is trivial:  a build-deploy cycle will automatically start with each merge to the Master branch in your repo.
 
-All toolchains created from an {{site.data.keyword.Bluemix}} developer dashboard will be configured for automatic deployment.
+All toolchains that are created from an {{site.data.keyword.Bluemix}} developer dashboard are configured for automatic deployment.
 {: tip}
 
 ## Deploying apps with the command line interface
@@ -41,7 +41,7 @@ Use {{site.data.keyword.Bluemix_notm}} command line interface to deploy your app
 Before you begin, download and install the {{site.data.keyword.Bluemix_notm}} command line interface.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download Bluemix command line interface" /> </a>
+<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download Bluemix command line interface" /></a>
 </p>
 
 **Restriction:** The command line tool isn’t supported by Cygwin. Use the tool in a command line window other than the Cygwin command line window.
@@ -57,7 +57,7 @@ After you install the command line interface, you can get started:
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  Make changes to your app code. For example, if you're using a {{site.data.keyword.Bluemix_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit "Thanks for creating ..." to say something new. Ensure the app runs locally before you deploy it back to {{site.data.keyword.Bluemix_notm}}.
+  3.  Make changes to your app code. For example, if you're using a {{site.data.keyword.Bluemix_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit "Thanks for creating ..." to say something new. Ensure that the app runs locally before you deploy it back to {{site.data.keyword.Bluemix_notm}}.
 
     Take note of the `manifest.yml` file. When deploying your app back to {{site.data.keyword.Bluemix_notm}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters.
 
@@ -71,7 +71,7 @@ After you install the command line interface, you can get started:
 
   <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  If you’re using a federated ID, use the `-sso` option.
+  If you use a federated ID, add the `-sso` option.
 
   <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 

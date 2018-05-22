@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-05-02"
 # Adding a service to your app
 {: #add_service}
 
-If you created an app using {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, then you had a chance to add resources from the app overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your app.
+If you created an app with {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, then you had a chance to add resources from the app overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
 You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the app overview page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.Bluemix_notm}} catalog.
@@ -37,7 +37,7 @@ You can also use services that are hosted in other regions if those services are
 
 To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} user interface or the {{site.data.keyword.Bluemix_notm}} command line interface.
 
-**Note:** When you specify the service name, avoid using characters other than alphabetic or numeric characters, because results might be unpredictable.
+**Note:** When you specify the service name, avoid characters other than alphabetic or numeric characters because results might be unpredictable.
 
 If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a service instance, complete the following steps:
 
