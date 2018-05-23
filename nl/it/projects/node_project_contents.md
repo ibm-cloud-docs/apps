@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +10,13 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# File progetto Node.js
+# File applicazione Node.js
 {: #node-project-files}
 
-Per i progetti Node.js, le seguenti informazioni sono un inventario di quello che normalmente trovi in {{site.data.keyword.Bluemix}}. Quando crei un kit starter, questi file sono creati per te. Se stai migrando un'applicazione per essere ospitata in {{site.data.keyword.Bluemix_notm}}, potresti voler esaminare queste informazioni per evitare potenziali conflitti.
+Per le applicazioni Node.js, le seguenti informazioni sono un inventario di quello che normalmente trovi in {{site.data.keyword.Bluemix}}. Quando crei un kit starter, questi file sono creati per te. Se stai migrando un'applicazione per essere ospitata in {{site.data.keyword.Bluemix_notm}}, potresti voler esaminare queste informazioni per evitare potenziali conflitti. 
 {:shortdesc}
 
-La seguente tabella elenca le directory comuni e i file che sono inclusi in un progetto Node.js generato.
+La seguente tabella elenca le directory e i file comuni che sono inclusi in un'applicazione Node.js generata.
 
 | Directory e file                                     | Descrizione                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -29,7 +29,7 @@ La seguente tabella elenca le directory comuni e i file che sono inclusi in un p
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | Configurazione del servizio dell'applicazione per Docker Compose |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Configurazione Webpack per la creazione delle informazioni correlate |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrizione del progetto |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrizione dell'applicazione |
 |<b>`./public/`</b> |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Specifica Swagger per descrivere l'API REST |
 |<b>`./public/index.html`</b> |  |  |
@@ -50,5 +50,5 @@ La seguente tabella elenca le directory comuni e i file che sono inclusi in un p
 |<b>`./chart/<projectname>/templates/`</b> | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Template distribuzione |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Template del servizio |
-{: caption="Tabella 1. Contenuto di un progetto Node.js generato" caption-side="top"}
+{: caption="Tabella 1. Contenuto di un'applicazione Node.js generata" caption-side="top"}
 

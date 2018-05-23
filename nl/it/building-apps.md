@@ -21,12 +21,12 @@ Se non stai utilizzando un kit starter e non sai di cosa hai bisogno, puoi crear
 ## Scelta del linguaggio
 {: #catalog}
 
-Il catalogo {{site.data.keyword.Bluemix_notm}} elenca le risorse di infrastruttura e piattaforma disponibili per l'utilizzo. Puoi iniziare a creare la tua applicazione selezionando una macchina virtuale, un contenitore o un'applicazione Cloudant o Cloud Foundry. Se hai bisogno di risorse della piattaforma, {{site.data.keyword.Bluemix_notm}} offre anche dei [contenitori tipo](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=blueprints), che forniscono runtime e altri servizi per aiutarti a iniziare a costruire.
+Il catalogo {{site.data.keyword.Bluemix_notm}} elenca le risorse dell'infrastruttura e piattaforma disponibili per l'utilizzo. Puoi iniziare a creare la tua applicazione selezionando una macchina virtuale, un contenitore o un'applicazione Cloudant o Cloud Foundry. Se hai bisogno di risorse della piattaforma, {{site.data.keyword.Bluemix_notm}} offre anche dei [contenitori tipo](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=blueprints), che forniscono runtime e altri servizi per aiutarti a iniziare a costruire.
 
 ## Creazione di una risorsa
 {: #resource}
 
-1. Nel tuo [dashboard](https://console.bluemix.net/dashboard/apps/), fai clic su **Crea risorsa**.
+1. Nel tuo [dashboard](https://console.bluemix.net/), fai clic su **Crea risorsa**.
 
 2. Dal catalogo, seleziona un'applicazione dalla sezione Piattaforma. Quindi, seleziona il tuo runtime. Ad esempio, puoi scegliere un ambiente di runtime IBM, come Liberty for Java, che è supportato dai pacchetti di build IBM. Puoi anche scegliere runtime di community, come Tomcat, che si basano su pacchetti di build open source e di terze parti.
 
@@ -34,7 +34,7 @@ Il catalogo {{site.data.keyword.Bluemix_notm}} elenca le risorse di infrastruttu
   * [Introduzione a Openwhisk](../openwhisk/index.html)
   * [Creazione di applicazioni Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
 
-3. Inserisci il nome applicazione, il nome host e scegli il piano dei prezzi.
+3. Inserisci il nome applicazione, il nome host e scegli il piano prezzi.
 
 4. Seleziona il tuo stile di sviluppo. Puoi modificare la tua applicazione nell'editor di testo preferito e utilizzare la riga di comando {{site.data.keyword.Bluemix_notm}} per distribuirla a {{site.data.keyword.Bluemix_notm}}. Puoi anche utilizzare i servizi {{site.data.keyword.Bluemix_notm}} DevOps per distribuire la tua applicazione da un browser o utilizzare Eclipse Tools for {{site.data.keyword.Bluemix_notm}} per lavorare sulle applicazioni nell'ambiente di sviluppo integrato di Eclipse.
 
@@ -43,7 +43,7 @@ Il catalogo {{site.data.keyword.Bluemix_notm}} elenca le risorse di infrastruttu
 
 Ogni applicazione viene fornita con una sezione introduttiva che ti aiuta a ottenere tutto il software e i contenuti necessari per iniziare a lavorare.
 
-Nel dashboard, fai clic sulla tua applicazione e quindi su **Introduzione**, che può aiutarti a ottenere il software necessario per sviluppare la tua applicazione, indirizzarti al codice di origine e aiutarti a distribuire l'applicazione per la prima volta.
+Nel dashboard, fai clic sulla tua applicazione e quindi su **Introduzione**, che può aiutarti a ottenere il software necessario per sviluppare la tua applicazione, indirizzarti al codice sorgente e aiutarti a distribuire l'applicazione per la prima volta.
 
 ## Passi successivi
 {: #next}

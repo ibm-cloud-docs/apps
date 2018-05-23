@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
 
-Se hai creato un progetto utilizzando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto una possibilità di aggiungere le risorse dalla pagina della panoramica del progetto. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto del tuo progetto.
+Se hai creato un'applicazione utilizzando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto una possibilità di aggiungere le risorse dalla pagina della panoramica dell'applicazione. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto della tua applicazione.
 {: shortdesc}
 
-Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa al tuo progetto dalla pagina della panoramica del progetto. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}.
+Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa alla tua applicazione dalla pagina della panoramica dell'applicazione. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}.
 
 ##Rilevamento servizi
 {: #discover_services}
@@ -56,7 +56,7 @@ per richiedere un'istanza del servizio, completa la seguente procedura:
 
 Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
 
-1. Utilizza il comando `bluemix service offerings`**` per trovare il nome e il piano del servizio di cui hai bisogno.
+1. Utilizza il comando `bluemix service offerings` per trovare il nome e il piano del servizio di cui hai bisogno.
 
 2. Utilizza il seguente comando per creare un'istanza del servizio, dove nome_servizio è il nome del servizio, piano_servizio è il piano del servizio e istanza_servizio è il nome da utilizzare per questa istanza del servizio.
 

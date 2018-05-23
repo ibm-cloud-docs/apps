@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   1. {: download} Scarica il codice per la tua applicazione in una nuova directory per configurare il tuo ambiente di sviluppo.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Si apre in una nuova scheda o finestra)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Si apre in una nuova scheda o finestra)"></a>
 
   2. Passa alla directory in cui si trova il codice.
 

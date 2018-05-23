@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -21,8 +21,7 @@ Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'
 Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.Bluemix}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server.
 
 Un CSR è un messaggio che viene inviato a un'autorità di certificazione per richiedere la firma di una chiave pubblica
-e le informazioni associate. Più comunemente, i CSR sono in formato PKCS #10. Il CSR include una chiave pubblica,
-così come un nome comune, organizzazione, città, stato, paese ed e-mail. Le richieste di certificati SSL
+e le informazioni associate. Più comunemente, i CSR sono in formato PKCS #10. Il CSR include una chiave pubblica, un nome comune, un'organizzazione, una città, uno stato, un paese ed una e-mail. Le richieste di certificato SSL
 vengono accettate solo con una lunghezza di chiave CSR pari a 2048 bit.
 
 ## Informazioni obbligatorie
@@ -78,7 +77,7 @@ Puoi applicare un protocollo di sicurezza per garantire la riservatezza
 delle comunicazioni della tua applicazione in modo da prevenire l'intercettazione delle comunicazioni,
 la manomissione e la falsificazione dei messaggi.
 
-Per ogni organizzazione in {{site.data.keyword.Bluemix_notm}} con un proprietario di account che dispone di un piano di pagamento a consumo o di sottoscrizione, hai diritto al caricamento di quattro certificati. Per ogni organizzazione con un proprietario di account che dispone di un account di prova gratuita, devi aggiornare il tuo account per poter caricare un certificato.
+Per ogni organizzazione in {{site.data.keyword.Bluemix_notm}} con un proprietario di account che dispone di un piano di pagamento a consumo o di sottoscrizione, hai diritto al caricamento di quattro certificati. Per ogni organizzazione con un proprietario di account che dispone di un account di prova gratuita, devi eseguire un upgrade del tuo account per caricare un certificato.
 
 Prima di poter caricare i certificati, devi creare una
 richiesta di firma del certificato.
@@ -96,14 +95,13 @@ Per caricare un certificato per la tua applicazione:
 
 1. Vai al tuo dashboard.
 
-2. Seleziona il nome della tua applicazione per visualizzarne la pagina dei dettagli.
+2. Seleziona la tua applicazione per aprire la vista dei dettagli ad essa relativa.
 
-3. Seleziona l'elenco a discesa **Rotte** e fai clic su **Gestisci domini**.
+3. Seleziona il menu a discesa **Rotte** e quindi, nella colonna delle azioni, per la tua organizzazione seleziona **Domini** dal menu delle azioni aggiuntive.
 
 3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
 
-4. Sfoglia per caricare un certificato, una chiave privata e,
-facoltativamente, un certificato intermedio. Puoi anche selezionare la casella di spunta per abilitare le richieste di un certificato client. Se abiliti l'opzione di richiesta di un certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
+4. Sfoglia per caricare un certificato, una chiave privata e, facoltativamente, un certificato intermedio o un certificato client. Per abilitare il truststore certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
 
   #### Certificato
 
@@ -136,21 +134,17 @@ solo mediante la chiave pubblica corrispondente. Inoltre, la chiave privata vien
 
     Un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
 specificamente per emettere certificati server per l'entità finale. Il risultato è una catena di certificati
-che inizia dalla CA radice attendibile, passa per il certificato intermedio e termina con il certificato
-SSL emesso per l'organizzazione.
+che inizia dalla CA radice attendibile, passa per il certificato intermedio e termina con il certificato SSL emesso per l'organizzazione.
 
     Devi utilizzare un certificato intermedio per verificare l'autenticità del certificato principale. I certificati intermedi vengono generalmente ottenuti da una terza parte attendibile. Potresti non aver bisogno
 di un certificato intermedio durante il test della tua applicazione, prima della sua distribuzione nella produzione.
 
   #### Abilita richiesta di certificato client
 
-    Se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
+    Se abiliti questa opzione caricando un file truststore certificato client, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
 il browser web gli richiede di fornire un certificato client per il dominio. Utilizza l'opzione di caricamento file **Truststore certificato client** per definire i certificati lato client a cui consenti di accedere al tuo dominio personalizzato.
 
-  **Nota:** la funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.Bluemix_notm}} dipende dall'estensione Server Name Indication (SNI) del protocollo TLS (Transport Layer Security). Pertanto, il codice
-client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}}
-protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione
-TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html).
+  **Nota:** la funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.Bluemix_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Pertanto, il codice client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html).
 
   #### Truststore certificato client
 
@@ -159,7 +153,8 @@ TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link
    In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
 
       * PEM (pem, .crt, .cer e .cert)
-	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Per eliminare un certificato o sostituire un certificato esistente con uno nuovo, vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**. Fai quindi clic su **Visualizza dettagli** > **Modifica organizzazione** > **Domini**.
+Per ulteriori informazioni, consulta [Importazione di certificati SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+
+Per eliminare un certificato o sostituire un certificato esistente con uno nuovo, vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**. Fai quindi clic su **Visualizza dettagli** > **Modifica organizzazione** > **Domini**. Nel menu delle azioni aggiuntive per l'organizzazione, fai clic su **Rimuovi dall'organizzazione**.

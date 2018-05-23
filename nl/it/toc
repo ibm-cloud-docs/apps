@@ -43,7 +43,7 @@ Creazione di applicazioni
         [Applicazioni web](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Centenuto del progetto
+    Contenuto dell'applicazione
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,7 +52,6 @@ Creazione di applicazioni
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Risoluzione dei problemi relativi alla creazione delle applicazioni](../troubleshoot/ts_createapps.html)
     [Risoluzione dei problemi relativi alla gestione delle applicazioni](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)

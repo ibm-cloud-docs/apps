@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Architetture comuni per le applicazioni cloud
 {: #patterns}
 
-I kit starter su {{site.data.keyword.cloud_notm}} ti aiutano a produrre le applicazioni con un'architettura comprovata. Le applicazioni sono tutti diverse, ma quando basi la tua applicazione su un noto modello architettonico, è più facile ottenere rapidamente un risultato affidabile. Quando crei un progetto da un kit starter, stai scegliendo uno dei diversi tipi di pattern insieme ai componenti, come un runtime, per compilare il modello.
+I kit starter su {{site.data.keyword.cloud_notm}} ti aiutano a produrre le applicazioni con un'architettura comprovata. Le applicazioni sono tutti diverse, ma quando basi la tua applicazione su un noto modello architettonico, è più facile ottenere rapidamente un risultato affidabile. Quando crei un'applicazione da un kit starter, stai scegliendo uno dei diversi tipi di pattern insieme ai componenti, come un runtime, per compilare il modello.
 {:shortdesc}
 
 ## Applicazione web
 {: #web}
 
-Il modello dell'applicazione web produce progetti che forniscono il contenuto web come HTML, JavaScript e i fogli di calcolo al server web. Esistono molti kit starter dell'applicazione web.
+Il modello dell'applicazione web produce applicazioni che forniscono il contenuto web come HTML, JavaScript e i fogli di calcolo al server web. Esistono molti kit starter dell'applicazione web.
 
 * Basic - fornisce un file `index.html` statico, un foglio di calcolo vuoto e predefinito e un file JavaScript.
 * React - un framework avanzato per creare le interfacce utente. I file di origine si trovano in `src/client/app` e vengono compilati con WebPack e forniti nella directory pubblica.
@@ -44,14 +44,14 @@ Esistono molti kit starter BFF tra cui puoi scegliere in base ai tuoi requisiti 
 ## Microservizio
 {: #microservice}
 
-I progetti del microservizio forniscono le basi per la creazione di microservizi di backend, inclusi un endpoint di integrità di base e l'API REST. I progetti generati contengono tutte le dipendenze richieste dal microservizio stesso, nonché tutti i servizi cloud collegati.
+Le applicazioni del microservizio forniscono le basi per la creazione di microservizi di backend, inclusi un endpoint di integrità di base e l'API REST. Le applicazioni generate contengono tutte le dipendenze richieste sia per il microservizio stesso che per gli eventuali servizi cloud collegati.
 
 Esistono molti kit starter del microservizio tra cui puoi scegliere in base ai tuoi requisiti di linguaggio e framework.  Puoi trovare i kit starter per il modello del microservizio nel [Dashboard dello sviluppatore dell'applicazione web{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
-I progetti mobili sono diversi dagli altri modelli perché hanno un componente lato client significativo. Il modello può includere una connessione diretta ai servizi mobili come le notifiche push, l'autenticazione e le analisi mobili, noto come mobile backend as a service (MBaaS) o può avere un [Backend for Frontend](#bff) dedicato.  
+Le applicazioni mobili sono diverse dagli altri modelli perché hanno un componente lato client significativo. Il modello può includere una connessione diretta ai servizi mobili come le notifiche push, l'autenticazione e le analisi mobili, noto come mobile backend as a service (MBaaS) o può avere un [Backend for Frontend](#bff) dedicato.  
 
 {{site.data.keyword.cloud_notm}} offre diversi kit starter per dispositivo mobile per iOS Swift, Android e Cordova. Puoi trovare i kit starter per il modello del dispositivo mobile nel [Dashboard dello sviluppatore mobile {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Creazione di un microservizio
 {: #tutorial}
 
-Puoi creare un progetto da uno starter di base del microservizio. Utilizza questi starter per creare un backend del microservizio per Node, Java o Python con una scelta di framework web. Puoi vedere come installare gli strumenti di cui hai bisogno, creare ed eseguire il progetto localmente e distribuirlo al cloud.
+Puoi creare un'applicazione da uno starter di base del microservizio. Utilizza questi starter per creare un backend del microservizio per Node, Java o Python con una scelta di framework web. Puoi vedere come installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla al cloud.
 {: shortdesc}
 
 ## Passo 1: Installa gli strumenti
@@ -23,14 +23,14 @@ Puoi creare un progetto da uno starter di base del microservizio. Utilizza quest
 
 Installa gli [strumenti per sviluppatori ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Passo 2: Crea un progetto
+## Passo 2: Crea un'applicazione
 {: #create-devex}
 
-Crea un progetto in {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
+Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
 1. Dalla pagina dei [Starter Kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio. Ad esempio, per un'applicazione Node.js, vai a **Express.js Microservice** e fai clic su **Select Starter Kit**.
 
-2. Immetti il nome del tuo progetto. Per questa esercitazione, utilizza `MicroserviceProject`.   
+2. Immetti il nome della tua applicazione. Per questa esercitazione, utilizza `MicroserviceProject`.   
 
 3. Immetti un nome host univoco, come ad esempio le tue iniziali più `-devhost`. Ad esempio:
 
@@ -38,29 +38,29 @@ Crea un progetto in {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 	abc-devhost
 	```
 
-	Questo nome host è la rotta del tuo progetto. Ad esempio, `abc-devhost.mybluemix.net`
+	Questo nome host è la rotta della tua applicazione. Ad esempio, `abc-devhost.mybluemix.net`
 
 4. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Node.js`.
 
-5. Fai clic su **Create Project**.
+5. Fai clic su **Crea**.
 
 ## Facoltativo: aggiungi risorse
 {: #add-services}
 
-1. Dalla vista **Project Details**, fai clic su **Add Resource**.
+1. Dalla vista **App Details**, fai clic su **Add Resource**.
 
 2. Seleziona il tipo di servizio che desideri. Per questa esercitazione, seleziona **Data** > **Next** > **Cloudant NoSQL DB** > **Next**.
 
-4. Fai clic su **Crea**.
+3. Fai clic su **Crea**.
 
 ## Facoltativo: crea toolchain DevOps
 {: #add-toolchain}
 
-L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per il tuo progetto. Quando crei una toolchain, il servizio dell'applicazione eseguirà il provisioning di un repository Git, dove puoi visualizzare il codice sorgente, clonare il tuo progetto e creare e gestire i problemi. Hai anche accesso a un ambiente Gitlab dedicato e a una pipeline di fornitura continua che viene personalizzata per la piattaforma di distribuzione che scegli, come Kubernetes o Cloud Foundry.
+L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione eseguirà il provisioning di un repository Git, dove puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente Gitlab dedicato e a una pipeline di fornitura continua che viene personalizzata per la piattaforma di distribuzione che scegli, come Kubernetes o Cloud Foundry.
 
 La fornitura continua è abilitata per alcune applicazioni. Potresti voler abilitare la fornitura continua per automatizzare le creazioni, i test e le distribuzioni tramite Delivery Pipeline e GitHub.
 
-1. Seleziona il tuo progetto nella pagina **Projects**.
+1. Seleziona la tua applicazione nella pagina **Apps**.
 
 2. Fai clic su **Deploy to Cloud**.
 
@@ -70,31 +70,31 @@ La fornitura continua è abilitata per alcune applicazioni. Potresti voler abili
 
 	* Distribuisci utilizzando Cloud Foundry, dove non devi gestire l'infrastruttura sottostante.
 
-## Passo 3: Genera il tuo codice del progetto
+## Passo 3: Genera il tuo codice applicazione
 {: #generate-code}
 
-Se hai creato una toolchain nel passo precedente, è stato creato un repository Git per il progetto e puoi trovare il codice lì. Segui queste istruzioni per accedere al tuo repository:
+Se hai creato una toolchain nel passo precedente, è stato creato un repository Git per la tua applicazione e puoi trovare il codice lì. Segui queste istruzioni per accedere al tuo repository:
 
-1. Seleziona il tuo progetto nella pagina **Projects**.
+1. Seleziona la tua applicazione nella pagina **Apps**.
 
 2. Fai clic su **View Toolchain**.
 
-3. Fai clic sulla scheda **Git** nell'intestazione **CODE** per aprire il tuo repository, dove puoi visualizzare il codice di origine e clonare il tuo progetto.
+3. Fai clic sulla scheda **Git** nell'intestazione **CODE** per aprire il tuo repository, dove puoi visualizzare il codice sorgente e clonare la tua applicazione.
 
-Se una toolchain non è abilitata, puoi accedere al tuo codice per scaricare la sorgente direttamente dalla vista dei dettagli del progetto.
+Se una toolchain non è abilitata, puoi accedere al tuo codice scaricando il sorgente direttamente dalla vista dei dettagli dell'applicazione.
 
-1. Seleziona il tuo progetto nella pagina **Projects**.
+1. Seleziona la tua applicazione nella pagina **Apps**.
 
-2. Fai clic su **Download Code** per scaricare il tuo archivio del progetto.
+2. Fai clic su **Download Code** per scaricare il tuo archivio dell'applicazione.
 
 ## Fase 4: Inizia ad utilizzare la tua applicazione
 {: #code}
 
-Inizia ad utilizzare il tuo progetto scaricato:
+Inizia ad utilizzare la tua applicazione scaricata:
 
 1. Espandi il file archiviato.
 
-2. Importa il progetto nella tua IDE.
+2. Importa l'applicazione nella tua IDE.
 
 3. Modifica il codice.
 
@@ -104,18 +104,18 @@ Inizia ad utilizzare il tuo progetto scaricato:
 ## Passo 5: Crea ed esegui l'applicazione localmente
 {: #build-run}
 
-Aggiungi il tuo proprio codice, crea ed esegui il progetto. Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {{site.data.keyword.dev_cli_notm}}.
+Aggiungi il tuo codice, crea ed esegui l'applicazione. Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {{site.data.keyword.dev_cli_notm}}.
 
 ### Utilizzo di {{site.data.keyword.dev_cli_short}}
 
-1. Per creare il progetto nella tua directory del progetto corrente, immetti il seguente comando:
+1. Per creare l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-2. Per eseguire il progetto nella tua directory del progetto corrente, immetti il seguente comando:
+2. Per eseguire l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
   ```
   bx dev run
@@ -140,7 +140,7 @@ Con una toolchain correttamente configurata, un ciclo di creazione-distribuzione
 
 Puoi anche distribuire manualmente la tua applicazione dalla tua toolchain DevOps:
 
-1. Seleziona il tuo progetto nella pagina **Projects**.
+1. Seleziona la tua applicazione nella pagina **Apps**.
 
 2. Fai clic su **View Toolchain**.
 
@@ -149,14 +149,14 @@ Puoi anche distribuire manualmente la tua applicazione dalla tua toolchain DevOp
 ### Distribuisci utilizzando {{site.data.keyword.dev_cli_short}}
 Se scegli di non utilizzare una toolchain, puoi anche distribuire utilizzando {{site.data.keyword.dev_cli_short}}.
 
-Per distribuire il tuo progetto a Cloud Foundry, immetti il seguente comando:
+Per distribuire la tua applicazione a Cloud Foundry, immetti il seguente comando:
 
   ```
   bx dev deploy
   ```
   {: codeblock}
 
-Per distribuire il tuo progetto a un cluster Kubernetes, immetti il seguente comando:
+Per distribuire la tua applicazione a un cluster Kubernetes, immetti il seguente comando:
 
 ```
 bx dev deploy --target <container>

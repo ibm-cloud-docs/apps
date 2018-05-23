@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Diamo un'occhiata da vicino al modo migliore di utilizzare {{site.data.keyword.c
 ##Inizia subito
 {: #get_started}
 
-Inizia a creare la tua applicazione dai dashboard dello sviluppatore {{site.data.keyword.cloud_notm}}, dove puoi selezionare un kit starter correlato al caso di utilizzo e scegliere un linguaggio di programmazione. {{site.data.keyword.cloud_notm}} utilizza le istruzioni dal kit starter per eseguire automaticamente il provisioning delle risorse necessarie e creare un progetto dell'applicazione indipendente dal runtime e di uno specifico linguaggio che si basa sulla tua applicazione di produzione. Per completare la fase iniziale, fai clic su **Distribuisci al cloud** dal dashboard dello sviluppatore. Con un solo clic crea una toolchain DevOps completa con un repository di codice che viene popolato con il codice di origine della tua applicazione e la pipeline di distribuzione.
+Inizia a creare la tua applicazione dai dashboard dello sviluppatore {{site.data.keyword.cloud_notm}}, dove puoi selezionare un kit starter correlato al caso di utilizzo e scegliere un linguaggio di programmazione. {{site.data.keyword.cloud_notm}} utilizza le istruzioni dal kit starter per eseguire automaticamente il provisioning delle risorse necessarie e creare un'applicazione indipendente dal runtime e di uno specifico linguaggio che è la base per la tua applicazione di produzione. Per completare la fase iniziale, fai clic su **Distribuisci al cloud** dal dashboard dello sviluppatore. Con un solo clic crea una toolchain DevOps completa con un repository di codice che viene popolato con il codice sorgente della tua applicazione e la pipeline di distribuzione.
 
 ![Introduzione](images/dev_get_started.png "Introduzione") Figura 2. Flusso iniziale
 
@@ -37,7 +37,7 @@ Quando utilizzi il pulsante **Distribuisci al cloud** per configurare la tua too
 ##Sviluppa localmente
 {: #develop_locally}
 
-Dopo aver creato la toolchain e il progetto dell'applicazione starter, inizia il tuo sviluppo localmente. Clona il codice dal tuo repository in una workstation locale e importalo nella tua IDE. Utilizza {{site.data.keyword.dev_cli_notm}} per creare, eseguire e verificare la tua applicazione cloud sulla tua macchina locale. {{site.data.keyword.dev_cli_notm}} crea e gestisce un contenitore locale per te. Quando sei pronto per visualizzare la tua applicazione in esecuzione nel cloud, esegui il push del tuo repository cloud e unisci le tue modifiche.
+Dopo aver creato la toolchain e l'applicazione starter, inizi il tuo sviluppo localmente. Clona il codice dal tuo repository in una workstation locale e importalo nella tua IDE. Utilizza {{site.data.keyword.dev_cli_notm}} per creare, eseguire e verificare la tua applicazione cloud sulla tua macchina locale. {{site.data.keyword.dev_cli_notm}} crea e gestisce un contenitore locale per te. Quando sei pronto per visualizzare la tua applicazione in esecuzione nel cloud, esegui il push del tuo repository cloud e unisci le tue modifiche.
 
 ![Sviluppa localmente](images/dev_code_locally.png "Sviluppa localmente") Figura 3. Sviluppa localmente il flusso
 
