@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Fichier Compose
 {: #compose-file}
 
-Pour les projets Compose, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit.
+Pour les applications Compose, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit. 
 {:shortdesc}
 
 Le fichier [Compose](https://docs.docker.com/compose/overview/)d définit des informations permettant d'exécuter des applications multi-conteneur.
 
 Vous devez spécifier la version 2.0 ou une version ultérieure pour le fichier Compose utilisé, par exemple, `version: '2'`
 
-Vous devez également définir les services. Voici un exemple de projet de noeud :
+Vous devez également définir les services. Voici un exemple d'application de noeud :
 ```
 services:
   web:

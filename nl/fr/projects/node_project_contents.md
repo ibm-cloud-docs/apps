@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +10,13 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Fichiers de projet Node.js
+# Fichiers d'application Node.js
 {: #node-project-files}
 
-Pour les projets Node.js, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit.
+Pour les applications Node.js, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit. 
 {:shortdesc}
 
-Le tableau suivant répertorie les répertoires et les fichiers couramment inclus dans un projet Node.js généré :
+Le tableau suivant répertorie les répertoires et les fichiers inclus dans une application Node.js générée :
 
 | Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -29,7 +29,7 @@ Le tableau suivant répertorie les répertoires et les fichiers couramment inclu
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | Configuration de service d'application pour Docker Compose |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Configuration Webpack pour les informations liées à la génération |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description de projet |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description d'application |
 |<b>`./public/`</b> |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Spécification Swagger pour la description d'API REST |
 |<b>`./public/index.html`</b> |  |  |
@@ -50,5 +50,5 @@ Le tableau suivant répertorie les répertoires et les fichiers couramment inclu
 |<b>`./chart/<projectname>/templates/`</b> | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Modèle de déploiement |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modèle de service |
-{: caption="Tableau 1. Contenu d'un projet Node.js généré" caption-side="top"}
+{: caption="Tableau 1. Contenu d'une application Node.js générée" caption-side="top"}
 

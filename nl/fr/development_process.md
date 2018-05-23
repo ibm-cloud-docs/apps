@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Examinons de plus près le meilleur moyen d'utiliser {{site.data.keyword.cloud_n
 ##Mise en route
 {: #get_started}
 
-Commencez à générer votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre cas d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour automatiquement mettre à disposition les ressources dont vous avez besoin et pour créer un projet d'application indépendant de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code rempli avec votre code source d'application et votre pipeline de déploiement.
+Commencez à générer votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre cas d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour automatiquement mettre à disposition les ressources dont vous avez besoin et pour créer une application indépendante de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code rempli avec votre code source d'application et votre pipeline de déploiement.
 
 ![Mise en route](images/dev_get_started.png "Mise en route") Figure 2. Flux de mise en route
 
@@ -37,7 +37,7 @@ Lorsque vous utilisez le bouton **Déployer dans le cloud** pour configurer votr
 ##Développement en local
 {: #develop_locally}
 
-Après avoir créé votre projet d'application de démarrage et votre chaîne d'outils, vous commencez votre développement en local. Clonez le code à partir de votre référentiel sur un poste de travail local et importez-le dans votre interface IDE. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour générer, exécuter et tester votre application en cloud sur votre machine locale. Le plug-in {{site.data.keyword.dev_cli_notm}} crée et gère un conteneur local pour vous. Lorsque vous êtes prêt à voir votre application s'exécuter sur le cloud, envoyez le contenu à votre référentiel cloud et fusionnez vos modifications.
+Après avoir créé votre application de démarrage et votre chaîne d'outils, vous commencez votre développement en local. Clonez le code à partir de votre référentiel sur un poste de travail local et importez-le dans votre interface IDE. Utilisez le plug-in {{site.data.keyword.dev_cli_notm}} pour générer, exécuter et tester votre application en cloud sur votre machine locale. Le plug-in {{site.data.keyword.dev_cli_notm}} crée et gère un conteneur local pour vous. Lorsque vous êtes prêt à voir votre application s'exécuter sur le cloud, envoyez le contenu à votre référentiel cloud et fusionnez vos modifications.
 
 ![Développement en local](images/dev_code_locally.png "Développement en local") Figure 3. Flux de développement en local
 

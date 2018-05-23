@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Architectures communes pour les applications en cloud
 {: #patterns}
 
-Les kits de démarrage sur {{site.data.keyword.cloud_notm}} vous aident à produire des applications avec une architecture éprouvée. Les applications sont toutes différentes, mais lorsque vous basez votre application sur un pattern d'architecture, il est plus facile d'obtenir rapidement un résultat fiable. Lorsque vous créez un projet à partir d'un kit de démarrage, vous choisissez l'un des nombreux types de pattern, en même temps que des composants, tels qu'un environnement d'exécution, pour remplir le pattern.
+Les kits de démarrage sur {{site.data.keyword.cloud_notm}} vous aident à produire des applications avec une architecture éprouvée. Les applications sont toutes différentes, mais lorsque vous basez votre application sur un pattern d'architecture, il est plus facile d'obtenir rapidement un résultat fiable. Lorsque vous créez une application à partir d'un kit de démarrage, vous choisissez l'un des nombreux types de modèle, en même temps que des composants, tels qu'un environnement d'exécution, pour remplir le modèle.
 {:shortdesc}
 
 ## Application Web
 {: #web}
 
-Le modèle d'application Web génère des projets qui servent du contenu Web, HTML, JavaScript, par exemple, et des feuilles de style au serveur Web. Il existe plusieurs kits de démarrage d'application Web.
+Le modèle d'application Web génère des applications qui servent du contenu Web, HTML, JavaScript, par exemple, et des feuilles de style au serveur Web. Il existe plusieurs kits de démarrage d'application Web.
 
 * Basic - Sert un fichier `index.html` statique, une feuille de style par défaut et vide et un fichier JavaScript.
 * React - Canevas riche permettant de générer des interfaces utilisateur. Les fichiers source se trouvent dans le répertoire `src/client/app`, sont compilés avec WebPack et sont servis dans le répertoire public.
@@ -44,14 +44,14 @@ Vous avez le choix entre plusieurs kits de démarrage d'architecture BFF selon v
 ## Microservice
 {: #microservice}
 
-Les projets de microservice fournissent le fondement de la génération de microservices de back end, y compris un noeud final de santé de base et une API REST. Les projets générés contiennent toutes les dépendances requises à la fois pour le microservice proprement dit et pour n'importe quel service cloud associé.
+Les applications de microservice fournissent le fondement de la génération de microservices de back end, y compris un noeud final de santé de base et une API REST. Les applications générées contiennent toutes les dépendances requises à la fois pour le microservice proprement dit et pour n'importe quel service cloud associé.
 
 Vous avez le choix entre plusieurs kits de démarrage microservice selon vos exigences en matière de langage et d'infrastructure.  Vous trouverez des kits de démarrage pour le modèle de microservice dans le [tableau de bord de développeur de service d'application {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
-Les projets mobiles sont différents des autres modèles car ils comportent un composant côté client significatif. Le modèle peut inclure une connexion directe aux services mobiles, tels que les notifications push, l'authentification et l'analytique mobile, appelée système de back end mobile sous forme de services, ou peut avoir une architecture [Backend for Frontend](#bff) dédiée.  
+Les applications mobiles sont différents des autres modèles car elles comportent un composant côté client significatif. Le modèle peut inclure une connexion directe aux services mobiles, tels que les notifications push, l'authentification et l'analytique mobile, appelée système de back end mobile sous forme de services, ou peut avoir une architecture [Backend for Frontend](#bff) dédiée.  
 
 {{site.data.keyword.cloud_notm}} offre plusieurs kits de démarrage mobile pour iOS, Swift, Android et Cordova. Vous trouverez des kits de démarrage pour le modèle mobile dans le [tableau de bord de développeur mobile {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
 

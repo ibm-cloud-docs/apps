@@ -26,7 +26,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} répertorie les ressources d'inf
 ## Création d'une ressource
 {: #resource}
 
-1. Dans votre [tableau de bord](https://console.bluemix.net/dashboard/apps/), cliquez sur **Créer une ressource**.
+1. Dans votre [tableau de bord](https://console.bluemix.net/), cliquez sur **Créer une ressource**.
 
 2. Depuis le catalogue, sélectionnez une application à la section Plateforme. Sélectionnez ensuite votre environnement d'exécution. Vous pouvez, par exemple, choisir un environnement d'exécution IBM tel que Liberty for Java, qui est pris en charge par les packs de construction IBM. Vous pouvez également opter pour une solution communautaire, telle que Tomcat, qui repose sur des packs de construction open source et tiers.
 

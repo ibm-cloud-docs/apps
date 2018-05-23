@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Ajout d'un service à votre application
 {: #add_service}
 
-Si vous avez créé un projet à l'aide de la console {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, vous avez eu la possibilité d'ajouter des ressources à partir de la page de présentation du projet. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.Bluemix_notm}} en dehors du contexte de votre projet.
+Si vous avez créé une application à l'aide d'{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, vous avez eu la possibilité d'ajouter des ressources à partir de la page de présentation de l'application. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.Bluemix_notm}} en dehors du contexte de votre application.
 {: shortdesc}
 
-Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre projet à partir de la page de présentation du projet. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.Bluemix_notm}}.
+Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre application à partir de la page de présentation de l'application. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.Bluemix_notm}}.
 
 ##Reconnaissance de services
 {: #discover_services}
@@ -56,7 +56,7 @@ conserver.
 
 Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
 
-1. Utilisez la commande `bluemix service offerings`**` pour rechercher le nom et le plan du service dont vous avez besoin.
+1. Utilisez la commande `bluemix service offerings` pour rechercher le nom et le plan du service dont vous avez besoin.
 
 2. Utilisez la commande suivante pour créer une instance de service, où nom_service est le nom du service, plan_service est le plan du service et
 instance_service est le nom à utiliser pour cette instance de service :

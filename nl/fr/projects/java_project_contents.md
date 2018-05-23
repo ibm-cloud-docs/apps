@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,16 +12,16 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Fichiers de projet Java
+# Fichiers d'application Java
 {: #java-project-files}
 
-Pour les projets Java, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit.
+Pour les applications Java, les informations ci-après répertorient ce que l'on trouve généralement dans {{site.data.keyword.Bluemix}}. Lorsque vous créez un kit de démarrage, ces fichiers sont créés pour vous. Si vous faites migrer une application vers un hôte dans {{site.data.keyword.Bluemix_notm}}, vous souhaiterez peut-être passer en revue ces informations pour éviter tout conflit. 
 {:shortdesc}
 
 ## Spring
 {: #spring-project-files}
 
-Le tableau suivant répertorie les répertoires et les fichiers inclus dans un projet Java Spring généré :
+Le tableau suivant répertorie les répertoires et les fichiers inclus dans une application Java Spring générée :
 
 | Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -32,7 +32,7 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans un p
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Fichier Dockerfile pour les commandes `bx dev run`, `bx dev deploy` et`docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Fichier Dockerfile pour les commandes `bx dev build` et `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description de projet |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description d'application |
 |**`./src/main/java/application/`** |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | Principale application Spring |
 |**`./src/main/java/application/rest/`** | |
@@ -58,12 +58,12 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans un p
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modèle de service |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Fichier yaml de service et de déploiement Kubernetes |
-{: caption="Tableau 1. Contenu d'un projet Java Spring généré" caption-side="top"}
+{: caption="Tableau 1. Contenu d'une application Java Spring générée" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
-Le tableau suivant répertorie les répertoires et les fichiers inclus dans un projet Java Liberty généré :
+Le tableau suivant répertorie les répertoires et les fichiers inclus dans une application Java Liberty générée :
 
 | Répertoire et fichier                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -74,7 +74,7 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans un p
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Fichier Dockerfile pour les commandes `bx dev run`, `bx dev deploy` et`docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Fichier Dockerfile pour les commandes `bx dev build` et `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description de projet |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description d'application |
 |**`./src/main/java/application/rest/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | Noeud final de santé |
 |**`./src/main/java/application/rest/v1/`** | |
@@ -104,5 +104,5 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans un p
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modèle de service |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Fichier yaml de service et de déploiement Kubernetes |
-{: caption="Tableau 2. Contenu d'un projet Java Liberty généré" caption-side="top"}
+{: caption="Tableau 2. Contenu d'une application Java Liberty générée" caption-side="top"}
 

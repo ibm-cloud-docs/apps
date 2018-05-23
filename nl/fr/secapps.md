@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -92,15 +92,13 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
 
 1. Accédez à votre tableau de bord.
 
-2. Sélectionnez le nom de votre application pour ouvrir la vue des détails d'application.
+2. Sélectionnez votre application pour ouvrir la vue des détails d'application.
 
-3. Sélectionnez le menu déroulant **Routes**, puis **Gestion des domaines**.
+3. Sélectionnez le menu déroulant **Routes**, puis pour votre organisation, dans la colonne Action, sélectionnez **Domaines** dans le menu des actions supplémentaires.
 
 3. Pour votre domaine personnalisé, cliquez sur **Télécharger le certificat**.
 
-4. Recherchez et téléchargez un certificat, une clé privée et, éventuellement, un certificat intermédiaire. Vous pouvez également cocher la case pour
-autoriser les demandes de certificat client. Si vous sélectionnez cette option, vous devez télécharger un fichier de clés certifiées de certificat
-client définissant les accès utilisateur autorisés à votre domaine personnalisé.
+4. Recherchez et téléchargez un certificat, une clé privée et, éventuellement, un certificat intermédiaire ou un certificat client. Pour activer le magasin de clés de confiance de certificat client, vous devez télécharger un fichier de clés certifiées de certificat client définissant les accès utilisateur autorisés à votre domaine personnalisé.
 
   #### Certificat
 
@@ -141,7 +139,7 @@ certificat SSL émis pour l'organisation.
 
   #### Activer la demande de certificat client
 
-    Si vous activez cette option, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir
+    Si vous activez cette option en téléchargeant un fichier de clés certifiées de certificat client, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir
 un certificat client pour le domaine. Utilisez l'option de téléchargement de fichier **Magasin de clés de confiance pour les certificats client**
 pour définir les certificats client auxquels vous permettez d'accéder à votre domaine personnalisé.
 
@@ -160,7 +158,8 @@ l'option de demande de certificat client, téléchargez un fichier de clés cert
 {{site.data.keyword.Bluemix_notm}}:
 
       * PEM (pem, .crt, .cer et .cert)
-	  * DER (.der ou .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines**.
+Pour plus d'informations, voir [Importation de certificats SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+
+Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines**. Dans le menu des actions supplémentaires pour l'organisation, cliquez sur **Retirer de l'organisation**.
