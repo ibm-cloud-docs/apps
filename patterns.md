@@ -12,7 +12,7 @@ lastupdated: "2018-05-02"
 {:pre: .pre}
 {:note:.deprecated}
 
-# Common architectures For cloud apps
+# Common architectures for cloud apps
 {: #patterns}
 
 Starter kits on {{site.data.keyword.cloud_notm}} help you produce apps with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components, like a runtime, to populate the pattern.
