@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Service zur App hinzufügen
 {: #add_service}
 
-Wenn Sie ein Projekt mithilfe der {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} erstellt haben, hatten Sie die Möglichkeit, Ressourcen von der Projektübersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihres Projekts.
+Wenn Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} erstellt haben, hatten Sie die Möglichkeit, Ressourcen von der App-Übersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
-Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der Projektübersichtseite zu Ihrem Projekt hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.
+Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der App-Übersichtseite zu Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.
 
 ##Services entdecken
 {: #discover_services}
@@ -56,7 +56,7 @@ anschließend auf **Erstellen**.
 
 Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 
-1. Verwenden Sie den Befehl `bluemix service offerings`**`, um den Namen und den Plan des benötigten Service zu suchen.
+1. Verwenden Sie den Befehl `bluemix service offerings`, um den Namen und den Plan des benötigten Service zu suchen. 
 
 2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'service_name' der Name des Service, 'service_plan' der Plan
 des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.

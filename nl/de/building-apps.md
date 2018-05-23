@@ -26,7 +26,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog listet die verfügbaren Infrastru
 ## Ressource erstellen
 {: #resource}
 
-1. Klicken Sie im [Dashboard](https://console.bluemix.net/dashboard/apps/) auf **Ressource erstellen**.
+1. Klicken Sie im [Dashboard](https://console.bluemix.net/) auf **Ressource erstellen**.
 
 2. Wählen Sie im Abschnitt 'Plattform' des Katalogs eine App aus. Wählen Sie anschließend die Laufzeit aus. Sie können beispielsweise eine IBM Laufzeitumgebung wie 'Liberty for Java' auswählen, die durch IBM Buildpacks unterstützt wird. Sie können aber auch Community-Laufzeiten wie beispielsweise 'Tomcat' auswählen, die sich auf Open-Source- und Drittanbieter-Buildpacks stützt.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,16 +12,16 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Java-Projektdateien
+# Java-App-Dateien
 {: #java-project-files}
 
-Für Java-Projekte stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden.
+Für Java-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden. 
 {:shortdesc}
 
 ## Spring
 {: #spring-project-files}
 
-In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Spring-Projekt enthalten sind.
+In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einer generierten Java Spring-App enthalten sind.
 
 | Verzeichnis und Datei                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -32,7 +32,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile für Befehle `bx dev run`, `bx dev deploy` und `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile für `bx dev build` und `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung des Projekts |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung der App |
 |**`./src/main/java/application/`** |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | Spring-Hauptanwendung |
 |**`./src/main/java/application/rest/`** | |
@@ -58,12 +58,12 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Servicevorlage |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes-Service & Bereitstellungs-YAML |
-{: caption="Tabelle 1. Inhalte eines generierten Java Spring-Projekts" caption-side="top"}
+{: caption="Tabelle 1. Inhalte einer generierten Java Spring-App" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
-In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einem generierten Java Liberty-Projekt enthalten sind.
+In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in einer generierten Java Liberty-App enthalten sind.
 
 | Verzeichnis/Datei                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -74,7 +74,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile für Befehle `bx dev run`, `bx dev deploy` und `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile für Befehle `bx dev build` und `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung des Projekts |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung der App |
 |**`./src/main/java/application/rest/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | Statusendpunkt |
 |**`./src/main/java/application/rest/v1/`** | |
@@ -104,5 +104,5 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Servicevorlage |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes-Service & Bereitstellungs-YAML |
-{: caption="Tabelle 2. Inhalte eines generierten Java Liberty-Projekts" caption-side="top"}
+{: caption="Tabelle 2. Inhalte einer generierten Java Liberty-App" caption-side="top"}
 

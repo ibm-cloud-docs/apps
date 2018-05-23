@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -20,7 +20,7 @@ Sie können Ihre Anwendungen schützen, indem Sie SSL-Zertifikate hochladen und 
 
 Bevor Sie die SSL-Zertifikate hochladen können, für die Sie in {{site.data.keyword.Bluemix}} berechtigt sind, müssen Sie auf Ihrem Server eine Zertifikatssignieranforderung (CSR) erstellen.
 
-Bei einer CSR handelt es sich um eine Nachricht, die an eine Zertifizierungsstelle gesendet wird, um die Signierung eines öffentlichen Schlüssels und der zugehörigen Informationen anzufordern. Am häufigsten haben CSRs das Format des PKCS-Standards #10. Die CSR umfasst einen öffentlichen Schlüssel sowie einen allgemeinen Namen, eine Organisation, eine Stadt, ein Bundesland, ein Land sowie eine E-Mail-Adresse. SSL-Zertifikatsanforderungen werden nur mit einer CSR-Schlüssellänge von 2048 Bits akzeptiert.
+Bei einer CSR handelt es sich um eine Nachricht, die an eine Zertifizierungsstelle gesendet wird, um die Signierung eines öffentlichen Schlüssels und der zugehörigen Informationen anzufordern. Am häufigsten haben CSRs das Format des PKCS-Standards #10. Die CSR umfasst einen öffentlichen Schlüssel und einen allgemeinen Namen, eine Organisation, eine Stadt, ein Bundesland, ein Land sowie eine E-Mail-Adresse. SSL-Zertifikatsanforderungen werden nur mit einer CSR-Schlüssellänge von 2048 Bits akzeptiert.
 
 ## Erforderliche Informationen
 
@@ -84,13 +84,13 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 1. Rufen Sie Ihr Dashboard auf.
 
-2. Wählen Sie den Namen für Ihre App aus, um die App-Detailansicht zu öffnen.
+2. Wählen Sie Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Wählen Sie das Pulldown-Menü **Routen** und anschließend die Option **Domänen verwalten** aus.
+3. Wählen Sie das Pulldown-Menü **Routen** aus und wählen Sie dann für Ihre Organisation in der Spalte mit den Aktionen den Eintrag **Domänen** im zusätzlichen Aktionsmenü aus. 
 
 3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
 
-4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat hochzuladen. Sie können auch das Kontrollkästchen auswählen, um Anforderungen eines Clientzertifikats zu aktivieren. Wenn Sie die Option zum Anfordern eines Clientzertifikats aktivieren, müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
+4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert. 
 
   #### Zertifikat
 
@@ -123,7 +123,7 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
   #### Anforderung eines Clientzertifikats aktivieren
 
-    Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. Verwenden Sie die Option **Truststore für Clientzertifikate** zum Hochladen der Datei, um die clientseitigen Zertifikate zu definieren, die Sie für den Zugriff auf Ihre angepasste Domäne zulassen.
+    Wenn Sie diese Option aktivieren, indem Sie eine Clientzertifikatstruststore-Datei hochladen, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. Verwenden Sie die Option **Truststore für Clientzertifikate** zum Hochladen der Datei, um die clientseitigen Zertifikate zu definieren, die Sie für den Zugriff auf Ihre angepasste Domäne zulassen.
 
   **Hinweis:** Die Funktion für angepasste Zertifikate in der {{site.data.keyword.Bluemix_notm}}-Domänenverwaltung hängt von der SNI (Server Name Indication)-Erweiterung des TLS-Protokolls (Transport Layer Security) ab. Deshalb muss der Client-Code, der auf {{site.data.keyword.Bluemix_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} sowie unter [Daten mit TLS schützen](/docs/get-support/appsectls.html).
 
@@ -134,7 +134,8 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
    Die folgenden Zertifikatstypen werden in {{site.data.keyword.Bluemix_notm}} unterstützt:
 
       * PEM (pem, .crt, .cer und .cert)
-	  * DER (.der oder .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**.
+Weitere Informationen finden Sie unter [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate). 
+
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**. Klicken Sie im zusätzlichen Aktionsmenü für die Organisation auf **Aus Organisation entfernen**. 

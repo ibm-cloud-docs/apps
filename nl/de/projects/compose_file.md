@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-03-16"
 # Compose-Datei
 {: #compose-file}
 
-Für Compose-Projekte stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden.
+Für Compose-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden. 
 {:shortdesc}
 
 Die [Compose](https://docs.docker.com/compose/overview/)-Datei definiert Informationen zum Ausführen von Anwendungen mit mehreren Containern.
@@ -22,7 +22,7 @@ Die [Compose](https://docs.docker.com/compose/overview/)-Datei definiert Informa
 Sie sollten die Version der verwendeten Compose-Datei als 2.0 oder höher wie folgt angeben:
 `version: '2'`
 
-Sie müssen die Services auch definieren. Im Folgenden finden Sie ein Beispiel aus einem Node-Projekt:
+Sie müssen die Services auch definieren. Im Folgenden finden Sie ein Beispiel aus einer Node-App: 
 ```
 services:
   web:

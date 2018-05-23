@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Angepasste Anwendung erstellen
 {: #tutorial}
 
-Sie können eine angepasste Anwendung mithilfe von Services und einer Laufzeit erstellen. Sie erfahren, wie die erforderlichen Tools installiert werden, wie das Projekt lokal erstellt und ausgeführt wird und wie es in der Cloud bereitgestellt wird.
+Sie können eine angepasste Anwendung mithilfe von Services und einer Laufzeit erstellen. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie sie in der Cloud bereitgestellt wird.
 {: shortdesc}
 
 ## Schritt 1: Tools installieren
@@ -23,14 +23,14 @@ Sie können eine angepasste Anwendung mithilfe von Services und einer Laufzeit e
 
 Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Schritt 2: Projekt erstellen
+## Schritt 2: App erstellen
 {: #create-devex}
 
-Erstellen Sie ein Projekt in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}:
+Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}: 
 
-1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} die Option **Projekt erstellen** aus, um eine angepasste Anwendung zu erstellen.
+1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} die Option **Erstellen** aus, um eine angepasste Anwendung zu erstellen. 
 
-2. Geben Sie Ihren Projektnamen ein. Verwenden Sie im Rahmen dieses Lernprogramms `CustomProject`.   
+2. Geben Sie Ihren App-Namen ein. Verwenden Sie im Rahmen dieses Lernprogramms `CustomProject`.   
 
 3. Geben Sie einen eindeutigen Hostnamen ein, z. B. Ihre Initialen plus `-devhost`. Beispiel:
 
@@ -38,31 +38,31 @@ Erstellen Sie ein Projekt in der {{site.data.keyword.cloud}}-{{site.data.keyword
 	abc-devhost
 	```
 
-	Dieser Hostname ist die Route Ihres Projekts. Beispiel: `abc-devhost.mybluemix.net`
+	Dieser Hostname ist die Route Ihrer App. Beispiel: `abc-devhost.mybluemix.net`
 
 4. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie im Rahmen dieses Lernprogramms `Node.js`.
 
 5. (Optional) Sie können das Gerüst Ihres Back-Ends aus einem OpenAPI-Dokument starten. Dies ist nützlich für einen Back-End-Entwickler, dessen Client- und Back-End-Integrationsvertrag bereits in einem Swagger-Dokument definiert ist. Die Dateitypen **.yaml** und **.json** werden unterstützt. Klicken Sie auf **Datei hinzufügen**, um Ihr Dokument hochzuladen.
 
-6. Klicken Sie auf **Projekt erstellen**.
+6. Klicken Sie auf **Erstellen**.
 
 ## Optional: Ressourcen hinzufügen
 {: #add-services}
 
-1. Wählen Sie in der Ansicht **Projektdetails** die Option **Ressource hinzufügen** aus.
+1. Wählen Sie in der Ansicht **App-Details** die Option **Ressource hinzufügen** aus. 
 
 2. Wählen Sie den Typ des gewünschten Service aus. Wählen Sie im Rahmen dieses Lernprogramms **Daten** > **Weiter** > **Cloudant NoSQL DB** > **Weiter** aus.
 
-4. Klicken Sie auf **Erstellen**.
+3. Klicken Sie auf **Erstellen**.
 
 ## Optional: DevOps-Toolchain erstellen
 {: #add-toolchain}
 
-Wenn Sie eine Toolchain aktivieren, wird eine teambasierte Entwicklungsumgebung für Ihr Projekt erstellt. Wenn Sie eine Toolchain erstellen, stellt der App-Service ein Git-Repository bereit, in dem Sie Quellcode anzeigen, Ihr Projekt klonen und Probleme erstellen und verwalten können. Sie haben außerdem Zugriff auf eine dedizierte Gitlab-Umgebung und eine Continuous Delivery-Pipeline, die an die ausgewählte Entwicklungsplattform angepasst wird, z. B. Kubernetes oder Cloud Foundry.
+Wenn Sie eine Toolchain aktivieren, wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, stellt der App-Service ein Git-Repository bereit, in dem Sie Quellcode anzeigen, Ihre App klonen und Probleme erstellen und verwalten können. Sie haben außerdem Zugriff auf eine dedizierte Gitlab-Umgebung und eine Continuous Delivery-Pipeline, die an die ausgewählte Entwicklungsplattform angepasst wird, z. B. Kubernetes oder Cloud Foundry.
 
 Continuous Delivery ist für manche Anwendungen aktiviert. Aktivieren Sie Continuous Delivery beispielsweise, um Builds, Tests und Bereitstellungen über die Delivery Pipeline und GitHub zu automatisieren.
 
-1. Wählen Sie Ihr Projekt auf der Seite **Projekte** aus.
+1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
 2. Klicken Sie auf **In Cloud bereitstellen**.
 
@@ -72,31 +72,31 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Aktivieren Sie Contin
 
 	* Führen Sie die Bereitstellung mithilfe von Cloud Foundry aus, wo Sie die zugrunde liegende Infrastruktur nicht verwalten müssen.
 
-## Schritt 3: Projektcode generieren
+## Schritt 3: App-Code generieren
 {: #generate-code}
 
-Wenn Sie im vorherigen Schritt eine Toolchain erstellt haben, wurde ein Git-Repository für Ihr Projekt erstellt und Sie können den Code darin finden. Führen Sie die folgenden Schritte aus, um auf Ihr Repository zuzugreifen:
+Wenn Sie im vorherigen Schritt eine Toolchain erstellt haben, wurde ein Git-Repository für Ihre App erstellt und Sie können den Code darin finden. Führen Sie die folgenden Schritte aus, um auf Ihr Repository zuzugreifen:
 
-1. Wählen Sie Ihr Projekt auf der Seite **Projekte** aus.
+1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
 2. Klicken Sie auf **Toolchain anzeigen**.
 
-3. Klicken Sie auf die Karte **Git** unter der Überschrift **CODE**, um Ihr Repository zu öffnen, wo Sie Quellcode anzeigen und Ihr Projekt klonen können.
+3. Klicken Sie auf die Karte **Git** unter der Überschrift **CODE**, um Ihr Repository zu öffnen, wo Sie Quellcode anzeigen und Ihre App klonen können. 
 
-Falls keine Toolchain aktiviert ist, können Sie auf Ihren Code zugreifen, indem Sie die Quelle direkt in der Ansicht 'Projektdetails' herunterladen.
+Falls keine Toolchain aktiviert ist, können Sie auf Ihren Code zugreifen, indem Sie die Quelle direkt in der Ansicht 'App-Details' herunterladen. 
 
-1. Wählen Sie Ihr Projekt auf der Seite **Projekte** aus.
+1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
-2. Klicken Sie auf **Code herunterladen**, um Ihr Projektarchiv herunterzuladen.
+2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen. 
 
 ## Schritt 4: Arbeit an Ihrer App beginnen
 {: #code}
 
-Beginnen Sie, mit Ihrem heruntergeladenen Projekt zu arbeiten:
+Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
 
 1. Erweitern Sie die archivierte Datei.
 
-2. Importieren Sie das Projekt in Ihre integrierte Entwicklungsumgebung (IDE).
+2. Importieren Sie die App in Ihre integrierte Entwicklungsumgebung (IDE).
 
 3. Ändern Sie den Code.
 
@@ -106,18 +106,18 @@ Beginnen Sie, mit Ihrem heruntergeladenen Projekt zu arbeiten:
 ## Schritt 5: App erstellen und lokal ausführen
 {: #build-run}
 
-Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie das Projekt aus. Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die erforderlichen Buildtools installieren oder indem Sie die verfügbare Containerunterstützung in der {{site.data.keyword.dev_cli_notm}} verwenden.
+Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die erforderlichen Buildtools installieren oder indem Sie die verfügbare Containerunterstützung in der {{site.data.keyword.dev_cli_notm}} verwenden.
 
 ### {{site.data.keyword.dev_cli_short}} verwenden
 
-1. Geben Sie den folgenden Befehl ein, um das Projekt in Ihrem aktuellen Projektverzeichnis zu erstellen:
+1. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis zu erstellen: 
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-2. Geben Sie den folgenden Befehl ein, um das Projekt in Ihrem aktuellen Projektverzeichnis auszuführen:
+2. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis auszuführen: 
 
   ```
   bx dev run
@@ -137,7 +137,7 @@ Bei einer ordnungsgemäß konfigurierten Toolchain startet ein Erstellen-Bereits
 
 Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
 
-1. Wählen Sie Ihr Projekt auf der Seite **Projekte** aus.
+1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
 2. Klicken Sie auf **Toolchain anzeigen**.
 
@@ -146,14 +146,14 @@ Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstelle
 ### Bereitstellung mithilfe von {{site.data.keyword.dev_cli_short}}
 Wenn Sie keine Toolchain verwenden, können Sie die Bereitstellung auch mithilfe der {{site.data.keyword.dev_cli_short}} vornehmen.
 
-Geben Sie den folgenden Befehl ein, um Ihr Projekt in Cloud Foundry bereitzustellen:
+Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
 
   ```
   bx dev deploy
   ```
   {: codeblock}
 
-Geben Sie den folgenden Befehl ein, um Ihr Projekt in einem Kubernetes-Cluster bereitzustellen:
+Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
 
 ```
 bx dev deploy --target <container>

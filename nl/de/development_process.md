@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Werfen wir einen genaueren Blick auf die beste Möglichkeit, {{site.data.keyword
 ##Einstieg
 {: #get_started}
 
-Beginnen Sie mit der Entwicklung Ihrer App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen bereitzustellen und ein sprachspezifisches, laufzeitunabhängiges App-Projekt zu erstellen, das als Grundlage für Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase im Entwicklerdashboard auf **In Cloud bereitstellen**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
+Beginnen Sie mit der Entwicklung Ihrer App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen bereitzustellen und eine sprachspezifische, laufzeitunabhängige App zu erstellen, das als Grundlage für Ihre Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase im Entwicklerdashboard auf **In Cloud bereitstellen**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
 
 ![Einstieg](images/dev_get_started.png "Einstieg") Abbildung 2. Einstieg
 
@@ -37,7 +37,7 @@ Wenn Sie die Schaltfläche **In Cloud bereitstellen** verwenden, um Ihre DevOps-
 ##Lokal entwickeln
 {: #develop_locally}
 
-Nachdem Sie Ihr Starter-App-Projekt und Ihre Toolchain erstellt haben, starten Sie Ihre Entwicklung lokal. Klonen Sie den Code aus Ihrem Repository und importieren Sie ihn in Ihre IDE. Verwenden Sie {{site.data.keyword.dev_cli_notm}}, um Ihre Cloud-App auf Ihrer lokalen Maschine zu erstellen, auszuführen und zu testen. {{site.data.keyword.dev_cli_notm}} erstellt und verwaltet einen lokalen Container für Sie. Wenn Sie bereit sind, Ihre App in der Cloud auszuführen, führen Sie eine Push-Operation zu Ihrem Cloud-Repository durch und führen Sie Ihre Änderungen zusammen.
+Nachdem Sie Ihre Starter-App und Ihre Toolchain erstellt haben, starten Sie Ihre Entwicklung lokal. Klonen Sie den Code aus Ihrem Repository und importieren Sie ihn in Ihre IDE. Verwenden Sie {{site.data.keyword.dev_cli_notm}}, um Ihre Cloud-App auf Ihrer lokalen Maschine zu erstellen, auszuführen und zu testen. {{site.data.keyword.dev_cli_notm}} erstellt und verwaltet einen lokalen Container für Sie. Wenn Sie bereit sind, Ihre App in der Cloud auszuführen, führen Sie eine Push-Operation zu Ihrem Cloud-Repository durch und führen Sie Ihre Änderungen zusammen.
 
 ![Lokal entwickeln](images/dev_code_locally.png "Lokal entwickeln") Abbildung 3. Lokal entwickeln
 

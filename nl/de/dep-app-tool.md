@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   1. {: download} Laden Sie den Code für Ihre App in ein neues Verzeichnis herunter, um Ihre Entwicklungsumgebung einzurichten.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
 
   2. Wechseln Sie in das Verzeichnis, in dem sich Ihr Code befindet.
 

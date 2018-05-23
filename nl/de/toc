@@ -43,7 +43,7 @@ Apps erstellen
         [Web-Apps](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Projektinhalte
+    App-Inhalte
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,8 +52,7 @@ Apps erstellen
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Fehlerbehebung für die Erstellung von Apps](../troubleshoot/ts_createapps.html)
     [Fehlerbehebung für die Verwaltung von Apps](../troubleshoot/ts_apps.html)
-    [IBM Cloud Slack - developer-tools-Kanal](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [Stacküberlauf](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Kanal für IBM Cloud Slack-Entwicklertools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [Stack Overflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

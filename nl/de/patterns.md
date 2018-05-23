@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Gängige Architekturen für Cloud-Apps
 {: #patterns}
 
-Starter-Kits unter {{site.data.keyword.cloud_notm}} helfen Ihnen dabei, Apps mit einer bewährten Architektur zu erzeugen. Apps sind alle unterschiedlich, aber wenn Sie Ihrer ein bekanntes Architekturmuster zugrunde legen, ist es einfacher, schnell ein zuverlässiges Ergebnis zu erhalten. Wenn Sie ein Projekt aus einem Starter-Kit erstellen, wählen Sie neben einem Mustertyp auch Komponenten wie eine Laufzeit aus, um das Muster zu füllen.
+Starter-Kits unter {{site.data.keyword.cloud_notm}} helfen Ihnen dabei, Apps mit einer bewährten Architektur zu erzeugen. Apps sind alle unterschiedlich, aber wenn Sie Ihrer ein bekanntes Architekturmuster zugrunde legen, ist es einfacher, schnell ein zuverlässiges Ergebnis zu erhalten. Wenn Sie eine App aus einem Starter-Kit erstellen, wählen Sie neben einem Mustertyp auch Komponenten wie eine Laufzeit aus, um das Muster zu füllen.
 {:shortdesc}
 
 ## Web-App
 {: #web}
 
-Das Web-App-Muster erzeugt Projekte, die Webinhalte wie HTML, JavaScript und Stylesheets für den Web-Server bereitstellen. Es gibt verschiedene Web-App-Starter-Kits.
+Das Web-App-Muster erzeugt Apps, die Webinhalte wie HTML, JavaScript und Stylesheets für den Web-Server bereitstellen. Es gibt verschiedene Web-App-Starter-Kits.
 
 * Basic - stellt eine statische Datei `index.html`, ein Standard- und ein leeres Stylesheet und eine JavaScript-Datei bereit.
 * React - ein umfangreiches Framework zum Erstellen von Benutzerschnittstellen. Die Quellendateien befinden sich im Verzeichnis `src/client/app`, werden mit WebPack kompiliert und im öffentlichen Verzeichnis bereitgestellt.
@@ -44,14 +44,14 @@ Es gibt diverse BFF-Starter-Kits, die sie abhängig von Ihrer Sprache und Ihren 
 ## Mikroservice
 {: #microservice}
 
-Mikroservice-Projekte bilden die Basis für das Erstellen von Back-End Mikroservices, einschließlich eines grundlegenden Statusendpunkts und einer REST-API. Generierte Projekte enthalten alle Abhängigkeiten, die sowohl für den Mikroservice selbst, als auch für alle angehängten Cloud-Services erforderlich sind.
+Mikroservice-Apps bilden die Basis für das Erstellen von Back-End-Mikroservices, einschließlich eines grundlegenden Statusendpunkts und einer REST-API. Generierte Apps enthalten alle Abhängigkeiten, die sowohl für den Mikroservice selbst, als auch für alle angehängten Cloud-Services erforderlich sind. 
 
 Es gibt diverse Mikroservice-Starter-Kits, die sie abhängig von Ihrer Sprache und Ihren Frameworkanforderungen auswählen können.  Sie finden die Starter-Kits für Mikroservice-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobil
 {: #mobile}
 
-Projekte für Mobilgeräte unterscheiden sich von den anderen Mustern, weil sie eine signifikante clientseitige Komponente enthalten. Das Muster kann eine direkte Verbindung zu mobilen Services wie Push-Benachrichtigungen, Authentifizierung und Analysen für Mobilanwendungen wie Mobile Backend as a Service bzw. MBaaS umfassen oder es kann ein dediziertes [Back-End for Front-End](#bff) aufweisen.  
+Apps für Mobilgeräte unterscheiden sich von den anderen Mustern, weil sie eine signifikante clientseitige Komponente enthalten. Das Muster kann eine direkte Verbindung zu mobilen Services wie Push-Benachrichtigungen, Authentifizierung und Analysen für Mobilanwendungen wie Mobile Backend as a Service bzw. MBaaS umfassen oder es kann ein dediziertes [Back-End for Front-End](#bff) aufweisen.  
 
 {{site.data.keyword.cloud_notm}} bietet diverse Starter-Kits für Mobilgeräte für iOS Swift, Android und Cordova. Sie finden die Starter-Kits für das Muster für Mobilgeräte im [{{site.data.keyword.cloud_notm}} Mobile-Entwicklerdashboard](https://console.bluemix.net/developer/mobile/dashboard).
 
