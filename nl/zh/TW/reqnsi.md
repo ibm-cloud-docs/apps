@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # 將服務新增至應用程式
 {: #add_service}
 
-如果您使用 {{site.data.keyword.Bluemix_notm}}{{site.data.keyword.dev_console}} 建立專案，則您有機會從專案概觀頁面新增資源。不過，您也可以從專案的環境定義之外，直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建它們。
+如果您使用 {{site.data.keyword.Bluemix_notm}}{{site.data.keyword.dev_console}} 建立應用程式，則您有機會從應用程式概觀頁面新增資源。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建它們。
 {: shortdesc}
 
-您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從專案概觀頁面，將資源實例新增至專案。您可以直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建特定類型的資源（服務）。
+您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從應用程式概觀頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建特定類型的資源（服務）。
 
 ##探索服務
 {: #discover_services}

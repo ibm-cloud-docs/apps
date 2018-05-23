@@ -31,7 +31,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools CLI 참조](https://console.bluemix.net/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools 명령행 참조](https://console.bluemix.net/docs/cli/idt/commands.html)
 
     {: .topicgroup}
     IBM Cloud 개발자 대시보드
@@ -43,7 +43,7 @@
         [웹 앱](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    프로젝트 컨텐츠
+    앱 컨텐츠
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,8 +52,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [앱 작성에 대한 문제점 해결](../troubleshoot/ts_createapps.html)
     [앱 관리에 대한 문제점 해결](../troubleshoot/ts_apps.html)
-    [IBM Cloud Slack 개발자-도구 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack 개발자 도구 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

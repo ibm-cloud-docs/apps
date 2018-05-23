@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # アプリへのサービスの追加
 {: #add_service}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してプロジェクトを作成した場合、「プロジェクト概要」ページからリソースを追加するすることができました。 しかし、プロジェクトのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、「アプリ概要」ページからリソースを追加するすることができました。 しかし、アプリのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
 {: shortdesc}
 
-リソースのインスタンスを要求して、これをアプリとは無関係に使用することも、「プロジェクト概要」ページからリソース・インスタンスをプロジェクトに追加することもできます。 特定のタイプのリソース (サービス) を {{site.data.keyword.Bluemix_notm}} カタログから直接プロビジョンできます。
+リソースのインスタンスを要求して、これをアプリとは無関係に使用することも、「アプリ概要」ページからリソース・インスタンスをアプリに追加することもできます。 特定のタイプのリソース (サービス) を {{site.data.keyword.Bluemix_notm}} カタログから直接プロビジョンできます。
 
 ##サービスの検出
 {: #discover_services}
@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 * bluemix コマンド・ライン・インターフェースから。 `bluemix service offerings` コマンドを使用します。
 * ご使用のアプリケーションから。 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
 
-アプリケーションを開発するときに、必要なサービスを選択できます。 選択されたサービスは、{{site.data.keyword.Bluemix_notm}} によってプロビジョンされます。サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。
+アプリケーションを開発するときに、必要なサービスを選択できます。 選択されたサービスは、{{site.data.keyword.Bluemix_notm}} によってプロビジョンされます。 サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。
 
 {{site.data.keyword.Bluemix_notm}} は、サービス・インスタンスを使用してサービスのリソースをアプリケーションに提供します。 サービス・インスタンスは Web アプリケーション間で共有できます。
 
@@ -49,7 +49,7 @@ lastupdated: "2018-03-16"
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを使用してサービス・インスタンスを要求する場合、以下のステップを実行します。
 
-1. `bluemix service offerings`**` コマンドを使用して、要求するサービスの名前とプランを見つけます。
+1. `bluemix service offerings` コマンドを使用して、要求するサービスの名前とプランを見つけます。
 
 2. 以下のコマンドを使用してサービス・インスタンスを作成します。ここで、service_name はサービスの名前、service_plan はサービスのプラン、service_instance はこのサービス・インスタンス用に使用する名前です。
 

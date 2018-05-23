@@ -43,7 +43,7 @@
         [Web 應用程式](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    專案內容
+    應用程式內容
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,7 +52,6 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [建立應用程式的疑難排解](../troubleshoot/ts_createapps.html)
     [管理應用程式的疑難排解](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools 頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)

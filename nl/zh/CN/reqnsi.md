@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # 向应用程序添加服务
 {: #add_service}
 
-如果使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 创建了项目，那么您有机会在“项目概述”页面中添加资源。但是，您也可以在项目上下文外部直接通过 {{site.data.keyword.Bluemix_notm}}“目录”对其进行供应。
+如果使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 创建了应用程序，那么您有机会在应用程序概述页面中添加资源。但是，您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.Bluemix_notm}}“目录”供应资源。
 {: shortdesc}
 
-您可以请求资源的实例，并独立于应用程序使用该实例，也可以在“项目概述”页面中将资源实例添加到项目。您可以直接在 {{site.data.keyword.Bluemix_notm}}“目录”中供应特定类型的资源（服务）。
+您可以请求一个资源实例，然后独立于应用程序使用该实例，也可以在应用程序概述页面中将资源实例添加到应用程序中。您可以直接在 {{site.data.keyword.Bluemix_notm}}“目录”中供应特定类型的资源（服务）。
 
 ##发现服务
 {: #discover_services}
@@ -49,7 +49,7 @@ lastupdated: "2018-03-16"
 
 如果使用 {{site.data.keyword.Bluemix_notm}} 命令行界面请求服务实例，请完成以下步骤：
 
-1. 使用 `bluemix service offerings`**` 命令查找所需服务的名称和套餐。
+1. 使用 `bluemix service offerings` 命令查找所需服务的名称和套餐。
 
 2. 使用以下命令创建服务实例，其中 service_name 是服务的名称；service_plan 是服务的套餐；service_instance 是您希望用于此服务实例的名称。
 

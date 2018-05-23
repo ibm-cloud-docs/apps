@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 
   1. {: download} 将应用程序的编码下载到新目录，以设置开发环境。
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新选项卡或窗口中打开）"></a>
 
   2. 切换到代码所在的目录。
 

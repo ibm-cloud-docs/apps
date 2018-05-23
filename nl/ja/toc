@@ -43,7 +43,7 @@
         [Web アプリ](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    プロジェクト・コンテンツ
+    アプリ・コンテンツ
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,7 +52,6 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [アプリの作成に関するトラブルシューティング](../troubleshoot/ts_createapps.html)
     [アプリの管理に関するトラブルシューティング](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools チャネル](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [スタック・オーバーフロー](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)

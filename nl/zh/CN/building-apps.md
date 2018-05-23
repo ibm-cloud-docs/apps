@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 ## 创建资源
 {: #resource}
 
-1. 在[仪表板](https://console.bluemix.net/dashboard/apps/)中，单击**创建资源**。
+1. 在[仪表板](https://console.bluemix.net/)中，单击**创建资源**。
 
 2. 从“目录”的“平台”部分中选择应用程序。然后，选择运行时。例如，可以选择 IBM buildpack 支持的 IBM 运行时环境，例如 Liberty for Java。您还可以选择依赖于开放式源代码和第三方 buildpack 的社区运行时，例如 Tomcat。
 

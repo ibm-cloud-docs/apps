@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # 앱에 서비스 추가
 {: #add_service}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}을 사용하여 프로젝트를 작성한 경우에는 프로젝트 개요 페이지에서 리소스를 추가할 수 있습니다. 또한 프로젝트의 컨텍스트에 속하지 않는 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 리소스를 프로비저닝할 수도 있습니다.
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}을 사용하여 앱을 작성한 경우에는 앱 개요 페이지에서 리소스를 추가할 수 있습니다. 또한 앱의 컨텍스트에 속하지 않는 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 리소스를 프로비저닝할 수도 있습니다.
 {: shortdesc}
 
-사용자는 리소스의 인스턴스를 요청하고 이를 앱으로부터 독립적으로 사용하거나, 프로젝트 개요 페이지에서 프로젝트에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스(서비스)를 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다.
+사용자는 리소스의 인스턴스를 요청하고 이를 앱으로부터 독립적으로 사용하거나, 앱 개요 페이지에서 앱에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스(서비스)를 {{site.data.keyword.Bluemix_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다.
 
 ##서비스 발견
 {: #discover_services}
@@ -49,7 +49,7 @@ lastupdated: "2018-03-16"
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오.
 
-1. `bluemix service offerings`**` 명령을 사용하여 필요한 서비스의 이름과 플랜을 찾으십시오.
+1. `bluemix service offerings` 명령을 사용하여 필요한 서비스의 이름 및 플랜을 찾으십시오. 
 
 2. 다음 명령을 사용하여 서비스 인스턴스를 작성하십시오. 여기서 service_name은 서비스 이름이고, service_plan은 서비스 플랜이며, service_instance는 이 서비스 인스턴스에 사용할 이름입니다.
 

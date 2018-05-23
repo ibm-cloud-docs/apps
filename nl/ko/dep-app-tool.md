@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ IBM Cloud는 강력한 CLI, 그리고 CLI와 통합되는 플러그인 및 개�
 
   1. {: download} 앱에 대한 코드를 새 디렉토리에 다운로드하여 개발 환경을 설정하십시오.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(새 탭 또는 창에서 열림)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(새 탭 또는 창에서 열림)"></a>
 
   2. 코드가 있는 디렉토리로 변경하십시오.
 

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 
   1. {: download} 開発環境をセットアップするため、アプリのコードを新規ディレクトリーにダウンロードします。
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(新しいタブまたはウィンドウで開く)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(新しいタブまたはウィンドウで開く)"></a>
 
   2. コードが置かれているディレクトリーに移動します。
 

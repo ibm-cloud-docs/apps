@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,16 +12,16 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Java プロジェクト・ファイル
+# Java アプリ・ファイル
 {: #java-project-files}
 
-次の情報は、Java プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
+次の情報は、Java アプリの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でアプリをホストにマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。 
 {:shortdesc}
 
 ## Spring
 {: #spring-project-files}
 
-次の表に、生成された Java Spring プロジェクトに含まれるディレクトリーとファイルをリストします。
+次の表に、生成された Java Spring アプリに含まれるディレクトリーとファイルをリストします。
 
 | ディレクトリーとファイル                                     | 説明                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -32,7 +32,7 @@ lastupdated: "2018-03-16"
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`、`bx dev deploy`、および `docker` の各コマンドの Dockerfile |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | `bx dev build` および `bx dev test` の Dockerfile |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | プロジェクトの説明 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | アプリの説明 |
 |**`./src/main/java/application/`** |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | メイン Spring アプリケーション |
 |**`./src/main/java/application/rest/`** | |
@@ -58,12 +58,12 @@ lastupdated: "2018-03-16"
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | サービス・テンプレート |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
-{: caption="表 1. 生成された Java Spring プロジェクトの内容" caption-side="top"}
+{: caption="表 1. 生成された Java Spring アプリの内容" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
-次の表に、生成された Java Liberty プロジェクトに含まれるディレクトリーとファイルをリストします。
+次の表に、生成された Java Liberty アプリに含まれるディレクトリーとファイルをリストします。
 
 | ディレクトリー / ファイル                                     | 説明                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -74,7 +74,7 @@ lastupdated: "2018-03-16"
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`、`bx dev deploy`、および `docker` の各コマンドの Dockerfile |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | コマンド `bx dev build`、`bx dev test` の Dockerfile |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | プロジェクトの説明 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | アプリの説明 |
 |**`./src/main/java/application/rest/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | ヘルス・エンドポイント |
 |**`./src/main/java/application/rest/v1/`** | |
@@ -104,5 +104,5 @@ lastupdated: "2018-03-16"
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | サービス・テンプレート |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
-{: caption="表 2. 生成された Java Liberty プロジェクトの内容" caption-side="top"}
+{: caption="表 2. 生成された Java Liberty アプリの内容" caption-side="top"}
 

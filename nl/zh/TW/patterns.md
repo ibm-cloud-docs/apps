@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # 雲端應用程式的一般架構
 {: #patterns}
 
-{{site.data.keyword.cloud_notm}} 上的入門範本套件能協助您利用經過驗證的架構來產生應用程式。應用程式都是不同的，但當您的應用程式以已知的架構模式為基礎時，更容易快速取得可靠的結果。當您從入門範本套件建立專案時，您選擇了數種不同模式類型的其中一種以及元件（例如運行環境）來移入模式。
+{{site.data.keyword.cloud_notm}} 上的入門範本套件能協助您利用經過驗證的架構來產生應用程式。應用程式都是不同的，但當您的應用程式以已知的架構模式為基礎時，更容易快速取得可靠的結果。當您從入門範本套件建立應用程式時，您選擇了數種不同模式類型的其中一種以及元件（例如運行環境）來移入模式。
 {:shortdesc}
 
 ## Web 應用程式
 {: #web}
 
-Web 應用程式模式會產生專案，以提供 Web 內容（例如 HTML、JavaScript 和樣式表）給 Web 伺服器。有數個 Web 應用程式入門範本套件。
+Web 應用程式模式會產生應用程式，以提供 Web 內容（例如 HTML、JavaScript 和樣式表）給 Web 伺服器。有數個 Web 應用程式入門範本套件。
 
 * 基本 - 提供靜態 `index.html` 檔、預設和空的樣式表，以及 JavaScript 檔。
 * React - Rich 架構，用來建置使用者介面。原始檔位於 `src/client/app`，並使用 WebPack 進行編譯，且在公用目錄中提供。
@@ -44,14 +44,14 @@ BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，利用 {
 ## 微服務
 {: #microservice}
 
-「微服務」專案提供建置後端微服務的基礎（包括基本性能端點及 REST API）。產生的專案包含微服務本身及任何附加之雲端服務所需的所有相依關係。
+「微服務」應用程式提供建置後端微服務的基礎（包括基本性能端點及 REST API）。產生的應用程式包含微服務本身及任何附加之雲端服務所需的所有相依關係。
 
 根據語言及架構需求，有數個您可以從中選擇的微服務入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到「微服務」模式的入門範本套件。
 
 ## 行動
 {: #mobile}
 
-行動專案與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線，稱為「行動後端即服務」或 MBaaS 模式，或者可能有專用 [Backend for Frontend](#bff)。  
+行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線，稱為「行動後端即服務」或 MBaaS 模式，或者可能有專用 [Backend for Frontend](#bff)。  
 
 {{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://console.bluemix.net/developer/mobile/dashboard)上找到「行動」模式的入門範本套件。
 

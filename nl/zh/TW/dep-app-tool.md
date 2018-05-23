@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ IBM Cloud 提供強健的 CLI，以及與 CLI 整合的外掛程式和開發人�
 
   1. {: download} 將您應用程式的程式碼下載至新的目錄，以設定開發環境。
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新分頁或視窗中開啟）"></a>
 
   2. 切換至您程式碼所在的目錄。
 

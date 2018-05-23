@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Compose ファイル
 {: #compose-file}
 
-次の情報は、Compose プロジェクトの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でホストするアプリをマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
+次の情報は、Compose アプリの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でアプリをホストにマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。 
 {:shortdesc}
 
 [Compose](https://docs.docker.com/compose/overview/) ファイルは、複数コンテナーのアプリケーションを実行するための情報を定義します。
 
 使用する Compose ファイルのバージョンは、`version: '2'` のように 2.0 以降を指定する必要があります。
 
-また、サービスを定義する必要があります。 以下は、Node プロジェクトからの例です。
+また、サービスを定義する必要があります。 以下は、Node アプリからの例です。
 ```
 services:
   web:

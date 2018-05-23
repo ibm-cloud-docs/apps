@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +10,13 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Node.js 프로젝트 파일
+# Node.js 앱 파일
 {: #node-project-files}
 
-Node.js 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}에서 일반적으로 볼 수 있는 항목의 인벤토리입니다. 스타터 킷을 작성하면 이러한 파일이 사용자를 위해 작성됩니다. 앱을 {{site.data.keyword.Bluemix_notm}} 내의 호스트로 마이그레이션하는 경우에는 잠재적 충돌을 방지하기 위해 이 정보를 검토할 수 있습니다.
+Node.js 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix}}에서 볼 수 있는 항목의 인벤토리입니다. 스타터 킷을 작성하면 이러한 파일이 사용자를 위해 작성됩니다. 앱을 {{site.data.keyword.Bluemix_notm}} 내의 호스트로 마이그레이션하는 경우에는 잠재적 충돌을 방지하기 위해 이 정보를 검토할 수 있습니다. 
 {:shortdesc}
 
-다음 표에는 생성된 Node.js 프로젝트에 포함되는 공통 디렉토리 및 파일이 나열되어 있습니다.
+다음 표에는 생성된 Node.js 앱에 포함되는 공통 디렉토리 및 파일이 나열되어 있습니다. 
 
 | 디렉토리 및 파일                                     | 설명                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -29,7 +29,7 @@ Node.js 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}�
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | Docker Compose에 대한 앱 서비스 구성 |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | 빌드 관련 정보에 대한 webpack 구성 |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | 프로젝트에 대한 설명 |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | 앱 설명 |
 |<b>`./public/`</b> |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | REST API 설명을 위한 Swagger 스펙 |
 |<b>`./public/index.html`</b> |  |  |
@@ -50,5 +50,5 @@ Node.js 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}�
 |<b>`./chart/<projectname>/templates/`</b> | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | 배치 템플리트 |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | 서비스 템플리트 |
-{: caption="표 1. 생성된 Node.js 프로젝트의 컨텐츠" caption-side="top"}
+{: caption="표 1. 생성된 Node.js 앱의 컨텐츠" caption-side="top"}
 

@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 ## 리소스 작성
 {: #resource}
 
-1. [대시보드](https://console.bluemix.net/dashboard/apps/)에서 **리소스 작성**을 클릭하십시오.
+1. [대시보드](https://console.bluemix.net/)에서 **리소스 작성**을 클릭하십시오.
 
 2. 카탈로그의 플랫폼 섹션에서 앱을 선택하십시오. 그런 다음 런타임을 선택하십시오. 예를 들어, IBM 빌드팩에서 지원하는 IBM 런타임 환경(예: Liberty for Java)을 선택할 수 있습니다. 오픈 소스 및 써드파티 빌드팩에 의존하는 커뮤니티 런타임(예: Tomcat)을 선택할 수도 있습니다.
 

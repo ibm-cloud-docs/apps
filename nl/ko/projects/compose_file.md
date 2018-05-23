@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Compose 파일
 {: #compose-file}
 
-Compose 프로젝트의 경우, 다음 정보는 {{site.data.keyword.Bluemix}}에서 일반적으로 볼 수 있는 항목의 인벤토리입니다. 스타터 킷을 작성하면 이러한 파일이 사용자를 위해 작성됩니다. 앱을 {{site.data.keyword.Bluemix_notm}} 내의 호스트로 마이그레이션하는 경우에는 잠재적 충돌을 방지하기 위해 이 정보를 검토할 수 있습니다.
+Compose 앱의 경우 다음 정보는 일반적으로 {{site.data.keyword.Bluemix}}에서 볼 수 있는 항목의 인벤토리입니다. 스타터 킷을 작성하면 이러한 파일이 사용자를 위해 작성됩니다. 앱을 {{site.data.keyword.Bluemix_notm}} 내의 호스트로 마이그레이션하는 경우에는 잠재적 충돌을 방지하기 위해 이 정보를 검토할 수 있습니다. 
 {:shortdesc}
 
 [Compose](https://docs.docker.com/compose/overview/) 파일은 멀티 컨테이너 애플리케이션 실행을 위한 정보를 정의합니다.
 
 사용되는 Compose 파일의 버전을 `version: '2'`와 같이 2.0 이상으로 지정해야 합니다.
 
-서비스 또한 정의해야 합니다. 다음은 Node.js 프로젝트의 예입니다.
+서비스 또한 정의해야 합니다. 다음은 Node 앱의 예입니다. 
 ```
 services:
   web:

@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Compose 檔案
 {: #compose-file}
 
-若為 Compose 專案，下列資訊是您在 {{site.data.keyword.Bluemix}} 中一般找到的項目庫存。當您建立入門範本套件時，會為您建立這些檔案。如果您要移轉應用程式以便在 {{site.data.keyword.Bluemix_notm}} 中管理，建議您檢閱此資訊，以避免潛在的衝突。
+若為 Compose 應用程式，下列資訊是您在 {{site.data.keyword.Bluemix}} 中一般找到的項目庫存。當您建立入門範本套件時，會為您建立這些檔案。如果您要移轉應用程式以便在 {{site.data.keyword.Bluemix_notm}} 中管理，建議您檢閱此資訊，以避免潛在的衝突。
 {:shortdesc}
 
 [Compose](https://docs.docker.com/compose/overview/) 檔案會定義用於執行多容器應用程式的資訊。
 
 您應該將要使用的 Compose 檔案版本指定為 2.0 或更新版本，例如：`version: '2'`
 
-您也需要定義服務。以下是來自 Node 專案的範例：
+您也需要定義服務。以下是來自 Node 應用程式的範例：
 ```
 services:
   web:

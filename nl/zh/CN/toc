@@ -43,7 +43,7 @@
         [Web 应用程序](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    项目内容
+    应用程序内容
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,8 +52,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [有关创建应用程序的故障诊断](../troubleshoot/ts_createapps.html)
     [有关管理应用程序的故障诊断](../troubleshoot/ts_apps.html)
-    [IBM Cloud Slack developer-tools 通道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

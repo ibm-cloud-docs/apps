@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 ## 建立資源
 {: #resource}
 
-1. 在[儀表板](https://console.bluemix.net/dashboard/apps/)中，按一下**建立資源**。
+1. 在[儀表板](https://console.bluemix.net/)中，按一下**建立資源**。
 
 2. 從型錄中，在「平台」區段中選取應用程式。然後，選擇運行環境。例如，您可以選擇 IBM 建置套件所支援的 IBM 運行環境（例如 Liberty for Java）。您也可以選擇根據開放程式碼及協力廠商建置套件的「社群」運行環境（例如 Tomcat）。
 

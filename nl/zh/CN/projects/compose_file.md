@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-03-16"
 # Compose 文件
 {: #compose-file}
 
-对于 Compose 项目，以下信息列出了通常在 {{site.data.keyword.Bluemix}} 中可找到的内容。创建初学者工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
+对于 Compose 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建初学者工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
 {:shortdesc}
 
 [Compose](https://docs.docker.com/compose/overview/) 文件定义了用于运行多容器应用程序的信息。
 
 应将使用的 Compose 文件的版本指定为 2.0 或更高版本，如下所示：`version: '2'`
 
-您还需要定义服务。下面是 Node 项目中的示例：
+您还需要定义服务。下面是 Node 应用程序中的示例：
 ```
 services:
   web:

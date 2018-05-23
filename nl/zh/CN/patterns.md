@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # 云应用程序的常用体系结构
 {: #patterns}
 
-{{site.data.keyword.cloud_notm}} 上的初学者工具包可帮助您使用成熟的体系结构来生成应用程序。应用程序各不相同，但如果将应用程序基于已知的体系结构模式，可以更轻松地快速获得可靠的结果。通过初学者工具包创建项目时，要选择多种不同模式类型中的一种类型以及组件（如运行时）来填充模式。
+{{site.data.keyword.cloud_notm}} 上的初学者工具包可帮助您使用成熟的体系结构来生成应用程序。应用程序各不相同，但如果将应用程序基于已知的体系结构模式，可以更轻松地快速获得可靠的结果。通过初学者工具包创建应用程序时，您需要从多种不同的模式类型中选择一种模式，还需要选择用于填充该模式的组件，如运行时。
 {:shortdesc}
 
 ## Web 应用程序
 {: #web}
 
-“Web 应用程序”模式生成的项目用于向 Web 服务器提供 HTML、JavaScript 和样式表等 Web 内容。有多个 Web 应用程序初学者工具包。
+“Web 应用程序”模式生成的应用程序用于向 Web 服务器提供 HTML、JavaScript 和样式表等 Web 内容。有多个 Web 应用程序初学者工具包。
 
 * 基本 - 提供静态 `index.html` 文件、缺省和空白样式表以及 JavaScript 文件。
 * 反应 - 用于构建用户界面的丰富框架。源文件位于 `src/client/app` 中，这些文件使用 WebPack 进行编译并在公共目录中提供。
@@ -44,14 +44,14 @@ BFF 最常使用 REST 模式来公开 API，但您也可以将 BFF 设计为通�
 ## 微服务
 {: #microservice}
 
-微服务项目提供用于构建后端微服务的基础，包括基本运行状况端点和 REST API。生成的项目包含针对微服务本身以及任何连接的云服务都需要的所有依赖关系。
+微服务应用程序会提供用于构建后端微服务的基础，包括基本运行状况端点和 REST API。生成的应用程序包含微服务本身以及任何连接的云服务都需要的所有依赖项。
 
 有多个微服务初学者工具包，您可根据自己的语言和框架需求进行选择。您可以在 [{{site.data.keyword.cloud_notm}} App Service 开发者仪表板](https://console.bluemix.net/developer/appservice/dashboard)上找到“微服务”模式的初学者工具包。
 
 ## 移动
 {: #mobile}
 
-移动项目不同于其他模式的地方是有一个重要的客户机端组件。此模式可能包括与移动服务的直接连接，如推送通知、认证和移动分析（称为移动后端即服务 (MBaaS) 模式），也可能包含专用的[服务于前端的后端](#bff)。  
+移动应用程序不同于其他模式，其具有一个重要的客户机端组件。此模式可能包括与移动服务的直接连接，如推送通知、认证和移动分析（称为移动后端即服务 (MBaaS) 模式），也可能包含专用的[服务于前端的后端](#bff)。  
 
 {{site.data.keyword.cloud_notm}} 针对 iOS Swift、Android 和 Cordova 提供了多个移动初学者工具包。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 开发者仪表板](https://console.bluemix.net/developer/mobile/dashboard)上找到“移动”模式的初学者工具包。
 
