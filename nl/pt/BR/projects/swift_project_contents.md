@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +10,13 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Arquivos de projeto Swift
+# Arquivos de apps Swift
 {: #swift-project-files}
 
-Para projetos Swift, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
+Para apps Swift, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos. 
 {:shortdesc}
 
-A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos em um projeto Swift gerado.
+A tabela a seguir lista os diretórios e os arquivos comuns que estão incluídos em um app Swift gerado.
 
 | Diretório e arquivo                                     | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -27,7 +27,7 @@ A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos e
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile para comandos `bx dev run`, `bx dev deploy` e `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para `bx dev build` e `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENÇA |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do projeto |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do app |
 |<b>`./Sources/Application/`</b> |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.swift | O arquivo de aplicativo Swift |
 |<b>`./Sources/<projectname>/`</b> | |
@@ -52,5 +52,5 @@ A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos e
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modelo de serviço |
 |<b>`./manifests/`</b> | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Serviço e implementação do & Kubernetes yaml |
-{: caption="Tabela 1. Conteúdo de um projeto Swift gerado" caption-side="top"}
+{: caption="Tabela 1. Conteúdos de um app Swift gerado" caption-side="top"}
 

@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-03-16"
 # Arquivo do Compose
 {: #compose-file}
 
-Para projetos Compose, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
+Para apps Compose, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos. 
 {:shortdesc}
 
 O arquivo do [Compor](https://docs.docker.com/compose/overview/) define informações para executar aplicativos de múltiplos contêineres.
@@ -22,7 +22,7 @@ O arquivo do [Compor](https://docs.docker.com/compose/overview/) define informa�
 É necessário especificar a versão do arquivo do Compose usado para 2.0 ou mais recente, como:
 `version: '2'`
 
-Você também precisa definir os serviços. A seguir está um exemplo de um projeto Node:
+Você também precisa definir os serviços. A seguir está um exemplo de um app Node:
 ```
 services:
   web:

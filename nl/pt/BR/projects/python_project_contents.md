@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,13 +10,13 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Arquivos de projeto Python
+# Arquivos de apps Python
 {: #python-project-files}
 
-Para projetos Python, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
+Para apps Python, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos. 
 {:shortdesc}
 
-A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos em um projeto Python gerado.
+A tabela a seguir lista os diretórios e os arquivos comuns que estão incluídos em um app Python gerado.
 
 | Diretório e arquivo                                     | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -28,7 +28,7 @@ A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos e
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile para comandos `bx dev run`, `bx dev deploy` e `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para `bx dev build` e `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENÇA |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do projeto |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do app |
 |<b>`./public/`</b> |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Especificação do swagger para descrever APIs de REST |
 |<b>`./public/`</b> |  |  |
@@ -49,4 +49,4 @@ A tabela a seguir lista os diretórios e arquivos comuns que estão incluídos e
 |<b>`./chart/<projectname>/templates/`</b> | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Modelo de implementação |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modelo de serviço |
-{: caption="Tabela 1. Conteúdo de um projeto Python gerado" caption-side="top"}
+{: caption="Tabela 1. Conteúdos de um app Python gerado" caption-side="top"}

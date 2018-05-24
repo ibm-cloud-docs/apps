@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,16 +12,16 @@ lastupdated: "2018-03-16"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Arquivos de projeto Java
+# Arquivos de app Java
 {: #java-project-files}
 
-Para projetos Java, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
+Para apps Java, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos. 
 {:shortdesc}
 
 ## Spring
 {: #spring-project-files}
 
-A tabela a seguir lista os diretórios e arquivos que estão incluídos em um projeto Java Spring gerado.
+A tabela a seguir lista os diretórios e os arquivos que estão incluídos em um app Java Spring gerado.
 
 | Diretório e arquivo                                     | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -32,7 +32,7 @@ A tabela a seguir lista os diretórios e arquivos que estão incluídos em um pr
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile para comandos `bx dev run`, `bx dev deploy` e `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para `bx dev build` e `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENÇA |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do projeto |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do app |
 |**`./src/main/java/application/`** |  |  |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | O aplicativo Spring principal |
 |**`./src/main/java/application/rest/`** | |
@@ -58,12 +58,12 @@ A tabela a seguir lista os diretórios e arquivos que estão incluídos em um pr
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modelo de serviço |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Serviço e implementação do & Kubernetes yaml |
-{: caption="Tabela 1. Conteúdo de um projeto Java Spring gerado" caption-side="top"}
+{: caption="Tabela 1. Conteúdos de um app Java Spring gerado" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
-A tabela a seguir lista os diretórios e arquivos que estão incluídos em um projeto Java Liberty gerado.
+A tabela a seguir lista os diretórios e os arquivos incluídos em um app Java Liberty gerado.
 
 | Diretório / Arquivo                                     | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
@@ -74,7 +74,7 @@ A tabela a seguir lista os diretórios e arquivos que estão incluídos em um pr
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile para comandos `bx dev run`, `bx dev deploy` e `docker` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para comandos `bx dev build` e `bx dev test` |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENÇA |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do projeto |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descrição do app |
 |**`./src/main/java/application/rest/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | Endpoint de funcionamento |
 |**`./src/main/java/application/rest/v1/`** | |
@@ -104,5 +104,5 @@ A tabela a seguir lista os diretórios e arquivos que estão incluídos em um pr
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modelo de serviço |
 |**`./manifests/`** | |
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Serviço e implementação do & Kubernetes yaml |
-{: caption="Tabela 2. Conteúdo de um projeto Java Liberty gerado" caption-side="top"}
+{: caption="Tabela 2. Conteúdos de um app Java Liberty gerado" caption-side="top"}
 

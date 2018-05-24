@@ -26,7 +26,7 @@ O catálogo do {{site.data.keyword.Bluemix_notm}} lista os recursos da infraestr
 ## Criando um recurso
 {: #resource}
 
-1. Em seu [painel](https://console.bluemix.net/dashboard/apps/), clique em **Criar recurso**.
+1. Em seu [painel](https://console.bluemix.net/), clique em **Criar recurso**.
 
 2. No catálogo, selecione um aplicativo na seção Plataforma. Em seguida, escolha seu tempo de execução. Por exemplo, é possível escolher um ambiente de tempo de execução da IBM, como o Liberty for Java, que é suportado pelos pacotes de construção IBM. Também é possível escolher tempos de execução de Comunidade, como o Tomcat, que depende do software livre e de pacotes de construção de terceiros.
 

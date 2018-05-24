@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Vamos dar uma olhada mais de perto na melhor maneira de usar o {{site.data.keywo
 ##Introdução
 {: #get_started}
 
-Comece a construir seu app por meio dos painéis de desenvolvedor do {{site.data.keyword.cloud_notm}}, nos quais é possível selecionar um kit do iniciador relacionado ao seu caso de uso e escolher uma linguagem de programação. O {{site.data.keyword.cloud_notm}} usa instruções do kit do iniciador para provisionar automaticamente os recursos que você precisa e para criar um projeto de app agnóstico de tempo de execução e específico da linguagem que é a base para seu app de produção. Para concluir a fase de introdução, clique em **Implementar no Cloud** no painel de desenvolvedor. Um clique cria uma cadeia de ferramentas do DevOps completa com um repositório de código que é preenchido com seu código-fonte de app e pipeline de implementação.
+Comece a construir seu app por meio dos painéis de desenvolvedor do {{site.data.keyword.cloud_notm}}, nos quais é possível selecionar um kit do iniciador relacionado ao seu caso de uso e escolher uma linguagem de programação. O {{site.data.keyword.cloud_notm}} usa instruções do kit do iniciador para provisionar automaticamente os recursos de que você precisa e para criar um app agnóstico de tempo de execução e específico para a linguagem que é a base para seu app de produção. Para concluir a fase de introdução, clique em **Implementar no Cloud** no painel de desenvolvedor. Um clique cria uma cadeia de ferramentas do DevOps completa com um repositório de código que é preenchido com seu código-fonte de app e pipeline de implementação.
 
 ![Introdução](images/dev_get_started.png "Introdução") Figura 2. Fluxo de introdução
 
@@ -37,7 +37,7 @@ Quando você usar o botão **Implementar no Cloud** para configurar sua cadeia d
 ##Desenvolver localmente
 {: #develop_locally}
 
-Depois de criar seu projeto de app de iniciador e cadeia de ferramentas, você inicia seu desenvolvimento localmente. Clone o código de seu repositório para uma estação de trabalho local e importe para seu IDE. Use o {{site.data.keyword.dev_cli_notm}} para construir, executar e testar seu app em nuvem em sua máquina local. O {{site.data.keyword.dev_cli_notm}} cria e gerencia um contêiner local para você. Quando você estiver pronto para ver seu app em execução na nuvem, envie por push para seu repositório na nuvem e mescle suas mudanças.
+Após a criação de seu app iniciador e da cadeia de ferramentas, você inicia seu desenvolvimento localmente. Clone o código de seu repositório para uma estação de trabalho local e importe para seu IDE. Use o {{site.data.keyword.dev_cli_notm}} para construir, executar e testar seu app em nuvem em sua máquina local. O {{site.data.keyword.dev_cli_notm}} cria e gerencia um contêiner local para você. Quando você estiver pronto para ver seu app em execução na nuvem, envie por push para seu repositório na nuvem e mescle suas mudanças.
 
 ![Desenvolver localmente](images/dev_code_locally.png "Desenvolver localmente") Figura 3. Desenvolvendo o fluxo localmente
 

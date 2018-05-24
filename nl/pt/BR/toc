@@ -43,7 +43,7 @@ Criando aplicativos
         [Apps da web](https://console.bluemix.net/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Conteúdo do projeto
+    Conteúdos do app
         projects/compose_file.md
         projects/java_project_contents.md
         projects/node_project_contents.md
@@ -52,9 +52,7 @@ Criando aplicativos
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Resolução de problemas para criação de apps](../troubleshoot/ts_createapps.html)
-[Resolução de problemas para gerenciamento de apps](../troubleshoot/ts_apps.html)
-[Canal de ferramentas do desenvolvedor do IBM
-Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-[StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Resolução de problemas para gerenciar apps](../troubleshoot/ts_apps.html)
+    [Canal de ferramentas do desenvolvedor do IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

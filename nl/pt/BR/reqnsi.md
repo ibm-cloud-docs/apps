@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Incluindo um serviço em seu app
 {: #add_service}
 
-Se você criou um projeto usando o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, teve uma chance de incluir recursos da página de visão geral do projeto. No entanto, também é possível provisioná-los diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}, fora do contexto de seu projeto.
+Se você criou um app usando o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, teve uma chance de incluir recursos da página de visão geral do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.Bluemix_notm}}, fora do contexto de seu app.
 {: shortdesc}
 
-É possível solicitar uma instância do recurso e usá-la de forma independente de seu app ou incluir a instância de recurso em seu projeto por meio da página de visão geral do projeto. É possível provisionar um tipo específico de recurso (um serviço) diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}.
+É possível solicitar uma instância do recurso e usá-la independentemente de seu app ou incluir a instância de recurso em seu app da página de visão geral do app. É possível provisionar um tipo específico de recurso (um serviço) diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 ##Descobrindo serviços
 {: #discover_services}
@@ -59,7 +59,7 @@ mantê-lo inalterado.
 
 Se você usar a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
-1. Use o comando `bluemix service offerings`**` para localizar o nome e o plano do serviço que você requer.
+1. Use o comando `bluemix service offerings` para localizar o nome e o plano do serviço que você requer.
 
 2. Use o comando a seguir para criar uma instância de serviço, em que service_name é o nome do serviço, service_plan é o plano do serviço e service_instance é o nome que você deseja usar para essa instância de serviço.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Criando um aplicativo da web básico com um kit do iniciador
 {: #tutorial}
 
-É possível criar um projeto por meio de um iniciador da web básico. Use esses iniciadores para configurar um servidor da web simples para Swift, Node, Java ou Python com uma opção de estruturas da web. É possível ver como instalar as ferramentas necessárias, construir e executar o projeto localmente e implementá-lo na nuvem.
+É possível criar um app de um iniciador da web básico. Use esses iniciadores para configurar um servidor da web simples para Swift, Node, Java ou Python com uma opção de estruturas da web. É possível ver como instalar as ferramentas necessárias, construir e executar o app localmente e implementá-lo na nuvem.
 {: shortdesc}
 
 ## Etapa 1: instalar as ferramentas
@@ -24,14 +24,14 @@ lastupdated: "2018-03-16"
 Instale as [ferramentas do desenvolvedor![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 
-## Etapa 2: criar um projeto
+## Etapa 2: Criar um app
 {: #create-devex}
 
-Crie um projeto no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
+Crie um app no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
-1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, selecione **Express.js básico** e **Criar projeto**.
+1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, selecione **Express.js básico** e, em seguida, **Criar**.
 
-2. Insira o nome do projeto. Para este tutorial, use `WebBasicProject`.   
+2. Insira o nome de seu app. Para este tutorial, use `WebBasicProject`.   
 
 3. Insira um nome de host exclusivo, tal como suas iniciais mais `-devhost`. Por
 exemplo:
@@ -40,29 +40,29 @@ exemplo:
 	abc-devhost
 	```
 
-	Esse nome do host é a rota de seu projeto. Por exemplo, `abc-devhost.mybluemix.net`
+	Esse nome do host é a rota de seu app. Por exemplo, `abc-devhost.mybluemix.net`
 
 4. Selecione a plataforma da linguagem. Para este tutorial, use `Node.js`.
 
-5. Clique em **Criar projeto**.
+5. Clique em **Criar**.
 
 ## Opcional: incluir recursos
 {: #add-services}
 
-1. Na visualização **Detalhes do projeto**, clique em **Incluir recurso**.
+1. Na visualização **Detalhes do app**, clique em **Incluir recurso**.
 
 2. Selecione o tipo de serviço desejado. Para este tutorial, selecione **Dados** > **Avançar** > **Cloudant NoSQL DB** > **Avançar**.
 
-4. Clique em **Criar**.
+3. Clique em **Criar**.
 
 ## Opcional: criar cadeia de ferramentas de DevOps
 {: #add-toolchain}
 
-A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu projeto. Ao criar uma cadeia de ferramentas, o Serviço de Aplicativo fornecerá um repositório Git, no qual será possível visualizar o código-fonte, clonar seu projeto e criar e gerenciar problemas. Você também tem acesso a um ambiente Gitlab dedicado e um pipeline de entrega contínua que é customizado para a plataforma de implementação que você escolher, como Kubernetes ou Cloud Foundry.
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você criar uma cadeia de ferramentas, o Serviço de app fornecerá um repositório Git, no qual será possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente Gitlab dedicado e um pipeline de entrega contínua que é customizado para a plataforma de implementação que você escolher, como Kubernetes ou Cloud Foundry.
 
 A entrega contínua é ativada para alguns aplicativos. Você pode desejar ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e GitHub.
 
-1. Selecione seu projeto na página **Projetos**.
+1. Selecione seu app na página **Apps**.
 
 2. Clique em **Implementar na nuvem**.
 
@@ -72,41 +72,40 @@ A entrega contínua é ativada para alguns aplicativos. Você pode desejar ativa
 
 	* Implementar usando o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-## Etapa 3: gerar seu código do projeto
+## Etapa 3: Gerar seu código de app
 {: #generate-code}
 
-Se você criou uma cadeia de ferramentas na etapa anterior, um repositório Git foi criado para seu projeto e será possível localizar o código lá. Siga estas etapas para acessar seu repositório:
+Se você tiver criado uma cadeia de ferramentas na etapa anterior, um repositório Git terá sido criado para seu app e será possível localizar o código lá. Siga estas etapas para acessar seu repositório:
 
-1. Selecione seu projeto na página **Projetos**.
+1. Selecione seu app na página **Apps**.
 
 2. Clique em **Visualizar cadeia de ferramentas**.
 
-3. Clique no cartão **Git** sob o título **CODE** para abrir seu repositório, no qual é possível visualizar o código-fonte e clonar seu projeto.
+3. Clique no cartão **Git** sob o título **CODE** para abrir seu repositório, no qual é possível visualizar o código-fonte e clonar seu app.
 
-Se uma cadeia de ferramentas não estiver ativada, será possível acessar seu código fazendo download da origem diretamente da visualização Detalhes do projeto.
+Se uma cadeia de ferramentas não estiver ativada, será possível acessar seu código fazendo download da origem diretamente da visualização Detalhes do app.
 
-1. Selecione seu projeto na página **Projetos**.
+1. Selecione seu app na página **Apps**.
 
-2. Clique em **Fazer download do código** para fazer download de seu archive de projeto.
+2. Clique em **Código do download** para fazer download do archive do app.
 
 ## Etapa 4: começar a trabalhar em seu app
 {: #code}
 
-Comece a trabalhar com seu projeto transferido por download:
+Comece a trabalhar com seu app transferido por download:
 
 1. Expanda o arquivo arquivado.
 
-2. Importe o projeto para seu IDE.
+2. Importe o app para seu IDE.
 
-3. Modifique o código como você desejar.
+3. Modifique o código.
 
 4. Use o {{site.data.keyword.dev_cli_notm}} para construir e executar seu código localmente.
-
 
 ## Etapa 5: construir e executar o app localmente
 {: #build-run}
 
-Inclua seu próprio código e execute o projeto. É possível executar o aplicativo localmente em seu sistema host se você instala as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
+Inclua seu próprio código, a compilação e execute o app. É possível executar o aplicativo localmente em seu sistema host se você instala as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
 
 ### Usando o {{site.data.keyword.dev_cli_short}}
 
@@ -124,21 +123,21 @@ Inclua seu próprio código e execute o projeto. É possível executar o aplicat
   ```
   {: codeblock}
 
-3. Para construir o projeto em seu diretório de projeto atual, insira o comando a seguir:
+3. Para construir o app no diretório de app atual, insira o comando a seguir:
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-4. Para executar o projeto em seu diretório de projeto atual, insira o comando a seguir:
+4. Para executar o app no diretório de app atual, insira o comando a seguir:
 
   ```
   bx dev run
   ```
   {: codeblock}
 
-5. Abra seu navegador para `http://localhost:3000` (seu número da porta pode ser diferente dependendo do tempo de execução escolhido).
+5. Abra seu navegador para `http://localhost:3000`. O número da porta pode ser diferente dependendo de seu tempo de execução escolhido.
 
 
 ## Etapa 6: implementar na nuvem
@@ -151,7 +150,7 @@ Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção
 
 Também é possível implementar seu app manualmente por meio de sua cadeia de ferramentas DevOps:
 
-1. Selecione seu projeto na página **Projetos**.
+1. Selecione seu app na página **Apps**.
 
 2. Clique em **Visualizar cadeia de ferramentas**.
 
@@ -160,14 +159,14 @@ Também é possível implementar seu app manualmente por meio de sua cadeia de f
 ### Implementar usando o {{site.data.keyword.dev_cli_short}}
 Se você optar por não usar uma cadeia de ferramentas, também será possível implementar usando o {{site.data.keyword.dev_cli_short}}.
 
-Para implementar seu projeto para Cloud Foundry, insira o comando a seguir:
+Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 
   ```
   bx dev deploy
   ```
   {: codeblock}
 
-Para implementar seu projeto para um cluster do Kubernetes, insira o comando a seguir:
+Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
 
 ```
 bx dev deploy --target <container>

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -52,7 +52,7 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   1. {: download} Faça download do código do app em um novo diretório para configurar seu ambiente de desenvolvimento.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Abre em uma nova guia ou janela)"></a>
 
   2. Mude para o diretório no qual o seu código está localizado.
 

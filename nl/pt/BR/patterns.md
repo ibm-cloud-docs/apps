@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Arquiteturas comuns para apps de nuvem
 {: #patterns}
 
-Os kits do iniciador no {{site.data.keyword.cloud_notm}} ajudam a produzir apps com uma arquitetura comprovada. Os apps são todos diferentes, mas quando você baseia seu app em um padrão arquitetural conhecido, é mais fácil obter um resultado confiável rapidamente. Ao criar um projeto por meio de um kit do iniciador, você está escolhendo um dos vários tipos padrão diferentes junto com os componentes, como um tempo de execução, para preencher o padrão.
+Os kits do iniciador no {{site.data.keyword.cloud_notm}} ajudam a produzir apps com uma arquitetura comprovada. Os apps são todos diferentes, mas quando você baseia seu app em um padrão arquitetural conhecido, é mais fácil obter um resultado confiável rapidamente. Ao criar um app por meio de um kit do iniciador, você está escolhendo um dos vários tipos padrão diferentes junto com os componentes, como um tempo de execução, para preencher o padrão.
 {:shortdesc}
 
 ## App da web
 {: #web}
 
-O padrão App da web produz projetos que entregam conteúdo da web, como HTML, JavaScript e folhas de estilo, para o servidor da web. Há vários kits do iniciador de App da web.
+O padrão App da web produz apps que entregam conteúdo da web, como HTML, JavaScript e folhas de estilo, para o servidor da web. Há vários kits do iniciador de App da web.
 
 * Básico - entrega um arquivo `index.html` estático, uma folha de estilo padrão e vazia e um arquivo JavaScript.
 * React - uma rica estrutura para construir interfaces com o usuário. Os arquivos de origem estão em `src/client/app` e são compilados com o WebPack e entregues no diretório público.
@@ -44,14 +44,14 @@ Existem vários kits do iniciador do BFF dentre os quais é possível escolher d
 ## Microsserviço
 {: #microservice}
 
-Os projetos de microsserviço fornecem a base para construir microsserviços de backend, incluindo um terminal de funcionamento básico e API de REST. Os projetos gerados contêm todas as dependências necessárias tanto para o próprio microsserviço quanto para qualquer serviço de nuvem conectado.
+Os apps de microsserviço fornecem a base para construir microsserviços de backend, incluindo um terminal de funcionamento básico e API de REST. Os apps gerados contêm todas as dependências necessárias tanto para o próprio microsserviço como para qualquer serviço de nuvem conectado.
 
 Há vários kits do iniciador de microsserviço dentre os quais é possível escolher dependendo de seus requisitos de linguagem e estrutura.  É possível localizar kits do iniciador para o padrão Microsserviço no painel do desenvolvedor de Serviço de aplicativo do [{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Dispositivo móvel
 {: #mobile}
 
-Os projetos móveis são diferentes dos outros padrões porque eles têm um componente significativo do lado do cliente. O padrão pode incluir conexão direta com serviços móveis, como notificações push, autenticação e analítica móvel, conhecido como padrão Mobile Backend as a Service ou MBaaS, ou pode ter um [Backend for Frontend](#bff) dedicado.  
+Os apps móveis são diferentes dos outros padrões porque eles têm um componente significativo do lado do cliente. O padrão pode incluir conexão direta com serviços móveis, como notificações push, autenticação e analítica móvel, conhecido como padrão Mobile Backend as a Service ou MBaaS, ou pode ter um [Backend for Frontend](#bff) dedicado.  
 
 O {{site.data.keyword.cloud_notm}} oferece vários kits do iniciador de dispositivo móvel para iOS Swift, Android e Cordova. É possível localizar kits do iniciador para o padrão Dispositivo móvel no [painel do desenvolvedor de Dispositivo móvel do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
 
