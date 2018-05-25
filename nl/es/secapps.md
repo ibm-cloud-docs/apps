@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-04-26"
 
 ---
 
@@ -21,13 +21,12 @@ Puede proteger las apps subiendo certificados SSL y limitando el acceso a las ap
 Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe crear una solicitud de firma de certificado (CSR) en el servidor.
 
 Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
-y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública,
-así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
+y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública, así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
 sólo están aceptadas con una longitud de claves CSR de 2048 bits.
 
 ## Información necesaria
 
-Para que la CSR sea válida, se debe especificar la siguiente información al generar la CSR:
+Para que la CSR sea válida, debe especificarse la siguiente información al generar la CSR:
 
 ### Nombre de país
 
@@ -90,13 +89,13 @@ Para cargar un certificado para la aplicación:
 
 1. Vaya a su panel de control.
 
-2. Seleccione el nombre de la app de la que desea ver su vista de detalles.
+2. Seleccione su app para abrir la vista de detalles de la app.
 
-3. Seleccione el desplegable **Rutas** y, a continuación, seleccione **Gestionar dominios**.
+3. Seleccione el desplegable **Rutas** y, a continuación, para su organización, en la columna Acción, seleccione **Dominios** del menú de acciones adicional.
 
 3. Para su dominio personalizado, pulse **Cargar certificado**.
 
-4. Busque el certificado, clave privada y, si lo desea, certificado intermedio que desee cargar. También puede marcar el recuadro de selección para habilitar las solicitudes de un certificado de cliente. Si habilita la opción para solicitar un certificado de cliente, deberá cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
+4. Busque el certificado, clave privada y, si lo desea, un certificado intermedio o certificado de cliente que desee cargar. Para habilitar el almacén de confianza de certificado de cliente, debe cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
 
   #### Certificado
 
@@ -131,7 +130,7 @@ protege mediante una contraseña.
 
   #### Habilitar solicitud de certificado de cliente
 
-    Si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
+    Si habilita esta opción cargando un archivo de almacén de confianza de certificado de cliente, a los usuarios que intenten acceder un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
 
   **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las apps {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
 
@@ -142,7 +141,8 @@ protege mediante una contraseña.
    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
 
       * PEM (pem, .crt, .cer y .cert)
-	  * DER (.der o .cer )
       * PKCS #7 (p7b, p7r, spc)
 
-Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios**.
+Para obtener más información consulte [Importación de certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+
+Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios**. En el menú de acciones adicional de la organización, pulse **Eliminar de la organización**.

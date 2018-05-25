@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-03-17"
+lastupdated: "2018-05-14"
 
 ---
 
@@ -51,7 +51,7 @@ Tras instalar la interfaz de línea de mandatos, ya puede empezar:
 
   1. {: download} Descargue el código de la app en un directorio nuevo para configurar su entorno de desarrollo.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" title="(Se abre en un nuevo separador o ventana)"></a>
+    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Se abre en un nuevo separador o ventana)"></a>
 
   2. Cambie al directorio donde se encuentra el código.
 

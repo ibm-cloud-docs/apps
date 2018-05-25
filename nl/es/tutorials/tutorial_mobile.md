@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -15,40 +15,38 @@ lastupdated: "2018-03-16"
 # Creación de una aplicación móvil con un kit de iniciación
 {: #tutorial}
 
-Puede crear un proyecto móvil a partir de un iniciador básico móvil. Aprenderá a instalar las herramientas que necesita y los pasos para ejecutar el proyecto en Xcode y Android Studio.
+Puede crear una app móvil a partir de un iniciador básico móvil. Aprenderá a instalar las herramientas que necesita y los pasos para ejecutar la app en Xcode y Android Studio.
 {: shortdesc}
 
 ## Instalación de las herramientas
 {: #before-you-begin}
 
-Instale las [herramientas de desarrollador](/docs/cli/idt/index.html#add-cli){: new_window}.
+Instale las [herramientas de desarrollador](/docs/cli/idt/index.html#create){: new_window}.
 
-
-## Elija cómo desea crear su proyecto
+## Elija cómo crear la app
 {: #choose_how}
 
-Puede crear un proyecto con uno de los siguientes métodos:
+Puede crear una app con uno de los siguientes métodos:
 - [{{site.data.keyword.dev_console}}](#create-devex) basado en la web
 - [{{site.data.keyword.dev_cli_notm}}](#create-cli) mediante mandatos locales
 
-
-## Creación de un proyecto con {{site.data.keyword.dev_console}}
+## Creación de una app con {{site.data.keyword.dev_console}}
 {: #create-devex}
 
-1. Cree un proyecto de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
+1. Cree una app de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
 
     1. En la página [Kits de iniciación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}, seleccione un kit de iniciación con base a las funcionalidades que desee. Por ejemplo, para una aplicación de Watson Language, vaya a **Watson Language** y pulse **Seleccionar kit de iniciación**.
 
-    2. Especifique el nombre del proyecto. En esta guía de aprendizaje, utilice `WatsonProject`.   
+    2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `WatsonApp`.   
 
     3. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilizaremos `Swift`.
 
-    4. Pulse **Crear proyecto**.
+    4. Pulse **Crear**.
 
 ### Opcional: Añadir servicios
 {: #add-services}
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
 2. Pulse **Añadir servicio**.
 
@@ -66,27 +64,26 @@ Puede crear un proyecto con uno de los siguientes métodos:
 
 9. Para obtener más información sobre cómo añadir notificaciones push, consulte la [documentación de notificaciones](/docs/services/mobilepush/c_overview_push.html#overview-push) Push.
 
-### Generación del código de su proyecto
+### Genere el código de app
 {: #generate-code}
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
-2. Pulse **Descargar código** para descargar el archivador del proyecto.
-
+2. Pulse **Descargar código** para descargar el archivador de la app.
 
 ### Cómo empezar a trabajar con su app
 {: #code}
 
-Empiece a trabajar con el proyecto descargado:
+Empiece a trabajar con la app descargada:
 
 1. Expanda el archivo archivado.
 
-2. Vaya al directorio del nuevo proyecto.
+2. Navegue al nuevo directorio de la app.
 
 3. Utilice {{site.data.keyword.dev_cli_notm}} para continuar.
 
 
-## Creación de un proyecto con {{site.data.keyword.dev_cli_notm}}
+## Creación de una app con {{site.data.keyword.dev_cli_notm}}
 {: #create-cli}
 
 1. Asegúrese de instalar [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html).
@@ -100,64 +97,62 @@ Empiece a trabajar con el proyecto descargado:
 
 3. Proporcione los siguientes valores cuando se le solicite:
 
-	* Seleccione un tipo de proyecto "Mobile Client", opción 2.
+	* Seleccione un tipo de app "Mobile Client", opción 2
 	* Seleccione un lenguaje de implementación para que sea "iOS Swift", opción 3.
 	* Seleccione el kit de iniciación "Mobile App: Basic", opción 1.
-	* Especifique el nombre de su proyecto: `MobileBasicProject`.
+	* Especifique el nombre de la app: `MobileBasicProject`
 
     Nota: Los números de selección concretos pueden variar dependiendo de las mejoras en las herramientas.
 
-4. Si desea añadir servicios al proyecto, escriba `y` en la solicitud de preguntas y responda el resto de las preguntas.
+4. Si desea añadir servicios a la app, escriba `y` en la solicitud de preguntas y responda el resto de las preguntas.
 
 5. Cuando `MobileBasicProject` se cree y guarde de forma satisfactoria, vaya a la carpeta `MobileBasicProject/MobileBasicProject-Swift`.
 
-### Ejecución de su proyecto Swift en Xcode
+### Ejecución de la app Swift en Xcode
 {: #run_swift}
 
-1. Abra el archivo `README.md` en un visor para archivos markdown para revisar los pasos para configurar el proyecto.
+1. Abra el archivo `README.md` en un visor para archivos markdown para revisar los pasos para configurar la app.
 
-2. Abra el terminal, vaya a la carpeta del proyecto y, a continuación, ejecute los siguientes mandatos:
+2. Abra el terminal, vaya a la carpeta de la app y, a continuación, ejecute los siguientes mandatos:
     1. Ejecute `pod setup` si tiene que configurar el repositorio de CocoaPods.
     2. Ejecute `pod update` si tiene que actualizar los pods existentes.
-    3. Ejecute `pod install` para instalar los pods correspondientes al proyecto.
+    3. Ejecute `pod install` para instalar los pods para la app.
 
-3. Abra su espacio de trabajo Xcode `<projectname>.xcworkspace`.
+3. Abra su espacio de trabajo Xcode `<appname>.xcworkspace`.
 
 4. Ejecute la app.
 
-### Ejecución del proyecto Cordova en Xcode
+### Ejecución de la app Cordova en Xcode
 {: #run_cordova_xcode}
 
 Si opta utilizar Cordova como su lenguaje de implementación, siga estas instrucciones.
 
-1. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+1. Abra el archivo `README.md` en un visor Markdown para configurar la app.
 
-2. Abra su proyecto `platforms/ios` en Xcode.
+2. Abra la app `platforms/ios` en Xcode.
 
 3. Ejecute la app.
 
-
-### Ejecución del proyecto Cordova en Android Studio
+### Ejecución de la app Cordova en Android Studio
 {: #run_cordova_studio}
 
 Utilice esta sección si quiere utilizar Cordova como plataforma de su app móvil.
 
 1. Extraiga el archivo `BasicProject-Cordova.zip`.
 
-2. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+2. Abra el archivo `README.md` en un visor Markdown para configurar la app.
 
-3. Abra su proyecto `platforms/android` en Android Studio.
+3. Abra la app `platforms/android` en Android Studio.
 
 4. Ejecute la app.
 
-
-### Ejecución del proyecto Android en Android Studio
+### Ejecución de la app Android en Android Studio
 {: #run_android}
 
 Utilice esta sección si quiere utilizar Android como plataforma de su app móvil.
 
-1. Abra el archivo `README.md` en un visor Markdown para configurar el proyecto.
+1. Abra el archivo `README.md` en un visor Markdown para configurar la app.
 
-2. Abra su proyecto `BasicProject-Android` en Android Studio.
+2. Abra la app `BasicProject-Android` en Android Studio.
 
 3. Ejecute la app.

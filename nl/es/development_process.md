@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ Ahora vamos a ver con algo más de detalle la mejor manera de utilizar {{site.da
 ##Iniciación
 {: #get_started}
 
-Empiece a crear su app a partir de los paneles de control de desarrollador de {{site.data.keyword.cloud_notm}}, donde se puede seleccionar un kit de iniciación relacionado con su caso de uso. Elija también un lenguaje de programación. {{site.data.keyword.cloud_notm}} utiliza las indicaciones del kit de iniciación para suministrar automáticamente los recursos que necesita y para crear un proyecto de app independiente del tiempo de ejecución específico del lenguaje y que es la base de su app de producción. Para completar la fase de iniciación, pulse **Desplegar en la nube** desde el panel de control de desarrollador. Una pulsación crea una cadena de herramientas de DevOps completa con un repositorio de código que se cumplimenta con el código fuente de su app y un conducto de despliegue.
+Empiece a crear su app a partir de los paneles de control de desarrollador de {{site.data.keyword.cloud_notm}}, donde se puede seleccionar un kit de iniciación relacionado con su caso de uso. Elija también un lenguaje de programación. {{site.data.keyword.cloud_notm}} utiliza las indicaciones del kit de iniciación para suministrar automáticamente los recursos que necesita y para crear una app independiente del tiempo de ejecución específico del lenguaje y que es la base de su app de producción. Para completar la fase de iniciación, pulse **Desplegar en la nube** desde el panel de control de desarrollador. Una pulsación crea una cadena de herramientas de DevOps completa con un repositorio de código que se cumplimenta con el código fuente de su app y un conducto de despliegue.
 
 ![Iniciación](images/dev_get_started.png "Iniciación") Figura 2. Flujo de iniciación
 
@@ -37,7 +37,7 @@ Cuando utilice el botón **Desplegar en la nube** para configurar su cadena de h
 ##Desarrollo local
 {: #develop_locally}
 
-Después de crear su cadena de herramientas y proyecto de app de inicio, iniciará su desarrollo de forma local. Clone el código desde el repositorio en una estación de trabajo local e impórtela en su IDE. Utilice {{site.data.keyword.dev_cli_notm}} para crear, ejecutar y probar su app en la nube en su máquina local. {{site.data.keyword.dev_cli_notm}} crea y gestiona un contenedor local en su nombre. Cuando esté listo para ver su app en ejecución en la nube, envíe por push su código al repositorio en la nube y fusione sus cambios.
+Después de crear su cadena de herramientas y app inicio, iniciará su desarrollo de forma local. Clone el código desde el repositorio en una estación de trabajo local e impórtela en su IDE. Utilice {{site.data.keyword.dev_cli_notm}} para crear, ejecutar y probar su app en la nube en su máquina local. {{site.data.keyword.dev_cli_notm}} crea y gestiona un contenedor local en su nombre. Cuando esté listo para ver su app en ejecución en la nube, envíe por push su código al repositorio en la nube y fusione sus cambios.
 
 ![Desarrollo local](images/dev_code_locally.png "Desarrollo local") Figura 3. Flujo de desarrollo local
 

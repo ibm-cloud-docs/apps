@@ -26,7 +26,7 @@ El catálogo de {{site.data.keyword.Bluemix_notm}} lista los recursos de infraes
 ## Creación de un recurso
 {: #resource}
 
-1. En el [panel de control](https://console.bluemix.net/dashboard/apps/), pulse **Crear recurso**.
+1. En el [panel de control](https://console.bluemix.net/), pulse **Crear recurso**.
 
 2. Desde el catálogo, seleccione una app desde la sección Plataforma. A continuación, elija su ejecución. Por ejemplo, puede elegir un entorno de ejecución de IBM, como Liberty for Java, que está soportado por los paquetes de compilación de IBM. También puede elegir tiempos de ejecución de Community como, por ejemplo, Tomcat, que se basan en paquetes de compilación de código abierto y de terceros.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Creación de una aplicación personalizada
 {: #tutorial}
 
-Puede crear una aplicación personalizada mediante servicios y un tiempo de ejecución. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute el proyecto localmente y despliéguelo en la nube.
+Puede crear una aplicación personalizada mediante servicios y un tiempo de ejecución. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute la app localmente y despliéguelo en la nube.
 {: shortdesc}
 
 ## Paso 1: Instalar las herramientas
@@ -23,14 +23,14 @@ Puede crear una aplicación personalizada mediante servicios y un tiempo de ejec
 
 Instale las [herramientas del desarrollador ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Paso 2: Crear un proyecto
+## Paso 2: Crear una app
 {: #create-devex}
 
-Cree un proyecto en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
+Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
-1. En la página [Kits de iniciación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}, seleccione **Crear proyecto** para crear una aplicación personalizada.
+1. En la página [Kits de iniciación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}, seleccione **Crear** para crear una aplicación personalizada.
 
-2. Especifique el nombre del proyecto. En esta guía de aprendizaje, utilice `CustomProject`.   
+2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `CustomProject`.   
 
 3. Especifique un nombre de host exclusivo como, por ejemplo, sus iniciales seguidas de `-devhost`. Por ejemplo:
 
@@ -38,31 +38,31 @@ Cree un proyecto en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 	abc-devhost
 	```
 
-	Este nombre de host es la ruta de su proyecto. Por ejemplo, `abc-devhost.mybluemix.net`.
+	El nombre de host es la ruta de su app. Por ejemplo, `abc-devhost.mybluemix.net`.
 
 4. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilice `Node.js`.
 
 5. (Opcional) Puede iniciar el andamiaje de su sistema de fondo desde un documento OpenAPI. Esto es útil para un desarrollador de sistemas de fondo que ya tiene definido en un documento Swagger su contrato de integración del sistema de fondo y del cliente. Se da soporte a los tipos de archivo **.yaml** y **.json**. Pulse **Añadir archivo** para subir su documento.
 
-6. Pulse **Crear proyecto**.
+6. Pulse **Crear**.
 
 ## Opcional: Añadir recursos
 {: #add-services}
 
-1. En la vista **Detalles del proyecto**, seleccione **Añadir recurso**.
+1. En la vista **Detalles de la app**, seleccione **Añadir recurso**.
 
 2. Seleccione el tipo de servicio que desee. Para esta guía de aprendizaje, seleccione **Datos** > **Siguiente** > **Cloudant NoSQL DB** > **Siguiente**.
 
-4. Pulse **Crear**.
+3. Pulse **Crear**.
 
 ## Opcional: Crear una cadena de herramientas de DevOps
 {: #add-toolchain}
 
-La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para su proyecto. Cuando se crea una cadena de herramientas, el servicio de app suministrará un repositorio Git, donde visualizar el código fuente, clonar el proyecto y crear y gestionar problemas. También es posible acceder a un entorno Gitlab dedicado y a un conducto de entrega personalizado para la plataforma de despliegue elegida como, por ejemplo, Kubernetes o Cloud Foundry.
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app suministrará un repositorio Git, donde visualizar el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno Gitlab dedicado y a un conducto de entrega personalizado para la plataforma de despliegue elegida como, por ejemplo, Kubernetes o Cloud Foundry.
 
 La entrega continua está habilitada para algunas aplicaciones. Es posible que desee habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues con Delivery Pipeline y GitHub.
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
 2. Pulse **Desplegar en la nube**.
 
@@ -72,31 +72,31 @@ La entrega continua está habilitada para algunas aplicaciones. Es posible que d
 
 	* Desplegar utilizando Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
 
-## Paso 3: Generar su código de proyecto
+## Paso 3: Generar el código de la app
 {: #generate-code}
 
-Si ha creado una cadena de herramientas en el paso anterior, se ha creado un repositorio Git para el proyecto donde podrá encontrar el código. Siga estos pasos para acceder a su repositorio:
+Si ha creado una cadena en el paso anterior, se ha creado un repositorio Git para la app donde encontrará el código. Siga estos pasos para acceder a su repositorio:
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
 2. Pulse **Ver cadena de herramientas**.
 
-3. Pulse la tarjeta **Git** bajo la cabecera **CODE** para abrir el repositorio, donde podrá visualizar el código fuente y clonar el proyecto.
+3. Pulse la tarjeta **Git** bajo la cabecera **CODE** para abrir el repositorio, donde podrá visualizar el código fuente y clonar la app.
 
-Si una cadena de herramientas no está habilitada, puede acceder a su código descargando el código fuente directamente desde la vista Detalles del proyecto.
+Si una cadena de herramientas no está habilitada, puede acceder a su código descargando el código fuente directamente desde la vista Detalles de la app.
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
-2. Pulse **Descargar código** para descargar el archivador del proyecto.
+2. Pulse **Descargar código** para descargar el archivador de la app.
 
 ## Paso 4: Empezar a trabajar con su app
 {: #code}
 
-Empiece a trabajar con el proyecto descargado:
+Empiece a trabajar con la app descargada:
 
 1. Expanda el archivo archivado.
 
-2. Importe el proyecto en su IDE.
+2. Importe la app a su IDE.
 
 3. Modifique el código.
 
@@ -106,18 +106,18 @@ Empiece a trabajar con el proyecto descargado:
 ## Paso 5: Compilar y ejecutar la app localmente
 {: #build-run}
 
-Añada su propio código, compile y ejecute el proyecto. Puede ejecutar la aplicación localmente en su sistema host si instala las herramientas de compilación necesarias, o utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
+Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicación localmente en su sistema host si instala las herramientas de compilación necesarias, o utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
 
 ### Utilización de {{site.data.keyword.dev_cli_short}}
 
-1. Para crear el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
+1. Para crear la app en el directorio de proyecto actual, escriba el mandato siguiente:
 
   ```
   bx dev build
   ```
   {: codeblock}
 
-2. Para ejecutar el proyecto en el directorio de proyecto actual, escriba el siguiente mandato:
+2. Para ejecutar la app en el directorio actual, especifique el mandato siguiente:
 
   ```
   bx dev run
@@ -137,7 +137,7 @@ Con una cadena de herramientas correctamente configurada, un ciclo de despliegue
 
 También puede desplegar manualmente su app desde su cadena de herramientas de DevOps:
 
-1. Seleccione su proyecto en la página **Proyectos**.
+1. Seleccione la app en la página **Apps**.
 
 2. Pulse **Ver cadena de herramientas**.
 
@@ -146,14 +146,14 @@ También puede desplegar manualmente su app desde su cadena de herramientas de D
 ### Desplegar utilizando {{site.data.keyword.dev_cli_short}}
 Si elige no utilizar una cadena de herramientas, también puede desplegar utilizando la {{site.data.keyword.dev_cli_short}}.
 
-Especifique el siguiente mandato para desplegar su proyecto en Cloud Foundry:
+Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
 
   ```
   bx dev deploy
   ```
   {: codeblock}
 
-Especifique el siguiente mandato para desplegar su proyecto en un clúster Kubernetes:
+Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
 
 ```
 bx dev deploy --target <container>

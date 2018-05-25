@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,13 +15,13 @@ lastupdated: "2018-03-16"
 # Arquitecturas comunes para apps en la nube
 {: #patterns}
 
-Los kits de iniciación en {{site.data.keyword.cloud_notm}} ayudan a crear apps con una arquitectura probada. Las apps son todas diferentes, sin embargo, cuando las basa en un patrón arquitectónico conocido, es más fácil obtener resultados fiables con mayor rapidez. Cuando se crea un proyecto a partir de un kit de iniciación, está eligiendo uno de los distintos tipos de patrón junto con componentes, de forma similar a un tiempo de ejecución, para cumplimentar el patrón.
+Los kits de iniciación en {{site.data.keyword.cloud_notm}} ayudan a crear apps con una arquitectura probada. Las apps son todas diferentes, sin embargo, cuando las basa en un patrón arquitectónico conocido, es más fácil obtener resultados fiables con mayor rapidez. Cuando se crea una app a partir de un kit de iniciación, está eligiendo uno de los distintos tipos de patrón junto con componentes, de forma similar a un tiempo de ejecución, para cumplimentar el patrón.
 {:shortdesc}
 
 ## App web
 {: #web}
 
-El patrón de App web crea proyectos que sirven contenido web como, por ejemplo, HTML, JavaScript y hojas de estilo para el servidor web. Existen varios kits de iniciación de App web.
+El patrón de App web crea apps que sirven contenido web como, por ejemplo, HTML, JavaScript y hojas de estilo para el servidor web. Existen varios kits de iniciación de App web.
 
 * Basic - sirve un archivo `index.html` estático, y un archivo JavaScript y de hoja de estilos vacíos.
 * React - una infraestructura rica para crear interfaces de usuario. Los archivos de origen se encuentran en `src/client/app`, se compilan con WebPack y se sirven en el directorio público.
@@ -44,14 +44,14 @@ Hay varios kits de iniciación para BFF que puede elegir en función de sus requ
 ## Microservicio
 {: #microservice}
 
-Los proyectos de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Los proyectos generados contienen todas las dependencias necesarias, tanto para el propio microservicio, como para los servicios de nube asociados.
+Las apps de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Las apps generadas contienen todas las dependencias necesarias, tanto para el propio microservicio, como para los servicios de nube asociados.
 
 Hay varios kits de iniciación para microservicios que puede elegir en función de sus requisitos de lenguaje e infraestructura.  Encontrará kits de iniciación para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Móvil
 {: #mobile}
 
-Los proyectos móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas web, conocidos como programa de fondo móvil como servicio (MBaaS (Mobile Backend as a Service)) o pueden tener un [Programa de fondo para programa de usuario (BFF)](#bff).  
+Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas web, conocidos como programa de fondo móvil como servicio (MBaaS (Mobile Backend as a Service)) o pueden tener un [Programa de fondo para programa de usuario (BFF)](#bff).  
 
 {{site.data.keyword.cloud_notm}} ofrece varios kits de iniciación móvil para iOS Swift, Android y Cordova. Puede encontrar kits de iniciación para el patrón móvil en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://console.bluemix.net/developer/mobile/dashboard).
 
@@ -68,4 +68,5 @@ Los kits de iniciación que {{site.data.keyword.cloud_notm}} proporciona están 
 |Node.js | [Node.js](../runtimes/nodejs/getting-started.html) es un tiempo de ejecución de JavaScript que utiliza un modelo de E/S sin bloqueo y dirigido por sucesos, que lo hace ligero y eficiente, proporcionando un gran rendimiento y escalabilidad para aplicaciones web, patrones de programa de fondo para programa de usuario y microservicios. El ecosistema de paquetes de Node.js', npm, proporciona acceso a una gran recopilación de módulos de código abierto, con una amplia variedad de prestaciones para acelerar el desarrollo de las aplicaciones. | Express|
 |JavaScript|JavaScript sirve para crear efectos interactivos en páginas web. JavaScript junto con HTML y CSS son la base de la mayoría de las páginas web. Cuando envuelve en un plugin de Cordova, el código JavaScript puede sacar partido de la funcionalidad de las funciones nativas del dispositivo. Los desarrolladores con conocimientos web pueden crear fácilmente apps móviles y, donde sea apropiado, el código web se puede reutilizar a través de entornos móviles y web.|Cordova|
 |Python | [Python](../runtimes/python/getting-started.html) es un lenguaje de programación interpretado de propósito general en el que se da mucha importancia a la legibilidad. Python permite a los programadores implementar funciones utilizando menos líneas de código con relación a otros lenguajes. Las características del lenguaje permite escribir código imperativo, funcional y orientado a objetos. Python es utilizado habitualmente para procesar tareas de lenguaje natural. | Flask, Django|
+
 

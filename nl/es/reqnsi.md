@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-02"
 
 ---
 
@@ -12,10 +12,10 @@ lastupdated: "2018-03-16"
 # Cómo añadir un servicio a la app
 {: #add_service}
 
-Si ha creado un proyecto utilizando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general del proyecto. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su proyecto.
+Si ha creado una app utilizando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general del proyecto. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su app.
 {: shortdesc}
 
-Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso al proyecto de la página de visión general del proyecto. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}.
+Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app de la página de visión general de la app. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
 ##Descubrimiento de servicios
 {: #discover_services}
@@ -49,7 +49,7 @@ Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para sol
 
 Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. Utilice el mandato `bluemix service offerings` para encontrar el nombre y el plan del servicio que necesita.
+1. Utilice el mandato `bluemix service offerings` para buscar el nombre y el plan del servicio que necesita.
 
 2. Utilice el mandato siguiente para crear una instancia de servicio, done service_name es el nombre del servicio, service_plan es el plan del servicio y service_instance es el nombre que desea utilizar para esta instancia de servicio.
 
