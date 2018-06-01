@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -91,7 +91,7 @@ lastupdated: "2018-05-02"
 2. 端末プロンプトで、選択したローカル・ディレクトリーにナビゲートして、以下のコマンドを実行します。
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 

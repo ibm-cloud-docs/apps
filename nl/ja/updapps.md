@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # カスタム・ドメインの作成と使用
 {: #updatingapps}
 
-コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
+コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などのビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
 ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
@@ -26,7 +26,7 @@ lastupdated: "2018-03-16"
 
 コンソールを使用して組織のカスタム・ドメインを作成するには、以下のステップを実行します。
 
-1. **「管理」**&gt;**「アカウント」**&gt;**「Cloud Foundry の組織」**に移動します。
+1. **「管理」** > **「アカウント」** > **「Cloud Foundry の組織」**に移動します。
 2. カスタム・ドメインを作成する組織の名前をクリックします。
 3. **「ドメイン」**タブをクリックします。
 4. **「ドメインの追加 (Add a domain)」**をクリックして、ドメイン名を入力して地域を選択します。
@@ -37,7 +37,7 @@ lastupdated: "2018-03-16"
 
 カスタム・ドメインを使用した経路をアプリケーションに追加します。
 
-1. **「メニュー」**アイコン ![メニュー・アイコン](../icons/icon_hamburger.svg) &gt; **「ダッシュボード」**をクリックし、次に、経路を追加するアプリケーションの行をクリックします。 **「概要」** ページが表示されます。
+1. **「メニュー」**アイコン ![メニュー・アイコン](../icons/icon_hamburger.svg) > **「ダッシュボード」**をクリックし、次に、経路を追加するアプリケーションの行をクリックします。 **「概要」** ページが表示されます。
 2. **「経路」**メニューで、**「経路の編集」**を選択します。
 3. **「経路の追加」**をクリックし、アプリケーションに使用する経路を指定します。
 4. **「保存」**をクリックして更新を確認します。
@@ -47,13 +47,13 @@ lastupdated: "2018-03-16"
 1. 次のコマンドを入力して、自分の組織のカスタム・ドメインを作成します。
 
    ```
-   bluemix app domain-create <your org name> mydomain
+   ibmcloud app domain-create <your org name> mydomain
    ```
 
 2. カスタム・ドメインを使用した経路をアプリケーションに追加します。 CF アプリの場合、次のコマンドを入力します。
 
    ```
-   bluemix app route-map myapp mydomain -n host_name
+   ibmcloud app route-map myapp mydomain -n host_name
 
    ```
 
@@ -85,10 +85,10 @@ http://host_name.mydomain
 孤立した経路を削除するには、以下のコマンドを実行します。
 
 ```
-bluemix app route-delete domain -n hostname -f
+ibmcloud app route-delete domain -n hostname -f
 
 ```
 {: tip}
 
-`domain` はご使用のドメインの名前で、`hostname` はご使用のアプリケーションの経路のホスト名です。 **bluemix app route-delete** コマンドについて詳しくは、`bluemix app route-delete -h` と入力してください。
+`domain` はご使用のドメインの名前で、`hostname` はご使用のアプリケーションの経路のホスト名です。 **ibmcloud app route-delete** コマンドについて詳しくは、`ibmcloud app route-delete -h` と入力してください。
 

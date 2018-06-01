@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-05-02"
 以下の方法で、{{site.data.keyword.Bluemix_notm}} で使用可能なサービスをすべて表示できます。
 
 * {{site.data.keyword.Bluemix_notm}} コンソールから。 {{site.data.keyword.Bluemix_notm}} カタログを表示します。
-* bluemix コマンド・ライン・インターフェースから。 `bluemix service offerings` コマンドを使用します。
+* ibmcloud コマンド・ライン・インターフェースから。 `ibmcloud service offerings` コマンドを使用します。
 * ご使用のアプリケーションから。 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
 
 アプリケーションを開発するときに、必要なサービスを選択できます。 選択されたサービスは、{{site.data.keyword.Bluemix_notm}} によってプロビジョンされます。 サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。
@@ -49,18 +49,18 @@ lastupdated: "2018-05-02"
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを使用してサービス・インスタンスを要求する場合、以下のステップを実行します。
 
-1. `bluemix service offerings` コマンドを使用して、要求するサービスの名前とプランを見つけます。
+1. `ibmcloud service offerings` コマンドを使用して、要求するサービスの名前とプランを見つけます。
 
 2. 以下のコマンドを使用してサービス・インスタンスを作成します。ここで、service_name はサービスの名前、service_plan はサービスのプラン、service_instance はこのサービス・インスタンス用に使用する名前です。
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. 以下のコマンドを使用してサービス・インスタンスをアプリケーションにバインドします。ここで、*appname* はアプリケーションの名前、service_instance はサービス・インスタンスの名前です。
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
@@ -145,10 +145,10 @@ bluemix service bind appname service_instance
 
 ユーザー提供のサービス・インスタンスを作成し、それをアプリケーションにバインドするには、以下のステップを実行します。
 
-1. `bluemix service user-provided-create` コマンドを使用して、ユーザー提供のサービス・インスタンスを作成します。
-    * 一般的なユーザー提供のサービス・インスタンスを作成するには、**-p** オプションを使用し、パラメーター名をコンマで区切ります。 `bx` コマンド・ライン・インターフェースはその後、各パラメーターについて順にプロンプトを出します。 例えば次のようにします。
+1. `ibmcloud service user-provided-create` コマンドを使用して、ユーザー提供のサービス・インスタンスを作成します。
+    * 一般的なユーザー提供のサービス・インスタンスを作成するには、**-p** オプションを使用し、パラメーター名をコンマで区切ります。 `ibmcloud` コマンド・ライン・インターフェースはその後、各パラメーターについて順にプロンプトを出します。 以下に例を示します。
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -161,17 +161,17 @@ bluemix service bind appname service_instance
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用し、そのサード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。 例えば次のようにします。
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    ユーザー提供のサービス・インスタンスの 1 つ以上のパラメーターを更新する場合は、`bluemix service user-provided-update` コマンドを使用します。
+    ユーザー提供のサービス・インスタンスの 1 つ以上のパラメーターを更新する場合は、`ibmcloud service user-provided-update` コマンドを使用します。
 
     * 一般的なユーザー提供のサービス・インスタンスを更新するには、**-p** オプションを使用して、パラメーターのキーと値を JSON オブジェクトで指定します。 例えば次のようにします。
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -179,15 +179,15 @@ bluemix service bind appname service_instance
     * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用します。 例えば次のようにします。
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. `bluemix service bind` コマンドを使用して、サービス・インスタンスをアプリケーションにバインドします。 例えば次のようにします。
+2. `ibmcloud service bind` コマンドを使用して、サービス・インスタンスをアプリケーションにバインドします。 例えば次のようにします。
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

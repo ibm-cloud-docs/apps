@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,86 +23,97 @@ lastupdated: "2018-05-02"
 
 次の表に、生成された Java Spring アプリに含まれるディレクトリーとファイルをリストします。
 
-| ディレクトリーとファイル                                     | 説明                       |
+| `./` ディレクトリー            | 説明                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | maven pom ファイル |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI 構成オプション |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry デプロイメント・ファイル |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`、`bx dev deploy`、および `docker` の各コマンドの Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | `bx dev build` および `bx dev test` の Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | アプリの説明 |
-|**`./src/main/java/application/`** |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | メイン Spring アプリケーション |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | ヘルス・エンドポイント |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | コード例 |
-|**`./src/main/java/resources/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application-local.properties | Spring プロパティー |
-|**`./src/main/test/application/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | テスト |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud パイプライン定義 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud ツールチェーン定義 |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm チャート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm チャート値 |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | デプロイメント・テンプレート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | HPA テンプレート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | サービス・テンプレート |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
-{: caption="表 1. 生成された Java Spring アプリの内容" caption-side="top"}
+| pom.xml | 　maven pom ファイル |
+| cli-config.yml | CLI 構成オプション |
+| manifest.yml | Cloud Foundry デプロイメント・ファイル |
+| Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
+| Dockerfile-tools | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
+| LICENSE | ライセンス・ファイル |
+| README.md | アプリの説明 |
+{: caption="表 1. 生成された Java Spring アプリのルート・ディレクトリーの内容" caption-side="top"}
+
+| `./src/main/java/` ディレクトリー | 説明                       |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/test/application/SBApplication.java` | メイン Spring アプリケーション |
+| `./src/main/test/application/HealthEndpointTest.java` | テスト |
+| `./src/main/java/application/rest/HealthApplication.java` | 　ヘルス・エンドポイント |
+| `./src/main/java/application/rest/v1/Example.java` | 　コード例 |
+| `./src/main/java/resources/application-local.properties` | 　Spring プロパティー |
+{: caption="表 2. 生成された Java Spring アプリの /java/ ディレクトリーの内容" caption-side="top"}
+
+| `./.bluemix/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | コンテナー・ビルド・スクリプト |
+| deploy.json | デプロイメント情報 |
+| kube_deploy.sh | Kubernetes デプロイメント・スクリプト |
+| pipeline.yml | IBM Cloud パイプライン定義 |
+| toolchain.yml | 　IBM Cloud ツールチェーン定義 |
+{: caption="表 3. 生成された Java Spring アプリの ./.bluemix/ ディレクトリーの内容" caption-side="top"}
+
+| `./chart/<projectname>/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm チャート |
+| `./chart/<projectname>/values.yaml` | 　Helm チャート値 |
+| `./chart/<projectname>/templates/deployment.yaml` | デプロイメント・テンプレート |
+| `./chart/<projectname>/templates/hpa.yaml` | HPA テンプレート |
+| `./chart/<projectname>/templates/service.yaml` | サービス・テンプレート |
+{: caption="表 4. 生成された Java Spring アプリの ./chart/<projectname/templates/ ディレクトリーの内容" caption-side="top"}>
+
+| `./manifests/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
+{: caption="表 5. 生成された Java Spring アプリの ./manifests/ ディレクトリーの内容" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
 次の表に、生成された Java Liberty アプリに含まれるディレクトリーとファイルをリストします。
 
-| ディレクトリー / ファイル                                     | 説明                       |
+| `./` ディレクトリー            | 説明                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | maven pom ファイル |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI 構成オプション |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry デプロイメント・ファイル |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`、`bx dev deploy`、および `docker` の各コマンドの Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | コマンド `bx dev build`、`bx dev test` の Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | アプリの説明 |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | ヘルス・エンドポイント |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | コード例 |
-|**`./src/main/liberty/config/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvm.options | JVM オプション |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvmbx.options | Java メトリック・エージェント構成 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.env | 環境変数 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.xml | サーバー構成 |
-|**`./src/main/webapp/WEB-INF/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beans.xml | CDI Bean 構成 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ibm-web-ext.xml | IBM Web アプリ構成 |
-|**`./src/main/test/it/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | テスト |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud パイプライン定義 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud ツールチェーン定義 |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm チャート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm チャート値 |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | デプロイメント・テンプレート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | HPA テンプレート |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | サービス・テンプレート |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
-{: caption="表 2. 生成された Java Liberty アプリの内容" caption-side="top"}
+| pom.xml | 　maven pom ファイル |
+| cli-config.yml | CLI 構成オプション |
+| manifest.yml | Cloud Foundry デプロイメント・ファイル |
+| Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
+| Dockerfile-tools | コマンド `ibmcloud dev build`、`ibmcloud dev test` の Dockerfile |
+| LICENSE | ライセンス・ファイル |
+| README.md | アプリの説明 |
+{: caption="表 6. 生成された Java Liberty アプリのルート・ディレクトリーの内容" caption-side="top"}
 
+| `./src/main` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/java/application/rest/HealthApplication.java` | 　ヘルス・エンドポイント |
+| `./src/main/java/application/rest/v1/Example.java` | 　コード例 |
+| `./src/main/liberty/config/jvm.options` | JVM オプション |
+| `./src/main/liberty/config/jvmbx.options` | Java メトリック・エージェント構成 |
+| `./src/main/liberty/config/server.env` | 環境変数 |
+| `./src/main/liberty/config/server.xml` | サーバー構成 |
+| `./src/main/webapp/WEB-INF/beans.xml` | CDI Bean 構成 |
+| `./src/main/webapp/WEB-INF/ibm-web-ext.xml` | IBM Web アプリ構成 |
+| `./src/main/test/it/HealthEndpointTest.java` | テスト |
+{: caption="表 7. 生成された Java Liberty アプリの ./src/main/ ディレクトリーの内容" caption-side="top"}
+
+| `./.bluemix/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | コンテナー・ビルド・スクリプト |
+| deploy.json | デプロイメント情報 |
+| kube_deploy.sh | Kubernetes デプロイメント・スクリプト |
+| pipeline.yml | IBM Cloud パイプライン定義 |
+| toolchain.yml | 　IBM Cloud ツールチェーン定義 |
+{: caption="表 8. 生成された Java Liberty アプリの ./bluemix/ ディレクトリーの内容" caption-side="top"}
+
+| `./chart/<projectname>/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm チャート |
+| `./chart/<projectname>/values.yaml` | 　Helm チャート値 |
+| `./chart/<projectname>/templates/deployment.yaml` | デプロイメント・テンプレート |
+| `./chart/<projectname>/templates/hpa.yaml` | HPA テンプレート |
+| `./chart/<projectname>/templates/service.yaml` | サービス・テンプレート |
+{: caption="表 9. 生成された Java Liberty アプリの ./chart/<projectname/ ディレクトリーの内容" caption-side="top"}>
+
+| `./manifests/` ディレクトリー | 説明 |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
+{: caption="表 10. 生成された Java Liberty アプリの ./manifests/ ディレクトリーの内容" caption-side="top"}

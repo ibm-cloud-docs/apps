@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -110,14 +110,14 @@ backend-for-frontend スターターからアプリを作成できます。 こ�
 1. 現行のアプリ・ディレクトリーでアプリをビルドするには、以下のコマンドを入力します。
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. 現行のアプリ・ディレクトリーでアプリを実行するには、以下のコマンドを入力します。
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -164,14 +164,14 @@ DevOps ツールチェーンからアプリを手動でデプロイすること�
 アプリを Cloud Foundry にデプロイするには、以下のコマンドを入力します。
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 アプリを Kubernetes クラスターにデプロイするには、以下のコマンドを入力します。
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 
