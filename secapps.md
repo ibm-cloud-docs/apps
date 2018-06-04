@@ -136,6 +136,9 @@ To upload a certificate for your application:
       * PEM (pem, .crt, .cer, and .cert)
       * PKCS #7 (p7b, p7r, spc)
 
+  You can set up mutual authentication by uploading a client certificate truststore that contains a public key in its metadata.
+  {: tip}
+
 For more information see, [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
 To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, click **View Details** > **Edit Org** > **Domains**. In the additional actions menu for the organization, click **Remove from Org**.
