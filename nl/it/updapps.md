@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Creazione e utilizzo di un dominio personalizzato
 {: #updatingapps}
 
-Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare la riga di comando o {{site.data.keyword.Bluemix}} Continuous Delivery. In molti casi, anche per i pacchetti di build integrati quali Node.js, devi inoltre fornire un parametro -c per specificare il comando utilizzato per avviare la tua applicazione.
+Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare la riga di comando o {{site.data.keyword.Bluemix}} Continuous Delivery. In molti casi, anche per i pacchetti di build come Node.js, devi fornire inoltre un parametro -c per specificare quale comando viene utilizzato per avviare la tua applicazione.
 {:shortdesc}
 
 I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}} e quindi associarlo al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
@@ -28,7 +28,7 @@ Puoi creare e utilizzare un dominio personalizzato utilizzando la console {{site
 
 Completa la seguente procedura per creare un dominio personalizzato per la tua organizzazione utilizzando la console:
 
-1. Vai a **Gestisci** &gt; **Account** &gt; **Organizzazioni Cloud Foundry**.
+1. Vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**.
 2. Fai clic sul nome dell'organizzazione per cui stai creando un dominio personalizzato.
 3. Fai clic sulla scheda **Domini**.
 4. Fai clic su **Aggiungi un dominio** e immetti il tuo nome del dominio e seleziona la regione.
@@ -39,7 +39,7 @@ Come esempio, puoi utilizzare `*.mycompany.com` per associare la rotta `www.mybl
 
 Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 
-1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) &gt; **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
+1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) > **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
 2. Dal menu **Rotte**, seleziona **Modifica rotte**.
 3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
 4. Conferma i tuoi aggiornamenti facendo clic su **Salva**.
@@ -50,13 +50,13 @@ Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 seguente comando:
 
    ```
-   bluemix app domain-create <your org name> mydomain
+   ibmcloud app domain-create <your org name> mydomain
    ```
 
 2. Aggiungi la rotta con il dominio personalizzato a un'applicazione. Per le applicazioni CF, immetti il seguente comando:
 
    ```
-   bluemix app route-map myapp mydomain -n host_name
+   ibmcloud app route-map myapp mydomain -n host_name
 
    ```
 
@@ -88,10 +88,10 @@ http://nome_host.mio_dominio
 Per rimuovere una rotta orfana, immetti il seguente comando:
 
 ```
-bluemix app route-delete domain -n hostname -f
+ibmcloud app route-delete domain -n hostname -f
 
 ```
 {: tip}
 
-`domain` è il nome del tuo dominio e `hostname` è il nome host della rotta per la tua applicazione. Per ulteriori informazioni sul comando **bluemix app route-delete**, digita `bluemix app route-delete -h`.
+`domain` è il nome del tuo dominio e `hostname` è il nome host della rotta per la tua applicazione. Per ulteriori informazioni sul comando **ibmcloud app route-delete**, digita `ibmcloud app route-delete -h`.
 

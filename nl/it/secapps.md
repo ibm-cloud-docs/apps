@@ -97,7 +97,7 @@ Per caricare un certificato per la tua applicazione:
 
 2. Seleziona la tua applicazione per aprire la vista dei dettagli ad essa relativa.
 
-3. Seleziona il menu a discesa **Rotte** e quindi, nella colonna delle azioni, per la tua organizzazione seleziona **Domini** dal menu delle azioni aggiuntive.
+3. Seleziona l'elenco a discesa **Rotte** e quindi, nella colonna delle azioni per la tua organizzazione seleziona **Domini** dal menu di azioni aggiuntive.
 
 3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
 
@@ -134,7 +134,7 @@ solo mediante la chiave pubblica corrispondente. Inoltre, la chiave privata vien
 
     Un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
 specificamente per emettere certificati server per l'entità finale. Il risultato è una catena di certificati
-che inizia dalla CA radice attendibile, passa per il certificato intermedio e termina con il certificato SSL emesso per l'organizzazione.
+che inizia dalla CA radice attendibile, passa per quello intermedio e termina con il certificato SSL emesso per l'organizzazione.
 
     Devi utilizzare un certificato intermedio per verificare l'autenticità del certificato principale. I certificati intermedi vengono generalmente ottenuti da una terza parte attendibile. Potresti non aver bisogno
 di un certificato intermedio durante il test della tua applicazione, prima della sua distribuzione nella produzione.

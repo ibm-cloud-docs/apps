@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -41,7 +41,7 @@ Puoi creare un'applicazione utilizzando uno dei seguenti metodi:
 
     3. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Swift`.
 
-    4. Fai clic su **Crea**.
+    4. Fai clic su **Create**.
 
 ### Facoltativo: aggiungi servizi
 {: #add-services}
@@ -91,7 +91,7 @@ Inizia ad utilizzare la tua applicazione scaricata:
 2. Nella tua finestra del terminale, passa a una directory locale di tua scelta ed esegui il seguente comando.
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 

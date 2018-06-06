@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -60,7 +60,7 @@ La tua applicazione non è in esecuzione. L'icona rossa indica che l'applicazion
 
 Puoi visualizzare ulteriori informazioni su un'applicazione facendo clic sul suo nome nel dashboard. Quindi, puoi visualizzare la pagina Panoramica dell'applicazione.
 
-Nella pagina Panoramica dell'applicazione, dopo che un'applicazione è stata distribuita, puoi avviare, arrestare o, in caso di applicazioni Web, modificare il numero di istanze e la quantità di memoria utilizzata dall'applicazione. Per le applicazioni web, {{site.data.keyword.Bluemix_notm}} non ridimensiona automaticamente la tua applicazione in base al suo carico, quindi devi essere tu a gestire questo aspetto.
+Nella pagina Panoramica dell'applicazione, dopo che un'applicazione viene distribuita, puoi avviare, arrestare, riavviare o, nel caso di applicazioni web, modificare il numero di istanze e la quantità di memoria utilizzata dall'applicazione. Per le applicazioni web, {{site.data.keyword.Bluemix_notm}} non ridimensiona automaticamente la tua applicazione in base al suo carico, quindi devi essere tu a gestire questo aspetto.
 
 Se viene apportato un aggiornamento, le applicazioni possono essere ridistribuite. Il meccanismo di aggiornamento dell'applicazione è uguale al meccanismo utilizzato per la sua originale distribuzione. {{site.data.keyword.Bluemix_notm}} arresta
 tutte le istanze in esecuzione e le sostituisce con le nuove istanze automaticamente.

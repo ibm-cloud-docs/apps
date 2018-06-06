@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -43,7 +43,7 @@ Il catalogo {{site.data.keyword.Bluemix_notm}} elenca le risorse dell'infrastrut
 
 Ogni applicazione viene fornita con una sezione introduttiva che ti aiuta a ottenere tutto il software e i contenuti necessari per iniziare a lavorare.
 
-Nel dashboard, fai clic sulla tua applicazione e quindi su **Introduzione**, che può aiutarti a ottenere il software necessario per sviluppare la tua applicazione, indirizzarti al codice sorgente e aiutarti a distribuire l'applicazione per la prima volta.
+Nel dashboard, fai clic sulla tua applicazione e quindi su **Introduzione**, che può aiutarti a ottenere il software necessario per sviluppare la tua applicazione, indirizzarti al codice sorgente e a distribuire l'applicazione per la prima volta.
 
 ## Passi successivi
 {: #next}

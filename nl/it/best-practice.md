@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
 # Cosa rende buona un'applicazione?
 {: #best-practice}
 
-Crea la tua applicazione in {{site.data.keyword.Bluemix_notm}} per sfruttare tutto quello che il cloud ha da offrire. Queste procedure consigliate possono aiutarti a assicurarti che le tue applicazioni sono pronte per il cloud.
+Crea la tua applicazione in {{site.data.keyword.Bluemix_notm}} per usufruire di tutto ciò che è offerto dal cloud. Queste procedure consigliate possono aiutarti a garantire che le tue applicazioni siano pronte per il cloud.
 {:shortdesc}
 
 ## Crea la tua applicazione in modo che sia indipendente dalla topologia
@@ -20,7 +20,7 @@ Crea la tua applicazione in modo che sia il più possibile generica e senza stat
 
 ## Supponiamo che il file system locale non sia permanente
 
-Poiché un'istanza dell'applicazione può essere spostata, eliminata o duplicata sul cloud in qualsiasi momento, non fare affidamento sui file che vengono scritti nel file system. Se un'applicazione utilizza il file system locale come cache delle informazioni utilizzate di frequente, inclusi i log delle applicazioni, le informazioni vengono perse quando l'istanza viene arrestata e riavviata in una posizione diversa o in un'altra VM.
+Poiché un'istanza dell'applicazione può essere spostata, eliminata o duplicata sul cloud, non fare affidamento sui file scritti nel file system. Se un'applicazione utilizza il file system locale come cache delle informazioni utilizzate di frequente, inclusi i log delle applicazioni, le informazioni vengono perse quando l'istanza viene arrestata e riavviata in una posizione diversa o in un'altra VM.
 
 Invece che nel file system locale, puoi memorizzare
 le informazioni in un servizio, quale un database SQL o NoSQL. In un ambiente cloud dinamico, è fondamentale anche che i tuoi log siano disponibili in un servizio avente durata superiore alle istanze dell'applicazione in cui vengono generati i log.
@@ -31,8 +31,7 @@ Lo stato del tuo sistema è definito dai tuoi database e dallo spazio di archivi
 l'impatto dello stato della sessione, memorizzandolo in un'ubicazione centralizzata
 sul server.
 
-Se non puoi eliminare del tutto lo stato della sessione, trasferiscilo in una memoria altamente disponibile esterna al tuo server delle applicazioni. Tra le memorie utilizzabili vi sono IBM WebSphere Extreme Scale, Redis,
-Memcached o un database esterno.
+Se non puoi eliminare del tutto lo stato della sessione, trasferiscilo in una memoria altamente disponibile esterna al tuo server delle applicazioni. Tra le memorie utilizzabili vi sono IBM WebSphere eXtreme Scale, Redis o Memcached oppure un database esterno.
 
 ## Utilizza un registro di servizio esterno per risolvere gli endpoint del servizio
 
@@ -71,7 +70,7 @@ Puoi invece affidarti ai prodotti open source o commerciali esistenti e lasciare
 Non utilizzare protocolli oscuri che
 richiedono una configurazione aggiuntiva per la resilienza.
 
-Le applicazioni basate su protocolli standard hanno maggiore resilienza con gli elementi della configurazione delegati alla piattaforma. I protocolli standard includono HTTP, SSL,
+Le applicazioni basate su protocolli standard hanno maggiore resilienza agli elementi di configurazione delegati alla piattaforma. I protocolli standard includono HTTP, SSL,
 database standard, accodamento e connessioni ai servizi Web.
 
 ## Utilizza librerie compatibilità invece di funzioni specifiche del sistema operativo

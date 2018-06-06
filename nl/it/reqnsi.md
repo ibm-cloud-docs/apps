@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-05-02"
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
 
-Se hai creato un'applicazione utilizzando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto una possibilità di aggiungere le risorse dalla pagina della panoramica dell'applicazione. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto della tua applicazione.
+Se hai creato un'applicazione con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto la possibilità di aggiungere le risorse dalla pagina di panoramica dell'applicazione. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto della tua applicazione.
 {: shortdesc}
 
 Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa alla tua applicazione dalla pagina della panoramica dell'applicazione. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}.
@@ -24,7 +24,7 @@ Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.Bluemix_not
 nei seguenti modi:
 
 * Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
-* Dall'interfaccia della riga di comando Bluemix. Utilizza il comando `bluemix service offerings`.
+* Dall'interfaccia della riga di comando ibmcloud. Utilizza il comando `ibmcloud service offerings`.
 * Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Una volta selezionato, {{site.data.keyword.Bluemix_notm}} esegue il provisioning del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
@@ -43,7 +43,7 @@ esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyw
 
 Per richiedere una nuova istanza del servizio, devi utilizzare l'interfaccia utente di {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}}.
 
-**Nota:** quando specifichi il nome servizio, evita di utilizzare caratteri che non siano alfabetici o numerici; in caso contrario, i risultati potrebbero essere imprevedibili.
+**Nota:** quando specifichi il nome del servizio, evita caratteri diversi dai caratteri alfabetici o numerici, altrimenti i risultati potrebbero essere imprevedibili.
 
 Se utilizzi l'interfaccia utente di {{site.data.keyword.Bluemix_notm}}
 per richiedere un'istanza del servizio, completa la seguente procedura:
@@ -56,18 +56,18 @@ per richiedere un'istanza del servizio, completa la seguente procedura:
 
 Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
 
-1. Utilizza il comando `bluemix service offerings` per trovare il nome e il piano del servizio di cui hai bisogno.
+1. Utilizza il comando `ibmcloud service offerings` per trovare il nome e il piano del servizio di cui hai bisogno.
 
 2. Utilizza il seguente comando per creare un'istanza del servizio, dove nome_servizio è il nome del servizio, piano_servizio è il piano del servizio e istanza_servizio è il nome da utilizzare per questa istanza del servizio.
 
 ```
-bluemix service create nome_servizio piano_servizio istanza_servizio
+ibmcloud service create nome_servizio piano_servizio istanza_servizio
 ```
 
 3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove *appname* è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
 
 ```
-bluemix service bind appname istanza_servizio
+ibmcloud service bind appname istanza_servizio
 ```
 
 Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
@@ -175,11 +175,11 @@ Puoi avere dei servizi che sono gestiti esternamente a {{site.data.keyword.Bluem
 
 Per creare un'istanza del servizio fornito dall'utente ed eseguirne il bind a un'applicazione, completa la seguente procedura:
 
-1. Crea un'istanza del servizio fornito dall'utente utilizzando il comando `bluemix service user-provided-create`:
+1. Crea un'istanza del servizio fornito dall'utente utilizzando il comando `ibmcloud service user-provided-create`:
     * Per creare un'istanza del servizio fornito dall'utente generale, utilizza l'opzione **-p** e
-separa i nomi parametro con delle virgole. L'interfaccia della riga di comando `bx` richiede quindi ciascun parametro alla volta. Ad esempio:
+separa i nomi parametro con delle virgole. L'interfaccia riga di comando `ibmcloud` ti richiede quindi ciascun parametro alla volta. Ad esempio:
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -193,18 +193,18 @@ separa i nomi parametro con delle virgole. L'interfaccia della riga di comando `
 utilizza l'opzione `-l` e specifica la destinazione fornita dal software di gestione di log di terze parti. Ad esempio:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    Se vuoi aggiornare uno o più parametri dell'istanza del servizio fornito dall'utente, utilizza il comando `bluemix service user-provided-update`.
+    Se vuoi aggiornare uno o più parametri dell'istanza del servizio fornito dall'utente, utilizza il comando `ibmcloud service user-provided-update`.
 
     * Per aggiornare un'istanza del servizio fornito dall'utente, utilizza l'opzione **-p**
 e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -212,15 +212,15 @@ e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
     * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti, utilizza l'opzione `-l`. Ad esempio:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Esegui il bind dell'istanza del servizio alla tua applicazione utilizzando il comando `bluemix service bind`. Ad esempio:
+2. Esegui il bind dell'istanza del servizio alla tua applicazione utilizzando il comando `ibmcloud service bind`. Ad esempio:
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -44,7 +44,7 @@ Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_cons
 
 5. (Facoltativo) Puoi iniziare la struttura del tuo backend da un documento OpenAPI. Questo è utile per uno sviluppatore di backend che già ha il client e il contratto di integrazione di backend definiti in un documento Swagger. I tipi di file **.yaml** e **.json** sono supportati. Fai clic su **Add file** per caricare il tuo documento.
 
-6. Fai clic su **Crea**.
+6. Fai clic su **Create**.
 
 ## Facoltativo: aggiungi risorse
 {: #add-services}
@@ -113,14 +113,14 @@ Aggiungi il tuo codice, crea ed esegui l'applicazione. Puoi eseguire l'applicazi
 1. Per creare l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. Per eseguire l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -149,14 +149,14 @@ Se scegli di non utilizzare una toolchain, puoi anche distribuire utilizzando {{
 Per distribuire la tua applicazione a Cloud Foundry, immetti il seguente comando:
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 Per distribuire la tua applicazione a un cluster Kubernetes, immetti il seguente comando:
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-05-02"
 # Esercitazione introduttiva
 {: #create}
 
-In {{site.data.keyword.Bluemix}}, puoi creare applicazioni mobili e web a livello aziendale e sfruttare le estensioni cloud ospitate da {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare la console {{site.data.keyword.Bluemix}} e gli strumenti della riga di comando per creare, eseguire e distribuire le tue applicazioni. Puoi iniziare in uno dei seguenti due modi: creare un'applicazione con un kit starter che gestisce il processo per te o, se sai quello che vuoi, creare la tua applicazione con le risorse necessarie.
+In {{site.data.keyword.Bluemix}}, puoi creare applicazioni mobili e web a livello aziendale e sfruttare le estensioni cloud ospitate da {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare la console {{site.data.keyword.Bluemix}} e gli strumenti della riga di comando per creare, eseguire e distribuire le tue applicazioni. Puoi iniziare in due modi: creare un'applicazione con un kit starter che gestisca il processo per te oppure, se sai cosa vuoi, creare la tua applicazione con le risorse di cui hai bisogno.
 {:shortdesc}
 
 Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua applicazione e a prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
@@ -34,7 +34,7 @@ I kit starter sono disponibili in molte categorie, tra cui:
 
 [Registrati](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono.
 
-Non ti serve una carta di credito per registrare un account gratuito, ma inserirla ti fornisce l'accesso a più risorse e ti rende più semplice sapere tutto quello che {{site.data.keyword.cloud_notm}} ha da offrire.
+Non ti serve una carta di credito per registrare un account gratuito, ma inserirla ti dà accesso a più risorse e ti rende più facile la comprensione di tutte le offerte di {{site.data.keyword.cloud_notm}}.
 
 ## Passo 1: Crea un'applicazione
 {: #project}
