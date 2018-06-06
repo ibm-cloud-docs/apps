@@ -2,3 +2,4 @@ There are several files that have moved since the last translation shipment.
 
 docs/glossary will move to docs/overview/glossary
 The contents of docs/monitor_log and docs/debug have moved to docs/cli/debug.md and docs/cli/monitoring_logging.md
+The content in /services has moved to /resources
