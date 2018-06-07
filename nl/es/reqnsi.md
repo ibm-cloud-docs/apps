@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-05-02"
 # Cómo añadir un servicio a la app
 {: #add_service}
 
-Si ha creado una app utilizando {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general del proyecto. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su app.
+Si ha creado una app con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su app.
 {: shortdesc}
 
 Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app de la página de visión general de la app. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}.
@@ -23,7 +23,7 @@ Puede solicitar una instancia del recurso y utilizarla independientemente de la 
 Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} de las maneras siguientes:
 
 * Desde la consola de {{site.data.keyword.Bluemix_notm}}. Visualice el catálogo de {{site.data.keyword.Bluemix_notm}}.
-* Desde la interfaz de línea de mandatos bluemix. Utilice el mandato `bluemix service offerings`.
+* Desde la interfaz de línea de mandatos ibmcloud. Utilice el mandato `ibmcloud service offerings`.
 * Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puede seleccionar el servicio que necesita cuando desarrolla app. Cuando lo haya seleccionado, {{site.data.keyword.Bluemix_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
@@ -37,7 +37,7 @@ También puede utilizar servicios que estén alojados en otras regiones si estos
 
 Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
 
-**Nota:** Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser erróneos.
+**Nota:** Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser imprevisibles.
 
 Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
@@ -49,18 +49,18 @@ Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para sol
 
 Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. Utilice el mandato `bluemix service offerings` para buscar el nombre y el plan del servicio que necesita.
+1. Utilice el mandato `ibmcloud service offerings` para buscar el nombre y el plan del servicio que necesita.
 
 2. Utilice el mandato siguiente para crear una instancia de servicio, done service_name es el nombre del servicio, service_plan es el plan del servicio y service_instance es el nombre que desea utilizar para esta instancia de servicio.
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. Utilice el siguiente mandato para enlazar una instancia de servicio a una aplicación, donde *appname* es el nombre de la aplicación y service_instance es el nombre de la instancia de servicio.
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
@@ -147,10 +147,10 @@ Es posible que tenga servicios gestionados fuera de {{site.data.keyword.Bluemix_
 
 Para crear una instancia de servicio proporcionada por el usuario y enlazarla a una aplicación, siga los pasos siguientes:
 
-1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato `bluemix service user-provided-create`:
-    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos `bx` le solicitará de uno en uno cada parámetro. Por ejemplo:
+1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato `ibmcloud service user-provided-create`:
+    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos `ibmcloud` le solicitará de uno en uno cada parámetro. Por ejemplo:
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -163,17 +163,17 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
     * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l` y especifique el destino que proporciona el software de gestión de registro del otro proveedor. Por ejemplo:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato `bluemix service user-provided-update`.
+    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato `ibmcloud service user-provided-update`.
 
     * Para actualizar una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y especifique las claves y valores de parámetros en un objeto JSON. Por ejemplo:
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -181,15 +181,15 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
     * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l`. Por ejemplo:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Enlace la instancia de servicio a la aplicación con el mandato `bluemix service bind`. Por ejemplo:
+2. Enlace la instancia de servicio a la aplicación con el mandato `ibmcloud service bind`. Por ejemplo:
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

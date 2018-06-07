@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -43,7 +43,7 @@ El catálogo de {{site.data.keyword.Bluemix_notm}} lista los recursos de infraes
 
 Cada app viene con una sección de iniciación que le ayuda a obtener todo el software y el contenido que necesita para empezar a trabajar.
 
-En el panel de control, pulse la app y, a continuación, pulse **Iniciación**, que puede ayudarle a obtener el software que necesitará para desarrollar su app, apuntarle hacia el código fuente y ayudarle a desplegar la app por primera vez.
+En el panel de control, pulse la app y, a continuación, pulse **Iniciación**, que puede ayudarle a obtener el software que necesita para desarrollar su app, apuntarle hacia el código fuente y ayudarle a desplegar la app por primera vez.
 
 ## Pasos siguientes
 {: #next}

@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
 # ¿Qué hace que una app sea buena?
 {: #best-practice}
 
-Cree su app en {{site.data.keyword.Bluemix_notm}} para aprovechar todas las posibilidades que ofrece la nube. Estas prácticas recomendadas le ayudarán a asegurarse de que sus apps están listas para ser utilizadas en la nube.
+Cree su app en {{site.data.keyword.Bluemix_notm}} para aprovechar todas las posibilidades que ofrece la nube. Estas mejores prácticas pueden ayudarle a asegurarse de que sus apps estén preparadas para la nube.
 {:shortdesc}
 
 ## Cree su app de forma que sea independiente de la topología
@@ -25,7 +25,7 @@ de escalabilidad.
 
 ## Presuponga que el sistema de archivos local no es permanente
 
-Como una instancia de app en la nube se puede mover, suprimir o duplicar en cualquier momento, no se base en archivos que se graben en el sistema de archivos. Si una app
+Como una instancia de app en la nube se puede mover, suprimir o duplicar en la nube, no se base en archivos que se graben en el sistema de archivos. Si una app
 utiliza el sistema de archivos local como memoria caché de
 información usada con frecuencia incluyendo los registros de app, la
 información se pierde cuando se cierra la instancia y se reinicia en una ubicación
@@ -47,8 +47,7 @@ centralizada en el servidor.
 
 Si no puede eliminar el estado de sesión
 por completo, colóquelo en un almacén de alta disponibilidad externo a
-su servidor de apps. Los almacenes pueden ser IBM WebSphere Extreme Scale, Redis o
-Memcached, o bien una base de datos externa.
+su servidor de apps. Los almacenes pueden ser IBM WebSphere eXtreme Scale, Redis o Memcached, o bien una base de datos externa.
 
 ## Utilice un registro de servicio externo para resolver puntos finales de servicio
 
@@ -58,7 +57,7 @@ La extracción de las dependencias específicas del entorno a un conjunto de arc
 puntos finales de servicio, o delegar la función de direccionamiento completa
 en un bus de servicio o un equilibrador de carga con un nombre virtual.
 
-## Cree la app utilizando una arquitectura de varias regiones
+## Cree la app mediante una arquitectura de varias regiones
 {: #multiregion}
 
 Ejecute varias instancias para evitar el tiempo de inactividad en una sola región, sin embargo, para ofrecer una aplicación más sólida tenga en cuenta una arquitectura de varias regiones.
@@ -91,9 +90,7 @@ app.
 
 No utilice protocolos complejos que necesiten de configuración adicional para su capacidad de resistencia.
 
-Las apps basadas en protocolos estándar son
-más resistentes con los elementos de configuración delegados a la
-plataforma. Los protocolos estándar principales son HTTP, SSL,
+Las apps basadas en protocolos estándar son más resistentes con los elementos de configuración que están delegados a la plataforma. Los protocolos estándar principales son HTTP, SSL,
 base de datos estándar, consultas y conexiones de servicio web.
 
 ## Utilice bibliotecas de compatibilidad en lugar de funciones de específicas de SO

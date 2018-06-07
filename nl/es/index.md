@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -34,7 +34,7 @@ Los kits de iniciación están disponibles para muchas categoría, entre otras:
 
 [Regístrese](https://console.bluemix.net){: new_window} para una cuenta de {{site.data.keyword.cloud_notm}}. Especifique su correo electrónico, nombre, empresa, región, y número de teléfono.
 
-No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gratuita, sin embargo, si especifica una tarjeta de crédito tendrá acceso a más recursos y facilitará la compresión completa de todo lo que {{site.data.keyword.cloud_notm}} tiene que ofrecer.
+No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gratuita, sin embargo, si especifica una tarjeta de crédito tendrá acceso a más recursos y facilitará la compresión completa de todo lo que {{site.data.keyword.cloud_notm}} ofrece.
 
 ## Paso 1: Crear una app
 {: #project}

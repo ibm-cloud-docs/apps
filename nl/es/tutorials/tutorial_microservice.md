@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -111,14 +111,14 @@ Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicació
 1. Para crear la app en el directorio de proyecto actual, escriba el mandato siguiente:
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. Para ejecutar la app en el directorio actual, especifique el mandato siguiente:
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -152,14 +152,14 @@ Si elige no utilizar una cadena de herramientas, también puede desplegar utiliz
 Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

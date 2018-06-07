@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -91,7 +91,7 @@ Empiece a trabajar con la app descargada:
 2. En la solicitud de terminal, vaya al directorio local que prefiera y ejecute el siguiente mandato.
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 

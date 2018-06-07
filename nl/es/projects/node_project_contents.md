@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,37 +18,44 @@ Para las apps Node.js, la siguiente información es un inventario de lo que norm
 
 En la siguiente tabla se muestra una lista de archivos y directorios comunes que se incluyen en una app Node.js generada.
 
-| Directorio y archivos                                     | Descripción                       |
+| Directorio Root                                     | Descripción                       |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package.json | Archivo de metadatos |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | Opciones de configuración de CLI |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Archivo de despliegue de Cloud Foundry |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Archivo Dockerfile para mandatos `bx dev run`, `bx dev deploy` y `docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para `bx dev build` y `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | Configuración de servicio app para Docker Compose |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Configuración de webpack para información relacionada con la compilación |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descripción de la app |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Especificación swagger para describir las API REST |
-|<b>`./public/index.html`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html | Esquema para aplicaciones web |
-|<b>`./public/server/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.js | Archivo de implementación de servidor |
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | Prueba de integración para servidor Express |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | Definición de conducto de IBM Cloud |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Diagrama Helm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Valores de diagrama Helm |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Plantilla de despliegue |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Plantilla de servicio |
-{: caption="Tabla 1. Contenidos de una app Node.js generada" caption-side="top"}
+|package.json | Archivo de metadatos |
+|cli-config.yml | Opciones de configuración de CLI |
+|manifest.yml | Archivo de despliegue de Cloud Foundry |
+|Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
+|Dockerfile-tools | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
+|docker-compose.yml | Configuración de servicio app para Docker Compose |
+|webpack.config.js | Configuración de webpack para información relacionada con la compilación |
+| LICENSE | Archivo de licencia |
+|README.md | Descripción de la app |
+{: caption="Tabla 1. Contenido de un directorio raíz de app Node.js generado" caption-side="top"}
 
+| Directorio `./public/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| `./public/swagger.yml` | Especificación swagger para describir las API REST |
+| `./public/index.html` | Esquema para aplicaciones web |
+|`./public/server/server.js` | Archivo de implementación de servidor |
+{: caption="Tabla 2. Contenido de un directorio público de app Node.js generado" caption-side="top"}
+
+| Directorio `./test/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| test-server.js | Prueba de integración para servidor Express |
+{: caption="Tabla 3. Contenido de un directorio de prueba de app Node.js generado" caption-side="top"}
+
+| Directorio `./.bluemix/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Script de compilación del contenedor |
+| deploy.json | Información de despliegue |
+| kube_deploy.sh | Script de despliegue de Kubernetes |
+| pipeline.yml | Definición de conducto de IBM Cloud |
+| toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
+{: caption="Tabla 4. Contenido de un directorio bluemix de app Node.js generado" caption-side="top"}
+
+| Directorio `./chart/<projectname>/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Diagrama Helm |
+| `./chart/<projectname>/values.yaml` | Valores de diagrama Helm |
+| `./chart/<projectname>/templates/deployment.yaml` | Plantilla de despliegue |
+| `./chart/<projectname>/templates/service.yaml` | Plantilla de servicio |
+{: caption="Tabla 5. Contenido de un directorio de gráfica de app Node.js generado" caption-side="top"}

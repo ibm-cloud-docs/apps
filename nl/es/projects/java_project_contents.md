@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,86 +23,97 @@ Para las apps Java, la siguiente información es un inventario de lo que normalm
 
 En la siguiente tabla se muestra una lista de los directorios y archivos que se incluyen en una app Java Spring.
 
-| Directorio y archivos                                     | Descripción                       |
+| Directorio `./`                                  | Descripción                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Archivo pom de maven |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | Opciones de configuración de CLI |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Archivo de despliegue de Cloud Foundry |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Archivo Dockerfile para mandatos `bx dev run`, `bx dev deploy` y `docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para `bx dev build` y `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descripción de la app |
-|**`./src/main/java/application/`** |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | Aplicación principal Spring |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | Punto final de salud |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | Código de ejemplo |
-|**`./src/main/java/resources/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application-local.properties | Propiedades de Spring |
-|**`./src/main/test/application/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | Pruebas |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | Definición de conducto de IBM Cloud |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Diagrama Helm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Valores de diagrama Helm |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Plantilla de despliegue |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | Plantilla HPA |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Plantilla de servicio |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | yaml de despliegue y servicio de Kubernetes |
-{: caption="Tabla 1. Contenidos de una app Java Spring generada" caption-side="top"}
+| pom.xml | Archivo pom de maven |
+| cli-config.yml | Opciones de configuración de CLI |
+| manifest.yml | Archivo de despliegue de Cloud Foundry |
+| Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
+| Dockerfile-tools | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
+| LICENSE | Archivo de licencia |
+| README.md | Descripción de la app |
+{: caption="Tabla 1. Contenido de un directorio raíz de app Java Spring generado" caption-side="top"}
+
+| Directorio `./src/main/java/` | Descripción                       |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/test/application/SBApplication.java` | Aplicación principal Spring |
+| `./src/main/test/application/HealthEndpointTest.java` | Pruebas |
+| `./src/main/java/application/rest/HealthApplication.java` | Punto final de salud |
+| `./src/main/java/application/rest/v1/Example.java` | Código de ejemplo |
+| `./src/main/java/resources/application-local.properties` | Propiedades de Spring |
+{: caption="Tabla 2. Contenido de un directorio /java/ de app Java Spring generado" caption-side="top"}
+
+| Directorio `./.bluemix/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Script de compilación del contenedor |
+| deploy.json | Información de despliegue |
+| kube_deploy.sh | Script de despliegue de Kubernetes |
+| pipeline.yml | Definición de conducto de IBM Cloud |
+| toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
+{: caption="Tabla 3. Contenido de un directorio ./.bluemix/ de app Java Spring generado" caption-side="top"}
+
+| Directorio `./chart/<projectname>/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Diagrama Helm |
+| `./chart/<projectname>/values.yaml` | Valores de diagrama Helm |
+| `./chart/<projectname>/templates/deployment.yaml` | Plantilla de despliegue |
+| `./chart/<projectname>/templates/hpa.yaml` | Plantilla HPA |
+| `./chart/<projectname>/templates/service.yaml` | Plantilla de servicio |
+{: caption="Tabla 4. Contenido de un directorio ./chart/<projectname/templates/ de app Java Spring generado" caption-side="top"}>
+
+| Directorio `./manifests/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | yaml de despliegue y servicio de Kubernetes |
+{: caption="Tabla 5. Contenido de un directorio ./manifests/ de app Java Spring generado" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
 La tabla siguiente lista los directorios y archivos incluidos en una app Java Liberty generada.
 
-| Directorio / Archivo                                     | Descripción                       |
+| Directorio `./`                                  | Descripción                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Archivo pom de maven |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | Opciones de configuración de CLI |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Archivo de despliegue de Cloud Foundry |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Archivo Dockerfile para mandatos `bx dev run`, `bx dev deploy` y `docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile para mandatos `bx dev build` y `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Descripción de la app |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | Punto final de salud |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | Código de ejemplo |
-|**`./src/main/liberty/config/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvm.options | Opciones de JVM |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvmbx.options | Configuración del agente de métricas de Java |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.env | Variables de entorno |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.xml | Configuración de servidor |
-|**`./src/main/webapp/WEB-INF/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beans.xml | Configuración del bean de CDI |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ibm-web-ext.xml | Configuración de app web de IBM |
-|**`./src/main/test/it/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | Pruebas |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | Definición de conducto de IBM Cloud |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Diagrama Helm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Valores de diagrama Helm |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Plantilla de despliegue |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | Plantilla HPA |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Plantilla de servicio |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | yaml de despliegue y servicio de Kubernetes |
-{: caption="Tabla 2. Contenidos de una app Java Liberty generada" caption-side="top"}
+| pom.xml | Archivo pom de maven |
+| cli-config.yml | Opciones de configuración de CLI |
+| manifest.yml | Archivo de despliegue de Cloud Foundry |
+| Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
+| Dockerfile-tools | Dockerfile para mandatos `ibmcloud dev build` e `ibmcloud dev test` |
+| LICENSE | Archivo de licencia |
+| README.md | Descripción de la app |
+{: caption="Tabla 6. Contenido de un directorio raíz de app Java Liberty generado" caption-side="top"}
 
+| Directorio `./src/main` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/java/application/rest/HealthApplication.java` | Punto final de salud |
+| `./src/main/java/application/rest/v1/Example.java` | Código de ejemplo |
+| `./src/main/liberty/config/jvm.options` | Opciones de JVM |
+| `./src/main/liberty/config/jvmbx.options` | Configuración del agente de métricas de Java |
+| `./src/main/liberty/config/server.env` | Variables de entorno |
+| `./src/main/liberty/config/server.xml` | Configuración de servidor |
+| `./src/main/webapp/WEB-INF/beans.xml` | Configuración del bean de CDI |
+| `./src/main/webapp/WEB-INF/ibm-web-ext.xml` | Configuración de app web de IBM |
+| `./src/main/test/it/HealthEndpointTest.java` | Pruebas |
+{: caption="Tabla 7. Contenido de un directorio ./src/main/ de app Java Liberty generado" caption-side="top"}
+
+| Directorio `./.bluemix/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Script de compilación del contenedor |
+| deploy.json | Información de despliegue |
+| kube_deploy.sh | Script de despliegue de Kubernetes |
+| pipeline.yml | Definición de conducto de IBM Cloud |
+| toolchain.yml | Definición de cadena de herramientas de IBM Cloud |
+{: caption="Tabla 8. Contenido de un directorio ./bluemix/ de app Java Liberty generado" caption-side="top"}
+
+| Directorio `./chart/<projectname>/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Diagrama Helm |
+| `./chart/<projectname>/values.yaml` | Valores de diagrama Helm |
+| `./chart/<projectname>/templates/deployment.yaml` | Plantilla de despliegue |
+| `./chart/<projectname>/templates/hpa.yaml` | Plantilla HPA |
+| `./chart/<projectname>/templates/service.yaml` | Plantilla de servicio |
+{: caption="Tabla 9. Contenido de un directorio ./chart/<projectname/ de app Java Liberty generado" caption-side="top"}>
+
+| Directorio `./manifests/` | Descripción |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | yaml de despliegue y servicio de Kubernetes |
+{: caption="Tabla 10. Contenido de un directorio ./manifests/ de app Java Liberty generado" caption-side="top"}
