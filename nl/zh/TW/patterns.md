@@ -37,7 +37,7 @@ Backend for Frontend 模式 (BFF) 可協助建立後端程式碼，以符合特�
 
 BFF 管理資料持續性、快取以及與高價值服務的整合，例如 [{{site.data.keyword.ibmwatson}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)、[{{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)、[{{site.data.keyword.weather_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps) 及 [{{site.data.keyword.sparks}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps)。
 
-BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，利用 {{site.data.keyword.messagehub}} 來從傳訊架構運作。
+BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，從使用 {{site.data.keyword.messagehub}} 的傳訊架構工作。
 
 根據語言及架構需求，有數個您可以從中選擇的 BFF 入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到 BFF 模式的入門範本套件。
 
@@ -51,7 +51,7 @@ BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，利用 {
 ## 行動
 {: #mobile}
 
-行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線，稱為「行動後端即服務」或 MBaaS 模式，或者可能有專用 [Backend for Frontend](#bff)。  
+行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線，稱為「行動後端即服務」或 MBaaS 模式，或者可能有專用 [Backend for Frontend](#bff)。
 
 {{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://console.bluemix.net/developer/mobile/dashboard)上找到「行動」模式的入門範本套件。
 
@@ -61,12 +61,13 @@ BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，利用 {
 各種語言及架構都具有提供的入門範本套件 {{site.data.keyword.cloud_notm}}。例如，雲端微服務入門範本套件提供 Node.js 選項，而與資料分析緊密相關的入門範本套件可能包括 Python 或 Go。已討論 {{site.data.keyword.cloud_notm}} 入門範本套件中使用的部分常用語言。
 
 
-|程式設計語言 | 說明
-| 開發架構 |
+|程式設計語言 |說明
+|開發架構 |
 |-----|-----|-----|
-|Java | [Java](../runtimes/liberty/getting-started.html) 具有經過驗證的功能可建置企業級應用程式。但是，Java 8 中的新功能與更輕量型的運行環境（例如 Liberty）及架構（例如 Spring Boot）搭配使用，也可讓 Java 更完美地適用於建置微服務。此外，Java 也是 Android 應用程式的熱門程式設計語言。| Spring、Liberty、Android |
-|Swift| [Swift](../runtimes/swift/getting-started.html) 是 Apple 在 2014 所建立的現代化程式設計語言，其設計目的是要取代 Objective C 的使用，並在 2015 年 12 月公開開放程式碼。現在，它是用來在使用 x86、ARM 或 z/Architecture 的 Linux 及 macOS 作業系統上建置 iOS、macOS、Web 服務及系統軟體。它的撰寫方式類似 Script 語言，但會進行編譯以獲得類似 C 語言的低額外負擔與高效能，讓它更適用於雲端運行環境。它會使用您在 Java 中看到的強式及靜態類型系統，而不是您在 JavaScript 中看到的功能性樣式及非同步常式。它的效能極高，而且原始檔會使用 LLVM 編譯器工具鏈編譯成原生程式碼，並且可以輕鬆地運用使用 C 所撰寫的外部系統程式庫。因為 Swift 可以用來編寫用戶端及伺服器端應用程式的程式碼，所以開發人員會在需要將功能從用戶端輕鬆地移轉至伺服器（反之亦然）時使用 Swift。| Kitura、iOS|
-|Node.js | [Node.js](../runtimes/nodejs/getting-started.html) 是一種 JavaScript 運行環境，使用事件驅動、非封鎖 I/O 模型讓它更為輕量且更具效率，對於 Web 應用程式、Backend for Frontend 模式及微服務的產量及可擴充性最有幫助。Node.js 的套件生態系統 npm 可存取大量的開放程式碼模組，並提供廣泛的功能來加速應用程式開發。| 簡易版|
+|Java |[Java](../runtimes/liberty/getting-started.html) 具有經過驗證的功能可建置企業級應用程式。但是，Java 8 中的新功能與更輕量型的運行環境（例如 Liberty）及架構（例如 Spring Boot）搭配使用，也可讓 Java 更完美地適用於建置微服務。此外，Java 也是 Android 應用程式的熱門程式設計語言。|Spring、Liberty、Android |
+|Swift|[Swift](../runtimes/swift/getting-started.html) 是 Apple 在 2014 所建立的現代化程式設計語言，其設計目的是要取代 Objective C 的使用，並在 2015 年 12 月公開開放程式碼。現在，它是用來在使用 x86、ARM 或 z/Architecture 的 Linux 及 macOS 作業系統上建置 iOS、macOS、Web 服務及系統軟體。它的撰寫方式類似 Script 語言，但會進行編譯以獲得類似 C 語言的低額外負擔與高效能，讓它更適用於雲端運行環境。它會使用您在 Java 中看到的強式及靜態類型系統，而不是您在 JavaScript 中看到的功能性樣式及非同步常式。它的效能極高，而且原始檔會編譯成使用 LLVM 編譯器工具鏈的原生程式碼，並且可以輕鬆地運用以 C 語言撰寫的外部系統程式庫。因為 Swift 可以用來編寫用戶端及伺服器端應用程式的程式碼，所以開發人員會在需要將功能從用戶端輕鬆地移轉至伺服器（反之亦然）時使用 Swift。|Kitura、iOS|
+|Node.js |[Node.js](../runtimes/nodejs/getting-started.html) 是一種 JavaScript 運行環境，使用事件驅動、非封鎖 I/O 模型讓它更為輕量且更具效率，對於 Web 應用程式、Backend for Frontend 模式及微服務的產量及可擴充性最有幫助。Node.js 的套件生態系統 npm 可存取大量的開放程式碼模組，並提供廣泛的功能來加速應用程式開發。|簡易版|
 |JavaScript|JavaScript 會在網頁中建立互動式效果。JavaScript 與 HTML 及 CSS 是大部分網頁的基礎。包裝 Cordova 外掛程式時，JavaScript 程式碼可以完整善用原生裝置功能。具有 Web 技能的開發人員可以輕鬆地建立行動應用程式，而且可在該處於 Web 及行動之間重複使用適當的應用程式碼。|Cordova|
-|Python| [Python](../runtimes/python/getting-started.html) 是通用解譯程式設計語言，其大大地強調了可讀性。Python 容許程式設計師實作的功能程式碼行少於其他語言可能需要的程式碼行。語言中的特性可讓您寫入物件導向、功能或命令程式碼。Python 常用來處理自然語言作業。| Flask、Django|
+|Python| [Python](../runtimes/python/getting-started.html) 是通用解譯程式設計語言，它強調可讀性。Python 容許程式設計師實作的功能程式碼行少於其他語言可能需要的程式碼行。語言中的特性可讓您寫入物件導向、功能或命令程式碼。Python 常用來處理自然語言作業。|Flask、Django|
+
 

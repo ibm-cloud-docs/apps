@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-05-02"
 
 
 * 從 {{site.data.keyword.Bluemix_notm}} 主控台。檢視 {{site.data.keyword.Bluemix_notm}} 型錄。
-* 從 bluemix 指令行介面。使用 `bluemix service offerings` 指令。
+* 從 ibmcloud 指令行介面。使用 `ibmcloud service offerings` 指令。
 * 從您自己的應用程式。使用 [GET /v2/services 服務 API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
 在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.Bluemix_notm}} 會佈建服務。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
@@ -39,7 +39,7 @@ lastupdated: "2018-05-02"
 
 若要要求新的服務實例，您必須使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 {{site.data.keyword.Bluemix_notm}} 指令行介面。
 
-**附註：**當您指定服務名稱時，請避免使用非英文字母或數值字元的字元，因為結果可能無法預期。
+**附註：**當您指定服務名稱時，請避免非英文字母或數值字元的字元，因為結果可能無法預期。
 
 如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來要求服務實例，請完成下列步驟：
 
@@ -51,18 +51,18 @@ lastupdated: "2018-05-02"
 
 如果您使用 {{site.data.keyword.Bluemix_notm}} 指令行介面來要求服務實例，請完成下列步驟：
 
-1. 使用 `bluemix service offerings` 指令，以尋找所需服務的名稱及方案。
+1. 使用 `ibmcloud service offerings` 指令，以尋找所需服務的名稱及方案。
 
 2. 使用下列指令來建立服務實例，其中 service_name 是服務的名稱、service_plan 是服務的方案，而 service_instance 是您要用於此服務實例的名稱。
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. 使用下列指令將服務實例連結至應用程式，其中 *appname* 是應用程式的名稱，而 service_instance 是服務實例的名稱。
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務](#accser_external){: new_window}。
@@ -156,10 +156,10 @@ bluemix service bind appname service_instance
 
 若要建立使用者提供的服務實例，並將它連結至應用程式，請完成下列步驟：
 
-1. 使用 `bluemix service user-provided-create` 指令，建立使用者提供的服務實例：
-    * 若要建立一般使用者提供的服務實例，請使用 **-p** 選項，並使用逗點區隔參數名稱。`bx` 指令行介面接著會提示您依次輸入每一個參數。例如：
+1. 使用 `ibmcloud service user-provided-create` 指令，建立使用者提供的服務實例：
+    * 若要建立一般使用者提供的服務實例，請使用 **-p** 選項，並使用逗點區隔參數名稱。`ibmcloud` 指令行介面接著會提示您依次輸入每一個參數。例如：
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -172,17 +172,17 @@ bluemix service bind appname service_instance
     * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 `-l` 選項，然後指定協力廠商日誌管理軟體所提供的目的地。例如：
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    如果您要更新使用者提供服務實例的一個以上參數，請使用 `bluemix service user-provided-update`。
+    如果您要更新使用者提供服務實例的一個以上參數，請使用 `ibmcloud service user-provided-update`。
 
     * 若要更新一般使用者提供的服務實例，請使用 **-p** 選項，並在 JSON 物件中指定參數索引鍵和值。例如：
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -190,15 +190,15 @@ bluemix service bind appname service_instance
     * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 `-l` 選項。例如：
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. 使用 `bluemix service bind` 指令，將服務實例連結至應用程式。例如：
+2. 使用 `ibmcloud service bind` 指令，將服務實例連結至應用程式。例如：
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

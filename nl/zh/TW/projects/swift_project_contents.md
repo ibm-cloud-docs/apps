@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,39 +18,53 @@ lastupdated: "2018-05-02"
 
 下表列出在所產生的 Swift 應用程式中包含的一般目錄及檔案。
 
-| 目錄和檔案| 說明|
+|根目錄|說明|
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Package.swift| Swift 相依關係定義檔|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI 配置選項|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry 部署檔案|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`、`bx dev deploy` 及 `docker` 指令的 Dockerfile|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | `bx dev build` 及 `bx dev test` 的 Dockerfile|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | 應用程式的說明|
-|<b>`./Sources/Application/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.swift | Swift 應用程式檔案|
-|<b>`./Sources/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.swift | Swift 主要檔案|
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | 用 Kitura 進行測試的公用程式方法|
-|<b>`./Tests/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinuxMain.swift | 在 Linux 上測試用的公用程式|
-|<b>`./Tests/ApplicationTests`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RouteTests.swift | 包含測試案例的檔案|
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud 管線定義|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud 工具鏈定義|
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm 圖表|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm 圖表值|
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | 部署範本|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | 服務範本|
-|<b>`./manifests/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes 服務及部署 yaml |
-{: caption="表 1. 產生的 Swift 應用程式的內容" caption-side="top"}
+|Package.swift|Swift 相依關係定義檔|
+|cli-config.yml |CLI 配置選項|
+|manifest.yml |Cloud Foundry 部署檔案|
+|Dockerfile |`ibmcloud dev run`、`ibmcloud dev deploy` 及 `docker` 指令的 Dockerfile|
+|Dockerfile-tools |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
+| LICENSE |授權檔|
+|README.md |應用程式的說明|
+{: caption="表 1. 產生的 Swift 應用程式根目錄的內容" caption-side="top"}
+
+| `./Sources/Application/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| `./Sources/Application/Application.swift` |Swift 應用程式檔案|
+| `./Sources/<projectname>/main.swift` |Swift 主要檔案|
+{: caption="表 2. 產生的 Swift Spring 應用程式 /Sources/Application/ 目錄的內容" caption-side="top"}
+
+| `./test/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| test-server.js |用 Kitura 進行測試的公用程式方法|
+{: caption="表 3. 產生的 Swift 應用程式 test 目錄的內容" caption-side="top"}
+
+| `./Tests/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| `./Tests/LinuxMain.swift` |在 Linux 上測試用的公用程式|
+| `./Tests/ApplicationTests>/RouteTests.swift` |包含測試案例的檔案|
+{: caption="表 4. 產生的 Swift 應用程式 tests 目錄的內容" caption-side="top"}
+
+| `./.bluemix/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh |容器建置 Script|
+| deploy.json |部署資訊|
+| kube_deploy.sh | Kubernetes 部署 Script|
+| pipeline.yml |IBM Cloud 管線定義|
+| toolchain.yml |IBM Cloud 工具鏈定義|
+{: caption="表 5. 產生的 Swift 應用程式 bluemix 目錄的內容" caption-side="top"}
+
+| `./chart/<projectname>/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` |Helm 圖表|
+| `./chart/<projectname>/values.yaml` |Helm 圖表值|
+| `./chart/<projectname>/templates/deployment.yaml` |部署範本|
+| `./chart/<projectname>/templates/service.yaml` |服務範本|
+{: caption="表 6. 產生的 Swift 應用程式 chart 目錄的內容" caption-side="top"}
+
+| `./manifests/` 目錄|說明|
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml |Kubernetes 服務及部署 yaml |
+{: caption="表 7. 產生的 Swift 應用程式 manifests 目錄的內容" caption-side="top"}
 

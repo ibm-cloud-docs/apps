@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 {:new_window: target="_blank"}
@@ -15,19 +15,19 @@ lastupdated: "2018-05-02"
 # 雲端開發的建議階段
 {: #development_process}
 
-雲端應用程式開發人員會經歷開發程序中的四個基本階段：開始、撰寫程式碼、交付及管理。此流程是互動式且會快速進行。目標是快速產生最小可行應用程式，然後使用來自正式作業應用程式的回饋，以持續反覆進行撰寫程式碼或交付的循環，直到您的應用程式與使用者產生共鳴為止。
+雲端應用程式開發人員會經歷開發程序中的四個基本階段：開始、撰寫程式碼、交付及管理。目標是快速產生最小可行應用程式，然後使用來自正式作業應用程式的回饋，以持續反覆進行撰寫程式碼或交付的循環，直到您的應用程式與使用者產生共鳴為止。
 {: shortdesc}
 
 ![開發流程](images/dev_flow_overview.png "開發流程") 圖 1. 開發程序的階段
 
-在某些情況下，「執行」會列為個別的階段，但在這裡我們將它與「交付」和「管理」階段結合。
+在某些情況下，「執行」會列為個別的階段，但在這裡它與「交付」和「管理」階段結合。
 
 讓我們更深入瞭解在開發流程中使用 {{site.data.keyword.cloud_notm}} 的最佳方式。
 
 ##開始使用
 {: #get_started}
 
-請從 {{site.data.keyword.cloud_notm}} 開發人員儀表板開始建置您的應用程式，您可以在這裡選取與使用案例相關的入門範本套件，並選擇程式設計語言。{{site.data.keyword.cloud_notm}} 會使用入門套件套件中的指示來自動佈建所需的資源，以及建立語言特有且無法得知運行環境的應用程式，以作為正式作業應用程式的基礎。若要完成開始使用階段，請從開發人員儀表板中按一下**部署至雲端**。按一下即可建立 DevOps 工具鏈，並具有完整的程式碼儲存庫，當中移入您的應用程式原始碼及部署管線。
+請從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建置您的應用程式，您可以在這裡選取與使用案例相關的入門範本套件，並選擇程式設計語言。{{site.data.keyword.cloud_notm}} 會使用入門套件套件中的指示來自動佈建所需的資源，以及建立語言特有且無法得知運行環境的應用程式，以作為正式作業應用程式的基礎。若要完成開始使用階段，請從開發人員儀表板中按一下**部署至雲端**。按一下即可建立 DevOps 工具鏈，並具有完整的程式碼儲存庫，當中移入您的應用程式原始碼及部署管線。
 
 ![開始使用](images/dev_get_started.png "開始使用") 圖 2. 開始使用流程
 
@@ -41,7 +41,7 @@ lastupdated: "2018-05-02"
 
 ![在本端開發](images/dev_code_locally.png "在本端開發") 圖 3. 在本端開發流程
 
-{{site.data.keyword.dev_cli_notm}} 的基本函數是 `bx dev build` 和 `bx dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
+{{site.data.keyword.dev_cli_notm}} 的基本函數是 `ibmcloud dev build` 和 `ibmcloud dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
 {: tip}
 
 ##在 {{site.data.keyword.cloud_notm}} 中交付和管理

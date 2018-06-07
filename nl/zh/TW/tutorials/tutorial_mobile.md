@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -91,7 +91,7 @@ lastupdated: "2018-05-02"
 2. 在「終端機」提示下，導覽至您選擇的本端目錄，然後執行下列指令。
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 

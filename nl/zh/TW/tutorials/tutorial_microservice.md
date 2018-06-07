@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -112,14 +112,14 @@ lastupdated: "2018-05-02"
 1. 若要在現行應用程式目錄中建置應用程式，請輸入下列指令：
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. 若要在現行應用程式目錄中執行應用程式，請輸入下列指令：
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -153,14 +153,14 @@ lastupdated: "2018-05-02"
 若要將應用程式部署至 Cloud Foundry，請輸入下列指令：
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 若要將應用程式部署至 Kubernetes 叢集，請輸入下列指令：
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 
