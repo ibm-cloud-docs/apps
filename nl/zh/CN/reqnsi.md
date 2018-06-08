@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-05-02"
 通过下列方式，您可以在 {{site.data.keyword.Bluemix_notm}} 中查看所有可用服务：
 
 * 通过 {{site.data.keyword.Bluemix_notm}} 控制台。查看 {{site.data.keyword.Bluemix_notm}}“目录”。
-* 通过 bluemix 命令行界面。使用 `bluemix service offerings` 命令。
+* 通过 ibmcloud 命令行界面。使用 `ibmcloud service offerings` 命令。
 * 从您自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
 在开发应用程序时，您可以选择所需的服务。选择服务后，{{site.data.keyword.Bluemix_notm}} 会供应该服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
@@ -49,18 +49,18 @@ lastupdated: "2018-05-02"
 
 如果使用 {{site.data.keyword.Bluemix_notm}} 命令行界面请求服务实例，请完成以下步骤：
 
-1. 使用 `bluemix service offerings` 命令查找所需服务的名称和套餐。
+1. 使用 `ibmcloud service offerings` 命令查找所需服务的名称和套餐。
 
 2. 使用以下命令创建服务实例，其中 service_name 是服务的名称；service_plan 是服务的套餐；service_instance 是您希望用于此服务实例的名称。
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. 使用以下命令将服务实例绑定到应用程序，其中 *appname* 是应用程序的名称；service_instance 是服务实例的名称。
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
@@ -145,10 +145,10 @@ bluemix service bind appname service_instance
 
 要创建用户提供的服务实例并将其绑定到应用程序，请完成以下步骤：
 
-1. 使用 `bluemix service user-provided-create` 命令创建用户提供的服务实例：
-    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，`bx` 命令行界面会依次提示您提供每个参数的值。例如：
+1. 使用 `ibmcloud service user-provided-create` 命令创建用户提供的服务实例：
+    * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，`ibmcloud` 命令行界面会依次提示您提供每个参数的值。例如：
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -161,17 +161,17 @@ bluemix service bind appname service_instance
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项，然后指定第三方日志管理软件提供的目标。例如：
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    如果要更新用户提供的服务实例的一个或多个参数，请使用 `bluemix service user-provided-update` 命令。
+    如果要更新用户提供的服务实例的一个或多个参数，请使用 `ibmcloud service user-provided-update` 命令。
 
     * 要更新用户提供的常规服务实例，请使用 **-p** 选项，并在 JSON 对象中指定参数键和值。例如：
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -179,15 +179,15 @@ bluemix service bind appname service_instance
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项。例如：
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. 使用 `bluemix service bind` 命令将该服务实例绑定到应用程序。例如：
+2. 使用 `ibmcloud service bind` 命令将该服务实例绑定到应用程序。例如：
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

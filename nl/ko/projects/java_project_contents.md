@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -21,88 +21,99 @@ Java 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix
 ## Spring
 {: #spring-project-files}
 
-다음 표에는 생성된 Java Spring 앱에 포함되는 디렉토리 및 파일이 나열되어 있습니다. 
+다음 표에는 생성된 Java Spring 앱에 포함되는 디렉토리 및 파일이 나열되어 있습니다.
 
-| 디렉토리 및 파일                                     | 설명                       |
+| `./` 디렉토리                                  | 설명                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Maven pom 파일 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI 구성 옵션 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry 배치 파일 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`, `bx dev deploy` 및 `docker` 명령에 대한 Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | `bx dev build` 및 `bx dev test`에 대한 Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | 앱 설명 |
-|**`./src/main/java/application/`** |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SBApplication.java | 기본 Spring 애플리케이션 |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | 상태 엔드포인트 |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | 코드 예 |
-|**`./src/main/java/resources/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application-local.properties | Spring 특성 |
-|**`./src/main/test/application/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | 테스트 |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud 파이프라인 정의 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud 도구 체인 정의 |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm 차트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm 차트 값 |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | 배치 템플리트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | HPA 템플리트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | 서비스 템플리트 |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes 서비스 및 배치 yaml |
-{: caption="표 1. 생성된 Java Spring 앱의 컨텐츠" caption-side="top"}
+| pom.xml | Maven pom 파일 |
+| cli-config.yml | CLI 구성 옵션 |
+| manifest.yml | Cloud Foundry 배치 파일 |
+| Dockerfile | `ibmcloud dev run`, `ibmcloud dev deploy` 및 `docker` 명령에 대한 Dockerfile|
+| Dockerfile-tools | `ibmcloud dev build` 및 `ibmcloud dev test`에 대한 Dockerfile |
+| LICENSE | 라이센스 파일 |
+| README.md | 앱 설명 |
+{: caption="표 1. 생성된 Java Spring 앱 루트 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./src/main/java/` 디렉토리 | 설명                       |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/test/application/SBApplication.java` | 기본 Spring 애플리케이션 |
+| `./src/main/test/application/HealthEndpointTest.java` | 테스트 |
+| `./src/main/java/application/rest/HealthApplication.java` | 상태 엔드포인트 |
+| `./src/main/java/application/rest/v1/Example.java` | 코드 예 |
+| `./src/main/java/resources/application-local.properties` | Spring 특성 |
+{: caption="표 2. 생성된 Java Spring 앱 /java/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./.bluemix/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | 컨테이너 빌드 스크립트 |
+| deploy.json | 배치 정보 |
+| kube_deploy.sh | Kubernetes 배치 스크립트 |
+| pipeline.yml | IBM Cloud 파이프라인 정의 |
+| toolchain.yml | IBM Cloud 도구 체인 정의 |
+{: caption="표 3. 생성된 Java Spring 앱 ./.bluemix/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./chart/<projectname>/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm 차트 |
+| `./chart/<projectname>/values.yaml` | Helm 차트 값 |
+| `./chart/<projectname>/templates/deployment.yaml` | 배치 템플리트 |
+| `./chart/<projectname>/templates/hpa.yaml` | HPA 템플리트 |
+| `./chart/<projectname>/templates/service.yaml` | 서비스 템플리트 |
+{: caption="표 4. 생성된 Java Spring 앱 ./chart/<projectname/templates/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./manifests/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | Kubernetes 서비스 및 배치 yaml |
+{: caption="표 5. 생성된 Java Spring 앱 ./manifests/ 디렉토리의 컨텐츠" caption-side="top"}
 
 ## Liberty
 {: #liberty-project-files}
 
-다음 표에는 생성된 Java Liberty 앱에 포함되는 디렉토리 및 파일이 나열되어 있습니다. 
+다음 표에는 생성된 Java Liberty 앱에 포함되는 디렉토리 및 파일이 나열되어 있습니다.
 
-| 디렉토리 / 파일                                     | 설명                       |
+| `./` 디렉토리                                  | 설명                       |
 |:------------------------------------------------|:------------------------------------------|
-|**`./`**                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pom.xml | Maven pom 파일 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI 구성 옵션 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry 배치 파일 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | `bx dev run`, `bx dev deploy` 및 `docker` 명령에 대한 Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | `bx dev build` 및 `bx dev test`에 대한 Dockerfile |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | 앱 설명 |
-|**`./src/main/java/application/rest/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthApplication.java | 상태 엔드포인트 |
-|**`./src/main/java/application/rest/v1/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example.java | 코드 예 |
-|**`./src/main/liberty/config/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvm.options | JVM 옵션 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jvmbx.options | Java 메트릭 에이전트 구성 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.env | 환경 변수 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.xml | 서버 구성 |
-|**`./src/main/webapp/WEB-INF/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beans.xml | CDI Bean 구성 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ibm-web-ext.xml | IBM 웹 앱 구성 |
-|**`./src/main/test/it/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HealthEndpointTest.java | 테스트 |
-|**`./.bluemix/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud 파이프라인 정의 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud 도구 체인 정의 |
-|**`./chart/<projectname>/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm 차트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm 차트 값 |
-|**`./chart/<projectname>/templates/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | 배치 템플리트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hpa.yaml | HPA 템플리트 |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | 서비스 템플리트 |
-|**`./manifests/`** | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes 서비스 및 배치 yaml |
-{: caption="표 2. 생성된 Java Liberty 앱의 컨텐츠" caption-side="top"}
+| pom.xml | Maven pom 파일 |
+| cli-config.yml | CLI 구성 옵션 |
+| manifest.yml | Cloud Foundry 배치 파일 |
+| Dockerfile | `ibmcloud dev run`, `ibmcloud dev deploy` 및 `docker` 명령에 대한 Dockerfile|
+| Dockerfile-tools | `ibmcloud dev build` 및 `ibmcloud dev test` 명령에 대한 Dockerfile |
+| LICENSE | 라이센스 파일 |
+| README.md | 앱 설명 |
+{: caption="표 6. 생성된 Java Liberty 앱 루트 디렉토리의 컨텐츠" caption-side="top"}
 
+| `./src/main` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| `./src/main/java/application/rest/HealthApplication.java` | 상태 엔드포인트 |
+| `./src/main/java/application/rest/v1/Example.java` | 코드 예 |
+| `./src/main/liberty/config/jvm.options` | JVM 옵션 |
+| `./src/main/liberty/config/jvmbx.options` | Java 메트릭 에이전트 구성 |
+| `./src/main/liberty/config/server.env` | 환경 변수 |
+| `./src/main/liberty/config/server.xml` | 서버 구성 |
+| `./src/main/webapp/WEB-INF/beans.xml` | CDI Bean 구성 |
+| `./src/main/webapp/WEB-INF/ibm-web-ext.xml` | IBM 웹 앱 구성 |
+| `./src/main/test/it/HealthEndpointTest.java` | 테스트 |
+{: caption="표 7. 생성된 Java Liberty 앱 ./src/main/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./.bluemix/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | 컨테이너 빌드 스크립트 |
+| deploy.json | 배치 정보 |
+| kube_deploy.sh | Kubernetes 배치 스크립트 |
+| pipeline.yml | IBM Cloud 파이프라인 정의 |
+| toolchain.yml | IBM Cloud 도구 체인 정의 |
+{: caption="표 8. 생성된 Java Liberty 앱 ./bluemix/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./chart/<projectname>/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm 차트 |
+| `./chart/<projectname>/values.yaml` | Helm 차트 값 |
+| `./chart/<projectname>/templates/deployment.yaml` | 배치 템플리트 |
+| `./chart/<projectname>/templates/hpa.yaml` | HPA 템플리트 |
+| `./chart/<projectname>/templates/service.yaml` | 서비스 템플리트 |
+{: caption="표 9. 생성된 Java Liberty 앱 ./chart/<projectname/ 디렉토리의 컨텐츠" caption-side="top"}
+
+| `./manifests/` 디렉토리 | 설명 |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | Kubernetes 서비스 및 배치 yaml |
+{: caption="표 10. 생성된 Java Liberty 앱 ./manifests/ 디렉토리의 컨텐츠" caption-side="top"}

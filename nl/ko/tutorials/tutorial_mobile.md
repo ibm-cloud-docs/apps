@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -91,7 +91,7 @@ lastupdated: "2018-05-02"
 2. 터미널 프롬프트에서 원하는 로컬 디렉토리로 이동한 후 다음 명령을 실행하십시오.
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 
@@ -153,6 +153,6 @@ lastupdated: "2018-05-02"
 
 1. 마크다운 뷰어에서 `README.md` 파일을 열어 앱을 구성하십시오.
 
-2. Android Studio에서 `BasicProject-Android` 앱을 여십시오. 
+2. Android Studio에서 `BasicProject-Android` 앱을 여십시오.
 
 3. 앱을 실행하십시오.

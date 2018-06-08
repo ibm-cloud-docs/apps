@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 {:new_window: target="_blank"}
@@ -15,19 +15,19 @@ lastupdated: "2018-05-02"
 # 建议的云开发阶段
 {: #development_process}
 
-云应用程序开发者在开发过程中将经历四个基本阶段：入门、编码、交付和管理。这是快速的交互式流程。目标是快速生成最小的可行应用程序，然后使用来自生产应用程序的反馈持续对代码或交付周期进行迭代，直至应用程序让用户满意。
+云应用程序开发者在开发过程中将经历四个基本阶段：入门、编码、交付和管理。目标是快速生成最小的可行应用程序，然后使用来自生产应用程序的反馈持续对代码或交付周期进行迭代，直至应用程序让用户满意。
 {: shortdesc}
 
 ![开发流程](images/dev_flow_overview.png "开发流程") 图 1. 开发过程的各阶段
 
-在某些情况下，“运行”将作为单独的阶段进行调用，但此处我们将其与“交付”和“管理”阶段合并在一起。
+在某些情况下，`运行`将作为单独的阶段进行调用，但此处我们将其与“交付”和“管理”阶段组合在一起。
 
 下面我们来进一步了解在开发流程中使用 {{site.data.keyword.cloud_notm}} 的最佳方式。
 
 ##入门
 {: #get_started}
 
-在 {{site.data.keyword.cloud_notm}} 开发者仪表板中开始构建应用程序，在这些仪表板中，可以选择与用例相关的初学者工具包，然后选择编程语言。{{site.data.keyword.cloud_notm}} 使用初学者工具包中的指示信息来自动供应所需的资源，并创建特定于语言且与运行时无关的应用程序，以作为生产应用程序的基础。要完成“入门”阶段，请在开发者仪表板中单击**部署到云**。一次单击就可创建 DevOps 工具链，并配套提供使用应用程序源代码和部署管道填充的代码存储库。
+在 {{site.data.keyword.cloud_notm}} 开发者仪表板中构建应用程序，在这些仪表板中，可以选择与用例相关的入门模板工具包，然后选择编程语言。{{site.data.keyword.cloud_notm}} 使用入门模板工具包中的指示信息来自动供应所需的资源，并创建特定于语言且与运行时无关的应用程序，以作为生产应用程序的基础。要完成“入门”阶段，请在开发者仪表板中单击**部署到云**。一次单击就可创建 DevOps 工具链，并配套提供使用应用程序源代码和部署管道填充的代码存储库。
 
 ![入门](images/dev_get_started.png "入门") 图 2.“入门”流程
 
@@ -41,7 +41,7 @@ lastupdated: "2018-05-02"
 
 ![本地开发](images/dev_code_locally.png "本地开发") 图 3.“本地开发”流程
 
-{{site.data.keyword.dev_cli_notm}} 的基本功能为 `bx dev build` 和 `bx dev run`，但该 CLI 还提供了更多功能。有关更多详细信息，请参阅 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
+{{site.data.keyword.dev_cli_notm}} 的基本功能为 `ibmcloud dev build` 和 `ibmcloud dev run`，但该 CLI 还提供了更多功能。有关更多详细信息，请参阅 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
 {: tip}
 
 ##在 {{site.data.keyword.cloud_notm}} 中交付和管理
@@ -52,7 +52,7 @@ lastupdated: "2018-05-02"
 要检查 DevOps 管道的状态，请使用 Delivery Pipeline 仪表板。要检查应用程序的总体状态，请查看您帐户的 {{site.data.keyword.cloud_notm}} 仪表板。
 {: tip}
 
-由入门体验生成的工具链包含您进行基于团队的协作式持续交付所需要的基本组件。不过，{{site.data.keyword.cloud_notm}} 提供了一组丰富的 DevOps 服务，您可以将这些服务添加到工具链中，以增强交付、监视、日志记录和警报功能。
+由入门体验生成的工具链包含您进行基于团队的协作式持续交付所需的基本组件。不过，{{site.data.keyword.cloud_notm}} 提供了一组丰富的 DevOps 服务，您可以将这些服务添加到工具链中，以增强交付、监视、日志记录和警报功能。
 
 ![交付和管理](images/dev_deliver_and_manage.png "交付和管理") 图 4.“交付和管理”流程
 

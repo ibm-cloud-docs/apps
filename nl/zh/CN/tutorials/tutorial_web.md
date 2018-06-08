@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -127,14 +127,14 @@ lastupdated: "2018-05-02"
 3. 要在当前应用程序目录中构建应用程序，请输入以下命令：
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 4. 要在当前应用程序目录中运行应用程序，请输入以下命令：
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -164,14 +164,14 @@ lastupdated: "2018-05-02"
 要将应用程序部署到 Cloud Foundry，请输入以下命令：
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 要将应用程序部署到 Kubernetes 集群，请输入以下命令：
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

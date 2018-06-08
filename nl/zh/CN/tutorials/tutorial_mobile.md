@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -91,7 +91,7 @@ lastupdated: "2018-05-02"
 2. 在终端提示符中，导航至所选的本地目录，并运行以下命令。
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 

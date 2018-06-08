@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,36 +18,53 @@ lastupdated: "2018-05-02"
 
 下表列出了生成的 Python 应用程序中包含的常见目录和文件。
 
-| 目录和文件| 描述
+|根目录|描述
 |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;requirements.txt| 必需的 Python 软件包|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setup.py| Python 安装程序脚本|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml| CLI 配置选项|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml| Cloud Foundry 部署文件|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile| 用于 `bx dev run`、`bx dev deploy` 和 `docker` 命令的 Dockerfile|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools| 用于 `bx dev build` 和 `bx dev test` 的 Dockerfile|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE|  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md| 应用程序描述|
-|<b>`./public/`</b>|  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml| 用于描述 REST API 的 Swagger 规范|
-|<b>`./public/`</b>|  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html| Web 应用程序的框架标记|
-|<b>`./server/`</b>| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__init__.py| 将目录标记为 Python 软件包目录|
-|<b>`./tests/`</b>| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app_tests.py| Python 服务器测试用例|
-|<b>`./.bluemix/`</b>| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml| IBM Cloud 管道定义|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml| IBM Cloud 工具链定义|
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml| Helm 图表|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml| Helm 图表值|
-|<b>`./chart/<projectname>/templates/`</b>| |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml| 部署模板|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml| 服务模板|
-{: caption="表 1. 生成的 Python 应用程序的内容" caption-side="top"}
+|requirements.txt|必需的 Python 软件包|
+|setup.py|Python 安装程序脚本|
+|cli-config.yml|CLI 配置选项|
+|manifest.yml|Cloud Foundry 部署文件|
+|Dockerfile|用于 `ibmcloud dev run`、`ibmcloud dev deploy` 和 `docker` 命令的 Dockerfile|
+|Dockerfile-tools|用于 `ibmcloud dev build` 和 `ibmcloud dev test` 的 Dockerfile|
+|LICENSE|许可证文件|
+|README.md|应用程序描述|
+{: caption="表 1. 生成的 Python 应用程序根目录的内容" caption-side="top"}
+
+|`./public/` 目录|描述
+|
+|:------------------------------------------------|:------------------------------------------|
+|swagger.yml|用于描述 REST API 的 Swagger 规范|
+|index.html|Web 应用程序的框架标记|
+{: caption="表 2. 生成的 Python 应用程序 public 目录的内容" caption-side="top"}
+
+|`./server/` 目录|描述
+|
+|:------------------------------------------------|:------------------------------------------|
+|`__init__.py`|将目录标记为 Python 软件包目录|
+{: caption="表 3. 生成的 Python 应用程序 server 目录的内容" caption-side="top"}
+
+|`./tests/` 目录|描述
+|
+|:------------------------------------------------|:------------------------------------------|
+|app_tests.py|Python 服务器测试用例|
+{: caption="表 4. 生成的 Python 应用程序 tests 目录的内容" caption-side="top"}
+
+|`./.bluemix/` 目录|描述
+|
+|:------------------------------------------------|:------------------------------------------|
+|container_build.sh|容器构建脚本|
+|deploy.json|部署信息|
+|kube_deploy.sh|Kubernetes 部署脚本|
+|pipeline.yml|IBM Cloud 管道定义|
+|toolchain.yml|IBM Cloud 工具链定义|
+{: caption="表 5. 生成的 Python 应用程序 bluemix 目录的内容" caption-side="top"}
+
+|`./chart/<projectname>/` 目录|描述
+|
+|:------------------------------------------------|:------------------------------------------|
+|`./chart/<projectname>/Chart.yaml`|Helm 图表|
+|`./chart/<projectname>/values.yaml`|Helm 图表值|
+|`./chart/<projectname>/templates/deployment.yaml`|部署模板|
+|`./chart/<projectname>/templates/service.yaml`|服务模板|
+{: caption="表 6. 生成的 Python 应用程序 chart 目录的内容" caption-side="top"}

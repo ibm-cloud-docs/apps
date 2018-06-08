@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -33,7 +33,7 @@ lastupdated: "2018-03-16"
 开始之前，请下载并安装 {{site.data.keyword.Bluemix_notm}} 命令行界面。
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 Bluemix 命令行界面" /> </a>
+<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 IBM Cloud 命令行界面" /> </a>
 </p>
 
 **限制：**Cygwin 不支持命令行工具。请在非 Cygwin 的命令行窗口中使用命令行工具。
@@ -41,7 +41,7 @@ lastupdated: "2018-03-16"
 
 安装命令行界面后，可以开始执行以下操作：
 
-  1. {: download} 将应用程序的编码下载到新目录，以设置开发环境。
+  1. {: download}将应用程序的编码下载到新目录，以设置开发环境。
 
     <a class="xref" href="http://bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_starter-code.svg" alt="下载应用程序代码" /></a>
 
@@ -49,7 +49,7 @@ lastupdated: "2018-03-16"
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  根据需要对应用程序代码进行更改。例如，如果要使用 {{site.data.keyword.Bluemix}} 样本应用程序，并且应用程序包含 `src/main/webapp/index.html` 文件，那么可以对其进行修改并编辑“Thanks for creating ...”以输入新内容。确保应用程序在本地运行，然后再将其部署回 {{site.data.keyword.Bluemix_notm}}。
+  3.  对应用程序代码进行更改。例如，如果要使用 {{site.data.keyword.Bluemix}} 样本应用程序，并且应用程序包含 `src/main/webapp/index.html` 文件，那么可以对其进行修改并编辑“Thanks for creating ...”以输入新内容。确保应用程序在本地运行，然后再将其部署回 {{site.data.keyword.Bluemix_notm}}。
 
     记录 `manifest.yml` 文件。将应用程序部署回 {{site.data.keyword.Bluemix_notm}} 时，此文件用于确定应用程序的 URL、内存分配、实例数和其他关键参数。
 
@@ -59,18 +59,18 @@ lastupdated: "2018-03-16"
 
   4. 连接并登录到 {{site.data.keyword.Bluemix_notm}}。
 
-  <pre class="pre"><code class="hljs">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
 
-  <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  如果使用的是联合标识，请使用 `-sso` 选项。
+  如果使用的是联合标识，请添加 `-sso` 选项。
 
-  <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
   **注**：如果 `username`、`org_name` 和 `space_name` 的值包含空格，那么必须用单引号或双引号将其括起，例如 `-o "my org"`。
 
-  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `bluemix app push` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关 `bluemix app push` 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
+  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud app push` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关 `ibmcloud app push` 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
 
-  <pre class="pre"><code class="hljs">bluemix app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. 通过浏览到 https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span> 来访问应用程序。

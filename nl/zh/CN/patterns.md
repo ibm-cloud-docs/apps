@@ -51,22 +51,23 @@ BFF 最常使用 REST 模式来公开 API，但您也可以将 BFF 设计为通�
 ## 移动
 {: #mobile}
 
-移动应用程序不同于其他模式，其具有一个重要的客户机端组件。此模式可能包括与移动服务的直接连接，如推送通知、认证和移动分析（称为移动后端即服务 (MBaaS) 模式），也可能包含专用的[服务于前端的后端](#bff)。  
+移动应用程序不同于其他模式，其具有一个重要的客户机端组件。此模式可能包括与移动服务的直接连接，如推送通知、认证和移动分析（称为移动后端即服务或 MBaaS 模式），也可能包含专用的[服务于前端的后端](#bff)。
 
 {{site.data.keyword.cloud_notm}} 针对 iOS Swift、Android 和 Cordova 提供了多个移动初学者工具包。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 开发者仪表板](https://console.bluemix.net/developer/mobile/dashboard)上找到“移动”模式的初学者工具包。
 
 ## 语言
 {: #languages}
 
-{{site.data.keyword.cloud_notm}} 提供的初学者工具包有适用于多种语言和框架的不同版本。例如，云微服务初学者工具包提供了 Node.js 选项，而与数据分析密切相关的初学者工具包可能包含 Python 或 Go。下面将讨论 {{site.data.keyword.cloud_notm}} 初学者工具包中使用的一些常用语言。
+{{site.data.keyword.cloud_notm}} 提供的初学者工具包有适用于多种语言和框架的不同版本。例如，云微服务初学者工具包提供了 Node.js 选项，而与数据分析密切相关的初学者工具包可能包含 Python 或 Go。下面将讨论 {{site.data.keyword.cloud_notm}} 入门模板工具包中使用的一些常用语言。
 
 
-|编程语言| 描述
-| 开发框架|
+|编程语言|描述
+|开发框架|
 |-----|-----|-----|
-|Java| [Java](../runtimes/liberty/getting-started.html) 具有用于构建企业级应用程序的成熟功能。但是 Java 8 中的新功能，与更轻量级的运行时（如 Liberty）和框架（如 Spring Boot）组合使用，使 Java 也能完美适用于构建微服务。此外，Java 还是用于 Android 应用程序的常用编程语言。| Spring、Liberty 和 Android|
-|Swift| [Swift](../runtimes/swift/getting-started.html) 是 Apple 在 2014 年创建的现代编程语言，旨在取代 Objective C，并已于 2015 年 12 月开放源代码。目前，Swift 用于在 Linux 和 macOS 操作系统上通过 x86、ARM 或 z/Architecture 构建 iOS、macOS、Web Service 和系统软件。它以类似于脚本语言的方式进行编写，但经过编译后，能以较低开销获得类似于 C 语言的高性能，因此是适用于云运行时的理想语言。Swift 使用了 Java 中具备的强类型和静态类型系统，但却使用了 JavaScript 中具备的功能样式和异步例程。Swift 的性能超高，源代码使用 LLVM 编译器工具链编译为本机代码，并且可以轻松使用以 C 语言编写的外部系统库。由于 Swift 可用于对客户机端和服务器端应用程序进行编码，因此开发人员需要将功能从客户机轻松迁移到服务器或从服务器迁移到客户机时，可使用 Swift。| Kitura 和 iOS|
-|Node.js| [Node.js](../runtimes/nodejs/getting-started.html) 是一种 JavaScript 运行时，使用由事件驱动的非阻塞性 I/O 模型，从而成为轻量级且高效的运行时，在 Web 应用程序的吞吐量和可扩展性方面以及服务于前端的后端模式和微服务中表现卓越。Node.js 的软件包生态系统 npm 提供对大量开放式源代码模块的访问，同时还提供各种功能来加速应用程序开发。| Express|
+|Java|[Java](../runtimes/liberty/getting-started.html) 具有用于构建企业级应用程序的成熟功能。但是 Java 8 中的新功能，与更轻量级的运行时（如 Liberty）和框架（如 Spring Boot）组合使用，使 Java 也能完美适用于构建微服务。此外，Java 还是用于 Android 应用程序的常用编程语言。|Spring、Liberty 和 Android|
+|Swift|[Swift](../runtimes/swift/getting-started.html) 是 Apple 在 2014 年创建的现代编程语言，旨在取代 Objective C，并已于 2015 年 12 月开放源代码。目前，Swift 用于构建 iOS、macOS、Web Service，以及在使用 x86、ARM 或 z/Architecture 的 Linux 和 macOS 操作系统上构建系统软件。它以类似于脚本语言的方式进行编写，但经过编译后，能以较低开销获得类似于 C 语言的高性能，因此是适用于云运行时的理想语言。Swift 使用了 Java 中具备的强类型和静态类型系统，但却使用了 JavaScript 中具备的功能样式和异步例程。Swift 的性能超高，源代码编译为使用 LLVM 编译器工具链的本机代码，并且可以轻松使用以 C 语言编写的外部系统库。由于 Swift 可用于对客户机端和服务器端应用程序进行编码，因此开发人员需要将功能从客户机轻松迁移到服务器或从服务器迁移到客户机时，可使用 Swift。|Kitura 和 iOS|
+|Node.js|[Node.js](../runtimes/nodejs/getting-started.html) 是一种 JavaScript 运行时，使用由事件驱动的非阻塞性 I/O 模型，从而成为轻量级且高效的运行时，在 Web 应用程序的吞吐量和可扩展性方面以及服务于前端的后端模式和微服务中表现卓越。Node.js 的软件包生态系统 npm 提供对大量开放式源代码模块的访问，同时还提供各种功能来加速应用程序开发。|Express|
 |JavaScript|JavaScript 在 Web 页面中创造交互效果。JavaScript 与 HTML 和 CSS 一起构成了大多数 Web 页面的基础。JavaScript 代码使用 Cordova 插件进行包装时，可以充分利用本机设备功能。具有 Web 技能的开发者可以轻松创建移动应用程序，并且可以视情形在 Web 和移动设备之间复用应用程序代码。|Cordova|
-|Python| [Python](../runtimes/python/getting-started.html) 是一种通用的解释型编程语言，着重于提高可读性。程序员使用 Python 来实现函数时，所使用的代码行数要少于使用其他语言时可能需要的代码行数。利用该语言的特性，可以编写面向对象的代码、功能性代码或命令式代码。Python 通常用于处理自然语言任务。| Flask 和 Django|
+|Python|[Python](../runtimes/python/getting-started.html) 是一种通用的解释型编程语言，着重于提高可读性。程序员使用 Python 来实现函数时，所使用的代码行数要少于使用其他语言时可能需要的代码行数。利用该语言的特性，可以编写面向对象的代码、功能性代码或命令式代码。Python 通常用于处理自然语言任务。|Flask 和 Django|
+
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -107,17 +107,17 @@ lastupdated: "2018-05-02"
 
 ### {{site.data.keyword.dev_cli_short}} 사용
 
-1. 현재 앱 디렉토리의 앱을 빌드하려면 다음 명령을 입력하십시오. 
+1. 현재 앱 디렉토리의 앱을 빌드하려면 다음 명령을 입력하십시오.
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. 현재 앱 디렉토리의 앱을 실행하려면 다음 명령을 입력하십시오.
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -164,14 +164,14 @@ DevOps 도구 체인에서 수동으로 앱을 배치할 수도 있습니다.
 앱을 Cloud Foundry에 배치하려면 다음 명령을 입력하십시오.
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 앱을 Kubernetes 클러스터에 배치하려면 다음 명령을 입력하십시오.
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

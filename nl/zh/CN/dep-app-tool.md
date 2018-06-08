@@ -3,14 +3,14 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-22"
 
 ---
 
-{:new_window: target="_blank"}  
-{:shortdesc: .shortdesc}  
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -25,9 +25,9 @@ lastupdated: "2018-05-14"
 
 开放工具链在 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可用。您可以通过两种方式创建工具链：使用模板创建工具链或通过应用程序创建工具链。要了解有关工具链的更多信息，请参阅[创建工具链](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)。
 
-使用正确配置的工具链，部署应用程序不过是小事一桩：每次合并到存储库中的主分支时，构建/部署周期都会自动启动。
+使用正确配置的工具链，部署应用程序不过是小事一桩：每次合并到存储库中的主分支时，都会自动启动构建/部署周期。
 
-在 {{site.data.keyword.Bluemix}} 开发者仪表板中创建的所有工具链都将配置用于自动部署。
+在 {{site.data.keyword.Bluemix}} 开发者仪表板中创建的所有工具链都将配置为自动部署。
 {: tip}
 
 ## 通过命令行界面部署应用程序
@@ -41,7 +41,7 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 开始之前，请下载并安装 {{site.data.keyword.Bluemix_notm}} 命令行界面。
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 Bluemix 命令行界面" /> </a>
+<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 Bluemix 命令行界面" /></a>
 </p>
 
 **限制：**Cygwin 不支持命令行工具。请在非 Cygwin 的命令行窗口中使用命令行工具。
@@ -49,7 +49,7 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 
 安装命令行界面后，可以开始执行以下操作：
 
-  1. {: download} 将应用程序的编码下载到新目录，以设置开发环境。
+  1. {: download}将应用程序的编码下载到新目录，以设置开发环境。
 
     <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新选项卡或窗口中打开）"></a>
 
@@ -67,18 +67,18 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 
   4. 连接并登录到 {{site.data.keyword.Bluemix_notm}}。
 
-  <pre class="pre"><code class="hljs">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
 
-  <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  如果使用的是联合标识，请使用 `-sso` 选项。
+  如果使用的是联合标识，请添加 `-sso` 选项。
 
-  <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
   **注**：如果 `username`、`org_name` 和 `space_name` 的值包含空格，那么必须用单引号或双引号将其括起，例如 `-o "my org"`。
 
-  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `bluemix app push` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关 `bluemix app push` 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
+  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud app push` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关 `ibmcloud app push` 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
 
-  <pre class="pre"><code class="hljs">bluemix app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. 通过浏览到 https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span> 来访问应用程序。

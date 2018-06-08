@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ lastupdated: "2018-05-02"
 다음 방법으로 {{site.data.keyword.Bluemix_notm}}에서 사용 가능한 모든 서비스를 확인할 수 있습니다.
 
 * {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.Bluemix_notm}} 카탈로그를 봅니다.
-* bluemix 명령행 인터페이스에서 `bluemix service offerings` 명령을 사용합니다.
+* ibmcloud 명령행 인터페이스에서 `ibmcloud service offerings` 명령을 사용합니다. 
 * 사용자 고유 애플리케이션: [GET /v2/services 서비스 API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}를 사용합니다.
 
 애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 이를 선택하면 {{site.data.keyword.Bluemix_notm}}가 서비스를 프로비저닝합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다.
@@ -37,7 +37,7 @@ lastupdated: "2018-05-02"
 
 새 서비스 인스턴스를 요청하려면 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스 또는 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용해야 합니다.
 
-**참고:** 서비스 이름을 지정하는 경우 영문자 또는 숫자만 사용하십시오. 그렇지 않을 경우 예측할 수 없는 결과가 초래될 수 있습니다.
+**참고:** 서비스 이름을 지정할 때는 영문자 또는 숫자만 사용하십시오. 이렇게 하지 않으면 예측할 수 없는 결과가 발생할 수 있습니다. 
 
 {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오.
 
@@ -49,18 +49,18 @@ lastupdated: "2018-05-02"
 
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오.
 
-1. `bluemix service offerings` 명령을 사용하여 필요한 서비스의 이름 및 플랜을 찾으십시오. 
+1. `ibmcloud service offerings` 명령을 사용하여 필요한 서비스의 이름 및 플랜을 찾으십시오. 
 
 2. 다음 명령을 사용하여 서비스 인스턴스를 작성하십시오. 여기서 service_name은 서비스 이름이고, service_plan은 서비스 플랜이며, service_instance는 이 서비스 인스턴스에 사용할 이름입니다.
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. 다음 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인드하십시오. 여기서 *appname*은 애플리케이션의 이름이고 service_instance는 서비스 인스턴스의 이름입니다.
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성할 수 있습니다. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external){: new_window}을 참조하십시오.
@@ -145,10 +145,10 @@ bluemix service bind appname service_instance
 
 사용자 제공 서비스 인스턴스를 작성하고 애플리케이션에 바인딩하려면 다음 단계를 완료하십시오.
 
-1. `bluemix service user-provided-create` 명령을 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오.
-    * 일반적인 사용자 제공 서비스 인스턴스를 작성하려면 **-p** 옵션을 사용하고 매개변수 이름을 쉼표로 구분하십시오. 그러면 `bx` 명령행 인터페이스에서 각 매개변수에 대한 프롬프트를 차례로 표시합니다. 예를 들어, 다음과 같습니다.
+1. `ibmcloud service user-provided-create` 명령을 사용하여 사용자 제공 서비스 인스턴스를 작성하십시오. 
+    * 일반적인 사용자 제공 서비스 인스턴스를 작성하려면 **-p** 옵션을 사용하고 매개변수 이름을 쉼표로 구분하십시오. 그러면 `ibmcloud` 명령행 인터페이스에서 각 매개변수에 대한 프롬프트를 차례로 표시합니다. 예를 들어, 다음과 같습니다.
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -161,17 +161,17 @@ bluemix service bind appname service_instance
     * 써드파티 로그 관리 소프트웨어로 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하고 써드파티 로그 관리 소프트웨어가 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    사용자 제공 서비스 인스턴스의 하나 이상의 매개변수를 업데이트하려면 `bluemix service user-provided-update`를 사용하십시오.
+    사용자 제공 서비스 인스턴스의 매개변수를 하나 이상 업데이트하려면 `ibmcloud service user-provided-update`를 사용하십시오. 
 
     * 일반적인 사용자 제공 서비스 인스턴스를 업데이트하려면 **-p** 옵션을 사용하고 JSON 오브젝트에 매개변수 키 및 값을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -179,15 +179,15 @@ bluemix service bind appname service_instance
     * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. `bluemix service bind` 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인딩하십시오. 예를 들어, 다음과 같습니다.
+2. `ibmcloud service bind` 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인드하십시오. 예를 들어, 다음과 같습니다.
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```
