@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-05-02"
 # Incluindo um serviço em seu app
 {: #add_service}
 
-Se você criou um app usando o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, teve uma chance de incluir recursos da página de visão geral do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.Bluemix_notm}}, fora do contexto de seu app.
+Se você tiver criado um app com o {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, teve uma chance de incluir recursos da página de visão geral do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.Bluemix_notm}}, fora do contexto de seu app.
 {: shortdesc}
 
 É possível solicitar uma instância do recurso e usá-la independentemente de seu app ou incluir a instância de recurso em seu app da página de visão geral do app. É possível provisionar um tipo específico de recurso (um serviço) diretamente do catálogo do {{site.data.keyword.Bluemix_notm}}.
@@ -23,7 +23,7 @@ Se você criou um app usando o {{site.data.keyword.Bluemix_notm}} {{site.data.ke
 É possível ver todos os serviços que estão disponíveis no {{site.data.keyword.Bluemix_notm}} das maneiras a seguir:
 
 * No console do {{site.data.keyword.Bluemix_notm}}. Visualize o catálogo do {{site.data.keyword.Bluemix_notm}}.
-* Na interface da linha de comandos bluemix. Use o comando `bluemix service offerings`.
+* Na interface de linha de comandos ibmcloud. Use o `ibmcloud ofertas de serviço` comando.
 * A partir de seu próprio aplicativo. Use a [API de Serviços GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 É possível selecionar o serviço necessário ao desenvolver
@@ -46,7 +46,7 @@ codifica aplicativos externos ou ferramentas de terceiros para usar os serviços
 
 Para solicitar uma nova instância de serviço, deve-se usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}.
 
-**Nota:** Ao especificar o nome do serviço, evite usar caracteres que não sejam caracteres alfabéticos ou numéricos, pois os resultados poderão ser imprevisíveis.
+**Nota:** ao especificar o nome do serviço, evite caracteres que não sejam alfabéticos ou numéricos, pois os resultados podem ser imprevisíveis.
 
 Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
@@ -59,18 +59,18 @@ mantê-lo inalterado.
 
 Se você usar a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
 
-1. Use o comando `bluemix service offerings` para localizar o nome e o plano do serviço que você requer.
+1. Use o comando `ibmcloud service offerings` para localizar o nome e o plano do serviço que você requer.
 
 2. Use o comando a seguir para criar uma instância de serviço, em que service_name é o nome do serviço, service_plan é o plano do serviço e service_instance é o nome que você deseja usar para essa instância de serviço.
 
 ```
-bluemix service create service_name service_plan service_instance
+Ibmcloud create service_name service_plan service_instance de serviço
 ```
 
 3. Use o comando a seguir para ligar a instância de serviço a um aplicativo, em que *appname* é o nome do aplicativo e service_instance é o nome da instância de serviço.
 
 ```
-bluemix service bind appname service_instance
+Service bind appname service_instance ibmcloud
 ```
 
 É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias
@@ -180,11 +180,10 @@ Você pode ter serviços que são gerenciados fora do {{site.data.keyword.Bluemi
 
 Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um aplicativo, conclua as etapas a seguir:
 
-1. Crie uma instância de serviço fornecido pelo usuário usando o comando `bluemix service user-provided-create`:
-    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. A interface da linha de comandos `bx` solicita você para cada parâmetro sucessivamente. Por
-exemplo:
+1. Crie uma instância de serviço fornecida pelo usuário usando o comando `ibmcloud service user-provided-create`:
+    * Para criar uma instância de serviço fornecida pelo usuário, use a opção **-p** e separe os nomes de parâmetro com vírgulas. A interface da linha de comandos `ibmcloud`, em seguida, solicita cada parâmetro sucessivamente. Por exemplo:
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -198,18 +197,18 @@ exemplo:
 exemplo:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    Se você desejar atualizar um ou mais parâmetros da instância de serviço fornecida pelo usuário, use o `bluemix service user-provided-update`.
+    Se desejar atualizar um ou mais parâmetros da instância de serviço fornecida pelo usuário, use o `ibmcloud service user-provided-update`.
 
     * Para atualizar uma instância de serviço fornecido pelo usuário geral, use a opção **-p** e especifique as chaves e os valores de parâmetro em um objeto JSON. Por
 exemplo:
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -219,16 +218,16 @@ gerenciamento de log de terceiro, use a opção `-l`. Por
 exemplo:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Ligue a instância de serviço ao seu aplicativo usando o comando `bluemix service bind`. Por
+2. Bind the service instance to your application by using the `ibmcloud service bind` command. Por
 exemplo:
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

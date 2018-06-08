@@ -2,14 +2,14 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
 # O que torna um aplicativo bom?
 {: #best-practice}
 
-Construa seu app no {{site.data.keyword.Bluemix_notm}} para aproveitar todas as coisas que a nuvem tem para oferecer. Estas melhores práticas podem ajudá-lo a assegurar que os seus apps estejam prontos para nuvem.
+Construa seu app no {{site.data.keyword.Bluemix_notm}} para aproveitar todas as coisas que a nuvem oferece. Essas melhores práticas podem ajudá-lo a assegurar que seus apps estão prontos para a nuvem.
 {:shortdesc}
 
 ## Construa seu app para ser independente de topologia
@@ -18,9 +18,9 @@ Em um ambiente não de nuvem, seu app pode usar uma topologia de implementação
 
 Construa seu app para ser o mais genérico e stateless possível para evitar que seu app seja afetado pelas mudanças de escalabilidade.
 
-## Suponha que o sistema de arquivos local não seja permanente
+## Suponha que o Sistema de arquivos local não seja permanente
 
-Como uma instância do app pode ser movida, excluída ou duplicada a qualquer momento na nuvem, não confie nos arquivos que são gravados no sistema de arquivos. Se um app usa o sistema de arquivos local como um cache de informações usadas frequentemente, incluindo logs do app, as informações são perdidas quando a instância é encerrada e reiniciada em um local diferente ou uma VM diferente.
+Como uma instância do app pode ser movida, excluída ou duplicada na nuvem, não confie nos arquivos gravados no sistema de arquivos. Se um app usa o sistema de arquivos local como um cache de informações usadas frequentemente, incluindo logs do app, as informações são perdidas quando a instância é encerrada e reiniciada em um local diferente ou uma VM diferente.
 
 É possível armazenar informações em um serviço, como um banco de dados SQL ou NoSQL em vez do sistema de arquivos local. Em um ambiente de nuvem dinâmica, também é crítico que seus logs estejam disponíveis em um serviço que prolongue as instâncias do app nas quais os logs são gerados.
 
@@ -28,7 +28,7 @@ Como uma instância do app pode ser movida, excluída ou duplicada a qualquer mo
 
 O estado de seu sistema é definido pelos seus bancos de dados e pelo armazenamento compartilhado e não por instância do app individual em execução. O stateful de qualquer classificação limita a escalabilidade de um app. Tente minimizar o impacto do estado da sessão armazenando-a em um local centralizado no servidor.
 
-Se não for possível eliminar o estado de sessão completamente, envie-o por push para um armazenamento altamente disponível que seja externo ao seu servidor de aplicativos. Os armazenamentos incluem IBM WebSphere Extreme Scale, Redis ou Memcached ou um banco de dados externo.
+Se não for possível eliminar o estado de sessão completamente, envie-o por push para um armazenamento altamente disponível que seja externo ao seu servidor de aplicativos. Os armazenamentos incluem o IBM WebSphere eXtreme Scale, o Redis ou o Memcached ou um banco de dados externo.
 
 ## Use um registro de serviço externo para resolver terminais em serviço
 
@@ -36,7 +36,7 @@ Não presuma que os serviços que seu app usa sejam nomes de hosts ou endereços
 
 A extração de dependências específicas do ambiente em um conjunto de arquivos de propriedades é uma melhoria, mas ainda é inadequada. A melhor prática é usar um registro de serviço externo para resolver terminais em serviço ou delegar a função de roteamento inteira para um barramento de serviço ou um balanceador de carga com um nome virtual.
 
-## Construa seu app usando uma arquitetura multiregion
+## Construa seu app usando uma arquitetura de várias regiões
 {: #multiregion}
 
 Execute múltiplas instâncias para evitar o tempo de inatividade em uma única região, mas para entregar um aplicativo ainda mais robusto, considere uma arquitetura multiregion.

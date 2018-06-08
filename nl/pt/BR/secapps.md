@@ -96,7 +96,7 @@ Para fazer upload de um certificado para seu aplicativo:
 
 2. Selecione seu app para abrir a visualização de detalhes do app.
 
-3. Selecione o menu suspenso **Rotas** e, em seguida, para sua organização, na coluna de ação, selecione **Domínios** no menu de ações adicionais.
+3. Selecione a lista suspensa **Rotas** e, em seguida, para a sua organização, na coluna de ação, selecione **Domínios** no menu Ações adicional.
 
 3. Para seu domínio customizado, clique em **Fazer upload de
 certificado**.

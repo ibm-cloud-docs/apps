@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -93,7 +93,7 @@ Comece a trabalhar com seu app transferido por download:
 2. No prompt do Terminal, navegue para um diretório local de sua preferência e execute o comando a seguir.
 
 	```
-	bx dev create
+	Ibmcloud dev criar
 	```
 	{: codeblock}
 

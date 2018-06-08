@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -43,7 +43,7 @@ O catálogo do {{site.data.keyword.Bluemix_notm}} lista os recursos da infraestr
 
 Cada aplicativo vem com uma seção de introdução que ajuda você a obter todos os softwares e conteúdo necessários para começar a trabalhar.
 
-Em seu painel, clique em seu aplicativo e, em seguida, clique em **Introdução**, que pode ajudá-lo a obter o software necessário para desenvolver seu aplicativo, apontar-lhe o código-fonte e ajudá-lo a implementar seu aplicativo pela primeira vez.
+No painel, clique em seu app e, em seguida, clique em **Introdução**, que pode ajudá-lo a obter o software necessário para desenvolver seu app, apontar-lhe o código-fonte e ajudá-lo a implementar seu app pela primeira vez.
 
 ## Próximas Etapas
 {: #next}

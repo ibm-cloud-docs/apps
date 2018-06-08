@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-05-02"
 # Tutorial Introdução
 {: #create}
 
-No {{site.data.keyword.Bluemix}}, é possível construir aplicativos móveis e da web no nível corporativo e aproveitar as extensões de nuvem hospedadas pelo {{site.data.keyword.Bluemix_notm}}. É possível usar o console do {{site.data.keyword.Bluemix}} e as ferramentas de linha de comandos para construir, executar e implementar seus aplicativos. É possível começar a fazer isso de uma destas duas maneiras: criar um app com um kit do iniciador que gerencia o processo para você ou, se souber o que deseja, construir seu app com os recursos necessários.
+No {{site.data.keyword.Bluemix}}, é possível construir aplicativos móveis e da web no nível corporativo e aproveitar as extensões de nuvem hospedadas pelo {{site.data.keyword.Bluemix_notm}}. É possível usar o console e as ferramentas de linha de comandos do {{site.data.keyword.Bluemix}} para construir, executar e implementar seus apps. É possível iniciar de duas maneiras: criar um app com um kit do iniciador que gerencie o processo para você ou, se você souber o que deseja, construir seu app com os recursos necessários.
 {:shortdesc}
 
 É possível usar um kit do iniciador para iniciar rapidamente o seu app e prepará-lo para desenvolvimento futuro. Escolha um kit do iniciador e uma linguagem de programação, crie um app e, em seguida, configure uma cadeia de ferramentas do DevOps para implementar automaticamente seu app. Também é possível fazer download do código para inspeção imediata.
@@ -34,9 +34,9 @@ Os kits do iniciador estão disponíveis em várias categorias, incluindo:
 
 [Inscreva-se](https://console.bluemix.net){: new_window} para uma conta do {{site.data.keyword.cloud_notm}}. Insira seu e-mail, nome, empresa, região e número do telefone.
 
-Um cartão de crédito não é necessário para a inscrição em uma conta grátis, mas se você inserir um, terá acesso a mais recursos e será fácil entender completamente tudo que o {{site.data.keyword.cloud_notm}} tem a oferecer.
+Você não precisa de um cartão de crédito para se inscrever para uma conta grátis, mas inserir um cartão de crédito dá a você acesso a mais recursos e facilita o entendimento completo de todas as ofertas do {{site.data.keyword.cloud_notm}}.
 
-## Etapa 1: criar um app
+## Etapa 1: Criar um app
 {: #project}
 
 1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) > **Apps da web**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -61,7 +61,7 @@ Seu app não está em execução. O ícone vermelho indica que o app está inici
 
 É possível visualizar mais informações sobre um app clicando no nome dele em seu painel. Em seguida, é possível ver a página Visão geral do app.
 
-Na página Visão geral de apps, depois que um app é implementado, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória que é usada pelo app. Para aplicativos da web, o {{site.data.keyword.Bluemix_notm}} não escala automaticamente seu app com base em sua carga, então é necessário gerenciar isso sozinho.
+Na página Visão geral dos apps, após a implementação de um app, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória usada pelo app. Para aplicativos da web, o {{site.data.keyword.Bluemix_notm}} não escala automaticamente seu app com base em sua carga, então é necessário gerenciar isso sozinho.
 
 Se uma atualização é feita, os apps podem ser reimplementados. O mecanismo para atualizar o app é o mesmo mecanismo que é usado para implementá-lo originalmente. {{site.data.keyword.Bluemix_notm}} para todas as instâncias em execução
 e as substitui por novas instâncias automaticamente.

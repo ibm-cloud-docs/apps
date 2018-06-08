@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-05-02"
 # Criando um microsserviço
 {: #tutorial}
 
-E possível usar um app por meio de um Microservice Basic Starter. Use esses iniciadores para construir um microsserviço de backend para Node, Java ou Python com uma opção de estruturas da web. É possível ver como instalar as ferramentas necessárias, construir e executar o app localmente e implementá-lo na nuvem.
+É possível criar um app por meio de um Iniciador básico de microsserviço. Use esses iniciadores para construir um microsserviço de backend para Node, Java ou Python com uma opção de estruturas da web. É possível ver como instalar as ferramentas necessárias, construir e executar o app localmente e implementá-lo na nuvem.
 {: shortdesc}
 
 ## Etapa 1: instalar as ferramentas
@@ -112,14 +112,14 @@ Inclua seu próprio código, a compilação e execute o app. É possível execut
 1. Para construir o app no diretório de app atual, insira o comando a seguir:
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. Para executar o app no diretório de app atual, insira o comando a seguir:
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -153,14 +153,14 @@ Se você optar por não usar uma cadeia de ferramentas, também será possível 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 
