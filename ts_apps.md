@@ -606,7 +606,7 @@ Use one of the following methods, depending on the cause of the problem:
  }
     ```
 
-For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "External link icon"){: new_window}.
+For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
 
 ## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse
