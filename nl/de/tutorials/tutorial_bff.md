@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -26,7 +26,7 @@ Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/l
 ## Schritt 2: App erstellen
 {: #create-devex}
 
-Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}. 
+Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}.
 
 1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus. Wechseln Sie für eine Node.js-Anwendung beispielsweise zu **Express.js Backend** und klicken Sie auf **Starter-Kit auswählen**.
 
@@ -47,7 +47,7 @@ Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.de
 ## Optional: Ressourcen hinzufügen
 {: #add-services}
 
-1. Wählen Sie in der Ansicht **App-Details** die Option **Ressource hinzufügen** aus. 
+1. Wählen Sie in der Ansicht **App-Details** die Option **Ressource hinzufügen** aus.
 
 2. Wählen Sie den Typ des gewünschten Service aus. Wählen Sie im Rahmen dieses Lernprogramms **Daten** > **Weiter** > **Cloudant NoSQL DB** > **Weiter** aus.
 
@@ -79,13 +79,13 @@ Wenn Sie im vorherigen Schritt eine Toolchain erstellt haben, wurde ein Git-Repo
 
 2. Klicken Sie auf **Toolchain anzeigen**.
 
-3. Klicken Sie auf die Karte **Git** unter der Überschrift **CODE**, um Ihr Repository zu öffnen, wo Sie Quellcode anzeigen und Ihre App klonen können. 
+3. Klicken Sie auf die Karte **Git** unter der Überschrift **CODE**, um Ihr Repository zu öffnen, wo Sie Quellcode anzeigen und Ihre App klonen können.
 
-Falls keine Toolchain aktiviert ist, können Sie auf Ihren Code zugreifen, indem Sie die Quelle direkt in der Ansicht 'App-Details' herunterladen. 
+Falls keine Toolchain aktiviert ist, können Sie auf Ihren Code zugreifen, indem Sie die Quelle direkt in der Ansicht 'App-Details' herunterladen.
 
 1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
-2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen. 
+2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen.
 
 ## Schritt 4: Arbeit an Ihrer App beginnen
 {: #code}
@@ -107,17 +107,17 @@ Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie 
 
 ### {{site.data.keyword.dev_cli_short}} verwenden
 
-1. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis zu erstellen: 
+1. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis zu erstellen:
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
-2. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis auszuführen: 
+2. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis auszuführen:
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -148,7 +148,7 @@ Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie 
 ### Bereitstellung mithilfe einer Toolchain
 Es gibt verschiedene Wege, Ihre App in {{site.data.keyword.cloud_notm}} bereitzustellen, aber die Verwendung einer DevOps-Toolchain ist die beste Möglichkeit, Produktions-Apps zu implementieren.  Mit einer DevOps-Toolchain können Sie Bereitstellungen in verschiedenen Umgebungen einfach automatisieren und schnell Überwachungs-, Protokollierungs- und Alert-Services hinzufügen, die Sie dabei unterstützen, Ihre immer in Entwicklung begriffene App zu verwalten.
 
-Bei einer ordnungsgemäß konfigurierten Toolchain startet ein Erstellen-Bereitstellen-Zyklus automatisch mit jedem Zusammenführvorgang mit dem Masterzweig in Ihrem Repository. Alle in einem {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains werden für die automatische Bereitstellung konfiguriert.
+Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus. Alle in einem {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains werden für die automatische Bereitstellung konfiguriert.
 
 Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
 
@@ -164,14 +164,14 @@ Wenn Sie keine Toolchain verwenden, können Sie die Bereitstellung auch mithilfe
 Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

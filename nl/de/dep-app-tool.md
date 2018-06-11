@@ -3,14 +3,14 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-14"
+lastupdated: "2018-05-22"
 
 ---
 
-{:new_window: target="_blank"}  
-{:shortdesc: .shortdesc}  
-{:screen: .screen}  
-{:codeblock: .codeblock}  
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
 
@@ -25,9 +25,9 @@ Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittst
 
 Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
-Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Zusammenführvorgang mit dem Masterzweig ihn Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
+Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
 
-Alle in einem {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolchains werden für die automatische Bereitstellung konfiguriert.
+Alle über ein {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
 {: tip}
 
 ## Apps mit der Befehlszeilenschnittstelle bereitstellen
@@ -41,7 +41,7 @@ Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.k
 Laden Sie zunächst die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunter und installieren Sie sie.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt="Bluemix-Befehlszeilenschnittstelle herunterladen" /> </a>
+<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt="Bluemix-Befehlszeilenschnittstelle herunterladen" /></a>
 </p>
 
 **Einschränkung:** Das Befehlszeilentool wird von Cygwin nicht unterstützt. Verwenden Sie das Tool in einem anderen Befehlszeilenfenster als dem Cygwin-Befehlszeilenfenster.
@@ -67,18 +67,18 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   4. Stellen Sie eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her und melden Sie sich an.
 
-  <pre class="pre"><code class="hljs">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span></code></pre>
 
-  <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">Benutzername</var> -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">Benutzername</var> -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var></code></pre>
 
-  Wenn Sie eine eingebundene ID nutzen, verwenden Sie die Option `-sso`.
+  Wenn Sie eine eingebundene ID nutzen, fügen Sie die Option `-sso` hinzu.
 
-  <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
 
   **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
 
-  5. Führen Sie unter <var class="keyword varname">neues_Verzeichnis</var> mit dem Befehl `bluemix app push` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen zum Befehl `bx app push` finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
+  5. Führen Sie unter <var class="keyword varname">neues_Verzeichnis</var> mit dem Befehl `ibmcloud app push` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen zum Befehl `ibmcloud app push` finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
 
-  <pre class="pre"><code class="hljs">bluemix app push <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 
   6. Greifen Sie auf Ihre App zu, indem Sie zu https://<var class="keyword varname" data-hd-keyref="app_url">App-URL</var>.<span class="keyword" data-hd-keyref="APPDomain">App-Domänenname</span> navigieren.

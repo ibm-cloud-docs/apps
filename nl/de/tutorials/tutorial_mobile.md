@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -69,7 +69,7 @@ Sie können eine App mithilfe einer der folgenden Methoden erstellen:
 
 1. Wählen Sie Ihre App auf der Seite **Apps** aus.
 
-2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen. 
+2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen.
 
 ### Arbeit an Ihrer App beginnen
 {: #code}
@@ -91,7 +91,7 @@ Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
 2. Navigieren Sie in Ihrer Terminal-Eingabeaufforderung zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus.
 
 	```
-	bx dev create
+	ibmcloud dev create
 	```
 	{: codeblock}
 
@@ -127,7 +127,7 @@ Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
 
 Falls Sie ausgewählt haben, Cordova als Ihre Implementierungssprache zu verwenden, befolgen Sie diese Anweisungen.
 
-1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren. 
+1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
 
 2. Öffnen Sie Ihre App `platforms/ios` in Xcode.
 
@@ -140,9 +140,9 @@ Verwenden Sie diesen Abschnitt, wenn Sie Cordova als Plattform Ihrer mobilen App
 
 1. Extrahieren Sie die Datei `BasicProject-Cordova.zip`.
 
-2. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren. 
+2. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
 
-3. Öffnen Sie Ihre App `platforms/android` in Android Studio. 
+3. Öffnen Sie Ihre App `platforms/android` in Android Studio.
 
 4. Führen Sie Ihre App aus.
 
@@ -151,8 +151,8 @@ Verwenden Sie diesen Abschnitt, wenn Sie Cordova als Plattform Ihrer mobilen App
 
 Verwenden Sie diesen Abschnitt, wenn Sie Android als Plattform Ihrer mobilen App verwenden möchten.
 
-1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren. 
+1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
 
-2. Öffnen Sie Ihre App `BasicProject-Android` in Android Studio. 
+2. Öffnen Sie Ihre App `BasicProject-Android` in Android Studio.
 
 3. Führen Sie Ihre App aus.

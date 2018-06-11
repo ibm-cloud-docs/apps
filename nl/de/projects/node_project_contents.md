@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,39 +16,46 @@ lastupdated: "2018-05-02"
 Für Node.js-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden. 
 {:shortdesc}
 
-In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einer generierten Node.js-App enthalten sind. 
+In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einer generierten Node.js-App enthalten sind.
 
-| Verzeichnis und Datei                                     | Beschreibung                       |
+| Stammverzeichnis                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package.json | Metadatendatei |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI-Konfigurationsoptionen |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile für Befehle `bx dev run`, `bx dev deploy` und `docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile für `bx dev build` und `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | App-Service-Konfiguration für Docker Compose |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Webpack-Konfiguration für buildbezogene Informationen |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung der App |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Swagger-Spezifikation zum Beschreiben von REST-APIs |
-|<b>`./public/index.html`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html | Gerüst-Markup für Webanwendungen |
-|<b>`./public/server/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.js | Serverimplementierungsdatei |
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | Integrationstest für Express-Server |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud-Pipelinedefinition |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud-Toolchaindefinition |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm-Diagramm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm-Diagrammwerte |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Bereitstellungsvorlage |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Servicevorlage |
-{: caption="Tabelle 1. Inhalte einer generierten Node.js-App" caption-side="top"}
+|package.json | Metadatendatei |
+|cli-config.yml | CLI-Konfigurationsoptionen |
+|manifest.yml | Cloud Foundry-Bereitstellungsdatei |
+|Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+|Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
+|docker-compose.yml | App-Service-Konfiguration für Docker Compose |
+|webpack.config.js | Webpack-Konfiguration für buildbezogene Informationen |
+| LICENSE | Lizenzdatei |
+|README.md | Beschreibung der App |
+{: caption="Tabelle 1. Inhalt des Stammverzeichnisses einer generierten Node.js-App" caption-side="top"}
 
+| Verzeichnis `./public/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| `./public/swagger.yml` | Swagger-Spezifikation zum Beschreiben von REST-APIs |
+| `./public/index.html` | Gerüst-Markup für Webanwendungen |
+|`./public/server/server.js` | Serverimplementierungsdatei |
+{: caption="Tabelle 2. Inhalt des öffentlichen Verzeichnisses einer generierten Node.js-App" caption-side="top"}
+
+| Verzeichnis `./test/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| test-server.js | Integrationstest für Express-Server |
+{: caption="Tabelle 3. Inhalt des Testverzeichnisses einer generierten Node.js-App" caption-side="top"}
+
+| Verzeichnis `./.bluemix/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Container-Build-Script |
+| deploy.json | Bereitstellungsinformationen |
+| kube_deploy.sh | Kubernetes-Bereitstellungsscript |
+| pipeline.yml | IBM Cloud-Pipelinedefinition |
+| toolchain.yml | IBM Cloud-Toolchaindefinition |
+{: caption="Tabelle 4. Inhalt des Bluemix-Verzeichnisses einer generierten Node.js-App" caption-side="top"}
+
+| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
+| `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |
+| `./chart/<projectname>/templates/deployment.yaml` | Bereitstellungsvorlage |
+| `./chart/<projectname>/templates/service.yaml` | Servicevorlage |
+{: caption="Tabelle 5. Inhalt des Diagrammverzeichnisses einer generierten Node.js-App" caption-side="top"}

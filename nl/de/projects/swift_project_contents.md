@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -16,41 +16,55 @@ lastupdated: "2018-05-02"
 Für Swift-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden. 
 {:shortdesc}
 
-In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einer generierten Swift-App enthalten sind. 
+In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgelistet, die in einer generierten Swift-App enthalten sind.
 
-| Verzeichnis und Datei                                     | Beschreibung                       |
+| Stammverzeichnis                                     | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Package.swift| Swift-Abhängigkeitsdefinitionsdatei |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | CLI-Konfigurationsoptionen |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Dockerfile für Befehle `bx dev run`, `bx dev deploy` und `docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Dockerfile für `bx dev build` und `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Beschreibung der App |
-|<b>`./Sources/Application/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Application.swift | Swift-Anwendungsdatei |
-|<b>`./Sources/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;main.swift | Swift-Hauptdatei |
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | Dienstprogrammmethoden für das Testen mit Kitura |
-|<b>`./Tests/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinuxMain.swift | Dienstprogramm für das Testen unter Linux |
-|<b>`./Tests/ApplicationTests`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RouteTests.swift | Datei mit Testfällen |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | IBM Cloud-Pipelinedefinition |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | IBM Cloud-Toolchaindefinition |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Helm-Diagramm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Helm-Diagrammwerte |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Bereitstellungsvorlage |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Servicevorlage |
-|<b>`./manifests/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube.deploy.yml | Kubernetes-Service & Bereitstellungs-YAML |
-{: caption="Tabelle 1. Inhalte einer generierten Swift-App" caption-side="top"}
+|Package.swift| Swift-Abhängigkeitsdefinitionsdatei |
+|cli-config.yml | CLI-Konfigurationsoptionen |
+|manifest.yml | Cloud Foundry-Bereitstellungsdatei |
+|Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+|Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
+| LICENSE | Lizenzdatei |
+|README.md | Beschreibung der App |
+{: caption="Tabelle 1. Inhalt des Stammverzeichnisses einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./Sources/Application/` | Beschreibung  |
+|:------------------------------------------------|:------------------------------------------|
+| `./Sources/Application/Application.swift` | Swift-Anwendungsdatei |
+| `./Sources/<projectname>/main.swift` | Swift-Hauptdatei |
+{: caption="Tabelle 2. Inhalt des Verzeichnisses /Sources/Application/ einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./test/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+|test-server.js | Dienstprogrammmethoden für das Testen mit Kitura |
+{: caption="Tabelle 3. Inhalt des Testverzeichnisses einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./Tests/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| `./Tests/LinuxMain.swift` | Dienstprogramm für das Testen unter Linux |
+| `./Tests/ApplicationTests>/RouteTests.swift` | Datei mit Testfällen |
+{: caption="Tabelle 4. Inhalt des Testverzeichnisses einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./.bluemix/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Container-Build-Script |
+| deploy.json | Bereitstellungsinformationen |
+| kube_deploy.sh | Kubernetes-Bereitstellungsscript |
+| pipeline.yml | IBM Cloud-Pipelinedefinition |
+| toolchain.yml | IBM Cloud-Toolchaindefinition |
+{: caption="Tabelle 5. Inhalt des Bluemix-Verzeichnisses einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
+| `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |
+| `./chart/<projectname>/templates/deployment.yaml` | Bereitstellungsvorlage |
+| `./chart/<projectname>/templates/service.yaml` | Servicevorlage |
+{: caption="Tabelle 6. Inhalt des Diagrammverzeichnisses einer generierten Swift-App" caption-side="top"}
+
+| Verzeichnis `./manifests/` | Beschreibung |
+|:------------------------------------------------|:------------------------------------------|
+| kube.deploy.yml | Kubernetes-Service & Bereitstellungs-YAML |
+{: caption="Tabelle 7. Inhalt des Manifestverzeichnisses einer generierten Swift-App" caption-side="top"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2018-05-02"
 # Lernprogramm 'Einführung'
 {: #create}
 
-In {{site.data.keyword.Bluemix}} können Sie auf Unternehmen abgestimmte Mobil- und Webanwendungen erstellen und von {{site.data.keyword.Bluemix_notm}} gehostete Clouderweiterungen nutzen. Mit der {{site.data.keyword.Bluemix}}-Konsole und den Befehlszeilentools können Sie Ihre Apps erstellen, ausführen und bereitstellen. Sie können auf eine der folgenden Arten beginnen: Eine App mit einem Starter-Kit erstellen, das den Prozess für Sie verwaltet, oder, wenn Sie wissen, was Sie möchten, Ihre App mit den erforderlichen Ressourcen erstellen.
+In {{site.data.keyword.Bluemix}} können Sie auf Unternehmen abgestimmte Mobil- und Webanwendungen erstellen und von {{site.data.keyword.Bluemix_notm}} gehostete Clouderweiterungen nutzen. Mit der {{site.data.keyword.Bluemix}}-Konsole und den Befehlszeilentools können Sie Ihre Apps erstellen, ausführen und bereitstellen. Sie können auf eine der folgenden Arten beginnen: Sie erstellen mit einem Starter-Kit eine App, die den Prozess für Sie verwaltet, oder - sofern Sie wissen, was Sie möchten - Sie erstellen Ihre App mit den benötigten Ressourcen.
 {:shortdesc}
 
-Mit einem Starter-Kit können Sie Ihre App schnell zum Einsatz bringen und auf zukünftige Entwicklungen vorbereiten. Wählen Sie ein Starter-Kit und eine Programmiersprache aus, erstellen Sie eine App und richten Sie dann eine DevOps-Toolchain ein, um Ihre App automatisch bereitzustellen. Sie können den Code auch für eine sofortige Überprüfung herunterladen. 
+Mit einem Starter-Kit können Sie Ihre App schnell zum Einsatz bringen und auf zukünftige Entwicklungen vorbereiten. Wählen Sie ein Starter-Kit und eine Programmiersprache aus, erstellen Sie eine App und richten Sie dann eine DevOps-Toolchain ein, um Ihre App automatisch bereitzustellen. Sie können den Code auch für eine sofortige Überprüfung herunterladen.
 
 Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 
@@ -34,7 +34,7 @@ Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 
 [Registrieren Sie sich](https://console.bluemix.net){: new_window} für ein {{site.data.keyword.cloud_notm}}-Konto. Geben Sie Ihre E-Mail-Adresse, Ihren Namen, Ihr Unternehmen, Ihre Region und Telefonnummer ein.
 
-Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte, aber durch die Angabe einer Kreditkarte erhalten Sie Zugriff auf weitere Ressourcen und können einfacher nachvollziehen, was {{site.data.keyword.cloud_notm}} alles zu bieten hat.
+Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte, aber durch die Angabe einer Kreditkarte erhalten Sie Zugriff auf weitere Ressourcen und können einfacher nachvollziehen, was {{site.data.keyword.cloud_notm}} alles bietet.
 
 ## Schritt 1: App erstellen
 {: #project}
@@ -43,12 +43,12 @@ Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte, a
 
 2. Klicken Sie im Abschnitt **Im Web beginnen** auf **Einstieg**.
 
-3. Wählen Sie das gewünschte Starter-Kit aus, lesen Sie die Details und klicken Sie auf **Erstellen**. 
+3. Wählen Sie das gewünschte Starter-Kit aus, lesen Sie die Details und klicken Sie auf **Erstellen**.
 
   Um anzuzeigen, was im Starter-Kit enthalten ist, erweitern Sie die Kachel im Dashboard 'App-Service-Starter-Kits'.
   {: tip}
 
-4. Benennen Sie Ihre App, wählen Sie Ihre Sprache aus und klicken Sie auf **Erstellen**. 
+4. Benennen Sie Ihre App, wählen Sie Ihre Sprache aus und klicken Sie auf **Erstellen**.
 
 Großartiger Start! Sie haben soeben eine App erstellt.
 

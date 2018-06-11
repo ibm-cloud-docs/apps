@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -23,7 +23,7 @@ Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App v
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren Services anzuzeigen:
 
 * Über die {{site.data.keyword.Bluemix_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
-* Über die Befehlszeilenschnittstelle 'bluemix'. Verwenden Sie hier den Befehl `bluemix service offerings`.
+* Über die Befehlszeilenschnittstelle 'ibmcloud'. Verwenden Sie hier den Befehl `ibmcloud service offerings`.
 * Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Sobald Sie ihn ausgewählt haben, stellt {{site.data.keyword.Bluemix_notm}} den Service bereit. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
@@ -41,8 +41,7 @@ zur Verwendung von {{site.data.keyword.Bluemix_notm}}-Services codieren. Weitere
 
 Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
 
-**Hinweis:** Bei der Angabe des Servicenamens sollten Sie nur alphabetische oder numerische Zeichen verwenden, da es sonst zu unvorhersehbaren
-Ergebnissen kommen kann.
+**Hinweis:** Bei der Angabe des Servicenamens sollten Sie nur alphabetische oder numerische Zeichen verwenden, da es sonst zu unvorhersehbaren Ergebnissen kommen kann.
 
 Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 
@@ -56,20 +55,20 @@ anschließend auf **Erstellen**.
 
 Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 
-1. Verwenden Sie den Befehl `bluemix service offerings`, um den Namen und den Plan des benötigten Service zu suchen. 
+1. Verwenden Sie den Befehl `ibmcloud service offerings`, um den Namen und den Plan des benötigten Service zu suchen.
 
 2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'service_name' der Name des Service, 'service_plan' der Plan
 des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
 
 ```
-bluemix service create service_name service_plan service_instance
+ibmcloud service create service_name service_plan service_instance
 ```
 
 3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist *appname* der Name der Anwendung und 'service_instance' der Name
 der Serviceinstanz.
 
 ```
-bluemix service bind appname service_instance
+ibmcloud service bind appname service_instance
 ```
 
 Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
@@ -154,10 +153,10 @@ Sie verfügen möglicherweise über Services, die außerhalb von {{site.data.key
 
 Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gestellte Serviceinstanz zu erstellen und an eine Anwendung zu binden:
 
-1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie den Befehl `bluemix service user-provided-create` verwenden:
-    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die `bx`-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
+1. Erstellen Sie eine vom Benutzer zur Verfügung gestellte Serviceinstanz, indem Sie den Befehl `ibmcloud service user-provided-create` verwenden:
+    * Verwenden Sie zum Erstellen einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und trennen Sie die Parameternamen durch Kommas. Die `ibmcloud`-Befehlszeilenschnittstelle fordert Sie dann nacheinander zum Angeben der einzelnen Parameter auf. Beispiel:
         ```
-        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
+        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -170,17 +169,17 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option `-l` und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz aktualisieren möchten, verwenden Sie den Befehl `bluemix service user-provided-update`.
+    Wenn Sie einen oder mehrere Parameter der vom Benutzer zur Verfügung gestellten Serviceinstanz aktualisieren möchten, verwenden Sie den Befehl `ibmcloud service user-provided-update`.
 
     * Verwenden Sie zum Aktualisieren einer allgemeinen, vom Benutzer zur Verfügung gestellten Serviceinstanz die Option **-p** und geben Sie die Parameterschlüssel und -werte in einem JSON-Objekt an. Beispiel:
 
         ```
-        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -188,15 +187,15 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
     * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option `-l`. Beispiel:
 
         ```
-        bluemix service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Binden Sie die Serviceinstanz mit dem Befehl `bluemix service bind` an Ihre Anwendung. Beispiel:
+2. Binden Sie die Serviceinstanz mit dem Befehl `ibmcloud service bind` an Ihre Anwendung. Beispiel:
 
 	```
-	bluemix service bind myapp testups1
+	ibmcloud service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```

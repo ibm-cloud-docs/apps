@@ -86,11 +86,11 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 2. Wählen Sie Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Wählen Sie das Pulldown-Menü **Routen** aus und wählen Sie dann für Ihre Organisation in der Spalte mit den Aktionen den Eintrag **Domänen** im zusätzlichen Aktionsmenü aus. 
+3. Wählen Sie die Dropdown-Liste **Routen** aus und wählen Sie dann für Ihre Organisation in der Spalte mit den Aktionen den Eintrag **Domänen** im zusätzlichen Aktionsmenü aus.
 
 3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
 
-4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert. 
+4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
 
   #### Zertifikat
 
@@ -136,6 +136,6 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
       * PEM (pem, .crt, .cer und .cert)
       * PKCS #7 (p7b, p7r, spc)
 
-Weitere Informationen finden Sie unter [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate). 
+Weitere Informationen finden Sie unter [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**. Klicken Sie im zusätzlichen Aktionsmenü für die Organisation auf **Aus Organisation entfernen**. 
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**. Klicken Sie im zusätzlichen Aktionsmenü für die Organisation auf **Aus Organisation entfernen**.

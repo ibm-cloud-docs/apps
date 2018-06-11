@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 {:new_window: target="_blank"}
@@ -15,19 +15,19 @@ lastupdated: "2018-05-02"
 # Empfohlene Phasen der Cloudentwicklung
 {: #development_process}
 
-Cloud-App-Entwickler durchlaufen vier grundlegende Phasen des Entwicklungsprozesses: Einstieg, Codierung, Bereitstellung und Verwaltung. Der Ablauf ist interaktiv und schnell. Das Ziel ist es, schnell eine mindestens funktionsfähige App zu erstellen und dann anhand des Feedbacks aus der Produktion den Code oder Bereitstellungszyklus immer wieder zu wiederholen, bis Ihre App bei den Benutzern ankommt.
+Cloud-App-Entwickler durchlaufen vier grundlegende Phasen des Entwicklungsprozesses: Einstieg, Codierung, Bereitstellung und Verwaltung. Das Ziel ist es, schnell eine mindestens funktionsfähige App zu erstellen und dann anhand des Feedbacks aus der Produktion den Code oder Bereitstellungszyklus immer wieder zu wiederholen, bis Ihre App bei den Benutzern ankommt.
 {: shortdesc}
 
 ![Entwicklungsprozess](images/dev_flow_overview.png "Entwicklungsprozess") Abbildung 1. Phasen des Entwicklungsprozesses
 
-In manchen Fällen wird die Ausführung als eine eigene Phase angesehen, aber im vorliegenden Fall kombinieren wir sie mit den Bereitstellungs- und Verwaltungsphasen.
+In manchen Fällen wird die Ausführung (`run`) als eine eigene Phase angesehen, aber im vorliegenden Fall kombinieren wir sie mit der Bereitstellungs- und der Verwaltungsphase.
 
 Werfen wir einen genaueren Blick auf die beste Möglichkeit, {{site.data.keyword.cloud_notm}} in Ihrem Entwicklungsprozess zu verwenden.
 
 ##Einstieg
 {: #get_started}
 
-Beginnen Sie mit der Entwicklung Ihrer App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen bereitzustellen und eine sprachspezifische, laufzeitunabhängige App zu erstellen, das als Grundlage für Ihre Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase im Entwicklerdashboard auf **In Cloud bereitstellen**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
+Entwickeln Sie Ihre App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen bereitzustellen und um eine sprachspezifische, laufzeitunabhängige App zu erstellen, die als Grundlage für Ihre Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase im Entwicklerdashboard auf **In Cloud bereitstellen**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
 
 ![Einstieg](images/dev_get_started.png "Einstieg") Abbildung 2. Einstieg
 
@@ -41,7 +41,7 @@ Nachdem Sie Ihre Starter-App und Ihre Toolchain erstellt haben, starten Sie Ihre
 
 ![Lokal entwickeln](images/dev_code_locally.png "Lokal entwickeln") Abbildung 3. Lokal entwickeln
 
-Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `bx dev build` und `bx dev run`, aber die Befehlszeilenschnittstelle bietet noch viel mehr. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html).
+ Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `ibmcloud dev build` und `ibmcloud dev run`, doch die Befehlszeilenschnittstelle (CLI) hat noch sehr viel mehr zu bieten. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html).
 {: tip}
 
 ##In {{site.data.keyword.cloud_notm}} bereitstellen und verwalten

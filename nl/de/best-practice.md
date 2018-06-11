@@ -2,25 +2,25 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
-# Best Practices für die App-Erstellung
+# Bewährte Verfahren (Best Practices) für die Erstellung guter Apps
 {: #best-practice}
 
-Erstellen Sie Ihre App in {{site.data.keyword.Bluemix_notm}}, um alle Vorteile einer Cloud zu nutzen. Die in diesem Abschnitt vorgestellten Best Practices unterstützen Sie dabei, Ihre Apps für die Cloud vorzubereiten.
+Erstellen Sie Ihre App in {{site.data.keyword.Bluemix_notm}}, um alle Vorteile auszuschöpfen, die eine Cloud bietet. Die in diesem Abschnitt vorgestellten bewährten Verfahren (Best Practices) helfen Ihnen dabei, Ihre Apps für die Cloud vorzubereiten.
 {:shortdesc}
 
-## App entsprechend erstellen, dass sie unabhängig von der Topologie ist
+## App topologieunabhängig konzipieren
 
-In einer Umgebung ohne Cloud setzt Ihre App eine bestimmte Bereitstellungstopologie ein. Die App-Topologie kann sich in Cloud-Apps jedoch ändern, weil für die Cloud geeignete Apps und Services sofortige Änderungen der Skalierbarkeit zulassen. Die Änderungen der Skalierbarkeit umfassen dynamisches Skalieren und eine manuelle Größenänderung der Instanzenanzahl einer App.
+In einer Umgebung ohne Cloud verwendet Ihre App möglicherweise eine bestimmte Bereitstellungstopologie. Die App-Topologie kann sich in Cloud-Apps jedoch ändern, weil für die Cloud geeignete Apps und Services sofortige Änderungen der Skalierbarkeit zulassen. Die Änderungen der Skalierbarkeit umfassen dynamisches Skalieren und eine manuelle Änderung der Anzahl von Instanzen einer App.
 
-Erstellen Sie Ihre App so generisch und statusunabhängig wie möglich, um zu verhindern, dass die App durch Änderungen der Skalierbarkeit beeinträchtigt wird.
+Erstellen Sie Ihre App so generisch und statusunabhängig wie möglich, um zu verhindern, dass die App durch Änderungen in der Skalierbarkeit beeinträchtigt wird.
 
-## Annehmen, dass das lokale Dateisystem ein nicht permanentes System ist
+## Voraussetzen, dass das lokale Dateisystem nicht von Bestand ist
 
-Eine App-Instanz kann in der Cloud jederzeit verschoben, gelöscht oder kopiert werden; verlassen Sie sich deswegen nicht auf die Dateien, die in das Dateisystem geschrieben werden. Wenn eine App das lokale Dateisystem als Cache für häufig verwendete Informationen (einschließlich von App-Protokollen) verwendet, gehen diese Informationen verloren, wenn die Instanz beendet wird und an einer anderen Position oder auf einer anderen virtuellen Maschine erneut gestartet wird.
+Da die Instanz einer App in der Cloud verschoben, gelöscht oder kopiert werden kann, sollten Sie sich nicht auf die Dateien verlassen, die in das Dateisystem geschrieben werden. Wenn eine App das lokale Dateisystem als Cache für häufig verwendete Informationen (einschließlich von App-Protokollen) verwendet, gehen diese Informationen verloren, wenn die Instanz beendet wird und an einer anderen Position oder auf einer anderen virtuellen Maschine erneut gestartet wird.
 
 Sie können Informationen anstatt im lokalen Dateisystem in einem Service speichern, z. B. in einer SQL- oder NoSQL-Datenbank. In einer dynamischen Cloudumgebung ist es darüber hinaus wichtig, dass die Protokolle durch einen Service bereitgestellt werden, der länger verfügbar ist als die App-Instanzen, für die die Protokolle erstellt werden.
 
@@ -28,7 +28,7 @@ Sie können Informationen anstatt im lokalen Dateisystem in einem Service speich
 
 Der Status Ihres Systems wird durch die Datenbanken und den gemeinsam genutzter Speicher definiert und nicht durch jede einzelne aktive App-Instanz. Statusangaben jeder Art schränken die Skalierbarkeit einer App ein. Versuchen Sie, die Auswirkung des Sitzungsstatus dadurch zu minimieren, dass er an einer zentralen Position auf dem Server gespeichert wird.
 
-Wenn Sie den Sitzungsstatus nicht vollständig ignorieren können, verlagern Sie ihn in einen Speicher mit hoher Verfügbarkeit, der sich außerhalb Ihres App-Servers befindet. Solche Speicher sind zum Beispiel IBM WebSphere Extreme Scale, Redis, Memcached oder eine externe Datenbank.
+Wenn Sie den Sitzungsstatus nicht vollständig ignorieren können, verlagern Sie ihn in einen Speicher mit hoher Verfügbarkeit, der sich außerhalb Ihres App-Servers befindet. Solche Speicher sind zum Beispiel IBM WebSphere eXtreme Scale, Redis, Memcached oder eine externe Datenbank.
 
 ## Externe Service-Registry zum Auflösen von Serviceendpunkten verwenden
 
@@ -36,7 +36,7 @@ Gehen Sie nicht davon aus, dass den Services, die von der App verwendet werden, 
 
 Das Extrahieren von umgebungsspezifischen Abhängigkeiten in eine Reihe von Eigenschaftendateien ist zwar eine Verbesserung, aber trotzdem unzulänglich. Ein bewährtes Verfahren ist das Verwenden einer externen Service-Registry zum Auflösen von Serviceendpunkten oder das Delegieren der gesamten Routingfunktion an einen Service-Bus oder eine Lastausgleichsfunktion mit einem virtuellen Namen.
 
-## App mithilfe einer Architektur mit mehreren Regionen erstellen
+## App unter Verwendung einer Architektur mit mehreren Regionen erstellen
 {: #multiregion}
 
 Führen Sie mehrere Instanzen aus, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren Anwendung kann es jedoch sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen.
