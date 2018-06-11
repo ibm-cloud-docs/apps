@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -79,13 +79,13 @@ Si vous avez créé une chaîne d'outils à l'étape précédente, un référent
 
 2. Cliquez sur **Afficher la chaîne d'outils**.
 
-3. Cliquez sur la carte **Git** sous l'en-tête **CODE** afin d'ouvrir votre référentiel dans lequel vous pouvez visualiser le code source et cloner votre application. 
+3. Cliquez sur la carte **Git** sous l'en-tête **CODE** afin d'ouvrir votre référentiel dans lequel vous pouvez visualiser le code source et cloner votre application.
 
-Si une chaîne d'outils n'est pas activée, vous pouvez accéder à votre code en téléchargeant la source directement à partir de la vue Détails de l'application. 
+Si une chaîne d'outils n'est pas activée, vous pouvez accéder à votre code en téléchargeant la source directement à partir de la vue Détails de l'application.
 
 1. Sélectionnez votre application sur la page **Applications**.
 
-2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application. 
+2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application.
 
 ## Etape 4 : Commencer à utiliser votre application
 {: #code}
@@ -110,14 +110,14 @@ Ajoutez votre propre code, puis générez et exécutez l'application. Vous pouve
 1. Pour générer l'application dans votre répertoire d'application en cours, entrez la commande suivante :
 
   ```
-  bx dev build
+  ibmcloud dev build
   ```
   {: codeblock}
 
 2. Pour exécuter l'application dans votre répertoire d'application en cours, entrez la commande suivante :
 
   ```
-  bx dev run
+  ibmcloud dev run
   ```
   {: codeblock}
 
@@ -164,14 +164,14 @@ Si vous choisissez de ne pas utiliser une chaîne d'outils, vous pouvez égaleme
 Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
 
   ```
-  bx dev deploy
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
 Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
 
 ```
-bx dev deploy --target <container>
+ibmcloud dev deploy --target <container>
 ```
 {: codeblock}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-03-16"
 # Création et utilisation d'un domaine personnalisé
 {: #updatingapps}
 
-Vous pouvez utiliser la ligne de commande ou {{site.data.keyword.Bluemix}} Continuous Delivery pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction intégrés tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
+Vous pouvez utiliser la ligne de commande ou {{site.data.keyword.Bluemix}} Continuous Delivery pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
 commande à utiliser pour démarrer votre application.
 {:shortdesc}
 
@@ -28,7 +28,7 @@ Vous pouvez créer et utiliser un domaine personnalisé en utilisant la console 
 
 Procédez comme suit pour créer un domaine personnalisé pour votre organisation à l'aide de la console :
 
-1. Accédez à **Gérer** &gt; **Compte** &gt; **Organisations Cloud Foundry**.
+1. Accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**.
 2. Cliquez sur le nom de l'organisation pour laquelle vous créez un domaine personnalisé.
 3. Cliquez sur l'onglet **Domaines**.
 4. Cliquez sur **Ajouter un domaine**, entrez le nom de votre domaine et sélectionnez la région.
@@ -39,7 +39,7 @@ Par exemple, vous pouvez utiliser `*.mycompany.com` pour associer la route `www.
 
 Ajoutez la route avec le domaine personnalisé à une application.
 
-1. Cliquez sur l'icône **Menu** ![Icône de menu](../icons/icon_hamburger.svg) &gt; **Tableau de bord**, puis sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
+1. Cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) > **Tableau de bord**, puis sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
 2. Dans le menu **Routes**, sélectionnez **Editer les routes**.
 3. Cliquez sur **Ajouter une route** et spécifiez la route à utiliser pour l'application.
 4. Confirmez vos mises à jour en cliquant sur **Sauvegarder**.
@@ -49,13 +49,13 @@ Ajoutez la route avec le domaine personnalisé à une application.
 1. Créez un domaine personnalisé pour votre organisation en lançant la commande suivante :
 
    ```
-   bluemix app domain-create <your org name> mydomain
+   ibmcloud app domain-create <nom_organisation> mydomain
    ```
 
 2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications CF, entrez la commande suivante :
 
    ```
-   bluemix app route-map myapp mydomain -n host_name
+   ibmcloud app route-map myapp mydomain -n host_name
 
    ```
 
@@ -91,10 +91,10 @@ http://host_name.mydomain
 Pour retirer une route orpheline, exécutez la commande suivante :
 
 ```
-bluemix app route-delete domain -n hostname -f
+ibmcloud app route-delete domain -n hostname -f
 
 ```
 {: tip}
 
-`domain` est le nom de votre domaine et `hostname` le nom d'hôte de la route pour votre application. Pour plus d'informations sur la commande **bluemix app route-delete**, entrez `bluemix app route-delete -h`.
+`domain` est le nom de votre domaine et `hostname` le nom d'hôte de la route pour votre application. Pour plus d'informations sur la commande **ibmcloud app route-delete**, entrez `ibmcloud app route-delete -h`.
 

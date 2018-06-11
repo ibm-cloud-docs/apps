@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,37 +18,45 @@ Pour les applications Node.js, les informations ci-après répertorient ce que l
 
 Le tableau suivant répertorie les répertoires et les fichiers inclus dans une application Node.js générée :
 
-| Répertoire et fichier                                     | Description                       |
+| Répertoire racine                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
-|<b>`./`</b>                                             |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;package.json | Fichier de métadonnées |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cli-config.yml | Options de configuration d'interface de ligne de commande |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifest.yml | Fichier de déploiement Cloud Foundry |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile | Fichier Dockerfile pour les commandes `bx dev run`, `bx dev deploy` et`docker` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dockerfile-tools | Fichier Dockerfile pour les commandes `bx dev build` et `bx dev test` |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker-compose.yml | Configuration de service d'application pour Docker Compose |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack.config.js | Configuration Webpack pour les informations liées à la génération |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LICENSE |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;README.md | Description d'application |
-|<b>`./public/`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swagger.yml | Spécification Swagger pour la description d'API REST |
-|<b>`./public/index.html`</b> |  |  |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html | Balisage de squelette pour des applications Web |
-|<b>`./public/server/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server.js | Fichier d'implémentation de serveur |
-|<b>`./test/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test-server.js | Test d'intégration pour Express server |
-|<b>`./.bluemix/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;container_build.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deploy.json | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kube_deploy.sh | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pipeline.yml | Définition de pipeline IBM Cloud |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toolchain.yml | Définition de chaîne d'outils IBM Cloud |
-|<b>`./chart/<projectname>/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chart.yaml | Graphique Helm |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values.yaml | Valeurs du graphique Helm |
-|<b>`./chart/<projectname>/templates/`</b> | |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;deployment.yaml | Modèle de déploiement |
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service.yaml | Modèle de service |
-{: caption="Tableau 1. Contenu d'une application Node.js générée" caption-side="top"}
+|package.json
+| Fichier de métadonnées |
+|cli-config.yml | Options de configuration d'interface de ligne de commande |
+|manifest.yml | Fichier de déploiement Cloud Foundry |
+| Dockerfile | Fichier Dockerfile pour les commandes `ibmcloud dev run`, `ibmcloud dev deploy` et `docker` |
+| Dockerfile-tools | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
+|docker-compose.yml | Configuration de service d'application pour Docker Compose |
+|webpack.config.js | Configuration Webpack pour les informations liées à la génération |
+| LICENSE | Fichier de licence |
+| README.md | Description d'application |
+{: caption="Tableau 1. Contenu du répertoire racine généré dans une application Node.js " caption-side="top"}
 
+|Répertoire  `./public/` | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `./public/swagger.yml` | Spécification Swagger pour la description d'API REST |
+| `./public/index.html` | Balisage de squelette pour des applications Web |
+|`./public/server/server.js` | Fichier d'implémentation de serveur |
+{: caption="Tableau 2. Contenu du répertoire public généré dans une application Node.js " caption-side="top"}
+
+|Répertoire  `./test/` | Description |
+|:------------------------------------------------|:------------------------------------------|
+|test-server.js | Test d'intégration pour Express server |
+{: caption="Tableau 3. Contenu du répertoire test généré dans une application Node.js " caption-side="top"}
+
+|Répertoire  `./.bluemix/` | Description |
+|:------------------------------------------------|:------------------------------------------|
+| container_build.sh | Script de construction du conteneur |
+| deploy.json | Informations de déploiement |
+| kube_deploy.sh | Script de déploiement Kubernetes |
+| pipeline.yml | Définition de pipeline IBM Cloud |
+| toolchain.yml | Définition de chaîne d'outils IBM Cloud |
+{: caption="Tableau 4. Contenu du répertoire Bluemix généré dans une application Node.js" caption-side="top"}
+
+|Répertoire `./chart/<projectname>/` | Description |
+|:------------------------------------------------|:------------------------------------------|
+| `./chart/<projectname>/Chart.yaml` | Graphique Helm |
+| `./chart/<projectname>/values.yaml` | Valeurs du graphique Helm |
+| `./chart/<projectname>/templates/deployment.yaml` | Modèle de déploiement |
+| `./chart/<projectname>/templates/service.yaml` | Modèle de service |
+{: caption="Tableau 5. Contenu du répertoire chart généré dans une application Node.js " caption-side="top"}

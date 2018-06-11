@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 {:new_window: target="_blank"}
@@ -15,23 +15,23 @@ lastupdated: "2018-05-02"
 # Phases recommandées pour le développement de cloud
 {: #development_process}
 
-Les développeurs d'application en cloud passent par quatre phases fondamentales lors du processus de développement : mise en route, codage, distribution et gestion. Le flux est interactif et rapide. L'objectif est de produire rapidement une application viable minimale, puis d'utiliser les commentaires en retour de l'application de production pour itérer en continu le code ou le cycle de distribution jusqu'à ce que votre application trouve un écho auprès des utilisateurs.
+Les développeurs d'application en cloud passent par quatre phases fondamentales lors du processus de développement : mise en route, codage, distribution et gestion. L'objectif est de produire rapidement une application viable minimale, puis d'utiliser les commentaires en retour de l'application de production pour itérer en continu le code ou le cycle de distribution jusqu'à ce que votre application trouve un écho auprès des utilisateurs.
 {: shortdesc}
 
 ![Flux de développement](images/dev_flow_overview.png "Flux de développement") Figure 1. Phases du processus de développement
 
-Dans certains cas, la phase d'exécution est distincte, mais ici, nous l'avons combinée avec les phases de distribution et de gestion.
+Dans certains cas, la phase d'exécution (`run`) est distincte, mais ici, nous l'avons combinée avec les phases de distribution et de gestion. 
 
 Examinons de plus près le meilleur moyen d'utiliser {{site.data.keyword.cloud_notm}} dans votre flux de développement.
 
 ##Mise en route
 {: #get_started}
 
-Commencez à générer votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre cas d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour automatiquement mettre à disposition les ressources dont vous avez besoin et pour créer une application indépendante de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code rempli avec votre code source d'application et votre pipeline de déploiement.
+Générez votre application à partir des tableaux de bord de développeur {{site.data.keyword.cloud_notm}} dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre scénario d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour mettre à disposition automatiquement les ressources dont vous avez besoin et pour créer une application indépendante de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord de développeur. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code alimenté avec votre code source d'application et votre pipeline de déploiement.
 
 ![Mise en route](images/dev_get_started.png "Mise en route") Figure 2. Flux de mise en route
 
-Lorsque vous utilisez le bouton **Déployer dans le cloud** pour configurer votre chaîne d'outils DevOps, sélectionnez votre plateforme d'exécution, par exemple, Kubernetes ou Cloud Foundry. L'application de démarrage produite à partir de {{site.data.keyword.cloud_notm}} est indépendante de l'environnement d'exécution et n'a pas besoin d'être modifiée.
+Lorsque vous utilisez le bouton **Déployer dans le cloud** pour configurer votre chaîne d'outils DevOps, sélectionnez votre plateforme d'exécution, par exemple, Kubernetes ou Cloud Foundry. L'application de démarrage générée à partir de {{site.data.keyword.cloud_notm}} est indépendante de l'environnement d'exécution et n'a pas besoin d'être modifiée.
 {: tip}
 
 ##Développement en local
@@ -41,7 +41,7 @@ Après avoir créé votre application de démarrage et votre chaîne d'outils, v
 
 ![Développement en local](images/dev_code_locally.png "Développement en local") Figure 3. Flux de développement en local
 
-Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `bx dev build` et `bx dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html).
+Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `ibmcloud dev build` et `ibmcloud dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html).
 {: tip}
 
 ##Distribution et gestion dans {{site.data.keyword.cloud_notm}}
@@ -52,7 +52,7 @@ La fusion des modifications apportées à votre référentiel cloud entraîne le
 Pour vérifier le statut de votre pipeline DevOps, utilisez votre tableau de bord de pipeline de distribution. Pour vérifier le statut général de votre application, consultez le tableau de bord {{site.data.keyword.cloud_notm}} pour votre compte.
 {: tip}
 
-La chaîne d'outils produite par votre démarche de mise en route possède les composants de base dont vous avez besoin pour une distribution continue collaborative qui repose sur une équipe. Cependant, {{site.data.keyword.cloud_notm}} offre un ensemble étendu de services DevOps que vous pouvez ajouter à votre chaîne d'outils afin d'améliorer la distribution, la surveillance, la journalisation et les alertes.
+La chaîne d'outils produite par votre démarche de mise en route comporte les composants de base dont vous avez besoin pour une distribution continue collaborative qui repose sur une équipe. Cependant, {{site.data.keyword.cloud_notm}} offre un ensemble étendu de services DevOps que vous pouvez ajouter à votre chaîne d'outils afin d'améliorer la distribution, la surveillance, la journalisation et les alertes.
 
 ![Distribution et gestion](images/dev_deliver_and_manage.png "Distribution et gestion") Figure 4. Flux de distribution et de gestion
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -15,10 +15,10 @@ lastupdated: "2018-05-02"
 # Tutoriel d'initiation
 {: #create}
 
-Dans {{site.data.keyword.Bluemix}}, vous pouvez générer des applications mobiles et Web au niveau de l'entreprise, et bénéficier des extensions cloud hébergées par {{site.data.keyword.Bluemix_notm}}. Vous pouvez utiliser les outils de ligne de commande et la console {{site.data.keyword.Bluemix}} pour générer, exécuter et déployer vos applications. Vous pouvez démarrer de deux façons, en créant une application avec un kit de démarrage qui gère le processus pour vous, ou, si vous savez précisément ce que vous voulez, en générant votre application avec les ressources dont vous avez besoin.
+Dans {{site.data.keyword.Bluemix}}, vous pouvez générer des applications mobiles et Web au niveau de l'entreprise, et tirer parti des extensions cloud hébergées par {{site.data.keyword.Bluemix_notm}}. Vous pouvez utiliser les outils de ligne de commande et la console {{site.data.keyword.Bluemix}} pour générer, exécuter et déployer vos applications. Vous pouvez démarrer de deux façons : en créant une application avec un kit de démarrage qui gère le processus pour vous, ou, si vous savez précisément ce que vous voulez, en générant votre application avec les ressources dont vous avez besoin.
 {:shortdesc}
 
-Vous pouvez utiliser un kit de démarrage pour que votre application démarre rapidement et pour la préparer à des développements futurs. Choisissez un kit de démarrage et un langage de programmation, créez une application, puis configurez une chaîne d'outils DevOps pour déployer automatiquement votre application. Vous pouvez également télécharger le code pour un examen immédiat. 
+Vous pouvez utiliser un kit de démarrage pour que votre application démarre rapidement et pour la préparer à des développements futurs. Choisissez un kit de démarrage et un langage de programmation, créez une application, puis configurez une chaîne d'outils DevOps pour déployer automatiquement votre application. Vous pouvez également télécharger le code pour un examen immédiat.
 
 Les kits de démarrage sont disponibles dans de nombreuses catégories, telles que les suivantes :
 
@@ -58,7 +58,7 @@ Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des 
 ## Etape 2 : Ajouter des ressources
 {: #addResources}
 
-La majeure partie des kits de démarrage demande à {{site.data.keyword.cloud_notm}} de mettre automatiquement des ressources à votre disposition. Vous pouvez également associer davantage de ressources à votre application en cliquant sur **Ajouter une ressource** sur la page des détails d'application. 
+La majeure partie des kits de démarrage demande à {{site.data.keyword.cloud_notm}} de mettre automatiquement des ressources à votre disposition. Vous pouvez également associer davantage de ressources à votre application en cliquant sur **Ajouter une ressource** sur la page des détails d'application.
 
 Pour développer et exécuter votre application localement utilisez le [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}

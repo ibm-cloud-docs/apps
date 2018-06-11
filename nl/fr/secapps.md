@@ -94,7 +94,7 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
 
 2. Sélectionnez votre application pour ouvrir la vue des détails d'application.
 
-3. Sélectionnez le menu déroulant **Routes**, puis pour votre organisation, dans la colonne Action, sélectionnez **Domaines** dans le menu des actions supplémentaires.
+3. Sélectionnez le menu déroulant **Routes**, puis, pour votre organisation, dans la colonne Action, sélectionnez **Domaines** dans le menu des actions supplémentaires.
 
 3. Pour votre domaine personnalisé, cliquez sur **Télécharger le certificat**.
 

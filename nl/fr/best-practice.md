@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-05-21"
 
 ---
 
@@ -21,8 +21,8 @@ modifications à des fins d'évolutivité.
 
 ## Partez du principe que le système de fichiers local n'est pas permanent
 
-Parce qu'une application peut être déplacée, supprimée ou dupliquée à tout
-moment dans le cloud, ne vous appuyez pas sur les fichiers qui se trouvent dans le système de fichiers. Si une application utilise le système de fichiers local comme cache pour les informations utilisées fréquemment, notamment les journaux d'application, les
+Etant donné qu'une application peut être déplacée, supprimée ou dupliquée
+dans le cloud, ne vous reposez pas sur les fichiers consignés sur le système de fichiers. Si une application utilise le système de fichiers local comme cache pour les informations utilisées fréquemment, notamment les journaux d'application, les
 informations sont perdues quand l'instance est arrêtée et redémarrée à un autre emplacement ou sur une machine virtuelle différente.
 
 Vous pouvez stocker les informations dans un service, par exemple une base de données SQL ou NoSQL, au lieu de les stocker dans le système de
@@ -36,7 +36,7 @@ partagé, et non par chaque instance d'application individuelle en cours d'exéc
 sur le serveur.
 
 Si vous ne pouvez pas éliminer l'état de session entièrement, envoyez-le dans un magasin hautement disponible externe à votre serveur
-d'applications, par exemple IBM WebSphere Extreme Scale, Redis ou Memcached, ou une base de données externe.
+d'applications, Les magasins peuvent être IBM WebSphere eXtreme Scale, Redis, Memcached, ou encore une base de données externe.
 
 ## Utilisez un registre de services externe pour résoudre les noeuds finaux de service
 
@@ -45,7 +45,7 @@ Ne partez pas du principe que les services que votre application utilise sont as
 L'extraction de dépendances propres à l'environnement dans un ensemble de fichiers de propriétés constitue une amélioration, mais reste inadaptée. Il est préférable d'utiliser un registre de services externe pour résoudre les noeuds finaux des services
 ou de déléguer la fonction de routage complète à un bus de services ou à un équilibreur de charge avec un nom virtuel.
 
-## Créez une application à l'aide d'une architecture multi-région
+## Créez votre application sous une architecture multi-régions
 {: #multiregion}
 
 Exécutez plusieurs instances afin d'éviter des durées d'indisponibilité dans une région unique, mais pour distribuer une application encore plus robuste, envisagez d'utiliser une architecture multi-région.
@@ -74,7 +74,7 @@ A la place, vous pouvez vous appuyer sur des produits commerciaux ou open source
 
 N'utilisez pas de protocoles opaques requérant des étapes de configuration supplémentaires afin d'assurer la résilience.
 
-Les applications reposant sur des protocoles standard sont plus résilientes avec les éléments de configuration délégués à la plateforme. Les protocoles standard sont HTTP, SSL, la base de données standard, la mise en file d'attente et les connexions de service Web.
+Les applications reposant sur des protocoles standard sont plus résilientes lorsque les éléments de configuration sont délégués à la plateforme. Les protocoles standard sont HTTP, SSL, la base de données standard, la mise en file d'attente et les connexions de service Web.
 
 ## Utilisez des bibliothèques de compatibilité au lieu des fonctions spécifiques au système d'exploitation
 

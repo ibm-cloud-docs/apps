@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-02"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -69,7 +69,7 @@ Vous pouvez créer une application en utilisant l'une des méthodes suivantes :
 
 1. Sélectionnez votre application sur la page **Applications**.
 
-2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application. 
+2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application.
 
 ### Commencer à utiliser votre application
 {: #code}
@@ -78,7 +78,7 @@ Commencez à utiliser l'application que vous avez téléchargée :
 
 1. Développez le fichier archivé.
 
-2. Accédez au nouveau répertoire d'application. 
+2. Accédez au nouveau répertoire d'application.
 
 3. Utilisez le {{site.data.keyword.dev_cli_notm}} pour poursuivre.
 
@@ -91,8 +91,8 @@ Commencez à utiliser l'application que vous avez téléchargée :
 2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante :
 
 	```
-	bx dev create
-	```
+	ibmcloud dev create
+```
 	{: codeblock}
 
 3. Fournissez les valeurs suivantes, quand vous y êtes invité :
@@ -111,12 +111,12 @@ Commencez à utiliser l'application que vous avez téléchargée :
 ### Exécution de votre application Swift dans Xcode
 {: #run_swift}
 
-1. Ouvrez le fichier `README.md` dans un visualiseur Markdown afin de passer en revue les étapes nécessaires pour configurer votre application. 
+1. Ouvrez le fichier `README.md` dans un visualiseur Markdown afin de passer en revue les étapes nécessaires pour configurer votre application.
 
 2. Ouvrez votre terminal et accédez au dossier de votre application, puis exécutez les commandes suivantes :
     1. Exécutez `pod setup` si vous devez configurer votre référentiel CocoaPods.
     2. Exécutez `pod update` si vous devez mettre à jour vos pods existants.
-    3. Exécutez `pod install` pour installer les pods de votre application. 
+    3. Exécutez `pod install` pour installer les pods de votre application.
 
 3. Ouvrez votre espace de travail Xcode `<appname>.xcworkspace`.
 
@@ -127,7 +127,7 @@ Commencez à utiliser l'application que vous avez téléchargée :
 
 Si vous avez choisi d'utiliser Cordova comme langage d'implémentation, suivez les instructions ci-dessous :
 
-1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application. 
+1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
 
 2. Ouvrez votre application `platforms/ios` dans Xcode.
 
@@ -140,7 +140,7 @@ Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme d
 
 1. Décompressez le fichier `BasicProject-Cordova.zip`.
 
-2. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application. 
+2. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
 
 3. Ouvrez votre application `platforms/android` dans Android Studio.
 
@@ -151,7 +151,7 @@ Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme d
 
 Utilisez cette section si vous avez choisi d'utiliser Android comme plateforme de votre application mobile.
 
-1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application. 
+1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
 
 2. Ouvrez votre application `BasicProject-Android` dans Android Studio.
 
