@@ -113,8 +113,6 @@ To upload a certificate for your application:
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
 
-    **Limitation:** Private keys that are protected by a passphrase cannot be uploaded.
-
   #### Intermediate certificate
 
     A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization.
