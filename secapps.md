@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -86,11 +86,13 @@ To upload a certificate for your application:
 
 2. Select your app to open the app details view.
 
-3. Select the **Routes** drop-down, and then for your organization, in the action column, select **Domains** from the additional actions menu.
+3. Click the **Routes** > **Manage domains**.
 
-3. For your custom domain, click **Upload Certificate**.
+4. For your organization, in the action column, click **Domains** from the additional actions menu.
 
-4. Browse to upload a certificate, private key, and optionally an intermediate certificate or client certificate. To enable the client certificate truststore, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
+5. For your custom domain, click **Upload** in the SSL Certificate column.
+
+6. Browse to upload a certificate, private key, and optionally an intermediate certificate or client certificate. To enable the client certificate truststore, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
 
   #### Certificate
 
