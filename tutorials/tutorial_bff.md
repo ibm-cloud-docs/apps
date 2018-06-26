@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -44,7 +44,7 @@ Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 
 5. Click **Create**.
 
-## Optional: Add resources
+## Step 3: Optional - Add resources
 {: #add-services}
 
 1. From the **App Details** view, select click **Add Resource**.
@@ -53,7 +53,7 @@ Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 
 3. Click **Create**.
 
-## Optional: Create DevOps toolchain
+## Step 4: Optional - Create DevOps toolchain
 {: #add-toolchain}
 
 Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the App Service will provision a Git repository, where you can view source code, clone your app and create and manage issues. You also have access to a dedicated Gitlab environment and a continuous Delivery Pipeline that is customized to the deployment platform you choose, such as Kubernetes or Cloud Foundry.
@@ -70,7 +70,7 @@ Continuous delivery is enabled for some applications. You may want to enable con
 
 	* Deploy using Cloud Foundry, where you don’t need to manage the underlying infrastructure.
 
-## Step 3: Generate your app code
+## Step 5: Generate your app code
 {: #generate-code}
 
 If you created a toolchain in the previous step, a Git repository was created for your app, and you can find the code there. Follow these steps to access your repo:
@@ -87,7 +87,7 @@ If a toolchain isn’t enabled, you can access your code by downloading the sour
 
 2. Click **Download Code** to download your app archive.
 
-## Step 4: Begin working on your app
+## Step 6: Begin working on your app
 {: #code}
 
 Begin working with your downloaded app:
@@ -100,7 +100,7 @@ Begin working with your downloaded app:
 
 4. Use the {{site.data.keyword.dev_cli_notm}} to build and run your code locally.
 
-## Step 5: Build and run the app locally
+## Step 7: Build and run the app locally
 {: #build-run}
 
 Add your own code, build, and run the app. You can run the application locally on your host system if you install the necessary build tools, or by using the available container support in the {{site.data.keyword.dev_cli_notm}}.
@@ -142,7 +142,7 @@ Add your own code, build, and run the app. You can run the application locally o
    ```
    {: codeblock}
 
-## Step 6: Deploy to the cloud
+## Step 8: Deploy to the cloud
 {: #deploy}
 
 ### Deploy using a toolchain
