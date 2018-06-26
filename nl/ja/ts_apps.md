@@ -380,7 +380,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下の手順を実行します。
 
-    1. 「アプリ」ダッシュボードで、アプリを選択します。アプリ詳細ページが開きます。
+    1. 「アプリ」ダッシュボードで、アプリを選択します。 アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
     cf コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
@@ -606,7 +606,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
  }
     ```
 
-Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "外部リンク・アイコン"){: new_window}を参照してください。
+Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} を参照してください。
 
 
 ## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる

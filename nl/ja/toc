@@ -23,7 +23,6 @@
 
     dep-app-tool.md
     reqnsi.md
-    [接続の管理](../resources/connecting_apps.html)
     mngapps.md
     updapps.md
     secapps.md
@@ -53,7 +52,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_apps.md
+    [アプリの管理に関するトラブルシューティング](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools チャネル](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [スタック・オーバーフロー](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
