@@ -34,11 +34,11 @@ Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 
 3. Enter a unique host name, such as your initials plus `-devhost`. For example:
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	This host name is your app's route. For example, `abc-devhost.mybluemix.net`
+   This host name is your app's route. For example, `abc-devhost.mybluemix.net`
 
 4. Select your language platform. For this tutorial, use `Node.js`.
 
@@ -109,17 +109,17 @@ Add your own code, build, and run the app. You can run the application locally o
 
 1. To build the app in your current app directory, enter the following command:
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. To run the app in your current app directory, enter the following command:
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. You can run curl on your server with:
 
@@ -163,10 +163,10 @@ If you choose not to use a toolchain, you can also deploy using the {{site.data.
 
 To deploy your app to Cloud Foundry, enter the following command:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 To deploy your app to a Kubernetes cluster, enter the following command:
 
