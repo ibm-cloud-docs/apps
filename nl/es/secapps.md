@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -91,11 +91,13 @@ Para cargar un certificado para la aplicación:
 
 2. Seleccione su app para abrir la vista de detalles de la app.
 
-3. Seleccione el desplegable **Rutas** y, a continuación, para su organización, en la columna Acción, seleccione **Dominios** del menú de acciones adicional.
+3. Pulse **Rutas** > **Gestionar dominios**.
 
-3. Para su dominio personalizado, pulse **Cargar certificado**.
+4. Para su organización, en la columna de acción, pulse **Dominios** desde el menú de acciones adicional.
 
-4. Busque el certificado, clave privada y, si lo desea, un certificado intermedio o certificado de cliente que desee cargar. Para habilitar el almacén de confianza de certificado de cliente, debe cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
+5. Para el dominio personalizado, pulse **Cargar** en la columna Certificado SSL.
+
+6. Busque el certificado, clave privada y, si lo desea, un certificado intermedio o certificado de cliente que desee cargar. Para habilitar el almacén de confianza de certificado de cliente, debe cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
 
   #### Certificado
 
@@ -120,8 +122,6 @@ protege mediante una contraseña.
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
 
-    **Limitación:** Las claves privadas protegidas con una contraseña no se pueden cargar.
-
   #### Certificado intermedio
 
     Certificado subordinado emitido por la entidad emisora de certificados (CA) raíz de confianza específicamente para emitir certificados del servidor de la entidad final. El resultado es una cadena de certificados que empieza en la entidad emisora de certificados raíz de confianza, pasa por el certificado intermedio y termina con la emisión del certificado SSL a la organización.
@@ -142,6 +142,9 @@ protege mediante una contraseña.
 
       * PEM (pem, .crt, .cer y .cert)
       * PKCS #7 (p7b, p7r, spc)
+
+  Puede configurar la autenticación mutua cargando un almacén de confianza de certificado de cliente que contenga una clave pública en sus metadatos.
+  {: tip}
 
 Para obtener más información consulte [Importación de certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 

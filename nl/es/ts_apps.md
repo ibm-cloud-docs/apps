@@ -621,7 +621,7 @@ Utilice uno de los métodos siguientes en función de la causa del problema:
  }
     ```
 
-Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las aplicaciones Node.js](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "icono de enlace externo"){: new_window}.
+Para ver más sugerencias sobre las apps Node.js, consulte [Consejos para las aplicaciones Node.js ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
 
 ## Aparecen errores de configuración en el archivo `server.xml` después de importar una app {{site.data.keyword.Bluemix_notm}} Liberty en Eclipse
