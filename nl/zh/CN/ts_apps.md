@@ -234,7 +234,7 @@ process.env.VCAP_SERVICES
 
 将不受支持构面应用于 Eclipse 项目时，可能无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 
-使用 Cloud Foundry CLI 可将应用程序成功部署到 {{site.data.keyword.Bluemix_notm}}。但是，无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且会看到以下错误消息：`不支持项目构面 <facet_name>。`例如：
+使用 Cloud Foundry CLI 可将应用程序成功部署到 {{site.data.keyword.Bluemix_notm}}。但是，无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}，并且会看到以下错误消息：`不支持项目构面 <facet_name> 。`例如：
 {: tsSymptoms}
 `不支持项目构面 Cloud Foundry Standalone Application V1.0。`
 
@@ -340,9 +340,9 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 
 
     要使用命令行界面删除服务实例，请完成以下步骤：
-	  1. 通过输入 `cf unbind-service <appname> <service_instance_name>`，取消服务实例与应用程序的绑定。
-	  2. 通过输入 `cf delete-service <service_instance_name>`，删除服务实例。
-	  3. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>` 来重新编译打包绑定该服务实例的应用程序。
+	  1. 通过输入 `cf unbind-service <appname> <service_instance_name>`.
+	  2. 通过输入 `cf delete-service <service_instance_name>`.
+	  3. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`.
 
   * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing)。
 
@@ -625,7 +625,7 @@ cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 
-有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "外部链接图标"){: new_window}。
+有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
 
 
 ## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，`server.xml` 文件中出现配置错误
@@ -687,7 +687,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
   * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
   ```
-buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
+  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```

@@ -23,7 +23,6 @@
 
     dep-app-tool.md
     reqnsi.md
-    [管理连接](../resources/connecting_apps.html)
     mngapps.md
     updapps.md
     secapps.md
@@ -53,7 +52,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_apps.md
+    [有关管理应用程序的故障诊断](../troubleshoot/ts_apps.html)
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
