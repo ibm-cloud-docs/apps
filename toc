@@ -49,6 +49,8 @@ Creating apps
         projects/node_project_contents.md
         projects/python_project_contents.md
         projects/swift_project_contents.md
+
+    at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
