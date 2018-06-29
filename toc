@@ -21,7 +21,11 @@ Creating apps
         tutorials/tutorial_custom.md
         tutorials/tutorial_mobile.md
 
-    dep-app-tool.md
+    {: .topicgroup}
+    Deploying and integrating apps
+        dep-app-tool.md
+        vsi-deploy.md
+
     reqnsi.md
     mngapps.md
     updapps.md
