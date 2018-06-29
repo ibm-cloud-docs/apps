@@ -23,7 +23,7 @@ You can deploy your apps with a toolchain or a command line interface. A toolcha
 ## Deploying apps with toolchains
 {: #toolchains_getting_started}
 
-Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. To learn more about toolchains, see [Creating toolchains](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. You can create a toolchain in two ways: use a template to create a toolchain or create a toolchain from an app. To learn more about toolchains, see [Creating toolchains](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 With a properly configured toolchain, deploying your app is trivial:  a build-deploy cycle will automatically start with each merge to the Master branch in your repo.
 
