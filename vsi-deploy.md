@@ -23,7 +23,7 @@ Deploy {{site.data.keyword.cloud}} [App Service ![External link icon](../icons/l
 A virtual server instance offers better transparency, predictability, and automation for all workload types when compared to other configurations. Combine it with a bare metal server to create unique workload combinations. For example, you can create high-performance database logic or machine learning with bare metal and GPU configurations running a Debian Linux based operating system.
 
 ## Before you begin
-To use virtual instances, your {{site.data.keyword.cloud_notm}} account must be enabled for infrastructure. For more information, see [Upgrade to Infrastructure](https://console.bluemix.net/dashboard/ibm-iaas-g1).
+To use virtual instances, your {{site.data.keyword.cloud_notm}} account must be enabled for infrastructure. For more information, see [Upgrade to Infrastructure ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/ibm-iaas-g1){: new_window}.
 
 ## Deploying through Terraform
 Any of the App Service starter kits can be deployed in a dynamically created virtual instance through [Terraform ![External link icon](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}, an open source infrastructure as code framework. For more information, see [Terraform Documentation ![External link icon](../icons/launch-glyph.svg)](https://www.terraform.io/docs/index.html){: new_window}.
