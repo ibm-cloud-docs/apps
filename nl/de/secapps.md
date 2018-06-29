@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -86,11 +86,13 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 2. Wählen Sie Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Wählen Sie die Dropdown-Liste **Routen** aus und wählen Sie dann für Ihre Organisation in der Spalte mit den Aktionen den Eintrag **Domänen** im zusätzlichen Aktionsmenü aus.
+3. Klicken Sie auf **Routen** > **Domänen verwalten**. 
 
-3. Klicken Sie für Ihre angepasste Domäne auf **Zertifikat hochladen**.
+4. Klicken Sie für Ihre Organisation in der Spalte mit den Aktionen im zusätzlichen Aktionsmenü auf **Domänen**. 
 
-4. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
+5. Klicken Sie für Ihre angepasste Domäne in der Spalte mit den SSL-Zertifikaten auf **Hochladen**. 
+
+6. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
 
   #### Zertifikat
 
@@ -113,8 +115,6 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
 
-    **Einschränkung:** Private Schlüssel, die durch eine Kennphrase geschützt sind, können nicht hochgeladen werden.
-
   #### Zwischenzertifikat
 
     Ein untergeordnetes Zertifikat, das von der Zertifizierungsstelle für Trusted Roots speziell dafür ausgegeben wird, Serverzertifikate für End-Entitäten auszugeben. Im Ergebnis erhält man eine Zertifikatskette, die mit der Zertifizierungsstelle für Trusted Roots beginnt und über das Zwischenzertifikat zum SSL-Zertifikat gelangt, das für die Organisation ausgegeben wird.
@@ -135,6 +135,9 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
       * PEM (pem, .crt, .cer und .cert)
       * PKCS #7 (p7b, p7r, spc)
+
+  Sie können die gegenseitige Authentifizierung konfigurieren, indem Sie einen Clientzertifikatstrustore hochladen, der in seinen Metadaten einen öffentlichen Schlüssel enthält.
+  {: tip}
 
 Weitere Informationen finden Sie unter [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 

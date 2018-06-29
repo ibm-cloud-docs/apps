@@ -163,7 +163,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 	 cf delete-route domain_name -n host_name
 	 ```
 	 例如：
-	 ```
+	    ```
 	 cf delete-route mybluemix.net -n app001
 	 ```
 
@@ -613,7 +613,7 @@ cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 
-如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![外部鏈結圖示](../../../icons/launch-glyph.svg)。
+如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
 
 
 ## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
@@ -674,6 +674,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * 如果您使用 `manifest.yml` 檔案來部署應用程式，請使用 buildpack 選項指定自訂建置套件的 URL 或名稱。例如：
+
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```

@@ -33,7 +33,7 @@ lastupdated: "2018-05-16"
 앱 세부사항 페이지에서 앱 또는 서비스를 확인하려고 하면 다음 오류 메시지가 계속 표시됩니다.
 {: tsSymptoms}
 
-`app_name 페이지의 변경사항을 저장하지 않았습니다. 변경사항을 저장하거나 취소하십시오.`
+`You have unsaved changes in page app_name. Save or cancel the changes.`
 
 런타임 분할창에서 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 설계상 이런 동작이 발생하는 것이며, 페이지에서 벗어나기 전에 메모리 또는 인스턴스 설정을 저장하라는 오류 메시지가 표시됩니다.
 {: tsCauses}
@@ -174,7 +174,7 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`BXNUI0515E: 조직의 영역이 검색되지 않았습니다. 네트워크 연결 문제점이 발생했거나 현재 조직에 이와 연관된 영역이 없습니다.`
+`BXNUI0515E: 조직의 영역이 검색되지 않았습니다. 네트워크 연결 문제점이 발생하거나 현재 조직에 연관되어 있는 영역이 없습니다.`
 
 이 오류는 영역이 아직 작성되지 않은 경우 카탈로그에서 앱 또는 서비스를 작성하려고 처음 시도할 때 종종 발생합니다.
 {: tsCauses}
@@ -182,8 +182,8 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 현재 조직에서 영역을 작성했는지 확인하십시오. 영역을 작성하려면 다음 방법 중 하나를 사용하십시오.
 {: tsResolve}
 
-  * 메뉴 표시줄에서 **관리 > 계정 > 조직**을 클릭하십시오. 영역을 작성하려는 조직을 선택하고 **영역 작성**을 클릭하십시오.
-  * cf 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
+  * 메뉴 표시줄에서 **관리 > 계정 > 조직**을 클릭하십시오. 영역을 작성할 조직을 선택하고 **영역 작성**을 클릭하십시오.
+  * cf 명령행 인터페이스에서 다음을 입력하십시오. `cf create-space <space_name> -o <organization_name>`.
 
 다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 
@@ -191,7 +191,7 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 ## 요청된 조치를 수행할 수 없음
 {: #ts_authority}
 
-적합한 액세스 권한이 없으면 조치를 완료하지 못할 수 있습니다.
+해당 액세스 권한이 없으면 조치를 완료하지 못할 수 있습니다.
 
 서비스 인스턴스 또는 앱 인스턴스에 대한 조치를 수행하려 할 때 요청된 조치를 완료할 수 없고 다음 오류 메시지 중 하나가 표시됩니다.
 {: tsSymptoms}
@@ -203,15 +203,15 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 조치 수행에 필요한 적절한 수준의 권한이 없습니다.
 {: tsCauses}
 
-적합한 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오.
+해당 권한 레벨을 확보하려면 다음 방법 중 하나를 사용하십시오.
 {: tsResolve}
  * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오.
- * 조직 관리자에게 문의하여 사용자의 역할을 개발자로 변경하거나 영역을 작성한 다음에 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/admin/orgs_spaces.html)를 참조하십시오.
+ * 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/admin/orgs_spaces.html)를 참조하십시오.
 
 ## 권한 오류로 인해 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 없음
 {: #ts_vcap}
 
-서비스 신임 정보가 앱에 하드 코딩된 경우, 앱이 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 때 권한 오류가 발생할 수 있습니다.
+사용자 앱에서 서비스 신임 정보가 하드 코딩된 경우 사용자 앱이 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스하려 하면 권한 오류가 발생합니다.
 
 {{site.data.keyword.Bluemix_notm}} 서비스와 통신하도록 사용자 앱을 구성한 후에는 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. 그러나 앱을 사용하여 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수는 없으며 권한 오류가 수신됩니다.
 {: tsSymptoms}
@@ -219,31 +219,31 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 앱에 하드 코딩된 신임 정보가 올바르지 않습니다. 서비스가 다시 작성될 때마다 이에 액세스하기 위한 신임 정보가 변경됩니다.
 {: tsCauses}
 
-앱에서 신임 정보를 하드 코딩하는 대신 VCAP_SERVICES 환경 변수의 연결 매개변수를 사용하십시오. VCAP_SERVICES 환경 변수를 통해 연결 매개변수를 사용하는 메소드는 프로그램 언어마다 다릅니다. 예를 들어, Node.js 앱의 경우 다음 명령을 사용할 수 있습니다.
+앱에서 신임 정보를 하드 코딩하는 대신 VCAP_SERVICES 환경 변수의 연결 매개변수를 사용하십시오. VCAP_SERVICES 환경 변수를 통해 연결 매개변수를 사용하는 메소드는 프로그램 언어마다 다릅니다. 예를 들어, Node.js 앱의 경우에는 다음 명령을 사용할 수 있습니다.
 {: tsResolve}
 
 ```
 process.env.VCAP_SERVICES
 ```
-다른 프로그램 언어에서 사용할 수 있는 명령에 대한 자세한 정보는 [Java ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
 
 
-## {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없음
+## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없음
 {: #ts_bm_tools_facet}
 
-지원되지 않는 패싯이 Eclipse 프로젝트에 적용된 경우에는 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하지 못할 수 있습니다.
+지원되지 않는 패싯이 Eclipse 프로젝트에 적용되는 경우 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 사용자 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
 
-Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 있습니다. 그러나 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없으며 다음과 같은 오류 메시지가 표시됩니다. `<facet_name> 프로젝트 패싯은 지원되지 않습니다.` 예:
+Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 있습니다. 그러나 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없으며 다음과 같은 오류 메시지가 표시됩니다. `Project facet<facet_name> is not supported.` 예를 들어, 다음과 같습니다.
 {: tsSymptoms}
-`프로젝트 패싯 Cloud Foundry Standalone Application 버전 1.0이 지원되지 않습니다.`
+`Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
 
-{{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구는 프로젝트 패싯 단위로 {{site.data.keyword.Bluemix_notm}} 런타임에 프로젝트를 맵핑합니다. 패싯은 Eclipse에서 Java EE 프로젝트의 요구사항을 정의하고, 서로 다른 런타임이 서로 다른 프로젝트와 연관될 수 있도록 런타임 구성의 일부로 사용됩니다. IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 지원하지 않는 프로젝트에 패싯이 적용되는 경우, IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없습니다.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}는 프로젝트 패싯 단위로 {{site.data.keyword.Bluemix_notm}} 런타임에 프로젝트를 맵핑합니다. 패싯은 Eclipse에서 Java EE 프로젝트의 요구사항을 정의하고, 서로 다른 런타임이 서로 다른 프로젝트와 연관될 수 있도록 런타임 구성의 일부로 사용됩니다. IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 지원하지 않는 프로젝트에 패싯이 적용되는 경우, IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 없습니다.
 {: tsCauses}
 
-{{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구를 사용하여 앱을 배치할 수 있으려면 Eclipse 프로젝트에서 패싯을 제거해야 합니다.
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 배치할 수 있으려면 Eclipse 프로젝트에서 패싯을 제거해야 합니다.
 {: tsResolve}
 
-패싯을 제거하려면 {{site.data.keyword.Bluemix_notm}}용 IBM Eclipse 도구에서 프로젝트에 대해 **프로젝트 > 특성 > 프로젝트 패싯**을 클릭하십시오. 그런 다음 지원되지 않는 패싯의 선택란을 선택 취소하십시오.
+패싯을 제거하려면 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}에서 프로젝트에 대해 **프로젝트>특성>프로젝트 패싯**을 클릭하십시오. 그런 다음 지원되지 않는 패싯의 선택란을 선택 취소하십시오.
 
 
 ## 502 잘못된 게이트웨이 오류가 수신됨
@@ -251,7 +251,7 @@ Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 �
 
 {{site.data.keyword.Bluemix_notm}}에서 앱과 상호작용할 때 502 잘못된 게이트웨이 오류가 수신되면 {{site.data.keyword.Bluemix_notm}} 상태 페이지를 확인한 후 적절하게 조치를 취하십시오.
 
-502 Bad Gateway로 시작하는 오류 메시지를 수신합니다. 예를 들면, 다음과 같은 메시지가 표시될 수 있습니다. `502 잘못된 게이트웨이: 등록된 엔드포인트가 요청을 처리하는 데 실패했습니다.`
+502 Bad Gateway로 시작하는 오류 메시지를 수신합니다. 예를 들어, `502 Bad Gateway: Registered endpoint failed to handle the request`가 표시될 수 있습니다.
 {: tsSymptoms}
 
 잘못된 게이트웨이 오류는 사이트를 호스팅하는 기본 서버의 데이터를 저장하고 릴레이하기 위해 프록시 서버를 사용하는 웹 사이트를 방문할 때 일반적으로 발생합니다. 기본 서버와 프록시 서버가 제대로 연결되지 않은 경우 브라우저 창에 HTTP 상태 코드 502가 표시됩니다. 이 상태 코드는 사이트의 기본 서버가 프록시 서버로부터 예상한 HTTP 구현을 수신하지 않았음을 나타냅니다.
@@ -259,20 +259,20 @@ Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 �
 
 잘못된 게이트웨이 오류의 덜 일반적인 기타 원인은 ISP(Internet Service Provider) 드롭아웃, 잘못된 방화벽 구성 및 브라우저 캐시 오류입니다.
 
-{{site.data.keyword.Bluemix_notm}} 서비스의 작동이 중지되었다고 의심되면 우선 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 임시 해결책으로 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/reqnsi.html#cross_region_service){: new_window}에서 사용 가능합니다. 서비스 상태가 정상이면 다음 단계를 수행하여 문제를 해결하십시오.
+{{site.data.keyword.Bluemix_notm}} 서비스의 작동이 중지된 것으로 의심되는 경우 먼저 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "")](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 임시 해결책으로 다른 {{site.data.keyword.Bluemix_notm}} 지역의 서비스를 사용할 수 있습니다. 자세한 정보는 [다른 지역에서 서비스 사용 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/reqnsi.html#cross_region_service){: new_window}을 참조하십시오. 서비스 상태가 정상이면 다음 단계를 수행하여 문제를 해결하십시오.
 {: tsResolve}
 
   * 조치 재시도:
     * 키보드에서 F5를 누르거나 새로 고치기 단추를 클릭하여 페이지를 다시 로드하십시오. 이 단계가 작동하지 않는 경우에는 브라우저의 캐시 및 쿠키를 지운 후 다시 로드하십시오.
     * 다른 브라우저를 사용하십시오.
     * 라우터, 모뎀 및 컴퓨터를 다시 부팅하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다.
-  * 기다리고 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
-  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.
+  * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
+  * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.
 
 ## 디스크 할당량이 초과됨
 {: #ts_disk_quota}
 
-디스크 공간이 부족한 경우, 디스크 할당량을 수동으로 수정하여 추가 디스크 공간을 얻을 수 있습니다.
+디스크 공간이 부족한 경우에는 디스크 할당량을 수동으로 수정하여 추가 디스크 공간을 얻을 수 있습니다.
 
 디스크 공간이 부족하면 디스크 할당량이 초과되었다는 메시지가 표시됩니다. 이 문제점을 해결하기 위해 앱 인스턴스를 확장하여 추가 디스크 공간을 얻도록 시도했을 수 있습니다. 예를 들어, 앱 세부사항 페이지에서 메모리 할당량을 변경하여 256MB에서 1256MB로 확장했을 수 있습니다. 하지만 디스크 할당량은 동일하게 유지되었기 때문에 추가 디스크 공간을 얻지 못했습니다.
 {: tsSymptoms}
@@ -280,14 +280,15 @@ Cloud Foundry CLI를 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 �
 하나의 앱에 대해 할당되는 기본 디스크 할당량은 1GB입니다. 추가 디스크 공간이 필요한 경우에는 디스크 할당량을 수동으로 지정해야 합니다.
 {: tsCauses}
 
-다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](/docs/services/ObjectStorage/index.html)와 같은 외부 서비스를 사용해 보십시오.
+다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](/docs/services/ObjectStorage/index.html) 등의 외부 서비스를 사용해 보십시오.
 {: tsResolve}
 
   * manifest.yml 파일에서 다음 항목을 추가하십시오.
     ```
 	disk_quota: <disk_quota>
 	```
-  * {{site.data.keyword.Bluemix_notm}}에 푸시할 때 **-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
+  * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때
+**-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
     ```
 	cf push appname -p app_path -k <disk_quota>
 	```
@@ -311,7 +312,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 ## 조직의 서비스 한계를 초과함
 {: #ts_servicelimit}
 
-평가판 계정 사용자인 경우, 조직의 서비스 한계를 초과했으면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
+평가판 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
 
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
@@ -321,34 +322,34 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 이 오류는 사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과한 경우에 발생합니다. 평가판 계정의 최대 서비스 인스턴스 수는 10입니다.
 {: tsCauses}
 
-필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스의 수에 대한 한계를 제거하십시오.
+필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
 {: tsResolve}
 
-  * 서비스 인스턴스를 삭제하기 위해 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
+  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
 
-    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 완료하십시오.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
 	  1. 서비스 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
 	  2. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 바인드한 앱을 다시 스테이징하라는 프롬프트가 표시됩니다.
 
-    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 완료하십시오.
-	  1. `cf unbind-service <appname> <service_instance_name>`을 입력하여 앱에서 서비스 인스턴스를 바인드 해제하십시오.
-	  2. `cf delete-service <service_instance_name>`을 입력하여 서비스 인스턴스를 삭제하십시오.
-	  3. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`을 입력하여 서비스 인스턴스가 바인드되었던 앱을 다시 스테이징하려고 할 수 있습니다.
+    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
+	  1. `cf unbind-service <appname> <service_instance_name>`.
+	  2. `cf delete-service <service_instance_name>`.
+	  3. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`.
 
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법에 대한 정보는 [플랜 변경 방법](/docs/pricing/index.html#changing)을 참조하십시오.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [플랜 변경 방법](/docs/pricing/index.html#changing)을 참조하십시오.
 
-## 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없음
+## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
 
-실행 파일이 다른 환경에서 개발되고 빌드된 경우에는 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다.
+실행 파일이 다른 환경에서 개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다.
 
 다른 환경에서 실행 파일을 개발하고 빌드한 경우 {{site.data.keyword.Bluemix_notm}}에서 이 실행 파일을 실행할 수 없습니다.
 {: tsSymptoms}
 
-{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우, 컨텐츠는 이전에 빌드되었으며 {{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 그러나 빌드팩이 필요하지 않음을 {{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
+{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우 이미 빌드되었으므로 {{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 그러나 빌드팩이 필요하지 않음을 {{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
 {: tsCauses}
 
-실행 파일을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 빌드팩이 필요하지 않음을 나타내는 null-buildpack을 지정해야 합니다. **-b** 옵션을 `cf push` 명령과 함께 사용하여 null-buildpack을 지정하십시오.
+실행 파일을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 빌드팩이 필요하지 않음을 나타내는 null-buildpack을 지정해야 합니다. null-buildpack을 지정하려면 **-b** 옵션을 `cf push` 명령과 함께 사용하십시오.
 {: tsResolve}
 
 ```
@@ -362,12 +363,12 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-평가판 계정 사용자인 경우, 조직의 메모리 한계를 초과했으면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다.  평가판 계정의 최대 메모리 할당량은 2GB이며 유료 계정으로 이동해야만 늘릴 수 있습니다.
+평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다.  평가판 계정의 최대 메모리 할당량은 2GB이며 유료 계정으로 이동해야만 늘릴 수 있습니다.
 
-앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
+{{site.data.keyword.Bluemix_notm}}에 앱을 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`FAILED 서버 오류, 상태 코드: 400, 오류 코드: 100005, 메시지: 조직의 메모리 한계를 초과했습니다.`
+`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
 이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. 평가판 계정의 최대 메모리 할당량은 2GB입니다.
 {: tsCauses}
@@ -375,10 +376,10 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve}
 
-  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법에 대한 정보는 [유료 계정](/docs/pricing/index.html#pay-accounts)을 참조하십시오.
+  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](/docs/pricing/index.html#pay-accounts)을 참조하십시오.
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 cf 명령행 인터페이스를 사용하십시오.
 
-    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 완료하십시오.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.
 
     1. 앱 대시보드에서 앱을 선택하십시오. 앱 세부사항 페이지가 열립니다.
     2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.
@@ -485,7 +486,8 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
     ```
     host: host_name
 	```
-  * 명령 프롬프트에서 애플리케이션을 배치하는 경우, `cf push` 명령을 **-n** 옵션과 함께 사용하십시오.
+  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf
+push` 명령을 **-n** 옵션과 함께 사용하십시오.
     ```
     cf push appname -p app_path -n host_name
     ```
@@ -498,7 +500,7 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
 
 `cf push` 명령을 사용하여 WAR 앱을 {{site.data.keyword.Bluemix_notm}}에 업로드할 때 다음 오류 메시지가 표시됩니다.
 {: tsSymptoms}
-`스테이징 오류: 스테이징에 실패하여 인스턴스를 가져올 수 없습니다.`
+`Staging error: cannot get instances since staging failed.`
 
 이 문제점은 WAR 파일을 지정하지 않았거나 WAR 파일의 경로를 지정하지 않은 경우에 발생할 수 있습니다.
 {: tsCauses}
@@ -545,14 +547,14 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 Node.js 앱을 업데이트하거나 Node.js 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 문제점이 발생할 수 있습니다.
 
-Node.js 앱을 업데이트하거나 Node.js 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음 오류 메시지 중 하나가 표시될 수 있습니다.
+Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음 오류 메시지 중 하나가 표시될 수 있습니다.
 {: tsSymptoms}
 
-`사용 가능한 빌드팩으로 앱이 발견되지 않았습니다.`
+`An app was not successfully detected by any available buildpack.`
 
-`인스턴스(인덱스 0)가 연결 허용을 시작하는 데 실패했습니다.`
+`Instance (index 0) failed to start accepting connections.`
 
-`스테이징에 실패하여 인스턴스를 가져올 수 없습니다.`
+`Cannot get instances since staging failed.`
 
 가능한 원인은 다음과 같습니다.
 {: tsCauses}
@@ -606,7 +608,7 @@ Node.js 앱을 업데이트하거나 Node.js 앱을 {{site.data.keyword.Bluemix_
  }
     ```
 
-Node.js 앱에 대한 추가 팁은 [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "외부 링크 아이콘"){: new_window}를 참조하십시오.
+Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}을 참조하십시오.
 
 
 ## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후에 `server.xml` 파일에서 구성 오류가 나타남

@@ -197,6 +197,7 @@ Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz ausz
 {: tsSymptoms}
 
 `BXNUI0514E: Sie sind kein Entwickler für die Bereiche in der Organisation <orgName>Organisationsname`.
+
 `Serverfehler, Statuscode: 403, Fehlercode: 10003, Nachricht: Sie sind nicht berechtigt, die angeforderte Aktion auszuführen.`
 
 Sie verfügen nicht über die entsprechende Berechtigungsebene zum Ausführen der Aktionen.
@@ -232,11 +233,9 @@ Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwe
 
 Wird eine nicht unterstützte Facette auf Ihr Eclipse-Projekt angewendet, können Sie Ihre Apps möglicherweise nicht mithilfe von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitstellen.
 
-Mit der Cloud Foundry-Befehlszeilenschnittstelle können Sie Ihre App erfolgreich in {{site.data.keyword.Bluemix_notm}} bereitstellen. Allerdings ist es nicht möglich, die App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitzustellen, und es wird die folgende Fehlernachricht angezeigt: `Project facet <facet_name> is not supported.` (Projektfacette 'facettenname' wird nicht unterstützt.)
- Beispiel:
+Mit der Cloud Foundry-Befehlszeilenschnittstelle können Sie Ihre App erfolgreich in {{site.data.keyword.Bluemix_notm}} bereitstellen. Allerdings ist es nicht möglich, die App mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} in {{site.data.keyword.Bluemix_notm}} bereitzustellen, und es wird die folgende Fehlernachricht angezeigt: `Project facet <facet_name> is not supported.` (Projektfacette 'facettenname' wird nicht unterstützt.) Beispiel:
 {: tsSymptoms}
 `Project facet Cloud Foundry Standalone Application version 1.0 is not supported.` (Projektfacette Cloud Foundry Standalone Application Version 1 wird nicht unterstützt.)
-
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} ordnet Projekte {{site.data.keyword.Bluemix_notm}}-Laufzeiten zu, und zwar durch Projektfacetten. Facetten definieren die Voraussetzungen für Java EE-Projekte in Eclipse und werden im Rahmen der Laufzeitkonfiguration genutzt, sodass unterschiedliche Laufzeiten unterschiedlichen Projekten zugeordnet werden. Wird die auf das Projekt angewendete Facette nicht von IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} unterstützt, können Sie Ihre App möglicherweise nicht mit IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} bereitstellen.
 {: tsCauses}
@@ -331,7 +330,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  1. Klicken Sie im Dashboard 'Services' für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
 	  2. Klicken Sie auf **Service löschen**. Sie werden dann aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen.
 
-    Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden, führen Sie folgende Schritte aus: 
+    Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden, führen Sie folgende Schritte aus:
 	  1. Heben Sie die Bindung zwischen der Serviceinstanz und der App mit dem folgenden Befehl auf: `cf unbind-service <appname> <service_instance_name>`.
 	  2. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  3. Nach dem Löschen der Serviceinstanz ist es gegebenenfalls wünschenswert, für Ihre App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen. Geben Sie hierzu folgenden Befehl ein: `cf restage <appname>`.
@@ -607,7 +606,7 @@ Verwenden Sie je nach Ursache des Problems eine der folgenden Methoden:
  }
     ```
 
-Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "Symbol für externen Link"){: new_window}.
+Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}. 
 
 
 ## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse
