@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -17,13 +17,11 @@ lastupdated: "2018-06-20"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-
 # Troubleshooting for managing apps
 {: #managingapps}
 
 General problems with managing apps might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
-
 
 ## You have unsaved changes
 {: #ts_unsaved_changes}
@@ -38,7 +36,7 @@ When you try to check your app or services on the app details page, you keep get
 When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you navigate away from the page.
 {: tsCauses}
 
-Close the message window, and then click the **RESET** button in your runtime pane.
+Close the message window, and then click **RESET** in your runtime pane.
 {: tsResolve}
 
 ## Automatic failover between {{site.data.keyword.Bluemix_notm}} regions isn't available
@@ -52,10 +50,11 @@ When an {{site.data.keyword.Bluemix_notm}} region becomes unavailable, the apps 
 {{site.data.keyword.Bluemix_notm}} doesn't yet provide automatic failover from one region to another.
 {: tsCauses}
 
-You can use a DNS provider that supports intelligent failover among multiple ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.Bluemix_notm}} regions. DNS providers with this capability include NSONE, Akamai, Dyn.
+You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.Bluemix_notm}} regions. DNS providers with this capability include NSONE, Akamai, Dyn.
 {: tsResolve}
 
-When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window:
+When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window.
+
 ```
 nslookup stage1.mybluemix.net
 ```
@@ -63,7 +62,7 @@ nslookup stage1.mybluemix.net
 ## Can't switch apps into debug mode
 {: #ts_debug}
 
-You might not be able to enable the debug mode if the Java virtual machine (JVM) version is 8 or lower.
+You can't enable the debug mode if the Java virtual machine (JVM) version is 8 or earlier.
 
 After you select **Enable application debug**, the tools attempt to switch the app into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`.
 {: tsSymptoms}
@@ -150,48 +149,54 @@ Complete the following steps to delete the unused route:
 {: tsResolve}
 
   1. Check whether the route belongs to the current space by entering the following command:
-     ```
-	 cf routes
-	 ```
+
+    ```
+    cf routes
+    ```
+
   2. If the route doesn't belong to the current space, switch to the space or org that it belongs to by entering the following command:
-     ```
-	 cf target -o org_name -s space_name
-	 ```
+
+    ```
+    cf target -o org_name -s space_name
+    ```
+
   3. Delete the app route by entering the following command:
-     ```
-	 cf delete-route domain_name -n host_name
-	 ```
-	 For example:
-	 ```
-	 cf delete-route mybluemix.net -n app001
-	 ```
+
+    ```
+    cf delete-route domain_name -n host_name
+    ```
+
+  For example:
+
+  ```
+  cf delete-route mybluemix.net -n app001
+  ```
 
 ## Can't retrieve spaces in the org
 {: #ts_retrieve_space}
 
-You can't create an app or a service if your current organization doesn't have a space associated with it.
+You can't create an app or a service if your current organization doesn't have a space that is associated with it.
 
 When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
 {: tsSymptoms}
 
 `BXNUI0515E: The spaces in the org weren't retrieved. Either a network connection problem occurred, or your current organization does not have a space associated with it.`
 
-This error often occurs the first time you try to create an app or a service from the Catalog when a space isn't created yet.
+This error often occurs the first time that you try to create an app or a service from the catalog when a space isn't created yet.
 {: tsCauses}
 
 Ensure that you created a space in your current organization. To create a space, use one of the following methods:
 {: tsResolve}
 
-  * From the menu bar, click **Manage > Account > Organizations**. Select the organization that you want to create the space in, and click **Create a Space**.
-  * In the cf command line interface, type `cf create-space <space_name> -o <organization_name>`.
+* From the menu bar, click **Manage > Account > Organizations**. Select the organization that you want to create the space in, and click **Create a Space**.
+* In the `cf` command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
-
 
 ## Can't perform requested actions
 {: #ts_authority}
 
-You might not be able to complete actions without appropriate access authority.
+You can't complete actions without appropriate access authority.
 
 When you try to perform actions for a service instance or an app instance, you can't complete the requested actions and see one of the following error messages:
 {: tsSymptoms}
@@ -203,10 +208,11 @@ When you try to perform actions for a service instance or an app instance, you c
 You don't have the appropriate level of authority to perform the actions.
 {: tsCauses}
 
-To obtain the appropriate authority level, use one of the following methods:
+To obtain the appropriate authority level, use one of the following methods.
 {: tsResolve}
- * Select another organization and space for which you have the developer role.
- * Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
+
+* Select another organization and space for which you have the developer role.
+* Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
 
 ## Can't access {{site.data.keyword.Bluemix_notm}} services because of authorization errors
 {: #ts_vcap}
@@ -216,7 +222,7 @@ Authorization errors might occur when your app accesses an {{site.data.keyword.B
 After you configure your app to communicate with an {{site.data.keyword.Bluemix_notm}} service, you deploy the app to {{site.data.keyword.Bluemix_notm}}. However, you can't use the app to access the {{site.data.keyword.Bluemix_notm}} service and receive an authorization error.
 {: tsSymptoms}
 
-The hardcoded credentials in the app might not be correct. Every time that the service is recreated, the credentials to access it change.
+The hardcoded credentials in the app might not be correct. Every time that the service is re-created, the credentials to access it change.
 {: tsCauses}
 
 Instead of hardcoding the credentials in your app, use connection parameters from the VCAP_SERVICES environment variable. The methods to use connection parameters from the VCAP_SERVICES environment variable vary depending on program languages. For example, for Node.js apps, you can use the following command:
@@ -237,7 +243,7 @@ You can successfully deploy your app to {{site.data.keyword.Bluemix_notm}} by us
 {: tsSymptoms}
 `Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
 
-The IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} map projects to {{site.data.keyword.Bluemix_notm}} runtimes by project facets. Facets define the requirements for Java EE projects in Eclipse, and are used as part of the runtime configuration so that different runtimes are associated with different projects. If the facet that is applied to the project isn't supported by the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, you might not be able to deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+The IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} map projects to {{site.data.keyword.Bluemix_notm}} runtimes by project facets. Facets define the requirements for Java EE projects in Eclipse, and are used as part of the runtime configuration so that different runtimes are associated with different projects. If the facet that is applied to the project isn't supported by the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, you can't deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
 You must remove the facet from the Eclipse project so that you can deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
@@ -245,19 +251,18 @@ You must remove the facet from the Eclipse project so that you can deploy your a
 
 To remove the facet, in the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, click **Project > Properties > Project Facets** for the project. Then, clear the check box for the unsupported facet.
 
-
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
 
-If you receive 502 Bad Gateway errors when you interact with apps on {{site.data.keyword.Bluemix_notm}}, check the {{site.data.keyword.Bluemix_notm}} status page, and then take actions accordingly.
+If you receive 502 Bad Gateway errors when you interact with apps on {{site.data.keyword.Bluemix_notm}}, check the {{site.data.keyword.Bluemix_notm}} status page, and then take appropriate actions.
 
 You receive error messages that start with 502 Bad Gateway. For example, you might see `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
 
-A Bad Gateway error usually happens when you visit a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly; therefore you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
+A Bad Gateway error usually happens when you visit a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly. Then, you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
 {: tsCauses}
 
-Other less common causes of a Bad Gateway error are Internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
+Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
 
 If you suspect that an {{site.data.keyword.Bluemix_notm}} service is down, first check the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page. A workaround might be to use the service in another {{site.data.keyword.Bluemix_notm}} region. Detailed information is available in [Using services in another region ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
@@ -265,8 +270,8 @@ If you suspect that an {{site.data.keyword.Bluemix_notm}} service is down, first
   * Retry the action:
     * Reload the page by pressing F5 on your keyboard, or by clicking the refresh button. If this step doesn't work, clear your browser's cache and cookies, and then reload again.
     * Use a different browser.
-    * Reboot your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
-  * Wait and try again later. In some instances, temporary problems might occur with your Internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
+    * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
+  * Wait and try again later. In some instances, temporary problems might occur with your internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
   * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information.
 
 ## Disk quota is exceeded
@@ -301,17 +306,16 @@ Android apps in certain regions where Google isn't accessible can't receive noti
 You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.keyword.Bluemix_notm}} app and send a message to the registered devices. However, apps that are developed on the Android platform can't receive your notifications in certain regions.
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
+IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [igetui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
+As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [getui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
-
 
 ## Org's services limit is exceeded
 {: #ts_servicelimit}
 
-If you are a trial account user, you might be unable to create an app in {{site.data.keyword.Bluemix_notm}} if you have exceeded your organization's services limit.
+If you are a trial account user, you might be unable to create an app in {{site.data.keyword.Bluemix_notm}} if you exceeded your organization's services limit.
 
 When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
 {: tsSymptoms}
@@ -328,16 +332,16 @@ Delete any services instances that aren't needed, or remove the limit on the num
 
     To use the {{site.data.keyword.Bluemix_notm}} console to delete a service instance, complete the following steps:
 	  1. In the Services dashboard, click the **Actions** menu for the service that you want to delete.
-	  2. Click **Delete Service**. You'll then be prompted to restage the app that the service instance was bound to.
+	  2. Click **Delete Service**. You are prompted to restage the app that the service instance was bound to.
 
     To use the command line interface to delete a service instance, complete the following steps:
-	  1. Unbind the service instance from an app by typing `cf unbind-service <appname> <service_instance_name>`.
-	  2. Delete the service instance by typing `cf delete-service <service_instance_name>`.
-	  3. After you delete the service instance, you might want to restage your app that the service instance was bound to by typing `cf restage <appname>`.
+	  3. Unbind the service instance from an app by typing `cf unbind-service <appname> <service_instance_name>`.
+	  4. Delete the service instance by typing `cf delete-service <service_instance_name>`.
+	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to by typing `cf restage <appname>`.
 
   * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing).
 
-## Executables can't be run on {{site.data.keyword.Bluemix_notm}}
+## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
 You might be unable to run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
@@ -345,10 +349,10 @@ You might be unable to run executables on {{site.data.keyword.Bluemix_notm}} whe
 You can't run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
 {: tsSymptoms}
 
-If the content that you want to push to {{site.data.keyword.Bluemix_notm}} is already an executable, the content was previously built and doesn't need to be built on {{site.data.keyword.Bluemix_notm}}. In this case, no buildpack is required for the executable to be run on {{site.data.keyword.Bluemix_notm}}. However, you must explicitly indicate to {{site.data.keyword.Bluemix_notm}} that no buildpack is required.
+If the content that you want to push to {{site.data.keyword.Bluemix_notm}} is already an executable, the content was previously built and doesn't need to be built on {{site.data.keyword.Bluemix_notm}}. In this case, no buildpack is required for the executable to be run on {{site.data.keyword.Bluemix_notm}}. You must explicitly indicate to {{site.data.keyword.Bluemix_notm}} that no buildpack is required.
 {: tsCauses}
 
-When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must specify a null-buildpack, which indicates that no buildpack is required. Specify a null-buildpack by using the **-b** option with the `cf push` command:
+When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must specify a `null-buildpack`, which indicates that no buildpack is required. Specify a `null-buildpack` by using the **-b** option with the `cf push` command:
 {: tsResolve}
 
 ```
@@ -362,7 +366,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
 
-If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a trial account is 2 GB and can only be increased by moving to a paid account.
+If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a trial account is 2 GB and can be increased only by moving to a paid account.
 
 When you deploy an app to {{site.data.keyword.Bluemix_notm}}, you see the following error message:
 {: tsSymptoms}
@@ -376,14 +380,14 @@ You can either increase the memory quota of your account, or reduce the memory t
 {: tsResolve}
 
   * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts).
-  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the cf command line interface.
+  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the `cf` command line interface.
 
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
     1. In the Apps Dashboard, select your app. The app details page opens.
     2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
 
-    If you use the cf command line interface, complete the following steps:
+    If you use the `cf` command line interface, complete the following steps:
 
     1. Check how much memory is being used for your apps:
 
@@ -391,7 +395,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 	  cf apps
 	  ```
 
-	  The cf apps command lists all the apps that you deployed in your current space. The status of each app is also displayed.
+	  The `cf apps` command lists all the apps that you deployed in your current space. The status of each app is also displayed.
 
     2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
 
@@ -401,11 +405,10 @@ You can either increase the memory quota of your account, or reduce the memory t
 
     3. Restart your app for the changes to take effect.
 
-
 ## Apps aren't automatically restarted
 {: #ts_apps_not_auto_restarted}
 
-An app isn't automatically restarted when a service that you bind to the app stops working.	  
+An app isn't automatically restarted when a service that you bind to the app stops working.
 
 When a service that you bind to an app crashes, problems such as outages, exceptions, and connection failures might occur on the app. {{site.data.keyword.Bluemix_notm}} doesn't automatically restart the app to recover from these problems.
 {: tsSymptoms}
@@ -419,6 +422,7 @@ You can manually restart the app by typing the following command in the command 
 ```
 cf push appname -p app_path
 ```
+
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures.
 
 ## User-defined variables are lost when an app is pushed
@@ -432,7 +436,7 @@ The variables that you specified are lost after you push an app to {{site.data.k
 The variables that you specified are saved only if you save them to the manifest file.
 {: tsCauses}
 
-When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time you open the wizard, the variables are displayed automatically.
+When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time that you open the wizard, the variables are displayed automatically.
 {: tsResolve}
 
 
@@ -441,29 +445,30 @@ When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tool
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
 
-You can log in to the {{site.data.keyword.Bluemix_notm}} console successfully, but you can't push apps by using the cf command line interface or the Eclipse plug-in.
+You can log in to the {{site.data.keyword.Bluemix_notm}} console successfully, but you can't push apps by using the `cf` command line interface or the Eclipse plug-in.
 {: tsSymptoms}
 
-When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the cf command line interface, you see one of the following error messages with the organization name specified in the message:
+When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the `cf` command line interface, you see one of the following error messages with the organization name that is specified in the message:
 
 `Error finding org`
 
 `Organization not found`
 
-When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry Eclipse Plugin, you see the following error message:
+When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry Eclipse plug-in, you see the following error message:
 
 `cloudspace not found.`
 
 This problem occurs because the API endpoint of the region that you want to work with isn't specified, and the organization you're looking for might be in a different region.
 {: tsCauses}
 
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the cf command line interface, enter the cf api command and specify the API endpoint of the region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
+If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the `cf` command line interface, enter the `cf api` command and specify the API endpoint of the region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
 {: tsResolve}
 
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create an {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).  
+
+If you're pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Eclipse tools, you must first create an {{site.data.keyword.Bluemix_notm}} server and specify the API endpoint of the {{site.data.keyword.Bluemix_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
 
 ## App routes can't be created
 {: #ts_hostistaken}
@@ -481,7 +486,7 @@ This problem occurs if the host name that you specified is already being used.
 The host name that you specify must be unique within the domain that you are using. To specify a different host name, use one of the following methods:
 {: tsResolve}
 
-  * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.	 
+  * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.
     ```
     host: host_name
 	```
@@ -494,7 +499,7 @@ The host name that you specify must be unique within the domain that you are usi
 ## WAR apps can't be pushed by using the cf push command
 {: #ts_cf_war}
 
-You might not be able to use the cf push command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location isn't specified correctly.
+You might not be able to use the `cf push` command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location isn't specified correctly.
 
 When you upload a WAR app to {{site.data.keyword.Bluemix_notm}} by using the `cf push` command, you see the following error message:
 {: tsSymptoms}
@@ -513,7 +518,7 @@ cf push MyUniqueAppName01 -p app.war
 ```
 cf push MyUniqueAppName02 -p "./app.war"
 ```
-For more information about the `cf push` command, enter `cf push -h`. 	
+For more information about the `cf push` command, enter `cf push -h`.
 
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.Bluemix_notm}}
@@ -564,7 +569,7 @@ Use one of the following methods, depending on the cause of the problem:
 {: tsResolve}
 
   * Specify the start command by one of the following methods:
-     * Use the cf command line interface. For example:
+     * Use the `cf` command line interface. For example:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
@@ -587,7 +592,7 @@ Use one of the following methods, depending on the cause of the problem:
         ```
 
   * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app.
-    The following example shows a simple `package.json` file:  
+    The following example shows a simple `package.json` file:
 	```
 	{
         "name": "MyUniqueNodejs01",
