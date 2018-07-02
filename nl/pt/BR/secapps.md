@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -96,12 +96,13 @@ Para fazer upload de um certificado para seu aplicativo:
 
 2. Selecione seu app para abrir a visualização de detalhes do app.
 
-3. Selecione a lista suspensa **Rotas** e, em seguida, para a sua organização, na coluna de ação, selecione **Domínios** no menu Ações adicional.
+3. Clique nas **Rotas** > **Gerenciar domínios**.
 
-3. Para seu domínio customizado, clique em **Fazer upload de
-certificado**.
+4. Para sua organização, na coluna de ação, clique em **Domínios** no menu de ações adicional.
 
-4. Navegue para fazer upload de um certificado, chave privada e, como opção, um certificado intermediário ou certificado de cliente. Para ativar o armazenamento confiável de certificado de cliente, deve-se fazer upload de um arquivo de armazenamento confiável de certificado de cliente que define o acesso de usuário permitido para seu domínio customizado.
+5. Para seu domínio customizado, clique em **Fazer upload** na coluna Certificado SSL.
+
+6. Navegue para fazer upload de um certificado, chave privada e, como opção, um certificado intermediário ou certificado de cliente. Para ativar o armazenamento confiável de certificado de cliente, deve-se fazer upload de um arquivo de armazenamento confiável de certificado de cliente que define o acesso de usuário permitido para seu domínio customizado.
 
   #### Certificado
 
@@ -132,8 +133,6 @@ mantida no sistema do usuário e é protegida por uma senha.
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
 
-    **Limitação:** as chaves privadas que estão protegidas por um passphrase não podem ser transferidas por upload.
-
   #### Certificado intermediário
 
     Um certificado subordinado que é emitido pela autoridade de certificação raiz confiável
@@ -163,6 +162,9 @@ tipos de certificados a seguir são suportados no
 
       * PEM (pem, .crt, .cer e .cert)
       * PKCS #7 (p7b, p7r, spc)
+
+  É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado do cliente que contém uma chave pública em seus metadados.
+  {: tip}
 
 Para obter mais informações, veja [Importando certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 

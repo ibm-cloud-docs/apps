@@ -23,7 +23,6 @@ Criando aplicativos
 
     dep-app-tool.md
     reqnsi.md
-    [Gerenciando conexões](../resources/connecting_apps.html)
     mngapps.md
     updapps.md
     secapps.md
@@ -53,7 +52,7 @@ Criando aplicativos
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_apps.md
+    [Resolução de problemas para gerenciar apps](../troubleshoot/ts_apps.html)
     [Canal de ferramentas do desenvolvedor do IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
