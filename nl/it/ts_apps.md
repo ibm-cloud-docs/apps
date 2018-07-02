@@ -640,8 +640,7 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-    * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/jsonfile){: new_window}. Ad
-esempio:
+    * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/jsonfile){: new_window}. Ad esempio:
 	    ```
 		{
       ...
@@ -650,8 +649,7 @@ esempio:
  	   }
 	}
 	    ```
-    * Utilizza il file `manifest.yml`. Ad
-esempio:
+    * Utilizza il file `manifest.yml`. Ad esempio:
 	    ```
 		applications:
   name: MyUniqueNodejs01
@@ -682,7 +680,7 @@ esempio:
  }
     ```
 
-Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Suggerimenti per le applicazioni Node.js](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "Icona link esterno"){: new_window}.
+Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
 
 ## Sono presenti degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-26"
+lastupdated: "2018-06-14"
 
 ---
 
@@ -97,11 +97,13 @@ Per caricare un certificato per la tua applicazione:
 
 2. Seleziona la tua applicazione per aprire la vista dei dettagli ad essa relativa.
 
-3. Seleziona l'elenco a discesa **Rotte** e quindi, nella colonna delle azioni per la tua organizzazione seleziona **Domini** dal menu di azioni aggiuntive.
+3. Fai clic su **Rotte** > **Gestisci domini**.
 
-3. Per il tuo dominio personalizzato, fai clic su **Carica certificato**.
+4. Per la tua organizzazione, nella colonna delle azioni, fai clic su **Domini** dal menu di azioni aggiuntive.
 
-4. Sfoglia per caricare un certificato, una chiave privata e, facoltativamente, un certificato intermedio o un certificato client. Per abilitare il truststore certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
+5. Per il tuo dominio personalizzato, fai clic su **Carica** nella colonna dei certificati SSL.
+
+6. Sfoglia per caricare un certificato, una chiave privata e, facoltativamente, un certificato intermedio o un certificato client. Per abilitare il truststore certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
 
   #### Certificato
 
@@ -128,8 +130,6 @@ solo mediante la chiave pubblica corrispondente. Inoltre, la chiave privata vien
     * PEM (pem, .key)
     * PKCS #8 (p8, pk8)
 
-    **Limitazione:** non è possibile caricare le chiavi private protette da una passphrase.
-
   #### Certificato intermedio
 
     Un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
@@ -154,6 +154,9 @@ il browser web gli richiede di fornire un certificato client per il dominio. Uti
 
       * PEM (pem, .crt, .cer e .cert)
       * PKCS #7 (p7b, p7r, spc)
+
+  Puoi configurare l'autenticazione reciproca caricando un truststore certificato client che contenga una chiave pubblica nei suoi metadati.
+  {: tip}
 
 Per ulteriori informazioni, consulta [Importazione di certificati SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
