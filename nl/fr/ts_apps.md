@@ -30,7 +30,7 @@ Des problèmes d'ordre général liés à la gestion des applications peuvent su
 
 Lorsque vous naviguez dans la page des détails de l'application, vous ne pourrez peut-être pas effectuer d'action et vous serez invité à sauvegarder vos modifications pour pouvoir continuer.
 
-Lorsque vous essayez de vérifier votre appli ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
+Lorsque vous essayez de vérifier votre application ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
 {: tsSymptoms}
 
 `Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
@@ -44,22 +44,18 @@ Fermez la fenêtre de message, puis cliquez sur le bouton **REINITIALISER** de v
 ## Le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}} n'est pas disponible
 {: #ts_failover}
 
-Vous ne pouvez pas utiliser le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}}. Toutefois, vous pouvez utiliser un fournisseur DNS qui prend en charge
-le basculement entre plusieurs adresses IP comme solution de contournement.
+Vous ne pouvez pas utiliser le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}}. Toutefois, vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement entre plusieurs adresses IP comme solution de contournement.
 
-Lorsqu'une région {{site.data.keyword.Bluemix_notm}} n'est plus disponible, les applications qui sont exécutées dans cette région ne sont plus
-disponibles non plus, même si les mêmes applications s'exécutent dans une autre région {{site.data.keyword.Bluemix_notm}}.
+Lorsqu'une région {{site.data.keyword.Bluemix_notm}} n'est plus disponible, les applications qui sont exécutées dans cette région ne sont plus disponibles non plus, même si les mêmes applications s'exécutent dans une autre région {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
 {{site.data.keyword.Bluemix_notm}} ne fournit pas encore le basculement automatique d'une région vers une autre.
 {: tsCauses}
 
-Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intelligent entre plusieurs adresses IP et configurer manuellement vos
-paramètres DNS pour activer le basculement automatique entre des régions {{site.data.keyword.Bluemix_notm}}. NSONE, Akamai et Dyn sont des fournisseurs DNS qui proposent cette capacité.
+Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intelligent entre plusieurs adresses IP et configurer manuellement vos paramètres DNS pour activer le basculement automatique entre des régions {{site.data.keyword.Bluemix_notm}}. NSONE, Akamai et Dyn sont des fournisseurs DNS qui proposent cette capacité.
 {: tsResolve}
 
-Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses IP publiques des régions {{site.data.keyword.Bluemix_notm}}
-dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la commande `nslookup`. Par exemple, vous pouvez entrer la commande suivante dans une fenêtre de ligne de commande :
+Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses IP publiques des régions {{site.data.keyword.Bluemix_notm}} dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la commande `nslookup`. Par exemple, vous pouvez entrer la commande suivante dans une fenêtre de ligne de commande :
 ```
 nslookup stage1.mybluemix.net
 ```
@@ -67,51 +63,49 @@ nslookup stage1.mybluemix.net
 ## Impossible de faire passer les applications en mode débogage
 {: #ts_debug}
 
-Il se peut que vous ne puissiez pas activer le mode débogage si votre version de machine virtuelle Java
-(JVM) est la version 8 ou antérieure.
+Il se peut que vous ne puissiez pas activer le mode débogage si votre version de machine virtuelle Java (JVM) est la version 8 ou antérieure.
 
-Après que vous avez sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan
-de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+Après que vous avez sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
 {: tsSymptoms}
 
 Par contre, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du mode` et `Développement`, sans afficher `Débogage`. Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
 
 ```
-bluemixMgmgClient - ???? [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion
-WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-à java.util.concurrent.FutureTask.run(FutureTask.java:277)
-à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-à java.lang.Thread.run(Thread.java:785)
-Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
-org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 autres
-Provoquée par : java.util.concurrent.TimeoutException
-à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERREUR  --- ClientProxyImpl : Impossible de créer les connexions websocket pour
-MyWebProj com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: La requête HTTP d'initialisation de la
-connexion WebSocket a échoué à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-à java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-à java.util.concurrent.FutureTask.run(FutureTask.java:277)
-à java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-à java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-à java.lang.Thread.run(Thread.java:785)
-Provoquée par : javax.websocket.DeploymentException: La requête HTTP d'initialisation de la connexion WebSocket a échoué à
-org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-à com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 autres
-Provoquée par : java.util.concurrent.TimeoutException
-à org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-à org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-à org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
+[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
+at java.util.concurrent.FutureTask.run(FutureTask.java:277)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.lang.Thread.run(Thread.java:785)
+Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
+at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
+... 6 more
+Caused by: java.util.concurrent.TimeoutException
+at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
+at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
+at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 autres
 ```
 
@@ -124,18 +118,15 @@ Pour vérifier la version Java utilisée par {{site.data.keyword.eclipsetoolsful
 {: tsResolve}
 
   1. Dans IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, sélectionnez **Aide** > **A propos d'Eclipse** > **Détails de l'installation** > **Configuration**.
-  2. Localisez la propriété `eclipse.vm` dans la liste. La ligne suivante est un exemple de propriété
-`eclipse.vm` :
+  2. Localisez la propriété `eclipse.vm` dans la liste. La ligne suivante est un exemple de propriété `eclipse.vm` :
 
 	```
 	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
 	```
 
-  3. Sur la ligne de commande, entrez `java -version` depuis le répertoire `bin` de votre installation Java. Les
-informations de version de votre JVM IBM s'affichent.
+  3. Sur la ligne de commande, entrez `java -version` depuis le répertoire `bin` de votre installation Java. Les informations de version de votre JVM IBM s'affichent.
 
-Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IBM, ou une version antérieure à la JVM 8 d'Oracle 8, procédez comme suit pour
-passer à la JVM 8 d'Oracle :
+Si la machine virtuelle Java de votre plan de travail utilise la JVM 7 ou 8 d'IBM, ou une version antérieure à la JVM 8 d'Oracle 8, procédez comme suit pour passer à la JVM 8 d'Oracle :
 
   1. Téléchargez et installez Oracle JVM 8. Pour plus d'informations, voir [Java SE Downloads ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
   2. Redémarrez Eclipse.
@@ -164,7 +155,7 @@ Procédez comme suit pour supprimer la route inutilisée :
 	 ```
   2. Si la route n'appartient pas à l'espace en cours, basculez vers l'espace ou l'organisation à laquelle elle est rattachée en entrant la commande suivante :
      ```
-	 cf target -o nom_org -s nom_espace
+	 cf target -o org_name -s space_name
 	 ```
   3. Supprimez la route de l'application en entrant la commande suivante :
      ```
@@ -222,16 +213,13 @@ Pour obtenir le niveau d'autorisation approprié, utilisez l'une des méthodes s
 
 Des erreurs d'autorisation peuvent se produite lorsque votre application accède à un service {{site.data.keyword.Bluemix_notm}} si les données d'identification du service sont codées en dur dans votre application.
 
-Une fois que vous avez configuré votre application pour qu'elle communique avec un service {{site.data.keyword.Bluemix_notm}}, vous la déployez dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous ne pouvez pas utiliser l'application pour accéder au service
-{{site.data.keyword.Bluemix_notm}} et recevez une erreur d'autorisation.
+Une fois que vous avez configuré votre application pour qu'elle communique avec un service {{site.data.keyword.Bluemix_notm}}, vous la déployez dans {{site.data.keyword.Bluemix_notm}}. Toutefois, vous ne pouvez pas utiliser l'application pour accéder au service {{site.data.keyword.Bluemix_notm}} et recevez une erreur d'autorisation.
 {: tsSymptoms}
 
-Il se peut que les données d'identification codées en dur dans l'application soient incorrectes. A chaque fois que le service est recréé, les
-données d'identification permettant d'y accéder changent.
+Il se peut que les données d'identification codées en dur dans l'application soient incorrectes. A chaque fois que le service est recréé, les données d'identification permettant d'y accéder changent.
 {: tsCauses}
 
-Au lieu de coder en dur les données d'identification dans votre application, utilisez les paramètres de connexion de la variable d'environnement VCAP_SERVICES. Les méthodes d'utilisation des paramètres de connexion de la variable d'environnement VCAP_SERVICES varient selon les
-langages de programmation. Par exemple, pour les applications Node.js, vous pouvez utiliser la commande suivante :
+Au lieu de coder en dur les données d'identification dans votre application, utilisez les paramètres de connexion de la variable d'environnement VCAP_SERVICES. Les méthodes d'utilisation des paramètres de connexion de la variable d'environnement VCAP_SERVICES varient selon les langages de programmation. Par exemple, pour les applications Node.js, vous pouvez utiliser la commande suivante :
 {: tsResolve}
 
 ```
@@ -245,16 +233,13 @@ Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autre
 
 Lorsqu'une facette non prise en charge est appliquée à votre projet Eclipse, il se peut que vous ne puissiez pas déployer vos applications dans {{site.data.keyword.Bluemix_notm}} à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
-Votre application peut être déployée avec succès dans
-{{site.data.keyword.Bluemix_notm}} à l'aide de l'interface de ligne de commande Cloud Foundry. Toutefois, vous ne pouvez pas déployer l'application dans {{site.data.keyword.Bluemix_notm}} à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} et le message d'erreur suivante s'affiche : `La facette de projet <facet_name> n'est pas prise en charge.` Exemple :
+Votre application peut être déployée avec succès dans {{site.data.keyword.Bluemix_notm}} à l'aide de l'interface de ligne de commande Cloud Foundry. Toutefois, vous ne pouvez pas déployer l'application dans {{site.data.keyword.Bluemix_notm}} à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} et le message d'erreur suivante s'affiche : `La facette de projet <facet_name> n'est pas prise en charge.` Exemple :
 {: tsSymptoms}
 `La facette de projet Cloud Foundry Standalone Application version 1.0 n'est pas prise en charge.`
 
 Les outils IBM Eclipse pour
 {{site.data.keyword.Bluemix_notm}} mappent des projets vers les contextes d'exécution
-{{site.data.keyword.Bluemix_notm}} par facettes de projet. Les facettes définissent les exigences des projets
-Java EE dans Eclipse et sont utilisées dans le cadre de la configuration du contexte d'exécution pour que différents contextes d'exécution soient associés à
-différents projets. Si la facette qui est appliquée au projet n'est pas prise en charge par IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, vous ne pourrez peut-être pas déployer votre application à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+{{site.data.keyword.Bluemix_notm}} par facettes de projet. Les facettes définissent les exigences des projets Java EE dans Eclipse et sont utilisées dans le cadre de la configuration du contexte d'exécution pour que différents contextes d'exécution soient associés à différents projets. Si la facette qui est appliquée au projet n'est pas prise en charge par IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, vous ne pourrez peut-être pas déployer votre application à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsCauses}
 
 Vous devez supprimer la facette du projet Eclipse pour pouvoir déployer votre application à l'aide d'IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
@@ -282,10 +267,8 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
   * Réessayez l'action :
     * Rechargez la page en appuyant sur la touche F5 de votre clavier ou en cliquant sur le bouton d'actualisation. Si cette étape ne fonctionne pas, videz le cache de votre navigateur et supprimez les cookies, puis rechargez la page.
     * Utilisez un navigateur différent.
-    * Réamorcez votre routeur, votre modem et votre ordinateur. Le réamorçage de ces
-unités peut éliminer diverses erreurs à l'origine de l'erreur 502.
-  * Patientez et essayez à nouveau ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire
-avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
+    * Réamorcez votre routeur, votre modem et votre ordinateur. Le réamorçage de ces unités peut éliminer diverses erreurs à l'origine de l'erreur 502.
+  * Patientez et essayez à nouveau ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
   * Si le problème persiste, contactez le support {{site.data.keyword.Bluemix_notm}}. Voir [Contact du support {{site.data.keyword.Bluemix_notm}} ![ Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/support/index.html#contacting-bluemix-support){: new_window} pour plus d'informations.
 
 ## Dépassement du quota de disque
@@ -293,10 +276,7 @@ avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Blu
 
 Si votre espace disque est épuisé, vous pouvez modifier manuellement le quota de disque pour disposer de plus d'espace.
 
-Lorsque votre espace disque devient insuffisant, un message indiquant que le quota de disque est dépassé peut s'afficher. Pour résoudre le problème,
-vous pouvez tenter d'augmenter votre instance d'application pour obtenir davantage
-d'espace disque. Par exemple, vous pouvez passer de 256 Mo à 1256 Mo en modifiant le quota de
-mémoire sur la page de détails de l'application. Cependant, comme le quota de disque est resté le même, vous n'avez pas obtenu plus d'espace disque.
+Lorsque votre espace disque devient insuffisant, un message indiquant que le quota de disque est dépassé peut s'afficher. Pour résoudre le problème, vous pouvez tenter d'augmenter votre instance d'application pour obtenir davantage d'espace disque. Par exemple, vous pouvez passer de 256 Mo à 1256 Mo en modifiant le quota de mémoire sur la page de détails de l'application. Cependant, comme le quota de disque est resté le même, vous n'avez pas obtenu plus d'espace disque.
 {: tsSymptoms}
 
 Le quota de disque par défaut alloué à une application est de 1 Go. Si vous avez besoin de davantage d'espace disque, vous devez spécifier manuellement le quota de disque.
@@ -307,11 +287,11 @@ Utilisez l'une des méthodes suivantes pour spécifier votre quota de disque. Le
 
   * Dans le fichier manifest.yml, ajoutez l'élément suivant :
     ```
-	disk_quota: <quota_disque>
+	disk_quota: <disk_quota>
 	```
   * Utilisez l'option **-k** avec la commande `cf push` lorsque vous envoyez par commande push votre application à {{site.data.keyword.Bluemix_notm}} :
     ```
-	cf push nom_app -p chemin_app -k <quota_disque>
+	cf push appname -p app_path -k <disk_quota>
 	```
 
 
@@ -326,7 +306,7 @@ Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre applicatio
 Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service GCM (Google Cloud Messaging) pour diffuser les notifications aux applications mobiles développées sur la plateforme Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où le service GCM n'est pas accessible aux applications Android, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Comme solution palliative, utilisez des services de tiers qui ne sont pas basés sur les services GCM, par exemple [Pushy ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://pushy.me){: new_window}, [igetui ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.getui.com/){: new_window}, and [jpush ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.jpush.cn/){: new_window}.
+Comme solution palliative, utilisez des services de tiers qui ne sont pas basés sur les services GCM, par exemple [Pushy ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://pushy.me){: new_window}, [igetui ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.getui.com/){: new_window} et [jpush ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
 
@@ -340,8 +320,7 @@ Lorsque vous tentez de créer une application dans {{site.data.keyword.Bluemix_n
 
 `BXNUI2032E: La ressource <service_instances> n'a pas été créée. Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Message Cloud Foundry : "You have exceeded your organization's services limit."`
 
-Cette erreur survient lorsque vous avez atteint le nombre maximal d'instances
-de service dont vous pouvez disposer pour votre compte. Le nombre maximal d'instances de service pour un compte d'essai est 10.
+Cette erreur survient lorsque vous avez atteint le nombre maximal d'instances de service dont vous pouvez disposer pour votre compte. Le nombre maximal d'instances de service pour un compte d'essai est 10.
 {: tsCauses}
 
 Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la limite portant sur le nombre de services que vous pouvez utiliser.
@@ -375,11 +354,11 @@ Lorsque vous envoyez par commande push le fichier exécutable dans {{site.data.k
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <commande_démarrage> -b <null-buildpack>
+cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 Exemple :
 ```
-cf push appname -p chemin_app -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## La limite mémoire de l'organisation est dépassée
@@ -392,8 +371,7 @@ Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, 
 
 `FAILED Erreur de serveur, code statut : 400, code d'erreur : 100005, message : vous avez dépassé la limite mémoire de votre organisation.`
 
-Cette erreur survient lorsque la quantité de mémoire restante pour votre organisation est inférieure à la quantité de mémoire requise par
-l'application à déployer. Le quota de mémoire maximal pour un compte d'essai est 2 Go.
+Cette erreur survient lorsque la quantité de mémoire restante pour votre organisation est inférieure à la quantité de mémoire requise par l'application à déployer. Le quota de mémoire maximal pour un compte d'essai est 2 Go.
 {: tsCauses}
 
 Vous pouvez augmenter le quota de mémoire de votre compte ou diminuer la mémoire que vos applications utilisent.
@@ -415,15 +393,12 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou diminuer la mémoi
 	  cf apps
 	  ```
 
-	  La commande cf apps répertorie toutes les applications que vous avez déployées dans votre espace en cours. Le statut de chaque application est
-également affiché.
+	  La commande cf apps répertorie toutes les applications que vous avez déployées dans votre espace en cours. Le statut de chaque application est également affiché.
 
-    2. Pour réduire la quantité de mémoire qui est utilisée par votre application, réduisez le nombre d'instances d'application ou la limite de
-mémoire
-maximale, ou les deux :
+    2. Pour réduire la quantité de mémoire qui est utilisée par votre application, réduisez le nombre d'instances d'application ou la limite de mémoire maximale, ou les deux :
 
 	  ```
-	  cf push appname -p chemin_app -i nombre_instances -m limite_mémoire
+	  cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. Redémarrez votre application pour que les modifications soient appliquées.
@@ -434,8 +409,7 @@ maximale, ou les deux :
 
 Une application n'est pas redémarrée automatiquement lorsqu'un service que vous liez à cette application cesse de fonctionner.	  
 
-Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de
-connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise suite à ces problèmes.
+Lorsqu'un service que vous liez à une application tombe en panne, des problèmes tels que des indisponibilités, des exceptions et des échecs de connexion peuvent survenir sur l'application. {{site.data.keyword.Bluemix_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise suite à ces problèmes.
 {: tsSymptoms}
 
 Ce comportement est normal dans Cloud Foundry.
@@ -445,63 +419,47 @@ Vous pouvez redémarrer manuellement l'application en entrant la commande suivan
 {: tsResolve}
 
 ```
-cf push nom_app -p chemin_app
+cf push appname -p app_path
 ```
-De plus, vous pouvez coder l'application afin d'identifier les problèmes et d'assurer la reprise après une indisponibilité, une exception ou un échec de
-connexion.
+De plus, vous pouvez coder l'application afin d'identifier les problèmes et d'assurer la reprise après une indisponibilité, une exception ou un échec de connexion.
 
 ## Les variables définies par l'utilisateur sont perdues lorsqu'une application est envoyée par commande push
 {: #ts_varsnotretained}
 
-Lorsque vous envoyez une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}}, les variables que vous spécifiez sont réinitialisées sauf si vous les sauvegardez dans le fichier manifeste.
+Lorsque vous envoyez une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, les variables que vous spécifiez sont réinitialisées sauf si vous les sauvegardez dans le fichier manifeste.
 
-Les variables que vous spécifiez sont perdues une fois que vous avez envoyé une application par commande push à
-{{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
+Les variables que vous spécifiez sont perdues une fois que vous avez envoyé une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
 
-Les variables que vous spécifiez ne sont sauvegardées que si vous les
-sauvegardez dans le fichier manifeste.
+Les variables que vous spécifiez ne sont sauvegardées que si vous les sauvegardez dans le fichier manifeste.
 {: tsCauses}
 
-Lorsque vous envoyez une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for
-{{site.data.keyword.Bluemix_notm}}, sélectionnez la case à cocher **Save to the manifest file** dans la page des détails
-de l'application de l'assistant Application. Ainsi, les variables que vous
-spécifiez dans l'assistant sont sauvegardées dans le fichier manifeste de votre application. A la prochaine ouverture de l'assistant, elles seront
-affichées automatiquement.
+Lorsque vous envoyez une application par commande push à {{site.data.keyword.Bluemix_notm}} depuis IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, sélectionnez la case à cocher **Save to the manifest file** dans la page des détails de l'application de l'assistant Application. Ainsi, les variables que vous spécifiez dans l'assistant sont sauvegardées dans le fichier manifeste de votre application. A la prochaine ouverture de l'assistant, elles seront affichées automatiquement.
 {: tsResolve}
 
 
 ## Des organisations sont introuvables dans {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
 
-Il se peut que vous ne parveniez pas à localiser votre organisation dans
-{{site.data.keyword.Bluemix_notm}} lorsque vous travaillez sur une région
-{{site.data.keyword.Bluemix_notm}}.
+Il se peut que vous ne parveniez pas à localiser votre organisation dans {{site.data.keyword.Bluemix_notm}} lorsque vous travaillez sur une région {{site.data.keyword.Bluemix_notm}}.
 
 Vous pouvez vous connecter à la console {{site.data.keyword.Bluemix_notm}}, mais vous ne parvenez pas à envoyer vos applications par commande push à l'aide de l'interface de ligne de commande cf ou du plug-in Eclipse.
 {: tsSymptoms}
 
-Lorsque vous essayez d'envoyer une application par commande push
-à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande cf, l'un des messages
-d'erreur
-suivants, qui spécifie le nom de l'organisation, s'affiche :
+Lorsque vous essayez d'envoyer une application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande cf, l'un des messages d'erreur suivants, qui spécifie le nom de l'organisation, s'affiche :
 
 `Erreur lors de la recherche de l'organisation`
 
 `Organization not found`
 
-Lorsque vous essayez d'envoyer une application par commande push à
-{{site.data.keyword.Bluemix_notm}} en utilisant le plug-in Eclipse Cloud Foundry, le message d'erreur suivant
-s'affiche :
+Lorsque vous essayez d'envoyer une application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant le plug-in Eclipse Cloud Foundry, le message d'erreur suivant s'affiche :
 
 `cloudspace not found.`
 
 Ce problème survient car le noeud final d'API de la région avec laquelle vous travaillez n'est pas spécifié et l'organisation que vous recherchez peut se trouver dans une autre région.
 {: tsCauses}
 
-Si vous envoyez votre application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande cf, entrez la commande cf api et spécifiez le noeud final d'API de la région. Par exemple, entrez la commande suivante pour vous connecter à la
-région {{site.data.keyword.Bluemix_notm}} Europe et Royaume-Uni :
+Si vous envoyez votre application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande cf, entrez la commande cf api et spécifiez le noeud final d'API de la région. Par exemple, entrez la commande suivante pour vous connecter à la région {{site.data.keyword.Bluemix_notm}} Europe et Royaume-Uni :
 {: tsResolve}
 
 ```
@@ -512,9 +470,7 @@ Si vous envoyez votre application par commande push à {{site.data.keyword.Bluem
 ## Impossible de créer les routes d'application
 {: #ts_hostistaken}
 
-Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, la route d'application ne peut pas être créée si le nom d'hôte
-que
-vous avez spécifié est déjà utilisé.
+Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, la route d'application ne peut pas être créée si le nom d'hôte que vous avez spécifié est déjà utilisé.
 
 Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
@@ -524,13 +480,12 @@ Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, 
 Ce problème survient si le nom d'hôte que vous avez spécifié est déjà utilisé.
 {: tsCauses}
 
-Le nom d'hôte que vous spécifiez doit être unique dans le domaine que vous
-utilisez. Pour spécifier un autre nom d'hôte, utilisez l'une des méthodes suivantes :
+Le nom d'hôte que vous spécifiez doit être unique dans le domaine que vous utilisez. Pour spécifier un autre nom d'hôte, utilisez l'une des méthodes suivantes :
 {: tsResolve}
 
   * Si vous déployez votre application avec le fichier `manifest.yml`, spécifiez le nom d'hôte dans l'option host.	 
     ```
-    host: nom_hôte
+    host: host_name
 	```
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf push` avec l'option **-n**.
     ```
@@ -554,11 +509,11 @@ Utilisez l'option **-p** pour spécifier un fichier WAR ou ajouter un chemin d'a
 {: tsResolve}
 
 ```
-cf push MonNomAppUnique01 -p app.war
+cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MonNomAppUnique02 -p "./app.war"
+cf push MyUniqueAppName02 -p "./app.war"
 ```
 Pour plus d'informations sur la commande `cf push`, entrez `cf push -h`. 	
 
@@ -653,7 +608,7 @@ Utilisez l'une des méthodes suivantes, selon la cause du problème :
  }
     ```
 
-Pour d'autres conseils relatifs aux applications Node.js, voir [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html ![External link icon](../icons/launch-glyph.svg "Icône de lien externe"){: new_window}.
+Pour obtenir des conseils supplémentaires relatifs aux applications Node.js, voir [Tips for Node.js Applications ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
 
 ## Des erreurs de configuration figurent dans le fichier `server.xml` après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty dans Eclipse
@@ -713,12 +668,12 @@ Ce problème survient car aucun pack de construction n'est fourni pour les appli
 Afin d'utiliser un pack de construction personnalisé pour les applications Meteor, appliquez l'une des méthodes suivantes :
 {: tsResolve}
 
-  * Si vous déployez votre application avec le fichier `manifest.yml`, spécifiez l'adresse URL ou le nom de votre pack de construction personnalisé avec l'option buildpack. Exemple :
+  * Si vous déployez votre application avec le fichier `manifest.yml`, spécifiez l'adresse URL ou le nom de votre pack de construction personnalisé avec l'option buildpack. Par exemple :
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * Si vous déployez votre application depuis l'invite de commande, utilisez la commande `cf
 push` et spécifiez votre pack de construction personnalisé avec l'option **-b**. Exemple :
     ```
-	cf push nom_app -p chemin_app -b https://github.com/Sing-Li/bluemix-bp-meteor
+	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
