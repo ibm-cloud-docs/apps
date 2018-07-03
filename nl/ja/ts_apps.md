@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -568,7 +568,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-    * [package.json ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.npmjs.com/package/jsonfile){: new_window} ファイルを使用します。 例:
+    * [package.json ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/jsonfile){: new_window} ファイルを使用します。 例:
 	    ```
 		{
       ...

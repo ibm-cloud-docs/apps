@@ -1,30 +1,31 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-22"
+  years: 2015, 2018
+lastupdated: "2018-06-26"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{: codeblock: .codeblock}
 
 # アプリへのサービスの追加
 {: #add_service}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、「アプリ概要」ページからリソースを追加するすることができました。 しかし、アプリのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、「アプリ概要」ページからリソースを追加することができます。しかし、アプリのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
 {: shortdesc}
 
 リソースのインスタンスを要求して、これをアプリとは無関係に使用することも、「アプリ概要」ページからリソース・インスタンスをアプリに追加することもできます。 特定のタイプのリソース (サービス) を {{site.data.keyword.Bluemix_notm}} カタログから直接プロビジョンできます。
 
-##サービスの検出
+## サービスの検出
 {: #discover_services}
 
 以下の方法で、{{site.data.keyword.Bluemix_notm}} で使用可能なサービスをすべて表示できます。
 
 * {{site.data.keyword.Bluemix_notm}} コンソールから。 {{site.data.keyword.Bluemix_notm}} カタログを表示します。
 * ibmcloud コマンド・ライン・インターフェースから。 `ibmcloud service offerings` コマンドを使用します。
-* ご使用のアプリケーションから。 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
+* ご使用のアプリケーションから。 [GET /v2/services Services API ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} を使用します。
 
 アプリケーションを開発するときに、必要なサービスを選択できます。 選択されたサービスは、{{site.data.keyword.Bluemix_notm}} によってプロビジョンされます。 サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。
 
@@ -63,7 +64,7 @@ ibmcloud service create service_name service_plan service_instance
 ibmcloud service bind appname service_instance
 ```
 
-サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[『外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする』](#accser_external){: new_window}を参照してください。
+サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](#accser_external){: new_window} を参照してください。
 
 ## アプリケーションの構成
 {: #config}
@@ -73,10 +74,82 @@ ibmcloud service bind appname service_instance
 各サービスは、アプリケーションと通信するために別のメカニズムを必要とする場合もあります。 これらのメカニズムについては、アプリケーションを開発するときに、サービス定義の一部として情報が文書化されます。 一貫性のために、メカニズムは、アプリケーションがサービスと対話するために必要です。
 
 * データベース・サービスと対話するには、ユーザー ID、パスワード、およびアプリケーションのアクセス URI など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。
-* モバイル・バックエンド・サービスと対話するには、アプリケーション ID (アプリ ID)、クライアント固有のセキュリティー情報、およびアプリケーションのアクセス URI など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。 アプリケーション開発者の名前やアプリケーションを使用するユーザーなどのコンテキスト情報を一連のサービスで共有できるように、モバイル・サービスは、通常、互いのコンテキストで作業します。
+* モバイル・バックエンド・サービスと対話するには、アプリケーション ID (アプリ ID)、クライアント固有のセキュリティー情報、およびアプリケーションのアクセス URI など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。 アプリケーション開発者の名前やアプリケーションを使用するユーザーなどのコンテキスト情報を一連のサービスで共有できるように、モバイル・サービスは多くの場合、互いのコンテキストで機能します。
 * Web アプリケーションと、またはモバイル・アプリケーションのサーバー・サイドのクラウド・コードと対話するには、アプリケーションの *VCAP_SERVICES* 環境変数内のランタイム資格情報など、{{site.data.keyword.Bluemix_notm}} が提供する情報を使用します。 *VCAP_SERVICES* 環境変数の値は、JSON オブジェクトの直列化です。 変数には、アプリケーションにバインドされているサービスと対話するために必要なランタイム・データが含まれます。 データのフォーマットは、サービスごとに異なります。 期待される情報と、情報の各部分を解釈する方法について、サービスの文書を読み取る必要が生じる場合もあります。
 
-アプリケーションにバインドしたサービスが異常終了すると、そのアプリケーションが稼動を停止したり、エラーを起こしたりする場合があります。 これらの問題からリカバリーするために {{site.data.keyword.Bluemix_notm}} がアプリケーションを自動的に再始動することはありません。 障害、例外、および接続失敗を識別してリカバリーするようにアプリケーションをコーディングすることを検討してください。 詳しくは、[アプリの非自動再始動](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)のトラブルシューティングのトピックを参照してください。
+アプリケーションにバインドしたサービスが異常終了すると、そのアプリケーションが稼動を停止したり、エラーを起こしたりする場合があります。 これらの問題からリカバリーするために {{site.data.keyword.Bluemix_notm}} がアプリケーションを自動的に再始動することはありません。 障害、例外、および接続失敗を識別してリカバリーするようにアプリケーションをコーディングすることを検討してください。 詳しくは、[アプリの非自動再始動](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)を参照してください。
+
+## 複数の {{site.data.keyword.Bluemix_notm}} デプロイメント環境でのサービスへのアクセス
+{: #migrate_instance}
+
+{{site.data.keyword.Bluemix_notm}} は多くのデプロイメント・オプションを提供します。ユーザーは、ある環境で実行中のサービスに別の環境からアクセスすることができます。例えば、Cloud Foundry で実行されているサービスに、Kubernetes クラスターで実行されているアプリケーションからアクセスすることができます。
+
+### 例: Kubernetes ポッドからの Cloud Foundry 上の Compose サービス・インスタンスへのアクセス
+
+{{site.data.keyword.composeForMongoDB}} や {{site.data.keyword.composeForRedis}} などのすべての Compose サービス・インスタンスが有料インスタンスです。Kubernetes 内の {{site.data.keyword.composeForMongoDB}} のような Compose サービス・インスタンスの使用に慣れたら、Compose によって提供されるインスタンスの資格情報を Cloud Foundry でインポートできます。
+
+1. **「資格情報」**に移動して、インスタンスから資格情報を取得します。
+
+2. チャート・ディレクトリー (例えば、`chart/project/`) から `values.yml` ファイルを開きます。
+
+3. サービス環境で参照される値を設定します。{{site.data.keyword.composeForMongoDB}} での例:
+
+  ```
+  services:
+    mongo:
+       url: {uri}
+       dbName: {dbname}
+       ca: {ca_certificate_base64}
+       username: {username}
+       password: {password}
+       env: production
+
+  ```
+
+4. チャート・ディレクトリー (例えば、`chart/project/`) から `bindings.yml` ファイルを開きます。
+
+5. `values.yml` ファイルで定義したキーと値の参照を、`env` ブロックが定義されている場所の最後に追加します。
+
+  ```
+    env:
+      - name: MONGO_URL
+        value: {{ .Values.services.mongo.url }}
+      - name: MONGO_DB_NAME
+        value: {{ .Values.services.mongo.name }}
+      - name: MONGO_USER
+        value: {{ .Values.services.mongo.username }}
+      - name: MONGO_PASS
+        value: {{ .Values.services.mongo.password }}
+      - name: MONGO_CA
+        value: {{ .Values.services.mongo.ca }}
+  ```
+
+6. アプリケーションで、環境変数を使用して、提供されるサービス SDK を開始します。
+
+  ```javascript
+    const serviceManger = require('./services/serivce-manage.js');
+    const mongoURL = process.env.MONGO_URL || 'localhost';
+    const mongoUser = process.env.MONGO_USER || '';
+    const mongoPass = process.env.MONGO_PASS || '';
+    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
+
+    const options = {
+        useMongoClient: true,
+        ssl: true,
+        sslValidate: true,
+        sslCA: mongoCA,
+        poolSize: 1,
+        reconnectTries: 1
+    };
+
+    const mongoDBClient = serviceManger.get('mongodb');
+  ```
+
+### 秘密 (オプション)
+{: #migrate_secrets_optional}
+
+`deployment.yml` ファイルや `values.yml` ファイルで資格情報を公開しないでください。Base64 エンコード・ストリングを使用するか、鍵で資格情報を暗号化することができます。詳しくは、[Creating a Secret Using kubectl create secret ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) および [How to encrypt your data ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) を参照してください。
 
 ## 外部アプリの使用可能化
 {: #accser_external}
@@ -192,4 +265,5 @@ ibmcloud service bind appname service_instance
 	OK
 	```
 
-外部サービスを使用するようアプリケーションを構成できるようになりました。 サービスと対話するようアプリケーションを構成する方法については、[「サービスと対話するようアプリケーションを構成する」](#config){: new_window}を参照してください。
+外部サービスを使用するようアプリケーションを構成できるようになりました。 サービスと対話するようアプリケーションを構成する方法については、[「サービスと対話するようアプリケーションを構成する」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](#config){: new_window} を参照してください。
+

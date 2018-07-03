@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -41,7 +41,7 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 開始する前に、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースをダウンロードしてインストールします。
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(新規タブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="Bluemix コマンド・ライン・インターフェースのダウンロード" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools のダウンロード" /></a>
 </p>
 
 **制約事項:** コマンド・ライン・ツールは Cygwin ではサポートされていません。 このツールは Cygwin コマンド・ライン・ウィンドウ以外のコマンド・ライン・ウィンドウで使用してください。
