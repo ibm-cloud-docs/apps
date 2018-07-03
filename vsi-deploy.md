@@ -25,6 +25,8 @@ A virtual server instance offers better transparency, predictability, and automa
 ## Before you begin
 To use virtual instances, your {{site.data.keyword.cloud_notm}} account must be enabled for infrastructure. For more information, see [Upgrade to Infrastructure ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/ibm-iaas-g1){: new_window}.
 
+**Important**: Services don't bind to the virtual server instance. You cannot add services to an application in a virtual server.
+
 ## Deploying through Terraform
 Any of the App Service starter kits can be deployed in a dynamically created virtual instance through [Terraform ![External link icon](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}, an open source infrastructure as code framework. For more information, see [Terraform Documentation ![External link icon](../icons/launch-glyph.svg)](https://www.terraform.io/docs/index.html){: new_window}.
 
