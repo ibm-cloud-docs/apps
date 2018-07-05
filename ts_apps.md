@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -26,14 +26,14 @@ General problems with managing apps might include apps that can't be updated, or
 ## You have unsaved changes
 {: #ts_unsaved_changes}
 
-When you navigate on the app details page, you might be unable to perform any actions and might be prompted to save changes before you can proceed.
+When you click items on the app details page, you might be unable to take any actions and might be prompted to save changes before you can proceed.
 
 When you try to check your app or services on the app details page, you keep getting the following error message:
 {: tsSymptoms}
 
 `You have unsaved changes in page app_name. Save or cancel the changes.`
 
-When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you navigate away from the page.
+When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you go to another page.
 {: tsCauses}
 
 Close the message window, and then click **RESET** in your runtime pane.
@@ -42,7 +42,7 @@ Close the message window, and then click **RESET** in your runtime pane.
 ## Automatic failover between {{site.data.keyword.Bluemix_notm}} regions isn't available
 {: #ts_failover}
 
-You can't use automatic failover between {{site.data.keyword.Bluemix_notm}} regions. However, you can use a DNS provider that supports failover among multiple IP addresses as a workaround.
+You can't use automatic failover between {{site.data.keyword.Bluemix_notm}} regions. However, you can use a DNS provider that supports failover among many IP addresses as a workaround.
 
 When an {{site.data.keyword.Bluemix_notm}} region becomes unavailable, the apps that are running in that region are also unavailable, even if the same apps are running in another {{site.data.keyword.Bluemix_notm}} region.
 {: tsSymptoms}
@@ -50,7 +50,7 @@ When an {{site.data.keyword.Bluemix_notm}} region becomes unavailable, the apps 
 {{site.data.keyword.Bluemix_notm}} doesn't yet provide automatic failover from one region to another.
 {: tsCauses}
 
-You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.Bluemix_notm}} regions. DNS providers with this capability include NSONE, Akamai, Dyn.
+You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.Bluemix_notm}} regions. DNS providers with this feature include NSONE, Akamai, Dyn.
 {: tsResolve}
 
 When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window.
@@ -64,7 +64,7 @@ nslookup stage1.mybluemix.net
 
 You can't enable the debug mode if the Java virtual machine (JVM) version is 8 or earlier.
 
-After you select **Enable application debug**, the tools attempt to switch the app into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`.
+After you select **Enable application debug**, the tools try to switch the app into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`.
 {: tsSymptoms}
 
 However, when the tools fail to enable the debug mode, the web application status displays `Updating mode` and `Developing` only, and doesn't display `Debugging`. The tools might also display the following error message in the Console view:
@@ -142,7 +142,7 @@ When you try to reuse the app name, you receive the following message:
 
 `The name is already used by another app.`
 
-When an app is deleted, its route, which is the URL for the app, isn't automatically deleted. Therefore, it's not available for reuse. You must go to the space where the app was created to delete the route so that it can be reused.
+When an app is deleted, its route, which is the URL for the app, isn't automatically deleted and it's not available for reuse. You must go to the space where the app was created to delete the route so that it can be reused.
 {: tsCauses}
 
 Complete the following steps to delete the unused route:
@@ -208,7 +208,7 @@ When you try to perform actions for a service instance or an app instance, you c
 You don't have the appropriate level of authority to perform the actions.
 {: tsCauses}
 
-To obtain the appropriate authority level, use one of the following methods.
+To get the appropriate authority level, use one of the following methods.
 {: tsResolve}
 
 * Select another organization and space for which you have the developer role.
@@ -259,7 +259,7 @@ If you receive 502 Bad Gateway errors when you interact with apps on {{site.data
 You receive error messages that start with 502 Bad Gateway. For example, you might see `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
 
-A Bad Gateway error usually happens when you visit a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly. Then, you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
+A Bad Gateway error usually happens when you go to a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly. Then, you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
 {: tsCauses}
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
@@ -268,10 +268,10 @@ If you suspect that an {{site.data.keyword.Bluemix_notm}} service is down, first
 {: tsResolve}
 
   * Retry the action:
-    * Reload the page by pressing F5 on your keyboard, or by clicking the refresh button. If this step doesn't work, clear your browser's cache and cookies, and then reload again.
+    * Reload the page by pressing F5 on your keyboard, or by clicking **Refresh**. If this step doesn't work, clear your browser's cache and cookies, and then reload again.
     * Use a different browser.
     * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
-  * Wait and try again later. In some instances, temporary problems might occur with your internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
+  * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.Bluemix_notm}} services. You can wait until the temporary problems are solved.
   * If the problem still exists, contact {{site.data.keyword.Bluemix_notm}} support. See [Contacting {{site.data.keyword.Bluemix_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information.
 
 ## Disk quota is exceeded
@@ -297,16 +297,15 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 Android apps in certain regions where Google isn't accessible can't receive notifications that you send out through the IBM {{site.data.keyword.mobilepushshort}} service. In this case, a workaround is to use third-party services.
 
-You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.keyword.Bluemix_notm}} app and send a message to the registered devices. However, apps that are developed on the Android platform can't receive your notifications in certain regions.
+You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.keyword.Bluemix_notm}} app and send a message to the registered devices. However, apps that are developed on Android can't receive your notifications in certain regions.
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on the Android platform. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
+IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on Android. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
 As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [getui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
@@ -322,7 +321,7 @@ When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the
 
 `BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
-This error occurs when you have exceeded the limit on the number of service instances that you can have for your account. The maximum number of services instances for a trial account is 10.
+This error occurs when you exceed the limit on the number of service instances that you can have for your account. The maximum number of services instances for a trial account is 10.
 {: tsCauses}
 
 Delete any services instances that aren't needed, or remove the limit on the number of service instances that you can have.
@@ -339,7 +338,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 	  4. Delete the service instance by typing `cf delete-service <service_instance_name>`.
 	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to by typing `cf restage <appname>`.
 
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing).
+  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For more information, see [How to change your plan](/docs/pricing/index.html#changing).
 
 ## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
@@ -495,7 +494,6 @@ The host name that you specify must be unique within the domain that you are usi
     cf push appname -p app_path -n host_name
     ```
 
-
 ## WAR apps can't be pushed by using the cf push command
 {: #ts_cf_war}
 
@@ -520,7 +518,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 For more information about the `cf push` command, enter `cf push -h`.
 
-
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
@@ -543,7 +540,6 @@ You can use the following code in your servlet or JSP file:
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Node.js apps can't be deployed
 {: #ts_nodejs_deploy}
@@ -613,7 +609,6 @@ Use one of the following methods, depending on the cause of the problem:
 
 For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-
 ## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
 
@@ -628,27 +623,26 @@ Liberty buildpack uses the `server.xml` file to configure the app and generates 
 You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
-
 ## Apps can't be staged by using custom buildpacks
 {: #ts_bp_compilation}
 
-You might not be able to deploy an app to {{site.data.keyword.Bluemix_notm}} by using a custom buildpack if the scripts in the buildpack aren't executable.
+You might not be able to deploy an app to {{site.data.keyword.Bluemix_notm}} with a custom buildpack if the scripts in the buildpack aren't executable files.
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}} by using a custom buildpack, you see the error message, `The application failed to stage, so there are no instances to display.`
+When you deploy an app to {{site.data.keyword.Bluemix_notm}} with a custom buildpack, you see the error message, `The application failed to stage, so there are no instances to display.`
 {: tsSymptoms}
 
 This problem might happen if scripts, such as the detect script, the compile script, and the release script, aren't executable.
 {: tsCauses}
 
-You can use the [git update ![External link icon](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [Git update ![External link icon](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.Bluemix_notm}} Continuous Delivery
  {: #ts_devops_to_bm}
 
- You might not be able to deploy your app using the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} if the `manifest.yml` file isn't present in your app.
+ You might not be able to deploy your app with the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} if the `manifest.yml` file isn't present in your app.
 
- When you deploy an app using the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, an error message `Unable to detect a supported application type` might display.
+ When you deploy an app with the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, an error message `Unable to detect a supported application type` might display.
  {: tsSymptoms}
 
  This problem might happen because the pipeline requires a `manifest.yml` file to deploy an app to {{site.data.keyword.Bluemix_notm}}.

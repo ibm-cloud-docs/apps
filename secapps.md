@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ Before you can upload certificates, you must create a certificate signing reques
 
 When you use a custom domain, to serve the SSL certificate, use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 To upload a certificate for your application:
@@ -141,4 +141,4 @@ To upload a certificate for your application:
 
 For more information see, [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, click **View Details** > **Edit Org** > **Domains**. In the additional actions menu for the organization, click **Remove from Org**.
+To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, in the action column, select **Domains** from the additional actions menu.. In the additional actions menu for the organization, click **Remove from Org**.

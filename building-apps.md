@@ -50,9 +50,8 @@ In your dashboard, click your app, and then click **Getting Started**, which can
 
 Continue to customize your app to fit your needs. Check out the following suggestions for extending your app to achieve business results:
 
-* Make your app more robust by adding [security](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [monitoring](https://console.bluemix.net/catalog/?category=devops){:new_window}, and availability improvements outlined in our [best practices](best-practice.html) guide.
-* Make your app smarter with [Watson cognitive services](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} and [advanced analytics and machine learning](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
-* Go [mobile](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
-* Try out the [Internet of Things](https://console.bluemix.net/catalog/?category=iot){:new_window}.
-* Use services such as [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window} to integrate [serverless actions](https://console.bluemix.net/catalog/?category=whisk){:new_window}.
-
+* Make your app more robust by adding [security ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [monitoring ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?category=devops){:new_window}, and availability improvements outlined in our [best practices](best-practice.html) guide.
+* Make your app smarter with [Watson cognitive services ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} and [advanced analytics and machine learning](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
+* Go [mobile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
+* Try out the [Internet of Things ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?category=iot){:new_window}.
+* Use services such as [API Connect ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?category=integration){:new_window} to integrate [serverless actions ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?category=whisk){:new_window}.

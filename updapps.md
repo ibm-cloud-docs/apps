@@ -86,7 +86,6 @@ To remove an orphaned route, run the following command:
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 
