@@ -1,30 +1,31 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-22"
+  years: 2015, 2018
+lastupdated: "2018-06-26"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{: codeblock: .codeblock}
 
 # 向应用程序添加服务
 {: #add_service}
 
-如果使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 创建了应用程序，那么您有机会在应用程序概述页面中添加资源。但是，您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.Bluemix_notm}}“目录”供应资源。
+使用 {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} 创建应用程序时，可以在应用程序概述页面中添加资源。但是，您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.Bluemix_notm}}“目录”供应资源。
 {: shortdesc}
 
 您可以请求一个资源实例，然后独立于应用程序使用该实例，也可以在应用程序概述页面中将资源实例添加到应用程序中。您可以直接在 {{site.data.keyword.Bluemix_notm}}“目录”中供应特定类型的资源（服务）。
 
-##发现服务
+## 发现服务
 {: #discover_services}
 
 通过下列方式，您可以在 {{site.data.keyword.Bluemix_notm}} 中查看所有可用服务：
 
 * 通过 {{site.data.keyword.Bluemix_notm}} 控制台。查看 {{site.data.keyword.Bluemix_notm}}“目录”。
 * 通过 ibmcloud 命令行界面。使用 `ibmcloud service offerings` 命令。
-* 从您自己的应用程序。使用 [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
+* 从您自己的应用程序。使用 [GET /v2/services 服务 API ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
 在开发应用程序时，您可以选择所需的服务。选择服务后，{{site.data.keyword.Bluemix_notm}} 会供应该服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。
 
@@ -63,7 +64,7 @@ ibmcloud service create service_name service_plan service_instance
 ibmcloud service bind appname service_instance
 ```
 
-只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external){: new_window}。
+只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](#accser_external){: new_window}。
 
 ## 配置应用程序
 {: #config}
@@ -73,10 +74,82 @@ ibmcloud service bind appname service_instance
 每个服务可能需要采用不同的机制与应用程序进行通信。在开发应用程序时，会记录这些机制作为服务定义的一部分以供您参阅。为了实现一致性，您的应用程序需要通过这些机制与服务进行交互。
 
 * 要与数据库服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，用户标识、密码和应用程序的访问 URI。
-* 要与移动后端服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者名称和使用应用程序的用户。
+* 要与移动后端服务交互，请使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者的姓名和使用应用程序的用户。
 * 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.Bluemix_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
-如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)故障诊断主题。
+如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)。
+
+## 访问 {{site.data.keyword.Bluemix_notm}} 部署环境中的服务
+{: #migrate_instance}
+
+{{site.data.keyword.Bluemix_notm}} 提供了许多部署选项，您可以从一个环境访问在不同的环境中运行的服务。例如，如果您具有在 Cloud Foundry 中运行的服务，那么可以从在 Kubernetes 集群中运行的应用程序访问该服务。
+
+### 示例：从 Kubernetes pod 访问 Cloud Foundry 上的 Compose 服务实例
+
+任何 Compose 服务实例（例如，{{site.data.keyword.composeForMongoDB}} 或 {{site.data.keyword.composeForRedis}}）都是付费实例。在 Kubernetes 中熟练使用 Compose 服务实例（如 {{site.data.keyword.composeForMongoDB}}）之后，可以在 Cloud Foundry 中导入由 Compose 提供的实例的凭证。
+
+1. 转至**凭证**，然后从实例中检索凭证。
+
+2. 打开图表目录（例如 `chart/project/`）中的 `values.yml` 文件。
+
+3. 设置服务环境中引用的值。例如，在 {{site.data.keyword.composeForMongoDB}} 中：
+
+  ```
+  services:
+    mongo:
+       url: {uri}
+       dbName: {dbname}
+       ca: {ca_certificate_base64}
+       username: {username}
+       password: {password}
+       env: production
+
+  ```
+
+4. 打开图表目录（例如 `chart/project/`）中的 `bindings.yml` 文件。
+
+5. 在定义 `env` 块的末尾，添加 `values.yml` 文件中定义的键/值引用。
+
+  ```
+    env:
+      - name: MONGO_URL
+        value: {{ .Values.services.mongo.url }}
+      - name: MONGO_DB_NAME
+        value: {{ .Values.services.mongo.name }}
+      - name: MONGO_USER
+        value: {{ .Values.services.mongo.username }}
+      - name: MONGO_PASS
+        value: {{ .Values.services.mongo.password }}
+      - name: MONGO_CA
+        value: {{ .Values.services.mongo.ca }}
+  ```
+
+6. 在应用程序中，使用环境变量来启动为您提供的服务 SDK。
+
+  ```javascript
+    const serviceManger = require('./services/serivce-manage.js');
+    const mongoURL = process.env.MONGO_URL || 'localhost';
+    const mongoUser = process.env.MONGO_USER || '';
+    const mongoPass = process.env.MONGO_PASS || '';
+    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
+
+    const options = {
+        useMongoClient: true,
+        ssl: true,
+        sslValidate: true,
+        sslCA: mongoCA,
+        poolSize: 1,
+        reconnectTries: 1
+    };
+
+    const mongoDBClient = serviceManger.get('mongodb');
+  ```
+
+### 私钥（可选）
+{: #migrate_secrets_optional}
+
+不要在 `deployment.yml` 或 `values.yml` 文件中公开凭证。您可以使用 base64 编码的字符串，或者使用密钥对凭证进行加密。有关更多信息，请参阅[使用 kubectl create secret 创建私钥 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) 和[如何加密数据 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
 ## 启用外部应用程序
 {: #accser_external}
@@ -192,4 +265,5 @@ ibmcloud service bind appname service_instance
 	OK
 	```
 
-现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互](#config){: new_window}。
+现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](#config){: new_window}。
+

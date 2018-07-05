@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -687,7 +687,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
   * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
   ```
-  buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
+buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
     ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -34,17 +34,17 @@ lastupdated: "2018-05-22"
 
 3. 输入唯一的主机名，例如您的姓名首字母加 `-devhost`。例如：
 
-	```
-	abc-devhost
+   ```
+abc-devhost
 	```
 
-	此主机名是应用程序的路径。例如，`abc-devhost.mybluemix.net`。
+   此主机名是应用程序的路径。例如，`abc-devhost.mybluemix.net`。
 
 4. 选择语言平台。对于本教程，请使用 `Node.js`。
 
 5. 单击**创建**。
 
-## 可选：添加资源
+## 步骤 3：可选 - 添加资源
 {: #add-services}
 
 1. 在**应用程序详细信息**视图中，选择**添加资源**。
@@ -53,7 +53,7 @@ lastupdated: "2018-05-22"
 
 3. 单击**创建**。
 
-## 可选：创建 DevOps 工具链
+## 步骤 4：可选 - 创建 DevOps 工具链
 {: #add-toolchain}
 
 启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 将供应 Git 存储库，在其中可以查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境以及根据您选择的部署平台（例如，Kubernetes 或 Cloud Foundry）定制的持续交付管道。
@@ -71,7 +71,7 @@ lastupdated: "2018-05-22"
 
 	* 使用 Cloud Foundry 进行部署，在其中不需要管理底层基础架构。
 
-## 步骤 3：生成应用程序代码
+## 步骤 5：生成应用程序代码
 {: #generate-code}
 
 如果在前面的步骤中创建了工具链，那么您的应用程序就有一个创建好的 Git 存储库，您可以在其中查找代码。请执行以下步骤来访问该存储库：
@@ -89,7 +89,7 @@ lastupdated: "2018-05-22"
 
 2. 单击**下载代码**以下载应用程序归档文件。
 
-## 步骤 4：开始使用应用程序
+## 步骤 6：开始使用应用程序
 {: #code}
 
 开始使用下载的应用程序：
@@ -102,7 +102,7 @@ lastupdated: "2018-05-22"
 
 4. 使用 {{site.data.keyword.dev_cli_notm}} 在本地构建和运行代码。
 
-## 步骤 5：在本地构建和运行应用程序
+## 步骤 7：在本地构建和运行应用程序
 {: #build-run}
 
 添加自己的代码，然后构建并运行应用程序。如果安装了必需的构建工具，或者使用 {{site.data.keyword.dev_cli_notm}} 中的可用容器支持，那么可以在主机系统上本地运行应用程序。
@@ -111,17 +111,17 @@ lastupdated: "2018-05-22"
 
 1. 要在当前应用程序目录中构建应用程序，请输入以下命令：
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+ibmcloud dev build
+```
+   {: codeblock}
 
 2. 要在当前应用程序目录中运行应用程序，请输入以下命令：
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+ibmcloud dev run
+```
+   {: codeblock}
 
 3. 可以使用以下命令在服务器上运行 curl：
 
@@ -144,7 +144,7 @@ lastupdated: "2018-05-22"
    ```
    {: codeblock}
 
-## 步骤 6：部署到云
+## 步骤 8：部署到云
 {: #deploy}
 
 ### 使用工具链进行部署
@@ -166,10 +166,10 @@ lastupdated: "2018-05-22"
 
 要将应用程序部署到 Cloud Foundry，请输入以下命令：
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 要将应用程序部署到 Kubernetes 集群，请输入以下命令：
 

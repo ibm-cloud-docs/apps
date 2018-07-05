@@ -52,7 +52,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [有关管理应用程序的故障诊断](../troubleshoot/ts_apps.html)
-    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    ts_apps.md
+    [IBM Cloud Slack developer-tools 通道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
