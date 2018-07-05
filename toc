@@ -20,6 +20,7 @@ Creating apps
         tutorials/tutorial_microservice.md
         tutorials/tutorial_custom.md
         tutorials/tutorial_mobile.md
+        starter_kits.md
 
     {: .topicgroup}
     Deploying and integrating apps
