@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -42,7 +42,7 @@ Use a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para 
 Antes de iniciar, faça download e instale a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download da interface da linha de comandos do Bluemix" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>
 </p>
 
 **Restrição:** a ferramenta de linha de comandos não é suportada por Cygwin. Use a ferramenta em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.

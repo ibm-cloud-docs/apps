@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -35,17 +35,17 @@ Crie um app no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 3. Insira um nome de host exclusivo, tal como suas iniciais mais `-devhost`. Por
 exemplo:
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	Esse nome do host é a rota de seu app. Por exemplo, `abc-devhost.mybluemix.net`
+   Esse nome do host é a rota de seu app. Por exemplo, `abc-devhost.mybluemix.net`
 
 4. Selecione a plataforma da linguagem. Para este tutorial, use `Node.js`.
 
 5. Clique em **Criar**.
 
-## Opcional: incluir recursos
+## Etapa 3: opcional - incluir recursos
 {: #add-services}
 
 1. Na visualização **Detalhes do app**, clique em **Incluir recurso**.
@@ -54,7 +54,7 @@ exemplo:
 
 3. Clique em **Criar**.
 
-## Opcional: criar cadeia de ferramentas de DevOps
+## Etapa 4: opcional - criar a cadeia de ferramentas do DevOps
 {: #add-toolchain}
 
 A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você criar uma cadeia de ferramentas, o Serviço de app fornecerá um repositório Git, no qual será possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente Gitlab dedicado e um pipeline de entrega contínua que é customizado para a plataforma de implementação que você escolher, como Kubernetes ou Cloud Foundry.
@@ -71,7 +71,7 @@ A entrega contínua é ativada para alguns aplicativos. Você pode desejar ativa
 
 	* Implementar usando o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-## Etapa 3: Gerar seu código de app
+## Etapa 5: gerar o seu código de aplicativo
 {: #generate-code}
 
 Se você tiver criado uma cadeia de ferramentas na etapa anterior, um repositório Git terá sido criado para seu app e será possível localizar o código lá. Siga estas etapas para acessar seu repositório:
@@ -88,7 +88,7 @@ Se uma cadeia de ferramentas não estiver ativada, será possível acessar seu c
 
 2. Clique em **Código do download** para fazer download do archive do app.
 
-## Etapa 4: começar a trabalhar em seu app
+## Etapa 6: começar a trabalhar em seu aplicativo
 {: #code}
 
 Comece a trabalhar com seu app transferido por download:
@@ -101,7 +101,7 @@ Comece a trabalhar com seu app transferido por download:
 
 4. Use o {{site.data.keyword.dev_cli_notm}} para construir e executar seu código localmente.
 
-## Etapa 5: construir e executar o app localmente
+## Etapa 7: construir e executar o aplicativo localmente
 {: #build-run}
 
 Inclua seu próprio código, a compilação e execute o app. É possível executar o aplicativo localmente em seu sistema host se você instala as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
@@ -110,17 +110,17 @@ Inclua seu próprio código, a compilação e execute o app. É possível execut
 
 1. Para construir o app no diretório de app atual, insira o comando a seguir:
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. Para executar o app no diretório de app atual, insira o comando a seguir:
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. É possível executar curl em seu servidor com:
 
@@ -143,7 +143,7 @@ Inclua seu próprio código, a compilação e execute o app. É possível execut
    ```
    {: codeblock}
 
-## Etapa 6: implementar na nuvem
+## Etapa 8: implementar para a nuvem
 {: #deploy}
 
 ### Implementar usando uma cadeia de ferramentas
@@ -164,10 +164,10 @@ Se você optar por não usar uma cadeia de ferramentas, também será possível 
 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
 
