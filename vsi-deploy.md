@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-03"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -64,7 +64,7 @@ To access the environment properties view and enable your pipeline with your use
 Terraform requires an infrastructure API key to create infrastructure resources. Follow these steps to retrieve an infrastructure key.
 
 1. Go to the infrastructure [user list ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. You can also click **Menu** > **Infrastructure** > **Account** > **User List**.
-2. Find the user details that are creating the toolchain and either click `View` in the API Key column or click `Generate` both steps display the API key in a dialog.
+2. Find the user details that are creating the toolchain and either click `View` in the API Key column or click `Generate` both steps display the API key in a window.
 3. Copy the API Key and replace the value in the Toolchain configuration `TF_VAR_ibm_sl_api_key`.
 
 ### Retrieving the infrastructure user name
@@ -85,7 +85,7 @@ To create platform level services in Terraform, like databases and compose servi
 1. From the [API Keys ![External link icon](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) page, click **Manage** > **Security** > **Platform API Keys**.
 2. Click **Create**.
 3. Enter a name and description and click **Create**.
-4. When the dialog opens, click **Show** to review the key.
+4. When the window opens, click **Show** to review the key.
 5. Copy and paste the key into the clipboard or download the key.
 6. Replace the value in the toolchain configuration `TF_VAR_ibm_cloud_api_key` with the value that was generated.
 
