@@ -1,30 +1,31 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-22"
+  years: 2015, 2018
+lastupdated: "2018-06-26"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{: codeblock: .codeblock}
 
 # Service zur App hinzufügen
 {: #add_service}
 
-Wenn Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}}-{{site.data.keyword.dev_console}} erstellt haben, hatten Sie die Möglichkeit, Ressourcen von der App-Übersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wen Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der App-Übersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
 Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der App-Übersichtseite zu Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.
 
-##Services entdecken
+## Services entdecken
 {: #discover_services}
 
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren Services anzuzeigen:
 
 * Über die {{site.data.keyword.Bluemix_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
 * Über die Befehlszeilenschnittstelle 'ibmcloud'. Verwenden Sie hier den Befehl `ibmcloud service offerings`.
-* Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Sobald Sie ihn ausgewählt haben, stellt {{site.data.keyword.Bluemix_notm}} den Service bereit. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
 
@@ -71,7 +72,7 @@ der Serviceinstanz.
 ibmcloud service bind appname service_instance
 ```
 
-Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external){: new_window}.
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#accser_external){: new_window}.
 
 ## Anwendung konfigurieren
 {: #config}
@@ -81,10 +82,82 @@ Nachdem Sie eine Serviceinstanz an Ihre Anwendung gebunden haben, müssen Sie Ih
 Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen anderen Mechanismus erfordern. Wenn Sie Anwendungen entwickeln, werden diese Mechanismen zu Informationszwecken als Teil der Servicedefinition dokumentiert. Aus Konsistenzgründen sind diese Mechanismen für die Interaktion Ihrer Anwendung mit dem Service erforderlich.
 
 * Um mit Datenbankservice zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Benutzer-ID, das Kennwort und den Zugriffs-URI für die Anwendung.
-* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie z. B. der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden kann.
+* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie z. B. der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
 * Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
-Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie im Abschnitt, in dem beschrieben wird, dass [Apps nicht automatisch neu gestartet werden](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Apps werden nicht automatisch erneut gestartet](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+
+## Über {{site.data.keyword.Bluemix_notm}}-Bereitstellungsumgebungen hinweg auf Services zugreifen
+{: #migrate_instance}
+
+{{site.data.keyword.Bluemix_notm}} bietet viele Bereitstellungsoptionen. Sie können in einer Bereitstellungsoption auf einen Service zugreifen, der in einer anderen Bereitstellungsoption ausgeführt wird. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
+
+### Beispiel: Greifen Sie von einem Kubernetes-Pod auf eine Compose-Serviceinstanz in Cloud Foundry zu.
+
+Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{site.data.keyword.composeForRedis}} ist eine bezahlte Instanz. Wenn Sie mit Ihrer Compose-Serviceinstanz wie zum Beispiel {{site.data.keyword.composeForMongoDB}} in Kubernetes zufrieden sind, können Sie die Berechtigungsnachweise der durch Compose bereitgestellten Instanz in Cloud Foundry importieren.
+
+1. Wechseln Sie zu **Berechtigungsnachweisen** und rufen Sie Ihre Berechtigungsnachweise von der Instanz ab. 
+
+2. Öffnen Sie die Datei `values.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel in `chart/project/`.
+
+3. Legen Sie die Werte fest, auf die in Ihren Serviceumgebungen verwiesen wird. Zum Beispiel in {{site.data.keyword.composeForMongoDB}}:
+
+  ```
+  services:
+    mongo:
+       url: {uri}
+       dbName: {dbname}
+       ca: {ca_certificate_base64}
+       username: {username}
+       password: {password}
+       env: production
+
+  ```
+
+4. Öffnen Sie die Datei `bindings.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel `chart/project/`.
+
+5. Fügen Sie die Schlüssel-Wert-Referenzen hinzu, die in der Datei `values.yml` am Ende, wo sich die Definition des `env`-Blocks befindet, definiert sind. 
+
+  ```
+    env:
+      - name: MONGO_URL
+        value: {{ .Values.services.mongo.url }}
+      - name: MONGO_DB_NAME
+        value: {{ .Values.services.mongo.name }}
+      - name: MONGO_USER
+        value: {{ .Values.services.mongo.username }}
+      - name: MONGO_PASS
+        value: {{ .Values.services.mongo.password }}
+      - name: MONGO_CA
+        value: {{ .Values.services.mongo.ca }}
+  ```
+
+6. In Ihrer Anwendung verwenden Sie Ihre Umgebungsvariablen, um die Service-SDK zu starten, die für Sie bereitgestellt wurde. 
+
+  ```javascript
+    const serviceManger = require('./services/serivce-manage.js');
+    const mongoURL = process.env.MONGO_URL || 'localhost';
+    const mongoUser = process.env.MONGO_USER || '';
+    const mongoPass = process.env.MONGO_PASS || '';
+    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
+
+    const options = {
+        useMongoClient: true,
+        ssl: true,
+        sslValidate: true,
+        sslCA: mongoCA,
+        poolSize: 1,
+        reconnectTries: 1
+    };
+
+    const mongoDBClient = serviceManger.get('mongodb');
+  ```
+
+### Geheime Schlüssel (optional)
+{: #migrate_secrets_optional}
+
+Legen Sie Ihre Berechtigungsnachweise nicht in den Dateien `deployment.yml` oder `values.yml` offen. Sie können eine Base64-Codierungszeichenfolge verwenden oder Ihre Berechtigungsnachweise mit einem Schlüssel verschlüsseln. Weitere Informationen finden Sie in den Abschnitten zum Thema [Geheimen Schlüssel mit 'kubectl create secret' erstellen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) und [Methoden der Datenverschlüsselung![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
 ## Externe Apps aktivieren
 {: #accser_external}
@@ -200,4 +273,5 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
 	OK
 	```
 
-Sie können Ihre Anwendung nun für die Verwendung der externen Services konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren](#config){: new_window}.
+Sie können Ihre Anwendung nun für die Verwendung der externen Services konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#config){: new_window}.
+

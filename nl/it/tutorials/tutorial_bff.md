@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -34,17 +34,17 @@ Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_cons
 
 3. Immetti un nome host univoco, come ad esempio le tue iniziali più `-devhost`. Ad esempio:
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	Questo nome host è la rotta della tua applicazione. Ad esempio, `abc-devhost.mybluemix.net`
+   Questo nome host è la rotta della tua applicazione. Ad esempio, `abc-devhost.mybluemix.net`
 
 4. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Node.js`.
 
 5. Fai clic su **Create**.
 
-## Facoltativo: aggiungi risorse
+## Passo 3: (Facoltativo) Aggiungi risorse
 {: #add-services}
 
 1. Dalla vista **App Details**, fai clic su **Add Resource**.
@@ -53,7 +53,7 @@ Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_cons
 
 3. Fai clic su **Create**.
 
-## Facoltativo: crea toolchain DevOps
+## Passo 4: (Facoltativo) Crea la toolchain DevOps
 {: #add-toolchain}
 
 L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione eseguirà il provisioning di un repository Git, dove puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente Gitlab dedicato e a una pipeline di fornitura continua che viene personalizzata per la piattaforma di distribuzione che scegli, come Kubernetes o Cloud Foundry.
@@ -70,7 +70,7 @@ La fornitura continua è abilitata per alcune applicazioni. Potresti voler abili
 
 	* Distribuisci utilizzando Cloud Foundry, dove non devi gestire l'infrastruttura sottostante.
 
-## Passo 3: Genera il tuo codice applicazione
+## Passo 5: Genera il tuo codice applicazione
 {: #generate-code}
 
 Se hai creato una toolchain nel passo precedente, è stato creato un repository Git per la tua applicazione e puoi trovare il codice lì. Segui queste istruzioni per accedere al tuo repository:
@@ -87,7 +87,7 @@ Se una toolchain non è abilitata, puoi accedere al tuo codice scaricando il sor
 
 2. Fai clic su **Download Code** per scaricare il tuo archivio dell'applicazione.
 
-## Fase 4: Inizia ad utilizzare la tua applicazione
+## Fase 6: Inizia ad utilizzare la tua applicazione
 {: #code}
 
 Inizia ad utilizzare la tua applicazione scaricata:
@@ -100,7 +100,7 @@ Inizia ad utilizzare la tua applicazione scaricata:
 
 4. Utilizza {{site.data.keyword.dev_cli_notm}} per creare ed eseguire il tuo codice localmente.
 
-## Passo 5: Crea ed esegui l'applicazione localmente
+## Passo 7: Crea ed esegui l'applicazione localmente
 {: #build-run}
 
 Aggiungi il tuo codice, crea ed esegui l'applicazione. Puoi eseguire l'applicazione localmente sul tuo sistema host se installi gli strumenti di build necessari o utilizzando il supporto del contenitore disponibile in {{site.data.keyword.dev_cli_notm}}.
@@ -109,17 +109,17 @@ Aggiungi il tuo codice, crea ed esegui l'applicazione. Puoi eseguire l'applicazi
 
 1. Per creare l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. Per eseguire l'applicazione nella tua directory dell'applicazione corrente, immetti il seguente comando:
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. Puoi eseguire curl sul tuo server con:
 
@@ -142,7 +142,7 @@ Aggiungi il tuo codice, crea ed esegui l'applicazione. Puoi eseguire l'applicazi
    ```
    {: codeblock}
 
-## Passo 6: Distribuisci al cloud
+## Passo 8: Distribuisci al cloud
 {: #deploy}
 
 ### Distribuisci utilizzando una toolchain
@@ -163,10 +163,10 @@ Se scegli di non utilizzare una toolchain, puoi anche distribuire utilizzando {{
 
 Per distribuire la tua applicazione a Cloud Foundry, immetti il seguente comando:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 Per distribuire la tua applicazione a un cluster Kubernetes, immetti il seguente comando:
 

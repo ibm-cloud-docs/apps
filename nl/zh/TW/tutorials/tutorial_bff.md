@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -34,17 +34,17 @@ lastupdated: "2018-05-22"
 
 3. 輸入唯一的主機名稱，例如您的首字再加上 `-devhost`。例如：
 
-	```
-	abc-devhost
+   ```
+abc-devhost
 	```
 
-	這個主機名稱是您應用程式的路徑。例如 `abc-devhost.mybluemix.net`。
+   這個主機名稱是您應用程式的路徑。例如 `abc-devhost.mybluemix.net`。
 
 4. 選取語言平台。針對本指導教學，請使用 `Node.js`。
 
 5. 按一下**建立**。
 
-## 選用項目：新增資源
+## 步驟 3：選用 - 新增資源
 {: #add-services}
 
 1. 從**應用程式詳細資料**視圖，按一下**新增資源**。
@@ -53,7 +53,7 @@ lastupdated: "2018-05-22"
 
 3. 按一下**建立**。
 
-## 選用項目：建立 DevOps 工具鏈
+## 步驟 4：選用 - 建立 DevOps 工具鏈
 {: #add-toolchain}
 
 啟用工具鏈會為您的應用程式建立一個團隊型開發環境。建立工具鏈時，應用程式服務會佈建 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 Gitlab 環境，以及針對您所選部署平台（例如 Kubernetes 或 Cloud Foundry）自訂的 Continuous Delivery Pipeline。
@@ -70,7 +70,7 @@ lastupdated: "2018-05-22"
 
 	* 使用 Cloud Foundry 部署，如此便不需要管理基礎的基礎架構。
 
-## 步驟 3：產生應用程式碼
+## 步驟 5：產生應用程式碼
 {: #generate-code}
 
 如果您在前一個步驟中建立工具鏈，則會為您的應用程式建立 Git 儲存庫，且您可以在該處找到程式碼。請遵循下列步驟來存取您的儲存庫：
@@ -87,7 +87,7 @@ lastupdated: "2018-05-22"
 
 2. 按一下**下載程式碼**以下載您的應用程式保存檔。
 
-## 步驟 4：開始使用您的應用程式
+## 步驟 6：開始使用您的應用程式
 {: #code}
 
 開始使用下載的應用程式：
@@ -100,7 +100,7 @@ lastupdated: "2018-05-22"
 
 4. 使用 {{site.data.keyword.dev_cli_notm}} 在本端建置及執行程式碼。
 
-## 步驟 5：在本端建置及執行應用程式
+## 步驟 7：在本端建置及執行應用程式
 {: #build-run}
 
 新增您自己的程式碼、建置，然後執行應用程式。如果您安裝必要的建置工具，或使用 {{site.data.keyword.dev_cli_notm}} 中可用的容器支援，則可以在主機系統本端上執行應用程式。
@@ -109,17 +109,17 @@ lastupdated: "2018-05-22"
 
 1. 若要在現行應用程式目錄中建置應用程式，請輸入下列指令：
 
-  ```
+   ```
   ibmcloud dev build
   ```
-  {: codeblock}
+   {: codeblock}
 
 2. 若要在現行應用程式目錄中執行應用程式，請輸入下列指令：
 
-  ```
+   ```
   ibmcloud dev run
   ```
-  {: codeblock}
+   {: codeblock}
 
 3. 您可以使用下列指令在伺服器上執行 curl：
 
@@ -142,7 +142,7 @@ lastupdated: "2018-05-22"
    ```
    {: codeblock}
 
-## 步驟 6：部署至雲端
+## 步驟 8：部署至雲端
 {: #deploy}
 
 ### 使用工具鏈部署
@@ -163,10 +163,10 @@ lastupdated: "2018-05-22"
 
 若要將應用程式部署至 Cloud Foundry，請輸入下列指令：
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 若要將應用程式部署至 Kubernetes 叢集，請輸入下列指令：
 

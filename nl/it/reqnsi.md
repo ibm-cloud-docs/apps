@@ -1,23 +1,24 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-22"
+  years: 2015, 2018
+lastupdated: "2018-06-26"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{: codeblock: .codeblock}
 
 # Aggiunta di un servizio alla tua applicazione
 {: #add_service}
 
-Se hai creato un'applicazione con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, hai avuto la possibilità di aggiungere le risorse dalla pagina di panoramica dell'applicazione. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto della tua applicazione.
+Quando crei un'applicazione con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, puoi aggiungere risorse dalla pagina di panoramica dell'applicazione. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}, fuori dal contesto della tua applicazione.
 {: shortdesc}
 
 Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa alla tua applicazione dalla pagina della panoramica dell'applicazione. Puoi fornire un particolare tipo di risorsa (un servizio) direttamente dal catalogo {{site.data.keyword.Bluemix_notm}}.
 
-##Rilevamento servizi
+## Rilevamento servizi
 {: #discover_services}
 
 Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.Bluemix_notm}}
@@ -25,7 +26,7 @@ nei seguenti modi:
 
 * Dalla console {{site.data.keyword.Bluemix_notm}}. Visualizza il catalogo {{site.data.keyword.Bluemix_notm}}.
 * Dall'interfaccia della riga di comando ibmcloud. Utilizza il comando `ibmcloud service offerings`.
-* Dalla tua applicazione. Utilizza la [API di servizi GET /v2/services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Dalla tua applicazione. Utilizza l'[API di servizi GET /v2/services ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Una volta selezionato, {{site.data.keyword.Bluemix_notm}} esegue il provisioning del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione.
@@ -70,7 +71,7 @@ ibmcloud service create nome_servizio piano_servizio istanza_servizio
 ibmcloud service bind appname istanza_servizio
 ```
 
-Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ](#accser_external){: new_window}.
+Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](#accser_external){: new_window}.
 
 ## Configurazione della tua applicazione
 {: #config}
@@ -87,9 +88,7 @@ servizio.
 e l'URI di accesso per l'applicazione.
 * Per interagire con i servizi di back-end mobili, utilizza le informazioni fornite da {{site.data.keyword.Bluemix_notm}}, quali l'identità dell'applicazione
 (ID applicazione), le informazioni di sicurezza specifiche per il client e l'URI di accesso per
-l'applicazione. I servizi mobili di norma operano in contesto reciproco e, pertanto, le informazioni
-di contesto, come il nome dello sviluppatore dell'applicazione e l'utente che utilizza l'applicazione,
-possono essere condivise tra la serie di servizi.
+l'applicazione. I servizi mobili funzionano spesso in contesto reciproco in modo che le informazioni di contesto, come il nome dello sviluppatore dell'applicazione e l'utente che utilizza l'applicazione, possano essere condivise tra la serie di servizi.
 * Per interagire con le applicazioni Web o il codice cloud lato server per le applicazioni mobili, utilizza le
 informazioni fornite da {{site.data.keyword.Bluemix_notm}}, quali le
 credenziali di runtime nella variabile di ambiente *VCAP_SERVICES*
@@ -100,7 +99,79 @@ diversi servizi. Potresti dover leggere la documentazione del servizio in merito
 e come interpretare ogni elemento di informazione.
 
 Se si verifica un arresto anomalo di un servizio di cui esegui il bind a un'applicazione,
-l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi l'argomento di risoluzione dei problemi relativo al fatto che [le applicazioni non verranno riavviate automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi [Le applicazioni non si riavviano automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+
+## Accesso ai servizi negli ambienti di distribuzione di {{site.data.keyword.Bluemix_notm}}
+{: #migrate_instance}
+
+{{site.data.keyword.Bluemix_notm}} offre molte opzioni di distribuzione e puoi accedere a un servizio in esecuzione in un ambiente da un ambiente diverso. Ad esempio, se hai un servizio in esecuzione in Cloud Foundry, puoi accedere a tale servizio da un'applicazione che è in esecuzione in un cluster Kubernetes.
+
+### Esempio: accesso a un'istanza del servizio Compose su Cloud Foundry da un pod Kubernetes
+
+Tutte le istanze del servizio Compose, come {{site.data.keyword.composeForMongoDB}} o {{site.data.keyword.composeForRedis}}, sono istanze a pagamento. Dopo aver familiarizzato con l'utilizzo della tua istanza del servizio Compose, come {{site.data.keyword.composeForMongoDB}} in Kubernetes, puoi importare le credenziali dell'istanza fornita da Compose in Cloud Foundry.
+
+1. Vai a **Credenziali** e richiama le tue credenziali dall'istanza.
+
+2. Apri il file `values.yml` dalla tua directory dei grafici, ad esempio, `chart/project/`.
+
+3. Imposta i valori a cui si fa riferimento nei tuoi ambienti del servizio. Ad esempio, in {{site.data.keyword.composeForMongoDB}}:
+
+  ```
+  services:
+    mongo:
+       url: {uri}
+       dbName: {dbname}
+       ca: {ca_certificate_base64}
+       username: {username}
+       password: {password}
+       env: production
+
+  ```
+
+4. Apri il file `bindings.yml` dalla tua directory dei grafici, ad esempio, `chart/project/`.
+
+5. Aggiungi i riferimenti chiave-valore definiti nel file `values.yml` alla fine in cui è definito il blocco `env`.
+
+  ```
+    env:
+      - name: MONGO_URL
+        value: {{ .Values.services.mongo.url }}
+      - name: MONGO_DB_NAME
+        value: {{ .Values.services.mongo.name }}
+      - name: MONGO_USER
+        value: {{ .Values.services.mongo.username }}
+      - name: MONGO_PASS
+        value: {{ .Values.services.mongo.password }}
+      - name: MONGO_CA
+        value: {{ .Values.services.mongo.ca }}
+  ```
+
+6. Nella tua applicazione, utilizza le variabili di ambiente per avviare l'SDK del servizio fornito per te.
+
+  ```javascript
+    const serviceManger = require('./services/serivce-manage.js');
+    const mongoURL = process.env.MONGO_URL || 'localhost';
+    const mongoUser = process.env.MONGO_USER || '';
+    const mongoPass = process.env.MONGO_PASS || '';
+    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
+
+    const options = {
+        useMongoClient: true,
+        ssl: true,
+        sslValidate: true,
+        sslCA: mongoCA,
+        poolSize: 1,
+        reconnectTries: 1
+    };
+
+    const mongoDBClient = serviceManger.get('mongodb');
+  ```
+
+### Segreti (facoltativo)
+{: #migrate_secrets_optional}
+
+Non esporre le tue credenziali nei file `deployment.yml` o `values.yml`. Puoi utilizzare una stringa codificata in base64 o crittografare le tue credenziali con una chiave. Per ulteriori informazioni, vedi [Creating a Secret Using kubectl create secret ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) e [How to encrypt your data ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
 ## Abilitazione di applicazioni esterne
 {: #accser_external}
@@ -225,4 +296,5 @@ e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
 	OK
 	```
 
-Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio](#config){: new_window}.
+Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](#config){: new_window}.
+

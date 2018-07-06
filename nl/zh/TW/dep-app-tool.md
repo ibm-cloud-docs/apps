@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -41,7 +41,7 @@ IBM Cloud 提供強健的 CLI，以及與 CLI 整合的外掛程式和開發人�
 開始之前，請下載並安裝 {{site.data.keyword.Bluemix_notm}} 指令行介面。
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 Bluemix 指令行介面" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="（在新分頁或視窗中開啟）"><img class="image" src="images/btn_bx_commandline.svg" alt="下載 IBM Cloud Developer Tools" /></a>
 </p>
 
 **限制：**Cygwin 不支援指令行工具。在指令行視窗（而非 Cygwin 指令行視窗）中，使用此工具。

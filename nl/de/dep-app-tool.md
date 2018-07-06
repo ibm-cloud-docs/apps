@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -41,7 +41,7 @@ Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.k
 Laden Sie zunächst die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunter und installieren Sie sie.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"><img class="image" src="images/btn_bx_commandline.svg" alt="Bluemix-Befehlszeilenschnittstelle herunterladen" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet) "><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools herunterladen" /></a>
 </p>
 
 **Einschränkung:** Das Befehlszeilentool wird von Cygwin nicht unterstützt. Verwenden Sie das Tool in einem anderen Befehlszeilenfenster als dem Cygwin-Befehlszeilenfenster.

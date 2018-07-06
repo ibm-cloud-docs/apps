@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-05-22"
 # Back-End-for-Front-End-API erstellen
 {: #tutorial}
 
-Sie können eine App aus einem Back-End-for-Front-End-Starter erstellen. Verwenden Sie diese Starter, um Back-End-for-Front-End-APIs in Node.js, Java oder Swift unter Zuhilfename einer Auswahl an Frameworks zu erstellen: Express.js, MicroProfile/ Java EE, Kitura oder Spring. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie es in der Cloud bereitgestellt wird.
+Sie können eine App aus einem Back-End-for-Front-End-Starter erstellen. Verwenden Sie diese Starter, um Back-End-for-Front-End-APIs in Node.js, Java oder Swift unter Zuhilfenahme einer Auswahl an Frameworks zu erstellen: Express.js, MicroProfile/ Java EE, Kitura oder Spring. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie es in der Cloud bereitgestellt wird.
 {: shortdesc}
 
 ## Schritt 1: Tools installieren
@@ -34,17 +34,17 @@ Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.de
 
 3. Geben Sie einen eindeutigen Hostnamen ein, z. B. Ihre Initialen plus `-devhost`. Beispiel:
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	Dieser Hostname ist die Route Ihrer App. Beispiel: `abc-devhost.mybluemix.net`
+   Dieser Hostname ist die Route Ihrer App. Beispiel: `abc-devhost.mybluemix.net`
 
 4. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie im Rahmen dieses Lernprogramms `Node.js`.
 
 5. Klicken Sie auf **Erstellen**.
 
-## Optional: Ressourcen hinzufügen
+## Schritt 3: Optional - Ressourcen hinzufügen
 {: #add-services}
 
 1. Wählen Sie in der Ansicht **App-Details** die Option **Ressource hinzufügen** aus.
@@ -53,7 +53,7 @@ Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.de
 
 3. Klicken Sie auf **Erstellen**.
 
-## Optional: DevOps-Toolchain erstellen
+## Schritt 4: Optional - DevOps-Toolchain erstellen
 {: #add-toolchain}
 
 Wenn Sie eine Toolchain aktivieren, wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, stellt der App-Service ein Git-Repository bereit, in dem Sie Quellcode anzeigen, Ihre App klonen und Probleme erstellen und verwalten können. Sie haben außerdem Zugriff auf eine dedizierte Gitlab-Umgebung und eine Continuous Delivery-Pipeline, die an die ausgewählte Entwicklungsplattform angepasst wird, z. B. Kubernetes oder Cloud Foundry.
@@ -70,7 +70,7 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Aktivieren Sie Contin
 
 	* Führen Sie die Bereitstellung mithilfe von Cloud Foundry aus, wo Sie die zugrunde liegende Infrastruktur nicht verwalten müssen.
 
-## Schritt 3: App-Code generieren
+## Schritt 5: App-Code generieren
 {: #generate-code}
 
 Wenn Sie im vorherigen Schritt eine Toolchain erstellt haben, wurde ein Git-Repository für Ihre App erstellt und Sie können den Code darin finden. Führen Sie die folgenden Schritte aus, um auf Ihr Repository zuzugreifen:
@@ -87,7 +87,7 @@ Falls keine Toolchain aktiviert ist, können Sie auf Ihren Code zugreifen, indem
 
 2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen.
 
-## Schritt 4: Arbeit an Ihrer App beginnen
+## Schritt 6: Arbeit an Ihrer App beginnen
 {: #code}
 
 Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
@@ -100,7 +100,7 @@ Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
 
 4. Verwenden Sie die {{site.data.keyword.dev_cli_notm}}. um Ihren Code zu erstellen und lokal auszuführen.
 
-## Schritt 5: App erstellen und lokal ausführen
+## Schritt 7: App erstellen und lokal ausführen
 {: #build-run}
 
 Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie können die Anwendung lokal auf Ihrem Hostsystem ausführen, wenn Sie die erforderlichen Buildtools installieren oder indem Sie die verfügbare Containerunterstützung in der {{site.data.keyword.dev_cli_notm}} verwenden.
@@ -109,17 +109,17 @@ Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie 
 
 1. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis zu erstellen:
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. Geben Sie den folgenden Befehl ein, um die App in Ihrem aktuellen App-Verzeichnis auszuführen:
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. Sie können curl auf Ihrem Server ausführen:
 
@@ -142,7 +142,7 @@ Fügen Sie Ihren eigenen Code hinzu, erstellen und führen Sie die App aus. Sie 
    ```
    {: codeblock}
 
-## Schritt 6: In der Cloud bereitstellen
+## Schritt 8: In der Cloud bereitstellen
 {: #deploy}
 
 ### Bereitstellung mithilfe einer Toolchain
@@ -163,10 +163,10 @@ Wenn Sie keine Toolchain verwenden, können Sie die Bereitstellung auch mithilfe
 
 Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
 

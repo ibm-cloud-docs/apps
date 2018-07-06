@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-05-16"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -674,11 +674,10 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
   * 如果您使用 `manifest.yml` 檔案來部署應用程式，請使用 buildpack 選項指定自訂建置套件的 URL 或名稱。例如：
-
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * 如果您從命令提示字元部署應用程式，請使用 `cf push` 指令，並使用 **-b** 選項指定自訂建置套件。例如：
-  ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
-  ```
+    ```
+	   cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+   	```
