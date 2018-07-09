@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -314,14 +314,14 @@ As a workaround, use third-party services that don't rely on the GCM service, fo
 ## Org's services limit is exceeded
 {: #ts_servicelimit}
 
-If you are a trial account user, you might be unable to create an app in {{site.data.keyword.Bluemix_notm}} if you exceeded your organization's services limit.
+If you are a Lite account user, you might be unable to create an app in {{site.data.keyword.Bluemix_notm}} if you exceeded your organization's services limit.
 
-When you try to create an app in {{site.data.keyword.Bluemix_notm}}, you see the following error message:
+When you try to create an app in {{site.data.keyword.Bluemix_notm}}, the following error message is displayed:
 {: tsSymptoms}
 
 `BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
-This error occurs when you exceed the limit on the number of service instances that you can have for your account. The maximum number of services instances for a trial account is 10.
+This error occurs when you exceed the limit on the number of service instances that you can have for your account.
 {: tsCauses}
 
 Delete any services instances that aren't needed, or remove the limit on the number of service instances that you can have.
@@ -330,7 +330,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
   * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} console or the command line interface.
 
     To use the {{site.data.keyword.Bluemix_notm}} console to delete a service instance, complete the following steps:
-	  1. In the Services dashboard, click the **Actions** menu for the service that you want to delete.
+	  1. From your dashboard, click the **Actions** menu for the service that you want to delete.
 	  2. Click **Delete Service**. You are prompted to restage the app that the service instance was bound to.
 
     To use the command line interface to delete a service instance, complete the following steps:
@@ -338,7 +338,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 	  4. Delete the service instance by typing `cf delete-service <service_instance_name>`.
 	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to by typing `cf restage <appname>`.
 
-  * To remove the limit on the number of service instances that you can have, convert your trial account to a pay account. For more information, see [How to change your plan](/docs/pricing/index.html#changing).
+  * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
 
 ## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
@@ -365,25 +365,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
 
-If you are a trial account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a trial account is 2 GB and can be increased only by moving to a paid account.
+If you are a Lite account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a Lite account is 256 MB and can be increased only by upgrading to a billable account.
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}}, you see the following error message:
+When you deploy an app to {{site.data.keyword.Bluemix_notm}}, the following error message is displayed:
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-This error occurs when the amount of memory that is remaining for your organization is less than the amount of memory that is required by the app that you want to deploy. The maximum memory quota for a trial account is 2 GB.
+This error occurs when the amount of memory that is remaining for your organization is less than the amount of memory that is required by the app that you want to deploy. The maximum memory quota for a Lite account is 256 MB.
 {: tsCauses}
 
 You can either increase the memory quota of your account, or reduce the memory that your apps use.
 {: tsResolve}
 
-  * To increase the memory quota of your account, convert your trial account to a pay account. For information about how to convert your trial account to a pay account, see [Pay accounts](/docs/pricing/index.html#pay-accounts).
+  * To increase the memory quota of your account, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
   * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the `cf` command line interface.
 
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
-    1. In the Apps Dashboard, select your app. The app details page opens.
+    1. From your dashboard, select your app. The app details page opens.
     2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
 
     If you use the `cf` command line interface, complete the following steps:
