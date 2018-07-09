@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-22"
 コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などのビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
-ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
+ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成する必要があります。次に、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
 
 カスタム・ドメインの作成と使用には、{{site.data.keyword.Bluemix_notm}} コンソールまたはコマンド・ライン・インターフェースのいずれかを使用できます。
 
@@ -30,7 +30,7 @@ lastupdated: "2018-05-22"
 2. カスタム・ドメインを作成する組織の名前をクリックします。
 3. **「ドメイン」**タブをクリックします。
 4. **「ドメインの追加 (Add a domain)」**をクリックして、ドメイン名を入力して地域を選択します。
-5. 更新を確認します。 **「追加」**をクリックします。 
+5. 更新を確認します。 **「追加」**をクリックします。
 
 例えば、`*.mycompany.com` を使用して経路 `www.mybluemix.com` をアプリに関連付けることができます。 `example.mycompany.com` を使用して、経路 `www.example.mybluemix.com` をアプリに関連付けることもできます。
 {: tip}
@@ -69,13 +69,13 @@ lastupdated: "2018-05-22"
 1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。 CNAME レコードのセットアップ手順は、使用している DNS プロバイダーによって異なります。 例えば、GoDaddy を使用する場合、GoDaddy の[ドメインのヘルプ ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window}にあるガイダンスに従ってください。
 2. アプリケーションが実行されている {{site.data.keyword.Bluemix_notm}} 地域のセキュア・エンドポイントにカスタム・ドメイン・ネームをマップします。 以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
 
-  * US-SOUTH: `secure.us-south.bluemix.net`
-  * US-EAST: `secure.us-east.bluemix.net`
-  * EU-DE: `secure.eu-de.bluemix.net`
-  * EU-GB: `secure.eu-gb.bluemix.net`
-  * AU-SYD: `secure.au-syd.bluemix.net`
+  * US-SOUTH - `secure.us-south.bluemix.net`
+  * US-EAST - `secure.us-east.bluemix.net`
+  * EU-DE - `secure.eu-de.bluemix.net`
+  * EU-GB - `secure.eu-gb.bluemix.net`
+  * AU-SYD - `secure.au-syd.bluemix.net`
 
-ブラウザーまたはコマンド・ライン・インターフェースで、myapp アプリケーションにアクセスするための URL を次のように入力します。
+ブラウザーまたはコマンド・ライン・インターフェースで、`myapp` アプリケーションにアクセスするための URL を次のように入力します。
 
 ```
 http://host_name.mydomain
@@ -90,5 +90,4 @@ ibmcloud app route-delete domain -n hostname -f
 ```
 {: tip}
 
-`domain` はご使用のドメインの名前で、`hostname` はご使用のアプリケーションの経路のホスト名です。 **ibmcloud app route-delete** コマンドについて詳しくは、`ibmcloud app route-delete -h` と入力してください。
-
+このサンプルにおいて、`domain` はご使用のドメインの名前で、`hostname` はご使用のアプリケーションの経路のホスト名です。 `ibmcloud app route-delete` コマンドについて詳しくは、コマンド `ibmcloud app route-delete -h` を入力してください。
