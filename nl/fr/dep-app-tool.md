@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-05-22"
 # Déploiement d'applications
 {: #deploy}
 
-Vous pouvez déployer vos applications avec une chaîne d'outils ou une interface de ligne de commande. Une chaîne d'outils est un ensemble d'intégrations d'outils. L'interface de ligne de commande constitue un moyen simple de déployer vos applciations et vos instances de service.
+Vous pouvez déployer vos applications avec une chaîne d'outils ou une interface de ligne de commande. Une chaîne d'outils est un ensemble d'intégrations d'outils. L'interface de ligne de commande constitue un moyen simple de déployer vos applications et vos instances de service.
 {: shortdesc}
 
 ## Déploiement d'applications avec des chaînes d'outils
@@ -41,7 +41,7 @@ Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pou
 Avant de commencer, téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande Bluemix" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger IBM Cloud Developer Tools" /></a>
 </p>
 
 **Restriction :** l'outil de ligne de commande n'est pas pris en charge par Cygwin. Utilisez-le dans une fenêtre de ligne de commande autre que Cygwin.

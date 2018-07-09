@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -34,17 +34,17 @@ Créez une application dans {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 
 3. Entrez un nom d'hôte unique, par exemple, vos initiales plus `-devhost`. Par exemple :
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	Ce nom d'hôte correspond à la route de votre application. Par exemple, `abc-devhost.mybluemix.net`
+   Ce nom d'hôte correspond à la route de votre application. Par exemple, `abc-devhost.mybluemix.net`
 
 4. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Node.js`.
 
 5. Cliquez sur **Créer**.
 
-## Facultatif : Ajouter des resources
+## Etape 3 : Facultatif - Ajouter des ressources
 {: #add-services}
 
 1. Dans la vue **Détails de l'application**, sélectionnez **Ajouter une ressource**.
@@ -53,7 +53,7 @@ Créez une application dans {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 
 3. Cliquez sur **Créer**.
 
-## Facultatif : Créer une chaîne d'outils DevOps
+## Etape 4 : Facultatif - Créer une chaîne d'outils DevOps
 {: #add-toolchain}
 
 L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application met à disposition un référentiel git dans lequel vous pouvez afficher le code source, cloner votre application et créer et gérer les problèmes. Vous avez également accès à un environnement Gitlab dédié et à un pipeline de distribution continue qui est personnalisé pour la plateforme de déploiement que vous avez choisie, telle que kubernetes ou Cloud Foundry.
@@ -70,7 +70,7 @@ La distribution continue est activée pour certaines applications. Vous souhaite
 
 	* Effectuer un déploiement à l'aide de Cloud Foundry, auquel cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
 
-## Etape 3 : Générer le code de votre application
+## Etape 5 : Générer le code de votre application
 {: #generate-code}
 
 Si vous avez créé une chaîne d'outils à l'étape précédente, un référentiel Git a été créé pour votre application et vous y trouverez le code. Procédez comme suit pour accéder à votre référentiel :
@@ -87,7 +87,7 @@ Si une chaîne d'outils n'est pas activée, vous pouvez accéder à votre code e
 
 2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application.
 
-## Etape 4 : Commencer à utiliser votre application
+## Etape 6 : Commencer à utiliser votre application
 {: #code}
 
 Commencez à utiliser l'application que vous avez téléchargée :
@@ -100,7 +100,7 @@ Commencez à utiliser l'application que vous avez téléchargée :
 
 4. Utilisez le {{site.data.keyword.dev_cli_notm}} pour générer et exécuter votre code localement.
 
-## Etape 5 : Générer et exécuter l'application localement
+## Etape 7 : Générer et exécuter l'application localement
 {: #build-run}
 
 Ajoutez votre propre code, puis générez et exécutez l'application. Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires, ou en utilisant le support de conteneur disponible dans le {{site.data.keyword.dev_cli_notm}}.
@@ -109,17 +109,17 @@ Ajoutez votre propre code, puis générez et exécutez l'application. Vous pouve
 
 1. Pour générer l'application dans votre répertoire d'application en cours, entrez la commande suivante :
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. Pour exécuter l'application dans votre répertoire d'application en cours, entrez la commande suivante :
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. Vous pouvez exécuter la commande curl sur votre serveur, via :
 
@@ -142,7 +142,7 @@ Ajoutez votre propre code, puis générez et exécutez l'application. Vous pouve
    ```
    {: codeblock}
 
-## Etape 6 : Effectuer un déploiement sur le cloud
+## Etape 8 : Effectuer un déploiement sur le cloud
 {: #deploy}
 
 ### Effectuer un déploiement à l'aide d'une chaîne d'outils
@@ -163,10 +163,10 @@ Si vous choisissez de ne pas utiliser une chaîne d'outils, vous pouvez égaleme
 
 Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
 
