@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-25"
 
 ---
 
@@ -41,7 +41,7 @@ Utilice la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} 
 Antes de empezar, descargue e instale la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Se abre en una nueva ventana o separador)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar interfaz de línea de mandatos de Bluemix" /></a>
+<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar IBM Cloud Developer Tools" /></a>
 </p>
 
 **Restricción:** La herramienta de línea de mandatos no se admite en Cygwin. Utilice la herramienta en una ventana de línea de mandatos que no sea la ventana de Cygwin.

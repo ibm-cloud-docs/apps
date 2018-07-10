@@ -21,11 +21,7 @@ Criando aplicativos
         tutorials/tutorial_custom.md
         tutorials/tutorial_mobile.md
 
-    {: .topicgroup}
-    Implementando e integrando apps
-        dep-app-tool.md
-        vsi-deploy.md
-
+    dep-app-tool.md
     reqnsi.md
     mngapps.md
     updapps.md
@@ -53,8 +49,6 @@ Criando aplicativos
         projects/node_project_contents.md
         projects/python_project_contents.md
         projects/swift_project_contents.md
-
-    at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

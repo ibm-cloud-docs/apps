@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-06-26"
 
 ---
 
@@ -34,17 +34,17 @@ Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
 3. Especifique un nombre de host exclusivo como, por ejemplo, sus iniciales seguidas de `-devhost`. Por ejemplo:
 
-	```
-	abc-devhost
-	```
+   ```
+   abc-devhost
+   ```
 
-	El nombre de host es la ruta de su app. Por ejemplo, `abc-devhost.mybluemix.net`.
+   El nombre de host es la ruta de su app. Por ejemplo, `abc-devhost.mybluemix.net`.
 
 4. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilice `Node.js`.
 
 5. Pulse **Crear**.
 
-## Opcional: Añadir recursos
+## Paso 3: Opcional - Añadir recursos
 {: #add-services}
 
 1. En la vista **Detalles de la app**, seleccione **Añadir recurso**.
@@ -53,7 +53,7 @@ Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
 3. Pulse **Crear**.
 
-## Opcional: Crear una cadena de herramientas de DevOps
+## Paso 4: Opcional - Crear cadena de herramientas de DevOps
 {: #add-toolchain}
 
 La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app suministrará un repositorio Git, donde visualizar el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno Gitlab dedicado y a un conducto de entrega personalizado para la plataforma de despliegue elegida como, por ejemplo, Kubernetes o Cloud Foundry.
@@ -70,7 +70,7 @@ La entrega continua está habilitada para algunas aplicaciones. Es posible que d
 
 	* Desplegar utilizando Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
 
-## Paso 3: Generar el código de la app
+## Paso 5: Generar el código de la app
 {: #generate-code}
 
 Si ha creado una cadena en el paso anterior, se ha creado un repositorio Git para la app donde encontrará el código. Siga estos pasos para acceder a su repositorio:
@@ -87,7 +87,7 @@ Si una cadena de herramientas no está habilitada, puede acceder a su código de
 
 2. Pulse **Descargar código** para descargar el archivador de la app.
 
-## Paso 4: Empezar a trabajar con su app
+## Paso 6: Empezar a trabajar con su app
 {: #code}
 
 Empiece a trabajar con la app descargada:
@@ -100,7 +100,7 @@ Empiece a trabajar con la app descargada:
 
 4. Utilice {{site.data.keyword.dev_cli_notm}} para compilar y ejecutar el código de forma local.
 
-## Paso 5: Compilar y ejecutar la app localmente
+## Paso 7: Construir y ejecutar la aplicación localmente
 {: #build-run}
 
 Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicación localmente en su sistema host si instala las herramientas de compilación necesarias, o utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
@@ -109,17 +109,17 @@ Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicació
 
 1. Para crear la app en el directorio de proyecto actual, escriba el mandato siguiente:
 
-  ```
-  ibmcloud dev build
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev build
+   ```
+   {: codeblock}
 
 2. Para ejecutar la app en el directorio actual, especifique el mandato siguiente:
 
-  ```
-  ibmcloud dev run
-  ```
-  {: codeblock}
+   ```
+   ibmcloud dev run
+   ```
+   {: codeblock}
 
 3. Puede ejecutar curl en su servidor con:
 
@@ -142,7 +142,7 @@ Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicació
    ```
    {: codeblock}
 
-## Paso 6: Desplegar a la nube
+## Paso 8: Desplegar en la nube
 {: #deploy}
 
 ### Desplegar utilizando una cadena de herramientas
@@ -163,10 +163,10 @@ Si elige no utilizar una cadena de herramientas, también puede desplegar utiliz
 
 Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: codeblock}
 
 Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
 

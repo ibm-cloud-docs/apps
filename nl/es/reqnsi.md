@@ -1,30 +1,31 @@
 ---
 
 copyright:
-  years: 2015, 2016, 2017, 2018
-lastupdated: "2018-05-22"
+  years: 2015, 2018
+lastupdated: "2018-06-26"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{: codeblock: .codeblock}
 
 # Cómo añadir un servicio a la app
 {: #add_service}
 
-Si ha creado una app con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, tiene la oportunidad de añadir recursos desde la página de visión general de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su app.
+Cuando se crea una app con {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, puede añadir recursos desde la página de visión general de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}, fuera del contexto de su app.
 {: shortdesc}
 
 Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app de la página de visión general de la app. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
-##Descubrimiento de servicios
+## Descubrimiento de servicios
 {: #discover_services}
 
 Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} de las maneras siguientes:
 
 * Desde la consola de {{site.data.keyword.Bluemix_notm}}. Visualice el catálogo de {{site.data.keyword.Bluemix_notm}}.
 * Desde la interfaz de línea de mandatos ibmcloud. Utilice el mandato `ibmcloud service offerings`.
-* Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Desde la propia aplicación. Utilice [GET /v2/services Services API ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
 Puede seleccionar el servicio que necesita cuando desarrolla app. Cuando lo haya seleccionado, {{site.data.keyword.Bluemix_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
 
@@ -64,7 +65,7 @@ ibmcloud service bind appname service_instance
 ```
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
-un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para utilizar servicios de {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
+un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo las apps externas utilizan los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para utilizar el servicio de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#accser_external){: new_window}.
 
 ## Configuración de la aplicación
 {: #config}
@@ -77,7 +78,79 @@ Cada servicio puede requerir un mecanismo diferente para comunicarse con las apl
 * Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
 * Para interactuar con app web o código en la nube del servidor para app móviles, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
 
-Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte el tema de resolución de problemas [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+
+## Acceso a servicios en los entornos de despliegue de {{site.data.keyword.Bluemix_notm}}
+{: #migrate_instance}
+
+{{site.data.keyword.Bluemix_notm}} ofrece muchas opciones de despliegue y puede acceder a un servicio que se está ejecutando en un entorno desde un entorno diferente. Por ejemplo, si tiene un servicio que se está ejecutando en Cloud Foundry, puede acceder a dicho servicio desde una aplicación que se esté ejecutando en un clúster de Kubernetes.
+
+### Ejemplo: Acceda a una instancia de servicio de Compose en Cloud Foundry desde un pod Kubernetes
+
+Cualquier instancia de servicio, como {{site.data.keyword.composeForMongoDB}} o {{site.data.keyword.composeForRedis}}, son instancias de pago. Cuando se sienta cómodo utilizando la instancia de servicio de Compose, como {{site.data.keyword.composeForMongoDB}} en Kubernetes, puede importar las credenciales de la instancia que proporciona Compose en Cloud Foundry.
+
+1. Vaya a **Credenciales** y recupere las credenciales de la instancia.
+
+2. Abra el archivo `values.yml` del directorio de gráficos, por ejemplo, `chart/project/`.
+
+3. Establezca los valores a los que se hace referencia en los entornos de servicio. Por ejemplo, en {{site.data.keyword.composeForMongoDB}}:
+
+  ```
+  services:
+    mongo:
+       url: {uri}
+       dbName: {dbname}
+       ca: {ca_certificate_base64}
+       username: {username}
+       password: {password}
+       env: production
+
+  ```
+
+4. Abra el archivo `bindings.yml` del directorio de gráficos, por ejemplo, `chart/project/`.
+
+5. Añada las referencias de valor de clave que se definen en el archivo `values.yml` al final donde se define el bloque `env`.
+
+  ```
+    env:
+      - name: MONGO_URL
+        value: {{ .Values.services.mongo.url }}
+      - name: MONGO_DB_NAME
+        value: {{ .Values.services.mongo.name }}
+      - name: MONGO_USER
+        value: {{ .Values.services.mongo.username }}
+      - name: MONGO_PASS
+        value: {{ .Values.services.mongo.password }}
+      - name: MONGO_CA
+        value: {{ .Values.services.mongo.ca }}
+  ```
+
+6. En la aplicación, utilice las variables de entorno para iniciar el servicio SDK que se proporciona para usted.
+
+  ```javascript
+    const serviceManger = require('./services/serivce-manage.js');
+    const mongoURL = process.env.MONGO_URL || 'localhost';
+    const mongoUser = process.env.MONGO_USER || '';
+    const mongoPass = process.env.MONGO_PASS || '';
+    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
+    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
+
+    const options = {
+        useMongoClient: true,
+        ssl: true,
+        sslValidate: true,
+        sslCA: mongoCA,
+        poolSize: 1,
+        reconnectTries: 1
+    };
+
+    const mongoDBClient = serviceManger.get('mongodb');
+  ```
+
+### Secretos (Opcional)
+{: #migrate_secrets_optional}
+
+No exponga las credenciales en los archivos `deployment.yml` o `values.yml`. Puede utilizar una serie codificada en base64 o cifrar sus credenciales con una clave. Para obtener más información, consulte [Creación de un Secreto utilizando kubectl create secret ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) y [Cómo cifrar sus datos ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
 
 ## Habilitación de apps externas
 {: #accser_external}
@@ -194,4 +267,5 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
 	OK
 	```
 
-Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](#config){: new_window}.
+Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para interactuar con un servicio ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#config){: new_window}.
+

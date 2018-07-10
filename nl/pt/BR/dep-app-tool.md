@@ -24,7 +24,7 @@ lastupdated: "2018-06-25"
 {: #toolchains_getting_started}
 
 As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
-ferramentas a partir de um app. Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+ferramentas a partir de um app. Para saber mais sobre cadeias de ferramentas, veja [Criando cadeias de ferramentas](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
 
 Com uma cadeia de ferramentas configurada adequadamente, a implementação de seu app é trivial: um ciclo de construção/implementação será iniciado automaticamente com cada mesclagem para a ramificação principal em seu repositório.
 
