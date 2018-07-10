@@ -22,11 +22,11 @@ You can use a starter kit to quickly get your app started and prepare it for fut
 
 Starter kits are available in many categories, including:
 
-* [Watson ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [Mobile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/mobile){:new_window}
-* [Web App ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice){:new_window}
-* [Security ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/){:new_window}
+* [Apple ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appledevelopment/){:new_window}
+* [Mobile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/mobile/){:new_window}
+* [Web App ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/){:new_window}
+* [Security ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/security/){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
 * [Finance ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/finance){:new_window}
 
