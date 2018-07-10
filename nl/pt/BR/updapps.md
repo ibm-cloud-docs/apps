@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-05-22"
 É possível usar a linha de comandos ou o {{site.data.keyword.Bluemix}} Continuous Delivery para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
 {:shortdesc}
 
-Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público, configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}} e, em seguida, mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema, as solicitações para seu domínio customizado serão roteadas para seu aplicativo no {{site.data.keyword.Bluemix_notm}}.
+Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público e configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}. Em seguida, mapeie o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema, as solicitações para seu domínio customizado serão roteadas para seu aplicativo no {{site.data.keyword.Bluemix_notm}}.
 
 É possível criar e usar um domínio customizado usando o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
 
@@ -30,7 +30,7 @@ Conclua as etapas a seguir para criar um domínio customizado para sua organiza�
 2. Clique no nome da organização para a qual você está criando um domínio customizado.
 3. Clique na guia **Domínios**.
 4. Clique em **Incluir um domínio** e insira seu nome de domínio e selecione a região.
-5. Confirme suas atualizações. Clique em ** Adicionar**. 
+5. Confirme suas atualizações. Clique em **Incluir**.
 
 Como um exemplo, é possível usar `*.mycompany.com` para associar a rota `www.mybluemix.com` ao seu app. Também é possível usar `example.mycompany.com` para associar a rota `www.example.mybluemix.com` ao seu app.
 {: tip}
@@ -68,15 +68,15 @@ Inclua a rota com o domínio customizado para um aplicativo.
 Após configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}, mapeie o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} em seu servidor DNS registrado:
 
 1. Configure um registro 'CNAME' para o nome de domínio customizado em seu servidor DNS. Etapas para configurar o registro CNAME variam dependendo de seu provedor DNS. Por exemplo, se você usar o GoDaddy, siga a orientação de [Ajuda de domínios ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} do GoDaddy.
-2. Mapeie o nome do domínio customizado para o terminal seguro para a região do {{site.data.keyword.Bluemix_notm}} em que seu aplicativo está em execução. Use os terminais da região a seguir para fornecer a rota da URL alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}:
+2. Mapeie o nome do domínio customizado para o terminal seguro para a região do {{site.data.keyword.Bluemix_notm}} em que seu aplicativo está em execução. Use os terminais de região a seguir para fornecer a rota de URL que está alocada para sua organização no {{site.data.keyword.Bluemix_notm}}.
 
-  * US-SOUTH: `secure.us-south.bluemix.net`
-  * US-EAST: `secure.us-east.bluemix.net`
-  * EU-DE: `secure.eu-de.bluemix.net`
-  * EU-GB: `secure.eu-gb.bluemix.net`
-  * AU-SYD: `secure.au-syd.bluemix.net`
+  * US-SOUTH- ` secure.us-south.bluemix.net `
+  * US-EAST- ` secure.us-east.bluemix.net `
+  * EU-DE- ` secure.eu-de.bluemix.net `
+  * EU-GB- ` secure.eu-gb.bluemix.net `
+  * AU-SYD- ` secure.au-syd.bluemix.net `
 
-Em um navegador ou interface da linha de comandos, insira a URL a seguir para acessar o aplicativo myapp:
+Em um navegador ou em uma interface da linha de comandos, insira a URL a seguir para acessar o aplicativo `myapp`:
 
 ```
 http://host_name.mydomain
@@ -91,5 +91,4 @@ ibmcloud app route-delete domain -n hostname -f
 ```
 {: tip}
 
-`domain` é o nome de seu domínio e `hostname` é o nome do host da rota de seu aplicativo. Para obter mais informações sobre o comando **ibmcloud app route-delete**, digite `ibmcloud app route-delete -h`.
-
+Nesse exemplo, `domain` é o nome de seu domínio e `hostname` é o nome do host da rota para seu aplicativo. Para obter mais informações sobre o comando `ibmcloud app route-delete`, insira o comando `ibmcloud app route-delete -h`.
