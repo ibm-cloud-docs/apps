@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -22,13 +22,13 @@ You can use a starter kit to quickly get your app started and prepare it for fut
 
 Starter kits are available in many categories, including:
 
-* [Watson ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/){:new_window}
-* [Apple ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appledevelopment/){:new_window}
-* [Mobile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/mobile/){:new_window}
-* [Web App ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/){:new_window}
-* [Security ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/security/){:new_window}
+* [Watson ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
+* [Apple ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
+* [Mobile ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/mobile/dashboard){:new_window}
+* [Web App ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/dashboard){:new_window}
+* [Security ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/security/dashboard){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finance ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/finance){:new_window}
+* [Finance ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/finance/dashboard){:new_window}
 
 ## Before you begin
 
