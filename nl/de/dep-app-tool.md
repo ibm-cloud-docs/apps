@@ -23,7 +23,7 @@ Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittst
 ## Apps mit Toolchains bereitstellen
 {: #toolchains_getting_started}
 
-Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started). 
 
 Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
 

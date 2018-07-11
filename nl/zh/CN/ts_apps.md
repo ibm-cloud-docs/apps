@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-06-20"
+lastupdated: "2018-07-02"
 
 ---
 
@@ -17,13 +17,11 @@ lastupdated: "2018-06-20"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-
 # 有关管理应用程序的故障诊断
 {: #managingapps}
 
 有关管理应用程序的一般问题可能包括：无法更新应用程序或未显示双字节字符。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
-
 
 ## 您有未保存的更改
 {: #ts_unsaved_changes}
@@ -38,7 +36,7 @@ lastupdated: "2018-06-20"
 在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意这样设计的；但是，当您要离开该页面时，会有错误消息提示您保存内存或实例设置。
 {: tsCauses}
 
-关闭消息窗口，然后单击运行时窗格中的**重置**按钮。
+关闭消息窗口，然后单击运行时窗格中的**重置**。
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移不可用
@@ -52,10 +50,11 @@ lastupdated: "2018-06-20"
 {{site.data.keyword.Bluemix_notm}} 尚不提供从一个区域到另一个区域的自动故障转移。
 {: tsCauses}
 
-您可以使用支持多个 IP 地址间智能故障转移的 DNS 提供程序，并手动配置 DNS 设置，以启用 {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移。具有此功能的 DNS 提供程序包括 NSONE、Akamai 和 Dyn。
+您可以使用支持在多个 IP 地址间进行智能故障转移的 DNS 提供程序，然后手动配置 DNS 设置以启用 {{site.data.keyword.Bluemix_notm}} 区域间的自动故障转移。具有此功能的 DNS 提供程序包括 NSONE、Akamai 和 Dyn。
 {: tsResolve}
 
-配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中输入以下命令：
+配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中键入以下命令。
+
 ```
 nslookup stage1.mybluemix.net
 ```
@@ -63,7 +62,7 @@ nslookup stage1.mybluemix.net
 ## 无法将应用程序切换到调试方式
 {: #ts_debug}
 
-如果 Java 虚拟机 (JVM) 版本为 8 或更低版本，那么可能无法启用调试方式。
+如果 Java 虚拟机 (JVM) 版本为 8 或更早版本，那么无法启用调试方式。
 
 选择**启用应用程序调试**后，工具会尝试将应用程序切换到调试方式。然后，Eclipse 工作台会启动调试会话。工具成功启用调试方式时，Web 应用程序状态会依次显示 `Updating mode`、`Developing` 和 `Debugging`。
 {: tsSymptoms}
@@ -150,48 +149,56 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 {: tsResolve}
 
   1. 通过输入以下命令，检查路径是否属于当前空间：
-     ```
-	 cf routes
-	 ```
+
+    ```
+    cf routes
+    ```
+
   2. 如果路径不属于当前空间，请通过输入以下命令，切换到其所属的空间或组织：
-     ```
-	 cf target -o org_name -s space_name
+     
+
+    ```
+    cf target -o org_name -s space_name
 	 ```
+
   3. 通过输入以下命令，删除应用程序路径：
-     ```
-	 cf delete-route domain_name -n host_name
+     
+
+    ```
+    cf delete-route domain_name -n host_name
 	 ```
-	 例如：
-	 ```
-	 cf delete-route mybluemix.net -n app001
+
+  例如：
+
+  ```
+cf delete-route mybluemix.net -n app001
 	 ```
 
 ## 无法在组织中检索空间
 {: #ts_retrieve_space}
 
-如果当前组织没有与其相关联的空间，那么您无法创建应用程序或服务。
+如果当前组织没有与其相关联的空间，那么无法创建应用程序或服务。
 
 尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，您会看到以下错误消息：
 {: tsSymptoms}
 
 `BXNUI0515E: 未检索到组织中的空间。发生了网络连接问题，或者当前组织没有与其相关联的空间。`
 
-通常当您第一次尝试在尚未创建空间的情况下通过目录创建应用程序或服务时，会发生此错误。
+在尚未创建空间的情况下，第一次尝试通过目录创建应用程序或服务时，通常会发生此错误。
 {: tsCauses}
 
 请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
 {: tsResolve}
 
-  * 在菜单栏中，单击**管理 > 帐户 > 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
-  * 在 cf 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`.
+* 在菜单栏中，单击**管理 > 帐户 > 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
+* 在 `cf` 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
 
 请重试。如果再次出现此消息，请转至 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面，检查服务或组件是否存在问题。
-
 
 ## 无法执行请求的操作
 {: #ts_authority}
 
-没有相应的访问权限，您可能无法完成操作。
+如果没有相应的访问权限，那么无法完成操作。
 
 尝试对服务实例或应用程序实例执行操作时，无法完成请求的操作，并看到以下其中一条错误消息：
 {: tsSymptoms}
@@ -203,10 +210,11 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 您没有执行操作所需的相应级别的权限。
 {: tsCauses}
 
-要获取相应级别的权限，请使用以下其中一种方法：
+要获取相应级别的权限，请使用以下某种方法。
 {: tsResolve}
- * 选择您具有其开发者角色的另一个组织和空间。
- * 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html)。
+
+* 选择您具有其开发者角色的另一个组织和空间。
+* 请求组织管理员将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html)。
 
 ## 由于授权错误而无法访问 {{site.data.keyword.Bluemix_notm}} 服务
 {: #ts_vcap}
@@ -238,14 +246,13 @@ process.env.VCAP_SERVICES
 {: tsSymptoms}
 `不支持项目构面 Cloud Foundry Standalone Application V1.0。`
 
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将项目映射到 {{site.data.keyword.Bluemix_notm}} 运行时。构面为 Eclipse 中的 Java EE 项目定义需求，并用作运行时配置的一部分，以便将不同运行时与不同项目关联。如果应用于项目的构面不受 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 支持，那么您可能无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
+IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将项目映射到 {{site.data.keyword.Bluemix_notm}} 运行时。构面为 Eclipse 中的 Java EE 项目定义需求，并用作运行时配置的一部分，以便将不同运行时与不同项目关联。如果应用于项目的构面不受 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 支持，那么无法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 {: tsCauses}
 
 必须从 Eclipse 项目中除去该构面，才能使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序。
 {: tsResolve}
 
 要除去该构面，请在 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 中单击该项目的**项目>属性>项目构面**。然后，清除不受支持构面的复选框。
-
 
 
 
@@ -258,7 +265,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 您收到以“502 无效网关”开头的错误消息。例如，您可能会看到 `502 无效网关：注册的端点未能处理请求。`
 {: tsSymptoms}
 
-通常会在以下情况下发生“无效网关”错误：您访问某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接，因此您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到本该从代理服务器发来的 HTTP 实现。
+通常会在以下情况下发生“无效网关”错误：您访问某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接。因此，您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到本该从代理服务器发来的 HTTP 实现。
 {: tsCauses}
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。
@@ -270,7 +277,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
     * 通过按键盘上的 F5 或单击刷新按钮，重新装入页面。如果此步骤无效，请清除浏览器的高速缓存和 cookie，然后再重新装入。
 
     * 使用其他浏览器。
-    * 重新引导您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。
+    * 重新启动您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。
 
   * 稍等，然后重试。在某些情况下，您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能会发生临时问题。您可以一直等到临时问题得到解决为止。
 
@@ -311,14 +318,13 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 平台上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[igetui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
+作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[getui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
 {: tsResolve}
-
 
 ## 超过组织的服务限制
 {: #ts_servicelimit}
 
-如果您是试用帐户用户，那么可能无法在超过组织服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
+如果您是试用帐户用户，那么可能无法在超过组织的服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
 
 尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，您会看到以下错误消息：
 {: tsSymptoms}
@@ -335,14 +341,12 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 
     要使用 {{site.data.keyword.Bluemix_notm}} 控制台来删除服务实例，请完成以下步骤：
 	  1. 在“服务”仪表板中，单击要删除的服务的**操作**菜单。
-	  2. 单击**删除服务**。系统会提示您重新编译打包该服务实例绑定到的应用程序。
-
-
+	  2. 单击**删除服务**。系统会提示您重新编译打包该服务实例所绑定到的应用程序。
 
     要使用命令行界面删除服务实例，请完成以下步骤：
-	  1. 通过输入 `cf unbind-service <appname> <service_instance_name>`.
-	  2. 通过输入 `cf delete-service <service_instance_name>`.
-	  3. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`.
+	  3. 通过输入 `cf unbind-service <appname> <service_instance_name>`。
+	  4. 通过输入 `cf delete-service <service_instance_name>`。
+	  5. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`。
 
   * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing)。
 
@@ -354,10 +358,10 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 如果可执行文件是在不同环境中开发和构建的，那么无法在 {{site.data.keyword.Bluemix_notm}} 上运行这些可执行文件。
 {: tsSymptoms}
 
-如果要推送到 {{site.data.keyword.Bluemix_notm}} 的内容已经是可执行文件，那么该内容是先前构建的，不需要在 {{site.data.keyword.Bluemix_notm}} 上进行构建。在此情况下，无需任何 buildpack，可执行文件就可以在 {{site.data.keyword.Bluemix_notm}} 上运行。但是，必须向 {{site.data.keyword.Bluemix_notm}} 明确指示不需要 buildpack。
+如果要推送到 {{site.data.keyword.Bluemix_notm}} 的内容已经是可执行文件，那么该内容是先前构建的，不需要在 {{site.data.keyword.Bluemix_notm}} 上进行构建。在此情况下，无需任何 buildpack，可执行文件就可以在 {{site.data.keyword.Bluemix_notm}} 上运行。您必须向 {{site.data.keyword.Bluemix_notm}} 明确指示不需要 buildpack。
 {: tsCauses}
 
-当您将可执行文件推送到 {{site.data.keyword.Bluemix_notm}} 时，必须指定 null-buildpack，它指示不需要 buildpack。指定 null-buildpack 的方法是使用带 **-b** 选项的 `cf push` 命令：
+在将可执行文件推送到 {{site.data.keyword.Bluemix_notm}} 时，必须指定 `null-buildpack`，它指示不需要 buildpack。指定 `null-buildpack` 的方法是使用带 **-b** 选项的 `cf push` 命令：
 {: tsResolve}
 
 ```
@@ -371,8 +375,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 超过组织的内存限制
 {: #ts_outofmemory}
 
-如果您是试用帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。试用帐户的最大内存配额为 2 GB，并且只能通过移至付费帐户来增大内存配额。
-
+如果您是试用帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。试用帐户的最大内存配额为 2 GB，要增大内存配额，只能移至付费帐户。
 
 将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息：
 {: tsSymptoms}
@@ -386,7 +389,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 {: tsResolve}
 
   * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](/docs/pricing/index.html#pay-accounts)。
-  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 cf 命令行界面。
+  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 `cf` 命令行界面。
 
     如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 
@@ -395,7 +398,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
     2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
 	
 
-    如果使用 cf 命令行界面，请完成以下步骤：
+    如果使用 `cf` 命令行界面，请完成以下步骤：
 
     1. 检查应用程序使用了多少内存：
 
@@ -403,7 +406,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 	  cf apps
 	  ```
 
-	  cf apps 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
+	  `cf apps` 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
 
 
     2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
@@ -414,11 +417,10 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
     3. 重新启动应用程序以使更改生效。
 
-
 ## 应用程序不会自动重新启动
 {: #ts_apps_not_auto_restarted}
 
-当绑定到应用程序的服务停止工作时，该应用程序不会自动重新启动。	  
+当绑定到应用程序的服务停止工作时，该应用程序不会自动重新启动。
 
 当绑定到应用程序的服务崩溃时，应用程序可能会发生如中断、异常和连接失败等问题。 {{site.data.keyword.Bluemix_notm}} 不会自动重新启动应用程序以从这些问题中恢复。
 {: tsSymptoms}
@@ -432,6 +434,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ```
 cf push appname -p app_path
   ```
+
 此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。
 
 
@@ -456,10 +459,10 @@ cf push appname -p app_path
 
 在 {{site.data.keyword.Bluemix_notm}} 区域上工作时，可能在 {{site.data.keyword.Bluemix_notm}} 上找不到组织。
 
-您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 控制台，但不能使用 cf 命令行界面或 Eclipse 插件来推送应用程序。
+您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 控制台，但不能使用 `cf` 命令行界面或 Eclipse 插件来推送应用程序。
 {: tsSymptoms}
 
-尝试使用 cf 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下某个错误消息（消息中指定了组织名称）：
+尝试使用 `cf` 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下某条错误消息（消息中指定了组织名称）：
 
 `查找组织时出错`
 
@@ -472,13 +475,14 @@ cf push appname -p app_path
 发生此问题的原因是您要使用的区域的 API 端点未指定，并且您要查找的组织可能位于其他区域中。
 {: tsCauses}
 
-如果使用 cf 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，请输入 cf api 命令并指定区域的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.Bluemix_notm}} 欧洲英国区域：
+如果要使用 `cf` 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，请输入 `cf api` 命令并指定区域的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.Bluemix_notm}} 欧洲英国区域：
 {: tsResolve}
 
 ```
 cf api https://api.eu-gb.bluemix.net
 ```
-如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定所创建组织所在的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html)。  
+
+如果要使用 Eclipse 工具将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，必须先创建 {{site.data.keyword.Bluemix_notm}} 服务器，然后指定在其中创建组织的 {{site.data.keyword.Bluemix_notm}} 区域的 API 端点。有关使用 Eclipse 工具的更多信息，请参阅[使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 部署应用程序](/docs/manageapps/eclipsetools/eclipsetools.html)。
 
 ## 无法创建应用程序路径
 {: #ts_hostistaken}
@@ -496,7 +500,7 @@ cf api https://api.eu-gb.bluemix.net
 您所指定的主机名在您所使用的域中必须是唯一的。要指定不同的主机名，请使用以下某个方法：
 {: tsResolve}
 
-  * 如果通过使用 `manifest.yml` 文件来部署应用程序，请在 host 选项中指定主机名。
+  * 如果使用 `manifest.yml` 文件来部署应用程序，请在 host 选项中指定主机名。
     ```
     host: host_name	
 	```
@@ -509,7 +513,7 @@ cf api https://api.eu-gb.bluemix.net
 ## 无法使用 cf push 命令推送 WAR 应用程序
 {: #ts_cf_war}
 
-如果未正确指定应用程序位置，那么可能无法使用 cf push 命令来将归档的 Web 应用程序推送到 {{site.data.keyword.Bluemix_notm}}。
+如果未正确指定应用程序位置，那么可能无法使用 `cf push` 命令将归档的 Web 应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 
 使用 `cf push` 命令将 WAR 应用程序上传到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息：
 {: tsSymptoms}
@@ -532,7 +536,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
- 	
+
 
 
 ## 将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时未正确显示双字节字符
@@ -583,8 +587,8 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 通过以下其中一种方法来指定启动命令：
-     * 使用命令行界面。例如：
-        ```
+     * 使用 `cf` 命令行界面。例如：
+```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/jsonfile){: new_window} 文件。例如：
@@ -606,7 +610,7 @@ cf push MyUniqueAppName02 -p "./app.war"
         ```
 
   * 确保 Node.js 应用程序中存在 `package.json` 文件，这样 Node.js buildpack 才能识别该应用程序。确保此文件位于应用程序的根目录中。	
-    以下示例显示简单的 `package.json` 文件：   
+    以下示例显示简单的 `package.json` 文件：
 	```
 	{
         "name": "MyUniqueNodejs01",
