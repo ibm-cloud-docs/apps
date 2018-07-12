@@ -23,7 +23,7 @@ Vous pouvez déployer vos applications avec une chaîne d'outils ou une interfac
 ## Déploiement d'applications avec des chaînes d'outils
 {: #toolchains_getting_started}
 
-Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux manières, soit  à l'aide d'un modèle, soit à partir d'une application. Pour en savoir plus sur les chaînes d'outils, voir[Création de chaînes d'outils](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Vous pouvez créer une chaîne d'outils de deux manières, soit  à l'aide d'un modèle, soit à partir d'une application. Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'outils](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 Avec une chaîne d'outils correctement configurée, le déploiement de votre application devient un jeu d'enfants : un cycle de création/déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel.
 
