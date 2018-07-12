@@ -100,7 +100,7 @@ Empiece a trabajar con la app descargada:
 
 4. Utilice {{site.data.keyword.dev_cli_notm}} para compilar y ejecutar el código de forma local.
 
-## Paso 7: Construir y ejecutar la aplicación localmente
+## Paso 7: Construir y ejecutar la app localmente
 {: #build-run}
 
 Añada su propio código, compile y ejecute la app. Puede ejecutar la aplicación localmente en su sistema host si instala las herramientas de compilación necesarias, o utilizando el soporte de contenedor disponible en {{site.data.keyword.dev_cli_notm}}.
