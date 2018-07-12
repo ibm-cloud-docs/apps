@@ -20,7 +20,7 @@ You can secure your applications by uploading SSL certificates and restricting a
 
 Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
-## Required information
+## Required CSR contents
 
 For the CSR to be valid, the following information must be entered when you generate the CSR:
 
@@ -93,7 +93,7 @@ To upload a certificate for your application:
 
   #### Certificate
 
-    A digital document that binds a public key to the identity of the certificate owner, thereby enabling the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
+    A digital document that binds a public key to the identity of the certificate owner, which enables the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
 
     A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes you might use a self-signed certificate.
 
@@ -105,7 +105,7 @@ To upload a certificate for your application:
 
   #### Private key
 
-    An algorithmic pattern used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
+    An algorithmic pattern that is used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
 
     The following types of private keys are supported in {{site.data.keyword.Bluemix_notm}}:
 
@@ -116,7 +116,7 @@ To upload a certificate for your application:
 
     A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization.
 
-    You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third-party. You might not require an intermediate certificate when testing your application prior to deploying it to production.
+    You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third-party. You might not require an intermediate certificate when you test your application before deploying it to production.
 
   #### Enable request of client certificate
 
@@ -126,7 +126,7 @@ To upload a certificate for your application:
 
   #### Client certificate truststore
 
-  The client certificate truststore is a file that includes the client certificates for the users who you want to allow access to your application. If you enable the option to request a client certificate, upload a client certificate truststore file.
+  The client certificate truststore includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
 
    The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
@@ -136,6 +136,9 @@ To upload a certificate for your application:
   You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
   {: tip}
 
-For more information see, [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+For more information, see [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, in the action column, select **Domains** from the additional actions menu. In the additional actions menu for the organization, click **Remove from Org**.
+To delete a certificate or replace an existing certificate with a new one, follow these steps. 
+
+1. Go to **Manage** > **Account** > **Cloud Foundry Organizations**. 
+2. In the action column, select **Domains** from the additional actions menu. In the additional actions menu for the organization, click **Remove from Org**.
