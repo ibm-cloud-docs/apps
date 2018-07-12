@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,16 +11,15 @@ lastupdated: "2018-05-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Starting with a Compose file
+# Starting with a Docker Compose file
 {: #compose-file}
 
-For Compose apps, the following information is an inventory of what you typically find in {{site.data.keyword.Bluemix}}. When you create a starter kit, these files are created for you. If you're migrating an app to host in {{site.data.keyword.Bluemix_notm}}, you might want to review this information to avoid potential conflicts.
+For Docker Compose apps, the following information is an inventory of what you typically find in {{site.data.keyword.Bluemix}}. When you create a starter kit, these files are created for you. If you're migrating an app to host in {{site.data.keyword.Bluemix_notm}}, you might want to review this information to avoid potential conflicts.
 {:shortdesc}
 
-The [Compose](https://docs.docker.com/compose/overview/) file defines information for running multi-container applications.
+The [Docker Compose](https://docs.docker.com/compose/overview/) file defines information for running multi-container applications.
 
-Specify the version of Compose file that is used to be 2.0 or later as such:
-`version: '2'`
+Specify the version of Docker Compose file that is used to be 2.0 or later: `version: '2'`
 
 You also need to define the services. The following example is from a Node app:
 
@@ -50,14 +49,14 @@ services:
     image: mongo
 ```
 
-The services `web` and `mongo` are defined and each of them has configurations, which are defined in the Docker-Compose [documentation](https://docs.docker.com/compose/compose-file/compose-file-v2/).
+The services `web` and `mongo` are defined and each of them has configurations, which are defined in the Docker Compose [documentation](https://docs.docker.com/compose/compose-file/compose-file-v2/).
 
 The most relevant configurations are listed as follows:
 
-* build: The context and Dockerfile attributes are unnecessary here because they are the default values, but can be overwritten in this format. The context attribute defines the path to the name of the Dockerfile that is specified in the Dockerfile attribute.
+* `build`: The context and Dockerfile attributes are unnecessary here because they're the default values, but can be overwritten in this format. The context attribute defines the path to the name of the Dockerfile that is specified in the Dockerfile attribute.
 
-* tty: By specifying this attribute, the containers can remain running and not immediately exit, which is required for Docker-Compose support.
+* `tty`: By specifying this attribute, the containers can continue to run and don't immediately exit, which is required for Docker Compose support.
 
-* command: This attribute specifies the command to be run inside the containers.
+* `command`: This attribute specifies the command to be run inside the containers.
 
-* image and container_name: These attributes specify the names of the image and containers.
+* `image` and `container_name`: These attributes specify the names of the image and containers.
