@@ -42,7 +42,7 @@ For the CSR to be valid, the following information must be entered when you gene
 
 ### Organization unit
 
-  The branch name of your company that is ordering the certificate, such as Accounting or Marketing.
+  The branch name of your company that is ordering the certificate, such as accounting or marketing.
 
 ### Common name
 
@@ -77,7 +77,7 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 * EU-GB - `secure.eu-gb.bluemix.net`
 * AU-SYD - `secure.au-syd.bluemix.net`
 
-To upload a certificate for your application:
+To upload a certificate for your application, follow these steps.
 
 1. Go to your dashboard.
 
@@ -116,7 +116,7 @@ To upload a certificate for your application:
 
     A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization.
 
-    You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before deploying it to production.
+    Use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before you deploy it to production.
 
   #### Enable request of client certificate
 

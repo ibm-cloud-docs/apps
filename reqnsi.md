@@ -124,7 +124,7 @@ Any Compose service instances, such as {{site.data.keyword.composeForMongoDB}} o
         value: {{ .Values.services.mongo.ca }}
   ```
 
-6. In your application, use your environment variables to initiate the service SDK that's provided for you.
+6. In your application, use your environment variables to start the service SDK that's provided for you.
 
   ```javascript
     const serviceManger = require('./services/serivce-manage.js');
@@ -231,7 +231,7 @@ To create a user-provided service instance and bind it to an application, comple
         OK
         ```
 
-    * To create a service instance that drains information to a third-party log management software, use the `-l` option, and specify the destination that the third-party log management software provides. For example:
+    * To create a service instance that drains information to a third-party log management software, use the `-l` option. Specify the destination that the third-party log management software provides. For example:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com

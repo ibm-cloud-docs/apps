@@ -71,7 +71,7 @@ However, when the tools fail to enable the debug mode, the web application statu
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
 at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
@@ -330,7 +330,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
   * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} console or the command line interface.
 
     To use the {{site.data.keyword.Bluemix_notm}} console to delete a service instance, complete the following steps:
-	  1. From your dashboard, click the **Actions** menu for the service that you want to delete.
+	  1. In the Services dashboard, click the **Actions** menu for the service that you want to delete.
 	  2. Click **Delete Service**. You are prompted to restage the app that the service instance was bound to.
 
     To use the command line interface to delete a service instance, complete the following steps:
@@ -367,7 +367,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
 If you are a Lite account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a Lite account is 256 MB and can be increased only by upgrading to a billable account.
 
-When you deploy an app to {{site.data.keyword.Bluemix_notm}}, the following error message is displayed:
+When you deploy an app to {{site.data.keyword.Bluemix_notm}},the following error message is displayed:
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
@@ -383,7 +383,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
-    1. From your dashboard, select your app. The app details page opens.
+    1. Select your app from the dashboard. The app details page opens.
     2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
 
     If you use the `cf` command line interface, complete the following steps:
