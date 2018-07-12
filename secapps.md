@@ -71,11 +71,11 @@ Before you can upload certificates, you must create a certificate signing reques
 
 When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.Bluemix_notm}}:
 
-* US-South: secure.us-south.bluemix.net
-* US-East: secure.us-east.bluemix.net
-* EU-DE: secure.eu-de.bluemix.net
-* EU-GB: secure.eu-gb.bluemix.net
-* AU-SYD: secure.au-syd.bluemix.net
+* US-South - `secure.us-south.bluemix.net`
+* US-East - `secure.us-east.bluemix.net`
+* EU-DE - `secure.eu-de.bluemix.net`
+* EU-GB - `secure.eu-gb.bluemix.net`
+* AU-SYD - `secure.au-syd.bluemix.net`
 
 To upload a certificate for your application:
 
@@ -85,9 +85,9 @@ To upload a certificate for your application:
 
 3. Click the **Routes** > **Manage domains**.
 
-4. For your organization, in the action column, click **Domains** from the additional actions menu.
+4. In the action column, click **Domains** from the additional actions menu and select your organization.
 
-5. For your custom domain, click **Upload** in the SSL Certificate column.
+5. Click **Upload** in the SSL Certificate column and select your custom domain.
 
 6. Browse to upload a certificate, private key, and optionally an intermediate certificate or client certificate. To enable the client certificate truststore, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
 
@@ -99,9 +99,9 @@ To upload a certificate for your application:
 
     The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
-	* PEM (pem, .crt, .cer, and .cert)
-	* DER (.der or .cer )
-	* PKCS #7 (p7b, p7r, spc)
+	* PEM (`pem`, `.crt`, `.cer`, and `.cert`)
+	* DER (`.der` or `.cer`)
+	* PKCS #7 (`p7b`, `p7r`, `spc`)
 
   #### Private key
 
@@ -109,14 +109,14 @@ To upload a certificate for your application:
 
     The following types of private keys are supported in {{site.data.keyword.Bluemix_notm}}:
 
-    * PEM (pem, .key)
-    * PKCS #8 (p8, pk8)
+    * PEM (`pem`, `.key`)
+    * PKCS #8 (`p8`, `pk8`)
 
   #### Intermediate certificate
 
     A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization.
 
-    You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third-party. You might not require an intermediate certificate when you test your application before deploying it to production.
+    You should use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before deploying it to production.
 
   #### Enable request of client certificate
 
@@ -138,7 +138,7 @@ To upload a certificate for your application:
 
 For more information, see [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-To delete a certificate or replace an existing certificate with a new one, follow these steps. 
+To delete a certificate or replace an existing certificate with a new one, follow these steps.
 
-1. Go to **Manage** > **Account** > **Cloud Foundry Organizations**. 
+1. Go to **Manage** > **Account** > **Cloud Foundry Organizations**.
 2. In the action column, select **Domains** from the additional actions menu. In the additional actions menu for the organization, click **Remove from Org**.
