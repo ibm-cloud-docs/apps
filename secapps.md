@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -18,9 +18,7 @@ lastupdated: "2018-07-03"
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
 
-Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server.
-
-A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
+Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
 ## Required information
 
@@ -28,7 +26,7 @@ For the CSR to be valid, the following information must be entered when you gene
 
 ### Country name
 
-  A two-digit code that represents the country or region. For example, "US" represents the United States. For other countries or regions, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
+  A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.iso.org/obp/ui/#search){:new_window} before you create the CSR.
 
 ### State or Province
 
@@ -67,18 +65,17 @@ A certificate is issued by a certificate authority and is digitally signed by th
 
 You can apply a security protocol to provide communication privacy for your application to prevent eavesdropping, tampering, and message forgery.
 
-For every organization in {{site.data.keyword.Bluemix_notm}} with an account owner who has a Pay as you Go or Subscription plan in place, you’re allowed four certificate uploads. For every organization with an account owner who has a free trial account, you must upgrade your account to upload a certificate.
+If your account owner has a free trial account, you must upgrade your account to upload a certificate.
 
 Before you can upload certificates, you must create a certificate signing request.
 
-When you use a custom domain, to serve the SSL certificate, use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}:
+When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.Bluemix_notm}}:
 
 * US-South: secure.us-south.bluemix.net
 * US-East: secure.us-east.bluemix.net
 * EU-DE: secure.eu-de.bluemix.net
 * EU-GB: secure.eu-gb.bluemix.net
 * AU-SYD: secure.au-syd.bluemix.net
-
 
 To upload a certificate for your application:
 
@@ -125,20 +122,20 @@ To upload a certificate for your application:
 
     If you enable this option by uploading a client certificate truststore file, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. Therefore, the client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
 
   #### Client certificate truststore
 
-  The client certificate truststore is a file that contains the client certificates for the users that you want to allow access to your application. If you enable the option to request a client certificate, upload a client certificate truststore file.
+  The client certificate truststore is a file that includes the client certificates for the users who you want to allow access to your application. If you enable the option to request a client certificate, upload a client certificate truststore file.
 
    The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
 
       * PEM (pem, .crt, .cer, and .cert)
       * PKCS #7 (p7b, p7r, spc)
 
-  You can set up mutual authentication by uploading a client certificate truststore that contains a public key in its metadata.
+  You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
   {: tip}
 
 For more information see, [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, in the action column, select **Domains** from the additional actions menu.. In the additional actions menu for the organization, click **Remove from Org**.
+To delete a certificate or replace an existing certificate with a new one, go to **Manage** > **Account** > **Cloud Foundry Organizations**. Then, in the action column, select **Domains** from the additional actions menu. In the additional actions menu for the organization, click **Remove from Org**.
