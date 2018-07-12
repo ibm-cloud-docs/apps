@@ -23,7 +23,7 @@ Puoi distribuire le tue applicazioni con una toolchain o un'interfaccia riga di 
 ## Distribuzione delle applicazioni con le toolchain
 {: #toolchains_getting_started}
 
-Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)
+Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Puoi creare una toolchain in due modi: utilizzando un template o creandola da un'applicazione. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 Con una toolchain correttamente configurata, la distribuzione della tua applicazione è semplice: un ciclo di creazione-distribuzione verrà avviato automaticamente con ogni unione al ramo master nel tuo repository.
 
