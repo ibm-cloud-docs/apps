@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,17 +22,17 @@ Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua app
 
 I kit starter sono disponibili in molte categorie, tra cui:
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [Mobile](https://console.bluemix.net/developer/mobile){:new_window}
-* [Applicazione web](https://console.bluemix.net/developer/appservice){:new_window}
-* [Sicurezza](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Mobile ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/mobile){:new_window}
+* [Web App ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Security ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Elemento finanziario](https://console.bluemix.net/developer/finance){:new_window}
+* [Finance ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## Prima di iniziare
 
-[Registrati](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono.
+[Registrati ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono.
 
 Non ti serve una carta di credito per registrare un account gratuito, ma inserirla ti dà accesso a più risorse e ti rende più facile la comprensione di tutte le offerte di {{site.data.keyword.cloud_notm}}.
 
@@ -45,15 +45,15 @@ Non ti serve una carta di credito per registrare un account gratuito, ma inserir
 
 3. Seleziona un kit starter di tua scelta, leggi i dettagli e fai clic su **Crea**.
 
-  Per visualizzare ciò che è incluso nel kit starter, espandi il tile nel dashboard dei kit starter del servizio dell'applicazione.
-  {: tip}
+   Per visualizzare ciò che è incluso nel kit starter, espandi il tile nel dashboard dei kit starter del servizio dell'applicazione.
+   {: tip}
 
 4. Fornisci un nome alla tua applicazione, seleziona il tuo linguaggio e fai clic su **Crea**.
 
-Ottimo inizio! Hai appena creato un'applicazione.
+   Ottimo inizio! Hai appena creato un'applicazione.
 
-Per esaminare il tuo codice, fai clic su **Scarica codice** nella pagina dei dettagli dell'applicazione. Controlla il file `README.md` nel file compresso scaricato per scoprire se devi effettuare ulteriori azioni per avere la tua applicazione starter in esecuzione.
-{: tip}
+   Per esaminare il tuo codice, fai clic su **Scarica codice** nella pagina dei dettagli dell'applicazione. Controlla il file `README.md` nel file compresso scaricato per scoprire se devi effettuare ulteriori azioni per avere la tua applicazione starter in esecuzione.
+   {: tip}
 
 ## Passo 2: Aggiungi risorse
 {: #addResources}

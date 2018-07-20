@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ I problemi generali con la gestione delle applicazioni potrebbero includere appl
 ## Non hai salvato delle modifiche
 {: #ts_unsaved_changes}
 
-Quando navighi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire delle azioni ed è possibile che ti venga richiesto di salvare le modifiche prima di continuare.
+Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire delle azioni ed è possibile che ti venga richiesto di salvare le modifiche prima di continuare.
 
 Quanto tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, continui a visualizzare il seguente messaggio di errore:
 {: tsSymptoms}
 
 `Sono presenti modifiche non salvate nella pagina nomeapplicazione. Salva o annulla le modifiche.`
 
-Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore di richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina.
+Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore ti richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina.
 {: tsCauses}
 
 Chiudi la finestra del messaggio, quindi fai clic su **REIMPOSTA** nel riquadro del runtime.
@@ -42,7 +42,7 @@ Chiudi la finestra del messaggio, quindi fai clic su **REIMPOSTA** nel riquadro 
 ## Il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}} non è disponibile
 {: #ts_failover}
 
-Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra più indirizzi IP.
+Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra molti indirizzi IP.
 
 Quando una regione {{site.data.keyword.Bluemix_notm}} non è più disponibile, anche le applicazioni in esecuzione in tale regione non saranno più disponibili, anche se le stesse applicazioni sono in esecuzione in un'altra regione {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
@@ -50,7 +50,7 @@ Quando una regione {{site.data.keyword.Bluemix_notm}} non è più disponibile, a
 {{site.data.keyword.Bluemix_notm}} non fornisce ancora il failover automatico da una regione all'altra.
 {: tsCauses}
 
-Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. I provider DNS con questa capacità comprendono NSONE, Akamai, Dyn.
+Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. I provider DNS con questa funzione comprendono NSONE, Akamai, Dyn.
 {: tsResolve}
 
 Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.Bluemix_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico di una regione {{site.data.keyword.Bluemix_notm}}, utilizza il comando `nslookup`. Ad esempio, puoi immettere il seguente comando in una finestra della riga di comando.
@@ -62,7 +62,7 @@ nslookup stage1.mybluemix.net
 ## Impossibile attivare la modalità di debug nelle applicazioni
 {: #ts_debug}
 
-Non puoi abilitare la modalità di debug se la versione della JVM (Java virtual machine) è 8 o precedente. 
+Non puoi abilitare la modalità di debug se la versione della JVM (Java virtual machine) è 8 o precedente.
 
 Dopo aver selezionato **Enable application debug**, gli strumenti tentano di attivare la modalità di debug nell'applicazione. Quindi, il workbench di Eclipse avvia una sessione di debug. Quando gli strumenti hanno abilitato correttamente la modalità di debug, lo stato dell'applicazione web visualizza `Updating mode`, `Developing` e `Debugging`.
 {: tsSymptoms}
@@ -116,7 +116,7 @@ Se la tua JVM del workbench è di una di queste versioni, potresti avere problem
 Per controllare la versione di Java eseguita da {{site.data.keyword.eclipsetoolsfull}}, completa la seguente procedura:
 {: tsResolve}
 
-  1. In IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona **Guida** > **Informazioni su Eclipse** > **Dettagli dell'installazione** > **Configurazione**.
+  1. In IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
   2. Trova la proprietà `eclipse.vm` dall'elenco. La seguente linea è un esempio di una proprietà `eclipse.vm`:
 
 	```
@@ -142,7 +142,7 @@ Quando tenti di riutilizzare il nome applicazione, ricevi il seguente messaggio:
 
 `Il nome è già utilizzato da un'altra applicazione.`
 
-Quando si elimina un'applicazione, la sua rotta, ossia l'URL dell'applicazione, non viene eliminata automaticamente. Pertanto, non è disponibile per il riutilizzo. Per poterlo riutilizzare, devi accedere allo spazio in cui è stata creata l'applicazione per eliminare la rotta.
+Quando si elimina un'applicazione, la sua rotta, ossia l'URL dell'applicazione, non viene eliminata automaticamente e non è disponibile per il riutilizzo. Per poterlo riutilizzare, devi accedere allo spazio in cui è stata creata l'applicazione per eliminare la rotta.
 {: tsCauses}
 
 Per eliminare la rotta non utilizzata, completa la seguente procedura:
@@ -175,7 +175,7 @@ Per eliminare la rotta non utilizzata, completa la seguente procedura:
 ## Impossibile richiamare gli spazi in un'organizzazione
 {: #ts_retrieve_space}
 
-Non puoi creare un'applicazione o un servizio se alla tua organizzazione corrente non è associato alcuno spazio. 
+Non puoi creare un'applicazione o un servizio se alla tua organizzazione corrente non è associato alcuno spazio.
 
 Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
@@ -196,7 +196,7 @@ Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati d
 ## Impossibile effettuare le azioni richieste
 {: #ts_authority}
 
-Non puoi completare le azioni senza un'autorizzazione di accesso appropriata. 
+Non puoi completare le azioni senza un'autorizzazione di accesso appropriata.
 
 Quando tenti di eseguire azioni per un'istanza del servizio o un'istanza dell'applicazione, non riesci a completare le azioni richieste e visualizzai uno dei seguenti messaggi di errore:
 {: tsSymptoms}
@@ -259,15 +259,12 @@ facet, in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, fai clic su 
 Se ricevi degli errori 502 Bad Gateway quando interagisci
 con le applicazioni su {{site.data.keyword.Bluemix_notm}},
 controlla la pagina degli stati di {{site.data.keyword.Bluemix_notm}}
-ed effettua le operazioni appropriate. 
+ed effettua le operazioni appropriate.
 
 Ricevi dei messaggi di errore che iniziano con 502 Bad Gateway. Ad esempio, potresti vedere `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
 
-Un errore
-Bad Gateway di solito si verifica quando visiti un sito Web che utilizza
-un server proxy per memorizzare e inoltrare i dati dal server principale che
-ospita il sito. Il server principale e il server proxy potrebbero non connettersi correttamente. Pertanto visualizzi il codice di stato HTTP 502 nella finestra del
+Un errore Bad Gateway di solito si verifica quando visiti un sito Web che utilizza un server proxy per memorizzare e inoltrare i dati dal server principale che ospita il sito. Il server principale e il server proxy potrebbero non connettersi correttamente. Pertanto visualizzi il codice di stato HTTP 502 nella finestra del
 browser. Questo codice di stato indica che il server principale del sito non ha ricevuto l'implementazione HTTP prevista dal server proxy.
 {: tsCauses}
 
@@ -278,13 +275,11 @@ prova le seguenti operazioni per risolvere il problema:
 {: tsResolve}
 
   * Ritenta l'azione:
-    * Ricarica la pagina premendo F5 sulla tastiera o facendo clic sul
-pulsante di aggiornamento. Se questa operazione non funziona, cancella la cache e i cookie del tuo browser e ricarica di nuovo la pagina.
+    * Ricarica la pagina premendo F5 sulla tastiera o facendo clic su **Aggiorna**. Se questa operazione non funziona, cancella la cache e i cookie del tuo browser e ricarica di nuovo la pagina.
     * Utilizza un browser differente.
     * Riavvia il router, il modem e il computer. Il riavvio di questi
 dispositivi può cancellare i diversi errori che portano all'errore 502.
-  * Attendi e riprova in seguito. In alcuni casi, possono verificarsi dei
-problemi temporanei con il tuo provider dei servizi internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
+  * Attendi e riprova in seguito. Possono verificarsi dei problemi temporanei con il tuo provider dei servizi internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
   * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
 
 ## Quota disco superata
@@ -317,20 +312,15 @@ quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}:
 	cf push nomeapplicazione -p app_path -k <quota_disco>
 	```
 
-
 ## Le applicazioni Android non possono ricevere {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 In alcune regioni in cui Google non è accessibile, le applicazioni Android non possono ricevere le notifiche che invii tramite il servizio IBM {{site.data.keyword.mobilepushshort}}. In questo caso, una soluzione potrebbe consistere nell'utilizzare servizi di terze parti.
 
-Esegui il bind di un servizio {{site.data.keyword.mobilepushshort}} per la tua applicazione {{site.data.keyword.Bluemix_notm}} e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni
-sviluppate sulla piattaforma Android non possono ricevere le tue notifiche
-in determinate regioni.
+Esegui il bind di un servizio {{site.data.keyword.mobilepushshort}} per la tua applicazione {{site.data.keyword.Bluemix_notm}} e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni sviluppate su Android non possono ricevere le tue notifiche in determinate regioni.
 {: tsSymptoms}
 
-Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (Google Cloud Messaging) per inviare notifiche alle applicazioni mobili sviluppate sulla piattaforma Android. Per consentire alle applicazioni Android di ricevere le notifiche,
-è necessario che il servizio GCM (Google Cloud Messaging) sia accessibile dalle applicazioni
-mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
+Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (Google Cloud Messaging) per inviare notifiche alle applicazioni mobili sviluppate su Android. Per consentire alle applicazioni Android di ricevere le notifiche, è necessario che il servizio GCM (Google Cloud Messaging) sia accessibile dalle applicazioni mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
 Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://pushy.me){: new_window}, [getui ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.getui.com/){: new_window} e [jpush ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jpush.cn/){: new_window}.
@@ -339,16 +329,14 @@ Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul
 ## Limite dei servizi dell'organizzazione superato
 {: #ts_servicelimit}
 
-Se utilizzi un account utente di prova, potresti non riuscire a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se hai superato il limite dei servizi della tua organizzazione. 
+Se utilizzi un account utente Lite, potresti non riuscire a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se hai superato il limite dei servizi della tua organizzazione.
 
 Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 `BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite dei servizi dell'organizzazione."`
 
-Questo errore si verifica quando superi il limite per il
-numero di istanze del servizio che puoi avere per l'account. Il
-numero massimo di istanze di servizi per un account di prova è 10.
+Questo errore si verifica quando superi il limite per il numero di istanze del servizio che puoi avere per l'account.
 {: tsCauses}
 
 Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite per il numero di istanze del servizio che puoi avere.
@@ -357,8 +345,8 @@ Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite
   * Per eliminare un'istanza dei servizi, puoi utilizzare la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando.
 
     Per utilizzare la console {{site.data.keyword.Bluemix_notm}} per eliminare un'istanza del servizio, completa la seguente procedura:
-	  1. Nel dashboard Servizi, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
-	  2. Fai clic su **Elimina servizio**. Ti viene richiesto di preparare nuovamente l'applicazione a cui era associata l'istanza del servizio. 
+	  1. Dal tuo dashboard, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
+	  2. Fai clic su **Elimina servizio**. Ti viene richiesto di preparare nuovamente l'applicazione a cui era associata l'istanza del servizio.
 
     Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
 servizio, completa la seguente procedura:
@@ -366,10 +354,9 @@ servizio, completa la seguente procedura:
 	  4. Elimina l'istanza del servizio immettendo `cf delete-service <service_instance_name>`.
 	  5. Dopo aver eliminato l'istanza del servizio, potresti voler preparare nuovamente l'applicazione a cui era associata l'istanza del servizio immettendo `cf restage <appname>`.
 
-  * Per rimuovere il limite sul numero di istanze del servizio che puoi avere,
-converti il tuo account di prova in un account a pagamento. For information about how to convert your trial account to a pay account, see [How to change your plan](/docs/pricing/index.html#changing).
+  * Per rimuovere il limite sul numero di istanze del servizio che puoi avere, aggiorna il tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
 
-## Impossibile eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}} 
+## Impossibile eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
 Potresti non riuscire ad eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
@@ -400,33 +387,29 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Limite di memoria dell'organizzazione superato
 {: #ts_outofmemory}
 
-Se utilizzi un account utente di prova, potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} se hai superato il limite di memoria della tua organizzazione. Puoi
+Se utilizzi un account utente Lite, potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} se hai superato il limite di memoria della tua organizzazione. Puoi
 ridurre la memoria utilizzata dalle tue applicazioni o aumentare la quota di memoria
-del tuo account. La quota massima di memoria per un account di prova è 2 GB e può essere aumentata solo passando a un account a pagamento. 
+del tuo account. La quota massima di memoria per un account Lite è 256 MB e può essere aumentata solo eseguendo l'upgrade a un account fatturabile.
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 `FAILED Server error,
 status code: 400, error code: 100005, message: You have exceeded your
 organization's memory limit.`
 
-Questo errore si verifica quando la quantità di memoria rimanente per la tua organizzazione è inferiore alla quantità di memoria richiesta dall'applicazione che desideri distribuire. La quota massima di memoria
-per un account di prova è 2 GB.
+Questo errore si verifica quando la quantità di memoria rimanente per la tua organizzazione è inferiore alla quantità di memoria richiesta dall'applicazione che desideri distribuire. La quota massima di memoria per un account Lite è 256 MB.
 {: tsCauses}
 
 Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.
 {: tsResolve}
 
-  * Per aumentare la quota di memoria dell'account,
-converti il tuo account di prova in un account a pagamento. Per informazioni
-su come convertire il tuo account di prova in un account a pagamento, vedi [Pay
-accounts](/docs/pricing/index.html#pay-accounts).
+  * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
   * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando `cf`.
 
     Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
-    1. Nel dashboard Applicazioni, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
+    1. Dal tuo dashboard, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
     2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 
     Se utilizzi l'interfaccia riga di comando `cf`, completa la seguente procedura:
@@ -507,7 +490,7 @@ messaggi di errore in cui viene specificato il nome dell'organizzazione:
 
 Quando tenti di distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}
 utilizzando il plug-in Eclipse Cloud Foundry, visualizzi il seguente messaggio di
-errore: 
+errore:
 
 `cloudspace not found.`
 
@@ -553,7 +536,6 @@ push` con l'opzione **-n**.
     cf push appname -p percorso_applicazione -n nome_host
     ```
 
-
 ## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push
 {: #ts_cf_war}
 
@@ -579,7 +561,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 Per ulteriori informazioni sul comando `cf push` , immettere `cf push -h`.
 
-
 ## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni a {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
@@ -602,7 +583,6 @@ Puoi utilizzare il seguente codice nel tuo file servlet o JSP:
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Impossibile distribuire le applicazioni Node.js
 {: #ts_nodejs_deploy}
@@ -676,7 +656,6 @@ esempio:
 
 Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-
 ## Sono presenti degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse
 {: #ts_eclipse}
 
@@ -692,27 +671,26 @@ Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pa
 esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informazioni, vedi [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
-
 ## Impossibile preparare l'applicazione utilizzando i pacchetti di build personalizzati
 {: #ts_bp_compilation}
 
-Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando un pacchetto di build personalizzato se gli script in questo pacchetto non sono eseguibili.
+Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} con un pacchetto di build personalizzato se gli script in questo pacchetto non sono file eseguibili.
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando un pacchetto di build personalizzato, visualizzi il messaggio di errore `La preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
+Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} con un pacchetto di build personalizzato, visualizzi il messaggio di errore `La preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
 {: tsSymptoms}
 
 Questo problema potrebbe verificarsi se gli script, ad esempio lo script di rilevamento, lo script di compilazione e lo script di rilascio, non sono eseguibili.
 {: tsCauses}
 
-Puoi utilizzare il comando [git update ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
+Puoi utilizzare il comando [Git update ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Impossibile distribuire un'applicazione da Delivery Pipeline in {{site.data.keyword.Bluemix_notm}} Continuous Delivery
  {: #ts_devops_to_bm}
 
- Potresti non riuscire a distribuire la tua applicazione utilizzando {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} se il file `manifest.yml` non è presente nella tua applicazione.
+ Potresti non riuscire a distribuire la tua applicazione con {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} se il file `manifest.yml` non è presente nella tua applicazione.
 
- Quando distribuisci un'applicazione utilizzando {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, potresti visualizzare il messaggio di errore `Unable to detect a supported application type`.
+ Quando distribuisci un'applicazione con {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, potresti visualizzare il messaggio di errore `Unable to detect a supported application type`.
  {: tsSymptoms}
 
  Questo problema potrebbe verificarsi perché la pipeline richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}.

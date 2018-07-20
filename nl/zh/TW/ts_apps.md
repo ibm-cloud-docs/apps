@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ lastupdated: "2018-07-02"
 ## 您有未儲存的變更
 {: #ts_unsaved_changes}
 
-在應用程式詳細資料頁面上進行瀏覽時，可能無法執行任何動作，系統可能會提示您儲存變更後才能繼續。
+當您按一下應用程式詳細資料頁面上的項目時，可能無法採取任何動作，而且系統可能會提示您儲存變更後才能繼續。
 
 在應用程式詳細資料頁面上嘗試檢查應用程式或服務時，總是收到下列錯誤訊息：
 {: tsSymptoms}
 
 `您在頁面 app_name 中有未儲存的變更。請儲存或取消這些變更。`
 
-在運行環境窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。這是有意這樣設計的；但是，當您要離開該頁面時，會有錯誤訊息提示您儲存記憶體或實例設定。
+在運行環境窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。這是有意這樣設計的；不過，當您移至另一個頁面時，會有錯誤訊息提示您儲存記憶體或實例設定。
 {: tsCauses}
 
 關閉訊息視窗，然後按一下運行環境窗格中的**重設**。
@@ -42,7 +42,7 @@ lastupdated: "2018-07-02"
 ## {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手無法使用
 {: #ts_failover}
 
-您無法在 {{site.data.keyword.Bluemix_notm}} 地區之間使用自動失效接手。不過，您可以使用支援在多個 IP 位址之間進行失效接手的 DNS 提供者，作為暫行解決方法。
+您無法在 {{site.data.keyword.Bluemix_notm}} 地區之間使用自動失效接手。不過，您可以使用支援在許多 IP 位址之間進行失效接手的 DNS 提供者，作為暫行解決方法。
 
 當 {{site.data.keyword.Bluemix_notm}} 地區變成無法使用時，在該地區中執行的應用程式也會無法使用，即使相同應用程式正在另一個 {{site.data.keyword.Bluemix_notm}} 地區中執行亦然。
 {: tsSymptoms}
@@ -50,7 +50,7 @@ lastupdated: "2018-07-02"
 {{site.data.keyword.Bluemix_notm}} 尚未提供從一個地區到另一個地區的自動失效接手。
 {: tsCauses}
 
-您可以使用支援在許多 IP 位址之間進行智慧型失效接手的 DNS 提供者，並且手動配置 DNS 設定，以啟用 {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手。具有此功能的 DNS 提供者包括 NSONE、Akamai、Dyn。
+您可以使用支援在許多 IP 位址之間進行智慧型失效接手的 DNS 提供者，並且手動配置 DNS 設定，以啟用 {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手。具有此特性的 DNS 提供者包括 NSONE、Akamai、Dyn。
 {: tsResolve}
 
 當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.Bluemix_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令。
@@ -142,7 +142,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 `The name is already used by another app.`
 
-刪除應用程式時，不會自動刪除其路徑（即應用程式的 URL）。因此，無法重複使用。您必須移至建立應用程式的空間來刪除路徑，才能重複使用。
+刪除應用程式時，不會自動刪除其路徑（即應用程式的 URL），也無法重複使用。您必須移至建立應用程式的空間來刪除路徑，才能重複使用。
 {: tsCauses}
 
 請完成下列步驟，以刪除未用的路徑：
@@ -262,7 +262,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 您收到開頭為「502 錯誤的閘道」的錯誤訊息。例如，您可能會看到 `502 錯誤的閘道：已登錄的端點無法處理要求。`
 {: tsSymptoms}
 
-「錯誤的閘道」錯誤通常發生在您所造訪網站使用 Proxy 伺服器來儲存及轉遞來自管理網站之主要伺服器的資料時。主要伺服器及 Proxy 伺服器可能未適當連接。那麼，您會在瀏覽器視窗中看到 HTTP 狀態碼 502。此狀態碼表示網站的主要伺服器未收到它預期來自 Proxy 伺服器的 HTTP 實作。
+「錯誤的閘道」錯誤通常發生在您前往網站使用 Proxy 伺服器來儲存及轉遞來自管理網站之主要伺服器的資料時。主要伺服器及 Proxy 伺服器可能未適當連接。那麼，您會在瀏覽器視窗中看到 HTTP 狀態碼 502。此狀態碼表示網站的主要伺服器未收到它預期來自 Proxy 伺服器的 HTTP 實作。
 {: tsCauses}
 
 其他較少見的「錯誤的閘道」錯誤原因，包括網際網路服務供應商 (ISP) 脫離、不正確的防火牆配置及瀏覽器快取錯誤。
@@ -271,11 +271,11 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 {: tsResolve}
 
   * 重試動作：
-    * 按鍵盤上的 F5 以重新載入頁面，或者按一下重新整理按鈕。如果此步驟無效，請清除瀏覽器的快取及 Cookie，然後再重新載入。
+    * 按鍵盤上的 F5，或按一下**重新整理**，來重新載入頁面。如果此步驟無效，請清除瀏覽器的快取及 Cookie，然後再重新載入。
     
     * 使用不同的瀏覽器。
     * 重新啟動路由器、數據機及電腦。將這些裝置重新開機可清除導致錯誤 502 的許多種錯誤。
-  * 等待並於稍後再試一次。在部分情況下，暫時問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
+  * 等待並於稍後再試一次。暫時發生的問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時發生的問題獲得解決。
   * 如果問題仍然存在，請與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡。如需相關資訊，請參閱[聯絡 {{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-bluemix-support){: new_window}。
 
 ## 已超出磁碟配額
@@ -297,20 +297,19 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 	disk_quota: <disk_quota>
 	```
   * 當您將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，使用 **-k** 選項與 `cf push` 指令搭配：
-```
+    ```
 	cf push appname -p app_path -k <disk_quota>
-	```
-
+   	```
 
 ## Android 應用程式無法收到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 在無法存取 Google 的特定地區中，Android 應用程式收不到您透過 IBM {{site.data.keyword.mobilepushshort}} 服務送出的通知。在此情況下，暫行解決方法是使用協力廠商服務。
 
-為您的 {{site.data.keyword.Bluemix_notm}} 應用程式連結一個 {{site.data.keyword.mobilepushshort}} 服務，並將訊息傳送至已登錄的裝置。不過，在特定地區，Android 平台上開發的應用程式收不到您的通知。
+為您的 {{site.data.keyword.Bluemix_notm}} 應用程式連結一個 {{site.data.keyword.mobilepushshort}} 服務，並將訊息傳送至已登錄的裝置。不過，在特定地區，Android 上開發的應用程式收不到您的通知。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 平台上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即收不到 {{site.data.keyword.mobilepushshort}}。
+IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
 暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://pushy.me){: new_window}、[getui ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.getui.com/){: new_window} 及 [jpush ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jpush.cn/){: new_window}。
@@ -319,14 +318,14 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 ## 已超出組織的服務限制
 {: #ts_servicelimit}
 
-如果您是試用帳戶使用者，則在超出組織的服務限制時，可能無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
+如果您是「精簡」帳戶使用者，則在超出組織的服務限制時，可能無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
 
-嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，您看到下列錯誤訊息：
+嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，會顯示下列錯誤訊息：
 {: tsSymptoms}
 
 `BXNUI2032E: 未建立 <service_instances> 資源。聯絡 Cloud Foundry 以建立資源時發生錯誤。Cloud Foundry 訊息："You have exceeded your organization's services limit."`
 
-當您超出帳戶可用的服務實例數目限制時，就會發生這個錯誤。試用帳戶的服務實例數目上限是 10。
+當您超出帳戶可用的服務實例數目限制時，就會發生此錯誤。
 {: tsCauses}
 
 請刪除任何不需要的服務實例，或移除您可以擁有的服務實例數目限制。
@@ -335,7 +334,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
   * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面。
 
     若要使用 {{site.data.keyword.Bluemix_notm}} 主控台來刪除服務實例，請完成下列步驟：
-	  1. 在「服務」儀表板中，按一下您要刪除之服務的**動作**功能表。
+	  1. 從儀表板中，按一下您要刪除之服務的**動作**功能表。
 	  2. 按一下**刪除服務**。系統會提示您重新編譯打包服務實例所連結的應用程式。
 
     若要使用指令行介面來刪除服務實例，請完成下列步驟：
@@ -343,7 +342,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 	  4. 鍵入 `cf delete-service <service_instance_name>`，以刪除服務實例。
 	  5. 刪除服務實例之後，您可能會想要鍵入 `cf restage <appname>`，以重新編譯打包服務實例所連結的應用程式。
 
-  * 若要移除您可以擁有之服務實例數目的限制，請將您的試用帳戶轉換為付費帳戶。如需如何將試用帳戶轉換為付費帳戶的相關資訊，請參閱[如何變更方案](/docs/pricing/index.html#changing)。
+  * 若要移除您可以擁有之服務實例數目的限制，請將您的「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account/index.html#upgrade-to-paygo)。
 
 ## 執行檔無法在 {{site.data.keyword.Bluemix_notm}} 上執行
 {: #ts_executable}
@@ -370,25 +369,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 已超出組織的記憶體限制
 {: #ts_outofmemory}
 
-如果您是試用帳戶使用者，則超出組織的記憶體限制時，您可能無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。試用帳戶的記憶體配額上限為 2 GB，而且只能透過移至付費帳戶來增加。
+如果您是「精簡」帳戶使用者，則超出組織的記憶體限制時，您可能無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。「精簡」帳戶的記憶體配額上限為 256 MB，而且只能透過升級為計費帳戶來增加。
 
-將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您看到下列錯誤訊息：
+將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，會顯示下列錯誤訊息：
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-當組織剩餘的記憶體量少於您想要部署之應用程式所需的記憶體量時，就會發生這個錯誤。試用帳戶的記憶體配額上限為 2 GB。
+當組織剩餘的記憶體量少於您想要部署之應用程式所需的記憶體量時，就會發生這個錯誤。「精簡」帳戶的記憶體配額上限為 256 MB。
 {: tsCauses}
 
 您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。
 {: tsResolve}
 
-  * 若要增加帳戶的記憶體配額，請將試用帳戶轉換為付費帳戶。如需如何將試用帳戶轉換為付費帳戶的相關資訊，請參閱[付費帳戶](/docs/pricing/index.html#pay-accounts)。
+  * 若要增加帳戶的記憶體配額，請將「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account/index.html#upgrade-to-paygo)。
   * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.Bluemix_notm}} 主控台或 `cf` 指令行介面。
 
     如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 
-    1. 在「應用程式儀表板」中，選取應用程式。即會開啟應用程式詳細資料頁面。
+    1. 從儀表板中，選取應用程式。即會開啟應用程式詳細資料頁面。
     2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。
 
     如果您使用 `cf` 指令行介面，請完成下列步驟：
@@ -399,13 +398,13 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 	  cf apps
 	  ```
 
-	  `cf apps` 指令會列出您在現行空間中部署的所有應用程式。也會顯示每個一應用程式的狀態。
+	  `cf apps` 指令會列出您在現行空間中部署的所有應用程式。也會顯示每一個應用程式的狀態。
 
     2. 若要減少應用程式所使用的記憶體量，請減少應用程式實例的數目及（或）記憶體上限：
 
 	  ```
 	  cf push appname -p app_path -i instance_number -m memory_limit
-   ```
+      ```
 
     3. 重新啟動應用程式，讓變更生效。
 
@@ -499,7 +498,6 @@ cf api https://api.eu-gb.bluemix.net
     cf push appname -p app_path -n host_name
     ```
 
-
 ## 無法使用 cf push 指令推送 WAR 應用程式
 {: #ts_cf_war}
 
@@ -524,7 +522,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 如需 `cf push` 指令的相關資訊，請輸入 `cf push -h`。
 
-
 ## 將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 後，未能適當地顯示雙位元組字元
 {: #ts_doublebytes}
 
@@ -547,7 +544,6 @@ cf push MyUniqueAppName02 -p "./app.war"
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## 無法部署 Node.js 應用程式
 {: #ts_nodejs_deploy}
@@ -575,8 +571,8 @@ cf push MyUniqueAppName02 -p "./app.war"
   * 以下列其中一種方法指定啟動指令：
      * 使用 `cf` 指令行介面。例如：
         ```
-		      cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-       	```
+		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		```
     * 使用 [package.json ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/jsonfile){: new_window} 檔案。例如：
 	    ```
 		{
@@ -593,7 +589,7 @@ cf push MyUniqueAppName02 -p "./app.war"
   ...
   command: node app.js
   ...
-     ```
+        ```
 
   * 確定 `package.json` 檔案存在於您的 Node.js 應用程式中，Node.js 建置套件才能辨識應用程式。請確定此檔案位在應用程式的根目錄中。下列範例顯示簡單的 `package.json` 檔案：
 	```
@@ -616,7 +612,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
 
-
 ## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
 {: #ts_eclipse}
 
@@ -631,19 +626,18 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty/index.html)。
 {: tsResolve}
 
-
 ## 無法使用自訂建置套件來編譯打包應用程式
 {: #ts_bp_compilation}
 
-如果自訂建置套件中的 Script 無法執行，您可能無法使用該建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
+如果自訂建置套件中的 Script 不是執行檔，則可能無法使用該建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
-使用自訂建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您看到此錯誤訊息：`無法編譯打包應用程式，因此沒有可顯示的實例。`
+使用自訂建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，您會看到`無法編譯打包應用程式，因此沒有可顯示的實例`錯誤訊息。
 {: tsSymptoms}
 
 如果 Script（例如偵測 Script、編譯 Script 及釋放 Script）無法執行，就可能會發生此問題。
 {: tsCauses}
 
-您可以使用 [git update ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://git-scm.com/docs/git-update-index){: new_window} 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
+您可以使用 [Git 更新 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://git-scm.com/docs/git-update-index){: new_window} 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 在 {{site.data.keyword.Bluemix_notm}} Continuous Delivery 中無法從 Delivery Pipeline 部署應用程式
@@ -651,7 +645,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
  如果應用程式中沒有 `manifest.yml` 檔案，您可能無法在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式。
 
- 當您在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式時，可能會顯示 `Unable to detect a supported application type` 錯誤訊息。
+ 當您在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式時，可能會顯示`偵測不到支援的應用程式類型`錯誤訊息。
  {: tsSymptoms}
 
  因為管線需要 `manifest.yml` 檔案，才能將應用程式部署至 {{site.data.keyword.Bluemix_notm}}，所以可能會發生此問題。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 當您使用自訂網域來提供 SSL 憑證時，請使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑：
 
-  * US-South：secure.us-south.bluemix.net
-  * US-East：secure.us-east.bluemix.net
-  * EU-DE：secure.eu-de.bluemix.net
-  * EU-GB：secure.eu-gb.bluemix.net
-  * AU-SYD：secure.au-syd.bluemix.net
+* US-South：secure.us-south.bluemix.net
+* US-East：secure.us-east.bluemix.net
+* EU-DE：secure.eu-de.bluemix.net
+* EU-GB：secure.eu-gb.bluemix.net
+* AU-SYD：secure.au-syd.bluemix.net
 
 
 若要上傳應用程式的憑證，請執行下列動作：
@@ -144,4 +144,4 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 如需相關資訊，請參閱[匯入 SSL 憑證](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)。
 
-若要刪除憑證或以新憑證取代現有憑證，請移至**管理** > **帳戶** > **Cloud Foundry 組織**。然後，按一下**檢視詳細資料** > **編輯組織** > **網域**。在組織的其他動作功能表中，按一下**從組織移除**。
+若要刪除憑證或以新憑證取代現有憑證，請移至**管理** > **帳戶** > **Cloud Foundry 組織**。然後，在動作直欄中，從其他動作功能表中選取**網域**。在組織的其他動作功能表中，按一下**從組織移除**。

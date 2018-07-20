@@ -89,8 +89,7 @@ Per rimuovere una rotta orfana, immetti il seguente comando:
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 
-In tale esempio, `domain` è il nome del tuo dominio e `hostname` è il nome host della rotta per la tua applicazione. Per ulteriori informazioni sul comando `ibmcloud app route-delete`, immetti `ibmcloud app route-delete -h`. 
+In tale esempio, `domain` è il nome del tuo dominio e `hostname` è il nome host della rotta per la tua applicazione. Per ulteriori informazioni sul comando `ibmcloud app route-delete`, immetti `ibmcloud app route-delete -h`.

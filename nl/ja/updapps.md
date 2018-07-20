@@ -18,7 +18,7 @@ lastupdated: "2018-07-02"
 コマンド・ラインまたは {{site.data.keyword.Bluemix}} 継続的デリバリーを使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。 多くの場合、Node.js などのビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
 {:shortdesc}
 
-ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成する必要があります。次に、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
+ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成する必要があります。 次に、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
 
 カスタム・ドメインの作成と使用には、{{site.data.keyword.Bluemix_notm}} コンソールまたはコマンド・ライン・インターフェースのいずれかを使用できます。
 
@@ -86,7 +86,6 @@ http://host_name.mydomain
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 

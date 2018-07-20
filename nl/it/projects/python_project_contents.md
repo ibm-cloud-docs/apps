@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -49,13 +49,13 @@ La seguente tabella elenca le directory e i file comuni che sono inclusi in un'a
 | Directory `./.bluemix/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script di build del contenitore |
-| deploy.json | Informazioni sulla distribuzione|
+| deploy.json | Informazioni sulla distribuzione |
 | kube_deploy.sh | Script di distribuzione Kubernetes |
 | pipeline.yml | Definizione della pipeline IBM Cloud |
 | toolchain.yml | Definizione della toolchain IBM Cloud toolchain |
 {: caption="Tabella 5. Contenuto della directory bluemix di un'applicazione Python generata" caption-side="top"}
 
-| Directory `./chart/<projectname>/` | Descrizione |
+| `./chart/<projectname>/` directory | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Grafico Helm |
 | `./chart/<projectname>/values.yaml` | Valori grafico Helm |

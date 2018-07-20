@@ -50,9 +50,8 @@ lastupdated: "2018-05-21"
 
 ユーザーのニーズに合うように、引き続きアプリをカスタマイズします。 ビジネスの成果を挙げるためにアプリを拡張するための次の提案を確認してください。
 
-* [ベスト・プラクティス](best-practice.html)・ガイドで説明した[セキュリティー](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[モニタリング](https://console.bluemix.net/catalog/?category=devops){:new_window}、および可用性の向上を追加することで、アプリの堅牢性を高めることができます。
-* [Watson コグニティブ・サービス](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}および[高度な分析と機械学習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}を使用して、アプリをよりスマートにします。
-* [モバイル](https://console.bluemix.net/catalog/?category=mobile){:new_window}に移行します。
-* [IoT](https://console.bluemix.net/catalog/?category=iot){:new_window} を試します。
-* [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window}などのサービスを使用して、[サーバーレス・アクション](https://console.bluemix.net/catalog/?category=whisk){:new_window}を統合します。
-
+* [ベスト・プラクティス](best-practice.html)・ガイドで説明した[セキュリティー ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[モニタリング ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?category=devops){:new_window}、および可用性の向上を追加することで、アプリの堅牢性を高める。
+* [Watson コグニティブ・サービス ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} および[高度な分析と機械学習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}を使用して、アプリをよりスマートにする。
+* [モバイル ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?category=mobile){:new_window} に移行する。
+* [IoT![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?category=iot){:new_window} を試してみる。
+* [API Connect ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?category=integration){:new_window} などのサービスを使用して、[サーバーレス・アクション ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?category=whisk){:new_window} を組み込む。

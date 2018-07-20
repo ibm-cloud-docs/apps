@@ -46,13 +46,13 @@ La seguente tabella elenca le directory e i file che sono inclusi in un'applicaz
 | Directory `./.bluemix/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script di build del contenitore |
-| deploy.json | Informazioni sulla distribuzione|
+| deploy.json | Informazioni sulla distribuzione |
 | kube_deploy.sh | Script di distribuzione Kubernetes |
 | pipeline.yml | Definizione della pipeline IBM Cloud |
 | toolchain.yml | Definizione della toolchain IBM Cloud toolchain |
 {: caption="Tabella 3. Contenuto della directory ./.bluemix/ di un'applicazione Java Spring generata" caption-side="top"}
 
-| Directory `./chart/<projectname>/` | Descrizione |
+| `./chart/<projectname>/` directory | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Grafico Helm |
 | `./chart/<projectname>/values.yaml` | Valori grafico Helm |
@@ -98,13 +98,13 @@ La seguente tabella elenca le directory e i file che sono inclusi in un'applicaz
 | Directory `./.bluemix/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script di build del contenitore |
-| deploy.json | Informazioni sulla distribuzione|
+| deploy.json | Informazioni sulla distribuzione |
 | kube_deploy.sh | Script di distribuzione Kubernetes |
 | pipeline.yml | Definizione della pipeline IBM Cloud |
 | toolchain.yml | Definizione della toolchain IBM Cloud toolchain |
 {: caption="Tabella 8. Contenuto della directory ./bluemix/ di un'applicazione Java Liberty generata" caption-side="top"}
 
-| Directory `./chart/<projectname>/` | Descrizione |
+| `./chart/<projectname>/` directory | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Grafico Helm |
 | `./chart/<projectname>/values.yaml` | Valori grafico Helm |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,17 +22,17 @@ lastupdated: "2018-05-21"
 
 入門範本套件有許多種類，其中包括：
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [行動](https://console.bluemix.net/developer/mobile){:new_window}
-* [Web 應用程式](https://console.bluemix.net/developer/appservice){:new_window}
-* [安全](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Mobile ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/mobile){:new_window}
+* [Web App ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Security ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [金融](https://console.bluemix.net/developer/finance){:new_window}
+* [Finance ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## 開始之前
 
-[註冊](https://console.bluemix.net){: new_window}一個 {{site.data.keyword.cloud_notm}} 帳戶。輸入電子郵件、名稱、公司、地區和電話號碼。
+[註冊 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net){: new_window} {{site.data.keyword.cloud_notm}} 帳戶。輸入電子郵件、名稱、公司、地區和電話號碼。
 
 您不需要信用卡就可以註冊一個免費帳戶，但輸入信用卡可讓您存取更多資源，您也能更輕鬆地完全瞭解 {{site.data.keyword.cloud_notm}} 提供的所有內容。
 
@@ -45,15 +45,15 @@ lastupdated: "2018-05-21"
 
 3. 選取您選擇的入門範本套件、閱讀詳細資料，然後按一下**建立**。
 
-  若要檢視入門範本套件中所包含的內容，請展開 App Service Starter Kits 儀表板上的磚。
-  {: tip}
+   若要檢視入門範本套件中所包含的內容，請展開 App Service Starter Kits 儀表板上的磚。
+   {: tip}
 
 4. 為您的應用程式命名、選取語言，然後按一下**建立**。
 
-很棒的開始！您剛剛建立了應用程式。
+   很棒的開始！您剛剛建立了應用程式。
 
-若要檢查您的程式碼，請按一下應用程式詳細資料頁面上的**下載程式碼**。請檢查所下載壓縮檔中的 `README.md` 檔，以找出您是否需要採取更多動作以讓入門範本應用程式執行。
-{: tip}
+   若要檢查您的程式碼，請按一下應用程式詳細資料頁面上的**下載程式碼**。請檢查所下載壓縮檔中的 `README.md` 檔，以找出您是否需要採取更多動作以讓入門範本應用程式執行。
+   {: tip}
 
 ## 步驟 2：新增資源
 {: #addResources}

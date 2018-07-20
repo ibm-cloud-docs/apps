@@ -50,9 +50,8 @@ lastupdated: "2018-05-21"
 
 繼續自訂應用程式，以便符合您的需要。請查看下列建議，以擴充您的應用程式來達到商業結果：
 
-* 新增我們[最佳作法](best-practice.html)手冊中所概述的[安全](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[監視](https://console.bluemix.net/catalog/?category=devops){:new_window}及可用性改進功能，使您的應用程式更強健。
-* 使用 [Watson 認知服務](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}及[進階分析與機器學習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}，使您的應用程式更加聰明。
-* 提升[行動](https://console.bluemix.net/catalog/?category=mobile){:new_window}力。
-* 嘗試[物聯網](https://console.bluemix.net/catalog/?category=iot){:new_window}。
-* 使用 [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window} 之類的服務，來整合[無伺服器動作](https://console.bluemix.net/catalog/?category=whisk){:new_window}。
-
+* 新增[安全 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[監視 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?category=devops){:new_window} 以及[最佳作法](best-practice.html)手冊中所述的可用性增進功能，讓應用程式更為健全。
+* 使用 [Watson 認知服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} 及[進階分析與機器學習](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}，使您的應用程式更加聰明。
+* 提升[行動 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?category=mobile){:new_window}。
+* 試用 [Internet of Things ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?category=iot){:new_window}。
+* 使用 [API Connect ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?category=integration){:new_window} 這類服務整合[無伺服器動作 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?category=whisk){:new_window}。

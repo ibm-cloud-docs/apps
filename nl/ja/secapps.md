@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ OpenSSL SHA-512 が実装されるかどうかは、コンパイラーが 64 ビ
 
 カスタム・ドメインを使用する場合、SSL 証明書を提供するために、以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 アプリケーションの証明書をアップロードするには、次のようにします。
@@ -142,4 +142,4 @@ OpenSSL SHA-512 が実装されるかどうかは、コンパイラーが 64 ビ
 
 詳しくは、『[SSL 証明書のインポート](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)』を参照してください。
 
-証明書を削除するか、既存の証明書を新しい証明書に置き換えるには、**「管理」**>**「アカウント」**>**「Cloud Foundry 組織」**に移動します。 その後、**「詳細を表示」**>**「組織の編集」**>**「ドメイン」**をクリックします。 組織に対する追加アクション・メニューで**「組織から削除」**をクリックします。
+証明書を削除するか、既存の証明書を新しい証明書に置き換えるには、**「管理」**>**「アカウント」**>**「Cloud Foundry 組織」**に移動します。 次に、アクション列で追加アクション・メニューから**「ドメイン」**を選択します。組織に対する追加アクション・メニューで**「組織から削除」**をクリックします。

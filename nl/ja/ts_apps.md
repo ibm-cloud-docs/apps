@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ lastupdated: "2018-07-02"
 ## 保存されていない変更があります
 {: #ts_unsaved_changes}
 
-アプリの詳細ページでナビゲートしている時に、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。
+アプリの詳細ページで項目をクリックしたときに、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。
 
 アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージを受信し続けます。
 {: tsSymptoms}
 
 `保存されていない変更がページ app_name にあります。 変更を保存するか取り消してください。`
 
-マウスをスクロールして、「ランタイム」ペインの**「インスタンス」**フィールドまたは**「メモリー割り当て量」**フィールドの上に移動すると、それらの値が変わります。 この動作は設計によるものですが、エラー・メッセージにより、そのペインの外にナビゲートする前にメモリー設定またはインスタンス設定を保存するよう求めるプロンプトが表示されます。
+マウスをスクロールして、「ランタイム」ペインの**「インスタンス」**フィールドまたは**「メモリー割り当て量」**フィールドの上に移動すると、それらの値が変わります。 この動作は設計によるものですが、エラー・メッセージにより、別のページに移動する前にメモリー設定またはインスタンス設定を保存するよう求めるプロンプトが表示されます。
 {: tsCauses}
 
 メッセージ・ウィンドウを閉じ、「ランタイム」ペイン内の**「リセット」**をクリックします。
@@ -42,7 +42,7 @@ lastupdated: "2018-07-02"
 ## {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用できない
 {: #ts_failover}
 
-{{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーは使用できません。 ただし、回避策として、複数の IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
+{{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーは使用できません。 ただし、回避策として、多くの IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
 
 ある {{site.data.keyword.Bluemix_notm}} 領域が使用不可になると、その領域で実行されているアプリは、たとえそれと同じアプリが別の {{site.data.keyword.Bluemix_notm}} 領域で実行されていても、使用不可になります。
 {: tsSymptoms}
@@ -142,7 +142,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 
 `名前は別のアプリによって既に使用されています。`
 
-アプリが削除されるとき、アプリの URL である経路は自動的に削除されません。 そのため、それは再使用できません。 アプリを再使用するため経路を削除するには、アプリが作成されたスペースに移動する必要があります。
+アプリが削除された時、アプリの URL である経路は自動的に削除されず、再使用できません。アプリを再使用するため経路を削除するには、アプリが作成されたスペースに移動する必要があります。
 {: tsCauses}
 
 使用されていない経路を削除するには、以下の手順を実行します。
@@ -155,7 +155,6 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
     ```
 
   2. 該当経路が現行スペースに属していない場合は、以下のコマンドを入力して、それが属しているスペースまたは組織に切り替えます。
-     
 
     ```
     cf target -o org_name -s space_name
@@ -260,7 +259,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプ�
 502 Bad Gateway で始まるエラー・メッセージを受信します。 例えば、`「502 Bad Gateway: 登録済みエンドポイントが要求の処理に失敗しました。(Registered endpoint failed to handle the request.)」`と表示されます。
 {: tsSymptoms}
 
-Bad Gateway エラーは通常、Web サイトをホストするメイン・サーバーのデータの保管と中継を行うためにプロキシー・サーバーを使用している Web サイトにアクセスしたときに発生します。 メイン・サーバーとプロキシー・サーバーが正しく接続されていない可能性があります。このため、ブラウザー・ウィンドウに HTTP 状況コード 502 が表示されます。この状況コードは、サイトのメイン・サーバーが、予期した HTTP 実装をプロキシー・サーバーから受信しなかったことを示します。
+Bad Gateway エラーは通常、Web サイトをホストするメイン・サーバーのデータの保管と中継を行うためにプロキシー・サーバーを使用している Web サイトにアクセスしたときに発生します。メイン・サーバーとプロキシー・サーバーが正しく接続されていない可能性があります。 このため、ブラウザー・ウィンドウに HTTP 状況コード 502 が表示されます。 この状況コードは、サイトのメイン・サーバーが、予期した HTTP 実装をプロキシー・サーバーから受信しなかったことを示します。
 {: tsCauses}
 
 Bad Gateway エラーのその他のまれな原因として、インターネット・サービス・プロバイダー (ISP) のドロップアウト、ファイアウォール構成の誤り、ブラウザー・キャッシュのエラーがあります。
@@ -269,10 +268,10 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 {: tsResolve}
 
   * アクションを再試行します。
-    * キーボードで F5 を押すか、最新表示ボタンをクリックして、ページを再ロードします。 このステップでうまくいかない場合は、ブラウザーのキャッシュと Cookie を消去してから、もう一度再ロードしてください。
+    * キーボードで F5 を押すか、**「最新表示」**をクリックして、ページを再ロードします。このステップでうまくいかない場合は、ブラウザーのキャッシュと Cookie を消去してから、もう一度再ロードしてください。
     * 異なるブラウザーを使用します。
-    * ルーター、モデム、およびコンピューターを再始動します。これらのデバイスをリブートすると、エラー 502 につながる各種エラーが解消する可能性があります。
-  * 時間をおいて、後で再試行します。 場合によっては、インターネット・サービス・プロバイダーまたは {{site.data.keyword.Bluemix_notm}} サービスで一時的な問題が発生していることがあります。 一時的な問題が解決されるまで待ちます。
+    * ルーター、モデム、およびコンピューターを再始動します。 これらのデバイスをリブートすると、エラー 502 につながる各種エラーが解消する可能性があります。
+  * 時間をおいて、後で再試行します。 インターネット・サービス・プロバイダーまたは {{site.data.keyword.Bluemix_notm}} サービスで一時的な問題が発生していることがあります。 一時的な問題が解決されるまで待ちます。
   * 問題が解決しない場合は、{{site.data.keyword.Bluemix_notm}} サポートに連絡してください。 詳しくは、[{{site.data.keyword.Bluemix_notm}} サポートへのお問い合わせ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/support/index.html#contacting-bluemix-support){: new_window} を参照してください。
 
 ## ディスク割り当て量を超えた
@@ -298,16 +297,15 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
 
 Google にアクセス不能な特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスで送信した通知を受信できません。 この場合、回避策はサード・パーティーのサービスを使用することです。
 
-{{site.data.keyword.Bluemix_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。 ただし、Android プラットフォームで開発されたアプリは、特定の地域で通知を受信できません。
+{{site.data.keyword.Bluemix_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。 ただし、Android で開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android プラットフォームで開発されたモバイル・アプリに通知を送ります。 Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
+IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android で開発されたモバイル・アプリに通知を送ります。 Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
 {: tsCauses}
 
 回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://pushy.me){: new_window}、[getui ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.getui.com/){: new_window}、および [jpush ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jpush.cn/){: new_window}) を使用してください。
@@ -316,14 +314,14 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 ## 組織のサービス上限の超過
 {: #ts_servicelimit}
 
-トライアル・ユーザーの場合、組織のサービス上限を超過すると、{{site.data.keyword.Bluemix_notm}} でアプリを作成できなくなる場合があります。
+ライト・アカウントのユーザーの場合、組織のサービス上限を超過すると、{{site.data.keyword.Bluemix_notm}} でアプリを作成できなくなる場合があります。
 
 {{site.data.keyword.Bluemix_notm}} でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms}
 
 `BXNUI2032E: <service_instances> リソースは作成されませんでした。 リソースを作成するために Cloud Foundry に接続している時にエラーが発生しました。 Cloud Foundry メッセージ:「組織のサービス上限を超過しました。」`
 
-このエラーは、そのアカウントで持つことのできるサービス・インスタンス数の上限を超過した時に発生します。 トライアル・アカウントでは、サービス・インスタンスの最大数は 10 です。
+このエラーは、そのアカウントで持つことのできるサービス・インスタンス数の上限を超過した時に発生します。
 {: tsCauses}
 
 不要なサービス・インスタンスをすべて削除するか、持つことができるサービス・インスタンス数の上限を撤廃します。
@@ -332,7 +330,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
   * サービス・インスタンスを削除するには、{{site.data.keyword.Bluemix_notm}} コンソールか、またはコマンド・ライン・インターフェースが使用できます。
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
-	  1. 「サービス」ダッシュボードで、削除するサービスの**「アクション」**メニューをクリックします。
+	  1. ダッシュボードから、削除するサービスの**「アクション」**メニューをクリックします。
 	  2. **「サービスの削除 (Delete Service)」**をクリックします。 そのサービス・インスタンスがバインドされていたアプリを再ステージするようにプロンプトが出されます。
 
     コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
@@ -340,7 +338,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 	  4. 次を入力して、サービス・インスタンスを削除します: `cf delete-service <service_instance_name>`。
 	  5. サービス・インスタンスを削除した後、次を入力して、サービス・インスタンスがバインドされていたアプリを再ステージングしなければならない場合があります: `cf restage <appname>`。
 
-  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、トライアル・アカウントを支払アカウントに変更します。 トライアル・アカウントを支払アカウントに変更する方法については、『[プラン変更方法](/docs/pricing/index.html#changing)』を参照してください。
+  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、ライト・アカウントを有料アカウントにアップグレードします。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
 
 ## 実行可能ファイルが {{site.data.keyword.Bluemix_notm}} で実行できない
 {: #ts_executable}
@@ -353,7 +351,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 {{site.data.keyword.Bluemix_notm}} にプッシュしたいコンテンツが既に実行可能ファイルであれば、そのコンテンツは前にビルドされており、{{site.data.keyword.Bluemix_notm}} でビルドする必要はありません。 その場合、{{site.data.keyword.Bluemix_notm}} でその実行可能ファイルを実行するためにビルドパックは必要ありません。 {{site.data.keyword.Bluemix_notm}} には、ビルドパックが不要であることを明示的に示さなければなりません。
 {: tsCauses}
 
-その実行可能ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュする際に、`null-buildpack` を指定する必要があります。これは、ビルドパックが不要であることを示します。`null-buildpack` は、**-b** オプションを指定した `cf push` コマンドを使用することで指定します。
+その実行可能ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュする際に、`null-buildpack` を指定する必要があります。これは、ビルドパックが不要であることを示します。 `null-buildpack` は、**-b** オプションを指定した `cf push` コマンドを使用することで指定します。
 {: tsResolve}
 
 ```
@@ -367,25 +365,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 組織のメモリー上限を超過
 {: #ts_outofmemory}
 
-トライアル・アカウントのユーザーの場合、組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 トライアル・アカウントの最大メモリー割り当て量は 2 GB で、これは支払アカウントに移行することでのみ増やすことができます。
+ライト・アカウントのユーザーの場合、組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
 
-アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、次のエラー・メッセージが表示されます。
+アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、以下のエラー・メッセージが表示されます。
 {: tsSymptoms}
 
 `失敗 サーバー・エラー、状況コード: 400、エラー・コード: 100005、メッセージ: 組織のメモリー上限を超過しました。`
 
-このエラーは、組織の残りメモリー量が、デプロイしたいアプリに必要なメモリー量を下回っている時に発生します。 トライアル・アカウントの最大メモリー割り当て量は 2 GB です。
+このエラーは、組織の残りメモリー量が、デプロイしたいアプリに必要なメモリー量を下回っている時に発生します。 ライト・アカウントの最大メモリー割り当て量は 256 MB です。
 {: tsCauses}
 
 自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
 {: tsResolve}
 
-  * アカウントのメモリー割り当て量を増やすには、トライアル・アカウントを支払アカウントに変更してください。 トライアル・アカウントを支払アカウントに変更する方法については、『[支払アカウント](/docs/pricing/index.html#pay-accounts)』を参照してください。
+  * アカウントのメモリー割り当て量を増やすには、ライト・アカウントを有料アカウントにアップグレードしてください。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} コンソールまたは `cf` コマンド・ライン・インターフェースのいずれかを使用します。
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下の手順を実行します。
 
-    1. 「アプリ」ダッシュボードで、アプリを選択します。 アプリ詳細ページが開きます。
+    1. ダッシュボードから、アプリを選択します。 アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
     `cf` コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
@@ -396,7 +394,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 	  cf apps
 	  ```
 
-	  `cf apps` コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。各アプリの状況も表示されます。
+	  `cf apps` コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。 各アプリの状況も表示されます。
 
     2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 
@@ -462,7 +460,7 @@ Cloud Foundry Eclipse プラグインを使用してアプリケーションを 
 この問題は、処理したい地域の API エンドポイントが指定されていないことが原因で発生します。探している組織が、別の地域にある可能性があります。
 {: tsCauses}
 
-`cf` コマンド・ライン・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} にアプリケーションをプッシュする場合は、`cf api` コマンドを入力し、地域の API エンドポイントを指定します。例えば、以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} の欧州英国地域に接続します。
+`cf` コマンド・ライン・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} にアプリケーションをプッシュする場合は、`cf api` コマンドを入力し、地域の API エンドポイントを指定します。 例えば、以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} の欧州英国地域に接続します。
 {: tsResolve}
 
 ```
@@ -487,7 +485,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 指定するホスト名は、使用するドメイン内で固有でなければなりません。 別のホスト名を指定するには、以下のいずれかの方法を使用して下さい。
 {: tsResolve}
 
-  * `manifest.yml` ファイルを使用してアプリケーションをデプロイする場合は、host オプションでホスト名を指定します。	
+  * `manifest.yml` ファイルを使用してアプリケーションをデプロイする場合は、host オプションでホスト名を指定します。
     ```
     host: host_name
 	```
@@ -495,7 +493,6 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
     ```
     cf push appname -p app_path -n host_name
     ```
-
 
 ## cf push コマンドを使用して WAR アプリをプッシュできない
 {: #ts_cf_war}
@@ -521,7 +518,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 `cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。
 
-
 ## アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
 
@@ -544,7 +540,6 @@ cf push MyUniqueAppName02 -p "./app.war"
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Node.js アプリをデプロイできない
 {: #ts_nodejs_deploy}
@@ -570,7 +565,7 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 {: tsResolve}
 
   * 以下のいずれかの方法で開始コマンドを指定します。
-     * `cf` コマンド・ライン・インターフェースを使用します。以下に例を示します。
+     * `cf` コマンド・ライン・インターフェースを使用します。 以下に例を示します。
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
@@ -614,7 +609,6 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 
 Node.js アプリについてさらにヒントを見るには、[Node.js アプリケーションに関するヒント (Tips for Node.js Applications) ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} を参照してください。
 
-
 ## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
 {: #ts_eclipse}
 
@@ -630,11 +624,10 @@ server.xml ファイルをプロジェクトから削除することで、この
 Java』](/docs/runtimes/liberty/index.html)を参照してください。
 {: tsResolve}
 
-
 ## カスタム・ビルドパックを使用してアプリをステージングできない
 {: #ts_bp_compilation}
 
-カスタム・ビルドパック内のスクリプトが実行可能でない場合は、そのビルドパックを使用して {{site.data.keyword.Bluemix_notm}} にアプリをデプロイできないことがあります。
+カスタム・ビルドパック内のスクリプトが実行可能ファイルでない場合、そのビルドパックを使用して {{site.data.keyword.Bluemix_notm}} にアプリをデプロイできないことがあります。
 
 カスタム・ビルドパックを使用して {{site.data.keyword.Bluemix_notm}} にアプリをデプロイすると、`「アプリケーションがステージングに失敗したため、表示するインスタンスはありません」`というエラー・メッセージが表示されます。
 {: tsSymptoms}
@@ -642,7 +635,7 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 この問題は、検出スクリプト、コンパイル・スクリプト、リリース・スクリプトなどのスクリプトが実行可能でない場合は発生する可能性があります。
 {: tsCauses}
 
-[git update![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。 例えば、`git update --chmod=+x script.sh` と入力できます。
+[Git update![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://git-scm.com/docs/git-update-index){: new_window} コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。 例えば、`git update --chmod=+x script.sh` と入力できます。
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}} Continuous Delivery の Delivery Pipeline からアプリをデプロイできない

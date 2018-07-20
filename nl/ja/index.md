@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-05-21"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# 概説チュートリアル
+# 入門チュートリアル
 {: #create}
 
 {{site.data.keyword.Bluemix}} では、エンタープライズレベルのモバイル・アプリケーションおよび Web アプリケーションを作成し、{{site.data.keyword.Bluemix_notm}} でホストされているクラウド拡張機能を利用できます。 アプリを作成、実行、およびデプロイするには、{{site.data.keyword.Bluemix}} コンソールおよびコマンド・ライン・ツールを使用できます。 開始するには、プロセスを管理するスターター・キットを使用してアプリを作成するか、欲しいものが分かっている場合は必要なリソースを使用してアプリをビルドするかの 2 つの方法を実行します。
@@ -22,17 +22,17 @@ lastupdated: "2018-05-21"
 
 スターター・キットは、以下の多くのカテゴリーで使用可能です。
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [モバイル](https://console.bluemix.net/developer/mobile){:new_window}
-* [Web アプリ](https://console.bluemix.net/developer/appservice){:new_window}
-* [セキュリティー](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Mobile ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/mobile){:new_window}
+* [Web App ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Security ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [金融](https://console.bluemix.net/developer/finance){:new_window}
+* [Finance ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## 始める前に
 
-{{site.data.keyword.cloud_notm}} アカウントに[登録](https://console.bluemix.net){: new_window}します。 E メール、名前、会社、地域、電話番号を入力します。
+{{site.data.keyword.cloud_notm}} アカウントの [登録![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} をしてください。E メール、名前、会社、地域、電話番号を入力します。
 
 無料アカウントの登録にクレジット・カードは必要ありませんが、クレジット・カードを入力すると、より多くのリソースへのアクセスが可能になり、{{site.data.keyword.cloud_notm}} で提供されるすべてのものを十分に理解しやすくなります。
 
@@ -45,15 +45,15 @@ lastupdated: "2018-05-21"
 
 3. 任意のスターター・キットを選択し、詳細を読み、**「作成」**をクリックします。
 
-  スターター・キットに含まれる内容を表示するには、アプリ・サービス・スターター・キットのダッシュボード上のタイルを展開します。
-  {: tip}
+   スターター・キットに含まれる内容を表示するには、アプリ・サービス・スターター・キットのダッシュボード上のタイルを展開します。
+   {: tip}
 
 4. アプリに名前を付け、言語を選択して、**「作成」**をクリックします。
 
-素晴らしいスタートです。 これでアプリが作成されました。
+   素晴らしいスタートです。 これでアプリが作成されました。
 
-コードを検査するには、アプリの詳細ページで**「コードのダウンロード (Download Code)」**をクリックします。 ダウンロードした圧縮ファイルの中の `README.md` を参照して、スターター・アプリを実行するためにさらに操作が必要かどうかを確認します。
-{: tip}
+   コードを検査するには、アプリの詳細ページで**「コードのダウンロード (Download Code)」**をクリックします。 ダウンロードした圧縮ファイルの中の `README.md` を参照して、スターター・アプリを実行するためにさらに操作が必要かどうかを確認します。
+   {: tip}
 
 ## ステップ 2: リソースの追加
 {: #addResources}
