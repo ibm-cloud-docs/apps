@@ -34,7 +34,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog listet die verfügbaren Infrastru
   * [Einführung in Openwhisk](../openwhisk/index.html)
   * [Cloud Foundry-Apps erstellen](../cfapps/index.html#creating_cloud_foundry_apps)
 
-3. Geben Sie den Namen Ihrer App sowie den Hostnamen ein und wählen Sie Ihren Preistarif aus.
+3. Geben Sie den Namen Ihrer App sowie den Hostnamen ein und wählen Sie Ihren Preisstrukturplan aus.
 
 4. Wählen Sie Ihren Entwicklungsstil aus. Sie können die App im Texteditor Ihrer Wahl bearbeiten und sie über die {{site.data.keyword.Bluemix_notm}}-Befehlszeile in {{site.data.keyword.Bluemix_notm}} bereitstellen. Außerdem können Sie Ihre App mithilfe von {{site.data.keyword.Bluemix_notm}} DevOps Services über einen Browser bereitstellen oder die Eclipse-Tools für {{site.data.keyword.Bluemix_notm}} nutzen, um in der integrierten Eclipse-Entwicklungsumgebung an Apps zu arbeiten.
 
@@ -50,9 +50,8 @@ Klicken Sie im Dashboard auf Ihre App und dann auf **Einführung**. Anschließen
 
 Passen Sie Ihre App weiter nach Ihren Anforderungen an. Lesen Sie sich die folgenden Vorschläge für das Erweitern Ihrer App mit dem Ziel, Geschäftsergebnisse zu erzielen, durch:
 
-* Machen Sie Ihre App leistungsfähiger, indem Sie Verbesserungen der [Sicherheit](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [Überwachung](https://console.bluemix.net/catalog/?category=devops){:new_window} und Verfügbarkeit hinzufügen, wie im Handbuch mit den [Best Practices](best-practice.html) beschrieben.
-* Machen Sie Ihre App intelligenter mit [kognitiven Services von Watson](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} und [erweiterter Analyse sowie maschinellem Lernen](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
-* Werden Sie [mobil](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
-* Probieren Sie das [Internet der Dinge](https://console.bluemix.net/catalog/?category=iot){:new_window} aus.
-* Verwenden Sie Services wie [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window}, um [serverlose Aktionen](https://console.bluemix.net/catalog/?category=whisk){:new_window} zu ermöglichen.
-
+* Machen Sie Ihre App leistungsfähiger, indem Sie Verbesserungen der [Sicherheit ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [Überwachung ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?category=devops){:new_window} und Verfügbarkeit hinzufügen, die im Handbuch für die [Best Practices](best-practice.html) beschrieben werden.
+* Machen Sie Ihre App intelligenter mit den [kognitiven Services von Watson ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} und der [erweiterten Analyse sowie dem maschinellen Lernen](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
+* Werden Sie [mobil ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
+* Werfen Sie einen Blick auf das [Internet of Things ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?category=iot){:new_window}.
+* Verwenden Sie Services wie [API Connect ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?category=integration){:new_window}, um [serverunabhängige Aktionen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?category=whisk){:new_window} zu integrieren.

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -24,7 +24,7 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | setup.py | Python-Installationsscript |
 | cli-config.yml | CLI-Konfigurationsoptionen |
 | manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-| Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+| Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
 | Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
 | README.md | Beschreibung der App |
@@ -55,7 +55,7 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | toolchain.yml | IBM Cloud-Toolchaindefinition |
 {: caption="Tabelle 5. Inhalt des Bluemix-Verzeichnisses einer generierten Python-App" caption-side="top"}
 
-| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+| `./chart/<projectname>Verzeichnis /` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
 | `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |

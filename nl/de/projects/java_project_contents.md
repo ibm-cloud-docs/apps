@@ -15,7 +15,7 @@ lastupdated: "2018-05-22"
 # Java-App-Dateien
 {: #java-project-files}
 
-Für Java-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden. 
+Für Java-Apps stellen die folgenden Informationen einen Bestand der Komponenten dar, die Sie typischerweise in {{site.data.keyword.Bluemix}} finden. Wenn Sie ein Starter-Kit erstellen, werden diese Dateien für Sie erstellt. Wenn Sie eine App migrieren, um sie in {{site.data.keyword.Bluemix_notm}} zu hosten, sollten Sie diese Informationen durchlesen, um potenzielle Konflikte zu vermeiden.
 {:shortdesc}
 
 ## Spring
@@ -28,7 +28,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 | pom.xml | Maven-POM-Datei |
 | cli-config.yml | CLI-Konfigurationsoptionen |
 | manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-| Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+| Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
 | Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
 | README.md | Beschreibung der App |
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 | toolchain.yml | IBM Cloud-Toolchaindefinition |
 {: caption="Tabelle 3. Inhalt des Verzeichnisses ./.bluemix/ einer generierten Java Spring-App" caption-side="top"}
 
-| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+| `./chart/<projectname>Verzeichnis /` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
 | `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |
@@ -76,7 +76,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 | pom.xml | Maven-POM-Datei |
 | cli-config.yml | CLI-Konfigurationsoptionen |
 | manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-| Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+| Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
 | Dockerfile-tools | Dockerfile für Befehle `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
 | README.md | Beschreibung der App |
@@ -104,7 +104,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 | toolchain.yml | IBM Cloud-Toolchaindefinition |
 {: caption="Tabelle 8. Inhalt des Verzeichnisses ./bluemix/ einer generierten Java Liberty-App" caption-side="top"}
 
-| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+| `./chart/<projectname>Verzeichnis /` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
 | `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |

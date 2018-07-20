@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ Allgemeine Probleme im Zusammenhang mit der Verwaltung von Apps können sein, da
 ## Es sind nicht gespeicherte Änderungen vorhanden
 {: #ts_unsaved_changes}
 
-Wenn Sie zur Detailseite der App navigieren, können Sie möglicherweise keine Aktionen ausführen und werden aufgefordert, Änderungen zu speichern, bevor Sie fortfahren.
+Wenn Sie auf der Detailseite der App auf bestimmte Elemente klicken, können Sie möglicherweise keine Aktionen ausführen und werden aufgefordert, Änderungen zu speichern, um fortfahren zu können.
 
 Wenn Sie versuchen, Ihre App oder Services auf der Detailseite der App zu prüfen, empfangen Sie immer wieder die folgende Fehlernachricht:
 {: tsSymptoms}
 
 `Es gibt nicht gespeicherte Änderungen auf Seite 'Name der App'. Speichern oder verwerfen Sie die Änderungen.`
 
-Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie von der Seite wegnavigieren.
+Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie eine andere Seite aufrufen.
 {: tsCauses}
 
 Schließen Sie das Nachrichtenfenster und klicken Sie danach im Teilfenster für Ihre Laufzeitumgebung auf **ZURÜCKSETZEN**.
@@ -50,10 +50,10 @@ Wenn eine {{site.data.keyword.Bluemix_notm}}-Region nicht mehr verfügbar ist, s
 {{site.data.keyword.Bluemix_notm}} bietet noch keine automatische Funktionsübernahme zwischen zwei Regionen an.
 {: tsCauses}
 
-Sie können einen DNS-Anbieter nutzen, der eine intelligente Funktionsübernahme zwischen einer Vielzahl von ID-Adressen unterstützt, und Ihre DNS-Einstellungen zur Aktivierung der automatischen Funktionsübernahme zwischen {{site.data.keyword.Bluemix_notm}}-Regionen manuell konfigurieren. DNS-Anbieter mit dieser Funktion sind z. B. NSONE, Akamai, Dyn.
+Sie können einen DNS-Anbieter nutzen, der eine intelligente Funktionsübernahme zwischen einer Vielzahl von ID-Adressen unterstützt, und Ihre DNS-Einstellungen zur Aktivierung der automatischen Funktionsübernahme zwischen {{site.data.keyword.Bluemix_notm}}-Regionen manuell konfigurieren. DNS-Anbieter mit dieser Funktion sind z. B. NSONE, Akamai und Dyn.
 {: tsResolve}
 
-Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse einer {{site.data.keyword.Bluemix_notm}}-Region den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise den nachfolgenden Befehl eingeben. 
+Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse einer {{site.data.keyword.Bluemix_notm}}-Region den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise den nachfolgenden Befehl eingeben.
 
 ```
 nslookup stage1.mybluemix.net
@@ -62,7 +62,7 @@ nslookup stage1.mybluemix.net
 ## Apps können nicht in den Debugmodus versetzt werden
 {: #ts_debug}
 
-Möglicherweise können Sie den Debugmodus nicht aktivieren, wenn die JVM-Version (JVM = Java Virtual Machine) 8 oder eine frühere Version verwendet wird. 
+Möglicherweise können Sie den Debugmodus nicht aktivieren, wenn die JVM-Version (JVM = Java Virtual Machine) 8 oder eine frühere Version verwendet wird.
 
 Wenn Sie die Option zum Aktivieren des Anwendungsdebuggings (**Enable application debug**) auswählen, versuchen die Tools, die App in den Debugmodus zu versetzen. Daraufhin startet die Eclipse-Workbench eine Debugsitzung. Wenn die Tools den Debugmodus erfolgreich aktivieren können, wird als Status für die Webanwendung `Updating mode` (Aktualisierungsmodus), `Developing` (Entwicklung) und `Debugging` (Fehlerbehebung) angezeigt.
 {: tsSymptoms}
@@ -142,7 +142,7 @@ Bei der Wiederverwendung des App-Namens wird die folgende Nachricht angezeigt:
 
 `The name is already used by another app.` (Der Name wird bereits von einer anderen App verwendet.)
 
-Beim Löschen einer App wird die zugehörige Route (URL für die App) nicht automatisch gelöscht. Deshalb kann sie nicht wiederverwendet werden. Sie müssen den Bereich aufrufen, in dem die App erstellt wurde, um die Route zu löschen.
+Beim Löschen einer App wird die zugehörige Route (URL für die App) nicht automatisch gelöscht und kann nicht wiederverwendet werden. Sie müssen den Bereich aufrufen, in dem die App erstellt wurde, um die Route zu löschen.
 {: tsCauses}
 
 Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu löschen:
@@ -196,7 +196,7 @@ Wiederholen Sie den Vorgang. Wenn diese Nachricht erneut angezeigt wird, rufen S
 ## Angeforderte Aktionen konnten nicht ausgeführt werden
 {: #ts_authority}
 
-Sie können Aktionen nur ausführen, wenn Sie über die entsprechende Zugriffsberechtigung verfügen. 
+Sie können Aktionen nur ausführen, wenn Sie über die entsprechende Zugriffsberechtigung verfügen.
 
 Wenn Sie versuchen, Aktionen für eine Serviceinstanz oder eine App-Instanz auszuführen, können Sie die angeforderten Aktionen nicht abschließen und es wird eine der folgenden Fehlernachrichten angezeigt:
 {: tsSymptoms}
@@ -254,7 +254,7 @@ Um die Facette zu entfernen, klicken Sie für das Projekt in IBM Eclipse Tools f
 ## Fehler des Typs '502 Bad Gateway' empfangen
 {: #ts_502_error}
 
-Wenn Sie bei der Interaktion mit Apps unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten, überprüfen Sie die Seite für die {{site.data.keyword.Bluemix_notm}}-Status und führen Sie anschließend die entsprechenden Aktionen durch. 
+Wenn Sie bei der Interaktion mit Apps unter {{site.data.keyword.Bluemix_notm}} Fehler vom Typ '502 Bad Gateway' erhalten, überprüfen Sie die Seite für die {{site.data.keyword.Bluemix_notm}}-Status und führen Sie anschließend die entsprechenden Aktionen durch.
 
 Sie erhalten Fehlernachrichten, die mit '502 Bad Gateway' beginnen. So wird beispielsweise die Fehlernachricht `502 Bad Gateway: Registered endpoint failed to handle the request` (502 Bad Gateway: Verarbeitung der Anfrage durch registrierten Endpunkt fehlgeschlagen) angezeigt.
 {: tsSymptoms}
@@ -268,10 +268,10 @@ Wenn Sie vermuten, dass ein {{site.data.keyword.Bluemix_notm}}-Service inaktiv i
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
-    * Laden Sie die Seite neu, indem Sie auf der Tastatur die Taste F5 drücken oder auf die Schaltfläche zum Aktualisieren der Anzeige klicken. Wenn dieser Schritt nicht funktioniert, löschen Sie den Inhalt des Cachespeichers und die Cookies und laden Sie die Seite anschließend erneut.
+    * Laden Sie die Seite neu, indem Sie auf der Tastatur die Taste F5 drücken oder auf die Schaltfläche zum **Aktualisieren** der Anzeige klicken. Wenn dieser Schritt nicht funktioniert, löschen Sie den Inhalt des Cachespeichers und die Cookies und laden Sie die Seite anschließend erneut.
     * Verwenden Sie einen anderen Browser.
     * Starten Sie Router, Modem und Computer erneut. Durch einen Warmstart dieser Geräte können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen.
-  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. Bei einigen Instanzen kann es in Verbindung mit Ihrem Internet-Service-Provider oder den {{site.data.keyword.Bluemix_notm}}-Services zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
+  * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. In Bezug auf den Internet-Service-Provider oder die {{site.data.keyword.Bluemix_notm}}-Services kann es zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
   * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.Bluemix_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.Bluemix_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
 
 ## Überschrittenes Plattenkontingent
@@ -297,16 +297,15 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Android-Apps empfangen keine {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann, empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM {{site.data.keyword.mobilepushshort}}-Service senden. In diesem Fall besteht die Ausweichlösung darin, Drittanbieterservices zu verwenden.
 
-Sie können einen {{site.data.keyword.mobilepushshort}}-Service für Ihre {{site.data.keyword.Bluemix_notm}}-App verwenden und eine Nachricht an die registrierten Geräte senden. Jedoch können Apps, die auf der Android-Plattform entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
+Sie können einen {{site.data.keyword.mobilepushshort}}-Service für Ihre {{site.data.keyword.Bluemix_notm}}-App verwenden und eine Nachricht an die registrierten Geräte senden. Jedoch können Apps, die für Android entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
 {: tsSymptoms}
 
-Der IBM {{site.data.keyword.mobilepushshort}}-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die auf der Android-Plattform entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
+Der IBM {{site.data.keyword.mobilepushshort}}-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die für Android entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
 {: tsCauses}
 
 Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM-Service abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://pushy.me){: new_window}, [getui ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.getui.com/){: new_window} oder [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.jpush.cn/){: new_window}.
@@ -315,14 +314,14 @@ Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM
 ## Für Organisation geltender Grenzwert für Services wurde überschritten
 {: #ts_servicelimit}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise keine App in {{site.data.keyword.Bluemix_notm}} erstellen, wenn Sie den für Ihre Organisation geltenden Grenzwert für Services überschritten haben. 
+Wenn Sie Benutzer eines Lite-Kontos sind, können Sie möglicherweise keine App in {{site.data.keyword.Bluemix_notm}} erstellen, wenn Sie den für Ihre Organisation geltenden Grenzwert für Services überschritten haben.
 
-Bei dem Versuch, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie versuchen, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
 `BXNUI2032E: Die Ressource <service_instances> wurde nicht erstellt. Während der Kontaktaufnahme mit Cloud Foundry zum Erstellen der Ressource ist ein Fehler aufgetreten. Cloud Foundry-Nachricht: "You have exceeded your organization's services limit." ("Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
 
-Dieser Fehler tritt auf, wenn Sie den Grenzwert für die Anzahl der Serviceinstanzen, die für Ihr Konto bestehen können, überschritten haben. Die maximale Anzahl von Serviceinstanzen für ein Testkonto beträgt 10.
+Dieser Fehler tritt auf, wenn Sie den Grenzwert für die Anzahl der Serviceinstanzen, die für Ihr Konto bestehen können, überschritten haben.
 {: tsCauses}
 
 Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Grenzwert für die für Sie zulässige Anzahl von Serviceinstanzen.
@@ -331,7 +330,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
 
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz verwenden, führen Sie die folgenden Schritte aus:
-	  1. Klicken Sie im Dashboard 'Services' für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
+	  1. Klicken Sie im Dashboard für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
 	  2. Klicken Sie auf **Service löschen**. Sie werden dazu aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen.
 
     Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden, führen Sie folgende Schritte aus:
@@ -339,7 +338,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  4. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
 	  5. Nach dem Löschen der Serviceinstanz ist es gegebenenfalls wünschenswert, für Ihre App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen. Geben Sie hierzu folgenden Befehl ein: `cf restage <appname>`.
 
-  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie Ihr Testkonto in ein zahlungspflichtiges Konto umwandeln. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Vorgehensweise zum Ändern des Plans](/docs/pricing/index.html#changing).
+  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen hierzu finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
 
 ## Ausführbare Dateien können in {{site.data.keyword.Bluemix_notm}} nicht ausgeführt werden
 {: #ts_executable}
@@ -366,25 +365,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## Für Organisation geltende Speicherbegrenzung wurde überschritten
 {: #ts_outofmemory}
 
-Wenn Sie Benutzer eines Testkontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte und kann nur durch den Wechsel zu einem gebührenpflichtigen Konto erhöht werden.
+Wenn Sie Benutzer eines Lite-Kontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Lite-Konto beträgt 256 MB und kann nur durch das Upgrade auf ein gebührenpflichtiges Konto erhöht werden.
 
 Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.` (FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 100005, Nachricht: Sie haben die für Ihre Organisation geltende Speicherbegrenzung überschritten.)
 
-Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speichermenge niedriger ist, als die Speichermenge, die für die bereitzustellende App erforderlich ist. Das Kontingent der maximalen Hauptspeicherkapazität für ein Testkonto beträgt 2 Gigabyte.
+Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speichermenge niedriger ist, als die Speichermenge, die für die bereitzustellende App erforderlich ist. Das Kontingent der maximalen Hauptspeicherkapazität für ein Lite-Konto beträgt 256 MB.
 {: tsCauses}
 
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Apps verwendeten Speicherplatz verringern.
 {: tsResolve}
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie Ihr Testkonto in ein zahlungspflichtiges Konto umwandeln. Informationen dazu, wie Ihr Testkonto in ein Zahlungskonto umgewandelt wird, finden Sie unter [Zahlungskonten](/docs/pricing/index.html#pay-accounts).
-  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle `cf`. 
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen hierzu finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
+  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle `cf`.
 
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte aus:
 
-    1. Wählen Sie im Dashboard 'Apps' Ihre App aus. Die Seite mit den Anwendungsdetails wird geöffnet.
+    1. Wählen Sie in Ihrem Dashboard die gewünschte App aus. Die Seite mit den Anwendungsdetails wird geöffnet.
     2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre App, die Anzahl der App-Instanzen oder beide Angaben reduzieren.
 
     Wenn Sie die Befehlszeilenschnittstelle `cf` verwenden, führen Sie die folgenden Schritte aus:
@@ -495,11 +494,10 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
     cf push appname -p app_path -n host_name
     ```
 
-
 ## Push-Operation für WAR-Anwendung mit Befehl cf push nicht möglich
 {: #ts_cf_war}
 
-Es kann vorkommen, dass Sie mit dem Befehl `cf push` eine archivierte Web-App unter {{site.data.keyword.Bluemix_notm}} nicht bereitstellen können, wenn die Position der App nicht ordnungsgemäß angegeben ist. 
+Es kann vorkommen, dass Sie mit dem Befehl `cf push` eine archivierte Web-App unter {{site.data.keyword.Bluemix_notm}} nicht bereitstellen können, wenn die Position der App nicht ordnungsgemäß angegeben ist.
 
 Wenn Sie eine WAR-App in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `cf push` hochladen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
@@ -519,7 +517,6 @@ cf push MyUniqueAppName01 -p app.war
 cf push MyUniqueAppName02 -p "./app.war"
 ```
 Weitere Informationen zum Befehl `cf push` erhalten Sie, wenn Sie `cf push -h` eingeben.
-
 
 ## Anzeigen von Doppelbytezeichen nach Push-Operation für Apps in {{site.data.keyword.Bluemix_notm}} nicht ordnungsgemäß
 {: #ts_doublebytes}
@@ -543,7 +540,6 @@ Sie können den folgenden Code im Servlet oder der JSP-Datei verwenden:
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Bereitstellung von Node.js-Apps nicht möglich
 {: #ts_nodejs_deploy}
@@ -613,7 +609,6 @@ Verwenden Sie je nach Ursache des Problems eine der folgenden Methoden:
 
 Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-
 ## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.Bluemix_notm}} Liberty-App in Eclipse
 {: #ts_eclipse}
 
@@ -628,11 +623,10 @@ Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App
 Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
-
 ## Staging für Apps mit angepassten Buildpacks nicht möglich
 {: #ts_bp_compilation}
 
-Es kann vorkommen, dass eine App unter {{site.data.keyword.Bluemix_notm}} nicht unter Verwendung eines angepassten Buildpacks bereitgestellt werden kann, wenn die Scripts im Buildpack nicht ausführbar sind.
+Es kann vorkommen, dass eine App unter {{site.data.keyword.Bluemix_notm}} nicht unter Verwendung eines angepassten Buildpacks bereitgestellt werden kann, wenn die Scripts im Buildpack keine ausführbaren Dateien sind.
 
 Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} unter Verwendung eines angepassten Buildpacks bereitstellen, kann es vorkommen, dass die Fehlernachricht `The application failed to stage, so there are no instances to display.` (Anzeigen der Instanzen nicht möglich, da Staging der Anwendung fehlgeschlagen ist) angezeigt wird.
 {: tsSymptoms}
@@ -640,22 +634,21 @@ Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} unter Verwendung eine
 Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Identifizieren, Kompilieren und Freigeben, nicht ausgeführt werden können.
 {: tsCauses}
 
-Mit dem Befehl [git update ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
+Mit dem Befehl [Git update ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 
-## Implementieren einer App über die Delivery Pipeline in IBM {{site.data.keyword.Bluemix_notm}} Continuous Delivery nicht möglich
+## Bereitstellen einer App über die Delivery Pipeline in IBM {{site.data.keyword.Bluemix_notm}} Continuous Delivery nicht möglich
  {: #ts_devops_to_bm}
 
- Es kann vorkommen, dass eine App nicht unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} implementiert werden kann, wenn die Datei `manifest.yml` nicht in der App vorhanden ist.
+ Es kann vorkommen, dass eine App nicht unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} bereitgestellt werden kann, wenn die Datei `manifest.yml` nicht in der App vorhanden ist.
 
- Wenn Sie eine App unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} implementieren, kann die Fehlernachricht `Unable to detect a supported application type` (Ermittlung eines unterstützten Anwendungstyps fehlgeschlagen) angezeigt werden.
+ Wenn Sie eine App unter Verwendung der {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} bereitstellen, kann die Fehlernachricht `Unable to detect a supported application type` (Ermittlung eines unterstützten Anwendungstyps fehlgeschlagen) angezeigt werden.
  {: tsSymptoms}
 
- Dieses Problem kann auftreten, weil für die Pipeline die Datei `manifest.yml` zum Implementieren einer App in {{site.data.keyword.Bluemix_notm}} erforderlich ist.
+ Dieses Problem kann auftreten, weil für die Pipeline die Datei `manifest.yml` zum Bereitstellen einer App in {{site.data.keyword.Bluemix_notm}} erforderlich ist.
  {: tsCauses}
 
- Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im
-[Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
+ Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im [Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
  {: tsResolve}
 
 ## Push-Operation für Meteor-Anwendungen nicht möglich

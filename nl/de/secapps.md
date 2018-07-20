@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ Bevor Sie Zertifikate hochladen können, müssen Sie eine Zertifikatssignieranfo
 
 Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemäß bereitzustellen, müssen Sie die folgenden Regionsendpunkte verwenden, um die URL-Route zur Verfügung zu stellen, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist.
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
@@ -86,11 +86,11 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 2. Wählen Sie Ihre App aus, um die App-Detailansicht zu öffnen.
 
-3. Klicken Sie auf **Routen** > **Domänen verwalten**. 
+3. Klicken Sie auf **Routen** > **Domänen verwalten**.
 
-4. Klicken Sie für Ihre Organisation in der Spalte mit den Aktionen im zusätzlichen Aktionsmenü auf **Domänen**. 
+4. Klicken Sie für Ihre Organisation in der Spalte mit den Aktionen im zusätzlichen Aktionsmenü auf **Domänen**.
 
-5. Klicken Sie für Ihre angepasste Domäne in der Spalte mit den SSL-Zertifikaten auf **Hochladen**. 
+5. Klicken Sie für Ihre angepasste Domäne in der Spalte mit den SSL-Zertifikaten auf **Hochladen**.
 
 6. Navigieren Sie in der Liste, um ein Zertifikat, einen privaten Schlüssel und optional ein Zwischenzertifikat bzw. ein Clientzertifikat hochzuladen. Zum Aktivieren des Clientzertifikatstruststores müssen Sie die Truststore-Datei eines Clientzertifikats hochladen, die den zulässigen Benutzerzugriff für Ihre angepasste Domäne definiert.
 
@@ -141,4 +141,4 @@ Um ein Zertifikat für Ihre Anwendung hochzuladen, gehen Sie wie folgt vor:
 
 Weitere Informationen finden Sie unter [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Klicken Sie anschließend auf **Details anzeigen** > **Organisation bearbeiten** > **Domänen**. Klicken Sie im zusätzlichen Aktionsmenü für die Organisation auf **Aus Organisation entfernen**.
+Um ein Zertifikat zu löschen oder ein vorhandenes Zertifikat durch ein neues zu ersetzen, wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**. Wählen Sie dann in der Spalte mit den Aktionen im zusätzlichen Aktionsmenü **Domänen** aus. Klicken Sie im zusätzlichen Aktionsmenü für die Organisation auf **Aus Organisation entfernen**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,17 +22,17 @@ Mit einem Starter-Kit können Sie Ihre App schnell zum Einsatz bringen und auf z
 
 Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [Mobile](https://console.bluemix.net/developer/mobile){:new_window}
-* [Web-App](https://console.bluemix.net/developer/appservice){:new_window}
-* [Sicherheit](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Mobile ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/mobile){:new_window}
+* [Web-App ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Sicherheit ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finanzen](https://console.bluemix.net/developer/finance){:new_window}
+* [Finanzen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## Vorbereitende Schritte
 
-[Registrieren Sie sich](https://console.bluemix.net){: new_window} für ein {{site.data.keyword.cloud_notm}}-Konto. Geben Sie Ihre E-Mail-Adresse, Ihren Namen, Ihr Unternehmen, Ihre Region und Telefonnummer ein.
+[Registrieren Sie sich ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net){: new_window} für ein {{site.data.keyword.cloud_notm}}-Konto. Geben Sie Ihre E-Mail-Adresse, Ihren Namen, Ihr Unternehmen, Ihre Region und Telefonnummer ein.
 
 Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte, aber durch die Angabe einer Kreditkarte erhalten Sie Zugriff auf weitere Ressourcen und können einfacher nachvollziehen, was {{site.data.keyword.cloud_notm}} alles bietet.
 
@@ -45,15 +45,15 @@ Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte, a
 
 3. Wählen Sie das gewünschte Starter-Kit aus, lesen Sie die Details und klicken Sie auf **Erstellen**.
 
-  Um anzuzeigen, was im Starter-Kit enthalten ist, erweitern Sie die Kachel im Dashboard 'App-Service-Starter-Kits'.
-  {: tip}
+   Um anzuzeigen, was im Starter-Kit enthalten ist, erweitern Sie die Kachel im Dashboard 'App-Service-Starter-Kits'.
+   {: tip}
 
 4. Benennen Sie Ihre App, wählen Sie Ihre Sprache aus und klicken Sie auf **Erstellen**.
 
-Großartiger Start! Sie haben soeben eine App erstellt.
+   Großartiger Start! Sie haben soeben eine App erstellt.
 
-Klicken Sie auf der Seite mit den App-Details auf **Code herunterladen**. Prüfen Sie die Datei `README.md` in der heruntergeladenen komprimierten Datei, um herauszufinden, ob Sie weitere Aktionen ausführen müssen, um Ihre Starter-App in Betrieb zu nehmen.
-{: tip}
+   Klicken Sie auf der Seite mit den App-Details auf **Code herunterladen**. Prüfen Sie die Datei `README.md` in der heruntergeladenen komprimierten Datei, um herauszufinden, ob Sie weitere Aktionen ausführen müssen, um Ihre Starter-App in Betrieb zu nehmen.
+   {: tip}
 
 ## Schritt 2: Ressourcen hinzufügen
 {: #addResources}

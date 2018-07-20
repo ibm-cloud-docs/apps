@@ -67,7 +67,7 @@ Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu.
 Nach der Konfiguration der angepassten Domäne in {{site.data.keyword.Bluemix_notm}} ordnen Sie die angepasste Domäne der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf Ihrem registrierten DNS-Server zu:
 
 1. Richten Sie einen Datensatz 'CNAME' für den Namen der angepassten Domäne auf Ihrem DNS-Server ein. Die Schritte zum Einrichten des CNAME-Datensatzes hängen von Ihrem DNS-Provider ab. Beispiel: Wenn Sie GoDaddy verwenden, folgen Sie den Anweisungen unter [Domains Help ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} von GoDaddy.
-2. Ordnen Sie den Namen der angepassten Domäne dem sicheren Endpunkt für die {{site.data.keyword.Bluemix_notm}}-Region zu, in der Ihre Anwendung ausgeführt wird. Geben Sie die URL-Route, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist, mithilfe der nachfolgenden Regionsendpunkte an. 
+2. Ordnen Sie den Namen der angepassten Domäne dem sicheren Endpunkt für die {{site.data.keyword.Bluemix_notm}}-Region zu, in der Ihre Anwendung ausgeführt wird. Geben Sie die URL-Route, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist, mithilfe der nachfolgenden Regionsendpunkte an.
 
   * US-SOUTH - `secure.us-south.bluemix.net`
   * US-EAST - `secure.us-east.bluemix.net`
@@ -86,8 +86,7 @@ Führen Sie den folgenden Befehl aus, um eine verwaiste Route zu entfernen:
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 
-Bei diesem Beispiel steht `domain` für den Namen Ihrer Domäne und `hostname` für den Hostnamen der Route für Ihre Anwendung. Weitere Informationen zum Befehl `ibmcloud app route-delete` erhalten Sie, indem Sie den Befehl `ibmcloud app route-delete -h` eingeben. 
+Bei diesem Beispiel steht `domain` für den Namen Ihrer Domäne und `hostname` für den Hostnamen der Route für Ihre Anwendung. Weitere Informationen zum Befehl `ibmcloud app route-delete` erhalten Sie, indem Sie den Befehl `ibmcloud app route-delete -h` eingeben.
