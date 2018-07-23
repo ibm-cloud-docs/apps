@@ -43,16 +43,15 @@ lastupdated: "2018-05-21"
 
 각 앱은 작업 시작에 필요한 모든 소프트웨어 및 컨텐츠를 가져오는 데 도움이 되는 시작하기 섹션과 함께 제공합니다.
 
-대시보드에서 앱을 클릭한 후 **시작하기**를 클릭하십시오. 이는 앱을 개발하는 데 필요한 소프트웨어를 얻는 데 도움을 주고, 사용자에게 소스 코드를 안내하며, 처음으로 앱을 배치하는 데 도움을 줍니다. 
+대시보드에서 앱을 클릭한 후 **시작하기**를 클릭하십시오. 이는 앱을 개발하는 데 필요한 소프트웨어를 얻는 데 도움을 주고, 사용자에게 소스 코드를 안내하며, 처음으로 앱을 배치하는 데 도움을 줍니다.
 
 ## 다음 단계
 {: #next}
 
 필요에 맞게 앱을 계속해서 사용자 정의하십시오. 비즈니스 결과를 달성하기 위해 앱을 확장하는 데 대한 다음 권장사항을 확인하십시오.
 
-* [우수 사례](best-practice.html) 안내서에 간략히 설명된 [보안](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [모니터링](https://console.bluemix.net/catalog/?category=devops){:new_window} 및 가용성 개선사항을 추가하여 앱의 안정성을 높이십시오.
-* [Watson 코그너티브 서비스](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}와 [고급 분석 및 기계 학습](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}을 통해 앱의 자율성을 높이십시오.
-* [모바일](https://console.bluemix.net/catalog/?category=mobile){:new_window}에서 사용할 수 있도록 앱을 사용자 정의하십시오.
-* [Internet of Things](https://console.bluemix.net/catalog/?category=iot){:new_window}를 사용해 보십시오.
-* [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window}와 같은 서비스를 사용하여 [서버리스 조치](https://console.bluemix.net/catalog/?category=whisk){:new_window}를 통합하십시오.
-
+* [우수 사례](best-practice.html) 안내서에 간략히 설명된 [보안 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [모니터링 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?category=devops){:new_window} 및 가용성 개선사항을 추가하여 앱의 안전성을 높이십시오.
+* [Watson 코그너티브 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} 및 [고급 분석 및 기계 학습](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}을 통해 앱의 자율성을 높이십시오.
+* [모바일 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?category=mobile){:new_window}로 이동하십시오.
+* [IoT(Internet of Things) ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?category=iot){:new_window}를 시도해 보십시오.
+* [API Connect ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?category=integration){:new_window}와 같은 서비스를 사용하여 [서버리스 조치 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?category=whisk){:new_window}를 통합하십시오.

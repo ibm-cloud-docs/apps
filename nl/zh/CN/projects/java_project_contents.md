@@ -15,7 +15,7 @@ lastupdated: "2018-05-22"
 # Java 应用程序文件
 {: #java-project-files}
 
-对于 Java 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建初学者工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
+对于 Java 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建入门模板工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
 {:shortdesc}
 
 ## Spring
@@ -55,20 +55,18 @@ lastupdated: "2018-05-22"
 |toolchain.yml|IBM Cloud 工具链定义|
 {: caption="表 3. 生成的 Java Spring 应用程序 ./.bluemix/ 目录的内容" caption-side="top"}
 
-|`./chart/<projectname>/` 目录|描述
-|
+| `./chart/<projectname>/` 目录| 描述 |
 |:------------------------------------------------|:------------------------------------------|
-|`./chart/<projectname>/Chart.yaml`|Helm 图表|
-|`./chart/<projectname>/values.yaml`|Helm 图表值|
-|`./chart/<projectname>/templates/deployment.yaml`|部署模板|
-|`./chart/<projectname>/templates/hpa.yaml`|HPA 模板|
-|`./chart/<projectname>/templates/service.yaml`|服务模板|
+| `./chart/<projectname>/Chart.yaml`|Helm 图表|
+| `./chart/<projectname>/values.yaml`|Helm 图表值|
+| `./chart/<projectname>/templates/deployment.yaml`|部署模板|
+| `./chart/<projectname>/templates/hpa.yaml`|HPA 模板|
+| `./chart/<projectname>/templates/service.yaml`|服务模板|
 {: caption="表 4. 生成的 Java Spring 应用程序 ./chart/<projectname>/templates/ 目录的内容" caption-side="top"}
 
-|`./manifests/` 目录|描述
-|
+| `./manifests/` 目录 | 描述 |
 |:------------------------------------------------|:------------------------------------------|
-|kube.deploy.yml|Kubernetes 服务和部署 yaml|
+| kube.deploy.yml |Kubernetes 服务和部署 yaml|
 {: caption="表 5. 生成的 Java Spring 应用程序 ./manifests/ 目录的内容" caption-side="top"}
 
 ## Liberty
@@ -102,28 +100,26 @@ lastupdated: "2018-05-22"
 |`./src/main/test/it/HealthEndpointTest.java`|测试|
 {: caption="表 7. 生成的 Java Liberty 应用程序 ./src/main/ 目录的内容" caption-side="top"}
 
-|`./.bluemix/` 目录|描述
-|
+| `./.bluemix/` 目录 | 描述 |
 |:------------------------------------------------|:------------------------------------------|
-|container_build.sh|容器构建脚本|
-|deploy.json|部署信息|
-|kube_deploy.sh|Kubernetes 部署脚本|
-|pipeline.yml|IBM Cloud 管道定义|
-|toolchain.yml|IBM Cloud 工具链定义|
+| container_build.sh |容器构建脚本|
+| deploy.json |部署信息|
+| kube_deploy.sh |Kubernetes 部署脚本|
+| pipeline.yml |IBM Cloud 管道定义|
+| toolchain.yml |IBM Cloud 工具链定义|
 {: caption="表 8. 生成的 Java Liberty 应用程序 ./bluemix/ 目录的内容" caption-side="top"}
 
-|`./chart/<projectname>/` 目录|描述
+| `./chart/<projectname>/` 目录|描述
 |
 |:------------------------------------------------|:------------------------------------------|
-|`./chart/<projectname>/Chart.yaml`|Helm 图表|
-|`./chart/<projectname>/values.yaml`|Helm 图表值|
-|`./chart/<projectname>/templates/deployment.yaml`|部署模板|
-|`./chart/<projectname>/templates/hpa.yaml`|HPA 模板|
-|`./chart/<projectname>/templates/service.yaml`|服务模板|
+| `./chart/<projectname>/Chart.yaml` |Helm 图表|
+| `./chart/<projectname>/values.yaml` |Helm 图表值|
+| `./chart/<projectname>/templates/deployment.yaml` |部署模板|
+| `./chart/<projectname>/templates/hpa.yaml` |HPA 模板|
+| `./chart/<projectname>/templates/service.yaml` |服务模板|
 {: caption="表 9. 生成的 Java Liberty 应用程序 ./chart/<projectname>/ 目录的内容" caption-side="top"}
 
-|`./manifests/` 目录|描述
-|
+| `./manifests/` 目录 | 描述 |
 |:------------------------------------------------|:------------------------------------------|
-|kube.deploy.yml|Kubernetes 服务和部署 yaml|
+| kube.deploy.yml |Kubernetes 服务和部署 yaml|
 {: caption="表 10. 生成的 Java Liberty 应用程序 ./manifests/ 目录的内容" caption-side="top"}

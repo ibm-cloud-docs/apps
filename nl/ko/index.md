@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,19 +22,19 @@ lastupdated: "2018-05-21"
 
 스타터 킷은 다음 항목을 포함한 다양한 카테고리에서 사용 가능합니다.
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [모바일](https://console.bluemix.net/developer/mobile){:new_window}
-* [웹 앱](https://console.bluemix.net/developer/appservice){:new_window}
-* [보안](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [모바일 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/mobile){:new_window}
+* [웹 앱 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice){:new_window}
+* [보안 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [금융](https://console.bluemix.net/developer/finance){:new_window}
+* [재정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## 시작하기 전에
 
-{{site.data.keyword.cloud_notm}} 계정에 [등록](https://console.bluemix.net){: new_window}하십시오. 이메일, 이름, 회사, 지역 및 전화번호를 입력하십시오.
+{{site.data.keyword.cloud_notm}} 계정으로 [등록 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net){: new_window}하십시오. 이메일, 이름, 회사, 지역 및 전화번호를 입력하십시오.
 
-무료 계정을 등록하는 데는 신용카드가 필요하지 않지만, 신용카드 정보를 입력하면 더 많은 리소스에 액세스할 수 있으며 {{site.data.keyword.cloud_notm}}에서 제공하는 모든 항목을 더 쉽게 알아볼 수 있습니다. 
+무료 계정을 등록하는 데는 신용카드가 필요하지 않지만, 신용카드 정보를 입력하면 더 많은 리소스에 액세스할 수 있으며 {{site.data.keyword.cloud_notm}}에서 제공하는 모든 항목을 더 쉽게 알아볼 수 있습니다.
 
 ## 1단계: 앱 작성
 {: #project}
@@ -45,15 +45,15 @@ lastupdated: "2018-05-21"
 
 3. 원하는 스타터 킷을 선택하고, 세부사항을 읽은 후 **작성**을 클릭하십시오.
 
-  스타터 킷에 무엇이 포함되어 있는지 보려면 앱 서비스 스타터 킷 대시보드에서 타일을 펼치십시오.
-  {: tip}
+   스타터 킷에 무엇이 포함되어 있는지 보려면 앱 서비스 스타터 킷 대시보드에서 타일을 펼치십시오.
+   {: tip}
 
 4. 앱에 이름을 지정하고, 언어를 선택한 후 **작성**을 클릭하십시오.
 
-시작이 좋습니다! 앱이 작성되었습니다.
+   시작이 좋습니다! 앱이 작성되었습니다.
 
-코드를 검사하려면, 앱 세부사항 페이지에서 **코드 다운로드**를 클릭하십시오. 다운로드된 압축 파일에 있는 `README.md` 파일을 확인하여 스타터 앱을 실행하기 위해 추가 조치를 수행해야 하는지 알아보십시오.
-{: tip}
+   코드를 검사하려면, 앱 세부사항 페이지에서 **코드 다운로드**를 클릭하십시오. 다운로드된 압축 파일에 있는 `README.md` 파일을 확인하여 스타터 앱을 실행하기 위해 추가 조치를 수행해야 하는지 알아보십시오.
+   {: tip}
 
 ## 2단계: 리소스 추가
 {: #addResources}

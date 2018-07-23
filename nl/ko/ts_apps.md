@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ lastupdated: "2018-07-02"
 ## 저장되지 않은 변경사항이 있음
 {: #ts_unsaved_changes}
 
-앱 세부사항 페이지에서 탐색할 때 조치를 수행하지 못하고 계속하기 전에 변경사항을 저장하라는 메시지가 표시될 수 있습니다.
+앱 세부사항 페이지에서 항목을 클릭하면 조치를 수행하지 못하고 계속하기 전에 변경사항을 저장하라는 메시지가 표시될 수 있습니다.
 
 앱 세부사항 페이지에서 앱 또는 서비스를 확인하려고 하면 다음 오류 메시지가 계속 표시됩니다.
 {: tsSymptoms}
 
 `You have unsaved changes in page app_name. Save or cancel the changes.`
 
-런타임 분할창에서 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 설계상 이런 동작이 발생하는 것이며, 페이지에서 벗어나기 전에 메모리 또는 인스턴스 설정을 저장하라는 오류 메시지가 표시됩니다.
+런타임 분할창에서 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 설계상 이런 동작이 발생하는 것이며, 다른 페이지로 이동하기 전에 메모리 또는 인스턴스 설정을 저장하라는 오류 메시지가 표시됩니다.
 {: tsCauses}
 
 메시지 창을 닫은 후 런타임 분할창에서 **재설정**을 클릭하십시오.
@@ -142,7 +142,7 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
 
 `The name is already used by another app.`
 
-앱이 삭제될 때 앱의 라우트(앱의 URL)는 자동으로 삭제되지 않습니다. 그러므로 앱 라우트를 재사용할 수 없습니다. 앱 라우트를 재사용할 수 있도록 라우트를 삭제하려면 앱이 작성된 영역으로 이동해야 합니다.
+앱이 삭제될 때 앱의 라우트(앱의 URL)는 자동으로 삭제되지 않지만 다시 사용할 수는 없습니다. 앱 라우트를 재사용할 수 있도록 라우트를 삭제하려면 앱이 작성된 영역으로 이동해야 합니다.
 {: tsCauses}
 
 다음 단계를 수행하여 사용하지 않는 라우트를 삭제하십시오.
@@ -189,7 +189,7 @@ cf delete-route mybluemix.net -n app001
 {: tsResolve}
 
 * 메뉴 표시줄에서 **관리 > 계정 > 조직**을 클릭하십시오. 영역을 작성할 조직을 선택하고 **영역 작성**을 클릭하십시오.
-* `cf` 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오.
+* `cf` 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`.
 
 다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 
@@ -259,7 +259,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 502 Bad Gateway로 시작하는 오류 메시지를 수신합니다. 예를 들어, `502 Bad Gateway: Registered endpoint failed to handle the request`가 표시될 수 있습니다.
 {: tsSymptoms}
 
-잘못된 게이트웨이 오류는 사이트를 호스팅하는 기본 서버의 데이터를 저장하고 릴레이하기 위해 프록시 서버를 사용하는 웹 사이트를 방문할 때 일반적으로 발생합니다. 기본 서버와 프록시 서버가 제대로 연결되지 않았을 수 있습니다. 그러면 브라우저 창에 HTTP 상태 코드 502가 표시됩니다. 이 상태 코드는 사이트의 기본 서버가 프록시 서버로부터 예상한 HTTP 구현을 수신하지 않았음을 나타냅니다.
+잘못된 게이트웨이 오류는 사이트를 호스팅하는 기본 서버의 데이터를 저장하고 릴레이하기 위해 프록시 서버를 사용하는 웹 사이트로 이동할 때 일반적으로 발생합니다. 기본 서버와 프록시 서버가 제대로 연결되지 않았을 수 있습니다. 그러면 브라우저 창에 HTTP 상태 코드 502가 표시됩니다. 이 상태 코드는 사이트의 기본 서버가 프록시 서버로부터 예상한 HTTP 구현을 수신하지 않았음을 나타냅니다.
 {: tsCauses}
 
 잘못된 게이트웨이 오류의 덜 일반적인 기타 원인은 ISP(Internet Service Provider) 드롭아웃, 잘못된 방화벽 구성 및 브라우저 캐시 오류입니다.
@@ -268,10 +268,10 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 {: tsResolve}
 
   * 조치 재시도:
-    * 키보드에서 F5를 누르거나 새로 고치기 단추를 클릭하여 페이지를 다시 로드하십시오. 이 단계가 작동하지 않는 경우에는 브라우저의 캐시 및 쿠키를 지운 후 다시 로드하십시오.
+    * 키보드에서 F5를 누르거나 **새로 고치기**를 클릭하여 페이지를 다시 로드하십시오. 이 단계가 작동하지 않는 경우에는 브라우저의 캐시 및 쿠키를 지운 후 다시 로드하십시오.
     * 다른 브라우저를 사용하십시오.
     * 라우터, 모뎀 및 컴퓨터를 다시 시작하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다.
-  * 대기한 후 나중에 다시 시도하십시오. 일부 경우에는 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
+  * 대기한 후 나중에 다시 시도하십시오. 인터넷 서비스 제공업체 또는 {{site.data.keyword.Bluemix_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
   * 문제점이 계속 존재하면 {{site.data.keyword.Bluemix_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.Bluemix_notm}} 지원 문의 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-bluemix-support){: new_window}를 참조하십시오.
 
 ## 디스크 할당량이 초과됨
@@ -298,16 +298,15 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없음
 {: #ts_push}
 
 Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우 임시 해결책으로 써드파티 서비스를 사용합니다.
 
- {{site.data.keyword.Bluemix_notm}} 앱에 대해 {{site.data.keyword.mobilepushshort}} 서비스를 바인드하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android 플랫폼에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
+ {{site.data.keyword.Bluemix_notm}} 앱에 대해 {{site.data.keyword.mobilepushshort}} 서비스를 바인드하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android 플랫폼에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
+IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
 임시 해결책으로 GCM 서비스에 의존하지 않는 써드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
@@ -316,14 +315,14 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 ## 조직의 서비스 한계를 초과함
 {: #ts_servicelimit}
 
-평가판 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
+라이트 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
 
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
 `BXNUI2032E: <service_instances> 리소스가 작성되지 않았습니다. 리소스를 작성하기 위해 Cloud Foundry에 접속하는 중에 오류가 발생했습니다. Cloud Foundry 메시지: "조직의 서비스 한계를 초과했습니다."`
 
-이 오류는 사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과한 경우에 발생합니다. 평가판 계정의 최대 서비스 인스턴스 수는 10입니다.
+이 오류는 사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과하는 경우에 발생합니다.
 {: tsCauses}
 
 필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
@@ -332,7 +331,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
   * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
 
     {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
-	  1. 서비스 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
+	  1. 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
 	  2. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 바인드한 앱을 다시 스테이징하라는 프롬프트가 표시됩니다.
 
     명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
@@ -340,7 +339,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 	  4. `cf delete-service <service_instance_name>`.
 	  5. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`.
 
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [플랜 변경 방법](/docs/pricing/index.html#changing)을 참조하십시오.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오. 
 
 ## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
@@ -367,25 +366,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-평가판 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 평가판 계정의 최대 메모리 할당량은 2GB이며 유료 계정으로 이동해야만 늘릴 수 있습니다.
+라이트 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 라이트 계정의 최대 메모리 할당량은 256MB이며 청구 가능 계정으로 업그레이드해야만 늘릴 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}}에 앱을 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
+앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. 평가판 계정의 최대 메모리 할당량은 2GB입니다.
+이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. 라이트 계정의 최대 메모리 할당량은 256MB입니다.
 {: tsCauses}
 
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve}
 
-  * 계정의 메모리 할당량을 늘리려면 평가판 계정을 유료 계정으로 변환하십시오. 평가판 계정을 유료 계정으로 변환하는 방법은 [유료 계정](/docs/pricing/index.html#pay-accounts)을 참조하십시오.
+  * 계정의 메모리 할당량을 늘리려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오. 
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 `cf` 명령행 인터페이스를 사용하십시오.
 
     {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.
 
-    1. 앱 대시보드에서 앱을 선택하십시오. 앱 세부사항 페이지가 열립니다.
+    1. 대시보드에서 앱을 선택하십시오. 앱 세부사항 페이지가 열립니다.
     2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.
 
     `cf` 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
@@ -500,7 +499,6 @@ push` 명령을 **-n** 옵션과 함께 사용하십시오.
     cf push appname -p app_path -n host_name
     ```
 
-
 ## cf push 명령을 사용하여 WAR 앱을 푸시할 수 없음
 {: #ts_cf_war}
 
@@ -525,7 +523,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 `cf push` 명령에 대한 자세한 정보를 보려면 `cf push -h`를 입력하십시오.
 
-
 ## 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시될 때 2바이트 문자가 올바르게 표시되지 않음
 {: #ts_doublebytes}
 
@@ -548,7 +545,6 @@ cf push MyUniqueAppName02 -p "./app.war"
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Node.js 앱을 배치할 수 없음
 {: #ts_nodejs_deploy}
@@ -618,7 +614,6 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
 
 Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}을 참조하십시오.
 
-
 ## {{site.data.keyword.Bluemix_notm}} Liberty 앱을 Eclipse로 가져온 후에 `server.xml` 파일에서 구성 오류가 나타남
 {: #ts_eclipse}
 
@@ -633,11 +628,10 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](/docs/runtimes/liberty/index.html)를 참조하십시오.
 {: tsResolve}
 
-
 ## 사용자 정의 빌드팩을 사용하여 앱을 스테이징할 수 없음
 {: #ts_bp_compilation}
 
-빌드팩의 스크립트가 실행 가능하지 않을 경우 사용자 정의 빌드팩을 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
+빌드팩의 스크립트가 실행 파일이 아닌 경우 사용자 정의 빌드팩을 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
 
 사용자 정의 빌드팩을 사용하여 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 `The application failed to stage, so there are no instances to display.`라는 오류 메시지가 표시됩니다.
 {: tsSymptoms}
@@ -645,13 +639,13 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 이 문제점은 발견 스크립트, 컴파일 스크립트, 릴리스 스크립트 등의 스크립트가 실행 가능하지 않을 경우에 발생합니다.
 {: tsCauses}
 
-[git update ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
+[Git update ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}} Continuous Delivery에서 Delivery Pipeline의 앱을 배치할 수 없음
  {: #ts_devops_to_bm}
 
- `manifest.yml` 파일이 앱에 없는 경우에는 {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 수 없을 수 있습니다.
+ `manifest.yml` 파일이 앱에 없는 경우에는 {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 수 없을 수 있습니다. 
 
  {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 때 `Unable to detect a supported application type`이라는 오류 메시지가 표시될 수 있습니다.
  {: tsSymptoms}

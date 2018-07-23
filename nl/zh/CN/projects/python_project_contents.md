@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,7 +13,7 @@ lastupdated: "2018-05-22"
 # Python 应用程序文件
 {: #python-project-files}
 
-对于 Python 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建初学者工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
+对于 Python 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建入门模板工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
 {:shortdesc}
 
 下表列出了生成的 Python 应用程序中包含的常见目录和文件。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ OpenSSL SHA-512 구현은 64비트 정수 유형에 대한 컴파일러 지원�
 
 사용자 정의 도메인을 사용할 때 SSL 인증서를 제공하려면 다음 지역 엔드포인트를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공하십시오.
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 애플리케이션 인증서를 업로드하려면 다음을 수행하십시오.
@@ -141,4 +141,4 @@ OpenSSL SHA-512 구현은 64비트 정수 유형에 대한 컴파일러 지원�
 
 자세한 정보는 [SSL 인증서 가져오기](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)를 참조하십시오.
 
-인증서를 삭제하거나 기존 인증서를 새 인증서로 대체하려면, **관리** > **계정** > **Cloud Foundry 조직**으로 이동하십시오. 그 후 **세부사항 보기** > **조직 편집** > **도메인**을 클릭하십시오. 조직에 대한 추가 조치 메뉴에서 **조직에서 제거**를 클릭하십시오.
+인증서를 삭제하거나 기존 인증서를 새 인증서로 대체하려면, **관리** > **계정** > **Cloud Foundry 조직**으로 이동하십시오. 그런 다음, 조치 열의 추가 조치 메뉴에서 **도메인**을 선택하십시오. 조직에 대한 추가 조치 메뉴에서 **조직에서 제거**를 클릭하십시오.

@@ -15,7 +15,7 @@ lastupdated: "2018-05-21"
 # 构建定制应用程序
 {: #build-your-own}
 
-如果您使用的不是初学者工具包，并且了解自己需要什么，那么可以使用所选资源来构建应用程序。
+如果您使用的不是入门模板工具包，并且了解自己需要什么，那么可以使用所选资源来构建应用程序。
 {: shortdesc}
 
 ## 选择语言
@@ -50,9 +50,8 @@ lastupdated: "2018-05-21"
 
 继续定制应用程序以满足您的需求。查看以下有关扩展应用程序以达成业务成果的建议：
 
-* 通过添加[最佳实践](best-practice.html)指南中概述的[安全性](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[监视](https://console.bluemix.net/catalog/?category=devops){:new_window}和可用性改进，使应用程序更稳健。
-* 通过 [Watson 感知服务](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window}和[高级分析和机器学习](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}，使应用程序更智能。
-* 转至[移动](https://console.bluemix.net/catalog/?category=mobile){:new_window}。
-* 试用[物联网](https://console.bluemix.net/catalog/?category=iot){:new_window}。
-* 使用 [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window} 等服务来集成[无服务器操作](https://console.bluemix.net/catalog/?category=whisk){:new_window}。
-
+* 通过添加[最佳实践](best-practice.html)指南中概述的[安全性 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}、[监视 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?category=devops){:new_window} 和可用性改进，使应用程序更稳健。
+* 通过 [Watson 感知服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} 以及[高级分析和机器学习](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}，使应用程序更智能。
+* 转至[移动 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?category=mobile){:new_window}。
+* 试用[物联网 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?category=iot){:new_window}。
+* 使用 [API Connect ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?category=integration){:new_window} 等服务来集成[无服务器操作 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/catalog/?category=whisk){:new_window}。

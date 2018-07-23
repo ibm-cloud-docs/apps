@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ lastupdated: "2018-07-02"
 ## 您有未保存的更改
 {: #ts_unsaved_changes}
 
-在应用程序详细信息页面上进行浏览时，可能无法执行任何操作，系统可能会提示您保存更改后才能继续。
+在应用程序详细信息页面上单击项时，可能无法执行任何操作，系统可能会提示您保存更改后才能继续。
 
 在应用程序详细信息页面上尝试检查应用程序或服务时，总是提示以下错误消息：
 {: tsSymptoms}
 
 `您在页面 app_name 中有未保存的更改。请保存或取消这些更改。`
 
-在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意这样设计的；但是，当您要离开该页面时，会有错误消息提示您保存内存或实例设置。
+在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意这样设计的；但是，当您要转至其他页面时，会有错误消息提示您保存内存或实例设置。
 {: tsCauses}
 
 关闭消息窗口，然后单击运行时窗格中的**重置**。
@@ -42,7 +42,7 @@ lastupdated: "2018-07-02"
 ## {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移不可用
 {: #ts_failover}
 
-无法使用 {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移。但可以使用支持多个 IP 地址间故障转移的 DNS 提供程序来作为变通方法。
+无法使用 {{site.data.keyword.Bluemix_notm}} 区域之间的自动故障转移。但是，可以使用支持在多个 IP 地址之间故障转移的 DNS 提供程序来作为变通方法。
 
 当某个 {{site.data.keyword.Bluemix_notm}} 区域变为不可用时，在该区域中运行的应用程序也不可用，即使在另一个 {{site.data.keyword.Bluemix_notm}} 区域中有相同的应用程序正在运行，也是如此。
 {: tsSymptoms}
@@ -142,7 +142,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 `名称已经由其他应用程序使用。`
 
-删除应用程序时，不会自动删除其作为应用程序 URL 的路径。因此无法对其进行复用。您必须转至创建应用程序的空间，删除路径，以便可以对其进行复用。
+删除应用程序时，不会自动删除其作为应用程序 URL 的路径，并且此路径不可复用。您必须转至创建应用程序的空间，删除路径，以便可以对其进行复用。
 {: tsCauses}
 
 完成以下步骤以删除未用的路径：
@@ -191,7 +191,7 @@ cf delete-route mybluemix.net -n app001
 {: tsResolve}
 
 * 在菜单栏中，单击**管理 > 帐户 > 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
-* 在 `cf` 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`。
+* 在 `cf` 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`.
 
 请重试。如果再次出现此消息，请转至 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面，检查服务或组件是否存在问题。
 
@@ -210,7 +210,7 @@ cf delete-route mybluemix.net -n app001
 您没有执行操作所需的相应级别的权限。
 {: tsCauses}
 
-要获取相应级别的权限，请使用以下某种方法。
+要获取相应级别的权限，请使用以下其中一种方法。
 {: tsResolve}
 
 * 选择您具有其开发者角色的另一个组织和空间。
@@ -265,7 +265,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 您收到以“502 无效网关”开头的错误消息。例如，您可能会看到 `502 无效网关：注册的端点未能处理请求。`
 {: tsSymptoms}
 
-通常会在以下情况下发生“无效网关”错误：您访问某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接。因此，您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到本该从代理服务器发来的 HTTP 实现。
+通常会在以下情况下发生“无效网关”错误：您转至某个 Web 站点，该站点使用代理服务器来存储和中继来自托管该站点的主服务器中的数据。主服务器和代理服务器之间可能未正确连接。因此，您会在浏览器窗口中看到 HTTP 状态码 502。此状态码指示该站点的主服务器未收到本该从代理服务器发来的 HTTP 实现。
 {: tsCauses}
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。
@@ -274,12 +274,12 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 {: tsResolve}
 
   * 重试操作：
-    * 通过按键盘上的 F5 或单击刷新按钮，重新装入页面。如果此步骤无效，请清除浏览器的高速缓存和 cookie，然后再重新装入。
+    * 通过按键盘上的 F5 或单击**刷新**，重新装入页面。如果此步骤无效，请清除浏览器的高速缓存和 cookie，然后再重新装入。
 
     * 使用其他浏览器。
     * 重新启动您的路由器、调制解调器和计算机。重新引导这些设备可以清理导致 502 错误的各种错误。
 
-  * 稍等，然后重试。在某些情况下，您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能会发生临时问题。您可以一直等到临时问题得到解决为止。
+  * 稍等，然后重试。您的因特网服务提供商或 {{site.data.keyword.Bluemix_notm}} 服务可能发生了临时问题。您可以一直等到临时问题得到解决为止。
 
   * 如果问题持续存在，请联系 {{site.data.keyword.Bluemix_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.Bluemix_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-bluemix-support){: new_window}。
 
@@ -306,16 +306,15 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 在无法访问 Google 的某些地区，Android 应用程序收不到您通过 IBM {{site.data.keyword.mobilepushshort}} 服务发送出来的通知。在这种情况下，变通方法是使用第三方服务。
 
-为 {{site.data.keyword.Bluemix_notm}} 应用程序绑定 {{site.data.keyword.mobilepushshort}} 服务，并将消息发送给已注册的设备。但在某些地区，在 Android 平台上开发的应用程序收不到您的通知。
+为 {{site.data.keyword.Bluemix_notm}} 应用程序绑定 {{site.data.keyword.mobilepushshort}} 服务，并将消息发送给已注册的设备。但是，在某些区域，Android 上开发的应用程序收不到您的通知。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 平台上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
+IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到 Android 上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
 作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[getui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
@@ -324,14 +323,14 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 ## 超过组织的服务限制
 {: #ts_servicelimit}
 
-如果您是试用帐户用户，那么可能无法在超过组织的服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
+如果您是轻量帐户用户，那么可能无法在超过组织服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
 
-尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，您会看到以下错误消息：
+尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，显示了以下错误消息：
 {: tsSymptoms}
 
 `BXNUI2032E: 未创建 <service_instances> 资源。联系 Cloud Foundry 来创建资源时，发生了错误。Cloud Foundry 消息：“已超过组织的服务限制。”`
 
-在已超过您帐户可拥有的服务实例数的限制时，会发生此错误。试用帐户的最大服务实例数是 10。
+在已超过您帐户可拥有的服务实例数的限制时，会发生此错误。
 {: tsCauses}
 
 删除不需要的任何服务实例，或者除去您可拥有的服务实例数的限制。
@@ -340,15 +339,15 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
   * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 控制台或命令行界面。
 
     要使用 {{site.data.keyword.Bluemix_notm}} 控制台来删除服务实例，请完成以下步骤：
-	  1. 在“服务”仪表板中，单击要删除的服务的**操作**菜单。
+	  1. 在仪表板中，单击要删除的服务的**操作**菜单。
 	  2. 单击**删除服务**。系统会提示您重新编译打包该服务实例所绑定到的应用程序。
 
     要使用命令行界面删除服务实例，请完成以下步骤：
-	  3. 通过输入 `cf unbind-service <appname> <service_instance_name>`。
-	  4. 通过输入 `cf delete-service <service_instance_name>`。
-	  5. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`。
+	  3. 通过输入 `cf unbind-service <appname> <service_instance_name>`.
+	  4. 通过输入 `cf delete-service <service_instance_name>`.
+	  5. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`.
 
-  * 要除去您可拥有的服务实例数的限制，请将试用帐户转换为付费帐户。有关如何将试用帐户转换为付费帐户的信息，请参阅[如何更改套餐](/docs/pricing/index.html#changing)。
+  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
 
 ## 无法在 {{site.data.keyword.Bluemix_notm}} 上运行可执行文件
 {: #ts_executable}
@@ -375,25 +374,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 超过组织的内存限制
 {: #ts_outofmemory}
 
-如果您是试用帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。试用帐户的最大内存配额为 2 GB，要增大内存配额，只能移至付费帐户。
+如果您是轻量帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。轻量帐户的最大内存配额为 256 MB，要增大内存配额，只能升级到计费帐户。
 
-将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息：
+将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，显示了以下错误消息：
 {: tsSymptoms}
 
 `失败 服务器错误，状态码：400，错误代码：100005，消息：您已超过组织的内存限制。`
 
-当组织的剩余内存量低于您要部署的应用程序所需的内存量时，会发生此错误。试用帐户的最大内存配额为 2 GB。
+当组织的剩余内存量低于您要部署的应用程序所需的内存量时，会发生此错误。轻量帐户的最大内存配额为 256 MB。
 {: tsCauses}
 
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve}
 
-  * 要增加帐户的内存配额，请将试用帐户转换为付费帐户。有关将试用帐户转换为付费帐户的信息，请参阅[付费帐户](/docs/pricing/index.html#pay-accounts)。
+  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 `cf` 命令行界面。
 
     如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 
-    1. 在“应用程序仪表板”中，选择应用程序。这将打开应用程序详细信息页面。
+    1. 在仪表板中，选择应用程序。这将打开应用程序详细信息页面。
 
     2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
 	
@@ -509,7 +508,6 @@ cf api https://api.eu-gb.bluemix.net
     cf push appname -p app_path -n host_name
     ```
 
-
 ## 无法使用 cf push 命令推送 WAR 应用程序
 {: #ts_cf_war}
 
@@ -538,7 +536,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 
 
-
 ## 将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时未正确显示双字节字符
 {: #ts_doublebytes}
 
@@ -561,7 +558,6 @@ cf push MyUniqueAppName02 -p "./app.war"
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## 无法部署 Node.js 应用程序
 {: #ts_nodejs_deploy}
@@ -631,7 +627,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 
 有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
 
-
 ## 将 {{site.data.keyword.Bluemix_notm}} Liberty 应用程序导入到 Eclipse 之后，`server.xml` 文件中出现配置错误
 {: #ts_eclipse}
 
@@ -646,11 +641,10 @@ cf push MyUniqueAppName02 -p "./app.war"
 您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html)。
 {: tsResolve}
 
-
 ## 使用定制 buildpack 无法编译打包应用程序
 {: #ts_bp_compilation}
 
-如果定制 buildpack 中的脚本不可执行，那么您可能无法使用该 buildpack 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
+如果定制 buildpack 中的脚本不是可执行文件，那么您可能无法使用该 buildpack 将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 
 使用定制 buildpack 将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，您会看到错误消息：`应用程序未能编译打包，因此没有要显示的实例。`
 {: tsSymptoms}
@@ -658,7 +652,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 如果脚本（如检测脚本、编译脚本和发布脚本）不可执行，那么可能发生此问题。
 {: tsCauses}
 
-您可以使用 [git update ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
+您可以使用 [Git update ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 无法通过 {{site.data.keyword.Bluemix_notm}} Continuous Delivery 中的 Delivery Pipeline 部署应用程序
@@ -666,7 +660,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
  如果应用程序中不存在 `manifest.yml` 文件，那么可能无法使用 {{site.data.keyword.contdelivery_short}} 中的 {{site.data.keyword.deliverypipeline}} 来部署应用程序。
 
- 使用 {{site.data.keyword.contdelivery_short}} 中的 {{site.data.keyword.deliverypipeline}} 部署应用程序时，可能会显示错误消息：`检测不到受支持的应用程序类型`。
+ 使用 {{site.data.keyword.contdelivery_short}} 中的 {{site.data.keyword.deliverypipeline}} 部署应用程序时，可能会显示错误消息：`检测不到支持的应用程序类型`。
  {: tsSymptoms}
 
  发生此问题的原因可能是管道需要使用 `manifest.yml` 文件将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。

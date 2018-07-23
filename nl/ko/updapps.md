@@ -86,7 +86,6 @@ http://host_name.mydomain
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 

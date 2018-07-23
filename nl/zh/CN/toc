@@ -20,6 +20,7 @@
         tutorials/tutorial_microservice.md
         tutorials/tutorial_custom.md
         tutorials/tutorial_mobile.md
+        starter_kits.md
 
     {: .topicgroup}
     部署和集成应用程序

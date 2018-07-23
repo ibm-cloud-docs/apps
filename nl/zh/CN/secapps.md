@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
 
 使用定制域时，要提供 SSL 证书，请使用以下区域端点来提供在 {{site.data.keyword.Bluemix_notm}} 中分配给您组织的 URL 路径：
 
-  * US-South：secure.us-south.bluemix.net
-  * US-East：secure.us-east.bluemix.net
-  * EU-DE：secure.eu-de.bluemix.net
-  * EU-GB：secure.eu-gb.bluemix.net
-  * AU-SYD：secure.au-syd.bluemix.net
+* US-South：secure.us-south.bluemix.net
+* US-East：secure.us-east.bluemix.net
+* EU-DE：secure.eu-de.bluemix.net
+* EU-GB：secure.eu-gb.bluemix.net
+* AU-SYD：secure.au-syd.bluemix.net
 
 
 要上传应用程序的证书，请执行以下操作：
@@ -141,4 +141,4 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
 
 有关更多信息，请参阅[导入 SSL 证书](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)。
 
-要删除证书或将现有证书替换为新证书，请转至**管理** > **帐户** > **Cloud Foundry 组织**。然后，单击**查看详细信息** > **编辑组织** > **域**。在组织的其他操作菜单中，单击**从组织中除去**。
+要删除证书或将现有证书替换为新证书，请转至**管理** > **帐户** > **Cloud Foundry 组织**。然后，在“操作”列中，从“其他操作”菜单中选择**域**。在组织的其他操作菜单中，单击**从组织中除去**。
