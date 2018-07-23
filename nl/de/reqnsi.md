@@ -13,7 +13,7 @@ lastupdated: "2018-06-26"
 # Service zur App hinzufügen
 {: #add_service}
 
-Wen Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der App-Übersichtsseite hinzuzufügen. Allerdings können Sie sie auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wenn Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der App-Übersichtsseite hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
 Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der App-Übersichtseite zu Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.
@@ -82,7 +82,7 @@ Nachdem Sie eine Serviceinstanz an Ihre Anwendung gebunden haben, müssen Sie Ih
 Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen anderen Mechanismus erfordern. Wenn Sie Anwendungen entwickeln, werden diese Mechanismen zu Informationszwecken als Teil der Servicedefinition dokumentiert. Aus Konsistenzgründen sind diese Mechanismen für die Interaktion Ihrer Anwendung mit dem Service erforderlich.
 
 * Um mit Datenbankservice zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Benutzer-ID, das Kennwort und den Zugriffs-URI für die Anwendung.
-* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie z. B. der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
+* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
 * Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
 Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Apps werden nicht automatisch erneut gestartet](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
@@ -90,13 +90,13 @@ Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführ
 ## Über {{site.data.keyword.Bluemix_notm}}-Bereitstellungsumgebungen hinweg auf Services zugreifen
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}} bietet viele Bereitstellungsoptionen. Sie können in einer Bereitstellungsoption auf einen Service zugreifen, der in einer anderen Bereitstellungsoption ausgeführt wird. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
+{{site.data.keyword.Bluemix_notm}} bietet viele Bereitstellungsoptionen und Sie können in einer Umgebung auf einen Service, der in einer anderen Umgebung ausgeführt wird, zugreifen. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
 
 ### Beispiel: Greifen Sie von einem Kubernetes-Pod auf eine Compose-Serviceinstanz in Cloud Foundry zu.
 
-Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{site.data.keyword.composeForRedis}} ist eine bezahlte Instanz. Wenn Sie mit Ihrer Compose-Serviceinstanz wie zum Beispiel {{site.data.keyword.composeForMongoDB}} in Kubernetes zufrieden sind, können Sie die Berechtigungsnachweise der durch Compose bereitgestellten Instanz in Cloud Foundry importieren.
+Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{site.data.keyword.composeForRedis}} ist eine bezahlte Instanz. Wenn Sie mit der Handhabung Ihrer Compose-Serviceinstanz, z. B. {{site.data.keyword.composeForMongoDB}} in Kubernetes, vertraut sind, können Sie die Berechtigungsnachweise der von Compose bereitgestellten Instanz in Cloud Foundry importieren.
 
-1. Wechseln Sie zu **Berechtigungsnachweisen** und rufen Sie Ihre Berechtigungsnachweise von der Instanz ab. 
+1. Wechseln Sie zu **Berechtigungsnachweisen** und rufen Sie Ihre Berechtigungsnachweise von der Instanz ab.
 
 2. Öffnen Sie die Datei `values.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel in `chart/project/`.
 
@@ -116,7 +116,7 @@ Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{s
 
 4. Öffnen Sie die Datei `bindings.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel `chart/project/`.
 
-5. Fügen Sie die Schlüssel-Wert-Referenzen hinzu, die in der Datei `values.yml` am Ende, wo sich die Definition des `env`-Blocks befindet, definiert sind. 
+5. Fügen Sie die Schlüssel-Wert-Referenzen hinzu, die in der Datei `values.yml` am Ende, wo sich die Definition des `env`-Blocks befindet, definiert sind.
 
   ```
     env:
@@ -132,7 +132,7 @@ Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{s
         value: {{ .Values.services.mongo.ca }}
   ```
 
-6. In Ihrer Anwendung verwenden Sie Ihre Umgebungsvariablen, um die Service-SDK zu starten, die für Sie bereitgestellt wurde. 
+6. Verwenden Sie in Ihrer Anwendung Ihre Umgebungsvariablen, um die Service-SDK zu starten, die Ihnen bereitgestellt wurde.
 
   ```javascript
     const serviceManger = require('./services/serivce-manage.js');
@@ -239,7 +239,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollmanagementsoftware eines Drittanbieters weitergibt, verwenden Sie die Option `-l` und geben Sie das von der Protokollmanagementsoftware des Drittanbieters bereitgestellte Ziel an. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollverwaltungssoftware eines anderen Anbieters weitergibt, verwenden Sie die Option `-l`. Geben Sie das Ziel an, das von der Protokollverwaltungssoftware des anderen Anbieters bereitgestellt wird. Beispiel:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
