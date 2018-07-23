@@ -87,7 +87,6 @@ Para remover uma rota órfã, execute o comando a seguir:
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 

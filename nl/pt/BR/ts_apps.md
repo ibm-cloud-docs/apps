@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ Problemas gerais com o gerenciamento de apps podem incluir apps que não podem s
 ## Você possui mudanças não salvas
 {: #ts_unsaved_changes}
 
-Ao navegar na página de detalhes do app, talvez não seja possível executar quaisquer ações e você pode ser solicitado a salvar as mudanças para que possa continuar.
+Quando você clica em itens na página de detalhes do app, pode ser incapaz de executar quaisquer ações e pode ser solicitado a salvar as mudanças antes que possa continuar.
 
 Ao tentar verificar seu app ou serviços na página de detalhes do app, você continua obtendo a mensagem de erro a seguir:
 {: tsSymptoms}
 
 `Você possui mudanças não salvas na página app_name. Salve ou cancele as mudanças.`
 
-Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve a memória ou as configurações da instância antes de navegar para fora da página.
+Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve as configurações de memória ou instância antes de acessar outra página.
 {: tsCauses}
 
 Feche a janela de mensagem e, em seguida, clique em **RECONFIGURAR** em sua área de janela de tempo de execução.
@@ -42,8 +42,7 @@ Feche a janela de mensagem e, em seguida, clique em **RECONFIGURAR** em sua áre
 ## O failover automático entre regiões do {{site.data.keyword.Bluemix_notm}} não está disponível
 {: #ts_failover}
 
-Não é possível usar failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. No entanto, é possível usar um provedor de DNS que suporte failover entre vários
-endereços IP como solução alternativa.
+Não é possível usar failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. No entanto, é possível usar um provedor DNS que suporte failover entre muitos endereços IP como uma solução alternativa.
 
 Quando uma região do {{site.data.keyword.Bluemix_notm}} se torna indisponível, os apps que estão em execução nessa região também ficam indisponíveis, ainda que os mesmos apps estejam em execução em outra região do {{site.data.keyword.Bluemix_notm}}.
 {: tsSymptoms}
@@ -51,7 +50,7 @@ Quando uma região do {{site.data.keyword.Bluemix_notm}} se torna indisponível,
 O {{site.data.keyword.Bluemix_notm}} ainda não fornece failover automático de uma região para outra.
 {: tsCauses}
 
-É possível usar um provedor DNS que suporte failover inteligente entre vários endereços de ID e configurar manualmente suas configurações de DNS para ativar o failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. Os provedores de DNS com essa capacidade incluem NSONE, Akamai, Dyn.
+É possível usar um provedor DNS que suporte failover inteligente entre vários endereços de ID e configurar manualmente suas configurações de DNS para ativar o failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. Os provedores de DNS com esse recurso incluem NSONE, Akamai, Dyn.
 {: tsResolve}
 
 Ao configurar suas definições de DNS, deve-se especificar os endereços IP públicos das regiões do {{site.data.keyword.Bluemix_notm}} em que seu apps estão em execução. Para obter o endereço IP público de uma região do {{site.data.keyword.Bluemix_notm}}, use o comando `nslookup`. Por exemplo, é possível digitar o comando a seguir em uma janela de linha de comandos.
@@ -65,7 +64,7 @@ nslookup stage1.mybluemix.net
 
 Não será possível ativar o modo de depuração se a versão da Java virtual machine (JVM) for 8 ou anterior.
 
-Depois que você seleciona **Ativar depuração de aplicativo**, as ferramentas tentam alternar o app para o modo de depuração. Em seguida, o ambiente de trabalho Eclipse inicia uma sessão de depuração. Quando as ferramentas ativam o modo de depuração com êxito, o status do aplicativo da web exibe `Atualizando modo`, `Desenvolvendo` e `Depurando`.
+Depois de selecionar **Ativar depuração de aplicativo**, as ferramentas tentam alternar o app para o modo de depuração. Em seguida, o ambiente de trabalho Eclipse inicia uma sessão de depuração. Quando as ferramentas ativam o modo de depuração com êxito, o status do aplicativo da web exibe `Atualizando modo`, `Desenvolvendo` e `Depurando`.
 {: tsSymptoms}
 
 No entanto, quando as ferramentas falham ao ativar o modo de depuração, o status do aplicativo da web exibe somente `Atualizando modo` e `Desenvolvendo` e não exibe `Depurando`. As ferramentas também podem exibir a mensagem de erro a seguir na visualização de Console:
@@ -143,7 +142,7 @@ Quando você tentar reutilizar o nome do app, receberá a mensagem a seguir:
 
 `O nome já é usado por outro app.`
 
-Quando um app é excluído, sua rota, que é a URL do app, não é automaticamente excluída. Portanto, não está disponível para reutilização. Deve-se acessar o espaço em que o app foi criado para excluir a rota para que ele possa ser reutilizado.
+Quando um app é excluído, sua rota, que é a URL para o app, não é excluída automaticamente e não está disponível para reutilização. Deve-se acessar o espaço em que o app foi criado para excluir a rota para que ele possa ser reutilizado.
 {: tsCauses}
 
 Conclua as etapas a seguir para excluir a rota não usada:
@@ -263,7 +262,7 @@ Se você receber erros 502 Gateway inválido quando interagir com apps no {{site
 Você recebe mensagens de erro que iniciam com 502 Gateway inválido. Por exemplo, você pode ver `502 Gateway inválido: o terminal registrado falhou em manipular a solicitação.`
 {: tsSymptoms}
 
-Um erro de Gateway inválido geralmente acontece quando você visita um website que usa um servidor proxy para armazenar e retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy podem não se conectar adequadamente. Então, você vê o código de status 502 do HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a implementação HTTP esperada do servidor proxy.
+Um erro de Gateway inválido geralmente acontece quando você acessa um website que usa um servidor proxy para armazenar e retransmitir os dados do servidor principal que hospeda o site. O servidor principal e o servidor proxy podem não se conectar adequadamente. Então, você vê o código de status 502 do HTTP em sua janela do navegador. Esse código de status indica que o servidor principal do site não recebeu a implementação HTTP esperada do servidor proxy.
 {: tsCauses}
 
 Outras causas menos comuns de um erro de Gateway inválido são os dropouts do provedor de serviços da Internet (ISP), configurações de firewall inválidas e erros de cache do navegador.
@@ -272,10 +271,10 @@ Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está i
 {: tsResolve}
 
   * Tente novamente a ação:
-    * Recarregar a página pressionando F5 em seu teclado ou clicando no botão de atualização. Se essa etapa não funcionar, limpe o cache e os cookies de seu navegador e, em seguida, recarregue novamente.
+    * Recarregue a página pressionando F5 em seu teclado ou clicando em **Atualizar**. Se essa etapa não funcionar, limpe o cache e os cookies de seu navegador e, em seguida, recarregue novamente.
     * Usar um navegador diferente.
     * Reinicie seu roteador, seu modem e seu computador. Reinicializar esses dispositivos pode limpar diversos erros que conduzem ao erro 502.
-  * Aguardar e tentar novamente mais tarde. Em algumas instâncias, problemas temporários podem ocorrer com seu provedor de serviços da Internet ou com os serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
+  * Aguardar e tentar novamente mais tarde. Problemas temporários podem ocorrer com seu provedor de serviços da Internet ou com os serviços do {{site.data.keyword.Bluemix_notm}}. É possível aguardar até que os problemas temporários sejam resolvidos.
   * Se o problema ainda existir, entre em contato com o suporte do {{site.data.keyword.Bluemix_notm}}. Veja [Entrando em contato com o Suporte do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/support/index.html#contacting-bluemix-support){: new_window} para obter mais informações.
 
 ## Cota do disco excedida
@@ -305,16 +304,15 @@ Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima 
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Apps Android não podem receber {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 Os apps Android em certas regiões em que o Google não está acessível não podem receber as notificações que você envia por meio do serviço IBM {{site.data.keyword.mobilepushshort}}. Nesse caso, uma solução alternativa é usar serviços de terceiros.
 
-Você liga um serviço {{site.data.keyword.mobilepushshort}} para seu app do {{site.data.keyword.Bluemix_notm}} e envia uma mensagem para os dispositivos registrados. No entanto, os apps que são desenvolvidos na plataforma Android não podem receber suas notificações em certas regiões.
+Você liga um serviço {{site.data.keyword.mobilepushshort}} para seu app do {{site.data.keyword.Bluemix_notm}} e envia uma mensagem para os dispositivos registrados. No entanto, os apps que são desenvolvidos no Android não podem receber suas notificações em certas regiões.
 {: tsSymptoms}
 
-O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar notificações para apps móveis que são desenvolvidos na plataforma Android. Para ativar o recebimento de notificações em apps Android, o serviço
+O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar notificações para apps móveis que são desenvolvidos no Android. Para ativar o recebimento de notificações em apps Android, o serviço
 Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que os apps Android não podem acessar o serviço GCM, os apps Android não podem receber o {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
@@ -324,16 +322,14 @@ Como uma solução alternativa, use serviços de terceiros que não dependam do 
 ## O limite de serviços da organização foi excedido
 {: #ts_servicelimit}
 
-Se você for um usuário de conta para teste, talvez não possa criar um app no {{site.data.keyword.Bluemix_notm}} se tiver excedido o limite de serviços de sua organização.
+Se você for um usuário da conta Lite, talvez não possa criar um app no {{site.data.keyword.Bluemix_notm}} se tiver excedido o limite de serviços de sua organização.
 
-Ao tentar criar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensagem de erro a seguir:
+Quando você tentar criar um app no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir será exibida:
 {: tsSymptoms}
 
 `BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
 
-Esse erro ocorre quando você excede o limite no
-número de instâncias de serviços que pode ter para sua conta. O
-número máximo de instâncias de serviços para uma conta para teste é 10.
+Esse erro ocorre quando você excede o limite no número de instâncias de serviço que pode ter para sua conta.
 {: tsCauses}
 
 Exclua todas as instâncias de serviços que não forem necessárias ou remova o limite no número de instâncias de serviço que você pode ter.
@@ -342,7 +338,7 @@ Exclua todas as instâncias de serviços que não forem necessárias ou remova o
   * Para excluir uma instância de serviços, é possível usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
 
     Para usar o console do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No painel Serviços, clique no menu **Ações** para o serviço que você deseja excluir.
+	  1. Em seu painel, clique no menu **Ações** para o serviço que você deseja excluir.
 	  2. Clique em **Excluir serviço**. É solicitado que você remonte o app ao qual a instância de serviço estava ligada.
 
     Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
@@ -350,7 +346,7 @@ Exclua todas as instâncias de serviços que não forem necessárias ou remova o
 	  4. Exclua a instância de serviço digitando `cf delete-service <service_instance_name>`.
 	  5. Após a exclusão da instância de serviço, talvez você queira remontar o app ao qual a instância de serviço foi ligada digitando `cf restage <appname>`.
 
-  * Para remover o limite no número de instâncias de serviços que você pode ter, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Como mudar seu plano](/docs/pricing/index.html#changing).
+  * Para remover o limite no número de instâncias de serviço que é possível ter, faça upgrade de sua conta Lite para uma conta faturável. Para obter mais informações, veja [Fazendo upgrade de sua conta](/docs/account/index.html#upgrade-to-paygo).
 
 ## Os arquivos executáveis não podem ser executados no  {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
@@ -377,26 +373,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## O limite de memória da organização foi excedido
 {: #ts_outofmemory}
 
-Se você for um usuário de conta para teste, talvez não consiga implementar um app no {{site.data.keyword.Bluemix_notm}} caso tenha excedido o limite de memória da sua organização. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. A cota de memória máxima para uma conta para teste é de 2 GB e pode ser aumentada somente mudando para uma conta paga.
+Se você for um usuário da conta Lite, talvez não possa implementar um app no {{site.data.keyword.Bluemix_notm}} se tiver excedido o limite de memória de sua organização. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. A cota máxima de memória para uma conta Lite é de 256 MB e pode ser aumentada somente fazendo upgrade para uma conta faturável.
 
-Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensagem de erro a seguir:
+Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir é exibida:
 {: tsSymptoms}
 
 `Erro de Servidor COM FALHA, código de status: 400, código de erro: 100005, mensagem: Você excedeu seu limite de memória da organização.`
 
-Esse erro ocorre quando a quantia de memória restante para a sua organização é menor que a quantia de memória requerida pelo aplicativo que você deseja implementar. A cota máxima
-de memória para uma conta de avaliação é 2 GB.
+Esse erro ocorre quando a quantia de memória restante para a sua organização é menor que a quantia de memória requerida pelo aplicativo que você deseja implementar. A cota máxima de memória para uma conta Lite é de 256 MB.
 {: tsCauses}
 
 É possível aumentar a cota de memória de sua conta ou reduzir a memória que seus apps usam.
 {: tsResolve}
 
-  * Para aumentar a cota de memória de sua conta, converta sua conta de avaliação em uma conta paga. Para obter informações sobre como converter sua conta para teste para uma conta paga, veja [Contas pagas](/docs/pricing/index.html#pay-accounts).
+  * Para aumentar a cota de memória de sua conta, faça upgrade de sua conta Lite para uma conta faturável. Para obter mais informações, veja [Fazendo upgrade de sua conta](/docs/account/index.html#upgrade-to-paygo).
   * Para reduzir a memória que seus apps usam, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos `cf`.
 
     Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 
-    1. No Painel Apps, selecione seu app. A página de detalhes do app é aberta.
+    1. Em seu painel, selecione seu app. A página de detalhes do app é aberta.
     2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app.
 
     Se você usar a interface da linha de comandos `cf`, conclua as etapas a seguir:
@@ -493,7 +488,7 @@ Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, a rota do app não 
 Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, você vê a mensagem de erro a seguir:
 {: tsSymptoms}
 
-`Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
+`Criando a rota hostname.domainname ... Erro de servidor COM FALHA, código de status: 400, código de erro: 210003, mensagem: O host foi tomado: hostname`
 
 Esse problema ocorre se o nome do host especificado
 já estiver sendo usado.
@@ -513,7 +508,6 @@ push` com a opção **-n**.
     ```
     cf push appname -p app_path -n host_name
     ```
-
 
 ## Aplicativos WAR não podem ser enviados por push usando o comando cf push
 {: #ts_cf_war}
@@ -542,7 +536,6 @@ Para obter mais informações
 sobre o comando `cf push`, insira `cf push
      -h`.
 
-
 ## Caracteres de byte duplo não são exibidos de forma adequada quando os apps são enviados por push para o {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
@@ -565,7 +558,6 @@ O problema poderá ocorrer se o suporte Unicode não estiver configurado correta
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Não é possível implementar apps Node.js
 {: #ts_nodejs_deploy}
@@ -639,7 +631,6 @@ exemplo:
 
 Para mais dicas sobre apps Node.js, veja [Dicas para aplicativos Node.js ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-
 ## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty para o Eclipse
 {: #ts_eclipse}
 
@@ -654,27 +645,26 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 É possível resolver esse problema removendo o arquivo server.xml do projeto. O buildpack cria o arquivo `server.xml` dinamicamente quando você envia por push o app como um app WAR. Para obter mais informações, veja [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
-
 ## Os aplicativos não podem ser colocados em estágios usando buildpacks customizados
 {: #ts_bp_compilation}
 
-Talvez não seja possível implementar um app no {{site.data.keyword.Bluemix_notm}} usando um buildpack customizado caso os scripts no buildpack não sejam executáveis.
+Você poderá não ser capaz de implementar um app no {{site.data.keyword.Bluemix_notm}} com um buildpack customizado se os scripts no buildpack não forem arquivos executáveis.
 
-Ao implementar um app no {{site.data.keyword.Bluemix_notm}} usando um buildpack customizado, você vê a mensagem de erro `O aplicativo falhou na preparação, portanto, não há instâncias a serem exibidas.`
+Ao implementar um app no {{site.data.keyword.Bluemix_notm}} com um buildpack customizado, você verá a mensagem de erro `The application failed to stage, so there are no instances to display.`
 {: tsSymptoms}
 
 Esse problema poderá ocorrer se scripts, como o script de detecção, o script de compilação e o script de liberação não forem executáveis.
 {: tsCauses}
 
-É possível usar o comando [git update ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://git-scm.com/docs/git-update-index){: new_window} para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
+É possível usar o comando [Git update ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://git-scm.com/docs/git-update-index){: new_window} para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Não é possível implementar um app do Delivery Pipeline no {{site.data.keyword.Bluemix_notm}} Continuous Delivery
  {: #ts_devops_to_bm}
 
- Talvez não seja possível implementar seu app usando o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}} se o arquivo `manifest.yml` não estiver presente em seu app.
+ Talvez não seja possível implementar seu app com o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}} se o arquivo `manifest.yml` não estiver presente em seu app.
 
- Ao implementar um app usando o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}}, uma mensagem de erro `Não é possível detectar um tipo de aplicativo suportado` poderá ser exibida.
+ Ao implementar um app com o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}}, uma mensagem de erro `Unable to detect a supported application type` pode ser exibida.
  {: tsSymptoms}
 
  Esse problema pode ocorrer porque o pipeline requer um arquivo `manifest.yml` para implementar um app no {{site.data.keyword.Bluemix_notm}}.

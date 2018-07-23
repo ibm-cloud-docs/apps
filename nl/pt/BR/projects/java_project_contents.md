@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2015, 2018
@@ -15,7 +15,7 @@ lastupdated: "2018-05-22"
 # Arquivos de app Java
 {: #java-project-files}
 
-Para apps Java, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos. 
+Para apps Java, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
 {:shortdesc}
 
 ## Spring
@@ -23,7 +23,7 @@ Para apps Java, as informações a seguir são um inventário do que você norma
 
 A tabela a seguir lista os diretórios e os arquivos que estão incluídos em um app Java Spring gerado.
 
-| Diretório `./`                                   | Descrição                       |
+| Diretório `./`                                  | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
 | pom.xml | O arquivo maven pom |
 | cli-config.yml | Opções de configuração de CLI |
@@ -52,14 +52,14 @@ A tabela a seguir lista os diretórios e os arquivos que estão incluídos em um
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 3. Conteúdo de um diretório ./.bluemix/ do app Java Spring gerado" caption-side="top"}
 
-| Diretório `./chart/<projectname>/` | Descrição |
+|Diretório `./chart/<projectname>/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
 | `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
 | `./chart/<projectname>/templates/hpa.yaml` | Modelo HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
-{: caption="Tabela 4. Conteúdo de um diretório ./chart/<projectname>/templates/ do app Java Spring gerado" caption-side="top"}
+{: caption="Tabela 4. Conteúdos de um diretório ./chart/<projectname>/templates/ do app Java Spring gerado" caption-side="top"}
 
 | Diretório `./manifests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
@@ -71,7 +71,7 @@ A tabela a seguir lista os diretórios e os arquivos que estão incluídos em um
 
 A tabela a seguir lista os diretórios e os arquivos incluídos em um app Java Liberty gerado.
 
-| Diretório `./`                                   | Descrição                       |
+| Diretório `./`                                  | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
 | pom.xml | O arquivo maven pom |
 | cli-config.yml | Opções de configuração de CLI |
@@ -104,14 +104,14 @@ A tabela a seguir lista os diretórios e os arquivos incluídos em um app Java L
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 8. Conteúdo de um diretório ./bluemix/ do app Java Liberty gerado" caption-side="top"}
 
-| Diretório `./chart/<projectname>/` | Descrição |
+|Diretório `./chart/<projectname>/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
 | `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
 | `./chart/<projectname>/templates/hpa.yaml` | Modelo HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
-{: caption="Tabela 9. Conteúdo de um diretório ./chart/<projectname>/ do app Java Liberty gerado" caption-side="top"}
+{: caption="Tabela 9. Conteúdos de um diretório ./chart/<projectname>/ do app Java Liberty gerado" caption-side="top"}
 
 | Diretório `./manifests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|

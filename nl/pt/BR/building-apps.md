@@ -50,9 +50,8 @@ No painel, clique em seu app e, em seguida, clique em **Introdução**, que pode
 
 Continue a customizar seu app para atender às suas necessidades. Confira as sugestões a seguir para estender seu app para alcançar os resultados de negócios:
 
-* Torne seu app mais robusto incluindo melhorias de [segurança](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [monitoramento](https://console.bluemix.net/catalog/?category=devops){:new_window} e disponibilidade descritas em nosso guia de [melhores práticas](best-practice.html).
-* Faça seu app mais inteligente com os [serviços cognitivos do Watson](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} e [analítica avançada e aprendizado de máquina](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
-* Acesse [dispositivo móvel](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
-* Experimente a [Internet of Things](https://console.bluemix.net/catalog/?category=iot){:new_window}.
-* Use serviços como [API Connect](https://console.bluemix.net/catalog/?category=integration){:new_window} para integrar [ações sem servidor](https://console.bluemix.net/catalog/?category=whisk){:new_window}.
-
+* Torne seu app mais robusto incluindo as melhorias de [segurança ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=security){:new_window}, [monitoramento ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?category=devops){:new_window} e disponibilidade descritas em nosso guia de [melhores práticas](best-practice.html).
+* Torne seu app mais inteligente com os [serviços cognitivos do Watson ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=watson){:new_window} e [analítica avançada e aprendizado de máquina](https://console.bluemix.net/catalog/?taxonomyNavigation=data&category=data){:new_window}.
+* Use [dispositivos móveis ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?category=mobile){:new_window}.
+* Experimente a [Internet of Things ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?category=iot){:new_window}.
+* Use serviços como o [API Connect ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?category=integration){:new_window} para integrar [ações sem servidor ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?category=whisk){:new_window}.

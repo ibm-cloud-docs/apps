@@ -330,7 +330,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
 
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz verwenden, führen Sie die folgenden Schritte aus:
-	  1. Klicken Sie im Dashboard 'Services' für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
+	  1. Klicken Sie im Dashboard für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
 	  2. Klicken Sie auf **Service löschen**. Sie werden dazu aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen.
 
     Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden, führen Sie folgende Schritte aus:
@@ -383,7 +383,7 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 
     Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte aus:
 
-    1. Wählen Sie Ihre App im Dashboard aus. Die Seite mit den Anwendungsdetails wird geöffnet.
+    1. Wählen Sie in Ihrem Dashboard die gewünschte App aus. Die Seite mit den Anwendungsdetails wird geöffnet.
     2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre App, die Anzahl der App-Instanzen oder beide Angaben reduzieren.
 
     Wenn Sie die Befehlszeilenschnittstelle `cf` verwenden, führen Sie die folgenden Schritte aus:

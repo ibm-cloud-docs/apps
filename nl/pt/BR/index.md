@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,17 +22,17 @@ No {{site.data.keyword.Bluemix}}, é possível construir aplicativos móveis e d
 
 Os kits do iniciador estão disponíveis em várias categorias, incluindo:
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [Dispositivo móvel](https://console.bluemix.net/developer/mobile){:new_window}
-* [App da web](https://console.bluemix.net/developer/appservice){:new_window}
-* [Segurança](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Dispositivo móvel ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/mobile){:new_window}
+* [App da web ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Segurança ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finança](https://console.bluemix.net/developer/finance){:new_window}
+* [Finanças ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## Antes de começar
 
-[Inscreva-se](https://console.bluemix.net){: new_window} para uma conta do {{site.data.keyword.cloud_notm}}. Insira seu e-mail, nome, empresa, região e número do telefone.
+[Inscreva-se ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net){: new_window} para uma conta do {{site.data.keyword.cloud_notm}}. Insira seu e-mail, nome, empresa, região e número do telefone.
 
 Você não precisa de um cartão de crédito para se inscrever para uma conta grátis, mas inserir um cartão de crédito dá a você acesso a mais recursos e facilita o entendimento completo de todas as ofertas do {{site.data.keyword.cloud_notm}}.
 
@@ -45,15 +45,15 @@ Você não precisa de um cartão de crédito para se inscrever para uma conta gr
 
 3. Selecione um kit do iniciador de sua escolha, leia os detalhes e clique em **Criar**.
 
-  Para visualizar o que está incluído no kit do iniciador, expanda o tile no painel Kits do iniciador do serviço de aplicativo.
-  {: tip}
+   Para visualizar o que está incluído no kit do iniciador, expanda o tile no painel Kits do iniciador do serviço de aplicativo.
+   {: tip}
 
 4. Nomeie seu app, selecione sua linguagem e clique em **Criar**.
 
-Ótimo início! Você acabou de criar um app.
+   Ótimo início! Você acabou de criar um app.
 
-Para inspecionar seu código, clique em **Fazer download do código** na página de detalhes do app. Veja o `README.md` no arquivo compactado transferido por download para descobrir se precisa executar mais ações para que seu app entre em execução.
-{: tip}
+   Para inspecionar seu código, clique em **Fazer download do código** na página de detalhes do app. Veja o `README.md` no arquivo compactado transferido por download para descobrir se precisa executar mais ações para que seu app entre em execução.
+   {: tip}
 
 ## Etapa 2: Incluir recursos
 {: #addResources}

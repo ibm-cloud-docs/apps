@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -83,11 +83,11 @@ solicitação de assinatura de certificado.
 
 Quando você usar um domínio customizado, para entregar o certificado SSL, use os terminais da região a seguir para fornecer a rota da URL que é alocada para a sua organização no {{site.data.keyword.Bluemix_notm}}:
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 Para fazer upload de um certificado para seu aplicativo:
@@ -168,4 +168,4 @@ tipos de certificados a seguir são suportados no
 
 Para obter mais informações, veja [Importando certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-Para excluir um certificado ou substituir um certificado existente por um novo, acesse **Gerenciar** > **Conta** > **Organizações do Cloud Foundry**. Em seguida, clique em **Visualizar detalhes** > **Editar organização** > **Domínios**. No menu de ações adicionais para a organização, clique em **Remover da organização**.
+Para excluir um certificado ou substituir um certificado existente por um novo, acesse **Gerenciar** > **Conta** > **Organizações do Cloud Foundry**. Em seguida, na coluna de ação, selecione **Domínios** no menu de ações adicionais. No menu de ações adicionais para a organização, clique em **Remover da organização**.

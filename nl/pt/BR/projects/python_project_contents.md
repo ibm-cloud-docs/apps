@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -10,7 +10,7 @@ lastupdated: "2018-05-22"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Arquivos de apps Python
+# Arquivos de app Python
 {: #python-project-files}
 
 Para apps Python, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
@@ -55,7 +55,7 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 5. Conteúdo de um diretório bluemix do app Python gerado" caption-side="top"}
 
-| Diretório `./chart/<projectname>/` | Descrição |
+|Diretório `./chart/<projectname>/ ` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
