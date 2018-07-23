@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Choose a BFF starter kit for your language and framework requirements. You can f
 
 Microservice apps provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated apps include all the dependencies required both for the microservice itself, and for any attached cloud service.
 
-Choose a micro-service starter for your language and framework requirements. You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+Choose a micro-service starter kit for your language and framework requirements. You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
