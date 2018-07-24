@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -23,7 +23,7 @@ Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittst
 ## Apps mit Toolchains bereitstellen
 {: #toolchains_getting_started}
 
-Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started). 
+Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
 
@@ -38,7 +38,7 @@ IBM Cloud bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line 
 Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
 {:shortdesc}
 
-Laden Sie zunächst die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunter und installieren Sie sie.
+Bevor Sie beginnen, müssen Sie die [{{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunterladen und installieren](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet) "><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools herunterladen" /></a>
@@ -77,8 +77,8 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
 
-  5. Führen Sie unter <var class="keyword varname">neues_Verzeichnis</var> mit dem Befehl `ibmcloud app push` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen zum Befehl `ibmcloud app push` finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
+  5. Führen Sie unter <var class="keyword varname">neues Verzeichnis</var> mit dem Befehl `ibmcloud dev deploy` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](docs/cli/idt/commands.html#deploy).
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 
   6. Greifen Sie auf Ihre App zu, indem Sie zu https://<var class="keyword varname" data-hd-keyref="app_url">App-URL</var>.<span class="keyword" data-hd-keyref="APPDomain">App-Domänenname</span> navigieren.

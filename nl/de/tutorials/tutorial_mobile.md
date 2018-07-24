@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,111 +15,106 @@ lastupdated: "2018-05-22"
 # Mobile Anwendung mit einem Starter-Kit erstellen
 {: #tutorial}
 
-Sie können eine mobile App aus einem entsprechenden grundlegenden Starter erstellen. Darin erfahren Sie, wie die erforderlichen Tools installiert werden, und lernen die einzelnen Schritte zur Ausführung der App in Xcode und Android Studio kennen.
+{{site.data.keyword.Bluemix}} stellt Starter-Kits für Mobilgeräte bereit, die Sie bei der schnellen Erstellung einer mobilen App unterstützen. Wählen Sie in den Starter-Kits des App-Service eine Sprache, ein Framework und Tools aus, um mit der Arbeit mit einer vorkonfigurierten angepassten App zu beginnen. In diesem Lernprogramm erfahren Sie, wie Sie die erforderlichen Tools installieren, wie Sie die App erstellen und lokal ausführen und wie Sie die App in der Cloud bereitstellen.
 {: shortdesc}
 
-## Tools installieren
-{: #before-you-begin}
+## Schritt 1: Tools installieren
+{: #install-tools}
 
-Installieren Sie die [Entwicklertools](/docs/cli/idt/index.html#create){: new_window}.
+Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Vorgehensweise zur Erstellung Ihrer App auswählen
-{: #choose_how}
+Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 
-Sie können eine App mithilfe einer der folgenden Methoden erstellen:
-- Webbasierte [{{site.data.keyword.dev_console}}](#create-devex)
-- Lokale befehlsgesteuerte [{{site.data.keyword.dev_cli_notm}}](#create-cli)
-
-## App mit der {{site.data.keyword.dev_console}} erstellen
+## Schritt 1: App mit {{site.data.keyword.dev_console}} erstellen
 {: #create-devex}
 
 1. Erstellen Sie eine {{site.data.keyword.dev_console}}-App in {{site.data.keyword.Bluemix}}.
+2. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit auf der Basis der gewünschten Features aus. Wählen Sie für eine Watson Language-Anwendung beispielsweise **Swift Kitura** aus.
+3. Geben Sie Ihren App-Namen ein. Verwenden Sie im Rahmen dieses Lernprogramms `WatsonApp`.
+4. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie im Rahmen dieses Lernprogramms `Swift`.
+5. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
+6. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
+7. Klicken Sie auf **Erstellen**.
 
-    1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit auf der Grundlage der gewünschten Funktionalitäten aus. Wechseln Sie für eine Watson Language-Anwendung beispielsweise zu **Watson Language** und klicken Sie auf **Starter-Kit auswählen**.
-
-    2. Geben Sie Ihren App-Namen ein. Verwenden Sie im Rahmen dieses Lernprogramms `WatsonApp`.   
-
-    3. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie im Rahmen dieses Lernprogramms `Swift`.
-
-    4. Klicken Sie auf **Erstellen**.
-
-### Optional: Services hinzufügen
+## Schritt 3: Ressourcen hinzufügen (optional)
 {: #add-services}
 
-1. Wählen Sie Ihre App auf der Seite **Apps** aus.
+Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
 
-2. Klicken Sie auf **Service hinzufügen**.
+1. Wählen Sie im Fenster des App-Service **Ressource hinzufügen** aus.
+2. Wählen Sie den Typ des gewünschten Service aus. Wählen Sie beispielsweise **Daten** > **Weiter** > **Cloudant** > **Weiter** aus.
+3. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
+4. Klicken Sie auf **Erstellen**.
 
-3. Wählen Sie den Typ des gewünschten Service aus. Wählen Sie im Rahmen dieses Lernprogramms **Sicherheit** > **Weiter** > **App-ID** > **Weiter** aus.
+## Schritt 4: DevOps-Toolchain erstellen
+{: #add-toolchain}
 
-4. Geben Sie Ihren Servicenamen ein und klicken Sie auf **Erstellen**.
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsplattform - z. B. Kubernetes oder Cloud Foundry - angepasst.
 
-5. Weitere Informationen zum Konfigurieren der Authentifizierung finden Sie unter [Identitätsprovider konfigurieren ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/appid/identity-providers.html){: new_window}.
+Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuous Delivery aktivieren, um Builds, Tests und Bereitstellungen über die Delivery Pipeline und GitHub zu automatisieren.
 
-6. Weitere Informationen zum Konfigurieren von Analysen finden Sie unter [Einführung in {{site.data.keyword.mobileanalytics_short}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/mobileanalytics/index.html){: new_window}.
+1. Klicken Sie im Fenster des App-Service auf **In Cloud bereitstellen**.
+2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie die Bereitstellungsmethode ein, indem Sie die Anweisungen für die ausgewählte Methode ausführen.
 
-7. Weitere Informationen zum Konfigurieren von {{site.data.keyword.cloudant_short_notm}} finden Sie unter [Einführung in {{site.data.keyword.cloudant_short_notm}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/Cloudant/index.html){: new_window}.
+    * Führen Sie die Bereitstellung für einen Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
 
-8. Weitere Informationen zum Konfigurieren von {{site.data.keyword.objectstorageshort}} finden Sie unter [Einführung in {{site.data.keyword.objectstorageshort}} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/ObjectStorage/index.html){: new_window}.
+    * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
 
-9. Weitere Informationen zum Hinzufügen von Push-Benachrichtigungen finden Sie in der [Dokumentation zu Push-Benachrichtigungen](/docs/services/mobilepush/c_overview_push.html#overview-push).
+## Schritt 5: App erstellen und lokal ausführen
+{: #build-run}
 
-### App-Code generieren
-{: #generate-code}
+Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Toolchain erstellt. Eine Toolchain erstellt ein Git-Repository für die App, in dem Sie den Code anzeigen können. Führen Sie diese Schritte aus, um auf Ihr Repository zuzugreifen. Sie können die App zu Testzwecken lokal erstellen, bevor Sie sie in der Cloud bereitstellen.
 
-1. Wählen Sie Ihre App auf der Seite **Apps** aus.
+1. Klicken Sie im Fenster des App-Service auf **Code herunterladen** oder **Repository klonen**, um lokal mit dem Code zu arbeiten.
+2. Importieren Sie die App in die integrierte Entwicklungsumgebung.
+3. Ändern Sie den Code.
+4. Richten Sie die [Git-Authentifizierung](/docs/services/ContinuousDelivery/git_working.html#git_authentication) ein, indem Sie ein persönliches Zugriffstoken hinzufügen.
+5. Melden Sie sich bei der {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle an. Wenn in Ihrer Organisation föderierte Anmeldungen verwendet werden, wählen Sie die Option `-sso` aus.
 
-2. Klicken Sie auf **Code herunterladen**, um Ihr App-Archiv herunterzuladen.
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### Arbeit an Ihrer App beginnen
-{: #code}
+6. Legen Sie die Zielorganisation und den Zielbereich fest.
 
-Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. Erweitern Sie die archivierte Datei.
+7.  Rufen Sie die Berechtigungsnachweise ab.
 
-2. Navigieren Sie zum neuen App-Verzeichnis.
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. Fahren Sie in der {{site.data.keyword.dev_cli_notm}} fort.
+8. Stellen Sie sicher, dass Docker ausgeführt wird, und erstellen Sie die App in einem lokalen Entwicklungscontainer im Verzeichnis.
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## App mit der {{site.data.keyword.dev_cli_notm}} erstellen
-{: #create-cli}
+9. Führen Sie die App in einem lokalen Entwicklungscontainer aus.
 
-1. Stellen Sie sicher, dass Sie die [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html) installieren.
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. Navigieren Sie in Ihrer Terminal-Eingabeaufforderung zu einem lokalen Verzeichnis Ihrer Wahl und führen Sie den folgenden Befehl aus.
-
-	```
-	ibmcloud dev create
-	```
-	{: codeblock}
-
-3. Geben Sie bei entsprechender Aufforderung die folgenden Werte an:
-
-	* Wählen Sie den App-Typ 'Mobile Client', Option 2, aus.
-	* Wählen Sie die Implementierungssprache 'iOS Swift', Option 3, aus.
-	* Wählen Sie das Starter-Kit 'Mobile App: Basic', Option 1, aus.
-	* Geben Sie einen Namen für Ihre App ein: `MobileBasicProject`
-
-    Hinweis: Die tatsächlichen Auswahlnummern können sich mit Toolerweiterungen ändern.
-
-4. Wenn Sie Services zu Ihrer App hinzufügen möchten, geben Sie an der Eingabeaufforderung `y` ein und beantworten Sie die verbleibenden Fragen.
-
-5. Wenn Ihr `MobileBasicProject` erfolgreich erstellt und gespeichert wurde, navigieren Sie zum Ordner `MobileBasicProject/MobileBasicProject-Swift`.
+10.  Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
 
 ### Swift-App in Xcode ausführen
 {: #run_swift}
 
 1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um die Schritte zur Konfiguration Ihrer App zu überprüfen.
-
 2. Öffnen Sie Ihr Terminal, navigieren Sie zu Ihrem App-Ordner und führen Sie die folgenden Befehle aus:
     1. Führen Sie `pod setup` aus, wenn Sie Ihr CocoaPods-Repository einrichten müssen.
     2. Führen Sie `pod update` aus, wenn Sie Ihre vorhandenen Pods aktualisieren müssen.
     3. Führen Sie `pod install` aus, um die Pods für Ihre App zu installieren.
-
 3. Öffnen Sie Ihren Xcode-Arbeitsbereich `<appname>.xcworkspace`.
-
 4. Führen Sie Ihre App aus.
 
 ### Cordova-App in Xcode ausführen
@@ -128,9 +123,7 @@ Beginnen Sie, mit Ihrer heruntergeladenen App zu arbeiten:
 Falls Sie ausgewählt haben, Cordova als Ihre Implementierungssprache zu verwenden, befolgen Sie diese Anweisungen.
 
 1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
-
 2. Öffnen Sie Ihre App `platforms/ios` in Xcode.
-
 3. Führen Sie Ihre App aus.
 
 ### Cordova-App in Android Studio ausführen
@@ -139,11 +132,8 @@ Falls Sie ausgewählt haben, Cordova als Ihre Implementierungssprache zu verwend
 Verwenden Sie diesen Abschnitt, wenn Sie Cordova als Plattform Ihrer mobilen App verwenden möchten.
 
 1. Extrahieren Sie die Datei `BasicProject-Cordova.zip`.
-
 2. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
-
 3. Öffnen Sie Ihre App `platforms/android` in Android Studio.
-
 4. Führen Sie Ihre App aus.
 
 ### Android-App in Android Studio ausführen
@@ -152,7 +142,41 @@ Verwenden Sie diesen Abschnitt, wenn Sie Cordova als Plattform Ihrer mobilen App
 Verwenden Sie diesen Abschnitt, wenn Sie Android als Plattform Ihrer mobilen App verwenden möchten.
 
 1. Öffnen Sie die Datei `README.md` in einem Markdown Viewer, um Ihre App zu konfigurieren.
-
 2. Öffnen Sie Ihre App `BasicProject-Android` in Android Studio.
-
 3. Führen Sie Ihre App aus.
+
+## Schritt 6: In der Cloud bereitstellen
+{: #deploy}
+
+### Bereitstellung: Toolchain verwenden
+
+Für die Bereitstellung der App in {{site.data.keyword.cloud_notm}} stehen mehrere Möglichkeiten zur Verfügung, eine DevOps-Toolchain ist jedoch für die Bereitstellung von Produktions-Apps am besten geeignet. Mit einer DevOps-Toolchain können Sie ohne großen Aufwand Bereitstellungen in vielen Umgebungen automatisieren und schnell Überwachungs-, Protokollierungs- und Alert-Services hinzufügen, die Sie bei der Verwaltung Ihrer ständig weiterentwickelten App unterstützen.
+
+Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus. Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
+
+Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
+
+1. Klicken Sie im Fenster mit den App-Details auf **Toolchain anzeigen**.
+
+2. Klicken Sie auf **Delivery Pipeline**. Hier können Sie Builds starten, die Bereitstellung verwalten sowie Protokolle und den Verlauf anzeigen.
+
+### Bereitstellung: {{site.data.keyword.dev_cli_short}} verwenden
+
+Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## Schritt 7: Ausführung der App verifizieren
+{: #verify}
+
+Nach der Bereitstellung der App verweist die DevOps-Pipeline bzw. die Befehlszeile auf die URL für Ihre App, z. B. `abc-devhost.mybluemix.net`. Rufen Sie diese URL im Browser auf.
