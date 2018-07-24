@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,16 +11,15 @@ lastupdated: "2018-05-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introduzione al file Compose
+# Introduzione a un file Docker Compose
 {: #compose-file}
 
-Per le applicazioni Compose, le seguenti informazioni sono un inventario di quello che normalmente trovi in {{site.data.keyword.Bluemix}}. Quando crei un kit starter, questi file sono creati per te. Se stai migrando un'applicazione per essere ospitata in {{site.data.keyword.Bluemix_notm}}, potresti voler esaminare queste informazioni per evitare potenziali conflitti.
+Per le applicazioni Docker Compose, le seguenti informazioni sono un inventario di quello che normalmente trovi in {{site.data.keyword.Bluemix}}. Quando crei un kit starter, questi file sono creati per te. Se stai migrando un'applicazione per essere ospitata in {{site.data.keyword.Bluemix_notm}}, potresti voler esaminare queste informazioni per evitare potenziali conflitti.
 {:shortdesc}
 
-Il file [Compose](https://docs.docker.com/compose/overview/) definisce le informazioni per l'esecuzione delle applicazioni con più contenitori.
+Il file [Docker Compose](https://docs.docker.com/compose/overview/) definisce le informazioni per l'esecuzione delle applicazioni con più contenitori.
 
-Specifica la versione del file Compose utilizzata in modo che sia 2.0 o successiva, ad esempio:
-`version: '2'`
+Specifica la versione del file Docker Compose utilizzata in modo che sia 2.0 o successiva, ad esempio:`version: '2'`
 
 Devi anche definire i servizi. Il seguente esempio proviene da un'applicazione Node:
 
@@ -50,14 +49,14 @@ services:
     image: mongo
 ```
 
-I servizi `web` e `mongo` sono definiti e ognuno di essi ha delle configurazioni che sono definite nella [documentazione](https://docs.docker.com/compose/compose-file/compose-file-v2/) di Docker-Compose.
+I servizi `web` e `mongo` sono definiti e ognuno di essi ha delle configurazioni che sono definite nella [documentazione](https://docs.docker.com/compose/compose-file/compose-file-v2/) di Docker Compose.
 
 Le configurazioni più rilevanti sono di seguito elencate:
 
-* build: gli attributi context e Dockerfile non sono necessari in questo esempio perché sono i valori predefiniti, ma possono essere sovrascritti in questo formato. L'attributo context definisce il percorso del nome del Dockerfile che è specificato nell'attributo Dockerfile.
+* `build`: gli attributi context e Dockerfile non sono necessari qui perché sono i valori predefiniti, ma possono essere sovrascritti in questo formato. L'attributo context definisce il percorso del nome del Dockerfile che è specificato nell'attributo Dockerfile.
 
-* tty: specificando questo attributo, i contenitori possono rimanere in esecuzione e non terminare immediatamente, che è richiesto per il supporto di Docker-Compose.
+* `tty`: specificando questo attributo, i contenitori possono continuare l'esecuzione e non vengono immediatamente terminati, cosa necessaria per il supporto di Docker Compose.
 
-* command: questo attributo specifica il comando da eseguire all'interno dei contenitori.
+* `command`: questo attributo specifica il comando da eseguire all'interno dei contenitori.
 
-* image e container_name: questi attributi specificano i nomi dell'immagine e dei contenitori.
+* `image` e `container_name`: questi attributi specificano i nomi dell'immagine e dei contenitori.

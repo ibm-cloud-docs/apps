@@ -260,8 +260,7 @@ separa i nomi parametro con delle virgole. L'interfaccia riga di comando `ibmclo
         OK
         ```
 
-    * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti,
-utilizza l'opzione `-l` e specifica la destinazione fornita dal software di gestione di log di terze parti. Ad esempio:
+    * Per creare un'istanza del servizio che scarica informazioni in un software di gestione di log di terze parti, utilizza l'opzione `-l`. Specifica la destinazione fornita dal software di gestione dei log di terze parti. Ad esempio:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com

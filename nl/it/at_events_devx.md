@@ -23,7 +23,7 @@ In qualità di responsabile della sicurezza, revisore o gestore, puoi utilizzare
 
 Il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} registra le attività avviate dall'utente che modificano lo stato di un servizio in {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ).
 
-## Dove visualizzare gli eventi 
+## Dove visualizzare gli eventi
 {: #ui}
 
 Gli eventi {{site.data.keyword.cloudaccesstrailshort}} sono disponibili nel dominio dell'account {{site.data.keyword.cloudaccesstrailshort}} disponibile nella regione di {{site.data.keyword.Bluemix_notm}} in cui sono stati generati gli eventi {{site.data.keyword.dev_console}}.
@@ -33,28 +33,28 @@ Per iniziare a monitorare le azioni dell'utente, consulta l'[Esercitazione intro
 ## Elenco di eventi
 {: #events}
 
-La seguente tabella elenca le azioni che generano un evento: 
+La seguente tabella elenca le azioni che generano un evento:
 
 <table>
-  <caption>Azioni che generano eventi </caption>
+  <caption>Azioni che generano eventi</caption>
   <tr>
     <th>Azioni</th>
 	  <th>Descrizione</th>
   <tr>
   <tr>
     <td>bluemix-developer-experience.app.create</td>
-	  <td>Viene generato un evento quando un utente crea un'applicazione. </td>
+	  <td>Viene generato un evento quando un utente crea un'applicazione.</td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.read</td>
-	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Un utente scarica il codice dell'applicazione. </li> <li>Un utente scarica il file delle credenziali utilizzando la CLI {{site.data.keyword.dev_console}}.</li> <li>L'infrastruttura dell'esperienza di sviluppo legge le credenziali delle risorse associate a un'applicazione.</li> <li>Un utente visualizza l'elenco delle applicazioni, ad esempio, quando l'utente visualizza l'elenco delle applicazioni nella console {{site.data.keyword.dev_console}} o tramite la CLI {{site.data.keyword.dev_cli_short}}.</li></ul></td>
+	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Un utente scarica il codice dell'applicazione.</li> <li>Un utente scarica il file delle credenziali utilizzando la CLI {{site.data.keyword.dev_console}}.</li> <li>L'infrastruttura dell'esperienza di sviluppo legge le credenziali delle risorse associate a un'applicazione.</li> <li>Un utente visualizza l'elenco delle applicazioni, ad esempio, quando l'utente visualizza l'elenco delle applicazioni nella console {{site.data.keyword.dev_console}} o tramite la CLI {{site.data.keyword.dev_cli_short}}.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Viene modificato qualcosa riguardo l'applicazione, ad esempio, quando un utente modifica il nome dell'applicazione. </li><li>Viene fornita e aggiunta una nuova risorsa a un'applicazione. </li><li>Una risorsa esistente viene aggiunta a un'applicazione. </li><li>Un servizio viene rimosso da un'applicazione. </li><li>Viene generato il codice per un'applicazione. </li><li>Una toolchain DevOps viene aggiunta tramite l'esperienza di sviluppo, ad esempio, selezionando *Distribuisci a Cloud*.</li></ul></td>
+	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Viene modificato qualcosa riguardo l'applicazione, ad esempio, quando un utente modifica il nome dell'applicazione. </li><li>Viene fornita e aggiunta una nuova risorsa a un'applicazione.</li><li>Una risorsa esistente viene aggiunta a un'applicazione.</li><li>Un servizio viene rimosso da un'applicazione.</li><li>Viene generato il codice per un'applicazione.</li><li>Una toolchain DevOps viene aggiunta tramite l'esperienza di sviluppo, ad esempio, selezionando *Distribuisci a Cloud*.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>
-	  <td>Viene generato un evento quando un utente elimina un'applicazione. </td>
+	  <td>Viene generato un evento quando un utente elimina un'applicazione.</td>
   </tr>
 </table>
