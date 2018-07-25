@@ -331,7 +331,7 @@ Suprima las instancias del servicio que no sean necesarias o elimine el límite 
   * Para suprimir una instancia del servicio, puede utilizar la consola de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos.
 
     Para utilizar la consola de {{site.data.keyword.Bluemix_notm}} para suprimir una instancia de servicio, siga estos pasos:
-	  1. Desde el panel de control, pulse el menú **Acciones** para el servicio que desea suprimir.
+	  1. En el panel de control Servicios, pulse el menú **Acciones** para el servicio que desea suprimir.
 	  2. Pulse **Suprimir servicio**. Se le solicitará que cambie las etapas de la app a la que está vinculada la instancia de servicio.
 
     Para utilizar la interfaz de línea de mandatos para suprimir una instancia de servicio, siga los pasos siguientes:
@@ -384,7 +384,7 @@ Puede aumentar la cuota de memoria de su cuenta o reducir la memoria que utiliza
 
     Si utiliza la consola de {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
-    1. En el panel de control, seleccione la app. Se abre la página de detalles de la app.
+    1. Seleccione la app en el panel de control. Se abre la página de detalles de la app.
     2. En el panel tiempo de ejecución, puede reducir el límite máximo de memoria o el número de instancias de la app, o ambos, para la app que desee.
 
     Si utiliza la interfaz de línea de mandatos `cf`, efectúe los pasos siguientes:

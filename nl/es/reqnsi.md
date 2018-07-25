@@ -233,7 +233,7 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l` y especifique el destino que proporciona el software de gestión de registro del otro proveedor. Por ejemplo:
+    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l`. Especifique el destino que proporciona el software de gestión de registros de terceros. Por ejemplo:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
