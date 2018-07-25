@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-06-14"
 # Creación de solicitudes de firma de certificado
 {: #ssl_csr}
 
-Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
+Puede proteger las aplicaciones subiendo certificados SSL y limitando el acceso a las aplicaciones.
 {:shortdesc}
 
 Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe crear una solicitud de firma de certificado (CSR) en el servidor.
@@ -61,7 +61,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
     privatekey.key
 ```
 
-La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
+La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las aplicaciones que tienen problemas de compatibilidad con el certificado SHA-256.
 {: tip}
 
 Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública.
@@ -78,11 +78,11 @@ solicitud de firma de certificado.
 
 Cuando utiliza un dominio personalizado, para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.Bluemix_notm}}:
 
-  * US-South: secure.us-south.bluemix.net
-  * US-East: secure.us-east.bluemix.net
-  * EU-DE: secure.eu-de.bluemix.net
-  * EU-GB: secure.eu-gb.bluemix.net
-  * AU-SYD: secure.au-syd.bluemix.net
+* US-South: secure.us-south.bluemix.net
+* US-East: secure.us-east.bluemix.net
+* EU-DE: secure.eu-de.bluemix.net
+* EU-GB: secure.eu-gb.bluemix.net
+* AU-SYD: secure.au-syd.bluemix.net
 
 
 Para cargar un certificado para la aplicación:
@@ -132,7 +132,7 @@ protege mediante una contraseña.
 
     Si habilita esta opción cargando un archivo de almacén de confianza de certificado de cliente, a los usuarios que intenten acceder un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
 
-  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las apps {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
+  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las aplicaciones {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
 
   #### Almacén de confianza de certificado de cliente
 
@@ -148,4 +148,4 @@ protege mediante una contraseña.
 
 Para obtener más información consulte [Importación de certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios**. En el menú de acciones adicional de la organización, pulse **Eliminar de la organización**.
+Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, en la columna de acción, seleccione **Dominios** en el menú de acciones adicional. En el menú de acciones adicional de la organización, pulse **Eliminar de la organización**.

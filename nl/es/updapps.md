@@ -86,7 +86,6 @@ Para eliminar una ruta huérfana, ejecute el siguiente mandato:
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 

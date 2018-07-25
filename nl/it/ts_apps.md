@@ -345,7 +345,7 @@ Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite
   * Per eliminare un'istanza dei servizi, puoi utilizzare la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando.
 
     Per utilizzare la console {{site.data.keyword.Bluemix_notm}} per eliminare un'istanza del servizio, completa la seguente procedura:
-	  1. Nel dashboard Servizi, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
+	  1. Dal tuo dashboard, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
 	  2. Fai clic su **Elimina servizio**. Ti viene richiesto di preparare nuovamente l'applicazione a cui era associata l'istanza del servizio.
 
     Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
@@ -409,7 +409,7 @@ Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizza
 
     Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
-    1. Seleziona la tua applicazione dal dashboard. Viene visualizzata la pagina dei dettagli dell'applicazione.
+    1. Dal tuo dashboard, seleziona la tua applicazione. Viene visualizzata la pagina dei dettagli dell'applicazione.
     2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 
     Se utilizzi l'interfaccia riga di comando `cf`, completa la seguente procedura:

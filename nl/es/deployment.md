@@ -26,7 +26,7 @@ Para los usuarios de la app de {{site.data.keyword.Bluemix_notm}} **, el **flujo
  1. A través de un cortafuegos, con prevención de intrusiones y seguridad de la red.
  2. A través de IBM DataPower Gateway, con proxy inverso y proxy de terminación de SSL.
  3. A través del direccionador de la red.
- 4. Alcanza el tiempo de ejecución de la app en el agente de ejecución de droplet (DEA).
+ 4. Alcanza el tiempo de ejecución de la aplicación en el agente de ejecución de droplet (DEA).
 
 El *desarrollador de* {{site.data.keyword.Bluemix_notm}} sigue dos flujos principales: para inicio de sesión y para desarrollo y despliegue.
 
@@ -58,7 +58,7 @@ Para los *administradores* de {{site.data.keyword.Bluemix_notm}} dedicado y {{si
 Además de los usuarios suscritos a estos métodos, un equipo de operaciones de seguridad de IBM autorizado realiza diversas tareas de seguridad operativa, como las siguientes:
  * Exploraciones de vulnerabilidad. En {{site.data.keyword.Bluemix_notm}} local, usted es el propietario de la seguridad física y de las exploraciones que se realicen en el cortafuegos.
  * Gestión de accesos de usuario.
- * Refuerzo del sistema operativo mediante la app periódica de arreglos con IBM Endpoint Manager.
+ * Refuerzo del sistema operativo mediante la aplicación periódica de arreglos con IBM Endpoint Manager.
  * Gestión de riesgos con protección frente a intrusiones.
  * Supervisión de la seguridad con QRadar.
  * Informes de seguridad disponibles en la página de administración.
