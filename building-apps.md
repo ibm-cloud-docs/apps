@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -43,7 +43,7 @@ The {{site.data.keyword.Bluemix_notm}} catalog lists the infrastructure and plat
 
 Each app comes with a getting started section that helps you get all the software and content you need to start working.
 
-In your dashboard, click your app, and then click **Getting Started**, which can help you get the software you need to develop your app, point you to the source code, and help you deploy your app for the first time.
+In your dashboard, click your app, and then click **Getting Started**, which can help you get the software that you need to develop your app, point you to the source code, and help you deploy your app for the first time.
 
 ## Next steps
 {: #next}

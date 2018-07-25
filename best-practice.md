@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -14,13 +14,13 @@ Build your app in {{site.data.keyword.Bluemix_notm}} to take advantage of all th
 
 ## Build your app to be independent of topology
 
-In a non-cloud environment, your app might use a particular deployment topology. However, your app topology might change in cloud apps, because the cloud-ready apps and services allow immediate scalability changes. The scalability changes include dynamic scaling and manually resizing the number of instances of an app.
+In a non-cloud environment, your app might use a particular deployment topology. However, your app topology might change in cloud apps because the cloud-ready apps and services allow immediate scalability changes. The scalability changes include dynamic scaling and manually resizing the number of instances of an app.
 
 Build your app to be as generic and stateless as possible to keep your app from being affected by scalability changes.
 
-## Assume that the local File System isn't permanent
+## Assume that the local file system isn't permanent
 
-Because an app instance can be moved, deleted, or duplicated on cloud, don't rely on the files that are written to the file system. If an app uses the local file system as a cache of frequently used information including app logs, the information is lost when the instance is shut down and restarted at a different location or a different VM.
+Don't rely on the files that are written to the file system because an app instance can be moved, deleted, or duplicated on cloud. If an app uses the local file system as a cache of frequently used information including app logs, the information is lost when the instance is shut down and restarted at a different location or a different VM.
 
 You can store information in a service, such as an SQL or NoSQL database instead of the local file system. In a dynamic cloud environment, it's also critical to have your logs available on a service that outlives the app instances where the logs are generated.
 
