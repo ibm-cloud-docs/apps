@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -22,17 +22,17 @@ Vous pouvez utiliser un kit de démarrage pour que votre application démarre ra
 
 Les kits de démarrage sont disponibles dans de nombreuses catégories, telles que les suivantes :
 
-* [Watson](https://console.bluemix.net/developer/watson){:new_window}
-* [Apple](https://console.bluemix.net/developer/appledevelopment){:new_window}
-* [Mobile](https://console.bluemix.net/developer/mobile){:new_window}
-* [Application Web](https://console.bluemix.net/developer/appservice){:new_window}
-* [Sécurité](https://console.bluemix.net/developer/security){:new_window}
+* [Watson ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/watson){:new_window}
+* [Apple ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appledevelopment){:new_window}
+* [Mobile ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/mobile){:new_window}
+* [Application Web ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appservice){:new_window}
+* [Sécurité ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/security){:new_window}
 <!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finance](https://console.bluemix.net/developer/finance){:new_window}
+* [Finance ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/finance){:new_window}
 
 ## Avant de commencer
 
-[Inscrivez-vous ](https://console.bluemix.net){: new_window} pour obtenir un compte {{site.data.keyword.cloud_notm}}. Indiquez votre adresse électronique, votre nom, le nom de votre société, votre région et votre numéro de téléphone.
+[Inscrivez-vous ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} pour obtenir un compte {{site.data.keyword.cloud_notm}}. Indiquez votre adresse électronique, votre nom, le nom de votre société, votre région et votre numéro de téléphone.
 
 Vous n'avez pas besoin d'une carte de crédit pour obtenir un compte gratuit, mais si vous entrez un numéro de carte de crédit, vous pourrez accéder à davantage de ressources et vous comprendrez mieux tout ce que {{site.data.keyword.cloud_notm}} peut vous offrir.
 
@@ -45,15 +45,15 @@ Vous n'avez pas besoin d'une carte de crédit pour obtenir un compte gratuit, ma
 
 3. Sélectionnez un kit de démarrage de votre choix, lisez les détails, puis cliquez sur **Créer**.
 
-  Pour voir ce qui est inclus dans le kit de démarrage, développez la vignette sur le tableau de bord des kits de démarrage de service d'application.
-  {: tip}
+   Pour voir ce qui est inclus dans le kit de démarrage, développez la vignette sur le tableau de bord des kits de démarrage de service d'application.
+   {: tip}
 
 4. Donnez un nom à votre application, sélectionnez votre langage, puis cliquez sur **Créer**.
 
-C'est un bon début ! Vous venez de créer une application.
+   C'est un bon début ! Vous venez de créer une application.
 
-Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des détails d'application. Vérifiez le fichier `README.md` dans le fichier compressé téléchargé pour savoir si vous devez exécuter d'autres actions pour rendre votre application de démarrage active.
-{: tip}
+   Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des détails d'application. Vérifiez le fichier `README.md` dans le fichier compressé téléchargé pour savoir si vous devez exécuter d'autres actions pour rendre votre application de démarrage active.
+   {: tip}
 
 ## Etape 2 : Ajouter des ressources
 {: #addResources}

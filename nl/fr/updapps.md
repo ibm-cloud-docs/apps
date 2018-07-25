@@ -91,7 +91,6 @@ Pour retirer une route orpheline, exécutez la commande suivante :
 
 ```
 ibmcloud app route-delete domain -n hostname -f
-
 ```
 {: tip}
 

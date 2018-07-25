@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-14"
+lastupdated: "2018-07-03"
 
 ---
 
@@ -73,11 +73,11 @@ Pour pouvoir télécharger des certificats, vous devez créer une demande de sig
 
 Lorsque vous utilisez un domaine personnalisé, pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}} :
 
-  * Sur des Etats-Unis : secure.us-south.bluemix.net
-  * Est des Etats-Unis : secure.us-east.bluemix.net
-  * EUROPE-ALLEMAGNE : secure.eu-de.bluemix.net
-  * Europe-Royaume-Uni : secure.eu-gb.bluemix.net
-  * Australie-Sydney : secure.au-syd.bluemix.net
+* Sur des Etats-Unis : secure.us-south.bluemix.net
+* Est des Etats-Unis : secure.us-east.bluemix.net
+* EUROPE-ALLEMAGNE : secure.eu-de.bluemix.net
+* Europe-Royaume-Uni : secure.eu-gb.bluemix.net
+* Australie-Sydney : secure.au-syd.bluemix.net
 
 
 Pour télécharger un certificat pour votre application, procédez comme suit :
@@ -142,4 +142,4 @@ certificat SSL émis pour l'organisation.
 
 Pour plus d'informations, voir [Importation de certificats SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
-Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Cliquez ensuite sur **Afficher les détails** > **Editer l'organisation** > **Domaines**. Dans le menu des actions supplémentaires pour l'organisation, cliquez sur **Retirer de l'organisation**.
+Pour supprimer un certificat ou remplacer un certificat existant par un nouveau, accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**. Puis, dans la colonne Action, sélectionnez **Domaines** dans le menu des actions supplémentaires. Cliquez sur **Retirer de l'organisation** dans le menu des actions supplémentaires correspondant à l'organisation.

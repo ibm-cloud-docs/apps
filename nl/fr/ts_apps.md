@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-09"
 
 ---
 
@@ -26,14 +26,14 @@ Des problèmes d'ordre général liés à la gestion des applications peuvent su
 ## Des modifications n'ont pas été sauvegardées
 {: #ts_unsaved_changes}
 
-Lorsque vous naviguez dans la page des détails de l'application, vous ne pourrez peut-être pas effectuer d'action et vous serez invité à sauvegarder vos modifications pour pouvoir continuer.
+Lorsque vous cliquez sur des éléments de la page des détails de l'application, il est possible que vous ne puissiez pas effectuer d'action et vous pouvez être invité à sauvegarder vos modifications avant de pouvoir continuer.
 
 Lorsque vous essayez de vérifier votre application ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
 {: tsSymptoms}
 
 `Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
 
-Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant de quitter la page.
+Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant d'accéder à une autre page.
 {: tsCauses}
 
 Fermez la fenêtre de message puis cliquez sur **REINITIALISER** dans votre panneau d'exécution.
@@ -50,7 +50,7 @@ Lorsqu'une région {{site.data.keyword.Bluemix_notm}} n'est plus disponible, les
 {{site.data.keyword.Bluemix_notm}} ne fournit pas encore le basculement automatique d'une région vers une autre.
 {: tsCauses}
 
-Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intelligent entre plusieurs adresses IP et configurer manuellement vos paramètres DNS pour activer le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}}. NSONE, Akamai et Dyn sont des fournisseurs DNS qui proposent cette capacité.
+Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intelligent entre plusieurs adresses IP et configurer manuellement vos paramètres DNS pour activer le basculement automatique entre les régions {{site.data.keyword.Bluemix_notm}}. NSONE, Akamai et Dyn sont des fournisseurs DNS qui proposent cette fonction.
 {: tsResolve}
 
 Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses IP publiques des régions {{site.data.keyword.Bluemix_notm}} dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la commande `nslookup`. Vous pouvez, par exemple, entrer la commande suivante dans une fenêtre de ligne de commande.
@@ -64,7 +64,7 @@ nslookup stage1.mybluemix.net
 
 Vous ne pouvez pas activer le mode débogage si votre version de machine virtuelle Java (JVM) est la version 8 ou une version antérieure.
 
-Après que vous avez sélectionné **Activer le débogage d'application**, les outils tentent de faire passer l'application en mode débogage. Le plan de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
+Une fois l'option **Activer le débogage d'application** sélectionnée, les outils tentent de faire passer l'application en mode débogage. Le plan de travail Eclipse entame alors une session de débogage. Lorsque les outils parviennent à activer le mode débogage, le statut de l'application Web affiche `Mise à jour du mode`, `Développement`, et `Débogage`.
 {: tsSymptoms}
 
 En revanche, si les outils ne parviennent pas à activer le mode débogage, le statut de l'application Web indique uniquement `Mise à jour du mode` et `Développement`, sans afficher `Débogage`. Les outils peuvent également afficher le message d'erreur suivant dans la vue Console :
@@ -142,7 +142,7 @@ Lorsque vous essayez de réutiliser le nom de l'application, vous recevez le mes
 
 `Le nom est déjà utilisé par une autre application.`
 
-Lorsqu'une application est supprimée, sa route, autrement dit, son URL, n'est pas automatiquement supprimée. Par conséquent, elle n'est pas disponible pour être réutilisée. Vous devez accéder à l'espace où l'application a été créée afin de supprimer la route et pouvoir réutiliser l'application.
+Lorsqu'une application est supprimée, sa route, autrement dit, son URL, n'est pas automatiquement supprimée et n'est pas disponible pour être réutilisée. Vous devez accéder à l'espace où l'application a été créée afin de supprimer la route et pouvoir réutiliser l'application.
 {: tsCauses}
 
 Procédez comme suit pour supprimer la route inutilisée :
@@ -270,10 +270,10 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.Bluemix_notm}}, cons
 {: tsResolve}
 
   * Réessayez l'action :
-    * Rechargez la page en appuyant sur la touche F5 de votre clavier ou en cliquant sur le bouton d'actualisation. Si cette étape ne fonctionne pas, videz le cache de votre navigateur et supprimez les cookies, puis rechargez la page.
+    * Rechargez la page en appuyant sur la touche F5 de votre clavier ou en cliquant sur le bouton **Actualiser**. Si cette étape ne fonctionne pas, videz le cache de votre navigateur et supprimez les cookies, puis rechargez la page.
     * Utilisez un navigateur différent.
     * Redémarrez votre routeur, votre modem et votre ordinateur. Le réamorçage de ces unités peut éliminer diverses erreurs à l'origine de l'erreur 502.
-  * Patientez et essayez à nouveau ultérieurement. Dans certaines instances, des problèmes temporaires peuvent se produire avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
+  * Patientez et essayez à nouveau ultérieurement. Des problèmes temporaires peuvent se produire avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.Bluemix_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
   * Si le problème persiste, contactez le support {{site.data.keyword.Bluemix_notm}}. Voir [Contact du support {{site.data.keyword.Bluemix_notm}} ![ Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/support/index.html#contacting-bluemix-support){: new_window} pour plus d'informations.
 
 ## Dépassement du quota de disque
@@ -299,16 +299,15 @@ Utilisez l'une des méthodes suivantes pour spécifier votre quota de disque. Le
 	cf push appname -p app_path -k <disk_quota>
 	```
 
-
 ## Les applications Android ne peuvent pas recevoir de {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
 Dans certaines régions où Google n'est pas accessible, les applications Android ne peuvent pas recevoir les notifications que vous envoyez via le service IBM {{site.data.keyword.mobilepushshort}}. Dans ce cas, une solution de contournement consiste à utiliser des services tiers.
 
-Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre application {{site.data.keyword.Bluemix_notm}} et envoyez un message aux unités enregistrées. Toutefois, les applications qui sont développées sur la plateforme Android ne peuvent pas recevoir vos notifications dans certaines régions.
+Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre application {{site.data.keyword.Bluemix_notm}} et envoyez un message aux unités enregistrées. Toutefois, les applications qui sont développées sous Android ne peuvent pas recevoir vos notifications dans certaines régions.
 {: tsSymptoms}
 
-Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service GCM (Google Cloud Messaging) pour diffuser les notifications aux applications mobiles développées sur la plateforme Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où les applications Android ne peuvent pas accéder au service GCM, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
+Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service GCM (Google Cloud Messaging) pour diffuser les notifications aux applications mobiles développées sous Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où les applications Android ne peuvent pas accéder au service GCM, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
 Comme solution palliative, utilisez des services de tiers qui ne sont pas basés sur les services GCM, par exemple [Pushy ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://pushy.me){: new_window}, [getui ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.getui.com/){: new_window} et [jpush ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.jpush.cn/){: new_window}.
@@ -317,14 +316,14 @@ Comme solution palliative, utilisez des services de tiers qui ne sont pas basés
 ## La limite de services de l'organisation est dépassée
 {: #ts_servicelimit}
 
-Si vous utilisez un compte d'essai, il se peut que vous ne puissiez pas déployer d'application dans {{site.data.keyword.Bluemix_notm}} si vous avez atteint le nombre maximal de services pour votre organisation.
+Si vous utilisez un compte Lite, il se peut que vous ne puissiez pas déployer d'application dans {{site.data.keyword.Bluemix_notm}} si vous avez atteint le nombre maximal de services pour votre organisation.
 
 Lorsque vous tentez de créer une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
 `BXNUI2032E: La ressource <service_instances> n'a pas été créée. Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Message Cloud Foundry : "You have exceeded your organization's services limit."`
 
-Cette erreur survient lorsque vous avez atteint le nombre maximal d'instances de service dont vous pouvez disposer pour votre compte. Le nombre maximal d'instances de service pour un compte d'essai est 10.
+Cette erreur survient lorsque le nombre maximal d'instances de service dont vous pouvez disposer pour votre compte est dépassé.
 {: tsCauses}
 
 Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la limite portant sur le nombre de services que vous pouvez utiliser.
@@ -333,7 +332,7 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
   * Pour supprimer une instance de service, vous pouvez utiliser la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
 
     Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord Services, cliquez sur le menu **Actions** du service que vous désirez supprimer.
+	  1. Dans le tableau de bord, cliquez sur le menu **Actions** du service que vous désirez supprimer.
 	  2. Cliquez sur **Supprimer le service**. Vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée.
 
     Pour utiliser l'interface de ligne de commande pour supprimer une instance de service, procédez comme suit :
@@ -341,7 +340,7 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
 	  4. Supprimez l'instance de service en entrant `cf delete-service <service_instance_name>`.
 	  5. Une fois l'instance de service supprimée, vous pouvez reconstituer l'application à laquelle l'instance de service était liée en entrant `cf restage <appname>`.
 
-  * Pour supprimer la limite portant sur le nombre d'instances de service dont vous pouvez disposer, convertissez votre compte d'essai en compte payant. Pour plus d'informations sur la conversion de votre compte d'essai en compte payant, voir [Comment changer votre plan](/docs/pricing/index.html#changing).
+  * Pour supprimer la limite de nombre d'instances de service dont vous pouvez disposer, mettez à niveau votre compte Lite vers un compte facturable. Pour plus d'informations, voir [Mise à niveau de votre compte](/docs/account/index.html#upgrade-to-paygo).
 
 ## Impossible d'exécuter des fichiers exécutables sur {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
@@ -368,25 +367,25 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## La limite mémoire de l'organisation est dépassée
 {: #ts_outofmemory}
 
-Si vous utilisez un compte d'essai, il se peut que vous ne puissiez pas déployer d'application dans {{site.data.keyword.Bluemix_notm}} si vous avez atteint la limite de mémoire de votre organisation. Vous pouvez réduire la quantité de mémoire que vos applications utilisent ou augmenter le quota de mémoire de votre compte. Le quota de mémoire maximal pour un compte d'essai est de 2 Go. Il ne peut être augmenté qu'en passant à un compte payant.
+Si vous utilisez un compte Lite, il se peut que vous ne puissiez pas déployer d'application dans {{site.data.keyword.Bluemix_notm}} si vous avez atteint la limite de mémoire de votre organisation. Vous pouvez réduire la quantité de mémoire que vos applications utilisent ou augmenter le quota de mémoire de votre compte. Le quota de mémoire maximal pour un compte Lite est de 256 Go. Il ne peut être augmenté qu'en passant à un compte facturable.
 
 Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
-`FAILED Erreur de serveur, code statut : 400, code d'erreur : 100005, message : vous avez dépassé la limite mémoire de votre organisation.`
+`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-Cette erreur survient lorsque la quantité de mémoire restante pour votre organisation est inférieure à la quantité de mémoire requise par l'application à déployer. Le quota de mémoire maximal pour un compte d'essai est 2 Go.
+Cette erreur survient lorsque la quantité de mémoire restante pour votre organisation est inférieure à la quantité de mémoire requise par l'application à déployer. Le quota de mémoire maximal pour un compte Lite est de 256 Go.
 {: tsCauses}
 
 Vous pouvez augmenter le quota de mémoire de votre compte ou diminuer la mémoire que vos applications utilisent.
 {: tsResolve}
 
-  * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte d'essai en compte payant. Pour plus d'informations sur la conversion de votre compte d'essai en compte payant, voir [comptes payants](/docs/pricing/index.html#pay-accounts).
+  * Pour augmenter le quota de mémoire de votre compte, convertissez votre compte Lite en compte facturable. Pour plus d'informations, voir [Mise à niveau de votre compte](/docs/account/index.html#upgrade-to-paygo).
   * Pour réduire la quantité de mémoire consommée par vos applications, utilisez la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande `cf`.
 
     Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
-    1. Dans le tableau de bord Applications, sélectionnez votre application. La page des détails de l'application s'ouvre.
+    1. Dans votre tableau de bord, sélectionnez votre application. La page des détails de l'application s'ouvre.
     2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximale, le nombre d'instances d'application, ou les deux, pour votre application.
 
     Si vous utilisez l'interface de ligne de commande `cf`, procédez comme suit :
@@ -497,7 +496,6 @@ Le nom d'hôte que vous spécifiez doit être unique dans le domaine que vous ut
     cf push appname -p app_path -n host_name
     ```
 
-
 ## Les applications WAR ne peuvent pas être envoyées à l'aide de la commande cf push
 {: #ts_cf_war}
 
@@ -522,7 +520,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 ```
 Pour plus d'informations sur la commande `cf push`, entrez `cf push -h`.
 
-
 ## Les caractères codés sur deux octets ne s'affichent pas correctement lorsque des applications sont envoyées par commande push vers {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
@@ -545,7 +542,6 @@ Utilisez le code suivant dans votre servlet ou votre fichier JSP :
     ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
-
 
 ## Les applications Node.js ne peuvent pas être déployées
 {: #ts_nodejs_deploy}
@@ -615,7 +611,6 @@ Utilisez l'une des méthodes suivantes, selon la cause du problème :
 
 Pour obtenir des conseils supplémentaires relatifs aux applications Node.js, voir [Tips for Node.js Applications ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-
 ## Des erreurs de configuration figurent dans le fichier `server.xml` après avoir importé une application {{site.data.keyword.Bluemix_notm}} Liberty dans Eclipse
 {: #ts_eclipse}
 
@@ -630,11 +625,10 @@ Le pack de construction Liberty utilise le fichier `server.xml` pour configurer 
 Pour résoudre ce problème, supprimez le fichier server.xml du projet. Le pack de construction crée le fichier `server.xml` de manière dynamique lorsque vous envoyez par commande push l'application sous forme d'application WAR. Pour plus d'informations, voir [Liberty for Java](/docs/runtimes/liberty/index.html).
 {: tsResolve}
 
-
 ## Les applications ne peuvent pas être transférées à l'aide de packs de construction personnalisés
 {: #ts_bp_compilation}
 
-Il se peut que vous ne puissiez pas déployer une application dans {{site.data.keyword.Bluemix_notm}} à l'aide d'un pack de construction personnalisé, si les scripts que ce dernier contient ne sont pas exécutables.
+Il se peut que vous ne puissiez pas déployer d'application dans {{site.data.keyword.Bluemix_notm}} à l'aide d'un pack de construction personnalisé si les scripts que ce dernier contient ne sont pas des fichiers exécutables.
 
 Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}} à l'aide d'un pack de construction personnalisé, le message d'erreur `La constitution de l'application a échoué ; par conséquent, il n'y a pas d'instance à afficher` s'affiche.
 {: tsSymptoms}
@@ -642,7 +636,7 @@ Lorsque vous déployez une application dans {{site.data.keyword.Bluemix_notm}} �
 Ce problème peut se produire si des scripts (tels que le script de détection, le script de compilation ou le script de publication) ne sont pas exécutables.
 {: tsCauses}
 
-Vous pouvez utiliser la commande [git update ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://git-scm.com/docs/git-update-index){: new_window} pour redéfinir chaque script comme exécutable. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
+Vous pouvez utiliser la commande [Git update ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://git-scm.com/docs/git-update-index){: new_window} pour faire en sorte que chaque script soit exécutable. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Impossible de déployer une application depuis Delivery Pipeline dans {{site.data.keyword.Bluemix_notm}} Continuous Delivery

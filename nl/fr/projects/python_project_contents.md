@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -28,25 +28,25 @@ Le tableau suivant répertorie les répertoires et les fichiers couramment inclu
 | Dockerfile-tools | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
 | LICENSE | Fichier de licence |
 | README.md | Description d'application |
-{: caption="Tableau 1. Contenu du répertoire racine généré dans une application Python " caption-side="top"}
+{: caption="Tableau 1. Contenu du répertoire racine généré dans une application Python" caption-side="top"}
 
-|Répertoire  `./public/` | Description |
+| Répertoire  `./public/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | swagger.yml | Spécification Swagger pour la description d'API REST |
 | index.html | Balisage de squelette pour des applications Web |
-{: caption="Tableau 2. Contenu du répertoire public généré dans une application Python " caption-side="top"}
+{: caption="Tableau 2. Contenu du répertoire public généré dans une application Python" caption-side="top"}
 
-|Répertoire `./server/`| Description |
+| Répertoire `./server/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | `__init__.py` | Marque les répertoires en tant que répertoires de packages Python |
-{: caption="Tableau 3. Contenu du répertoire server généré dans une application Python " caption-side="top"}
+{: caption="Tableau 3. Contenu du répertoire server généré dans une application Python" caption-side="top"}
 
-|Répertoire `./tests/`| Description |
+| Répertoire `./tests/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | app_tests.py | Scénarios de test de serveur Python |
-{: caption="Tableau 4. Contenu du répertoire tests généré dans une application Python " caption-side="top"}
+{: caption="Tableau 4. Contenu du répertoire tests généré dans une application Python" caption-side="top"}
 
-|Répertoire  `./.bluemix/` | Description |
+| Répertoire  `./.bluemix/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script de construction du conteneur |
 | deploy.json | Informations de déploiement |
@@ -55,7 +55,7 @@ Le tableau suivant répertorie les répertoires et les fichiers couramment inclu
 | toolchain.yml | Définition de chaîne d'outils IBM Cloud |
 {: caption="Tableau 5. Contenu du répertoire Bluemix généré dans une application Python" caption-side="top"}
 
-|Répertoire `./chart/<projectname>/`| Description |
+| `./chart/<projectname>Répertoire /` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Graphique Helm |
 | `./chart/<projectname>/values.yaml` | Valeurs du graphique Helm |
