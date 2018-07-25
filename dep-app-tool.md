@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ After you install the command line interface, you can get started:
 
   **Note**: If the value contains a space, you must add single or double quotation marks around `username`, `org_name`, and  `space_name`, for example, `-o "my org"`.
 
-  5. From <var class="keyword varname">your_new_directory</var>, redeploy your app to {{site.data.keyword.Bluemix_notm}} by using the `ibmcloud dev deploy` command. For more information, see [the CLI documentation](docs/cli/idt/commands.html#deploy).
+  5. From <var class="keyword varname">your_new_directory</var>, redeploy your app to {{site.data.keyword.Bluemix_notm}} by using the `ibmcloud dev deploy` command. For more information, see [the CLI documentation](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
