@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 {:new_window: target="_blank"}
@@ -57,4 +57,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions. It also provides a [serverless framework SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](docs/openwhisk/openwhisk_goserverless.html){:new_window} that enables serverless applications.
+{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions. It also provides a [serverless framework SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} that enables serverless applications.
