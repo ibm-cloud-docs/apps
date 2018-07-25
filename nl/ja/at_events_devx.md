@@ -21,14 +21,14 @@ lastupdated: "2018-06-29"
 セキュリティー担当者、監査員、または管理者として、お客様は {{site.data.keyword.cloudaccesstrailfull}} サービスを使用して、ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix_notm}} の {{site.data.keyword.dev_console}} とどのように対話しているかをトラッキングすることができます。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ) についてのページを参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} でサービスの状態を変更する、ユーザーが開始したアクティビティーを記録します。詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ) についてのページを参照してください。
 
 ## イベントの表示先
 {: #ui}
 
 {{site.data.keyword.cloudaccesstrailshort}} イベントは、{{site.data.keyword.dev_console}} イベントが生成される {{site.data.keyword.Bluemix_notm}} 領域内にある {{site.data.keyword.cloudaccesstrailshort}} アカウント・ドメインで使用可能です。
 
-ユーザーのアクションのモニタリングを開始するには、[入門チュートリアル](/docs/services/cloud-activity-tracker/index.html)を参照してください。
+ユーザーのアクションのモニターを開始するには、『[入門チュートリアル](/docs/services/cloud-activity-tracker/index.html)』を参照してください。
 
 ## イベント・リスト
 {: #events}
@@ -47,11 +47,11 @@ lastupdated: "2018-06-29"
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.read</td>
-	  <td>以下のいずれかのシチュエーションが発生すると、イベントが生成されます。</br><ul><li>ユーザーがアプリケーション・コードをダウンロードする。</li> <li>ユーザーが {{site.data.keyword.dev_console}} CLI を使用して資格情報ファイルをダウンロードする。</li> <li>開発者エクスペリエンス・インフラストラクチャーがアプリケーションと関連付けられたリソースの資格情報を読み取る。</li> <li>ユーザーがアプリケーションのリストを表示する (例えばユーザーが {{site.data.keyword.dev_console}} コンソールで、または {{site.data.keyword.dev_cli_short}} CLI を使用してアプリケーションのリストを表示するなど)。</li></ul></td>
+	  <td>以下のいずれかのシチュエーションが発生すると、イベントが生成されます。 </br><ul><li>ユーザーがアプリケーション・コードをダウンロードする。</li> <li>ユーザーが {{site.data.keyword.dev_console}} CLI を使用して資格情報ファイルをダウンロードする。</li> <li>開発者エクスペリエンス・インフラストラクチャーがアプリケーションと関連付けられたリソースの資格情報を読み取る。</li> <li>ユーザーがアプリケーションのリストを表示する (例えばユーザーが {{site.data.keyword.dev_console}} コンソールで、または {{site.data.keyword.dev_cli_short}} CLI を使用してアプリケーションのリストを表示するなど)。</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>以下のいずれかのシチュエーションが発生すると、イベントが生成されます。</br><ul><li>アプリケーションに何らかの変更が行われる (例えばユーザーがアプリケーションの名前を変更するなど)。</li><li>新規リソースがプロビジョンされ、アプリケーションに追加される。</li><li>既存のリソースがアプリケーションに追加される。</li><li>サービスがアプリケーションから削除される。</li><li>アプリケーション用にコードが生成される。</li><li>開発者エクスペリエンスにより (例えば*「クラウドにデプロイ (Deploy to Cloud)」*を選択するなどして) DevOps ツールチェーンが追加される。</li></ul></td>
+	  <td>以下のいずれかのシチュエーションが発生すると、イベントが生成されます。 </br><ul><li>アプリケーションに何らかの変更が行われる (例えばユーザーがアプリケーションの名前を変更するなど)。 </li><li>新規リソースがプロビジョンされ、アプリケーションに追加される。</li><li>既存のリソースがアプリケーションに追加される。</li><li>サービスがアプリケーションから削除される。</li><li>アプリケーション用にコードが生成される。</li><li>開発者エクスペリエンスにより (例えば*「クラウドにデプロイ (Deploy to Cloud)」*を選択するなどして) DevOps ツールチェーンが追加される。</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>

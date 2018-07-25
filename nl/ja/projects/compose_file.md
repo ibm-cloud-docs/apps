@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,15 +11,15 @@ lastupdated: "2018-05-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Compose ファイルからの開始
+# Docker Compose ファイルからの開始
 {: #compose-file}
 
-次の情報は、Compose アプリの場合に {{site.data.keyword.Bluemix}} で通常見られるものの一覧です。 スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でアプリをホストにマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
+Docker Compose アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれている内容のインベントリーは以下の情報のとおりです。スターター・キットを作成すると、以下のファイルが作成されます。 {{site.data.keyword.Bluemix_notm}} でアプリをホストにマイグレーションする場合、競合の可能性を回避するためにこの情報を確認する必要があります。
 {:shortdesc}
 
-[Compose](https://docs.docker.com/compose/overview/) ファイルは、複数コンテナーのアプリケーションを実行するための情報を定義します。
+[Docker Compose](https://docs.docker.com/compose/overview/) ファイルは、複数コンテナーのアプリケーションを実行するための情報を定義します。
 
-使用する Compose ファイルのバージョンは、`version: '2'` のように 2.0 以降を指定します。
+使用する Docker Compose ファイルのバージョンには、`version: '2'` のように 2.0 以降を指定します。
 
 また、サービスを定義する必要があります。 以下は、Node アプリからの例です。
 
@@ -49,14 +49,14 @@ services:
     image: mongo
 ```
 
-サービス `web` および `mongo` が定義されており、それぞれの構成は Docker-Compose [資料](https://docs.docker.com/compose/compose-file/compose-file-v2/)で定義されています。
+サービス `web` および `mongo` が定義されており、それぞれの構成は Docker Compose の [資料](https://docs.docker.com/compose/compose-file/compose-file-v2/)で定義されています。
 
 以下に、最も関連性の高い構成をリストします。
 
-* build: context 属性と Dockerfile 属性はデフォルト値であるためここでは不要ですが、この形式で上書きすることができます。 context 属性は、Dockerfile 属性で指定された Dockerfile の名前へのパスを定義します。
+* `build`: context 属性と Dockerfile 属性はデフォルト値であるためここでは不要ですが、この形式で上書きすることができます。context 属性は、Dockerfile 属性で指定された Dockerfile の名前へのパスを定義します。
 
-* tty: この属性を指定することで、コンテナーがすぐに終了することなく稼働したままとなるようにできます。これは、Docker-Compose サポートに必要です。 
+* `tty`: この属性を指定することで、コンテナーは実行を続行でき、すぐには終了しません。これは、Docker Compose のサポートに必要です。
 
-* command: この属性は、コンテナー内部で実行されるコマンドを指定します。
+* `command`: この属性は、コンテナー内で実行されるコマンドを指定します。
 
-* image および container_name: これらの属性は、イメージの名前とコンテナーの名前を指定します。
+* `image` および `container_name`: これらの属性は、イメージとコンテナーの名前を指定します。

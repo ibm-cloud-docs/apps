@@ -13,7 +13,7 @@ lastupdated: "2018-06-26"
 # アプリへのサービスの追加
 {: #add_service}
 
-{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、「アプリ概要」ページからリソースを追加することができます。しかし、アプリのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
+{{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、「アプリ概要」ページからリソースを追加することができます。 しかし、アプリのコンテキスト外部で、{{site.data.keyword.Bluemix_notm}} カタログからリソースを直接プロビジョンすることもできます。
 {: shortdesc}
 
 リソースのインスタンスを要求して、これをアプリとは無関係に使用することも、「アプリ概要」ページからリソース・インスタンスをアプリに追加することもできます。 特定のタイプのリソース (サービス) を {{site.data.keyword.Bluemix_notm}} カタログから直接プロビジョンできます。
@@ -82,17 +82,17 @@ ibmcloud service bind appname service_instance
 ## 複数の {{site.data.keyword.Bluemix_notm}} デプロイメント環境でのサービスへのアクセス
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}} は多くのデプロイメント・オプションを提供します。ユーザーは、ある環境で実行中のサービスに別の環境からアクセスすることができます。例えば、Cloud Foundry で実行されているサービスに、Kubernetes クラスターで実行されているアプリケーションからアクセスすることができます。
+{{site.data.keyword.Bluemix_notm}} は多くのデプロイメント・オプションを提供します。ユーザーは、ある環境で実行中のサービスに別の環境からアクセスすることができます。 例えば、Cloud Foundry で実行されているサービスに、Kubernetes クラスターで実行されているアプリケーションからアクセスすることができます。
 
 ### 例: Kubernetes ポッドからの Cloud Foundry 上の Compose サービス・インスタンスへのアクセス
 
-{{site.data.keyword.composeForMongoDB}} や {{site.data.keyword.composeForRedis}} などのすべての Compose サービス・インスタンスが有料インスタンスです。Kubernetes 内の {{site.data.keyword.composeForMongoDB}} のような Compose サービス・インスタンスの使用に慣れたら、Compose によって提供されるインスタンスの資格情報を Cloud Foundry でインポートできます。
+{{site.data.keyword.composeForMongoDB}} や {{site.data.keyword.composeForRedis}} などのすべての Compose サービス・インスタンスが有料インスタンスです。 Kubernetes 内の {{site.data.keyword.composeForMongoDB}} のような Compose サービス・インスタンスの使用に慣れたら、Compose によって提供されるインスタンスの資格情報を Cloud Foundry でインポートできます。
 
 1. **「資格情報」**に移動して、インスタンスから資格情報を取得します。
 
 2. チャート・ディレクトリー (例えば、`chart/project/`) から `values.yml` ファイルを開きます。
 
-3. サービス環境で参照される値を設定します。{{site.data.keyword.composeForMongoDB}} での例:
+3. サービス環境で参照される値を設定します。 {{site.data.keyword.composeForMongoDB}} での例:
 
   ```
   services:
@@ -149,7 +149,7 @@ ibmcloud service bind appname service_instance
 ### 秘密 (オプション)
 {: #migrate_secrets_optional}
 
-`deployment.yml` ファイルや `values.yml` ファイルで資格情報を公開しないでください。Base64 エンコード・ストリングを使用するか、鍵で資格情報を暗号化することができます。詳しくは、[Creating a Secret Using kubectl create secret ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) および [How to encrypt your data ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) を参照してください。
+`deployment.yml` ファイルや `values.yml` ファイルで資格情報を公開しないでください。 Base64 エンコード・ストリングを使用するか、鍵で資格情報を暗号化することができます。 詳しくは、[Creating a Secret Using kubectl create secret ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) および [How to encrypt your data ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) を参照してください。
 
 ## 外部アプリの使用可能化
 {: #accser_external}
@@ -231,7 +231,7 @@ ibmcloud service bind appname service_instance
         OK
         ```
 
-    * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用し、そのサード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。 例えば次のようにします。
+    * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用します。 サード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。例えば次のようにします。
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
