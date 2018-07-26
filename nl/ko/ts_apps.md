@@ -71,7 +71,7 @@ JVM(Java Virtual Machine)이 버전 8 이하인 경우에는 디버그 모드를
 
 ```
 bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
+com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
 at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
 at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
@@ -331,7 +331,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
   * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
 
     {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
-	  1. 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
+	  1. 서비스 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
 	  2. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 바인드한 앱을 다시 스테이징하라는 프롬프트가 표시됩니다.
 
     명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
@@ -339,7 +339,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 	  4. `cf delete-service <service_instance_name>`.
 	  5. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`.
 
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오. 
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
 
 ## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
@@ -379,7 +379,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve}
 
-  * 계정의 메모리 할당량을 늘리려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오. 
+  * 계정의 메모리 할당량을 늘리려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 `cf` 명령행 인터페이스를 사용하십시오.
 
     {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.
@@ -645,7 +645,7 @@ Liberty 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시되면 Liberty 빌드
 ## {{site.data.keyword.Bluemix_notm}} Continuous Delivery에서 Delivery Pipeline의 앱을 배치할 수 없음
  {: #ts_devops_to_bm}
 
- `manifest.yml` 파일이 앱에 없는 경우에는 {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 수 없을 수 있습니다. 
+ `manifest.yml` 파일이 앱에 없는 경우에는 {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 수 없을 수 있습니다.
 
  {{site.data.keyword.contdelivery_short}}에서 {{site.data.keyword.deliverypipeline}}을 사용하여 앱을 배치할 때 `Unable to detect a supported application type`이라는 오류 메시지가 표시될 수 있습니다.
  {: tsSymptoms}

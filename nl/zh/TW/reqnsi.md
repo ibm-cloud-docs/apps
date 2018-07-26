@@ -134,7 +134,7 @@ ibmcloud service bind appname service_instance
         value: {{ .Values.services.mongo.ca }}
   ```
 
-6. 在應用程式中，使用環境變數來起始提供給您的服務 SDK。
+6. 在應用程式中，使用環境變數來啟動提供給您的服務 SDK。
 
   ```javascript
     const serviceManger = require('./services/serivce-manage.js');
@@ -241,7 +241,7 @@ ibmcloud service bind appname service_instance
         OK
         ```
 
-    * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 `-l` 選項，然後指定協力廠商日誌管理軟體所提供的目的地。例如：
+    * 若要建立將資訊排除至協力廠商日誌管理軟體的服務實例，請使用 `-l` 選項。請指定協力廠商日誌管理軟體提供的目的地。例如：
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com

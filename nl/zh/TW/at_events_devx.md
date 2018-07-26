@@ -21,7 +21,7 @@ lastupdated: "2018-06-29"
 身為安全性管理者、審核員或管理員的您，可以使用 {{site.data.keyword.cloudaccesstrailfull}} 服務追蹤使用者和應用程式在 {{site.data.keyword.Bluemix_notm}} 中與 {{site.data.keyword.dev_console}} 互動的情況。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者起始，且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱[關於 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov )。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者啟動，且會變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱[關於 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov )。
 
 ## 在哪裡檢視事件
 {: #ui}

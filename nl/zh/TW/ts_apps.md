@@ -151,19 +151,19 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   1. 輸入下列指令，檢查路徑是否屬於現行空間：
 
     ```
-    cf routes
+cf routes
     ```
 
   2. 如果路徑不屬於現行空間，請輸入下列指令來切換至其所屬空間或組織：
 
     ```
-    cf target -o org_name -s space_name
+cf target -o org_name -s space_name
     ```
 
   3. 輸入下列指令，來刪除應用程式路徑：
 
     ```
-    cf delete-route domain_name -n host_name
+cf delete-route domain_name -n host_name
     ```
 
   例如：
@@ -275,7 +275,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
     
     * 使用不同的瀏覽器。
     * 重新啟動路由器、數據機及電腦。將這些裝置重新開機可清除導致錯誤 502 的許多種錯誤。
-  * 等待並於稍後再試一次。暫時發生的問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時發生的問題獲得解決。
+  * 等待並於稍後再試一次。暫時發生的問題可能是由於網際網路服務供應商或 {{site.data.keyword.Bluemix_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
   * 如果問題仍然存在，請與 {{site.data.keyword.Bluemix_notm}} 支援中心聯絡。如需相關資訊，請參閱[聯絡 {{site.data.keyword.Bluemix_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-bluemix-support){: new_window}。
 
 ## 已超出磁碟配額
@@ -297,9 +297,9 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 	disk_quota: <disk_quota>
 	```
   * 當您將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時，使用 **-k** 選項與 `cf push` 指令搭配：
-    ```
+```
 	cf push appname -p app_path -k <disk_quota>
-   	```
+	```
 
 ## Android 應用程式無法收到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -334,7 +334,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
   * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面。
 
     若要使用 {{site.data.keyword.Bluemix_notm}} 主控台來刪除服務實例，請完成下列步驟：
-	  1. 從儀表板中，按一下您要刪除之服務的**動作**功能表。
+	  1. 在「服務」儀表板中，按一下您要刪除之服務的**動作**功能表。
 	  2. 按一下**刪除服務**。系統會提示您重新編譯打包服務實例所連結的應用程式。
 
     若要使用指令行介面來刪除服務實例，請完成下列步驟：
@@ -387,7 +387,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
     如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 
-    1. 從儀表板中，選取應用程式。即會開啟應用程式詳細資料頁面。
+    1. 從儀表板選取您的應用程式。即會開啟應用程式詳細資料頁面。
     2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體上限及（或）應用程式實例的數目。
 
     如果您使用 `cf` 指令行介面，請完成下列步驟：

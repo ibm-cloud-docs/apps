@@ -25,7 +25,7 @@ lastupdated: "2018-06-26"
 
 * {{site.data.keyword.Bluemix_notm}} 콘솔에서 {{site.data.keyword.Bluemix_notm}} 카탈로그를 봅니다.
 * ibmcloud 명령행 인터페이스에서 `ibmcloud service offerings` 명령을 사용합니다.
-* 사용자 고유 애플리케이션: [GET /v2/services 서비스 API ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}를 사용하십시오. 
+* 사용자 고유 애플리케이션: [GET /v2/services 서비스 API ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}를 사용하십시오.
 
 애플리케이션을 개발할 때 필요한 서비스를 선택할 수 있습니다. 이를 선택하면 {{site.data.keyword.Bluemix_notm}}가 서비스를 프로비저닝합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다.
 
@@ -82,13 +82,13 @@ ibmcloud service bind appname service_instance
 ## {{site.data.keyword.Bluemix_notm}} 개발 환경의 서비스에 액세스
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}}에서 다양한 개발 옵션을 제공함에 따라 사용자는 하나의 환경에서 실행되는 서비스에 다른 환경에서 액세스할 수 있습니다. 예를 들어, Cloud Foundry에서 실행되는 서비스가 있는 경우 Kubernetes 클러스터에서 실행되는 애플리케이션에서 해당 서비스에 액세스할 수 있습니다. 
+{{site.data.keyword.Bluemix_notm}}에서 다양한 개발 옵션을 제공함에 따라 사용자는 하나의 환경에서 실행되는 서비스에 다른 환경에서 액세스할 수 있습니다. 예를 들어, Cloud Foundry에서 실행되는 서비스가 있는 경우 Kubernetes 클러스터에서 실행되는 애플리케이션에서 해당 서비스에 액세스할 수 있습니다.
 
 ### 예: Kubernetes 팟(Pod)에서 Cloud Foundry에 있는 Compose 서비스 인스턴스에 액세스
 
-Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또는 {{site.data.keyword.composeForRedis}})는 유료 인스턴스입니다. Compose 서비스 인스턴스(예: Kubernetes의 {{site.data.keyword.composeForMongoDB}})를 사용하는 데 문제가 없으면 Cloud Foundry의 Compose에서 제공된 인스턴스의 신임 정보를 가져올 수 있습니다. 
+Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또는 {{site.data.keyword.composeForRedis}})는 유료 인스턴스입니다. Compose 서비스 인스턴스(예: Kubernetes의 {{site.data.keyword.composeForMongoDB}})를 사용하는 데 문제가 없으면 Cloud Foundry의 Compose에서 제공된 인스턴스의 신임 정보를 가져올 수 있습니다.
 
-1. **신임 정보**로 이동하여 인스턴스에서 신임 정보를 검색하십시오. 
+1. **신임 정보**로 이동하여 인스턴스에서 신임 정보를 검색하십시오.
 
 2. 차트 디렉토리(예: `chart/project/`)에서 `values.yml` 파일을 여십시오.
 
@@ -108,7 +108,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
 
 4. 차트 디렉토리(예: `chart/project/`)에서 `bindings.yml` 파일을 여십시오.
 
-5. `env` 블록이 정의된 위치의 끝 부분에 `values.yml` 파일에 정의된 키-값 참조를 추가하십시오. 
+5. `env` 블록이 정의된 위치의 끝 부분에 `values.yml` 파일에 정의된 키-값 참조를 추가하십시오.
 
   ```
     env:
@@ -203,7 +203,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
 1. 서비스의 인스턴스를 요청하십시오.
     1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 대시보드에서 **리소스 작성**을 클릭하십시오. 카탈로그가 표시됩니다.
     2. 카탈로그에서 서비스 타일을 클릭하여 원하는 서비스를 선택하십시오. 서비스 세부사항 페이지가 열립니다.
-    3. 서비스 창에서 기본 **연결 대상:**: 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다.
+    3. 서비스 창에서 기본 **연결 대상:** 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다.
     4. 필요에 따라 기타 선택사항을 작성하십시오. 그런 다음 **작성**을 클릭하십시오. 서비스 인스턴스가 작성되고 서비스 대시보드가 표시됩니다.
 2. 서비스 대시보드에서 **서비스 신임 정보**를 선택하여 JSON 형식의 신임 정보를 보거나 추가할 수 있습니다. 신임 정보 세트를 선택하고 조치 열에서 **신임 정보 보기**를 클릭하십시오. 표시되는 API 키를 신임 정보로 사용하여 서비스 인스턴스에 연결하십시오.
 
@@ -231,7 +231,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
         OK
         ```
 
-    * 써드파티 로그 관리 소프트웨어로 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하고 써드파티 로그 관리 소프트웨어가 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
+    * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 써드파티 로그 관리 소프트웨어에서 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
                 ibmcloud service user-provided-create testups2 -l syslog://example.com
