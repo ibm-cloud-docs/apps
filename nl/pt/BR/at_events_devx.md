@@ -21,14 +21,14 @@ lastupdated: "2018-06-29"
 Como um responsável pela segurança, auditor ou gerente, é possível usar o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e os aplicativos interagem com o {{site.data.keyword.dev_console}} no {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte  [ Sobre o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ).
+O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra as atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte  [ Sobre o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ).
 
 ## Onde visualizar os eventos
 {: #ui}
 
 Os eventos do {{site.data.keyword.cloudaccesstrailshort}} estão disponíveis no domínio da conta do {{site.data.keyword.cloudaccesstrailshort}} que está disponível na região do {{site.data.keyword.Bluemix_notm}} em que os eventos do {{site.data.keyword.dev_console}} são gerados.
 
-Para começar a monitorar as ações de seu usuário, consulte o [Tutorial de introdução](/docs/services/cloud-activity-tracker/index.html).
+Para começar a monitorar as ações do seu usuário, veja o [Tutorial de Introdução](/docs/services/cloud-activity-tracker/index.html).
 
 ## Lista de eventos
 {: #events}

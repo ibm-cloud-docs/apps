@@ -1,7 +1,7 @@
 ---
 copyright:
 years: 2015, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-12"
 
 ---
 
@@ -11,16 +11,15 @@ lastupdated: "2018-05-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Iniciando com um arquivo do Compose
+# Iniciando com um arquivo do Docker Compose
 {: #compose-file}
 
-Para apps Compose, as informações a seguir são um inventário do que você normalmente localiza no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
+Para apps do Docker Compose, as informações a seguir são um inventário do que você tipicamente encontra no {{site.data.keyword.Bluemix}}. Ao criar um kit do iniciador, esses arquivos são criados para você. Se você estiver migrando um app para hospedar no {{site.data.keyword.Bluemix_notm}}, poderá desejar revisar essas informações para evitar possíveis conflitos.
 {:shortdesc}
 
-O arquivo do [Compor](https://docs.docker.com/compose/overview/) define informações para executar aplicativos de múltiplos contêineres.
+O arquivo do [Docker Compose](https://docs.docker.com/compose/overview/) define informações para executar aplicativos com múltiplos contêineres.
 
-Especifique a versão usada do arquivo do Compose para ser 2.0 ou mais recente, como:
-`version: '2'`
+Especifique a versão do arquivo do Docker Compose, a qual costuma ser 2.0 ou mais recente: `version: '2'`
 
 Você também precisa definir os serviços. O exemplo a seguir é de um app de Nó:
 
@@ -50,14 +49,14 @@ services:
     image: mongo
 ```
 
-Os serviços `web` e `mongo` são definidos e cada um deles tem configurações, que são definidas na [documentação](https://docs.docker.com/compose/compose-file/compose-file-v2/) do Docker Compose.
+Os serviços `web` e `mongo` são definidos e cada um deles possui configurações que são definidas na [documentação](https://docs.docker.com/compose/compose-file/compose-file-v2/) do Docker Compose.
 
 As configurações mais relevantes são listadas como a seguir:
 
-* build: os atributos de contexto e do Dockerfile são desnecessários aqui porque são os valores padrão, mas podem ser substituídos nesse formato. O atributo de contexto define o caminho para o nome do Dockerfile especificado no atributo do Dockerfile.
+* `build`: os atributos context e Dockerfile não são necessários aqui, porque eles são os valores padrão, mas podem ser sobrescritos nesse formato. O atributo de contexto define o caminho para o nome do Dockerfile especificado no atributo do Dockerfile.
 
-* tty: ao especificar esse atributo, os contêineres podem permanecer em execução e não sair imediatamente, que é necessário para o suporte do Docker Compose.
+* `tty`: ao especificar esse atributo, os contêineres podem continuar sendo executados e não sair imediatamente, o que é necessário para o suporte do Docker Compose.
 
-* command: esse atributo especifica o comando a ser executado dentro dos contêineres.
+* `command`: esse atributo especifica o comando a ser executado dentro dos contêineres.
 
-* image e container_name: esses atributos especificam os nomes da imagem e dos contêineres.
+* `image` e `container_name`: esses atributos especificam os nomes da imagem e dos contêineres.

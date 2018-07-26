@@ -124,7 +124,7 @@ Qualquer instância de serviço do Compose, como o {{site.data.keyword.composeFo
         value: {{ .Values.services.mongo.ca }}
   ```
 
-6. Em seu aplicativo, use as suas variáveis de ambiente para iniciar o SDK de serviço fornecido para você.
+6. Em seu aplicativo, use suas variáveis de ambiente para iniciar o SDK do serviço que é fornecido para você.
 
   ```javascript
     const serviceManger = require('./services/serivce-manage.js');
@@ -231,7 +231,8 @@ Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um ap
         OK
         ```
 
-    * Para criar uma instância de serviço que drene informações para um software de gerenciamento de log de terceiro, use a opção `-l` e especifique o destino que o software de gerenciamento de log de terceiro fornece. Por exemplo:
+    * Para criar uma instância de serviço que drena informações para um software de gerenciamento de log de terceiro, use a opção `-l`. Especifique o destino que o software de gerenciamento de log de terceiros fornece. Por
+exemplo:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
@@ -241,7 +242,8 @@ Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um ap
 
     Se desejar atualizar um ou mais parâmetros da instância de serviço fornecida pelo usuário, use o `ibmcloud service user-provided-update`.
 
-    * Para atualizar uma instância de serviço fornecido pelo usuário geral, use a opção **-p** e especifique as chaves e os valores de parâmetro em um objeto JSON. Por exemplo:
+    * Para atualizar uma instância de serviço fornecido pelo usuário geral, use a opção **-p** e especifique as chaves e os valores de parâmetro em um objeto JSON. Por
+exemplo:
 
         ```
         ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
@@ -249,7 +251,8 @@ Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um ap
         OK
         ```
 
-    * Para criar uma instância de serviço que drena informações para um software de gerenciamento de log de terceiro, use a opção `-l`. Por exemplo:
+    * Para criar uma instância de serviço que drena informações para um software de gerenciamento de log de terceiro, use a opção `-l`. Por
+exemplo:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example2.com
@@ -257,7 +260,8 @@ Para criar uma instância de serviço fornecida pelo usuário e ligá-la a um ap
         OK
         ```
 
-2. Bind the service instance to your application by using the `ibmcloud service bind` command. Por exemplo:
+2. Bind the service instance to your application by using the `ibmcloud service bind` command. Por
+exemplo:
 
 	```
 	ibmcloud service bind myapp testups1

@@ -194,7 +194,7 @@ Certifique-se de que você criou um espaço em sua organização atual. Para cri
 
 Tente novamente. Se essa mensagem ocorrer novamente, acesse a página de status do [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou um componente tem um problema.
 
-## Não é possível executar ações solicitadas
+## Não é possível executar as ações solicitadas
 {: #ts_authority}
 
 Não é possível concluir ações sem a autoridade de acesso apropriada.
@@ -327,7 +327,7 @@ Se você for um usuário da conta Lite, talvez não possa criar um app no {{site
 Quando você tentar criar um app no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir será exibida:
 {: tsSymptoms}
 
-`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Cloud Foundry message: "You have exceeded your organization's services limit."`
+`BXNUI2032E: The <service_instances> resource wasn't created. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
 
 Esse erro ocorre quando você excede o limite no número de instâncias de serviço que pode ter para sua conta.
 {: tsCauses}
@@ -338,7 +338,7 @@ Exclua todas as instâncias de serviços que não forem necessárias ou remova o
   * Para excluir uma instância de serviços, é possível usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
 
     Para usar o console do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. Em seu painel, clique no menu **Ações** para o serviço que você deseja excluir.
+	  1. No painel Serviços, clique no menu **Ações** para o serviço que você deseja excluir.
 	  2. Clique em **Excluir serviço**. É solicitado que você remonte o app ao qual a instância de serviço estava ligada.
 
     Para usar a interface de linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
@@ -391,7 +391,7 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 
     Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
 
-    1. Em seu painel, selecione seu app. A página de detalhes do app é aberta.
+    1. Selecione seu app a partir do painel. A página de detalhes do app é aberta.
     2. Na área de janela de tempo de execução, é possível reduzir o limite máximo de memória ou os números de instâncias do app, ou ambos, para seu app.
 
     Se você usar a interface da linha de comandos `cf`, conclua as etapas a seguir:
