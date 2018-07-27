@@ -231,7 +231,7 @@ ibmcloud service bind appname service_instance
         OK
         ```
 
-    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项，然后指定第三方日志管理软件提供的目标。例如：
+    * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项。指定第三方日志管理软件提供的目标。例如：
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com

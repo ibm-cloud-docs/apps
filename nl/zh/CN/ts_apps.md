@@ -339,7 +339,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
   * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 控制台或命令行界面。
 
     要使用 {{site.data.keyword.Bluemix_notm}} 控制台来删除服务实例，请完成以下步骤：
-	  1. 在仪表板中，单击要删除的服务的**操作**菜单。
+	  1. 在“服务”仪表板中，单击要删除的服务的**操作**菜单。
 	  2. 单击**删除服务**。系统会提示您重新编译打包该服务实例所绑定到的应用程序。
 
     要使用命令行界面删除服务实例，请完成以下步骤：
@@ -392,7 +392,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
     如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 
-    1. 在仪表板中，选择应用程序。这将打开应用程序详细信息页面。
+    1. 从仪表板中选择应用程序。这将打开应用程序详细信息页面。
 
     2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
 	
