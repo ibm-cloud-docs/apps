@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud proporciona una CLI sólida así como plugins y extensiones de herrami
 Utilice la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}} para desplegar las apps y las instancias de servicio.
 {:shortdesc}
 
-Antes de empezar, descargue e instale la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
+Antes de empezar, [descargue e instale la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar IBM Cloud Developer Tools" /></a>
@@ -80,8 +80,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
   **Nota**: Si el valor contiene un espacio, debe añadir comillas simples o dobles alrededor de `nombre_usuario`, `nombre_organización` y `nombre_espacio`, por ejemplo, `-o "my org"`.
 
-  5. Desde <var class="keyword varname">nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} mediante el mandato `ibmcloud app push`. Para obtener más información sobre el mandato `ibmcloud app push`, consulte [Carga de una aplicación](/docs/starters/upload_app.html).
+  5. Desde <var class="keyword varname">su_nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} utilizando el mandato `ibmcloud dev deploy`. Para obtener más información, consulte [la documentación de CLI](docs/cli/idt/commands.html#deploy).
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">nombre_app</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. Acceda a su app navegando a https://<var class="keyword varname" data-hd-keyref="app_url">url_app</var>.<span class="keyword" data-hd-keyref="APPDomain">NombreDominioApp</span>.

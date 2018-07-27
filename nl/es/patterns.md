@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Elija el kit de iniciación de BFF correspondiente a su lenguaje y a los requisi
 
 Las apps de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Las apps generadas incluyen todas las dependencias necesarias, tanto para el propio microservicio como para los servicios de nube asociados.
 
-Elija el kit de iniciación de microservicio correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará kits de iniciación para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Elija un kit de iniciación de microservicio para los requisitos de idioma y de infraestructura. Encontrará kits de iniciación para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Móvil
 {: #mobile}
