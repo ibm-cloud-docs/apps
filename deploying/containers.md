@@ -37,8 +37,6 @@ When you create back-end or web-serving apps, you can deploy them to the {{site.
 
 As the toolchain is created, the services that you associated with your app are bound to the Kubernetes cluster by using Kubernetes secrets. Secrets are used to manage the service credentials outside of your running app. The app reads the secrets and then retrieves the values that it needs to start running. Binding services enable you to deploy the app to another Kubernetes environment that might be using production level {{site.data.keyword.cloud_notm}} service instances.
 
-![View Toolchain](images/kubesecrets.png)
-
 If you delete the service or the secrets, you need to manually bind them again or delete and re-create the toolchain.
 {: tip}
 
@@ -55,8 +53,6 @@ For more information, see [Secrets ![External link icon](../../icons/launch-glyp
 {: #bulid-deploy-tc}
 
 The toolchain contains the building stage and the deployment stage.
-
-![View Toolchain](images/deploytoolchain.png)
 
 ### Building stage
 {: #build-stage}
