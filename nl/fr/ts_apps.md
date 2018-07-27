@@ -332,7 +332,7 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
   * Pour supprimer une instance de service, vous pouvez utiliser la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande.
 
     Pour utiliser la console {{site.data.keyword.Bluemix_notm}} afin de supprimer une instance de service, procédez comme suit :
-	  1. Dans le tableau de bord, cliquez sur le menu **Actions** du service que vous désirez supprimer.
+	  1. Dans le tableau de bord Services, cliquez sur le menu **Actions** du service que vous désirez supprimer.
 	  2. Cliquez sur **Supprimer le service**. Vous êtes invité à reconstituer l'application à laquelle l'instance de service était liée.
 
     Pour utiliser l'interface de ligne de commande pour supprimer une instance de service, procédez comme suit :
@@ -385,7 +385,7 @@ Vous pouvez augmenter le quota de mémoire de votre compte ou diminuer la mémoi
 
     Si vous utilisez la console {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
 
-    1. Dans votre tableau de bord, sélectionnez votre application. La page des détails de l'application s'ouvre.
+    1. Sélectionnez votre application dans le tableau de bord. La page des détails de l'application s'ouvre.
     2. Dans le panneau Contexte d'exécution, vous pouvez réduire la limite de mémoire maximale, le nombre d'instances d'application, ou les deux, pour votre application.
 
     Si vous utilisez l'interface de ligne de commande `cf`, procédez comme suit :

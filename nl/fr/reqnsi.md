@@ -140,7 +140,7 @@ Toutes les instances de service Compose, telles {{site.data.keyword.composeForMo
         value: {{ .Values.services.mongo.ca }}
   ```
 
-6. Dans votre application, utilisez vos variables d'environnement afin de lancer le logiciel SDK de service mis à votre disposition.
+6. Dans votre application, utilisez vos variables d'environnement afin de démarrer le logiciel SDK de service mis à votre disposition.
 
   ```javascript
     const serviceManger = require('./services/serivce-manage.js');
@@ -248,7 +248,7 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l` et spécifiez la destination fournie par le logiciel de gestion de journal tiers. Exemple :
+    * Pour créer une instance de service qui envoie des informations à un logiciel de gestion de journal tiers, utilisez l'option `-l`. Indiquez la destination fournie par le logiciel de gestion des journaux tiers. Exemple :
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
