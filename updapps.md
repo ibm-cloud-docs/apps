@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # Creating and using a custom domain
 {: #updatingapps}
 
-You can use the command line or {{site.data.keyword.Bluemix}} Continuous Delivery to update the applications in {{site.data.keyword.Bluemix_notm}}. In many cases, even for the buildpacks such as Node.js, you must also supply a -c parameter to specify which command is used to start your application.
-{:shortdesc}
-
 Domains provide the URL route that is allocated to your organization in {{site.data.keyword.Bluemix_notm}}. To use a custom domain, you must register the custom domain on a public DNS server, configure the custom domain in {{site.data.keyword.Bluemix_notm}}. Then, map the custom domain to the {{site.data.keyword.Bluemix_notm}} system domain on the public DNS server. After your custom domain is mapped to the system domain, requests for your custom domain are routed to your application in {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 You can create and use a custom domain by using either the {{site.data.keyword.Bluemix_notm}} console or the command-line interface.
 
