@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，從使�
 
 「微服務」應用程式提供建置後端微服務的基礎（包括基本性能端點及 REST API）。產生的應用程式包含微服務本身及任何附加之雲端服務所需的所有相依關係。
 
-請針對您的語言及架構需求選擇微服務入門範本。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到「微服務」模式的入門範本套件。
+請針對您的語言及架構需求選擇微服務入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到「微服務」模式的入門範本套件。
 
 ## 行動
 {: #mobile}

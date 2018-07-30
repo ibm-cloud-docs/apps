@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを使用して、アプリおよびサービス・インスタンスをデプロイします。
 {:shortdesc}
 
-開始する前に、{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースをダウンロードしてインストールします。
+開始する前に、[{{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースをダウンロードしてインストールします](/docs/cli/index.html)。
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools のダウンロード" /></a>
@@ -77,8 +77,8 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 
   **注**: `username`、`org_name`、`space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
 
-  5. `ibmcloud app push` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。 `ibmcloud app push` コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
+  5. `ibmcloud dev deploy` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。詳しくは、[CLI の資料](docs/cli/idt/commands.html#deploy)を参照してください。
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span> を表示してアプリにアクセスします。

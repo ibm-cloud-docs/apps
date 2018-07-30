@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,111 +15,106 @@ lastupdated: "2018-05-22"
 # スターター・キットを使用したモバイル・アプリケーションの作成
 {: #tutorial}
 
-モバイル基本スターターからモバイル・アプリを作成できます。 必要なツールをインストールする方法と、Xcode および Android Studio でアプリを実行するステップが表示されます。
+{{site.data.keyword.Bluemix}} は、モバイル・アプリを素早く作成するために役立つモバイル・スターター・キットを提供します。事前構成されたカスタム・アプリの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。このチュートリアルでは、必要なツールをインストールしてから、アプリをビルドしてローカルで実行し、クラウドにデプロイする方法を確認できます。
 {: shortdesc}
 
-## ツールのインストール
-{: #before-you-begin}
+## ステップ 1: ツールのインストール
+{: #install-tools}
 
-[開発者ツール](/docs/cli/idt/index.html#create){: new_window}をインストールします。
+[開発者ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window} をインストールします。
 
-## アプリの作成方法の選択
-{: #choose_how}
+Docker は開発者ツールの一部としてインストールされます。ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 
-以下のいずれかの方法を使用して、アプリを作成できます。
-- Web ベースの[{{site.data.keyword.dev_console}}](#create-devex)
-- ローカルのコマンド駆動の [{{site.data.keyword.dev_cli_notm}}](#create-cli)
-
-## {{site.data.keyword.dev_console}} を使用したアプリの作成
+## ステップ 1: {{site.data.keyword.dev_console}} を使用したアプリの作成
 {: #create-devex}
 
 1. {{site.data.keyword.Bluemix}} で {{site.data.keyword.dev_console}}・アプリを作成します。
+2. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) ページから、必要な機能に基づいてスターター・キットを選択します。例えば、Watson Language アプリケーションの場合、**「Swift Kitura」**を選択します。
+3. アプリ名を入力します。 このチュートリアルでは、`WatsonApp` を使用します。
+4. ご使用の言語プラットフォームを選択します。 このチュートリアルでは、`Swift` を使用します。
+5. ご使用の言語とフレームワークを選択します。一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
+6. 価格プランを選択します。このチュートリアルでは無料オプションを使用できます。
+7. **「作成」**をクリックします。
 
-    1. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) ページから、必要な機能に基づいてスターター・キットを選択します。 例えば、Watson Language アプリケーションの場合は、**「Watson Language」**に移動し、**「スターター・キットの選択」**をクリックします。
-
-    2. アプリ名を入力します。 このチュートリアルでは、`WatsonApp` を使用します。   
-
-    3. ご使用の言語プラットフォームを選択します。 このチュートリアルでは、`Swift` を使用します。
-
-    4. **「作成」**をクリックします。
-
-### オプション: サービスの追加
+## ステップ 3: リソースの追加 (オプション)
 {: #add-services}
 
-1. **「アプリ」**ページでアプリを選択します。
+Watson のコグニティブ機能でアプリを拡張するリソースを追加したり、モバイル・サービスやセキュリティー・サービスを追加したりできます。このチュートリアルでは、データを管理する場所を追加します。
 
-2. **「サービスの追加」**をクリックします。
+1. 「アプリ・サービス」ウィンドウで、**「リソースの追加」**をクリックします。
+2. 必要なサービスの種類を選択します。 例えば、**「データ (Data)」**>**「次へ」**>**「Cloudant」**>**「次へ」**をクリックします。
+3. 価格プランを選択します。このチュートリアルでは無料オプションを使用できます。
+4. **「作成」**をクリックします。
 
-3. 必要なサービスの種類を選択します。 このチュートリアルでは、**「セキュリティー」**>**「次へ」**>**「アプリ ID」**>**「次へ」**を選択します。
+## ステップ 4: DevOps ツールチェーンの作成
+{: #add-toolchain}
 
-4. サービス名を入力し、**「作成 (Create)」**をクリックします。
+ツールチェーンを有効にすると、アプリ用のチーム・ベースの開発環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。また、専用の GitLab 環境と、継続的 Delivery Pipeline にアクセスすることもできます。Kubernetes でも Cloud Foundry でも、選択したデプロイメント・プラットフォームに合わせてこれらはカスタマイズされています。
 
-5. 認証の構成について詳しくは、[ID プロバイダーの構成 (Configuring identity providers) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/appid/identity-providers.html){: new_window} を参照してください。
+一部のアプリケーションでは継続的デリバリーは有効になっています。 継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
 
-6. 分析の構成について詳しくは、[{{site.data.keyword.mobileanalytics_short}} の概説 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/mobileanalytics/index.html){: new_window} を参照してください。
+1. 「アプリ・サービス」ウィンドウで、**「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
+2. デプロイメント方式を選択します。 選択した方式の説明に従って、デプロイメント方式をセットアップします。
 
-7. {{site.data.keyword.cloudant_short_notm}} の構成について詳しくは、[{{site.data.keyword.cloudant_short_notm}} の概説 (Getting started with Cloudant NoSQL DB) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/Cloudant/index.html){: new_window} を参照してください。
+    * Kubernetes クラスターにデプロイします。 高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
 
-8. {{site.data.keyword.objectstorageshort}} の構成について詳しくは、[{{site.data.keyword.objectstorageshort}} 概説 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/ObjectStorage/index.html){: new_window} を参照してください。
+    * Cloud Foundry を使用してデプロイします。この場合、基礎となるインフラストラクチャーを管理する必要はありません。
 
-9. プッシュ通知の追加について詳しくは、プッシュ[通知の資料](/docs/services/mobilepush/c_overview_push.html#overview-push)を参照してください。
+## ステップ 5: ローカルでのアプリのビルドおよび実行
+{: #build-run}
 
-### アプリ・コードの生成
-{: #generate-code}
+最後のステップでアプリをクラウドにデプロイしたときに、ツールチェーンが作成されています。ツールチェーンは、アプリ用の Git リポジトリーを作成します。このリポジトリーで、コードを見つけることができます。リポジトリーにアクセスするには、次のステップに従います。アプリをクラウドにプッシュする前に、アプリをテスト用にローカルでビルドすることができます。
 
-1. **「アプリ」**ページでアプリを選択します。
+1. 「アプリ・サービス」ウィンドウで、**「コードのダウンロード (Download Code)」**または**「リポジトリーの複製 (Clone your repo)」**をクリックして、コードをローカルで処理します。
+2. 統合開発環境にアプリをインポートします。
+3. コードを変更します。
+4. パーソナル・アクセス・トークンを追加して、[Git 認証](/docs/services/ContinuousDelivery/git_working.html#git_authentication)をセットアップします。
+5. {{site.data.keyword.Bluemix}} コマンド・ライン・インターフェースにログインします。組織でフェデレーテッド・ログインを使用している場合は、`-sso` オプションを使用します。
 
-2. **「コードのダウンロード」**をクリックして、アプリ・アーカイブをダウンロードします。
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### アプリでの作業の開始
-{: #code}
+6. 組織とスペースのターゲットを設定します。
 
-ダウンロードしたアプリでの作業を開始します。
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. アーカイブ対象ファイルを展開します。
+7.  資格情報を取得します。
 
-2. 新規アプリ・ディレクトリーにナビゲートします。
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. {{site.data.keyword.dev_cli_notm}} を使用して続行します。
+8. Docker が実行中であることを確認して、ディレクトリーからローカル開発コンテナーでアプリをビルドします。
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## {{site.data.keyword.dev_cli_notm}} を使用したアプリの作成
-{: #create-cli}
+9. ローカル開発コンテナーでアプリを実行します。
 
-1. 必ず [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html) をインストールしてください。
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. 端末プロンプトで、選択したローカル・ディレクトリーにナビゲートして、以下のコマンドを実行します。
-
-	```
-	ibmcloud dev create
-	```
-	{: codeblock}
-
-3. プロンプトが出されたら、以下の値を指定します。
-
-	* アプリ・タイプとしてオプション 2 の「Mobile Client」を選択します。
-	* 実装言語にはオプション 3 の「iOS Swift」を選択します。
-	* スターター・キットにはオプション 1 の「Mobile App: Basic」を選択します。
-	* アプリの名前に `MobileBasicProject` と入力します。
-
-    注: 実際の選択番号は、ツールの機能拡張によって変わる可能性があります。
-
-4. サービスをアプリに追加するには、質問プロンプトで `y` と入力して、残りの質問に回答します。
-
-5. `MobileBasicProject` が正常に作成および保存されたら、`MobileBasicProject/MobileBasicProject-Swift` フォルダーにナビゲートします。
+10.  ご使用のブラウザーで `http://localhost:3000` を開きます。 ご使用のポート番号は、選択したランタイムによって異なる可能性があります。
 
 ### Xcode での Swift アプリの実行
 {: #run_swift}
 
 1. Markdown ビューアーで `README.md` ファイルを開き、アプリを構成するためのステップを確認します。
-
 2. 端末を開き、アプリ・フォルダーにナビゲートし、以下のコマンドを実行します。
     1. CocoaPods リポジトリーのセットアップが必要な場合は、`pod setup` を実行します。
     2. 既存の pod を更新する必要がある場合は、`pod update` を実行します。
     3. アプリの pod をインストールするには、`pod install` を実行します。
-
 3. `<appname>.xcworkspace` Xcode ワークスペースを開きます。
-
 4. アプリを実行します。
 
 ### Xcode での Cordova アプリの実行
@@ -128,9 +123,7 @@ lastupdated: "2018-05-22"
 実装言語として Cordova を使用するように選択した場合は、以下の指示に従います。
 
 1. Markdown ビューアーで `README.md` ファイルを開いてアプリを構成します。
-
 2. Xcode で `platforms/ios` アプリを開きます。
-
 3. アプリを実行します。
 
 ### Android Studio での Cordova アプリの実行
@@ -139,11 +132,8 @@ lastupdated: "2018-05-22"
 モバイル・アプリのプラットフォームとして Cordova を使用するように選択した場合は、このセクションを使用します。
 
 1. `BasicProject-Cordova.zip` ファイルを解凍します。
-
 2. Markdown ビューアーで `README.md` ファイルを開いてアプリを構成します。
-
 3. Android Studio で `platforms/android` アプリを開きます。
-
 4. アプリを実行します。
 
 ### Android Studio での Android アプリの実行
@@ -152,7 +142,41 @@ lastupdated: "2018-05-22"
 モバイル・アプリのプラットフォームとして Android を使用するように選択した場合は、このセクションを使用します。
 
 1. Markdown ビューアーで `README.md` ファイルを開いてアプリを構成します。
-
 2. Android Studio で `BasicProject-Android` アプリを開きます。
-
 3. アプリを実行します。
+
+## ステップ 6: クラウドへのデプロイ
+{: #deploy}
+
+### ツールチェーンを使用したデプロイ
+
+アプリはいくつかの方法で {{site.data.keyword.cloud_notm}} にデプロイできますが、DevOps ツールチェーンが、実動アプリをデプロイする場合に最適な方法です。DevOps ツールチェーンを使用すると、多数の環境へのデプロイメントを簡単に自動化して、成長するアプリの管理に役立つモニタリング、ロギング、およびアラートの各サービスを素早く追加することができます。
+
+正しく構成されたツールチェーンを使用すると、リポジトリー内のマスター・ブランチへのマージが行われるたびに、ビルドとデプロイのサイクルが自動的に開始されます。 {{site.data.keyword.cloud_notm}} 開発者ダッシュボードから作成されたツールチェーンはすべて、自動デプロイメント用に構成されています。
+
+DevOps ツールチェーンからアプリを手動でデプロイすることもできます。
+
+1. 「アプリ詳細」ウィンドウから、**「ツールチェーンの表示」**をクリックします。
+
+2. **「Delivery Pipeline」**をクリックします。ここで、ビルドの開始、デプロイメントの管理、およびログと履歴の表示を行うことができます。
+
+### {{site.data.keyword.dev_cli_short}} を使用したデプロイ
+
+アプリを Cloud Foundry にデプロイするには、以下のコマンドを入力します。
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+アプリを Kubernetes クラスターにデプロイするには、以下のコマンドを入力します。
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## ステップ 7: アプリが実行中であることの確認
+{: #verify}
+
+アプリのデプロイ後に、DevOps パイプラインまたはコマンド・ラインにアプリの URL (例えば、`abc-devhost.mybluemix.net`) が示されます。ご使用のブラウザーでその URL にアクセスします。

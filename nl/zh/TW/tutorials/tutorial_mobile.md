@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,111 +15,106 @@ lastupdated: "2018-05-22"
 # 使用入門範本套件來建立行動應用程式
 {: #tutorial}
 
-您可以從行動基本入門範本建立行動應用程式。您將會看到如何安裝所需的工具，以及在 Xcode 和 Android Studio 中執行應用程式的步驟。
+{{site.data.keyword.Bluemix}} 提供行動入門範本套件以協助您快速建立行動應用程式。請從「應用程式服務入門範本套件」選擇語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您可以了解如何安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端。
 {: shortdesc}
 
-## 安裝工具
-{: #before-you-begin}
+## 步驟 1：安裝工具
+{: #install-tools}
 
-安裝[開發人員工具](/docs/cli/idt/index.html#create){: new_window}。
+安裝[開發人員工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}。
 
-## 選擇如何建立應用程式
-{: #choose_how}
+Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
 
-您可以使用下列其中一種方法來建立應用程式：
-- Web 型的 [{{site.data.keyword.dev_console}}](#create-devex)
-- 本端指令驅動的 [{{site.data.keyword.dev_cli_notm}}](#create-cli)
-
-## 使用 {{site.data.keyword.dev_console}} 建立應用程式
+## 步驟 1：使用 {{site.data.keyword.dev_console}} 建立應用程式
 {: #create-devex}
 
 1. 在 {{site.data.keyword.Bluemix}} 中建立 {{site.data.keyword.dev_console}} 應用程式。
+2. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，根據您要的特性選取入門範本套件。例如，若為 Watson 應用程式，請選取 **Swift Kitura**。
+3. 輸入應用程式名稱。針對本指導教學，請使用 `WatsonApp`。
+4. 選取語言平台。針對本指導教學，請使用 `Swift`。
+5. 選取語言及架構。部分入門範本套件可能只提供一種語言。
+6. 選取定價方案。有免費選項，您可以用於本指導教學。
+7. 按一下**建立**。
 
-    1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，根據您要的功能選取入門範本套件。例如，若為 Watson 應用程式，請移至 **Watson 語言**，然後按一下**選取入門範本套件**。
-
-    2. 輸入應用程式名稱。針對本指導教學，請使用 `WatsonApp`。   
-
-    3. 選取語言平台。針對本指導教學，請使用 `Swift`。
-
-    4. 按一下**建立**。
-
-### 選用項目：新增服務
+## 步驟 3：新增資源（選用）
 {: #add-services}
 
-1. 在**應用程式**頁面中選取您的應用程式。
+您可以新增資源，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
 
-2. 按一下**新增服務**。
+1. 從應用程式服務視窗，按一下**新增資源**。
+2. 選取您要的服務類型。例如，選取**資料** > **下一步** > **Cloudant** > **下一步**。
+3. 選取定價方案。有免費選項，您可以用於本指導教學。
+4. 按一下**建立**。
 
-3. 選取您要的服務類型。針對本指導教學，請選取**安全** > **下一步** > **App ID** > **下一步**。
+## 步驟 4：建立 DevOps 工具鏈
+{: #add-toolchain}
 
-4. 輸入您的服務名稱，然後按一下**建立**。
+啟用工具鏈會為您的應用程式建立一個團隊型開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 Git 實驗室環境，以及持續交付管線。它們針對您所選部署平台（Kubernetes 或 Cloud Foundry）經過自訂。
 
-5. 如需配置鑑別的相關資訊，請參閱[配置身分提供者 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/appid/identity-providers.html){: new_window}。
+已針對部分應用程式啟用持續交付。您可以啟用持續交付，以透過 Delivery Pipeline 及 GitHub 自動建置、測試及部署。
 
-6. 如需配置分析的相關資訊，請參閱[開始使用 {{site.data.keyword.mobileanalytics_short}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/mobileanalytics/index.html){: new_window}。
+1. 從應用程式服務視窗，按一下**部署至雲端**。
+2. 選取部署方法。根據您所選方法的指示設定部署方法。
 
-7. 如需配置 {{site.data.keyword.cloudant_short_notm}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.cloudant_short_notm}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/Cloudant/index.html){: new_window}。
+    * 部署至 Kubernetes 叢集。建立主機的叢集（稱為工作者節點），以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
 
-8. 如需配置 {{site.data.keyword.objectstorageshort}} 的相關資訊，請參閱[開始使用 {{site.data.keyword.objectstorageshort}} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/services/ObjectStorage/index.html){: new_window}。
+    * 使用 Cloud Foundry 部署，如此便不需要管理基礎的基礎架構。
 
-9. 如需新增推送通知的相關資訊，請參閱 [Push Notifications 文件](/docs/services/mobilepush/c_overview_push.html#overview-push)。
+## 步驟 5：在本端建置及執行應用程式
+{: #build-run}
 
-### 產生應用程式碼
-{: #generate-code}
+在前一個步驟中將應用程式部署至雲端，已經建立了工具鏈。工具鏈會為您的應用程式建立 Git 儲存庫，您可以在該處找到程式碼。請遵循下列步驟來存取您的儲存庫。您可以在本端建置應用程式以做測試，然後才將它推送至雲端。
 
-1. 在**應用程式**頁面中選取您的應用程式。
+1. 從應用程式服務視窗，按一下**下載程式碼**或**複製儲存庫**，以在本端使用程式碼。
+2. 將應用程式匯入至整合開發環境。
+3. 修改程式碼。
+4. 新增個人存取記號來設定 [Git 鑑別](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。
+5. 登入 {{site.data.keyword.Bluemix}} 指令行介面。如果您的組織使用聯合登入，請使用 `-sso` 選項。
 
-2. 按一下**下載程式碼**以下載您的應用程式保存檔。
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### 開始使用您的應用程式
-{: #code}
+6. 設定您的組織及空間目標。
 
-開始使用下載的應用程式：
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. 展開保存檔。
+7.  取得認證。
 
-2. 導覽至新的應用程式目錄。
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. 使用 {{site.data.keyword.dev_cli_notm}} 繼續進行。
+8. 確定 Docker 在執行中，然後在本端開發容器中從目錄建置應用程式。
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## 使用 {{site.data.keyword.dev_cli_notm}} 建立應用程式
-{: #create-cli}
+9. 在本端開發容器中執行應用程式
 
-1. 確定您已安裝 [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html)。
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. 在「終端機」提示下，導覽至您選擇的本端目錄，然後執行下列指令。
-
-	```
-	ibmcloud dev create
-	```
-	{: codeblock}
-
-3. 當出現提示時，請提供下列值：
-
-	* 選取應用程式類型「行動用戶端」，選項 2
-	* 選取實作語言 iOS Swift，選項 3
-	* 選取入門範本套件「行動應用程式：基本」，選項 1
-	* 輸入應用程式的名稱：`MobileBasicProject`
-
-    附註：實際選擇號碼可能會隨著工具加強而變。
-
-4. 如果您要將服務新增至應用程式，請在問題提示處鍵入 `y`，並回答其餘的問題。
-
-5. 順利建立並儲存 `MobileBasicProject` 之後，導覽至 `MobileBasicProject/MobileBasicProject-Swift` 資料夾。
+10.  使用瀏覽器開啟 `http://localhost:3000`。您的埠號可能會根據選擇的運行環境而不同。
 
 ### 在 Xcode 中執行 Swift 應用程式
 {: #run_swift}
 
 1. 在 Markdown 檢視器中開啟 `README.md` 檔案，以檢閱配置應用程式的步驟。
-
 2. 開啟您的終端機並導覽至您的應用程式資料夾，然後執行下列指令：
     1. 如果您需要設定 CocoaPods 儲存庫，請執行 `pod setup`。
     2. 如果您需要更新現有的 Pod，請執行 `pod update`。
     3. 執行 `pod install` 來安裝應用程式的 Pod。
-
 3. 開啟您的 `<appname>.xcworkspace` Xcode 工作區。
-
 4. 執行應用程式。
 
 ### 在 Xcode 中執行 Cordova 應用程式
@@ -128,9 +123,7 @@ lastupdated: "2018-05-22"
 如果您選擇使用 Cordova 作為您的實作語言，請遵循這些指示。
 
 1. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置應用程式。
-
 2. 在 Xcode 中開啟 `platforms/ios` 應用程式。
-
 3. 執行應用程式。
 
 ### 在 Android Studio 中執行 Cordova 應用程式
@@ -139,11 +132,8 @@ lastupdated: "2018-05-22"
 如果您選擇使用 Cordova 作為行動應用程式的平台，請使用此區段。
 
 1. 解壓縮 `BasicProject-Cordova.zip` 檔案。
-
 2. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置應用程式。
-
 3. 在 Android Studio 中開啟 `platforms/android` 應用程式。
-
 4. 執行應用程式。
 
 ### 在 Android Studio 中執行 Android 應用程式
@@ -152,7 +142,42 @@ lastupdated: "2018-05-22"
 如果您選擇使用 Android 作為行動應用程式的平台，請使用此區段。
 
 1. 在 Markdown 檢視器中開啟 `README.md` 檔案，以配置應用程式。
-
 2. 在 Android Studio 中開啟 `BasicProject-Android` 應用程式。
-
 3. 執行應用程式。
+
+## 步驟 6：部署至雲端
+{: #deploy}
+
+### 使用工具鏈部署
+
+您有數種方式可以將應用程式部署至 {{site.data.keyword.cloud_notm}}，但 DevOps 工具鏈是部署正式作業應用程式的最佳方法。使用 DevOps 工具鏈，您可以輕鬆地自動部署到許多環境，並快速新增監視、記載和警示服務，以協助您在應用程式成長時進行管理。
+
+使用適當配置的工具鏈，建置-部署的循環會自動開始，並且全都合併到您儲存庫的主要分支。從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈都會針對自動部署進行配置。
+
+
+您也可以從 DevOps 工具鏈手動部署應用程式：
+
+1. 從「應用程式詳細資料」視窗，按一下**檢視工具鏈**。
+
+2. 按一下 **Delivery Pipeline**，您可以在其中啟動建置、管理部署，以及檢視日誌和歷程。
+
+### 使用 {{site.data.keyword.dev_cli_short}} 部署
+
+若要將應用程式部署至 Cloud Foundry，請輸入下列指令：
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+若要將應用程式部署至 Kubernetes 叢集，請輸入下列指令：
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## 步驟 7：驗證應用程式在執行中
+{: #verify}
+
+部署應用程式之後，DevOps 管線或指令行會將您指向應用程式的 URL，例如 `abc-devhost.mybluemix.net`。請在瀏覽器中移至該 URL。
