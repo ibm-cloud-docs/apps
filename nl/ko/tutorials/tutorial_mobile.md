@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,111 +15,106 @@ lastupdated: "2018-05-22"
 # 스타터 킷을 사용한 모바일 애플리케이션 작성
 {: #tutorial}
 
-모바일 기본 스타터로부터 모바일 앱을 작성할 수 있습니다. 필요한 도구를 설치하는 방법 및 앱을 Xcode 및 Android Studio에서 실행하는 단계를 알아볼 수 있습니다.
+{{site.data.keyword.Bluemix}}는 모바일 앱을 빠르게 작성할 수 있도록 모바일 스타터 킷을 제공합니다. 앱 서비스 스타터 킷에서 언어, 프레임워크 및 도구를 선택하여 사전 구성된 사용자 정의 앱에 대한 작업을 시작하십시오. 이 튜토리얼에서는 필요한 도구를 설치한 후 앱을 빌드하여 로컬로 실행하고, 이를 클라우드에 배치하는 방법을 알아볼 수 있습니다.
 {: shortdesc}
 
-## 도구 설치
-{: #before-you-begin}
+## 1단계: 도구 설치
+{: #install-tools}
 
-[개발자 도구](/docs/cli/idt/index.html#create){: new_window}를 설치하십시오.
+[개발자 도구 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}를 설치하십시오.
 
-## 앱 작성 방법 선택
-{: #choose_how}
+Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌드 명령에 대해 실행되어야 합니다. Docker 계정을 작성하고, Docker 앱을 실행하고, 로그인해야 합니다.
 
-다음 방법 중 하나를 사용하여 앱을 작성할 수 있습니다.
-- 웹 기반 [{{site.data.keyword.dev_console}}](#create-devex)
-- 로컬 명령 중심 [{{site.data.keyword.dev_cli_notm}}](#create-cli)
-
-## {{site.data.keyword.dev_console}}을 사용하여 앱 작성
+## 1단계: {{site.data.keyword.dev_console}}을 사용하여 앱 작성
 {: #create-devex}
 
 1. {{site.data.keyword.Bluemix}}에 {{site.data.keyword.dev_console}} 앱을 작성하십시오.
+2. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 페이지에서 원하는 기능에 따라 스타터 킷을 선택하십시오. 예를 들어, Watson Language 애플리케이션인 경우에는 **Swift Kitura**를 클릭하십시오.
+3. 앱 이름을 입력하십시오. 이 튜토리얼의 경우 `WatsonApp`을 사용하십시오.
+4. 언어 플랫폼을 선택하십시오. 이 튜토리얼의 경우에는 `Swift`를 사용하십시오.
+5. 언어 및 프레임워크를 선택하십시오. 일부 스타터 킷은 하나의 언어로만 사용 가능할 수 있습니다.
+6. 가격 책정 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
+7. **작성**을 클릭하십시오.
 
-    1. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 페이지에서 원하는 기능에 따라 스타터 킷을 선택하십시오. 예를 들어, Watson Language 애플리케이션인 경우에는 **Watson Language**로 이동하여 **스타터 킷 선택**을 클릭하십시오.
-
-    2. 앱 이름을 입력하십시오. 이 튜토리얼의 경우 `WatsonApp`을 사용하십시오.   
-
-    3. 언어 플랫폼을 선택하십시오. 이 튜토리얼의 경우에는 `Swift`를 사용하십시오.
-
-    4. **작성**을 클릭하십시오.
-
-### 선택사항: 서비스 추가
+## 3단계: 리소스 추가(선택사항)
 {: #add-services}
 
-1. **앱** 페이지에서 앱을 선택하십시오.
+Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추가하고 모바일 서비스 또는 보안 서비스를 추가할 수 있습니다. 이 튜토리얼의 경우 데이터를 관리할 위치를 추가하십시오.
 
-2. **서비스 추가**를 클릭하십시오.
+1. 앱 서비스 창에서 **리소스 추가**를 클릭하십시오.
+2. 원하는 서비스의 종류를 선택하십시오. 예를 들어, **데이터** > **다음** > **Cloudant** > **다음**을 선택하십시오.
+3. 가격 책정 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
+4. **작성**을 클릭하십시오.
 
-3. 원하는 서비스의 종류를 선택하십시오. 이 튜토리얼의 경우에는 **보안** > **다음** > **앱 ID** > **다음**을 선택하십시오.
+## 4단계: DevOps 도구 체인 작성
+{: #add-toolchain}
 
-4. 서비스 이름을 입력하고 **작성**을 클릭하십시오.
+도구 체인을 사용으로 설정하면 앱에 대한 팀 기반 개발 환경을 작성할 수 있습니다. 도구 체인을 작성하는 경우 앱 서비스는 소스 코드를 보고, 앱을 복제하여 이슈를 작성하고 관리할 수 있는 Git 저장소를 작성합니다. 또한 전용 Git Lab 환경 및 지속적 Delivery Pipeline에 대한 액세스도 제공됩니다. Kubernetes 또는 Cloud Foundry 중에서 선택하는 배치 플랫폼에 대해 사용자 정의되었습니다.
 
-5. 인증 구성에 대한 자세한 정보는 [ID 제공자 구성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/appid/identity-providers.html){: new_window}을 참조하십시오.
+지속적 딜리버리는 일부 애플리케이션에 대해 사용으로 설정됩니다. Delivery Pipeline 및 GitHub를 통해 빌드, 테스트 및 배치를 자동화하기 위해 지속적 딜리버리를 사용으로 설정할 수 있습니다.
 
-6. 분석 구성에 대한 자세한 정보는 [{{site.data.keyword.mobileanalytics_short}} 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/mobileanalytics/index.html){: new_window}를 참조하십시오.
+1. 앱 서비스 창에서 **클라우드에 배치**를 클릭하십시오.
+2. 배치 방법을 선택하십시오. 선택하는 방법의 지시사항에 따라 배치 방법을 선택하십시오.
 
-7. {{site.data.keyword.cloudant_short_notm}} 구성에 대한 자세한 정보는 [{{site.data.keyword.cloudant_short_notm}} 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/Cloudant/index.html){: new_window}를 참조하십시오.
+    * Kubernetes 클러스터에 배치합니다. 고가용성의 애플리케이션 컨테이너를 배치하고 관리하기 위해 작업자 노드라는 호스트 클러스터를 작성합니다. 클러스터를 작성하여 배치하거나 기존 클러스터에 배치할 수 있습니다.
 
-8. {{site.data.keyword.objectstorageshort}} 구성에 대한 자세한 정보는 [{{site.data.keyword.objectstorageshort}} 시작하기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/services/ObjectStorage/index.html){: new_window}를 참조하십시오.
+    * 기본 인프라를 관리할 필요가 없는 Cloud Foundry를 사용하여 배치합니다.
 
-9. 푸시 알림 추가에 대한 자세한 정보는 [푸시 알림 문서](/docs/services/mobilepush/c_overview_push.html#overview-push)를 참조하십시오.
+## 5단계: 앱을 로컬로 빌드하고 실행
+{: #build-run}
 
-### 앱 코드 생성
-{: #generate-code}
+도구 체인을 작성한 마지막 단계에서 앱을 클라우드에 배치합니다. 도구 체인은 코드를 찾을 수 있는 앱을 위한 Git 저장소를 작성합니다. 저장소에 액세스하려면 다음 단계를 따르십시오. 앱을 클라우드에 푸시하기 전에 테스트를 위해 앱을 로컬로 빌드할 수 있습니다.
 
-1. **앱** 페이지에서 앱을 선택하십시오.
+1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행할 수 있습니다.
+2. 앱을 통합된 개발 환경으로 가져오십시오.
+3. 코드를 수정하십시오.
+4. 개인 액세스 토큰을 추가하여 [Git 인증](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 설정하십시오.
+5. {{site.data.keyword.Bluemix}} 명령행 인터페이스에 로그인하십시오. 조직에서 연합 로그인을 사용하는 경우 `-sso` 옵션을 사용하십시오.
 
-2. 앱 아카이브를 다운로드하려면 **코드 다운로드**를 클릭하십시오.
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### 앱에 대한 작업 시작
-{: #code}
+6. 조직 및 영역 대상을 설정하십시오.
 
-다운로드한 앱에 대해 작업을 시작하십시오.
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. 아카이브된 파일을 펼치십시오.
+7.  신임 정보를 가져오십시오.
 
-2. 새 앱 디렉토리로 이동하십시오.
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. {{site.data.keyword.dev_cli_notm}}을 사용하여 진행하십시오.
+8. Docker가 실행 중인지 확인하고 디렉토리에서 로컬 개발 컨테이너에 있는 앱을 빌드하십시오.
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## {{site.data.keyword.dev_cli_notm}}을 사용하여 앱 작성
-{: #create-cli}
+9. 로컬 개발 컨테이너에 있는 앱을 실행하십시오.
 
-1. [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html)을 설치했는지 확인하십시오.
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. 터미널 프롬프트에서 원하는 로컬 디렉토리로 이동한 후 다음 명령을 실행하십시오.
-
-	```
-	ibmcloud dev create
-	```
-	{: codeblock}
-
-3. 프롬프트가 표시되면 다음 값을 제공하십시오.
-
-	* "모바일 클라이언트"의 앱 유형 선택(옵션 2)
-	* 구현 언어를 "iOS Swift"로 선택(옵션 3)
-	* "모바일 앱: Basic" 스타터 킷 선택(옵션 1)
-	* 앱 이름 입력: `MobileBasicProject`
-
-    참고: 실제 선택 번호는 도구 업데이트에 따라 변경될 수 있습니다.
-
-4. 앱에 서비스를 추가하려는 경우 질문 프롬프트에서 `y`를 입력하고 나머지 질문에 답하십시오.
-
-5. `MobileBasicProject`가 작성되어 저장되고 나면 `MobileBasicProject/MobileBasicProject-Swift` 폴더로 이동하십시오.
+10.  브라우저에서 `http://localhost:3000`을 여십시오. 포트 번호는 선택한 런타임에 따라 다를 수 있습니다.
 
 ### Xcode에서 Swift 앱 실행
 {: #run_swift}
 
 1. 마크다운 뷰어에서 `README.md` 파일을 열어 앱 구성 단계를 검토하십시오.
-
 2. 터미널을 열고 앱 폴더로 이동한 후 다음 명령을 실행하십시오.
     1. CocoaPods 저장소를 설정해야 하는 경우 `pod setup`을 실행하십시오.
     2. 기존 팟(Pod)을 업데이트해야 하는 경우 `pod update`를 실행하십시오.
     3. 앱에 대한 팟(Pod)을 설치하려면 `pod install`을 실행하십시오.
-
 3. `<appname>.xcworkspace` Xcode 작업공간을 여십시오.
-
 4. 앱을 실행하십시오.
 
 ### Xcode에서 Cordova 앱 실행
@@ -128,9 +123,7 @@ lastupdated: "2018-05-22"
 구현 언어로 Cordova를 사용하도록 선택한 경우에는 다음 지시사항을 따르십시오.
 
 1. 마크다운 뷰어에서 `README.md` 파일을 열어 앱을 구성하십시오.
-
 2. Xcode에서 `platforms/ios` 앱을 여십시오.
-
 3. 앱을 실행하십시오.
 
 ### Android Studio에서 Cordova 앱 실행
@@ -139,11 +132,8 @@ lastupdated: "2018-05-22"
 모바일 앱의 플랫폼으로 Cordova를 사용하도록 선택한 경우에는 이 섹션을 사용하십시오.
 
 1. `BasicProject-Cordova.zip` 파일의 압축을 푸십시오.
-
 2. 마크다운 뷰어에서 `README.md` 파일을 열어 앱을 구성하십시오.
-
 3. Android Studio에서 `platforms/android` 앱을 여십시오.
-
 4. 앱을 실행하십시오.
 
 ### Android Studio에서 Android 앱 실행
@@ -152,7 +142,41 @@ lastupdated: "2018-05-22"
 모바일 앱의 플랫폼으로 Android를 사용하도록 선택한 경우에는 이 섹션을 사용하십시오.
 
 1. 마크다운 뷰어에서 `README.md` 파일을 열어 앱을 구성하십시오.
-
 2. Android Studio에서 `BasicProject-Android` 앱을 여십시오.
-
 3. 앱을 실행하십시오.
+
+## 6단계: 클라우드에 배치
+{: #deploy}
+
+### 도구 체인을 사용하여 배치
+
+여러 가지 방법으로 앱을 {{site.data.keyword.cloud_notm}}에 배치할 수 있지만 프로덕션 앱을 배치하는 데 DevOps 도구 체인을 사용하는 것이 가장 좋은 방법입니다. DevOps 도구 체인을 사용하여 여러 환경으로의 배치를 손쉽게 자동화하고, 앱이 확장됨에 따라 이를 관리하는 데 도움을 주기 위해 신속하게 모니터링, 로깅 및 경보 서비스를 추가할 수 있습니다.
+
+도구 체인이 적절히 구성되면 저장소의 마스터 분기에 대한 각 병합마다 빌드-배치 주기가 자동으로 시작됩니다. {{site.data.keyword.cloud_notm}} 개발자 대시보드로부터 작성된 모든 도구 체인은 자동 배치로 구성됩니다.
+
+DevOps 도구 체인에서 수동으로 앱을 배치할 수도 있습니다.
+
+1. 앱 세부사항 창에서 **도구 체인 보기**를 클릭하십시오.
+
+2. 빌드를 시작하고, 배치를 관리하고 로그 및 히스토리를 볼 수 있는 **Delivery Pipeline**을 클릭하십시오.
+
+### {{site.data.keyword.dev_cli_short}}을 사용하여 배치
+
+앱을 Cloud Foundry에 배치하려면 다음 명령을 입력하십시오.
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+앱을 Kubernetes 클러스터에 배치하려면 다음 명령을 입력하십시오.
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## 7단계: 앱 실행 여부 확인
+{: #verify}
+
+앱을 배치한 후 DevOps 파이프라인 또는 명령행에서 앱의 URL로 이동할 수 있습니다(예: `abc-devhost.mybluemix.net`). 브라우저에서 URL로 이동하십시오.

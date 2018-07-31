@@ -17,15 +17,19 @@ Creazione di applicazioni
     Sviluppo di applicazioni
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
-        tutorials/tutorial_microservice.md
         tutorials/tutorial_custom.md
+        tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         starter_kits.md
+        deploying/functions.md
 
     {: .topicgroup}
-    Distribuzione e integrazione delle applicazioni
+    Distribuzione e integrazione di applicazioni
         dep-app-tool.md
         vsi-deploy.md
+        deploying/containers.md
+        deploying/crypto.md
+
 
     reqnsi.md
     mngapps.md
@@ -62,4 +66,6 @@ Creazione di applicazioni
     ts_apps.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Riferimento API Cloud Functions](https://console.bluemix.net/apidocs/98)
+    [SDK mobile](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

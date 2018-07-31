@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud는 강력한 CLI, 그리고 CLI와 통합되는 플러그인 및 개�
 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 앱 및 서비스 인스턴스를 배치하십시오.
 {:shortdesc}
 
-시작하기 전에 {{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 다운로드하여 설치하십시오.
+시작하기 전에 [{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 다운로드하여 설치하십시오](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools 다운로드" /></a>
@@ -77,8 +77,8 @@ IBM Cloud는 강력한 CLI, 그리고 CLI와 통합되는 플러그인 및 개�
 
   **참고**: 값에 간격이 포함되어 있는 경우에는 `-o "my org"`와 같이 `username`, `org_name` 및 `space_name` 앞뒤에 작은따옴표 또는 큰따옴표를 추가해야 합니다.
 
-  5. <var class="keyword varname">your_new_directory</var>에서 `ibmcloud app push` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. `ibmcloud app push` 명령에 대한 자세한 정보는 [애플리케이션 업로드](/docs/starters/upload_app.html)를 참조하십시오.
+  5. <var class="keyword varname">your_new_directory</var>에서 `ibmcloud dev deploy` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. 자세한 정보는 [CLI 문서](docs/cli/idt/commands.html#deploy)를 참조하십시오.
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>을 브라우징하여 앱에 액세스하십시오.

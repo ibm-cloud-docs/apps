@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ BFF는 가장 일반적으로 REST 패턴을 사용하여 API를 노출하지만
 
 마이크로서비스 앱은 기본 상태 엔드포인트 및 REST API를 포함하는 백엔드 마이크로서비스를 빌드하는 데 필요한 기반을 제공합니다. 생성되는 앱에는 마이크로서비스 자체 및 연결된 클라우드 서비스 둘 다에 필요한 모든 종속 항목이 포함되어 있습니다.
 
-언어 및 프레임워크 요구사항에 맞는 마이크로서비스 스타터를 선택하십시오. 마이크로서비스 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://console.bluemix.net/developer/appservice/dashboard)에서 찾을 수 있습니다.
+언어 및 프레임워크 요구사항에 맞는 마이크로서비스 스타터 킷을 선택하십시오. 마이크로서비스 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://console.bluemix.net/developer/appservice/dashboard)에서 찾을 수 있습니다.
 
 ## 모바일
 {: #mobile}

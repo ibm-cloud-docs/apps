@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud fornisce una solida CLI nonché i plug-in e le estensioni dello strume
 Utilizza l'interfaccia riga di comando {{site.data.keyword.Bluemix_notm}} per distribuire le tue applicazioni e istanze del servizio.
 {:shortdesc}
 
-Prima di iniziare, scarica e installa l'interfaccia di riga di comando {{site.data.keyword.Bluemix_notm}}.
+Prima di iniziare, [scarica e installa l'interfaccia di riga di comando {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica IBM Cloud Developer Tools" /></a>
@@ -77,8 +77,8 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   **Nota**: se il valore contiene uno spazio, devi aggiungere singoli o doppi apostrofi intorno a `nomeutente`, `nome_org` e  `nome_spazio` se il valore contiene uno spazio, ad esempio, `-o "my org"`.
 
-  5. Da <var class="keyword varname">la_tua_nuova_directory</var>, ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud app push`. Per ulteriori informazioni sul comando `ibmcloud app push`, vedi [Caricamento della tua applicazione](/docs/starters/upload_app.html).
+  5. Da <var class="keyword varname">la_tua_nuova_directory</var>, ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [la documentazione della CLI](docs/cli/idt/commands.html#deploy).
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">nome_app</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">nome_app</var></code></pre>
 
   6. Accedi alla tua applicazione andando all'indirizzo https://<var class="keyword varname" data-hd-keyref="app_url">url_app</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.
