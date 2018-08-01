@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,9 +19,11 @@ lastupdated: "2018-05-22"
 {: shortdesc}
 
 ## Etapa 1: instalar as ferramentas
-{: #before-you-begin}
+{: #install-tools}
 
 Instale as [ferramentas do desenvolvedor![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+
+O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 
 ## Etapa 2: Criar um app
 {: #create-devex}
@@ -30,136 +32,114 @@ Crie um app no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
 1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione **Criar** para criar um aplicativo customizado.
 
-2. Insira o nome de seu app. Para este tutorial, use `CustomProject`.   
-
-3. Insira um nome de host exclusivo, tal como suas iniciais mais `-devhost`. Por
-exemplo:
-
-	```
-	abc-devhost
-	```
-
-	Esse nome do host é a rota de seu app. Por exemplo, `abc-devhost.mybluemix.net`
-
-4. Selecione a plataforma da linguagem. Para este tutorial, use `Node.js`.
-
-5. (Opcional) É possível iniciar o andaime de seu backend de um documento do OpenAPI. Isso é útil para um desenvolvedor de backend que já tem seu cliente e contrato de integração de backend definido em um documento Swagger. Os tipos de arquivos **.yaml** e **.json** são suportados. Clique em **Incluir arquivo** para fazer upload de seu documento.
-
+2. Insira o nome de seu app. Para este tutorial, use `CustomProject`.
+3. Insira um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota de seu app, `abc-devhost.mybluemix.net`
+4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 6. Clique em **Criar**.
 
-## Opcional: incluir recursos
+## Etapa 3: Incluir recursos (opcional)
 {: #add-services}
 
-1. Na visualização **Detalhes do app**, clique em **Incluir recurso**.
+É possível incluir recursos que aprimoram seu app com o poder cognitivo do Watson, incluir serviços móveis ou serviços de segurança. Para este tutorial, inclua um local para gerenciar seus dados.
 
-2. Selecione o tipo de serviço desejado. Para este tutorial, selecione **Dados** > **Avançar** > **Cloudant NoSQL DB** > **Avançar**.
+1. Na janela de serviço do app, clique em **Incluir recurso**.
+2. Selecione o tipo de serviço desejado. Por exemplo, selecione **Dados** > **Avançar** > **Cloudant** > **Avançar**.
+3. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+4. Clique em **Criar**.
 
-3. Clique em **Criar**.
-
-## Opcional: criar cadeia de ferramentas de DevOps
+## Etapa 4: Criar uma cadeia de ferramentas do DevOps
 {: #add-toolchain}
 
-A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você criar uma cadeia de ferramentas, o Serviço de app fornecerá um repositório Git, no qual será possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente Gitlab dedicado e um pipeline de entrega contínua que é customizado para a plataforma de implementação que você escolher, como Kubernetes ou Cloud Foundry.
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para a plataforma de implementação escolhida, seja Kubernetes ou Cloud Foundry.
 
-A entrega contínua é ativada para alguns aplicativos. Você pode desejar ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e GitHub.
+A entrega contínua é ativada para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
 
-1. Selecione seu app na página **Apps**.
+1. Na janela de serviço do app, clique em **Implementar na nuvem**.
+2. Selecione um método de implementação. Configure seu método de implementação de acordo com as instruções para o método escolhido.
 
-2. Clique em **Implementar na nuvem**.
+    * Implementar em um cluster do Kubernetes. Crie um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
 
-3. Selecione um método de implementação. É possível optar por:
+    * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-	* Implementar em um cluster do Kubernetes. Provisione um cluster de hosts, denominado nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-
-	* Implementar usando o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
-
-## Etapa 3: Gerar seu código de app
-{: #generate-code}
-
-Se você tiver criado uma cadeia de ferramentas na etapa anterior, um repositório Git terá sido criado para seu app e será possível localizar o código lá. Siga estas etapas para acessar seu repositório:
-
-1. Selecione seu app na página **Apps**.
-
-2. Clique em **Visualizar cadeia de ferramentas**.
-
-3. Clique no cartão **Git** sob o título **CODE** para abrir seu repositório, no qual é possível visualizar o código-fonte e clonar seu app.
-
-Se uma cadeia de ferramentas não estiver ativada, será possível acessar seu código fazendo download da origem diretamente da visualização Detalhes do app.
-
-1. Selecione seu app na página **Apps**.
-
-2. Clique em **Código do download** para fazer download do archive do app.
-
-## Etapa 4: começar a trabalhar em seu app
-{: #code}
-
-Comece a trabalhar com seu app transferido por download:
-
-1. Expanda o arquivo arquivado.
-
-2. Importe o app para seu IDE.
-
-3. Modifique o código.
-
-4. Use o {{site.data.keyword.dev_cli_notm}} para construir e executar seu código localmente.
-
-
-## Etapa 5: construir e executar o app localmente
+## Etapa 5: Construindo e executando o app localmente
 {: #build-run}
 
-Inclua seu próprio código, a compilação e execute o app. É possível executar o aplicativo localmente em seu sistema host se você instala as ferramentas de construção necessárias ou usando o suporte de contêiner disponível no {{site.data.keyword.dev_cli_notm}}.
+A implementação de seu app na nuvem na última etapa criou uma cadeia de ferramentas. Uma cadeia de ferramentas cria um repositório Git para seu app no qual é possível localizar o código. Siga estas etapas para acessar o repositório. É possível construir o app localmente para teste antes de enviá-lo por push para a nuvem.
 
-### Usando o {{site.data.keyword.dev_cli_short}}
+1. Na janela de serviço do app, clique em **Fazer download do código** ou **Clonar seu repositório** para trabalhar com seu código localmente.
+2. Importe o app para seu ambiente de desenvolvimento integrado.
+3. Modifique o código.
+4. Configure a [Autenticação Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) incluindo um token de acesso pessoal.
+5. Efetue login na interface da linha de comandos do {{site.data.keyword.Bluemix}}. Se a sua organização usar logins federados, use a opção `-sso`.
 
-1. Para construir o app no diretório de app atual, insira o comando a seguir:
-
+  ```bash
+  ibmcloud login -sso
   ```
+  {: pre}
+
+6. Configure seus destinos de organização e espaço.
+
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
+
+7.  Obtenha as credenciais.
+
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
+
+8. Certifique-se de que o Docker esteja em execução e construa seu app em um contêiner de desenvolvimento local por meio do diretório.
+
+  ```bash
   ibmcloud dev build
   ```
-  {: codeblock}
+  {: pre}
 
-2. Para executar o app no diretório de app atual, insira o comando a seguir:
+9. Execute seu app em um contêiner de desenvolvimento local.
 
-  ```
+  ```bash
   ibmcloud dev run
   ```
-  {: codeblock}
+  {: pre}
 
-3. Abra seu navegador para `http://localhost:3000` (seu número da porta pode ser diferente dependendo do tempo de execução escolhido).
-
+10.  Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
 
 ## Etapa 6: implementar na nuvem
 {: #deploy}
 
 ### Implementar usando uma cadeia de ferramentas
-Há várias maneiras de implementar seu app para {{site.data.keyword.cloud_notm}}, mas usar uma cadeia de ferramentas de DevOps é a melhor maneira de implementar apps de produção. Uma cadeia de ferramentas de DevOps permite automatizar facilmente as implementações para diversos ambientes e incluir rapidamente monitoramento, criação de log e serviços de alerta para ajudar a gerenciar seu app à medida que ele cresce.
 
-Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção-implementação se inicia automaticamente com cada mesclagem na ramificação Principal em seu repositório. Todas as cadeias de ferramentas criadas em um painel de desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
+É possível implementar seu app no {{site.data.keyword.cloud_notm}} de várias maneiras, mas uma cadeia de ferramentas do DevOps é a melhor maneira de implementar apps de produção. Com uma cadeia de ferramentas do DevOps, é possível automatizar facilmente implementações para muitos ambientes e incluir rapidamente serviços de monitoramento, criação de log e alerta para ajudar a gerenciar seu app à medida que ele cresce.
+
+Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção-implementação se inicia automaticamente com cada mesclagem na ramificação Principal em seu repositório. Todas as cadeias de ferramentas criadas por meio de um painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
 
 Também é possível implementar seu app manualmente por meio de sua cadeia de ferramentas DevOps:
 
-1. Selecione seu app na página **Apps**.
+1. Na janela Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
 
-2. Clique em **Visualizar cadeia de ferramentas**.
-
-3. Visualize seu pipeline de entrega no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e histórico.
+2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e o histórico.
 
 ### Implementar usando o {{site.data.keyword.dev_cli_short}}
-Se você optar por não usar uma cadeia de ferramentas, também será possível implementar usando o {{site.data.keyword.dev_cli_short}}.
 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: pre}
 
 Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
 
 ```
 ibmcloud dev deploy --target <container>
 ```
-{: codeblock}
+{: pre}
 
-### Consulte seu app em execução
-Quando o aplicativo for implementado, você verá uma URL semelhante a `abc-devhost.mybluemix.net` no pipeline do DevOps ou no terminal (se você estiver usando a linha de comandos). Visite essa URL em seu navegador.
+## Etapa 7: Verificar se seu app está em execução
+{: #verify}
+
+Após a implementação de seu app, o pipeline ou a linha de comandos do DevOps aponta para a URL de seu app, por exemplo, `abc-devhost.mybluemix.net`. Acesse essa URL em seu navegador.

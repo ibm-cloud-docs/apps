@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,113 +15,106 @@ lastupdated: "2018-05-22"
 # Criando um aplicativo móvel com um kit do iniciador
 {: #tutorial}
 
-É possível criar um app móvel por meio de um iniciador básico móvel. Você verá como instalar as ferramentas necessárias e as etapas para executar o app em Xcode e no Android Studio.
+O {{site.data.keyword.Bluemix}} oferece kits móveis do iniciador para ajudar a criar um app móvel rapidamente. Escolha uma linguagem, uma estrutura e ferramentas dos Kits do iniciador do Serviço de app para começar a trabalhar com um app customizado pré-configurado. Neste tutorial, é possível aprender a instalar as ferramentas necessárias, além de construir e executar o app localmente e implementá-lo na nuvem.
 {: shortdesc}
 
-## Instalar as ferramentas
-{: #before-you-begin}
+## Etapa 1: instalar as ferramentas
+{: #install-tools}
 
-Instale as [ferramentas do desenvolvedor](/docs/cli/idt/index.html#create){: new_window}.
+Instale as [ferramentas do desenvolvedor![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Escolher como criar seu app
-{: #choose_how}
+O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 
-É possível criar um app usando um dos métodos a seguir:
-- [{{site.data.keyword.dev_console}}](#create-devex) baseado na web
-- [{{site.data.keyword.dev_cli_notm}}](#create-cli) acionado por comando local
-
-## Criando um app com o {{site.data.keyword.dev_console}}
+## Etapa 1: Criando um app com o {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Crie um app {{site.data.keyword.dev_console}} no {{site.data.keyword.Bluemix}}.
+2. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador com base nos recursos desejados. Por exemplo, para um aplicativo Watson Language, selecione **Swift Kitura**.
+3. Insira o nome de seu app. Para este tutorial, use `WatsonApp`.
+4. Selecione a plataforma da linguagem. Para este tutorial, use `Swift`.
+5. Selecione sua linguagem e estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+6. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+7. Clique em **Criar**.
 
-    1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador com base nos recursos desejados. Por exemplo, para um aplicativo Watson Language, acesse **Watson Language** e clique em **Selecionar kit do iniciador**.
-
-    2. Insira o nome de seu app. Para este tutorial, use `WatsonApp`.   
-
-    3. Selecione a plataforma da linguagem. Para este tutorial, use `Swift`.
-
-    4. Clique em **Criar**.
-
-### Opcional: incluir serviços
+## Etapa 3: Incluir recursos (opcional)
 {: #add-services}
 
-1. Selecione seu app na página **Apps**.
+É possível incluir recursos que aprimoram seu app com o poder cognitivo do Watson, incluir serviços móveis ou serviços de segurança. Para este tutorial, inclua um local para gerenciar seus dados.
 
-2. Clique em **Incluir serviço**.
+1. Na janela de serviço do app, clique em **Incluir recurso**.
+2. Selecione o tipo de serviço desejado. Por exemplo, selecione **Dados** > **Avançar** > **Cloudant** > **Avançar**.
+3. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+4. Clique em **Criar**.
 
-3. Selecione o tipo de serviço desejado. Para este tutorial, selecione **Segurança** > **Avançar** > **ID do app** > **Avançar**.
+## Etapa 4: criar uma cadeia de ferramentas do DevOps
+{: #add-toolchain}
 
-4. Insira o nome do serviço e clique em **Criar**.
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para a plataforma de implementação escolhida, seja Kubernetes ou Cloud Foundry.
 
-5. Para obter mais informações sobre como configurar a autenticação, veja [Configurando provedores de identidade ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/appid/identity-providers.html){: new_window}.
+A entrega contínua é ativada para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
 
-6. Para obter mais informações sobre como configurar a analítica, veja [Introdução ao {{site.data.keyword.mobileanalytics_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/mobileanalytics/index.html){: new_window}.
+1. Na janela de serviço do app, clique em **Implementar na nuvem**.
+2. Selecione um método de implementação. Configure seu método de implementação de acordo com as instruções para o método escolhido.
 
-7. Para obter mais informações sobre como configurar o {{site.data.keyword.cloudant_short_notm}}, consulte
-[Introdução ao {{site.data.keyword.cloudant_short_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/Cloudant/index.html){: new_window}.
+    * Implementar em um cluster do Kubernetes. Crie um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
 
-8. Para obter mais informações sobre como configurar o {{site.data.keyword.objectstorageshort}}, consulte
-[Introdução ao {{site.data.keyword.objectstorageshort}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/ObjectStorage/index.html){: new_window}.
+    * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-9. Para obter mais informações sobre como incluir notificações push, veja a [documentação de notificações](/docs/services/mobilepush/c_overview_push.html#overview-push) push.
+## Etapa 5: Construindo e executando o app localmente
+{: #build-run}
 
-### Gerar seu código de app
-{: #generate-code}
+A implementação de seu app na nuvem na última etapa criou uma cadeia de ferramentas. Uma cadeia de ferramentas cria um repositório Git para seu app no qual é possível localizar o código. Siga estas etapas para acessar o repositório. É possível construir o app localmente para teste antes de enviá-lo por push para a nuvem.
 
-1. Selecione seu app na página **Apps**.
+1. Na janela de serviço do app, clique em **Fazer download do código** ou **Clonar seu repositório** para trabalhar com seu código localmente.
+2. Importe o app para seu ambiente de desenvolvimento integrado.
+3. Modifique o código.
+4. Configure a [Autenticação Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) incluindo um token de acesso pessoal.
+5. Efetue login na interface da linha de comandos do {{site.data.keyword.Bluemix}}. Se a sua organização usar logins federados, use a opção `-sso`.
 
-2. Clique em **Código do download** para fazer download do archive do app.
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### Começar a trabalhar em seu app
-{: #code}
+6. Configure seus destinos org e space.
 
-Comece a trabalhar com seu app transferido por download:
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. Expanda o arquivo arquivado.
+7.  Obtenha as credenciais.
 
-2. Navegue para o novo diretório de aplicativos.
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. Use o {{site.data.keyword.dev_cli_notm}} para continuar.
+8. Certifique-se de que o Docker esteja em execução e construa seu app em um contêiner de desenvolvimento local por meio do diretório.
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## Criando um app com o {{site.data.keyword.dev_cli_notm}}
-{: #create-cli}
+9. Execute seu app em um contêiner de desenvolvimento local.
 
-1. Assegure-se de instalar o [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html).
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. No prompt do Terminal, navegue para um diretório local de sua preferência e execute o comando a seguir.
-
-	```
-	Ibmcloud dev criar
-	```
-	{: codeblock}
-
-3. Forneça os valores a seguir quando solicitado:
-
-	* Selecione um tipo de app de "Cliente móvel", opção 2
-	* Selecione a linguagem de implementação como "iOS Swift", opção 3
-	* Selecione kit do iniciador de "App móvel: básico", opção 1
-	* Insira um nome para seu app: `MobileBasicProject`
-
-    Nota: os números reais de seleção podem mudar com os aprimoramentos de ferramentas.
-
-4. Se você deseja incluir serviços em seu app, digite `y` no prompt de pergunta e responda às perguntas restantes.
-
-5. Quando o `MobileBasicProject` for criado e salvo com êxito, navegue para a pasta `MobileBasicProject/MobileBasicProject-Swift`.
+10.  Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
 
 ### Executando seu app Swift no Xcode
 {: #run_swift}
 
 1. Abra o arquivo `README.md` em um visualizador de redução de preço para revisar as etapas para configurar seu app.
-
 2. Abra seu terminal e navegue para sua pasta de app e execute os comandos a seguir:
     1. Execute `pod setup` se precisar configurar o repositório do CocoaPods.
     2. Execute `pod update` se precisar atualizar os pods existentes.
     3. Execute `pod install` para instalar os pods para seu app.
-
 3. Abra sua área de trabalho do Xcode `<appname>.xcworkspace`.
-
 4. Execute seu app.
 
 ### Executando seu app Cordova no Xcode
@@ -130,9 +123,7 @@ Comece a trabalhar com seu app transferido por download:
 Se você optar por usar o Cordova como sua linguagem de implementação, siga estas instruções.
 
 1. Abra o arquivo `README.md` em um visualizador de Markdown para configurar seu app.
-
 2. Abra seu app `platforms/ios` no Xcode.
-
 3. Execute seu app.
 
 ### Executando seu app Cordova no Android Studio
@@ -141,11 +132,8 @@ Se você optar por usar o Cordova como sua linguagem de implementação, siga es
 Use essa seção se você escolher usar o Cordova como plataforma do seu app móvel.
 
 1. Extraia o arquivo `BasicProject-Cordova.zip`.
-
 2. Abra o arquivo `README.md` em um visualizador de Markdown para configurar seu app.
-
 3. Abra seu app `platforms/android` no Android Studio.
-
 4. Execute seu app.
 
 ### Executando seu app Android no Android Studio
@@ -154,7 +142,41 @@ Use essa seção se você escolher usar o Cordova como plataforma do seu app mó
 Use esta seção se você escolher usar o Android como plataforma do seu app móvel.
 
 1. Abra o arquivo `README.md` em um visualizador de Markdown para configurar seu app.
-
 2. Abra seu app `BasicProject-Android` no Android Studio.
-
 3. Execute seu app.
+
+## Etapa 6: implementar na nuvem
+{: #deploy}
+
+### Implementar usando uma cadeia de ferramentas
+
+É possível implementar seu app no {{site.data.keyword.cloud_notm}} de várias maneiras, mas uma cadeia de ferramentas do DevOps é a melhor maneira de implementar apps de produção. Com uma cadeia de ferramentas do DevOps, é possível automatizar facilmente implementações para muitos ambientes e incluir rapidamente serviços de monitoramento, criação de log e alerta para ajudar a gerenciar seu app à medida que ele cresce.
+
+Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção-implementação se inicia automaticamente com cada mesclagem na ramificação Principal em seu repositório. Todas as cadeias de ferramentas criadas por meio de um painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
+
+Também é possível implementar seu app manualmente por meio de sua cadeia de ferramentas DevOps:
+
+1. Na janela Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
+
+2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e o histórico.
+
+### Implemente usando o  {{site.data.keyword.dev_cli_short}}
+
+Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## Etapa 7: Verificar se seu app está em execução
+{: #verify}
+
+Após a implementação de seu app, o pipeline ou a linha de comandos do DevOps aponta para a URL de seu app, por exemplo, `abc-devhost.mybluemix.net`. Acesse essa URL em seu navegador.

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -39,7 +39,7 @@ O IBM Cloud fornece uma CLI robusta, bem como plug-ins e extensões de ferrament
 Use a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para implementar seus aplicativos e instâncias de serviço.
 {:shortdesc}
 
-Antes de iniciar, faça download e instale a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}.
+Antes de iniciar, [faça download e instale a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>
@@ -78,8 +78,8 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   **Nota**: quando o valor contém um espaço, deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name`, por exemplo, `-o "my org"`.
 
-  5. Por meio do <var class="keyword varname">your_new_directory</var>, reimplemente o seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `ibmcloud app push`. Para obter mais informações sobre o comando `ibmcloud app push`, veja [Fazendo upload de seu aplicativo](/docs/starters/upload_app.html).
+  5. Em <var class="keyword varname">your_new_directory</var>, reimplemente seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [a documentação da CLI](docs/cli/idt/commands.html#deploy).
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs"> ibmcloud dev deploy  <var class="keyword varname" data-hd-keyref="app_name"> app_name </var> </code></pre>
 
   6. Acesse seu app procurando https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.

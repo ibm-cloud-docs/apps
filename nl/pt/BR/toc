@@ -17,15 +17,19 @@ Criando aplicativos
     Desenvolvendo apps
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
-        tutorials/tutorial_microservice.md
         tutorials/tutorial_custom.md
+        tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         starter_kits.md
+        deploying/functions.md
 
     {: .topicgroup}
     Implementando e integrando apps
         dep-app-tool.md
         vsi-deploy.md
+        deploying/containers.md
+        deploying/crypto.md
+
 
     reqnsi.md
     mngapps.md
@@ -60,6 +64,8 @@ Criando aplicativos
 
     {: .navgroup id="help"}
     ts_apps.md
-    [Canal de ferramentas do desenvolvedor do IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Referência de API do Cloud Functions](https://console.bluemix.net/apidocs/98)
+    [SDK móvel](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}
