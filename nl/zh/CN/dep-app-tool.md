@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 使用 {{site.data.keyword.Bluemix_notm}} 命令行界面部署应用程序和服务实例。
 {:shortdesc}
 
-开始之前，请下载并安装 {{site.data.keyword.Bluemix_notm}} 命令行界面。
+开始之前，请[下载并安装 {{site.data.keyword.Bluemix_notm}} 命令行界面](/docs/cli/index.html)。
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 IBM Cloud Developer Tools" /></a>
@@ -77,8 +77,8 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 
   **注**：如果 `username`、`org_name` 和 `space_name` 的值包含空格，那么必须用单引号或双引号将其括起，例如 `-o "my org"`。
 
-  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud app push` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关 `ibmcloud app push` 命令的更多信息，请参阅[上传应用程序](/docs/starters/upload_app.html)。
+  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud dev deploy` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关更多信息，请参阅 [CLI 文档](docs/cli/idt/commands.html#deploy)。
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. 通过浏览到 https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span> 来访问应用程序。
