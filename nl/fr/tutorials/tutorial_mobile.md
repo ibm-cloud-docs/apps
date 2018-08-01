@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -15,111 +15,106 @@ lastupdated: "2018-05-22"
 # Création d'une application mobile à l'aide d'un kit de démarrage
 {: #tutorial}
 
-Vous pouvez créer une application mobile à partir d'un kit de démarrage de base mobile. Vous verrez comment installer les outils dont vous avez besoin et vous découvrirez les étapes nécessaires à l'exécution de l'application dans Xcode et Android Studio.
+{{site.data.keyword.Bluemix}} inclut des kits de démarrage mobiles vous permettant de créer plus facilement et plus rapidement une application mobile. Choisissez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez apprendre à installer les outils dont vous avez besoin, générer et exécuter l'application localement et la déployer dans le cloud.
 {: shortdesc}
 
-## Installation des outils
-{: #before-you-begin}
+## Etape 1 : Installer les outils
+{: #install-tools}
 
-Installez les [outils de développement](/docs/cli/idt/index.html#create){: new_window}.
+Installez les [outils de développement ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
-## Choix du mode de création de votre application
-{: #choose_how}
+Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 
-Vous pouvez créer une application en utilisant l'une des méthodes suivantes :
-- En utilisant la console [{{site.data.keyword.dev_console}}](#create-devex) basée sur le Web
-- En utilisant le plug-in [{{site.data.keyword.dev_cli_notm}}](#create-cli) piloté par des commandes
-
-## Création d'une application à l'aide d'{{site.data.keyword.dev_console}}
+## Etape 2 : Créer une application avec la console {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Créez une application {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
+2. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage correspondant aux fonctions dont vous avez besoin. Par exemple, pour une application Watson Language, sélectionnez **Swift Kitura**.
+3. Entrez le nom de votre application. Pour ce tutoriel, utilisez `WatsonApp`.
+4. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Swift`.
+5. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
+6. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
+7. Cliquez sur **Créer**.
 
-    1. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage en fonction des fonctions souhaitées. Par exemple, pour une application de langage Watson, accédez à **Watson Language** et cliquez sur **Sélectionner un kit de démarrage**.
-
-    2. Entrez le nom de votre application. Pour ce tutoriel, utilisez `WatsonApp`.   
-
-    3. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Swift`.
-
-    4. Cliquez sur **Créer**.
-
-### Facultatif : Ajouter des services
+## Etape 3 : Ajouter des ressources (facultatif)
 {: #add-services}
 
-1. Sélectionnez votre application sur la page **Applications**.
+Vous pouvez ajouter des ressources qui améliorent votre application avec la puissance cognitive de Watson, ajoutent des services mobiles ou des services de sécurité. Pour ce tutoriel, ajoutez un emplacement pour gérer vos données.
 
-2. Cliquez sur **Ajouter un service**.
+1. Dans la fenêtre de service d'application, cliquez sur **Ajouter une ressource**.
+2. Sélectionnez le type de service souhaité. Par exemple, sélectionnez **Données** > **Suivant** > **Cloudant** > **Suivant**.
+3. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
+4. Cliquez sur **Créer**.
 
-3. Sélectionnez le type de service souhaité. Pour ce tutoriel, sélectionnez **Sécurité** > **Suivant** > **ID app** > **Suivant**.
+## Etape 4 : Créer une chaîne d'outils DevOps
+{: #add-toolchain}
 
-4. Entrez le nom de votre service, puis cliquez sur **Créer**.
+L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont configurés pour la plateforme de déploiement choisie, Kubernetes ou Cloud Foundry.
 
-5. Pour plus d'informations sur la configuration de l'authentification, voir [Configuration des fournisseurs d'identité ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/appid/identity-providers.html){: new_window}.
+La distribution continue est activée pour certaines applications. Vous pouvez activer la distribution continue pour automatiser les générations, les tests et les déploiements via Delivery Pipeline et GitHub.
 
-6. Pour plus d'informations sur la configuration d'analyse, voir [Initiation à {{site.data.keyword.mobileanalytics_short}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/mobileanalytics/index.html){: new_window}.
+1. Dans la fenêtre de service d'application, cliquez sur **Déployer dans le cloud**.
+2. Sélectionnez une méthode de déploiement. Configurez votre méthode de déploiement en fonction des instructions s'appliquant à la méthode choisie.
 
-7. Pour plus d'informations sur la configuration de {{site.data.keyword.cloudant_short_notm}}, voir [Initiation à {{site.data.keyword.cloudant_short_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/Cloudant/index.html){: new_window}.
+    * Effectuer un déploiement sur un cluster Kubernetes. Créez un cluster d'hôtes, appelé noeuds d'employé, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
 
-8. Pour plus d'informations sur la configuration d'{{site.data.keyword.objectstorageshort}}, voir [Initiation à {{site.data.keyword.objectstorageshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/ObjectStorage/index.html){: new_window}.
+    * Effectuer un déploiement à l'aide de Cloud Foundry. Dans ce cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
 
-9. Pour plus d'informations sur l'ajout de notifications push, voir la documentation sur les [notifications push](/docs/services/mobilepush/c_overview_push.html#overview-push).
+## Etape 5 : Générer et exécuter l'application localement
+{: #build-run}
 
-### Générer le code de votre application
-{: #generate-code}
+Le déploiement de votre application dans le cloud effectué lors de la dernière étape a créé une chaîne d'outils. Cette dernière crée un référentiel Git pour votre application dans lequel vous pouvez trouver le code. Procédez comme suit pour accéder à votre référentiel. Vous pouvez générer l'application localement à des fins de test avant de la placer dans le cloud.
 
-1. Sélectionnez votre application sur la page **Applications**.
+1. Dans la fenêtre de service d'application, cliquez sur **Télécharger le code** ou **Cloner votre référentiel** pour utiliser votre code localement.
+2. Importez l'application dans votre environnement de développement intégré.
+3. Modifiez le code.
+4. Configurez l'[authentification Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) en ajoutant un jeton d'accès personnel.
+5. Connectez-vous à l'interface de ligne de commande {{site.data.keyword.Bluemix}}. Si votre entreprise utilise des connexions fédérées, utilisez l'option `-sso`.
 
-2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application.
+  ```bash
+  ibmcloud login -sso
+  ```
+  {: pre}
 
-### Commencer à utiliser votre application
-{: #code}
+6. Configurez vos cibles d'organisation et d'espace.
 
-Commencez à utiliser l'application que vous avez téléchargée :
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
 
-1. Développez le fichier archivé.
+7.  Obtenez les données d'identification.
 
-2. Accédez au nouveau répertoire d'application.
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
 
-3. Utilisez le {{site.data.keyword.dev_cli_notm}} pour poursuivre.
+8. Assurez-vous que Docker est en cours d'exécution et générez votre application dans un conteneur de développement local à partir du répertoire.
 
+  ```bash
+  ibmcloud dev build
+  ```
+  {: pre}
 
-## Création d'une application à l'aide d'{{site.data.keyword.dev_cli_notm}}
-{: #create-cli}
+9. Exécutez votre application dans un conteneur de développement local.
 
-1. Prenez soin d'installer le plug-in [{{site.data.keyword.dev_cli_short}}](/docs/cli/idt/index.html).
+  ```bash
+  ibmcloud dev run
+  ```
+  {: pre}
 
-2. Dans votre invite de terminal, accédez au répertoire local de votre choix et exécutez la commande suivante :
-
-	```
-	ibmcloud dev create
-```
-	{: codeblock}
-
-3. Fournissez les valeurs suivantes, quand vous y êtes invité :
-
-	* Sélectionnez le type d'application "Mobile Client", option 2
-	* Sélectionnez le langage d'implémentation "iOS Swift", option 3
-	* Sélectionnez le kit de démarrage "Mobile App: Basic", option 1
-	* Entrez le nom suivant pour votre application : `MobileBasicProject`
-
-    Remarque : les numéros de sélection pourront changer dans le cadre d'améliorations apportées aux outils.
-
-4. Si vous voulez ajouter des services à votre application, répondez par l'affirmative à la question qui vous est posée, puis répondez aux questions suivantes.
-
-5. Lorsque votre application `MobileBasicProject` est créée et sauvegardée, accédez au dossier `MobileBasicProject/MobileBasicProject-Swift`.
+10.  Ouvrez votre navigateur dans `http://localhost:3000`. Votre numéro de port peut être différent en fonction de l'environnement d'exécution choisi.
 
 ### Exécution de votre application Swift dans Xcode
 {: #run_swift}
 
 1. Ouvrez le fichier `README.md` dans un visualiseur Markdown afin de passer en revue les étapes nécessaires pour configurer votre application.
-
 2. Ouvrez votre terminal et accédez au dossier de votre application, puis exécutez les commandes suivantes :
     1. Exécutez `pod setup` si vous devez configurer votre référentiel CocoaPods.
     2. Exécutez `pod update` si vous devez mettre à jour vos pods existants.
     3. Exécutez `pod install` pour installer les pods de votre application.
-
 3. Ouvrez votre espace de travail Xcode `<appname>.xcworkspace`.
-
 4. Exécutez votre application.
 
 ### Exécution de votre application Cordova dans Xcode
@@ -128,9 +123,7 @@ Commencez à utiliser l'application que vous avez téléchargée :
 Si vous avez choisi d'utiliser Cordova comme langage d'implémentation, suivez les instructions ci-dessous :
 
 1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
-
 2. Ouvrez votre application `platforms/ios` dans Xcode.
-
 3. Exécutez votre application.
 
 ### Exécution de votre application Cordova dans Android Studio
@@ -139,11 +132,8 @@ Si vous avez choisi d'utiliser Cordova comme langage d'implémentation, suivez l
 Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme de votre application mobile.
 
 1. Décompressez le fichier `BasicProject-Cordova.zip`.
-
 2. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
-
 3. Ouvrez votre application `platforms/android` dans Android Studio.
-
 4. Exécutez votre application.
 
 ### Exécution de votre application Android dans Android Studio
@@ -152,7 +142,41 @@ Utilisez cette section si vous avez choisi d'utiliser Cordova comme plateforme d
 Utilisez cette section si vous avez choisi d'utiliser Android comme plateforme de votre application mobile.
 
 1. Ouvrez le fichier `README.md` dans un visualiseur Markdown pour configurer votre application.
-
 2. Ouvrez votre application `BasicProject-Android` dans Android Studio.
-
 3. Exécutez votre application.
+
+## Etape 6 : Effectuer un déploiement sur le cloud
+{: #deploy}
+
+### Déploiement à l'aide d'une chaîne d'outils
+
+Vous pouvez déployer votre application dans {{site.data.keyword.cloud_notm}} de différentes manières. Mais l'utilisation d'une chaîne d'outils DevOps reste le meilleur moyen de déployer des applications de production. A l'aide d'une chaîne d'outils DevOps, vous pouvez facilement automatiser un grand nombre de déploiements et ajouter rapidement des services de surveillance, de journalisation et d'alerte afin de gérer plus facilement votre application à mesure de sa croissance.
+
+Avec une chaîne d'outils correctement configurée, un cycle de génération-déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
+
+Vous pouvez également déployer manuellement votre application depuis votre chaîne d'outils DevOps :
+
+1. Dans la fenêtre Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
+
+2. Cliquez sur **Delivery pipeline**. Vous pouvez alors démarrer des générations, gérer le déploiement et afficher les journaux et l'historique.
+
+### Déploiement en utilisant {{site.data.keyword.dev_cli_short}}
+
+Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
+
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
+
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
+
+## Etape 7 : Vérifier que votre application est en cours d'exécution
+{: #verify}
+
+Une fois votre application déployée, l'invite de commande ou le pipeline DevOps indique l'URL de votre application, par exemple `abc-devhost.mybluemix.net`. Accédez à cette URL à partir de votre navigateur.

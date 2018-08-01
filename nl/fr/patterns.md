@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -51,14 +51,14 @@ Choisissez un kit de démarrage BFF en fonction de vos exigences d'infrastructur
 
 Les applications de microservice fournissent le fondement de la génération de microservices de back end, y compris un noeud final de santé de base et une API REST. Les applications générées incluent toutes les dépendances requises à la fois pour le microservice proprement dit et pour n'importe quel service cloud associé.
 
-Choisissez un kit de démarrage de microservice en fonction de vos exigences d'infrastructure et de langage. Vous trouverez des kits de démarrage pour le modèle de microservice dans le [tableau de bord de développeur de service d'application {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Choisissez un kit de démarrage de micro-service en fonction de vos exigences d'infrastructure et de langage. Vous trouverez des kits de démarrage pour le modèle de microservice dans le [tableau de bord de développeur de service d'application {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
 Les applications mobiles sont différents des autres modèles car elles comportent un composant côté client significatif. Le modèle peut inclure une connexion directe aux services mobiles, telle que les notifications push, l'authentification et l'analytique mobile. Les services mobiles sont dénommés système de back end mobile sous forme de services ou encore modèle MBaaS. Ils peuvent également disposer d'une solution [Backend-for-frontend](#bff) dédiée.
 
-{{site.data.keyword.cloud_notm}} offre plusieurs kits de démarrage mobile pour iOS, Swift, Android et Cordova. Vous trouverez des kits de démarrage pour le modèle mobile dans le [tableau de bord de développeur mobile {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} offre plusieurs kits de démarrage mobiles pour iOS, Swift, Android et Cordova. Vous trouverez des kits de démarrage pour le modèle mobile dans le [tableau de bord de développeur mobile {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
 
 ## Langages
 {: #languages}

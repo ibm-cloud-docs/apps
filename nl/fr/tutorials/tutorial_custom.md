@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -19,9 +19,11 @@ Vous pouvez créer une application personnalisée à l'aide de services et d'un 
 {: shortdesc}
 
 ## Etape 1 : Installer les outils
-{: #before-you-begin}
+{: #install-tools}
 
 Installez les [outils de développement ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+
+Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 
 ## Etape 2 : Créer une application
 {: #create-devex}
@@ -30,135 +32,114 @@ Créez une application dans {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 
 1. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez **Créer** pour créer une application personnalisée.
 
-2. Entrez le nom de votre application. Pour ce tutoriel, utilisez `CustomProject`.   
-
-3. Entrez un nom d'hôte unique, par exemple, vos initiales plus `-devhost`. Par exemple :
-
-	```
-	abc-devhost
-	```
-
-	Ce nom d'hôte correspond à la route de votre application. Par exemple, `abc-devhost.mybluemix.net`
-
-4. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Node.js`.
-
-5. (Facultatif) Vous pouvez commencer l'échafaudage de votre système de back end à partir d'un document OpenAPI. Cette opération est utile pour le développeur de système de back end dont le client et le contrat d'intégration de back end sont déjà définis dans un document Swagger. Les types de fichier **.yaml** et **.json** sont pris en charge. Cliquez sur **Ajouter un fichier** pour mettre à jour votre document.
-
+2. Entrez le nom de votre application. Pour ce tutoriel, utilisez `CustomProject`.
+3. Entrez un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`
+4. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
+5. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
 6. Cliquez sur **Créer**.
 
-## Facultatif : Ajouter des resources
+## Etape 3 : Ajouter des ressources (facultatif)
 {: #add-services}
 
-1. Dans la vue **Détails de l'application**, sélectionnez **Ajouter une ressource**.
+Vous pouvez ajouter des ressources qui améliorent votre application avec la puissance cognitive de Watson, ajoutent des services mobiles ou des services de sécurité. Pour ce tutoriel, ajoutez un emplacement pour gérer vos données.
 
-2. Sélectionnez le type de service souhaité. Pour ce tutoriel, sélectionnez **Données** > **Suivant** > **Cloudant NoSQL DB** > **Suivant**.
+1. Dans la fenêtre de service d'application, cliquez sur **Ajouter une ressource**.
+2. Sélectionnez le type de service souhaité. Par exemple, sélectionnez **Données** > **Suivant** > **Cloudant** > **Suivant**.
+3. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
+4. Cliquez sur **Créer**.
 
-3. Cliquez sur **Créer**.
-
-## Facultatif : Créer une chaîne d'outils DevOps
+## Etape 4 : Créer une chaîne d'outils DevOps
 {: #add-toolchain}
 
-L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application met à disposition un référentiel git dans lequel vous pouvez afficher le code source, cloner votre application et créer et gérer les problèmes. Vous avez également accès à un environnement Gitlab dédié et à un pipeline de distribution continue qui est personnalisé pour la plateforme de déploiement que vous avez choisie, telle que kubernetes ou Cloud Foundry.
+L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont configurés pour la plateforme de déploiement choisie, Kubernetes ou Cloud Foundry.
 
-La distribution continue est activée pour certaines applications. Vous souhaiterez peut-être activer la distribution continue pour automatiser les générations, les tests et les déploiements via le pipeline de distribution et GitHub.
+La distribution continue est activée pour certaines applications. Vous pouvez activer la distribution continue pour automatiser les générations, les tests et les déploiements via Delivery Pipeline et GitHub.
 
-1. Sélectionnez votre application sur la page **Applications**.
+1. Dans la fenêtre de service d'application, cliquez sur **Déployer dans le cloud**.
+2. Sélectionnez une méthode de déploiement. Configurez votre méthode de déploiement en fonction des instructions s'appliquant à la méthode choisie.
 
-2. Cliquez sur **Déployer dans Cloud**.
+    * Effectuer un déploiement sur un cluster Kubernetes. Créez un cluster d'hôtes, appelé noeuds d'employé, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
 
-3. Sélectionnez une méthode de déploiement. Les deux options suivantes s'offrent à vous :
-
-	* Effectuer un déploiement sur un cluster Kubernetes. Mettez à disposition un cluster d'hôtes, appelé noeuds d'employé, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
-
-	* Effectuer un déploiement à l'aide de Cloud Foundry, auquel cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
-
-## Etape 3 : Générer le code de votre application
-{: #generate-code}
-
-Si vous avez créé une chaîne d'outils à l'étape précédente, un référentiel Git a été créé pour votre application et vous y trouverez le code. Procédez comme suit pour accéder à votre référentiel :
-
-1. Sélectionnez votre application sur la page **Applications**.
-
-2. Cliquez sur **Afficher la chaîne d'outils**.
-
-3. Cliquez sur la carte **Git** sous l'en-tête **CODE** afin d'ouvrir votre référentiel dans lequel vous pouvez visualiser le code source et cloner votre application.
-
-Si une chaîne d'outils n'est pas activée, vous pouvez accéder à votre code en téléchargeant la source directement à partir de la vue Détails de l'application.
-
-1. Sélectionnez votre application sur la page **Applications**.
-
-2. Cliquez sur **Télécharger le code** pour télécharger l'archive de votre application.
-
-## Etape 4 : Commencer à utiliser votre application
-{: #code}
-
-Commencez à utiliser l'application que vous avez téléchargée :
-
-1. Développez le fichier archivé.
-
-2. Importez l'application dans votre interface IDE.
-
-3. Modifiez le code.
-
-4. Utilisez le {{site.data.keyword.dev_cli_notm}} pour générer et exécuter votre code localement.
-
+    * Effectuer un déploiement à l'aide de Cloud Foundry. Dans ce cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
 
 ## Etape 5 : Générer et exécuter l'application localement
 {: #build-run}
 
-Ajoutez votre propre code, puis générez et exécutez l'application. Vous pouvez exécuter l'application localement sur votre système hôte si vous installez les outils de génération nécessaires, ou en utilisant le support de conteneur disponible dans le {{site.data.keyword.dev_cli_notm}}.
+Le déploiement de votre application dans le cloud effectué lors de la dernière étape a créé une chaîne d'outils. Cette dernière crée un référentiel Git pour votre application dans lequel vous pouvez trouver le code. Procédez comme suit pour accéder à votre référentiel. Vous pouvez générer l'application localement à des fins de test avant de la placer dans le cloud.
 
-### Utilisation du plug-in {{site.data.keyword.dev_cli_short}}
+1. Dans la fenêtre de service d'application, cliquez sur **Télécharger le code** ou **Cloner votre référentiel** pour utiliser votre code localement.
+2. Importez l'application dans votre environnement de développement intégré.
+3. Modifiez le code.
+4. Configurez l'[authentification Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) en ajoutant un jeton d'accès personnel.
+5. Connectez-vous à l'interface de ligne de commande {{site.data.keyword.Bluemix}}. Si votre entreprise utilise des connexions fédérées, utilisez l'option `-sso`.
 
-1. Pour générer l'application dans votre répertoire d'application en cours, entrez la commande suivante :
-
+  ```bash
+  ibmcloud login -sso
   ```
+  {: pre}
+
+6. Configurez vos cibles d'organisation et d'espace.
+
+  ```bash
+  ibmcloud target --cf
+  ```
+  {: pre}
+
+7.  Obtenez les données d'identification.
+
+  ```bash
+  ibmcloud dev get-credentials
+  ```
+  {: pre}
+
+8. Assurez-vous que Docker est en cours d'exécution et générez votre application dans un conteneur de développement local à partir du répertoire.
+
+  ```bash
   ibmcloud dev build
   ```
-  {: codeblock}
+  {: pre}
 
-2. Pour exécuter l'application dans votre répertoire d'application en cours, entrez la commande suivante :
+9. Exécutez votre application dans un conteneur de développement local.
 
-  ```
+  ```bash
   ibmcloud dev run
   ```
-  {: codeblock}
+  {: pre}
 
-3. Ouvrez votre navigateur dans `http://localhost:3000` (votre numéro de port peut être différent selon l'environnement d'exécution choisi).
-
+10.  Ouvrez votre navigateur dans `http://localhost:3000`. Votre numéro de port peut être différent en fonction de l'environnement d'exécution choisi.
 
 ## Etape 6 : Effectuer un déploiement sur le cloud
 {: #deploy}
 
-### Effectuer un déploiement à l'aide d'une chaîne d'outils
-Il existe plusieurs moyens de déployer une application sur {{site.data.keyword.cloud_notm}}, mais l'utilisation d'une chaîne d'outils DevOps reste le meilleur moyen de déployer des applications de production. Une chaîne d'outils DevOps vous permet d'automatiser facilement des déploiements sur plusieurs environnements et d'ajouter rapidement des services de surveillance, de journalisation et d'alerte afin de vous aider à gérer votre application à mesure qu'elle grossit.
+### Déploiement à l'aide d'une chaîne d'outils
+
+Vous pouvez déployer votre application dans {{site.data.keyword.cloud_notm}} de différentes manières. Mais l'utilisation d'une chaîne d'outils DevOps reste le meilleur moyen de déployer des applications de production. A l'aide d'une chaîne d'outils DevOps, vous pouvez facilement automatiser un grand nombre de déploiements et ajouter rapidement des services de surveillance, de journalisation et d'alerte afin de gérer plus facilement votre application à mesure de sa croissance.
 
 Avec une chaîne d'outils correctement configurée, un cycle de génération-déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
 
 Vous pouvez également déployer manuellement votre application depuis votre chaîne d'outils DevOps :
 
-1. Sélectionnez votre application sur la page **Applications**.
+1. Dans la fenêtre Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
 
-2. Cliquez sur **Afficher la chaîne d'outils**.
+2. Cliquez sur **Delivery pipeline**. Vous pouvez alors démarrer des générations, gérer le déploiement et afficher les journaux et l'historique.
 
-3. Affichez votre pipeline de distribution où vous pouvez démarrer des générations, gérer le déploiement et visualiser les journaux et l'historique.
-
-### Effectuer un déploiement à l'aide du plug-in {{site.data.keyword.dev_cli_short}}
-Si vous choisissez de ne pas utiliser une chaîne d'outils, vous pouvez également effectuer un déploiement à l'aide du plug-in {{site.data.keyword.dev_cli_short}}.
+### Déploiement en utilisant {{site.data.keyword.dev_cli_short}}
 
 Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
 
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
+```
+ibmcloud dev deploy
+```
+{: pre}
 
 Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
 
 ```
 ibmcloud dev deploy --target <container>
 ```
-{: codeblock}
+{: pre}
 
-### Vérifier que votre application est active
-Une fois l'application déployée, vous verrez une URL semblable à `abc-devhost.mybluemix.net` dans le pipeline DevOps ou dans le terminal (si vous utilisez la ligne de commande). Visitez l'URL dans votre navigateur.
+## Etape 7 : Vérifier que votre application est en cours d'exécution
+{: #verify}
+
+Une fois votre application déployée, l'invite de commande ou le pipeline DevOps indique l'URL de votre application, par exemple `abc-devhost.mybluemix.net`. Accédez à cette URL à partir de votre navigateur.

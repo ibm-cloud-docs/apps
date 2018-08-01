@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-06-25"
+lastupdated: "2018-07-23"
 
 ---
 
@@ -38,7 +38,7 @@ IBM Cloud fournit une interface de ligne de commande robuste, ainsi que des plug
 Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour déployer vos applications et instances de service.
 {:shortdesc}
 
-Avant de commencer, téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
+Avant de commencer, [téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger IBM Cloud Developer Tools" /></a>
@@ -55,7 +55,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   2. Placez-vous dans le répertoire dans lequel se trouve votre code.
 
-  <pre class="pre"><code class="hljs">cd <var class="keyword varname">votre_nouveau_répertoire</var></code></pre>
+  <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
   3.  Modifiez le code de votre application. Par exemple, si vous utilisez un exemple d'application {{site.data.keyword.Bluemix_notm}} qui contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute localement avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
 
@@ -77,8 +77,8 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   **Remarque **: si la valeur contient un espace, vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`. Par exemple, `-o "my org"`.
 
-  5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `ibmcloud app push`. Pour plus d'informations sur la commande `ibmcloud app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
+  5. A partir du répertoire <var class="keyword varname">your_new_directory</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} en utilisant la commande `ibmcloud dev deploy`. Pour plus d'informations, voir la [documentation concernant l'interface CLI](docs/cli/idt/commands.html#deploy).
 
-  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. Accédez à votre application via https://<var class="keyword varname" data-hd-keyref="app_url">url_app</var>.<span class="keyword" data-hd-keyref="APPDomain">nom_domaine_app</span>.
