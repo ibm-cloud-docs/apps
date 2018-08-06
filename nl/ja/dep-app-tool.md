@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ IBM Cloud は、堅固な CLI のほかに、CLI と統合されるプラグイ�
 
   **注**: `username`、`org_name`、`space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
 
-  5. `ibmcloud dev deploy` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。詳しくは、[CLI の資料](docs/cli/idt/commands.html#deploy)を参照してください。
+  5. `ibmcloud dev deploy` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。 詳しくは、[CLI の資料](/docs/cli/idt/commands.html#deploy)を参照してください。
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

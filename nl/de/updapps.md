@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # Angepasste Domäne erstellen und verwenden
 {: #updatingapps}
 
-Sie können die Befehlszeile oder {{site.data.keyword.Bluemix}} Continuous Delivery verwenden, um die Anwendungen in {{site.data.keyword.Bluemix_notm}} zu aktualisieren. In vielen Fällen müssen Sie (selbst für die Buildpacks wie beispielsweise 'Node.js') auch den Parameter '-c' verwenden, um anzugeben, welcher Befehl zum Starten Ihrer Anwendung verwendet wird.
-{:shortdesc}
-
 Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in {{site.data.keyword.Bluemix_notm}} zugeordnet ist. Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren und die angepasste Domäne in {{site.data.keyword.Bluemix_notm}} konfigurieren. Ordnen Sie die angepasste Domäne dann der {{site.data.keyword.Bluemix_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zu. Nachdem Ihre angepasste Domäne der Systemdomäne zugeordnet wurde, werden Anforderungen für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.Bluemix_notm}} weitergeleitet.
+{:shortdesc}
 
 Sie können eine angepasste Domäne erstellen und verwenden, indem Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die -Befehlszeilenschnittstelle verwenden.
 

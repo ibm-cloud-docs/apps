@@ -37,8 +37,6 @@ Wenn Sie Back-End- oder Web-Serving-Apps erstellen, können Sie sie im {{site.da
 
 Beim Erstellen der Toolchain werden die Services, die Sie Ihrer App zugeordnet haben, an den Kubernetes-Cluster gebunden, indem geheime Kubernetes-Schlüssel verwendet werden. Geheime Schlüssel dienen zur Verwaltung der Serviceberechtigungsnachweise außerhalb der aktiven App. Die App liest die geheimen Schlüssel und ruft dann die Werte ab, die zum Starten der Ausführung benötigt werden. Das Binden von Services ermöglicht die Bereitstellung der App in einer anderen Kubernetes-Umgebung, die möglicherweise {{site.data.keyword.cloud_notm}}-Serviceinstanzen auf Produktionsniveau verwendet.
 
-![Toolchain anzeigen](images/kubesecrets.png)
-
 Wenn Sie den Service oder die geheimen Schlüssel löschen, müssen Sie sie manuell erneut binden oder Sie müssen die Toolchain löschen und erneut erstellen.
 {: tip}
 
@@ -55,8 +53,6 @@ Weitere Informationen finden Sie in [Geheime Schlüssel ![Symbol für externen L
 {: #bulid-deploy-tc}
 
 Die Toolchain enthält die Build-Stage und die Bereitstellungsstage.
-
-![Toolchain anzeigen](images/deploytoolchain.png)
 
 ### Build-Stage
 {: #build-stage}

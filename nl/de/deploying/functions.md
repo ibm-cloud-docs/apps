@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 {:new_window: target="_blank"}
@@ -57,4 +57,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} stellt ein [SDK für Mobilgeräte](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) für iOS- und watchOS-Geräte bereit, mit dem mobile Apps ohne großen Aufwand ferne Auslöser senden und ferne Aktionen aufrufen können. Darüber hinaus steht ein [SDK für serverunabhänigige Frameworks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](docs/openwhisk/openwhisk_goserverless.html){:new_window} für serverunabhängige Anwendungen zur Verfügung.
+{{site.data.keyword.openwhisk_short}} stellt ein [SDK für Mobilgeräte](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) für iOS- und watchOS-Geräte bereit, mit dem mobile Apps ohne großen Aufwand ferne Auslöser senden und ferne Aktionen aufrufen können. Darüber hinaus steht ein [SDK für serverunabhänigige Frameworks ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} für serverunabhängige Anwendungen zur Verfügung.

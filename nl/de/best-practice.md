@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -18,9 +18,9 @@ In einer Umgebung ohne Cloud verwendet Ihre App möglicherweise eine bestimmte B
 
 Erstellen Sie Ihre App so generisch und statusunabhängig wie möglich, um zu verhindern, dass die App durch Änderungen in der Skalierbarkeit beeinträchtigt wird.
 
-## Voraussetzen, dass das lokale Dateisystem nicht von Bestand ist
+## Davon ausgehen, dass es sich beim lokalen Dateisystem nicht um ein permanentes System handelt
 
-Da die Instanz einer App in der Cloud verschoben, gelöscht oder kopiert werden kann, sollten Sie sich nicht auf die Dateien verlassen, die in das Dateisystem geschrieben werden. Wenn eine App das lokale Dateisystem als Cache für häufig verwendete Informationen (einschließlich von App-Protokollen) verwendet, gehen diese Informationen verloren, wenn die Instanz beendet wird und an einer anderen Position oder auf einer anderen virtuellen Maschine erneut gestartet wird.
+Verlassen Sie sich nicht auf die Dateien, die in das Dateisystem geschrieben werden, da eine App-Instanz in der Cloud verschoben, gelöscht oder dupliziert werden kann. Wenn eine App das lokale Dateisystem als Cache für häufig verwendete Informationen (einschließlich von App-Protokollen) verwendet, gehen diese Informationen verloren, wenn die Instanz beendet wird und an einer anderen Position oder auf einer anderen virtuellen Maschine erneut gestartet wird.
 
 Sie können Informationen anstatt im lokalen Dateisystem in einem Service speichern, z. B. in einer SQL- oder NoSQL-Datenbank. In einer dynamischen Cloudumgebung ist es darüber hinaus wichtig, dass die Protokolle durch einen Service bereitgestellt werden, der länger verfügbar ist als die App-Instanzen, für die die Protokolle erstellt werden.
 

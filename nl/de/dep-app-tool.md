@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
 
-  5. Führen Sie unter <var class="keyword varname">neues Verzeichnis</var> mit dem Befehl `ibmcloud dev deploy` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](docs/cli/idt/commands.html#deploy).
+  5. Führen Sie unter <var class="keyword varname">neues Verzeichnis</var> mit dem Befehl `ibmcloud dev deploy` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 

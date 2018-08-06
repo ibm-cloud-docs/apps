@@ -15,10 +15,7 @@ lastupdated: "2018-07-02"
 # 建立及使用自訂網域
 {: #updatingapps}
 
-您可以使用指令行或 {{site.data.keyword.Bluemix}} Continuous Delivery，來更新 {{site.data.keyword.Bluemix_notm}} 中的應用程式。在許多情況下，即使是建置套件（例如 Node.js），您還是必須提供 -c 參數來指定用來啟動應用程式的指令。
-{:shortdesc}
-
-網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域。然後，請將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
+網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域。然後，請將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。{:shortdesc}
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面，來建立及使用自訂網域。
 
