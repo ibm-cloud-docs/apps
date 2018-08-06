@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   **Nota**: se il valore contiene uno spazio, devi aggiungere singoli o doppi apostrofi intorno a `nomeutente`, `nome_org` e  `nome_spazio` se il valore contiene uno spazio, ad esempio, `-o "my org"`.
 
-  5. Da <var class="keyword varname">la_tua_nuova_directory</var>, ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [la documentazione della CLI](docs/cli/idt/commands.html#deploy).
+  5. Da <var class="keyword varname">la_tua_nuova_directory</var>, ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [la documentazione della CLI](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">nome_app</var></code></pre>
 

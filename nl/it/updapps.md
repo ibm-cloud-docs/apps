@@ -15,12 +15,10 @@ lastupdated: "2018-07-02"
 # Creazione e utilizzo di un dominio personalizzato
 {: #updatingapps}
 
-Per aggiornare le applicazioni in {{site.data.keyword.Bluemix_notm}}, puoi utilizzare la riga di comando o {{site.data.keyword.Bluemix}} Continuous Delivery. In molti casi, anche per i pacchetti di build come Node.js, devi fornire inoltre un parametro -c per specificare quale comando viene utilizzato per avviare la tua applicazione.
-{:shortdesc}
-
 I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{site.data.keyword.Bluemix_notm}}. Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico, configurare tale dominio in {{site.data.keyword.Bluemix_notm}}. Quindi, associa il dominio personalizzato al dominio di sistema {{site.data.keyword.Bluemix_notm}} sul server DNS pubblico. Dopo aver
 associato il tuo dominio personalizzato al dominio di sistema,
 le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 Puoi creare e utilizzare un dominio personalizzato utilizzando la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia della riga di comando
 
@@ -75,7 +73,7 @@ Una volta configurato il dominio personalizzato in {{site.data.keyword.Bluemix_n
   * STATI UNITI SUD - `secure.us-south.bluemix.net`
   * STATI UNITI EST - `secure.us-east.bluemix.net`
   * EU-DE - `secure.eu-de.bluemix.net`
-  * EUROPA REGNO UNITO - `secure.eu-gb.bluemix.net`
+  * EU-GB - `secure.eu-gb.bluemix.net`
   * AU-SYD - `secure.au-syd.bluemix.net`
 
 In un browser o nell'interfaccia riga di comando, immetti il seguente URL per accedere all'applicazione `myapp`:

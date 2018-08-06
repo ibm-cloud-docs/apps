@@ -37,8 +37,6 @@ Quando crei applicazioni di back-end o web-serving, puoi distribuirle al servizi
 
 Quando viene creata la toolchain, i servizi che hai associato alla tua applicazioni vengono collegati al cluster Kubernetes utilizzando i segreti Kubernetes. I segreti vengono utilizzati per gestire le credenziali del servizio al di fuori della tua applicazione in esecuzione. L'applicazione legge i segreti e quindi richiama i valori di cui ha bisogno per avviare l'esecuzione. Il bind dei servizi ti consente di distribuire l'applicazione in un altro ambiente Kubernetes che potrebbe utilizzare istanze del servizio {{site.data.keyword.cloud_notm}} a livello di produzione.
 
-![View Toolchain](images/kubesecrets.png)
-
 Se elimini il servizio o i segreti, devi ricollegarli manualmente o eliminare e ricreare la toolchain.
 {: tip}
 
@@ -55,8 +53,6 @@ Per ulteriori informazioni, vedi [Secreti ![Icona link esterno](../../icons/laun
 {: #bulid-deploy-tc}
 
 La toolchain contiene la fase di creazione e la fase di distribuzione.
-
-![View Toolchain](images/deploytoolchain.png)
 
 ### Fase di creazione
 {: #build-stage}

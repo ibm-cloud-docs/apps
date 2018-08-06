@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -20,7 +20,7 @@ Crea la tua applicazione in modo che sia il più possibile generica e senza stat
 
 ## Supponiamo che il file system locale non sia permanente
 
-Poiché un'istanza dell'applicazione può essere spostata, eliminata o duplicata sul cloud, non fare affidamento sui file scritti nel file system. Se un'applicazione utilizza il file system locale come cache delle informazioni utilizzate di frequente, inclusi i log delle applicazioni, le informazioni vengono perse quando l'istanza viene arrestata e riavviata in una posizione diversa o in un'altra VM.
+Non fare affidamento sui file scritti nel file system perché un'istanza dell'applicazione può essere spostata, eliminata o duplicata sul cloud. Se un'applicazione utilizza il file system locale come cache delle informazioni utilizzate di frequente, inclusi i log delle applicazioni, le informazioni vengono perse quando l'istanza viene arrestata e riavviata in una posizione diversa o in un'altra VM.
 
 Invece che nel file system locale, puoi memorizzare
 le informazioni in un servizio, quale un database SQL o NoSQL. In un ambiente cloud dinamico, è fondamentale anche che i tuoi log siano disponibili in un servizio avente durata superiore alle istanze dell'applicazione in cui vengono generati i log.
