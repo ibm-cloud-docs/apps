@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # Creación y utilización de un dominio personalizado
 {: #updatingapps}
 
-Puede utilizar la línea de mandatos o {{site.data.keyword.Bluemix}} Continuous Delivery para actualizar las aplicaciones en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación como Node.js, también debe escribir un parámetro -c para especificar el mandato que se debe utilizar para iniciar la aplicación.
-{:shortdesc}
-
 Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}. Para utilizar un dominio personalizado, debe registrar el dominio personalizado en un servidor DNS público, configurar el dominio personalizado en {{site.data.keyword.Bluemix_notm}}. A continuación, correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}} en el servidor DNS público. Después de correlacionar el dominio personalizado con el dominio del sistema, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 Puede crear y utilizar un dominio personalizado utilizando la consola o la interfaz de línea de mandatos de {{site.data.keyword.Bluemix_notm}}.
 

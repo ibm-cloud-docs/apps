@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -80,7 +80,7 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
   **Nota**: Si el valor contiene un espacio, debe añadir comillas simples o dobles alrededor de `nombre_usuario`, `nombre_organización` y `nombre_espacio`, por ejemplo, `-o "my org"`.
 
-  5. Desde <var class="keyword varname">su_nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} utilizando el mandato `ibmcloud dev deploy`. Para obtener más información, consulte [la documentación de CLI](docs/cli/idt/commands.html#deploy).
+  5. Desde <var class="keyword varname">su_nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} utilizando el mandato `ibmcloud dev deploy`. Para obtener más información, consulte [la documentación de CLI](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

@@ -37,8 +37,6 @@ Al crear apps de fondo o de servicio web, puede desplegarlas en el servicio de {
 
 A medida que se crea la cadena de herramientas, los servicios que asocia a su app están enlazados al clúster de Kubernetes utilizando los secretos de Kubernetes. Los secretos se utilizan para gestionar las credenciales de servicio fuera de la app en ejecución. La app lee los secretos y, a continuación, recupera los valores que necesita para empezar a ejecutarse. El enlace de servicios le permite desplegar la app en otro entorno de Kubernetes que podría estar utilizando instancias de servicio {{site.data.keyword.cloud_notm}} de nivel de producción.
 
-![Ver cadena de herramientas](images/kubesecrets.png)
-
 Si suprime el servicio o los secretos, debe enlazarlos de nuevo manualmente o suprimir y volver a crear la cadena de herramientas.
 {: tip}
 
@@ -55,8 +53,6 @@ Para obtener más información, consulte [Secretos ![Icono de enlace externo](..
 {: #bulid-deploy-tc}
 
 La cadena de herramientas contiene la etapa de creación y la etapa de despliegue.
-
-![Ver cadena de herramientas](images/deploytoolchain.png)
 
 ### Etapa de creación
 {: #build-stage}
