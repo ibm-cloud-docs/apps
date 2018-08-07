@@ -343,7 +343,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 ## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-You might be unable to run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
+You might be unable to run executable files on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
 
 You can't run executables on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
 {: tsSymptoms}
