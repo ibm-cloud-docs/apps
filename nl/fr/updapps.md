@@ -15,12 +15,9 @@ lastupdated: "2018-07-02"
 # Création et utilisation d'un domaine personnalisé
 {: #updatingapps}
 
-Vous pouvez utiliser la ligne de commande ou {{site.data.keyword.Bluemix}} Continuous Delivery pour mettre à jour les applications dans {{site.data.keyword.Bluemix_notm}}. Dans de nombreux cas, même pour les packs de construction tels que Node.js, vous devez également fournir un paramètre -c afin de spécifier la
-commande à utiliser pour démarrer votre application.
-{:shortdesc}
-
 Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer ce dernier sur un serveur DNS public et le configurer dans {{site.data.keyword.Bluemix_notm}}. Mappez ensuite le domaine personnalisé au domaine de système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine de système, les demandes de votre domaine personnalisé sont acheminées vers votre application
 dans {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 Vous pouvez créer et utiliser un domaine personnalisé en utilisant la console ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 

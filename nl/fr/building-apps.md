@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -43,7 +43,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} répertorie les ressources d'inf
 
 Chaque application est fournie avec une section d'initiation qui vous aide à réunir tout les logiciels et le contenu dont vous avez besoin pour commencer à travailler.
 
-Dans votre tableau de bord, cliquez sur votre application, puis sur **Initiation**, pour vous aider à réunir les logiciels dont vous avez besoin pour développer votre application, vous indiquer le code source et vous aider à déployer votre application pour la première fois.
+Dans votre tableau de bord, cliquez sur votre application, puis sur **Initiation**. Vous obtiendrez alors des informations vous indiquant comment réunir les logiciels dont vous avez besoin, accéder au code source et déployer votre application pour la première fois.
 
 ## Etapes suivantes
 {: #next}

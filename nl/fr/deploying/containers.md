@@ -37,8 +37,6 @@ Lorsque vous créez des applications de back end ou de service Web, vous pouvez 
 
 Lorsque la chaîne d'outils est créée, les services associés à votre application sont liés au cluster Kubernetes en utilisant des valeurs confidentielles Kubernetes. Ces dernières permettent de gérer les données d'identification de service en dehors de votre application en cours d'exécution. L'application lit les valeurs confidentielles puis extrait les valeurs requises pour le démarrage de l'exécution. La liaison des services vous permet de déployer l'application dans un autre environnement Kubernetes pouvant utiliser des instances de service {{site.data.keyword.cloud_notm}} de niveau de production.
 
-![Afficher la chaîne d'outils](images/kubesecrets.png)
-
 Si vous supprimez le service ou les valeurs confidentielles, vous devez les lier manuellement à nouveau ou supprimer et recréer la chaîne d'outils.
 {: tip}
 
@@ -55,8 +53,6 @@ Pour plus d'informations, voir [Secrets ![Icône de lien externe](../../icons/la
 {: #bulid-deploy-tc}
 
 La chaîne d'outils contient l'étape de génération et l'étape de déploiement.
-
-![Afficher la chaîne d'outils](images/deploytoolchain.png)
 
 ### Etape de génération
 {: #build-stage}

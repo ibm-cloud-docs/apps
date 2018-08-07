@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 {:new_window: target="_blank"}
@@ -57,4 +57,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} inclut un [kit SDK mobile](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) pour les appareils iOS et watchOS. Ainsi, les applications mobiles peuvent envoyer plus facilement des déclencheurs distants et appeler des actions distantes. Un [kit SDK d'infrastructure sans serveur ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](docs/openwhisk/openwhisk_goserverless.html){:new_window} qui active les applications sans serveur est également disponible.
+{{site.data.keyword.openwhisk_short}} inclut un [kit SDK mobile](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) pour les appareils iOS et watchOS. Ainsi, les applications mobiles peuvent envoyer plus facilement des déclencheurs distants et appeler des actions distantes. Un [kit SDK d'infrastructure sans serveur ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} qui active les applications sans serveur est également disponible.

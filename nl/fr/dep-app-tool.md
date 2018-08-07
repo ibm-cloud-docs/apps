@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   **Remarque **: si la valeur contient un espace, vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`. Par exemple, `-o "my org"`.
 
-  5. A partir du répertoire <var class="keyword varname">your_new_directory</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} en utilisant la commande `ibmcloud dev deploy`. Pour plus d'informations, voir la [documentation concernant l'interface CLI](docs/cli/idt/commands.html#deploy).
+  5. A partir du répertoire <var class="keyword varname">your_new_directory</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} en utilisant la commande `ibmcloud dev deploy`. Pour plus d'informations, voir la [documentation concernant l'interface CLI](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
