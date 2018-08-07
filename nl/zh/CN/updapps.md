@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # 创建并使用定制域
 {: #updatingapps}
 
-您可以使用命令行或 {{site.data.keyword.Bluemix}} Continuous Delivery 来更新 {{site.data.keyword.Bluemix_notm}} 中的应用程序。在许多情况下，即便对于 buildpack（例如 Node.js），也必须提供 -c 参数来指定用于启动应用程序的命令。
-{:shortdesc}
-
 域提供了分配给 {{site.data.keyword.Bluemix_notm}} 中组织的 URL 路径。要使用定制域，必须在公共 DNS 服务器上注册定制域，在 {{site.data.keyword.Bluemix_notm}} 中配置定制域。然后，将该定制域映射到公共 DNS 服务器上的 {{site.data.keyword.Bluemix_notm}} 系统域。定制域映射到系统域后，对定制域的请求会路由到 {{site.data.keyword.Bluemix_notm}} 中的应用程序。
+{:shortdesc}
 
 可以使用 {{site.data.keyword.Bluemix_notm}} 控制台或命令行界面创建并使用定制域。
 

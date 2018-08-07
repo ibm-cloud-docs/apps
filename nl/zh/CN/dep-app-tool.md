@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ IBM Cloud 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工
 
   **注**：如果 `username`、`org_name` 和 `space_name` 的值包含空格，那么必须用单引号或双引号将其括起，例如 `-o "my org"`。
 
-  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud dev deploy` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关更多信息，请参阅 [CLI 文档](docs/cli/idt/commands.html#deploy)。
+  5. 在 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud dev deploy` 命令将应用程序重新部署到 {{site.data.keyword.Bluemix_notm}}。有关更多信息，请参阅 [CLI 文档](/docs/cli/idt/commands.html#deploy)。
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

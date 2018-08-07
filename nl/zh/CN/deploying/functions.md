@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 {:new_window: target="_blank"}
@@ -57,4 +57,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} 为 iOS 和 watchOS 设备提供[移动 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)，支持移动应用程序轻松发送远程触发器和调用远程操作。它还提供支持无服务器应用程序的[无服务器框架 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](docs/openwhisk/openwhisk_goserverless.html){:new_window}。
+{{site.data.keyword.openwhisk_short}} 为 iOS 和 watchOS 设备提供[移动 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)，支持移动应用程序轻松发送远程触发器和调用远程操作。它还提供支持无服务器应用程序的[无服务器框架 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/openwhisk/openwhisk_goserverless.html){:new_window}。

@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # 사용자 정의 도메인 작성 및 사용
 {: #updatingapps}
 
-명령행 또는 {{site.data.keyword.Bluemix}} Continuous Delivery를 사용하여 {{site.data.keyword.Bluemix_notm}}의 애플리케이션을 업데이트할 수 있습니다. 대부분의 경우(Node.js와 같은 빌드팩의 경우에도)에는 -c 매개변수를 제공하여 애플리케이션을 시작하는 데 사용되는 명령을 지정해야 합니다.
-{:shortdesc}
-
 도메인은 {{site.data.keyword.Bluemix_notm}}에서 조직에 할당되는 URL 라우트를 제공합니다. 사용자 정의 도메인을 사용하려면 공용 DNS 서버에 사용자 정의 도메인을 등록하고 {{site.data.keyword.Bluemix_notm}}에서 사용자 정의 도메인을 구성해야 합니다. 그런 다음, 해당 사용자 도메인을 공용 DNS 서버의 {{site.data.keyword.Bluemix_notm}} 시스템 도메인에 맵핑하십시오. 사용자 정의 도메인이 시스템 도메인에 맵핑되면 사용자 정의 도메인에 대한 요청이 {{site.data.keyword.Bluemix_notm}}의 애플리케이션으로 라우팅됩니다.
+{:shortdesc}
 
 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용하여 사용자 정의 도메인을 작성하고 사용할 수 있습니다.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 {:new_window: target="_blank"}
@@ -57,4 +57,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}}는 iOS 및 watchOS 디바이스를 위한 [모바일 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)를 제공하여 모바일 앱이 쉽게 원격 트리거를 전송하고 원격 액션을 호출할 수 있도록 합니다. 또한 서버리스 애플리케이션을 사용으로 설정하는 [서버리스 프레임워크 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](docs/openwhisk/openwhisk_goserverless.html){:new_window}도 제공합니다.
+{{site.data.keyword.openwhisk_short}}는 iOS 및 watchOS 디바이스를 위한 [모바일 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)를 제공하여 모바일 앱이 쉽게 원격 트리거를 전송하고 원격 액션을 호출할 수 있도록 합니다. 또한 서버리스 애플리케이션을 사용으로 설정하는 [서버리스 프레임워크 SDK ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/openwhisk/openwhisk_goserverless.html){:new_window}도 제공합니다.

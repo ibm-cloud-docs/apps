@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-23"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -77,7 +77,7 @@ IBM Cloud는 강력한 CLI, 그리고 CLI와 통합되는 플러그인 및 개�
 
   **참고**: 값에 간격이 포함되어 있는 경우에는 `-o "my org"`와 같이 `username`, `org_name` 및 `space_name` 앞뒤에 작은따옴표 또는 큰따옴표를 추가해야 합니다.
 
-  5. <var class="keyword varname">your_new_directory</var>에서 `ibmcloud dev deploy` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. 자세한 정보는 [CLI 문서](docs/cli/idt/commands.html#deploy)를 참조하십시오.
+  5. <var class="keyword varname">your_new_directory</var>에서 `ibmcloud dev deploy` 명령을 사용하여 {{site.data.keyword.Bluemix_notm}}에 앱을 재배치하십시오. 자세한 정보는 [CLI 문서](/docs/cli/idt/commands.html#deploy)를 참조하십시오.
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

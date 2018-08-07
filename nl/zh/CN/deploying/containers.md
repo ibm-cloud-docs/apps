@@ -37,8 +37,6 @@ lastupdated: "2018-07-23"
 
 创建工具链后，与应用程序关联的服务将使用 Kubernetes 私钥绑定到 Kubernetes 集群。私钥用于管理运行的应用程序外部的服务凭证。应用程序会读取私钥，然后检索开始运行所需的值。通过绑定服务，您可以将应用程序部署到可能正在使用生产级别 {{site.data.keyword.cloud_notm}} 服务实例的其他 Kubernetes 环境。
 
-![查看工具链](images/kubesecrets.png)
-
 如果删除了服务或私钥，您需要重新手动绑定这些项，或者删除并重新创建工具链。
 {: tip}
 
@@ -55,8 +53,6 @@ lastupdated: "2018-07-23"
 {: #bulid-deploy-tc}
 
 工具链包含构建阶段和部署阶段。
-
-![查看工具链](images/deploytoolchain.png)
 
 ### 构建阶段
 {: #build-stage}
