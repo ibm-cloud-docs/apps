@@ -15,10 +15,8 @@ lastupdated: "2018-07-02"
 # Criando e usando um domínio customizado
 {: #updatingapps}
 
-É possível usar a linha de comandos ou o {{site.data.keyword.Bluemix}} Continuous Delivery para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
-{:shortdesc}
-
 Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público e configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}}. Em seguida, mapeie o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema, as solicitações para seu domínio customizado serão roteadas para seu aplicativo no {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 É possível criar e usar um domínio customizado usando o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
 

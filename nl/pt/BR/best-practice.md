@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-07-25"
 
 ---
 
@@ -14,13 +14,13 @@ Construa seu app no {{site.data.keyword.Bluemix_notm}} para aproveitar todas as 
 
 ## Construa seu app para ser independente de topologia
 
-Em um ambiente não de nuvem, seu app pode usar uma topologia de implementação específica. No entanto, sua topologia de app pode mudar em apps em nuvem, pois os apps e serviços prontos para nuvem permitem mudanças de escalabilidade imediatas. As mudanças de escalabilidade incluem ajuste de escala dinâmica e redimensionamento manual do número de instâncias de um app.
+Em um ambiente não de nuvem, seu app pode usar uma topologia de implementação específica. No entanto, sua topologia de app pode mudar em apps em nuvem porque os apps e serviços prontos para a nuvem permitem mudanças de escalabilidade imediatas. As mudanças de escalabilidade incluem ajuste de escala dinâmica e redimensionamento manual do número de instâncias de um app.
 
 Construa seu app para ser o mais genérico e stateless possível para evitar que seu app seja afetado pelas mudanças de escalabilidade.
 
-## Suponha que o Sistema de arquivos local não seja permanente
+## Suponha que o sistema de arquivos local não seja permanente
 
-Como uma instância do app pode ser movida, excluída ou duplicada na nuvem, não confie nos arquivos gravados no sistema de arquivos. Se um app usa o sistema de arquivos local como um cache de informações usadas frequentemente, incluindo logs do app, as informações são perdidas quando a instância é encerrada e reiniciada em um local diferente ou uma VM diferente.
+Não dependa dos arquivos gravados no sistema de arquivos porque uma instância do app pode ser movida, excluída ou duplicada na nuvem. Se um app usa o sistema de arquivos local como um cache de informações usadas frequentemente, incluindo logs do app, as informações são perdidas quando a instância é encerrada e reiniciada em um local diferente ou uma VM diferente.
 
 É possível armazenar informações em um serviço, como um banco de dados SQL ou NoSQL em vez do sistema de arquivos local. Em um ambiente de nuvem dinâmica, também é crítico que seus logs estejam disponíveis em um serviço que prolongue as instâncias do app nas quais os logs são gerados.
 

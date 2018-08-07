@@ -37,8 +37,6 @@ Ao criar apps de backend ou de serviço da web, é possível implementá-los no 
 
 À medida que a cadeia de ferramentas é criada, os serviços associados a seu app são ligados ao cluster do Kubernetes usando segredos do Kubernetes. Os segredos são usados para gerenciar as credenciais de serviço fora do seu app em execução. O app lê os segredos e, em seguida, recupera os valores que ele precisa para iniciar a execução. Os serviços de ligação permitem implementar o app em outro ambiente do Kubernetes que pode estar usando as instâncias de serviço de nível de produção do {{site.data.keyword.cloud_notm}}.
 
-![View Toolchain](images/kubesecrets.png)
-
 Se você excluir o serviço ou os segredos, será necessário ligá-los manualmente novamente ou excluir e recriar a cadeia de ferramentas.
 {: tip}
 
@@ -55,8 +53,6 @@ Para obter mais informações, consulte [Segredos ![Ícone de link externo](../.
 {: #bulid-deploy-tc}
 
 A cadeia de ferramentas contém o estágio de construção e o estágio de implementação.
-
-![View Toolchain](images/deploytoolchain.png)
 
 ### Estágio de construção
 {: #build-stage}
