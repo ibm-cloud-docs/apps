@@ -351,7 +351,7 @@ Exclua todas as instâncias de serviços que não forem necessárias ou remova o
 ## Os arquivos executáveis não podem ser executados no  {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-Talvez você não possa executar os executáveis no {{site.data.keyword.Bluemix_notm}} quando eles forem desenvolvidos e construídos em um ambiente diferente.
+Talvez não seja possível executar arquivos executáveis no {{site.data.keyword.Bluemix_notm}} quando esses executáveis foram desenvolvidos e construídos em um ambiente diferente.
 
 Não será possível executar executáveis no {{site.data.keyword.Bluemix_notm}} quando eles tiverem sido desenvolvidos e construídos em um ambiente diferente.
 {: tsSymptoms}
@@ -589,8 +589,7 @@ Use um dos métodos a seguir, dependendo da causa do problema:
         ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
-    * Use o arquivo [package.json ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.npmjs.com/package/jsonfile){: new_window}. Por
-exemplo:
+    * Use o arquivo [package.json ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.npmjs.com/package/jsonfile){: new_window}. Por exemplo:
 	    ```
 		{
       ...
@@ -599,8 +598,7 @@ exemplo:
  	   }
 	}
 	    ```
-    * Use o arquivo `manifest.yml`. Por
-exemplo:
+    * Use o arquivo `manifest.yml`. Por exemplo:
 	    ```
 		applications:
   name: MyUniqueNodejs01
