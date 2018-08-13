@@ -151,21 +151,21 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   1. 通过输入以下命令，检查路径是否属于当前空间：
 
     ```
-    cf routes
+cf routes
     ```
 
   2. 如果路径不属于当前空间，请通过输入以下命令，切换到其所属的空间或组织：
      
 
     ```
-    cf target -o org_name -s space_name
+cf target -o org_name -s space_name
 	 ```
 
   3. 通过输入以下命令，删除应用程序路径：
      
 
     ```
-    cf delete-route domain_name -n host_name
+cf delete-route domain_name -n host_name
 	 ```
 
   例如：
@@ -367,7 +367,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 例如：
-```
+    ```
 cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 

@@ -345,7 +345,7 @@ Supprimez les instances de service dont vous n'avez pas besoin ou supprimez la l
 ## Impossible d'exécuter des fichiers exécutables sur {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-Il peut s'avérer impossible d'exécuter des fichiers exécutables sur {{site.data.keyword.Bluemix_notm}} si ces fichiers ont été développés et générés dans un environnement différent.
+Il se peut que vous ne puissiez pas utiliser des fichiers exécutables sur {{site.data.keyword.Bluemix_notm}} s'ils ont été développés et générés dans un environnement différent.
 
 Vous ne parvenez pas à exécuter des fichiers exécutables dans {{site.data.keyword.Bluemix_notm}} lorsque ceux-ci ont été développés et générés dans un environnement différent.
 {: tsSymptoms}

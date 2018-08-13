@@ -151,19 +151,19 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
   1. 다음 명령을 입력하여 라우트가 현재 영역에 속하는지 확인하십시오.
 
     ```
-    cf routes
+cf routes
     ```
 
   2. 라우트가 현재 영역에 속하지 않는 경우, 다음 명령을 입력하여 라우트가 속한 영역 또는 조직으로 전환하십시오.
 
     ```
-    cf target -o org_name -s space_name
+cf target -o org_name -s space_name
     ```
 
   3. 다음 명령을 입력하여 앱 라우트를 삭제하십시오.
 
     ```
-    cf delete-route domain_name -n host_name
+cf delete-route domain_name -n host_name
     ```
 
   예를 들어, 다음과 같습니다.
@@ -344,7 +344,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 ## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
 
-실행 파일이 다른 환경에서 개발되고 빌드된 경우 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다.
+실행 파일이 다른 환경에서 개발되고 빌드된 경우 {{site.data.keyword.Bluemix_notm}}에서 해당 실행 파일을 실행하지 못할 수 있습니다. 
 
 다른 환경에서 실행 파일을 개발하고 빌드한 경우 {{site.data.keyword.Bluemix_notm}}에서 이 실행 파일을 실행할 수 없습니다.
 {: tsSymptoms}
