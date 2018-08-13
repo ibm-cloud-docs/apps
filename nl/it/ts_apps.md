@@ -296,10 +296,13 @@ la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poich
 disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco.
 {: tsSymptoms}
 
-La quota di disco predefinita assegnata a un'applicazione è 1 GB. Se hai bisogno di più spazio su disco, devi specificare manualmente la quota di disco.
+La quota di disco predefinita assegnata a un'applicazione è 1
+GB. Se hai bisogno di più spazio su disco, devi specificare manualmente la
+quota di disco.
 {: tsCauses}
 
-Utilizza uno dei seguenti metodi per specificare la quota disco. La quota di disco massima che puoi specificare è 2 GB. Se 2 GB non è ancora sufficiente, prova un servizio esterno come [Object Store](/docs/services/ObjectStorage/index.html).
+Utilizza uno dei seguenti metodi per specificare la quota disco. La quota di disco massima che puoi specificare è 2 GB. Se 2 GB non è ancora
+sufficiente, prova un servizio esterno come [Object Store](/docs/services/ObjectStorage/index.html).
 {: tsResolve}
 
   * Nel file manifest.yml, aggiungi la seguente voce:
@@ -320,7 +323,9 @@ In alcune regioni in cui Google non è accessibile, le applicazioni Android non 
 Esegui il bind di un servizio {{site.data.keyword.mobilepushshort}} per la tua applicazione {{site.data.keyword.Bluemix_notm}} e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni sviluppate su Android non possono ricevere le tue notifiche in determinate regioni.
 {: tsSymptoms}
 
-Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (Google Cloud Messaging) per inviare notifiche alle applicazioni mobili sviluppate su Android. Per consentire alle applicazioni Android di ricevere le notifiche, è necessario che il servizio GCM (Google Cloud Messaging) sia accessibile dalle applicazioni mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
+Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (Google Cloud Messaging) per inviare notifiche alle applicazioni mobili sviluppate su Android. Per consentire alle applicazioni Android di ricevere le notifiche,
+è necessario che il servizio GCM (Google Cloud Messaging) sia accessibile dalle applicazioni
+mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
 Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://pushy.me){: new_window}, [getui ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.getui.com/){: new_window} e [jpush ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jpush.cn/){: new_window}.
@@ -334,7 +339,8 @@ Se utilizzi un account utente Lite, potresti non riuscire a creare un'applicazio
 Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite dei servizi dell'organizzazione."`
+`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite
+dei servizi dell'organizzazione."`
 
 Questo errore si verifica quando superi il limite per il numero di istanze del servizio che puoi avere per l'account.
 {: tsCauses}
@@ -359,7 +365,7 @@ servizio, completa la seguente procedura:
 ## Impossibile eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-Potresti non riuscire ad eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
+Potresti non riuscire ad eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
 
 Non puoi eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se questi eseguibili sono stati sviluppati e creati in un ambiente diverso.
 {: tsSymptoms}
