@@ -343,7 +343,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 ## 実行可能ファイルが {{site.data.keyword.Bluemix_notm}} で実行できない
 {: #ts_executable}
 
-実行可能ファイルは、別の環境で開発とビルドを行った時は、 {{site.data.keyword.Bluemix_notm}} で実行できない場合があります。
+{{site.data.keyword.Bluemix_notm}} とは別の環境で開発およびビルドが行われた実行可能ファイルは、{{site.data.keyword.Bluemix_notm}} 上で実行できない場合があります。
 
 実行可能ファイルは、別の環境で開発とビルドを行った時は、{{site.data.keyword.Bluemix_notm}} で実行することができません。
 {: tsSymptoms}
@@ -383,7 +383,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下の手順を実行します。
 
-    1. ダッシュボードからアプリを選択します。アプリ詳細ページが開きます。
+    1. ダッシュボードからアプリを選択します。 アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
     `cf` コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
