@@ -15,7 +15,7 @@ lastupdated: "2018-08-21"
 # Creating a backend-for-frontend API
 {: #tutorial}
 
-You can create a app from a backend-for-frontend starter. Use these starters to build backend-for-frontend APIs in Node.js, Java, or Swift using a variety of frameworks: Express.js, MicroProfile/ Java EE, Kitura or Spring. You can see how to install the tools you need, build and run the app locally and deploy it to the cloud.
+You can create an app from a backend-for-frontend starter. Use these starters to build backend-for-frontend APIs in Node.js, Java, or Swift by using various frameworks: Express.js, MicroProfile/ Java EE, Kitura, or Spring. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1. Install the tools
@@ -28,7 +28,7 @@ Docker is installed as part of the developer tools. Docker must be running for t
 ## Step 2. Create an app
 {: #create-devex}
 
-Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
+Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
 1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
 
@@ -63,7 +63,7 @@ Continuous delivery is enabled for some applications. You can enable continuous 
 
     * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
 
-## Step 5. Build and run the app locally
+## Step 5. Building and running the app locally
 {: #build-run}
 
 Deploying your app to the cloud in the last step created a toolchain. A toolchain creates a Git repository for your app where you can find the code there. Follow these steps to access your repo. You can build the app locally for testing before you push it to the cloud.
@@ -93,7 +93,7 @@ Deploying your app to the cloud in the last step created a toolchain. A toolchai
   ```
   {: pre}
 
-8. Make sure Docker is running and build your app in a local development container from the directory.
+8. Make sure that Docker is running and build your app in a local development container from the directory.
 
   ```bash
   ibmcloud dev build
@@ -140,7 +140,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Step 7. Verify your app is running
+## Step 7. Verify that your app is running
 {: #verify}
 
 After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.mybluemix.net`. Go to that URL in your browser.

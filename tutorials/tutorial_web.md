@@ -90,7 +90,7 @@ Deploying your app to the cloud in the last step created a toolchain. A toolchai
   ```
   {: pre}
 
-8. Make sure Docker is running and build your app in a local development container from the directory.
+8. Make sure that Docker is running and build your app in a local development container from the directory.
 
   ```bash
   ibmcloud dev build
@@ -137,7 +137,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Step 7. Verify your app is running
+## Step 7. Verify that your app is running
 {: #verify}
 
 After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.mybluemix.net`. Go to that URL in your browser.
