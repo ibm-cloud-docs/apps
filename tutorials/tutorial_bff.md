@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 You can create a app from a backend-for-frontend starter. Use these starters to build backend-for-frontend APIs in Node.js, Java, or Swift using a variety of frameworks: Express.js, MicroProfile/ Java EE, Kitura or Spring. You can see how to install the tools you need, build and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
-## Step 1: Install the tools
+## Step 1. Install the tools
 {: #install-tools}
 
 Install the [developer tools ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 
-## Step 2: Create an app
+## Step 2. Create an app
 {: #create-devex}
 
 Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
@@ -39,7 +39,7 @@ Create a app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}
 5. Select your pricing plan. There is a free option that you can use for this tutorial.
 6. Click **Create**.
 
-## Step 3: Add resources (Optional)
+## Step 3. Add resources (Optional)
 {: #add-services}
 
 You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
@@ -49,7 +49,7 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 3. Select your pricing plan. There is a free option that you can use for this tutorial.
 4. Click **Create**.
 
-## Step 4: Create a DevOps toolchain
+## Step 4. Create a DevOps toolchain
 {: #add-toolchain}
 
 Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment platform you choose, whether it's Kubernetes or Cloud Foundry.
@@ -63,7 +63,7 @@ Continuous delivery is enabled for some applications. You can enable continuous 
 
     * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
 
-## Step 5: Building and running the app locally
+## Step 5. Build and run the app locally
 {: #build-run}
 
 Deploying your app to the cloud in the last step created a toolchain. A toolchain creates a Git repository for your app where you can find the code there. Follow these steps to access your repo. You can build the app locally for testing before you push it to the cloud.
@@ -109,7 +109,7 @@ Deploying your app to the cloud in the last step created a toolchain. A toolchai
 
 10.  Open your browser to `http://localhost:3000`. Your port number might be different depending on your chosen runtime.
 
-## Step 6: Deploy to the cloud
+## Step 6. Deploy your app
 {: #deploy}
 
 ### Deploy by using a toolchain
@@ -140,7 +140,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Step 7: Verify your app is running
+## Step 7. Verify your app is running
 {: #verify}
 
 After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.mybluemix.net`. Go to that URL in your browser.

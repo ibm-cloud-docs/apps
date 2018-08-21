@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ Starter kits are available in many categories, including:
 
 You don't need a credit card to sign up for a free account. But entering a credit card gives you access to more resources and makes it easier for you to get all {{site.data.keyword.cloud_notm}} offers.
 
-## Step 1: Creating an app
+## Step 1. Create an app
 {: #project}
 
 1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) > **Web Apps**.
@@ -55,7 +55,7 @@ You don't need a credit card to sign up for a free account. But entering a credi
    To inspect your code, click **Download Code** on the app details page. Check the `README.md` file in the downloaded compressed file to find out whether you need to take more actions to get your starter app up and running.
    {: tip}
 
-## Step 2: Adding resources
+## Step 2. Add resources
 {: #addResources}
 
 Most starter kits instruct {{site.data.keyword.cloud_notm}} to automatically provision resources for you. You can also associate more resources with your app by clicking **Add Resource** on the app details page.
@@ -63,7 +63,7 @@ Most starter kits instruct {{site.data.keyword.cloud_notm}} to automatically pro
 To develop and run your app locally, use the [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
 
-## Step 3: Deploying to {{site.data.keyword.cloud_notm}}
+## Step 3. Deploy your app
 {: #deploy}
 
 Click **Deploy to Cloud** on the app details page, select a deployment method, for example Kubernetes Cluster or Cloud Foundry App, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline. Open the pipeline component of your new toolchain to start the initial build and deploy process so that you can see your new app in minutes.
