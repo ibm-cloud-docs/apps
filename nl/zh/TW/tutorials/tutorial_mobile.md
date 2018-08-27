@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} 提供行動入門範本套件以協助您快速建立行動應用程式。請從「應用程式服務入門範本套件」選擇語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您可以了解如何安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端。
 {: shortdesc}
 
-## 步驟 1：安裝工具
+## 步驟 1. 安裝工具
 {: #install-tools}
 
 安裝[開發人員工具 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}。
 
 Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
 
-## 步驟 1：使用 {{site.data.keyword.dev_console}} 建立應用程式
+## 步驟 2. 使用 {{site.data.keyword.dev_console}} 建立應用程式
 {: #create-devex}
 
 1. 在 {{site.data.keyword.Bluemix}} 中建立 {{site.data.keyword.dev_console}} 應用程式。
@@ -36,7 +36,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 6. 選取定價方案。有免費選項，您可以用於本指導教學。
 7. 按一下**建立**。
 
-## 步驟 3：新增資源（選用）
+## 步驟 3. 新增資源（選用）
 {: #add-services}
 
 您可以新增資源，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
@@ -46,7 +46,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 3. 選取定價方案。有免費選項，您可以用於本指導教學。
 4. 按一下**建立**。
 
-## 步驟 4：建立 DevOps 工具鏈
+## 步驟 4. 建立 DevOps 工具鏈
 {: #add-toolchain}
 
 啟用工具鏈會為您的應用程式建立一個團隊型開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 Git 實驗室環境，以及持續交付管線。它們針對您所選部署平台（Kubernetes 或 Cloud Foundry）經過自訂。
@@ -60,7 +60,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 
     * 使用 Cloud Foundry 部署，如此便不需要管理基礎的基礎架構。
 
-## 步驟 5：在本端建置及執行應用程式
+## 步驟 5. 在本端建置及執行應用程式
 {: #build-run}
 
 在前一個步驟中將應用程式部署至雲端，已經建立了工具鏈。工具鏈會為您的應用程式建立 Git 儲存庫，您可以在該處找到程式碼。請遵循下列步驟來存取您的儲存庫。您可以在本端建置應用程式以做測試，然後才將它推送至雲端。
@@ -145,7 +145,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 2. 在 Android Studio 中開啟 `BasicProject-Android` 應用程式。
 3. 執行應用程式。
 
-## 步驟 6：部署至雲端
+## 步驟 6. 部署應用程式
 {: #deploy}
 
 ### 使用工具鏈部署
@@ -177,7 +177,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## 步驟 7：驗證應用程式在執行中
+## 步驟 7. 驗證應用程式在執行中
 {: #verify}
 
 部署應用程式之後，DevOps 管線或指令行會將您指向應用程式的 URL，例如 `abc-devhost.mybluemix.net`。請在瀏覽器中移至該 URL。

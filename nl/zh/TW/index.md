@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2018-07-12"
 
 您不需要信用卡就可以註冊一個免費帳戶。但輸入信用卡可讓您存取更多資源，您也能更輕鬆地掌握 {{site.data.keyword.cloud_notm}} 提供的所有內容。
 
-## 步驟 1：建立應用程式
+## 步驟 1. 建立應用程式
 {: #project}
 
 1. 按一下**功能表**圖示 ![功能表圖示](../icons/icon_hamburger.svg) > **Web 應用程式**。
@@ -55,7 +55,7 @@ lastupdated: "2018-07-12"
    若要檢查您的程式碼，請按一下應用程式詳細資料頁面上的**下載程式碼**。請檢查所下載壓縮檔中的 `README.md` 檔，以找出您是否需要採取更多動作以讓入門範本應用程式啟動並執行。
    {: tip}
 
-## 步驟 2：新增資源
+## 步驟 2. 新增資源
 {: #addResources}
 
 大部分入門範本套件會指示 {{site.data.keyword.cloud_notm}} 為您自動佈建資源。您也可以在應用程式詳細資料頁面上按一下**新增資源**，使更多資源與您的應用程式相關聯。
@@ -63,7 +63,7 @@ lastupdated: "2018-07-12"
 若要在本端開發及執行您的應用程式，請使用 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
 {: tip}
 
-## 步驟 3：部署至 {{site.data.keyword.cloud_notm}}
+## 步驟 3. 部署應用程式
 {: #deploy}
 
 按一下應用程式詳細資料頁面上的**部署至雲端**、選取部署方法（例如 Kubernetes Cluster 或 Cloud Foundry 應用程式），然後按一下**建立**。{{site.data.keyword.cloud_notm}} 會自動建立開放式工具鏈，此工具鏈會完整地具備 Git 儲存庫及持續交付管線。請開啟新工具鏈的管線元件，以開始起始的建置及部署處理程序，以便您可以在數分鐘內看到您的新應用程式。

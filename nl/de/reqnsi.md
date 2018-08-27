@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -92,72 +92,19 @@ Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführ
 
 {{site.data.keyword.Bluemix_notm}} bietet viele Bereitstellungsoptionen und Sie können in einer Umgebung auf einen Service, der in einer anderen Umgebung ausgeführt wird, zugreifen. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
 
-### Beispiel: Greifen Sie von einem Kubernetes-Pod auf eine Compose-Serviceinstanz in Cloud Foundry zu.
+### Beispiel: Über einen Kubernetes-Pod auf einen Cloud Foundry-Service zugreifen
 
-Jede Compose-Serviceinstanz wie {{site.data.keyword.composeForMongoDB}} oder {{site.data.keyword.composeForRedis}} ist eine bezahlte Instanz. Wenn Sie mit der Handhabung Ihrer Compose-Serviceinstanz, z. B. {{site.data.keyword.composeForMongoDB}} in Kubernetes, vertraut sind, können Sie die Berechtigungsnachweise der von Compose bereitgestellten Instanz in Cloud Foundry importieren.
+Für den Zugriff auf einen Cloud Foundry-Service über einen Pod in einem Kubernetes-Cluster müssen Sie den Service an den Cluster binden, damit die Serviceberechtigungsnachweise in einem geheimen Kubernetes-Schlüssel gespeichert werden können. Dann können Sie diese Informationen für Ihre App verfügbar machen.
+{: shortdesc}
 
-1. Wechseln Sie zu **Berechtigungsnachweisen** und rufen Sie Ihre Berechtigungsnachweise von der Instanz ab.
+Serviceberechtigungsnachweise, die in einem geheimen Kubernetes-Schlüssel gespeichert werden, verfügen standardmäßig über eine Base64-Codierung und sind mit ETCD verschlüsselt. 
 
-2. Öffnen Sie die Datei `values.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel in `chart/project/`.
+**Wichtig**: Die Serviceberechtigungsnachweise dürfen nicht direkt in der YAML-Datei der Bereitstellung referenziert oder zugänglich gemacht werden. YAML-Dateien für Bereitstellungen sind nicht dafür vorgesehen, sensible Daten zu enthalten, und bieten keine standardmäßige Verschlüsselung Ihrer Serviceberechtigungsnachweise. Für das korrekte Speichern dieser Informationen und den korrekten Zugriff darauf müssen Sie einen geheimen Kubernetes-Schlüssel verwenden. 
 
-3. Legen Sie die Werte fest, auf die in Ihren Serviceumgebungen verwiesen wird. Zum Beispiel in {{site.data.keyword.composeForMongoDB}}:
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. Öffnen Sie die Datei `bindings.yml` in Ihrem Diagrammverzeichnis. Zum Beispiel `chart/project/`.
-
-5. Fügen Sie die Schlüssel-Wert-Referenzen hinzu, die in der Datei `values.yml` am Ende, wo sich die Definition des `env`-Blocks befindet, definiert sind.
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. Verwenden Sie in Ihrer Anwendung Ihre Umgebungsvariablen, um die Service-SDK zu starten, die Ihnen bereitgestellt wurde.
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### Geheime Schlüssel (optional)
-{: #migrate_secrets_optional}
-
-Legen Sie Ihre Berechtigungsnachweise nicht in den Dateien `deployment.yml` oder `values.yml` offen. Sie können eine Base64-Codierungszeichenfolge verwenden oder Ihre Berechtigungsnachweise mit einem Schlüssel verschlüsseln. Weitere Informationen finden Sie in den Abschnitten zum Thema [Geheimen Schlüssel mit 'kubectl create secret' erstellen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) und [Methoden der Datenverschlüsselung![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+1. [Service an den Cluster binden](/docs/containers/cs_integrations.html#adding_cluster). 
+2. Wählen Sie für den Zugriff auf Ihre Serviceberechtigungsnachweise über den App-Pod eine der folgenden Optionen aus. 
+   - [Geheimen Schlüssel als Datenträger an den Pod anhängen](#mount_secret)
+   - [Geheimen Schlüssel in Umgebungsvariablen referenzieren](#reference_secret)
 
 ## Externe Apps aktivieren
 {: #accser_external}
@@ -239,7 +186,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokollverwaltungssoftware eines anderen Anbieters weitergibt, verwenden Sie die Option `-l`. Geben Sie das Ziel an, das von der Protokollverwaltungssoftware des anderen Anbieters bereitgestellt wird. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines anderen Anbieters weitergibt, verwenden Sie die Option `-l`. Geben Sie das Ziel an, das von der Protokollmanagementsoftware des anderen Anbieters bereitgestellt wird. Beispiel:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
@@ -257,7 +204,7 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
         OK
         ```
 
-    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines Drittanbieters weitergibt, verwenden Sie die Option `-l`. Beispiel:
+    * Um eine Serviceinstanz zu erstellen, die Informationen an eine Protokoll-Management-Software eines anderen Anbieters weitergibt, verwenden Sie die Option `-l`. Beispiel:
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example2.com

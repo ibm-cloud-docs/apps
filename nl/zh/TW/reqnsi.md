@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -94,72 +94,19 @@ ibmcloud service bind appname service_instance
 
 {{site.data.keyword.Bluemix_notm}} 提供了許多部署選項，您可以從某個環境，存取不同環境中執行的服務。例如，如果您的服務是在 Cloud Foundry 中執行，則可以從在 Kubernetes 叢集中執行的應用程式存取該服務。
 
-### 範例：從 Kubernetes Pod 存取 Cloud Foundry 上的 Compose 服務實例
+### 範例：從 Kubernetes Pod 存取 Cloud Foundry 服務
 
-任何 Compose 服務實例（例如 {{site.data.keyword.composeForMongoDB}} 或 {{site.data.keyword.composeForRedis}}）都是付費實例。在您適應使用 Compose 服務實例（例如 Kubernet 中的 {{site.data.keyword.composeForMongoDB}}）之後，您可以在 Cloud Foundry 匯入 Compose 所提供實例的認證。
+若要從 Kubernetes 叢集裡的 Pod 存取 Cloud Foundry 服務，您必須將服務連結至叢集，以便將服務認證儲存在 Kubernetes 密碼中。然後，您便可以將此資訊提供給應用程式使用。
+{: shortdesc}
 
-1. 移至**認證**，並從實例擷取您的認證。
+依預設，儲存在 Kubernetes 密碼的服務認證是以 base64 編碼，並在 etcd 中加密。 
 
-2. 從圖表目錄（例如 `chart/project/`）開啟 `values.yml` 檔。
+**重要事項**：請不要直接在部署 YAML 檔案中參照或公開您的服務認證。部署 YAML 檔案的設計並不是為了保留機密資料，且依預設不會加密您的服務認證。若要適當地儲存及存取此資訊，您必須使用 Kubernetes 密碼。 
 
-3. 設定服務環境中參照的值。例如，在 {{site.data.keyword.composeForMongoDB}} 中：
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. 從圖表目錄（例如 `chart/project/`）開啟 `bindings.yml` 檔。
-
-5. 在定義 `env` 區塊的結尾，新增 `values.yml` 檔中所定義的金鑰值參照。
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. 在應用程式中，使用環境變數來啟動提供給您的服務 SDK。
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-    useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### 密碼（選用）
-{: #migrate_secrets_optional}
-
-請勿在 `deployment.yml` 或 `values.yml` 檔中公開您的認證。您可以使用 base64 編碼字串，或使用金鑰來加密您的認證。如需相關資訊，請參閱 [Creating a Secret Using kubectl create secret ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) 及 [How to encrypt your data ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+1. [將服務連結至您的叢集](/docs/containers/cs_integrations.html#adding_cluster)。 
+2. 若要從應用程式 Pod 存取服務認證，請在下列選項之間進行選擇。 
+   - [將密碼以磁區的形式裝載至 Pod](#mount_secret)
+   - [在環境變數中參照密碼](#reference_secret)
 
 ## 啟用外部應用程式
 {: #accser_external}

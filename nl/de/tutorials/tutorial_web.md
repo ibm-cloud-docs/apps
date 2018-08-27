@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,25 +18,25 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} stellt eine Reihe von Starter-Kits bereit, die Ihnen einen schnellen Einstieg in die Codierung ermöglichen. Wählen Sie in den Starter-Kits des App-Service eine Sprache, ein Framework und Tools aus, um mit der Arbeit mit einer vorkonfigurierten angepassten App zu beginnen. In diesem Lernprogramm werden die Schritte beschrieben, die erforderlich sind, um die benötigten Tools zu installieren, um die App anschließend zu erstellen und lokal auszuführen und um die App in der Cloud bereitzustellen.
 {: shortdesc}
 
-## Schritt 1: Tools installieren
+## Schritt 1. Tools installieren
 {: #install-tools}
 
 Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 
-## Schritt 2: Starter-Kit auswählen
+## Schritt 2. Starter-Kit auswählen
 {: #create-devex}
 
 Starter-Kits sind in der {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} in vielen Sprachen und Frameworks verfügbar. Wählen Sie als Einstieg die Sprache aus, die für Ihr Projekt am besten geeignet ist.
 
-1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus. 
+1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus.
 2. Geben Sie den App-Namen und einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Dieser Hostname gibt die Route Ihrer App an: `abc-devhost.mybluemix.net`.
 3. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
 4. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 5. Klicken Sie auf **Erstellen**.
 
-## Schritt 3: Ressourcen hinzufügen (optional)
+## Schritt 3. Ressourcen hinzufügen (optional)
 {: #add-services}
 
 Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
@@ -46,7 +46,7 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 3. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 4. Klicken Sie auf **Erstellen**.
 
-## Schritt 4: DevOps-Toolchain erstellen
+## Schritt 4. DevOps-Toolchain erstellen
 {: #add-toolchain}
 
 Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsplattform - z. B. Kubernetes oder Cloud Foundry - angepasst.
@@ -60,7 +60,7 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuou
 
     * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
 
-## Schritt 5: App erstellen und lokal ausführen
+## Schritt 5. App erstellen und lokal ausführen
 {: #build-run}
 
 Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Toolchain erstellt. Eine Toolchain erstellt ein Git-Repository für die App, in dem Sie den Code anzeigen können. Führen Sie diese Schritte aus, um auf Ihr Repository zuzugreifen. Sie können die App zu Testzwecken lokal erstellen, bevor Sie sie in der Cloud bereitstellen.
@@ -106,7 +106,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
 
 10.  Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
 
-## Schritt 6: In der Cloud bereitstellen
+## Schritt 6. App bereitstellen
 {: #deploy}
 
 ### Bereitstellung: Toolchain verwenden
@@ -137,7 +137,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Schritt 7: Ausführung der App verifizieren
+## Schritt 7. Ausführung der App verifizieren
 {: #verify}
 
 Nach der Bereitstellung der App verweist die DevOps-Pipeline bzw. die Befehlszeile auf die URL für Ihre App, z. B. `abc-devhost.mybluemix.net`. Rufen Sie diese URL im Browser auf.

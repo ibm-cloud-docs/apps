@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} stellt Starter-Kits für Mobilgeräte bereit, die Sie bei der schnellen Erstellung einer mobilen App unterstützen. Wählen Sie in den Starter-Kits des App-Service eine Sprache, ein Framework und Tools aus, um mit der Arbeit mit einer vorkonfigurierten angepassten App zu beginnen. In diesem Lernprogramm erfahren Sie, wie Sie die erforderlichen Tools installieren, wie Sie die App erstellen und lokal ausführen und wie Sie die App in der Cloud bereitstellen.
 {: shortdesc}
 
-## Schritt 1: Tools installieren
+## Schritt 1. Tools installieren
 {: #install-tools}
 
 Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 
-## Schritt 1: App mit {{site.data.keyword.dev_console}} erstellen
+## Schritt 2. App über die {{site.data.keyword.dev_console}} erstellen
 {: #create-devex}
 
 1. Erstellen Sie eine {{site.data.keyword.dev_console}}-App in {{site.data.keyword.Bluemix}}.
@@ -36,7 +36,7 @@ Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt we
 6. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 7. Klicken Sie auf **Erstellen**.
 
-## Schritt 3: Ressourcen hinzufügen (optional)
+## Schritt 3. Ressourcen hinzufügen (optional)
 {: #add-services}
 
 Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
@@ -46,7 +46,7 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 3. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 4. Klicken Sie auf **Erstellen**.
 
-## Schritt 4: DevOps-Toolchain erstellen
+## Schritt 4. DevOps-Toolchain erstellen
 {: #add-toolchain}
 
 Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsplattform - z. B. Kubernetes oder Cloud Foundry - angepasst.
@@ -56,11 +56,11 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuou
 1. Klicken Sie im Fenster des App-Service auf **In Cloud bereitstellen**.
 2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie die Bereitstellungsmethode ein, indem Sie die Anweisungen für die ausgewählte Methode ausführen.
 
-    * Führen Sie die Bereitstellung für einen Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
+    * Führen Sie die Bereitstellung in einem Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
 
     * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
 
-## Schritt 5: App erstellen und lokal ausführen
+## Schritt 5. App erstellen und lokal ausführen
 {: #build-run}
 
 Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Toolchain erstellt. Eine Toolchain erstellt ein Git-Repository für die App, in dem Sie den Code anzeigen können. Führen Sie diese Schritte aus, um auf Ihr Repository zuzugreifen. Sie können die App zu Testzwecken lokal erstellen, bevor Sie sie in der Cloud bereitstellen.
@@ -145,7 +145,7 @@ Verwenden Sie diesen Abschnitt, wenn Sie Android als Plattform Ihrer mobilen App
 2. Öffnen Sie Ihre App `BasicProject-Android` in Android Studio.
 3. Führen Sie Ihre App aus.
 
-## Schritt 6: In der Cloud bereitstellen
+## Schritt 6. App bereitstellen
 {: #deploy}
 
 ### Bereitstellung: Toolchain verwenden
@@ -176,7 +176,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Schritt 7: Ausführung der App verifizieren
+## Schritt 7. Ausführung der App verifizieren
 {: #verify}
 
 Nach der Bereitstellung der App verweist die DevOps-Pipeline bzw. die Befehlszeile auf die URL für Ihre App, z. B. `abc-devhost.mybluemix.net`. Rufen Sie diese URL im Browser auf.

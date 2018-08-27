@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 
 Sie benötigen keine Kreditkarte für eine Anmeldung bei einem kostenfreien Konto. Die Angabe einer Kreditkarte ermöglicht jedoch den Zugriff auf zusätzliche Ressourcen und macht es einfacher, alle Angebote von {{site.data.keyword.cloud_notm}} aufzurufen.
 
-## Schritt 1: App erstellen
+## Schritt 1. App erstellen
 {: #project}
 
 1. Klicken Sie auf das **Menüsymbol** ![Menüsymbol](../icons/icon_hamburger.svg) > **Web-Apps**.
@@ -55,7 +55,7 @@ Sie benötigen keine Kreditkarte für eine Anmeldung bei einem kostenfreien Kont
    Klicken Sie auf der Seite mit den App-Details auf **Code herunterladen**. Prüfen Sie die Datei `README.md` in der heruntergeladenen komprimierten Datei, um herauszufinden, ob Sie weitere Aktionen ausführen müssen, um Ihre Starter-App betriebsbereit zu machen.
    {: tip}
 
-## Schritt 2: Ressourcen hinzufügen
+## Schritt 2. Ressourcen hinzufügen
 {: #addResources}
 
 Die meisten Starter-Kits weisen {{site.data.keyword.cloud_notm}} an, Ressourcen automatisch für Sie bereitzustellen. Sie können auch weitere Ressourcen Ihrer App zuordnen, indem Sie auf der Seite mit den App-Details auf **Ressource hinzufügen** klicken.
@@ -63,9 +63,9 @@ Die meisten Starter-Kits weisen {{site.data.keyword.cloud_notm}} an, Ressourcen 
 Verwenden Sie [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html), um Ihre App lokal zu entwickeln und auszuführen.
 {: tip}
 
-## Schritt 3: In {{site.data.keyword.cloud_notm}} bereitstellen
+## Schritt 3. App bereitstellen
 {: #deploy}
 
-Klicken Sie auf der Seite mit den App-Details auf **In Cloud bereitstellen**, wählen Sie eine Bereitstellungsmethode aus (z. B. Kubernetes-Cluster oder Cloud Foundry-App) und klicken Sie auf **Erstellen**.{{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline. Öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App in wenigen Minuten anzeigen können.
+Klicken Sie auf der Seite mit den App-Details auf **In Cloud bereitstellen**, wählen Sie eine Bereitstellungsmethode aus (z. B. Kubernetes-Cluster oder Cloud Foundry-App) und klicken Sie auf **Erstellen**. {{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline. Öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App in wenigen Minuten anzeigen können.
 
 Jetzt sind Sie bereit für die iterative Entwicklung und Continuous Delivery.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 Sie können eine angepasste Anwendung mithilfe von Services und einer Laufzeit erstellen. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie sie in der Cloud bereitgestellt wird.
 {: shortdesc}
 
-## Schritt 1: Tools installieren
+## Schritt 1. Tools installieren
 {: #install-tools}
 
 Installieren Sie die [Entwicklertools ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 
-## Schritt 2: App erstellen
+## Schritt 2. App erstellen
 {: #create-devex}
 
 Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}:
@@ -38,7 +38,7 @@ Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.de
 5. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 6. Klicken Sie auf **Erstellen**.
 
-## Schritt 3: Ressourcen hinzufügen (optional)
+## Schritt 3. Ressourcen hinzufügen (optional)
 {: #add-services}
 
 Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
@@ -48,7 +48,7 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 3. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 4. Klicken Sie auf **Erstellen**.
 
-## Schritt 4: DevOps-Toolchain erstellen
+## Schritt 4. DevOps-Toolchain erstellen
 {: #add-toolchain}
 
 Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsplattform - z. B. Kubernetes oder Cloud Foundry - angepasst.
@@ -62,7 +62,7 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuou
 
     * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
 
-## Schritt 5: App erstellen und lokal ausführen
+## Schritt 5. App erstellen und lokal ausführen
 {: #build-run}
 
 Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Toolchain erstellt. Eine Toolchain erstellt ein Git-Repository für die App, in dem Sie den Code anzeigen können. Führen Sie diese Schritte aus, um auf Ihr Repository zuzugreifen. Sie können die App zu Testzwecken lokal erstellen, bevor Sie sie in der Cloud bereitstellen.
@@ -108,7 +108,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
 
 10.  Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
 
-## Schritt 6: In der Cloud bereitstellen
+## Schritt 6. App bereitstellen
 {: #deploy}
 
 ### Bereitstellung: Toolchain verwenden
@@ -139,7 +139,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Schritt 7: Ausführung der App verifizieren
+## Schritt 7. Ausführung der App verifizieren
 {: #verify}
 
 Nach der Bereitstellung der App verweist die DevOps-Pipeline bzw. die Befehlszeile auf die URL für Ihre App, z. B. `abc-devhost.mybluemix.net`. Rufen Sie diese URL im Browser auf.
