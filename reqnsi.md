@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -48,21 +48,17 @@ If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a se
 
 3. Complete more fields or selections, and then click **CREATE**.
 
-If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, complete the following steps:
+If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, download your app locally open the command line, and change to the app directory.
 
-1. Use the `ibmcloud service offerings` command to find the name and the plan of the service that you require.
+1. Run the following command to add a service to your app. You can select an existing service from one already enabled on your account, or add a new service.
 
-2. Use the following command to create a service instance, where service_name is the name of the service, service_plan is the plan of the service, and service_instance is the name that you want to use for this service instance.
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. Use the following command to bind the service instance to an application, where *appname* is the name of the application, and service_instance is the name of the service instance.
-
-```
-ibmcloud service bind appname service_instance
-```
+2. Follow the prompts to select a resource group, and to create and connect a new data-related service to your application, such as Cloudant. You might need to select a region and plan for the service.
+3. When the service is created, several files, including credentials, are added to your application directory to help you integrate the service into your application. You can manually merge any files or skip this step for now.
 
 You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services ![External link icon](../icons/launch-glyph.svg "External link icon")](#accser_external){: new_window}.
 
