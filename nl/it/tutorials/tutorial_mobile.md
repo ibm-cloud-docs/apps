@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} offre kit starter mobili per aiutarti a creare rapidamente un'applicazione mobile. Scegli un linguaggio, un framework e gli strumenti dai kit starter del servizio dell'applicazione per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, imparerai a installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
 {: shortdesc}
 
-## Passo 1: Installa gli strumenti
+## Passo 1. Installa gli strumenti
 {: #install-tools}
 
 Installa gli [strumenti per sviluppatori ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 
-## Passo 1: Crea un'applicazione con {{site.data.keyword.dev_console}}
+## Passo 2. Crea un'applicazione utilizzando {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Crea un'applicazione {{site.data.keyword.dev_console}} in {{site.data.keyword.Bluemix}}.
@@ -36,7 +36,7 @@ Docker viene installato come parte degli strumenti per sviluppatori. Affinché i
 6. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
 7. Fai clic su **Create**.
 
-## Passo 3: Aggiungi risorse (facoltativo)
+## Passo 3. Aggiungi risorse (facoltativo)
 {: #add-services}
 
 Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognitiva di Watson, aggiungere servizi mobili o servizi per la sicurezza. Per questa esercitazione, aggiungi una posizione per gestire i tuoi dati.
@@ -46,7 +46,7 @@ Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognit
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
 4. Fai clic su **Create**.
 
-## Passo 4: Crea una toolchain DevOps
+## Passo 4. Crea una toolchain DevOps
 {: #add-toolchain}
 
 L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Questi sono personalizzati per la piattaforma di distribuzione che scegli, che si tratti di Kubernetes o Cloud Foundry.
@@ -60,7 +60,7 @@ La fornitura continua è abilitata per alcune applicazioni. Puoi abilitare la fo
 
     * Distribuisci con Cloud Foundry, dove non è necessario gestire l'infrastruttura sottostante.
 
-## Passo 5: Crea ed esegui l'applicazione localmente
+## Passo 5. Crea ed esegui l'applicazione localmente
 {: #build-run}
 
 La distribuzione della tua applicazione sul cloud nell'ultimo passo ha creato una toolchain. Una toolchain crea un repository Git per la tua applicazione in cui puoi trovare il codice. Segui questa procedura per accedere al tuo repository. Puoi creare localmente l'applicazione per il test prima di inviarla al cloud.
@@ -145,7 +145,7 @@ Utilizza questa sezione se scegli di utilizzare Android come piattaforma della t
 2. Apri la tua applicazione `BasicProject-Android` in Android Studio.
 3. Esegui la tua applicazione.
 
-## Passo 6: Distribuisci al cloud
+## Passo 6. Distribuisci la tua applicazione
 {: #deploy}
 
 ### Distribuisci utilizzando una toolchain
@@ -176,7 +176,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Passo 7: Verifica che la tua applicazione sia in esecuzione
+## Passo 7. Verifica che la tua applicazione sia in esecuzione
 {: #verify}
 
 Dopo aver distribuito la tua applicazione, la pipeline DevOps o la riga di comando ti indirizzano all'URL della tua applicazione, ad esempio `abc-devhost.mybluemix.net`. Vai a tale URL nel tuo browser.

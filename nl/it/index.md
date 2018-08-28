@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ I kit starter sono disponibili in molte categorie, tra cui:
 
 Non ti serve una carta di credito per registrare un account gratuito. Inserirla però ti dà accesso a più risorse e ti rende più facile ottenere tutte le offerte di {{site.data.keyword.cloud_notm}}.
 
-## Passo 1: Creazione di un'applicazione
+## Passo 1. Crea un'applicazione
 {: #project}
 
 1. Fai clic sull'icona **Menu** ![Icona menu](../icons/icon_hamburger.svg) > **Applicazioni Web**.
@@ -55,7 +55,7 @@ Non ti serve una carta di credito per registrare un account gratuito. Inserirla 
    Per esaminare il tuo codice, fai clic su **Scarica codice** nella pagina dei dettagli dell'applicazione. Controlla il file `README.md` nel file compresso scaricato per scoprire se devi effettuare ulteriori azioni per rendere operativa la tua applicazione starter.
    {: tip}
 
-## Passo 2: Aggiunta di risorse
+## Passo 2. Aggiungi risorse
 {: #addResources}
 
 La maggior parte dei kit starter indicano a {{site.data.keyword.cloud_notm}} di eseguire automaticamente il provisioning delle risorse al tuo posto. Puoi anche associare ulteriori risorse alla tua applicazione facendo clic su **Aggiungi risorsa** nella pagina dei dettagli dell'applicazione.
@@ -63,7 +63,7 @@ La maggior parte dei kit starter indicano a {{site.data.keyword.cloud_notm}} di 
 Per sviluppare ed eseguire la tua applicazione localmente, utilizza la [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
 
-## Passo 3: Distribuzione a {{site.data.keyword.cloud_notm}}
+## Passo 3. Distribuisci la tua applicazione
 {: #deploy}
 
 Fai clic su **Distribuisci a Cloud** nella pagina dei dettagli dell'applicazione, seleziona un metodo di distribuzione, ad esempio cluster Kubernetes o applicazione Cloud Foundry, e fai clic su **Crea**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta completa di un repository Git e della pipeline di fornitura continua. Visualizza il componente pipeline della tua nuova toolchain per iniziare a creare e distribuire il processo in modo che puoi visualizzare la tua nuova applicazione in pochi minuti.
