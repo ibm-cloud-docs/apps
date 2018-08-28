@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -84,72 +84,19 @@ ibmcloud service bind appname service_instance
 
 {{site.data.keyword.Bluemix_notm}} は多くのデプロイメント・オプションを提供します。ユーザーは、ある環境で実行中のサービスに別の環境からアクセスすることができます。 例えば、Cloud Foundry で実行されているサービスに、Kubernetes クラスターで実行されているアプリケーションからアクセスすることができます。
 
-### 例: Kubernetes ポッドからの Cloud Foundry 上の Compose サービス・インスタンスへのアクセス
+### 例: Kubernetes ポッドからの Cloud Foundry サービスへのアクセス
 
-{{site.data.keyword.composeForMongoDB}} や {{site.data.keyword.composeForRedis}} などのすべての Compose サービス・インスタンスが有料インスタンスです。 Kubernetes 内の {{site.data.keyword.composeForMongoDB}} のような Compose サービス・インスタンスの使用に慣れたら、Compose によって提供されるインスタンスの資格情報を Cloud Foundry でインポートできます。
+Kubernetes クラスター内のポッドから Cloud Foundry サービスにアクセスするには、サービスの資格情報を Kubernetes Secret に保管するために、サービスをクラスターにバインドする必要があります。次に、この情報をアプリで利用できるようにします。
+{: shortdesc}
 
-1. **「資格情報」**に移動して、インスタンスから資格情報を取得します。
+Kubernetes Secret に保管されているサービス資格情報は、デフォルトでは、base64 エンコードされ暗号化されて etcd に保管されます。 
 
-2. チャート・ディレクトリー (例えば、`chart/project/`) から `values.yml` ファイルを開きます。
+**重要**: デプロイメント YAML ファイルの中で、サービス資格情報を直接参照したり公開したりしないでください。デプロイメント YAML ファイルは、機密データを保持するように設計されておらず、デフォルトではサービス資格情報を暗号化しません。この情報を適切に保存してアクセスするには、Kubernetes Secret を使用する必要があります。 
 
-3. サービス環境で参照される値を設定します。 {{site.data.keyword.composeForMongoDB}} での例:
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. チャート・ディレクトリー (例えば、`chart/project/`) から `bindings.yml` ファイルを開きます。
-
-5. `values.yml` ファイルで定義したキーと値の参照を、`env` ブロックが定義されている場所の最後に追加します。
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. アプリケーションで、環境変数を使用して、提供されるサービス SDK を開始します。
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### 秘密 (オプション)
-{: #migrate_secrets_optional}
-
-`deployment.yml` ファイルや `values.yml` ファイルで資格情報を公開しないでください。 Base64 エンコード・ストリングを使用するか、鍵で資格情報を暗号化することができます。 詳しくは、[Creating a Secret Using kubectl create secret ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) および [How to encrypt your data ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/) を参照してください。
+1. [サービスをクラスターにバインドします](/docs/containers/cs_integrations.html#adding_cluster)。 
+2. アプリ・ポッドからサービス資格情報にアクセスするには、次のいずれかのオプションを選択します。 
+   - [Secret をボリュームとしてポッドにマウントする](#mount_secret)
+   - [環境変数で Secret を参照する](#reference_secret)
 
 ## 外部アプリの使用可能化
 {: #accser_external}
@@ -231,7 +178,7 @@ ibmcloud service bind appname service_instance
         OK
         ```
 
-    * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用します。 サード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。例えば次のようにします。
+    * サード・パーティーのログ管理ソフトウェアに情報をドレーンするサービス・インスタンスを作成するには、`-l` オプションを使用します。 サード・パーティーのログ管理ソフトウェアが提供する宛先を指定します。 例えば次のようにします。
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com

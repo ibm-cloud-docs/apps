@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 您可以使用服务和运行时来创建定制应用程序。您可以了解如何安装所需的工具，如何在本地构建和运行应用程序，以及如何将应用程序部署到云上。
 {: shortdesc}
 
-## 步骤 1：安装工具
+## 步骤 1. 安装工具
 {: #install-tools}
 
 安装 [Developer Tools ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}。
 
 Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构建命令才有效。您必须创建 Docker 帐户、运行 Docker 应用程序并登录。
 
-## 步骤 2：创建应用程序
+## 步骤 2. 创建应用程序
 {: #create-devex}
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中创建应用程序：
@@ -38,7 +38,7 @@ Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构�
 5. 选择价格套餐。对于本教程，可以使用免费选项。
 6. 单击**创建**。
 
-## 步骤 3：添加资源（可选）
+## 步骤 3. 添加资源（可选）
 {: #add-services}
 
 可以添加用于通过 Watson 的认知功能增强应用程序的资源，也可以添加移动服务或安全服务。对于本教程，请添加用于管理数据的位置。
@@ -48,7 +48,7 @@ Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构�
 3. 选择价格套餐。对于本教程，可以使用免费选项。
 4. 单击**创建**。
 
-## 步骤 4：创建 DevOps 工具链
+## 步骤 4. 创建 DevOps 工具链
 {: #add-toolchain}
 
 启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 将创建 Git 存储库，在其中可以查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。可以根据您选择的部署平台（无论是 Kubernetes 还是 Cloud Foundry）对其进行定制。
@@ -62,7 +62,7 @@ Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构�
 
     * 使用 Cloud Foundry 进行部署，在其中不需要管理底层基础架构。
 
-## 步骤 5：在本地构建和运行应用程序
+## 步骤 5. 在本地构建和运行应用程序
 {: #build-run}
 
 在最后一步中将应用程序部署到云后，即创建了工具链。工具链会为应用程序创建 Git 存储库，在其中可以查找代码。请执行以下步骤来访问存储库。在将应用程序推送到云之前，可以在本地构建应用程序以进行测试。
@@ -108,7 +108,7 @@ Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构�
 
 10.  打开浏览器并转至 `http://localhost:3000`。您的端口号可能有所不同，具体取决于所选的运行时。
 
-## 步骤 6：部署到云
+## 步骤 6. 部署应用程序
 {: #deploy}
 
 ### 使用工具链进行部署
@@ -140,7 +140,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## 步骤 7：验证应用程序是否在运行
+## 步骤 7. 验证应用程序是否在运行
 {: #verify}
 
 部署应用程序后，DevOps 管道或命令行会将您指向该应用程序的 URL，例如 `abc-devhost.mybluemix.net`。在浏览器中转至该 URL。

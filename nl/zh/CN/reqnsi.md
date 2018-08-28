@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -84,72 +84,19 @@ ibmcloud service bind appname service_instance
 
 {{site.data.keyword.Bluemix_notm}} 提供了许多部署选项，您可以从一个环境访问在不同的环境中运行的服务。例如，如果您具有在 Cloud Foundry 中运行的服务，那么可以从在 Kubernetes 集群中运行的应用程序访问该服务。
 
-### 示例：从 Kubernetes pod 访问 Cloud Foundry 上的 Compose 服务实例
+### 示例：从 Kubernetes pod 访问 Cloud Foundry 服务
 
-任何 Compose 服务实例（例如，{{site.data.keyword.composeForMongoDB}} 或 {{site.data.keyword.composeForRedis}}）都是付费实例。在 Kubernetes 中熟练使用 Compose 服务实例（如 {{site.data.keyword.composeForMongoDB}}）之后，可以在 Cloud Foundry 中导入由 Compose 提供的实例的凭证。
+要从 Kubernetes 集群中的 pod 访问 Cloud Foundry 服务，必须将服务绑定到集群以在 Kubernetes 私钥中存储服务凭证。然后，您可以将此信息提供给应用程序。
+{: shortdesc}
 
-1. 转至**凭证**，然后从实例中检索凭证。
+缺省情况下，存储在 Kubernetes 私钥中的服务凭证采用 base64 编码并使用 etcd 加密。 
 
-2. 打开图表目录（例如 `chart/project/`）中的 `values.yml` 文件。
+**重要信息**：请勿直接在部署 YAML 文件中引用或公开服务凭证。部署 YAML 文件并非设计为保存敏感数据，并且缺省情况下不会加密服务凭证。要正确地存储和访问此信息，必须使用 Kubernetes 私钥。 
 
-3. 设置服务环境中引用的值。例如，在 {{site.data.keyword.composeForMongoDB}} 中：
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. 打开图表目录（例如 `chart/project/`）中的 `bindings.yml` 文件。
-
-5. 在定义 `env` 块的末尾，添加 `values.yml` 文件中定义的键/值引用。
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. 在应用程序中，使用环境变量来启动为您提供的服务 SDK。
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### 私钥（可选）
-{: #migrate_secrets_optional}
-
-不要在 `deployment.yml` 或 `values.yml` 文件中公开凭证。您可以使用 base64 编码的字符串，或者使用密钥对凭证进行加密。有关更多信息，请参阅[使用 kubectl create secret 创建私钥 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) 和[如何加密数据 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+1. [将服务绑定到集群](/docs/containers/cs_integrations.html#adding_cluster)。 
+2. 要从应用程序 pod 访问服务凭证，请在以下选项中进行选择。 
+   - [将私钥作为卷安装到 pod](#mount_secret)
+   - [在环境变量中引用私钥](#reference_secret)
 
 ## 启用外部应用程序
 {: #accser_external}
@@ -234,7 +181,7 @@ ibmcloud service bind appname service_instance
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项。指定第三方日志管理软件提供的目标。例如：
 
         ```
-        ibmcloud service user-provided-create testups2 -l syslog://example.com
+ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -244,7 +191,7 @@ ibmcloud service bind appname service_instance
     * 要更新用户提供的常规服务实例，请使用 **-p** 选项，并在 JSON 对象中指定参数键和值。例如：
 
         ```
-        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -252,7 +199,7 @@ ibmcloud service bind appname service_instance
     * 要创建服务实例来将信息排出至第三方日志管理软件，请使用 `-l` 选项。例如：
 
         ```
-        ibmcloud service user-provided-create testups2 -l syslog://example2.com
+ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2018-07-12"
 
 您无需信用卡就可以注册免费帐户。但通过输入信用卡，您可以访问更多资源，并且能更轻松地获取 {{site.data.keyword.cloud_notm}} 所提供的所有内容。
 
-## 步骤 1：创建应用程序
+## 步骤 1. 创建应用程序
 {: #project}
 
 1. 单击**菜单**图标 ![“菜单”图标](../icons/icon_hamburger.svg) > **Web 应用程序**。
@@ -55,7 +55,7 @@ lastupdated: "2018-07-12"
    要检查您的代码，请单击应用程序详细信息页面上的**下载代码**。检查下载的压缩文件中的 `README.md` 文件，以了解是否需要执行更多操作来使入门模板应用程序启动并运行。
    {: tip}
 
-## 步骤 2：添加资源
+## 步骤 2. 添加资源
 {: #addResources}
 
 大多数入门模板工具包指示 {{site.data.keyword.cloud_notm}} 自动为您供应资源。您还可以单击应用程序详细信息页面上的**添加资源**，将更多资源与应用程序进行关联。
@@ -63,7 +63,7 @@ lastupdated: "2018-07-12"
 要在本地开发并运行应用程序，请使用 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)。
 {: tip}
 
-## 步骤 3：部署到 {{site.data.keyword.cloud_notm}}
+## 步骤 3. 部署应用程序
 {: #deploy}
 
 单击应用程序详细信息页面上的**部署到云**，选择部署方法（例如，Kubernetes 集群或 Cloud Foundry 应用程序），然后单击**创建**。{{site.data.keyword.cloud_notm}} 会自动创建开放工具链，该工具链配套提供 Git 存储库和持续交付管道。打开新工具链的管道组件，以开始初始构建和部署过程，这样您在几分钟内就可以看到新应用程序。
