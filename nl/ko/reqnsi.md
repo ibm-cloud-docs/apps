@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -84,72 +84,19 @@ ibmcloud service bind appname service_instance
 
 {{site.data.keyword.Bluemix_notm}}에서 다양한 개발 옵션을 제공함에 따라 사용자는 하나의 환경에서 실행되는 서비스에 다른 환경에서 액세스할 수 있습니다. 예를 들어, Cloud Foundry에서 실행되는 서비스가 있는 경우 Kubernetes 클러스터에서 실행되는 애플리케이션에서 해당 서비스에 액세스할 수 있습니다.
 
-### 예: Kubernetes 팟(Pod)에서 Cloud Foundry에 있는 Compose 서비스 인스턴스에 액세스
+### 예: Kubernetes 팟(Pod)에서 Cloud Foundry 서비스에 액세스
 
-Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또는 {{site.data.keyword.composeForRedis}})는 유료 인스턴스입니다. Compose 서비스 인스턴스(예: Kubernetes의 {{site.data.keyword.composeForMongoDB}})를 사용하는 데 문제가 없으면 Cloud Foundry의 Compose에서 제공된 인스턴스의 신임 정보를 가져올 수 있습니다.
+Kubernetes 클러스터의 팟에서 Cloud Foundry 서비스에 액세스하려면 Kubernetes 시크릿에 서비스 신임 정보를 저장하기 위해 클러스터에 서비스를 바인드해야 합니다. 그런 다음 이 정보를 앱에서 사용 가능하게 할 수 있습니다.
+{: shortdesc}
 
-1. **신임 정보**로 이동하여 인스턴스에서 신임 정보를 검색하십시오.
+Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 base64 인코딩되고 etcd로 암호화됩니다. 
 
-2. 차트 디렉토리(예: `chart/project/`)에서 `values.yml` 파일을 여십시오.
+**중요**: 배치 YAML 파일에 직접 서비스 신임 정보를 노출하거나 참조하지 마십시오. 배치 YAML 파일은 민감한 데이터를 보관하도록 디자인되지 않았으며 기본적으로 서비스 신임 정보를 암호화하지 않습니다. 이 정보를 제대로 저장하고 액세스하려면 Kubernetes 시크릿을 사용해야 합니다. 
 
-3. 서비스 환경에서 참조되는 값을 설정하십시오. 예를 들어, {{site.data.keyword.composeForMongoDB}}에서는 다음과 같습니다.
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. 차트 디렉토리(예: `chart/project/`)에서 `bindings.yml` 파일을 여십시오.
-
-5. `env` 블록이 정의된 위치의 끝 부분에 `values.yml` 파일에 정의된 키-값 참조를 추가하십시오.
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. 애플리케이션에서 환경 변수를 사용하여 사용자에게 제공되는 서비스 SDK를 시작하십시오. 
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### 시크릿(선택사항)
-{: #migrate_secrets_optional}
-
-`deployment.yml` 또는 `values.yml` 파일의 신임 정보를 노출하지 마십시오. base64로 인코딩된 문자열을 사용하거나 키를 통해 신임 정보를 암호화할 수 있습니다. 자세한 정보는 [kubectl create secret를 사용하여 시크릿 작성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) 및 [데이터 암호화 방법 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)을 참조하십시오.
+1. [서비스를 클러스터에 바인딩](/docs/containers/cs_integrations.html#adding_cluster)하십시오. 
+2. 앱 팟(Pod)에서 서비스 신임 정보에 액세스하려면 다음 옵션 중에서 선택하십시오. 
+   - [시크릿을 볼륨으로 팟(Pod)에 마운트](#mount_secret)
+   - [환경 변수의 시크릿 참조](#reference_secret)
 
 ## 외부 앱 사용
 {: #accser_external}
@@ -234,7 +181,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
     * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 써드파티 로그 관리 소프트웨어에서 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-                ibmcloud service user-provided-create testups2 -l syslog://example.com
+        ibmcloud service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -244,7 +191,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
     * 일반적인 사용자 제공 서비스 인스턴스를 업데이트하려면 **-p** 옵션을 사용하고 JSON 오브젝트에 매개변수 키 및 값을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-                ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
@@ -252,7 +199,7 @@ Compose 서비스 인스턴스(예: {{site.data.keyword.composeForMongoDB}} 또�
     * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 예를 들어, 다음과 같습니다.
 
         ```
-                ibmcloud service user-provided-create testups2 -l syslog://example2.com
+        ibmcloud service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```

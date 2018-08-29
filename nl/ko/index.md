@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ lastupdated: "2018-07-12"
 
 무료 계정을 등록하는 데는 신용카드가 필요하지 않습니다. 그러나 신용카드 정보를 입력하면 더 많은 리소스에 액세스할 수 있으며 모든 {{site.data.keyword.cloud_notm}} 오퍼링을 더 쉽게 가져올 수 있습니다.
 
-## 1단계: 앱 작성
+## 1단계. 앱 작성
 {: #project}
 
 1. **메뉴** 아이콘 ![메뉴 아이콘](../icons/icon_hamburger.svg) > **웹 앱**을 클릭하십시오.
@@ -55,7 +55,7 @@ lastupdated: "2018-07-12"
    코드를 검사하려면, 앱 세부사항 페이지에서 **코드 다운로드**를 클릭하십시오. 다운로드된 압축 파일에 있는 `README.md` 파일을 확인하여 스타터 앱을 시작하고 실행하기 위해 추가 조치를 수행해야 하는지 알아보십시오.
    {: tip}
 
-## 2단계: 리소스 추가
+## 2단계. 리소스 추가
 {: #addResources}
 
 대부분의 스타터 킷은 사용자를 위해 리소스를 자동으로 프로비저닝하도록 {{site.data.keyword.cloud_notm}}에 지시합니다. 앱 세부사항 페이지에서 **리소스 추가**를 클릭하여 여러 리소스를 앱과 연관시킬 수도 있습니다.
@@ -63,7 +63,7 @@ lastupdated: "2018-07-12"
 앱을 로컬로 개발하고 실행하려는 경우에는 [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)을 사용하십시오.
 {: tip}
 
-## 3단계: {{site.data.keyword.cloud_notm}}에 배치
+## 3단계. 앱 배치
 {: #deploy}
 
 앱 세부사항 페이지에서 **Cloud에 배치**를 클릭하고, 배치 방법,예: Kubernetes 클러스터 또는 Cloud Foundry 앱)을 선택한 후 **작성**을 클릭하십시오. {{site.data.keyword.cloud_notm}}가 Git 저장소와 지속적 Delivery Pipeline을 모두 갖춘 공개 도구 체인을 자동으로 작성합니다. 새 도구 체인의 파이프라인 컴포넌트를 열어 초기 빌드 및 배치 프로세스를 시작하고 나면 몇 분 내에 새 앱을 확인할 수 있습니다.
