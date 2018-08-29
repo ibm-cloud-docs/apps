@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} ofrece muchos kits de iniciación para ayudarle a codificar rápidamente. Elija un idioma, una infraestructura y herramientas de kits de iniciación de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
 {: shortdesc}
 
-## Paso 1: Instalar las herramientas
+## Paso 1. Instalar las herramientas
 {: #install-tools}
 
 Instale las [herramientas del desarrollador ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 
-## Paso 2: Seleccionar un kit de iniciación
+## Paso 2. Seleccionar un kit de iniciación
 {: #create-devex}
 
 Los kits de iniciación están disponibles en muchos idiomas e infraestructuras de la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
@@ -36,7 +36,7 @@ Los kits de iniciación están disponibles en muchos idiomas e infraestructuras 
 4. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 5. Pulse **Crear**.
 
-## Paso 3: Añadir recursos (Opcional)
+## Paso 3. Añadir recursos (opcional)
 {: #add-services}
 
 Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, para añadir servicios móviles o servicios de seguridad. Para esta guía de aprendizaje, añada un lugar para gestionar los datos.
@@ -46,7 +46,7 @@ Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, 
 3. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 4. Pulse **Crear**.
 
-## Paso 4: Crear una cadena de herramientas de DevOps
+## Paso 4. Crear una cadena de herramientas de DevOps
 {: #add-toolchain}
 
 La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Se personalizan en la plataforma de despliegue que elija, ya sea Kubernetes o Cloud Foundry.
@@ -60,7 +60,7 @@ La entrega continua está habilitada para algunas aplicaciones. Puede habilitar 
 
     * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
 
-## Paso 5: Creación y ejecución de la app localmente
+## Paso 5. Crear y ejecutar la app localmente
 {: #build-run}
 
 El despliegue de la app en la nube en el último paso ha creado una cadena de herramientas. Una cadena de herramientas crea un repositorio Git para la app donde puede encontrar el código allí. Siga estos pasos para acceder a su repositorio. Puede compilar la app localmente para probarla antes de enviarla por push a la nube.
@@ -106,7 +106,7 @@ El despliegue de la app en la nube en el último paso ha creado una cadena de he
 
 10.  Abra el navegador en `http://localhost:3000`. Es posible que el número de puerto sea distinto en función del tiempo de ejecución elegido.
 
-## Paso 6: Desplegar a la nube
+## Paso 6. Desplegar la app
 {: #deploy}
 
 ### Desplegar utilizando una cadena de herramientas
@@ -137,7 +137,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Paso 7: Verificar que la app se está ejecutando
+## Paso 7. Verificar que la app se está ejecutando
 {: #verify}
 
 Después de desplegar la app, el conducto o la línea de mandatos de DevOps le apunta al URL para la app, por ejemplo `abc-devhost.mybluemix.net`. Vaya a ese URL en el navegador.

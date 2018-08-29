@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -85,72 +85,19 @@ Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de f
 
 {{site.data.keyword.Bluemix_notm}} ofrece muchas opciones de despliegue y puede acceder a un servicio que se está ejecutando en un entorno desde un entorno diferente. Por ejemplo, si tiene un servicio que se está ejecutando en Cloud Foundry, puede acceder a dicho servicio desde una aplicación que se esté ejecutando en un clúster de Kubernetes.
 
-### Ejemplo: Acceda a una instancia de servicio de Compose en Cloud Foundry desde un pod Kubernetes
+### Ejemplo: Acceda a un servicio de Cloud Foundry desde un pod de Kubernetes
 
-Cualquier instancia de servicio, como {{site.data.keyword.composeForMongoDB}} o {{site.data.keyword.composeForRedis}}, son instancias de pago. Cuando se sienta cómodo utilizando la instancia de servicio de Compose, como {{site.data.keyword.composeForMongoDB}} en Kubernetes, puede importar las credenciales de la instancia que proporciona Compose en Cloud Foundry.
+Para acceder a un servicio de Cloud Foundry desde un pod de un clúster de Kubernetes, debe enlazar el servicio al clúster para almacenar las credenciales del servicio en un secreto de Kubernetes. A continuación, puede poner esta información a disposición de la app. 
+{: shortdesc}
 
-1. Vaya a **Credenciales** y recupere las credenciales de la instancia.
+Las credenciales de servicio que se almacenan en un secreto de Kubernetes están codificadas con base64 y cifradas en etcd de forma predeterminada. 
 
-2. Abra el archivo `values.yml` del directorio de gráficos, por ejemplo, `chart/project/`.
+**Importante**: No haga referencia ni exponga las credenciales de servicio directamente en el archivo YAML de despliegue. Los archivos YAML de despliegue no están diseñados para contener datos confidenciales y no cifran las credenciales de servicio de forma predeterminada. Para almacenar correctamente esta información y acceder a ella, debe utilizar un secreto de Kubernetes. 
 
-3. Establezca los valores a los que se hace referencia en los entornos de servicio. Por ejemplo, en {{site.data.keyword.composeForMongoDB}}:
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. Abra el archivo `bindings.yml` del directorio de gráficos, por ejemplo, `chart/project/`.
-
-5. Añada las referencias de valor de clave que se definen en el archivo `values.yml` al final donde se define el bloque `env`.
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. En la aplicación, utilice las variables de entorno para iniciar el servicio SDK que se proporciona para usted.
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### Secretos (Opcional)
-{: #migrate_secrets_optional}
-
-No exponga las credenciales en los archivos `deployment.yml` o `values.yml`. Puede utilizar una serie codificada en base64 o cifrar sus credenciales con una clave. Para obtener más información, consulte [Creación de un Secreto utilizando kubectl create secret ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) y [Cómo cifrar sus datos ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+1. [Enlace el servicio al clúster](/docs/containers/cs_integrations.html#adding_cluster). 
+2. Para acceder a las credenciales de servicio desde su pod de app, elija una de las siguientes opciones. 
+   - [Monte el secreto como un volumen en el pod](#mount_secret)
+   - [Haga referencia al secreto en variables de entorno](#reference_secret)
 
 ## Habilitación de apps externas
 {: #accser_external}
