@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ Os kits do iniciador estão disponíveis em várias categorias, incluindo:
 
 Não é necessário um cartão de crédito para se inscrever para uma conta grátis. No entanto, inserir um cartão de crédito fornece a você acesso a mais recursos e torna mais fácil obter todas as ofertas do {{site.data.keyword.cloud_notm}}.
 
-## Etapa 1: Criando um app
+## Etapa 1. Criar um app
 {: #project}
 
 1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) > **Apps da web**.
@@ -55,7 +55,7 @@ Não é necessário um cartão de crédito para se inscrever para uma conta grá
    Para inspecionar seu código, clique em **Fazer download do código** na página de detalhes do app. Verifique o arquivo `README.md` no arquivo compactado transferido por download para descobrir se é necessário executar mais ações para colocar o app Starter em funcionamento.
    {: tip}
 
-## Etapa 2: incluindo recursos
+## Etapa 2. Incluir recursos
 {: #addResources}
 
 A maioria dos kits do iniciador instrui o {{site.data.keyword.cloud_notm}} a provisionar recursos automaticamente para você. Também é possível associar mais recursos com seu app clicando em **Incluir recurso** na página de detalhes do app.
@@ -63,7 +63,7 @@ A maioria dos kits do iniciador instrui o {{site.data.keyword.cloud_notm}} a pro
 Para desenvolver e executar seu app localmente, use o [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
 
-## Etapa 3: Implementando no  {{site.data.keyword.cloud_notm}}
+## Etapa 3. Implementar seu app
 {: #deploy}
 
 Clique em **Implementar na nuvem** na página de detalhes do app, selecione um método de implementação, como Kubernetes Cluster ou App Cloud Foundry, e clique em **Criar**. O {{site.data.keyword.cloud_notm}} automaticamente cria uma cadeia de ferramentas aberta e completa com um repositório Git e um pipeline de entrega contínua. Abra o componente de pipeline de sua nova cadeia de ferramentas para iniciar o processo de construção e implementação inicial para que seja possível ver seu novo app em minutos.

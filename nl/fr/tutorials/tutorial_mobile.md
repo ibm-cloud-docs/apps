@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.Bluemix}} inclut des kits de démarrage mobiles vous permettant de créer plus facilement et plus rapidement une application mobile. Choisissez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez apprendre à installer les outils dont vous avez besoin, générer et exécuter l'application localement et la déployer dans le cloud.
 {: shortdesc}
 
-## Etape 1 : Installer les outils
+## Etape 1. Installer les outils
 {: #install-tools}
 
 Installez les [outils de développement ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 
-## Etape 2 : Créer une application avec la console {{site.data.keyword.dev_console}}
+## Etape 2. Créer une application en utilisant {{site.data.keyword.dev_console}}
 {: #create-devex}
 
 1. Créez une application {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
@@ -36,7 +36,7 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 6. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
 7. Cliquez sur **Créer**.
 
-## Etape 3 : Ajouter des ressources (facultatif)
+## Etape 3. Ajouter des ressources (facultatif)
 {: #add-services}
 
 Vous pouvez ajouter des ressources qui améliorent votre application avec la puissance cognitive de Watson, ajoutent des services mobiles ou des services de sécurité. Pour ce tutoriel, ajoutez un emplacement pour gérer vos données.
@@ -46,7 +46,7 @@ Vous pouvez ajouter des ressources qui améliorent votre application avec la pui
 3. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
 4. Cliquez sur **Créer**.
 
-## Etape 4 : Créer une chaîne d'outils DevOps
+## Etape 4. Créer une chaîne d'outils DevOps
 {: #add-toolchain}
 
 L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont configurés pour la plateforme de déploiement choisie, Kubernetes ou Cloud Foundry.
@@ -60,7 +60,7 @@ La distribution continue est activée pour certaines applications. Vous pouvez a
 
     * Effectuer un déploiement à l'aide de Cloud Foundry. Dans ce cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
 
-## Etape 5 : Générer et exécuter l'application localement
+## Etape 5. Générer et exécuter l'application localement
 {: #build-run}
 
 Le déploiement de votre application dans le cloud effectué lors de la dernière étape a créé une chaîne d'outils. Cette dernière crée un référentiel Git pour votre application dans lequel vous pouvez trouver le code. Procédez comme suit pour accéder à votre référentiel. Vous pouvez générer l'application localement à des fins de test avant de la placer dans le cloud.
@@ -145,7 +145,7 @@ Utilisez cette section si vous avez choisi d'utiliser Android comme plateforme d
 2. Ouvrez votre application `BasicProject-Android` dans Android Studio.
 3. Exécutez votre application.
 
-## Etape 6 : Effectuer un déploiement sur le cloud
+## Etape 6. Déployer votre application
 {: #deploy}
 
 ### Déploiement à l'aide d'une chaîne d'outils
@@ -176,7 +176,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Etape 7 : Vérifier que votre application est en cours d'exécution
+## Etape 7. Vérifier que votre application est en cours d'exécution
 {: #verify}
 
 Une fois votre application déployée, l'invite de commande ou le pipeline DevOps indique l'URL de votre application, par exemple `abc-devhost.mybluemix.net`. Accédez à cette URL à partir de votre navigateur.

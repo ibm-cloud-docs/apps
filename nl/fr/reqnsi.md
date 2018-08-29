@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-20"
 
 ---
 
@@ -100,72 +100,19 @@ d'assurer la reprise après une indisponibilité, une exception ou une panne de 
 
 {{site.data.keyword.Bluemix_notm}} propose un grand nombre d'options de déploiement et vous pouvez accéder à un service qui s'exécute dans un environnement à partir d'un autre environnement. Par exemple, si vous avez un service qui s'exécute dans Cloud Foundry, vous pouvez accéder à ce service à partir d'une application qui s'exécute dans un cluster Kubernetes.
 
-### Exemple : Accès à une instance de service Compose sur Cloud Foundry à partir d'un pod Kubernetes
+### Exemple : Accès à un service Cloud Foundry à partir d'un pod Kubernetes
 
-Toutes les instances de service Compose, telles {{site.data.keyword.composeForMongoDB}} ou {{site.data.keyword.composeForRedis}}, sont des instances payantes. Une fois que vous maîtrisez l'utilisation de votre instance de service Compose, comme {{site.data.keyword.composeForMongoDB}} dans Kubernetes, vous pouvez importer les données d'identification de l'instance fournies par Compose dans Cloud Foundry.
+Pour accéder à un service Cloud Foundry à partir d'un pod dans un cluster Kubernetes, vous devez lier le service à votre cluster pour stocker les données d'identification pour le service dans une valeur confidentielle de Kubernetes. Vous pouvez ensuite mettre ces informations à disposition de votre application.
+{: shortdesc}
 
-1. Sélectionnez **Données d'identification** et extrayez vos données d'identification de l'instance.
+Les données d'identification pour le service qui sont stockées dans une valeur confidentielle de Kubernetes sont codées en base64 et chiffrées en etcd par défaut. 
 
-2. Ouvrez le fichier `values.yml` du répertoire charts, par exemple `chart/project/`.
+**Important** : Ne référencez ou n'exposez pas vos données d'identification pour le service directement dans votre fichier YAML de déploiement. Les fichiers YAML de déploiement ne sont pas conçus pour contenir des données sensibles et ne chiffrent pas vos données d'identification pour le service par défaut. Pour stocker ces informations et y accéder correctement, vous devez utiliser une valeur confidentielle de Kubernetes. 
 
-3. Définissez les valeurs référencées dans vos environnements de service. Par exemple, dans {{site.data.keyword.composeForMongoDB}} :
-
-  ```
-  services:
-    mongo:
-       url: {uri}
-       dbName: {dbname}
-       ca: {ca_certificate_base64}
-       username: {username}
-       password: {password}
-       env: production
-
-  ```
-
-4. Ouvrez le fichier `bindings.yml` du répertoire charts, par exemple `chart/project/`.
-
-5. Ajoutez à la fin de ce dernier les références clé/valeur définies dans le fichier `values.yml`, à l'emplacement de définition du bloc `env`.
-
-  ```
-    env:
-      - name: MONGO_URL
-        value: {{ .Values.services.mongo.url }}
-      - name: MONGO_DB_NAME
-        value: {{ .Values.services.mongo.name }}
-      - name: MONGO_USER
-        value: {{ .Values.services.mongo.username }}
-      - name: MONGO_PASS
-        value: {{ .Values.services.mongo.password }}
-      - name: MONGO_CA
-        value: {{ .Values.services.mongo.ca }}
-  ```
-
-6. Dans votre application, utilisez vos variables d'environnement afin de démarrer le logiciel SDK de service mis à votre disposition.
-
-  ```javascript
-    const serviceManger = require('./services/serivce-manage.js');
-    const mongoURL = process.env.MONGO_URL || 'localhost';
-    const mongoUser = process.env.MONGO_USER || '';
-    const mongoPass = process.env.MONGO_PASS || '';
-    const mongoDBName = process.env.MONGO_DB_NAME || 'comments';
-    const mongoCA = [new Buffer(process.env.MONGO_CA || '', 'base64')]
-
-    const options = {
-        useMongoClient: true,
-        ssl: true,
-        sslValidate: true,
-        sslCA: mongoCA,
-        poolSize: 1,
-        reconnectTries: 1
-    };
-
-    const mongoDBClient = serviceManger.get('mongodb');
-  ```
-
-### Secrets (facultatif)
-{: #migrate_secrets_optional}
-
-N'exposez pas vos données d'identification dans vos fichiers `deployment.yml` ou `values.yml`. Vous pouvez utiliser une chaîne codée base64 ou chiffrer vos données d'identification avec une clé. Pour plus d'informations, voir [Creating a Secret Using kubectl create secret ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) et [How to encrypt your data ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/)
+1. [Liez le service à votre cluster](/docs/containers/cs_integrations.html#adding_cluster). 
+2. Pour accéder aux données d'identification de votre service à partir du pod de votre application, choisissez l'une des options suivantes : 
+   - [Monter la valeur confidentielle en tant que volume sur votre pod](#mount_secret)
+   - [Référencer la valeur confidentielle dans les variables d'environnement](#reference_secret)
 
 ## Activation d'applications externes
 {: #accser_external}

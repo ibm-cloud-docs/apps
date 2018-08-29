@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -36,7 +36,7 @@ Les kits de démarrage sont disponibles dans de nombreuses catégories, telles q
 
 Vous n'avez pas besoin de carte de crédit pour obtenir un compte gratuit. Cependant, si vous entrez un numéro de carte de crédit, vous pourrez accéder à davantage de ressources et pourrez plus facilement vous procurer toutes les offres {{site.data.keyword.cloud_notm}}.
 
-## Etape 1 : Création d'une application
+## Etape 1. Créer une application
 {: #project}
 
 1. Cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) > **Applications Web**.
@@ -55,7 +55,7 @@ Vous n'avez pas besoin de carte de crédit pour obtenir un compte gratuit. Cepen
    Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des détails d'application. Consultez le fichier `README.md` se trouvant dans le fichier compressé téléchargé pour savoir si vous devez exécuter d'autres actions pour rendre votre application de démarrage opérationnelle.
    {: tip}
 
-## Etape 2 : Ajout de ressources
+## Etape 2. Ajouter des ressources
 {: #addResources}
 
 La majeure partie des kits de démarrage demande à {{site.data.keyword.cloud_notm}} de mettre automatiquement des ressources à votre disposition. Vous pouvez également associer davantage de ressources à votre application en cliquant sur **Ajouter une ressource** sur la page des détails d'application.
@@ -63,7 +63,7 @@ La majeure partie des kits de démarrage demande à {{site.data.keyword.cloud_no
 Pour développer et exécuter votre application localement utilisez le [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}
 
-## Etape 3 : Déploiement dans {{site.data.keyword.cloud_notm}}
+## Etape 3. Déployer votre application
 {: #deploy}
 
 Cliquez sur **Déployer dans Cloud** sur la page des détails d'application, sélectionnez une méthode de déploiement, par exemple, Cluster Kubernetes ou Application Cloud Foundry, puis cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue. Ouvrez le composant pipeline de votre nouvelle chaîne d'outils afin de commencer le processus de génération et de déploiement initial de sorte que vous puissiez voir votre application après quelques minutes.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-23"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -18,14 +18,14 @@ lastupdated: "2018-07-23"
 O {{site.data.keyword.Bluemix}} oferece vários kits do iniciador para ajudar você a obter a codificação rapidamente. Escolha uma linguagem, uma estrutura e ferramentas dos kits do iniciador do Serviço de app para começar a trabalhar com um app customizado pré-configurado. Neste tutorial, você percorrerá as etapas para instalar as ferramentas necessárias e, em seguida, construirá e executará o app localmente e o implementará na nuvem.
 {: shortdesc}
 
-## Etapa 1: instalar as ferramentas
+## Etapa 1. Instale as ferramentas
 {: #install-tools}
 
 Instale as [ferramentas do desenvolvedor![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
 
 O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 
-## Etapa 2: Selecione um kit do iniciador
+## Etapa 2. Selecione um kit do iniciador
 {: #create-devex}
 
 Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}. Selecione a linguagem que for melhor para seu projeto ser iniciado.
@@ -36,7 +36,7 @@ Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.
 4. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 5. Clique em **Criar**.
 
-## Etapa 3: Incluir recursos (opcional)
+## Etapa 3. Incluir recursos (opcional)
 {: #add-services}
 
 É possível incluir recursos que aprimoram seu app com o poder cognitivo do Watson, incluir serviços móveis ou serviços de segurança. Para este tutorial, inclua um local para gerenciar seus dados.
@@ -46,7 +46,7 @@ Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.
 3. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 4. Clique em **Criar**.
 
-## Etapa 4: criar uma cadeia de ferramentas do DevOps
+## Etapa 4. Criar uma cadeia de ferramentas do DevOps
 {: #add-toolchain}
 
 A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para a plataforma de implementação escolhida, seja Kubernetes ou Cloud Foundry.
@@ -60,7 +60,7 @@ A entrega contínua é ativada para alguns aplicativos. É possível ativar a en
 
     * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-## Etapa 5: Construindo e executando o app localmente
+## Etapa 5. Criar e executar o app localmente
 {: #build-run}
 
 A implementação de seu app na nuvem na última etapa criou uma cadeia de ferramentas. Uma cadeia de ferramentas cria um repositório Git para seu app no qual é possível localizar o código. Siga estas etapas para acessar o repositório. É possível construir o app localmente para teste antes de enviá-lo por push para a nuvem.
@@ -76,7 +76,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
   ```
   {: pre}
 
-6. Configure seus destinos org e space.
+6. Configure seus destinos de organização e espaço.
 
   ```bash
   ibmcloud target --cf
@@ -90,7 +90,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
   ```
   {: pre}
 
-8. Certifique-se de que o Docker esteja em execução e construa seu app em um contêiner de desenvolvimento local por meio do diretório.
+8. Verifique se o Docker está executando e crie seu app em um contêiner de desenvolvimento local do diretório.
 
   ```bash
   ibmcloud dev build
@@ -106,7 +106,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
 
 10.  Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
 
-## Etapa 6: implementar na nuvem
+## Etapa 6. Implementar seu app
 {: #deploy}
 
 ### Implementar usando uma cadeia de ferramentas
@@ -121,7 +121,7 @@ Também é possível implementar seu app manualmente por meio de sua cadeia de f
 
 2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e o histórico.
 
-### Implemente usando o  {{site.data.keyword.dev_cli_short}}
+### Implementar usando o {{site.data.keyword.dev_cli_short}}
 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 
@@ -137,7 +137,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Etapa 7: Verificar se seu app está em execução
+## Etapa 7. Verificar se o app está em execução
 {: #verify}
 
 Após a implementação de seu app, o pipeline ou a linha de comandos do DevOps aponta para a URL de seu app, por exemplo, `abc-devhost.mybluemix.net`. Acesse essa URL em seu navegador.
