@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -102,7 +102,6 @@ You might have applications that were created and run outside of {{site.data.key
 The following services provide service keys for you to use externally:
 
 * {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
-* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
 * {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
 * {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
 * {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
@@ -118,7 +117,6 @@ The following services provide service keys for you to use externally:
 * {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
 * {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
 * {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
-* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
 * {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
 * {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
 * {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
@@ -137,7 +135,6 @@ The following services provide service keys for you to use externally:
 * {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
 * {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
 * {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
 * {{site.data.keyword.weather_short}} <!--Weather Company Data-->
 * {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
@@ -209,4 +206,3 @@ To create a user-provided service instance and bind it to an application, comple
 	```
 
 You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service ![External link icon](../icons/launch-glyph.svg "External link icon")](#config){: new_window}.
-
