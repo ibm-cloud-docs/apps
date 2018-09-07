@@ -101,36 +101,22 @@ You might have applications that were created and run outside of {{site.data.key
 
 The following services provide service keys for you to use externally:
 
-* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
 * {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
 * {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
 * {{site.data.keyword.blockchain}} <!--Blockchain-->
 * {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
 * {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.dashdbshort}} <!--dashDB-->
 * {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
-* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
 * {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
 * {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
 * {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
-* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
-* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
-* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
-* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
 * {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
 * {{site.data.keyword.dwl_short}} <!--Lift-->
 * {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
 * {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
 * {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
 * {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
 * {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
 * {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
 * {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
 * {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
