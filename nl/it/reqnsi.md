@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -55,21 +55,17 @@ per richiedere un'istanza del servizio, completa la seguente procedura:
 
 3. Completa le selezioni o i campi aggiuntivi e fai quindi clic su **CREA**.
 
-Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, completa la seguente procedura:
+Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.Bluemix_notm}} per richiedere un'istanza del servizio, scarica la tua applicazione localmente, apri la riga di comando e modifica la directory app.
 
-1. Utilizza il comando `ibmcloud service offerings` per trovare il nome e il piano del servizio di cui hai bisogno.
+1. Immetti il seguente comando per aggiungere un servizio alla tua applicazione. Puoi selezionare un servizio esistente da uno già abilitato sul tuo account o aggiungerne uno nuovo.
 
-2. Utilizza il seguente comando per creare un'istanza del servizio, dove nome_servizio è il nome del servizio, piano_servizio è il piano del servizio e istanza_servizio è il nome da utilizzare per questa istanza del servizio.
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create nome_servizio piano_servizio istanza_servizio
-```
-
-3. Utilizza il seguente comando per eseguire il bind dell'istanza del servizio a un'applicazione, dove *appname* è il nome dell'applicazione e istanza_servizio è il nome dell'istanza del servizio.
-
-```
-ibmcloud service bind appname istanza_servizio
-```
+2. Segui le istruzioni per selezionare un gruppo di risorse e per creare e collegare un nuovo servizio correlato ai dati alla tua applicazione, ad esempio Cloudant. Potresti dover selezionare una regione e un piano per il servizio.
+3. Quando il servizio viene creato, diversi file, incluse le credenziali, vengono aggiunti alla directory dell'applicazione per facilitarti ad integrare il servizio nella tua applicazione. Puoi unire manualmente tutti file o ignorare questo passo per ora.
 
 Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.Bluemix_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](#accser_external){: new_window}.
 
@@ -108,7 +104,7 @@ l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verif
 
 ### Esempio: accesso a un servizio Cloud Foundry da un pod Kubernetes
 
-Per accedere a un servizio Cloud Foundry da un pod in un cluster Kubernetes, devi eseguire il bind del servizio al tuo cluster per memorizzare le credenziali del servizio in un segreto Kubernetes. Quindi, puoi rendere queste informazioni disponibili alla tua applicazione.
+Per accedere a un servizio Cloud Foundry da un pod in un cluster Kubernetes, devi eseguire il bind del servizio al tuo cluster per memorizzare le credenziali del servizio in un segreto Kubernetes. Quindi, puoi rendere queste informazioni disponibili alla tua applicazione. 
 {: shortdesc}
 
 Le credenziali del servizio memorizzate in un segreto Kubernetes sono codificate in base64 e crittografate in etcd per impostazione predefinita. 
