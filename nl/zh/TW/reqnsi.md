@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -50,21 +50,17 @@ lastupdated: "2018-08-20"
 
 3. 完成其他欄位或選擇，然後按一下**建立**。
 
-如果您使用 {{site.data.keyword.Bluemix_notm}} 指令行介面來要求服務實例，請完成下列步驟：
+如果您使用 {{site.data.keyword.Bluemix_notm}} 指令行介面來要求服務實例，請下載應用程式、在本端開啟指令行，然後切換至應用程式目錄。
 
-1. 使用 `ibmcloud service offerings` 指令，以尋找所需服務的名稱及方案。
+1. 執行下列指令，以將服務新增至應用程式。您可以從帳戶上已啟用的服務選取現有服務，或是新增一個服務。
 
-2. 使用下列指令來建立服務實例，其中 service_name 是服務的名稱、service_plan 是服務的方案，而 service_instance 是您要用於此服務實例的名稱。
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. 使用下列指令將服務實例連結至應用程式，其中 *appname* 是應用程式的名稱，而 service_instance 是服務實例的名稱。
-
-```
-ibmcloud service bind appname service_instance
-```
+2. 遵循提示以選取資源群組，及建立新的資料相關服務並將它連接至您的應用程式，例如 Cloudant。您可能需要為服務選取地區及方案。
+3. 建立服務時，會將數個檔案（包括認證）新增至您的應用程式目錄，以協助您將服務整合到應用程式。您可以手動合併任何檔案，或是目前先跳過此步驟。
 
 您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.Bluemix_notm}} 服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](#accser_external){: new_window}。
 
