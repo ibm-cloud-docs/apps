@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -48,21 +48,21 @@ Se você usar a interface com o usuário do {{site.data.keyword.Bluemix_notm}} p
 
 3. Conclua mais campos ou seleções e, em seguida, clique em **CRIAR**.
 
-Se você usar a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de serviço, conclua as etapas a seguir:
+Se você usar a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para solicitar uma instância de
+serviço, faça download do app localmente, abra a linha de comandos e mude para o diretório do app.
 
-1. Use o comando `ibmcloud service offerings` para localizar o nome e o plano do serviço que você requer.
+1. Execute o comando a seguir para incluir um serviço no app. É possível selecionar um serviço existente de um já
+ativado na conta ou incluir um novo serviço.
 
-2. Use o comando a seguir para criar uma instância de serviço, em que service_name é o nome do serviço, service_plan é o plano do serviço e service_instance é o nome que você deseja usar para essa instância de serviço.
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-Ibmcloud create service_name service_plan service_instance de serviço
-```
-
-3. Use o comando a seguir para ligar a instância de serviço a um aplicativo, em que *appname* é o nome do aplicativo e service_instance é o nome da instância de serviço.
-
-```
-Service bind appname service_instance ibmcloud
-```
+2. Siga os prompts para selecionar um grupo de recursos e para criar e conectar um novo serviço relacionado a dados ao
+aplicativo, como o Cloudant. Pode ser necessário selecionar uma região e um plano para o serviço.
+3. Quando o serviço é criado, vários arquivos, incluindo as credenciais, são incluídos no diretório do aplicativo para
+ajudar você a integrar o serviço ao aplicativo. É possível mesclar manualmente quaisquer arquivos ou ignorar essa etapa por enquanto.
 
 É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os aplicativos externos usam os serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Ativando aplicativos externos para usar os serviços do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](#accser_external){: new_window}.
 
@@ -88,7 +88,7 @@ O {{site.data.keyword.Bluemix_notm}} oferece muitas opções de implementação 
 
 Para acessar um serviço do Cloud Foundry por meio de um pod em um cluster do Kubernetes, deve-se ligar o serviço ao cluster
 para armazenar as credenciais de serviço em um segredo do Kubernetes. Em seguida, é possível disponibilizar essas informações para o
-app.
+app. 
 {: shortdesc}
 
 Por padrão, as credenciais de serviço armazenadas em um segredo do Kubernetes têm codificação Base64 e são criptografadas em
