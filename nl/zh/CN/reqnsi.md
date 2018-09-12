@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -48,21 +48,17 @@ lastupdated: "2018-08-20"
 
 3. 填写更多字段或完成更多选择，然后单击**创建**。
 
-如果使用 {{site.data.keyword.Bluemix_notm}} 命令行界面请求服务实例，请完成以下步骤：
+如果使用 {{site.data.keyword.Bluemix_notm}} 命令行界面请求服务实例，请在本地下载应用程序，然后打开命令行，并切换到应用程序目录。
 
-1. 使用 `ibmcloud service offerings` 命令查找所需服务的名称和套餐。
+1. 运行以下命令将服务添加到应用程序。您可以从已在帐户上启用的服务中选择现有服务，或添加新服务。
 
-2. 使用以下命令创建服务实例，其中 service_name 是服务的名称；service_plan 是服务的套餐；service_instance 是您希望用于此服务实例的名称。
-
+  ```bash
+ibmcloud dev edit
 ```
-ibmcloud service create service_name service_plan service_instance
-```
+  {: pre}
 
-3. 使用以下命令将服务实例绑定到应用程序，其中 *appname* 是应用程序的名称；service_instance 是服务实例的名称。
-
-```
-ibmcloud service bind appname service_instance
-```
+2. 按照提示选择资源组，然后创建与数据相关的新服务并将其连接到应用程序（如 Cloudant）。您可能需要选择服务的区域和套餐。
+3. 创建服务时，会将若干文件（包括凭证）添加到应用程序目录，以帮助您将服务集成到应用程序中。您可以手动合并任何文件，也可以暂时跳过此步骤。
 
 只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](#accser_external){: new_window}。
 
@@ -151,7 +147,7 @@ ibmcloud service bind appname service_instance
     1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中的“仪表板”上，单击**创建资源**。这将显示“目录”。
     2. 在“目录”中，通过单击相应服务磁贴来选择所需的服务。这将打开服务详细信息页面。
     3. 在“服务”窗口中，将缺省**连接到：**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
-    4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务“仪表板”。
+    4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务仪表板。
 2. 在服务仪表板中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。选择一组凭证，然后单击“操作”列中的**查看凭证**。使用显示的 API 密钥作为凭证来连接到服务实例。
 
 在 {{site.data.keyword.Bluemix_notm}} 外部运行的应用程序现在可以访问 {{site.data.keyword.Bluemix_notm}} 服务。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -48,21 +48,17 @@ lastupdated: "2018-08-20"
 
 3. 추가 필드 또는 선택사항을 완료한 후 **작성**을 클릭하십시오.
 
-{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우에는 다음 단계를 완료하십시오.
+{{site.data.keyword.Bluemix_notm}} 명령행 인터페이스를 사용하여 서비스 인스턴스를 요청하는 경우, 앱을 로컬로 다운로드하고 명령행을 열고 앱 디렉토리로 변경하십시오.
 
-1. `ibmcloud service offerings` 명령을 사용하여 필요한 서비스의 이름 및 플랜을 찾으십시오.
+1. 다음 명령을 실행하여 앱에 서비스를 추가하십시오. 계정에서 이미 사용되고 있는 기존 서비스 중 하나를 선택하거나 새 서비스를 추가할 수 있습니다.
 
-2. 다음 명령을 사용하여 서비스 인스턴스를 작성하십시오. 여기서 service_name은 서비스 이름이고, service_plan은 서비스 플랜이며, service_instance는 이 서비스 인스턴스에 사용할 이름입니다.
+  ```bash
+ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. 다음 명령을 사용하여 서비스 인스턴스를 애플리케이션에 바인드하십시오. 여기서 *appname*은 애플리케이션의 이름이고 service_instance는 서비스 인스턴스의 이름입니다.
-
-```
-ibmcloud service bind appname service_instance
-```
+2. 프롬프트에 따라 리소스 그룹을 선택하고 새 데이터 관련 서비스를 작성하고 Cloudant와 같은 애플리케이션에 연결하십시오. 서비스의 지역 및 플랜을 선택해야 합니다.
+3. 서비스가 작성되면 신임 정보를 포함한 여러 파일이 애플리케이션 디렉토리에 추가되어 사용자가 서비스를 애플리케이션으로 통합할 수 있습니다. 임의 파일을 수동으로 병합하거나 이 단계를 건너뛸 수 있습니다.
 
 동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성할 수 있습니다. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#accser_external){: new_window}을 참조하십시오.
 
@@ -86,7 +82,7 @@ ibmcloud service bind appname service_instance
 
 ### 예: Kubernetes 팟(Pod)에서 Cloud Foundry 서비스에 액세스
 
-Kubernetes 클러스터의 팟에서 Cloud Foundry 서비스에 액세스하려면 Kubernetes 시크릿에 서비스 신임 정보를 저장하기 위해 클러스터에 서비스를 바인드해야 합니다. 그런 다음 이 정보를 앱에서 사용 가능하게 할 수 있습니다.
+Kubernetes 클러스터의 팟에서 Cloud Foundry 서비스에 액세스하려면 Kubernetes 시크릿에 서비스 신임 정보를 저장하기 위해 클러스터에 서비스를 바인드해야 합니다. 그런 다음 이 정보를 앱에서 사용 가능하게 할 수 있습니다. 
 {: shortdesc}
 
 Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 base64 인코딩되고 etcd로 암호화됩니다. 
