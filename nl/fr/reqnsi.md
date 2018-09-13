@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -53,22 +53,17 @@ conserver.
 
 3. Renseignez les autres zones ou effectuez les sélections requises, puis cliquez sur **Créer**.
 
-Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, procédez comme suit :
+Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pour demander une instance de service, téléchargez votre application localement, ouvrez la ligne de commande puis accédez au répertoire de l'application.
 
-1. Utilisez la commande `ibmcloud service offerings` pour rechercher le nom et le plan du service dont vous avez besoin.
+1. Exécutez la commande suivante pour ajouter un service à votre application. Vous pouvez sélectionner un service déjà activé sur votre compte ou ajouter un nouveau service.
 
-2. Utilisez la commande suivante pour créer une instance de service, où service_name est le nom du service, service_plan le plan du service et service_instance le nom à utiliser pour cette instance de service :
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. Utilisez la commande suivante pour lier l'instance de service à une application, où *appname* est le nom de l'application et service_instance est
-le nom de l'instance de service :
-
-```
-ibmcloud service bind appname service_instance
-```
+2. Suivez les invites pour sélectionner un groupe de ressources et pour créer et connecter à votre application (Cloudant, par exemple) un service lié aux données. Il peut être nécessaire de sélectionner une région et un plan pour le service.
+3. Lorsque le service est créé, plusieurs fichiers (notamment les données d'identification) sont ajoutés au répertoire d'application afin que vous puissiez plus facilement intégrer le service à votre application. Vous pouvez fusionner manuellement des fichiers ou ignorer cette étape pour l'instant.
 
 Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
 créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](#accser_external){: new_window}.
@@ -102,7 +97,7 @@ d'assurer la reprise après une indisponibilité, une exception ou une panne de 
 
 ### Exemple : Accès à un service Cloud Foundry à partir d'un pod Kubernetes
 
-Pour accéder à un service Cloud Foundry à partir d'un pod dans un cluster Kubernetes, vous devez lier le service à votre cluster pour stocker les données d'identification pour le service dans une valeur confidentielle de Kubernetes. Vous pouvez ensuite mettre ces informations à disposition de votre application.
+Pour accéder à un service Cloud Foundry à partir d'un pod dans un cluster Kubernetes, vous devez lier le service à votre cluster pour stocker les données d'identification pour le service dans une valeur confidentielle de Kubernetes. Vous pouvez ensuite mettre ces informations à disposition de votre application. 
 {: shortdesc}
 
 Les données d'identification pour le service qui sont stockées dans une valeur confidentielle de Kubernetes sont codées en base64 et chiffrées en etcd par défaut. 
