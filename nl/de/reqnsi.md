@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -54,23 +54,17 @@ in dem Feld ändern oder ihn unverändert übernehmen.
 3. Füllen Sie ggf. weitere Felder aus bzw. treffen Sie weitere Auswahlen und klicken Sie
 anschließend auf **Erstellen**.
 
-Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, führen Sie die folgenden Schritte durch:
+Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, dann laden Sie Ihre App lokal herunter, öffnen Sie die Befehlszeile und wechseln Sie ins App-Verzeichnis.
 
-1. Verwenden Sie den Befehl `ibmcloud service offerings`, um den Namen und den Plan des benötigten Service zu suchen.
+1. Führen Sie den folgenden Befehl aus, um einen Service zu Ihrer App hinzuzufügen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen neuen Service hinzufügen.
 
-2. Verwenden Sie den folgenden Befehl, um eine Serviceinstanz zu erstellen. Dabei ist 'service_name' der Name des Service, 'service_plan' der Plan
-des Service und 'service_instance' der Name, den Sie für diese Serviceinstanz verwenden möchten.
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. Verwenden Sie den folgenden Befehl, um die Serviceinstanz an eine Anwendung zu binden. Dabei ist *appname* der Name der Anwendung und 'service_instance' der Name
-der Serviceinstanz.
-
-```
-ibmcloud service bind appname service_instance
-```
+2. Folgen Sie der Bedienerführung, um eine Ressourcengruppe auszuwählen und einen neuen datenbezogenen Service (z. B. Cloudant) für Ihre Anwendung zu erstellen und ihn mit dieser Anwendung zu verbinden. Möglicherweise müssen Sie eine Region auswählen und die erforderliche Planung für den Service durchführen.
+3. Bei der Erstellung des Service werden verschiedene Dateien (einschließlich der zugehörigen Berechtigungsnachweise) zu Ihrem Anwendungsverzeichnis hinzugefügt, um die Integration des Service in die Anwendung zu vereinfachen. Sie können die Dateien manuell zusammenführen oder diesen Schritt zurückstellen und später ausführen.
 
 Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#accser_external){: new_window}.
 
