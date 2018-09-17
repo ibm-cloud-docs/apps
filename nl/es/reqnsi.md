@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-27"
 
 ---
 
@@ -48,21 +48,17 @@ Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para sol
 
 3. Cumplimente más campos o selecciones y, a continuación, pulse **CREAR**.
 
-Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
+Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, descargue la app de forma local, abra la línea de mandatos y cambie al directorio de la app.
 
-1. Utilice el mandato `ibmcloud service offerings` para buscar el nombre y el plan del servicio que necesita.
+1. Ejecute el mandato siguiente para añadir un servicio a la app. Puede seleccionar un servicio existente de uno ya habilitado en su cuenta, o añadir un nuevo servicio.
 
-2. Utilice el mandato siguiente para crear una instancia de servicio, done service_name es el nombre del servicio, service_plan es el plan del servicio y service_instance es el nombre que desea utilizar para esta instancia de servicio.
+  ```bash
+  ibmcloud dev edit
+  ```
+  {: pre}
 
-```
-ibmcloud service create service_name service_plan service_instance
-```
-
-3. Utilice el siguiente mandato para enlazar una instancia de servicio a una aplicación, donde *appname* es el nombre de la aplicación y service_instance es el nombre de la instancia de servicio.
-
-```
-ibmcloud service bind appname service_instance
-```
+2. Siga las indicaciones para seleccionar un grupo de recursos y para crear y conectar un nuevo servicio relacionado con datos a la aplicación, como por ejemplo Cloudant. Es posible que tenga que seleccionar una región y un plan para el servicio.
+3. Cuando se crea el servicio, se añaden varios archivos al directorio de la aplicación, incluidas las credenciales, para ayudarle a integrar el servicio en la aplicación. Puede fusionar manualmente los archivos o saltarse este paso por ahora.
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
 un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo las apps externas utilizan los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para utilizar el servicio de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#accser_external){: new_window}.
