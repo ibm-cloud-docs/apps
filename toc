@@ -65,6 +65,6 @@ Creating apps
     ts_apps.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API Reference](https://console.bluemix.net/apidocs/98)
+    [Cloud Functions API Reference](https://console.bluemix.net/apidocs/functions)
     [Mobile SDK](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}
