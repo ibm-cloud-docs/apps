@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -50,15 +50,15 @@ lastupdated: "2018-08-27"
 
 {{site.data.keyword.Bluemix_notm}} コマンド・ライン・インターフェースを使用してサービス・インスタンスを要求する場合、アプリをローカルにダウンロードし、コマンド・ラインを開いて、アプリ・ディレクトリーに移動します。
 
-1. 次のコマンドを実行して、サービスをアプリに追加します。ご使用のアカウントで既に使用可能になっている既存のサービスを選択することも、新規サービスを追加することもできます。
+1. 次のコマンドを実行して、サービスをアプリに追加します。 ご使用のアカウントで既に使用可能になっている既存のサービスを選択することも、新規サービスを追加することもできます。
 
   ```bash
   ibmcloud dev edit
   ```
   {: pre}
 
-2. プロンプトに従って、リソース・グループを選択し、新しいデータ関連サービスを作成してアプリケーションに接続します (Cloudant など)。サービスの地域とプランを選択する必要がある場合があります。
-3. サービスが作成されるときに、サービスをアプリケーションに統合するのに役立つよう、資格情報を含め、いくつかのファイルがアプリケーション・ディレクトリーに追加されます。任意のファイルを手動でマージすることも、今はこのステップをスキップすることもできます。
+2. プロンプトに従って、リソース・グループを選択し、新しいデータ関連サービスを作成してアプリケーションに接続します (Cloudant など)。 サービスの地域とプランを選択する必要がある場合があります。
+3. サービスが作成されるときに、サービスをアプリケーションに統合するのに役立つよう、資格情報を含め、いくつかのファイルがアプリケーション・ディレクトリーに追加されます。 任意のファイルを手動でマージすることも、今はこのステップをスキップすることもできます。
 
 サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](#accser_external){: new_window} を参照してください。
 
@@ -101,43 +101,26 @@ Kubernetes Secret に保管されているサービス資格情報は、デフ�
 
 外部で使用するためのサービス・キーを提供するサービスは次のとおりです。
 
-* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
-* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
 * {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
 * {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
 * {{site.data.keyword.blockchain}} <!--Blockchain-->
 * {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
 * {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.dashdbshort}} <!--dashDB-->
 * {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
-* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
 * {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
 * {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
 * {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
-* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
-* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
-* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
-* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
-* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
 * {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
 * {{site.data.keyword.dwl_short}} <!--Lift-->
 * {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
 * {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
 * {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
 * {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
 * {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
 * {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
 * {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
 * {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
 * {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
 * {{site.data.keyword.weather_short}} <!--Weather Company Data-->
 * {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
@@ -209,4 +192,3 @@ Kubernetes Secret に保管されているサービス資格情報は、デフ�
 	```
 
 外部サービスを使用するようアプリケーションを構成できるようになりました。 サービスと対話するようアプリケーションを構成する方法については、[「サービスと対話するようアプリケーションを構成する」![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](#config){: new_window} を参照してください。
-
