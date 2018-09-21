@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-08-27"
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
-다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 써드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 써드파티 도구가 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external)을 참조하십시오.
+다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 서드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 서드파티 도구가 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external)을 참조하십시오.
 
 ## 새 서비스 인스턴스 요청
 {: #req_instance}
@@ -58,9 +58,9 @@ ibmcloud dev edit
   {: pre}
 
 2. 프롬프트에 따라 리소스 그룹을 선택하고 새 데이터 관련 서비스를 작성하고 Cloudant와 같은 애플리케이션에 연결하십시오. 서비스의 지역 및 플랜을 선택해야 합니다.
-3. 서비스가 작성되면 신임 정보를 포함한 여러 파일이 애플리케이션 디렉토리에 추가되어 사용자가 서비스를 애플리케이션으로 통합할 수 있습니다. 임의 파일을 수동으로 병합하거나 이 단계를 건너뛸 수 있습니다.
+3. 서비스가 작성되면 인증 정보를 포함한 여러 파일이 애플리케이션 디렉토리에 추가되어 사용자가 서비스를 애플리케이션으로 통합할 수 있습니다. 임의 파일을 수동으로 병합하거나 이 단계를 건너뛸 수 있습니다.
 
-동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 신임 정보를 사용하여 앱 인스턴스를 직접 구성할 수 있습니다. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#accser_external){: new_window}을 참조하십시오.
+동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#accser_external){: new_window}을 참조하십시오.
 
 ## 애플리케이션 구성
 {: #config}
@@ -71,7 +71,7 @@ ibmcloud dev edit
 
 * 데이터베이스 서비스와 상호작용하려면 사용자 ID, 비밀번호, 애플리케이션에 대한 액세스 URI 등 {{site.data.keyword.Bluemix_notm}}에서 제공하는 정보를 사용하십시오.
 * 모바일 백엔드 서비스와 상호작용하려면 애플리케이션 ID(앱 ID), 클라이언트에 고유한 보안 정보, 애플리케이션에 대한 액세스 URI 등 {{site.data.keyword.Bluemix_notm}}에서 제공하는 정보를 사용하십시오. 모바일 서비스는 종종 애플리케이션 개발자의 이름, 애플리케이션 사용자 등의 컨텍스트 정보를 서비스 세트에서 공유할 수 있도록 서로 함께 작동합니다.
-* 웹 애플리케이션 또는 모바일 애플리케이션의 서버 측 클라우드 코드와 상호작용하려면 애플리케이션의 *VCAP_SERVICES* 환경 변수에 있는 런타임 신임 정보 등 {{site.data.keyword.Bluemix_notm}}에서 제공하는 정보를 사용하십시오. *VCAP_SERVICES* 환경 변수의 값은 직렬화된 JSON 오브젝트입니다. 이 변수에는 애플리케이션이 바인딩된 서비스와 상호작용하는 데 필요한 런타임 데이터가 포함되어 있습니다. 데이터 형식은 서비스마다 다릅니다. 예상 내용 및 각 정보를 해석하는 방법에 대한 서비스 문서를 읽어야 할 수 있습니다.
+* 웹 애플리케이션 또는 모바일 애플리케이션의 서버 측 클라우드 코드와 상호작용하려면 애플리케이션의 *VCAP_SERVICES* 환경 변수에 있는 런타임 인증 정보 등 {{site.data.keyword.Bluemix_notm}}에서 제공하는 정보를 사용하십시오. *VCAP_SERVICES* 환경 변수의 값은 직렬화된 JSON 오브젝트입니다. 이 변수에는 애플리케이션이 바인딩된 서비스와 상호작용하는 데 필요한 런타임 데이터가 포함되어 있습니다. 데이터 형식은 서비스마다 다릅니다. 예상 내용 및 각 정보를 해석하는 방법에 대한 서비스 문서를 읽어야 할 수 있습니다.
 
 애플리케이션에 바인딩한 서비스가 충돌할 경우 애플리케이션 실행이 중단되거나 애플리케이션에서 오류가 발생할 수 있습니다. {{site.data.keyword.Bluemix_notm}}에서는 이러한 문제점에서 복구하기 위해 애플리케이션을 자동으로 다시 시작하지 않습니다. 가동 중단, 예외, 연결 오류를 식별하고 이러한 오류에서 복구할 수 있도록 애플리케이션 코딩을 고려하십시오. 자세한 정보는 [앱이 자동으로 다시 시작되지 않음](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)을 참조하십시오.
 
@@ -82,73 +82,56 @@ ibmcloud dev edit
 
 ### 예: Kubernetes 팟(Pod)에서 Cloud Foundry 서비스에 액세스
 
-Kubernetes 클러스터의 팟에서 Cloud Foundry 서비스에 액세스하려면 Kubernetes 시크릿에 서비스 신임 정보를 저장하기 위해 클러스터에 서비스를 바인드해야 합니다. 그런 다음 이 정보를 앱에서 사용 가능하게 할 수 있습니다. 
+Kubernetes 클러스터의 팟에서 Cloud Foundry 서비스에 액세스하려면 Kubernetes 시크릿에 서비스 인증 정보를 저장하기 위해 클러스터에 서비스를 바인드해야 합니다. 그런 다음 이 정보를 앱에서 사용 가능하게 할 수 있습니다. 
 {: shortdesc}
 
-Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 base64 인코딩되고 etcd로 암호화됩니다. 
+Kubernetes 시크릿에 저장된 서비스 인증 정보는 기본적으로 base64 인코딩되고 etcd로 암호화됩니다. 
 
-**중요**: 배치 YAML 파일에 직접 서비스 신임 정보를 노출하거나 참조하지 마십시오. 배치 YAML 파일은 민감한 데이터를 보관하도록 디자인되지 않았으며 기본적으로 서비스 신임 정보를 암호화하지 않습니다. 이 정보를 제대로 저장하고 액세스하려면 Kubernetes 시크릿을 사용해야 합니다. 
+**중요**: 배치 YAML 파일에 직접 서비스 인증 정보를 노출하거나 참조하지 마십시오. 배치 YAML 파일은 민감한 데이터를 보관하도록 디자인되지 않았으며 기본적으로 서비스 인증 정보를 암호화하지 않습니다. 이 정보를 제대로 저장하고 액세스하려면 Kubernetes 시크릿을 사용해야 합니다. 
 
 1. [서비스를 클러스터에 바인딩](/docs/containers/cs_integrations.html#adding_cluster)하십시오. 
-2. 앱 팟(Pod)에서 서비스 신임 정보에 액세스하려면 다음 옵션 중에서 선택하십시오. 
+2. 앱 팟(Pod)에서 서비스 인증 정보에 액세스하려면 다음 옵션 중에서 선택하십시오. 
    - [시크릿을 볼륨으로 팟(Pod)에 마운트](#mount_secret)
    - [환경 변수의 시크릿 참조](#reference_secret)
 
 ## 외부 앱 사용
 {: #accser_external}
 
-{{site.data.keyword.Bluemix_notm}} 외부에서 작성되어 실행되는 애플리케이션을 사용하거나, 써드파티 도구를 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 서비스가 인터넷을 통해 액세스할 수 있는 서비스 키를 제공하는 경우 로컬 앱 또는 써드파티 도구에서 이러한 서비스를 사용할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 외부에서 작성되어 실행되는 애플리케이션을 사용하거나, 서드파티 도구를 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 서비스가 인터넷을 통해 액세스할 수 있는 서비스 키를 제공하는 경우 로컬 앱 또는 서드파티 도구에서 이러한 서비스를 사용할 수 있습니다.
 
 다음 서비스는 외부적으로 사용할 서비스 키를 제공합니다.
 
-* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
-* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
 * {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
 * {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
 * {{site.data.keyword.blockchain}} <!--Blockchain-->
 * {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
 * {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.dashdbshort}} <!--dashDB-->
 * {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
-* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
 * {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
 * {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
 * {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
-* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
-* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
-* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
-* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
-* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
 * {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
 * {{site.data.keyword.dwl_short}} <!--Lift-->
 * {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
 * {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
 * {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
 * {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
 * {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
 * {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
 * {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
 * {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
 * {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
 * {{site.data.keyword.weather_short}} <!--Weather Company Data-->
 * {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
-외부 앱이나 써드파티 도구에서 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 하려면 다음 단계를 완료하십시오.
+외부 앱이나 서드파티 도구에서 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 하려면 다음 단계를 완료하십시오.
 
 1. 서비스의 인스턴스를 요청하십시오.
     1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 대시보드에서 **리소스 작성**을 클릭하십시오. 카탈로그가 표시됩니다.
     2. 카탈로그에서 서비스 타일을 클릭하여 원하는 서비스를 선택하십시오. 서비스 세부사항 페이지가 열립니다.
     3. 서비스 창에서 기본 **연결 대상:** 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다.
     4. 필요에 따라 기타 선택사항을 작성하십시오. 그런 다음 **작성**을 클릭하십시오. 서비스 인스턴스가 작성되고 서비스 대시보드가 표시됩니다.
-2. 서비스 대시보드에서 **서비스 신임 정보**를 선택하여 JSON 형식의 신임 정보를 보거나 추가할 수 있습니다. 신임 정보 세트를 선택하고 조치 열에서 **신임 정보 보기**를 클릭하십시오. 표시되는 API 키를 신임 정보로 사용하여 서비스 인스턴스에 연결하십시오.
+2. 서비스 대시보드에서 **서비스 인증 정보**를 선택하여 JSON 형식의 인증 정보를 보거나 추가할 수 있습니다. 인증 정보 세트를 선택하고 조치 열에서 **인증 정보 보기**를 클릭하십시오. 표시되는 API 키를 인증 정보로 사용하여 서비스 인스턴스에 연결하십시오.
 
 {{site.data.keyword.Bluemix_notm}} 외부에서 실행되는 애플리케이션이 이제 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 있습니다.
 
@@ -157,7 +140,7 @@ Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 bas
 ## 사용자 제공 서비스 인스턴스 작성
 {: #user_provide_services}
 
-{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 서비스가 있을 수 있습니다. 인터넷에서 이들 외부 서비스에 액세스하기 위한 신임 정보를 가지고 있는 경우에는 {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 서비스를 표시하고 통신할 수 있습니다.
+{{site.data.keyword.Bluemix_notm}} 외부에서 관리되는 서비스가 있을 수 있습니다. 인터넷에서 이들 외부 서비스에 액세스하기 위한 인증 정보를 가지고 있는 경우에는 {{site.data.keyword.Bluemix_notm}} 사용자 제공 서비스 인스턴스를 작성하여 외부 서비스를 표시하고 통신할 수 있습니다.
 
 사용자 제공 서비스 인스턴스를 작성하고 애플리케이션에 바인딩하려면 다음 단계를 완료하십시오.
 
@@ -174,7 +157,7 @@ Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 bas
         OK
         ```
 
-    * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 써드파티 로그 관리 소프트웨어에서 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
+    * 서드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 서드파티 로그 관리 소프트웨어에서 제공하는 대상을 지정하십시오. 예를 들어, 다음과 같습니다.
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example.com
@@ -192,7 +175,7 @@ Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 bas
         OK
         ```
 
-    * 써드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 예를 들어, 다음과 같습니다.
+    * 서드파티 로그 관리 소프트웨어에 정보를 제공하는 서비스 인스턴스를 작성하려면 `-l` 옵션을 사용하십시오. 예를 들어, 다음과 같습니다.
 
         ```
         ibmcloud service user-provided-create testups2 -l syslog://example2.com
@@ -209,4 +192,3 @@ Kubernetes 시크릿에 저장된 서비스 신임 정보는 기본적으로 bas
 	```
 
 이제 외부 서비스를 사용하도록 애플리케이션을 구성할 수 있습니다. 서비스와 상호작용하도록 애플리케이션을 구성하는 방법은 [서비스와 상호작용하도록 애플리케이션 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#config){: new_window}을 참조하십시오.
-
