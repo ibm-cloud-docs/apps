@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-07"
 
 ---
 
@@ -125,43 +125,26 @@ o utilizzare strumenti di terze parti. Se i servizi {{site.data.keyword.Bluemix_
 
 I seguenti servizi forniscono le chiavi del servizio per l'utilizzo esterno:
 
-* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
-* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
 * {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
 * {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
 * {{site.data.keyword.blockchain}} <!--Blockchain-->
 * {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
 * {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.dashdbshort}} <!--dashDB-->
 * {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
-* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
 * {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
 * {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
 * {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
-* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
-* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
-* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
-* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
-* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
 * {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
 * {{site.data.keyword.dwl_short}} <!--Lift-->
 * {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
 * {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
 * {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
 * {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
 * {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
 * {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
 * {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
 * {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
 * {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
 * {{site.data.keyword.weather_short}} <!--Weather Company Data-->
 * {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
@@ -239,4 +222,3 @@ e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
 	```
 
 Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](#config){: new_window}.
-
