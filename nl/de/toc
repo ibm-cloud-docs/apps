@@ -20,7 +20,6 @@ Apps erstellen
         tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        starter_kits.md
         deploying/functions.md
 
     {: .topicgroup}
@@ -66,6 +65,6 @@ Apps erstellen
     ts_apps.md
     [Kanal für Slack-Entwicklertools von IBM Cloud](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [API-Referenz für Cloud Functions](https://console.bluemix.net/apidocs/98)
+    [API-Referenz für Cloud Functions](https://console.bluemix.net/apidocs/functions)
     [Mobile SDK](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}
