@@ -92,7 +92,7 @@ You can deploy your app {{site.data.keyword.Bluemix_notm}} in one of two ways, d
 
 If you previously created a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
 
-1. Run the `git add` command.
+1. Run the `git add .` command.
 2. Run the `git commit -m "made changes"` command to commit changes.
 3. Run the `git push origin master` command to push to the master branch.
 4. View the DevOps toolchain for your app from the {{site.data.keyword.Bluemix_notm}} console. You can view the toolchain in a web browser by running the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command from the app directory and clicking **View Toolchain**.
