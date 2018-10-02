@@ -108,6 +108,7 @@ You can manually deploy your app by using the [`deploy`](/docs/cli/idt/commands.
 4. Wait a few minutes for the deployment to complete.
 
 ## Viewing your app
+{: #view}
 
 1. To view the URL of your app that's running on {{site.data.keyword.Bluemix_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.Bluemix_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command. 
