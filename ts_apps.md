@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Troubleshooting for managing apps
+# Troubleshooting for creating apps
 {: #managingapps}
 
-General problems with managing apps might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
+General problems with creating apps might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
 ## You have unsaved changes
@@ -31,7 +31,7 @@ When you click items on the app details page, you might be unable to take any ac
 When you try to check your app or services on the app details page, you keep getting the following error message:
 {: tsSymptoms}
 
-`You have unsaved changes in page app_name. Save or cancel the changes.`
+`You have unsaved changes. Are you sure you want to leave this page?`
 
 When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** field on the runtime pane, the values change. This behavior is by design; however, the error message prompts you to save the memory or instance settings before you go to another page.
 {: tsCauses}
@@ -56,7 +56,7 @@ You can use a DNS provider that supports intelligent failover among many ID addr
 When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.Bluemix_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.Bluemix_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## Can't switch apps into debug mode
