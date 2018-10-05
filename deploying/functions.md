@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Developing serverless apps
+# Creating serverless apps
 {: #serverless}
 
 For serverless development, you can use IBM's functions as a service (FaaS) offering, {{site.data.keyword.openwhisk}}. You can run application logic with {{site.data.keyword.openwhisk_short}} in response to events or direct invocations from web or mobile apps over HTTP without provisioning or managing servers.{{site.data.keyword.openwhisk_short}} performs system administration like auto-scaling, availability management, and maintenance so that you, as a developer, can focus on writing application logic.

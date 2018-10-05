@@ -14,7 +14,7 @@ Creating apps
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Developing apps
+    Creating apps
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md
