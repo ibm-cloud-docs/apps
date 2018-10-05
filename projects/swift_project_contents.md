@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ The following table lists the common directories and files that are included in 
 
 | Root directory                                     | Description |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| Swift dependency definition file |
-|cli-config.yml | CLI configuration options |
-|manifest.yml | Cloud Foundry deployment file |
-|Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
-|Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
+| Package.swift| Swift dependency definition file |
+| cli-config.yml | CLI configuration options |
+| manifest.yml | Cloud Foundry deployment file |
+| Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
+| `Dockerfile-tools` | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
 | LICENSE | License file |
-|README.md | Description of app |
+| README.md | Description of app |
 {: caption="Table 1. Contents of a generated Swift app root directory" caption-side="top"}
 
 | `./Sources/Application/` directory | Description  |
@@ -43,7 +43,7 @@ The following table lists the common directories and files that are included in 
 | `./Tests/` directory | Description |
 |:------------------------------------------------|:------------------------------------------|
 | `./Tests/LinuxMain.swift` | Utility for testing on Linux |
-| `./Tests/ApplicationTests>/RouteTests.swift` | File containing test cases |
+| `./Tests/ApplicationTests>/RouteTests.swift` | File that includes test cases |
 {: caption="Table 4. Contents of a generated Swift app tests directory" caption-side="top"}
 
 | `./.bluemix/` directory | Description |
@@ -66,5 +66,5 @@ The following table lists the common directories and files that are included in 
 | `./manifests/` directory | Description |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Kubernetes Service & Deployment yaml |
-{: caption="Table 7. Contents of a generated Swift app manifests directory" caption-side="top"}
+{: caption="Table 7. Contents of a generated manifests directory" caption-side="top"}
 

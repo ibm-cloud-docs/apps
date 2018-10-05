@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -77,7 +77,7 @@ The following table lists the directories and files that are included in a gener
 | cli-config.yml | CLI configuration options |
 | manifest.yml | Cloud Foundry deployment file |
 | Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
-| Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` commands |
+| `Dockerfile-tools` | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` commands |
 | LICENSE | License file |
 | README.md | Description of app |
 {: caption="Table 6. Contents of a generated Java Liberty app root directory" caption-side="top"}
