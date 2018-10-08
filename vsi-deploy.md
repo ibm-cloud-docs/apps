@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -36,15 +36,14 @@ When you create a starter kit that uses the {{site.data.keyword.cloud_notm}} [Ap
 
 The virtual server option works in phases. First, the app code is prepared and stored into a GITLab Git repository and the source code creates a toolchain with a pipeline. The pipeline is defined to build the code and package it into a Debian Package manager format. Then, Terraform provisions a virtual instance. Finally, the app is deployed, installed, and started inside the running virtual image and its health is validated.
 
-The pipeline fails on first use because it requires a set of user account properties to be manually configured. These properties can't be passed into the toolchain that uses GIT source code for security reasons. You must manually configure these values to enable the toolchain to complete successfully.
+The pipeline uses a set of user account properties and a fresh SSH key pair to deploy to infrastructure. These properties are automatically passed into the toolchain, but not stored in GIT source code for security reasons.
 
-To access the environment properties view and enable your pipeline with your user account properties, follow these steps.
+To view these environment properties, follow these steps. Consult the table to learn about the properties that are available.
 
 1. From the app details page, click **View Toolchain**.
 2. Click the **Delivery Pipeline** tile.
 3. Click the **Stage Configure** icon, then click **Configure Stage** on the build stage.
 4. Click **Environment Properties** tab to view the properties.
-5. Change these properties in the environment properties tab to enable the toolchain to run successfully.
 
 | Property   | Description   |
 |---|---|
@@ -58,29 +57,29 @@ To access the environment properties view and enable your pipeline with your use
 | `GIT_PASSWORD` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GITLab password is required. |
 {: caption="Table 1. Environment Variables to change for enablement" caption-side="top"}
 
-### Retrieving the infrastructure API key
+#### Infrastructure API key
 {: #iaas-key}
 
-Terraform requires an infrastructure API key to create infrastructure resources. Follow these steps to retrieve an infrastructure key.
+Terraform requires an infrastructure API key to create infrastructure resources. This is obtained automatically during deployment. Follow these steps to retrieve a key manually.
 
 1. Go to the infrastructure [user list ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. You can also click **Menu** > **Infrastructure** > **Account** > **User List**.
 2. Find the user details that are creating the toolchain and either click `View` in the API Key column or click `Generate` both steps display the API key in a window.
 3. Copy the API Key and replace the value in the Toolchain configuration `TF_VAR_ibm_sl_api_key`.
 
-### Retrieving the infrastructure user name
+#### Infrastructure user name
 {: #user-key}
 
-To retrieve the infrastructure user name, follow these steps.
+The infrastructure user name is also automatically obtained and used during deployment. Follow these steps to retrieve a key manually.
 
 1. Go to the infrastructure [user list ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. You can also click **Menu** > **Infrastructure** > **Account** > **User List**.
 2. Click the user who you want to create the toolchain.
 3. Scroll down to the **VPN User Name** property.
 4. Cut and paste this value and replace the Toolchain configuration `TF_VAR_ibm_sl_username`.
 
-### Retrieving the platform API key
+#### Platform API key
 {: #platform-key}
 
-To create platform level services in Terraform, like databases and compose services, the platform API key is required. Follow these steps to retrieve a platform key.
+To create platform level services in Terraform, like databases and compose services, the platform API key is automatically obtained and stored as an environment variable in your pipeline. Follow these steps to retrieve a platform key manually.
 
 1. From the [API Keys ![External link icon](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) page, click **Manage** > **Security** > **Platform API Keys**.
 2. Click **Create**.
@@ -89,11 +88,12 @@ To create platform level services in Terraform, like databases and compose servi
 5. Copy and paste the key into the clipboard or download the key.
 6. Replace the value in the toolchain configuration `TF_VAR_ibm_cloud_api_key` with the value that was generated.
 
-### Generating the public and private Key
+#### Public and private Keys
 {: #public-key}
 
-For the toolchain to install the Debian packaging into the virtual server instance, follow these steps.
+For the toolchain to install the Debian packaging into the virtual server instance, the deployment infrastructure automatically generates a private and public SSH key pair to transfer the GIT contents to the instance.
 
+To do this manually:
 1. In your client, use the following instructions to create a [public and private key pair ![External link icon](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
 2. Go to the [Infrastructure SSH keys view ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. You can also click **Menu** > **Infrastructure** > **Devices** > **Manage** > **SSH Keys**.
 3. Click **Add**.
@@ -108,12 +108,12 @@ The private key must be on a single line. Replace new lines with `\n`. See the f
 ```
 {: screen}
 
-### Enabling Terraform state
+#### Enabling Terraform state
 {: #tform-state}
 
-Terraform supports storing the state of the Terraform `apply` command. This state file runs the `apply` command a second time to determine whether any of the Terraform configuration files changed. You can store the state in the GIT repo where the app and configuration are managed.
+Terraform supports storing the state of the Terraform `apply` command. This state file runs the `apply` command a second time to determine whether any of the Terraform configuration files changed. The state is stored in the GIT repo where the app and configuration are automatically set up.
 
-To enable the state storage, configure the `GIT_USER` and `GIT_PASSWORD` properties in the toolchain environment variables. To retrieve the values, follow these steps:
+To enable the state storage, `GIT_USER` and `GIT_PASSWORD` are automatically configured as properties in the toolchain environment variables. If you need to access these values, follow these steps:
 
 1. From the toolchains view, access the GIT repo from the code tool.
 2. In GIT Lab, click the **Profile icon** and then click **Settings**.
