@@ -31,7 +31,7 @@ You can find starter kits for web app pattern on the [{{site.data.keyword.cloud_
 ## Backend-for-frontend
 {: #bff}
 
-Backendf-for-frontend pattern (BFF) helps create backend code that exposes business data and services in a way that matches user expectations for a specific app channel, such as mobile or web. For example, users on a mobile device might use voice control, while web browser users prefer point and click. You can build two BFFs, one for mobile that includes services like [{{site.data.keyword.conversationfull}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/conversation.html) and one for web that has a more sophisticated user interface.
+Backendf-for-frontend pattern (BFF) helps create backend code that exposes business data and services in a way that matches user expectations for a specific app channel, such as mobile or web. For example, users on a mobile device might use voice control, while web browser users prefer point and click. You can build two BFFs, one for mobile that includes services like [{{site.data.keyword.conversationfull}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/ai-assistant/) and one for web that has a more sophisticated user interface.
 
 In {{site.data.keyword.cloud_notm}}, you can build a BFF with polyglot programming approach. You can use Node.js, Swift, Java, or Python and running them in a pattern with container services or that use serverless functions.
 
