@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-08-21"
 ## Step 1. Install the tools
 {: #install-tools}
 
-Install the [developer tools ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+Install the [developer tools](/docs/cli/index.html).
 
 Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 
