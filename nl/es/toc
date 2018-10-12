@@ -20,6 +20,7 @@ Creación de apps
         tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
+        create-deploy-cli.md
         deploying/functions.md
 
     {: .topicgroup}
