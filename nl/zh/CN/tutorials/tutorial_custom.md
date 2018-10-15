@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-08-21"
 ## 步骤 1. 安装工具
 {: #install-tools}
 
-安装 [Developer Tools ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}。
+安装 [Developer Tools](/docs/cli/index.html)。
 
 Docker 作为 Developer Tools 的一部分安装。Docker 必须在运行，构建命令才有效。您必须创建 Docker 帐户、运行 Docker 应用程序并登录。
 

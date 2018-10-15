@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Fehlerbehebung für die Verwaltung von Apps
+# Fehlerbehebung für die Erstellung von Apps
 {: #managingapps}
 
-Allgemeine Probleme im Zusammenhang mit der Verwaltung von Apps können sein, dass Apps nicht aktualisiert werden können oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
+Allgemeine Probleme im Zusammenhang mit der Erstellung von Apps können sein, dass Apps nicht aktualisiert werden können oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
 ## Es sind nicht gespeicherte Änderungen vorhanden
@@ -31,7 +31,7 @@ Wenn Sie auf der Detailseite der App auf bestimmte Elemente klicken, können Sie
 Wenn Sie versuchen, Ihre App oder Services auf der Detailseite der App zu prüfen, empfangen Sie immer wieder die folgende Fehlernachricht:
 {: tsSymptoms}
 
-`Es gibt nicht gespeicherte Änderungen auf Seite 'Name der App'. Speichern oder verwerfen Sie die Änderungen.`
+`Es sind nicht gespeicherte Änderungen vorhanden. Möchten Sie diese Seite tatsächlich verlassen?`
 
 Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Dieses Verhalten ist wie vorgesehen. Allerdings werden Sie von der Fehlernachricht aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie eine andere Seite aufrufen.
 {: tsCauses}
@@ -56,7 +56,7 @@ Sie können einen DNS-Anbieter nutzen, der eine intelligente Funktionsübernahme
 Wenn Sie Ihre DNS-Einstellungen konfigurieren, müssen Sie die öffentlichen IP-Adressen der {{site.data.keyword.Bluemix_notm}}-Regionen angeben, in denen Ihre Apps ausgeführt werden. Verwenden Sie zum Abrufen der öffentlichen IP-Adresse einer {{site.data.keyword.Bluemix_notm}}-Region den Befehl `nslookup`. Sie können in einem Befehlszeilenfenster beispielsweise den nachfolgenden Befehl eingeben.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## Apps können nicht in den Debugmodus versetzt werden

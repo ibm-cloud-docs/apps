@@ -31,7 +31,7 @@ Web 應用程式模式會產生應用程式，以提供 web 內容（例如 HTML
 ## Backend for Frontend
 {: #bff}
 
-Backendf for Frontend 模式 (BFF) 可協助建立後端程式碼，以符合特定應用程式通道（例如行動或 Web）之使用者預期的方式來公開商業資料及服務。例如，行動裝置上的使用者可能會使用語音控制，而 Web 瀏覽器使用者則偏好點按方式。您可以建置兩個 BFF：一個適用於包含 [{{site.data.keyword.conversationfull}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/watson/developercloud/conversation.html) 這類服務的行動，一個則適用於具有更準確使用者介面的 Web。
+Backendf for Frontend 模式 (BFF) 可協助建立後端程式碼，以符合特定應用程式通道（例如行動或 Web）之使用者預期的方式來公開商業資料及服務。例如，行動裝置上的使用者可能會使用語音控制，而 Web 瀏覽器使用者則偏好點按方式。您可以建置兩個 BFF：一個適用於包含 [{{site.data.keyword.conversationfull}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/watson/ai-assistant/) 這類服務的行動，一個則適用於具有更準確使用者介面的 Web。
 
 在 {{site.data.keyword.cloud_notm}} 中，您可以使用多國語言程式設計方式來建置 BFF。您可以使用 Node.js、Swift、Java 或 Python，並以具有容器服務的模式或使用無伺服器功能的模式來執行它們。
 

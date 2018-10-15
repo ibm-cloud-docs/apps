@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 開發無伺服器應用程式
+# 建立無伺服器應用程式
 {: #serverless}
 
 要進行無伺服器開發，您可以使用 IBM 的函數即服務 (FaaS) 供應項目 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 執行應用程式邏輯以回應事件，或透過 HTTP 導向來自 Web 或行動應用程式的呼叫，而不必佈建或管理伺服器。{{site.data.keyword.openwhisk_short}} 會執行系統管理，例如自動擴充、可用性管理及維護，以便身為開發人員的您可以專注於撰寫應用程式邏輯。

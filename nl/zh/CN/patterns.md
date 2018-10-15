@@ -31,7 +31,7 @@ lastupdated: "2018-07-22"
 ## 服务于前端的后端
 {: #bff}
 
-“服务于前端的后端”(BFF) 模式用于帮助创建后端代码，以通过符合用户对特定应用程序通道（如移动或 Web）的期望的方式来公开业务数据和服务。例如，移动设备上的用户可能会使用语音控件，而 Web 浏览器用户更偏好即点即选。您可以构建两个 BFF，一个用于包含服务（如 [{{site.data.keyword.conversationfull}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/developercloud/conversation.html)）的移动，一个用于具有更复杂用户界面的 Web。
+“服务于前端的后端”(BFF) 模式用于帮助创建后端代码，以通过符合用户对特定应用程序通道（如移动或 Web）的期望的方式来公开业务数据和服务。例如，移动设备上的用户可能会使用语音控件，而 Web 浏览器用户更偏好即点即选。您可以构建两个 BFF，一个用于包含服务（如 [{{site.data.keyword.conversationfull}} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/watson/ai-assistant/)）的移动，一个用于具有更复杂用户界面的 Web。
 
 在 {{site.data.keyword.cloud_notm}} 中，可以使用多语言编程方法来构建 BFF。您可以使用 Node.js、Swift、Java 或 Python，并以使用容器服务的模式或使用无服务器功能来运行。
 

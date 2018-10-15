@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 开发无服务器应用程序
+# 创建无服务器应用程序
 {: #serverless}
 
 对于无服务器开发，您可以使用 IBM 的功能即服务 (FaaS) 产品 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 运行应用程序逻辑以响应事件，或通过 HTTP 从 Web 或移动应用程序直接进行调用，而无需供应或管理服务器。{{site.data.keyword.openwhisk_short}} 可执行系统管理，如自动扩展、可用性管理和维护，以便您作为开发者可以专注于编写应用程序逻辑。

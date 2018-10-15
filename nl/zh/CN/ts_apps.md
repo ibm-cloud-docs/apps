@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 有关管理应用程序的故障诊断
+# 有关创建应用程序的故障诊断
 {: #managingapps}
 
-有关管理应用程序的一般问题可能包括：无法更新应用程序或未显示双字节字符。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
+有关创建应用程序的一般问题可能包括：无法更新应用程序或未显示双字节字符。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
 ## 您有未保存的更改
@@ -31,7 +31,7 @@ lastupdated: "2018-07-09"
 在应用程序详细信息页面上尝试检查应用程序或服务时，总是提示以下错误消息：
 {: tsSymptoms}
 
-`您在页面 app_name 中有未保存的更改。请保存或取消这些更改。`
+`您有未保存的更改。确定要离开此页面吗？`
 
 在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意这样设计的；但是，当您要转至其他页面时，会有错误消息提示您保存内存或实例设置。
 {: tsCauses}
@@ -56,7 +56,7 @@ lastupdated: "2018-07-09"
 配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.Bluemix_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中键入以下命令。
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## 无法将应用程序切换到调试方式
@@ -352,7 +352,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 ## 无法在 {{site.data.keyword.Bluemix_notm}} 上运行可执行文件
 {: #ts_executable}
 
-如果可执行文件是在不同环境中开发的，那么可能无法在 {{site.data.keyword.Bluemix_notm}} 上运行这些可执行文件。
+如果可执行文件是在不同环境中开发和构建的，那么可能无法在 {{site.data.keyword.Bluemix_notm}} 上运行这些可执行文件。
 
 如果可执行文件是在不同环境中开发和构建的，那么无法在 {{site.data.keyword.Bluemix_notm}} 上运行这些可执行文件。
 {: tsSymptoms}
@@ -367,7 +367,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 例如：
-    ```
+        ```
 cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
@@ -584,7 +584,7 @@ cf push MyUniqueAppName02 -p "./app.war"
 
   * 通过以下其中一种方法来指定启动命令：
      * 使用 `cf` 命令行界面。例如：
-```
+        ```
 		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/jsonfile){: new_window} 文件。例如：
@@ -688,6 +688,6 @@ cf push MyUniqueAppName02 -p "./app.war"
 buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
   * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
-    ```
+        ```
 	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
 	```

@@ -14,7 +14,7 @@ Apps erstellen
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Apps entwickeln
+    Apps erstellen
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md

@@ -14,7 +14,7 @@
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    開發應用程式
+    建立應用程式
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md

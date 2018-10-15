@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 
 | Stammverzeichnis                                     | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| Swift-Abhängigkeitsdefinitionsdatei |
-|cli-config.yml | CLI-Konfigurationsoptionen |
-|manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-|Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
-|Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
+| Package.swift| Swift-Abhängigkeitsdefinitionsdatei |
+| cli-config.yml | CLI-Konfigurationsoptionen |
+| manifest.yml | Cloud Foundry-Bereitstellungsdatei |
+| Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+| `Dockerfile-Tools` | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
-|README.md | Beschreibung der App |
+| README.md | Beschreibung der App |
 {: caption="Tabelle 1. Inhalt des Stammverzeichnisses einer generierten Swift-App" caption-side="top"}
 
 | Verzeichnis `./Sources/Application/` | Beschreibung  |
@@ -55,7 +55,7 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | toolchain.yml | IBM Cloud-Toolchaindefinition |
 {: caption="Tabelle 5. Inhalt des Bluemix-Verzeichnisses einer generierten Swift-App" caption-side="top"}
 
-| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+| `./chart/<projectname>Verzeichnis /` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
 | `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |
@@ -66,5 +66,5 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | Verzeichnis `./manifests/` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Kubernetes-Service & Bereitstellungs-YAML |
-{: caption="Tabelle 7. Inhalt des Manifestverzeichnisses einer generierten Swift-App" caption-side="top"}
+{: caption="Tabelle 7. Inhalt eines generierten Manifestverzeichnisses " caption-side="top"}
 

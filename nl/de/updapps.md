@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -48,7 +48,7 @@ Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu.
    ibmcloud app domain-create <Organisationsname> mydomain
    ```
 
-2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu. Geben Sie für CF-Apps den folgenden Befehl ein:
+2. Fügen Sie die Route mit der angepassten Domäne zu einer Anwendung hinzu. Geben Sie für Cloud Foundry-Apps den folgenden Befehl ein:
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

@@ -14,7 +14,7 @@
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    开发应用程序
+    创建应用程序
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -55,7 +55,8 @@ lastupdated: "2018-05-22"
 |toolchain.yml|IBM Cloud 工具链定义|
 {: caption="表 3. 生成的 Java Spring 应用程序 ./.bluemix/ 目录的内容" caption-side="top"}
 
-| `./chart/<projectname>/` 目录| 描述 |
+| `./chart/<projectname>/` 目录|描述
+|
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml`|Helm 图表|
 | `./chart/<projectname>/values.yaml`|Helm 图表值|
@@ -64,7 +65,8 @@ lastupdated: "2018-05-22"
 | `./chart/<projectname>/templates/service.yaml`|服务模板|
 {: caption="表 4. 生成的 Java Spring 应用程序 ./chart/<projectname>/templates/ 目录的内容" caption-side="top"}
 
-| `./manifests/` 目录 | 描述 |
+| `./manifests/` 目录 |描述
+|
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml |Kubernetes 服务和部署 yaml|
 {: caption="表 5. 生成的 Java Spring 应用程序 ./manifests/ 目录的内容" caption-side="top"}
@@ -81,7 +83,7 @@ lastupdated: "2018-05-22"
 |cli-config.yml|CLI 配置选项|
 |manifest.yml|Cloud Foundry 部署文件|
 |Dockerfile|用于 `ibmcloud dev run`、`ibmcloud dev deploy` 和 `docker` 命令的 Dockerfile|
-|Dockerfile-tools|用于 `ibmcloud dev build` 和 `ibmcloud dev test` 命令的 Dockerfile|
+|`Dockerfile-tools`|用于 `ibmcloud dev build` 和 `ibmcloud dev test` 命令的 Dockerfile|
 |LICENSE|许可证文件|
 |README.md|应用程序描述|
 {: caption="表 6. 生成的 Java Liberty 应用程序根目录的内容" caption-side="top"}
@@ -100,7 +102,8 @@ lastupdated: "2018-05-22"
 |`./src/main/test/it/HealthEndpointTest.java`|测试|
 {: caption="表 7. 生成的 Java Liberty 应用程序 ./src/main/ 目录的内容" caption-side="top"}
 
-| `./.bluemix/` 目录 | 描述 |
+| `./.bluemix/` 目录 |描述
+|
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh |容器构建脚本|
 | deploy.json |部署信息|
@@ -119,7 +122,8 @@ lastupdated: "2018-05-22"
 | `./chart/<projectname>/templates/service.yaml` |服务模板|
 {: caption="表 9. 生成的 Java Liberty 应用程序 ./chart/<projectname>/ 目录的内容" caption-side="top"}
 
-| `./manifests/` 目录 | 描述 |
+| `./manifests/` 目录 |描述
+|
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml |Kubernetes 服务和部署 yaml|
 {: caption="表 10. 生成的 Java Liberty 应用程序 ./manifests/ 目录的内容" caption-side="top"}

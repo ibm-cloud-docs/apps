@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -77,7 +77,7 @@ In der folgenden Tabelle sind die Verzeichnisse und Dateien aufgelistet, die in 
 | cli-config.yml | CLI-Konfigurationsoptionen |
 | manifest.yml | Cloud Foundry-Bereitstellungsdatei |
 | Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
-| Dockerfile-tools | Dockerfile für Befehle `ibmcloud dev build` und `ibmcloud dev test` |
+| `Dockerfile-Tools` | Dockerfile für Befehle `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
 | README.md | Beschreibung der App |
 {: caption="Tabelle 6. Inhalt des Stammverzeichnisses einer generierten Java Liberty-App" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2018-07-02"
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. 将包含定制域的路径添加到应用程序。对于 CF 应用程序，请输入以下命令：
+2. 将包含定制域的路径添加到应用程序。对于 Cloud Foundry 应用程序，请输入以下命令：
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

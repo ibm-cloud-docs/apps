@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -24,7 +24,7 @@ lastupdated: "2018-05-22"
 |cli-config.yml |CLI 配置選項|
 |manifest.yml |Cloud Foundry 部署檔案|
 |Dockerfile |`ibmcloud dev run`、`ibmcloud dev deploy` 及 `docker` 指令的 Dockerfile|
-|Dockerfile-tools |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
+| `Dockerfile-tools` |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
 | LICENSE |授權檔|
 |README.md |應用程式的說明|
 {: caption="表 1. 產生的 Swift 應用程式根目錄的內容" caption-side="top"}
@@ -66,5 +66,5 @@ lastupdated: "2018-05-22"
 | `./manifests/` 目錄|說明|
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml |Kubernetes 服務及部署 yaml |
-{: caption="表 7. 產生的 Swift 應用程式 manifests 目錄的內容" caption-side="top"}
+{: caption="表 7. 產生的 manifests 目錄的內容" caption-side="top"}
 

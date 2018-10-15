@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-07-05"
 Stellen Sie Apps von {{site.data.keyword.cloud}} [App Service ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} in virtuellen Serverinstanzen bereit, um ein Zusammenspiel der Plattform- und Infrastrukturaktivitäten zu ermöglichen und die Steuerungsmöglichkeiten und Flexibilität bei der Entwicklung von Apps zu erweitern.
 {: shortdesc}
 
-Eine virtuelle Serverinstanz bietet im Vergleich zu anderen Konfigurationen mehr Transparenz, Vorhersagbarkeit und Automatisierungsmöglichkeiten für alle Workloadtypen. Kombinieren Sie die virtuelle Instanz mit einem Bare-Metal-Server, um eindeutige Workloadkombinationen zu bilden. Sie können z. B. eine leistungsfähige Datenbanklogik oder effizientes maschinelles Lernen mit Bare-Metal- und GPU-Konfigurationen (GPU = Graphics Processing Unit, Grafik-Verarbeitungseinheit) erstellen, die unter einem auf Linux basierenden Debian-Betriebssystem ausgeführt werden.
+Eine virtuelle Serverinstanz bietet im Vergleich zu anderen Konfigurationen mehr Transparenz, Vorhersagbarkeit und Automatisierungsmöglichkeiten für alle Workloadtypen. Kombinieren Sie die virtuelle Instanz mit einer Bare Metal Server-Instanz, um eindeutige Workloadkombinationen zu bilden. Sie können z. B. eine leistungsfähige Datenbanklogik oder effizientes maschinelles Lernen mit Bare-Metal- und GPU-Konfigurationen (GPU = Graphics Processing Unit, Grafik-Verarbeitungseinheit) erstellen, die unter einem auf Linux basierenden Debian-Betriebssystem ausgeführt werden.
 
 ## Vorbereitende Schritte
 Für die Verwendung von virtuellen Instanzen muss Ihr {{site.data.keyword.cloud_notm}}-Konto für Infrastrukturservices aktiviert sein. Weitere Informationen finden Sie in [Upgrade auf den Infrastrukturservice![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/dashboard/ibm-iaas-g1){: new_window}.
@@ -36,15 +36,14 @@ Wenn Sie ein Starter-Kit erstellen, bei dem der {{site.data.keyword.cloud_notm}}
 
 Die Option für virtuelle Server schließt verschiedene Phasen ein. Zunächst wird der App-Code aufbereitet und in einem GitLab-Repository gespeichert und es wird eine Toolchain mit Pipeline über den Quellcode erstellt. Die Pipeline ist so definiert, dass der Code erstellt und in einem Debian-Paketmanagerformat paketiert wird. Danach wird eine virtuelle Instanz von Terraform bereitgestellt. Anschließend wird die App bereitgestellt, installiert und im aktiven virtuellen Image gestartet und der Zustand der App wird überprüft.
 
-Die Pipeline schlägt bei der ersten Ausführung fehl, da zunächst eine Reihe von Benutzerkontoeigenschaften manuell konfiguriert werden müssen. Diese Eigenschaften können nicht in die Toolchain, bei der aus Sicherheitsgründen Git-Quellcode verwendet wird, übergeben werden. Sie müssen diese Werte manuell konfigurieren, damit die Toolchain ordnungsgemäß abgeschlossen werden kann.
+Die Pipeline verwendet eine Reihe von Benutzerkontoeigenschaften und ein neues SSH-Schlüsselpaar zur Bereitstellung der Infrastruktur. Diese Eigenschaften werden automatisch an die Toolchain übergeben, aus Sicherheitsgründen jedoch nicht im GIT-Quellcode gespeichert.
 
-Führen Sie die folgenden Schritte aus, um die Ansicht mit den Umgebungseigenschaften aufzurufen und die Benutzerkontoeigenschaften für die Ausführung der Pipeline festzulegen.
+Führen Sie diese Schritte aus, um diese Umgebungseigenschaften anzuzeigen. Die Tabelle enthält Informationen zu den verfügbaren Eigenschaften.
 
 1. Klicken Sie auf der Seite mit den App-Details auf **Toolchain anzeigen**.
 2. Klicken Sie auf die Kachel **Delivery Pipeline**.
 3. Klicken Sie auf das Symbol für die **Konfiguration der Stage** und dann für die Build-Stage auf **Stage konfigurieren**.
 4. Klicken Sie auf die Registerkarte **Umgebungseigenschaften**, um die Eigenschaften anzuzeigen.
-5. Ändern Sie die Eigenschaften auf der Registerkarte 'Umgebungseigenschaften', um die ordnungsgemäße Ausführung der Toolchain zu ermöglichen.
 
 | Eigenschaft   | Beschreibung   |
 |---|---|
@@ -58,29 +57,29 @@ Führen Sie die folgenden Schritte aus, um die Ansicht mit den Umgebungseigensch
 | `GIT_PASSWORD` | Das GitLab-Kennwort. Dieses Kennwort ist erforderlich, wenn Sie den [Terraform-Status](#tform-state) definieren, um den Status des Befehls 'Apply' zu speichern. |
 {: caption="Tabelle 1. Für die Aktivierung der Pipeline zu ändernde Umgebungsvariablen" caption-side="top"}
 
-### Infrastruktur-API-Schlüssel abrufen
+#### Infrastruktur-API-Schlüssel
 {: #iaas-key}
 
-Terraform benötigt einen Infrastruktur-API-Schlüssel zum Erstellen von Infrastrukturressourcen. Rufen Sie wie im Folgenden beschrieben einen Infrastrukturschlüssel ab.
+Terraform benötigt einen Infrastruktur-API-Schlüssel zum Erstellen von Infrastrukturressourcen. Dieser wird während der Bereitstellung automatisch abgerufen. Führen Sie diese Schritte aus, um einen Schlüssel manuell abzurufen.
 
 1. Rufen Sie in der Infrastruktur die [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} auf. Alternativ hierzu können Sie auf **Menü** > **Infrastruktur** > **Konto** > **Benutzerliste** klicken.
 2. Suchen Sie nach den Details der Benutzer, die die Toolchain erstellen, und klicken Sie in der Spalte für den API-Schlüssel auf `Anzeigen` oder `Generieren`. In beiden Fällen wird der API-Schlüssel anschließend in einem Fenster angezeigt.
 3. Kopieren Sie den API-Schlüssel und ersetzen Sie den Wert der Toolchain-Konfigurationseigenschaft `TF_VAR_ibm_sl_api_key` durch diesen Schlüssel.
 
-### Infrastrukturbenutzernamen abrufen
+#### Benutzername der Infrastruktur
 {: #user-key}
 
-Rufen Sie wie im Folgenden beschrieben den Infrastrukturbenutzernamen.
+Der Infrastrukturbenutzername wird ebenfalls während der Bereitstellung automatisch abgerufen und verwendet. Führen Sie diese Schritte aus, um einen Schlüssel manuell abzurufen.
 
 1. Rufen Sie in der Infrastruktur die [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} auf. Alternativ hierzu können Sie auf **Menü** > **Infrastruktur** > **Konto** > **Benutzerliste** klicken.
 2. Klicken Sie auf den Benutzer, von dem die Toolchain erstellt werden soll.
 3. Blättern Sie abwärts zur Eigenschaft **VPN-Benutzername**.
 4. Schneiden Sie den zugehörigen Wert aus und ersetzen Sie den Wert der Toolchainkonfigurationseigenschaft `TF_VAR_ibm_sl_username` durch diesen Wert.
 
-### Plattform-API-Schlüssel
+#### Plattform-API-Schlüssel
 {: #platform-key}
 
-Der Plattform-API-Schlüssel wird benötigt, um in Terraform Services auf Plattformebene wie z. B. Datenbank- und Compose-Services zu erstellen. Rufen Sie wie im Folgenden beschrieben einen Plattformschlüssel ab.
+Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbanken und Compose-Services, wird der API-Schlüssel der Plattform automatisch abgerufen und als Umgebungsvariable in der Pipeline gespeichert. Führen Sie diese Schritte aus, um einen Plattformschlüssel manuell abzurufen.
 
 1. Klicken Sie auf der Seite für die [API-Schlüssel ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) auf **Verwalten** > **Sicherheit** > **Plattform-API-Schlüssel**.
 2. Klicken Sie auf **Erstellen**.
@@ -89,11 +88,12 @@ Der Plattform-API-Schlüssel wird benötigt, um in Terraform Services auf Plattf
 5. Kopieren Sie den Schlüssel und fügen Sie ihn in die Zwischenablage ein oder laden Sie den Schlüssel herunter.
 6. Ersetzen Sie den Wert der Toolchainkonfigurationseigenschaft `TF_VAR_ibm_cloud_api_key` durch den generierten Wert.
 
-### Öffentlichen und privaten Schlüssel generieren
+#### Öffentliche und private Schlüssel
 {: #public-key}
 
-Führen Sie die folgenden Schritte aus, um mit der Toolchain die Debian-Paketierung in der virtuellen Serverinstanz zu installieren:
+Damit die Toolchain die Debian-Paketerstellung in der virtuellen Serverinstanz installieren kann, generiert die Bereitstellungsinfrastruktur automatisch ein SSH-Schlüsselpaar aus privatem und öffentlichem Schlüssel für die Übertragung des GIT-Inhalts an die Instanz.
 
+Gehen Sie wie folgt vor, um diese Schritte manuell auszuführen:
 1. Erstellen Sie auf dem Client wie im Folgenden beschrieben ein [Schlüsselpaar aus öffentlichem und privatem Schlüssel![Symbol für externen Link](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
 2. Rufen Sie die [Ansicht für die SSH-Schlüssel der Infrastruktur ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window} auf. Alternativ hierzu können Sie auf **Menü** > **Infrastruktur** > **Geräte** > **Verwalten** > **SSH-Schlüssel** klicken.
 3. Klicken Sie auf **Hinzufügen**.
@@ -108,12 +108,12 @@ Der private Schlüssel muss in einer einzigen Zeile angegeben werden. Ersetzen S
 ```
 {: screen}
 
-### Terraform-Status aktivieren
+#### Terraform-Status aktivieren
 {: #tform-state}
 
-Terraform unterstützt das Speichern des Status des Terraform-Befehls `apply`. Über diese Statusdatei wird der Befehl `apply` ein zweites Mal ausgeführt, um zu ermitteln, ob Terraform-Konfigurationsdateien geändert wurden. Sie können den Status in dem Git-Repository speichern, das für die App- und die Konfigurationsverwaltung verwendet wird.
+Terraform unterstützt das Speichern des Status des Terraform-Befehls `apply`. Über diese Statusdatei wird der Befehl `apply` ein zweites Mal ausgeführt, um zu ermitteln, ob Terraform-Konfigurationsdateien geändert wurden. Der Status wird in dem GIT-Repository gespeichert, in dem die App und die Konfiguration automatisch eingerichtet werden.
 
-Aktivieren Sie die Statusspeicherung, indem Sie die Eigenschaften `GIT_USER` und `GIT_PASSWORD` in den Umgebungsvariablen der Toolchain konfigurieren. Rufen Sie die Werte wie folgt ab:
+Zum Aktivieren des Statusspeichers werden `GIT_USER` und `GIT_PASSWORD` automatisch als Eigenschaften in den Umgebungsvariablen der Toolchain konfiguriert. Wenn Sie Zugriff auf diese Werte benötigen, führen Sie diese Schritte aus:
 
 1. Greifen Sie im Code-Tool über die Ansicht mit den Toolchains auf das Git-Repository zu.
 2. Klicken Sie in GitLab auf das **Profilsymbol** und danach auf **Einstellungen**.
@@ -158,7 +158,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 }
 ```
 
-Sie können auch Bare-Metal-Server mit Terraform bereitstellen. Weitere Informationen hierzu finden Sie in der [Providerdokumentation zu IBM Terraform![Symbol für externen Link](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} und im Abschnitt zum [Git-Repository für IBM Terraform-Provider![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}.
+Sie können auch Bare Metal Server-Instanzen mit Terraform bereitstellen. Weitere Informationen hierzu finden Sie in der [Providerdokumentation zu IBM Terraform![Symbol für externen Link](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} und im Abschnitt zum [Git-Repository für IBM Terraform-Provider![Symbol für externen Link](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}.
 
 Mithilfe der Datei `variables.tf` können Sie das Rechenzentrum ändern, das beim Erstellen der virtuellen Instanz als Ziel dienen soll. Ein Liste der bei der Plattform definierten Rechenzentren finden Sie im Abschnitt zu den [Rechenzentren![Symbol für externen Link](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}.
 

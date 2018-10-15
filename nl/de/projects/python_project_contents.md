@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | cli-config.yml | CLI-Konfigurationsoptionen |
 | manifest.yml | Cloud Foundry-Bereitstellungsdatei |
 | Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
-| Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
+| `Dockerfile-Tools` | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
 | LICENSE | Lizenzdatei |
 | README.md | Beschreibung der App |
 {: caption="Tabelle 1. Inhalt des Stammverzeichnisses einer generierten Python-App" caption-side="top"}

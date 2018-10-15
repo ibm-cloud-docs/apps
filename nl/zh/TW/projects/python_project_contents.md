@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ lastupdated: "2018-07-05"
 | cli-config.yml |CLI 配置選項|
 | manifest.yml |Cloud Foundry 部署檔案|
 | Dockerfile |`ibmcloud dev run`、`ibmcloud dev deploy` 及 `docker` 指令的 Dockerfile|
-| Dockerfile-tools |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
+| `Dockerfile-tools` |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
 | LICENSE |授權檔|
 | README.md |應用程式的說明|
 {: caption="表 1. 產生的 Python 應用程式根目錄的內容" caption-side="top"}

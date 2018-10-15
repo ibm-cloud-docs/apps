@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -15,7 +15,8 @@ lastupdated: "2018-07-02"
 # 建立及使用自訂網域
 {: #updatingapps}
 
-網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域。然後，請將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。{:shortdesc}
+網域提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。若要使用自訂網域，必須在公用 DNS 伺服器上登錄自訂網域，在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域。然後，請將自訂網域對映至公用 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域。將自訂網域對映至系統網域之後，該自訂網域的要求即會遞送至 {{site.data.keyword.Bluemix_notm}} 中的應用程式。
+{:shortdesc}
 
 您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面，來建立及使用自訂網域。
 
@@ -47,19 +48,19 @@ lastupdated: "2018-07-02"
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. 新增含有自訂網域的路徑至應用程式。若為 CF 應用程式，請鍵入下列指令：
+2. 新增含有自訂網域的路徑至應用程式。若為 Cloud Foundry 應用程式，請鍵入下列指令：
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name
 
    ```
 
-       若為容器群組，請鍵入下列指令：
-     
+   若為容器群組，請鍵入下列指令：
 
    ```
-     cf ic route map -n host_name -d mydomain mycontainergroup
-     ```
+   cf ic route map -n host_name -d mydomain mycontainergroup
+
+   ```
 
 在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，請將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
 
