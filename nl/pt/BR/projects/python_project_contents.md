@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | cli-config.yml | Opções de configuração de CLI |
 | manifest.yml | Arquivo de implementação do Cloud Foundry |
 | Dockerfile | Dockerfile para comandos `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-| Ferramentas do Dockerfile | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
+| `Dockerfile-tools` | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENÇA | Arquivo de licença |
 | README.md | Descrição do app |
 {: caption="Tabela 1. Conteúdo de um diretório-raiz do app Python gerado" caption-side="top"}
@@ -55,7 +55,7 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 5. Conteúdo de um diretório bluemix do app Python gerado" caption-side="top"}
 
-|Diretório `./chart/<projectname>/ ` | Descrição |
+| `./chart/<projectname>/ ` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |

@@ -1,8 +1,8 @@
-﻿---
+---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -52,14 +52,14 @@ A tabela a seguir lista os diretórios e os arquivos que estão incluídos em um
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 3. Conteúdo de um diretório ./.bluemix/ do app Java Spring gerado" caption-side="top"}
 
-|Diretório `./chart/<projectname>/` | Descrição |
+| Diretório `./chart/<projectname>/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
 | `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
 | `./chart/<projectname>/templates/hpa.yaml` | Modelo HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
-{: caption="Tabela 4. Conteúdos de um diretório ./chart/<projectname>/templates/ do app Java Spring gerado" caption-side="top"}
+{: caption="Tabela 4. Conteúdo de um diretório ./chart/<projectname>/templates/ do app Java Spring gerado" caption-side="top"}
 
 | Diretório `./manifests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
@@ -77,7 +77,7 @@ A tabela a seguir lista os diretórios e os arquivos incluídos em um app Java L
 | cli-config.yml | Opções de configuração de CLI |
 | manifest.yml | Arquivo de implementação do Cloud Foundry |
 | Dockerfile | Dockerfile para comandos `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-| Ferramentas do Dockerfile | Dockerfile para os comandos `ibmcloud dev build` e `ibmcloud dev test` |
+| `Dockerfile-tools` | Dockerfile para os comandos `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENÇA | Arquivo de licença |
 | README.md | Descrição do app |
 {: caption="Tabela 6. Conteúdo de um diretório-raiz do app Java Liberty gerado" caption-side="top"}
@@ -104,14 +104,14 @@ A tabela a seguir lista os diretórios e os arquivos incluídos em um app Java L
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 8. Conteúdo de um diretório ./bluemix/ do app Java Liberty gerado" caption-side="top"}
 
-|Diretório `./chart/<projectname>/` | Descrição |
+| `./chart/<projectname>/ ` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
 | `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
 | `./chart/<projectname>/templates/hpa.yaml` | Modelo HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
-{: caption="Tabela 9. Conteúdos de um diretório ./chart/<projectname>/ do app Java Liberty gerado" caption-side="top"}
+{: caption="Tabela 9. Conteúdo de um diretório ./chart/<projectname>/ do app Java Liberty gerado" caption-side="top"}
 
 | Diretório `./manifests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|

@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -36,15 +36,14 @@ Ao criar um kit do iniciador que usa o {{site.data.keyword.cloud_notm}} [App Ser
 
 A opção do servidor virtual funciona em fases. Primeiramente, o código do app é preparado e armazenado em um repositório Git GITLab e o código-fonte cria uma cadeia de ferramentas com um pipeline. O pipeline é definido para construir o código e o empacotá-lo em um formato de gerenciador de pacote do Debian. Em seguida, Terraform provisões uma instância virtual. Finalmente, o app é implementado, instalado e iniciado dentro da imagem virtual em execução e seu funcionamento é validado.
 
-O pipeline falha no primeiro uso porque ele requer que um conjunto de propriedades da conta do usuário seja configurado manualmente. Essas propriedades não podem ser transmitidas para a cadeia de ferramentas que usa o código-fonte GIT por razões de segurança. Deve-se configurar manualmente esses valores para permitir que a cadeia de ferramentas seja concluída com êxito.
+O pipeline usa um conjunto de propriedades da conta do usuário e um novo par de chaves SSH para implementar na infraestrutura. Essas propriedades são passadas automaticamente para a cadeia de ferramentas, mas não são armazenadas no código-fonte GIT por motivos de segurança.
 
-Para acessar a visualização de propriedades do ambiente e ativar seu pipeline com as propriedades de sua conta do usuário, siga estas etapas.
+Para visualizar essas propriedades do ambiente, siga estas etapas. Consulte a tabela para aprender sobre as propriedades que estão disponíveis.
 
 1. Na página de detalhes do app, clique em **Visualizar cadeia de ferramentas**.
 2. Clique no ladrilho **Delivery Pipeline**.
 3. Clique no ícone **Configuração de estágio** e, em seguida, clique em **Configurar estágio** no estágio de construção.
 4. Clique na guia **Propriedades do ambiente** para visualizar as propriedades.
-5. Mude essas propriedades na guia de propriedades do ambiente para permitir que a cadeia de ferramentas seja executada com êxito.
 
 | Propriedade   | Descrição   |
 |---|---|
@@ -58,29 +57,29 @@ Para acessar a visualização de propriedades do ambiente e ativar seu pipeline 
 | `GIT_PASSWORD` | Se você configurar o [estado do Terraform](#tform-state) para armazenar o estado do comando apply, a senha GITLab será necessária. |
 {: caption="Tabela 1. Variáveis de ambiente a serem mudadas para ativação" caption-side="top"}
 
-### Recuperando a chave API de infraestrutura
+#### Chave da API de infraestrutura
 {: #iaas-key}
 
-O Terraform requer uma chave API de infraestrutura para criar recursos de infraestrutura. Siga estas etapas para recuperar uma chave de infraestrutura.
+O Terraform requer uma chave API de infraestrutura para criar recursos de infraestrutura. Isso é obtido automaticamente durante a implementação. Siga estas etapas para recuperar uma chave manualmente.
 
 1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de infraestrutura. Também é possível clicar em **Menu** > **Infraestrutura** > **Conta** > **Lista de usuários**.
 2. Localize os detalhes do usuário que estão criando a cadeia de ferramentas e clique em `Visualizar` na coluna Chave API ou clique em `Gerar`, ambas as etapas exibirão a chave API em uma janela.
 3. Copie a chave API e substitua o valor na configuração da Cadeia de Ferramentas `TF_VAR_ibm_sl_api_key`.
 
-### Recuperando o nome do usuário da infraestrutura
+#### Nome do usuário de infraestrutura
 {: #user-key}
 
-Para recuperar o nome do usuário da infraestrutura, siga estas etapas.
+O nome do usuário de infraestrutura também é obtido automaticamente e usado durante a implementação. Siga estas etapas para recuperar uma chave manualmente.
 
 1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de infraestrutura. Também é possível clicar em **Menu** > **Infraestrutura** > **Conta** > **Lista de usuários**.
 2. Clique no usuário para o qual você deseja criar a cadeia de ferramentas.
 3. Role para baixo para a propriedade **Nome do usuário da VPN**.
 4. Recorte e cole esse valor e substitua a configuração da Cadeia de Ferramentas `TF_VAR_ibm_sl_username`.
 
-### Recuperando a chave API da plataforma
+#### Chave API da plataforma
 {: #platform-key}
 
-Para criar serviços de nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave API de plataforma é necessária. Siga estas etapas para recuperar uma chave de plataforma.
+Para criar serviços no nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave API da plataforma é obtida automaticamente e armazenada como uma variável de ambiente em seu pipeline. Siga estas etapas para recuperar uma chave de plataforma manualmente.
 
 1. Na página [Chaves API ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), clique em **Gerenciar** > **Segurança** > **Chaves API de plataforma**.
 2. Clique em **Criar**.
@@ -89,11 +88,12 @@ Para criar serviços de nível de plataforma no Terraform, como bancos de dados 
 5. Copie e cole a chave dentro da área de transferência ou faça download da chave.
 6. Substitua o valor na configuração da cadeia de ferramentas `TF_VAR_ibm_cloud_api_key` pelo valor que foi gerado.
 
-### Gerando a chave pública e privada
+#### Chaves públicas e privadas
 {: #public-key}
 
-Para a cadeia de ferramentas instalar o pacote Debian na instância de servidor virtual, siga estas etapas.
+Para que a cadeia de ferramentas instale o pacote Debian na instância do servidor virtual, a infraestrutura de implementação gera automaticamente um par de chaves SSH privada e pública para transferir o conteúdo do GIT para a instância.
 
+Para fazer isso manualmente:
 1. Em seu cliente, use as instruções a seguir para criar um [par de chaves pública e privada ![Ícone de link externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
 2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura** > **Dispositivos** > **Gerenciar** > **Chaves SSH**.
 3. Clique em **Incluir**.
@@ -108,12 +108,12 @@ A chave privada deve estar em uma linha única. Substitua novas linhas por  ` \n
 ```
 {: screen}
 
-### Ativando o estado do Terraform
+#### Ativando o estado do Terraform
 {: #tform-state}
 
-O Terraform suporta o armazenamento do estado do comando `apply` do Terraform. Esse arquivo de estado executa o comando `apply` uma segunda vez para determinar se algum dos arquivos de configuração do Terraform mudou. É possível armazenar o estado no repositório GIT no qual o app e a configuração são gerenciados.
+O Terraform suporta o armazenamento do estado do comando `apply` do Terraform. Esse arquivo de estado executa o comando `apply` uma segunda vez para determinar se algum dos arquivos de configuração do Terraform mudou. O estado é armazenado no repositório GIT em que o app e a configuração são configurados automaticamente.
 
-Para ativar o armazenamento de estado, configure as propriedades `GIT_USER` e `GIT_PASSWORD` nas variáveis de ambiente da cadeia de ferramentas. Para recuperar os valores, siga estas etapas:
+Para ativar o armazenamento de estado, `GIT_USER` e `GIT_PASSWORD` são configurados automaticamente como propriedades nas variáveis de ambiente da cadeia de ferramentas. Se for necessário acessar esses valores, siga estas etapas:
 
 1. Na visualização de cadeias de ferramentas, acesse o repositório GIT por meio da ferramenta de código.
 2. No GIT Lab, clique no **Ícone do perfil** e, em seguida, clique em **Configurações**.

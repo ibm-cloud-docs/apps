@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Resolução de problemas para gerenciar aplicativos
+# Resolução de problemas para criar apps
 {: #managingapps}
 
-Problemas gerais com o gerenciamento de apps podem incluir apps que não podem ser atualizados ou caracteres de byte duplo que não são exibidos. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Problemas gerais com a criação de apps podem incluir apps que não podem ser atualizados ou caracteres de byte duplo que não são exibidos. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 ## Você possui mudanças não salvas
@@ -31,7 +31,7 @@ Quando você clica em itens na página de detalhes do app, pode ser incapaz de e
 Ao tentar verificar seu app ou serviços na página de detalhes do app, você continua obtendo a mensagem de erro a seguir:
 {: tsSymptoms}
 
-`Você possui mudanças não salvas na página app_name. Salve ou cancele as mudanças.`
+` Você possui mudanças não salvas. Tem certeza de que deseja sair desta página?`
 
 Ao rolar o seu mouse sobre o campo **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é por design; no entanto, a mensagem de erro solicita que você salve as configurações de memória ou instância antes de acessar outra página.
 {: tsCauses}
@@ -56,7 +56,7 @@ O {{site.data.keyword.Bluemix_notm}} ainda não fornece failover automático de 
 Ao configurar suas definições de DNS, deve-se especificar os endereços IP públicos das regiões do {{site.data.keyword.Bluemix_notm}} em que seu apps estão em execução. Para obter o endereço IP público de uma região do {{site.data.keyword.Bluemix_notm}}, use o comando `nslookup`. Por exemplo, é possível digitar o comando a seguir em uma janela de linha de comandos.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## Impossível alternar apps para o modo de depuração

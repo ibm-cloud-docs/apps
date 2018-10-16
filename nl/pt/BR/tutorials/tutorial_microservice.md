@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -18,17 +18,17 @@ lastupdated: "2018-08-21"
 É possível criar um app por meio de um Iniciador básico de microsserviço. Use esses iniciadores para construir um microsserviço de backend para Node, Java ou Python com uma opção de estruturas da web. É possível ver como instalar as ferramentas necessárias, criar e executar o app localmente e implantá-lo na nuvem.
 {: shortdesc}
 
-## Etapa 1. Instalar as ferramentas
+## Etapa 1. Instale as ferramentas
 {: #install-tools}
 
-Instale as [ferramentas do desenvolvedor![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+Instale as [ferramentas do desenvolvedor](/docs/cli/index.html).
 
 O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 
 ## Etapa 2. Criar um app
 {: #create-devex}
 
-Crie um app no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
+Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}:
 
 1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
 2. Insira o nome de seu app. Para este tutorial, use `MicroserviceProject`.

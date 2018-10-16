@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 
 | Diretório-raiz                                     | Descrição |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| Arquivo de definição de dependência do Swift |
-|cli-config.yml | Opções de configuração de CLI |
-|manifest.yml | Arquivo de implementação do Cloud Foundry |
-|Dockerfile | Dockerfile para comandos `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-|Ferramentas do Dockerfile | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
+| Package.swift| Arquivo de definição de dependência do Swift |
+| cli-config.yml | Opções de configuração de CLI |
+| manifest.yml | Arquivo de implementação do Cloud Foundry |
+| Dockerfile | Dockerfile para comandos `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
+| `Dockerfile-tools` | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENÇA | Arquivo de licença |
-|README.md | Descrição do app |
+| README.md | Descrição do app |
 {: caption="Tabela 1. Conteúdo de um diretório-raiz do app Swift gerado" caption-side="top"}
 
 | Diretório `./Sources/Application/` | Descrição  |
@@ -43,7 +43,7 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | Diretório `./Tests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./Tests/LinuxMain.swift` | Utilitário para teste no Linux |
-| `./Tests/ApplicationTests>/RouteTests.swift` | Arquivo contendo casos de teste |
+| `./Tests/ApplicationTests>/RouteTests.swift` | Arquivo que inclui casos de teste |
 {: caption="Tabela 4. Conteúdo de um diretório de testes do app Swift gerado" caption-side="top"}
 
 | Diretório `./.bluemix/` | Descrição |
@@ -55,7 +55,7 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | toolchain.yml | Definição da cadeia de ferramentas do IBM Cloud |
 {: caption="Tabela 5. Conteúdo de um diretório bluemix do app Swift gerado" caption-side="top"}
 
-| Diretório `./chart/<projectname>/` | Descrição |
+| `./chart/<projectname>/ ` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
 | `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
@@ -66,5 +66,5 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 | Diretório `./manifests/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Serviço e implementação do & Kubernetes yaml |
-{: caption="Tabela 7. Conteúdo de um diretório manifests do app Swift gerado" caption-side="top"}
+{: caption="Tabela 7. Conteúdo de um diretório manifests gerado" caption-side="top"}
 
