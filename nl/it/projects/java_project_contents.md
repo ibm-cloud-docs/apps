@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -77,7 +77,7 @@ La seguente tabella elenca le directory e i file che sono inclusi in un'applicaz
 | cli-config.yml | Opzioni di configurazione della CLI |
 | manifest.yml | File di distribuzione Cloud Foundry |
 | Dockerfile | Dockerfile per i comandi `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-| Dockerfile-tools | Dockerfile per i comandi `ibmcloud dev build` e `ibmcloud dev test` |
+| `Dockerfile-tools` | Dockerfile per i comandi `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENSE | File di licenza |
 | README.md | Descrizione dell'applicazione |
 {: caption="Tabella 6. Contenuto della directory root di un'applicazione Java Liberty generata" caption-side="top"}

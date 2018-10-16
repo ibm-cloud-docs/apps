@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2018-07-02"
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오. CF 앱의 경우 다음 명령을 입력하십시오.
+2. 사용자 정의 도메인을 포함한 라우트를 애플리케이션에 추가하십시오. Cloud Foundry 앱의 경우 다음 명령을 입력하십시오.
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

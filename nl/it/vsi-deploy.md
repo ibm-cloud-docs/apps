@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -36,15 +36,14 @@ Quando crei un kit starter che utilizza {{site.data.keyword.cloud_notm}} [App Se
 
 L'opzione del server virtuale funziona a fasi. Per prima cosa, il codice dell'applicazione viene preparato e memorizzato in un repository GITLab Git e il codice di origine crea una toolchain con una pipeline. La pipeline viene definita per creare il codice e impacchettarlo in un formato del gestore pacchetti Debian. Quindi, Terraform fornisce un'istanza virtuale. Infine, l'applicazione viene distribuita, installata e avviata all'interno dell'immagine virtuale in esecuzione e il relativo stato di integrità viene convalidato.
 
-La pipeline ha un errore al primo utilizzo perché richiede che una serie di proprietà dell'account utente vengano configurate manualmente. Queste proprietà non possono essere trasferite nella toolchain che utilizza il codice di origine GIT per motivi di sicurezza. Devi configurare manualmente questi valori per consentire il completamento corretto della toolchain.
+La pipeline utilizza una serie di proprietà account utente e una nuova coppia di chiavi SSH per la distribuzione all'infrastruttura. Queste proprietà vengono automaticamente passate nella toolchain, ma non memorizzate nel codice di origine GIT per motivi di sicurezza.
 
-Per accedere alla vista delle proprietà dell'ambiente e abilitare la tua pipeline con le proprietà dell'account utente, completa la seguente procedura.
+Per visualizzare queste proprietà di ambiente, completa questa procedura. Consulta la tabella per acquisire informazioni sulle proprietà disponibili.
 
 1. Dalla pagina dei dettagli dell'applicazione, fai clic su **View Toolchain**.
 2. Fai clic sul tile **Delivery Pipeline**.
 3. Fai clic sull'icona **Stage Configure** e quindi su **Configure Stage** nella fase di build.
 4. Fai clic sulla scheda **Environment Properties** per visualizzare le proprietà.
-5. Modifica queste proprietà nella scheda delle proprietà dell'ambiente per consentire l'esecuzione corretta della toolchain.
 
 | Proprietà   | Descrizione   |
 |---|---|
@@ -58,29 +57,29 @@ Per accedere alla vista delle proprietà dell'ambiente e abilitare la tua pipeli
 | `GIT_PASSWORD` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando applicato, è obbligatoria la password GITLab. |
 {: caption="Tabella 1. Variabili di ambiente da modificare per l'abilitazione" caption-side="top"}
 
-### Richiamo della chiave API dell'infrastruttura
+#### Chiave API dell'infrastruttura
 {: #iaas-key}
 
-Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell'infrastruttura. Segui questa procedura per richiamare una chiave dell'infrastruttura.
+Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell'infrastruttura. Questa viene ottenuta automaticamente durante la distribuzione. Segui questa procedura per richiamare una chiave manualmente. 
 
 1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} dell'infrastruttura. Puoi anche fare clic su **Menu** > **Infrastruttura** > **Account** > **Elenco utenti**.
 2. Trova i dettagli dell'utente che sta creando la toolchain e fai clic su `View` nella colonna delle chiavi API o fai clic su `Generate`; entrambi i passi visualizzano la chiave API in una finestra.
 3. Copia la chiave API e sostituisci il valore nella configurazione della toolchain `TF_VAR_ibm_sl_api_key`.
 
-### Richiamo del nome utente dell'infrastruttura
+#### Nome utente dell'infrastruttura
 {: #user-key}
 
-Per richiamare il nome utente dell'infrastruttura, attieniti alla seguente procedura.
+Il nome utente dell'infrastruttura viene anche ottenuto automaticamente e utilizzato durante la distribuzione. Segui questa procedura per richiamare una chiave manualmente. 
 
 1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} dell'infrastruttura. Puoi anche fare clic su **Menu** > **Infrastruttura** > **Account** > **Elenco utenti**.
 2. Fai clic sull'utente per cui vuoi creare la toolchain.
 3. Scorri verso il basso fino alla proprietà **Nome utente VPN**.
 4. Taglia e incolla questo valore e sostituisci la configurazione della toolchain `TF_VAR_ibm_sl_username`.
 
-### Richiamo della chiave API della piattaforma
+#### Chiave API della piattaforma
 {: #platform-key}
 
-Per creare servizi a livello di piattaforma in Terraform, come database e servizi di composizione, è richiesta la chiave API della piattaforma. Segui questa procedura per richiamare una chiave della piattaforma.
+Per creare servizi a livello di piattaforma in Terraform, come database e servizi di composizione, la chiave API della piattaforma viene automaticamente ottenuta ed archiviata come variabile di ambiente nella tua pipeline. Segui questa procedura per richiamare una chiave della piattaforma manualmente. 
 
 1. Dalla pagina [Chiavi API ![Icona link esterno](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), fai clic su **Gestisci** > **Sicurezza** > **Chiavi API della piattaforma**.
 2. Fai clic su **Crea**.
@@ -89,11 +88,12 @@ Per creare servizi a livello di piattaforma in Terraform, come database e serviz
 5. Copia e incolla la chiave negli appunti o scaricala.
 6. Sostituisci il valore nella configurazione della toolchain `TF_VAR_ibm_cloud_api_key` con il valore che è stato generato.
 
-### Generazione della chiave pubblica e privata
+#### Chiavi pubbliche e private
 {: #public-key}
 
-Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale, completa la seguente procedura.
+Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale, l'infrastruttura di distribuzione genera automaticamente una coppia di chiavi SSH privata e pubblica per trasferire i contenuti GIT all'istanza. 
 
+Per effettuare questa operazione manualmente:
 1. Nel tuo client, utilizza le seguenti istruzioni per creare una [coppia di chiavi pubblica e privata ![Icona link esterno](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
 2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
 3. Fai clic su **Aggiungi**.
@@ -108,12 +108,12 @@ La chiave privata deve essere su una singola riga. Sostituisci le nuove righe co
 ```
 {: screen}
 
-### Abilitazione dello stato di Terraform
+#### Abilitazione dello stato di Terraform
 {: #tform-state}
 
-Terraform supporta l'archiviazione dello stato del comando `apply` di Terraform. Questo file di stato esegue il comando `apply` una seconda volta per determinare se uno qualsiasi dei file di configurazione di Terraform è stato modificato. Puoi memorizzare lo stato nel repository GIT in cui sono gestite l'applicazione e la configurazione.
+Terraform supporta l'archiviazione dello stato del comando `apply` di Terraform. Questo file di stato esegue il comando `apply` una seconda volta per determinare se uno qualsiasi dei file di configurazione di Terraform è stato modificato. Lo stato viene archiviato nel repository GIT in cui l'applicazione e la configurazione vengono impostate automaticamente.
 
-Per abilitare l'archiviazione dello stato, configura le proprietà `GIT_USER` e `GIT_PASSWORD` nelle variabili di ambiente della toolchain. Per richiamare i valori, completa la seguente procedura:
+Per abilitare l'archiviazione dello stato, `GIT_USER` e `GIT_PASSWORD` vengono automaticamente configurate come proprietà nelle variabili di ambiente della toolchain. Se hai bisogno di accedere a questi valori, segui queste istruzioni:
 
 1. Dalla vista delle toolchain, accedi al repository GIT dallo strumento del codice.
 2. In GIT Lab, fai clic sull'**Icona profilo** e poi su **Impostazioni**.

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ Python アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれてい
 | cli-config.yml | CLI 構成オプション |
 | manifest.yml | Cloud Foundry デプロイメント・ファイル |
 | Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
-| Dockerfile-tools | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
+| `Dockerfile-tools` | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
 | LICENSE | ライセンス・ファイル |
 | README.md | アプリの説明 |
 {: caption="表 1. 生成された Python アプリのルート・ディレクトリーの内容" caption-side="top"}

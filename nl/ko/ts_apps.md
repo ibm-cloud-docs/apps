@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# 앱 관리 문제점 해결
+# 앱 작성 문제점 해결
 {: #managingapps}
 
-앱 관리의 일반적인 문제점에는 앱을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 문제가 포함될 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+앱을 작성할 때 앱을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 일반적인 문제가 생길 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 ## 저장되지 않은 변경사항이 있음
@@ -31,7 +31,7 @@ lastupdated: "2018-07-09"
 앱 세부사항 페이지에서 앱 또는 서비스를 확인하려고 하면 다음 오류 메시지가 계속 표시됩니다.
 {: tsSymptoms}
 
-`You have unsaved changes in page app_name. Save or cancel the changes.`
+`저장되지 않은 변경사항이 있습니다. 이 페이지에서 나가시겠습니까?`
 
 런타임 분할창에서 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 설계상 이런 동작이 발생하는 것이며, 다른 페이지로 이동하기 전에 메모리 또는 인스턴스 설정을 저장하라는 오류 메시지가 표시됩니다.
 {: tsCauses}
@@ -56,7 +56,7 @@ lastupdated: "2018-07-09"
 DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.Bluemix_notm}} 지역의 공인 IP 주소를 지정해야 합니다. {{site.data.keyword.Bluemix_notm}} 지역의 공인 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## 앱을 디버그 모드로 전환할 수 없음
@@ -217,15 +217,15 @@ cf delete-route mybluemix.net -n app001
 ## 권한 오류로 인해 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 없음
 {: #ts_vcap}
 
-사용자 앱에서 서비스 신임 정보가 하드 코딩된 경우 사용자 앱이 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스하려 하면 권한 오류가 발생합니다.
+사용자 앱에서 서비스 인증 정보가 하드 코딩된 경우 사용자 앱이 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스하려 하면 권한 오류가 발생합니다.
 
 {{site.data.keyword.Bluemix_notm}} 서비스와 통신하도록 사용자 앱을 구성한 후에는 앱을 {{site.data.keyword.Bluemix_notm}}에 배치하십시오. 그러나 앱을 사용하여 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수는 없으며 권한 오류가 수신됩니다.
 {: tsSymptoms}
 
-앱에 하드 코딩된 신임 정보가 올바르지 않습니다. 서비스가 다시 작성될 때마다 이에 액세스하기 위한 신임 정보가 변경됩니다.
+앱에 하드 코딩된 인증 정보가 올바르지 않습니다. 서비스가 다시 작성될 때마다 이에 액세스하기 위한 인증 정보가 변경됩니다.
 {: tsCauses}
 
-앱에서 신임 정보를 하드 코딩하는 대신 VCAP_SERVICES 환경 변수의 연결 매개변수를 사용하십시오. VCAP_SERVICES 환경 변수를 통해 연결 매개변수를 사용하는 메소드는 프로그램 언어마다 다릅니다. 예를 들어, Node.js 앱의 경우에는 다음 명령을 사용할 수 있습니다.
+앱에서 인증 정보를 하드 코딩하는 대신 VCAP_SERVICES 환경 변수의 연결 매개변수를 사용하십시오. VCAP_SERVICES 환경 변수를 통해 연결 매개변수를 사용하는 메소드는 프로그램 언어마다 다릅니다. 예를 들어, Node.js 앱의 경우에는 다음 명령을 사용할 수 있습니다.
 {: tsResolve}
 
 ```
@@ -301,7 +301,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
 ## Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없음
 {: #ts_push}
 
-Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우 임시 해결책으로 써드파티 서비스를 사용합니다.
+Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우 임시 해결책으로 서드파티 서비스를 사용합니다.
 
  {{site.data.keyword.Bluemix_notm}} 앱에 대해 {{site.data.keyword.mobilepushshort}} 서비스를 바인드하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
@@ -309,13 +309,13 @@ Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.dat
 IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
-임시 해결책으로 GCM 서비스에 의존하지 않는 써드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
+임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
 {: tsResolve}
 
 ## 조직의 서비스 한계를 초과함
 {: #ts_servicelimit}
 
-라이트 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
+Lite 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
 
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
@@ -339,12 +339,12 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 	  4. `cf delete-service <service_instance_name>`.
 	  5. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`.
 
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
 
 ## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
 {: #ts_executable}
 
-실행 파일이 다른 환경에서 개발되고 빌드된 경우 {{site.data.keyword.Bluemix_notm}}에서 해당 실행 파일을 실행하지 못할 수 있습니다. 
+실행 파일이 다른 환경에서 개발되고 빌드된 경우 {{site.data.keyword.Bluemix_notm}}에서 해당 실행 파일을 실행하지 못할 수 있습니다.
 
 다른 환경에서 실행 파일을 개발하고 빌드한 경우 {{site.data.keyword.Bluemix_notm}}에서 이 실행 파일을 실행할 수 없습니다.
 {: tsSymptoms}
@@ -366,20 +366,20 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-라이트 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. 라이트 계정의 최대 메모리 할당량은 256MB이며 청구 가능 계정으로 업그레이드해야만 늘릴 수 있습니다.
+Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. Lite 계정의 최대 메모리 할당량은 256MB이며 청구 가능 계정으로 업그레이드해야만 늘릴 수 있습니다.
 
 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
 
-이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. 라이트 계정의 최대 메모리 할당량은 256MB입니다.
+이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. Lite 계정의 최대 메모리 할당량은 256MB입니다.
 {: tsCauses}
 
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve}
 
-  * 계정의 메모리 할당량을 늘리려면 라이트 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
+  * 계정의 메모리 할당량을 늘리려면 Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
   * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 `cf` 명령행 인터페이스를 사용하십시오.
 
     {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.

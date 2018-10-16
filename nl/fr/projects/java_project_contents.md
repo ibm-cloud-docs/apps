@@ -1,8 +1,8 @@
----
+﻿---
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -59,9 +59,9 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans une 
 | `./chart/<projectname>/templates/deployment.yaml` | Modèle de déploiement |
 | `./chart/<projectname>/templates/hpa.yaml` | Modèle HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modèle de service |
-{: caption="Tableau 4. Contenu du répertoire ./chart/<projectname/templates/ généré dans une application Java Spring" caption-side="top"}>
+{: caption="Tableau 4. Contenu du répertoire ./chart/<projectname>/templates/ généré dans une application Java Spring" caption-side="top"}
 
-| Répertoire  `./manifests/` | Description |
+| Répertoire `./manifests/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Fichier yaml de service et de déploiement Kubernetes |
 {: caption="Tableau 5. Contenu du répertoire ./manifests/ généré dans une application Java Spring" caption-side="top"}
@@ -77,7 +77,7 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans une 
 | cli-config.yml | Options de configuration d'interface de ligne de commande |
 | manifest.yml | Fichier de déploiement Cloud Foundry |
 | Dockerfile | Fichier Dockerfile pour les commandes `ibmcloud dev run`, `ibmcloud dev deploy` et `docker` |
-| Dockerfile-tools | Fichier Dockerfile pour les commandes `ibmcloud dev build` et `ibmcloud dev test` |
+| `Dockerfile-tools` | Fichier Dockerfile pour les commandes `ibmcloud dev build` et `ibmcloud dev test` |
 | LICENSE | Fichier de licence |
 | README.md | Description d'application |
 {: caption="Tableau 6. Contenu du répertoire racine généré dans une application Java Liberty" caption-side="top"}
@@ -111,9 +111,9 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans une 
 | `./chart/<projectname>/templates/deployment.yaml` | Modèle de déploiement |
 | `./chart/<projectname>/templates/hpa.yaml` | Modèle HPA |
 | `./chart/<projectname>/templates/service.yaml` | Modèle de service |
-{: caption="Tableau 9. Contenu du répertoire ./chart/<projectname/ généré dans une application Java Spring" caption-side="top"}>
+{: caption="Tableau 9. Contenu du répertoire ./chart/<projectname>/ généré dans une application Java Spring" caption-side="top"}
 
 | Répertoire  `./manifests/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Fichier yaml de service et de déploiement Kubernetes |
-{: caption="Tableau 10. Tableau 5. Contenu du répertoire ./manifests/ généré dans une application Java Liberty" caption-side="top"}
+{: caption="Tableau 10. Contenu du répertoire ./manifests/ généré dans une application Java Liberty" caption-side="top"}

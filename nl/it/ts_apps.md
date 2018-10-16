@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Risoluzione dei problemi relativi alla gestione delle applicazioni
+# Risoluzione dei problemi relativi alla creazione delle applicazioni
 {: #managingapps}
 
-I problemi generali con la gestione delle applicazioni potrebbero includere applicazioni che non possono essere aggiornate o caratteri a doppio byte che non vengono visualizzati. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
+I problemi generali con la creazione delle applicazioni potrebbero includere applicazioni che non possono essere aggiornate o caratteri a doppio byte che non vengono visualizzati. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {:shortdesc}
 
 ## Non hai salvato delle modifiche
@@ -31,7 +31,7 @@ Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potr
 Quanto tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, continui a visualizzare il seguente messaggio di errore:
 {: tsSymptoms}
 
-`Sono presenti modifiche non salvate nella pagina nomeapplicazione. Salva o annulla le modifiche.`
+`You have unsaved changes. Are you sure you want to leave this page?`
 
 Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore ti richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina.
 {: tsCauses}
@@ -56,7 +56,7 @@ Puoi utilizzare un provider DNS che supporti il failover intelligente tra più i
 Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.Bluemix_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico di una regione {{site.data.keyword.Bluemix_notm}}, utilizza il comando `nslookup`. Ad esempio, puoi immettere il seguente comando in una finestra della riga di comando.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## Impossibile attivare la modalità di debug nelle applicazioni

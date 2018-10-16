@@ -14,7 +14,7 @@ Création d'applications
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Développement d'applications
+    Création d'applications
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md

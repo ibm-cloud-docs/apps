@@ -14,12 +14,13 @@
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    アプリの開発
+    アプリの作成
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
+        create-deploy-cli.md
         deploying/functions.md
 
     {: .topicgroup}

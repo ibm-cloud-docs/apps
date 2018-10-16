@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ Le tableau suivant répertorie les répertoires et les fichiers couramment inclu
 | cli-config.yml | Options de configuration d'interface de ligne de commande |
 | manifest.yml | Fichier de déploiement Cloud Foundry |
 | Dockerfile | Fichier Dockerfile pour les commandes `ibmcloud dev run`, `ibmcloud dev deploy` et `docker` |
-| Dockerfile-tools | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
+| `Dockerfile-tools` | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
 | LICENSE | Fichier de licence |
 | README.md | Description d'application |
 {: caption="Tableau 1. Contenu du répertoire racine généré dans une application Python" caption-side="top"}

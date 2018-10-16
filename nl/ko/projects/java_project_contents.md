@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -52,14 +52,14 @@ Java 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix
 |toolchain.yml |IBM Cloud 도구 체인 정의 |
 {: caption="표 3. 생성된 Java Spring 앱 ./.bluemix/ 디렉토리의 컨텐츠" caption-side="top"}
 
-|`./chart/<projectname>/` 디렉토리 |설명 |
+| `./chart/<projectname>/` 디렉토리 |설명 |
 |:------------------------------------------------|:------------------------------------------|
-|`./chart/<projectname>/Chart.yaml` |Helm 차트 |
-|`./chart/<projectname>/values.yaml` |Helm 차트 값 |
-|`./chart/<projectname>/templates/deployment.yaml` |배치 템플리트 |
-|`./chart/<projectname>/templates/hpa.yaml` |HPA 템플리트 |
-|`./chart/<projectname>/templates/service.yaml` |서비스 템플리트 |
-{: caption="표 4. 생성된 Java Spring 앱 ./chart/<projectname/templates/ 디렉토리의 컨텐츠" caption-side="top"}
+| `./chart/<projectname>/Chart.yaml` |Helm 차트 |
+| `./chart/<projectname>/values.yaml` |Helm 차트 값 |
+| `./chart/<projectname>/templates/deployment.yaml` |배치 템플리트 |
+| `./chart/<projectname>/templates/hpa.yaml` |HPA 템플리트 |
+| `./chart/<projectname>/templates/service.yaml` |서비스 템플리트 |
+{: caption="표 4. 생성된 Java Spring 앱 ./chart/<projectname>/templates/ 디렉토리의 컨텐츠" caption-side="top"}
 
 |`./manifests/` 디렉토리 |설명 |
 |:------------------------------------------------|:------------------------------------------|
@@ -77,7 +77,7 @@ Java 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix
 |cli-config.yml |CLI 구성 옵션 |
 |manifest.yml |Cloud Foundry 배치 파일 |
 |Dockerfile |`ibmcloud dev run`, `ibmcloud dev deploy` 및 `docker` 명령에 대한 Dockerfile |
-|Dockerfile-tools |`ibmcloud dev build` 및 `ibmcloud dev test` 명령에 대한 Dockerfile |
+|`Dockerfile-tools` |`ibmcloud dev build` 및 `ibmcloud dev test` 명령에 대한 Dockerfile |
 |LICENSE |라이센스 파일 |
 |README.md |앱 설명 |
 {: caption="표 6. 생성된 Java Liberty 앱 루트 디렉토리의 컨텐츠" caption-side="top"}
@@ -95,13 +95,13 @@ Java 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix
 |`./src/main/test/it/HealthEndpointTest.java` |테스트 |
 {: caption="표 7. 생성된 Java Liberty 앱 ./src/main/ 디렉토리의 컨텐츠" caption-side="top"}
 
-|`./.bluemix/` 디렉토리 |설명 |
+| `./.bluemix/` 디렉토리 |설명 |
 |:------------------------------------------------|:------------------------------------------|
-|container_build.sh |컨테이너 빌드 스크립트 |
-|deploy.json |배치 정보 |
-|kube_deploy.sh |Kubernetes 배치 스크립트 |
-|pipeline.yml |IBM Cloud 파이프라인 정의 |
-|toolchain.yml |IBM Cloud 도구 체인 정의 |
+| container_build.sh |컨테이너 빌드 스크립트 |
+| deploy.json |배치 정보 |
+| kube_deploy.sh |Kubernetes 배치 스크립트 |
+| pipeline.yml |IBM Cloud 파이프라인 정의 |
+| toolchain.yml |IBM Cloud 도구 체인 정의 |
 {: caption="표 8. 생성된 Java Liberty 앱 ./bluemix/ 디렉토리의 컨텐츠" caption-side="top"}
 
 |`./chart/<projectname>/` 디렉토리 |설명 |
@@ -111,7 +111,7 @@ Java 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluemix
 |`./chart/<projectname>/templates/deployment.yaml` |배치 템플리트 |
 |`./chart/<projectname>/templates/hpa.yaml` |HPA 템플리트 |
 |`./chart/<projectname>/templates/service.yaml` |서비스 템플리트 |
-{: caption="표 9. 생성된 Java Liberty 앱 ./chart/<projectname/ 디렉토리의 컨텐츠" caption-side="top"}
+{: caption="표 9. 생성된 Java Liberty 앱 ./chart/<projectname>/ 디렉토리의 컨텐츠" caption-side="top"}
 
 |`./manifests/` 디렉토리 |설명 |
 |:------------------------------------------------|:------------------------------------------|

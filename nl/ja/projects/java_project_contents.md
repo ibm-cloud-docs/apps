@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -59,7 +59,7 @@ lastupdated: "2018-05-22"
 | `./chart/<projectname>/templates/deployment.yaml` | デプロイメント・テンプレート |
 | `./chart/<projectname>/templates/hpa.yaml` | HPA テンプレート |
 | `./chart/<projectname>/templates/service.yaml` | サービス・テンプレート |
-{: caption="表 4. 生成された Java Spring アプリの ./chart/<projectname/templates/ ディレクトリーの内容" caption-side="top"}>
+{: caption="表 4. 生成された Java Spring アプリの ./chart/<projectname>/templates/ ディレクトリーの内容" caption-side="top"}>
 
 | `./manifests/` ディレクトリー | 説明 |
 |:------------------------------------------------|:------------------------------------------|
@@ -77,7 +77,7 @@ lastupdated: "2018-05-22"
 | cli-config.yml | CLI 構成オプション |
 | manifest.yml | Cloud Foundry デプロイメント・ファイル |
 | Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
-| Dockerfile-tools | コマンド `ibmcloud dev build`、`ibmcloud dev test` の Dockerfile |
+| `Dockerfile-tools` | コマンド `ibmcloud dev build`、`ibmcloud dev test` の Dockerfile |
 | LICENSE | ライセンス・ファイル |
 | README.md | アプリの説明 |
 {: caption="表 6. 生成された Java Liberty アプリのルート・ディレクトリーの内容" caption-side="top"}
@@ -111,7 +111,7 @@ lastupdated: "2018-05-22"
 | `./chart/<projectname>/templates/deployment.yaml` | デプロイメント・テンプレート |
 | `./chart/<projectname>/templates/hpa.yaml` | HPA テンプレート |
 | `./chart/<projectname>/templates/service.yaml` | サービス・テンプレート |
-{: caption="表 9. 生成された Java Liberty アプリの ./chart/<projectname/ ディレクトリーの内容" caption-side="top"}>
+{: caption="表 9. 生成された Java Liberty アプリの ./chart/<projectname>/ ディレクトリーの内容" caption-side="top"}>
 
 | `./manifests/` ディレクトリー | 説明 |
 |:------------------------------------------------|:------------------------------------------|

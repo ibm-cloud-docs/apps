@@ -3,7 +3,7 @@ copyright:
 
   years: 2018
 
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-08"
 
 ---
 
@@ -36,15 +36,14 @@ Lorsque vous créez un kit de démarrage qui utilise {{site.data.keyword.cloud_n
 
 L'option de serveur virtuel inclut plusieurs phases. Tout d'abord, le code d'application est préparé et stocké dans un référentiel Git GITLab et le code source crée une chaîne d'outils avec un pipeline. Ce dernier est conçu pour générer le code et regrouper ce dernier en utilisant le format du gestionnaire de package Debian. Terraform met ensuite à disposition une instance virtuelle. Pour finir, l'application est déployée, installée et démarrée dans l'image virtuelle en cours d'exécution et son intégrité est validée.
 
-Une erreur survient lors de la première utilisation du pipeline car un ensemble de propriétés de compte utilisateur doit être manuellement configuré. Pour des raisons de sécurité, il n'est pas possible de transmettre ces propriétés dans la chaîne d'outils qui utilise le code source GIT. Vous devez configurer ces valeurs manuellement pour que la chaîne d'outils puisse être exécutée.
+Le pipeline utilise un ensemble de propriétés de compte utilisateur et une nouvelle paire de clés SSH à déployer dans l'infrastructure. Ces propriétés sont automatiquement transmises à la chaîne d'outils, mais ne sont pas stockées dans le code source GIT pour des raisons de sécurité. 
 
-Pour accéder à la vue des propriétés d'environnement et activer votre pipeline avec vos propriétés de compte utilisateur, procédez comme suit.
+Pour afficher ces propriétés d'environnement, procédez comme suit. Consultez le tableau pour connaître les propriétés disponibles. 
 
 1. Sur la page Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
 2. Cliquez sur la vignette **Delivery Pipeline**.
 3. Cliquez sur l'icône **Configurer l'étape** puis cliquez sur **Configurer l'étape** lors de l'étape de génération.
 4. Cliquez sur l'onglet **Propriétés d'environnement** pour afficher les propriétés.
-5. Modifiez ces propriétés dans l'onglet Propriétés d'environnement pour que l'exécution de la chaîne d'outils s'effectue correctement.
 
 | Propriété   | Description   |
 |---|---|
@@ -58,29 +57,29 @@ Pour accéder à la vue des propriétés d'environnement et activer votre pipeli
 | `GIT_PASSWORD` | Si vous définissez l'[état Terraform](#tform-state) afin de stocker l'état de la commande apply, le mot de passe GITLab est requis. |
 {: caption="Tableau 1. Variables d'environnement à changer pour l'activation" caption-side="top"}
 
-### Extraction de la clé d'API d'infrastructure
+#### Clé d'API de l'infrastructure
 {: #iaas-key}
 
-Terraform requiert une clé d'API d'infrastructure pour pouvoir créer des ressources d'infrastructure. Procédez comme suit pour extraire une clé d'infrastructure.
+Terraform requiert une clé d'API d'infrastructure pour pouvoir créer des ressources d'infrastructure. Elle est obtenue automatiquement lors du déploiement. Procédez comme suit pour extraire une clé manuellement. 
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de l'infrastructure. Vous pouvez également cliquer sur **Menu** > **Infrastructure** > **Compte** > **Liste d'utilisateurs**.
 2. Recherchez les détails utilisateur qui créent la chaîne d'outils puis cliquez sur `Afficher` dans la colonne de clé d'API ou cliquez sur `Générer`. Quelle que soit la méthode choisie, la clé d'API s'affiche dans une fenêtre.
 3. Copiez la clé d'API et remplacez la valeur dans la configuration de chaîne d'outils `TF_VAR_ibm_sl_api_key`.
 
-### Extraction du nom d'utilisateur de l'infrastructure
+#### Nom d'utilisateur de l'infrastructure
 {: #user-key}
 
-Pour extraire le nom d'utilisateur de l'infrastructure, procédez comme suit.
+Le nom d'utilisateur de l'infrastructure est également obtenu et utilisé automatiquement lors du déploiement. Procédez comme suit pour extraire une clé manuellement. 
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de l'infrastructure. Vous pouvez également cliquer sur **Menu** > **Infrastructure** > **Compte** > **Liste d'utilisateurs**.
 2. Cliquez sur l'utilisateur devant créer la chaîne d'outils.
 3. Faites défiler jusqu'à la propriété de nom d'utilisateur VPN****.
 4. Coupez et collez cette valeur et remplacez la configuration de chaîne d'outils `TF_VAR_ibm_sl_username`.
 
-### Extraction de la clé d'API de plateforme
+#### Clé d'API de la plateforme
 {: #platform-key}
 
-Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API de plateforme est requise. Procédez comme suit pour extraire une clé de plateforme.
+Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API de plateforme est automatiquement obtenue et stockée sous forme de variable d'environnement dans votre pipeline. Procédez comme suit pour extraire une clé de plateforme manuellement.
 
 1. Sur la page [Clés d'API ![Icône de lien externe](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), cliquez sur **Gérer** > **Sécurité** > **Clés d'API de la plateforme**.
 2. Cliquez sur **Créer**.
@@ -89,11 +88,12 @@ Pour créer des services de niveau de plateforme dans Terraform (bases de donné
 5. Copiez et remplacez la clé dans le tableau de bord ou téléchargez-la.
 6. Remplacez la valeur de la configuration de la chaîne d'outils `TF_VAR_ibm_cloud_api_key` par la valeur générée.
 
-### Génération de la clé publique et de la clé privée
+#### Clés publiques et privées
 {: #public-key}
 
-Pour que la chaîne d'outils puisse installer le package Debian dans l'instance de serveur virtuel, procédez comme suit.
+Pour que la chaîne d'outils puisse installer le package Debian dans l'instance de serveur virtuel, l'infrastructure de déploiement génère automatiquement une paie de clés SSH privée et publique afin de transférer le contenu GIT vers l'instance. 
 
+Pour exécuter cette opération manuellement :
 1. Sur votre client, suivez les instructions présentées ci-dessous pour créer une [paire clé publique/clé privée ![Icône de lien externe](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
 2. Accédez à la [vue des clés SSH de l'infrastructure ![Icône de lien externe](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. Vous pouvez également cliquer sur **Menu** > **Infrastructure** > **Périphériques** > **Gérer** > **Clés SSH**.
 3. Cliquez sur **Ajouter**.
@@ -108,12 +108,12 @@ La clé privée doit se trouver sur une seule ligne. Remplacez les nouvelles lig
 ```
 {: screen}
 
-### Activation de l'état Terraform
+#### Activation de l'état Terraform
 {: #tform-state}
 
-Terraform prend en charge le stockage de l'état de la commande `apply` Terraform. Ce fichier d'état exécute une deuxième fois la commande `apply` afin de déterminer si un des fichiers de configuration Terraform a été modifié. Vous pouvez stocker l'état dans le référentiel GIT où l'application et la configuration sont gérées.
+Terraform prend en charge le stockage de l'état de la commande `apply` Terraform. Ce fichier d'état exécute une deuxième fois la commande `apply` afin de déterminer si un des fichiers de configuration Terraform a été modifié. L'état est stocké dans le référentiel GIT où l'application et la configuration sont automatiquement définies. 
 
-Pour permettre le stockage d'état, configurez les propriétés `GIT_USER` et `GIT_PASSWORD` dans les variables d'environnement de la chaîne d'outils. Pour extraire les valeurs, procédez comme suit :
+Pour permettre le stockage d'état, `GIT_USER` et `GIT_PASSWORD` sont automatiquement configurés en tant que propriétés dans les variables d'environnement de la chaîne d'outils. Si vous devez accéder à ces valeurs, procédez comme suit :
 
 1. Dans la vue Chaînes d'outils, accédez au référentiel GIT à partir de l'outil de code.
 2. Dans GIT Lab, cliquez sur l'icône **Profil** puis sur **Paramètres**.
@@ -176,7 +176,7 @@ variable "datacenter" {
 
 La chaîne d'outils affiche l'infrastructure et le déploiement d'application dans un pipeline simple. Placez l'infrastructure sous forme de partie de code dans un pipeline et le déploiement d'application dans un autre.
 
-La chaîne d'outils est composée de cinq étapes. 
+La chaîne d'outils est composée de cinq étapes.
 
 1. L'étape de génération clone le référentiel GIT et place le code dans un package Debian.
 2. L'étape de planification Terraform prépare un plan Terraform.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -51,7 +51,7 @@ seguente comando:
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. Aggiungi la rotta con il dominio personalizzato a un'applicazione. Per le applicazioni CF, immetti il seguente comando:
+2. Aggiungi la rotta con il dominio personalizzato a un'applicazione. Per le applicazioni Cloud Foundry, immetti il seguente comando:
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

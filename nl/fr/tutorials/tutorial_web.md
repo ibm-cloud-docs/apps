@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -21,7 +21,7 @@ lastupdated: "2018-08-21"
 ## Etape 1. Installer les outils
 {: #install-tools}
 
-Installez les [outils de développement ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window}.
+Installez les [outils de développement](/docs/cli/index.html).
 
 Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 

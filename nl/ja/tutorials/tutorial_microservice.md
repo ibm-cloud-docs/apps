@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-10"
 
 ---
 
@@ -21,7 +21,7 @@ Microservice 基本スターターからアプリを作成できます。 これ
 ## ステップ 1. ツールのインストール
 {: #install-tools}
 
-[開発者ツール ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/IBM-Bluemix/ibm-cloud-developer-tools){: new_window} をインストールします。
+[開発者ツール](/docs/cli/index.html)をインストールします。
 
 Docker は開発者ツールの一部としてインストールされます。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。 Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 

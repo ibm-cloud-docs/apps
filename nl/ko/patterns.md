@@ -31,7 +31,7 @@ lastupdated: "2018-07-22"
 ## 프론트 엔드를 위한 백엔드
 {: #bff}
 
-프론트 엔드를 위한 백엔드(BFF) 패턴은 모바일 또는 웹과 같은 특정 앱 채널에 대한 사용자 기대를 만족시키는 방식으로 비즈니스 데이터 및 서비스를 노출하는 백엔드 코드를 작성합니다. 예를 들면, 모바일 디바이스의 사용자는 음성 제어를 사용하려고 하고 웹 브라우저 사용자는 이동 및 클릭을 선호합니다. 사용자는 [{{site.data.keyword.conversationfull}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/watson/developercloud/conversation.html) 등의 서비스를 포함하는 모바일용 BFF와 더 정교한 사용자 인터페이스를 갖춘 웹용 BFF의 두 BFF를 빌드할 수 있습니다.
+프론트 엔드를 위한 백엔드(BFF) 패턴은 모바일 또는 웹과 같은 특정 앱 채널에 대한 사용자 기대를 만족시키는 방식으로 비즈니스 데이터 및 서비스를 노출하는 백엔드 코드를 작성합니다. 예를 들면, 모바일 디바이스의 사용자는 음성 제어를 사용하려고 하고 웹 브라우저 사용자는 이동 및 클릭을 선호합니다. 사용자는 [{{site.data.keyword.conversationfull}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/watson/ai-assistant/) 등의 서비스를 포함하는 모바일용 BFF와 더 정교한 사용자 인터페이스를 갖춘 웹용 BFF의 두 BFF를 빌드할 수 있습니다.
 
 {{site.data.keyword.cloud_notm}}에서는 폴리글롯 프로그래밍 접근법을 사용하여 BFF를 빌드할 수 있습니다. 사용자는 Node.js, Swift, Java 또는 Python을 사용하고 이를 컨테이너 서비스를 사용하거나 서버리스 기능을 사용하는 패턴에서 실행할 수 있습니다.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -48,7 +48,7 @@ lastupdated: "2018-07-02"
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. カスタム・ドメインを使用した経路をアプリケーションに追加します。 CF アプリの場合、次のコマンドを入力します。
+2. カスタム・ドメインを使用した経路をアプリケーションに追加します。 Cloud Foundry アプリの場合、次のコマンドを入力します。
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

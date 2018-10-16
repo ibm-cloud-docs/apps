@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 서버리스 앱 개발
+# 서버리스 앱 작성
 {: #serverless}
 
 서버리스 개발을 위해 IBM의 FaaS(Functions as a Service) 오퍼링인 {{site.data.keyword.openwhisk}}를 사용할 수 있습니다. 서버를 프로비저닝하거나 관리하지 않고 HTTP를 통해 웹 또는 모바일 앱의 직접 호출이나 이벤트에 응답하여 {{site.data.keyword.openwhisk_short}}가 포함된 애플리케이션 로직을 실행할 수 있습니다. {{site.data.keyword.openwhisk_short}}가 Auto-Scaling, 가용성 관리 및 유지보수와 같은 시스템 관리를 수행함에 따라 사용자는 개발자로서 애플리케이션 로직 작성에 집중할 수 있습니다.

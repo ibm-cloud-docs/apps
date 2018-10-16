@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-27"
 
 ---
 
@@ -49,7 +49,7 @@ Ajoutez la route avec le domaine personnalisé à une application.
    ibmcloud app domain-create <nom_organisation> mydomain
    ```
 
-2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications CF, entrez la commande suivante :
+2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications Cloud Foundry, entrez la commande suivante :
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name

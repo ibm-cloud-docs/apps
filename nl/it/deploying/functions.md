@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Sviluppo di applicazioni senza server
+# Creazione di applicazioni senza server
 {: #serverless}
 
 Per lo sviluppo senza server, puoi utilizzare l'offerta FaaS (Functions as a Service) di IBM, {{site.data.keyword.openwhisk}}. Puoi eseguire la logica dell'applicazione con {{site.data.keyword.openwhisk_short}} in risposta a eventi o chiamate dirette provenienti da applicazioni web o mobili su HTTP senza provisioning o gestione dei server. {{site.data.keyword.openwhisk_short}} effettua la gestione del sistema come il ridimensionamento automatico, la gestione della disponibilità e la manutenzione in modo che tu, come sviluppatore, possa concentrarti sulla scrittura della logica dell'applicazione.

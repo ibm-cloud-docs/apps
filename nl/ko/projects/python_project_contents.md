@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ Python 앱의 경우, 다음 정보는 일반적으로 {{site.data.keyword.Bluem
 |cli-config.yml |CLI 구성 옵션 |
 |manifest.yml |Cloud Foundry 배치 파일 |
 |Dockerfile |`ibmcloud dev run`, `ibmcloud dev deploy` 및 `docker` 명령에 대한 Dockerfile |
-|Dockerfile-tools |`ibmcloud dev build` 및 `ibmcloud dev test`에 대한 Dockerfile |
+|`Dockerfile-tools` |`ibmcloud dev build` 및 `ibmcloud dev test`에 대한 Dockerfile |
 |LICENSE |라이센스 파일 |
 |README.md |앱 설명 |
 {: caption="표 1. 생성된 Python 앱 루트 디렉토리의 컨텐츠" caption-side="top"}

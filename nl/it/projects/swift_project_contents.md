@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ La seguente tabella elenca le directory e i file comuni che sono inclusi in un'a
 
 | Directory root                                     | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| File di definizione dipendenza Swift |
-|cli-config.yml | Opzioni di configurazione della CLI |
-|manifest.yml | File di distribuzione Cloud Foundry |
-|Dockerfile | Dockerfile per i comandi `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-|Dockerfile-tools | Dockerfile per `ibmcloud dev build` e `ibmcloud dev test` |
+| Package.swift| File di definizione dipendenza Swift |
+| cli-config.yml | Opzioni di configurazione della CLI |
+| manifest.yml | File di distribuzione Cloud Foundry |
+| Dockerfile | Dockerfile per i comandi `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
+| `Dockerfile-tools` | Dockerfile per `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENSE | File di licenza |
-|README.md | Descrizione dell'applicazione |
+| README.md | Descrizione dell'applicazione |
 {: caption="Tabella 1. Contenuto della directory root di un'applicazione Swift generata" caption-side="top"}
 
 | Directory `./Sources/Application/` | Descrizione  |
@@ -43,19 +43,19 @@ La seguente tabella elenca le directory e i file comuni che sono inclusi in un'a
 | Directory `./Tests/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | `./Tests/LinuxMain.swift` | Programma di utilità per la verifica su Linux |
-| `./Tests/ApplicationTests>/RouteTests.swift` | File contenente gli scenari di test |
+| `./Tests/ApplicationTests>/RouteTests.swift` | File che include gli scenari di test |
 {: caption="Tabella 4. Contenuto della directory di test di un'applicazione Swift generata" caption-side="top"}
 
 | Directory `./.bluemix/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script di build del contenitore |
-| deploy.json | Informazioni sulla distribuzione|
+| deploy.json | Informazioni sulla distribuzione |
 | kube_deploy.sh | Script di distribuzione Kubernetes |
 | pipeline.yml | Definizione della pipeline IBM Cloud |
 | toolchain.yml | Definizione della toolchain IBM Cloud toolchain |
 {: caption="Tabella 5. Contenuto della directory bluemix di un'applicazione Swift generata" caption-side="top"}
 
-| Directory `./chart/<projectname>/` | Descrizione |
+| `./chart/<projectname>/` directory | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Grafico Helm |
 | `./chart/<projectname>/values.yaml` | Valori grafico Helm |
@@ -66,5 +66,5 @@ La seguente tabella elenca le directory e i file comuni che sono inclusi in un'a
 | Directory `./manifests/` | Descrizione |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Yaml di distribuzione e del servizio Kubernetes |
-{: caption="Tabella 7. Contenuto della directory manifest di un'applicazione Swift generata" caption-side="top"}
+{: caption="Tabella 7. Contenuto della directory manifest generata" caption-side="top"}
 

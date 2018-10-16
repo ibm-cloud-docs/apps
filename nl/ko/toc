@@ -14,7 +14,7 @@
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    앱 개발
+    앱 작성
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md

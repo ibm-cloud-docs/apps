@@ -31,7 +31,7 @@ Web アプリ・パターンは、HTML、JavaScript、スタイルシートな�
 ## Backend-for-frontend
 {: #bff}
 
-Backend-for-frontend パターン (BFF) は、モバイルや Web といった特定のアプリ・チャネルに、ユーザーの期待に沿った方法でビジネス・データとサービスを公開する、バックエンド・コードの作成を支援します。 例えば、モバイル・デバイスのユーザーは音声制御を使用する一方、Web ブラウザーのユーザーはポイント・アンド・クリックを選びます。 2 つの BFF をビルドできます。1 つは [{{site.data.keyword.conversationfull}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/developercloud/conversation.html) のようなサービスを含むモバイル用で、1 つはより洗練されたユーザー・インターフェースを持つ Web 用です。
+Backend-for-frontend パターン (BFF) は、モバイルや Web といった特定のアプリ・チャネルに、ユーザーの期待に沿った方法でビジネス・データとサービスを公開する、バックエンド・コードの作成を支援します。 例えば、モバイル・デバイスのユーザーは音声制御を使用する一方、Web ブラウザーのユーザーはポイント・アンド・クリックを選びます。 2 つの BFF をビルドできます。1 つは [{{site.data.keyword.conversationfull}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/ai-assistant/) のようなサービスを含むモバイル用で、1 つはより洗練されたユーザー・インターフェースを持つ Web 用です。
 
 {{site.data.keyword.cloud_notm}} では、多言語プログラミング・アプローチを使用して、BFF をビルドできます。 Node.js、Swift、Java、または Python を使用でき、コンテナー・サービスを使用したパターンで実行したり、サーバーレス機能を使用したりできます。
 
@@ -51,7 +51,7 @@ BFF は、通常、REST パターンを使用して API を公開しますが、
 
 マイクロサービス・アプリは、基本的なヘルス・エンドポイントや REST API など、バックエンド・マイクロサービスをビルドするための基盤を提供します。 生成されたアプリには、マイクロサービス自体と、接続されているクラウド・サービスの両方に必要なすべての依存関係が含まれています。
 
-ご使用の言語とフレームワーク要件に合ったマイクロサービス・スターター・キットを選択してください。[{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://console.bluemix.net/developer/appservice/dashboard)で、マイクロサービス・パターンのスターター・キットを見つけることができます。
+ご使用の言語とフレームワーク要件に合ったマイクロサービス・スターター・キットを選択してください。 [{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://console.bluemix.net/developer/appservice/dashboard)で、マイクロサービス・パターンのスターター・キットを見つけることができます。
 
 ## モバイル
 {: #mobile}

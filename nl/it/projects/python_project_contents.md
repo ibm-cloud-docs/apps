@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -25,7 +25,7 @@ La seguente tabella elenca le directory e i file comuni che sono inclusi in un'a
 | cli-config.yml | Opzioni di configurazione della CLI |
 | manifest.yml | File di distribuzione Cloud Foundry |
 | Dockerfile | Dockerfile per i comandi `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
-| Dockerfile-tools | Dockerfile per `ibmcloud dev build` e `ibmcloud dev test` |
+| `Dockerfile-tools` | Dockerfile per `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENSE | File di licenza |
 | README.md | Descrizione dell'applicazione |
 {: caption="Tabella 1. Contenuto della directory root di un'applicazione Python generata" caption-side="top"}

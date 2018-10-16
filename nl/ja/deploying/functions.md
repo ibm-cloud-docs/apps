@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# サーバーレス・アプリの開発
+# サーバーレス・アプリの作成
 {: #serverless}
 
 サーバーレス開発では、IBM の Functions as a Service (FaaS) オファリングである {{site.data.keyword.openwhisk}} を使用できます。 サーバーをプロビジョンしたり管理したりすることなく、HTTP を介した Web アプリやモバイル・アプリからのイベントまたは直接呼び出しに応答して、{{site.data.keyword.openwhisk_short}} を使用してアプリケーション・ロジックを実行できます。{{site.data.keyword.openwhisk_short}} は、開発者がアプリケーション・ロジックの作成に集中できるように、自動スケーリング、可用性管理、保守などのシステム管理を実行します。

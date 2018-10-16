@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Développement d'applications sans serveur
+# Création d'applications sans serveur
 {: #serverless}
 
 Pour le développement sans serveur, vous pouvez utiliser les fonctions d'IBM en tant qu'offre de service (FaaS), {{site.data.keyword.openwhisk}}. Vous pouvez exécuter la logique d'application avec {{site.data.keyword.openwhisk_short}} en réponse aux événements ou aux appels directs effectués par des applications Web ou mobiles via HTTP sans mise à disposition ou gestion des serveurs. {{site.data.keyword.openwhisk_short}} effectue l'administration système (mise à l'échelle automatique, gestion de la disponibilité et maintenance, par exemple) afin que vous puissiez, en tant que développeur, vous concentrer sur la conception de la logique d'application.

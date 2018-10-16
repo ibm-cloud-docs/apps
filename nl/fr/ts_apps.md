@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Traitement des incidents liés à la gestion des applications
+# Traitement des incidents liés à la création d'applications
 {: #managingapps}
 
-Des problèmes d'ordre général liés à la gestion des applications peuvent survenir, par exemple, les applications ne peuvent pas être mises à jour ou les caractères codés sur deux octets ne sont pas affichés. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
+Des problèmes d'ordre général liés à la création d'applications peuvent survenir, par exemple, les applications ne peuvent pas être mises à jour ou les caractères codés sur deux octets ne sont pas affichés. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {:shortdesc}
 
 ## Des modifications n'ont pas été sauvegardées
@@ -31,7 +31,7 @@ Lorsque vous cliquez sur des éléments de la page des détails de l'application
 Lorsque vous essayez de vérifier votre application ou vos services sur la page des détails de l'application, vous obtenez toujours le message d'erreur suivant :
 {: tsSymptoms}
 
-`Des modifications n'ont pas été sauvegardées dans la page nom_appli. Sauvegardez ou annulez les modifications.`
+`Certaines modifications n'ont pas été enregistrées. Voulez-vous vraiment quitter cette page ?`
 
 Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOIRE** dans le panneau du contexte d'exécution, les valeurs changent. Ce comportement est normal. Toutefois, le message d'erreur vous invite à sauvegarder les paramètres de mémoire ou d'instance avant d'accéder à une autre page.
 {: tsCauses}
@@ -56,7 +56,7 @@ Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intel
 Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses IP publiques des régions {{site.data.keyword.Bluemix_notm}} dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.Bluemix_notm}}, utilisez la commande `nslookup`. Vous pouvez, par exemple, entrer la commande suivante dans une fenêtre de ligne de commande.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## Impossible de faire passer les applications en mode débogage
@@ -449,7 +449,7 @@ Il se peut que vous ne parveniez pas à localiser votre organisation dans {{site
 Vous pouvez vous connecter à la console {{site.data.keyword.Bluemix_notm}}, mais vous ne parvenez pas à envoyer vos applications par commande push à l'aide de l'interface de ligne de commande `cf` ou du plug-in Eclipse.
 {: tsSymptoms}
 
-Lorsque vous tentez d'envoyer une application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande `cf`, l'un des messages suivants suivants, qui spécifie le nom de l'organisation, s'affiche :
+Lorsque vous tentez d'envoyer une application par commande push à {{site.data.keyword.Bluemix_notm}} en utilisant l'interface de ligne de commande `cf`, l'un des messages suivants, qui spécifie le nom de l'organisation, s'affiche :
 
 `Erreur lors de la recherche de l'organisation`
 

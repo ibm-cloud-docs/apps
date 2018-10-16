@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,15 +18,15 @@ Swift アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれてい�
 
 以下の表に、生成される Swift アプリに含まれている一般的なディレクトリーとファイルをリストします。
 
-| ルート・ディレクトリー                          | 説明 |
+| ルート・ディレクトリー                                     | 説明 |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| Swift 依存関係定義ファイル |
-|cli-config.yml | CLI 構成オプション |
-|manifest.yml | Cloud Foundry デプロイメント・ファイル |
-|Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
-|Dockerfile-tools | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
+| Package.swift| Swift 依存関係定義ファイル |
+| cli-config.yml | CLI 構成オプション |
+| manifest.yml | Cloud Foundry デプロイメント・ファイル |
+| Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
+| `Dockerfile-tools` | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
 | LICENSE | ライセンス・ファイル |
-|README.md | アプリの説明 |
+| README.md | アプリの説明 |
 {: caption="表 1. 生成された Swift アプリのルート・ディレクトリーの内容" caption-side="top"}
 
 | `./Sources/Application/` ディレクトリー | 説明  |
@@ -43,7 +43,7 @@ Swift アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれてい�
 | `./Tests/` ディレクトリー | 説明 |
 |:------------------------------------------------|:------------------------------------------|
 | `./Tests/LinuxMain.swift` | Linux 上でテストするためのユーティリティー |
-| `./Tests/ApplicationTests>/RouteTests.swift` | 　テスト・ケースが含まれるファイル |
+| `./Tests/ApplicationTests>/RouteTests.swift` | テスト・ケースが含まれているファイル |
 {: caption="表 4. 生成された Swift アプリの tests ディレクトリーの内容" caption-side="top"}
 
 | `./.bluemix/` ディレクトリー | 説明 |
@@ -66,5 +66,5 @@ Swift アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれてい�
 | `./manifests/` ディレクトリー | 説明 |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | Kubernetes サービスおよびデプロイメント yaml |
-{: caption="表 7. 生成された Swift アプリの manifests ディレクトリーの内容" caption-side="top"}
+{: caption="表 7. 生成された manifests ディレクトリーの内容" caption-side="top"}
 
