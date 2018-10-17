@@ -11,7 +11,7 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Desarrollo de apps sin servidor
+# Creación de apps sin servidor
 {: #serverless}
 
 Para el desarrollo sin servidor, puede utilizar las funciones de IBM como una oferta de servicio (FaaS), {{site.data.keyword.openwhisk}}. Puede ejecutar la lógica de aplicación con {{site.data.keyword.openwhisk_short}} en respuesta a sucesos o invocaciones directas desde apps web o móviles a través de HTTP sin suministro ni gestión de servidores.{{site.data.keyword.openwhisk_short}} realiza la administración del sistema como escalado automático, gestión de disponibilidad y mantenimiento para que, como desarrollador, pueda centrarse en escribir la lógica de aplicación.

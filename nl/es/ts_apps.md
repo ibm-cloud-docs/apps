@@ -17,10 +17,10 @@ lastupdated: "2018-07-09"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Resolución de problemas de gestión de apps
+# Resolución de problemas de creación de apps
 {: #managingapps}
 
-Entre los problemas generales relacionados con la gestión de apps se pueden incluir las apps que no se pueden actualizar y los caracteres de doble byte que no se visualizan. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
+Entre los problemas generales relacionados con la creación de apps se pueden incluir las apps que no se pueden actualizar y los caracteres de doble byte que no se visualizan. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {:shortdesc}
 
 ## Hay cambios sin guardar
@@ -31,7 +31,7 @@ Cuando pulse sobre elementos en la página de detalles de apps, es posible que n
 Cuando intente comprobar la app o los servicios en la página de detalles de la app, seguirá recibiendo el siguiente mensaje de error:
 {: tsSymptoms}
 
-`Hay cambios sin guardar en la página app_name. Guarde o cancele los cambios.`
+`Tiene cambios sin guardar. ¿Está seguro de que desea abandonar esta página?`
 
 Cuando desplace el ratón sobre el campo **INSTANCIAS** o **CUOTA DE MEMORIA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es así por diseño; sin embargo, el mensaje de error le solicitará que guarde los valores de instancia o de memoria para poder ir a otra página.
 {: tsCauses}
@@ -56,7 +56,7 @@ Puede utilizar un proveedor de DNS que dé soporte a la migración tras error in
 Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.Bluemix_notm}} en la que se ejecutan sus apps. Para obtener la dirección IP pública de una región de {{site.data.keyword.Bluemix_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una línea de mandatos de línea de mandatos.
 
 ```
-nslookup stage1.mybluemix.net
+nslookup mybluemix.net
 ```
 
 ## No se pueden conmutar apps a la modalidad de depuración

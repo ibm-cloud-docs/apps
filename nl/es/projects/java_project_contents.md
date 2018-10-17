@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 
 ---
 
@@ -77,7 +77,7 @@ La tabla siguiente lista los directorios y archivos incluidos en una app Java Li
 | cli-config.yml | Opciones de configuración de CLI |
 | manifest.yml | Archivo de despliegue de Cloud Foundry |
 | Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
-| Dockerfile-tools | Dockerfile para mandatos `ibmcloud dev build` e `ibmcloud dev test` |
+| `Dockerfile-tools` | Dockerfile para mandatos `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENSE | Archivo de licencia |
 | README.md | Descripción de la app |
 {: caption="Tabla 6. Contenido de un directorio raíz de app Java Liberty generado" caption-side="top"}

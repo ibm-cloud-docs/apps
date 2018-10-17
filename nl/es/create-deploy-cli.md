@@ -17,7 +17,7 @@ lastupdated: "2018-10-02"
 # Creación y despliegue de apps utilizando la CLI
 {: #developing}
 
-Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix}} para crear y desplegar sus apps.
+Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.Bluemix}} para crear y desplegar su app.
 {:shortdesc}
 
 ## Antes de empezar

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-10-05"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ En la siguiente tabla se muestra una lista de archivos y directorios comunes que
 
 | Directorio Root                                     | Descripción |
 |:------------------------------------------------|:------------------------------------------|
-|Package.swift| Archivo de definición de dependencias de Swift |
-|cli-config.yml | Opciones de configuración de CLI |
-|manifest.yml | Archivo de despliegue de Cloud Foundry |
-|Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
-|Dockerfile-tools | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
+| Package.swift| Archivo de definición de dependencias de Swift |
+| cli-config.yml | Opciones de configuración de CLI |
+| manifest.yml | Archivo de despliegue de Cloud Foundry |
+| Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |
+| `Dockerfile-tools` | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
 | LICENSE | Archivo de licencia |
-|README.md | Descripción de la app |
+| README.md | Descripción de la app |
 {: caption="Tabla 1. Contenido de un directorio raíz de app Swift generado" caption-side="top"}
 
 | Directorio `./Sources/Application/` | Descripción  |
@@ -43,7 +43,7 @@ En la siguiente tabla se muestra una lista de archivos y directorios comunes que
 | Directorio `./Tests/` | Descripción |
 |:------------------------------------------------|:------------------------------------------|
 | `./Tests/LinuxMain.swift` | Programa de utilidad para la realización de pruebas en Linux |
-| `./Tests/ApplicationTests>/RouteTests.swift` | Archivos que contienen casos de prueba |
+| `./Tests/ApplicationTests>/RouteTests.swift` | Archivo que incluye casos de prueba |
 {: caption="Tabla 4. Contenido de un directorio de pruebas de app Swift generado" caption-side="top"}
 
 | Directorio `./.bluemix/` | Descripción |
@@ -66,5 +66,5 @@ En la siguiente tabla se muestra una lista de archivos y directorios comunes que
 | Directorio `./manifests/` | Descripción |
 |:------------------------------------------------|:------------------------------------------|
 | kube.deploy.yml | yaml de despliegue y servicio de Kubernetes |
-{: caption="Tabla 7. Contenido de un directorio de manifests de app Swift generado" caption-side="top"}
+{: caption="Tabla 7. Contenido de un directorio de manifests generado" caption-side="top"}
 

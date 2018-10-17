@@ -14,7 +14,7 @@ Creación de apps
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Desarrollo de apps
+    Creación de apps
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_custom.md
