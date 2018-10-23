@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,25 +151,25 @@ Complete the following steps to delete the unused route:
   1. Check whether the route belongs to the current space by entering the following command:
 
     ```
-    cf routes
+    ibmcloud cf routes
     ```
 
   2. If the route doesn't belong to the current space, switch to the space or org that it belongs to by entering the following command:
 
     ```
-    cf target -o org_name -s space_name
+    ibmcloud cf target -o org_name -s space_name
     ```
 
   3. Delete the app route by entering the following command:
 
     ```
-    cf delete-route domain_name -n host_name
+    ibmcloud cf delete-route domain_name -n host_name
     ```
 
   For example:
 
   ```
-  cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route mybluemix.net -n app001
   ```
 
 ## Can't retrieve spaces in the org
@@ -189,7 +189,7 @@ Ensure that you created a space in your current organization. To create a space,
 {: tsResolve}
 
 * From the menu bar, click **Manage > Account > Organizations**. Select the organization that you want to create the space in, and click **Create a Space**.
-* In the `cf` command line interface, type `cf create-space <space_name> -o <organization_name>`.
+* In the Cloud Foundry command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
@@ -292,9 +292,10 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
     ```
 	disk_quota: <disk_quota>
 	```
-  * Use the **-k** option with the `cf push` command when you push your app to {{site.data.keyword.Bluemix_notm}}:
-    ```
-	cf push appname -p app_path -k <disk_quota>
+  * Use the **-k** option with the `ibmcloud cf push` command when you push your app to {{site.data.keyword.Bluemix_notm}}:
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
@@ -334,9 +335,9 @@ Delete any services instances that aren't needed, or remove the limit on the num
 	  2. Click **Delete Service**. You are prompted to restage the app that the service instance was bound to.
 
     To use the command line interface to delete a service instance, complete the following steps:
-	  3. Unbind the service instance from an app by typing `cf unbind-service <appname> <service_instance_name>`.
-	  4. Delete the service instance by typing `cf delete-service <service_instance_name>`.
-	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to by typing `cf restage <appname>`.
+	  3. Unbind the service instance from an app. Enter `cf unbind-service <appname> <service_instance_name>`.
+	  4. Delete the service instance. Enter `cf delete-service <service_instance_name>`.
+	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to. Enter `cf restage <appname>`.
 
   * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
 
@@ -351,15 +352,16 @@ You can't run executables on {{site.data.keyword.Bluemix_notm}} when those execu
 If the content that you want to push to {{site.data.keyword.Bluemix_notm}} is already an executable, the content was previously built and doesn't need to be built on {{site.data.keyword.Bluemix_notm}}. In this case, no buildpack is required for the executable to be run on {{site.data.keyword.Bluemix_notm}}. You must explicitly indicate to {{site.data.keyword.Bluemix_notm}} that no buildpack is required.
 {: tsCauses}
 
-When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must specify a `null-buildpack`, which indicates that no buildpack is required. Specify a `null-buildpack` by using the **-b** option with the `cf push` command:
+When you push the executable to {{site.data.keyword.Bluemix_notm}}, you must specify a `null-buildpack`, which indicates that no buildpack is required. Specify a `null-buildpack` by using the **-b** option with the `ibmcloud cf push` command:
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <start_command> -b <null-buildpack>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 For example:
 ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## Org's memory limit is exceeded
@@ -379,27 +381,27 @@ You can either increase the memory quota of your account, or reduce the memory t
 {: tsResolve}
 
   * To increase the memory quota of your account, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
-  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the `cf` command line interface.
+  * To reduce the memory that your apps use, use either the {{site.data.keyword.Bluemix_notm}} console or the Cloud Foundry command line interface.
 
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
     1. Select your app from the dashboard. The app details page opens.
     2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
 
-    If you use the `cf` command line interface, complete the following steps:
+    If you use the command line interface, complete the following steps:
 
     1. Check how much memory is being used for your apps:
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  The `cf apps` command lists all the apps that you deployed in your current space. The status of each app is also displayed.
+	  The `ibmcloud cf list` command lists all the apps that you deployed in your current space. The status of each app is also displayed.
 
     2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
 
 	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. Restart your app for the changes to take effect.
@@ -419,7 +421,7 @@ You can manually restart the app by typing the following command in the command 
 {: tsResolve}
 
 ```
-cf push appname -p app_path
+ibmcloud cf push appname -p app_path
 ```
 
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures.
@@ -444,10 +446,10 @@ When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tool
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
 
-You can log in to the {{site.data.keyword.Bluemix_notm}} console successfully, but you can't push apps by using the `cf` command line interface or the Eclipse plug-in.
+You can log in to the {{site.data.keyword.Bluemix_notm}} console successfully, but you can't push apps by using the Cloud Foundry command line interface or the Eclipse plug-in.
 {: tsSymptoms}
 
-When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the `cf` command line interface, you see one of the following error messages with the organization name that is specified in the message:
+When you try to push an application to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry command line interface, you see one of the following error messages with the organization name that is specified in the message:
 
 `Error finding org`
 
@@ -460,7 +462,7 @@ When you try to push an application to {{site.data.keyword.Bluemix_notm}} by usi
 This problem occurs because the API endpoint of the region that you want to work with isn't specified, and the organization you're looking for might be in a different region.
 {: tsCauses}
 
-If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the `cf` command line interface, enter the `cf api` command and specify the API endpoint of the region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
+If you are pushing your application to {{site.data.keyword.Bluemix_notm}} by using the Cloud Foundry command line interface, enter the `cf api` command and specify the API endpoint of the region. For example, enter the following command to connect to the {{site.data.keyword.Bluemix_notm}} Europe United Kingdom region:
 {: tsResolve}
 
 ```
@@ -489,17 +491,17 @@ The host name that you specify must be unique within the domain that you are usi
     ```
     host: host_name
 	```
-  * If you deploy your application from the command prompt, use the `cf push` command with the **-n** option.
+  * If you deploy your application from the command prompt, use the `ibmcloud cf push` command with the **-n** option.
     ```
-    cf push appname -p app_path -n host_name
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## WAR apps can't be pushed by using the cf push command
+## WAR apps can't be pushed by using the ibmcloud cf push command
 {: #ts_cf_war}
 
-You might not be able to use the `cf push` command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location isn't specified correctly.
+You might not be able to use the `ibmcloud cf push` command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location isn't specified correctly.
 
-When you upload a WAR app to {{site.data.keyword.Bluemix_notm}} by using the `cf push` command, you see the following error message:
+When you upload a WAR app to {{site.data.keyword.Bluemix_notm}} by using the `ibmcloud cf push` command, you see the following error message:
 {: tsSymptoms}
 `Staging error: cannot get instances since staging failed.`
 
@@ -510,13 +512,13 @@ Use the **-p** option to specify a WAR file or add the path to the WAR file. For
 {: tsResolve}
 
 ```
-cf push MyUniqueAppName01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-For more information about the `cf push` command, enter `cf push -h`.
+For more information about the `ibmcloud cf push` command, enter `ibmcloud cf push -h`.
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
@@ -565,9 +567,9 @@ Use one of the following methods, depending on the cause of the problem:
 {: tsResolve}
 
   * Specify the start command by one of the following methods:
-     * Use the `cf` command line interface. For example:
+     * Use the Cloud Foundry command line interface. For example:
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * Use the [package.json ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/jsonfile){: new_window} file. For example:
 	    ```
@@ -669,7 +671,7 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * If you deploy your application from the command prompt, use the `cf push` command and specify your custom buildpack by using the **-b** option. For example:
+  * If you deploy your application from the command prompt, use the `ibmcloud cf push` command and specify your custom buildpack by using the **-b** option. For example:
     ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
