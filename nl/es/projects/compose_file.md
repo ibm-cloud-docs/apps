@@ -14,7 +14,7 @@ lastupdated: "2018-07-12"
 # Cómo empezar a trabajar con un archivo Docker Compose
 {: #compose-file}
 
-Para las apps Docker Compose, la siguiente información es un inventario de lo que normalmente se encontrará en {{site.data.keyword.Bluemix}}. Cuando se crea un kit de iniciación, estos archivos se crean en su nombre. Si está migrando una app para alojarla en {{site.data.keyword.Bluemix_notm}}, es posible que desee revisar esta información para evitar posibles conflictos.
+Para las apps Docker Compose, la siguiente información es un inventario de lo que normalmente se encontrará en {{site.data.keyword.Bluemix}}. Cuando se crea un kit de inicio, estos archivos se crean en su nombre. Si está migrando una app para alojarla en {{site.data.keyword.Bluemix_notm}}, es posible que desee revisar esta información para evitar posibles conflictos.
 {:shortdesc}
 
 El archivo [Docker Compose](https://docs.docker.com/compose/overview/) define información para ejecutar aplicaciones en varios contenedores.

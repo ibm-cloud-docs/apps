@@ -15,12 +15,12 @@ lastupdated: "2018-08-21"
 # Guía de aprendizaje de iniciación
 {: #create}
 
-En {{site.data.keyword.Bluemix}}, puede crear aplicaciones web y móviles a nivel de empresa y aprovechar las extensiones de nube alojadas por {{site.data.keyword.Bluemix_notm}}. Puede utilizar la consola de {{site.data.keyword.Bluemix}} y las herramientas de línea de mandatos para crear, ejecutar y desplegar las apps. Puede empezar de dos formas: creando una con un kit de iniciación que gestiona el proceso en su nombre, o si conoce exactamente lo que necesita, compilando su app con los recursos que necesite.
+En {{site.data.keyword.Bluemix}}, puede crear aplicaciones web y móviles a nivel de empresa y aprovechar las extensiones de nube alojadas por {{site.data.keyword.Bluemix_notm}}. Puede utilizar la consola de {{site.data.keyword.Bluemix}} y las herramientas de línea de mandatos para crear, ejecutar y desplegar las apps. Puede empezar de dos formas: creando una con un kit de inicio que gestiona el proceso en su nombre, o si conoce exactamente lo que necesita, compilando su app con los recursos que necesite.
 {:shortdesc}
 
-Utilice un kit de iniciación para empezar rápidamente su app y prepárela para el futuro desarrollo. Seleccione un kit de iniciación y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente. También puede descargar el código para una inspección inmediata.
+Utilice un kit de inicio para empezar rápidamente su app y prepárela para el futuro desarrollo. Seleccione un kit de inicio y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente. También puede descargar el código para una inspección inmediata.
 
-Los kits de iniciación están disponibles para muchas categoría, entre otras:
+Los kits de inicio están disponibles para muchas categoría, entre otras:
 
 * [Watson ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
 * [Apple ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
@@ -43,9 +43,9 @@ No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gr
 
 2. Pulse **Iniciación** en la sección **Empezar desde web**.
 
-3. Seleccione el kit de iniciación que desee, lea los detalles y pulse **Crear**.
+3. Seleccione el kit de inicio que desee, lea los detalles y pulse **Crear**.
 
-   Para ver lo que se incluye en el kit de iniciación, expanda el mosaico en el panel de control de Kits de iniciación de App Service.
+   Para ver lo que se incluye en el kit de inicio, expanda el mosaico en el panel de control de Kits de inicio de App Service.
    {: tip}
 
 4. Proporcione un nombre para la app, seleccione el idioma y pulse **Crear**.
@@ -58,7 +58,7 @@ No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gr
 ## Paso 2. Añadir recursos
 {: #addResources}
 
-La mayoría de los kits de iniciación indican a {{site.data.keyword.cloud_notm}} iniciar de forma automática el suministro de recursos en su nombre. También es posible asociar más recursos a su app pulsando **Añadir recurso** en la página de detalles de la app.
+La mayoría de los kits de inicio indican a {{site.data.keyword.cloud_notm}} iniciar de forma automática el suministro de recursos en su nombre. También es posible asociar más recursos a su app pulsando **Añadir recurso** en la página de detalles de la app.
 
 Para desarrollar y ejecutar la app de forma local, utilice [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
 {: tip}

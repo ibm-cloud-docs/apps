@@ -12,10 +12,10 @@ lastupdated: "2018-10-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creación de una aplicación móvil con un kit de iniciación
+# Creación de una aplicación móvil con un kit de inicio
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} ofrece kits de iniciadores móviles para ayudarle a crear una app para móvil rápidamente. Elija un idioma, una infraestructura y herramientas de kits de iniciación de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, puede aprender a instalar las herramientas que necesita, a crear y ejecutar la app localmente y a desplegarla en la nube.
+{{site.data.keyword.Bluemix}} ofrece kits de inicio móviles para ayudarle a crear una app para móvil rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, puede aprender a instalar las herramientas que necesita, a crear y ejecutar la app localmente y a desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -29,10 +29,10 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 {: #create-devex}
 
 1. Cree una app de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
-2. En la página [Kits de iniciación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de iniciación basado en las características que desee. Por ejemplo, para una aplicación de lenguaje Watson, seleccione **Swift Kitura**.
+2. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio basado en las características que desee. Por ejemplo, para una aplicación de lenguaje Watson, seleccione **Swift Kitura**.
 3. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `WatsonApp`.
 4. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilizaremos `Swift`.
-5. Seleccione el idioma y la infraestructura. Es posible que algunos kits de iniciación solo estén disponibles en un idioma.
+5. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
 6. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 7. Pulse **Crear**.
 

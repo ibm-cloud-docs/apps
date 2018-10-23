@@ -15,18 +15,18 @@ lastupdated: "2018-07-22"
 # Arquitecturas comunes para apps en la nube
 {: #patterns}
 
-Los kits de iniciación en {{site.data.keyword.cloud_notm}} ayudan a crear apps con una arquitectura probada. Las apps son todas diferentes, sin embargo, cuando las basa en un patrón arquitectónico conocido, es más fácil obtener resultados fiables con mayor rapidez. Cuando se crea una app a partir de un kit de iniciación, está eligiendo uno de los distintos tipos de patrón junto con componentes, de forma similar a un tiempo de ejecución, para cumplimentar el patrón.
+Los kits de inicio en {{site.data.keyword.cloud_notm}} ayudan a crear apps con una arquitectura probada. Las apps son todas diferentes, sin embargo, cuando las basa en un patrón arquitectónico conocido, es más fácil obtener resultados fiables con mayor rapidez. Cuando se crea una app a partir de un kit de inicio, está eligiendo uno de los distintos tipos de patrón junto con componentes, de forma similar a un tiempo de ejecución, para cumplimentar el patrón.
 {:shortdesc}
 
 ## App web
 {: #web}
 
-El patrón de app web crea apps que sirven contenido web como, por ejemplo, HTML, JavaScript y hojas de estilo para el servidor web. {{site.data.keyword.cloud_notm}} ofrece varios kits de iniciación a las apps web.
+El patrón de app web crea apps que sirven contenido web como, por ejemplo, HTML, JavaScript y hojas de estilo para el servidor web. {{site.data.keyword.cloud_notm}} ofrece varios kits de inicio a las apps web.
 
 * Basic - sirve un archivo `index.html` estático, y un archivo JavaScript y de hoja de estilos vacíos.
 * React - una infraestructura rica para crear interfaces de usuario. Los archivos de origen se encuentran en `src/client/app`, se compilan con WebPack y se sirven en el directorio público.
 
-Encontrará kits de iniciación para el patrón de app web en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Encontrará kits de inicio para el patrón de app web en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Programa de fondo para programa de usuario (BFF)
 {: #bff}
@@ -44,26 +44,26 @@ BFF gestiona la persistencia, la colocación en memoria caché y la integración
 
 Los programas BFF habitualmente en la mayoría de las ocasiones exponen una API utilizando un patrón REST. No obstante, puede diseñar su programa BFF para que funcione desde una arquitectura de mensajería que utilice {{site.data.keyword.messagehub}}.
 
-Elija el kit de iniciación de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará kits de iniciación para el patrón de BFF en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará kits de inicio para el patrón de BFF en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Microservicio
 {: #microservice}
 
 Las apps de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Las apps generadas incluyen todas las dependencias necesarias, tanto para el propio microservicio como para los servicios de nube asociados.
 
-Elija un kit de iniciación de microservicio para los requisitos de idioma y de infraestructura. Encontrará kits de iniciación para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Elija un kit de inicio de microservicio para los requisitos de idioma y de infraestructura. Encontrará kits de inicio para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
 
 ## Móvil
 {: #mobile}
 
 Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un [programa de fondo para programa de usuario](#bff) dedicado.
 
-{{site.data.keyword.cloud_notm}} ofrece varios kits de iniciación móvil para iOS Swift, Android y Cordova. Puede encontrar kits de iniciación para el patrón móvil en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Puede encontrar kits de inicio para el patrón móvil en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://console.bluemix.net/developer/mobile/dashboard).
 
 ## Lenguajes
 {: #languages}
 
-Los kits de iniciación que {{site.data.keyword.cloud_notm}} proporciona están disponibles en varias infraestructuras y lenguajes. Por ejemplo, los kits de iniciación de microservicios ofrecen una opción Node.js, mientras que los kits de iniciación más relacionados con el análisis de datos podrían incluir Python o Go. A continuación se trata sobre los lenguajes habituales que se utilizan en los kits de iniciación de {{site.data.keyword.cloud_notm}}.
+Los kits de inicio que {{site.data.keyword.cloud_notm}} proporciona están disponibles en varias infraestructuras y lenguajes. Por ejemplo, los kits de inicio de microservicios ofrecen una opción Node.js, mientras que los kits de inicio más relacionados con el análisis de datos podrían incluir Python o Go. A continuación se trata sobre los lenguajes habituales que se utilizan en los kits de inicio de {{site.data.keyword.cloud_notm}}.
 
 |Lenguaje de programación | Descripción | Infraestructuras de desarrollo |
 |-----|-----|-----|

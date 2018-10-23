@@ -15,7 +15,7 @@ lastupdated: "2018-07-25"
 # Creación de una app personalizada
 {: #build-your-own}
 
-Si no utiliza un kit de iniciación y sabe lo que necesita, puede crear su app con los recursos que elija.
+Si no utiliza un kit de inicio y sabe lo que necesita, puede crear su app con los recursos que elija.
 {: shortdesc}
 
 ## Elija su lenguaje

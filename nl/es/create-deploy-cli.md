@@ -35,7 +35,7 @@ Puede crear una app nueva desde cero o crear una app basada en cloud utilizando 
 1. Ejecute el mandato [`ibmcloud dev create`](/docs/cli/idt/commands.html#create) en el directorio que prefiera.
 2. Seleccione **Backend Service / Web App** como tipo de aplicación.
 3. Seleccione **Nodo** como tipo de lenguaje.
-4. Seleccione **Express.js Basic (Web App)** como el kit de iniciación que va a utilizar.
+4. Seleccione **Express.js Basic (Web App)** como el kit de inicio que va a utilizar.
 5. Especifique un nombre para su app y seleccione el grupo de recursos que quiere utilizar (si es necesario). No añada servicios por ahora.
 6. Seleccione la opción **IBM DevOps, utilizando Cloud Foundry** para crear la cadena de herramientas de DevOps. Es posible que tenga que configurar las claves SSH para completar este paso.
 7. Especifique un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`.

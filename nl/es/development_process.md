@@ -27,7 +27,7 @@ Ahora vamos a ver con algo más de detalle la mejor manera de utilizar {{site.da
 ##Iniciación
 {: #get_started}
 
-Cree la app a partir de los paneles de control de desarrollador de {{site.data.keyword.cloud_notm}}, donde se puede seleccionar un kit de iniciación relacionado con su caso de uso y elija un lenguaje de programación. {{site.data.keyword.cloud_notm}} utiliza las indicaciones del kit de iniciación para suministrar automáticamente los recursos que necesita y para crear una app independiente del tiempo de ejecución específico del lenguaje y que es la base de su app de producción. Para completar la fase de iniciación, pulse **Desplegar en la nube** desde el panel de control de desarrollador. Una pulsación crea una cadena de herramientas de DevOps completa con un repositorio de código que se cumplimenta con el código fuente de su app y un conducto de despliegue.
+Cree la app a partir de los paneles de control de desarrollador de {{site.data.keyword.cloud_notm}}, donde se puede seleccionar un kit de inicio relacionado con su caso de uso y elija un lenguaje de programación. {{site.data.keyword.cloud_notm}} utiliza las indicaciones del kit de inicio para suministrar automáticamente los recursos que necesita y para crear una app independiente del tiempo de ejecución específico del lenguaje y que es la base de su app de producción. Para completar la fase de iniciación, pulse **Desplegar en la nube** desde el panel de control de desarrollador. Una pulsación crea una cadena de herramientas de DevOps completa con un repositorio de código que se cumplimenta con el código fuente de su app y un conducto de despliegue.
 
 ![Iniciación](images/dev_get_started.png "Iniciación") Figura 2. Flujo de iniciación
 

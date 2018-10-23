@@ -12,10 +12,10 @@ lastupdated: "2018-10-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Creación de una app web básica con un kit de iniciación
+# Creación de una app web básica con un kit de inicio
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} ofrece muchos kits de iniciación para ayudarle a codificar rápidamente. Elija un idioma, una infraestructura y herramientas de kits de iniciación de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
+{{site.data.keyword.Bluemix}} ofrece muchos kits de inicio para ayudarle a codificar rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -25,14 +25,14 @@ Instale las [herramientas del desarrollador](/docs/cli/index.html).
 
 Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 
-## Paso 2. Seleccionar un kit de iniciación
+## Paso 2. Seleccionar un kit de inicio
 {: #create-devex}
 
-Los kits de iniciación están disponibles en muchos idiomas e infraestructuras de la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
+Los kits de inicio están disponibles en muchos idiomas e infraestructuras de la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
 
-1. En la página [kits de iniciación ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de iniciación para su idioma.
+1. En la página [kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su idioma.
 2. Especifique el nombre de la app y un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`
-3. Seleccione el idioma y la infraestructura. Es posible que algunos kits de iniciación solo estén disponibles en un idioma.
+3. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
 4. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 5. Pulse **Crear**.
 
