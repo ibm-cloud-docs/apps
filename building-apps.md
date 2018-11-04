@@ -32,7 +32,7 @@ The {{site.data.keyword.Bluemix_notm}} catalog lists the infrastructure and plat
 
   * [Getting started with Containers](../containers/container_index.html)
   * [Getting started with Openwhisk](../openwhisk/index.html)
-  * [Creating Cloud Foundry apps](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Creating Cloud Foundry apps](../cloud-foundry/index.html)
 
 3. Enter your app name, host name and choose your pricing plan.
 
