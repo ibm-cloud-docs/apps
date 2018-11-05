@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ You can select the service that you need when you develop applications. Once you
 
 {{site.data.keyword.Bluemix_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
-You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.Bluemix_notm}} services](#accser_external).
+You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Connecting services to external apps](/docs/apps/connect_external_app.html).
 
 ## Requesting a new service instance
 {: #req_instance}
@@ -60,7 +60,7 @@ If you use the {{site.data.keyword.Bluemix_notm}} command line interface to requ
 2. Follow the prompts to select a resource group, and to create and connect a new data-related service to your application, such as Cloudant. You might need to select a region and plan for the service.
 3. When the service is created, several files, including credentials, are added to your application directory to help you integrate the service into your application. You can manually merge any files or skip this step for now.
 
-You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Enabling external apps to use {{site.data.keyword.Bluemix_notm}} services ![External link icon](../icons/launch-glyph.svg "External link icon")](#accser_external){: new_window}.
+You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Connecting services to external apps](/docs/apps/connect_external_app.html).
 
 ## Configuring your application
 {: #config}
@@ -93,49 +93,6 @@ Service credentials that are stored in a Kubernetes secret are base64 encoded an
 2. To access your service credentials from your app pod, choose between the following options. 
    - [Mount the secret as a volume to your pod](#mount_secret)
    - [Reference the secret in environment variables](#reference_secret)
-
-## Enabling external apps
-{: #accser_external}
-
-You might have applications that were created and run outside of {{site.data.keyword.Bluemix_notm}}, or you might use third-party tools. If {{site.data.keyword.Bluemix_notm}} services provide service keys that are accessible from the internet, you can use those services with your local apps or third-party tools.
-
-The following services provide service keys for you to use externally:
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-To enable an external app or third-party tool to use a {{site.data.keyword.Bluemix_notm}} service, complete the following steps:
-
-1. Request an instance of the service.
-    1. On the Dashboard in the {{site.data.keyword.Bluemix_notm}} user interface, click **Create Resource**. The catalog displays.
-    2. From the catalog, select the service that you want by clicking the service tile. The service details page opens.
-    3. In the service window, leave the default **Connect to:**: list selection as **Leave unbound**. This selection means that the service isn’t connected to a {{site.data.keyword.Bluemix_notm}} app.
-    4. Make any other selections as needed. Then, click **Create**. A service instance is created, and the service Dashboard displays.
-2. In the service Dashboard, you can select **Service Credentials** to view or add credentials in JSON format. Select a set of credentials and click **View Credentials** in the Actions column. Use the API key that is displayed as the credentials to connect to the service instance.
-
-Your application that runs outside of {{site.data.keyword.Bluemix_notm}} can now access the {{site.data.keyword.Bluemix_notm}} service.
-
-**Note:** If you want to delete service instances or check the billing information, you must go back to your Dashboard in the user interface to manage the service instances.
 
 ## Creating a user-provided service instance
 {: #user_provide_services}
