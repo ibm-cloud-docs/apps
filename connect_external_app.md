@@ -9,6 +9,7 @@ lastupdated: "2018-11-05"
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {: codeblock: .codeblock}
+{: tip: .tip}
 
 # Connecting services to external apps
 {: #externalapp}
