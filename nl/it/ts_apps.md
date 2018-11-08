@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,25 +151,25 @@ Per eliminare la rotta non utilizzata, completa la seguente procedura:
   1. Controlla se la rotta appartiene allo spazio corrente immettendo il seguente comando:
 
     ```
-    cf routes
+    ibmcloud cf routes
     ```
 
   2. Se la rotta non appartiene allo spazio corrente, passa allo spazio o all'organizzazione a cui appartiene immettendo il seguente comando:
 
     ```
-    cf target -o org_name -s space_name
+    ibmcloud cf target -o org_name -s space_name
     ```
 
   3. Elimina la rotta dell'applicazione immettendo il seguente comando:
 
     ```
-    cf delete-route domain_name -n host_name
+    ibmcloud cf delete-route domain_name -n host_name
     ```
 
   Ad esempio:
 
   ```
-  cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route mybluemix.net -n app001
   ```
 
 ## Impossibile richiamare gli spazi in un'organizzazione
@@ -189,7 +189,7 @@ Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per crea
 {: tsResolve}
 
 * Dalla barra dei menu, fai clic su **Gestisci > Account > Organizzazioni**. Seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
-* Nell'interfaccia riga di comando `cf`, immetti `cf create-space <space_name> -o <organization_name>`.
+* Nell'interfaccia riga di comando Cloud Foundry, immetti `cf create-space <space_name> -o <organization_name>`.
 
 Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
@@ -309,10 +309,10 @@ sufficiente, prova un servizio esterno come [Object Store](/docs/services/Object
     ```
 	disk_quota: <quota_disco>
 	```
-  * Utilizza l'opzione **-k** con il comando `cf push`
-quando distribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}}:
-    ```
-	cf push nomeapplicazione -p app_path -k <quota_disco>
+  * Utilizza l'opzione **-k** con il comando `ibmcloud cf push` quando esegui il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}:
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
 ## Le applicazioni Android non possono ricevere {{site.data.keyword.mobilepushshort}}
@@ -334,13 +334,12 @@ Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul
 ## Limite dei servizi dell'organizzazione superato
 {: #ts_servicelimit}
 
-Se utilizzi un account utente Lite, potresti non riuscire a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se hai superato il limite dei servizi della tua organizzazione.
+Se sei un utente di un account Lite, potresti non riuscire a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se hai superato il limite dei servizi della tua organizzazione.
 
-Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
+Quando provi a creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite
-dei servizi dell'organizzazione."`
+`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite dei servizi dell'organizzazione."`
 
 Questo errore si verifica quando superi il limite per il numero di istanze del servizio che puoi avere per l'account.
 {: tsCauses}
@@ -354,40 +353,35 @@ Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite
 	  1. Nel dashboard Servizi, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
 	  2. Fai clic su **Elimina servizio**. Ti viene richiesto di preparare nuovamente l'applicazione a cui era associata l'istanza del servizio.
 
-    Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
-servizio, completa la seguente procedura:
-	  3. Annulla il bind dell'istanza del servizio da un'applicazione immettendo `cf unbind-service <appname> <service_instance_name>`.
-	  4. Elimina l'istanza del servizio immettendo `cf delete-service <service_instance_name>`.
-	  5. Dopo aver eliminato l'istanza del servizio, potresti voler preparare nuovamente l'applicazione a cui era associata l'istanza del servizio immettendo `cf restage <appname>`.
+    Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del servizio, completa la seguente procedura:
+	  3. Annulla il bind dell'istanza del servizio a un'applicazione. Immetti `cf unbind-service <appname> <service_instance_name>`.
+	  4. Elimina l'istanza del servizio. Immetti `cf delete-service <service_instance_name>`.
+	  5. Dopo che hai eliminato l'istanza del servizio, potresti voler ripreparare la tua applicazione a cui era associata mediante bind l'istanza del servizio. Immetti `cf restage <appname>`.
 
-  * Per rimuovere il limite sul numero di istanze del servizio che puoi avere, aggiorna il tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
+  * Per rimuovere il limite sul numero di istanze del servizio di cui disponi, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Upgrade del tuo account](/docs/account/index.html#upgrade-to-paygo).
 
-## Impossibile eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}}
+## I file eseguibili non possono essere eseguiti su {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
 
-Potresti non riuscire ad eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
+Potresti non riuscire ad eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}} quando tali eseguibili sono stati sviluppati e creati in un ambiente differente.
 
 Non puoi eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se questi eseguibili sono stati sviluppati e creati in un ambiente diverso.
 {: tsSymptoms}
 
-Se il contenuto che desideri distribuire a {{site.data.keyword.Bluemix_notm}} è
-già un eseguibile, il contenuto è stato creato precedentemente e non è necessario
-crearlo in {{site.data.keyword.Bluemix_notm}}. In questo caso, non è richiesto alcun pacchetto di build per l'eseguibile da eseguire
+Se il contenuto di cui desideri eseguire il push a {{site.data.keyword.Bluemix_notm}} è già un eseguibile, il contenuto è stato creato precedentemente e non è necessario crearlo in {{site.data.keyword.Bluemix_notm}}. In questo caso, non è richiesto alcun pacchetto di build per l'eseguibile da eseguire
 su {{site.data.keyword.Bluemix_notm}}. Devi indicare esplicitamente a {{site.data.keyword.Bluemix_notm}} che non è richiesto alcun pacchetto di build.
 {: tsCauses}
 
-Quando distribuisci l'eseguibile a {{site.data.keyword.Bluemix_notm}},
-devi specificare `null-buildpack`, che indica che
-non è richiesto alcun pacchetto di build. Specifica `null-buildpack` utilizzando l'opzione **-b**
-con il comando `cf push`:
+Quando esegui il push dell'eseguibile a {{site.data.keyword.Bluemix_notm}}, devi specificare un `null-buildpack`, che indica che non è richiesto alcun pacchetto di build. Specifica un `null-buildpack` utilizzando l'opzione **-b** con il comando `ibmcloud cf push`:
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <comando_di_avvio> -b <pacchetto_di_build-null>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 Ad esempio:
 ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## Limite di memoria dell'organizzazione superato
@@ -400,9 +394,7 @@ del tuo account. La quota massima di memoria per un account Lite è 256 MB e pu�
 Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`FAILED Server error,
-status code: 400, error code: 100005, message: You have exceeded your
-organization's memory limit.`
+`FAILED Errore server, codice di stato: 400, codice di errore: 100005, messaggio: È stato superato il limite di memoria dell'organizzazione.`
 
 Questo errore si verifica quando la quantità di memoria rimanente per la tua organizzazione è inferiore alla quantità di memoria richiesta dall'applicazione che desideri distribuire. La quota massima di memoria per un account Lite è 256 MB.
 {: tsCauses}
@@ -410,28 +402,28 @@ Questo errore si verifica quando la quantità di memoria rimanente per la tua or
 Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.
 {: tsResolve}
 
-  * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
-  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando `cf`.
+  * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Upgrade del tuo account](/docs/account/index.html#upgrade-to-paygo).
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando Cloud Foundry.
 
     Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
 
     1. Seleziona la tua applicazione dal dashboard. Viene visualizzata la pagina dei dettagli dell'applicazione.
     2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 
-    Se utilizzi l'interfaccia riga di comando `cf`, completa la seguente procedura:
+    Se utilizzi l'interfaccia riga di comando, completa la seguente procedura:
 
-    1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
+    1. Controlla quanta memoria è in uso per le tue applicazioni:
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  Il comando `cf apps` elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
+	  Il comando `ibmcloud cf list` elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
 
     2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.
 
 	  ```
-	  cf push appname -p percorso_applicazione -i numero_istanza -m limite_memoria
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. Riavvia la tua applicazione per rendere effettive le modifiche.
@@ -451,7 +443,7 @@ Puoi riavviare manualmente l'applicazione immettendo il seguente comando nell'in
 {: tsResolve}
 
 ```
-cf push appname -p percorso_applicazione
+ibmcloud cf push appname -p app_path
 ```
 
 Inoltre, puoi codificare l'applicazione per identificare e risolvere problemi come interruzioni, eccezioni ed errori di connessione.
@@ -482,19 +474,16 @@ salvate nel file manifest della tua applicazione. La prossima volta che apri la 
 Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.Bluemix_notm}} quando
 lavori su una regione {{site.data.keyword.Bluemix_notm}}.
 
-Riesci ad accedere correttamente alla console {{site.data.keyword.Bluemix_notm}}, ma non puoi distribuire le applicazioni utilizzando l'interfaccia riga di comando `cf` o il plug-in Eclipse.
+Puoi accedere correttamente alla console {{site.data.keyword.Bluemix_notm}} ma non puoi eseguire il push delle applicazioni utilizzando l'interfaccia riga di comando Cloud Foundry o il plug-in Eclipse.
 {: tsSymptoms}
 
-Quando tenti di distribuire un'applicazione
-a {{site.data.keyword.Bluemix_notm}} utilizzando
-l'interfaccia riga di comando `cf`, puoi visualizzare uno dei seguenti
-messaggi di errore in cui viene specificato il nome dell'organizzazione:
+Quando provi ad eseguire il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, vedi uno dei seguenti messaggi di errore con il nome dell'organizzazione specificato nel messaggio.
 
 `Error finding org`
 
 `Organization not found`
 
-Quando tenti di distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}
+Quando tenti di eseguire il push di un'applicazione a {{site.data.keyword.Bluemix_notm}}
 utilizzando il plug-in Eclipse Cloud Foundry, visualizzi il seguente messaggio di
 errore:
 
@@ -503,7 +492,7 @@ errore:
 Questo problema si verifica poiché l'endpoint API della regione che vuoi utilizzare non è specificato e l'organizzazione che stai cercando potrebbe trovarsi in una regione differente.
 {: tsCauses}
 
-Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando `cf`, immetti il comando `cf api` e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
+Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, immetti il comando `cf api` e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
 Regno Unito:
 {: tsResolve}
 
@@ -511,7 +500,7 @@ Regno Unito:
 cf api https://api.eu-gb.bluemix.net
 ```
 
-Se stai distribuendo la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando gli strumenti Eclipse, devi prima creare un server {{site.data.keyword.Bluemix_notm}} e specificare l'endpoint API della regione {{site.data.keyword.Bluemix_notm}} in cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo degli strumenti Eclipse, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
+Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando gli strumenti Eclipse, devi prima creare un server {{site.data.keyword.Bluemix_notm}} e specificare l'endpoint API della regione {{site.data.keyword.Bluemix_notm}} in cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo degli strumenti Eclipse, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
 
 ## Impossibile creare rotte di applicazione
 {: #ts_hostistaken}
@@ -536,18 +525,17 @@ seguenti metodi:
     ```
     host: nome_host
 	```
-  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
-push` con l'opzione **-n**.
+  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `ibmcloud cf push` con l'opzione **-n**.
     ```
-    cf push appname -p percorso_applicazione -n nome_host
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## Non è possibile distribuire delle applicazioni WAR utilizzando il comando cf push
+## Non è possibile eseguire il push di applicazioni WAR utilizzando il comando ibmcloud cf push
 {: #ts_cf_war}
 
-Potresti non riuscire a utilizzare il comando `cf push` per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se la posizione dell'applicazione non è specificata correttamente.
+Potresti non riuscire a utilizzare il comando `ibmcloud cf push` per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se l'ubicazione dell'applicazione non è specificata correttamente.
 
-Quando carichi un'applicazione WAR in {{site.data.keyword.Bluemix_notm}} utilizzando il comando `cf push`, vedi il seguente messaggio di errore:
+Quando carichi un'applicazione WAR in {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud cf push`, vedi il seguente messaggio di errore:
 {: tsSymptoms}
 `Staging error: cannot get instances since staging failed.`
 
@@ -559,20 +547,21 @@ un file WAR o aggiungere il percorso del file WAR. Ad esempio:
 {: tsResolve}
 
 ```
-cf push nomeunivocodellamiaapplicazione01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-Per ulteriori informazioni sul comando `cf push` , immettere `cf push -h`.
+Per ulteriori informazioni sul comando `ibmcloud cf push` , immetti `ibmcloud cf push -h`. 	
 
-## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni a {{site.data.keyword.Bluemix_notm}}
+
+## I caratteri double-byte non vengono visualizzati correttamente quando viene eseguito il push delle applicazioni a {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
 
 I caratteri double-byte potrebbero non essere visualizzati correttamente se il supporto Unicode non è adeguatamente configurato per i file servlet o JSP.
 
-Quando un'applicazione viene distribuita a {{site.data.keyword.Bluemix_notm}}, i caratteri double-byte specificati all'interno dell'applicazione non vengono visualizzati correttamente.
+Quando viene eseguito il push di un'applicazione a {{site.data.keyword.Bluemix_notm}}, i caratteri double-byte specificati all'interno dell'applicazione non vengono visualizzati correttamente.
 {: tsSymptoms}
 
 Il problema può verificarsi se il supporto Unicode non è configurato correttamente per i file servlet o JSP.
@@ -616,9 +605,9 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
 {: tsResolve}
 
   * Specifica il comando di avvio utilizzando uno dei seguenti metodi:
-     * Utilizza l'interfaccia riga di comando `cf`. Ad esempio:
+     * Utilizza l'interfaccia riga di comando Cloud Foundry. Ad esempio:
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/jsonfile){: new_window}. Ad
 esempio:
@@ -707,10 +696,10 @@ vedi [Manifest
 dell'applicazione](/docs/manageapps/depapps.html#appmanifest).
  {: tsResolve}
 
-## Impossibile distribuire le applicazioni Meteor
+## Impossibile eseguire il push delle applicazioni Meteor
 {: #ts_meteor}
 
-Potresti non riuscire a distribuire un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}} se il pacchetto di build non è specificato correttamente.
+Potresti non riuscire ad eseguire il push di un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}} se il pacchetto di build non è specificato correttamente.
 
 Quando distribuisci un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}}, potresti visualizzare il messaggio di errore `La
 preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
@@ -726,9 +715,7 @@ Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, 
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `cf
-push` e specifica il pacchetto di build personalizzato usando
-l'opzione **-b**. Ad esempio:
+  * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `ibmcloud cf push` e specifica il tuo pacchetto di build personalizzato usando l'opzione **-b**. Ad esempio:
     ```
-	cf push nomeapplicazione -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
