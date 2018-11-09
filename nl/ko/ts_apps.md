@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,25 +151,25 @@ IBM JVM 7, IBM JVM 8 및 Oracle JVM 8의 이전 버전 등의 JVM(Java Virtual M
   1. 다음 명령을 입력하여 라우트가 현재 영역에 속하는지 확인하십시오.
 
     ```
-cf routes
+    ibmcloud cf routes
     ```
 
   2. 라우트가 현재 영역에 속하지 않는 경우, 다음 명령을 입력하여 라우트가 속한 영역 또는 조직으로 전환하십시오.
 
     ```
-cf target -o org_name -s space_name
+    ibmcloud cf target -o org_name -s space_name
     ```
 
   3. 다음 명령을 입력하여 앱 라우트를 삭제하십시오.
 
     ```
-cf delete-route domain_name -n host_name
+    ibmcloud cf delete-route domain_name -n host_name
     ```
 
   예를 들어, 다음과 같습니다.
 
   ```
-cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route mybluemix.net -n app001
   ```
 
 ## 조직에서 영역을 검색할 수 없음
@@ -189,7 +189,7 @@ cf delete-route mybluemix.net -n app001
 {: tsResolve}
 
 * 메뉴 표시줄에서 **관리 > 계정 > 조직**을 클릭하십시오. 영역을 작성할 조직을 선택하고 **영역 작성**을 클릭하십시오.
-* `cf` 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`.
+* Cloud Foundry 명령행 인터페이스에서 다음을 입력하십시오. `cf create-space <space_name> -o <organization_name>`.
 
 다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.Bluemix_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 
@@ -292,10 +292,10 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 앱을 
     ```
 	disk_quota: <disk_quota>
 	```
-  * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때
-**-k** 옵션을 `cf push` 명령과 함께 사용하십시오.
-    ```
-	cf push appname -p app_path -k <disk_quota>
+  * 앱을 {{site.data.keyword.Bluemix_notm}}에 푸시할 때 **-k** 옵션을 `ibmcloud cf push` 명령과 함께 사용하십시오.
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
 ## Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없음
@@ -309,13 +309,13 @@ Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.dat
 IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
-임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
+임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ![External link icon](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
 {: tsResolve}
 
-## 조직의 서비스 한계를 초과함
+# 조직의 서비스 한계를 초과함
 {: #ts_servicelimit}
 
-Lite 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
+Lite 계정 사용자인 경우, 조직의 서비스 한계를 초과했으면 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성할 수 없습니다.
 
 {{site.data.keyword.Bluemix_notm}}에서 앱을 작성하려고 할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
@@ -325,53 +325,54 @@ Lite 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{sit
 이 오류는 사용 중인 계정이 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 초과하는 경우에 발생합니다.
 {: tsCauses}
 
-필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하십시오.
+필요하지 않은 서비스 인스턴스를 삭제하거나, 보유할 수 있는 서비스 인스턴스의 수에 대한 한계를 제거하십시오.
 {: tsResolve}
 
-  * 서비스 인스턴스를 삭제하려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
+  * 서비스 인스턴스를 삭제하기 위해 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 명령행 인터페이스를 사용할 수 있습니다.
 
-    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 완료하십시오.
 	  1. 서비스 대시보드에서 삭제하려는 서비스에 대해 **조치** 메뉴를 클릭하십시오.
 	  2. **서비스 삭제**를 클릭하십시오. 서비스 인스턴스를 바인드한 앱을 다시 스테이징하라는 프롬프트가 표시됩니다.
 
-    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 수행하십시오.
-	  3. `cf unbind-service <appname> <service_instance_name>`.
-	  4. `cf delete-service <service_instance_name>`.
-	  5. 서비스 인스턴스를 삭제한 후에는 `cf restage <appname>`.
+    명령행 인터페이스를 사용하여 서비스 인스턴스를 삭제하려면 다음 단계를 완료하십시오.
+	  3. 앱에서 서비스 인스턴스를 바인드 해제하십시오. `cf unbind-service <appname> <service_instance_name>`을 입력하십시오.
+	  4. 서비스 인스턴스를 삭제하십시오. `cf delete-service <service_instance_name>`을 입력하십시오.
+	  5. 서비스 인스턴스를 삭제한 후 서비스 인스턴스가 바인딩된 앱을 다시 스테이징하려고 할 수 있습니다. `cf restage <appname>`을 입력하십시오.
 
   * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면 Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
 
-## {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행할 수 없음
+## 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없음
 {: #ts_executable}
 
-실행 파일이 다른 환경에서 개발되고 빌드된 경우 {{site.data.keyword.Bluemix_notm}}에서 해당 실행 파일을 실행하지 못할 수 있습니다.
+실행 파일이 다른 환경에서 개발되고 빌드된 경우에는 해당 실행 파일을 {{site.data.keyword.Bluemix_notm}}에서 실행할 수 없습니다.
 
 다른 환경에서 실행 파일을 개발하고 빌드한 경우 {{site.data.keyword.Bluemix_notm}}에서 이 실행 파일을 실행할 수 없습니다.
 {: tsSymptoms}
 
-{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우 이미 빌드되었으므로 {{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 빌드팩이 필요하지 않음을 {{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
+{{site.data.keyword.Bluemix_notm}}로 푸시하려는 컨텐츠가 이미 실행 파일인 경우, 컨텐츠는 이전에 빌드되었으며 {{site.data.keyword.Bluemix_notm}}에서 빌드할 필요가 없습니다. 이 경우 {{site.data.keyword.Bluemix_notm}}에서 실행 파일을 실행하는 데 빌드팩이 필요하지 않습니다. 빌드팩이 필요하지 않음을 {{site.data.keyword.Bluemix_notm}}에 명시적으로 표시해야 합니다.
 {: tsCauses}
 
-실행 파일을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 빌드팩이 필요하지 않음을 나타내는 `null-buildpack`을 지정해야 합니다. `cf push` 명령과 함께 **-b** 옵션을 사용하여 `null-buildpack`을 지정하십시오.
+실행 파일을 {{site.data.keyword.Bluemix_notm}}로 푸시할 때 빌드팩이 필요하지 않음을 나타내는 `null-buildpack`을 지정해야 합니다. **-b** 옵션을 `ibmcloud cf push` 명령과 함께 사용하여 `null-buildpack`을 지정하십시오.
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <start_command> -b <null-buildpack>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 예를 들어, 다음과 같습니다.
 ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## 조직의 메모리 한계를 초과함
 {: #ts_outofmemory}
 
-Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. Lite 계정의 최대 메모리 할당량은 256MB이며 청구 가능 계정으로 업그레이드해야만 늘릴 수 있습니다.
+Lite 계정 사용자인 경우, 조직의 메모리 한계를 초과했으면 {{site.data.keyword.Bluemix_notm}}에 앱을 배치할 수 없습니다. 앱에서 사용하는 메모리를 줄이거나, 계정의 메모리 할당량을 늘릴 수 있습니다. Lite 계정의 최대 메모리 할당량은 256MB이며 청구 가능 계정으로 업그레이드해야만 늘릴 수 있습니다.
 
 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 때 다음과 같은 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 
-`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
+`FAILED 서버 오류, 상태 코드: 400, 오류 코드: 100005, 메시지: 조직의 메모리 한계를 초과했습니다.`
 
 이 오류는 조직의 남아 있는 메모리의 양이 배치하려는 앱에 필요한 메모리의 양보다 적을 경우에 발생합니다. Lite 계정의 최대 메모리 할당량은 256MB입니다.
 {: tsCauses}
@@ -380,27 +381,27 @@ Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{sit
 {: tsResolve}
 
   * 계정의 메모리 할당량을 늘리려면 Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
-  * 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 `cf` 명령행 인터페이스를 사용하십시오.
+* 앱에서 사용하는 메모리를 줄이려면 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 Cloud Foundry 명령행 인터페이스를 사용하십시오.
 
-    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.
+    {{site.data.keyword.Bluemix_notm}} 콘솔을 사용하는 경우 다음 단계를 완료하십시오.
 
     1. 대시보드에서 앱을 선택하십시오. 앱 세부사항 페이지가 열립니다.
     2. 런타임 페이지에서 앱에 대한 최대 메모리 한계 또는 앱 인스턴스 수를 줄이거나 둘 다 줄일 수 있습니다.
 
-    `cf` 명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
+    명령행 인터페이스를 사용하는 경우 다음 단계를 완료하십시오.
 
     1. 앱에 사용 중인 메모리의 양을 확인하십시오.
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  `cf apps` 명령은 현재 영역에 배치된 앱을 모두 나열합니다. 각 앱의 상태도 표시됩니다.
+	  `ibmcloud cf list` 명령은 현재 영역에 배치된 앱을 모두 나열합니다. 각 앱의 상태도 표시됩니다.
 
     2. 앱에서 사용하는 메모리의 양을 줄이려면 앱 인스턴스 수 또는 최대 메모리 한계를 줄이거나 둘 다 줄이십시오.
 
 	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. 변경사항이 적용되도록 앱을 다시 시작하십시오.
@@ -420,7 +421,7 @@ Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 {{sit
 {: tsResolve}
 
 ```
-cf push appname -p app_path
+ibmcloud cf push appname -p app_path
 ```
 
 또한 가동 중단, 예외, 연결 실패 등의 문제점을 식별하고 이러한 문제점에서 복구하도록 앱을 코딩할 수 있습니다.
@@ -445,10 +446,10 @@ cf push appname -p app_path
 
 {{site.data.keyword.Bluemix_notm}} 지역에서 작업할 때 {{site.data.keyword.Bluemix_notm}}에서 조직을 찾을 수 없습니다.
 
-{{site.data.keyword.Bluemix_notm}} 콘솔에 로그인할 수는 있지만 `cf` 명령행 인터페이스 또는 Eclipse 플러그인을 사용하여 앱을 푸시할 수 없습니다.
+{{site.data.keyword.Bluemix_notm}} 콘솔에 로그인할 수는 있지만, Cloud Foundry 명령행 인터페이스 또는 Eclipse 플러그인을 사용하여 앱을 푸시할 수 없습니다.
 {: tsSymptoms}
 
-`cf` 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하려고 할 때 다음과 같은 오류 메시지가 표시되고 해당 메시지에 지정된 조직 이름도 함께 표시됩니다.
+Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하려고 할 때 다음과 같은 오류 메시지가 표시되고 해당 메시지에 지정된 조직 이름도 함께 표시됩니다.
 
 `Error finding org`
 
@@ -461,10 +462,7 @@ Cloud Foundry Eclipse 플러그인을 사용하여 애플리케이션을 {{site.
 이 문제점은 작업하는 지역의 API 엔드포인트를 지정하지 않은 경우에 발생합니다. 찾고 있는 조직이 다른 지역에 있을 수 있습니다.
 {: tsCauses}
 
-`cf`
-명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로
-푸시한 경우 `cf api` 명령을 입력하고 지역의 API 엔드포인트를
-지정하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하십시오.
+Cloud Foundry 명령행 인터페이스를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix_notm}}로 푸시하는 경우 `cf api` 명령을 입력하고 지역의 API 엔드포인트를 지정하십시오. 예를 들어, 다음 명령을 입력하여 {{site.data.keyword.Bluemix_notm}} 유럽 영국 지역에 연결하십시오.
 {: tsResolve}
 
 ```
@@ -493,18 +491,17 @@ Eclipse 도구를 사용하여 애플리케이션을 {{site.data.keyword.Bluemix
     ```
     host: host_name
 	```
-  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf
-push` 명령을 **-n** 옵션과 함께 사용하십시오.
+  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `ibmcloud cf push` 명령을 **-n** 옵션과 함께 사용하십시오.
     ```
-    cf push appname -p app_path -n host_name
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## cf push 명령을 사용하여 WAR 앱을 푸시할 수 없음
+## ibmcloud cf push 명령을 사용하여 WAR 앱을 푸시할 수 없음
 {: #ts_cf_war}
 
-앱 위치를 올바르게 지정하지 않은 경우 `cf push` 명령을 사용하여 아카이브된 웹 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
+앱 위치를 올바르게 지정하지 않은 경우 `ibmcloud cf push` 명령을 사용하여 아카이브된 웹 앱을 {{site.data.keyword.Bluemix_notm}}에 배치할 수 없습니다.
 
-`cf push` 명령을 사용하여 WAR 앱을 {{site.data.keyword.Bluemix_notm}}에 업로드할 때 다음 오류 메시지가 표시됩니다.
+`ibmcloud cf push` 명령을 사용하여 WAR 앱을 {{site.data.keyword.Bluemix_notm}}에 업로드할 때 다음 오류 메시지가 표시됩니다.
 {: tsSymptoms}
 `Staging error: cannot get instances since staging failed.`
 
@@ -515,13 +512,13 @@ push` 명령을 **-n** 옵션과 함께 사용하십시오.
 {: tsResolve}
 
 ```
-cf push MyUniqueAppName01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` 명령에 대한 자세한 정보를 보려면 `cf push -h`를 입력하십시오.
+`ibmcloud cf push` 명령에 대한 자세한 정보를 보려면 `ibmcloud cf push -h`를 입력하십시오.
 
 ## 앱이 {{site.data.keyword.Bluemix_notm}}로 푸시될 때 2바이트 문자가 올바르게 표시되지 않음
 {: #ts_doublebytes}
@@ -570,9 +567,9 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.Bluemix_notm}}에 배�
 {: tsResolve}
 
   * 다음 방법 중 하나로 시작 명령을 지정하십시오.
-     * `cf` 명령행 인터페이스를 사용하십시오. 예를 들어, 다음과 같습니다.
+     * Cloud Foundry 명령행 인터페이스를 사용하십시오. 예를 들어, 다음과 같습니다.
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * [package.json ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.npmjs.com/package/jsonfile){: new_window} 파일을 사용하십시오. 예를 들어, 다음과 같습니다.
 	    ```
@@ -674,7 +671,7 @@ Meteor 앱에 대해 사용자 정의 빌드팩을 사용하려면 다음 방법
   ```
 buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `cf push` 명령을 사용하되 **-b** 옵션을 사용하여 사용자 정의 빌드팩을 지정하십시오. 예를 들어, 다음과 같습니다.
+  * 명령 프롬프트에서 애플리케이션을 배치하는 경우 `ibmcloud cf push` 명령을 사용하고 **-b** 옵션을 사용하여 사용자 정의 빌드팩을 지정하십시오. 예를 들어, 다음과 같습니다.
     ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
