@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,28 +151,28 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
   1. 通过输入以下命令，检查路径是否属于当前空间：
 
     ```
-cf routes
+    ibmcloud cf routes
     ```
 
   2. 如果路径不属于当前空间，请通过输入以下命令，切换到其所属的空间或组织：
      
 
     ```
-cf target -o org_name -s space_name
-	 ```
+    ibmcloud cf target -o org_name -s space_name
+    ```
 
   3. 通过输入以下命令，删除应用程序路径：
      
 
     ```
-cf delete-route domain_name -n host_name
-	 ```
+    ibmcloud cf delete-route domain_name -n host_name
+    ```
 
   例如：
 
   ```
-cf delete-route mybluemix.net -n app001
-	 ```
+  ibmcloud cf delete-route mybluemix.net -n app001
+  ```
 
 ## 无法在组织中检索空间
 {: #ts_retrieve_space}
@@ -191,7 +191,7 @@ cf delete-route mybluemix.net -n app001
 {: tsResolve}
 
 * 在菜单栏中，单击**管理 > 帐户 > 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
-* 在 `cf` 命令行界面中，键入 `cf create-space <space_name> -o <organization_name>`.
+* 在 Cloud Foundry 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`.
 
 请重试。如果再次出现此消息，请转至 [{{site.data.keyword.Bluemix_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面，检查服务或组件是否存在问题。
 
@@ -301,20 +301,20 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 通过项目构面将�
     ```
 	disk_quota: <disk_quota>
 	```
-  * 在用于将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 的 `cf push` 命令中使用 **-k** 选项：
-    ```
-	cf push appname -p app_path -k <disk_quota>
+  * 在将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 中时，使用带 **-k** 选项的 `ibmcloud cf push` 命令：
+    
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
 ## Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 
-在无法访问 Google 的某些地区，Android 应用程序收不到您通过 IBM {{site.data.keyword.mobilepushshort}} 服务发送出来的通知。在这种情况下，变通方法是使用第三方服务。
-
-为 {{site.data.keyword.Bluemix_notm}} 应用程序绑定 {{site.data.keyword.mobilepushshort}} 服务，并将消息发送给已注册的设备。但是，在某些区域，Android 上开发的应用程序收不到您的通知。
+在无法访问 Google 的某些地区，Android 应用程序收不到您 IBM {{site.data.keyword.mobilepushshort}} 服务发送出来的通知。在这种情况下，变通方法是使用第三方服务。为 {{site.data.keyword.Bluemix_notm}} 应用程序绑定 {{site.data.keyword.mobilepushshort}} 服务，并将消息发送给已注册的设备。但是，在某些区域，Android 上开发的应用程序收不到您的通知。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到 Android 上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
+IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 平台上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
 作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[getui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
@@ -323,31 +323,28 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 ## 超过组织的服务限制
 {: #ts_servicelimit}
 
-如果您是轻量帐户用户，那么可能无法在超过组织服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
-
-尝试在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序时，显示了以下错误消息：
+如果您是轻量帐户用户，那么可能无法在超过组织的服务限制的情况下在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序。
+尝试在 {{site.data.keyword.Bluemix_notm}}中创建应用程序时，显示了以下错误消息：
 {: tsSymptoms}
 
-`BXNUI2032E: 未创建 <service_instances> 资源。联系 Cloud Foundry 来创建资源时，发生了错误。Cloud Foundry 消息：“已超过组织的服务限制。”`
+`BXNUI2032E：未能创建 <service_instances> 资源。联系 Cloud Foundry 来创建资源时，发生了错误。Cloud Foundry 消息：“已超过组织的服务限制。”`
 
 在已超过您帐户可拥有的服务实例数的限制时，会发生此错误。
 {: tsCauses}
 
-删除不需要的任何服务实例，或者除去您可拥有的服务实例数的限制。
+删除不需要的任何服务实例，或者除去对您可拥有的服务实例数的限制。
 {: tsResolve}
 
   * 要删除服务实例，可以使用 {{site.data.keyword.Bluemix_notm}} 控制台或命令行界面。
 
-    要使用 {{site.data.keyword.Bluemix_notm}} 控制台来删除服务实例，请完成以下步骤：
-	  1. 在“服务”仪表板中，单击要删除的服务的**操作**菜单。
-	  2. 单击**删除服务**。系统会提示您重新编译打包该服务实例所绑定到的应用程序。
+    要使用 {{site.data.keyword.Bluemix_notm}} 控制台删除服务实例，请完成下列步骤：
+	  1. 在“服务”仪表板中，单击要删除的服务的“操作”菜单。
+   2. 单击“删除服务”。系统会提示您重新编译打包该服务实例所绑定到的应用程序。要使用命令行界面删除服务实例，请完成以下步骤：
+	  3. 取消应用程序与该服务实例的绑定。输入“cf unbind-service <appname> <service_instance_name>”。
+	  4. 删除该服务实例。输入“cf delete-service <service_instance_name>”。
+	  5. 在删除服务实例之后，可能需要重新编译打包绑定该服务实例的应用程序。输入“cf restage <appname>”。
 
-    要使用命令行界面删除服务实例，请完成以下步骤：
-	  3. 通过输入 `cf unbind-service <appname> <service_instance_name>`.
-	  4. 通过输入 `cf delete-service <service_instance_name>`.
-	  5. 在删除服务实例之后，可能需要通过输入 `cf restage <appname>`.
-
-  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
+  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅 [升级帐户](/docs/account/index.html#upgrade-to-paygo)。
 
 ## 无法在 {{site.data.keyword.Bluemix_notm}} 上运行可执行文件
 {: #ts_executable}
@@ -360,26 +357,25 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 如果要推送到 {{site.data.keyword.Bluemix_notm}} 的内容已经是可执行文件，那么该内容是先前构建的，不需要在 {{site.data.keyword.Bluemix_notm}} 上进行构建。在此情况下，无需任何 buildpack，可执行文件就可以在 {{site.data.keyword.Bluemix_notm}} 上运行。您必须向 {{site.data.keyword.Bluemix_notm}} 明确指示不需要 buildpack。
 {: tsCauses}
 
-在将可执行文件推送到 {{site.data.keyword.Bluemix_notm}} 时，必须指定 `null-buildpack`，它指示不需要 buildpack。指定 `null-buildpack` 的方法是使用带 **-b** 选项的 `cf push` 命令：
+在将可执行文件推送到 {{site.data.keyword.Bluemix_notm}} 时，必须指定“null-buildpack”，它指示不需要 buildpack。指定“null-buildpack”的方法是使用带 **-b** 选项的“ibmcloud cf push”命令：
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <start_command> -b <null-buildpack>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 例如：
         ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## 超过组织的内存限制
 {: #ts_outofmemory}
 
-如果您是轻量帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。轻量帐户的最大内存配额为 256 MB，要增大内存配额，只能升级到计费帐户。
-
-将应用程序部署到 {{site.data.keyword.Bluemix_notm}} 时，显示了以下错误消息：
+如果您是轻量帐户用户，那么可能无法在超过组织的内存限制的情况下将应用程序部署到 {{site.data.keyword.Bluemix_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。轻量帐户的最大内存配额为 256 MB，要增大内存配额，只能升级到计费帐户。尝试在 {{site.data.keyword.Bluemix_notm}} 中部署应用程序时，显示了以下错误消息：
 {: tsSymptoms}
 
-`失败 服务器错误，状态码：400，错误代码：100005，消息：您已超过组织的内存限制。`
+“失败 服务器错误，状态码：400，错误代码：100005，消息：您已超过组织的内存限制。`
 
 当组织的剩余内存量低于您要部署的应用程序所需的内存量时，会发生此错误。轻量帐户的最大内存配额为 256 MB。
 {: tsCauses}
@@ -387,31 +383,30 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve}
 
-  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
-  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 `cf` 命令行界面。
+  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅 [升级帐户](/docs/account/index.html#upgrade-to-paygo)。
+
+* 要减少应用程序使用的内存，请使用 {{site.data.keyword.Bluemix_notm}} 控制台或 Cloud Foundry 命令行界面。
 
     如果使用 {{site.data.keyword.Bluemix_notm}} 控制台，请完成以下步骤：
 
-    1. 从仪表板中选择应用程序。这将打开应用程序详细信息页面。
+    1. 在仪表板中选择应用程序。这将打开应用程序详细信息页面。
+    2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。
 
-    2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
-	
-
-    如果使用 `cf` 命令行界面，请完成以下步骤：
+    如果使用命令行界面，请完成以下步骤：
 
     1. 检查应用程序使用了多少内存：
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  `cf apps` 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
+	  `ibmcloud cf list` 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
 
 
     2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
 
 	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. 重新启动应用程序以使更改生效。
@@ -431,8 +426,8 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 {: tsResolve}
 
 ```
-cf push appname -p app_path
-  ```
+ibmcloud cf push appname -p app_path
+```
 
 此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。
 
@@ -458,10 +453,10 @@ cf push appname -p app_path
 
 在 {{site.data.keyword.Bluemix_notm}} 区域上工作时，可能在 {{site.data.keyword.Bluemix_notm}} 上找不到组织。
 
-您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 控制台，但不能使用 `cf` 命令行界面或 Eclipse 插件来推送应用程序。
+您可以成功登录到 {{site.data.keyword.Bluemix_notm}} 控制台，但不能使用 Cloud Foundry 命令行界面或 Eclipse 插件来推送应用程序。
 {: tsSymptoms}
 
-尝试使用 `cf` 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下某条错误消息（消息中指定了组织名称）：
+尝试使用 Cloud Foundry 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下某条错误消息（消息中指定了组织名称）：
 
 `查找组织时出错`
 
@@ -474,7 +469,7 @@ cf push appname -p app_path
 发生此问题的原因是您要使用的区域的 API 端点未指定，并且您要查找的组织可能位于其他区域中。
 {: tsCauses}
 
-如果要使用 `cf` 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，请输入 `cf api` 命令并指定区域的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.Bluemix_notm}} 欧洲英国区域：
+如果要使用 Cloud Foundry 命令行界面将应用程序推送到 {{site.data.keyword.Bluemix_notm}}，请输入 `cf api` 命令并指定区域的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.Bluemix_notm}} 欧洲英国区域：
 {: tsResolve}
 
 ```
@@ -503,17 +498,17 @@ cf api https://api.eu-gb.bluemix.net
     ```
     host: host_name	
 	```
-  * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `cf push` 命令。
+  * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `ibmcloud cf push` 命令。
     ```
-    cf push appname -p app_path -n host_name
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## 无法使用 cf push 命令推送 WAR 应用程序
+## 无法使用 ibmcloud cf push 命令推送 WAR 应用程序
 {: #ts_cf_war}
 
-如果未正确指定应用程序位置，那么可能无法使用 `cf push` 命令将归档的 Web 应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
+如果未正确指定应用程序位置，那么可能无法使用 `ibmcloud cf push` 命令将归档的 Web 应用程序部署到 {{site.data.keyword.Bluemix_notm}}。
 
-使用 `cf push` 命令将 WAR 应用程序上传到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息：
+使用 `ibmcloud cf push` 命令将 WAR 应用程序上传到 {{site.data.keyword.Bluemix_notm}} 时，您会看到以下错误消息：
 {: tsSymptoms}
 `编译打包错误：由于编译打包失败，无法获取实例。`
 
@@ -524,17 +519,13 @@ cf api https://api.eu-gb.bluemix.net
 {: tsResolve}
 
 ```
-cf push MyUniqueAppName01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-有关 `cf push` 命令的更多信息，请输入 `cf push -h`。
-
-
-
-
+有关 `ibmcloud cf push` 命令的更多信息，请输入 `ibmcloud cf push -h`。
 
 ## 将应用程序推送到 {{site.data.keyword.Bluemix_notm}} 时未正确显示双字节字符
 {: #ts_doublebytes}
@@ -583,9 +574,9 @@ cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 通过以下其中一种方法来指定启动命令：
-     * 使用 `cf` 命令行界面。例如：
+     * 使用 Cloud Foundry 命令行界面。例如：
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/jsonfile){: new_window} 文件。例如：
 	    ```
@@ -687,7 +678,7 @@ cf push MyUniqueAppName02 -p "./app.war"
   ```
 buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
   ```
-  * 如果从命令提示符部署应用程序，请使用 `cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
+  * 如果从命令提示符部署应用程序，请使用 `ibmcloud cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
         ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor 
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
