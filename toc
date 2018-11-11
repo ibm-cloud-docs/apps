@@ -22,12 +22,14 @@ Creating apps
         tutorials/tutorial_mobile.md
         create-deploy-cli.md
         deploying/functions.md
+        tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
     Deploying and integrating apps
         vsi-deploy.md
         deploying/containers.md
         deploying/crypto.md
+        tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
     connect_external_app.md
