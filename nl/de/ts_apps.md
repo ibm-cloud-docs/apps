@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,25 +151,25 @@ Führen Sie die folgenden Schritte aus, um die nicht verwendete Route zu lösche
   1. Stellen Sie fest, ob die Route zum aktuellen Bereich gehört. Geben Sie dazu den folgenden Befehl ein:
 
     ```
-    cf routes
+    ibmcloud cf routes
     ```
 
   2. Wenn die Route nicht zum aktuellen Bereich gehört, wechseln Sie in den betreffenden Bereich oder in die betreffende Organisation. Geben Sie dazu den folgenden Befehl ein:
 
     ```
-    cf target -o org_name -s space_name
+    ibmcloud cf target -o org_name -s space_name
     ```
 
   3. Löschen Sie die App-Route, indem Sie den folgenden Befehl eingeben:
 
     ```
-    cf delete-route domain_name -n host_name
+    ibmcloud cf delete-route domain_name -n host_name
     ```
 
   Beispiel:
 
   ```
-  cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route mybluemix.net -n app001
   ```
 
 ## Abrufen von Bereichen in Organisation nicht möglich
@@ -189,7 +189,7 @@ Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erste
 {: tsResolve}
 
 * Klicken Sie in der Menüleiste auf **Verwalten > Konto > Organisationen**. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie auf **Bereich erstellen**.
-* Geben Sie in der Befehlszeilenschnittstelle `cf` Folgendes ein: `cf create-space <space_name> -o <organization_name>`.
+* Geben Sie in der Cloud Foundry-Befehlszeilenschnittstelle Folgendes ein: `cf create-space <space_name> -o <organization_name>`.
 
 Wiederholen Sie den Vorgang. Wenn diese Nachricht erneut angezeigt wird, rufen Sie die Seite für den [{{site.data.keyword.Bluemix_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob ein Problem für einen Service oder eine Komponente vorliegt.
 
@@ -292,34 +292,35 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
     ```
 	disk_quota: <disk_quota>
 	```
-  * Verwenden Sie die Option **-k** in Kombination mit dem Befehl `cf push`, wenn Sie Ihre App mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen:
-    ```
-	cf push appname -p app_path -k <disk_quota>
+  * Verwenden Sie die Option **-k** mit dem Befehl `ibmcloud cf push`, wenn Sie Ihre App mit einer Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen:
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
-## Android-Apps empfangen keine {{site.data.keyword.mobilepushshort}}
+## Android-Apps können {{site.data.keyword.mobilepushshort}} nicht empfangen.
 {: #ts_push}
 
-In bestimmten Regionen, in denen nicht auf Google zugegriffen werden kann, empfangen Android-Apps keine Benachrichtigungen, die Sie über den IBM {{site.data.keyword.mobilepushshort}}-Service senden. In diesem Fall besteht die Ausweichlösung darin, Drittanbieterservices zu verwenden.
+Android-Apps können in bestimmten Regionen, in denen Google nicht erreichbar ist, keine Benachrichtigungen erhalten, die Sie über den {{site.data.keyword.mobilepushshort}}-Service von IBM versenden. In diesem Fall besteht die Ausweichlösung darin, Drittanbieterservices zu verwenden.
 
 Sie können einen {{site.data.keyword.mobilepushshort}}-Service für Ihre {{site.data.keyword.Bluemix_notm}}-App verwenden und eine Nachricht an die registrierten Geräte senden. Jedoch können Apps, die für Android entwickelt wurden, Ihre Benachrichtigungen in bestimmten Regionen nicht empfangen.
 {: tsSymptoms}
 
-Der IBM {{site.data.keyword.mobilepushshort}}-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die für Android entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
+Der IBM {{site.data.keyword.mobilepushshort}}-Service verwendet den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu senden, die unter Android entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
 {: tsCauses}
 
-Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM-Service abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://pushy.me){: new_window}, [getui ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.getui.com/){: new_window} oder [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.jpush.cn/){: new_window}.
+Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM-Service abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://pushy.me){: new_window}, [getui ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.getui.com/){: new_window} und [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
-## Für Organisation geltender Grenzwert für Services wurde überschritten
+## Die Servicebegrenzung von Org wurde überschritten.
 {: #ts_servicelimit}
 
 Wenn Sie Benutzer eines Lite-Kontos sind, können Sie möglicherweise keine App in {{site.data.keyword.Bluemix_notm}} erstellen, wenn Sie den für Ihre Organisation geltenden Grenzwert für Services überschritten haben.
 
-Wenn Sie versuchen, in {{site.data.keyword.Bluemix_notm}} eine App zu erstellen, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie versuchen, eine App in {{site.data.keyword.Bluemix_notm}} zu erstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
-`BXNUI2032E: Die Ressource <service_instances> wurde nicht erstellt. Während der Kontaktaufnahme mit Cloud Foundry zum Erstellen der Ressource ist ein Fehler aufgetreten. Cloud Foundry-Nachricht: "You have exceeded your organization's services limit." ("Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
+`BXNUI2032E: Die Ressource <service_instances> wurde nicht erstellt. Während der Kontaktaufnahme mit Cloud Foundry zum Erstellen der Ressource ist ein Fehler aufgetreten. Cloud Foundry-Nachricht: "You have exceeded your organization's services limit." ("Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten."`
 
 Dieser Fehler tritt auf, wenn Sie den Grenzwert für die Anzahl der Serviceinstanzen, die für Ihr Konto bestehen können, überschritten haben.
 {: tsCauses}
@@ -329,18 +330,17 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 
   * Zum Löschen einer Serviceinstanz können Sie die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.
 
-    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz verwenden, führen Sie die folgenden Schritte aus:
-	  1. Klicken Sie im Dashboard 'Services' für den Service, den Sie löschen wollen, auf das Menü **Aktionen**.
+    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole zum Löschen einer Serviceinstanz verwenden möchten, führen Sie die folgenden Schritte aus:
+	  1. Klicken Sie im Dashboard 'Services' für den Service, den Sie löschen möchten, auf das Menü **Aktionen**.
 	  2. Klicken Sie auf **Service löschen**. Sie werden dazu aufgefordert, für die App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen.
 
-    Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden, führen Sie folgende Schritte aus:
-	  3. Heben Sie die Bindung zwischen der Serviceinstanz und der App mit dem folgenden Befehl auf: `cf unbind-service <appname> <service_instance_name>`.
-	  4. Löschen Sie die Serviceinstanz durch Eingeben von `cf delete-service <service_instance_name>`.
-	  5. Nach dem Löschen der Serviceinstanz ist es gegebenenfalls wünschenswert, für Ihre App, an die die Serviceinstanz gebunden war, ein erneutes Staging durchzuführen. Geben Sie hierzu folgenden Befehl ein: `cf restage <appname>`.
+    Wenn Sie die Befehlszeilenschnittstelle zum Löschen einer Serviceinstanz verwenden möchten, führen Sie folgende Schritte aus:
+	  3. Heben Sie die Bindung der Serviceinstanz zur App auf. Geben Sie `cf unbind-service <appname> <service_instance_name>` ein.
+	  4. Löschen Sie die Serviceinstanz. Geben Sie `cf delete-service <service_instance_name>` ein.
+	  5. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise ein erneutes Staging für Ihre App durchführen, an die die Serviceinstanz gebunden war. Geben Sie `cf restage <appname>` ein.
+  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
 
-  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen hierzu finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
-
-## Ausführbare Dateien können in {{site.data.keyword.Bluemix_notm}} nicht ausgeführt werden
+## Ausführbare Dateien können auf {{site.data.keyword.Bluemix_notm}} nicht ausgeführt werden.
 {: #ts_executable}
 
 Möglicherweise können Sie ausführbare Dateien in {{site.data.keyword.Bluemix_notm}} nicht ausführen, wenn diese ausführbaren Dateien in einer anderen Umgebung entwickelt wurden und der Build für sie auch dort erstellt wurde.
@@ -351,26 +351,27 @@ Sie können ausführbare Dateien nicht in {{site.data.keyword.Bluemix_notm}} aus
 Wenn es sich bei dem Inhalt, den Sie per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen wollen, bereits um eine ausführbare Datei handelt, wurde der Build für den Inhalt zuvor erstellt und ein erneuter Build in {{site.data.keyword.Bluemix_notm}} ist nicht erforderlich. In diesem Fall ist kein Buildpack erforderlich, damit die ausführbare Datei in {{site.data.keyword.Bluemix_notm}} ausgeführt werden kann. Sie müssen für {{site.data.keyword.Bluemix_notm}} explizit angeben, dass ein Buildpack nicht erforderlich ist.
 {: tsCauses}
 
-Wenn Sie die ausführbare Datei per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie durch einen `Null-Buildpack` angeben, dass kein Buildpack erforderlich ist. Sie geben einen `Null-Buildpack` an, indem Sie die Option **-b** in Verbindung mit dem Befehl `cf push` verwenden:
+Wenn Sie die ausführbare Datei per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, müssen Sie durch einen 'Null-Buildpack' angeben, dass kein Buildpack erforderlich ist. Sie geben einen 'Null-Buildpack' an, indem Sie die Option **-b** mit dem Befehl `ibmcloud cf push` verwenden:
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <start_command> -b <null-buildpack>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 Beispiel:
 ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
 ## Für Organisation geltende Speicherbegrenzung wurde überschritten
 {: #ts_outofmemory}
 
-Wenn Sie Benutzer eines Lite-Kontos sind, können Sie möglicherweise eine App nicht in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die für Ihre Organisation geltende Speicherbegrenzung überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Lite-Konto beträgt 256 MB und kann nur durch das Upgrade auf ein gebührenpflichtiges Konto erhöht werden.
+Wenn Sie ein Lite-Kontobenutzer sind, können Sie möglicherweise keine App in {{site.data.keyword.Bluemix_notm}} bereitstellen, wenn Sie die maximale Speicherbegrenzung für Ihre Organisation überschritten haben. Sie können entweder den von Ihren Apps verwendeten Speicherplatz verringern oder das Speicherkontingent Ihres Konto erhöhen. Das Kontingent der maximalen Hauptspeicherkapazität für ein Lite-Konto beträgt 256 MB und kann nur durch das Upgrade auf ein gebührenpflichtiges Konto erhöht werden.
 
 Wenn Sie eine App unter {{site.data.keyword.Bluemix_notm}} bereitstellen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 
-`FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.` (FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 100005, Nachricht: Sie haben die für Ihre Organisation geltende Speicherbegrenzung überschritten.)
+`FEHLGESCHLAGEN Serverfehler, Statuscode: 400, Fehlercode: 100005, Nachricht: You have exceeded your organization's memory limit. ("Sie haben den für Ihre Organisation geltenden Grenzwert für Services überschritten.")`
 
 Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speichermenge niedriger ist, als die Speichermenge, die für die bereitzustellende App erforderlich ist. Das Kontingent der maximalen Hauptspeicherkapazität für ein Lite-Konto beträgt 256 MB.
 {: tsCauses}
@@ -378,28 +379,28 @@ Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speicherme
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Apps verwendeten Speicherplatz verringern.
 {: tsResolve}
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen hierzu finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
-  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}}-Konsole oder die Befehlszeilenschnittstelle `cf`.
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie im Abschnitt [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
+  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.Bluemix_notm}} -Konsole oder die Befehlszeilenschnittstelle von Cloud Foundry'.
 
-    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden, führen Sie die folgenden Schritte aus:
+    Wenn Sie die {{site.data.keyword.Bluemix_notm}}-Konsole verwenden möchten, führen Sie die folgenden Schritte aus:
 
     1. Wählen Sie Ihre App im Dashboard aus. Die Seite mit den Anwendungsdetails wird geöffnet.
     2. Im Teilfenster für die Laufzeit können Sie die maximale Hauptspeicherkapazität für Ihre App, die Anzahl der App-Instanzen oder beide Angaben reduzieren.
 
-    Wenn Sie die Befehlszeilenschnittstelle `cf` verwenden, führen Sie die folgenden Schritte aus:
+    Wenn Sie die Befehlszeilenschnittstelle verwenden, führen Sie die folgenden Schritte aus:
 
-    1. Überprüfen Sie, wie viel Speicherplatz für Ihre Apps verwendet wird:
+    1. Überprüfen Sie, wieviel Speicher für Ihre Apps verwendet wird.
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  Mit dem Befehl `cf apps` werden alle Apps aufgelistet, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Apps wird auch angezeigt.
+	  Der Befehl `ibmcloud cf list` listet alle Apps auf, die Sie in Ihrem aktuellen Bereich bereitgestellt haben. Der Status der einzelnen Apps wird auch angezeigt.
 
     2. Zum Verringern der von Ihrer App verwendeten Speichermenge verringern Sie die Anzahl der App-Instanzen, die maximale Hauptspeicherkapazität oder beides:
 
 	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. Starten Sie Ihre App erneut, damit die Änderungen wirksam werden.
@@ -419,7 +420,7 @@ Sie können die App manuell erneut starten, indem Sie den folgenden Befehl in di
 {: tsResolve}
 
 ```
-cf push appname -p app_path
+ibmcloud cf push appname -p app_path
 ```
 
 Darüber hinaus können Sie die App so codieren, dass Probleme wie Ausfallzeiten, Ausnahmebedingungen und Verbindungsfehler erkannt werden und eine Recovery durchgeführt wird.
@@ -444,10 +445,10 @@ Wenn Sie eine App aus IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} m
 
 Es kann vorkommen, dass Sie Ihre Organisation in {{site.data.keyword.Bluemix_notm}} nicht finden können, wenn Sie in einer {{site.data.keyword.Bluemix_notm}}-Region arbeiten.
 
-Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, jedoch keine Apps mithilfe der Befehlszeilenschnittstelle `cf` oder des Eclipse-Plug-ins per Push-Operation übertragen.
+Sie können sich zwar erfolgreich an der {{site.data.keyword.Bluemix_notm}}-Konsole anmelden, jedoch keine Apps mithilfe der Befehlszeilenschnittstelle von Cloud Foundry oder des Eclipse-Plug-ins per Push-Operation übertragen.
 {: tsSymptoms}
 
-Wenn Sie versuchen, mithilfe der Befehlszeilenschnittstelle `cf` eine Anwendung per Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen, wird eine der folgenden Fehlernachrichten mit angegebenem Organisationsnamen angezeigt:
+Wenn Sie versuchen, mithilfe der Befehlszeilenschnittstelle von Cloud Foundry eine Anwendung per Push-Operation an {{site.data.keyword.Bluemix_notm}} zu übertragen, wird eine der folgenden Fehlernachrichten mit angegebenem Organisationsnamen angezeigt: 
 
 `Error finding org` (Fehler bei der Suche nach der Organisation)
 
@@ -460,7 +461,7 @@ Wenn Sie versuchen, mithilfe des Eclipse-Plug-ins von Cloud Foundry eine Anwendu
 Dieses Problem tritt auf, weil der API-Endpunkt der Region, mit der Sie arbeiten möchten, nicht angegeben ist und sich die gesuchte Organisation eventuell in einer anderen Region befindet.
 {: tsCauses}
 
-Wenn Sie eine Anwendung mithilfe der Befehlszeilenschnittstelle `cf` per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, geben Sie den Befehl `cf api` ein und geben Sie den API-Endpunkt der Region an. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung zu der {{site.data.keyword.Bluemix_notm}}-Region 'Europa - Vereintes Königreich' herzustellen:
+Wenn Sie eine Anwendung mithilfe der Befehlszeilenschnittstelle von Cloud Foundry per Push-Operation an {{site.data.keyword.Bluemix_notm}} übertragen, geben Sie den Befehl `cf api` ein und den API-Endpunkt der Region an. Geben Sie beispielsweise den folgenden Befehl ein, um eine Verbindung zu der {{site.data.keyword.Bluemix_notm}}-Region 'Europa - Vereintes Königreich' herzustellen:
 {: tsResolve}
 
 ```
@@ -489,17 +490,17 @@ Der angegebene Hostname muss innerhalb der verwendeten Domäne eindeutig sein. V
     ```
     host: host_name
 	```
-  * Wenn Sie die Anwendung über eine Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` in Verbindung mit der Option **-n**.
+  * Wenn Sie die Anwendung über eine Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `ibmcloud cf push` in Verbindung mit der Option **-n**.
     ```
-    cf push appname -p app_path -n host_name
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## Push-Operation für WAR-Anwendung mit Befehl cf push nicht möglich
+## Push-Operation für WAR-Anwendung mit Befehl 'ibmcloud cf push' nicht möglich
 {: #ts_cf_war}
 
-Es kann vorkommen, dass Sie mit dem Befehl `cf push` eine archivierte Web-App unter {{site.data.keyword.Bluemix_notm}} nicht bereitstellen können, wenn die Position der App nicht ordnungsgemäß angegeben ist.
+Es kann vorkommen, dass Sie mit dem Befehl `ibmcloud cf push` eine archivierte Web-App unter {{site.data.keyword.Bluemix_notm}} nicht bereitstellen können, wenn die Position der App nicht ordnungsgemäß angegeben ist. 
 
-Wenn Sie eine WAR-App in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `cf push` hochladen, wird die folgende Fehlernachricht angezeigt:
+Wenn Sie eine WAR-App in {{site.data.keyword.Bluemix_notm}} mit dem Befehl `ibmcloud cf push` hochladen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
 `Staging error: Cannot get instances since staging failed.` (Abrufen der Instanzen wegen fehlgeschlagenem Staging nicht möglich.)
 
@@ -510,13 +511,13 @@ Verwenden Sie die Option **-p** zum Angeben einer WAR-Datei oder fügen Sie den 
 {: tsResolve}
 
 ```
-cf push MyUniqueAppName01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-Weitere Informationen zum Befehl `cf push` erhalten Sie, wenn Sie `cf push -h` eingeben.
+Weitere Informationen zum Befehl `ibmcloud cf push` erhalten Sie, wenn Sie `ibmcloud cf push -h` eingeben.
 
 ## Anzeigen von Doppelbytezeichen nach Push-Operation für Apps in {{site.data.keyword.Bluemix_notm}} nicht ordnungsgemäß
 {: #ts_doublebytes}
@@ -565,9 +566,9 @@ Verwenden Sie je nach Ursache des Problems eine der folgenden Methoden:
 {: tsResolve}
 
   * Geben Sie unter Verwendung einer der folgenden Methoden den Startbefehl an:
-     * Verwenden Sie die Befehlszeilenschnittstelle `cf`. Beispiel:
+     * Verwenden Sie die Befehlszeilenschnittstelle von Cloud Foundry. Beispiel:
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * Mithilfe der Datei [package.json ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.npmjs.com/package/jsonfile){: new_window}. Beispiel:
 	    ```
@@ -669,7 +670,7 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * Wenn Sie die Anwendung in einer Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `cf push` und geben Sie das angepasste Buildpack mit der Option **-b** an. Beispiel:
+  * Wenn Sie die Anwendung in einer Eingabeaufforderung bereitstellen, verwenden Sie den Befehl `ibmcloud cf push` und geben das angepasste Buildpack mit der Option **-b** an. Beispiel:
     ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```

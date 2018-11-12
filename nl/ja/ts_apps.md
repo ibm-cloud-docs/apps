@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-07-09"
+lastupdated: "2018-10-23"
 
 ---
 
@@ -151,25 +151,25 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
   1. 以下のコマンドを入力して、該当経路が現行スペースに属しているかどうかを確認します。
 
     ```
-    cf routes
+    ibmcloud cf routes
     ```
 
   2. 該当経路が現行スペースに属していない場合は、以下のコマンドを入力して、それが属しているスペースまたは組織に切り替えます。
 
     ```
-    cf target -o org_name -s space_name
+    ibmcloud cf target -o org_name -s space_name
     ```
 
   3. 以下のコマンドを入力して、アプリ経路を削除します。
 
     ```
-    cf delete-route domain_name -n host_name
+    ibmcloud cf delete-route domain_name -n host_name
     ```
 
   例えば次のようにします。
 
   ```
-  cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route mybluemix.net -n app001
   ```
 
 ## 組織のスペースを取得できない
@@ -189,7 +189,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 {: tsResolve}
 
 * メニュー・バーで、**「管理」>「アカウント」>「組織」**をクリックします。 スペースを作成する組織を選択してから、**「スペースの作成」**をクリックします。
-* `cf` コマンド・ライン・インターフェースに `cf create-space <space_name> -o <organization_name>` と入力します。
+* Cloud Foundry コマンド・ライン・インターフェースに `cf create-space <space_name> -o <organization_name>` と入力します。
 
 やり直してください。 このメッセージが再び発生する場合、[{{site.data.keyword.Bluemix_notm}} 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスして、サービスまたはコンポーネントに問題がないか確認してください。
 
@@ -292,15 +292,16 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
     ```
 	disk_quota: <disk_quota>
 	```
-  * アプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときに、`cf push` コマンドで **-k** オプションを使用します。
-    ```
-	cf push appname -p app_path -k <disk_quota>
+  * アプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときに、`ibmcloud cf push` コマンドで **-k** オプションを使用します。
+    
+  ```
+	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
 ## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
 
-Google にアクセス不能な特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスで送信した通知を受信できません。 この場合、回避策はサード・パーティーのサービスを使用することです。
+Google にアクセスできない特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスから送信された通知を受信できません。 この場合、回避策はサード・パーティーのサービスを使用することです。
 
 {{site.data.keyword.Bluemix_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。 ただし、Android で開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
@@ -308,13 +309,13 @@ Google にアクセス不能な特定地域の Android アプリは、IBM {{site
 IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android で開発されたモバイル・アプリに通知を送ります。 Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
 {: tsCauses}
 
-回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://pushy.me){: new_window}、[getui ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.getui.com/){: new_window}、および [jpush ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jpush.cn/){: new_window}) を使用してください。
+回避策として、GCM サービスに依存しないサード・パーティー・サービス (例えば、[Pushy ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://pushy.me){: new_window}, [getui ![外部リンク・アイコン ](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.getui.com/){: new_window}、および [jpush ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jpush.cn/){: new_window}) を使用します。
 {: tsResolve}
 
-## 組織のサービス上限の超過
+## 組織のサービス限度を超えた
 {: #ts_servicelimit}
 
-ライト・アカウントのユーザーの場合、組織のサービス上限を超過すると、{{site.data.keyword.Bluemix_notm}} でアプリを作成できなくなる場合があります。
+ライト・アカウントのユーザーの場合、組織のサービス限度を超過すると、{{site.data.keyword.Bluemix_notm}} でアプリを作成できなくなることがあります。
 
 {{site.data.keyword.Bluemix_notm}} でアプリを作成しようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms}
@@ -329,45 +330,46 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 
   * サービス・インスタンスを削除するには、{{site.data.keyword.Bluemix_notm}} コンソールか、またはコマンド・ライン・インターフェースが使用できます。
 
-    {{site.data.keyword.Bluemix_notm}} コンソールを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
+    {{site.data.keyword.Bluemix_notm}} コンソールを使用してサービス・インスタンスを削除するには、以下のステップを実行します。
 	  1. 「サービス」ダッシュボードで、削除するサービスの**「アクション」**メニューをクリックします。
-	  2. **「サービスの削除 (Delete Service)」**をクリックします。 そのサービス・インスタンスがバインドされていたアプリを再ステージするようにプロンプトが出されます。
+	  2. **「サービスの削除」**をクリックします。 そのサービス・インスタンスがバインドされていたアプリを再ステージするようにプロンプトが出されます。
 
-    コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
-	  3. Un次を入力して、アプリからサービス・インスタンスをアンバインドします: `cf unbind-service <appname> <service_instance_name>`。
-	  4. 次を入力して、サービス・インスタンスを削除します: `cf delete-service <service_instance_name>`。
-	  5. サービス・インスタンスを削除した後、次を入力して、サービス・インスタンスがバインドされていたアプリを再ステージングしなければならない場合があります: `cf restage <appname>`。
+    コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下のステップを実行します。
+	  3. サービス・インスタンスをアプリからアンバインドします。 `cf unbind-service <appname> <service_instance_name>` と入力します。
+	  4. サービス・インスタンスを削除します。 `cf delete-service <service_instance_name>` と入力します。
+	  5. サービス・インスタンスを削除した後、サービス・インスタンスがバインドされていたアプリを再ステージングしなければならない場合があります。 `cf restage <appname>` と入力します。
 
-  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、ライト・アカウントを有料アカウントにアップグレードします。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
+  * 持つことのできるサービス・インスタンスの数に対する上限を撤廃するには、ライト・アカウントを有料アカウントにアップグレードします。 詳しくは、[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo) を参照してください。
 
-## 実行可能ファイルが {{site.data.keyword.Bluemix_notm}} で実行できない
+## {{site.data.keyword.Bluemix_notm}} で実行可能ファイルを実行できない
 {: #ts_executable}
 
-{{site.data.keyword.Bluemix_notm}} とは別の環境で開発およびビルドが行われた実行可能ファイルは、{{site.data.keyword.Bluemix_notm}} 上で実行できない場合があります。
+別の環境で開発およびビルドされた実行可能ファイルは、{{site.data.keyword.Bluemix_notm}} 上で実行できないことがあります。
 
 実行可能ファイルは、別の環境で開発とビルドを行った時は、{{site.data.keyword.Bluemix_notm}} で実行することができません。
 {: tsSymptoms}
 
-{{site.data.keyword.Bluemix_notm}} にプッシュしたいコンテンツが既に実行可能ファイルであれば、そのコンテンツは前にビルドされており、{{site.data.keyword.Bluemix_notm}} でビルドする必要はありません。 その場合、{{site.data.keyword.Bluemix_notm}} でその実行可能ファイルを実行するためにビルドパックは必要ありません。 {{site.data.keyword.Bluemix_notm}} には、ビルドパックが不要であることを明示的に示さなければなりません。
+{{site.data.keyword.Bluemix_notm}} にプッシュしたいコンテンツが既に実行可能ファイルの場合、そのコンテンツは以前にビルドされているため、{{site.data.keyword.Bluemix_notm}} でビルドする必要はありません。 その場合、{{site.data.keyword.Bluemix_notm}} でその実行可能ファイルを実行するためにビルドパックは必要ありません。 {{site.data.keyword.Bluemix_notm}} には、ビルドパックが不要であることを明示的に示さなければなりません。
 {: tsCauses}
 
-その実行可能ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュする際に、`null-buildpack` を指定する必要があります。これは、ビルドパックが不要であることを示します。 `null-buildpack` は、**-b** オプションを指定した `cf push` コマンドを使用することで指定します。
+実行可能ファイルを {{site.data.keyword.Bluemix_notm}} にプッシュする際、「null-buildpack」を指定する必要があります。これは、ビルドパックが必要ないことを示すものです。 以下のように、`ibmcloud cf push` コマンドに **-b** オプションを使用して `null-buildpack` を指定します。
 {: tsResolve}
 
 ```
-cf push appname -p app_path -c <start_command> -b <null-buildpack>
+ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+
 以下に例を示します。
 ```
-cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
+ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
-## 組織のメモリー上限を超過
+## 組織のメモリー限度を超えた
 {: #ts_outofmemory}
 
-ライト・アカウントのユーザーの場合、組織のメモリー上限を超過すると、アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
+ライト・アカウントのユーザーの場合、組織のメモリー限度を超過すると、{{site.data.keyword.Bluemix_notm}} にアプリをデプロイできなくなることがあります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
 
-アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、以下のエラー・メッセージが表示されます。
+{{site.data.keyword.Bluemix_notm}} にアプリをデプロイしようとすると、以下のエラー・メッセージが表示されます。
 {: tsSymptoms}
 
 `失敗 サーバー・エラー、状況コード: 400、エラー・コード: 100005、メッセージ: 組織のメモリー上限を超過しました。`
@@ -375,31 +377,31 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 このエラーは、組織の残りメモリー量が、デプロイしたいアプリに必要なメモリー量を下回っている時に発生します。 ライト・アカウントの最大メモリー割り当て量は 256 MB です。
 {: tsCauses}
 
-自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
+アカウントのメモリー割り当て量を増加するか、アプリが使用するメモリーを削減できます。
 {: tsResolve}
 
-  * アカウントのメモリー割り当て量を増やすには、ライト・アカウントを有料アカウントにアップグレードしてください。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
-  * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} コンソールまたは `cf` コマンド・ライン・インターフェースのいずれかを使用します。
+  * アカウントのメモリー割り当て量を増やすには、ライト・アカウントを有料アカウントにアップグレードしてください。 詳しくは、[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo) を参照してください。
+  * アプリが使用するメモリーを削減するには、{{site.data.keyword.Bluemix_notm}} コンソールまたは Cloud Foundry コマンド・ライン・インターフェースのいずれかを使用します。
 
-    {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下の手順を実行します。
+    {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下のステップを実行します。
 
     1. ダッシュボードからアプリを選択します。 アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
-    `cf` コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
+    コマンド・ライン・インターフェースを使用する場合は、以下のステップを実行します。
 
-    1. アプリで使用しているメモリー量を調べます。
+    1. 以下を実行して、アプリに使用されているメモリー量を確認します。
 
 	  ```
-	  cf apps
+	  ibmcloud cf list
 	  ```
 
-	  `cf apps` コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。 各アプリの状況も表示されます。
+	  `ibmcloud cf list` コマンドで、自分が現行スペースにデプロイしたアプリがすべてリストされます。 各アプリの状況も表示されます。
 
     2. アプリが使用するメモリー量を削減するには、アプリ・インスタンス数または最大メモリー上限のいずれか、あるいはその両方を減らします。
 
 	  ```
-	  cf push appname -p app_path -i instance_number -m memory_limit
+	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
 
     3. アプリを再始動して、変更を有効にします。
@@ -419,7 +421,7 @@ cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/nul
 {: tsResolve}
 
 ```
-cf push appname -p app_path
+ibmcloud cf push appname -p app_path
 ```
 
 さらに、停止、例外、接続障害といった問題を見つけて、そのような問題から復旧するようにアプリをコーディングすることもできます。
@@ -444,10 +446,10 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 
 ある {{site.data.keyword.Bluemix_notm}} 地域で作業しているときに、{{site.data.keyword.Bluemix_notm}} で自分の組織が見つからない場合があります。
 
-{{site.data.keyword.Bluemix_notm}} コンソールに正常にログインできますが、`cf` コマンド・ライン・インターフェースまたは Eclipse プラグインを使用してアプリをプッシュすることができません。
+{{site.data.keyword.Bluemix_notm}} コンソールに正常にログインできますが、Cloud Foundry コマンド・ライン・インターフェースまたは Eclipse プラグインを使用してアプリをプッシュすることができません。
 {: tsSymptoms}
 
-`cf` コマンド・ライン・インターフェースを使用してアプリケーションを  {{site.data.keyword.Bluemix_notm}} にプッシュしようとすると、メッセージ内に組織名が指定された、次のいずれかのメッセージが表示されます。
+Cloud Foundry コマンド・ライン・インターフェースを使用してアプリケーションを  {{site.data.keyword.Bluemix_notm}} にプッシュしようとすると、メッセージ内に組織名が指定された、次のいずれかのメッセージが表示されます。
 
 `組織の検索中にエラーが発生しました (Error finding org)`
 
@@ -460,7 +462,7 @@ Cloud Foundry Eclipse プラグインを使用してアプリケーションを 
 この問題は、処理したい地域の API エンドポイントが指定されていないことが原因で発生します。探している組織が、別の地域にある可能性があります。
 {: tsCauses}
 
-`cf` コマンド・ライン・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} にアプリケーションをプッシュする場合は、`cf api` コマンドを入力し、地域の API エンドポイントを指定します。 例えば、以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} の欧州英国地域に接続します。
+Cloud Foundry コマンド・ライン・インターフェースを使用して {{site.data.keyword.Bluemix_notm}} にアプリケーションをプッシュする場合は、`cf api` コマンドを入力し、地域の API エンドポイントを指定します。 例えば、以下のコマンドを入力して、{{site.data.keyword.Bluemix_notm}} の欧州英国地域に接続します。
 {: tsResolve}
 
 ```
@@ -489,17 +491,17 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
     ```
     host: host_name
 	```
-  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを **-n** オプションで使用します。
+  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`ibmcloud cf push` コマンドを **-n** オプションで使用します。
     ```
-    cf push appname -p app_path -n host_name
+    ibmcloud cf push appname -p app_path -n host_name
     ```
 
-## cf push コマンドを使用して WAR アプリをプッシュできない
+## ibmcloud cf push コマンドを使用して WAR アプリをプッシュできない
 {: #ts_cf_war}
 
-アプリのロケーションが正しく指定されていないと、`cf push` コマンドを使用してアーカイブ済み Web アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。
+アプリのロケーションが正しく指定されていないと、`ibmcloud cf push` コマンドを使用してアーカイブ済み Web アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。
 
-`cf push` コマンドを使用して WAR アプリを {{site.data.keyword.Bluemix_notm}} にアップロードする際に、次のエラー・メッセージが表示されます。
+`ibmcloud cf push` コマンドを使用して WAR アプリを {{site.data.keyword.Bluemix_notm}} にアップロードする際に、次のエラー・メッセージが表示されます。
 {: tsSymptoms}
 `ステージング・エラー: ステージングに失敗したため、インスタンスを取得できません。(Staging error: cannot get instances since staging failed.)`
 
@@ -510,13 +512,13 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 {: tsResolve}
 
 ```
-cf push MyUniqueAppName01 -p app.war
+ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
 
 ```
-cf push MyUniqueAppName02 -p "./app.war"
+ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
-`cf push` コマンドの詳細な情報を確認するには、`cf push -h` を入力してください。
+`ibmcloud cf push` コマンドの詳細な情報を確認するには、`ibmcloud cf push -h` を入力してください。
 
 ## アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
@@ -565,9 +567,9 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 {: tsResolve}
 
   * 以下のいずれかの方法で開始コマンドを指定します。
-     * `cf` コマンド・ライン・インターフェースを使用します。 以下に例を示します。
+     * Cloud Foundry コマンド・ライン・インターフェースを使用します。 以下に例を示します。
         ```
-		cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * [package.json ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/jsonfile){: new_window} ファイルを使用します。 例:
 	    ```
@@ -670,7 +672,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。 以下に例を示します。
+  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`ibmcloud cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。 以下に例を示します。
     ```
-	cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
+	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
