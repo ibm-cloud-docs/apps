@@ -24,12 +24,10 @@ Criando aplicativos
         deploying/functions.md
 
     {: .topicgroup}
-    Implementando e integrando apps
-        dep-app-tool.md
+    Implementando e integrando aplicativos
         vsi-deploy.md
         deploying/containers.md
         deploying/crypto.md
-
 
     reqnsi.md
     mngapps.md
