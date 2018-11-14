@@ -25,11 +25,9 @@
 
     {: .topicgroup}
     앱 배치 및 통합
-        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         deploying/crypto.md
-
 
     reqnsi.md
     mngapps.md

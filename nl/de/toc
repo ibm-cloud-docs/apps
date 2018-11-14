@@ -25,11 +25,9 @@ Apps erstellen
 
     {: .topicgroup}
     Apps bereitstellen und integrieren
-        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         deploying/crypto.md
-
 
     reqnsi.md
     mngapps.md
