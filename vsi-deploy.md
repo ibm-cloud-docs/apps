@@ -37,7 +37,7 @@ Upgrade to a Pay-As-You-Go account. To use virtual instances, your {{site.data.k
 
 The App Service provisions a virtual server instance for you, loads an image that includes your app, creates a Devops toolchain, and initiates the first deployment cycle for you.
 
-1. [Create an app](apps/index.html#createapp). 
+1. [Create an app](index.html#createapp). 
 2. Click **Deploy to Cloud** from the app details page.
 3. Select **Deploy to a Virtual Server** along with the region in which to run your server.
 

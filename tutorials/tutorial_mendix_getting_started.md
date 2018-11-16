@@ -22,7 +22,7 @@ Mendix is a low-code development environment and toolset that helps you deliver 
 ## Selecting a starter kit
 {: #select-a-starter-kit}
 
-2. From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
+2. From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
 3. Select a Mendix low-code starter kit from one of the following categories:
   * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
