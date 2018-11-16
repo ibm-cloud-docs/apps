@@ -103,4 +103,4 @@ To redeploy, go to your application details page, and click **Deploy Application
 ## Additional information
 {: #additional-information}
 
-For more architectural detail on running Mendix applications in Kubernetes environments, review the [Run Mendix on Kubernetes](https://docs.mendix.com/deployment/docker/run-mendix-on-kubernetes) section of the Mendix user documentation.
+For more architectural detail on running Mendix applications in Kubernetes environments, review the [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) section of the Mendix user documentation.
