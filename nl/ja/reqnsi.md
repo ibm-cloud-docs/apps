@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-07"
 
 {{site.data.keyword.Bluemix_notm}} は、サービス・インスタンスを使用してサービスのリソースをアプリケーションに提供します。 サービス・インスタンスは Web アプリケーション間で共有できます。
 
-他の地域でホストされているサービスがその地域内で使用可能である場合、それらのサービスを使用することもできます。 これらのサービスはインターネットからアクセスできる必要があり、さらに API エンドポイントを持つ必要があります。 {{site.data.keyword.Bluemix_notm}} サービスを利用するために外部アプリケーションやサード・パーティー・ツールをコード化するのと同様に、これらのサービスを利用するにはお使いのアプリケーションを手動でコード化する必要があります。 詳しくは、『[{{site.data.keyword.Bluemix_notm}} サービスを利用するための外部アプリケーションとサード・パーティー・ツールの使用可能化](#accser_external)』を参照してください。
+他の地域でホストされているサービスがその地域内で使用可能である場合、それらのサービスを使用することもできます。 これらのサービスはインターネットからアクセスできる必要があり、さらに API エンドポイントを持つ必要があります。 {{site.data.keyword.Bluemix_notm}} サービスを利用するために外部アプリケーションやサード・パーティー・ツールをコード化するのと同様に、これらのサービスを利用するにはお使いのアプリケーションを手動でコード化する必要があります。 詳しくは、『[外部アプリへのサービスの接続](/docs/apps/connect_external_app.html)』を参照してください。
 
 ## 新規サービス・インスタンスの要求
 {: #req_instance}
@@ -60,7 +60,7 @@ lastupdated: "2018-09-07"
 2. プロンプトに従って、リソース・グループを選択し、新しいデータ関連サービスを作成してアプリケーションに接続します (Cloudant など)。 サービスの地域とプランを選択する必要がある場合があります。
 3. サービスが作成されるときに、サービスをアプリケーションに統合するのに役立つよう、資格情報を含め、いくつかのファイルがアプリケーション・ディレクトリーに追加されます。 任意のファイルを手動でマージすることも、今はこのステップをスキップすることもできます。
 
-サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用する方法について詳しくは、[外部アプリが {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにする![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](#accser_external){: new_window} を参照してください。
+サービス・インスタンスは、同じスペースまたは組織内のアプリ・インスタンスにのみバインド可能です。ただし、外部アプリと同じように他のスペースまたは組織からサービス・インスタンスを使用できます。 バインディングを作成する代わりに、資格情報を使用してアプリ・インスタンスを直接構成します。 外部アプリがどのように {{site.data.keyword.Bluemix_notm}} サービスを使用するのかについて詳しくは、『[外部アプリへのサービスの接続](/docs/apps/connect_external_app.html)』を参照してください。
 
 ## アプリケーションの構成
 {: #config}
@@ -93,49 +93,6 @@ Kubernetes Secret に保管されているサービス資格情報は、デフ�
 2. アプリ・ポッドからサービス資格情報にアクセスするには、次のいずれかのオプションを選択します。 
    - [Secret をボリュームとしてポッドにマウントする](#mount_secret)
    - [環境変数で Secret を参照する](#reference_secret)
-
-## 外部アプリの使用可能化
-{: #accser_external}
-
-{{site.data.keyword.Bluemix_notm}} の外部で作成および実行されたアプリケーションがある場合や、サード・パーティーのツールを使用する場合があります。 インターネットからアクセスできるサービス・キーを {{site.data.keyword.Bluemix_notm}} サービスが提供している場合、それらのサービスをローカル・アプリやサード・パーティー・ツールで使用できます。
-
-外部で使用するためのサービス・キーを提供するサービスは次のとおりです。
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-外部アプリまたはサード・パーティー・ツールで {{site.data.keyword.Bluemix_notm}} サービスを使用できるようにするには、以下のステップを実行します。
-
-1. サービスのインスタンスを要求します。
-    1. {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースのダッシュボードで、**「リソースの作成」**をクリックします。 カタログが表示されます。
-    2. カタログで、サービス・タイルをクリックして必要なサービスを選択します。 サービス詳細ページが開きます。
-    3. サービスのウィンドウで、デフォルトの**「接続先:」**リスト選択を**「アンバインドのまま」**にしておきます。 この選択は、サービスが {{site.data.keyword.Bluemix_notm}} アプリに接続されないことを意味します。
-    4. 必要に応じてその他の選択を行います。 次に、**「作成」**をクリックします。 サービス・インスタンスが作成され、サービスの「ダッシュボード」が表示されます。
-2. サービスの「ダッシュボード」で、**「サービス資格情報 (Service Credentials)」**を選択すると JSON 形式で資格情報を表示および追加することができます。 資格情報のセットを選択し、「アクション」列で**「資格情報の表示」**をクリックします。 資格情報として表示されている API キーを使用して、サービス・インスタンスに接続します。
-
-これで、{{site.data.keyword.Bluemix_notm}} の外部で実行されるアプリケーションが、{{site.data.keyword.Bluemix_notm}} サービスにアクセスできるようになりました。
-
-**注:** サービス・インスタンスの削除または請求情報の確認を行う場合は、ユーザー・インターフェースの「ダッシュボード」に戻ってサービス・インスタンスを管理する必要があります。
 
 ## ユーザー提供のサービス・インスタンスの作成
 {: #user_provide_services}

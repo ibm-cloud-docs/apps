@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-07-25"
 
   * [コンテナーの概説](../containers/container_index.html)
   * [Openwhisk の概説](../openwhisk/index.html)
-  * [Cloud Foundry アプリの作成](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Cloud Foundry アプリの作成](../cloud-foundry/index.html)
 
 3. アプリ名とホスト名を入力し、価格設定プランを選択します。
 
