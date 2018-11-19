@@ -25,13 +25,12 @@ Création d'applications
 
     {: .topicgroup}
     Déploiement et intégration d'applications
-        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         deploying/crypto.md
 
-
     reqnsi.md
+    connect_external_app.md
     mngapps.md
     updapps.md
     secapps.md

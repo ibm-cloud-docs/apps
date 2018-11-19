@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -34,8 +34,7 @@ instance de service. Une instance de service peut être partagée entre plusieur
 
 Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation
 de ces services de la même façon que vous codez les applications externes ou les outils tiers pour l'utilisation des services
-{{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des
-applications externes et des outils tiers](#accser_external).
+{{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [Connexion de services à des applications externes](/docs/apps/connect_external_app.html).
 
 ## Demande de nouvelle instance de service
 {: #req_instance}
@@ -66,7 +65,7 @@ Si vous utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_no
 3. Lorsque le service est créé, plusieurs fichiers (notamment les données d'identification) sont ajoutés au répertoire d'application afin que vous puissiez plus facilement intégrer le service à votre application. Vous pouvez fusionner manuellement des fichiers ou ignorer cette étape pour l'instant.
 
 Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de
-créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Utilisation des services {{site.data.keyword.Bluemix_notm}} avec des applications externes![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](#accser_external){: new_window}.
+créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon dont les applications externes utilisent les services {{site.data.keyword.Bluemix_notm}}, voir [Connexion de services à des applications externes](/docs/apps/connect_external_app.html).
 
 ## Configuration de votre application
 {: #config}
@@ -108,50 +107,6 @@ Les données d'identification pour le service qui sont stockées dans une valeur
 2. Pour accéder aux données d'identification de votre service à partir du pod de votre application, choisissez l'une des options suivantes : 
    - [Monter la valeur confidentielle en tant que volume sur votre pod](#mount_secret)
    - [Référencer la valeur confidentielle dans les variables d'environnement](#reference_secret)
-
-## Activation d'applications externes
-{: #accser_external}
-
-Vous pouvez disposer d'applications créées et exécutées en dehors de {{site.data.keyword.Bluemix_notm}}, mais également utiliser des outils tiers. Si des services {{site.data.keyword.Bluemix_notm}} fournissent des clés de service accessibles depuis Internet, vous pouvez utiliser ces services dans vos applications locales ou dans des outils tiers.
-
-Les services suivants vous fournissent des clés de service pour un usage externe :
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-Pour autoriser une application externe ou un outil tiers à utiliser un service {{site.data.keyword.Bluemix_notm}}, procédez comme suit :
-
-1. Demandez une instance du service.
-    1. Dans le tableau de bord de l'interface utilisateur {{site.data.keyword.Bluemix_notm}}, cliquez sur **Créer une ressource**. Le catalogue s'affiche.
-    2. Dans le catalogue, sélectionnez le service de votre choix en cliquant sur la vignette correspondante. La page des détails du service s'ouvre.
-    3. Dans la fenêtre du service, conservez la sélection par défaut de la liste **Connecter à :**: sur **Laisser non lié**. Cette sélection signifie que le service n'est pas connecté à une application {{site.data.keyword.Bluemix_notm}}.
-    4. Faites toutes les sélections requises. Ensuite, cliquez sur **Créer**. Une instance de service est créée et le tableau de bord du service s'affiche.
-2. Dans le tableau de bord du service, vous pouvez sélectionner **Données d'identification pour le service** pour afficher ou ajouter des données d'identification au format JSON. Sélectionnez un ensemble de données d'identification, puis cliquez sur **Afficher les données d'identification** dans la colonne Actions. Utilisez la clé d'API affichée comme données d'identification pour vous connecter à l'instance de service.
-
-Votre application qui s'exécute en dehors de {{site.data.keyword.Bluemix_notm}} peut désormais accéder au
-service {{site.data.keyword.Bluemix_notm}}.
-
-**Remarque :** si vous souhaitez supprimer des instances de service ou consulter les informations de facturation, vous devez revenir à votre tableau de bord dans l'interface utilisateur afin de gérer les instances de service.
 
 ## Création d'une instance de service fournie par l'utilisateur
 {: #user_provide_services}

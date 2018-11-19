@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} répertorie les ressources d'inf
 
   * [Initiation aux conteneurs](../containers/container_index.html)
   * [Initiation à Openwhisk](../openwhisk/index.html)
-  * [Création d'applications Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Création d'applications Cloud Foundry](../cloud-foundry/index.html)
 
 3. Entrez votre nom d'application et votre nom d'hôte et sélectionnez votre plan de tarification.
 
