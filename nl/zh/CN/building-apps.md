@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-07-25"
 
   * [Containers 入门](../containers/container_index.html)
   * [Openwhisk 入门](../openwhisk/index.html)
-  * [创建 Cloud Foundry 应用程序](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [创建 Cloud Foundry 应用程序](../cloud-foundry/index.html)
 
 3. 输入应用程序名称和主机名，并选择价格套餐。
 

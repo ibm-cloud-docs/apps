@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-07"
 
 {{site.data.keyword.Bluemix_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
-다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 서드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 서드파티 도구가 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정](#accser_external)을 참조하십시오.
+다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 서드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 앱에 서비스 연결](/docs/apps/connect_external_app.html)을 참조하십시오.
 
 ## 새 서비스 인스턴스 요청
 {: #req_instance}
@@ -60,7 +60,7 @@ ibmcloud dev edit
 2. 프롬프트에 따라 리소스 그룹을 선택하고 새 데이터 관련 서비스를 작성하고 Cloudant와 같은 애플리케이션에 연결하십시오. 서비스의 지역 및 플랜을 선택해야 합니다.
 3. 서비스가 작성되면 인증 정보를 포함한 여러 파일이 애플리케이션 디렉토리에 추가되어 사용자가 서비스를 애플리케이션으로 통합할 수 있습니다. 임의 파일을 수동으로 병합하거나 이 단계를 건너뛸 수 있습니다.
 
-동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#accser_external){: new_window}을 참조하십시오.
+동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 외부 앱에서 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하는 방법에 관한 자세한 정보는 [외부 앱에 서비스 연결](/docs/apps/connect_external_app.html)을 참조하십시오.
 
 ## 애플리케이션 구성
 {: #config}
@@ -93,49 +93,6 @@ Kubernetes 시크릿에 저장된 서비스 인증 정보는 기본적으로 bas
 2. 앱 팟(Pod)에서 서비스 인증 정보에 액세스하려면 다음 옵션 중에서 선택하십시오. 
    - [시크릿을 볼륨으로 팟(Pod)에 마운트](#mount_secret)
    - [환경 변수의 시크릿 참조](#reference_secret)
-
-## 외부 앱 사용
-{: #accser_external}
-
-{{site.data.keyword.Bluemix_notm}} 외부에서 작성되어 실행되는 애플리케이션을 사용하거나, 서드파티 도구를 사용할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 서비스가 인터넷을 통해 액세스할 수 있는 서비스 키를 제공하는 경우 로컬 앱 또는 서드파티 도구에서 이러한 서비스를 사용할 수 있습니다.
-
-다음 서비스는 외부적으로 사용할 서비스 키를 제공합니다.
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-외부 앱이나 서드파티 도구에서 {{site.data.keyword.Bluemix_notm}} 서비스를 사용하도록 하려면 다음 단계를 완료하십시오.
-
-1. 서비스의 인스턴스를 요청하십시오.
-    1. {{site.data.keyword.Bluemix_notm}} 사용자 인터페이스의 대시보드에서 **리소스 작성**을 클릭하십시오. 카탈로그가 표시됩니다.
-    2. 카탈로그에서 서비스 타일을 클릭하여 원하는 서비스를 선택하십시오. 서비스 세부사항 페이지가 열립니다.
-    3. 서비스 창에서 기본 **연결 대상:** 목록 선택사항을 **언바인드 상태로 두기**로 유지하십시오. 이 선택사항은 서비스가 {{site.data.keyword.Bluemix_notm}} 앱에 연결되지 않음을 의미합니다.
-    4. 필요에 따라 기타 선택사항을 작성하십시오. 그런 다음 **작성**을 클릭하십시오. 서비스 인스턴스가 작성되고 서비스 대시보드가 표시됩니다.
-2. 서비스 대시보드에서 **서비스 인증 정보**를 선택하여 JSON 형식의 인증 정보를 보거나 추가할 수 있습니다. 인증 정보 세트를 선택하고 조치 열에서 **인증 정보 보기**를 클릭하십시오. 표시되는 API 키를 인증 정보로 사용하여 서비스 인스턴스에 연결하십시오.
-
-{{site.data.keyword.Bluemix_notm}} 외부에서 실행되는 애플리케이션이 이제 {{site.data.keyword.Bluemix_notm}} 서비스에 액세스할 수 있습니다.
-
-**참고:** 서비스 인스턴스를 삭제하거나 청구 정보를 확인하려면 서비스 인스턴스를 관리하기 위해 사용자 인터페이스의 대시보드로 되돌아가야 합니다.
 
 ## 사용자 제공 서비스 인스턴스 작성
 {: #user_provide_services}

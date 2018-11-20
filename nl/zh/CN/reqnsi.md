@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-07"
 
 {{site.data.keyword.Bluemix_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。可以跨 Web 应用程序共享服务实例。
 
-您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照与编码外部应用程序或第三方工具以使用 {{site.data.keyword.Bluemix_notm}} 服务相同的方式来手动编码应用程序以使用这些服务。有关更多信息，请参阅[允许外部应用程序和第三方工具使用 {{site.data.keyword.Bluemix_notm}} 服务](#accser_external)。
+您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照与编码外部应用程序或第三方工具以使用 {{site.data.keyword.Bluemix_notm}} 服务相同的方式来手动编码应用程序以使用这些服务。有关更多信息，请参阅[将服务连接到外部应用程序](/docs/apps/connect_external_app.html)。
 
 ## 请求新的服务实例
 {: #req_instance}
@@ -60,7 +60,7 @@ ibmcloud dev edit
 2. 按照提示选择资源组，然后创建与数据相关的新服务并将其连接到应用程序（如 Cloudant）。您可能需要选择服务的区域和套餐。
 3. 创建服务时，会将若干文件（包括凭证）添加到应用程序目录，以帮助您将服务集成到应用程序中。您可以手动合并任何文件，也可以暂时跳过此步骤。
 
-只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.Bluemix_notm}} 服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](#accser_external){: new_window}。
+只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何让使用 {{site.data.keyword.Bluemix_notm}} 服务的更多信息，请参阅[将服务连接到外部应用程序](/docs/apps/connect_external_app.html)。
 
 ## 配置应用程序
 {: #config}
@@ -93,49 +93,6 @@ ibmcloud dev edit
 2. 要从应用程序 pod 访问服务凭证，请在以下选项中进行选择。 
    - [将私钥作为卷安装到 pod](#mount_secret)
    - [在环境变量中引用私钥](#reference_secret)
-
-## 启用外部应用程序
-{: #accser_external}
-
-您可能会有在 {{site.data.keyword.Bluemix_notm}} 外部创建和运行的应用程序，或者，您可能会使用第三方工具。如果 {{site.data.keyword.Bluemix_notm}} 服务提供可从因特网访问的服务密钥，那么您可以通过本地应用程序或第三方工具来使用这些服务。
-
-以下服务提供服务密钥供您在外部使用：
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-要允许外部应用程序或第三方工具使用 {{site.data.keyword.Bluemix_notm}} 服务，请完成以下步骤：
-
-1. 请求服务的实例。
-    1. 在 {{site.data.keyword.Bluemix_notm}} 用户界面中的“仪表板”上，单击**创建资源**。这将显示“目录”。
-    2. 在“目录”中，通过单击相应服务磁贴来选择所需的服务。这将打开服务详细信息页面。
-    3. 在“服务”窗口中，将缺省**连接到：**列表选择保留为**保持未绑定**。此选择意味着该服务不会连接到 {{site.data.keyword.Bluemix_notm}} 应用程序。
-    4. 根据需要进行任何其他选择。然后，单击**创建**。这将创建服务实例，并显示服务仪表板。
-2. 在服务仪表板中，可以选择**服务凭证**来查看或添加 JSON 格式的凭证。选择一组凭证，然后单击“操作”列中的**查看凭证**。使用显示的 API 密钥作为凭证来连接到服务实例。
-
-在 {{site.data.keyword.Bluemix_notm}} 外部运行的应用程序现在可以访问 {{site.data.keyword.Bluemix_notm}} 服务。
-
-**注：**如果想要删除服务实例或检查记帐信息，必须返回到用户界面中用于管理服务实例的“仪表板”。
 
 ## 创建用户提供的服务实例
 {: #user_provide_services}
