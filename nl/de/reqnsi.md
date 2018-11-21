@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -35,7 +35,7 @@ genutzt werden.
 Sie können auch Services verwenden, die in anderen Regionen gehostet werden, sofern diese Services in diesen Regionen verfügbar sind. Diese Services müssen im Internet
 zugänglich gemacht werden und müssen über API-Endpunkte verfügen. Sie müssen Ihre Anwendung für die Verwendung dieser
 Services manuell codieren, wie Sie auch externe Anwendungen oder Tools von anderen Anbietern
-zur Verwendung von {{site.data.keyword.Bluemix_notm}}-Services codieren. Weitere Informationen finden Sie in [Externen Anwendungen und Tools von anderen Anbietern die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen](#accser_external).
+zur Verwendung von {{site.data.keyword.Bluemix_notm}}-Services codieren. Weitere Informationen enthält [Verbindung von Services zu externen Apps herstellen](/docs/apps/connect_external_app.html).
 
 ## Neue Serviceinstanz anfordern
 {: #req_instance}
@@ -66,7 +66,7 @@ Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm
 2. Folgen Sie der Bedienerführung, um eine Ressourcengruppe auszuwählen und einen neuen datenbezogenen Service (z. B. Cloudant) für Ihre Anwendung zu erstellen und ihn mit dieser Anwendung zu verbinden. Möglicherweise müssen Sie eine Region auswählen und die erforderliche Planung für den Service durchführen.
 3. Bei der Erstellung des Service werden verschiedene Dateien (einschließlich der zugehörigen Berechtigungsnachweise) zu Ihrem Anwendungsverzeichnis hinzugefügt, um die Integration des Service in die Anwendung zu vereinfachen. Sie können die Dateien manuell zusammenführen oder diesen Schritt zurückstellen und später ausführen.
 
-Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie unter [Externen Apps die Verwendung von {{site.data.keyword.Bluemix_notm}}-Services ermöglichen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#accser_external){: new_window}.
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie in [Verbindung von Services zu externen Apps herstellen](/docs/apps/connect_external_app.html).
 
 ## Anwendung konfigurieren
 {: #config}
@@ -99,49 +99,6 @@ Serviceberechtigungsnachweise, die in einem geheimen Kubernetes-Schlüssel gespe
 2. Wählen Sie für den Zugriff auf Ihre Serviceberechtigungsnachweise über den App-Pod eine der folgenden Optionen aus. 
    - [Geheimen Schlüssel als Datenträger an den Pod anhängen](#mount_secret)
    - [Geheimen Schlüssel in Umgebungsvariablen referenzieren](#reference_secret)
-
-## Externe Apps aktivieren
-{: #accser_external}
-
-Möglicherweise verfügen Sie über Anwendungen, die außerhalb von {{site.data.keyword.Bluemix_notm}} erstellt und in Betrieb genommen wurden, oder Sie verwenden Tools von anderen Anbietern. Wenn ein {{site.data.keyword.Bluemix_notm}}-Service Serviceschlüssel zur Verfügung stellt, die über das Internet zugänglich sind, können Sie diese Services mit Ihren lokalen Apps oder mit Tools von anderen Anbietern verwenden.
-
-Die folgenden Services stellen Serviceschlüssel bereit, die Sie extern verwenden können:
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-Um einer externen App oder einem Tool eines anderen Anbieters die Verwendung eines {{site.data.keyword.Bluemix_notm}}-Service zu ermöglichen, führen Sie die folgenden Schritte durch:
-
-1. Fordern Sie eine Instanz des Service an.
-    1. Klicken Sie auf dem Dashboard in der Benutzerschnittstelle von {{site.data.keyword.Bluemix_notm}} auf **Ressource erstellen**. Daraufhin wird der Katalog angezeigt.
-    2. Wählen Sie im Katalog den gewünschten Service aus, indem Sie auf die Kachel für den Service klicken. Die Seite mit den Servicedetails wird geöffnet.
-    3. Lassen Sie im Servicefenster für die Liste **Verbindung herstellen zu:** den Standardwert **Nicht binden** ausgewählt. Diese Auswahl bedeutet, dass keine Verbindung zwischen dem Service und einer {{site.data.keyword.Bluemix_notm}}-App hergestellt wird.
-    4. Wählen Sie die anderen Optionen je nach Bedarf entsprechend aus. Klicken Sie anschließend auf **Erstellen**. Es wird eine Serviceinstanz erstellt und das Service-Dashboard wird angezeigt.
-2. Im Service-Dashboard können Sie die Option **Serviceberechtigungsnachweise** auswählen, um Berechtigungsnachweise im JSON-Format anzuzeigen oder hinzuzufügen. Wählen Sie eine Reihe von Berechtigungsnachweisen aus und klicken Sie in der Spalte 'Aktionen' auf **Berechtigungsnachweise anzeigen**. Verwenden Sie den angezeigten API-Schlüssel als Berechtigungsnachweise zur Herstellung einer Verbindung zu der Serviceinstanz.
-
-Ihre Anwendung, die außerhalb von {{site.data.keyword.Bluemix_notm}} ausgeführt wird, kann nun auf den {{site.data.keyword.Bluemix_notm}}-Service zugreifen.
-
-**Hinweis:** Wenn Sie Serviceinstanzen löschen oder die Rechnungsangaben überprüfen möchten, müssen Sie zu Ihrem Dashboard in der Benutzerschnittstelle zurückkehren, um die Serviceinstanzen zu verwalten.
 
 ## Vom Benutzer zur Verfügung gestellte Serviceinstanz erstellen
 {: #user_provide_services}

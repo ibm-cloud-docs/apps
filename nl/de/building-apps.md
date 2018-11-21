@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog listet die verfügbaren Infrastru
 
   * [Einführung in Container](../containers/container_index.html)
   * [Einführung in Openwhisk](../openwhisk/index.html)
-  * [Cloud Foundry-Apps erstellen](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Cloud Foundry-Apps erstellen](../cloud-foundry/index.html)
 
 3. Geben Sie den Namen Ihrer App sowie den Hostnamen ein und wählen Sie Ihren Preisstrukturplan aus.
 

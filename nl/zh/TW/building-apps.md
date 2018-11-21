@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ lastupdated: "2018-07-25"
 
   * [開始使用 Containers](../containers/container_index.html)
   * [開始使用 Openwhisk](../openwhisk/index.html)
-  * [建立 Cloud Foundry 應用程式](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [建立 Cloud Foundry 應用程式](../cloud-foundry/index.html)
 
 3. 輸入應用程式名稱、主機名稱，然後選擇定價方案。
 
