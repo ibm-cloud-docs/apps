@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ Puede seleccionar el servicio que necesita cuando desarrolla aplicaciones. Cuand
 
 {{site.data.keyword.Bluemix_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
 
-También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica aplicaciones externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Habilitación de aplicaciones externas y de herramientas de terceros para utilizar servicios {{site.data.keyword.Bluemix_notm}}](#accser_external).
+También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica aplicaciones externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Conexión de servicios a apps externas](/docs/apps/connect_external_app.html).
 
 ## Solicitud de una nueva instancia de servicio
 {: #req_instance}
@@ -61,7 +61,7 @@ Si utiliza la interfaz de línea de mandatos {{site.data.keyword.Bluemix_notm}} 
 3. Cuando se crea el servicio, se añaden varios archivos al directorio de la aplicación, incluidas las credenciales, para ayudarle a integrar el servicio en la aplicación. Puede fusionar manualmente los archivos o saltarse este paso por ahora.
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
-un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo las apps externas utilizan los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para utilizar el servicio de {{site.data.keyword.Bluemix_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#accser_external){: new_window}.
+un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo las apps externas utilizan los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Conexión de servicios a apps externas](/docs/apps/connect_external_app.html).
 
 ## Configuración de la aplicación
 {: #config}
@@ -94,50 +94,6 @@ Las credenciales de servicio que se almacenan en un secreto de Kubernetes están
 2. Para acceder a las credenciales de servicio desde su pod de app, elija una de las siguientes opciones. 
    - [Monte el secreto como un volumen en el pod](#mount_secret)
    - [Haga referencia al secreto en variables de entorno](#reference_secret)
-
-## Habilitación de apps externas
-{: #accser_external}
-
-Es posible que tenga aplicaciones que se crearon y ejecutaron fuera de {{site.data.keyword.Bluemix_notm}},
-o puede que utilice herramientas de terceros. Si los servicios de {{site.data.keyword.Bluemix_notm}} proporcionan claves que están accesibles en Internet, puede utilizarlas con las apps locales o herramientas de terceros.
-
-Los siguientes servicios proporcionan claves de servicio que puede utilizar de forma externa:
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-Para habilitar una app externa o una herramienta de terceros para que utilice un servicio {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
-
-1. Solicite una instancia del servicio.
-    1. En el Panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pulse **Crear recurso**. Se visualiza el catálogo.
-    2. En el catálogo, seleccione el servicio que desee pulsando el mosaico del servicio. Se abre la página de detalles del servicio.
-    3. En la ventana de servicio, deje la selección de lista predeterminada **Conectar a:** como **Dejar sin enlazar**. Esta selección significa que el servicio no se conecta a una app de {{site.data.keyword.Bluemix_notm}}.
-    4. Realice las selecciones que necesite. A continuación, pulse en **Crear**. Se creará una instancia de servicio y se mostrará el Panel de control del servicio.
-2. En el Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Seleccione un conjunto de credenciales y pulse **Ver credenciales** en la columna de acciones. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
-
-La aplicación que se ejecuta fuera de {{site.data.keyword.Bluemix_notm}} ahora puede acceder al servicio de {{site.data.keyword.Bluemix_notm}}.
-
-**Nota:** Si desea suprimir instancias de servicio o comprobar la información de facturación, debe volver al Panel de control de la interfaz de usuario para gestionar las instancias de servicio.
 
 ## Creación de una instancia del servicio proporcionada por el usuario
 {: #user_provide_services}

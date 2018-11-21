@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ El catálogo de {{site.data.keyword.Bluemix_notm}} lista los recursos de infraes
 
   * [Iniciación a Containers](../containers/container_index.html)
   * [Iniciación a Openwhisk](../openwhisk/index.html)
-  * [Creación de apps de Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Creación de apps de Cloud Foundry](../cloud-foundry/index.html)
 
 3. Especifique el nombre de la app, el nombre de host y elija su plan de precios.
 
