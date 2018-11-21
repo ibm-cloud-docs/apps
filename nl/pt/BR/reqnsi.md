@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-09-07"
+lastupdated: "2018-11-05"
 
 ---
 
@@ -31,7 +31,7 @@ Ao criar um aplicativo com o {{site.data.keyword.Bluemix_notm}} {{site.data.keyw
 
 O {{site.data.keyword.Bluemix_notm}} fornece os recursos de um serviço para o aplicativo usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre os aplicativos da web.
 
-É possível também usar serviços que são hospedados em outras regiões, se esses serviços estiverem disponíveis nessas regiões. Esses serviços devem ser acessíveis pela internet e possuírem terminais de API. Deve-se codificar manualmente o aplicativo para usar esses serviços da mesma maneira que você codifica aplicativos externos ou ferramentas de terceiros para usar os serviços {{site.data.keyword.Bluemix_notm}}. Para obter informações adicionais, veja [Permitindo que aplicativos externos e ferramentas de terceiros usem os serviços do {{site.data.keyword.Bluemix_notm}}](#accser_external).
+É possível também usar serviços que são hospedados em outras regiões, se esses serviços estiverem disponíveis nessas regiões. Esses serviços devem ser acessíveis pela internet e possuírem terminais de API. Deve-se codificar manualmente o aplicativo para usar esses serviços da mesma maneira que você codifica aplicativos externos ou ferramentas de terceiros para usar os serviços {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte [Conectando serviços a apps externos](/docs/apps/connect_external_app.html).
 
 ## Solicitando uma nova instância de serviço
 {: #req_instance}
@@ -64,7 +64,7 @@ aplicativo, como o Cloudant. Pode ser necessário selecionar uma região e um pl
 3. Quando o serviço é criado, vários arquivos, incluindo as credenciais, são incluídos no diretório do aplicativo para
 ajudar você a integrar o serviço ao aplicativo. É possível mesclar manualmente quaisquer arquivos ou ignorar essa etapa por enquanto.
 
-É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os aplicativos externos usam os serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Ativando aplicativos externos para usar os serviços do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](#accser_external){: new_window}.
+É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como apps externos usam os serviços do {{site.data.keyword.Bluemix_notm}}, consulte [Conectando serviços a apps externos](/docs/apps/connect_external_app.html).
 
 ## Configurando seu aplicativo
 {: #config}
@@ -101,49 +101,6 @@ criptografam as credenciais de serviço. Para armazenar e acessar adequadamente 
 2. Para acessar as credenciais de serviço por meio do pod do app, escolha entre as opções a seguir. 
    - [Montar o segredo como um volume para o pod](#mount_secret)
    - [ Referenciar o segredo em variáveis de ambiente ](#reference_secret)
-
-## Ativando aplicativos externos
-{: #accser_external}
-
-Pode haver aplicativos que foram criados e executados fora do {{site.data.keyword.Bluemix_notm}} ou é possível usar ferramentas de terceiros. Se os serviços do {{site.data.keyword.Bluemix_notm}} fornecerem chaves de serviço acessíveis pela internet, será possível usar esses serviços com apps locais ou ferramentas de terceiros.
-
-Os serviços a seguir fornecem chaves de serviço para você usar externamente:
-
-* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
-* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
-* {{site.data.keyword.blockchain}} <!--Blockchain-->
-* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
-* {{site.data.keyword.conversationshort}} <!--Conversation-->
-* {{site.data.keyword.discoveryshort}} <!--Discovery-->
-* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
-* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
-* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
-* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
-* {{site.data.keyword.dwl_short}} <!--Lift-->
-* {{site.data.keyword.messagehub}} <!--Message Hub-->
-* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
-* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
-* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
-* {{site.data.keyword.mobilepush}} <!--Push-->
-* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
-* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
-* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
-* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
-* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
-* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
-
-Para ativar um app externo ou ferramenta de terceiro para usar um serviço do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
-
-1. Solicite uma instância do serviço.
-    1. No Painel na interface com o usuário do {{site.data.keyword.Bluemix_notm}}, clique em **Criar recurso**. O catálogo é exibido.
-    2. No catálogo, selecione o serviço desejado clicando no tile do serviço. A página de detalhes do serviço é aberta.
-    3. Na janela de serviço, deixe a seleção de lista padrão **Conectar-se a:** como **Deixar desvinculado**. Essa seleção significa que o serviço não está conectado a um app {{site.data.keyword.Bluemix_notm}}.
-    4. Faça qualquer outra seleção conforme necessário. Em seguida, clique em **Criar**. Uma instância de serviço é criada e o Painel de serviço é exibido.
-2. No Painel de serviço, é possível selecionar **Credenciais de serviço** para visualizar ou incluir credenciais no formato JSON. Selecione um conjunto de credenciais e clique em **Visualizar credenciais** na coluna Ações. Use a chave de API que é exibida como as credenciais para se conectar à instância de serviço.
-
-Seu aplicativo que é executado fora do {{site.data.keyword.Bluemix_notm}} agora poderá acessar o serviço do {{site.data.keyword.Bluemix_notm}}.
-
-**Nota:** Se desejar excluir instâncias de serviço ou verificar as informações de faturamento, deve-se voltar para o Painel na interface com o usuário para gerenciar as instâncias de serviço.
 
 ## Criando uma instância de serviço fornecida pelo usuário
 {: #user_provide_services}
@@ -194,7 +151,7 @@ exemplo:
         OK
         ```
 
-2. Bind the service instance to your application by using the `ibmcloud service bind` command. Por
+2. Ligue a instância de serviço ao seu aplicativo usando o comando `ibmcloud service bind`. Por
 exemplo:
 
 	```

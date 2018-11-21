@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-04"
 
 ---
 
@@ -32,7 +32,7 @@ O catálogo do {{site.data.keyword.Bluemix_notm}} lista os recursos da infraestr
 
   * [Introdução aos contêineres](../containers/container_index.html)
   * [Introdução ao Openwhisk](../openwhisk/index.html)
-  * [Criando apps Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
+  * [Criando apps Cloud Foundry](../cloud-foundry/index.html)
 
 3. Insira seu nome do app, o nome do host e escolha seu plano de precificação.
 

@@ -30,6 +30,7 @@ Criando aplicativos
         deploying/crypto.md
 
     reqnsi.md
+    connect_external_app.md
     mngapps.md
     updapps.md
     secapps.md
@@ -62,7 +63,7 @@ Criando aplicativos
 
     {: .navgroup id="help"}
     ts_apps.md
-    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [Canal de ferramentas do desenvolvedor do IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     [Referência de API do Cloud Functions](https://console.bluemix.net/apidocs/functions)
     [SDK móvel](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
