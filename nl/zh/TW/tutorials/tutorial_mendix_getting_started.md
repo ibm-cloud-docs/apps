@@ -22,7 +22,7 @@ Mendix 是低程式碼開發環境及工具集，它能協助您更快速地遞�
 ## 選取入門範本套件
 {: #select-a-starter-kit}
 
-2. 從 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/dashboard){: new_window}，按一下**功能表**圖示 ![功能表圖示](../../icons/icon_hamburger.svg)。
+2. 從 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/dashboard/apps){: new_window}，按一下**功能表**圖示 ![功能表圖示](../../icons/icon_hamburger.svg)。
 3. 從下列其中一個種類選取 Mendix 低程式碼入門範本套件：
   * [Mobile ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson Web or Mobile App ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
