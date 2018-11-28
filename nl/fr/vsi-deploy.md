@@ -23,7 +23,7 @@ Vous pouvez utiliser le [service d'application![Icône de lien externe](../icons
 
 Par rapport aux autres configurations, une instance de serveur virtuel offre une meilleure transparence, un meilleur caractère prévisionnel et une meilleure automatisation pour tous les types de charge de travail. Associez-la à un serveur Bare metal pour créer des combinaisons de charge de travail uniques. Par exemple, vous pouvez créer une logique de base de données à hautes performances ou un système d'apprentissage automatique avec des configurations Bare metal ou GPU exécutant un système d'exploitation de type Debian Linux.
 
-La mise à disposition et le déploiement d'une instance de serveur virtuel peut être un processus long et complexe, mais vous pouvez être rapidement opérationnel si vous utilisez le service d'application {{site.data.keyword.cloud_notm}}. 
+La mise à disposition et le déploiement d'une instance de serveur virtuel peut être un processus long et complexe, mais vous pouvez être rapidement opérationnel si vous utilisez le service d'application {{site.data.keyword.cloud_notm}}.
 
 ## Avant de commencer
 {: #prereqs}
@@ -35,15 +35,15 @@ Procédez à la mise à niveau vers un compte Paiement à la carte. Pour pouvoir
 ## Création et déploiement d'applications
 {: #create-deploy}
 
-Le service d'application met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils Devops et initie le premier cycle de déploiement pour vous. 
+Le service d'application met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils Devops et initie le premier cycle de déploiement pour vous.
 
-1. [Créez une application](apps/index.html#createapp). 
-2. Cliquez sur **Déployer dans le cloud** sur la page des détails de l'application. 
-3. Sélectionnez **Déployer sur un serveur virtuel** en même temps que la région dans laquelle votre serveur doit s'exécuter. 
+1. [Créez une application](index.html#createapp). 
+2. Cliquez sur **Déployer dans le cloud** sur la page des détails de l'application.
+3. Sélectionnez **Déployer sur un serveur virtuel** en même temps que la région dans laquelle votre serveur doit s'exécuter.
 
 ## Fonctionnement du processus de déploiement
 
-Le processus de déploiement de serveur virtuel est composé de plusieurs technologies essentielles, notamment Terraform, l'activation de pipeline, la gestion de clés d'API (opérations Git) et la compréhension du processus de chaîne d'outils.  
+Le processus de déploiement de serveur virtuel est composé de plusieurs technologies essentielles, notamment Terraform, l'activation de pipeline, la gestion de clés d'API (opérations Git) et la compréhension du processus de chaîne d'outils. 
 
 ### Déploiement via Terraform
 
@@ -55,14 +55,14 @@ Lorsque vous créez un kit de démarrage qui utilise {{site.data.keyword.cloud_n
 
 L'option de serveur virtuel inclut plusieurs phases. Tout d'abord, le code d'application est préparé et stocké dans un référentiel Git GitLab et le code source crée une chaîne d'outils avec un pipeline. Ce dernier est conçu pour générer le code et regrouper ce dernier en utilisant le format du gestionnaire de package Debian. Terraform met ensuite à disposition une instance virtuelle. Pour finir, l'application est déployée, installée et démarrée dans l'image virtuelle en cours d'exécution et son intégrité est validée.
 
-Le pipeline utilise un ensemble de propriétés de compte utilisateur et une nouvelle paire de clés SSH à déployer dans l'infrastructure. Ces propriétés sont automatiquement transmises à la chaîne d'outils, mais ne sont pas stockées dans le code source Git pour des raisons de sécurité. 
+Le pipeline utilise un ensemble de propriétés de compte utilisateur et une nouvelle paire de clés SSH à déployer dans l'infrastructure. Ces propriétés sont automatiquement transmises à la chaîne d'outils, mais ne sont pas stockées dans le code source Git pour des raisons de sécurité.
 
 Pour afficher ces propriétés d'environnement, procédez comme suit : 
 
 1. Sur la page Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
 2. Cliquez sur la vignette **Delivery Pipeline**.
 3. Cliquez sur l'icône **Configurer l'étape** puis cliquez sur **Configurer l'étape** lors de l'étape de génération.
-4. Cliquez sur l'onglet **Propriétés d'environnement** pour afficher les propriétés. Consultez le tableau suivant pour connaître les propriétés disponibles. 
+4. Cliquez sur l'onglet **Propriétés d'environnement** pour afficher les propriétés. Consultez le tableau suivant pour connaître les propriétés disponibles.
 
   | Propriété   | Description   |
   |---|---|
@@ -79,16 +79,16 @@ Pour afficher ces propriétés d'environnement, procédez comme suit :
 #### Clé d'API de l'infrastructure
 {: #iaas-key}
 
-Terraform requiert une clé d'API d'infrastructure pour pouvoir créer des ressources d'infrastructure classique. Cette clé est obtenue automatiquement lors du déploiement. Pour extraire manuellement une clé, procédez comme indiqué ci-après.  
+Terraform requiert une clé d'API d'infrastructure pour pouvoir créer des ressources d'infrastructure classique. Cette clé est obtenue automatiquement lors du déploiement. Pour extraire manuellement une clé, procédez comme indiqué ci-après. 
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de l'infrastructure classique. Vous pouvez également cliquer sur **Menu** > **Infrastructure classique** > **Compte** > **Liste d'utilisateurs**.
-2. Recherchez les détails utilisateur qui créent la chaîne d'outils, puis cliquez sur **Afficher** dans la colonne de clé d'API ou cliquez sur **Générer**. Quelle que soit la méthode choisie, la clé d'API s'affiche dans une fenêtre. 
+2. Recherchez les détails utilisateur qui créent la chaîne d'outils, puis cliquez sur **Afficher** dans la colonne de clé d'API ou cliquez sur **Générer**. Quelle que soit la méthode choisie, la clé d'API s'affiche dans une fenêtre.
 3. Copiez la clé d'API et remplacez la valeur dans la configuration de chaîne d'outils `TF_VAR_ibm_sl_api_key`.
 
 #### Nom d'utilisateur de l'infrastructure classique
 {: #user-key}
 
-Le nom d'utilisateur de l'infrastructure classique est également obtenu et utilisé automatiquement lors du déploiement. Pour obtenir manuellement le nom d'utilisateur, procédez comme indiqué ci-après. 
+Le nom d'utilisateur de l'infrastructure classique est également obtenu et utilisé automatiquement lors du déploiement. Pour obtenir manuellement le nom d'utilisateur, procédez comme indiqué ci-après.
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} de l'infrastructure classique. Vous pouvez également cliquer sur **Menu** > **Infrastructure classique** > **Compte** > **Liste d'utilisateurs**.
 2. Cliquez sur l'utilisateur devant créer la chaîne d'outils.
@@ -98,7 +98,7 @@ Le nom d'utilisateur de l'infrastructure classique est également obtenu et util
 #### Clé d'API de la plateforme
 {: #platform-key}
 
-Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API de plateforme est automatiquement obtenue et stockée sous forme de variable d'environnement dans votre pipeline. Pour extraire manuellement une clé de plateforme, procédez comme indiqué ci-après. 
+Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API de plateforme est automatiquement obtenue et stockée sous forme de variable d'environnement dans votre pipeline. Pour extraire manuellement une clé de plateforme, procédez comme indiqué ci-après.
 
 1. Sur la page [Clés d'API ![Icône de lien externe](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), cliquez sur **Gérer** > **Sécurité** > **Clés d'API de la plateforme**.
 2. Cliquez sur **Créer**.
@@ -110,7 +110,7 @@ Pour créer des services de niveau de plateforme dans Terraform (bases de donné
 #### Clés publiques et privées
 {: #public-key}
 
-Pour que la chaîne d'outils puisse installer le package Debian dans l'instance de serveur virtuel, l'infrastructure de déploiement génère automatiquement une paie de clés SSH privée et publique afin de transférer le contenu Git vers l'instance. 
+Pour que la chaîne d'outils puisse installer le package Debian dans l'instance de serveur virtuel, l'infrastructure de déploiement génère automatiquement une paie de clés SSH privée et publique afin de transférer le contenu Git vers l'instance.
 
 Pour exécuter cette opération manuellement :
 1. Sur votre client, suivez les instructions présentées ci-dessous pour créer une [paire clé publique/clé privée ![Icône de lien externe](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
@@ -130,7 +130,7 @@ La clé privée doit se trouver sur une seule ligne. Remplacez les nouvelles lig
 #### Activation de l'état Terraform
 {: #tform-state}
 
-Terraform prend en charge le stockage de l'état de la commande `apply` Terraform. Ce fichier d'état exécute une deuxième fois la commande `apply` afin de déterminer si un des fichiers de configuration Terraform a été modifié. L'état est stocké dans le référentiel Git où l'application et la configuration sont automatiquement définies. 
+Terraform prend en charge le stockage de l'état de la commande `apply` Terraform. Ce fichier d'état exécute une deuxième fois la commande `apply` afin de déterminer si un des fichiers de configuration Terraform a été modifié. L'état est stocké dans le référentiel Git où l'application et la configuration sont automatiquement définies.
 
 Pour permettre le stockage d'état, `GIT_USER` et `GIT_PASSWORD` sont automatiquement configurés en tant que propriétés dans les variables d'environnement de la chaîne d'outils. Si vous devez accéder à ces valeurs, procédez comme suit :
 
