@@ -131,4 +131,4 @@ e pronto para o uso de produção.
 
 Para obter mais detalhes arquiteturais sobre como executar os aplicativos Mendix em ambientes do Kubernetes,
 revise a seção [Executar o Mendix no
-Kubernetes](https://docs.mendix.com/deployment/docker/run-mendix-on-kubernetes) da documentação do usuário do Mendix.
+Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) da documentação do usuário do Mendix.

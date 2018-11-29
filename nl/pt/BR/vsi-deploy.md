@@ -47,7 +47,7 @@ acesse **Gerenciar** > **Faturamento e uso** >
 O App Service fornece uma instância de servidor virtual, carrega uma imagem que inclui o aplicativo,
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
-1. [Crie um aplicativo](apps/index.html#createapp). 
+1. [Crie um aplicativo](index.html#createapp). 
 2. Clique em **Implementar na nuvem** na página de detalhes do aplicativo.
 3. Selecione **Implementar em um Virtual Server** juntamente com a região na qual o servidor deve ser executado.
 

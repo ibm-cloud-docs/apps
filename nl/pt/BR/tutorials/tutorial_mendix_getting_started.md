@@ -22,7 +22,7 @@ Mendix é um ambiente de desenvolvimento de pouco código e um conjunto de ferra
 ## Selecionando um kit do iniciador
 {: #select-a-starter-kit}
 
-2. No painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/dashboard){: new_window}, clique no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg).
+2. No painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/dashboard/apps){: new_window}, clique no ícone de **Menu** ![Ícone de menu](../../icons/icon_hamburger.svg).
 3. Selecione um kit do iniciador de pouco código do Mendix em uma das seguintes categorias:
   * [Móvel![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Aplicativo móvel ou da web do Watson ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
@@ -52,7 +52,7 @@ Após a conclusão da autorização, o navegador retorna ao aplicativo Mendix qu
 
 Uma cadeia de ferramentas do DevOps é criada. A cadeia de ferramentas integra o projeto Mendix dentro da plataforma Mendix no ambiente do {{site.data.keyword.cloud_notm}}. Um aplicativo padrão é implementado na implementação de destino para que seja possível verificar se o aplicativo foi implementado com êxito na conclusão da cadeia de ferramentas do DevOps.
 
-As implementações do Mendix Cloud Foundry requerem o serviço de banco de dados PostGRES, que não tem uma camada Lite. Se desejar avaliar os kits do iniciador do Mendix usando uma conta Lite, será possível destinar um cluster do Kubernetes de teste.
+As implementações do Mendix Cloud Foundry requerem o serviço de banco de dados PostGRES, que não tem uma camada Lite.   Se desejar avaliar os kits do iniciador do Mendix usando uma conta Lite, será possível destinar um cluster do Kubernetes de teste.
 {: tip}
 
 Se você selecionou um cluster do Kubernetes para implementação, consulte o [Tutorial do Kubernetes do Mendix](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) para saber como configurar o cluster para o uso de produção.
