@@ -22,18 +22,18 @@ lastupdated: "2018-11-11"
 ## 시작하기 전에
 {: #prerequisites}
 
-- Mendix 앱을 작성하십시오. 자세한 정보는 [Mendix 앱 작성](/docs/apps/tutorials/tutorial_mendix_getting_started.html)을 참조하십시오. 
+- Mendix 앱을 작성하십시오. 자세한 정보는 [Mendix 앱 작성](/docs/apps/tutorials/tutorial_mendix_getting_started.html)을 참조하십시오.
 - {{site.data.keyword.containershort_notm}} CLI를 포함하여 [{{site.data.keyword.dev_cli_notm}} 명령행 인터페이스(CLI)](/docs/cli/index.html)를 설치하십시오.
-- `ibmcloud` CLI에 로그인하고 [Kubernetes 클러스터에 액세스](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)할 수 있도록 `kubectl`을 구성하십시오. 
+- `ibmcloud` CLI에 로그인하고 [Kubernetes 클러스터에 액세스](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)할 수 있도록 `kubectl`을 구성하십시오.
 
 ## Cloud Object Storage 서비스 인스턴스 작성
 {: #cloud-object-storage}
 
 애플리케이션의 세부사항 페이지에서 시작하여 다음 단계를 수행하십시오.
-1. **자원 추가**를 클릭하십시오. 
-2. **스토리지**를 선택하고 **다음**을 클릭하십시오. 
-3. 다음으로, **Cloud Object Storage** 옵션을 선택하고 **다음**을 클릭하십시오. 
-4.  {{site.data.keyword.cos_full_notm}} 인스턴스에 대한 가격 책정 플랜이 제시됩니다. 사용자 요구에 가장 적합한 가격 책정 플랜을 선택한 다음 **작성**을 클릭하여 Mendix 애플리케이션에서 사용할 {{site.data.keyword.cos_full_notm}} 서비스의 인스턴스를 작성하십시오. 
+1. **리소스 추가**를 클릭하십시오.
+2. **스토리지**를 선택하고 **다음**을 클릭하십시오.
+3. 다음으로, **Cloud Object Storage** 옵션을 선택하고 **다음**을 클릭하십시오.
+4.  {{site.data.keyword.cos_full_notm}} 인스턴스에 대한 가격 플랜이 제시됩니다. 사용자 요구에 가장 적합한 가격 플랜을 선택한 다음 **작성**을 클릭하여 Mendix 애플리케이션에서 사용할 {{site.data.keyword.cos_full_notm}} 서비스의 인스턴스를 작성하십시오.
 
   {{site.data.keyword.cos_full_notm}} 서비스의 기존 인스턴스를 사용하려면 **리소스 추가**를 클릭하고 사용할 애플리케이션의 기존 인스턴스를 선택하십시오.
   {: tip}
@@ -103,4 +103,4 @@ spec:
 ## 추가 정보
 {: #additional-information}
 
-Kubernetes 환경에서 실행 중인 Mendix 애플리케이션에 대한 아키텍처 세부사항을 보려면 Mendix 사용자 문서의 [Kubernetes에서 Mendix 실행](https://docs.mendix.com/deployment/docker/run-mendix-on-kubernetes) 절을 검토하십시오.
+Kubernetes 환경에서 실행 중인 Mendix 애플리케이션에 대한 아키텍처 세부사항을 보려면 Mendix 사용자 문서의 [Kubernetes에서 Mendix 실행](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) 절을 검토하십시오.

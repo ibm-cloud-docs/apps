@@ -22,13 +22,13 @@ Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code)
 ## 스타터 킷 선택
 {: #select-a-starter-kit}
 
-2. [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/dashboard){: new_window}에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하십시오.
+2. [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/dashboard/apps){: new_window}에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하십시오.
 3. 다음 카테고리 중 하나에서 Mendix 로우 코드 스타터 킷을 선택하십시오.
   * [모바일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson 웹 또는 모바일 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [웹 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-app)
-4. **앱 작성**을 클릭하십시오. 
-5. 앱 이름을 지정하십시오.  
+4. **앱 작성**을 클릭하십시오.
+5. 앱 이름을 지정하십시오. 
 6. **작성**을 클릭하십시오.
 
 ## IBM에 Mendix 및 링크 계정에서 프로젝트를 작성할 권한 부여
@@ -41,18 +41,18 @@ Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code)
 3. 프롬프트가 표시되면 이메일 주소, 비밀번호 및 국가를 지정하고 **작성**을 클릭하십시오.
 4. **Mendix 계정에 액세스할 권한 부여** 페이지에서 **권한 부여**를 클릭하십시오.
 
-권한 부여가 완료되면, 브라우저가 작성 중인 Mendix 앱으로 돌아갑니다. **배치 환경 선택** 페이지가 표시됩니다. 
+권한 부여가 완료되면, 브라우저가 작성 중인 Mendix 앱으로 돌아갑니다. **배치 환경 선택** 페이지가 표시됩니다.
 
 ## Mendix 앱의 배치 옵션 선택
 {: #select-deployment}
 
 1. **배치 환경 선택** 페이지에서 Cloud Foundry 또는 {{site.data.keyword.cloud_notm}}에서 실행되는 Kubernetes 클러스터 중 하나를 선택하십시오.
-2. 선택사항. Kubernetes 클러스터가 없는 경우 지금 하나를 작성할 수 있습니다. 
-3. **도구 체인 구성** 페이지에서 사용자의 영역과 리소스 그룹을 선택한 후 **작성**을 클릭하십시오. 
+2. 선택사항. Kubernetes 클러스터가 없는 경우 지금 하나를 작성할 수 있습니다.
+3. **도구 체인 구성** 페이지에서 사용자의 영역과 리소스 그룹을 선택한 후 **작성**을 클릭하십시오.
 
-DevOps 도구 체인이 작성됩니다. 도구 체인은 {{site.data.keyword.cloud_notm}} 환경에서 Mandix 플랫폼 내에 Mendix 프로젝트를 통합합니다. DevOps 도구 체인이 완료 시 애플리케이션이 배치되었는지 확인할 수 있도록 기본 애플리케이션이 대상 배치에 배치됩니다. 
+DevOps 도구 체인이 작성됩니다. 도구 체인은 {{site.data.keyword.cloud_notm}} 환경에서 Mandix 플랫폼 내에 Mendix 프로젝트를 통합합니다. DevOps 도구 체인이 완료 시 애플리케이션이 배치되었는지 확인할 수 있도록 기본 애플리케이션이 대상 배치에 배치됩니다.
 
-Mendix Cloud Foundry 배치에는 Lite 티어 없는 PostGRES 데이터베이스 서비스가 필요합니다. Lite 계정을 사용하여 Mendix 스타터 킷을 평가하려는 경우, 평가판 Kubernetes 클러스터를 대상으로 할 수 있습니다.
+Mendix Cloud Foundry 배치에는 Lite 티어 없는 PostGRES 데이터베이스 서비스가 필요합니다.   Lite 계정을 사용하여 Mendix 스타터 킷을 평가하려는 경우, 평가판 Kubernetes 클러스터를 대상으로 할 수 있습니다.
 {: tip}
 
 배치에 Kubernetes 클러스터를 선택한 경우, [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)을 참조하여 프로덕션 사용을 위해 클러스터를 구성하는 방법을 알아보십시오.
@@ -78,4 +78,4 @@ Mendix는 로우 코드 작성 환경입니다. 개발 라이프사이클을 수
 ## 다음 단계 
 {: #next steps}
 
-앱을 {{site.data.keyword.containerlong_notm}}에 배치하려면 프로덕션 배치를 위해 앱을 구성하십시오. 자세한 정보는 [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)을 참조하십시오.  
+앱을 {{site.data.keyword.containerlong_notm}}에 배치하려면 프로덕션 배치를 위해 앱을 구성하십시오. 자세한 정보는 [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)을 참조하십시오. 

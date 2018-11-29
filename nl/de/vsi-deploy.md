@@ -18,7 +18,8 @@ lastupdated: "2018-11-10"
 # Apps in einem virtuellen Server bereitstellen
 {: #vsi-deploy}
 
-Sie können den {{site.data.keyword.cloud}}-[App-Service ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} verwenden, um Ihre Apps in zahlreichen Umgebungen einschließlich virtueller Serverinstanzen bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Implementierungsoption, wenn lokale Workloads in die Cloud verschoben werden.{: shortdesc}
+Sie können den {{site.data.keyword.cloud}}-[App-Service ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} verwenden, um Ihre Apps in zahlreichen Umgebungen einschließlich virtueller Serverinstanzen bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Implementierungsoption, wenn lokale Workloads in die Cloud verschoben werden.
+{: shortdesc}
 
 Eine virtuelle Serverinstanz bietet im Vergleich zu anderen Konfigurationen mehr Transparenz, Vorhersagbarkeit und Automatisierungsmöglichkeiten für alle Workloadtypen. Kombinieren Sie die virtuelle Instanz mit einer Bare-Metal-Server-Instanz, um eindeutige Workloadkombinationen zu bilden. Sie können z. B. eine leistungsfähige Datenbanklogik oder effizientes maschinelles Lernen mit Bare-Metal- und GPU-Konfigurationen (GPU = Graphics Processing Unit, Grafik-Verarbeitungseinheit) erstellen, die unter einem auf Linux basierenden Debian-Betriebssystem ausgeführt werden.
 
@@ -27,22 +28,22 @@ Die Einrichtung einer virtuellen Serverinstanz und ihre Bereitstellung kann ein 
 ## Vorbereitende Schritte
 {: #prereqs}
 
-Führen Sie eine Aktualisierung auf ein nutzungsabhängiges Konto durch. Um virtuelle Instanzen verwenden zu können, muss Ihr {{site.data.keyword.cloud_notm}}-Konto für die klassische Infrastruktur aktiviert sein. Wechseln Sie in der Konsole zu **Verwalten** > **Abrechnung und Nutzung** > **Abrechnung**, um Ihr Konto zu aktualisieren. 
+Führen Sie eine Aktualisierung auf ein nutzungsabhängiges Konto durch. Um virtuelle Instanzen verwenden zu können, muss Ihr {{site.data.keyword.cloud_notm}}-Konto für die klassische Infrastruktur aktiviert sein. Wechseln Sie in der Konsole zu **Verwalten** > **Abrechnung und Nutzung** > **Abrechnung**, um Ihr Konto zu aktualisieren.
 
 **Wichtig:** Services werden nicht an die virtuelle Serverinstanz gebunden. Sie können Services nicht zu einer Anwendung in einem virtuellen Server hinzufügen.
 
 ## Apps erstellen und implementieren
 {: #create-deploy}
 
-Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie. 
+Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
-1. [Erstellen Sie eine App](apps/index.html#createapp). 
-2. Klicken Sie auf der Detailseite der App auf **In Cloud bereitstellen**. 
-3. Wählen Sie die Option zur Bereitstellung auf einem virtuellen Server gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll. 
+1. [Erstellen Sie eine App](index.html#createapp). 
+2. Klicken Sie auf der Detailseite der App auf **In Cloud bereitstellen**.
+3. Wählen Sie die Option zur Bereitstellung auf einem virtuellen Server gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll.
 
 ## Funktionsweise des Bereitstellungsprozesses
 
-Der Bereitstellungsprozess für den virtuellen Server besteht aus mehreren Schlüsseltechnologien, die Terraform, Pipelineaktivierung, API-Schlüsselverwaltung (Git-Operationen) und das Verständnis des Toolchainprozesses umfassen.  
+Der Bereitstellungsprozess für den virtuellen Server besteht aus mehreren Schlüsseltechnologien, die Terraform, Pipelineaktivierung, API-Schlüsselverwaltung (Git-Operationen) und das Verständnis des Toolchainprozesses umfassen. 
 
 ### Über Terraform bereitstellen
 
@@ -78,16 +79,16 @@ Führen Sie die folgenden Schritte aus, um diese Umgebungseigenschaften anzuzeig
 #### Infrastruktur-API-Schlüssel
 {: #iaas-key}
 
-Terraform erfordert einen Infrastruktur-API-Schlüssel zum Erstellen klassischer Infrastrukturressourcen, die während der Bereitstellung automatisch abgerufen werden. Um einen Schlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.  
+Terraform erfordert einen Infrastruktur-API-Schlüssel zum Erstellen klassischer Infrastrukturressourcen, die während der Bereitstellung automatisch abgerufen werden. Um einen Schlüssel manuell abzurufen, führen Sie die folgenden Schritte aus. 
 
 1. Wechseln Sie in der klassischen Infrastruktur zur [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. Sie können auch auf **Menü** > **Klassische Infrastruktur** > **Konto** > **Benutzerliste** klicken.
-2. Suchen Sie die Benutzerdetails, die die Toolchain erstellen und klicken Sie entweder in der API-Schlüsselspalte auf **Anzeigen** oder auf **Generieren**. Beides führt zur Anzeige des API-Schlüssels in einem Fenster. 
+2. Suchen Sie die Benutzerdetails, die die Toolchain erstellen und klicken Sie entweder in der API-Schlüsselspalte auf **Anzeigen** oder auf **Generieren**. Beides führt zur Anzeige des API-Schlüssels in einem Fenster.
 3. Kopieren Sie den API-Schlüssel und ersetzen Sie den Wert der Toolchain-Konfigurationseigenschaft `TF_VAR_ibm_sl_api_key` durch diesen Schlüssel.
 
 #### Klassische Infrastruktur - Benutzername
 {: #user-key}
 
-Der Benutzername bei der klassischen Infrastruktur wird ebenfalls automatisch abgerufen und während der Bereitstellung verwendet. Um den Benutzernamen manuell abzurufen, führen Sie die folgenden Schritte aus. 
+Der Benutzername bei der klassischen Infrastruktur wird ebenfalls automatisch abgerufen und während der Bereitstellung verwendet. Um den Benutzernamen manuell abzurufen, führen Sie die folgenden Schritte aus.
 
 1. Wechseln Sie in der klassischen Infrastruktur zur [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. Sie können auch auf **Menü** > **Klassische Infrastruktur** > **Konto** > **Benutzerliste** klicken.
 2. Klicken Sie auf den Benutzer, von dem die Toolchain erstellt werden soll.
@@ -97,7 +98,7 @@ Der Benutzername bei der klassischen Infrastruktur wird ebenfalls automatisch ab
 #### Plattform-API-Schlüssel
 {: #platform-key}
 
-Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbanken und Compose-Services, wird der API-Schlüssel der Plattform automatisch abgerufen und als Umgebungsvariable in der Pipeline gespeichert. Um einen Plattformschlüssel manuell abzurufen, führen Sie die folgenden Schritte aus. 
+Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbanken und Compose-Services, wird der API-Schlüssel der Plattform automatisch abgerufen und als Umgebungsvariable in der Pipeline gespeichert. Um einen Plattformschlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.
 
 1. Klicken Sie auf der Seite für die [API-Schlüssel ![Symbol für externen Link](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) auf **Verwalten** > **Sicherheit** > **Plattform-API-Schlüssel**.
 2. Klicken Sie auf **Erstellen**.
@@ -109,7 +110,7 @@ Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbank
 #### Öffentliche und private Schlüssel
 {: #public-key}
 
-Damit die Toolchain die Debian-Paketierung in der virtuellen Serverinstanz installiert, generiert die Bereitstellungsinfrastruktur automatisch ein SSH-Schlüsselpaar mit privatem und öffentlichem Schlüssel, um den Git-Inhalt zur Instanz zu übertragen. 
+Damit die Toolchain die Debian-Paketierung in der virtuellen Serverinstanz installiert, generiert die Bereitstellungsinfrastruktur automatisch ein SSH-Schlüsselpaar mit privatem und öffentlichem Schlüssel, um den Git-Inhalt zur Instanz zu übertragen.
 
 Gehen Sie wie folgt vor, um diese Schritte manuell auszuführen:
 1. Erstellen Sie auf dem Client wie im Folgenden beschrieben ein [Schlüsselpaar aus öffentlichem und privatem Schlüssel![Symbol für externen Link](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
@@ -129,23 +130,23 @@ Der private Schlüssel muss in einer einzigen Zeile angegeben werden. Ersetzen S
 #### Terraform-Status aktivieren
 {: #tform-state}
 
-Terraform unterstützt das Speichern des Status des Terraform-Befehls `apply`. Über diese Statusdatei wird der Befehl `apply` ein zweites Mal ausgeführt, um zu ermitteln, ob Terraform-Konfigurationsdateien geändert wurden. Der Status wird in dem Git-Repository gespeichert, in dem die App und die Konfiguration automatisch konfiguriert werden. 
+Terraform unterstützt das Speichern des Status des Terraform-Befehls `apply`. Über diese Statusdatei wird der Befehl `apply` ein zweites Mal ausgeführt, um zu ermitteln, ob Terraform-Konfigurationsdateien geändert wurden. Der Status wird in dem Git-Repository gespeichert, in dem die App und die Konfiguration automatisch konfiguriert werden.
 
 Zum Aktivieren des Statusspeichers werden `GIT_USER` und `GIT_PASSWORD` automatisch als Eigenschaften in den Umgebungsvariablen der Toolchain konfiguriert. Wenn Sie Zugriff auf diese Werte benötigen, führen Sie diese Schritte aus:
 
-1. Greifen Sie in der Toolchain-Ansicht vom Code-Tool auf das Git-Repository zu. 
+1. Greifen Sie in der Toolchain-Ansicht vom Code-Tool auf das Git-Repository zu.
 2. Klicken Sie in GitLab auf das **Profilsymbol** und danach auf **Einstellungen**.
 3. Klicken Sie auf **Konto**, kopieren Sie den Benutzernamen und ersetzen Sie den Wert für `GIT_USER` durch diesen Wert.
 4. Klicken Sie auf **Zugriffstoken**.
 5. Definieren Sie einen Namen für Ihr Token, wählen Sie einen Bereich aus und klicken Sie danach auf **Persönliches Zugriffstoken erstellen**.
-6. Klicken Sie im Feld `Neues persönliches Zugriffstoken` auf **Kopieren** und ersetzen Sie den Wert für `GIT_PASSWORD` in den Toolchain-Eigenschaften. 
+6. Klicken Sie im Feld `Neues persönliches Zugriffstoken` auf **Kopieren** und ersetzen Sie den Wert für `GIT_PASSWORD` in den Toolchain-Eigenschaften.
 
 Der Terraform-Status wird in einem Zweig namens `terraform` gespeichert und löst die Pipeline-Ausführung nicht aus, wenn eine Änderung ermittelt wurde.
 
 ### Git-Operationen aktivieren
 {: #git-repo}
 
-Wenn die App in {{site.data.keyword.cloud_notm}} bereitgestellt wird, wird ein GitLab-Repository erstellt, um den Code für die Quellcodeverwaltung zu hosten.  Sie können Git-Operationen verwenden, um Teams zu ermöglichen, Änderungen an Ihrer App vorzunehmen und bereitzustellen. Im Folgenden wird der Inhalt der Ordner in diesem Repository beschrieben.
+Wenn die App in {{site.data.keyword.cloud_notm}} bereitgestellt wird, wird ein GitLab-Repository erstellt, um den Code für die Quellcodeverwaltung zu hosten. Sie können Git-Operationen verwenden, um Teams zu ermöglichen, Änderungen an Ihrer App vorzunehmen und bereitzustellen. Im Folgenden wird der Inhalt der Ordner in diesem Repository beschrieben.
 
 #### Debian-Ordner
 {: #debian-folder}
@@ -195,7 +196,7 @@ Die Toolchain stellt die Bereitstellung von Infrastruktur und Apps in einer einf
 
 Der Toolchain-Prozess verfügt über fünf Stages.
 
-1. Der Stage 'Build' klont das Git-Repository und paketiert den Code in ein Debian-Paket. 
+1. Der Stage 'Build' klont das Git-Repository und paketiert den Code in ein Debian-Paket.
 2. In der Terraform-Planungsstage wird ein Terraform-Plan vorbereitet.
   ```console
   terraform init -input=false
