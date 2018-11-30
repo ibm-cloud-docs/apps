@@ -22,7 +22,7 @@ Mendix es un entorno de desarrollo con poco código y un conjunto de herramienta
 ## Selección de un kit de inicio
 {: #select-a-starter-kit}
 
-2. En el panel de control de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/dashboard){: new_window}, pulse el icono **Menú** ![Icono Menús](../../icons/icon_hamburger.svg).
+2. En el [panel de control de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/dashboard/apps){: new_window}, pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg).
 3. Seleccione un kit de inicio de Mendix con poco código de una de las siguientes categorías:
   * [Móvil ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson Web o Mobile App ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
@@ -52,7 +52,7 @@ Una vez que se haya completado la autorización, el navegador vuelve a la app Me
 
 Se crea una cadena de herramientas DevOps. La cadena de herramientas integra el proyecto Mendix dentro de la plataforma Mendix en el entorno de {{site.data.keyword.cloud_notm}}. Se despliega una aplicación predeterminada en el despliegue de destino de modo que pueda verificar que la aplicación se ha desplegado correctamente al finalizar la cadena de herramientas DevOps.
 
-Los despliegues de Mendix Cloud Foundry requieren el servicio de base de datos PostGRES, que no tiene un nivel Lite. Si desea evaluar los kits de inicio de Mendix utilizando una cuenta Lite, puede elegir como destino un clúster de Kubernetes de prueba.
+Los despliegues de Mendix Cloud Foundry requieren el servicio de base de datos PostGRES, que no tiene un nivel Lite.   Si desea evaluar los kits de inicio de Mendix utilizando una cuenta Lite, puede elegir como destino un clúster de Kubernetes de prueba.
 {: tip}
 
 Si ha seleccionado un clúster de Kubernetes para el despliegue, consulte la [guía de aprendizaje de Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) para aprender a configurar el clúster para su uso en producción.
@@ -70,7 +70,7 @@ Mendix es un entorno de creación con poco código. El ciclo de vida de desarrol
 4. Utilice el menú **Ejecutar** de la aplicación Mendix Desktop Modeler y seleccione la opción **Ejecutar**.
   El paquete de despliegue se crea y se carga en Mendix. Una vez que se haya creado el paquete de despliegue, puede desplegar la aplicación en {{site.data.keyword.cloud_notm}}.
 5. Para desplegar la aplicación Mendix, vuelva a la página **Detalles de app** en {{site.data.keyword.cloud_notm}} y pulse **Desplegar aplicación**.
-  Esta acción inicia la cadena de herramientas de DevOps de la aplicación, que obtiene el despliegue más reciente de Mendix y lo despliega en el entorno de destino. Una vez finalizado el despliegue, la versión más reciente de la aplicación se inicia automáticamente y pasa a estar disponible. 
+  Esta acción inicia la cadena de herramientas de DevOps de la aplicación, que obtiene el despliegue más reciente de Mendix y lo despliega en el entorno de destino. Una vez finalizado el despliegue, la versión más reciente de la aplicación se inicia automáticamente y pasa a estar disponible.
 
 Todas las aplicaciones Mendix se despliegan en {{site.data.keyword.cloud_notm}} pulsando **Desplegar aplicación** en la página **Detalles de app** en {{site.data.keyword.cloud_notm}}. No invoque manualmente cadenas de herramientas de Mendix a través de la interfaz de IBM DevOps. Si se inician manualmente cadenas de herramientas a través de la interfaz de DevOps, es posible que el despliegue falle debido a una falta de los metadatos necesarios que resultan críticos para los despliegues de Mendix. En función del estado de la aplicación, es posible que se produzca un error durante el inicio de la cadena de herramientas de DevOps o un error en la aplicación desplegada. Si inicia manualmente una cadena de herramientas y se produce un error, puede restaurar la aplicación pulsando **Desplegar aplicación** en la página **Detalles de app** en {{site.data.keyword.cloud_notm}}. Esta acción desencadena un flujo de DevOps completo para la aplicación Mendix, que incluye los metadatos necesarios.
 {: tip}

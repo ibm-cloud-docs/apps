@@ -35,9 +35,9 @@ Actualice a una cuenta de Pago según uso. Para utilizar instancias virtuales, l
 ## Creación y despliegue de apps
 {: #create-deploy}
 
-El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue. 
+El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue.
 
-1. [Cree una app](apps/index.html#createapp). 
+1. [Cree una app](index.html#createapp). 
 2. Pulse **Desplegar en la nube** en la página de detalles de la app.
 3. Seleccione **Desplegar en un servidor virtual** junto con la región en la que se va a ejecutar el servidor.
 
@@ -57,7 +57,7 @@ La opción del servidor virtual funciona en fases. En primer lugar, el código d
 
 El conducto utiliza un conjunto de propiedades de cuenta y un nuevo par de claves SSH para desplegar en la infraestructura. Estas propiedades se pasan automáticamente a la cadena de herramientas, pero no se almacenan en el código fuente de Git por razones de seguridad.
 
-Para ver estas propiedades de entorno, siga estos pasos.  
+Para ver estas propiedades de entorno, siga estos pasos. 
 
 1. En la página Detalles de la app, pulse **Ver cadena de herramientas**.
 2. Pulse el mosaico **Delivery Pipeline**.
