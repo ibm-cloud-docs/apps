@@ -22,7 +22,7 @@ Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少�
 ## 选择入门模板工具包
 {: #select-a-starter-kit}
 
-2. 在 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/dashboard){: new_window} 中，单击**菜单**图标 ![菜单图标](../../icons/icon_hamburger.svg)。
+2. 在 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/dashboard/apps){: new_window} 中，单击**菜单**图标 ![菜单图标](../../icons/icon_hamburger.svg)。
 3. 从以下类别中选择一个 Mendix 低代码入门模板工具包：
   * [移动 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson Web 或移动应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)

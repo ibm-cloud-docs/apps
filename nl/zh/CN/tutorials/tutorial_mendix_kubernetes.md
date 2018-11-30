@@ -103,4 +103,4 @@ spec:
 ## 其他信息
 {: #additional-information}
 
-有关在 Kubernetes 环境中运行 Mendix 应用程序的更多架构详细信息，请查看 Mendix 用户文档的 [Run Mendix on Kubernetes](https://docs.mendix.com/deployment/docker/run-mendix-on-kubernetes) 部分。
+有关在 Kubernetes 环境中运行 Mendix 应用程序的更多架构详细信息，请查看 Mendix 用户文档的 [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) 部分。
