@@ -34,7 +34,7 @@ Services don't bind to the virtual server instance. You cannot add services to a
 
 The App Service provisions a virtual server instance for you, loads an image that includes your app, creates a Devops toolchain, and initiates the first deployment cycle for you.
 
-1. [Create an app](index.html#createapp). 
+1. [Create an app](tutorials/tutorial_scratch.html). 
 2. Click **Deploy to Cloud** from the app details page.
 3. Select **Deploy to a Virtual Server** along with the region in which to run your server.
 
@@ -76,7 +76,6 @@ To view these environment properties, complete the following steps.
 
 #### Infrastructure API key
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
 Terraform requires an infrastructure API key to create infrastructure resources. The API key is obtained automatically during deployment. To manually retrieve a key, complete the following steps.
 
 1. Go to the [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
@@ -89,7 +88,6 @@ For more information, see [Managing classic infrastructure API keys](/docs/iam/c
 
 #### Infrastructure user name
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
 The infrastructure user name is also automatically obtained and used during deployment. To manually obtain the user name, complete the following steps.
 
 1. Go to [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
@@ -112,12 +110,11 @@ To create platform-level services in Terraform, like databases and compose servi
 
 #### Public and private keys
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 For the toolchain to install the Debian packaging into the virtual server instance, the deployment infrastructure automatically generates a private and public SSH key pair to transfer the Git contents to the instance.
 
 To do this manually:
 1. In your client, use the following instructions to create a [public and private key pair ![External link icon](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Go to the [Infrastructure SSH keys view ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Devices** > **Manage** > **SSH Keys**.
+2. Go to the [Infrastructure SSH keys view ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Devices** > **Manage** > **SSH Keys**.
 3. Click **Add**.
 4. Copy the contents of the public key that you previously created and paste it into the key contents.
 5. Give the key a name and click **Add**.
