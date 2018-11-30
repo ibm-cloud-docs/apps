@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker is installed as part of the developer tools. Docker must be running for t
 
 Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
-1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
+1. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
 
 2. Enter your app name. For this tutorial, use `ExpressBackend`.
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ The following table lists the common directories and files that are included in 
 
 | Root directory                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
-|package.json | Metadata file |
+|package.json | Metadata information about the package including name, version, and dependencies. |
 |cli-config.yml | CLI configuration options |
 |manifest.yml | Cloud Foundry deployment file |
 |Dockerfile | Dockerfile for `ibmcloud dev run`, `ibmcloud dev deploy`, and `docker` commands |
 |Dockerfile-tools | Dockerfile for `ibmcloud dev build` and `ibmcloud dev test` |
 |docker-compose.yml | App service configuration for Docker Compose |
-|webpack.config.js | Webpack configuration for build related information |
+|webpack.config.js | Web pack configuration for build related information |
 | LICENSE | License file |
 |README.md | Description of app |
 {: caption="Table 1. Contents of a generated Node.js app root directory" caption-side="top"}

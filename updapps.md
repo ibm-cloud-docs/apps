@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ You can create and use a custom domain by using either the {{site.data.keyword.B
 
 Complete the following steps to create a custom domain for your org by using the console:
 
-1. Go to **Manage** > **Account** > **Cloud Foundry Orgs**.
+1. Go to **Manage > Account**, and select **Cloud Foundry orgs**.
 2. Click the name of the org for which you're creating a custom domain.
 3. Click the **Domains** tab.
 4. Click **Add a domain**, and enter your domain name and select the region.
@@ -35,8 +35,8 @@ As an example, you can use `*.mycompany.com` to associate the route `www.mybluem
 
 Add the route with the custom domain to an application.
 
-1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) > **Dashboard**, then click the row for the application that you want to add the route to. The **Overview** page is displayed.
-2. From the **Routes** menu, select **Edit Routes**.
+1. Click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg) > **resource list**, then click the row for the application that you want to add the route to. The Overview page is displayed.
+2. Click the **Routes** menu, select **Edit Routes**.
 3. Click **Add route**, and specify the route that you want to use for the application.
 4. Confirm your updates by clicking **Save**.
 

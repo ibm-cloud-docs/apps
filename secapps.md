@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Creating certificate signing requests
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 You can secure your applications by uploading SSL certificates and restricting access to the applications.
 {:shortdesc}
 
-Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.Bluemix}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
+Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.cloud}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
 ## Required CSR contents
 
@@ -69,7 +70,7 @@ If your account owner has a free trial account, you must upgrade your account to
 
 Before you can upload certificates, you must create a certificate signing request.
 
-When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.Bluemix_notm}}:
+When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.cloud_notm}}:
 
 * US-South - `secure.us-south.bluemix.net`
 * US-East - `secure.us-east.bluemix.net`
@@ -79,7 +80,7 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 
 To upload a certificate for your application, follow these steps.
 
-1. Go to your dashboard.
+1. Go to your resource list.
 
 2. Select your app to open the app details view.
 
@@ -89,15 +90,13 @@ To upload a certificate for your application, follow these steps.
 
 5. Click **Upload** in the SSL Certificate column and select your custom domain.
 
-6. Browse to upload a certificate, private key, and optionally an intermediate certificate or client certificate. To enable the client certificate truststore, you must upload a client certificate truststore file that defines the allowed user access to your custom domain.
-
   #### Certificate
 
     A digital document that binds a public key to the identity of the certificate owner, which enables the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority.
 
     A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes you might use a self-signed certificate.
 
-    The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
+    The following types of certificates are supported in {{site.data.keyword.cloud_notm}}:
 
 	* PEM (`pem`, `.crt`, `.cer`, and `.cert`)
 	* DER (`.der` or `.cer`)
@@ -107,7 +106,7 @@ To upload a certificate for your application, follow these steps.
 
     An algorithmic pattern that is used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
 
-    The following types of private keys are supported in {{site.data.keyword.Bluemix_notm}}:
+    The following types of private keys are supported in {{site.data.keyword.cloud_notm}}:
 
     * PEM (`pem`, `.key`)
     * PKCS #8 (`p8`, `pk8`)
@@ -122,13 +121,14 @@ To upload a certificate for your application, follow these steps.
 
     If you enable this option by uploading a client certificate truststore file, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  **Note:** The custom certificate feature in {{site.data.keyword.Bluemix_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+  The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+  {: note}
 
   #### Client certificate truststore
 
   The client certificate truststore includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
 
-   The following types of certificates are supported in {{site.data.keyword.Bluemix_notm}}:
+   The following types of certificates are supported in {{site.data.keyword.cloud_notm}}:
 
       * PEM (pem, .crt, .cer, and .cert)
       * PKCS #7 (p7b, p7r, spc)
@@ -140,5 +140,5 @@ For more information, see [Importing SSL certificates](/docs/infrastructure/ssl-
 
 To delete a certificate or replace an existing certificate with a new one, follow these steps.
 
-1. Go to **Manage** > **Account** > **Cloud Foundry Organizations**.
+1. Go to **Manage > Account**, and select **Cloud Foundry orgs**.
 2. In the action column, select **Domains** from the additional actions menu. In the additional actions menu for the organization, click **Remove from Org**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-05-21"
 # Checking the status of your app
 {: #manageapps}
 
-Your dashboard in the {{site.data.keyword.Bluemix}} console provides summary information for the applications that you created. The summary information includes the name, icon, URL, runtime, running status, and service instances that are bound to the app.
+Your resource list in the {{site.data.keyword.Bluemix}} console provides summary information for the applications that you created. The summary information includes the name, icon, URL, runtime, running status, and service instances that are bound to the app.
 {:shortdesc}
 
 ## Understanding the status of your app
 {: #status}
 
-From your dashboard, you can view the status of each application. In the state column for each application, you can see whether the instances of app are running.
+From your resource list, you can view the status of each application. In the state column for each application, you can see whether the instances of app are running.
 
 <dl>
 <dt>
@@ -55,10 +55,10 @@ Your app isn’t running. The red icon indicates that the app is started, but no
 </dd>
 </dl>
 
-## Viewing your app details dashboard
+## Viewing your app details
 {: #viewingapps}
 
-You can view more information about an app by clicking the name of it in your dashboard. Then, you can see the app's Overview page.
+You can view more information about an app by clicking the name of it in your resource list. Then, you can see the app's Overview page.
 
 On the Apps Overview page, after an app is deployed, you can start, stop, restart, or in the case of web applications, modify the number of instances and the amount of memory that is used by the app. For web applications, {{site.data.keyword.Bluemix_notm}} doesn’t automatically scale your app based on its load, so you must manage it yourself.
 

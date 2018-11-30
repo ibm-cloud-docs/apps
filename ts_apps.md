@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-23"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-10-23"
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
 # Troubleshooting for creating apps
 {: #managingapps}
@@ -25,6 +26,7 @@ General problems with creating apps might include apps that can't be updated, or
 
 ## You have unsaved changes
 {: #ts_unsaved_changes}
+{: troubleshoot}
 
 When you click items on the app details page, you might be unable to take any actions and might be prompted to save changes before you can proceed.
 
@@ -41,6 +43,7 @@ Close the message window, and then click **RESET** in your runtime pane.
 
 ## Automatic failover between {{site.data.keyword.Bluemix_notm}} regions isn't available
 {: #ts_failover}
+{: troubleshoot}
 
 You can't use automatic failover between {{site.data.keyword.Bluemix_notm}} regions. However, you can use a DNS provider that supports failover among many IP addresses as a workaround.
 
@@ -61,6 +64,7 @@ nslookup mybluemix.net
 
 ## Can't switch apps into debug mode
 {: #ts_debug}
+{: troubleshoot}
 
 You can't enable the debug mode if the Java virtual machine (JVM) version is 8 or earlier.
 
@@ -134,6 +138,7 @@ If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, 
 
 ## Can't reuse names of deleted apps
 {: #ts_reuse_appname}
+{: troubleshoot}
 
 After you delete an app, you can reuse the app name only after you delete the app route.
 
@@ -174,6 +179,7 @@ Complete the following steps to delete the unused route:
 
 ## Can't retrieve spaces in the org
 {: #ts_retrieve_space}
+{: troubleshoot}
 
 You can't create an app or a service if your current organization doesn't have a space that is associated with it.
 
@@ -188,13 +194,14 @@ This error often occurs the first time that you try to create an app or a servic
 Ensure that you created a space in your current organization. To create a space, use one of the following methods:
 {: tsResolve}
 
-* From the menu bar, click **Manage > Account > Organizations**. Select the organization that you want to create the space in, and click **Create a Space**.
+* From the menu bar, click **Manage > Account**, and select **Cloud Foundry orgs**. Select the organization that you want to create the space in, and click **Create a Space**.
 * In the Cloud Foundry command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.Bluemix_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
 ## Can't perform requested actions
 {: #ts_authority}
+{: troubleshoot}
 
 You can't complete actions without appropriate access authority.
 
@@ -216,6 +223,7 @@ To get the appropriate authority level, use one of the following methods.
 
 ## Can't access {{site.data.keyword.Bluemix_notm}} services because of authorization errors
 {: #ts_vcap}
+{: troubleshoot}
 
 Authorization errors might occur when your app accesses an {{site.data.keyword.Bluemix_notm}} service, if the service credentials are hardcoded in your app.
 
@@ -236,6 +244,7 @@ For more information about the commands that you can use in other program langua
 
 ## Can't deploy apps by using IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
+{: troubleshoot}
 
 When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to {{site.data.keyword.Bluemix_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
@@ -253,6 +262,7 @@ To remove the facet, in the IBM Eclipse Tools for {{site.data.keyword.Bluemix_no
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
+{: troubleshoot}
 
 If you receive 502 Bad Gateway errors when you interact with apps on {{site.data.keyword.Bluemix_notm}}, check the {{site.data.keyword.Bluemix_notm}} status page, and then take appropriate actions.
 
@@ -276,6 +286,7 @@ If you suspect that an {{site.data.keyword.Bluemix_notm}} service is down, first
 
 ## Disk quota is exceeded
 {: #ts_disk_quota}
+{: troubleshoot}
 
 If you run out of disk space, you can manually modify the disk quota to get more disk space.
 
@@ -300,6 +311,7 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
+{: troubleshoot}
 
 Android apps in certain regions where Google isn't accessible can't receive notifications that you send out through the IBM {{site.data.keyword.mobilepushshort}} service. In this case, a workaround is to use third-party services.
 
@@ -314,6 +326,7 @@ As a workaround, use third-party services that don't rely on the GCM service, fo
 
 ## Org's services limit is exceeded
 {: #ts_servicelimit}
+{: troubleshoot}
 
 If you are a Lite account user, you might be unable to create an app in {{site.data.keyword.Bluemix_notm}} if you exceeded your organization's services limit.
 
@@ -331,7 +344,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
   * To delete a services instance, you can use the {{site.data.keyword.Bluemix_notm}} console or the command line interface.
 
     To use the {{site.data.keyword.Bluemix_notm}} console to delete a service instance, complete the following steps:
-	  1. In the Services dashboard, click the **Actions** menu for the service that you want to delete.
+	  1. In the resource list, click the **Actions** menu for the service that you want to delete.
 	  2. Click **Delete Service**. You are prompted to restage the app that the service instance was bound to.
 
     To use the command line interface to delete a service instance, complete the following steps:
@@ -343,6 +356,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 
 ## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
+{: troubleshoot}
 
 You might be unable to run executable files on {{site.data.keyword.Bluemix_notm}} when those executables were developed and built in a different environment.
 
@@ -366,6 +380,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
+{: troubleshoot}
 
 If you are a Lite account user, you might be unable to deploy an app to {{site.data.keyword.Bluemix_notm}} if you have exceeded the memory limit of your organization. You can either reduce the memory that your apps use or increase the memory quota of your account. The maximum memory quota for a Lite account is 256 MB and can be increased only by upgrading to a billable account.
 
@@ -385,7 +400,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 
     If you use the {{site.data.keyword.Bluemix_notm}} console, complete the following steps:
 
-    1. Select your app from the dashboard. The app details page opens.
+    1. Select your app from the resource list. The app details page opens.
     2. In the runtime pane, you can reduce the maximum memory limit or the numbers of app instances, or both, for your app.
 
     If you use the command line interface, complete the following steps:
@@ -408,6 +423,7 @@ You can either increase the memory quota of your account, or reduce the memory t
 
 ## Apps aren't automatically restarted
 {: #ts_apps_not_auto_restarted}
+{: troubleshoot}
 
 An app isn't automatically restarted when a service that you bind to the app stops working.
 
@@ -428,6 +444,7 @@ In addition, you can code the app to identify and recover from problems such as 
 
 ## User-defined variables are lost when an app is pushed
 {: #ts_varsnotretained}
+{: troubleshoot}
 
 When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, the variables that you specified are reset unless you save the variables to the manifest file.
 
@@ -440,9 +457,35 @@ The variables that you specified are saved only if you save them to the manifest
 When you push an app to {{site.data.keyword.Bluemix_notm}} from IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time that you open the wizard, the variables are displayed automatically.
 {: tsResolve}
 
+<!-- begin STAGING ONLY -->
+
+## {{site.data.keyword.Bluemix_notm}} Live Sync Debug doesn't start from the command line
+{: #ts_no_debug}
+{: troubleshoot}
+
+You enabled the {{site.data.keyword.Bluemix_notm}} Live Sync Debug feature for your app by using the command line, but you can't access the Debug interface.
+
+You enabled the Debug feature for your app by setting the **BLUEMIX_APP_MGMT_ENABLE** environment variable. However, you can't access the Debug user interface at `app_url/bluemix-debug/manage`.
+{: tsSymptoms}
+
+The Debug feature can't be enabled in these situations:
+{: tsCauses}
+
+  * When the `manifest.yml` contains the command attribute
+  * When you use the **-c** option to push an app to {{site.data.keyword.Bluemix_notm}}
+
+Use one of the following options to resolve the issue:
+{: tsResolve}
+
+  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) topic.
+  * Disable the command for your existing app either by revising the command attribute in your `manifest.yml` to command: null or by editing your push command to include `-c null`.
+  * Remove the **command** attribute from the `manifest.yml`. Then, delete the current app from {{site.data.keyword.Bluemix_notm}} and push the app again.
+
+<!-- end STAGING ONLY -->
 
 ## Orgs can't be found on {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
+{: troubleshoot}
 
 You might not be able to locate your organization on {{site.data.keyword.Bluemix_notm}} when working on a {{site.data.keyword.Bluemix_notm}} region.
 
@@ -473,6 +516,7 @@ If you're pushing your application to {{site.data.keyword.Bluemix_notm}} by usin
 
 ## App routes can't be created
 {: #ts_hostistaken}
+{: troubleshoot}
 
 When you deploy an app to {{site.data.keyword.Bluemix_notm}}, the route of the app can't be created if the host name that you specified is already being used.
 
@@ -490,7 +534,8 @@ The host name that you specify must be unique within the domain that you are usi
   * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.
     ```
     host: host_name
-	```
+	  ```
+
   * If you deploy your application from the command prompt, use the `ibmcloud cf push` command with the **-n** option.
     ```
     ibmcloud cf push appname -p app_path -n host_name
@@ -498,6 +543,7 @@ The host name that you specify must be unique within the domain that you are usi
 
 ## WAR apps can't be pushed by using the ibmcloud cf push command
 {: #ts_cf_war}
+{: troubleshoot}
 
 You might not be able to use the `ibmcloud cf push` command to deploy an archived web app to {{site.data.keyword.Bluemix_notm}} if the app location isn't specified correctly.
 
@@ -522,6 +568,7 @@ For more information about the `ibmcloud cf push` command, enter `ibmcloud cf pu
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
+{: troubleshoot}
 
 Double-byte characters might not be displayed properly if Unicode support isn't configured properly for the servlet or JSP files.
 
@@ -535,16 +582,17 @@ You can use the following code in your servlet or JSP file:
 {: tsResolve}
 
   * In the servlet source file
-    ```
+  ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
   * In the JSP
-    ```
+  ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
 
 ## Node.js apps can't be deployed
 {: #ts_nodejs_deploy}
+{: troubleshoot}
 
 You might experience problems when you update a Node.js app or deploy a Node.js app to {{site.data.keyword.Bluemix_notm}}.
 
@@ -568,26 +616,26 @@ Use one of the following methods, depending on the cause of the problem:
 
   * Specify the start command by one of the following methods:
      * Use the Cloud Foundry command line interface. For example:
-        ```
-		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-		```
+      ```
+		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		  ```
     * Use the [package.json ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/jsonfile){: new_window} file. For example:
 	    ```
-		{
-      ...
-  	   "scripts": {
-	 		 "start": "node app.js"
- 	   }
-	}
+		  {
+        ...
+  	    "scripts": {
+	 		  "start": "node app.js"
+ 	    }
+	    }
 	    ```
     * Use the `manifest.yml` file. For example:
 	    ```
-		applications:
-  name: MyUniqueNodejs01
-  ...
-  command: node app.js
-  ...
-        ```
+		  applications:
+      name: MyUniqueNodejs01
+      ...
+      command: node app.js
+      ...
+      ```
 
   * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app.
     The following example shows a simple `package.json` file:
@@ -613,6 +661,7 @@ For more tips about Node.js apps, see [Tips for Node.js Applications ![External 
 
 ## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
+{: troubleshoot}
 
 If you see configuration errors in the `server.xml` file after you import an {{site.data.keyword.Bluemix_notm}} Liberty app into Eclipse, you might need to remove the `server.xml` file from the project.
 
@@ -627,6 +676,7 @@ You can resolve this problem by removing the server.xml file from the project. T
 
 ## Apps can't be staged by using custom buildpacks
 {: #ts_bp_compilation}
+{: troubleshoot}
 
 You might not be able to deploy an app to {{site.data.keyword.Bluemix_notm}} with a custom buildpack if the scripts in the buildpack aren't executable files.
 
@@ -640,7 +690,8 @@ You can use the [Git update ![External link icon](../icons/launch-glyph.svg "Ext
 {: tsResolve}
 
 ## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.Bluemix_notm}} Continuous Delivery
- {: #ts_devops_to_bm}
+{: #ts_devops_to_bm}
+{: troubleshoot}
 
  You might not be able to deploy your app with the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} if the `manifest.yml` file isn't present in your app.
 
@@ -655,6 +706,7 @@ You can use the [Git update ![External link icon](../icons/launch-glyph.svg "Ext
 
 ## Meteor apps can't be pushed
 {: #ts_meteor}
+{: troubleshoot}
 
 You might not be able to push a Meteor application to {{site.data.keyword.Bluemix_notm}} if the buildpack isn't specified correctly.
 
@@ -672,6 +724,31 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * If you deploy your application from the command prompt, use the `ibmcloud cf push` command and specify your custom buildpack by using the **-b** option. For example:
-    ```
+  ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+
+## Exceeded your storage quota
+{: #exceed_quota}
+
+If the build or deploy jobs fail, and you see the following message, you can delete your images with the following CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
+
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
+* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you are in.
+* List your images by using `ibmcloud cr images`.
+* Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
+* Rerun the build or deploy job that failed.
+
+## Accessing Kubernetes logs
+{: #access_kube_logs}
+
+If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
+* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you are in.
+* List your clusters by using `ibmcloud cs clusters`,
+* Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.
+* Export the environment variable that is listed.
+* View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+* You can view the logs in your app by using `kubectl logs <pod-name>.`
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker is installed as part of the developer tools. Docker must be running for t
 
 Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}. Select the language that's best for your project to get started.
 
-1. From the [starter kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language.
+1. From the [starter kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language.
 2. Enter your app name and a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`
 3. Select your language and framework. Some starter kits might be available only in one language.
 4. Select your pricing plan. There is a free option that you can use for this tutorial.
@@ -55,10 +55,10 @@ Continuous delivery is enabled for some applications. You can enable continuous 
 
 1. From the app service window, click **Deploy to Cloud**.
 2. Select a deployment method. Set up your deployment method according to the instructions for the method you choose.
+  * Deploy to a Kubernetes Cluster. Create a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
+  * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
 
-    * Deploy to a Kubernetes Cluster. Create a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
-
-    * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
+For more information, see [Creating toolchains](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
 
 ## Step 5. Build and run the app locally
 {: #build-run}
@@ -83,7 +83,7 @@ Deploying your app to the cloud in the last step created a toolchain. A toolchai
   ```
   {: pre}
 
-7.  Get the credentials.
+7. Get the credentials.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ Deploying your app to the cloud in the last step created a toolchain. A toolchai
   ```
   {: pre}
 
-10.  Open your browser to `http://localhost:3000`. Your port number might be different depending on your chosen runtime.
+10. Open your browser to `http://localhost:3000`. Your port number might be different depending on your chosen runtime.
 
 ## Step 6. Deploy your app
 {: #deploy}
@@ -118,20 +118,19 @@ With a properly configured toolchain, a build-deploy cycle automatically starts 
 You can also manually deploy your app from your DevOps toolchain:
 
 1. From the App Details window, click **View Toolchain**.
-
 2. Click **Delivery pipeline** where you can start builds, manage deployment and view logs and history.
+
+For more information, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Deploy by using the {{site.data.keyword.dev_cli_short}}
 
 To deploy your app to Cloud Foundry, enter the following command:
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 To deploy your app to a Kubernetes cluster, enter the following command:
-
 ```
 ibmcloud dev deploy --target <container>
 ```

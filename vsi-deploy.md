@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,24 +12,22 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # Deploying to a virtual server
 {: #vsi-deploy}
 
-You can use the {{site.data.keyword.cloud}} [App Service ![External link icon](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} to deploy your apps to many types of environments, including virtual server instances. A virtual server instance emulates a bare metal machine and is a common deployment choice when moving on-premises workloads to the cloud.
+If you have a Pay-As-You-Go account, you can use the {{site.data.keyword.cloud}} [App Service ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} to deploy your apps to many types of environments, including virtual server instances. A virtual server instance emulates a bare metal machine and is a common deployment choice when moving on-premises workloads to the cloud.
 {: shortdesc}
 
 A virtual server instance offers better transparency, predictability, and automation for all workload types when compared to other configurations. Combine it with a bare metal server to create unique workload combinations. For example, you can create high-performance database logic or machine learning with bare metal and GPU configurations that run a Debian Linux-based operating system.
 
 Provisioning a virtual server instance and deploying it can be a complex and time-consuming process, but you can get up and running quickly by using the {{site.data.keyword.cloud_notm}} App Service.
 
-## Before you begin
-{: #prereqs}
-
-Upgrade to a Pay-As-You-Go account. To use virtual instances, your {{site.data.keyword.cloud_notm}} account must be enabled for classic infrastructure. To upgrade your account, go to **Manage** > **Billing and usage** > **Billing** in the console.
-
-**Important:** Services don't bind to the virtual server instance. You cannot add services to an application in a virtual server.
+Services don't bind to the virtual server instance. You cannot add services to an application in a virtual server.
+{: important}
 
 ## Creating and deploying apps
 {: #create-deploy}
@@ -51,7 +48,7 @@ Any of the App Service starter kits can be deployed in a dynamically created vir
 
 ### Enabling your pipeline deployment
 
-When you create a starter kit that uses the {{site.data.keyword.cloud_notm}} [App Service ![External link icon](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}, the virtual server instance is enabled. After the app is created, you can then choose where you want to deploy the app. The starter kits are enabled to support deployment by using a Continuous Delivery toolchain. Starter kits can target Kubernetes, Cloud Foundry, and Virtual Server Instances. The toolchain includes a source code repository and a deployment pipeline.
+When you create a starter kit that uses the {{site.data.keyword.cloud_notm}} [App Service ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, the virtual server instance is enabled. After the app is created, you can then choose where you want to deploy the app. The starter kits are enabled to support deployment by using a Continuous Delivery toolchain. Starter kits can target Kubernetes, Cloud Foundry, and Virtual Server Instances. The toolchain includes a source code repository and a deployment pipeline.
 
 The virtual server option works in phases. First, the app code is prepared and stored into a GitLab Git repository and the source code creates a toolchain with a pipeline. The pipeline is defined to build the code and package it into a Debian Package manager format. Then, Terraform provisions a virtual instance. Finally, the app is deployed, installed, and started inside the running virtual image and its health is validated.
 
@@ -64,57 +61,63 @@ To view these environment properties, complete the following steps.
 3. Click the **Stage Configure** icon, then click **Configure Stage** on the build stage.
 4. Click **Environment Properties** tab to view the properties. Use the following table to learn about the properties that are available.
 
-  | Property   | Description   |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | The [infrastructure API key](#iaas-key) is from the classic infrastructure console. |
-  | `TF_VAR_ibm_sl_username` | The [infrastructure user name](#user-key) that identifies the classic infrastructure account |
-  | `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [platform API key](#platform-key) is used to enable service creation. |
-  | `PUBLIC_KEY` | [Public key](#public-key) that is defined to enable access to the virtual server instance. |
-  | `PRIVATE_KEY` | [Private key](#public-key) that is defined to enable access to the virtual server instance. **Note**: You must use `\n` newline style formatting. |
-  | `VI_INSTANCE_NAME` | Auto-generated name for the virtual server instance |
-  | `GIT_USER` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab user name is required. |
-  | `GIT_PASSWORD` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab password is required. |
-  {: caption="Table 1. Environment variables to change for enablement" caption-side="top"}
+| Property  | Description  |
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | The [infrastructure API key](#iaas-key) is from the classic infrastructure console. |
+| `TF_VAR_ibm_sl_username` | The [infrastructure user name](#user-key) that identifies the classic infrastructure account |
+| `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [platform API key](#platform-key) is used to enable service creation. |
+| `PUBLIC_KEY` | [Public key](#public-key) that is defined to enable access to the virtual server instance. |
+| `PRIVATE_KEY` | [Private key](#public-key) that is defined to enable access to the virtual server instance. You must use `\n` newline style formatting. |
+| `VI_INSTANCE_NAME` | Auto-generated name for the virtual server instance |
+| `GIT_USER` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab user name is required. |
+| `GIT_PASSWORD` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab password is required. |
+{: caption="Table 1. Environment variables to change for enablement" caption-side="top"}
+
 
 #### Infrastructure API key
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform requires an infrastructure API key to create infrastructure resources. The API key is obtained automatically during deployment. To manually retrieve a key, complete the following steps.
 
-Terraform requires an infrastructure API key to create classic infrastructure resources, which is obtained automatically during deployment. To manually retrieve a key, complete the following steps. 
+1. Go to the [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
+2. Click a user name, and then click **User details**.
+3. Click **Add a classic infrastructure key** in the API keys section.
+4. Copy or download the API key `TF_VAR_ibm_sl_api_key`, and save it in a safe place. You can retrieve the details of the API key later by using the **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
+5. Paste the copied API key value into the toolchain configuration to replace the `TF_VAR_ibm_sl_api_key`.
 
-1. Go to the classic infrastructure [user list ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Account** > **User List**.
-2. Find the user details that are creating the toolchain and either click **View** in the API Key column or click **Generate**. Both steps display the API key in a window.
-3. Copy the API Key and replace the value in the Toolchain configuration `TF_VAR_ibm_sl_api_key`.
+For more information, see [Managing classic infrastructure API keys](/docs/iam/classic_infra_keys.html) and [Classic infrastructure permissions](/docs/iam/infrastructureaccess.html).
 
-#### Classic infrastructure user name
+#### Infrastructure user name
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+The infrastructure user name is also automatically obtained and used during deployment. To manually obtain the user name, complete the following steps.
 
-The classic infrastructure user name is also automatically obtained and used during deployment. To manually obtain the user name, complete the following steps.
+1. Go to [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
+2. Click a user name, and then click **User details**.
+3. Locate the **VPN User Name** property.
+4. Cut and paste this value and replace the toolchain configuration `TF_VAR_ibm_sl_username`.
 
-1. Go to the classic infrastructure [user list ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Account** > **User List**.
-2. Click the user who you want to create the toolchain.
-3. Scroll down to the **VPN User Name** property.
-4. Cut and paste this value and replace the Toolchain configuration `TF_VAR_ibm_sl_username`.
-
-#### Platform API key
+#### IBM Cloud API key
 {: #platform-key}
 
-To create platform level services in Terraform, like databases and compose services, the platform API key is automatically obtained and stored as an environment variable in your pipeline. To manually retrieve a platform key, complete the following steps.
+To create platform-level services in Terraform, like databases and compose services, the platform API key is automatically obtained and stored as an environment variable in your pipeline. To manually retrieve a platform key, complete the following steps.
 
-1. From the [API Keys ![External link icon](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) page, click **Manage** > **Security** > **Platform API Keys**.
-2. Click **Create**.
-3. Enter a name and description and click **Create**.
-4. When the window opens, click **Show** to review the key.
-5. Copy and paste the key into the clipboard or download the key.
-6. Replace the value in the toolchain configuration `TF_VAR_ibm_cloud_api_key` with the value that was generated.
+1. Go to [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
+2. Click a user name, and then click **User details**.
+3. Locate the API keys section, and click **Create an IBM Cloud API key**.
+4. Enter a name and description and click **Create**.
+5. When the window opens, click **Show** to review the key.
+6. Copy and paste the key into the clipboard, or download the key.
+7. Replace the value in the toolchain configuration `TF_VAR_ibm_cloud_api_key` with the value that was generated.
 
-#### Public and private Keys
+#### Public and private keys
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 For the toolchain to install the Debian packaging into the virtual server instance, the deployment infrastructure automatically generates a private and public SSH key pair to transfer the Git contents to the instance.
 
 To do this manually:
 1. In your client, use the following instructions to create a [public and private key pair ![External link icon](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Go to the [Infrastructure SSH keys view ![External link icon](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Devices** > **Manage** > **SSH Keys**.
+2. Go to the [Infrastructure SSH keys view ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. You can also click **Menu** > **Classic infrastructure** > **Devices** > **Manage** > **SSH Keys**.
 3. Click **Add**.
 4. Copy the contents of the public key that you previously created and paste it into the key contents.
 5. Give the key a name and click **Add**.

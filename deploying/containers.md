@@ -29,7 +29,7 @@ When you create back-end or web-serving apps, you can deploy them to the {{site.
 
 1. Deploy your app to the cloud by setting up an automated cloud pipeline.
 2. Click **Deploy to Cloud**.
-3. Select Kubernetes as the target. You need to [create a cluster ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window} if you don't already have one.
+3. Select Kubernetes as the target. You need to [create a cluster ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window} if you don't already have one.
 4. After your deployment is complete, check out your live app in the cloud by getting the URL in the logs from your deploy stage of the delivery pipeline. The last IP address with a port is your app's new home, for example, 169.60.133.124:32355.
 
 ## Binding services
@@ -67,11 +67,11 @@ The deployment stage retrieves the latest image from the {{site.data.keyword.reg
 
 For more information, see [Charts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.helm.sh/developing_charts/){:new_window}.
 
-{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}.
+{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}.
 
 ## Checking app security
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} supports scanning the packaged container images for security vulnerabilities. Security scanning is essential for supporting enterprise-grade applications.
 
-View the containers [image repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} to check for potential security vulnerabilities.
+View the containers [image repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} to check for potential security vulnerabilities.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Creating a mobile application with a starter kit
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} offers mobile starter kits to help you create a mobile app quickly. Choose a language, framework, and tools from the App Service Starter Kits to start working with a pre-configured custom app. In this tutorial, you can learn how to install the tools you need, build, and run the app locally and deploy it to the cloud.
+{{site.data.keyword.cloud}} offers mobile starter kits to help you create a mobile app quickly. Choose a language, framework, and tools from the App Service Starter Kits to start working with a pre-configured custom app. In this tutorial, you can learn how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1. Install the tools
 {: #install-tools}
 
-Install the [developer tools](/docs/cli/index.html).
+Install the [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 
 Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 
@@ -29,7 +30,7 @@ Docker is installed as part of the developer tools. Docker must be running for t
 {: #create-devex}
 
 1. Create a {{site.data.keyword.dev_console}} app in {{site.data.keyword.Bluemix}}.
-2. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language application, select **Swift Kitura**.
+2. From the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language application, select **Swift Kitura**.
 3. Enter your app name. For this tutorial, use `WatsonApp`.
 4. Select your language platform. For this tutorial, use `Swift`.
 5. Select your language and framework. Some starter kits might be available only in one language.

@@ -26,7 +26,7 @@ The web app pattern produces apps that serve web content such as HTML, JavaScrip
 * Basic - serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
 
-You can find starter kits for web app pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+You can find starter kits for web app pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://{DomainName}/developer/appservice/dashboard).
 
 ## Backend-for-frontend
 {: #bff}
@@ -37,28 +37,28 @@ In {{site.data.keyword.cloud_notm}}, you can build a BFF with polyglot programmi
 
 The BFF manages data persistence, caching, and integration with the following high-value services.
 
-* [{{site.data.keyword.ibmwatson}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
 
 The BFF exposes an API most commonly by using a REST pattern, but you can design your BFF to work from a messaging architecture that uses {{site.data.keyword.messagehub}}.
 
-Choose a BFF starter kit for your language and framework requirements. You can find starter kits for BFF pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+Choose a BFF starter kit for your language and framework requirements. You can find starter kits for BFF pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://{DomainName}/developer/appservice/dashboard).
 
 ## Microservice
 {: #microservice}
 
 Microservice apps provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated apps include all the dependencies required both for the microservice itself, and for any attached cloud service.
 
-Choose a micro-service starter kit for your language and framework requirements. You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://console.bluemix.net/developer/appservice/dashboard).
+Choose a micro-service starter kit for your language and framework requirements. You can find starter kits for Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://{DomainName}/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
 Mobile apps are different from the other patterns because they have a significant client-side component. The pattern might include direct connection to mobile services like push notifications, authentication, and mobile analytics. Mobile services are known as Mobile Backend as a Service or MBaaS pattern. They also might have a dedicated [Backend-for-frontend](#bff).
 
-{{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift, Android, and Cordova. You can find starter kits for Mobile pattern on the [{{site.data.keyword.cloud_notm}} Mobile developer dashboard](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift, Android, and Cordova. You can find starter kits for Mobile pattern on the [{{site.data.keyword.cloud_notm}} Mobile developer dashboard](https://{DomainName}/developer/mobile/dashboard).
 
 ## Languages
 {: #languages}

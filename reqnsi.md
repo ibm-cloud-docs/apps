@@ -2,53 +2,55 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {: codeblock: .codeblock}
+{:note: .note}
 
 # Adding a service to your app
 {: #add_service}
 
-When you create an app with {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}}, you can add resources from the app overview page. However, you can also provision them directly from the {{site.data.keyword.Bluemix_notm}} catalog, outside the context of your app.
+When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add resources from the App Details page. However, you can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
-You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the app overview page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.Bluemix_notm}} catalog.
+You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the App Details page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.cloud_notm}} catalog.
 
 ## Discovering services
 {: #discover_services}
 
-You can see all the services that are available in {{site.data.keyword.Bluemix_notm}} in the following ways:
+You can see all the services that are available in {{site.data.keyword.cloud_notm}} in the following ways:
 
-* From the {{site.data.keyword.Bluemix_notm}} console. View the {{site.data.keyword.Bluemix_notm}} catalog.
-* From the ibmcloud command line interface. Use the `ibmcloud service offerings` command.
+* From the {{site.data.keyword.cloud_notm}} console. View the {{site.data.keyword.cloud_notm}} catalog.
+* From the command line. Use the `ibmcloud service offerings` command.
 * From your own application. Use the [GET /v2/services Services API ![External link icon](../icons/launch-glyph.svg "External link icon")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.Bluemix_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
+You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.cloud_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
 
-{{site.data.keyword.Bluemix_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
+{{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
-You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.Bluemix_notm}} services. For more information, see [Connecting services to external apps](/docs/apps/connect_external_app.html).
+You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.cloud_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.cloud_notm}} services](/docs/resources/connect_external_app#externalapp).
 
 ## Requesting a new service instance
 {: #req_instance}
 
-To request a new service instance, you must use the {{site.data.keyword.Bluemix_notm}} user interface or the {{site.data.keyword.Bluemix_notm}} command line interface.
+To request a new service instance, you must use the {{site.data.keyword.cloud_notm}} user interface or the {{site.data.keyword.cloud_notm}} command line interface.
 
-**Note:** When you specify the service name, avoid characters other than alphabetic or numeric characters because results might be unpredictable.
+When you specify the service name, avoid characters other than alphabetic or numeric characters because results might be unpredictable.
+{: note}
 
-If you use the {{site.data.keyword.Bluemix_notm}} user interface to request a service instance, complete the following steps:
+If you use the {{site.data.keyword.cloud_notm}} user interface to request a service instance, complete the following steps:
 
-1. In the {{site.data.keyword.Bluemix_notm}} catalog, click the tile for the service that you want to add. The service details page opens.
+1. In the {{site.data.keyword.cloud_notm}} catalog, click the tile for the service that you want to add. The service details page opens.
 
 2. Type a name in the **Service name** field. A default name is provided. You can change the name in the field, or leave it unchanged.
 
 3. Complete more fields or selections, and then click **CREATE**.
 
-If you use the {{site.data.keyword.Bluemix_notm}} command line interface to request a service instance, download your app locally open the command line, and change to the app directory.
+If you use the {{site.data.keyword.cloud_notm}} command line interface to request a service instance, download your app locally open the command line, and change to the app directory.
 
 1. Run the following command to add a service to your app. You can select an existing service from one already enabled on your account, or add a new service.
 
@@ -60,7 +62,7 @@ If you use the {{site.data.keyword.Bluemix_notm}} command line interface to requ
 2. Follow the prompts to select a resource group, and to create and connect a new data-related service to your application, such as Cloudant. You might need to select a region and plan for the service.
 3. When the service is created, several files, including credentials, are added to your application directory to help you integrate the service into your application. You can manually merge any files or skip this step for now.
 
-You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.Bluemix_notm}} services, see [Connecting services to external apps](/docs/apps/connect_external_app.html).
+You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Configuring your application
 {: #config}
@@ -69,16 +71,16 @@ After you bind a service instance to your application, you must configure your a
 
 Each service might require a different mechanism for communicating with applications. These mechanisms are documented as part of the service definition for your information when you develop applications. For consistency, the mechanisms are required for your application to interact with the service.
 
-* To interact with database services, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the user ID, password, and the access URI for the application.
-* To interact with mobile back-end services, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services often work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
-* To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.Bluemix_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
+* To interact with database services, use the information that {{site.data.keyword.cloud_notm}} provides such as the user ID, password, and the access URI for the application.
+* To interact with mobile back-end services, use the information that {{site.data.keyword.cloud_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services often work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
+* To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.cloud_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.Bluemix_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. For more information, see [Apps won't be automatically restarted](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. For more information, see [Apps won't be automatically restarted](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
 
-## Accessing services across {{site.data.keyword.Bluemix_notm}} deployment environments
+## Accessing services across {{site.data.keyword.cloud_notm}} deployment environments
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}} offers many deployment options, and you can access a service that is running in one environment from a different environment. For example, if you have a service that is running in Cloud Foundry, you can access that service from an application that is running in a Kubernetes cluster.
+{{site.data.keyword.cloud_notm}} offers many deployment options, and you can access a service that is running in one environment from a different environment. For example, if you have a service that is running in Cloud Foundry, you can access that service from an application that is running in a Kubernetes cluster.
 
 ### Example: Access a Cloud Foundry service from a Kubernetes pod
 
@@ -97,7 +99,7 @@ Service credentials that are stored in a Kubernetes secret are base64 encoded an
 ## Creating a user-provided service instance
 {: #user_provide_services}
 
-You might have services that are managed outside of {{site.data.keyword.Bluemix_notm}}. If you have credentials to access those external services from the internet, you can create {{site.data.keyword.Bluemix_notm}} user-provided service instances to represent and communicate with your external services.
+You might have services that are managed outside of {{site.data.keyword.cloud_notm}}. If you have credentials to access those external services from the internet, you can create {{site.data.keyword.cloud_notm}} user-provided service instances to represent and communicate with your external services.
 
 To create a user-provided service instance and bind it to an application, complete the following steps:
 

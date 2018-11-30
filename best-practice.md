@@ -2,31 +2,39 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-29"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
 
 # What makes a good app?
 {: #best-practice}
 
-Build your app in {{site.data.keyword.Bluemix_notm}} to take advantage of all the things cloud offers. These best practices can help you ensure that your apps are cloud-ready.
-{:shortdesc}
+Build your app in {{site.data.keyword.cloud}} to take advantage of all the things cloud offers. These best practices can help you ensure that your apps are cloud-ready.
+{: shortdesc}
 
 ## Build your app to be independent of topology
 
-In a non-cloud environment, your app might use a particular deployment topology. However, your app topology might change in cloud apps because the cloud-ready apps and services allow immediate scalability changes. The scalability changes include dynamic scaling and manually resizing the number of instances of an app.
+In a non-cloud environment, your app might use a particular deployment topology. However, your app topology might change in cloud apps because the cloud-ready apps and services allow immediate scalability changes. These changes include dynamic scaling and manually resizing the number of instances of an app.
 
 Build your app to be as generic and stateless as possible to keep your app from being affected by scalability changes.
 
 ## Assume that the local file system isn't permanent
 
-Don't rely on the files that are written to the file system because an app instance can be moved, deleted, or duplicated on cloud. If an app uses the local file system as a cache of frequently used information including app logs, the information is lost when the instance is shut down and restarted at a different location or a different VM.
+Don't rely on the files that are written to the file system because an app instance can be moved, deleted, or duplicated on cloud. If an app uses the local file system as a cache of frequently used information (including app logs), the information is lost when the instance is shut down and restarted at a different location or a different VM.
 
 You can store information in a service, such as an SQL or NoSQL database instead of the local file system. In a dynamic cloud environment, it's also critical to have your logs available on a service that outlives the app instances where the logs are generated.
 
-## Store session state outside of your app
+## Exclude session state from your app
 
-The state of your system is defined by your databases and shared storage, and not by each individual running app instance. Statefulness of any sort limits the scalability of an app. Try to minimize the impact of session state by storing it in a centralized location on the server.
+The state of your system is defined by your databases and shared storage, and not by each individual running app instance. Statefulness of any sort limits the extensibility of an app. Try to minimize the impact of session state by storing it in a centralized location on the server.
 
 If you can't eliminate session state entirely, push it out to a highly available store that is external to your app server. The stores include IBM WebSphere eXtreme Scale, Redis, or Memcached, or an external database.
 
@@ -39,19 +47,19 @@ Extracting environment-specific dependencies into a set of property files is an 
 ## Build your app by using a multi-region architecture
 {: #multiregion}
 
-Run multiple instances to avoid downtime in a single region, but to deliver an even more robust application, consider a multi-region architecture.
+You can run more than one instance to avoid downtime in a single region. To deliver an even more robust application, consider a multi-region architecture.
 
 ## Ensure you're monitoring your apps
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} makes it easy to monitor your application with services like [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}. Check out [monitoring and logging](../monitor_log/logging.html#logging) for more information.
+{{site.data.keyword.Bluemix_notm}} makes it easy to monitor your application with services like [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Take advantage of support options
 {: #support}
 
 {{site.data.keyword.Bluemix_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.Bluemix_notm}}, consider enrolling in this option.
 
-With or without paid support, you can get help as described at [support](../get-support/howtogetsupport.html), which offers insurance against unforeseen issues.
+With or without paid support, you can get help as described at [support](/docs/get-support/howtogetsupport.html), which offers insurance against unforeseen issues.
 
 ## Avoid infrastructure APIs in your app
 
@@ -67,7 +75,7 @@ Apps based on standard protocols are more resilient with the configuration items
 
 ## Use compatibility libraries instead of OS-specific features
 
-If you have already used OS-specific features, you can fix this issue by using compatibility libraries, for example, Cygwin and Mono. Cygwin is a compatibility library that provides a set of Linux tools in a Windows environment. Mono is a compatibility library that provides Windows .NET capabilities in Linux.
+If you have already used OS-specific features, you can fix this issue by using compatibility libraries, for example, Cygwin and Mono. Cygwin is a compatibility library that provides a set of Linux tools in a Windows environment. Mono is a compatibility library that provides Windows .NET tools in Linux.
 
 Avoid the OS-specific dependencies; instead, use services that are provided by the middleware infrastructure or service providers.
 

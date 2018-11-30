@@ -2,11 +2,17 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}
-    index.md
+    {: .topicgroup}
+    Getting started
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+    
     development_process.md
     best-practice.md
     patterns.md
@@ -17,10 +23,8 @@ Creating apps
     Creating apps
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
-        tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        create-deploy-cli.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
 
@@ -28,29 +32,37 @@ Creating apps
     Deploying and integrating apps
         vsi-deploy.md
         deploying/containers.md
+        tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_starter_kube.md
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    connect_external_app.md
+    
+    {: .topicgroup}
+    Adding credentials to your environment
+        creds_overview.md
+        creds_kube.md
+        creds_cf.md
+        creds_vsi.md
+
     mngapps.md
     updapps.md
     secapps.md
-    building-apps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools command line reference](https://console.bluemix.net/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools command line reference](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
     IBM Cloud developer dashboards
-        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
-        [Finance](https://console.bluemix.net/developer/finance/dashboard)
-        [Mobile](https://console.bluemix.net/developer/mobile/dashboard)
-        [Security](https://console.bluemix.net/developer/security/dashboard)
-        [Watson](https://console.bluemix.net/developer/watson/dashboard)
-        [Web Apps](https://console.bluemix.net/developer/appservice/dashboard)
+        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
+        [Finance](https://cloud.ibm.com/developer/finance/dashboard)
+        [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
+        [Security](https://cloud.ibm.com/developer/security/dashboard)
+        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
+        [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     App contents
@@ -67,6 +79,6 @@ Creating apps
     ts_apps.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API Reference](https://console.bluemix.net/apidocs/functions)
-    [Mobile SDK](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [Cloud Functions API Reference](https://cloud.ibm.com/apidocs/functions)
+    [Mobile SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}
