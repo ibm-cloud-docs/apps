@@ -65,7 +65,7 @@ To view these environment properties, complete the following steps.
 |-----------|--------------|
 | `TF_VAR_ibm_sl_api_key` | The [infrastructure API key](#iaas-key) is from the classic infrastructure console. |
 | `TF_VAR_ibm_sl_username` | The [infrastructure user name](#user-key) that identifies the classic infrastructure account |
-| `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [platform API key](#platform-key) is used to enable service creation. |
+| `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [API key](#platform-key) is used to enable service creation. |
 | `PUBLIC_KEY` | [Public key](#public-key) that is defined to enable access to the virtual server instance. |
 | `PRIVATE_KEY` | [Private key](#public-key) that is defined to enable access to the virtual server instance. You must use `\n` newline style formatting. |
 | `VI_INSTANCE_NAME` | Auto-generated name for the virtual server instance |
@@ -74,9 +74,10 @@ To view these environment properties, complete the following steps.
 {: caption="Table 1. Environment variables to change for enablement" caption-side="top"}
 
 
-#### Infrastructure API key
+#### Classic infrastructure API key
 {: #iaas-key}
-Terraform requires an infrastructure API key to create infrastructure resources. The API key is obtained automatically during deployment. To manually retrieve a key, complete the following steps.
+
+Terraform requires a classic infrastructure API key to create infrastructure resources. The API key is obtained automatically during deployment. To manually retrieve a key, complete the following steps.
 
 1. Go to the [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
 2. Click a user name, and then click **User details**.
@@ -86,19 +87,20 @@ Terraform requires an infrastructure API key to create infrastructure resources.
 
 For more information, see [Managing classic infrastructure API keys](/docs/iam/classic_infra_keys.html) and [Classic infrastructure permissions](/docs/iam/infrastructureaccess.html).
 
-#### Infrastructure user name
+#### Classic infrastructure user name
 {: #user-key}
-The infrastructure user name is also automatically obtained and used during deployment. To manually obtain the user name, complete the following steps.
+
+The classic infrastructure user name is also automatically obtained and used during deployment. To manually obtain the user name, complete the following steps.
 
 1. Go to [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
 2. Click a user name, and then click **User details**.
 3. Locate the **VPN User Name** property.
 4. Cut and paste this value and replace the toolchain configuration `TF_VAR_ibm_sl_username`.
 
-#### IBM Cloud API key
+#### {{site.data.keyword.cloud_notm}} API key
 {: #platform-key}
 
-To create platform-level services in Terraform, like databases and compose services, the platform API key is automatically obtained and stored as an environment variable in your pipeline. To manually retrieve a platform key, complete the following steps.
+To create platform-level services in Terraform, like databases and compose services, the {{site.data.keyword.cloud_notm}} API key is automatically obtained and stored as an environment variable in your pipeline. To manually retrieve an {{site.data.keyword.cloud_notm}} API key, complete the following steps.
 
 1. Go to [user list ![External link icon](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. You can also click **Manage** > **Access (IAM)**, and select **Users**.
 2. Click a user name, and then click **User details**.
@@ -110,6 +112,7 @@ To create platform-level services in Terraform, like databases and compose servi
 
 #### Public and private keys
 {: #public-key}
+
 For the toolchain to install the Debian packaging into the virtual server instance, the deployment infrastructure automatically generates a private and public SSH key pair to transfer the Git contents to the instance.
 
 To do this manually:
