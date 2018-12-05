@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,12 +52,12 @@ You can run more than one instance to avoid downtime in a single region. To deli
 ## Ensure you're monitoring your apps
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} makes it easy to monitor your application with services like [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} makes it easy to monitor your application with services like [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Take advantage of support options
 {: #support}
 
-{{site.data.keyword.Bluemix_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.Bluemix_notm}}, consider enrolling in this option.
+{{site.data.keyword.cloud_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.cloud_notm}}, consider enrolling in this option.
 
 With or without paid support, you can get help as described at [support](/docs/get-support/howtogetsupport.html), which offers insurance against unforeseen issues.
 

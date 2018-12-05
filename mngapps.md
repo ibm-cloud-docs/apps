@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-11-06"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-11-06"
 # Checking the status of your app
 {: #manageapps}
 
-Your resource list in the {{site.data.keyword.Bluemix}} console provides summary information for the applications that you created. The summary information includes the name, icon, URL, runtime, running status, and service instances that are bound to the app.
+Your resource list in the {{site.data.keyword.cloud}} console provides summary information for the applications that you created. The summary information includes the name, icon, URL, runtime, running status, and service instances that are bound to the app.
 {:shortdesc}
 
 ## Understanding the status of your app
@@ -60,6 +60,6 @@ Your app isn’t running. The red icon indicates that the app is started, but no
 
 You can view more information about an app by clicking the name of it in your resource list. Then, you can see the app's Overview page.
 
-On the Apps Overview page, after an app is deployed, you can start, stop, restart, or in the case of web applications, modify the number of instances and the amount of memory that is used by the app. For web applications, {{site.data.keyword.Bluemix_notm}} doesn’t automatically scale your app based on its load, so you must manage it yourself.
+On the Apps Overview page, after an app is deployed, you can start, stop, restart, or in the case of web applications, modify the number of instances and the amount of memory that is used by the app. For web applications, {{site.data.keyword.cloud_notm}} doesn’t automatically scale your app based on its load, so you must manage it yourself.
 
-If an update is made, apps can be redeployed. The mechanism for updating the app is the same mechanism that is used to deploy it originally. {{site.data.keyword.Bluemix_notm}} stops all running instances and replaces them with new instances automatically.
+If an update is made, apps can be redeployed. The mechanism for updating the app is the same mechanism that is used to deploy it originally. {{site.data.keyword.cloud_notm}} stops all running instances and replaces them with new instances automatically.

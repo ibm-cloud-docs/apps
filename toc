@@ -6,13 +6,7 @@
 Creating apps
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    Getting started
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
+    index.md
     development_process.md
     best-practice.md
     patterns.md
@@ -21,6 +15,10 @@ Creating apps
     {: .navgroup id="howto"}
     {: .topicgroup}
     Creating apps
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md

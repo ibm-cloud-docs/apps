@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -31,7 +31,7 @@ In the Cloud Foundry space in which your application exists, you can define what
   {: codeblock}
 
 2. Configure your Cloud Foundry application to bind to the user-provided service by adding to the services section:
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -87,9 +87,9 @@ cf services
 ```
 {: codeblock}
 
-Output:
+Example output:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -112,7 +112,7 @@ cf services
 
 Example output:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided

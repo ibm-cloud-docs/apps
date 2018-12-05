@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -38,7 +38,7 @@ Creating an app from scratch is useful if you don't already have existing code t
 4. Select **Node.js Web App with Express.js (Web App)** as the starter kit to use.
 5. Enter a name for your app and select the resource group that you want to use (if necessary). Don't add services for now.
 6. Select the **IBM DevOps, using Cloud Foundry** option to create a DevOps toolchain. You might need to set up SSH keys to complete this step.
-7. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`.
+7. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.cloud.ibm.com`.
 
 Creating the app and toolchain takes a few seconds to complete.
 
@@ -47,7 +47,7 @@ Creating the app and toolchain takes a few seconds to complete.
 
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Note that this command is in Beta, and not all languages and/or app structures are supported. The following instructions illustrate how to use this functionality with a sample repository, but the steps are roughly the same for your own codebase.
 
-1. Log in to IBM Cloud by running ibmcloud login then target an org and space.
+1. Log in to {{site.data.keyword.cloud_notm}} by running ibmcloud login then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld) by running the following command in the directory of your choice.
 
   ```
@@ -59,7 +59,7 @@ This option can be used if you already have an existing codebase and want to gen
 4. Select to continue without committing changes for now (if necessary).
 5. Select to continue when you're prompted to proceed with the Node language that is detected.
 6. Select the resource group that you want to use (if necessary). 
-7. Select the option to create a new {{site.data.keyword.Bluemix_notm}} app that is linked to this Git repository. See **Important Notes** for details.
+7. Select the option to create a new {{site.data.keyword.cloud_notm}} app that is linked to this Git repository. See **Important Notes** for details.
 8. Don't add services for now.
 9. Wait a few seconds for the operations to complete. 
 10. Once completed, you can manually merge the deployment and cloud enablement files that are saved to the app directory. Any new files marked `.merge` should be merged by using `git diff` or a similar tool.
@@ -95,10 +95,10 @@ Now that your app can run locally, you can add a service and modify some code.
 4. Make a change in your code. For example, modify the `/public/index.html` file or a similar file. If you're using the sample `ExpressJS` application, you can change the `Congratulations!` string to something like `Hello World!`.
 5. Save any files that you modified.
 
-## Deploying to {{site.data.keyword.Bluemix_notm}}
+## Deploying to {{site.data.keyword.cloud_notm}}
 {: #deploy}
 
-You can deploy your {{site.data.keyword.Bluemix_notm}} app in one of two ways, depending on how your app is configured. 
+You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured. 
 
 ### Deploying your app by using a DevOps toolchain
 If you haven't yet created a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [`ibmcloud dev edit`](/docs/cli/idt/commands.html#edit) command. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
@@ -108,7 +108,7 @@ Once you've created a DevOps toolchain for your app, deploying a new build is as
 1. Run the `git add .` command.
 2. Run the `git commit -m "made changes"` command to commit changes.
 3. Run the `git push origin master` command to push to the master branch.
-4. View the DevOps toolchain for your app from the {{site.data.keyword.Bluemix_notm}} console. You can view toolchain details from the App Details screen in the {{site.data.keyword.Bluemix_notm}} console by running the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command from the app directory.
+4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the App Details screen in the {{site.data.keyword.cloud_notm}} console by running the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command from the app directory.
 5. View the pipeline within the toolchain to verify that a new build started.
 
 ### Manually deploying your app
@@ -123,7 +123,7 @@ You can manually deploy your app by using the [`deploy`](/docs/cli/idt/commands.
 ## Viewing your app
 {: #view}
 
-1. To view the URL of your app that's running on {{site.data.keyword.Bluemix_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command.
-2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.Bluemix_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command. 
+1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command.
+2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command. 
 
-**To report issues or provide feedback, you can use the [IBM Cloud Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**
+**To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**

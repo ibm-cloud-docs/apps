@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,9 +52,9 @@ For the CSR to be valid, the following information must be entered when you gene
 The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.openssl.org/){:new_window}:
 
 ```
-openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
-    privatekey.key
+openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 ```
+{: codeblock}
 
 OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for applications that have compatibility issues with the SHA-256 certificate.
 {: tip}
@@ -72,11 +72,11 @@ Before you can upload certificates, you must create a certificate signing reques
 
 When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.cloud_notm}}:
 
-* US-South - `secure.us-south.bluemix.net`
-* US-East - `secure.us-east.bluemix.net`
-* EU-DE - `secure.eu-de.bluemix.net`
-* EU-GB - `secure.eu-gb.bluemix.net`
-* AU-SYD - `secure.au-syd.bluemix.net`
+* US-South - `secure.us-south.cloud.ibm.com`
+* US-East - `secure.us-east.cloud.ibm.com`
+* EU-DE - `secure.eu-de.cloud.ibm.com`
+* EU-GB - `secure.eu-gb.cloud.ibm.com`
+* AU-SYD - `secure.au-syd.cloud.ibm.com`
 
 To upload a certificate for your application, follow these steps.
 
@@ -121,7 +121,7 @@ To upload a certificate for your application, follow these steps.
 
     If you enable this option by uploading a client certificate truststore file, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. Use the **Client certificate trust store** file upload option to define the client-side certificates that you allow to access your custom domain.
 
-  The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.Bluemix_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+  The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.cloud_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
   {: note}
 
   #### Client certificate truststore
