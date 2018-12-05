@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,7 +20,7 @@ En la siguiente tabla se muestra una lista de archivos y directorios comunes que
 
 | Directorio Root                                     | Descripción                       |
 |:------------------------------------------------|:------------------------------------------|
-|package.json | Archivo de metadatos |
+|package.json | Información de metadatos sobre el paquete que incluye el nombre, la versión y las dependencias. |
 |cli-config.yml | Opciones de configuración de CLI |
 |manifest.yml | Archivo de despliegue de Cloud Foundry |
 |Dockerfile | Archivo Dockerfile para mandatos `ibmcloud dev run`, `ibmcloud dev deploy` y `docker` |

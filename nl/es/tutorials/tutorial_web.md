@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 
 Los kits de inicio están disponibles en muchos idiomas e infraestructuras de la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
 
-1. En la página [kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su idioma.
+1. En la página [kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su idioma.
 2. Especifique el nombre de la app y un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`
 3. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
 4. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
@@ -55,10 +55,10 @@ La entrega continua está habilitada para algunas aplicaciones. Puede habilitar 
 
 1. En la ventana de servicio de la app, pulse **Desplegar en la nube**.
 2. Seleccione un método de despliegue. Configure el método de despliegue de acuerdo con las instrucciones para el método que elija.
+  * Desplegar en un clúster Kubernetes. Cree un clúster de hosts, denominados nodos de trabajador, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
+  * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
 
-    * Desplegar en un clúster Kubernetes. Cree un clúster de hosts, denominados nodos de trabajador, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
-
-    * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
+Para obtener más información, consulte [Creación de cadenas de herramientas](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
 
 ## Paso 5. Crear y ejecutar la app localmente
 {: #build-run}
@@ -83,7 +83,7 @@ El despliegue de la app en la nube en el último paso ha creado una cadena de he
   ```
   {: pre}
 
-7.  Obtener las credenciales.
+7. Obtener las credenciales.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ El despliegue de la app en la nube en el último paso ha creado una cadena de he
   ```
   {: pre}
 
-10.  Abra el navegador en `http://localhost:3000`. Es posible que el número de puerto sea distinto en función del tiempo de ejecución elegido.
+10. Abra el navegador en `http://localhost:3000`. Es posible que el número de puerto sea distinto en función del tiempo de ejecución elegido.
 
 ## Paso 6. Desplegar la app
 {: #deploy}
@@ -118,20 +118,19 @@ Con una cadena de herramientas correctamente configurada, un ciclo de despliegue
 También puede desplegar manualmente su app desde su cadena de herramientas de DevOps:
 
 1. En la ventana Detalles de la app, pulse **Ver cadena de herramientas**.
-
 2. Pulse **Conducto de entrega** donde puede iniciar compilaciones, gestionar el despliegue y ver registros e historiales.
+
+Para obtener más información, consulte [Creación y despliegue](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Desplegar utilizando el {{site.data.keyword.dev_cli_short}}
 
 Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
-
 ```
 ibmcloud dev deploy --target <container>
 ```

@@ -29,7 +29,7 @@ Al crear apps de fondo o de servicio web, puede desplegarlas en el servicio de {
 
 1. Despliegue la app en la nube configurando un conducto de nube automatizado.
 2. Pulse **Desplegar en la nube**.
-3. Seleccione Kubernetes como destino. Debe [crear un clúster ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window} si aún no tiene ninguno.
+3. Seleccione Kubernetes como destino. Debe [crear un clúster ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window} si aún no tiene ninguno.
 4. Una vez que se haya completado el despliegue, compruebe la app activa en la nube obteniendo el URL en los registros de la etapa de despliegue del conducto de entrega. La última dirección IP con un puerto es la nueva página de inicio de la app, por ejemplo, 169.60.133.124:32355.
 
 ## Enlace de servicios
@@ -67,11 +67,11 @@ La etapa de despliegue recupera la imagen más reciente del {{site.data.keyword.
 
 Para obtener más información, consulte [Diagramas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://docs.helm.sh/developing_charts/){:new_window}.
 
-{{site.data.keyword.cloud_notm}} da soporte a un número de [diagramas de Helm preconfigurados ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}.
+{{site.data.keyword.cloud_notm}} da soporte a un número de [diagramas de Helm preconfigurados ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}.
 
 ## Comprobación de la seguridad de la app
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} da soporte al escaneo de las imágenes de contenedor empaquetadas para las vulnerabilidades de seguridad. El escaneo de seguridad es esencial para dar soporte a las aplicaciones de nivel empresarial.
 
-Vea el [repositorio de imágenes ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} de los contenedores para comprobar si hay vulnerabilidades de seguridad potenciales.
+Vea el [repositorio de imágenes ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} de los contenedores para comprobar si hay vulnerabilidades de seguridad potenciales.

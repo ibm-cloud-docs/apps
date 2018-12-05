@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Creación de una aplicación móvil con un kit de inicio
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} ofrece kits de inicio móviles para ayudarle a crear una app para móvil rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, puede aprender a instalar las herramientas que necesita, a crear y ejecutar la app localmente y a desplegarla en la nube.
+{{site.data.keyword.cloud}} ofrece kits de inicio móviles para ayudarle a crear una app para móvil rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una app personalizada preconfigurada. En esta guía de aprendizaje, puede aprender a instalar las herramientas que necesita, a crear y ejecutar la app localmente y a desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
 {: #install-tools}
 
-Instale las [herramientas del desarrollador](/docs/cli/index.html).
+Instale [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 
 Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 
@@ -29,7 +30,7 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 {: #create-devex}
 
 1. Cree una app de {{site.data.keyword.dev_console}} en {{site.data.keyword.Bluemix}}.
-2. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio basado en las características que desee. Por ejemplo, para una aplicación de lenguaje Watson, seleccione **Swift Kitura**.
+2. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio basado en las características que desee. Por ejemplo, para una aplicación de lenguaje Watson, seleccione **Swift Kitura**.
 3. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `WatsonApp`.
 4. Seleccione el lenguaje de la plataforma. En esta guía de aprendizaje, utilizaremos `Swift`.
 5. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.

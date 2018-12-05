@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-05-21"
 # Comprobación del estado de su app
 {: #manageapps}
 
-Su panel de control en la consola de {{site.data.keyword.Bluemix}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app.
+Su lista de recursos en la consola de {{site.data.keyword.Bluemix}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app.
 {:shortdesc}
 
 ## Estado de su app
 {: #status}
 
-Desde su panel de control, puede ver el estado de cada aplicación. En la columna de estado para cada aplicación, puede ver si las instancias de app están en ejecución.
+Desde su lista de recursos, puede ver el estado de cada aplicación. En la columna de estado para cada aplicación, puede ver si las instancias de app están en ejecución.
 
 <dl>
 <dt>
@@ -55,10 +55,10 @@ La app no se está ejecutando. El icono rojo indica que la app se ha iniciado, p
 </dd>
 </dl>
 
-## Visualización del panel de control de detalles de su app
+## Visualización de los detalles de su app
 {: #viewingapps}
 
-Puede ver más información sobre una app pulsando el nombre en su panel de control. A continuación, puede ver la página de Visión general de la app.
+Puede ver más información sobre una app pulsando el nombre en su lista de recursos. A continuación, puede ver la página de Visión general de la app.
 
 En la página Visión general de apps, cuando se despliega una app, puede iniciar, detener, reiniciar o en el caso de aplicaciones web, modificar el número de instancias y la cantidad de memoria utilizada por la app. Para las aplicaciones web, {{site.data.keyword.Bluemix_notm}} no escala automáticamente su app en función de su carga, por lo que deberá gestionarlo usted mismo.
 

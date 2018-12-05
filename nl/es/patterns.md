@@ -26,7 +26,7 @@ El patrón de app web crea apps que sirven contenido web como, por ejemplo, HTML
 * Basic - sirve un archivo `index.html` estático, y un archivo JavaScript y de hoja de estilos vacíos.
 * React - una infraestructura rica para crear interfaces de usuario. Los archivos de origen se encuentran en `src/client/app`, se compilan con WebPack y se sirven en el directorio público.
 
-Encontrará kits de inicio para el patrón de app web en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Encontrará los kits de inicio para el patrón de app web en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Programa de fondo para programa de usuario (BFF)
 {: #bff}
@@ -37,28 +37,28 @@ En {{site.data.keyword.cloud_notm}}, puede compilar un programa BFF con enfoque 
 
 BFF gestiona la persistencia, la colocación en memoria caché y la integración de los datos con los siguientes servicios de gran valor.
 
-* [{{site.data.keyword.ibmwatson}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
 
 Los programas BFF habitualmente en la mayoría de las ocasiones exponen una API utilizando un patrón REST. No obstante, puede diseñar su programa BFF para que funcione desde una arquitectura de mensajería que utilice {{site.data.keyword.messagehub}}.
 
-Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará kits de inicio para el patrón de BFF en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará los kits de inicio para el patrón BFF en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Microservicio
 {: #microservice}
 
 Las apps de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Las apps generadas incluyen todas las dependencias necesarias, tanto para el propio microservicio como para los servicios de nube asociados.
 
-Elija un kit de inicio de microservicio para los requisitos de idioma y de infraestructura. Encontrará kits de inicio para el patrón de microservicios en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+Elija un kit de inicio de microservicio para los requisitos de idioma y de infraestructura. Encontrará los kits de inicio para el patrón Microservice en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Móvil
 {: #mobile}
 
 Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un [programa de fondo para programa de usuario](#bff) dedicado.
 
-{{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Puede encontrar kits de inicio para el patrón móvil en el [panel de control de desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Encontrará los kits de inicio para el patrón Mobile en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
 
 ## Lenguajes
 {: #languages}

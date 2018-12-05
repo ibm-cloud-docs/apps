@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-10-10"
 # Creación de una API de programa de fondo para programa de usuario (BFF)
 {: #tutorial}
 
-Puede crear una app a partir de un iniciador de programa de fondo para programa de usuario (BFF - Backend-For-Frontend). Utilice estos iniciadores para compilar API de programas de fondo para programas de usuario (BFF) en Node.js, Java o Swift utilizando distintas infraestructuras: Express.js, MicroProfile/Java EE, Kitura o Spring. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute la app localmente y despliéguelo en la nube.
+Puede crear una app a partir de un iniciador de programa de fondo para programa de usuario (BFF - Backend-For-Frontend). Utilice estos iniciadores para compilar API de programas de fondo para programas de usuario (BFF) en Node.js, Java o Swift utilizando distintas infraestructuras: Express.js, MicroProfile/Java EE, Kitura o Spring. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute la app localmente y despliéguela en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -30,7 +30,7 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 
 Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
-1. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje. Por ejemplo, para una aplicación Node.js, vaya a **Express.js Backend** y pulse **Seleccionar kit de inicio**.
+1. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje. Por ejemplo, para una aplicación Node.js, vaya a **Express.js Backend** y pulse **Seleccionar kit de inicio**.
 
 2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `ExpressBackend`.
 

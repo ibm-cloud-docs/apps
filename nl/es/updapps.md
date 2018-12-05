@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ Puede crear y utilizar un dominio personalizado utilizando la consola o la inter
 
 Complete los siguientes pasos para crear un dominio personalizado para su organización utilizando la consola:
 
-1. Vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**.
+1. Vaya a **Gestionar > Cuenta** y seleccione **Organizaciones de Cloud Foundry**. 
 2. Pulse el nombre de la organización para la que está creando un dominio personalizado.
 3. Pulse el separador **Dominios**.
 4. Pulse **Añadir un dominio**, especifique el nombre de dominio y seleccione la región.
@@ -35,8 +35,8 @@ Como ejemplo, puede utilizar `*.mycompany.com` para asociar la ruta `www.mybluem
 
 Añada la ruta con el dominio personalizado a una aplicación.
 
-1. Pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) > **Panel de control** y pulse la fila de la aplicación a la que desee añadir la ruta. Se muestra la página **Visión general**.
-2. Desde el menú **Rutas**, seleccione **Editar rutas**.
+1. Pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) > **lista de recursos** y pulse la fila de la aplicación a la que desee añadir la ruta. Se muestra la página Visión general.
+2. Pulse el menú **Rutas** y seleccione **Editar rutas**.
 3. Pulse **Añadir ruta** y especifique la ruta que desea utilizar para la aplicación.
 4. Confirme sus actualizaciones pulsando **Guardar**.
 

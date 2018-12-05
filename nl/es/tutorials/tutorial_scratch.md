@@ -11,30 +11,35 @@ lastupdated: "2018-11-28"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
-# Creación de un microservicio
+# Creación de una app desde cero
 {: #tutorial}
 
-Puede crear una app a partir del iniciador básico de microservicios (Microservice Basic Starter). Utilice estos iniciadores para compilar un sistema de fondo de microservicio de fondo para Node, Java o Python con distintas infraestructuras. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute la app localmente y despliéguela en la nube.
+Puede crear una aplicación personalizada desde cero mediante servicios y un tiempo de ejecución. Decida la forma en la que instalar las herramientas que necesita, compile y ejecute la app localmente y despliéguela en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
 {: #install-tools}
 
-Instale las [herramientas del desarrollador](/docs/cli/index.html).
+Instale [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
 
 Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 
-## Paso 2. Crear una app
+## Paso 2. Crear una app desde cero
 {: #create-devex}
 
-Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
+Cree una app personalizada en el panel de control de {{site.data.keyword.cloud}}:
 
-1. En la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje. Por ejemplo, para una aplicación Node.js, vaya a **Express.js Microservice** y pulse **Seleccionar kit de inicio**.
-2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `MicroserviceProject`.
+1. En el panel de control de panel de control de [{{site.data.keyword.cloud}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") ](https://{DomainName}), seleccione **Crear** para crear una aplicación personalizada.
+
+  También puede crear una app personalizada en la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}, seleccione **Crear** para crear una aplicación personalizada.
+  {: tip}
+
+2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `CustomProject`.
 3. Especifique un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`
 4. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
-5. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
+5. Seleccione el plan de precios. Puede utilizar la opción gratuita para esta guía de aprendizaje.
 6. Pulse **Crear**.
 
 ## Paso 3. Añadir recursos (opcional)
@@ -44,27 +49,28 @@ Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, 
 
 1. En la ventana de servicio de la app, pulse **Añadir recurso**.
 2. Seleccione el tipo de servicio que desee. Por ejemplo, seleccione **Datos** > **Siguiente** > **Cloudant** > **Siguiente**.
-3. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
+3. Seleccione el plan de precios. Puede utilizar la opción gratuita para esta guía de aprendizaje.
 4. Pulse **Crear**.
 
-## Paso 4. Crear una cadena de herramientas de DevOps
+## Paso 4. Desplegar una cadena de herramientas de DevOps
 {: #add-toolchain}
 
 La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Se personalizan en la plataforma de despliegue que elija, ya sea Kubernetes o Cloud Foundry.
 
 La entrega continua está habilitada para algunas aplicaciones. Puede habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues a través de Delivery Pipeline y GitHub.
 
-1. En la ventana de servicio de la app, pulse **Desplegar en la nube**.
-2. Seleccione un método de despliegue. Configure el método de despliegue de acuerdo con las instrucciones para el método que elija.
+1. En la página Detalles de la app, pulse **Desplegar en la nube**.
+2. Seleccione un método de despliegue. Configure el método de despliegue de acuerdo con las instrucciones correspondientes al método que elija:
+  * Desplegar en un clúster Kubernetes. Cree un clúster de hosts, denominados nodos de trabajador, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
+  * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
+  * Desplegar en una instancia de servidor virtual. 
 
-    * Desplegar en un clúster Kubernetes. Cree un clúster de hosts, denominados nodos de trabajador, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
+El despliegue de la app en la nube en el último paso crea automáticamente una cadena de herramientas. La cadena de herramientas crea un repositorio Git para la app en el que puede encontrar el código. Para obtener más información, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html).
 
-    * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
-
-## Paso 5. Crear y ejecutar la app localmente
+## Paso 5. Creación y ejecución de la app localmente
 {: #build-run}
 
-El despliegue de la app en la nube en el último paso ha creado una cadena de herramientas. Una cadena de herramientas crea un repositorio Git para la app donde puede encontrar el código allí. Siga estos pasos para acceder a su repositorio. Puede compilar la app localmente para probarla antes de enviarla por push a la nube.
+También puede compilar la app localmente para probarla antes de enviarla por push a la nube.
 
 1. En la ventana de servicio de la app, pulse **Descargar código** o **Clonar el repositorio** para trabajar con el código localmente.
 2. Importe la app a su entorno de desarrollo integrado.
@@ -84,7 +90,7 @@ El despliegue de la app en la nube en el último paso ha creado una cadena de he
   ```
   {: pre}
 
-7.  Obtener las credenciales.
+7. Obtener las credenciales.
 
   ```bash
   ibmcloud dev get-credentials
@@ -105,12 +111,12 @@ El despliegue de la app en la nube en el último paso ha creado una cadena de he
   ```
   {: pre}
 
-10.  Abra el navegador en `http://localhost:3000`. Es posible que el número de puerto sea distinto en función del tiempo de ejecución elegido.
+10. Abra el navegador en `http://localhost:3000`. Es posible que el número de puerto sea distinto en función del tiempo de ejecución elegido.
 
 ## Paso 6. Desplegar la app
 {: #deploy}
 
-### Desplegar utilizando una cadena de herramientas
+### Desplegar una cadena de herramientas de DevOps
 
 Puede desplegar la app en {{site.data.keyword.cloud_notm}} de varias formas, pero una cadena de herramientas de DevOps es la mejor forma de desplegar apps de producción. Con una cadena de herramientas de DevOps, puede automatizar fácilmente despliegues en muchos entornos y añadir rápidamente servicios de supervisión, de registro y de alertas para ayudar a gestionar su app a medida que crece.
 
@@ -119,20 +125,19 @@ Con una cadena de herramientas correctamente configurada, un ciclo de despliegue
 También puede desplegar manualmente su app desde su cadena de herramientas de DevOps:
 
 1. En la ventana Detalles de la app, pulse **Ver cadena de herramientas**.
-
 2. Pulse **Conducto de entrega** donde puede iniciar compilaciones, gestionar el despliegue y ver registros e historiales.
+
+Para obtener más información, consulte [Creación y despliegue](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Desplegar utilizando el {{site.data.keyword.dev_cli_short}}
 
 Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
-
 ```
 ibmcloud dev deploy --target <container>
 ```

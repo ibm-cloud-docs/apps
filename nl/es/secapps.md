@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Creación de solicitudes de firma de certificado
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 Puede proteger las aplicaciones subiendo certificados SSL y limitando el acceso a las aplicaciones.
 {:shortdesc}
 
-Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe crear una solicitud de firma de certificado (CSR) en el servidor. Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
+Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.cloud}}, debe crear una solicitud de firma de certificado (CSR) en el servidor. Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
 y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública, así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
 sólo están aceptadas con una longitud de claves CSR de 2048 bits.
 
@@ -74,7 +75,7 @@ Si el propietario de su cuenta tiene una cuenta de prueba gratuita, debe actuali
 Para poder cargar los certificados, debe crear una
 solicitud de firma de certificado.
 
-Si utiliza un dominio personalizado para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.Bluemix_notm}}:
+Si utiliza un dominio personalizado para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.cloud_notm}}:
 
 * US-South - `secure.us-south.bluemix.net`
 * US-East - `secure.us-east.bluemix.net`
@@ -84,7 +85,7 @@ Si utiliza un dominio personalizado para servir el certificado SSL, utilice los 
 
 Para cargar un certificado para la aplicación, siga estos pasos.
 
-1. Vaya a su panel de control.
+1. Vaya a la lista de recursos.
 
 2. Seleccione su app para abrir la vista de detalles de la app.
 
@@ -94,8 +95,6 @@ Para cargar un certificado para la aplicación, siga estos pasos.
 
 5. Pulse **Cargar** en la columna Certificado SSL y seleccione su dominio personalizado.
 
-6. Busque el certificado, clave privada y, si lo desea, un certificado intermedio o certificado de cliente que desee cargar. Para habilitar el almacén de confianza de certificado de cliente, debe cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
-
   #### Certificado
 
     Documento digital que enlaza una clave pública con la identidad del propietario
@@ -103,7 +102,7 @@ del certificado, permitiendo de este modo autenticar al propietario de este cert
 
     Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
 
-    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
+    En {{site.data.keyword.cloud_notm}} se da soporte a los siguientes tipos de certificados:
 
 	* PEM (`pem`, `.crt`, `.cer` y `.cert`)
 	* DER (`.der` o `.cer`)
@@ -114,7 +113,7 @@ del certificado, permitiendo de este modo autenticar al propietario de este cert
     Patrón algorítmico utilizado para cifrar mensajes que solo se pueden descifrar con la clave pública correspondiente. La clave privada también se utiliza para descifrar mensajes que se han cifrado mediante la clave pública correspondiente. La clave privada se guarda en el sistema del usuario y se
 protege mediante una contraseña.
 
-    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de claves públicas:
+    En {{site.data.keyword.cloud_notm}} se da soporte a los siguientes tipos de claves públicas:
 
     * PEM (`pem`, `.key`)
     * PKCS #8 (`p8`, `pk8`)
@@ -129,13 +128,14 @@ protege mediante una contraseña.
 
     Si habilita esta opción cargando un archivo de almacén de confianza de certificado de cliente, a los usuarios que intenten acceder un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
 
-  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). El código de cliente que accede a las aplicaciones {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
+  La característica de certificado personalizado de la gestión del dominio {{site.data.keyword.cloud_notm}} depende de la extensión Indicación de Nombres del Servidor (SNI) del protocolo de seguridad de la capa de transporte (TLS). El código de cliente que accede a las aplicaciones {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
+  {: note}
 
   #### Almacén de confianza de certificado de cliente
 
   El almacén de confianza de certificado de cliente incluye los certificados de cliente para los usuarios a los que desea permitir el acceso a la aplicación. Cargue un archivo de almacén de confianza de certificado de cliente para habilitar la opción de solicitud de certificado de cliente.
 
-   En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
+   En {{site.data.keyword.cloud_notm}} se da soporte a los siguientes tipos de certificados:
 
       * PEM (pem, .crt, .cer y .cert)
       * PKCS #7 (p7b, p7r, spc)
@@ -147,5 +147,5 @@ Para obtener más información, consulte [Importación de certificados SSL](/doc
 
 Para suprimir un certificado o sustituir un certificado existente con uno nuevo, siga estos pasos.
 
-1. Vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**.
+1. Vaya a **Gestionar > Cuenta** y seleccione **Organizaciones de Cloud Foundry**. 
 2. En la columna de acción, seleccione **Dominios** en el menú de acciones adicional. En el menú de acciones adicional de la organización, pulse **Eliminar de la organización**.
