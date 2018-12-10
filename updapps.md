@@ -62,11 +62,11 @@ After you configure the custom domain in {{site.data.keyword.cloud_notm}}, map t
 1. Set up a 'CNAME' record for the custom domain name on your DNS server. Steps for setting up the CNAME record vary depending on your DNS provider. For example, if you use GoDaddy, you follow the [Domains Help ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} guidance from GoDaddy.
 2. Map the custom domain name to the secure endpoint for the {{site.data.keyword.cloud_notm}} region where your application is running. Use the following region endpoints to provide the URL route that is allocated to your organization in {{site.data.keyword.cloud_notm}}.
 
-  * US-SOUTH - `secure.us-south.cloud.ibm.com`
-  * US-EAST - `secure.us-east.cloud.ibm.com`
-  * EU-DE - `secure.eu-de.cloud.ibm.com`
-  * EU-GB - `secure.eu-gb.cloud.ibm.com`
-  * AU-SYD - `secure.au-syd.cloud.ibm.com`
+  * US-SOUTH - `secure.us-south.cf.cloud.ibm.com`
+  * US-EAST - `secure.us-east.cf.cloud.ibm.com`
+  * EU-DE - `secure.eu-de.cf.cloud.ibm.com`
+  * EU-GB - `secure.eu-gb.cf.cloud.ibm.com`
+  * AU-SYD - `secure.au-syd.cf.cloud.ibm.com`
 
 In a browser or command-line interface, enter the following URL to access the `myapp` application:
 ```
