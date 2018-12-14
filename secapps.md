@@ -72,11 +72,11 @@ Before you can upload certificates, you must create a certificate signing reques
 
 When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.cloud_notm}}:
 
-* US-South - `secure.us-south.cloud.ibm.com`
-* US-East - `secure.us-east.cloud.ibm.com`
-* EU-DE - `secure.eu-de.cloud.ibm.com`
-* EU-GB - `secure.eu-gb.cloud.ibm.com`
-* AU-SYD - `secure.au-syd.cloud.ibm.com`
+* US-South - `custom-domain.us-south.cf.cloud.ibm.com`
+* US-East - `custom-domain.us-east.cf.cloud.ibm.com`
+* EU-DE - `custom-domain.eu-de.cf.cloud.ibm.com`
+* EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
+* AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
 To upload a certificate for your application, follow these steps.
 
