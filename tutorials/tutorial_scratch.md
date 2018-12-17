@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-11-28"
+lastupdated: "2018-12-13"
 
 ---
 
@@ -12,6 +12,7 @@ lastupdated: "2018-11-28"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # Creating an app from scratch
 {: #tutorial}
@@ -31,16 +32,17 @@ Docker is installed as part of the Developer Tools. Docker must be running for t
 
 Create a custom app in the {{site.data.keyword.cloud}} dashboard:
 
-1. From the [{{site.data.keyword.cloud}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), select **Create** to create a custom application.
+1. From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), select **Create** to create a custom application.
 
   You can also create a custom app from the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create** to create a custom application.
   {: tip}
 
 2. Enter your app name. For this tutorial, use `CustomProject`.
-3. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`
-4. Select your language and framework. Some starter kits might be available only in one language.
-5. Select your pricing plan. You can use the free option for this tutorial.
-6. Click **Create**.
+3. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.cloud.ibm.com`
+4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources/tagging_resources.html).
+5. Select your language and framework. Some starter kits might be available only in one language.
+6. Select your pricing plan. You can use the free option for this tutorial.
+7. Click **Create**.
 
 ## Step 3. Add resources (Optional)
 {: #add-services}
@@ -52,22 +54,7 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 3. Select your pricing plan. You can use the free option for this tutorial.
 4. Click **Create**.
 
-## Step 4. Deploy with a DevOps toolchain
-{: #add-toolchain}
-
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment platform you choose, whether it's Kubernetes or Cloud Foundry.
-
-Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
-
-1. From the App Details page, click **Deploy to Cloud**.
-2. Select a deployment method. Set up your deployment method according to the instructions for the method you choose:
-  * Deploy to a Kubernetes Cluster. Create a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
-  * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
-  * Deploy to a Virtual Server Instance.
-
-Deploying your app to the cloud in the last step creates a toolchain automatically. The toolchain creates a Git repository for your app where you can find the code. For more information, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html).
-
-## Step 5. Building and running the app locally
+## Step 4. Building and running the app locally
 {: #build-run}
 
 You can also build the app locally for testing before you push it to the cloud.
@@ -76,7 +63,7 @@ You can also build the app locally for testing before you push it to the cloud.
 2. Import the app to your integrated development environment.
 3. Modify the code.
 4. Set up [Git authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication) by adding a personal access token.
-5. Log in to the {{site.data.keyword.Bluemix}} command line interface. If your organization uses federated logins, use the `-sso` option.
+5. Log in to the {{site.data.keyword.cloud_notm}} command line interface. If your organization uses federated logins, use the `-sso` option.
 
   ```bash
   ibmcloud login -sso
@@ -113,21 +100,40 @@ You can also build the app locally for testing before you push it to the cloud.
 
 10. Open your browser to `http://localhost:3000`. Your port number might be different depending on your chosen runtime.
 
-## Step 6. Deploy your app
+## Step 5. Deploy your app
 {: #deploy}
-
-### Deploy with a DevOps toolchain
 
 You can deploy your app to {{site.data.keyword.cloud_notm}} several ways, but a DevOps toolchain is the best way to deploy production apps. With a DevOps toolchain, you can easily automate deployments to lots of environments and quickly add monitoring, logging, and alert services to help manage your app as it grows.
 
-With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the Master branch in your repo. All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment platform you choose, whether it's Kubernetes or Cloud Foundry.
+
+All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
+{: note}
+
+### Manual deployment with a DevOps toolchain
+
+With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the Master branch in your repo. 
 
 You can also manually deploy your app from your DevOps toolchain:
 
 1. From the App Details window, click **View Toolchain**.
 2. Click **Delivery pipeline** where you can start builds, manage deployment and view logs and history.
 
-For more information, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
+Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
+
+For more information, see:
+* [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html) with Continuous Delivery.
+* [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html) from a template.
+
+### Automatic deployment with a DevOps toolchain
+
+1. From the App Details page, click **Deploy to Cloud**.
+2. Select a deployment method. Set up your deployment method according to the instructions for the method you choose:
+  * Deploy to a Kubernetes Cluster. Create a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
+  * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
+  * Deploy to a Virtual Server Instance.
+
+Deploying your app to the cloud in the last step creates a toolchain automatically. The toolchain creates a Git repository for your app where you can find the code. 
 
 ### Deploy by using the {{site.data.keyword.dev_cli_short}}
 
@@ -143,7 +149,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Step 7. Verify that your app is running
+## Step 6. Verify that your app is running
 {: #verify}
 
-After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.mybluemix.net`. Go to that URL in your browser.
+After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.cloud.ibm.com`. Go to that URL in your browser.
