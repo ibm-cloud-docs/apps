@@ -19,6 +19,7 @@ Creating apps
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
@@ -37,7 +38,7 @@ Creating apps
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    
+
     {: .topicgroup}
     Adding credentials to your environment
         creds_overview.md

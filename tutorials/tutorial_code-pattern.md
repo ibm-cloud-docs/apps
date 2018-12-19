@@ -1,0 +1,60 @@
+---
+
+copyright:
+  years: 2018
+lastupdated: "2018-12-19"
+
+---
+
+{:shortdesc: .shortdesc}
+{:tip: .tip}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+
+# Creating an app with a code pattern
+{: #create_codepattern}
+
+You can use a code pattern to quickly create your app and deploy it to {{site.data.keyword.cloud}}. You can either view the code in GitHub or create and build an app on {{site.data.keyword.cloud_notm}}, where you can use a DevOps toolchain to automatically deploy your app.
+{: shortdesc}
+
+## Step 1. Create an app
+{: #create-app}
+
+1. Go to [IBM Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} and select the code pattern that you want. For example, you can select the [Build a MEAN Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/build-a-mean-web-app/){:new_window} code pattern.
+
+2. Read the code pattern's description, and view the GitHub repository and `README.md` file. To view the repo, click **Get the code**, which opens the GitHub repo for the code pattern.
+
+3. Start creating an app by using either of the following options. Either option opens the **Create app** page for the code pattern.
+    * On the code pattern's page, click the link for building an app on {{site.data.keyword.cloud_notm}}. 
+    * In the `README.md` file in the GitHub repo, click the link for using a starter kit to create the app. 
+
+4. On the **Create app** page, name your app, select a resource group, optionally provide tags, and click **Create**. For more information about tags, see [Working with tags](/docs/resources/tagging_resources.html).
+
+  To go back to the code pattern, click **View code pattern**. Check the `README.md` file in the repository to find out whether you need to take more actions to get your app up and running.
+  {: tip}
+
+## Step 2. Adding resources
+{: #add-resources}
+
+You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. This process creates a resource instance, creates a resource key (credentials), and binds it to your app. For this tutorial, add a place to manage your data.
+
+1. From the **App details** page, click **Add resource**.
+2. Select the kind of resource that you want. 
+3. Select your pricing plan. A lite option is available.
+4. Click **Create**.
+
+## Step 3. Copying service credentials to your environment
+
+After you add a resource to your app, or if any services are required for your app, notice that the credentials for that service are displayed in the **Credentials** box. You must manually copy the credentials to your deployment environment.
+
+For more information about copying credentials to your environment, see [Credentials overview](/docs/apps/creds_overview.html).
+
+## Step 4. Deploying to {{site.data.keyword.cloud_notm}}
+{: #deploy}
+
+1. On the **App details** page, click **Deploy to cloud**.
+2. Select a deployment method, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
+3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
+
+For more information about deployment methods, builds, and pipelines, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
