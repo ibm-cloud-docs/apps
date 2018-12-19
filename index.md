@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-19"
 
 ---
 
@@ -22,8 +22,6 @@ You can build enterprise-ready mobile and web applications in {{site.data.keywor
 ## Before you begin
 {: #prereqs}
 
-[Sign up ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window} for an {{site.data.keyword.cloud_notm}} account. 
-
 You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) for installation details.
 
 ## Step 1. Create your app
@@ -34,7 +32,8 @@ Create an app by selecting one of the following entry points:
 * [Custom](/docs/apps/tutorials/tutorial_scratch.html): If you know what you want, build a custom app from scratch with the resources you need by using a blank starter kit.
 * [Bring your own code](/docs/apps/tutorials/tutorial_byoc.html): Bring your own code by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
 * [CLI](/docs/apps/create-deploy-cli.html): Create and deploy a custom or starter kit app by using the CLI and Developer tools.
-<!-- Add a bullet for the IBM Catalog starter kits?-->
+* [Code patterns](/docs/apps/tutorials/tutorial_code-pattern.html): Use an IBM Developer code pattern as a basis for creating your app.
+* [{{site.data.keyword.cloud_notm}} catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/catalog){: new_window}: You can browse or search the catalog for apps and services that you can create and start using today.
 
 ## Step 2. Add resources
 {: #addResources}
