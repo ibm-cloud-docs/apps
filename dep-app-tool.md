@@ -44,7 +44,7 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
 
   1. {: download} Download the code for your app to a new directory to set up your development environment.
 
-    <a class="xref" href="http://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Opens in a new tab or window)"></a>
+    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Opens in a new tab or window)"></a>
 
   2. Change to the directory where your code is located.
 

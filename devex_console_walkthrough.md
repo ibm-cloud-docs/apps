@@ -20,15 +20,12 @@ lastupdated: "2018-11-29"
 
 The {{site.data.keyword.cloud}} Developer Experience enables a cloud native application developer to create an app from a variety of starter kits, create and connect key {{site.data.keyword.Bluemix_notm}}-optimized services, and then quickly download working code or set up for continuous delivery. The Developer Experience provides a set of developer consoles across {{site.data.keyword.Bluemix_notm}} that allow you to create, view, configure, and manage your app as well as deploy it to a devops pipeline or download it for local development.
 
-To see a list of developer consoles, click [here](devex_elements.html#developer_consoles).
-{: tip}
-
 By creating an app thorough an {{site.data.keyword.cloud_notm}} developer console, all of the required parts of your app are maintained under your account on the {{site.data.keyword.cloud_notm}} server.  Thus you can move back and forth between the developer console GUI and [{{site.data.keyword.dev_cli_notm}}](/docs/cli/idt/index.html) should you choose to do so.
 
 {{site.data.keyword.cloud_notm}} developer consoles give you a seamless path to building a production-ready starter app for the use case you select.  Let's look at the steps you might take in your journey.
 
-Ready to jump in?  Visit the [{{site.data.keyword.cloud_notm}} Web App developer console](https://{DomainName}/developer/appservice) to get started.
-{: tip}
+<!-- Ready to jump in?  Visit the [{{site.data.keyword.cloud_notm}} Web App developer console](https://{DomainName}/developer/appservice) to get started.
+{: tip} -->
 
 ##Overview screen
 {: #overview_screen}
