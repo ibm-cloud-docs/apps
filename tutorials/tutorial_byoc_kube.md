@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -27,8 +27,8 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 ## Before you begin
 {: #prereqs}
 
-* Follow the steps for [Creating apps from your own code repository](/docs/apps/tutorials/tutorial_byoc.html) to create an app.
-* From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers/container_index.html).
+* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials/tutorial_byoc.html) for more information.
+* From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers/container_index.html).
 * To confirm that your app runs in Docker, run the following commands:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -36,24 +36,18 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Then, visit your URL, such as `http://localhost/springboothelloworld/sayhello`.   
-Press `Ctrl+C` to stop the Docker run.
+* Then, go to your URL, such as `http://localhost/springboothelloworld/sayhello`. Press the Ctrl+C keys to stop the Docker run.
 
-## Optional. Adding resources to your app
+## Adding resources to your app (optional)
 {: #add_resources}
 
 Add a service resource to your application and {{site.data.keyword.cloud_notm}} creates the service for you. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information. {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
 This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps/reqnsi.html).
 
-### Copying service credentials to your environment
+After you add a service resource to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html).
 
-After you add a service resource to your app, note that the credentials for that service are displayed in the **Credentials** box. You must copy the credentials to your deployment environment.
-
-For more information about copying credentials to your environment, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html).
-
-
-## Preparing your app for deployment by using a DevOps toolchain
+## Preparing your app for deployment
 {: #connect_toolchain}
 
 In this step, you attach a DevOps toolchain to the application and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
@@ -62,7 +56,7 @@ The DevOps toolchain is flexible enough to allow managed execution of arbitrary 
 
 Establishing a link between your app, toolchain, and repo is a step toward organizing your product assets. It also helps aggregate a view of your source repository with your DevOps workflow, your running app instances, and dependent services across all of your deployment targets.
 
-In the Connect Toolchain page, you have a few options:
+On the Connect Toolchain page, you have a few options:
 
 * Connect your app to an existing toolchain.
 * Connect your app to an existing toolchain that doesn't contain your repo. Then, connect the toolchain to your repo later.
@@ -76,7 +70,7 @@ If you have one or more DevOps toolchains that are already connected to the Git 
 ### Connect your app to an existing toolchain that doesn't contain your repo
 {: #connect_toolchain_notrepo}
 
-If you have one or more DevOps toolchains that are associated with your account, but are not connected to the Git repo that you specified during your app creation, those toolchains are displayed in the table that's labeled **without your repo**. You can select one of those toolchains and connect it to your app, but you must also manually add your repo to that toolchain.
+If you have one or more DevOps toolchains that are associated with your account, but are not connected to the Git repo that you specified during your app creation, those toolchains are displayed in the **Without your repo** table. You can select one of those toolchains and connect it to your app, but you must also manually add your repo to that toolchain.
 
 For more information about adding your repo to your toolchain, see:
 
@@ -88,104 +82,80 @@ For more information about adding your repo to your toolchain, see:
 ### Connect your app to a new toolchain
 {: #create_toolchain}
 
-You have these options for connecting your app to a new toolchain:
-* If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc).
-* Create a DevOps toolchain from scratch within the console. If you want to fully control the creation of the DevOps toolchain with no changes in your code repository, create the toolchain from scratch. For more information, see [Creating a DevOps toolchain from scratch](#create_toolchain_scratch).
+If you want to fully control the creation of the DevOps toolchain with no changes in your code repository, create the toolchain from scratch. You also create all of the integrations to build your app and deploy it to Kubernetes cluster. 
 
-#### Creating a DevOps toolchain from scratch
-{: #create_toolchain_scratch}
+1. On the Create a Toolchain page, click the **Build your own toolchain** template.
+2. Enter a name for your toolchain, select a region and resource group (default), and click **Create**.
 
-If you want to create a toolchain from scratch and connect it to your app, complete these steps. You also create all of the integrations to build your app and deploy it to Kubernetes cluster. The DevOps toolchain feature offers templates, but these steps show you how to set up a DevOps toolchain from scratch.
-
-When you choose to create a toolchain from your new app, the [Create a Toolchain](https://{DomainName}/devops/create) page in the [DevOps dashboard](https://{DomainName}/devops/) opens in a new tab in your browser. After you create and configure your toolchain in that tab, you must go back to the **Connect a toolchain** page in your app and refresh the page.
+When you choose to create a toolchain from your new app, the [Create a Toolchain](https://{DomainName}/devops/create) page in the DevOps dashboard opens in a new tab in your browser. After you create and configure your toolchain in that tab, you must go back to the Connect a toolchain page in your app and refresh the page.
 {:tip}
 
-1. On the **Create a Toolchain** page, click the **Build your own toolchain** template.
-2. On the **Build your own toolchain** page, enter a name for your toolchain, select a region and resource group (default), and click **Create**.
-
-An empty toolchain with no preconfigured tools or integrations is created. Continue to configure and test your new toolchain by completing the remaining steps.
+If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Adding a GitHub integration
 
-You can configure the DevOps toolchain with GitHub integration by using the following steps:
+Configure the DevOps toolchain with an integration for your GitHub repo for the toolchain to set a webhook in your repo so that pull requests and code pushes in that repo send a POST to the toolchain. 
 
 1. In your DevOps toolchain template, click **Add a Tool**.
-2. Select **GitHub** (if your repository is indeed on public GitHub or on Enterprise GitHub).
-3. On the **Configure the Integration** page for GitHub, complete these steps:
-  * Select (or enter) the **GitHub Server** URL.
-  * If you see an "Unauthorized on GitHub" message, click **Authorize**. Then, on the **Authorize IBM Cloud Toolchains** page, click **Authorize IBM-Cloud**. Then, enter your GitHub password.
-  * On the **Configure the Integration** page, select **Existing** for the **Repository Type** so that the DevOps toolchain configures the repository with a webhook and does _not_ make any fork or copy of your repository.
-  * Enter your **Repository URL**. (For example, `https://github.com/yourrepo/spring-boot-hello-world`).
-  * Wait a few moments, and you might be prompted authorize GitHub to grant DevOps toolchain permission to use the GitHub ReST API to configure your repo with the webhooks that are necessary to trigger the toolchain.
-  * Click **Create Integration**.
+2. Select **GitHub** if your repository is on public GitHub or on Enterprise GitHub.
+3. Select or enter the GitHub server URL.
+4. An `Unauthorized on GitHub` message might be displayed. If so, click **Authorize**. Then, on the Authorize IBM Cloud Toolchains page, click **Authorize IBM-Cloud**, and enter your GitHub password.
+5. On the Configure the Integration page, select **Existing** for the repository type so that the DevOps toolchain configures the repository with a webhook and does not make any fork or copy of your repository.
+6. Enter your repository URL, for example, `https://github.com/yourrepo/spring-boot-hello-world`.
+7. After a few moments, you might be prompted to authorize GitHub to grant DevOps toolchain permission to use the GitHub ReST API to configure your repo with the webhooks that are necessary to trigger the toolchain.
+8.  Click **Create Integration**.
 
-You configured this DevOps toolchain with an integration for your GitHub repo. Doing so allows the toolchain to set a webhook in your repo so that pull requests and code pushes in that repo trigger a POST to the toolchain. You can look in the settings of your repo to see the new webhook.
+You can view the new webhook from your repo settings.
 
-## Adding a Delivery Pipeline to build, test, and deploy your app
-
-The Delivery Pipeline is where the work happens.
+## Adding a delivery pipeline
 
 1. Click **Add a Tool**.
 2. Select **Delivery Pipeline**.
-3. On the **Configure the Integration** page for Delivery Pipeline, complete these steps:
- * Enter "Continuous Integration" for the pipeline name.
- * Click **Create Integration**.
+3. Enter `Continuous Integration` for the pipeline name, and click **Create Integration**.
 
-You created an empty delivery pipeline. Next, you define pipeline stages to direct your input (the GitHub repo contents) to their destination. Because this tutorial assumes that you have a GitHub repo that produces a working Docker image and is targeting an IBM Containers Kubernetes cluster, you create pipeline stages with inputs, shell scripts, and outputs that achieve this goal.
+## Configuring your pipeline stages
 
-### Configuring the "Build and Publish" pipeline stage
+Configure the pipeline stages to direct your input (the GitHub repo contents) to the correct destination. Because this tutorial assumes that you have a GitHub repo that produces a working Docker image and is targeting an IBM Containers Kubernetes cluster, you create pipeline stages with inputs, shell scripts, and outputs that achieve this goal.
 
-1. Click the delivery pipeline that you created.
-2. On the delivery pipeline page, click **Add a Stage**.
-3. On the **Input** tab of the **Stage Configuration** page, complete the fields as follows:
-  * For the stage name, type **Build & Publish Docker Image**.
-  * **Input type**: Select **Git repository**.
-  * **Git repository**: Select your GitHub repo.
-  * **Branch**: Select the branch that you use for continuous integration.
-4. Click the **Jobs** tab, and complete the fields as follows:
-  * Click the **Add Job '+'** icon, and select **Build** for the job type.
-  * Enter a name, such as **Build & Publish**.
-  * **Builder type**: select **Container Registry**.
-  * **IBM Cloud region**: Select the region where your Kubernetes cluster is located.
-  * **API key**: Select **Enter an existing API key**. If you don't have a key or don't know your API key, you can [get an API key](https://{DomainName}/iam/#/apikeys) by opening a separate browser window and navigating to **Manage** > **Security** > **Platform API Keys**. Be sure to keep this key in a safe place.
-  * **Account name**: This field is automatically completed when you enter an API key.
-  * **Container Registry namespace**: Enter the [container registry namespace](https://{DomainName}/containers-kubernetes/registry/namespaces) (You can find it by clicking the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and selecting **Containers** > **Registry** > **Namespaces**.)
-  * **Docker image name**: Enter **continuous** because this pipeline build stage is for the continuous build of your repo's continuous integration branch.
-  * **Build script**: Notice the shell script. It lacks the app build instructions for _your_ repository. You need to add a line or more after the first `#!/bin/bash` line. For example, for a repo that is built by using maven, you might add a few lines similar to the following example:
+1. Configure your `build and publish` pipeline stage.
+  1. Select the delivery pipeline that you created, and click **Add a Stage**.
+  2. Click the **Input** tab and complete the fields as follows:
+    * Enter `build and publish Docker image` for the stage name.
+    * Select **Git repository** for the input type.
+    * Select your GitHub repo.
+    * Select the branch that you use for continuous integration.
+  3.  Click the **Jobs** tab, then click **Add Job '+'**, and complete the fields as follows:
+    * Select **Build** for the job type.
+    * Enter `build and publish` for the name.
+    * Select **Container Registry** for the builder type.
+    * Select the region where your Kubernetes cluster is located.
+    * Select **Enter an existing API key**. If you don't have an API key, see [Creating an API key](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Enter the container registry namespace, which you can find by clicking the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and selecting **Containers** > **Registry** > **Namespaces**.
+    * For the Docker image name, enter `continuous` because this pipeline build stage is for the continuous build of your repo's continuous integration branch.
+    * Edit the build script by adding a line or more after the first `#!/bin/bash` line. For example, for a repo that is built by using maven, you might add a few lines similar to the following example:
 
-    ```bash
-    export JAVA_HOME=/opt/IBM/java8
-    # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
-    export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-    mvn -B clean verify
-    ```
-    {: codeblock}
-5. Click **Save**. Your "Build and Publish" pipeline stage now appears in your toolchain.
-
-### Testing your "Build and Publish" pipeline stage
-
-Click the **Play** icon until the build succeeds. You know it works when the stage turns green, and the script output confirms your expectations. The goal in this stage is to publish a Docker image to your image registry. If the script doesn't display enough for your confidence, you can see the image registry to confirm publication by clicking the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and then selecting **Containers** > **Registry** > **Private Repositories**. Then, confirm that a repository that ends with the name `/continuous` is listed. (Remember, that was the image name.)
-
-### Configuring the "Deploy to Cluster" pipeline stage
-
-So far, you published a Docker image to your private Docker image registry. Now, it's time to create a stage that deploys that image to your Kubernetes cluster.
-
-1. On the delivery pipeline page, click **Add a Stage**.
-2. On the **Input** tab of the **Stage Configuration** page, complete the fields as follows:
-  * **Name**: Type **Deploy**.
-  * **Input type**: Select **Build artifacts**.
-  * **Stage**: Select **Build & Publish Docker Image**.
-  * **Job**: Select **Build & Publish**.
-  * **Stage trigger**: Because this is your continuous integration pipeline, select the default **Run jobs then the previous stage is completed**.
-3. Click the **Jobs** tab, and complete the fields as follows:
-  * Click the **Add Job '+'** icon, and select **Deploy** for the job type.
-  * Enter a name, such as **Deploy to Continuous Integration Cluster**.
-  * **Deployer type**: Select **Kubernetes**.
-  * **IBM Cloud region**: Select the region where your Kubernetes cluster is located.
-  * **API key**: Select **Enter an existing API key**. If you don't have a key or don't know your API key, you can [get an API key](https://{DomainName}/iam/#/apikeys) by opening a separate browser window and navigating to **Manage** > **Security** > **Platform API Keys**. Be sure to keep this key in a safe place.
-  * Accept the remaining default settings.
-4. Click **Save**. Your "Deploy" pipeline stage now appears in your toolchain.
-
-### Testing your "Deploy to Cluster" pipeline stage
-
-Click the **Play** icon until the build succeeds. You know it works when the stage turns green, and the script output confirms your expectations. You can view the logs for the stage. Near the end of the logs, find a clickable link to the running app. However, only _you_ know your app's context root and path. Append the correct path to confirm that it runs.
+      ```bash
+      export JAVA_HOME=/opt/IBM/java8
+      # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
+      export MAVEN_OPTS="-  
+      Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      mvn -B clean verify
+      ```
+      {: codeblock}
+  4. Click **Save**. 
+2. Test your `build and publish` pipeline stage by clicking the **Play** icon until the build succeeds. A stage of green indicates that the build is successful. 
+3. Configure your `deploy to cluster` pipeline stage to deploy the Docker image to your Kubernetes cluster. 
+  1. On the delivery pipeline page, click **Add a Stage**.
+  2. Click the **Input** tab and complete the fields as follows:
+    * Enter `deploy to cluster` for the name.
+    * Select **Build artifacts** for the input type.
+    * Select **Build & Publish Docker Image** for the stage.
+    * Select **Build & Publish** for the job.
+    * Because this is your continuous integration pipeline, accept the default option for the stage trigger.
+  3. Click the **Jobs** tab, then click **Add Job '+'**, and complete the fields as follows:
+    * Enter `deploy to continuous integration cluster` for the name.
+    * Select **Kubernetes** for the deployer type.
+    * Select the region where your Kubernetes cluster is located.
+    * Enter your existing API key. 
+  4. Click **Save**.
+4. Test your `deploy to cluster` pipeline stage by clicking the **Play** icon until the build succeeds. A stage of green indicates that the build is successful. You can view the logs for the stage. Near the end of the logs, find a clickable link to the running app. Append the correct path for your app to confirm that it runs.
