@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -17,18 +17,18 @@ Se você tiver um app existente, será possível hospedá-lo no {{site.data.keyw
 ## Migrando aplicativos
 {: #migrating}
 
-Se você precisar que o app acesse seus dados ou serviços no local, use o [{{site.data.keyword.SecureGatewayfull}}](../services/SecureGateway/secure_gateway.html) para estabelecer um túnel seguro entre uma organização do {{site.data.keyword.Bluemix_notm}} e sua rede de backend corporativo. Para obter detalhes, consulte [Atingindo o backend corporativo com o {{site.data.keyword.Bluemix_notm}} Secure Gateway por meio do console ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg).
+Se você precisar que o app acesse seus dados ou serviços no local, use o [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/secure_gateway.html) para estabelecer um túnel seguro entre uma organização do {{site.data.keyword.Bluemix_notm}} e sua rede de backend corporativo. Para obter detalhes, consulte [Atingindo o back-end corporativo com o {{site.data.keyword.Bluemix_notm}} Secure Gateway por meio do console ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
-Se você precisar de ajuda com sua migração, o [IBM Cloud Migration Services](https://www.ibm.com/cloud/migration-services){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") estará disponível.
+Se você precisar de ajuda com sua migração, o [IBM Cloud Migration Services![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/migration-services){: new_window} estará disponível.
 
 ## Hospedando aplicativos
 {: #ht_hostapp}
 
-No [catálogo](https://console.bluemix.net/catalog/?taxonomyNavigation=apps){: new_window} do {{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), é possível escolher um ambiente gerenciado como o Kubernetes ou Cloud Foundry ou hospedar seu app diretamente em um servidor bare metal ou virtual.
+No catálogo do {{site.data.keyword.Bluemix_notm}} [ ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window}, é possível escolher um ambiente gerenciado como o Kubernetes ou o Cloud Foundry, ou hospedar o app diretamente em um servidor bare metal ou virtual.
 
-Em uma implementação virtual, a maioria das operações do seu app é gerenciada pelo {{site.data.keyword.Bluemix_notm}}. Uma implementação [virtual](../vsi/vsi_about.html) é melhor se sua carga de trabalho está espalhada entre regiões geográficas e você deseja usar um hypervisor do {{site.data.keyword.Bluemix_notm}} para gerenciar suas implementações. Uma implementação [básica](../bare-metal/index.html) é melhor quando você precisa de acesso direto a um servidor físico dedicado para maior desempenho.
+Em uma implementação virtual, a maioria das operações do seu app é gerenciada pelo {{site.data.keyword.Bluemix_notm}}. Uma implementação [virtual](/docs/vsi/vsi_about.html) é melhor se sua carga de trabalho está espalhada entre regiões geográficas e você deseja usar um hypervisor do {{site.data.keyword.Bluemix_notm}} para gerenciar suas implementações. Uma implementação [básica](/docs/bare-metal/index.html) é melhor quando você precisa de acesso direto a um servidor físico dedicado para maior desempenho.
 
 Você também tem muitas opções para:
-* Selecionar o tipo de [armazenamento](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") que é o certo para você por meio de armazenamento de bloco, armazenamento de arquivo ou Object Storage.
-* Selecionar o tipo de [rede](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") de que você precisa.
-* Selecionar um serviço de [conteinerização](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para aproveitar a tecnologia Kubernetes do {{site.data.keyword.Bluemix_notm}}.
+* Selecionar o tipo de [armazenamento![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} que é o certo para você por meio de armazenamento de bloco, armazenamento de arquivo ou Object Storage.
+* Selecionar o tipo de [rede![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} de que você precisa.
+* Selecionar um serviço de [conteinerização![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} para aproveitar a tecnologia Kubernetes do {{site.data.keyword.Bluemix_notm}}.

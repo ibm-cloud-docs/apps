@@ -26,7 +26,7 @@ Web アプリ・パターンは、HTML、JavaScript、スタイルシートな�
 * Basic - 静的 `index.html` ファイル、デフォルトおよび空のスタイルシート、および JavaScript ファイルを提供します。
 * React - ユーザー・インターフェースをビルドするための豊富なフレームワーク。 ソース・ファイルは `src/client/app` にあり、WebPack でコンパイルされ、公開ディレクトリーで機能します。
 
-[{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://console.bluemix.net/developer/appservice/dashboard)で、Web アプリ・パターンのスターター・キットを見つけることができます。
+[{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://{DomainName}/developer/appservice/dashboard)で、Web アプリ・パターンのスターター・キットを見つけることができます。
 
 ## Backend-for-frontend
 {: #bff}
@@ -37,28 +37,28 @@ Backend-for-frontend パターン (BFF) は、モバイルや Web といった�
 
 BFF は、データ・パーシスタンスとキャッシングを管理し、以下の高価値サービスとの統合を管理します。
 
-* [{{site.data.keyword.ibmwatson}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
 
 BFF は、通常、REST パターンを使用して API を公開しますが、{{site.data.keyword.messagehub}} を使用してメッセージング・アーキテクチャーから動作するように、BFF を設計することができます。
 
-ご使用の言語とフレームワーク要件に合った BFF スターター・キットを選択します。 [{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://console.bluemix.net/developer/appservice/dashboard)で、BFF パターンのスターター・キットを見つけることができます。
+ご使用の言語とフレームワーク要件に合った BFF スターター・キットを選択します。 [{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://{DomainName}/developer/appservice/dashboard)で、BFF パターンのスターター・キットを見つけることができます。
 
 ## マイクロサービス
 {: #microservice}
 
 マイクロサービス・アプリは、基本的なヘルス・エンドポイントや REST API など、バックエンド・マイクロサービスをビルドするための基盤を提供します。 生成されたアプリには、マイクロサービス自体と、接続されているクラウド・サービスの両方に必要なすべての依存関係が含まれています。
 
-ご使用の言語とフレームワーク要件に合ったマイクロサービス・スターター・キットを選択してください。 [{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://console.bluemix.net/developer/appservice/dashboard)で、マイクロサービス・パターンのスターター・キットを見つけることができます。
+ご使用の言語とフレームワーク要件に合ったマイクロサービス・スターター・キットを選択してください。 [{{site.data.keyword.cloud_notm}} アプリ・サービス開発者ダッシュボード](https://{DomainName}/developer/appservice/dashboard)で、マイクロサービス・パターンのスターター・キットを見つけることができます。
 
 ## モバイル
 {: #mobile}
 
 モバイル・アプリは、重要なクライアント・サイド・コンポーネントがあるため、他のパターンとは異なります。 このパターンには、プッシュ通知、認証、Mobile Analytics のようなモバイル・サービスへの直接接続が含まれる場合があります。 モバイル・サービスは、Mobile Backend as a Service または MBaaS パターンと呼ばれます。 これらのサービスは、専用の [Backend-for-frontend](#bff) を持つ場合があります。
 
-{{site.data.keyword.cloud_notm}} は、iOS Swift、Android、および Cordova のためのいくつかのモバイル・スターター・キットを提供します。 [{{site.data.keyword.cloud_notm}} モバイル開発者ダッシュボード](https://console.bluemix.net/developer/mobile/dashboard)で、モバイル・パターンのスターター・キットを見つけることができます。
+{{site.data.keyword.cloud_notm}} は、iOS Swift、Android、および Cordova のためのいくつかのモバイル・スターター・キットを提供します。 [{{site.data.keyword.cloud_notm}} モバイル開発者ダッシュボード](https://{DomainName}/developer/mobile/dashboard)で、モバイル・パターンのスターター・キットを見つけることができます。
 
 ## 言語
 {: #languages}

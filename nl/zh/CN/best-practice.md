@@ -2,19 +2,27 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-29"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
 
 # 优秀应用程序的要素是什么？
 {: #best-practice}
 
-在 {{site.data.keyword.Bluemix_notm}} 中构建应用程序，以利用云提供的所有功能。这些最佳实践可帮助您确保应用程序是云就绪型应用程序。
-{:shortdesc}
+在 {{site.data.keyword.cloud}} 中构建应用程序，以利用云提供的所有功能。这些最佳实践可帮助您确保应用程序是云就绪型应用程序。
+{: shortdesc}
 
 ## 独立于拓扑构建应用程序
 
-在非云环境中，应用程序可能会使用特定的部署拓扑。但是，因为云就绪型应用程序和服务允许进行即时可扩展性更改，所以应用程序拓扑在云应用程序中可能会更改。可扩展性更改包括动态扩展和手动调整应用程序实例数。
+在非云环境中，应用程序可能会使用特定的部署拓扑。但是，因为云就绪型应用程序和服务允许进行即时可扩展性更改，所以应用程序拓扑在云应用程序中可能会更改。这些更改包括动态扩展和手动调整应用程序实例数。
 
 在构建应用程序时，应尽可能确保应用程序是通用且无状态的，从而避免应用程序受到可扩展性更改的影响。
 
@@ -24,7 +32,7 @@ lastupdated: "2018-07-25"
 
 您可以将信息存储在 SQL 或 NoSQL 数据库等服务中，而不是本地文件系统中。在动态云环境中，还有一点非常重要，那就是用于存储日志的服务必须比生成日志的应用程序实例具有更长的生命周期。
 
-## 将会话状态存储于应用程序外部
+## 从应用程序中排除会话状态
 
 系统状态是由数据库和共享存储器定义的，而不是由每个单独的运行中应用程序实例定义的。任何类型的有状态性都会限制应用程序的可扩展性。请尝试将会话状态存储在服务器上的集中位置，从而最大限度降低会话状态的影响。
 
@@ -39,19 +47,19 @@ lastupdated: "2018-07-25"
 ## 使用多区域体系结构构建应用程序
 {: #multiregion}
 
-运行多个实例以避免单个区域中产生停机时间，但要想交付更稳健的应用程序，请考虑多区域体系结构。
+您可以运行多个实例以避免单个区域中产生停机时间。要交付更稳健的应用程序，请考虑多区域体系结构。
 
 ## 确保在监视应用程序
 {: #monitoring}
 
-通过 {{site.data.keyword.Bluemix_notm}}，可轻松使用 [New Relic ![外部链接图标](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window} 等服务来监视应用程序。有关更多信息，请查看[监视和日志记录](../monitor_log/logging.html#logging)。
+通过 {{site.data.keyword.Bluemix_notm}}，可轻松使用 [New Relic ![外部链接图标](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window} 等服务来监视应用程序。
 
 ## 利用支持选项
 {: #support}
 
 {{site.data.keyword.Bluemix_notm}} 付费价格套餐提供了多种不同的帐户类型以及可选的付费支持。不管您的帐户类型是什么，如果您计划将应用程序放入 {{site.data.keyword.Bluemix_notm}} 上的生产环境，请考虑选择此选项。
 
-不管是否使用付费支持，您都可以如[支持](../get-support/howtogetsupport.html)中所述获取帮助，从而避免遭受未预见的问题。
+不管是否使用付费支持，您都可以如[支持](/docs/get-support/howtogetsupport.html)中所述获取帮助，从而避免遭受未预见的问题。
 
 ## 避免使用应用程序中的基础架构 API
 
@@ -67,7 +75,7 @@ lastupdated: "2018-07-25"
 
 ## 使用兼容性库而非特定于操作系统的功能
 
-如果已经使用了特定于操作系统的功能，那么可以通过兼容性库（例如，Cygwin 和 Mono）来解决此问题。Cygwin 是一种兼容性库，用于在 Windows 环境中提供一组 Linux 工具。Mono 是一种兼容性库，用于在 Linux 中提供 Windows .NET 功能。
+如果已经使用了特定于操作系统的功能，那么可以通过兼容性库（例如，Cygwin 和 Mono）来解决此问题。Cygwin 是一种兼容性库，用于在 Windows 环境中提供一组 Linux 工具。Mono 是一种兼容性库，用于在 Linux 中提供 Windows .NET 工具。
 
 避免特定于操作系统的依赖关系；请改用中间件基础架构或服务提供者提供的服务。
 

@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-23"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-10-23"
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
 # アプリの作成に関するトラブルシューティング
 {: #managingapps}
@@ -25,6 +26,7 @@ lastupdated: "2018-10-23"
 
 ## 保存されていない変更があります
 {: #ts_unsaved_changes}
+{: troubleshoot}
 
 アプリの詳細ページで項目をクリックしたときに、アクションを実行できなくなり、続行する前に変更を保存するよう求めるプロンプトが出される場合があります。
 
@@ -41,6 +43,7 @@ lastupdated: "2018-10-23"
 
 ## {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーを使用できない
 {: #ts_failover}
+{: troubleshoot}
 
 {{site.data.keyword.Bluemix_notm}} 領域間の自動フェイルオーバーは使用できません。 ただし、回避策として、多くの IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
 
@@ -61,6 +64,7 @@ nslookup mybluemix.net
 
 ## アプリをデバッグ・モードに切り替えられない
 {: #ts_debug}
+{: troubleshoot}
 
 Java 仮想マシン (JVM) バージョンが 8 以前の場合、デバッグ・モードを有効にできません。
 
@@ -134,6 +138,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 
 ## 削除したアプリの名前を再使用できない
 {: #ts_reuse_appname}
+{: troubleshoot}
 
 アプリを削除したら、アプリ経路を削除した場合に限り、アプリ名を再使用できます。
 
@@ -174,6 +179,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 
 ## 組織のスペースを取得できない
 {: #ts_retrieve_space}
+{: troubleshoot}
 
 現行組織に関連付けられたスペースがない場合、アプリまたはサービスを作成できません。
 
@@ -188,13 +194,14 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 現行組織にスペースを作成したことを確認してください。 スペースを作成するには、次のいずれかの方法を使用します。
 {: tsResolve}
 
-* メニュー・バーで、**「管理」>「アカウント」>「組織」**をクリックします。 スペースを作成する組織を選択してから、**「スペースの作成」**をクリックします。
+* メニュー・バーで、**「管理」>「アカウント」**をクリックし、**「Cloud Foundry の組織」**を選択します。スペースを作成する組織を選択してから、**「スペースの作成」**をクリックします。
 * Cloud Foundry コマンド・ライン・インターフェースに `cf create-space <space_name> -o <organization_name>` と入力します。
 
 やり直してください。 このメッセージが再び発生する場合、[{{site.data.keyword.Bluemix_notm}} 状況 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window} ページにアクセスして、サービスまたはコンポーネントに問題がないか確認してください。
 
 ## 要求したアクションを実行できない
 {: #ts_authority}
+{: troubleshoot}
 
 適切なアクセス権限がない場合、アクションを実行できません。
 
@@ -216,6 +223,7 @@ Java 仮想マシン (JVM) のバージョンが IBM JVM 7、IBM JVM 8、また�
 
 ## 許可エラーのため、{{site.data.keyword.Bluemix_notm}} サービスにアクセスできない
 {: #ts_vcap}
+{: troubleshoot}
 
 許可エラーは、アプリでサービス資格情報がハードコーディングされている場合にアプリが {{site.data.keyword.Bluemix_notm}} サービスにアクセスすると生じることがあります。
 
@@ -236,6 +244,7 @@ process.env.VCAP_SERVICES
 
 ## IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリをデプロイできない
 {: #ts_bm_tools_facet}
+{: troubleshoot}
 
 サポートされないファセットが Eclipse プロジェクトに適用された場合、IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない可能性があります。
 
@@ -253,6 +262,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} を使用してアプ�
 
 ## 502 Bad Gateway エラーを受信した
 {: #ts_502_error}
+{: troubleshoot}
 
 {{site.data.keyword.Bluemix_notm}} でアプリと対話していて 502 Bad Gateway エラーを受信した場合は、{{site.data.keyword.Bluemix_notm}} 状況ページを確認して、適切なアクションを実行してください。
 
@@ -276,6 +286,7 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 
 ## ディスク割り当て量を超えた
 {: #ts_disk_quota}
+{: troubleshoot}
 
 ディスク・スペースを使い尽くした場合には、手動でディスク割り当て量を変更して、ディスク・スペースを追加することができます。
 
@@ -300,6 +311,7 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 
 ## Android アプリが {{site.data.keyword.mobilepushshort}} を受信できない
 {: #ts_push}
+{: troubleshoot}
 
 Google にアクセスできない特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスから送信された通知を受信できません。 この場合、回避策はサード・パーティーのサービスを使用することです。
 
@@ -314,6 +326,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 
 ## 組織のサービス限度を超えた
 {: #ts_servicelimit}
+{: troubleshoot}
 
 ライト・アカウントのユーザーの場合、組織のサービス限度を超過すると、{{site.data.keyword.Bluemix_notm}} でアプリを作成できなくなることがあります。
 
@@ -331,7 +344,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
   * サービス・インスタンスを削除するには、{{site.data.keyword.Bluemix_notm}} コンソールか、またはコマンド・ライン・インターフェースが使用できます。
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用してサービス・インスタンスを削除するには、以下のステップを実行します。
-	  1. 「サービス」ダッシュボードで、削除するサービスの**「アクション」**メニューをクリックします。
+	  1. リソース・リストで、削除するサービスの**「アクション」**メニューをクリックします。
 	  2. **「サービスの削除」**をクリックします。 そのサービス・インスタンスがバインドされていたアプリを再ステージするようにプロンプトが出されます。
 
     コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下のステップを実行します。
@@ -343,6 +356,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 
 ## {{site.data.keyword.Bluemix_notm}} で実行可能ファイルを実行できない
 {: #ts_executable}
+{: troubleshoot}
 
 別の環境で開発およびビルドされた実行可能ファイルは、{{site.data.keyword.Bluemix_notm}} 上で実行できないことがあります。
 
@@ -366,6 +380,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
 ## 組織のメモリー限度を超えた
 {: #ts_outofmemory}
+{: troubleshoot}
 
 ライト・アカウントのユーザーの場合、組織のメモリー限度を超過すると、{{site.data.keyword.Bluemix_notm}} にアプリをデプロイできなくなることがあります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
 
@@ -385,7 +400,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
     {{site.data.keyword.Bluemix_notm}} コンソールを使用する場合は、以下のステップを実行します。
 
-    1. ダッシュボードからアプリを選択します。 アプリ詳細ページが開きます。
+    1. リソース・リストからアプリを選択します。 アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
     コマンド・ライン・インターフェースを使用する場合は、以下のステップを実行します。
@@ -408,6 +423,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
 ## アプリが自動的に再始動しない
 {: #ts_apps_not_auto_restarted}
+{: troubleshoot}
 
 アプリは、アプリにバインドしているサービスが機能を停止した時、自動的に再始動されません。
 
@@ -428,6 +444,7 @@ ibmcloud cf push appname -p app_path
 
 ## アプリがプッシュされたときにユーザー定義変数が失われる
 {: #ts_varsnotretained}
+{: troubleshoot}
 
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{site.data.keyword.Bluemix_notm}} にプッシュすると、指定した変数は、マニフェスト・ファイルに保存しない限りリセットされてしまいます。
 
@@ -440,9 +457,35 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{si
 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} からアプリを {{site.data.keyword.Bluemix_notm}} にプッシュするときは、「アプリケーション」ウィザードの「アプリケーションの詳細 (Application details)」ページで**「マニフェスト・ファイルに保存 (Save to the manifest file)」**チェック・ボックスを選択してください。 これにより、ウィザードで指定した変数が、アプリケーション用のマニフェスト・ファイルに保存されます。 次にそのウィザードを開いたときに、それらの変数は自動的に表示されます。
 {: tsResolve}
 
+<!-- begin STAGING ONLY -->
+
+## {{site.data.keyword.Bluemix_notm}} Live Sync Debug がコマンド・ラインから開始しない
+{: #ts_no_debug}
+{: troubleshoot}
+
+コマンド・ラインを使用して {{site.data.keyword.Bluemix_notm}} Live Sync Debug フィーチャーをアプリに対して使用可能にしたが、デバッグ・インターフェースにアクセスできません。
+
+**BLUEMIX_APP_MGMT_ENABLE** 環境変数を設定し、アプリにデバッグ・フィーチャーを使用可能にしました。 しかし、`app_url/bluemix-debug/manage` でデバッグ・ユーザー・インターフェースにアクセスできません。
+{: tsSymptoms}
+
+以下の状況では、デバッグ・フィーチャーを使用可能にすることができません。
+{: tsCauses}
+
+  * `manifest.yml` に command 属性が含まれる場合
+  * **-c** オプションを使用してアプリを {{site.data.keyword.Bluemix_notm}} にプッシュする場合
+
+以下のいずれかのオプションを使用して問題を解決します。
+{: tsResolve}
+
+  * 推奨されるのは、IBM Node.js ビルドパックを使用してアプリを開始する方法です。 詳しくは、『[{{site.data.keyword.Bluemix_notm}} への Node.js アプリケーションのデプロイ](/docs/runtimes/nodejs/index.html#nodejs_runtime)』トピックの「開始コマンド (Startup command)」セクションを参照してください。
+  * `manifest.yml` の command 属性を command: null に修正するか、push コマンドを編集して `-c null` を組み込むことで、既存アプリにコマンドを使用不可にします。
+  * `manifest.yml` から **command** 属性を削除します。 その後、{{site.data.keyword.Bluemix_notm}} から現行アプリを削除し、アプリを再びプッシュします。
+
+<!-- end STAGING ONLY -->
 
 ## 組織が {{site.data.keyword.Bluemix_notm}} で見つからない
 {: #ts_orgs}
+{: troubleshoot}
 
 ある {{site.data.keyword.Bluemix_notm}} 地域で作業しているときに、{{site.data.keyword.Bluemix_notm}} で自分の組織が見つからない場合があります。
 
@@ -473,6 +516,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 
 ## アプリの経路を作成できない
 {: #ts_hostistaken}
+{: troubleshoot}
 
 アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする際、指定したホスト名がすでに使用されていると、アプリの経路を作成できません。
 
@@ -490,7 +534,8 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
   * `manifest.yml` ファイルを使用してアプリケーションをデプロイする場合は、host オプションでホスト名を指定します。
     ```
     host: host_name
-	```
+	  ```
+
   * コマンド・プロンプトからアプリケーションをデプロイする場合は、`ibmcloud cf push` コマンドを **-n** オプションで使用します。
     ```
     ibmcloud cf push appname -p app_path -n host_name
@@ -498,6 +543,7 @@ Eclipse ツールを使用してアプリケーションを {{site.data.keyword.
 
 ## ibmcloud cf push コマンドを使用して WAR アプリをプッシュできない
 {: #ts_cf_war}
+{: troubleshoot}
 
 アプリのロケーションが正しく指定されていないと、`ibmcloud cf push` コマンドを使用してアーカイブ済み Web アプリを {{site.data.keyword.Bluemix_notm}} にデプロイできない場合があります。
 
@@ -522,6 +568,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 
 ## アプリが {{site.data.keyword.Bluemix_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
 {: #ts_doublebytes}
+{: troubleshoot}
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
 
@@ -535,16 +582,17 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * サーブレット・ソース・ファイル内
-    ```
+  ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
   * JSP 内
-    ```
+  ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
 
 ## Node.js アプリをデプロイできない
 {: #ts_nodejs_deploy}
+{: troubleshoot}
 
 Node.js アプリを更新する時、または Node.js アプリを {{site.data.keyword.Bluemix_notm}} にデプロイする時に問題が発生することがあります。
 
@@ -568,26 +616,26 @@ Node.js アプリを更新する際、または Node.js アプリを {{site.data
 
   * 以下のいずれかの方法で開始コマンドを指定します。
      * Cloud Foundry コマンド・ライン・インターフェースを使用します。 以下に例を示します。
-        ```
-		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-		```
+      ```
+		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		  ```
     * [package.json ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.npmjs.com/package/jsonfile){: new_window} ファイルを使用します。 例:
 	    ```
-		{
-      ...
-  	   "scripts": {
-	 		 "start": "node app.js"
+		  {
+        ...
+  	    "scripts": {
+	 		  "start": "node app.js"
  	   }
-	}
+	    }
 	    ```
     * `manifest.yml` ファイルを使用します。 例:
 	    ```
-		applications:
+		  applications:
   name: MyUniqueNodejs01
   ...
-  command: node app.js
+      command: node app.js
   ...
-        ```
+      ```
 
   * Node.js ビルドパックがアプリを認識できるように、ご使用の Node.js アプリ内に必ず `package.json` ファイルが存在するようにしてください。 このファイルは必ずアプリのルート・ディレクトリーに置いてください。
     以下は単純な `package.json` ファイルの例です。
@@ -613,6 +661,7 @@ Node.js アプリについてさらにヒントを見るには、[Node.js アプ
 
 ## Eclipse に {{site.data.keyword.Bluemix_notm}} Liberty アプリをインポートした後、`server.xml` ファイル内に構成エラーが現れる
 {: #ts_eclipse}
+{: troubleshoot}
 
 {{site.data.keyword.Bluemix_notm}} Liberty アプリを Eclipse にインポートした後、`server.xml` ファイル内に構成エラーを認めた場合は、プロジェクトから `server.xml` ファイルを削除しなければならないことがあります。
 
@@ -628,6 +677,7 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 
 ## カスタム・ビルドパックを使用してアプリをステージングできない
 {: #ts_bp_compilation}
+{: troubleshoot}
 
 カスタム・ビルドパック内のスクリプトが実行可能ファイルでない場合、そのビルドパックを使用して {{site.data.keyword.Bluemix_notm}} にアプリをデプロイできないことがあります。
 
@@ -641,7 +691,8 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 {: tsResolve}
 
 ## {{site.data.keyword.Bluemix_notm}} Continuous Delivery の Delivery Pipeline からアプリをデプロイできない
- {: #ts_devops_to_bm}
+{: #ts_devops_to_bm}
+{: troubleshoot}
 
  アプリに `manifest.yml` ファイルが存在しない場合、{{site.data.keyword.contdelivery_short}} の {{site.data.keyword.deliverypipeline}} を使用してアプリをデプロイできないことがあります。
 
@@ -656,6 +707,7 @@ Java』](/docs/runtimes/liberty/index.html)を参照してください。
 
 ## Meteor アプリをプッシュできない
 {: #ts_meteor}
+{: troubleshoot}
 
 ビルドパックが正しく指定されていない場合、Meteor アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュできない可能性があります。
 
@@ -672,7 +724,32 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`ibmcloud cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。 以下に例を示します。
-    ```
+  * コマンド・プロンプトからアプリケーションをデプロイする場合は、`ibmcloud cf push` コマンドを使用し、**-b** オプションによってカスタム・ビルドパックを指定します。 例えば次のようにします。
+  ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+
+## ストレージ割り当て量を超えた
+{: #exceed_quota}
+
+ビルド・ジョブまたはデプロイ・ジョブが失敗し、次のメッセージが表示された場合、以下の CLI コマンドを使用してイメージを削除できます。`状況: 無許可: ストレージ割り当て量を超過しています。1 つ以上のイメージを削除するか、ストレージ割り当て量と価格設定プランを確認してください。`
+
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) がまだない場合は、インストールします。
+* `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
+* `ibmcloud cr images` を使用して、イメージをリストします。
+* 未使用のイメージがある場合、`ibmcloud cr image-rm <respository>:<tag>` を使用して削除します。
+* 失敗したビルド・ジョブまたはデプロイ・ジョブを再実行します。
+
+## Kubernetes ログのアクセス
+{: #access_kube_logs}
+
+アプリケーションが実行されておらず、ヘルス・エンドポイントにアクセスできない場合、クラスター内のログを調べてください。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) がまだない場合は、インストールします。
+* `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
+* `ibmcloud cs clusters` を使用して、クラスターをリストします。
+* `ibmcloud cs cluster-config <cluster-name>` を使用して、該当するクラスターを指します。
+* リストされた環境変数をエクスポートします。
+* `kubectl get pods` を使用して、ポッドを表示します。`kubectl` をインストールする必要がある場合、[Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) を参照してください。
+* `kubectl logs <pod-name>` を使用して、アプリのログを表示できます。
+
+

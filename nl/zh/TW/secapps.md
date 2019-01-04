@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # 建立憑證簽署要求
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 您可以上傳 SSL 憑證並限制應用程式存取，來保護您的應用程式。
 {:shortdesc}
 
-您必須先在伺服器上建立憑證簽署要求 (CSR)，才能使用 {{site.data.keyword.Bluemix}} 上傳授與您的 SSL 憑證。CSR 是傳送給憑證管理中心的訊息，用來要求簽署公開金鑰及相關聯的資訊。最常見的 CSR 是 PKCS #10 格式。CSR 包含公開金鑰，以及通用名稱、組織、城市、州省、國家或地區，以及電子郵件。只接受 CSR 金鑰長度 2048 位元的 SSL 憑證要求。
+您必須先在伺服器上建立憑證簽署要求 (CSR)，才能使用 {{site.data.keyword.cloud}} 上傳授與您的 SSL 憑證。CSR 是傳送給憑證管理中心的訊息，用來要求簽署公開金鑰及相關聯的資訊。最常見的 CSR 是 PKCS #10 格式。CSR 包含公開金鑰，以及通用名稱、組織、城市、州省、國家或地區，以及電子郵件。只接受 CSR 金鑰長度 2048 位元的 SSL 憑證要求。
 
 ## 必要的 CSR 內容
 
@@ -69,7 +70,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 您必須先建立憑證簽署要求，才能上傳憑證。
 
-當您使用自訂網域來提供 SSL 憑證時，請使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中貴組織的 URL 路徑：
+當您使用自訂網域來提供 SSL 憑證時，請使用下列地區端點，提供在 {{site.data.keyword.cloud_notm}} 中貴組織的 URL 路徑：
 
 * US-South - `secure.us-south.bluemix.net`
 * US-East - `secure.us-east.bluemix.net`
@@ -79,7 +80,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 若要上傳應用程式的憑證，請遵循下列步驟。
 
-1. 移至儀表板。
+1. 移至資源清單。
 
 2. 選取應用程式，以開啟應用程式詳細資料視圖。
 
@@ -89,15 +90,13 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 5. 按一下「SSL 憑證」直欄中的**上傳**，然後選取您的自訂網域。
 
-6. 瀏覽以上傳憑證、私密金鑰，以及選擇性地上傳中繼憑證或用戶端憑證。若要啟用用戶端憑證信任儲存庫，您必須上傳用戶端憑證信任儲存庫檔案，而此檔案定義您自訂網域的容許使用者存取權。
-
   #### 憑證
 
     一種數位文件，用來將公開金鑰連結到憑證擁有人的身分，使憑證擁有人能夠接受鑑別。憑證由憑證管理中心發行，並由該憑證管理中心執行數位簽署。
 
     一般是由憑證管理中心發出及簽署憑證。不過，您可能會使用自簽憑證進行測試及開發用途。
 
-    {{site.data.keyword.Bluemix_notm}} 支援下列類型的憑證：
+    {{site.data.keyword.cloud_notm}} 支援下列類型的憑證：
 
 	* PEM（`pem`、`.crt`、`.cer` 及 `.cert`）
 	* DER（`.der` 或 `.cer`）
@@ -107,7 +106,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
     一種用來加密訊息的演算模式，只有對應的公開金鑰可以解密。另外，私密金鑰也用來將相對應公開金鑰所加密的訊息解密。私密金鑰保存在使用者系統上，受到密碼保護。
 
-    {{site.data.keyword.Bluemix_notm}} 支援下列類型的私密金鑰：
+    {{site.data.keyword.cloud_notm}} 支援下列類型的私密金鑰：
 
     * PEM（`pem`、`.key`）
     * PKCS #8（`p8`、`pk8`）
@@ -123,13 +122,14 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
     如果您藉由上傳用戶端憑證信任儲存庫來啟用此選項，則嘗試存取 SSL 保護網域的使用者會被要求提供用戶端憑證。例如，在 Web 瀏覽器中，當使用者嘗試存取 SSL 保護的網域時，Web 瀏覽器會提示使用者提供網域的用戶端憑證。
 使用**用戶端憑證信任儲存庫**檔案上傳選項，以定義容許存取您自訂網域的用戶端憑證。
 
-  **附註：**{{site.data.keyword.Bluemix_notm}} 網域管理中的自訂憑證特性取決於「傳輸層安全 (TLS)」通訊協定的「伺服器名稱指示 (SNI)」延伸。存取自訂憑證所保護之 {{site.data.keyword.Bluemix_notm}} 應用程式的用戶端程式碼必須支援 TLS 實作中的 SNI 延伸。如需相關資訊，請參閱 [RFC 4346 的第 7.4.2 節 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 及[使用傳輸層安全 (TLS) 保護資料](/docs/get-support/appsectls.html)。
+  {{site.data.keyword.cloud_notm}} 網域管理中的自訂憑證特性取決於「傳輸層安全 (TLS)」通訊協定的「伺服器名稱指示 (SNI)」延伸。存取自訂憑證所保護之 {{site.data.keyword.Bluemix_notm}} 應用程式的用戶端程式碼必須支援 TLS 實作中的 SNI 延伸。如需相關資訊，請參閱 [RFC 4346 的第 7.4.2 節 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 及[使用傳輸層安全 (TLS) 保護資料](/docs/get-support/appsectls.html)。
+  {: note}
 
   #### 用戶端憑證信任儲存庫
 
   用戶端憑證信任儲存庫包含要容許存取您應用程式之使用者的用戶端憑證。請上傳用戶端憑證信任儲存庫檔案，以啟用要求用戶端憑證的選項。
 
-   {{site.data.keyword.Bluemix_notm}} 支援下列類型的憑證：
+   {{site.data.keyword.cloud_notm}} 支援下列類型的憑證：
 
       * PEM（pem、.crt、.cer 及 .cert）
       * PKCS #7（p7b、p7r、spc）
@@ -141,5 +141,5 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 若要刪除憑證或以新憑證取代現有憑證，請遵循下列步驟。
 
-1. 移至**管理** > **帳戶** > **Cloud Foundry 組織**。
+1. 移至**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。
 2. 在動作直欄中，從其他動作功能表中選取**網域**。在組織的其他動作功能表中，按一下**從組織移除**。

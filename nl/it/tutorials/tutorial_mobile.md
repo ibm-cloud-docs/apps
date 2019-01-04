@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Creazione di un'applicazione mobile con un kit starter
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} offre kit starter mobili per aiutarti a creare rapidamente un'applicazione mobile. Scegli un linguaggio, un framework e gli strumenti dai kit starter del servizio dell'applicazione per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, imparerai a installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
+{{site.data.keyword.cloud}} offre kit starter mobili per aiutarti a creare rapidamente un'applicazione mobile. Scegli un linguaggio, un framework e gli strumenti dai kit starter del servizio dell'applicazione per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, imparerai a installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
 {: shortdesc}
 
 ## Passo 1. Installa gli strumenti
 {: #install-tools}
 
-Installa gli [strumenti sviluppatore](/docs/cli/index.html).
+Installa [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 
 Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 
@@ -29,7 +30,7 @@ Docker viene installato come parte degli strumenti per sviluppatori. Affinché i
 {: #create-devex}
 
 1. Crea un'applicazione {{site.data.keyword.dev_console}} in {{site.data.keyword.Bluemix}}.
-2. Dalla pagina dei [Starter Kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter in base alle funzioni che desideri. Ad esempio, per un'applicazione di linguaggio Watson, seleziona **Swift Kitura**.
+2. Dalla pagina dei [Starter Kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter in base alle funzioni che desideri. Ad esempio, per un'applicazione di linguaggio Watson, seleziona **Swift Kitura**.
 3. Immetti il nome della tua applicazione. Per questa esercitazione, utilizza `WatsonApp`.
 4. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Swift`.
 5. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
@@ -41,7 +42,7 @@ Docker viene installato come parte degli strumenti per sviluppatori. Affinché i
 
 Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognitiva di Watson, aggiungere servizi mobili o servizi per la sicurezza. Per questa esercitazione, aggiungi una posizione per gestire i tuoi dati.
 
-1. Dalla finestra del servizio dell'applicazione, fai clic su **Add Resource**.
+1. Dalla finestra App Service, fai clic su **Add Resource**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
 4. Fai clic su **Create**.
@@ -53,7 +54,7 @@ L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per
 
 La fornitura continua è abilitata per alcune applicazioni. Puoi abilitare la fornitura continua per automatizzare le creazioni, i test e le distribuzioni tramite Delivery Pipeline e GitHub.
 
-1. Dalla finestra del servizio dell'applicazione, fai clic su **Deploy to Cloud**.
+1. Dalla finestra App Service, fai clic su **Deploy to Cloud**.
 2. Seleziona un metodo di distribuzione. Imposta il metodo di distribuzione in base alle istruzioni per il metodo scelto.
 
     * Distribuisci a un cluster Kubernetes. Crea un cluster di host, chiamati nodi di lavoro, per distribuire e gestire contenitori dell'applicazione a elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
@@ -65,7 +66,7 @@ La fornitura continua è abilitata per alcune applicazioni. Puoi abilitare la fo
 
 La distribuzione della tua applicazione sul cloud nell'ultimo passo ha creato una toolchain. Una toolchain crea un repository Git per la tua applicazione in cui puoi trovare il codice. Segui questa procedura per accedere al tuo repository. Puoi creare localmente l'applicazione per il test prima di inviarla al cloud.
 
-1. Dalla finestra del servizio dell'applicazione, fai clic su **Download Code** o **Clone your repo** per lavorare con il codice in locale.
+1. Dalla finestra App Service, fai clic su **Download Code** o **Clone your repo** per lavorare con il tuo codice in locale.
 2. Importa l'applicazione nel tuo ambiente di sviluppo integrato.
 3. Modifica il codice.
 4. Imposta l'[autenticazione Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) aggiungendo un token di accesso personale.
@@ -152,7 +153,7 @@ Utilizza questa sezione se scegli di utilizzare Android come piattaforma della t
 
 Puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} in diversi modi, ma una toolchain DevOps è il modo migliore per distribuire le applicazioni di produzione. Con una toolchain DevOps, puoi facilmente automatizzare le distribuzioni in molti ambienti e aggiungere rapidamente servizi di monitoraggio, registrazione e avvisi per aiutare a gestire la tua applicazione man mano che cresce.
 
-Con una toolchain correttamente configurata, un ciclo di creazione-distribuzione viene avviato automaticamente con tutte le unioni al ramo master nel tuo repository. Tutte le toolchain che vengono create da un dashboard di sviluppo {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
+Con una toolchain correttamente configurata, un ciclo di creazione-distribuzione viene avviato automaticamente con tutte le unioni al ramo master nel tuo repository. Tutte le toolchain che vengono create da un dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
 
 Puoi anche distribuire manualmente la tua applicazione dalla tua toolchain DevOps:
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,7 +13,7 @@ lastupdated: "2018-05-22"
 # Node.js 应用程序文件
 {: #node-project-files}
 
-对于 Node.js 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建初学者工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
+对于 Node.js 应用程序，以下信息列出了通常可在 {{site.data.keyword.Bluemix}} 中找到的内容。创建入门模板工具包时，会创建这些文件。如果要迁移应用程序以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，您可能希望查看这些信息以避免潜在的冲突。
 {:shortdesc}
 
 下表列出了生成的 Node.js 应用程序中包含的常见目录和文件。
@@ -21,13 +21,13 @@ lastupdated: "2018-05-22"
 |根目录|描述
 |
 |:------------------------------------------------|:------------------------------------------|
-|package.json|元数据文件|
+|package.json|有关包的元数据信息，包括名称、版本和依赖项。|
 |cli-config.yml|CLI 配置选项|
 |manifest.yml|Cloud Foundry 部署文件|
 |Dockerfile|用于 `ibmcloud dev run`、`ibmcloud dev deploy` 和 `docker` 命令的 Dockerfile|
 |Dockerfile-tools|用于 `ibmcloud dev build` 和 `ibmcloud dev test` 的 Dockerfile|
 |docker-compose.yml|Docker Compose 的应用程序服务配置|
-|webpack.config.js|用于与构建相关的信息的 Webpack 配置|
+|webpack.config.js|用于与构建相关的信息的 Web 包配置|
 |LICENSE|许可证文件|
 |README.md|应用程序描述|
 {: caption="表 1. 生成的 Node.js 应用程序根目录的内容" caption-side="top"}

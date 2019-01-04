@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ Sie können eine angepasste Domäne erstellen und verwenden, indem Sie entweder 
 
 Führen Sie die folgenden Schritte aus, um mithilfe der Konsole eine angepasste Domäne für Ihre Organisation zu erstellen:
 
-1. Wechseln Sie zu **Verwalten** > **Konto** > **Cloud Foundry-Organisationen**.
+1. Wechseln Sie zu **Verwalten > Konto** und wählen Sie **Cloud Foundry-Organisationen** aus.
 2. Klicken Sie auf den Namen der Organisation, für die Sie eine angepasste Domäne erstellen.
 3. Klicken Sie auf die Registerkarte **Domänen**.
 4. Klicken Sie auf **Domäne hinzufügen**, geben Sie Ihren Domänennamen ein und wählen Sie die Region aus.
@@ -35,8 +35,8 @@ Sie können beispielsweise `*.mycompany.com` verwenden, um die Route `www.myblue
 
 Fügen Sie die Route mit der angepassten Domäne einer Anwendung hinzu.
 
-1. Klicken Sie auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) > **Dashboard**. Klicken Sie dann auf die Zeile für die Anwendung, der Sie die Route hinzufügen möchten. Die Seite **Übersicht** wird angezeigt.
-2. Wählen Sie im Menü **Routen** die Option **Routen bearbeiten** aus.
+1. Klicken Sie auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) > **Ressourcenliste** und klicken Sie dann auf die Zeile für die Anwendung, der Sie die Route hinzufügen möchten. Die Übersichtsseite wird angezeigt.
+2. Klicken Sie auf das Menü **Routen** und wählen Sie **Routen bearbeiten** aus.
 3. Klicken Sie auf **Route hinzufügen**. Geben Sie die Route an, die Sie für die Anwendung verwenden möchten.
 4. Bestätigen Sie Ihre Aktualisierungen, indem Sie auf **Speichern** klicken.
 

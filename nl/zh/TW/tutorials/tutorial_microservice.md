@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,9 +30,9 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中建立應用程式：
 
-1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 頁面中，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
+1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/) 頁面中，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
 2. 輸入應用程式名稱。針對本指導教學，請使用 `MicroserviceProject`。
-3. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，`abc-devhost.mybluemix.net`
+3. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，也就是 `abc-devhost.mybluemix.net`。
 4. 選取語言及架構。部分入門範本套件可能只提供一種語言。
 5. 選取定價方案。有免費選項，您可以用於本指導教學。
 6. 按一下**建立**。
@@ -57,9 +57,9 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 1. 從應用程式服務視窗，按一下**部署至雲端**。
 2. 選取部署方法。根據您所選方法的指示設定部署方法。
 
-    * 部署至 Kubernetes 叢集。建立主機的叢集（稱為工作者節點），以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
+    * 部署至 Kubernetes 叢集。建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
 
-    * 使用 Cloud Foundry 部署，如此便不需要管理基礎的基礎架構。
+    * 使用 Cloud Foundry 進行部署，如此便不需要管理基礎的基礎架構。
 
 ## 步驟 5. 在本端建置及執行應用程式
 {: #build-run}
@@ -110,11 +110,11 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 ## 步驟 6. 部署應用程式
 {: #deploy}
 
-### 使用工具鏈部署
+### 使用工具鏈進行部署
 
 您有數種方式可以將應用程式部署至 {{site.data.keyword.cloud_notm}}，但 DevOps 工具鏈是部署正式作業應用程式的最佳方法。使用 DevOps 工具鏈，您可以輕鬆地自動部署到許多環境，並快速新增監視、記載和警示服務，以協助您在應用程式成長時進行管理。
 
-使用適當配置的工具鏈，建置-部署的循環會自動開始，並且全都合併到您儲存庫的主要分支。從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈都會針對自動部署進行配置。
+使用適當配置的工具鏈，會自動開始建置、部署的循環，並且全都合併到您儲存庫的主要分支。從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 
 
 您也可以從 DevOps 工具鏈手動部署應用程式：
@@ -123,7 +123,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 
 2. 按一下 **Delivery Pipeline**，您可以在其中啟動建置、管理部署，以及檢視日誌和歷程。
 
-### 使用 {{site.data.keyword.dev_cli_short}} 部署
+### 使用 {{site.data.keyword.dev_cli_short}} 進行部署
 
 若要將應用程式部署至 Cloud Foundry，請輸入下列指令：
 

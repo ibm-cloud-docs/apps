@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Création de demandes de signature de certificat
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL et en limitant l'accès aux applications.
 {:shortdesc}
 
-Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.Bluemix}}, vous devez créer une demande de signature de certificat sur votre serveur. Une demande de signature de certificat est un message qui est envoyé à une autorité de certification afin de demander la signature d'une clé publique et des informations associées. En général, les demandes de signature de certificat sont au format PKCS #10. Une demande de signature de certificat inclut une clé publique ainsi qu'un nom usuel, une organisation, une ville, un état, un pays et une adresse électronique. Les demandes de certificat SSL ne sont acceptées qu'avec une longueur de clé de demande de signature de certificat de 2048 bits.
+Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.cloud}}, vous devez créer une demande de signature de certificat sur votre serveur. Une demande de signature de certificat est un message qui est envoyé à une autorité de certification afin de demander la signature d'une clé publique et des informations associées. En général, les demandes de signature de certificat sont au format PKCS #10. Une demande de signature de certificat inclut une clé publique ainsi qu'un nom usuel, une organisation, une ville, un état, un pays et une adresse électronique. Les demandes de certificat SSL ne sont acceptées qu'avec une longueur de clé de demande de signature de certificat de 2048 bits.
 
 ## Contenu CSR requis
 
@@ -69,7 +70,7 @@ Si votre propriétaire de compte bénéficie d'un compte d'essai gratuit, vous d
 
 Pour pouvoir télécharger des certificats, vous devez créer une demande de signature de certificat.
 
-Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route d'URL de votre organisation dans {{site.data.keyword.Bluemix_notm}} :
+Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route d'URL de votre organisation dans {{site.data.keyword.cloud_notm}} :
 
 * Etats-Unis (Sud) - `secure.us-south.bluemix.net`
 * Etats-Unis (Est) - `secure.us-east.bluemix.net`
@@ -77,9 +78,9 @@ Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, ut
 * EUROPE (ROYAUME-UNI) - `secure.eu-gb.bluemix.net`
 * AUSTRALIE (SYDNEY) - `secure.au-syd.bluemix.net`
 
-Pour télécharger un certificat pour votre application, procédez comme suit. 
+Pour télécharger un certificat pour votre application, procédez comme suit.
 
-1. Accédez à votre tableau de bord.
+1. Accédez à la liste de vos ressources.
 
 2. Sélectionnez votre application pour ouvrir la vue des détails d'application.
 
@@ -89,15 +90,13 @@ Pour télécharger un certificat pour votre application, procédez comme suit.
 
 5. Cliquez sur **Télécharger** dans la colonne Certificat SSL et sélectionnez votre nom de domaine.
 
-6. Recherchez et téléchargez un certificat, une clé privée et, éventuellement, un certificat intermédiaire ou un certificat client. Pour activer le magasin de clés de confiance de certificat client, vous devez télécharger un fichier de clés certifiées de certificat client définissant les accès utilisateur autorisés à votre domaine personnalisé.
-
   #### Certificat
 
     Document numérique qui associe une clé publique à l'identité du propriétaire du certificat, permettant ainsi l'authentification du propriétaire du certificat. Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme.
 
     En général, un certificat est émis et signé par une autorité de certification. Toutefois, pour le test et le développement, vous pouvez utiliser un certificat autosigné.
 
-    Les types de certificat suivants sont pris en charge dans {{site.data.keyword.Bluemix_notm}}:
+    Les types de certificat suivants sont pris en charge dans {{site.data.keyword.cloud_notm}}:
 
 	* PEM (`pem`, `.crt`, `.cer` et `.cert`)
 	* DER (`.der` ou `.cer`)
@@ -107,7 +106,7 @@ Pour télécharger un certificat pour votre application, procédez comme suit.
 
     Modèle algorithmique utilisé pour chiffrer des messages que seule la clé publique correspondante peut déchiffrer. La clé privée sert également à déchiffrer les messages encodés par la clé publique correspondante. Elle est conservée sur le système de l'utilisateur et protégée par un mot de passe.
 
-    Les types de clé privée suivants sont pris en charge dans {{site.data.keyword.Bluemix_notm}}:
+    Les types de clé privée suivants sont pris en charge dans {{site.data.keyword.cloud_notm}}:
 
     * PEM (`pem`, `.key`)
     * PKCS #8 (`p8`, `pk8`)
@@ -123,13 +122,14 @@ certificat SSL émis pour l'organisation.
 
     Si vous activez cette option en téléchargeant un fichier de clés certifiées de certificat client, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir un certificat client pour le domaine. Utilisez l'option de téléchargement de fichier **Magasin de clés de confiance pour les certificats client** pour définir les certificats client auxquels vous permettez d'accéder à votre domaine personnalisé.
 
-  **Remarque :** la fonction de certificat personnalisé dans la gestion des domaines {{site.data.keyword.Bluemix_notm}} dépend de l'extension SNI (Server Name Indication) du protocole TLS (Transport Layer Security). Le code client qui accède aux applications {{site.data.keyword.Bluemix_notm}} protégées par des certificats personnalisés doit prendre en charge l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} et [Sécurisation des données avec TLS](/docs/get-support/appsectls.html).
+  La fonction de certificat personnalisé dans la gestion des domaines {{site.data.keyword.cloud_notm}} dépend de l'extension SNI (Server Name Indication) du protocole TLS (Transport Layer Security). Le code client qui accède aux applications {{site.data.keyword.Bluemix_notm}} protégées par des certificats personnalisés doit prendre en charge l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} et [Sécurisation des données avec TLS](/docs/get-support/appsectls.html).
+  {: note}
 
   #### Fichier de clés certifiées de certificat client
 
   Le fichier de clés certifiées de certificat client inclut les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Téléchargez un fichier de ce type pour pouvoir demander un certificat client.
 
-   Les types de certificat suivants sont pris en charge dans {{site.data.keyword.Bluemix_notm}}:
+   Les types de certificat suivants sont pris en charge dans {{site.data.keyword.cloud_notm}}:
 
       * PEM (pem, .crt, .cer et .cert)
       * PKCS #7 (p7b, p7r, spc)
@@ -141,5 +141,5 @@ Pour plus d'informations, voir [Importation de certificats SSL](/docs/infrastruc
 
 Pour supprimer un certificat ou remplacer un certificat existant, procédez comme suit.
 
-1. Sélectionnez **Gérer** > **Compte** > **Organisations Cloud Foundry**.
+1. Accédez à **Gérer > Compte** puis sélectionnez **Organisations Cloud Foundry**.
 2. Dans la colonne des actions, sélectionnez **Domaines** dans le menu des actions supplémentaires. Cliquez sur **Retirer de l'organisation** dans le menu des actions supplémentaires correspondant à l'organisation.

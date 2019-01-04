@@ -26,7 +26,7 @@ Il modello dell'applicazione web produce applicazioni che forniscono il contenut
 * Basic - fornisce un file `index.html` statico, un foglio di stile vuoto e predefinito e un file JavaScript.
 * React - un framework avanzato per creare le interfacce utente. I file di origine si trovano in `src/client/app` e vengono compilati con WebPack e forniti nella directory pubblica.
 
-Puoi trovare i kit starter per il modello dell'applicazione nel [Dashboard dello sviluppatore dell'applicazione web{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Puoi trovare i kit starter per il modello dell'applicazione web nel [dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## BFF (backend-for-frontend)
 {: #bff}
@@ -37,28 +37,28 @@ In {{site.data.keyword.cloud_notm}}, puoi creare un BFF con l'approccio di progr
 
 Il BFF gestisce la persistenza dei dati, la memorizzazione nella cache e l'integrazione con i seguenti servizi ad alto valore.
 
-* [{{site.data.keyword.ibmwatson}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
 
 Il BFF espone un'API utilizzando più comunemente un modello REST, ma puoi progettare il tuo BFF per lavorare da un'architettura di messaggistica che utilizza {{site.data.keyword.messagehub}}.
 
-Scegli un kit starter BFF per i tuoi requisiti di linguaggio e framework. Puoi trovare i kit starter per il modello BFF nel [Dashboard dello sviluppatore dell'applicazione web{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Scegli un kit starter BFF per i tuoi requisiti di linguaggio e framework. Puoi trovare i kit starter per il modello BFF nel [dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} Web App](https://{DomainName}/developer/appservice/dashboard).
 
 ## Microservizio
 {: #microservice}
 
 Le applicazioni del microservizio forniscono le basi per la creazione di microservizi di backend, inclusi un endpoint di integrità di base e l'API REST. Le applicazioni generate includono tutte le dipendenze richieste sia per il microservizio stesso sia per qualsiasi servizio cloud collegato.
 
-Scegli un kit starter del microservizio per i tuoi requisiti di linguaggio e framework. Puoi trovare i kit starter per il modello del microservizio nel [Dashboard dello sviluppatore dell'applicazione web{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Scegli un kit starter del microservizio per i tuoi requisiti di linguaggio e framework. Puoi trovare i kit starter per il modello del microservizio nel [dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} Web App](https://{DomainName}/developer/appservice/dashboard).
 
 ## Mobile
 {: #mobile}
 
 Le applicazioni mobili sono diverse dagli altri modelli perché hanno un componente lato client significativo. Il modello potrebbe includere la connessione diretta a servizi mobili come le notifiche push, l'autenticazione e l'analisi mobile. I servizi mobili sono noti come modello MBaaS (Mobile Backend as a Service). Possono anche avere un [backend-for-frontend](#bff) dedicato.
 
-{{site.data.keyword.cloud_notm}} offre diversi kit starter per dispositivo mobile per iOS Swift, Android e Cordova. Puoi trovare i kit starter per il modello del dispositivo mobile nel [Dashboard dello sviluppatore mobile {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} offre diversi kit starter per dispositivo mobile per iOS Swift, Android e Cordova. Puoi trovare i kit starter per il modello mobile nel [Dashboard dello sviluppatore mobile {{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/mobile/dashboard).
 
 ## Linguaggi
 {: #languages}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -22,14 +22,26 @@ Mendix 是低程式碼開發環境及工具集，它能協助您更快速地遞�
 ## 選取入門範本套件
 {: #select-a-starter-kit}
 
-2. 從 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/dashboard/apps){: new_window}，按一下**功能表**圖示 ![功能表圖示](../../icons/icon_hamburger.svg)。
-3. 從下列其中一個種類選取 Mendix 低程式碼入門範本套件：
-  * [Mobile ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-app)
-4. 按一下**建立應用程式**。
-5. 命名您的應用程式。 
-6. 按一下**建立**。
+1. 從「[{{site.data.keyword.cloud_notm}} 應用程式服務」儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/dashboard){: new_window} 中，按一下**開始使用**。
+2. 從下列其中一個種類選取 Mendix 低程式碼入門範本套件：
+  * [Mobile ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web or Mobile App ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
+3. 按一下**建立應用程式**。
+4. 命名您的應用程式。
+5. 按一下**建立**。
+
+<!-- 
+####### Promote CLOUD.IBM.COM links to prod when approved.
+1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
+2. Select a Mendix low-code starter kit from one of the following categories:
+  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
+3. Click **Create app**.
+4. Name your app.
+5. Click **Create**.
+-->
 
 ## 授權 IBM 在 Mendix 上建立專案並鏈結帳戶
 {: #link-mendix-account}

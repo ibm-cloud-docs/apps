@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -25,7 +25,7 @@ Vous pouvez créer et utiliser un domaine personnalisé en utilisant la console 
 
 Procédez comme suit pour créer un domaine personnalisé pour votre organisation à l'aide de la console :
 
-1. Accédez à **Gérer** > **Compte** > **Organisations Cloud Foundry**.
+1. Accédez à **Gérer > Compte** puis sélectionnez **Organisations Cloud Foundry**.
 2. Cliquez sur le nom de l'organisation pour laquelle vous créez un domaine personnalisé.
 3. Cliquez sur l'onglet **Domaines**.
 4. Cliquez sur **Ajouter un domaine**, entrez le nom de votre domaine et sélectionnez la région.
@@ -36,8 +36,8 @@ Par exemple, vous pouvez utiliser `*.mycompany.com` pour associer la route `www.
 
 Ajoutez la route avec le domaine personnalisé à une application.
 
-1. Cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) > **Tableau de bord**, puis sur la ligne de l'application à laquelle ajouter la route. La page **Vue d'ensemble** s'affiche.
-2. Dans le menu **Routes**, sélectionnez **Editer les routes**.
+1. Cliquez sur l'icône **Menu**![Icône Menu](../icons/icon_hamburger.svg) > **liste de ressources**, puis sur la ligne de l'application à laquelle ajouter la route. La page Présentation s'affiche.
+2. Cliquez sur le menu **Routes** puis sélectionnez **Editer les routes**.
 3. Cliquez sur **Ajouter une route** et spécifiez la route à utiliser pour l'application.
 4. Confirmez vos mises à jour en cliquant sur **Sauvegarder**.
 
@@ -46,7 +46,7 @@ Ajoutez la route avec le domaine personnalisé à une application.
 1. Créez un domaine personnalisé pour votre organisation en lançant la commande suivante :
 
    ```
-   ibmcloud app domain-create <nom_organisation> mydomain
+   ibmcloud app domain-create <your org name> mydomain
    ```
 
 2. Ajoutez la route avec le domaine personnalisé à une application. Pour les applications Cloud Foundry, entrez la commande suivante :

@@ -26,7 +26,7 @@ Web 應用程式模式會產生應用程式，以提供 web 內容（例如 HTML
 * 基本 - 提供靜態 `index.html` 檔、預設和空的樣式表，以及 JavaScript 檔。
 * React - Rich 架構，用來建置使用者介面。原始檔位於 `src/client/app`，並使用 WebPack 進行編譯，且在公用目錄中提供。
 
-您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到 Web 應用程式模式的入門範本套件。
+您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard)上找到 Web 應用程式模式的入門範本套件。
 
 ## Backend for Frontend
 {: #bff}
@@ -37,28 +37,28 @@ Backendf for Frontend 模式 (BFF) 可協助建立後端程式碼，以符合特
 
 BFF 會使用下列高價值的服務管理資料持續性、快取及整合。
 
-* [{{site.data.keyword.ibmwatson}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps)。
+* [{{site.data.keyword.ibmwatson}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps)。
 
 BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，從使用 {{site.data.keyword.messagehub}} 的傳訊架構工作。
 
-請針對您的語言及架構需求選擇 BFF 入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到 BFF 模式的入門範本套件。
+請針對您的語言及架構需求選擇 BFF 入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard)上找到 BFF 模式的入門範本套件。
 
 ## 微服務
 {: #microservice}
 
 「微服務」應用程式提供建置後端微服務的基礎（包括基本性能端點及 REST API）。產生的應用程式包含微服務本身及任何附加之雲端服務所需的所有相依關係。
 
-請針對您的語言及架構需求選擇微服務入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://console.bluemix.net/developer/appservice/dashboard)上找到「微服務」模式的入門範本套件。
+請針對您的語言及架構需求選擇微服務入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard)上找到「微服務」模式的入門範本套件。
 
 ## 行動
 {: #mobile}
 
 行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線。行動服務稱為「行動後端即服務」，或 MBaaS 模式。它們也有專用的 [Backend for Frontend](#bff)。
 
-{{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://console.bluemix.net/developer/mobile/dashboard)上找到「行動」模式的入門範本套件。
+{{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://{DomainName}/developer/mobile/dashboard)上找到「行動」模式的入門範本套件。
 
 ## 語言
 {: #languages}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,7 +24,7 @@ Os domínios fornecem a rota da URL que é alocada para sua organização no {{s
 
 Conclua as etapas a seguir para criar um domínio customizado para sua organização usando o console:
 
-1. Acesse **Gerenciar** > **Conta** > **Organizações do Cloud Foundry**.
+1. Acesse **Gerenciar > Conta** e selecione **Organizações do Cloud Foundry**.
 2. Clique no nome da organização para a qual você está criando um domínio customizado.
 3. Clique na guia **Domínios**.
 4. Clique em **Incluir um domínio** e insira seu nome de domínio e selecione a região.
@@ -35,9 +35,8 @@ Como um exemplo, é possível usar `*.mycompany.com` para associar a rota `www.m
 
 Inclua a rota com o domínio customizado para um aplicativo.
 
-1. Clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) > **Painel** e, em seguida, clique na linha do aplicativo no qual você deseja incluir a rota. A página
-**Visão geral** é exibida.
-2. No menu **Rotas**, selecione **Editar rotas**.
+1. Clique no ícone **Menu** ![Ícone de menu](../icons/icon_hamburger.svg) > **Lista de recursos** e, então, clique na linha para o aplicativo ao qual deseja incluir a rota. A página Visão geral é exibida.
+2. Clique no menu **Rotas**, selecione **Editar rotas**.
 3. Clique em **Incluir rota** e especifique a rota que você deseja usar para o aplicativo.
 4. Confirme suas atualizações clicando em **Salvar**.
 

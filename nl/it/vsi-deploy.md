@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,29 +12,27 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # Distribuzione a un server virtuale
 {: #vsi-deploy}
 
-Puoi utilizzare l'{{site.data.keyword.cloud}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} per distribuire le tue applicazioni a molti tipi di ambienti, comprese le istanze del server virtuale. Un'istanza del server virtuale emula una macchina bare metal ed è una scelta di distribuzione comune quando si spostano sul cloud i carichi di lavoro .
+Se hai un account Pagamento a consumo, puoi utilizzare l'{{site.data.keyword.cloud}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} per distribuire le tue applicazioni a molti tipi di ambienti, comprese le istanze del server virtuale (o VSI, Virtual Server Instance). Un'istanza del server virtuale (o VSI, Virtual Server Instance) emula una macchina bare metal ed è una scelta di distribuzione comune quando si spostano sul cloud i carichi di lavoro .
 {: shortdesc}
 
-Un'istanza del server virtuale offre trasparenza, prevedibilità e automazione migliori per tutti i tipi di carico di lavoro quando confrontata con altre configurazioni. Combinala con un server bare metal per creare combinazioni di carico di lavoro uniche. Ad esempio, puoi creare la logica di database ad alte prestazioni o machine learning con configurazioni bare metal e GPU che eseguono un sistema operativo basato su Linux Debian.
+Un'istanza del server virtuale (o VSI, Virtual Server Instance) offre trasparenza, prevedibilità e automazione migliori per tutti i tipi di carico di lavoro quando confrontata con altre configurazioni. Combinala con un server bare metal per creare combinazioni di carico di lavoro uniche. Ad esempio, puoi creare la logica di database ad alte prestazioni o machine learning con configurazioni bare metal e GPU che eseguono un sistema operativo basato su Linux Debian.
 
-Il provisioning di un'istanza del server virtuale e la sua distribuzione può essere un processo complesso e dispendioso in termini di tempo ma puoi essere operativo rapidamente utilizzando {{site.data.keyword.cloud_notm}} App Service.
+Il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) e la sua distribuzione può essere un processo complesso e dispendioso in termini di tempo ma puoi essere operativo rapidamente utilizzando {{site.data.keyword.cloud_notm}} App Service.
 
-## Prima di iniziare
-{: #prereqs}
-
-Esegui l'aggiornamento a un account Pagamento a consumo. Per utilizzare le istanze virtuali, il tuo account {{site.data.keyword.cloud_notm}} deve essere abilitato per l'infrastruttura classica. Per aggiornare il tuo account, vai a **Gestisci** > **Fatturazione e utilizzo** > **Fatturazione** nella console.
-
-**Importante:** non viene eseguito il bind dei servizi all'istanza del server virtuale. Non puoi aggiungere servizi a un'applicazione in un server virtuale.
+Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, Virtual Server Instance). Non puoi aggiungere servizi a un'applicazione in un server virtuale.
+{: important}
 
 ## Creazione e distribuzione di applicazioni
 {: #create-deploy}
 
-L'App Service esegue il provisioning di un'istanza del server virtuale per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
+L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
 1. [Crea un'applicazione](index.html#createapp). 
 2. Fai clic su **Deploy to Cloud** dalla pagina dei dettagli dell'applicazione.
@@ -51,7 +48,7 @@ Tutti i kit starter del servizio dell'applicazione possono essere distribuiti in
 
 ### Abilitazione della tua distribuzione della pipeline
 
-Quando crei un kit starter che utilizza {{site.data.keyword.cloud_notm}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}, viene abilitata l'istanza del server virtuale. Dopo aver creato l'applicazione, puoi scegliere dove vuoi distribuirla. I kit starter sono abilitati per supportare la distribuzione utilizzando una toolchain di Continuous Delivery. I kit starter possono avere come destinazione istanze di Virtual Server, Kubernetes e Cloud Foundry. La toolchain include un repository del codice di origine e una pipeline di distribuzione.
+Quando crei un kit starter che utilizza {{site.data.keyword.cloud_notm}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, viene abilitata l'istanza del server virtuale (o VSI, Virtual Server Instance). Dopo aver creato l'applicazione, puoi scegliere dove vuoi distribuirla. I kit starter sono abilitati per supportare la distribuzione utilizzando una toolchain di Continuous Delivery. I kit starter possono avere come destinazione istanze di Virtual Server, Kubernetes e Cloud Foundry. La toolchain include un repository del codice di origine e una delivery pipeline.
 
 L'opzione del server virtuale funziona a fasi. Per prima cosa, il codice dell'applicazione viene preparato e memorizzato in un repository GitLab Git e il codice di origine crea una toolchain con una pipeline. La pipeline viene definita per creare il codice e impacchettarlo in un formato del gestore pacchetti Debian. Quindi, Terraform fornisce un'istanza virtuale. Infine, l'applicazione viene distribuita, installata e avviata all'interno dell'immagine virtuale in esecuzione e il relativo stato di integrità viene convalidato.
 
@@ -64,57 +61,63 @@ Per visualizzare queste proprietà di ambiente, completa la seguente procedura.
 3. Fai clic sull'icona **Stage Configure** e quindi su **Configure Stage** nella fase di build.
 4. Fai clic sulla scheda **Environment Properties** per visualizzare le proprietà. Utilizza la seguente tabella per ulteriori informazioni sulle proprietà disponibili.
 
-  | Proprietà   | Descrizione   |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](#iaas-key) viene dalla console dell'infrastruttura classica. |
-  | `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](#user-key) che identifica l'account dell'infrastruttura classica |
-  | `TF_VAR_ibm_cloud_api_key` | La [chiave API della piattaforma](#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
-  | `PUBLIC_KEY` | La [chiave pubblica](#public-key) definita per abilitare l'accesso all'istanza del server virtuale. |
-  | `PRIVATE_KEY` | La [chiave privata](#public-key) definita per abilitare l'accesso all'istanza del server virtuale. **Nota**: devi utilizzare la formattazione di stile nuova riga `\n`. |
-  | `VI_INSTANCE_NAME` | Il nome generato automaticamente per l'istanza del server virtuale. |
-  | `GIT_USER` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
-  | `GIT_PASSWORD` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
-  {: caption="Tabella 1. Variabili di ambiente da modificare per l'abilitazione" caption-side="top"}
+| Proprietà  | Descrizione  |
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](#iaas-key) viene dalla console dell'infrastruttura classica. |
+| `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](#user-key) che identifica l'account dell'infrastruttura classica |
+| `TF_VAR_ibm_cloud_api_key` | La [chiave API della piattaforma](#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
+| `PUBLIC_KEY` | La [chiave pubblica](#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). |
+| `PRIVATE_KEY` | La [chiave privata](#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). Devi utilizzare la formattazione di stile nuova riga `\n`. |
+| `VI_INSTANCE_NAME` | Il nome generato automaticamente per l'istanza del server virtuale (o VSI, Virtual Server Instance). |
+| `GIT_USER` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
+| `GIT_PASSWORD` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
+{: caption="Tabella 1. Variabili di ambiente da modificare per l'abilitazione" caption-side="top"}
+
 
 #### Chiave API dell'infrastruttura
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell'infrastruttura. La chiave API viene ottenuta automaticamente durante la distribuzione. Per richiamare manualmente una chiave, completa la seguente procedura.
 
-Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell'infrastruttura classica che viene ottenuta automaticamente durante la distribuzione. Per richiamare manualmente una chiave, completa la seguente procedura. 
+1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
+3. Fai clic su **Aggiungi chiave infrastruttura classica** nella sezione Chiavi API.
+4. Copia o scarica la chiave API `TF_VAR_ibm_sl_api_key` e salvala in un luogo sicuro. Puoi richiamare i dettagli della chiave API in un secondo momento utilizzando l'opzione **Visualizza dettagli** dal menu **Azioni** ![Icona di elenco di azioni](../icons/action-menu-icon.svg).
+5. Incolla il valore di chiave API copiato nella configurazione della toolchain per sostituire il valore `TF_VAR_ibm_sl_api_key`.
 
-1. Vai all'[elenco utenti dell'infrastruttura classica ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Account** > **Elenco utenti**.
-2. Trova i dettagli dell'utente che sta creando la toolchain e fai clic su **Visualizza** nella colonna della chiave API oppure fai clic su **Genera**. Entrambi i passi visualizzano la chiave API in una finestra.
-3. Copia la chiave API e sostituisci il valore nella configurazione della toolchain `TF_VAR_ibm_sl_api_key`.
+Per ulteriori informazioni, vedi i documenti relativi alla [gestione delle chiavi API dell'infrastruttura classica](/docs/iam/classic_infra_keys.html) e alle [autorizzazioni dell'infrastruttura classica](/docs/iam/infrastructureaccess.html).
 
-#### Nome utente dell'infrastruttura classica
+#### Nome utente dell'infrastruttura
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+Il nome utente dell'infrastruttura viene anche ottenuto automaticamente e utilizzato durante la distribuzione. Per ottenere manualmente il nome utente, completa la seguente procedura.
 
-Anche il nome utente dell'infrastruttura classica viene ottenuto automaticamente e utilizzato durante la distribuzione. Per ottenere manualmente il nome utente, completa la seguente procedura.
+1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
+3. Individua la proprietà **Nome utente VPN**.
+4. Taglia e incolla questo valore e sostituisci il valore `TF_VAR_ibm_sl_username` della configurazione della toolchain.
 
-1. Vai all'[elenco utenti dell'infrastruttura classica ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Account** > **Elenco utenti**.
-2. Fai clic sull'utente per cui vuoi creare la toolchain.
-3. Scorri verso il basso fino alla proprietà **Nome utente VPN**.
-4. Taglia e incolla questo valore e sostituisci la configurazione della toolchain `TF_VAR_ibm_sl_username`.
-
-#### Chiave API della piattaforma
+#### Chiave API IBM Cloud
 {: #platform-key}
 
-Per creare servizi a livello di piattaforma in Terraform, come database e servizi di composizione, la chiave API della piattaforma viene automaticamente ottenuta ed archiviata come variabile di ambiente nella tua pipeline. Per richiamare manualmente una chiave di piattaforma, completa la seguente procedura.
+Per creare servizi a livello di piattaforma in Terraform, come database e servizi di composizione, la chiave API della piattaforma viene automaticamente ottenuta ed archiviata come una variabile di ambiente nella tua pipeline. Per richiamare manualmente una chiave di piattaforma, completa la seguente procedura.
 
-1. Dalla pagina [Chiavi API ![Icona link esterno](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), fai clic su **Gestisci** > **Sicurezza** > **Chiavi API della piattaforma**.
-2. Fai clic su **Crea**.
-3. Immetti un nome e una descrizione e fai clic su **Crea**.
-4. Quando si apre la finestra, fai clic su **Mostra** per esaminare la chiave.
-5. Copia e incolla la chiave negli appunti o scaricala.
-6. Sostituisci il valore nella configurazione della toolchain `TF_VAR_ibm_cloud_api_key` con il valore che è stato generato.
+1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
+3. Individua la sezione Chiavi API e fai clic su **Crea una chiave API IBM Cloud**.
+4. Immetti un nome e una descrizione e fai clic su **Crea**.
+5. Quando si apre la finestra, fai clic su **Mostra** per esaminare la chiave.
+6. Copia e incolla la chiave negli appunti oppure scarica la chiave.
+7. Sostituisci il valore nella configurazione della toolchain `TF_VAR_ibm_cloud_api_key` con il valore che è stato generato.
 
 #### Chiavi pubbliche e private
 {: #public-key}
-
-Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale, l'infrastruttura di distribuzione genera automaticamente una coppia di chiavi SSH privata e pubblica per trasferire i contenuti Git all'istanza.
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale (o VSI, Virtual Server Instance), l'infrastruttura di distribuzione genera automaticamente una coppia di chiavi SSH privata e pubblica per trasferire i contenuti Git all'istanza.
 
 Per effettuare questa operazione manualmente:
 1. Nel tuo client, utilizza le seguenti istruzioni per creare una [coppia di chiavi pubblica e privata ![Icona link esterno](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
+2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
 3. Fai clic su **Aggiungi**.
 4. Copia il contenuto della chiave pubblica che hai precedentemente creato e incollalo nel contenuto della chiave.
 5. Assegna un nome alla chiave e fai clic su **Aggiungi**.

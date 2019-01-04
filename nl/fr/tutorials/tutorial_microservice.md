@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 
 Créez une application dans {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} :
 
-1. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage. Par exemple, pour une application Node.js, accédez à **Express.js Microservice** et cliquez sur **Sélectionner un kit de démarrage**.
+1. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage. Par exemple, pour une application Node.js, accédez à **Express.js Microservice** et cliquez sur **Sélectionner un kit de démarrage**.
 2. Entrez le nom de votre application. Pour ce tutoriel, utilisez `MicroserviceProject`.
 3. Entrez un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`
 4. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.

@@ -2,11 +2,17 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
 建立應用程式
 
     {: .navgroup id="learn"}
-    index.md
+    {: .topicgroup}
+    開始使用
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+    
     development_process.md
     best-practice.md
     patterns.md
@@ -17,10 +23,8 @@
     建立應用程式
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
-        tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        create-deploy-cli.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
 
@@ -28,29 +32,37 @@
     部署及整合應用程式
         vsi-deploy.md
         deploying/containers.md
+        tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_starter_kube.md
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    connect_external_app.md
+    
+    {: .topicgroup}
+    將認證新增至環境
+        creds_overview.md
+        creds_kube.md
+        creds_cf.md
+        creds_vsi.md
+
     mngapps.md
     updapps.md
     secapps.md
-    building-apps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 指令行參考資料](https://console.bluemix.net/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools 指令行參考資料](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
     IBM 開發人員儀表板
-        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
-        [財務](https://console.bluemix.net/developer/finance/dashboard)
-        [行動](https://console.bluemix.net/developer/mobile/dashboard)
-        [安全](https://console.bluemix.net/developer/security/dashboard)
-        [Watson](https://console.bluemix.net/developer/watson/dashboard)
-        [Web 應用程式](https://console.bluemix.net/developer/appservice/dashboard)
+        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
+        [財務](https://cloud.ibm.com/developer/finance/dashboard)
+        [行動](https://cloud.ibm.com/developer/mobile/dashboard)
+        [安全](https://cloud.ibm.com/developer/security/dashboard)
+        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
+        [Web 應用程式](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     應用程式內容
@@ -67,6 +79,6 @@
     ts_apps.md
     [IBM Cloud Slack developer-tools 頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API 參考資料](https://console.bluemix.net/apidocs/functions)
-    [行動 SDK](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [Cloud Functions API 參考資料](https://cloud.ibm.com/apidocs/functions)
+    [行動 SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

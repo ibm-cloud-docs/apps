@@ -26,7 +26,7 @@ Das Web-App-Muster generiert Apps, die Webinhalte wie HTML, JavaScript und Style
 * Basic - stellt eine statische Datei `index.html`, ein Standard- und ein leeres Stylesheet und eine JavaScript-Datei bereit.
 * React - ein umfangreiches Framework zum Erstellen von Benutzerschnittstellen. Die Quellendateien befinden sich im Verzeichnis `src/client/app`, werden mit WebPack kompiliert und im öffentlichen Verzeichnis bereitgestellt.
 
-Sie können Starter-Kits für Web-App-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://console.bluemix.net/developer/appservice/dashboard) finden.
+Sie können Starter-Kits für Web-App-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://{DomainName}/developer/appservice/dashboard) finden.
 
 ## Back-End for Front-End (BFF)
 {: #bff}
@@ -37,28 +37,28 @@ In {{site.data.keyword.cloud_notm}} können Sie ein Back-End-for-Front-End-Muste
 
 BFF verwaltet Datenpersistenz, Caching und Integration mit den folgenden hochwertigen Services.
 
-* [{{site.data.keyword.ibmwatson}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps)
+* [{{site.data.keyword.ibmwatson}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps)
 
 Das Back-End-for-Front-End-Muster macht eine API in den meisten Fällen mithilfe eines REST-Musters verfügbar, aber Sie können Ihr eigenes Back-End-for-Front-End-Muster so konzipieren, dass es aus einer Messaging-Architektur heraus mit {{site.data.keyword.messagehub}} arbeitet.
 
-Wählen Sie ein BFF-Starter-Kit für die jeweiligen Sprach- und Frameworkanforderungen aus. Sie finden die Starter-Kits für BFF-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://console.bluemix.net/developer/appservice/dashboard).
+Wählen Sie ein BFF-Starter-Kit für die jeweiligen Sprach- und Frameworkanforderungen aus. Sie finden die Starter-Kits für BFF-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://{DomainName}/developer/appservice/dashboard).
 
 ## Mikroservice
 {: #microservice}
 
 Mikroservice-Apps bilden die Basis für das Erstellen von Back-End-Mikroservices, einschließlich eines grundlegenden Statusendpunkts und einer REST-API. Generierte Apps enthalten alle Abhängigkeiten, die sowohl für den Mikroservice selbst, als auch für alle angehängten Cloud-Services erforderlich sind.
 
-Wählen Sie ein Mikroservice-Starter-Kit für die jeweiligen Sprach- und Frameworkanforderungen aus. Sie finden die Starter-Kits für Mikroservice-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://console.bluemix.net/developer/appservice/dashboard).
+Wählen Sie ein Mikroservice-Starter-Kit für die jeweiligen Sprach- und Frameworkanforderungen aus. Sie finden die Starter-Kits für Mikroservice-Muster im [{{site.data.keyword.cloud_notm}} App Service-Entwicklerdashboard](https://{DomainName}/developer/appservice/dashboard).
 
 ## Mobil
 {: #mobile}
 
 Apps für Mobilgeräte unterscheiden sich von den anderen Mustern, weil sie eine signifikante clientseitige Komponente enthalten. Das Muster könnte beispielsweise eine direkte Verbindung zu mobilen Services wie Push-Benachrichtigungen, Authentifizierung und Analysen für Mobilanwendungen umfassen. Mobile Services werden als MBaaS-Muster (Mobile Backend as a Service) bezeichnet. Sie können auch über ein dediziertes [BFF](#bff) verfügen.
 
-{{site.data.keyword.cloud_notm}} bietet diverse Starter-Kits für Mobilgeräte für iOS Swift, Android und Cordova. Sie finden die Starter-Kits für das Muster für Mobilgeräte im [{{site.data.keyword.cloud_notm}} Mobile-Entwicklerdashboard](https://console.bluemix.net/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} bietet diverse Starter-Kits für Mobilgeräte für iOS Swift, Android und Cordova. Sie finden die Starter-Kits für das Muster für Mobilgeräte im [{{site.data.keyword.cloud_notm}} Mobile-Entwicklerdashboard](https://{DomainName}/developer/mobile/dashboard).
 
 ## Sprachen
 {: #languages}

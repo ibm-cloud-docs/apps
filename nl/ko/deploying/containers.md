@@ -29,13 +29,13 @@ Kubernetes 클러스터에서 실행되는 Docker 컨테이너에 고가용성 �
 
 1. 자동화된 클라우드 파이프라인을 설정하여 앱을 클라우드에 배치하십시오.
 2. **클라우드에 배치**를 클릭하십시오.
-3. 대상으로 Kubernetes를 선택하십시오. 아직 클러스터가 하나도 없으면 [클러스터 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window}을 수행해야 합니다.
+3. 대상으로 Kubernetes를 선택하십시오. 아직 클러스터가 하나도 없으면 [클러스터 작성 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window}을 수행해야 합니다.
 4. 배치가 완료된 후 Delivery Pipeline의 배치 단계에서 로그의 URL을 가져와서 클라우드에 있는 라이브 앱을 확인하십시오. 포트가 포함된 마지막 IP 주소는 앱의 새 홈입니다(예: 169.60.133.124:32355).
 
 ## 서비스 바인딩
 {: #bind-services}
 
-도구 체인이 작성되면 앱과 연관된 서비스가 Kubernetes 시크릿을 사용하여 Kubernetes 클러스터에 바인드됩니다. 시크릿은 실행 중인 앱의 외부에서 서비스 신임 정보를 관리하는 데 사용됩니다. 앱은 시크릿을 읽은 후 실행을 시작하는 데 필요한 값을 검색합니다. 서비스를 바인드하면 프로덕션 레벨 {{site.data.keyword.cloud_notm}} 서비스 인스턴스를 사용하고 있을 수 있는 다른 Kubernetes 환경에 앱을 배치할 수 있습니다.
+도구 체인이 작성되면 앱과 연관된 서비스가 Kubernetes 시크릿을 사용하여 Kubernetes 클러스터에 바인드됩니다. 시크릿은 실행 중인 앱의 외부에서 서비스 인증 정보를 관리하는 데 사용됩니다. 앱은 시크릿을 읽은 후 실행을 시작하는 데 필요한 값을 검색합니다. 서비스를 바인드하면 프로덕션 레벨 {{site.data.keyword.cloud_notm}} 서비스 인스턴스를 사용하고 있을 수 있는 다른 Kubernetes 환경에 앱을 배치할 수 있습니다.
 
 서비스 또는 시크릿을 삭제한 경우 수동으로 이를 다시 바인드하거나 도구 체인을 삭제한 후 다시 작성해야 합니다.
 {: tip}
@@ -67,11 +67,11 @@ Kubernetes 클러스터에서 실행되는 Docker 컨테이너에 고가용성 �
 
 자세한 정보는 [차트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.helm.sh/developing_charts/){:new_window}를 참조하십시오.
 
-{{site.data.keyword.cloud_notm}}는 다수의 [사전 구성된 Helm 차트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}를 지원합니다.
+{{site.data.keyword.cloud_notm}}는 다수의 [사전 구성된 Helm 차트 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}를 지원합니다.
 
 ## 앱 보안 확인
 {: #sec}
 
 {{site.data.keyword.containershort_notm}}는 보안 취약점에 대한 패키지된 컨테이너 이미지의 스캔을 지원합니다. 보안 스캔은 엔터프라이즈급 애플리케이션을 지원하는 데 필수입니다.
 
-잠재적인 보안 취약점을 확인하려면 컨테이너 [이미지 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window}를 보십시오.
+잠재적인 보안 취약점을 확인하려면 컨테이너 [이미지 저장소 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/containers-kubernetes/registry/private){:new_window}를 보십시오.

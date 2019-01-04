@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 
 | Stammverzeichnis                                     | Beschreibung                       |
 |:------------------------------------------------|:------------------------------------------|
-|package.json | Metadatendatei |
+|package.json | Metadateninformationen zu dem Paket, einschließlich Name, Version und Abhängigkeiten. |
 |cli-config.yml | CLI-Konfigurationsoptionen |
 |manifest.yml | Cloud Foundry-Bereitstellungsdatei |
-|Dockerfile |Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
+|Dockerfile | Dockerfile für Befehle `ibmcloud dev run`, `ibmcloud dev deploy` und `docker` |
 |Dockerfile-tools | Dockerfile für `ibmcloud dev build` und `ibmcloud dev test` |
 |docker-compose.yml | App-Service-Konfiguration für Docker Compose |
-|webpack.config.js | Webpack-Konfiguration für buildbezogene Informationen |
+|webpack.config.js | Web pack-Konfiguration für buildbezogene Informationen |
 | LICENSE | Lizenzdatei |
 |README.md | Beschreibung der App |
 {: caption="Tabelle 1. Inhalt des Stammverzeichnisses einer generierten Node.js-App" caption-side="top"}
@@ -52,7 +52,7 @@ In der folgenden Tabelle sind die gängigen Verzeichnisse und Dateien aufgeliste
 | toolchain.yml | IBM Cloud-Toolchaindefinition |
 {: caption="Tabelle 4. Inhalt des Bluemix-Verzeichnisses einer generierten Node.js-App" caption-side="top"}
 
-| Verzeichnis `./chart/<projectname>/` | Beschreibung |
+| `./chart/<projectname>Verzeichnis /` | Beschreibung |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Helm-Diagramm |
 | `./chart/<projectname>/values.yaml` | Helm-Diagrammwerte |

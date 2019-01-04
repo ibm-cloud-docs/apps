@@ -29,7 +29,7 @@ Wenn Sie Back-End- oder Web-Serving-Apps erstellen, können Sie sie im {{site.da
 
 1. Stellen Sie die App in der Cloud bereit, indem Sie eine automatisiert Cloud-Pipeline einrichten.
 2. Klicken Sie auf **In Cloud bereitstellen**.
-3. Wählen Sie Kubernetes als Ziel aus. Sie müssen [einen Cluster erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window}, falls noch kein Cluster vorhanden ist.
+3. Wählen Sie Kubernetes als Ziel aus. Sie müssen [einen Cluster erstellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window}, falls noch kein Cluster vorhanden ist.
 4. Rufen Sie nach dem Abschluss der Bereitstellung Ihre Live-App in der Cloud auf, indem Sie die URL aus den Protokollen der Bereitstellungstage in der Delivery Pipeline verwenden. Die letzte IP-Adresse mit einem Port ist die neue Startseite Ihrer App, z. B. 169.60.133.124:32355.
 
 ## Services binden
@@ -67,11 +67,11 @@ Die Bereitstellungsstage ruft das neueste Image aus {{site.data.keyword.registry
 
 Weitere Informationen finden Sie in [Diagramme ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.helm.sh/developing_charts/){:new_window}.
 
-{{site.data.keyword.cloud_notm}} unterstützt eine Reihe von [vorkonfigurierten Helm-Diagrammen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}.
+{{site.data.keyword.cloud_notm}} unterstützt eine Reihe von [vorkonfigurierten Helm-Diagrammen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}.
 
 ## App-Sicherheit überprüfen
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} unterstützt das Scannen der gepackten Container-Images zur Überprüfung auf Sicherheitslücken. Das Scannen zu Sicherheitszwecken ist für die Unterstützung von auf Unternehmen abgestimmten Anwendungen unverzichtbar.
 
-Rufen Sie das [Image-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} für die Container auf, um eine Überprüfung auf potenzielle Sicherheitslücken durchzuführen.
+Rufen Sie das [Image-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} für die Container auf, um eine Überprüfung auf potenzielle Sicherheitslücken durchzuführen.

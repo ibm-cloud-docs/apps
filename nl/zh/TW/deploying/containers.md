@@ -30,7 +30,7 @@ lastupdated: "2018-07-23"
 
 1. 設定自動化雲端管線來將應用程式部署至雲端。
 2. 按一下**部署至雲端**。
-3. 選取 Kubernetes 作為目標。您需要[建立叢集 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window}，如果還沒有的話。
+3. 選取 Kubernetes 作為目標。您需要[建立叢集 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window}，如果還沒有的話。
 4. 部署完成之後，請從交付管線的部署階段日誌取得 URL，查看雲端中的即時應用程式。最後一個具有埠的 IP 位址是您應用程式的新首頁，例如 169.60.133.124:32355。
 
 ## 連結服務
@@ -50,7 +50,7 @@ lastupdated: "2018-07-23"
 2. 藉由將儲存庫複製到本端環境，存取建立程式碼所在的 Git 儲存庫。
 3. 使用您最愛的 IDE 開啟專案。
 
-## 使用工具鏈建置及部署
+## 使用工具鏈進行建置及部署
 {: #bulid-deploy-tc}
 
 工具鏈包含建置階段及部署階段。
@@ -68,11 +68,11 @@ lastupdated: "2018-07-23"
 
 如需相關資訊，請參閱 [Charts ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.helm.sh/developing_charts/){:new_window}。
 
-{{site.data.keyword.cloud_notm}} 支援許多[預先配置的 Helm 圖表 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}。
+{{site.data.keyword.cloud_notm}} 支援許多[預先配置的 Helm 圖表 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}。
 
 ## 檢查應用程式安全
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} 支援掃描已包裝的容器映像檔是否有安全漏洞。安全掃描對於支援企業應用程式而言相當重要。
 
-檢視容器[映像檔儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} 以檢查可能的安全漏洞。
+檢視容器[映像檔儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} 以檢查可能的安全漏洞。

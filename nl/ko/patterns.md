@@ -26,7 +26,7 @@ lastupdated: "2018-07-22"
 * Basic - 정적 `index.html` 파일, 비어 있는 기본 스타일시트 및 JavaScript 파일을 제공합니다.
 * React - 사용자 인터페이스 빌드를 위한 세련된 프레임워크입니다. 소스 파일은 `src/client/app`에 있으며, webpack으로 컴파일되고 공용 디렉토리에서 제공됩니다.
 
-웹 앱 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://console.bluemix.net/developer/appservice/dashboard)에서 찾을 수 있습니다.
+웹 앱 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard)에서 찾을 수 있습니다.
 
 ## 프론트 엔드를 위한 백엔드
 {: #bff}
@@ -37,28 +37,28 @@ lastupdated: "2018-07-22"
 
 BFF는 데이터 지속성, 캐싱 및 다음 고가치 서비스와의 통합을 관리합니다.
 
-* [{{site.data.keyword.ibmwatson}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps)를 참조하십시오.
+* [{{site.data.keyword.ibmwatson}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps)를 참조하십시오.
 
 BFF는 가장 일반적으로 REST 패턴을 사용하여 API를 노출하지만, {{site.data.keyword.messagehub}}를 사용하는 메시징 아키텍처로부터 작동하도록 BFF를 디자인할 수도 있습니다.
 
-언어 및 프레임워크 요구사항에 맞는 BFF 스타터 킷을 선택하십시오. BFF 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://console.bluemix.net/developer/appservice/dashboard)에서 찾을 수 있습니다.
+언어 및 프레임워크 요구사항에 맞는 BFF 스타터 킷을 선택하십시오. BFF 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard)에서 찾을 수 있습니다.
 
 ## 마이크로서비스
 {: #microservice}
 
 마이크로서비스 앱은 기본 상태 엔드포인트 및 REST API를 포함하는 백엔드 마이크로서비스를 빌드하는 데 필요한 기반을 제공합니다. 생성되는 앱에는 마이크로서비스 자체 및 연결된 클라우드 서비스 둘 다에 필요한 모든 종속 항목이 포함되어 있습니다.
 
-언어 및 프레임워크 요구사항에 맞는 마이크로서비스 스타터 킷을 선택하십시오. 마이크로서비스 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://console.bluemix.net/developer/appservice/dashboard)에서 찾을 수 있습니다.
+언어 및 프레임워크 요구사항에 맞는 마이크로서비스 스타터 킷을 선택하십시오. 마이크로서비스 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard)에서 찾을 수 있습니다.
 
 ## 모바일
 {: #mobile}
 
 모바일 앱은 중요한 클라이언트 측 컴포넌트를 포함하고 있으므로 다른 패턴과는 다릅니다. 이 패턴은 푸시 알림, 인증 및 모바일 분석과 같은 모바일 서비스에 대한 직접 연결을 포함할 수 있습니다. 모바일 서비스를 MBaaS(Mobile Backend as a Service) 또는 MBaaS 패턴이라고 합니다. 또한 전용 [프론트 엔드를 위한 백엔드](#bff)를 갖추고 있을 수 있습니다.
 
-{{site.data.keyword.cloud_notm}}에서는 몇 가지 iOS Swift, Android 및 Cordova용 모바일 스타터 킷을 제공합니다. 모바일 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 모바일 개발자 대시보드](https://console.bluemix.net/developer/mobile/dashboard)에서 찾을 수 있습니다.
+{{site.data.keyword.cloud_notm}}에서는 몇 가지 iOS Swift, Android 및 Cordova용 모바일 스타터 킷을 제공합니다. 모바일 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 모바일 개발자 대시보드](https://{DomainName}/developer/mobile/dashboard)에서 찾을 수 있습니다.
 
 ## 언어
 {: #languages}

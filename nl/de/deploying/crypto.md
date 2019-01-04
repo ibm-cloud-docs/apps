@@ -22,7 +22,7 @@ lastupdated: "2018-07-23"
 ## ACSP-Client installieren und konfigurieren
 {: ##crypto_config}
 
-Erstellen Sie vor der Installation des ACSP-Clients (Advanced Cryptography Service Provider) eine Instanz von {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} über den [Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/catalog/services/hyper-protect-crypto-services){:new_window} und stellen Sie sie bereit. Anschließend müssen Sie den (ASCP-) Client in Ihrer Umgebung installieren und konfigurieren.
+Erstellen Sie vor der Installation des ACSP-Clients (Advanced Cryptography Service Provider) eine Instanz von {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} über den [Katalog ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/services/hyper-protect-crypto-services){:new_window} und stellen Sie sie bereit. Anschließend müssen Sie den (ASCP-) Client in Ihrer Umgebung installieren und konfigurieren.
 
 1. Laden Sie das Installationspaket aus dem [GitHub-Repository ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window} herunter. Wählen Sie im Ordner **Pakete** die Installationspaketdatei aus, die für das verwendete Betriebssystem und die verwendete CPU-Architektur geeignet ist. Wählen Sie beispielsweise für Ubuntu in x86 `acsp-pkcs11-client_1.5-3.5_amd64.deb` aus.
 2. Installieren Sie das Paket für die Installation der ACSP-Clientbibliotheken mit dem Befehl `dpkg`. Beispiel: `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`.

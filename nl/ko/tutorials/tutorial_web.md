@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌
 
 스타터 킷은 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}에서 다양한 언어 및 프레임워크로 사용 가능합니다. 프로젝트에 가장 적합한 언어를 선택하여 시작하십시오.
 
-1. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/) 페이지에서 언어에 맞는 스타터 킷을 선택하십시오.
+1. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/) 페이지에서 언어에 맞는 스타터 킷을 선택하십시오.
 2. 앱 이름과 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름이 앱의 라우트인 `abc-devhost.mybluemix.net`입니다.
 3. 언어 및 프레임워크를 선택하십시오. 일부 스타터 킷은 하나의 언어로만 사용 가능할 수 있습니다.
 4. 가격 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
@@ -55,17 +55,17 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
 
 1. 앱 서비스 창에서 **클라우드에 배치**를 클릭하십시오.
 2. 배치 방법을 선택하십시오. 선택하는 방법의 지시사항에 따라 배치 방법을 선택하십시오.
+  * Kubernetes 클러스터에 배치합니다. 고가용성의 애플리케이션 컨테이너를 배치하고 관리하기 위해 작업자 노드라는 호스트 클러스터를 작성합니다. 클러스터를 작성하여 배치하거나 기존 클러스터에 배치할 수 있습니다.
+  * 기본 인프라를 관리할 필요가 없는 Cloud Foundry를 사용하여 배치합니다.
 
-    * Kubernetes 클러스터에 배치합니다. 고가용성의 애플리케이션 컨테이너를 배치하고 관리하기 위해 작업자 노드라는 호스트 클러스터를 작성합니다. 클러스터를 작성하여 배치하거나 기존 클러스터에 배치할 수 있습니다.
-
-    * 기본 인프라를 관리할 필요가 없는 Cloud Foundry를 사용하여 배치합니다.
+자세한 정보는 [도구 체인 작성](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html)을 참조하십시오.
 
 ## 5단계. 앱을 로컬로 빌드하고 실행
 {: #build-run}
 
 도구 체인을 작성한 마지막 단계에서 앱을 클라우드에 배치합니다. 도구 체인은 코드를 찾을 수 있는 앱을 위한 Git 저장소를 작성합니다. 저장소에 액세스하려면 다음 단계를 따르십시오. 앱을 클라우드에 푸시하기 전에 테스트를 위해 앱을 로컬로 빌드할 수 있습니다.
 
-1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행할 수 있습니다.
+1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행하십시오.
 2. 앱을 통합된 개발 환경으로 가져오십시오.
 3. 코드를 수정하십시오.
 4. 개인 액세스 토큰을 추가하여 [Git 인증](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 설정하십시오.
@@ -83,7 +83,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
   ```
   {: pre}
 
-7.  인증 정보를 가져오십시오.
+7. 인증 정보를 가져오십시오.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
   ```
   {: pre}
 
-10.  브라우저에서 `http://localhost:3000`을 여십시오. 포트 번호는 선택한 런타임에 따라 다를 수 있습니다.
+10. 브라우저에서 `http://localhost:3000`을 여십시오. 포트 번호는 선택한 런타임에 따라 다를 수 있습니다.
 
 ## 6단계. 앱 배치
 {: #deploy}
@@ -118,20 +118,19 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
 DevOps 도구 체인에서 수동으로 앱을 배치할 수도 있습니다.
 
 1. 앱 세부사항 창에서 **도구 체인 보기**를 클릭하십시오.
-
 2. 빌드를 시작하고, 배치를 관리하고 로그 및 히스토리를 볼 수 있는 **Delivery Pipeline**을 클릭하십시오.
+
+자세한 정보는 [빌드 및 배치](/docs/services/ContinuousDelivery/pipeline_build_deploy.html)를 참조하십시오. 
 
 ### {{site.data.keyword.dev_cli_short}}을 사용하여 배치
 
 앱을 Cloud Foundry에 배치하려면 다음 명령을 입력하십시오.
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 앱을 Kubernetes 클러스터에 배치하려면 다음 명령을 입력하십시오.
-
 ```
 ibmcloud dev deploy --target <container>
 ```

@@ -29,7 +29,7 @@ Ao criar apps de backend ou de serviço da web, é possível implementá-los no 
 
 1. Implemente seu app na nuvem configurando um pipeline de nuvem automatizado.
 2. Clique em **Implementar na nuvem**.
-3. Selecione Kubernetes como o destino. Será necessário [criar um cluster ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window} se você ainda não tiver um.
+3. Selecione Kubernetes como o destino. Será necessário [criar um cluster ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window} se você ainda não tiver um.
 4. Após a conclusão da implementação, efetue check-out do app em tempo real na nuvem, obtendo a URL nos logs do estágio de implementação do pipeline de entrega. O último endereço IP com uma porta é o novo início de seu app, por exemplo, 169.60.133.124:32355.
 
 ## Ligando serviços
@@ -67,11 +67,12 @@ O estágio de implementação recupera a imagem mais recente do {{site.data.keyw
 
 Para obter mais informações, consulte [Gráficos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://docs.helm.sh/developing_charts/){:new_window}.
 
-O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window}.
+O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}.
 
 ## Verificando a segurança do app
 {: #sec}
 
 O {{site.data.keyword.containershort_notm}} suporta varrer as imagens de contêiner compactadas para vulnerabilidades de segurança. A varredura de segurança é essencial para o suporte de aplicativos de nível corporativo.
 
-Visualize o [repositório de imagem de contêineres ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} para verificar potenciais vulnerabilidades de segurança.
+Visualize o [repositório de imagem de
+contêineres ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} para verificar potenciais vulnerabilidades de segurança.

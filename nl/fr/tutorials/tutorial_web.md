@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 
 Les kits de démarrage sont disponibles dans de nombreux langages et infrastructures de la console {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}. Sélectionnez le langage le plus adapté à votre projet pour commencer.
 
-1. Sur la page des [kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appservice/starter-kits/) de la console {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage.
+1. Sur la page des [kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/) de la console {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage.
 2. Entrez votre nom d'application et un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`
 3. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
 4. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
@@ -55,10 +55,10 @@ La distribution continue est activée pour certaines applications. Vous pouvez a
 
 1. Dans la fenêtre de service d'application, cliquez sur **Déployer dans le cloud**.
 2. Sélectionnez une méthode de déploiement. Configurez votre méthode de déploiement en fonction des instructions s'appliquant à la méthode choisie.
+  * Effectuer un déploiement sur un cluster Kubernetes. Créez un cluster d'hôtes, appelé noeuds d'employé, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
+  * Effectuer un déploiement à l'aide de Cloud Foundry. Dans ce cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
 
-    * Effectuer un déploiement sur un cluster Kubernetes. Créez un cluster d'hôtes, appelé noeuds d'employé, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
-
-    * Effectuer un déploiement à l'aide de Cloud Foundry. Dans ce cas, vous n'avez pas à vous préoccuper de gérer l'infrastructure sous-jacente.
+Pour plus d'informations, voir [Création de chaînes d'outils](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
 
 ## Etape 5. Générer et exécuter l'application localement
 {: #build-run}
@@ -83,7 +83,7 @@ Le déploiement de votre application dans le cloud effectué lors de la dernièr
   ```
   {: pre}
 
-7.  Obtenez les données d'identification.
+7. Obtenez les données d'identification.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ Le déploiement de votre application dans le cloud effectué lors de la dernièr
   ```
   {: pre}
 
-10.  Ouvrez votre navigateur dans `http://localhost:3000`. Votre numéro de port peut être différent en fonction de l'environnement d'exécution choisi.
+10. Ouvrez votre navigateur dans `http://localhost:3000`. Votre numéro de port peut être différent en fonction de l'environnement d'exécution choisi.
 
 ## Etape 6. Déployer votre application
 {: #deploy}
@@ -118,20 +118,19 @@ Avec une chaîne d'outils correctement configurée, un cycle de génération-dé
 Vous pouvez également déployer manuellement votre application depuis votre chaîne d'outils DevOps :
 
 1. Dans la fenêtre Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
-
 2. Cliquez sur **Delivery pipeline**. Vous pouvez alors démarrer des générations, gérer le déploiement et afficher les journaux et l'historique.
+
+Pour plus d'informations, voir [Génération et déploiement](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Déploiement en utilisant {{site.data.keyword.dev_cli_short}}
 
 Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
-
 ```
 ibmcloud dev deploy --target <container>
 ```

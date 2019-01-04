@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,24 +12,22 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # 部署至虛擬伺服器
 {: #vsi-deploy}
 
-您可以使用 {{site.data.keyword.cloud}} [App Service ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} 將應用程式部署到許多類型的環境，包括虛擬伺服器實例。虛擬伺服器實例會模擬裸機機器，在將內部部署工作負載移到雲端時是常見的部署選項。
+如果您具有「隨收隨付制」帳戶，則可以使用 {{site.data.keyword.cloud}} [App Service ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 將應用程式部署到許多類型的環境，包括虛擬伺服器實例。虛擬伺服器實例會模擬裸機機器，在將內部部署工作負載移到雲端時是常見的部署選項。
 {: shortdesc}
 
 與其他配置相比時，虛擬伺服器實例為所有工作負載類型提供較佳的透通性、可預測性及自動化。將它與裸機伺服器結合，即可建立唯一的工作負載組合。例如，您可以使用執行 Debian Linux 作業系統的裸機伺服器和 GPU 配置，建立高效能的資料庫邏輯或機器學習。
 
 佈建虛擬伺服器實例並部署它可能是個複雜且耗時的處理程序，但您可以使用 {{site.data.keyword.cloud_notm}} App Service 快速開始進行。
 
-## 開始之前
-{: #prereqs}
-
-請升級至「隨收隨付制」帳戶。若要使用虛擬實例，您的 {{site.data.keyword.cloud_notm}} 帳戶必須已針對標準基礎架構啟用。若要升級帳戶，請在主控台中移至**管理** > **計費及用量** > **計費**。
-
-**重要事項**：服務不會連結至虛擬伺服器實例。您無法新增服務至虛擬伺服器中的應用程式。
+服務不會連結至虛擬伺服器實例。您無法新增服務至虛擬伺服器中的應用程式。
+{: important}
 
 ## 建立及部署應用程式
 {: #create-deploy}
@@ -51,7 +48,7 @@ App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程�
 
 ### 啟用您的管線部署
 
-當您建立使用 {{site.data.keyword.cloud_notm}} [App Service ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} 的入門範本套件時，會啟用虛擬伺服器實例。建立應用程式之後，您便可以選擇要部署應用程式的位置。入門範本套件已啟用，能夠使用 Continuous Delivery 工具鏈支援部署。入門範本套件可以 Kubernetes、Cloud Foundry 及虛擬伺服器實例為目標。工具鏈包含原始碼儲存庫以及部署管線。
+當您建立使用 {{site.data.keyword.cloud_notm}} [App Service ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 的入門範本套件時，會啟用虛擬伺服器實例。建立應用程式之後，您便可以選擇要部署應用程式的位置。入門範本套件已啟用，能夠使用 Continuous Delivery 工具鏈支援部署。入門範本套件可以 Kubernetes、Cloud Foundry 及虛擬伺服器實例為目標。工具鏈包含原始碼儲存庫以及部署管線。
 
 虛擬伺服器選項會分階段來運作。首先，會準備應用程式碼並儲存到 GitLab Git 儲存庫，而原始碼會建立具有管線的工具鏈。管線定義為建置程式碼，並將它包裝成 Debian 套件管理程式格式。然後 Terraform 會佈建虛擬實例。最後，會部署、安裝應用程式，並在執行中的虛擬映像檔內啟動它，且驗證其性能。
 
@@ -64,57 +61,63 @@ App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程�
 3. 按一下**階段配置**圖示，然後在建置階段上按一下**配置階段**。
 4. 按一下**環境內容**標籤，以檢視內容。請使用下表以瞭解可用的內容。
 
-  |內容|說明|
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` |[基礎架構 API 金鑰](#iaas-key)來自標準基礎架構主控台。|
-  | `TF_VAR_ibm_sl_username` |識別標準基礎架構帳戶的[基礎架構使用者名稱](#user-key)。|
-  | `TF_VAR_ibm_cloud_api_key` |{{site.data.keyword.cloud_notm}} [平台 API 金鑰](#platform-key)用來啟用服務建立。|
-  | `PUBLIC_KEY` |已定義以便啟用虛擬伺服器實例存取的[公開金鑰](#public-key)。|
-  | `PRIVATE_KEY` |已定義以便啟用虛擬伺服器實例存取的[私密金鑰](#public-key)。**附註**：您必須使用 `\n` 的新增一行樣式格式。|
-  | `VI_INSTANCE_NAME` |自動產生的虛擬伺服器實例名稱。|
-  | `GIT_USER` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 使用者名稱是必要項目。|
-  | `GIT_PASSWORD` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 密碼是必要項目。|
-  {: caption="表 1. 變更啟用的環境變數" caption-side="top"}
+|內容|說明|
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` |[基礎架構 API 金鑰](#iaas-key)來自標準基礎架構主控台。|
+| `TF_VAR_ibm_sl_username` |識別標準基礎架構帳戶的[基礎架構使用者名稱](#user-key)。|
+| `TF_VAR_ibm_cloud_api_key` |{{site.data.keyword.cloud_notm}} [平台 API 金鑰](#platform-key)用來啟用服務建立。|
+| `PUBLIC_KEY` |已定義以便啟用虛擬伺服器實例存取的[公開金鑰](#public-key)。|
+| `PRIVATE_KEY` |已定義以便啟用虛擬伺服器實例存取的[私密金鑰](#public-key)。您必須使用 `\n` 的新增一行樣式格式。|
+| `VI_INSTANCE_NAME` |自動產生的虛擬伺服器實例名稱。|
+| `GIT_USER` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 使用者名稱是必要項目。|
+| `GIT_PASSWORD` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 密碼是必要項目。|
+{: caption="表 1. 變更啟用的環境變數" caption-side="top"}
+
 
 #### 基礎架構 API 金鑰
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform 需要基礎架構 API 金鑰以便建立基礎架構資源。在部署期間會自動取得 API 金鑰。若要手動擷取金鑰，請完成下列步驟。
 
-Terraform 需要基礎架構 API 金鑰以便建立標準基礎架構資源，這會在部署期間自動取得。若要手動擷取金鑰，請完成下列步驟。 
+1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
+2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
+3. 按一下 API 金鑰區段中的**新增標準基礎架構金鑰**。
+4. 複製或下載 API 金鑰 `TF_VAR_ibm_sl_api_key`，並將它儲存在安全的地方。您稍後可以使用**動作** ![「動作清單」圖示](../icons/action-menu-icon.svg) 功能表中的**檢視詳細資料**選項，來擷取 API 金鑰的詳細資料。
+5. 將複製的 API 金鑰值貼入工具鏈配置中，以取代 `TF_VAR_ibm_sl_api_key`。
 
-1. 移至標準基礎架構[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **帳戶** > **使用者清單**。
-2. 尋找建立工具鏈的使用者詳細資料，然後按一下「API 金鑰」直欄中的 **View** 或按一下 **Generate**。兩個步驟都會在視窗中顯示 API 金鑰。
-3. 複製 API 金鑰，然後取代工具鏈配置 `TF_VAR_ibm_sl_api_key` 中的值。
+如需相關資訊，請參閱[管理標準基礎架構 API 金鑰](/docs/iam/classic_infra_keys.html)及[標準基礎架構許可權](/docs/iam/infrastructureaccess.html)。
 
-#### 標準基礎架構使用者名稱
+#### 基礎架構使用者名稱
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+基礎架構使用者名稱也會在部署期間自動取得及使用。若要手動取得使用者名稱，請完成下列步驟。
 
-標準基礎架構使用者名稱也會在部署期間自動取得及使用。若要手動取得使用者名稱，請完成下列步驟。
-
-1. 移至標準基礎架構[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **帳戶** > **使用者清單**。
-2. 按一下您要建立工具鏈的使用者。
-3. 往下捲動到 **VPN 使用者名稱**內容。
+1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
+2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
+3. 找出 **VPN 使用者名稱**內容。
 4. 剪下並貼上此值，然後取代工具鏈配置 `TF_VAR_ibm_sl_username`。
 
-#### 平台 API 金鑰
+#### IBM Cloud API 金鑰
 {: #platform-key}
 
-為了在 Terraform 中建立像是資料庫的平台層次服務，以及組合服務，平台 API 金鑰會自動取得並儲存為您管線中的環境變數。若要手動擷取平台金鑰，請完成下列步驟。
+為了在 Terraform 中建立像是資料庫及組合服務的平台層次服務，會自動取得平台 API 金鑰，並將其儲存為管線中的環境變數。若要手動擷取平台金鑰，請完成下列步驟。
 
-1. 從 [API 金鑰 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) 頁面，按一下**管理** > **安全** > **平台 API 金鑰**。
-2. 按一下**建立**。
-3. 輸入名稱和說明，然後按一下**建立**。
-4. 當視窗開啟時，按一下**顯示**以檢閱金鑰。
-5. 複製金鑰並貼入剪貼簿中，或是下載金鑰。
-6. 將工具鏈配置 `TF_VAR_ibm_cloud_api_key` 中的值取代為產生的值。
+1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
+2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
+3. 找出 API 金鑰區段，然後按一下**建立 IBM Cloud API 金鑰**。
+4. 輸入名稱和說明，然後按一下**建立**。
+5. 當視窗開啟時，按一下**顯示**以檢閱金鑰。
+6. 複製金鑰並貼入剪貼簿中，或是下載金鑰。
+7. 將工具鏈配置 `TF_VAR_ibm_cloud_api_key` 中的值取代為產生的值。
 
 #### 公開和私密金鑰
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 若要讓工具鏈能將 Debian 套件安裝至虛擬伺服器實例，部署基礎架構會自動產生私密及公開 SSH 金鑰組，以便將 Git 內容傳送到實例。
 
 若要手動進行，請執行下列動作：
 1. 在您的用戶端中，使用下列指示來建立[公開和私密金鑰組 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}。
-2. 移至[基礎架構 SSH 金鑰視圖 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **裝置** > **管理** > **SSH 金鑰**。
+2. 移至[基礎架構 SSH 金鑰視圖 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **裝置** > **管理** > **SSH 金鑰**。
 3. 按一下**新增**。
 4. 複製您先前建立之公開金鑰的內容，並貼入金鑰內容中。
 5. 為金鑰命名，然後按一下**新增**。

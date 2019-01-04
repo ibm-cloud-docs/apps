@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-29"
 
 ---
 {:new_window: target="_blank"}
@@ -17,17 +17,17 @@ lastupdated: "2018-07-25"
 サーバーレス開発では、IBM の Functions as a Service (FaaS) オファリングである {{site.data.keyword.openwhisk}} を使用できます。 サーバーをプロビジョンしたり管理したりすることなく、HTTP を介した Web アプリやモバイル・アプリからのイベントまたは直接呼び出しに応答して、{{site.data.keyword.openwhisk_short}} を使用してアプリケーション・ロジックを実行できます。{{site.data.keyword.openwhisk_short}} は、開発者がアプリケーション・ロジックの作成に集中できるように、自動スケーリング、可用性管理、保守などのシステム管理を実行します。
 {:shortdesc}
 
-{{site.data.keyword.openwhisk_short}} ユーザー・インターフェース (UI) やコマンド・ライン・インターフェース (CLI) を使用して、アプリケーションを開発できます。 どちらも、類似したアプリケーション開発機能を備えています。 CLI の方が、デプロイメントおよび操作をより詳細に制御できます。 {{site.data.keyword.openwhisk_short}} について詳しくは、完全な[資料](/docs/openwhisk/index.html)を参照してください。
+{{site.data.keyword.openwhisk_short}} ユーザー・インターフェース (UI) やコマンド・ライン・インターフェース (CLI) を使用して、アプリケーションを開発できます。 どちらも、類似したアプリケーション開発機能を備えています。 CLI の方が、デプロイメントおよび操作をより詳細に制御できます。 {{site.data.keyword.openwhisk_short}} について詳しくは、完全な [Openwhisk の資料](/docs/openwhisk/index.html)で確認してください。
 
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #ui}
 
-ご使用の[ブラウザー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/openwhisk/actions){:new_window} で {{site.data.keyword.openwhisk_short}} を試してください。 {{site.data.keyword.openwhisk_short}} ユーザー・インターフェースのクイック・ツアーについては、[概念 (Concepts) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/openwhisk/learn){:new_window} のページに移動します。
+ご使用の[ブラウザー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/openwhisk/actions){:new_window} で {{site.data.keyword.openwhisk_short}} を試してください。 {{site.data.keyword.openwhisk_short}} ユーザー・インターフェースのクイック・ツアーについては、[概念 (Concepts) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/openwhisk/learn){:new_window} のページに移動します。
 
 ## CLI を使用した開発
 {: #openwhisk_start_configure_cli}
 
-{{site.data.keyword.openwhisk_short}} CLI を使用したインストールと開発について詳しくは、[{{site.data.keyword.openwhisk_short}} CLI のセットアップ (Setting up the OpenWhisk CLI) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.{DomainName}/openwhisk/cli){:new_window} を参照してください。
+{{site.data.keyword.openwhisk_short}} CLI を使用したインストールと開発について詳しくは、[{{site.data.keyword.openwhisk_short}} CLI のセットアップ (Setting up the OpenWhisk CLI) ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/openwhisk/cli){:new_window} を参照してください。
 
 ## Web アクションとしての API およびデータ・セットの公開
 {: #containers}
@@ -58,3 +58,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 {: #sdk}
 
 {{site.data.keyword.openwhisk_short}} は、モバイル・アプリが簡単にリモート・トリガーを送信してリモート・アクションを起動できるようにする、iOS デバイスおよび watchOS デバイス用の[モバイル SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) を提供します。 また、サーバーレス・アプリケーションを有効にする[サーバーレス・フレームワーク SDK ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} も提供します。
+

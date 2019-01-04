@@ -26,7 +26,7 @@ O padrão do app da web produz apps que entregam conteúdo da web, como HTML, Ja
 * Básico - entrega um arquivo `index.html` estático, uma folha de estilo padrão e vazia e um arquivo JavaScript.
 * React - uma rica estrutura para construir interfaces com o usuário. Os arquivos de origem estão em `src/client/app` e são compilados com o WebPack e entregues no diretório público.
 
-É possível localizar kits do iniciador para o padrão de app da web no [Painel de desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://console.bluemix.net/developer/appservice/dashboard).
+É possível localizar os kits do iniciador para o padrão de app da web no [Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Backend-for-frontend
 {: #bff}
@@ -37,28 +37,29 @@ No {{site.data.keyword.cloud_notm}}, é possível construir um BFF com abordagem
 
 O BFF gerencia a persistência de dados, o armazenamento em cache e a integração com os serviços de alto valor a seguir.
 
-* [ {{site.data.keyword.ibmwatson}}  ![External link icon](../icons/launch-glyph.svg "External link icon") ](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=iot)
-* [ {{site.data.keyword.weather_short}}  ![External link icon](../icons/launch-glyph.svg "External link icon") ](https://console.bluemix.net/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [ {{site.data.keyword.sparks}}  ![External link icon](../icons/launch-glyph.svg "External link icon") ](https://console.bluemix.net/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
+* [{{site.data.keyword.iot_short_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
+* [{{site.data.keyword.weather_short}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
+* [{{site.data.keyword.sparks}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
 
 O BFF expõe uma API mais comumente usando um padrão de REST, mas é possível projetar o BFF para trabalhar por meio de uma arquitetura de sistema de mensagens que usa o {{site.data.keyword.messagehub}}.
 
-Escolha um kit do iniciador do BFF para seus requisitos de linguagem e estrutura. É possível localizar kits do iniciador para o padrão BFF no painel do desenvolvedor do Serviço de aplicativo do [{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Escolha um kit do iniciador do BFF para seus requisitos de linguagem e estrutura. É possível localizar os kits do
+iniciador para o padrão BFF no [Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Microsserviço
 {: #microservice}
 
 Os apps de microsserviço fornecem a base para construir microsserviços de backend, incluindo um terminal de funcionamento básico e API de REST. Os apps gerados incluem todas as dependências requeridas para o microsserviço em si e para qualquer serviço de nuvem conectado.
 
-Escolha um kit do iniciador de microsserviço para seus requisitos de linguagem e estrutura. É possível localizar kits do iniciador para o padrão Microsserviço no painel do desenvolvedor de Serviço de aplicativo do [{{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/appservice/dashboard).
+Escolha um kit do iniciador de microsserviço para seus requisitos de linguagem e estrutura. É possível localizar os kits do iniciador para o padrão de microsserviço no [Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
 
 ## Dispositivo móvel
 {: #mobile}
 
 Os apps móveis são diferentes dos outros padrões porque eles têm um componente significativo do lado do cliente. O padrão pode incluir conexão direta com serviços móveis, tais como notificações push, autenticação e análise de dados móvel. Os serviços móveis são conhecidos como Backend móvel como serviço ou padrão MBaaS. Eles também podem ter um [Backend-for-frontend](#bff) dedicado.
 
-O {{site.data.keyword.cloud_notm}} oferece vários kits do iniciador de dispositivo móvel para iOS Swift, Android e Cordova. É possível localizar kits do iniciador para o padrão Dispositivo móvel no [painel do desenvolvedor de Dispositivo móvel do {{site.data.keyword.cloud_notm}}](https://console.bluemix.net/developer/mobile/dashboard).
+O {{site.data.keyword.cloud_notm}} oferece vários kits do iniciador de dispositivo móvel para iOS Swift, Android e Cordova. É possível localizar os kits do iniciador para o padrão móvel no Painel do desenvolvedor do [{{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
 
 ## Idiomas
 {: #languages}

@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,24 +12,22 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # 가상 서버에 배치
 {: #vsi-deploy}
 
-{{site.data.keyword.cloud}} [앱 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}를 사용하여 가상 인스턴스 등 여러 유형의 환경에 앱을 배치할 수 있습니다. 가상 서버 인스턴스는 온프레미스 워크로드를 클라우드로 이동할 때의 일반적인 배치 선택사항이며 베어메탈 머신을 에뮬레이트합니다.
+종량과금제 계정이 있으면 {{site.data.keyword.cloud}} [앱 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}를 사용하여 가상 서버 인스턴스를 포함하여 여러 유형의 환경에 앱을 배치할 수 있습니다. 가상 서버 인스턴스는 온프레미스 워크로드를 클라우드로 이동할 때의 일반적인 배치 선택사항이며 베어메탈 머신을 에뮬레이트합니다.
 {: shortdesc}
 
 가상 서버 인스턴스는 다른 구성과 비교할 때 모든 워크로드 유형에 대해 더 나은 투명성, 예측 가능성 및 자동화를 제공합니다. 고유 워크로드 조합을 작성하려면 이를 베어메탈 서버와 결합하십시오. 예를 들어, Debian Linux 기반 운영 체제를 실행 중인 베어메탈 및 GPU 구성을 사용하여 고성능 데이터베이스 로직 또는 기계 학습을 작성할 수 있습니다.
 
 가상 서버 인스턴스를 프로비저닝하고 배치하는 작업은 복잡하고 시간이 많이 걸리는 프로세스지만 {{site.data.keyword.cloud_notm}} 앱 서비스를 사용하면 이를 신속하게 시작하고 실행할 수 있습니다.
 
-## 시작하기 전에
-{: #prereqs}
-
-종량과금제 계정으로 업그레이드하십시오. 가상 인스턴스를 사용하려면 {{site.data.keyword.cloud_notm}} 계정을 클래식 인프라에서 사용할 수 있어야 합니다. 계정을 업그레이드하려면 콘솔에서 **관리** > **청구 및 사용량** > **청구**로 이동하십시오.
-
-**중요:** 서비스는 가상 서버 인스턴스와 바인드되지 않습니다. 가상 서버의 애플리케이션에는 서비스를 추가할 수 없습니다.
+서비스는 가상 서버 인스턴스에 바인드되지 않습니다. 가상 서버의 애플리케이션에는 서비스를 추가할 수 없습니다.
+{: important}
 
 ## 앱 작성 및 배치
 {: #create-deploy}
@@ -51,7 +48,7 @@ lastupdated: "2018-11-10"
 
 ### 파이프라인 배치 사용
 
-{{site.data.keyword.cloud_notm}} [앱 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}를 사용하는 스타터 킷을 작성할 때 가상 서버 인스턴스가 사용으로 설정됩니다. 앱이 작성된 후 앱을 배치할 위치를 선택할 수 있습니다. 스타터 킷은 Continuous Delivery 도구 체인을 사용하여 배치를 지원할 수 있습니다. 스타터 킷은 Kubernetes, Cloud Foundry 및 가상 서버 인스턴스를 대상으로 할 수 있습니다. 이 도구 체인에는 소스 코드 저장소 및 배치 파이프라인이 포함되어 있습니다.
+{{site.data.keyword.cloud_notm}} [앱 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}를 사용하는 스타터 킷을 작성할 때 가상 서버 인스턴스가 사용으로 설정됩니다. 앱이 작성된 후 앱을 배치할 위치를 선택할 수 있습니다. 스타터 킷은 Continuous Delivery 도구 체인을 사용하여 배치를 지원할 수 있습니다. 스타터 킷은 Kubernetes, Cloud Foundry 및 가상 서버 인스턴스를 대상으로 할 수 있습니다. 이 도구 체인에는 소스 코드 저장소 및 배치 파이프라인이 포함되어 있습니다.
 
 가상 서버 옵션은 단계적으로 작동합니다. 먼저, 앱 코드가 준비되어 GitLab Git 저장소에 저장되며 소스 코드가 파이프라인을 사용하여 도구 체인을 작성합니다. 코드를 빌드하여 Debian 패키지 관리자 형식으로 패키징하기 위한 파이프라인이 정의됩니다. 그런 다음, Terraform이 가상 인스턴스를 프로비저닝합니다. 마지막으로, 실행 중인 가상 이미지 내부에 앱이 배치, 설치 및 시작되고 해당 상태의 유효성이 검증됩니다.
 
@@ -64,57 +61,63 @@ lastupdated: "2018-11-10"
 3. **단계 구성** 아이콘을 클릭한 다음 빌드 단계에서 **단계 구성**을 클릭하십시오.
 4. **환경 특성** 탭을 클릭하여 특성을 확인하십시오. 사용 가능한 특성에 대해 알아보려면 다음 표를 참조하십시오.
 
-  |특성   |설명   |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | [인프라 API 키](#iaas-key)는 클래식 인프라 콘솔에서 가져옵니다. |
-  | `TF_VAR_ibm_sl_username` | 클래식 인프라 계정을 식별하는 [인프라 사용자 이름](#user-key)입니다. |
-  | `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [플랫폼 API 키](#platform-key)는 서비스 작성을 사용으로 설정하는 데 사용됩니다. |
-  | `PUBLIC_KEY` | 가상 서버 인스턴스에 액세스할 수 있도록 정의된 [공개 키](#public-key)입니다. |
-  | `PRIVATE_KEY` | 가상 서버 인스턴스에 액세스할 수 있도록 정의된 [개인 키](#public-key)입니다. **참고**: `\n` 줄 바꾸기 스타일 형식을 사용해야 합니다. |
-  | `VI_INSTANCE_NAME` | 가상 서버 인스턴스에 대한 자동 생성 이름입니다. |
-  | `GIT_USER` | apply 명령의 상태를 저장하도록 [Terraform 상태](#tform-state)를 설정한 경우 GitLab 사용자 이름이 필요합니다. |
-  | `GIT_PASSWORD` | apply 명령의 상태를 저장하도록 [Terraform 상태](#tform-state)를 설정한 경우 GitLab 비밀번호가 필요합니다. |
-  {: caption="표 1. 사용을 위해 변경할 환경 변수" caption-side="top"}
+|특성  |설명  |
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | [인프라 API 키](#iaas-key)는 클래식 인프라 콘솔에서 가져옵니다. |
+| `TF_VAR_ibm_sl_username` | 클래식 인프라 계정을 식별하는 [인프라 사용자 이름](#user-key)입니다. |
+| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [플랫폼 API 키](#platform-key)는 서비스 작성을 사용으로 설정하는 데 사용됩니다. |
+| `PUBLIC_KEY` | 가상 서버 인스턴스에 액세스할 수 있도록 정의된 [공개 키](#public-key)입니다. |
+| `PRIVATE_KEY` | 가상 서버 인스턴스에 액세스할 수 있도록 정의된 [개인 키](#public-key)입니다. `\n` 줄 바꾸기 스타일 형식을 사용해야 합니다. |
+| `VI_INSTANCE_NAME` | 가상 서버 인스턴스에 대한 자동 생성 이름입니다. |
+| `GIT_USER` | apply 명령의 상태를 저장하도록 [Terraform 상태](#tform-state)를 설정한 경우 GitLab 사용자 이름이 필요합니다. |
+| `GIT_PASSWORD` | apply 명령의 상태를 저장하도록 [Terraform 상태](#tform-state)를 설정한 경우 GitLab 비밀번호가 필요합니다. |
+{: caption="표 1. 사용을 위해 변경할 환경 변수" caption-side="top"}
+
 
 #### 인프라 API 키
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+인프라 리소스를 작성하려면 Terraform에서 인프라 API 키가 필요합니다. API 키는 배치 중에 자동으로 확보됩니다. 키를 수동으로 검색하려면 다음 단계를 완료하십시오.
 
-Terraform에서 인프라 리소스를 작성하려면 인프라 API 키가 필요하며, 이 키는 배치 중에 자동으로 확보됩니다. 키를 수동으로 검색하려면 다음 단계를 완료하십시오. 
+1. [사용자 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}으로 이동하십시오. **관리** > **액세스(IAM)**를 클릭하고 **사용자**를 선택할 수도 있습니다. 
+2. 사용자 이름을 클릭한 후 **사용자 세부사항**을 클릭하십시오. 
+3. API 키 섹션에서 **클래식 인프라 키 추가**를 클릭하십시오. 
+4. API 키 `TF_VAR_ibm_sl_api_key`를 복사하거나 다운로드하고 이를 안전한 곳에 저장하십시오. **조치** ![조치 목록 아이콘](../icons/action-menu-icon.svg) 메뉴에서 **세부사항 보기** 옵션을 사용하여 나중에 API 키의 세부사항을 검색할 수 있습니다. 
+5. 복사된 API 사본 값을 도구 체인 구성에 붙여넣어 `TF_VAR_ibm_sl_api_key`를 대체하십시오. 
 
-1. 클래식 인프라 [사용자 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}으로 이동하십시오. **메뉴** > **클래식 인프라** > **계정** > **사용자 목록**을 클릭할 수도 있습니다.
-2. 도구 체인을 작성 중인 사용자 세부사항을 찾고 API 키 열에서 **보기**를 클릭하거나 **생성**을 클릭하십시오. 두 단계 모두 창에 API 키를 표시합니다.
-3. API 키를 복사하고 도구 체인 구성 `TF_VAR_ibm_sl_api_key`의 값을 대체하십시오.
+자세한 정보는 [클래식 인프라 API 키 관리](/docs/iam/classic_infra_keys.html) 및 [클래식 인프라 권한](/docs/iam/infrastructureaccess.html)을 참조하십시오. 
 
-#### 클래식 인프라 사용자 이름
+#### 인프라 사용자 이름
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+인프라 사용자 이름도 배치 중에 자동으로 확보되어 사용됩니다. 사용자 이름을 수동으로 확보하려면 다음 단계를 완료하십시오.
 
-클래식 인프라 사용자 이름도 배치 중에 자동으로 확보되어 사용됩니다. 사용자 이름을 수동으로 확보하려면 다음 단계를 완료하십시오.
+1. [사용자 목록![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}으로 이동하십시오. **관리** > **액세스(IAM)**를 클릭하고 **사용자**를 선택할 수도 있습니다. 
+2. 사용자 이름을 클릭한 후 **사용자 세부사항**을 클릭하십시오. 
+3. **VPN 사용자 이름** 특성을 찾으십시오. 
+4. 이 값을 잘라내어 붙여넣고 도구 체인 구성 `TF_VAR_ibm_sl_username`을 대체하십시오. 
 
-1. 클래식 인프라 [사용자 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}으로 이동하십시오. **메뉴** > **클래식 인프라** > **계정** > **사용자 목록**을 클릭할 수도 있습니다.
-2. 도구 체인을 작성할 사용자를 클릭하십시오.
-3. **VPN 사용자 이름** 특성이 표시될 때까지 아래로 스크롤하십시오.
-4. 이 값을 복사하여 붙여넣고 도구 체인 구성 `TF_VAR_ibm_sl_username`을 대체하십시오.
-
-#### 플랫폼 API 키
+#### IBM Cloud API 키
 {: #platform-key}
 
-Terraform에서 데이터베이스 및 Compose 서비스와 같은 플랫폼 레벨 서비스를 작성하기 위해 플랫폼 API 키가 자동으로 확보되어 파이프라인에 환경 변수로 저장됩니다. 플랫폼 키를 수동으로 검색하려면 다음 단계를 완료하십시오.
+Terraform에서 데이터베이스 및 Compose 서비스 등의 플랫폼 레벨 서비스를 작성하기 위해 플랫폼 API 키가 자동으로 확보되어 파이프라인에 환경 변수로서 저장됩니다. 플랫폼 키를 수동으로 검색하려면 다음 단계를 완료하십시오.
 
-1. [API 키 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) 페이지에서 **관리** > **보안** > **플랫폼 API 키**를 클릭하십시오.
-2. **작성**을 클릭하십시오.
-3. 이름과 설명을 입력하고 **작성**을 클릭하십시오.
-4. 창이 열리면 **표시**를 클릭하여 키를 검토하십시오.
-5. 키를 복사하여 클립보드에 붙여넣거나 키를 다운로드하십시오.
-6. 도구 체인 구성 `TF_VAR_ibm_cloud_api_key`의 값을 생성된 값으로 대체하십시오.
+1. [사용자 목록![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}으로 이동하십시오. **관리** > **액세스(IAM)**를 클릭하고 **사용자**를 선택할 수도 있습니다. 
+2. 사용자 이름을 클릭한 후 **사용자 세부사항**을 클릭하십시오. 
+3. API 키 섹션을 찾고 **IBM Cloud API 키 작성**을 클릭하십시오. 
+4. 이름과 설명을 입력하고 **작성**을 클릭하십시오.
+5. 창이 열리면 **표시**를 클릭하여 키를 검토하십시오.
+6. 키를 복사하여 클립보드에 붙여넣거나 키를 다운로드하십시오.
+7. 도구 체인 구성 `TF_VAR_ibm_cloud_api_key`의 값을 생성된 값으로 대체하십시오.
 
-#### 공개 및 개인 키
+#### 공개 키와 개인 키
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 도구 체인이 Debian 패키징을 가상 서버 인스턴스에 설치할 수 있도록 배치 인프라가 자동으로 개인 및 공개 SSH 키 쌍을 생성하여 Git 컨텐츠를 인스턴스에 전송합니다.
 
 이를 수동으로 수행하려면 다음을 수행하십시오.
 1. 클라이언트에서 다음 지시사항을 사용하여 [공개 및 개인 키 쌍 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}을 작성하십시오.
-2. [인프라 SSH 키 보기 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}로 이동하십시오. **메뉴** > **클래식 인프라** > **디바이스** > **관리** > **SSH 키**를 클릭할 수도 있습니다.
+2. [인프라 SSH 키 보기 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}로 이동하십시오. **메뉴** > **클래식 인프라** > **디바이스** > **관리** > **SSH 키**를 클릭할 수도 있습니다.
 3. **추가**를 클릭하십시오.
 4. 이전에 작성한 공개 키의 컨텐츠를 복사하여 키 컨텐츠에 붙여넣으십시오.
 5. 키 이름을 지정하고 **추가**를 클릭하십시오.

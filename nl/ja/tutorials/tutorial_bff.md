@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker は開発者ツールの一部としてインストールされます。 
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}でアプリを作成します。
 
-1. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリケーションの場合は、**「Express.js バックエンド (Express.js Backend)」**に移動し、**「スターター・キットの選択」**をクリックします。
+1. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/) ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリケーションの場合は、**「Express.js バックエンド (Express.js Backend)」**に移動し、**「スターター・キットの選択」**をクリックします。
 
 2. アプリ名を入力します。 このチュートリアルでは、`ExpressBackend` を使用します。
 

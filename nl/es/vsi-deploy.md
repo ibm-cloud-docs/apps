@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,24 +12,22 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # Despliegue en un servidor virtual
 {: #vsi-deploy}
 
-Puede utilizar el [servicio {{site.data.keyword.cloud}} App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} para desplegar apps en distintos tipos de entornos, incluidas instancias de servidor virtual. Una instancia de servidor virtual emula una máquina nativa y es una opción de despliegue común cuando se mueven cargas de trabajo locales a la nube.
+Si tiene una cuenta de pago según uso, puede utilizar el servicio {{site.data.keyword.cloud}} [App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} para desplegar sus apps en distintos tipos de entornos, incluidas instancias de servidor virtual. Una instancia de servidor virtual emula una máquina nativa y es una opción de despliegue común cuando se mueven cargas de trabajo locales a la nube.
 {: shortdesc}
 
 Una instancia de servidor virtual ofrece una mejor transparencia, previsibilidad y automatización para todos los tipos de carga de trabajo en comparación con otras configuraciones. Combínela con un servidor nativo para crear combinaciones de carga de trabajo exclusivas. Por ejemplo, puede crear lógica de base de datos de alto rendimiento o aprendizaje automático con configuraciones nativas y GPU que se ejecuten en un sistema operativo Debian basado en Linux.
 
 El suministro de una instancia de servidor virtual y su despliegue puede ser un proceso complejo y que requiere mucho tiempo, pero puede empezar a trabajar rápidamente utilizando {{site.data.keyword.cloud_notm}} App Service.
 
-## Antes de empezar
-{: #prereqs}
-
-Actualice a una cuenta de Pago según uso. Para utilizar instancias virtuales, la cuenta de {{site.data.keyword.cloud_notm}} debe estar habilitada para la infraestructura clásica. Para actualizar su cuenta, vaya a **Gestionar** > **Facturación y uso** > **Facturación** en la consola.
-
-**Importante:** los servicios no están vinculados a la instancia de servidor virtual. No puede añadir servicios a una aplicación de un servidor virtual.
+Los servicios no están vinculados a la instancia de servidor virtual. No puede añadir servicios a una aplicación de un servidor virtual.
+{: important}
 
 ## Creación y despliegue de apps
 {: #create-deploy}
@@ -51,7 +48,7 @@ Cualquiera de los kits de inicio de App Service se puede desplegar en una instan
 
 ### Habilitación del despliegue de conducto
 
-Al crear un kit de inicio que utiliza [{{site.data.keyword.cloud_notm}} App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}, se habilitará la instancia de servidor virtual. Una vez creada la app, podrá elegir dónde desea desplegarla. Los kits de inicio están habilitados para dar soporte al despliegue utilizando una cadena de herramientas de Continuous Delivery. Los kits de inicio pueden destinarse a Kubernetes, Cloud Foundry e Instancias de servidor virtual. La cadena de herramientas incluye un repositorio de código fuente y un conducto de despliegue.
+Al crear un kit de inicio que utiliza {{site.data.keyword.cloud_notm}} [App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, se habilita la instancia de servidor virtual. Una vez creada la app, podrá elegir dónde desea desplegarla. Los kits de inicio están habilitados para dar soporte al despliegue utilizando una cadena de herramientas de Continuous Delivery. Los kits de inicio pueden destinarse a Kubernetes, Cloud Foundry e Instancias de servidor virtual. La cadena de herramientas incluye un repositorio de código fuente y un conducto de despliegue.
 
 La opción del servidor virtual funciona en fases. En primer lugar, el código de la app está preparado y almacenado en un repositorio Git de GitLab y el código fuente crea una cadena de herramientas con un conducto. El conducto está definido para crear el código y empaquetarlo en un formato de gestor de paquetes de Debian. A continuación, Terraform proporciona una instancia virtual. Finalmente, la app se despliega, se instala y se inicia dentro de la imagen virtual en ejecución y su estado se valida.
 
@@ -64,57 +61,63 @@ Para ver estas propiedades de entorno, siga estos pasos.
 3. Pulse el icono **Configuración de etapa** y luego pulse **Configurar etapa** en la etapa de creación.
 4. Pulse el separador **Propiedades del entorno** para ver las propiedades. Utilice la tabla siguiente para ver las propiedades disponibles.
 
-  | Propiedad   | Descripción   |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | La [clave de API de la infraestructura](#iaas-key) proviene de la consola de infraestructura clásica. |
-  | `TF_VAR_ibm_sl_username` | El [nombre de usuario de la infraestructura](#user-key) que identifica la cuenta de infraestructura clásica. |
-  | `TF_VAR_ibm_cloud_api_key` | La {{site.data.keyword.cloud_notm}} [clave de API de plataforma](#platform-key) se utiliza para permitir la creación del servicio. |
-  | `PUBLIC_KEY` | [Clave pública](#public-key) definida para permitir el acceso a la instancia de servidor virtual. |
-  | `PRIVATE_KEY` | [Clave privada](#public-key) definida para permitir el acceso a la instancia de servidor virtual. **Nota**: debe utilizar el estilo de formato de línea nueva `\n`. |
-  | `VI_INSTANCE_NAME` | Nombre generado automáticamente para la instancia de servidor virtual. |
-  | `GIT_USER` | Si establece el [estado de Terraform](#tform-state) para almacenar el estado del mandato apply, se necesitará el nombre de usuario de GitLab. |
-  | `GIT_PASSWORD` | Si establece el [estado de Terraform](#tform-state) para almacenar el estado del mandato apply, se necesitará la contraseña de GitLab. |
-  {: caption="Tabla 1. Variables de entorno a cambiar para la habilitación" caption-side="top"}
+| Propiedad  | Descripción  |
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | La [clave de API de la infraestructura](#iaas-key) proviene de la consola de infraestructura clásica. |
+| `TF_VAR_ibm_sl_username` | El [nombre de usuario de la infraestructura](#user-key) que identifica la cuenta de infraestructura clásica. |
+| `TF_VAR_ibm_cloud_api_key` | La {{site.data.keyword.cloud_notm}} [clave de API de plataforma](#platform-key) se utiliza para permitir la creación del servicio. |
+| `PUBLIC_KEY` | [Clave pública](#public-key) definida para permitir el acceso a la instancia de servidor virtual. |
+| `PRIVATE_KEY` | [Clave privada](#public-key) definida para permitir el acceso a la instancia de servidor virtual. Debe utilizar el formato de estilo de nueva línea `\n`. |
+| `VI_INSTANCE_NAME` | Nombre generado automáticamente para la instancia de servidor virtual. |
+| `GIT_USER` | Si establece el [estado de Terraform](#tform-state) para almacenar el estado del mandato apply, se necesitará el nombre de usuario de GitLab. |
+| `GIT_PASSWORD` | Si establece el [estado de Terraform](#tform-state) para almacenar el estado del mandato apply, se necesitará la contraseña de GitLab. |
+{: caption="Tabla 1. Variables de entorno a cambiar para la habilitación" caption-side="top"}
+
 
 #### Clave de API de infraestructura
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform requiere una clave de API de infraestructura para crear recursos de la infraestructura. La clave de API se obtiene automáticamente durante el despliegue. Para recuperar manualmente una clave, siga los pasos siguientes.
 
-Terraform requiere una clave de API de infraestructura para crear recursos de la infraestructura clásica, que se obtiene automáticamente durante el despliegue. Para recuperar manualmente una clave, siga los pasos siguientes. 
+1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
+3. Pulse **Añadir una clave de infraestructura clásica** en la sección de claves de API.
+4. Copie y descargue la clave de API `TF_VAR_ibm_sl_api_key` y guárdela en un lugar seguro. Puede recuperar los detalles de la clave de API posteriormente mediante la opción **Ver detalles** del menú **Acciones** ![Lista de iconos de acción](../icons/action-menu-icon.svg). 
+5. Pegue el valor de clave de API que ha copiado en la configuración de la cadena de herramientas para sustituir el valor de `TF_VAR_ibm_sl_api_key`.
 
-1. Vaya a la [lista de usuarios de la infraestructura clásica![Icono de enlace externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. También puede pulsar **Menú** > **Infraestructura clásica** > **Cuenta** > **Lista de usuarios**.
-2. Busque los detalles de los usuarios que están creando la cadena de herramientas y pulse **Ver** en la columna Clave de API o pulse **Generar**. Ambos pasos muestran la clave de API en una ventana.
-3. Copie la Clave de API y sustituya el valor de la configuración de la Cadena de herramientas `TF_VAR_ibm_sl_api_key`.
+Para obtener más información, consulte [Gestión de claves de API de la infraestructura clásica](/docs/iam/classic_infra_keys.html) y [Permisos de la infraestructura clásica](/docs/iam/infrastructureaccess.html).
 
-#### Nombre de usuario de la infraestructura clásica
+#### Nombre de usuario de la infraestructura
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+El nombre de usuario de la infraestructura también se obtiene automáticamente y se utiliza durante el despliegue. Para obtener manualmente el nombre de usuario, siga los pasos siguientes.
 
-El nombre de usuario de la infraestructura clásica también se obtiene automáticamente y se utiliza durante el despliegue. Para obtener manualmente el nombre de usuario, siga los pasos siguientes.
+1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
+3. Localice la propiedad **Nombre de usuario de VPN**.
+4. Corte y pegue este valor y sustituya la configuración de la cadena de herramientas `TF_VAR_ibm_sl_username`.
 
-1. Vaya a la [lista de usuarios de la infraestructura clásica![Icono de enlace externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}. También puede pulsar **Menú** > **Infraestructura clásica** > **Cuenta** > **Lista de usuarios**.
-2. Pulse el usuario que desee que cree la cadena de herramientas.
-3. Desplácese hacia abajo hasta la propiedad **Nombre de usuario de VPN**.
-4. Corte y pegue este valor y sustituya la configuración de la Cadena de herramientas `TF_VAR_ibm_sl_username`.
-
-#### Clave de API de plataforma
+#### Clave de API de IBM Cloud
 {: #platform-key}
 
 Para crear servicios a nivel de plataforma en Terraform, como bases de datos y servicios de Compose, la clave de API de plataforma se obtiene automáticamente y se almacena como una variable de entorno en su conducto. Para recuperar manualmente una clave de la plataforma, siga los pasos siguientes.
 
-1. En la página [Claves de API ![Icono de enlace externo](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), pulse **Gestionar** > **Seguridad** > **Claves de API de la plataforma**.
-2. Pulse **Crear**.
-3. Especifique un nombre y una descripción y pulse **Crear**.
-4. Cuando se abra la ventana, pulse **Mostrar** para revisar la clave.
-5. Copie y pegue la clave en el portapapeles o descargue la clave.
-6. Sustituya el valor de la configuración de la cadena de herramientas `TF_VAR_ibm_cloud_api_key` por el valor generado.
+1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
+3. Localice la sección de claves de API y pulse **Crear una clave de API de IBM Cloud**.
+4. Especifique un nombre y una descripción y pulse **Crear**.
+5. Cuando se abra la ventana, pulse **Mostrar** para revisar la clave.
+6. Copie y pegue la clave en el portapapeles o descargue la clave.
+7. Sustituya el valor de la configuración de la cadena de herramientas `TF_VAR_ibm_cloud_api_key` por el valor generado.
 
 #### Claves públicas y privadas
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 Para que la cadena de herramientas instale el empaquetado de Debian en la instancia del servidor virtual, la infraestructura de despliegue genera automáticamente un par de claves SSH pública y privada para transferir el contenido de Git a la instancia.
 
 Para hacerlo manualmente:
 1. En el cliente, utilice las siguientes instrucciones para crear un [par de claves públicas y privadas ![Icono de enlace externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Vaya a la [vista de claves SSH de la infraestructura ![Icono de enlace externo](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. También puede pulsar **Menú** > **Infraestructura clásica** > **Dispositivos** > **Gestionar** > **Claves de SSH**.
+2. Vaya a la [vista de claves SSH de la infraestructura ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. También puede pulsar **Menú** > **Infraestructura clásica** > **Dispositivos** > **Gestionar** > **Claves de SSH**.
 3. Pulse **Añadir**.
 4. Copie el contenido de la clave pública que ha creado anteriormente y péguelo en el contenido de la clave.
 5. Asigne un nombre a la clave y pulse **Añadir**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Criando solicitações de assinatura de certificado
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 É possível assegurar seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
 {:shortdesc}
 
-Para que seja possível fazer upload dos certificados SSL aos quais você está autorizado com o {{site.data.keyword.Bluemix}}, deve-se criar uma solicitação de assinatura de certificado (CSR) em seu servidor. Uma CSR é uma mensagem que é enviada a uma autoridade de certificado para solicitar
+Antes que seja possível fazer upload dos certificados SSL aos quais você está autorizado com o {{site.data.keyword.cloud}}, deve-se criar uma solicitação de assinatura de certificado (CSR) no servidor. Uma CSR é uma mensagem que é enviada a uma autoridade de certificado para solicitar
 a assinatura de uma chave pública e as informações associadas. O mais comum é que as CSRs estejam no formato PKCS #10. A CSR inclui uma chave pública e um nome comum, uma organização, uma cidade, um estado, um país e um e-mail. As
 solicitações de certificado SSL são aceitas somente com um comprimento da chave CSR de 2048 bits.
 
@@ -79,7 +80,7 @@ Caso o proprietário da conta tenha uma conta de avaliação grátis, deve-se fa
 Antes que seja possível fazer upload dos certificados, deve-se criar uma
 solicitação de assinatura de certificado.
 
-Ao usar um domínio customizado para entregar o certificado SSL, use os terminais de região a seguir para fornecer a rota de URL para sua organização no {{site.data.keyword.Bluemix_notm}}:
+Ao usar um domínio customizado para entregar o certificado SSL, use os terminais de região a seguir para fornecer a rota de URL para sua organização no {{site.data.keyword.cloud_notm}}:
 
 * EU-Sul- ` secure.us-south.bluemix.net `
 * US-East- ` secure.us-east.bluemix.net `
@@ -89,7 +90,7 @@ Ao usar um domínio customizado para entregar o certificado SSL, use os terminai
 
 Para fazer upload de um certificado para o seu aplicativo, siga essas etapas.
 
-1. Acesse seu painel.
+1. Acesse a lista de recursos.
 
 2. Selecione seu app para abrir a visualização de detalhes do app.
 
@@ -98,8 +99,6 @@ Para fazer upload de um certificado para o seu aplicativo, siga essas etapas.
 4. Na coluna de ação, clique em **Domínios** no menu de ações adicionais e selecione a sua organização.
 
 5. Clique em **Fazer upload ** na coluna Certificado SSL e selecione seu domínio customizado.
-
-6. Navegue para fazer upload de um certificado, chave privada e, como opção, um certificado intermediário ou certificado de cliente. Para ativar o armazenamento confiável de certificado de cliente, deve-se fazer upload de um arquivo de armazenamento confiável de certificado de cliente que define o acesso de usuário permitido para seu domínio customizado.
 
   #### Certificado
 
@@ -111,7 +110,7 @@ essa autoridade.
 
     Os
 tipos de certificados a seguir são suportados no
-{{site.data.keyword.Bluemix_notm}}:
+{{site.data.keyword.cloud_notm}}:
 
 	* PEM (`pem`, `.crt`, `.cer` e `.cert`)
 	* DER (` .der `  ou  ` .cer `)
@@ -120,10 +119,10 @@ tipos de certificados a seguir são suportados no
   #### Chave privada
 
     Um padrão algorítmico que é usado para criptografar mensagens que somente a chave pública correspondente pode decriptografar. A chave privada também é usada para decriptografar mensagens que foram criptografadas pela chave pública correspondente. A chave privada é
-mantida no sistema do usuário e é protegida por uma senha.
+mantida no sistema do usuário e protegida por uma senha.
 
     Os tipos de chaves privadas a seguir são suportados no
-{{site.data.keyword.Bluemix_notm}}:
+{{site.data.keyword.cloud_notm}}:
 
     * PEM (` pem `,  ` .key `)
     * PKCS #8 (` p8 `,  ` pk8 `)
@@ -141,7 +140,11 @@ termina com o certificado SSL emitido para a organização.
 
     Se você ativa essa opção ao fazer upload de um arquivo de armazenamento confiável de certificado de cliente, um usuário que tenta acessar um domínio protegido por SSL é solicitado a fornecer um certificado do lado do cliente. Por exemplo, em um navegador da web, quando um usuário tentar acessar um domínio protegido por SSL, o navegador da web solicitará ao usuário que forneça um certificado de cliente para o domínio. Use a opção de upload de arquivo de **Armazenamento confiável de certificado de cliente** para definir os certificados do lado do cliente que permitem acessar seu domínio customizado.
 
-  **Nota:** o recurso de certificado customizado no gerenciamento de domínio do {{site.data.keyword.Bluemix_notm}} depende da extensão Server Name Indication (SNI) do protocolo de Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.Bluemix_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Assegurando dados com TLS](/docs/get-support/appsectls.html).
+  O recurso de certificado customizado no gerenciamento de domínio do
+{{site.data.keyword.cloud_notm}} depende da
+extensão de Indicação de Nome do Servidor (SNI) do protocolo de
+Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.Bluemix_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Assegurando dados com TLS](/docs/get-support/appsectls.html).
+  {: note}
 
   #### Armazenamento confiável de certificado de cliente
 
@@ -149,7 +152,7 @@ termina com o certificado SSL emitido para a organização.
 
    Os
 tipos de certificados a seguir são suportados no
-{{site.data.keyword.Bluemix_notm}}:
+{{site.data.keyword.cloud_notm}}:
 
       * PEM (pem, .crt, .cer e .cert)
       * PKCS #7 (p7b, p7r, spc)
@@ -161,5 +164,5 @@ Para obter mais informações, veja [Importando SSL Certificates](/docs/infrastr
 
 Para excluir um certificado ou substituir um certificado existente por um novo, siga essas etapas.
 
-1. Acesse **Gerenciar** > **Conta** > **Organizações do Cloud Foundry**.
+1. Acesse **Gerenciar > Conta** e selecione **Organizações do Cloud Foundry**.
 2. Na coluna de ação, selecione **Domínios** no menu de ações adicionais. No menu de ações adicionais para a organização, clique em **Remover da organização**.

@@ -2,51 +2,53 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {: codeblock: .codeblock}
+{:note: .note}
 
 # Service zur App hinzufügen
 {: #add_service}
 
-Wenn Sie eine App mithilfe der {{site.data.keyword.Bluemix_notm}} {{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der App-Übersichtsseite hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
-Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der App-Übersichtseite zu Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.Bluemix_notm}}-Katalog bereitstellen.
+Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der Seite mit den App-Details Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog bereitstellen.
 
 ## Services entdecken
 {: #discover_services}
 
-Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.Bluemix_notm}} verfügbaren Services anzuzeigen:
+Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.cloud_notm}} verfügbaren Services anzuzeigen:
 
-* Über die {{site.data.keyword.Bluemix_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.Bluemix_notm}}-Katalog an.
-* Über die Befehlszeilenschnittstelle 'ibmcloud'. Verwenden Sie hier den Befehl `ibmcloud service offerings`.
+* Über die {{site.data.keyword.cloud_notm}}-Konsole. Zeigen Sie den {{site.data.keyword.cloud_notm}}-Katalog an.
+* Über die Befehlszeile. Verwenden Sie hier den Befehl `ibmcloud service offerings`.
 * Über Ihre eigene Anwendung. Verwenden Sie die [Services-API GET /v2/services ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Sobald Sie ihn ausgewählt haben, stellt {{site.data.keyword.Bluemix_notm}} den Service bereit. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
+Zum Entwickeln einer Anwendung wählen Sie den benötigten Service aus. Sobald Sie ihn ausgewählt haben, stellt {{site.data.keyword.cloud_notm}} den Service bereit. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt.
 
-{{site.data.keyword.Bluemix_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
+{{site.data.keyword.cloud_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
 genutzt werden.
 
 Sie können auch Services verwenden, die in anderen Regionen gehostet werden, sofern diese Services in diesen Regionen verfügbar sind. Diese Services müssen im Internet
 zugänglich gemacht werden und müssen über API-Endpunkte verfügen. Sie müssen Ihre Anwendung für die Verwendung dieser
 Services manuell codieren, wie Sie auch externe Anwendungen oder Tools von anderen Anbietern
-zur Verwendung von {{site.data.keyword.Bluemix_notm}}-Services codieren. Weitere Informationen enthält [Verbindung von Services zu externen Apps herstellen](/docs/apps/connect_external_app.html).
+zur Verwendung von {{site.data.keyword.cloud_notm}}-Services codieren. Weitere Informationen finden Sie unter [Externe Anwendungen und Tools von anderen Anbietern für die Verwendung von {{site.data.keyword.cloud_notm}}-Services aktivieren](/docs/resources/connect_external_app#externalapp).
 
 ## Neue Serviceinstanz anfordern
 {: #req_instance}
 
-Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle oder die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
+Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle oder die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle verwenden.
 
-**Hinweis:** Bei der Angabe des Servicenamens sollten Sie nur alphabetische oder numerische Zeichen verwenden, da es sonst zu unvorhersehbaren Ergebnissen kommen kann.
+Bei der Angabe des Servicenamens sollten Sie nur alphabetische oder numerische Zeichen verwenden, da es sonst zu unvorhersehbaren Ergebnissen kommen kann.
+{: note}
 
-Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
+Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle verwenden, führen Sie die folgenden Schritte durch:
 
-1. Klicken Sie im {{site.data.keyword.Bluemix_notm}}-Katalog auf die Kachel für den Service, den Sie hinzufügen möchten. Die Seite mit den Servicedetails wird geöffnet.
+1. Klicken Sie im {{site.data.keyword.cloud_notm}}-Katalog auf die Kachel für den Service, den Sie hinzufügen möchten. Die Seite mit den Servicedetails wird geöffnet.
 
 2. Geben Sie in das Feld **Servicename** einen Namen ein. Es wird ein Standardname bereitgestellt. Sie können den Namen
 in dem Feld ändern oder ihn unverändert übernehmen.
@@ -54,7 +56,7 @@ in dem Feld ändern oder ihn unverändert übernehmen.
 3. Füllen Sie ggf. weitere Felder aus bzw. treffen Sie weitere Auswahlen und klicken Sie
 anschließend auf **Erstellen**.
 
-Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden, dann laden Sie Ihre App lokal herunter, öffnen Sie die Befehlszeile und wechseln Sie ins App-Verzeichnis.
+Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle verwenden, dann laden Sie Ihre App lokal herunter, öffnen Sie die Befehlszeile und wechseln Sie ins App-Verzeichnis.
 
 1. Führen Sie den folgenden Befehl aus, um einen Service zu Ihrer App hinzuzufügen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen neuen Service hinzufügen.
 
@@ -66,7 +68,7 @@ Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.Bluemix_notm
 2. Folgen Sie der Bedienerführung, um eine Ressourcengruppe auszuwählen und einen neuen datenbezogenen Service (z. B. Cloudant) für Ihre Anwendung zu erstellen und ihn mit dieser Anwendung zu verbinden. Möglicherweise müssen Sie eine Region auswählen und die erforderliche Planung für den Service durchführen.
 3. Bei der Erstellung des Service werden verschiedene Dateien (einschließlich der zugehörigen Berechtigungsnachweise) zu Ihrem Anwendungsverzeichnis hinzugefügt, um die Integration des Service in die Anwendung zu vereinfachen. Sie können die Dateien manuell zusammenführen oder diesen Schritt zurückstellen und später ausführen.
 
-Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.Bluemix_notm}}-Services verwenden, finden Sie in [Verbindung von Services zu externen Apps herstellen](/docs/apps/connect_external_app.html).
+Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.cloud_notm}}-Services verwenden, finden Sie unter [Externe Apps für die Verwendung von {{site.data.keyword.cloud_notm}}-Services aktivieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Anwendung konfigurieren
 {: #config}
@@ -75,16 +77,16 @@ Nachdem Sie eine Serviceinstanz an Ihre Anwendung gebunden haben, müssen Sie Ih
 
 Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen anderen Mechanismus erfordern. Wenn Sie Anwendungen entwickeln, werden diese Mechanismen zu Informationszwecken als Teil der Servicedefinition dokumentiert. Aus Konsistenzgründen sind diese Mechanismen für die Interaktion Ihrer Anwendung mit dem Service erforderlich.
 
-* Um mit Datenbankservice zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Benutzer-ID, das Kennwort und den Zugriffs-URI für die Anwendung.
-* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
-* Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.Bluemix_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
+* Um mit Datenbankservice zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.cloud_notm}} zur Verfügung stellt, z. B. die Benutzer-ID, das Kennwort und den Zugriffs-URI für die Anwendung.
+* Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.cloud_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
+* Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.cloud_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
-Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.Bluemix_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Apps werden nicht automatisch erneut gestartet](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.cloud_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Apps werden nicht automatisch erneut gestartet](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
 
-## Über {{site.data.keyword.Bluemix_notm}}-Bereitstellungsumgebungen hinweg auf Services zugreifen
+## Über {{site.data.keyword.cloud_notm}}-Bereitstellungsumgebungen hinweg auf Services zugreifen
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}} bietet viele Bereitstellungsoptionen und Sie können in einer Umgebung auf einen Service, der in einer anderen Umgebung ausgeführt wird, zugreifen. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
+{{site.data.keyword.cloud_notm}} bietet viele Bereitstellungsoptionen und Sie können in einer Umgebung auf einen Service, der in einer anderen Umgebung ausgeführt wird, zugreifen. Falls Sie über einen Service verfügen, der in Cloud Foundry ausgeführt wird, können Sie auf diesen Service von einer Anwendung aus zugreifen, die in einem Kubernetes-Cluster ausgeführt wird.
 
 ### Beispiel: Über einen Kubernetes-Pod auf einen Cloud Foundry-Service zugreifen
 
@@ -103,7 +105,7 @@ Serviceberechtigungsnachweise, die in einem geheimen Kubernetes-Schlüssel gespe
 ## Vom Benutzer zur Verfügung gestellte Serviceinstanz erstellen
 {: #user_provide_services}
 
-Sie verfügen möglicherweise über Services, die außerhalb von {{site.data.keyword.Bluemix_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Services über das Internet verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.Bluemix_notm}}-Serviceinstanzen erstellen, die Ihre externen Services darstellen und die Kommunikation mit diesen Services ermöglichen.
+Sie verfügen möglicherweise über Services, die außerhalb von {{site.data.keyword.cloud_notm}} verwaltet werden. Wenn Sie über Berechtigungsnachweise für den Zugriff auf solche externen Services über das Internet verfügen, können Sie vom Benutzer zur Verfügung gestellte {{site.data.keyword.cloud_notm}}-Serviceinstanzen erstellen, die Ihre externen Services darstellen und die Kommunikation mit diesen Services ermöglichen.
 
 Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gestellte Serviceinstanz zu erstellen und an eine Anwendung zu binden:
 

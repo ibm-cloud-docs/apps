@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # スターター・キットを使用したモバイル・アプリケーションの作成
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} は、モバイル・アプリを素早く作成するために役立つモバイル・スターター・キットを提供します。 事前構成されたカスタム・アプリの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイする方法を確認できます。
+{{site.data.keyword.cloud}} は、モバイル・アプリを素早く作成するために役立つモバイル・スターター・キットを提供します。 事前構成されたカスタム・アプリの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイする方法を確認できます。
 {: shortdesc}
 
 ## ステップ 1. ツールのインストール
 {: #install-tools}
 
-[開発者ツール](/docs/cli/index.html)をインストールします。
+[{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html) をインストールします。
 
 Docker は開発者ツールの一部としてインストールされます。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。 Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 
@@ -29,7 +30,7 @@ Docker は開発者ツールの一部としてインストールされます。 
 {: #create-devex}
 
 1. {{site.data.keyword.Bluemix}} で {{site.data.keyword.dev_console}}・アプリを作成します。
-2. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) ページから、必要な機能に基づいてスターター・キットを選択します。 例えば、Watson Language アプリケーションの場合、**「Swift Kitura」**を選択します。
+2. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/) ページから、必要な機能に基づいてスターター・キットを選択します。 例えば、Watson Language アプリケーションの場合、**「Swift Kitura」**を選択します。
 3. アプリ名を入力します。 このチュートリアルでは、`WatsonApp` を使用します。
 4. ご使用の言語プラットフォームを選択します。 このチュートリアルでは、`Swift` を使用します。
 5. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。

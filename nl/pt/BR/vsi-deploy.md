@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,15 +12,14 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # Implementando em um servidor virtual
 {: #vsi-deploy}
 
-É possível usar o {{site.data.keyword.cloud}}
-[App Service
-![Ícone de link externo](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}
-para implementar os aplicativos para muitos tipos de ambientes, incluindo instâncias de servidor virtual. Uma instância de
+Se você tiver uma conta pré-paga, será possível usar o {{site.data.keyword.cloud}} [App Service ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} para implementar os apps para vários tipos de ambientes, incluindo instâncias de servidor virtual. Uma instância de
 servidor virtual emula uma máquina bare metal e é uma opção de implementação comum ao mover cargas de trabalho no local
 para a nuvem.
 {: shortdesc}
@@ -31,15 +29,8 @@ Uma instância de servidor virtual oferece melhor transparência, previsibilidad
 O fornecimento de uma instância de servidor virtual e sua implementação podem ser um processo complexo e
 demorado, mas é possível estar funcional rapidamente usando o {{site.data.keyword.cloud_notm}} App Service.
 
-## Antes de começar
-{: #prereqs}
-
-Faça upgrade para uma conta Pagamento por utilização. Para usar as instâncias virtuais, a conta do
-{{site.data.keyword.cloud_notm}} deve ser ativada para a infraestrutura clássica. Para fazer upgrade da conta,
-acesse **Gerenciar** > **Faturamento e uso** >
-**Faturamento** no console.
-
-**Importante:** os serviços não se ligam à instância de servidor virtual. Não é possível incluir serviços em um aplicativo em um servidor virtual.
+Os serviços não se ligam à instância de servidor virtual. Não é possível incluir serviços em um aplicativo em um servidor virtual.
+{: important}
 
 ## Criando e implementando os aplicativos
 {: #create-deploy}
@@ -61,7 +52,7 @@ Qualquer um dos kits do iniciador do App Service pode ser implementado em uma in
 
 ### Ativando sua implementação de pipeline
 
-Ao criar um kit do iniciador que usa o {{site.data.keyword.cloud_notm}} [App Service ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window}, a instância do servidor virtual é ativada. Após o app ser criado, será possível escolher onde deseja implementá-lo. Os kits do iniciador são ativados para suportar a implementação usando uma cadeia de ferramentas de Entrega Contínua. Os kits do iniciador podem ter como destino o Kubernetes, o Cloud Foundry e as Instâncias do Virtual Server. A cadeia de ferramentas inclui um repositório de código-fonte e um pipeline de implementação.
+Ao criar um kit do iniciador que usa o {{site.data.keyword.cloud_notm}} [App Service ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, a instância do servidor virtual é ativada. Após o app ser criado, será possível escolher onde deseja implementá-lo. Os kits do iniciador são ativados para suportar a implementação usando uma cadeia de ferramentas de Entrega Contínua. Os kits do iniciador podem ter como destino o Kubernetes, o Cloud Foundry e as Instâncias do Virtual Server. A cadeia de ferramentas inclui um repositório de código-fonte e um pipeline de implementação.
 
 A opção do servidor virtual funciona em fases. Primeiro, o código do aplicativo é preparado e armazenado em um
 repositório Git GitLab e o código-fonte cria uma cadeia de ferramentas com um pipeline. O pipeline é definido para construir o código e o empacotá-lo em um formato de gerenciador de pacote do Debian. Em seguida, Terraform provisões uma instância virtual. Finalmente, o app é implementado, instalado e iniciado dentro da imagem virtual em execução e seu funcionamento é validado.
@@ -76,65 +67,68 @@ Para visualizar essas propriedades do ambiente, conclua as etapas a seguir.
 4. Clique na guia **Propriedades do ambiente** para visualizar as propriedades. Use a tabela a
 seguir para aprender sobre as propriedades que estão disponíveis.
 
-  | Propriedade   | Descrição   |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](#iaas-key) é do
+| Propriedade  | Descrição  |
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](#iaas-key) é do
 console da infraestrutura clássica. |
-  | `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](#user-key) que
+| `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](#user-key) que
 identifica a conta da infraestrutura clássica |
-  | `TF_VAR_ibm_cloud_api_key` | A [chave API da plataforma](#platform-key) do {{site.data.keyword.cloud_notm}} é usada para ativar a criação de serviço. |
-  | `PUBLIC_KEY` | [Chave pública](#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
-  | `PRIVATE_KEY` | [Chave privada](#public-key) que é definida para ativar o acesso à instância de servidor virtual. **Nota**: deve-se usar a formatação de estilo de nova linha `\n`. |
-  | `VI_INSTANCE_NAME` | Nome gerado automaticamente para a instância do servidor virtual |
-  | `GIT_USER` | Se você configurar o [estado do Terraform](#tform-state) para
+| `TF_VAR_ibm_cloud_api_key` | A [chave API da plataforma](#platform-key) do {{site.data.keyword.cloud_notm}} é usada para ativar a criação de serviço. |
+| `PUBLIC_KEY` | [Chave pública](#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
+| `PRIVATE_KEY` | [Chave privada](#public-key) que é definida para ativar o acesso à instância de servidor virtual. Deve-se usar a formatação de estilo de nova linha `\n`. |
+| `VI_INSTANCE_NAME` | Nome gerado automaticamente para a instância do servidor virtual |
+| `GIT_USER` | Se você configurar o [estado do Terraform](#tform-state) para
 armazenar o estado do comando apply, o nome de usuário do GitLab será necessário. |
-  | `GIT_PASSWORD` | Se você configurar o [estado do Terraform](#tform-state) para
+| `GIT_PASSWORD` | Se você configurar o [estado do Terraform](#tform-state) para
 armazenar o estado do comando apply, a senha do GitLab será necessária. |
-  {: caption="Tabela 1. Variáveis de ambiente a serem mudadas para a ativação" caption-side="top"}
+{: caption="Tabela 1. Variáveis de ambiente a serem mudadas para a ativação" caption-side="top"}
+
 
 #### Chave da API de infraestrutura
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+O Terraform requer uma chave API de infraestrutura para criar recursos de infraestrutura. A chave de API é obtida automaticamente durante a implementação. Para recuperar manualmente uma chave, conclua as etapas a seguir.
 
-O Terraform requer uma chave API de infraestrutura para criar os recursos da infraestrutura clássica, que é
-obtida automaticamente durante a implementação. Para recuperar manualmente uma chave, conclua as etapas a seguir. 
+1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
+3. Clique em **Incluir uma chave de infraestrutura clássica** na seção de chaves de API.
+4. Copie ou faça download da chave de API `TF_VAR_ibm_sl_api_key` e salve-a em um local seguro. É possível recuperar os detalhes da chave de API posteriormente usando a opção **Visualizar detalhes** no menu **Ações** ![Ícone de lista de ações](../icons/action-menu-icon.svg).
+5. Cole o valor da chave de API copiado na configuração da cadeia de ferramentas para substituir o `TF_VAR_ibm_sl_api_key`.
 
-1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} da infraestrutura clássica. É possível também clicar em **Menu** > **Infraestrutura clássica** > **Conta** > **Lista de usuários**.
-2. Localize os detalhes do usuário que estão criando a cadeia de ferramentas e clique em
-**Visualizar** na coluna Chave API ou clique em **Gerar**. Ambas as etapas
-exibem a chave API em uma janela.
-3. Copie a chave API e substitua o valor na configuração da Cadeia de Ferramentas `TF_VAR_ibm_sl_api_key`.
+Para obter mais informações, consulte [Gerenciando chaves de API da infraestrutura clássica](/docs/iam/classic_infra_keys.html) e [Permissões da infraestrutura clássica](/docs/iam/infrastructureaccess.html).
 
-#### Nome de usuário da infraestrutura clássica
+#### Nome do usuário de infraestrutura
 {: #user-key}
-
-O nome de usuário da infraestrutura clássica também é obtido automaticamente e usado durante a implementação. Para
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+O nome do usuário de infraestrutura também é obtido automaticamente e usado durante a implementação. Para
 obter manualmente o nome do usuário, conclua as etapas a seguir.
 
-1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window} da infraestrutura clássica. É possível também clicar em **Menu** > **Infraestrutura clássica** > **Conta** > **Lista de usuários**.
-2. Clique no usuário para o qual você deseja criar a cadeia de ferramentas.
-3. Role para baixo para a propriedade **Nome do usuário da VPN**.
-4. Recorte e cole esse valor e substitua a configuração da Cadeia de Ferramentas `TF_VAR_ibm_sl_username`.
+1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
+3. Localize a propriedade **Nome do usuário da VPN**.
+4. Recorte e cole esse valor e substitua a configuração da cadeia de ferramentas `TF_VAR_ibm_sl_username`.
 
-#### Chave API da plataforma
+#### Chave de API do IBM Cloud
 {: #platform-key}
 
-Para criar serviços no nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave API da plataforma é obtida automaticamente e armazenada como uma variável de ambiente em seu pipeline. Para recuperar manualmente uma chave da plataforma, conclua as etapas a seguir.
+Para criar serviços de nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave de API de plataforma é obtida automaticamente e armazenada como uma variável de ambiente no pipeline. Para recuperar manualmente uma chave da plataforma, conclua as etapas a seguir.
 
-1. Na página [Chaves API ![Ícone de link externo](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys), clique em **Gerenciar** > **Segurança** > **Chaves API de plataforma**.
-2. Clique em **Criar**.
-3. Insira um nome e uma descrição e clique em **Criar**.
-4. Quando a janela for aberta, clique em **Mostrar** para revisar a chave.
-5. Copie e cole a chave dentro da área de transferência ou faça download da chave.
-6. Substitua o valor na configuração da cadeia de ferramentas `TF_VAR_ibm_cloud_api_key` pelo valor que foi gerado.
+1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
+3. Localize a seção Chaves de API e clique em **Criar uma chave de API do IBM Cloud**.
+4. Insira um nome e uma descrição e clique em **Criar**.
+5. Quando a janela for aberta, clique em **Mostrar** para revisar a chave.
+6. Copie e cole a chave na área de transferência ou faça download da chave.
+7. Substitua o valor na configuração da cadeia de ferramentas `TF_VAR_ibm_cloud_api_key` pelo valor que foi gerado.
 
 #### Chaves públicas e privadas
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 Para que a cadeia de ferramentas instale o pacote do Debian na instância de servidor virtual, a infraestrutura de implementação gera automaticamente um par de chaves SSH privada/pública para transferir os conteúdos do Git para a instância.
 
 Para fazer isso manualmente:
 1. Em seu cliente, use as instruções a seguir para criar um [par de chaves pública e privada ![Ícone de link externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
+2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
 3. Clique em **Incluir**.
 4. Copie os conteúdos da chave pública que você criou anteriormente e cole-os nos conteúdos de chave.
 5. Forneça um nome à chave e clique em **Incluir**.

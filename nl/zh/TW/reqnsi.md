@@ -2,55 +2,57 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-05"
+lastupdated: "2018-11-29"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {: codeblock: .codeblock}
+{:note: .note}
 
 # 將服務新增至應用程式
 {: #add_service}
 
-使用 {{site.data.keyword.Bluemix_notm}}{{site.data.keyword.dev_console}} 建立應用程式時，您可以從應用程式概觀頁面新增資源。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建它們。
+使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增資源。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
 {: shortdesc}
 
-您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從應用程式概觀頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.Bluemix_notm}} 型錄佈建特定類型的資源（服務）。
+您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從「應用程式詳細資料」頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的資源（服務）。
 
 ## 探索服務
 {: #discover_services}
 
-您可以用下列方式查看 {{site.data.keyword.Bluemix_notm}} 中可用的所有服務：
+您可以用下列方式查看 {{site.data.keyword.cloud_notm}} 中可用的所有服務：
 
 
-* 從 {{site.data.keyword.Bluemix_notm}} 主控台。檢視 {{site.data.keyword.Bluemix_notm}} 型錄。
-* 從 ibmcloud 指令行介面。使用 `ibmcloud service offerings` 指令。
+* 從 {{site.data.keyword.cloud_notm}} 主控台。檢視 {{site.data.keyword.cloud_notm}} 型錄。
+* 從指令行。使用 `ibmcloud service offerings` 指令。
 * 從您自己的應用程式。請使用 [GET /v2/services Services API ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
-在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.Bluemix_notm}} 會佈建服務。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
+在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
 
-{{site.data.keyword.Bluemix_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
+{{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.Bluemix_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[連接至外部應用程式](/docs/apps/connect_external_app.html)。
+如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[讓外部應用程式及協力廠商工具能使用 {{site.data.keyword.cloud_notm}} 服務](/docs/resources/connect_external_app#externalapp)。
 
 ## 要求新的服務實例
 {: #req_instance}
 
-若要要求新的服務實例，您必須使用 {{site.data.keyword.Bluemix_notm}} 使用者介面或 {{site.data.keyword.Bluemix_notm}} 指令行介面。
+若要要求新的服務實例，您必須使用 {{site.data.keyword.cloud_notm}} 使用者介面或 {{site.data.keyword.cloud_notm}} 指令行介面。
 
-**附註：**當您指定服務名稱時，請避免非英文字母或數值字元的字元，因為結果可能無法預期。
+當您指定服務名稱時，請避免非英文字母或數值字元的字元，因為結果可能無法預期。
+{: note}
 
-如果您使用 {{site.data.keyword.Bluemix_notm}} 使用者介面來要求服務實例，請完成下列步驟：
+如果您使用 {{site.data.keyword.cloud_notm}} 使用者介面來要求服務實例，請完成下列步驟：
 
-1. 在 {{site.data.keyword.Bluemix_notm}} 型錄中，按一下您要新增的服務磚。即會開啟「服務詳細資料」頁面。
+1. 在 {{site.data.keyword.cloud_notm}} 型錄中，按一下您要新增的服務磚。即會開啟「服務詳細資料」頁面。
 
 2. 在**服務名稱**欄位鍵入名稱。會提供預設名稱。您可以在欄位中變更名稱，或是將它保留不變。
 
 3. 完成其他欄位或選擇，然後按一下**建立**。
 
-如果您使用 {{site.data.keyword.Bluemix_notm}} 指令行介面來要求服務實例，請下載應用程式、在本端開啟指令行，然後切換至應用程式目錄。
+如果您使用 {{site.data.keyword.cloud_notm}} 指令行介面來要求服務實例，請下載應用程式、在本端開啟指令行，然後切換至應用程式目錄。
 
 1. 執行下列指令，以將服務新增至應用程式。您可以從帳戶上已啟用的服務選取現有服務，或是新增一個服務。
 
@@ -62,7 +64,7 @@ lastupdated: "2018-11-05"
 2. 遵循提示以選取資源群組，及建立新的資料相關服務並將它連接至您的應用程式，例如 Cloudant。您可能需要為服務選取地區及方案。
 3. 建立服務時，會將數個檔案（包括認證）新增至您的應用程式目錄，以協助您將服務整合到應用程式。您可以手動合併任何檔案，或是目前先跳過此步驟。
 
-您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.Bluemix_notm}} 服務的相關資訊，請參閱[將服務連接至外部應用程式](/docs/apps/connect_external_app.html)。
+您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.cloud_notm}} 服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/resources/connect_external_app#externalapp){: new_window}。
 
 ## 配置應用程式
 {: #config}
@@ -74,21 +76,21 @@ lastupdated: "2018-11-05"
 為了一致性，必須要有機制，您的應用程式才能與服務互動。
 
 
-* 若要與資料庫服務互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，使用者 ID、密碼，以及應用程式的存取 URI）。
-* 若要與行動後端服務互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
-* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.Bluemix_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES*
+* 若要與資料庫服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，使用者 ID、密碼，以及應用程式的存取 URI）。
+* 若要與行動後端服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
+* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES*
 環境變數的值是 JSON 物件的序列化。
 變數包含與應用程式所連結之服務互動時所需要的運行環境資料。
 不同服務會有不同的資料格式。
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.Bluemix_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)。
 
-## 跨 {{site.data.keyword.Bluemix_notm}} 部署環境存取服務
+## 跨 {{site.data.keyword.cloud_notm}} 部署環境存取服務
 {: #migrate_instance}
 
-{{site.data.keyword.Bluemix_notm}} 提供了許多部署選項，您可以從某個環境，存取不同環境中執行的服務。例如，如果您的服務是在 Cloud Foundry 中執行，則可以從在 Kubernetes 叢集中執行的應用程式存取該服務。
+{{site.data.keyword.cloud_notm}} 提供了許多部署選項，您可以從某個環境，存取不同環境中執行的服務。例如，如果您的服務是在 Cloud Foundry 中執行，則可以從在 Kubernetes 叢集裡執行的應用程式存取該服務。
 
 ### 範例：從 Kubernetes Pod 存取 Cloud Foundry 服務
 
@@ -107,7 +109,7 @@ lastupdated: "2018-11-05"
 ## 建立使用者提供的服務實例
 {: #user_provide_services}
 
-您的服務可能是在 {{site.data.keyword.Bluemix_notm}} 外部進行管理。如果您有認證可從網際網路存取那些外部服務，則可以建立 {{site.data.keyword.Bluemix_notm}} 使用者提供的服務實例來代表外部服務並與之通訊。
+您的服務可能是在 {{site.data.keyword.cloud_notm}} 外部進行管理。如果您有認證可從網際網路存取那些外部服務，則可以建立 {{site.data.keyword.cloud_notm}} 使用者提供的服務實例來代表外部服務並與之通訊。
 
 若要建立使用者提供的服務實例，並將它連結至應用程式，請完成下列步驟：
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -26,7 +26,7 @@ Puoi creare e utilizzare un dominio personalizzato utilizzando la console {{site
 
 Completa la seguente procedura per creare un dominio personalizzato per la tua organizzazione utilizzando la console:
 
-1. Vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**.
+1. Vai a **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**.
 2. Fai clic sul nome dell'organizzazione per cui stai creando un dominio personalizzato.
 3. Fai clic sulla scheda **Domini**.
 4. Fai clic su **Aggiungi un dominio** e immetti il tuo nome del dominio e seleziona la regione.
@@ -37,8 +37,8 @@ Come esempio, puoi utilizzare `*.mycompany.com` per associare la rotta `www.mybl
 
 Aggiungi la rotta con il dominio personalizzato a un'applicazione.
 
-1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) > **Dashboard**, quindi fai clic sulla riga dell'applicazione a cui desideri aggiungere la rotta. Viene visualizzata la pagina **Panoramica**.
-2. Dal menu **Rotte**, seleziona **Modifica rotte**.
+1. Fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) > **elenco risorse** e fai quindi clic sulla riga per l'applicazione a cui vuoi aggiungere la rotta. Viene visualizzata la pagina Panoramica.
+2. Fai clic sul menu **Rotte** e seleziona **Modifica rotte**.
 3. Fai clic su **Aggiungi rotta** e specifica la rotta che vuoi utilizzare per l'applicazione.
 4. Conferma i tuoi aggiornamenti facendo clic su **Salva**.
 

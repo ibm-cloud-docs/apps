@@ -22,7 +22,7 @@ lastupdated: "2018-07-23"
 ## 安裝及配置 ACSP 用戶端
 {: ##crypto_config}
 
-安裝「進階加密法服務提供者 (ACSP)」用戶端之前，請從[型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/catalog/services/hyper-protect-crypto-services){:new_window} 建立並佈建 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 的實例。接著，您必須在您的環境中安裝及配置 (ACSP) 用戶端。
+安裝「進階加密法服務提供者 (ACSP)」用戶端之前，請從[型錄 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/catalog/services/hyper-protect-crypto-services){:new_window} 建立並佈建 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 的實例。接著，您必須在您的環境中安裝及配置 (ACSP) 用戶端。
 
 1. 從 [GitHub 儲存庫 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window} 下載安裝套件。在 **packages** 資料夾，選擇適合您作業系統及 CPU 架構的安裝套件檔。例如，對於 x86 上的 Ubuntu，請選擇 `acsp-pkcs11-client_1.5-3.5_amd64.deb`。
 2. 使用 `dpkg` 指令來安裝套件，以安裝 ACSP 用戶端程式庫，例如 `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`。

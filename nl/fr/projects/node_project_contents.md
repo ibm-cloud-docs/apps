@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,31 +20,30 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans une 
 
 | Répertoire racine                                     | Description                       |
 |:------------------------------------------------|:------------------------------------------|
-|package.json
-| Fichier de métadonnées |
+|package.json | Informations de métadonnées sur le package, incluant le nom, la version et les dépendances. |
 |cli-config.yml | Options de configuration d'interface de ligne de commande |
 |manifest.yml | Fichier de déploiement Cloud Foundry |
-| Dockerfile | Fichier Dockerfile pour les commandes `ibmcloud dev run`, `ibmcloud dev deploy` et `docker` |
-| Dockerfile-tools | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
+|Dockerfile | Fichier Dockerfile pour les commandes `ibmcloud dev run`, `ibmcloud dev deploy` et `docker` |
+|Dockerfile-tools | Fichier Dockerfile pour `ibmcloud dev build` et `ibmcloud dev test` |
 |docker-compose.yml | Configuration de service d'application pour Docker Compose |
-|webpack.config.js | Configuration Webpack pour les informations liées à la génération |
+|webpack.config.js | Configuration du pack Web pour les informations liées à la génération |
 | LICENSE | Fichier de licence |
-| README.md | Description d'application |
-{: caption="Tableau 1. Contenu du répertoire racine généré dans une application Node.js " caption-side="top"}
+|README.md | Description d'application |
+{: caption="Tableau 1. Contenu du répertoire racine généré dans une application Node.js" caption-side="top"}
 
-|Répertoire  `./public/` | Description |
+| Répertoire  `./public/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | `./public/swagger.yml` | Spécification Swagger pour la description d'API REST |
 | `./public/index.html` | Balisage de squelette pour des applications Web |
 |`./public/server/server.js` | Fichier d'implémentation de serveur |
-{: caption="Tableau 2. Contenu du répertoire public généré dans une application Node.js " caption-side="top"}
+{: caption="Tableau 2. Contenu du répertoire public généré dans une application Node.js" caption-side="top"}
 
-|Répertoire  `./test/` | Description |
+| Répertoire  `./test/` | Description |
 |:------------------------------------------------|:------------------------------------------|
-|test-server.js | Test d'intégration pour Express server |
-{: caption="Tableau 3. Contenu du répertoire test généré dans une application Node.js " caption-side="top"}
+| test-server.js | Test d'intégration pour Express server |
+{: caption="Tableau 3. Contenu du répertoire test généré dans une application Node.js" caption-side="top"}
 
-|Répertoire  `./.bluemix/` | Description |
+| Répertoire  `./.bluemix/` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | container_build.sh | Script de construction du conteneur |
 | deploy.json | Informations de déploiement |
@@ -53,10 +52,10 @@ Le tableau suivant répertorie les répertoires et les fichiers inclus dans une 
 | toolchain.yml | Définition de chaîne d'outils IBM Cloud |
 {: caption="Tableau 4. Contenu du répertoire Bluemix généré dans une application Node.js" caption-side="top"}
 
-|Répertoire `./chart/<projectname>/` | Description |
+| `./chart/<projectname>Répertoire /` | Description |
 |:------------------------------------------------|:------------------------------------------|
 | `./chart/<projectname>/Chart.yaml` | Graphique Helm |
 | `./chart/<projectname>/values.yaml` | Valeurs du graphique Helm |
 | `./chart/<projectname>/templates/deployment.yaml` | Modèle de déploiement |
 | `./chart/<projectname>/templates/service.yaml` | Modèle de service |
-{: caption="Tableau 5. Contenu du répertoire chart généré dans une application Node.js " caption-side="top"}
+{: caption="Tableau 5. Contenu du répertoire chart généré dans une application Node.js" caption-side="top"}

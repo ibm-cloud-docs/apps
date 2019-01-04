@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -24,19 +24,19 @@ lastupdated: "2018-07-27"
 
 請完成下列步驟，以使用主控台為您的組織建立自訂網域：
 
-1. 移至**管理** > **帳戶** > **Cloud Foundry 組織**。
+1. 移至**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。
 2. 按一下您要建立自訂網域的組織名稱。
 3. 按一下**網域**標籤。
-4. 按一下**新增網域**，並輸入您的網域名稱，然後選取該地區。
+4. 按一下**新增網域**、輸入您的網域名稱，然後選取地區。
 5. 確認更新。按一下**新增**。
 
 例如，您可以使用 `*.mycompany.com` 來建立路徑 `www.mybluemix.com` 與您應用程式的關聯。您也可以使用 `example.mycompany.com` 來建立路徑 `www.example.mybluemix.com` 與您應用程式的關聯。
 {: tip}
 
-新增含有自訂網域的路徑至應用程式。
+將含有自訂網域的路徑新增至應用程式。
 
-1. 按一下**功能表**圖示 ![「功能表」圖示](../icons/icon_hamburger.svg) > **儀表板**，然後按一下您要新增路徑的應用程式列。即會顯示**概觀**頁面。
-2. 從**路徑**功能表中，選取**編輯路徑**。
+1. 按一下**功能表**圖示 ![「功能表」圖示](../icons/icon_hamburger.svg) > **資源清單**，然後按一下您要新增路徑的應用程式列。即會顯示「概觀」頁面。
+2. 按一下**路徑**功能表，然後選取**編輯路徑**。
 3. 按一下**新增路徑**，然後指定您要用於應用程式的路徑。
 4. 按一下**儲存**，以確認更新。
 
@@ -48,7 +48,7 @@ lastupdated: "2018-07-27"
    ibmcloud app domain-create <your org name> mydomain
    ```
 
-2. 新增含有自訂網域的路徑至應用程式。若為 Cloud Foundry 應用程式，請鍵入下列指令：
+2. 將含有自訂網域的路徑新增至應用程式。若為 Cloud Foundry 應用程式，請鍵入下列指令：
 
    ```
    ibmcloud app route-map myapp mydomain -n host_name
@@ -65,7 +65,7 @@ lastupdated: "2018-07-27"
 在 {{site.data.keyword.Bluemix_notm}} 中配置自訂網域之後，請將自訂網域對映至已登錄 DNS 伺服器上的 {{site.data.keyword.Bluemix_notm}} 系統網域：
 
 1. 在 DNS 伺服器上，設定自訂網域名稱的 'CNAME' 記錄。視您的 DNS 提供者而定，設定 CNAME 記錄的步驟有所不同。例如，如果您使用 GoDaddy，請遵循 GoDaddy 的[網域說明 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} 指引。
-2. 將自訂網域名稱對映至應用程式執行所在的 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供在 {{site.data.keyword.Bluemix_notm}} 中配置給組織的 URL 路徑。
+2. 將自訂網域名稱對映至應用程式執行所在之 {{site.data.keyword.Bluemix_notm}} 地區的安全端點。使用下列地區端點，提供配置給 {{site.data.keyword.Bluemix_notm}} 中組織的 URL 路徑。
 
   * US-SOUTH - `secure.us-south.bluemix.net`
   * US-EAST - `secure.us-east.bluemix.net`

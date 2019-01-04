@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt we
 
 Starter-Kits sind in der {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} in vielen Sprachen und Frameworks verfügbar. Wählen Sie als Einstieg die Sprache aus, die für Ihr Projekt am besten geeignet ist.
 
-1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus.
+1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus.
 2. Geben Sie den App-Namen und einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Dieser Hostname gibt die Route Ihrer App an: `abc-devhost.mybluemix.net`.
 3. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
 4. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
@@ -55,10 +55,10 @@ Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuou
 
 1. Klicken Sie im Fenster des App-Service auf **In Cloud bereitstellen**.
 2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie die Bereitstellungsmethode ein, indem Sie die Anweisungen für die ausgewählte Methode ausführen.
+  * Führen Sie die Bereitstellung in einem Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
+  * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
 
-    * Führen Sie die Bereitstellung in einem Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
-
-    * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
+Weitere Informationen finden Sie unter [Toolchains erstellen](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
 
 ## Schritt 5. App erstellen und lokal ausführen
 {: #build-run}
@@ -83,7 +83,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
   ```
   {: pre}
 
-7.  Rufen Sie die Berechtigungsnachweise ab.
+7. Rufen Sie die Berechtigungsnachweise ab.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
   ```
   {: pre}
 
-10.  Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
+10. Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
 
 ## Schritt 6. App bereitstellen
 {: #deploy}
@@ -118,20 +118,19 @@ Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der
 Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
 
 1. Klicken Sie im Fenster mit den App-Details auf **Toolchain anzeigen**.
-
 2. Klicken Sie auf **Delivery Pipeline**. Hier können Sie Builds starten, die Bereitstellung verwalten sowie Protokolle und den Verlauf anzeigen.
+
+Weitere Informationen finden Sie unter [Erstellen und bereitstellen](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Bereitstellung: {{site.data.keyword.dev_cli_short}} verwenden
 
 Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
-
 ```
 ibmcloud dev deploy --target <container>
 ```

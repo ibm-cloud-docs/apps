@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-05-21"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-05-21"
 # Status der App prüfen
 {: #manageapps}
 
-Ihr Dashboard in der {{site.data.keyword.Bluemix}}-Konsole stellt Übersichtsinformationen zu den von Ihnen erstellten Anwendungen bereit. Diese Übersichtsinformationen umfassen den Namen, das Symbol, die URL, die Laufzeit und den Ausführungsstatus sowie die Serviceinstanzen, die an die App gebunden sind.
+Ihre Ressourcenliste in der {{site.data.keyword.Bluemix}}-Konsole stellt Übersichtsinformationen zu den von Ihnen erstellten Anwendungen bereit. Diese Übersichtsinformationen umfassen den Namen, das Symbol, die URL, die Laufzeit und den Ausführungsstatus sowie die Serviceinstanzen, die an die App gebunden sind.
 {:shortdesc}
 
 ## Status der App verstehen
 {: #status}
 
-In Ihrem Dashboard können Sie den Status jeder Anwendung anzeigen. In der Statusspalte jeder Anwendung können Sie sehen, ob die Instanzen der App ausgeführt werden.
+In Ihrer Ressourcenliste können Sie den Status jeder Anwendung anzeigen. In der Statusspalte jeder Anwendung können Sie sehen, ob die Instanzen der App ausgeführt werden.
 
 <dl>
 <dt>
@@ -55,10 +55,10 @@ Ihre App wird nicht ausgeführt. Das rote Symbol gibt an, dass die App zwar gest
 </dd>
 </dl>
 
-## Dashboard mit App-Details anzeigen
+## App-Details anzeigen
 {: #viewingapps}
 
-Sie können weitere Informationen zu einer App anzeigen, indem Sie auf den Namen der App in Ihrem Dashboard klicken. Daraufhin wird die Seite 'Übersicht' der App angezeigt.
+Sie können weitere Informationen zu einer App anzeigen, indem Sie auf den Namen der App in Ihrer Ressourcenliste klicken. Daraufhin wird die Seite 'Übersicht' der App angezeigt.
 
 Nachdem eine App bereitgestellt wurde, können Sie sie über die Seite 'Übersicht' starten, stoppen oder erneut starten oder - im Falle von Webanwendungen - die Anzahl der Instanzen sowie die von der App verwendete Speichermenge ändern. {{site.data.keyword.Bluemix_notm}} führt für Webanwendungen keine automatische Skalierung der Apps auf Basis der jeweiligen Auslastung durch, weshalb Sie sie selbst verwalten müssen.
 

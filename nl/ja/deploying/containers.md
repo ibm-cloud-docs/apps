@@ -29,7 +29,7 @@ Kubernetes クラスターで実行される Docker コンテナーに高可用�
 
 1. 自動化されたクラウド・パイプラインをセットアップして、アプリをクラウドにデプロイします。
 2. **「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
-3. ターゲットとして Kubernetes を選択します。 まだクラスターがない場合は、[クラスターを作成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/containers-kubernetes/catalog/cluster/create){:new_window} する必要があります。
+3. ターゲットとして Kubernetes を選択します。 まだクラスターがない場合は、[クラスターを作成 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window} する必要があります。
 4. デプロイメントが完了したら、Delivery Pipeline のデプロイ・ステージからのログで URL を取得して、クラウドのライブ・アプリを確認します。 ポートを含む最後の IP アドレスが、アプリの新しいホーム (例えば、169.60.133.124:32355) です。
 
 ## サービスのバインド
@@ -67,11 +67,11 @@ Kubernetes クラスターで実行される Docker コンテナーに高可用�
 
 詳しくは、[Charts ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://docs.helm.sh/developing_charts/){:new_window} を参照してください。
 
-{{site.data.keyword.cloud_notm}} では、多数の[事前構成済みの Helm チャート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/containers-kubernetes/solutions/helm-charts){:new_window} がサポートされます。
+{{site.data.keyword.cloud_notm}} では、多数の[事前構成済みの Helm チャート ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window} がサポートされます。
 
 ## アプリのセキュリティーの確認
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} では、パッケージされたコンテナー・イメージにセキュリティーの脆弱性がないかどうかのスキャンがサポートされます。 エンタープライズ・レベルのアプリケーションをサポートするためには、セキュリティー・スキャンが必須です。
 
-潜在的なセキュリティーの脆弱性を確認するには、コンテナーの[イメージ・リポジトリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/containers-kubernetes/registry/private){:new_window} を参照してください。
+潜在的なセキュリティーの脆弱性を確認するには、コンテナーの[イメージ・リポジトリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} を参照してください。

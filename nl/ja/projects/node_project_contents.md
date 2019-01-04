@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -18,15 +18,15 @@ Node.js アプリでは、通常 {{site.data.keyword.Bluemix}} に含まれて�
 
 以下の表に、生成される Node.js アプリに含まれている一般的なディレクトリーとファイルをリストします。
 
-| ルート・ディレクトリー                          | 説明                       |
+| ルート・ディレクトリー                                     | 説明                       |
 |:------------------------------------------------|:------------------------------------------|
-|package.json | メタデータ・ファイル |
+|package.json | 名前、バージョン、および依存関係を含む、パッケージに関するメタデータ情報。 |
 |cli-config.yml | CLI 構成オプション |
 |manifest.yml | Cloud Foundry デプロイメント・ファイル |
 |Dockerfile | `ibmcloud dev run`、`ibmcloud dev deploy`、および `docker` の各コマンドの Dockerfile |
 |Dockerfile-tools | `ibmcloud dev build` および `ibmcloud dev test` の Dockerfile |
 |docker-compose.yml | Docker Compose のアプリ・サービス構成 |
-|webpack.config.js | ビルド関連情報の Webpack 構成 |
+|webpack.config.js | ビルド関連情報の Web パック構成 |
 | LICENSE | ライセンス・ファイル |
 |README.md | アプリの説明 |
 {: caption="表 1. 生成された Node.js アプリのルート・ディレクトリーの内容" caption-side="top"}

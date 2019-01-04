@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-23"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-10-23"
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
 # 建立應用程式的疑難排解
 {: #managingapps}
@@ -25,6 +26,7 @@ lastupdated: "2018-10-23"
 
 ## 您有未儲存的變更
 {: #ts_unsaved_changes}
+{: troubleshoot}
 
 當您按一下應用程式詳細資料頁面上的項目時，可能無法採取任何動作，而且系統可能會提示您儲存變更後才能繼續。
 
@@ -41,6 +43,7 @@ lastupdated: "2018-10-23"
 
 ## {{site.data.keyword.Bluemix_notm}} 地區之間的自動失效接手無法使用
 {: #ts_failover}
+{: troubleshoot}
 
 您無法在 {{site.data.keyword.Bluemix_notm}} 地區之間使用自動失效接手。不過，您可以使用支援在許多 IP 位址之間進行失效接手的 DNS 提供者，作為暫行解決方法。
 
@@ -61,6 +64,7 @@ nslookup mybluemix.net
 
 ## 無法將應用程式切換為除錯模式
 {: #ts_debug}
+{: troubleshoot}
 
 如果 Java 虛擬機器 (JVM) 版本是第 8 版或更舊版本，則無法啟用除錯模式。
 
@@ -134,6 +138,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 ## 無法重複使用已刪除應用程式的名稱
 {: #ts_reuse_appname}
+{: troubleshoot}
 
 在您刪除應用程式之後，只有在刪除應用程式路徑之後才能重複使用應用程式名稱。
 
@@ -174,6 +179,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 ## 無法擷取組織中的空間
 {: #ts_retrieve_space}
+{: troubleshoot}
 
 如果現行組織沒有與其相關聯的空間，則無法建立應用程式或服務。
 
@@ -188,13 +194,14 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-* 從功能表列中，按一下**管理 > 帳戶 > 組織**。選取要在其中建立空間的組織，然後按一下**建立空間**。
-* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o<organization_name>`。
+* 從功能表列中，按一下**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。選取要在其中建立空間的組織，然後按一下**建立空間**。
+* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
 請重試。如果此訊息再次出現，請前往 [{{site.data.keyword.Bluemix_notm}} 狀態 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/bluemixstatus){: new_window} 頁面，以檢查服務或元件是否有問題。
 
 ## 無法執行所要求的動作
 {: #ts_authority}
+{: troubleshoot}
 
 您沒有適當的存取權，無法完成動作。
 
@@ -216,6 +223,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketC
 
 ## 因為授權錯誤，所以無法存取 {{site.data.keyword.Bluemix_notm}} 服務
 {: #ts_vcap}
+{: troubleshoot}
 
 如果服務認證寫在您的應用程式中，則您的應用程式存取 {{site.data.keyword.Bluemix_notm}} 服務時可能會發生授權錯誤。
 
@@ -239,6 +247,7 @@ process.env.VCAP_SERVICES
 
 ## 無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 來部署應用程式
 {: #ts_bm_tools_facet}
+{: troubleshoot}
 
 當不受支援的資料類型套用至 Eclipse 專案時，您可能無法使用 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 將您的應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
@@ -256,6 +265,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
 ## 收到 502 錯誤的閘道錯誤
 {: #ts_502_error}
+{: troubleshoot}
 
 如果您在 {{site.data.keyword.Bluemix_notm}} 上與應用程式互動時，收到「502 錯誤的閘道」錯誤，請檢查 {{site.data.keyword.Bluemix_notm}} 狀態頁面，然後採取適當的動作。
 
@@ -280,6 +290,7 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 
 ## 已超出磁碟配額
 {: #ts_disk_quota}
+{: troubleshoot}
 
 如果您已耗盡磁碟空間，可以手動修改磁碟配額以取得更多磁碟空間。
 
@@ -302,8 +313,9 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
-## Android 應用程式收不到 {{site.data.keyword.mobilepushshort}}
+## Android 應用程式無法接收 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
+{: troubleshoot}
 
 在無法存取 Google 的特定地區中，Android 應用程式收不到您透過 IBM {{site.data.keyword.mobilepushshort}} 服務送出的通知。在此情況下，暫行解決方法是使用協力廠商服務。為您的 {{site.data.keyword.Bluemix_notm}} 應用程式連結一個 {{site.data.keyword.mobilepushshort}} 服務，並將訊息傳送至已登錄的裝置。不過，在特定地區，Android 上開發的應用程式收不到您的通知。
 {: tsSymptoms}
@@ -311,13 +323,14 @@ IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 會依專案資料類�
 IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://pushy.me){: new_window}, [getui ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.getui.com/){: new_window}、以及 [jpush ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jpush.cn/){: new_window}。
+暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://pushy.me){: new_window}, [getui ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.getui.com/){: new_window} 以及 [jpush ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jpush.cn/){: new_window}。
 {: tsResolve}
 
 ## 已超出組織的服務限制
 {: #ts_servicelimit}
+{: troubleshoot}
 
-如果您是「精簡」帳戶使用者，則在超出組織的服務限制時，可能無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
+如果您是「精簡」帳戶使用者，則在超出組織的服務限制時，您可能無法在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式。
 
 當您嘗試在 {{site.data.keyword.Bluemix_notm}} 中建立應用程式時，會顯示下列錯誤訊息：
 {: tsSymptoms}
@@ -333,8 +346,8 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
   * 若要刪除服務實例，您可以使用 {{site.data.keyword.Bluemix_notm}} 主控台或指令行介面。
 
     若要使用 {{site.data.keyword.Bluemix_notm}} 主控台來刪除服務實例，請完成下列步驟：
-	  1. 在「服務」儀表板中，對您要刪除的服務按一下 **動作** 功能表。
-	  2. 按一下 **刪除服務**。系統會提示您重新編譯打包服務實例所連結的應用程式。若要使用指令行介面來刪除服務實例，請完成下列步驟：
+	  1. 在資源清單中，對您要刪除的服務按一下 **動作** 功能表。
+	  2. 按一下**刪除服務**。系統會提示您重新編譯打包服務實例所連結的應用程式。若要使用指令行介面來刪除服務實例，請完成下列步驟：
 	  3. 從應用程式取消連結服務實例。請輸入 `cf unbind-service <appname> <service_instance_name>`。
 	  4. 刪除服務實例。 請輸入 `cf delete-service <service_instance_name>`。
 	  5. 刪除服務實例之後，您可能要重新編譯打包服務實例所連結的應用程式。請輸入 `cf restage <appname>`。
@@ -343,6 +356,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 
 ## 執行檔無法在 {{site.data.keyword.Bluemix_notm}} 上執行
 {: #ts_executable}
+{: troubleshoot}
 
 在不同環境中開發及建置的執行檔，可能無法在 {{site.data.keyword.Bluemix_notm}} 上執行。
 
@@ -366,8 +380,9 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
 ## 已超出組織的記憶體限制
 {: #ts_outofmemory}
+{: troubleshoot}
 
-如果您是「精簡」帳戶使用者，則在超出組織的記憶體限制時，可能無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。「精簡」帳戶的記憶體配額上限為 256 MB，而且只能透過升級為計費帳戶來增加。當您將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，會顯示下列錯誤訊息：
+如果您是「精簡」帳戶使用者，則超出組織的記憶體限制時，您可能無法將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。您可以減少應用程式所使用的記憶體，或增加帳戶的記憶體配額。「精簡」帳戶的記憶體配額上限為 256 MB，而且只能透過升級為計費帳戶來增加。當您將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，會顯示下列錯誤訊息：
 {: tsSymptoms}
 
 `FAILED Server error, status code: 400, error code: 100005, message: You have exceeded your organization's memory limit.`
@@ -383,8 +398,8 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
     如果您使用 {{site.data.keyword.Bluemix_notm}} 主控台，請完成下列步驟：
 
-    1. 從儀表板選取應用程式。即會開啟應用程式詳細資料頁面。
-    2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體限制上限或者應用程式實例的數目，或此兩者。
+    1. 從資源清單中選取應用程式。即會開啟應用程式詳細資料頁面。
+    2. 在「運行環境」窗格中，您可以針對您的應用程式減少記憶體限制上限或應用程式實例的數目，或這兩者。
 
     如果您使用指令行介面，請完成下列步驟：
 
@@ -406,6 +421,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 
 ## 應用程式不會自動重新啟動
 {: #ts_apps_not_auto_restarted}
+{: troubleshoot}
 
 當連結至應用程式的服務停止運作時，不會自動重新啟動應用程式。
 
@@ -426,6 +442,7 @@ ibmcloud cf push appname -p app_path
 
 ## 推送應用程式時遺失使用者定義變數
 {: #ts_varsnotretained}
+{: troubleshoot}
 
 當您從 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 推送應用程式至 {{site.data.keyword.Bluemix_notm}} 時，您指定的變數會重設，除非您將變數儲存至資訊清單檔。
 
@@ -438,9 +455,35 @@ ibmcloud cf push appname -p app_path
 當您從 IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 推送應用程式至 {{site.data.keyword.Bluemix_notm}} 時，請在「應用程式」精靈的「應用程式詳細資料」頁面中，選取**儲存至資訊清單檔**勾選框。然後，您在精靈中指定的變數便會儲存到應用程式的資訊清單檔。下次開啟精靈時，會自動顯示變數。
 {: tsResolve}
 
+<!-- begin STAGING ONLY -->
+
+## {{site.data.keyword.Bluemix_notm}} Live Sync 除錯不會從指令行啟動
+{: #ts_no_debug}
+{: troubleshoot}
+
+您已使用指令行來啟用應用程式的「{{site.data.keyword.Bluemix_notm}} Live Sync 除錯」特性，但無法存取「除錯」介面。
+
+您已藉由設定 **BLUEMIX_APP_MGMT_ENABLE** 環境變數，來為應用程式啟用「除錯」特性。不過，您無法存取位於 `app_url/bluemix-debug/manage` 的「除錯」使用者介面。
+{: tsSymptoms}
+
+在以下情況無法啟用「除錯」特性：
+{: tsCauses}
+
+  * 當 `manifest.yml` 包含指令屬性時
+  * 當您使用 **-c** 選項，將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 時
+
+請使用下列其中一個選項來解決問題：
+{: tsResolve}
+
+  * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) 主題的「啟動指令」一節。
+  * 將 `manifest.yml` 中的指令屬性修訂為 command: null，或編輯您的推送指令以包含 `-c null`，來停用現有應用程式的指令。
+  * 從 `manifest.yml` 中移除**指令**屬性。然後，從 {{site.data.keyword.Bluemix_notm}} 中刪除現行應用程式，然後重新推送應用程式。
+
+<!-- end STAGING ONLY -->
 
 ## 在 {{site.data.keyword.Bluemix_notm}} 上找不到組織
 {: #ts_orgs}
+{: troubleshoot}
 
 在使用 {{site.data.keyword.Bluemix_notm}} 地區時，可能找不到 {{site.data.keyword.Bluemix_notm}} 上的組織。
 
@@ -471,6 +514,7 @@ cf api https://api.eu-gb.bluemix.net
 
 ## 無法建立應用程式路徑
 {: #ts_hostistaken}
+{: troubleshoot}
 
 將應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，如果指定的主機名稱已被使用，則無法建立應用程式路徑。
 
@@ -489,6 +533,7 @@ cf api https://api.eu-gb.bluemix.net
     ```
     host: host_name
 	```
+
   * 如果您從命令提示字元部署應用程式，請使用 `ibmcloud cf push` 指令與 **-n** 選項。
     ```
     ibmcloud cf push appname -p app_path -n host_name
@@ -496,6 +541,7 @@ cf api https://api.eu-gb.bluemix.net
 
 ## 無法使用 ibmcloud cf push 指令推送 WAR 應用程式
 {: #ts_cf_war}
+{: troubleshoot}
 
 如果未正確指定應用程式位置，則可能無法使用 `ibmcloud cf push` 指令，將保存的 Web 應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
@@ -520,6 +566,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 
 ## 將應用程式推送至 {{site.data.keyword.Bluemix_notm}} 後，未能適當地顯示雙位元組字元
 {: #ts_doublebytes}
+{: troubleshoot}
 
 如果未適當配置 Servlet 或 JSP 檔的 Unicode 支援，則可能無法適當顯示雙位元組字元。
 
@@ -533,16 +580,17 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 {: tsResolve}
 
   * 在 Servlet 原始檔中
-    ```
+  ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * 在 JSP 中
-    ```
+  * In the JSP
+  ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
 
 ## 無法部署 Node.js 應用程式
 {: #ts_nodejs_deploy}
+{: troubleshoot}
 
 當您更新 Node.js 應用程式或是將 Node.js 應用程式部署至 {{site.data.keyword.Bluemix_notm}} 時，可能會遇到問題。
 
@@ -566,26 +614,26 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 
   * 以下列其中一種方法指定啟動指令：
      * 使用 Cloud Foundry 指令行介面。例如：
-        ```
-		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+    ```
+		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		```
     * 使用 [package.json ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/jsonfile){: new_window} 檔案。例如：
 	    ```
-		{
-      ...
-  	   "scripts": {
+		  {
+        ...
+  	    "scripts": {
 	 		 "start": "node app.js"
  	   }
 	}
 	    ```
     * 使用 `manifest.yml` 檔案。例如：
 	    ```
-		applications:
+		  applications:
   name: MyUniqueNodejs01
   ...
-  command: node app.js
+      command: node app.js
   ...
-        ```
+      ```
 
   * 確定 `package.json` 檔案存在於您的 Node.js 應用程式中，Node.js 建置套件才能辨識應用程式。請確定此檔案位在應用程式的根目錄中。下列範例顯示簡單的 `package.json` 檔案：
 	```
@@ -610,6 +658,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 
 ## 將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
 {: #ts_eclipse}
+{: troubleshoot}
 
 如果您在將 {{site.data.keyword.Bluemix_notm}} Liberty 應用程式匯入至 Eclipse 之後，於 `server.xml` 檔案中看到配置錯誤，則可能需要移除專案中的 `server.xml` 檔案。
 
@@ -624,6 +673,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 ## 無法使用自訂建置套件來編譯打包應用程式
 {: #ts_bp_compilation}
+{: troubleshoot}
 
 如果自訂建置套件中的 Script 不是執行檔，則可能無法使用該建置套件將應用程式部署至 {{site.data.keyword.Bluemix_notm}}。
 
@@ -637,7 +687,8 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsResolve}
 
 ## 在 {{site.data.keyword.Bluemix_notm}} Continuous Delivery 中無法從 Delivery Pipeline 部署應用程式
- {: #ts_devops_to_bm}
+{: #ts_devops_to_bm}
+{: troubleshoot}
 
  如果應用程式中沒有 `manifest.yml` 檔案，您可能無法在 {{site.data.keyword.contdelivery_short}} 中使用 {{site.data.keyword.deliverypipeline}} 來部署應用程式。
 
@@ -652,6 +703,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 ## 無法推送 Meteor 應用程式
 {: #ts_meteor}
+{: troubleshoot}
 
 如果未正確指定建置套件，您可能無法將 Meteor 應用程式推送至 {{site.data.keyword.Bluemix_notm}}。
 
@@ -668,7 +720,32 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
   ```
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
-  * 如果您從命令提示字元部署應用程式，請使用 `ibmcloud cf push` 指令，以及 **-b** 選項來指定自訂建置套件。例如：
-    ```
+  * 如果您從命令提示字元部署應用程式，請使用 `ibmcloud cf push` 指令，並使用 **-b** 選項來指定自訂建置套件。例如：
+  ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+
+## 已超出儲存空間配額
+{: #exceed_quota}
+
+如果建置或部署工作失敗，且看到下列訊息，則您可以使用下列 CLI 指令來刪除映像檔。「狀態：未獲授權：您已超出儲存空間配額。請刪除一個以上的映像檔，或檢閱您的儲存空間配額及定價方案。」
+
+* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，如果您還沒有它的話。
+* 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
+* 使用 `ibmcloud cr images` 列出您的映像檔。
+* 使用 `ibmcloud cr image-rm <respository>:<tag>` 來刪除任何未用的映像檔。
+* 重新執行失敗的建置或部署工作。
+
+## 存取 Kubernetes 日誌
+{: #access_kube_logs}
+
+如果應用程式不在執行中，且您無法存取性能端點，請嘗試查看叢集裡的日誌。
+* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，如果您還沒有它的話。
+* 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
+* 使用 `ibmcloud cs clusters` 列出您的叢集。
+* 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的對應叢集。
+* 匯出列出的環境變數。
+* 使用 `kubectl get pods` 檢視您的 Pod。如果您需要安裝 `kubectl`，請參閱[安裝並設定 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。
+* 您可以使用 `kubectl logs <pod-name>` 來檢視應用程式中的日誌。
+
+

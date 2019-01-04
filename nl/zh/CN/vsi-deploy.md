@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-11-10"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -13,24 +12,22 @@ lastupdated: "2018-11-10"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 {:important: .important}
+{:table: .aria-labeledby="caption"}
 
 # 部署虚拟服务器
 {: #vsi-deploy}
 
-您可以使用 {{site.data.keyword.cloud}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} 将应用程序部署到多种类型的环境中，包括虚拟服务器实例。虚拟服务器实例会模拟裸机机器，是将内部部署工作负载移动到云上时常见的部署选择。
+如果您有现买现付帐户，那么可以使用 {{site.data.keyword.cloud}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 将应用程序部署到多种类型的环境中，包括虚拟服务器实例。虚拟服务器实例会模拟裸机机器，是将内部部署工作负载移动到云上时常见的部署选择。
 {: shortdesc}
 
 与其他配置相比，虚拟服务器实例可以为所有工作负载类型提供更好的透明度、可预测性和自动化功能。与裸机服务器相结合，还可以创建出独特的工作负载组合。例如，可以使用运行基于 Debian Linux 的操作系统的裸机和 GPU 配置来创建高性能的数据库逻辑或机器学习。
 
-供应和部署虚拟服务器实例的过程可能很复杂和耗时。使用 {{site.data.keyword.cloud_notm}} App Service，您就可以快速地启动和运行虚拟服务器实例了。
+供应和部署虚拟服务器实例的过程可能很复杂和耗时。但是，使用 {{site.data.keyword.cloud_notm}} App Service，可以快速地设置和运行虚拟服务器实例。
 
-## 开始之前
-{: #prereqs}
-
-请升级到“现买现付”帐户。要使用虚拟实例，必须为经典基础架构启用 {{site.data.keyword.cloud_notm}} 帐户。要升级帐户，请转至控制台中的**管理** > **计费和使用情况** > **计费**。
-
-**重要信息：**服务未绑定到虚拟服务器实例。您无法向虚拟服务器中的应用程序添加服务。
+服务未绑定到虚拟服务器实例。您无法向虚拟服务器中的应用程序添加服务。
+{: important}
 
 ## 创建和部署应用程序
 {: #create-deploy}
@@ -51,7 +48,7 @@ App Service 会为您供应虚拟服务器实例，装入包含您的应用程�
 
 ### 启用管道部署
 
-当您创建入门模板工具包来使用 {{site.data.keyword.cloud_notm}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://console.bluemix.net/developer/appservice/starter-kits){: new_window} 时，系统会启用虚拟服务器实例。在创建应用程序后，可以选择要在何处部署应用程序。启用了入门模板工具包，以支持使用 Continuous Delivery 工具链进行部署。入门模板工具包可用于 Kubernetes、Cloud Foundry 以及 Virtual Server 实例。该工具链包含源代码存储库和部署管道。
+当您创建入门模板工具包来使用 {{site.data.keyword.cloud_notm}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 时，系统会启用虚拟服务器实例。在创建应用程序后，可以选择要在何处部署应用程序。启用了入门模板工具包，以支持使用 Continuous Delivery 工具链进行部署。入门模板工具包可用于 Kubernetes、Cloud Foundry 以及 Virtual Server 实例。该工具链包含源代码存储库和部署管道。
 
 虚拟服务器选项分阶段进行。首先，准备应用程序代码并将其存储在 GitLab Git 存储库中。源代码用于创建包含管道的工具链。可定义管道来构建代码，并将代码打包成 Debian 软件包管理器格式。然后，Terraform 供应一个虚拟实例。最后，在运行中虚拟映像内部署、安装和启动应用程序，并验证其运行状况。
 
@@ -64,58 +61,64 @@ App Service 会为您供应虚拟服务器实例，装入包含您的应用程�
 3. 单击**阶段配置**图标，然后单击构建阶段上的**配置阶段**。
 4. 单击**环境属性**选项卡来查看属性。要了解可用的属性，请参阅下表。
 
-  |属性|描述
+|属性|描述
 |
-  |---|---|
-  | `TF_VAR_ibm_sl_api_key` | [基础架构 API 密钥](#iaas-key)来自经典基础架构控制台。|
-  | `TF_VAR_ibm_sl_username` | 用于标识经典基础架构帐户的[基础架构用户名](#user-key) |
-  | `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [平台 API 密钥](#platform-key)用于确保能够进行服务创建。|
-  | `PUBLIC_KEY` | [公用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。|
-  | `PRIVATE_KEY` | [专用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。**注**：必须使用 `\n` 换行符样式格式。|
-  | `VI_INSTANCE_NAME` | 自动为虚拟服务器实例生成的名称 |
-  | `GIT_USER` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 用户名。|
-  | `GIT_PASSWORD` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 密码。|
-  {: caption="表 1. 为启用管道而更改的环境变量" caption-side="top"}
+|-----------|--------------|
+| `TF_VAR_ibm_sl_api_key` | [基础架构 API 密钥](#iaas-key)来自经典基础架构控制台。|
+| `TF_VAR_ibm_sl_username` | 用于标识经典基础架构帐户的[基础架构用户名](#user-key) |
+| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [平台 API 密钥](#platform-key)用于确保能够进行服务创建。|
+| `PUBLIC_KEY` | [公用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。|
+| `PRIVATE_KEY` | [专用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。必须使用 `\n` 换行符样式格式。|
+| `VI_INSTANCE_NAME` | 自动为虚拟服务器实例生成的名称 |
+| `GIT_USER` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 用户名。|
+| `GIT_PASSWORD` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 密码。|
+{: caption="表 1. 为启用管道而更改的环境变量" caption-side="top"}
+
 
 #### 基础架构 API 密钥
 {: #iaas-key}
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform 需要基础架构 API 密钥来创建基础架构资源。API 密钥在部署期间自动获取。要手动检索该密钥，请完成以下步骤。
 
-Terraform 需要基础架构 API 密钥来创建经典基础架构资源。在部署期间，会自动获取该密钥。要手动检索该密钥，请完成以下步骤。 
+1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
+2. 单击用户名，然后单击**用户详细信息**。
+3. 单击“API 密钥”部分中的**添加经典基础架构密钥**。
+4. 复制或下载 API 密钥 `TF_VAR_ibm_sl_api_key`，并将其保存在安全的位置。您可以稍后使用**操作** ![“操作列表”图标](../icons/action-menu-icon.svg) 菜单中的**查看详细信息**选项来检索 API 密钥的详细信息。
+5. 将复制的 API 密钥值粘贴到工具链配置中，以替换 `TF_VAR_ibm_sl_api_key`。
 
-1. 转至经典基础架构[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}。您也可以单击**菜单** > **经典基础架构** > **帐户** > **用户列表**。
-2. 查找创建工具链的用户的详细信息，单击“API 密钥”列中的**查看**或单击**生成**。这两个步骤都会在窗口中显示 API 密钥。
-3. 复制 API 密钥并替换工具链配置 `TF_VAR_ibm_sl_api_key` 中的值。
+有关更多信息，请参阅[管理经典基础架构 API 密钥](/docs/iam/classic_infra_keys.html)和[经典基础架构许可权](/docs/iam/infrastructureaccess.html)。
 
-#### 经典基础架构用户名
+#### 基础架构用户名
 {: #user-key}
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+部署期间，还会自动获取并使用基础架构用户名。要手动获取该用户名，请完成以下步骤。
 
-在部署期间，还会自动获取并使用经典基础架构用户名。要手动获取该用户名，请完成以下步骤。
-
-1. 转至经典基础架构[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://control.bluemix.net/account/users){: new_window}。您也可以单击**菜单** > **经典基础架构** > **帐户** > **用户列表**。
-2. 单击您想要其创建工具链的用户。
-3. 向下滚动到 **VPN 用户名**属性。
+1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
+2. 单击用户名，然后单击**用户详细信息**。
+3. 找到 **VPN 用户名**属性。
 4. 剪切并粘贴此值，然后替换工具链配置 `TF_VAR_ibm_sl_username`。
 
-#### 平台 API 密钥
+#### IBM Cloud API 密钥
 {: #platform-key}
 
 为了在 Terraform 中创建平台级别的服务（如数据库和 Compose 服务），系统会自动获取平台 API 密钥，并将其存储为管道中的环境变量。要手动检索平台密钥，请完成以下步骤。
 
-1. 在 [API 密钥 ![外部链接图标](../icons/launch-glyph.svg)](https://console.bluemix.net/iam/#/apikeys) 页面中，单击**管理** > **安全性** > **平台 API 密钥**。
-2. 单击**创建**。
-3. 输入名称和描述，然后单击**创建**。
-4. 窗口打开时，单击**显示**以查看密钥。
-5. 将密钥复制并粘贴到剪贴板上，或下载密钥。
-6. 使用生成的值替换工具链配置 `TF_VAR_ibm_cloud_api_key` 中的值。
+1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
+2. 单击用户名，然后单击**用户详细信息**。
+3. 找到“API 密钥”部分，然后单击**创建 IBM Cloud API 密钥**。
+4. 输入名称和描述，然后单击**创建**。
+5. 窗口打开时，单击**显示**以查看密钥。
+6. 将密钥复制并粘贴到剪贴板上，或下载密钥。
+7. 使用生成的值替换工具链配置 `TF_VAR_ibm_cloud_api_key` 中的值。
 
-#### 公共和专用密钥
+#### 公用密钥和专用密钥
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 为了使工具链能够将 Debian 打包安装到虚拟服务器实例中，部署基础架构会自动生成专用和公用 SSH 密钥对，以用于将 Git 内容传输到实例。
 
 要手动执行此操作，请执行以下步骤：
 1. 在客户机中，使用以下指示信息来创建[公用和专用密钥对 ![外部链接图标](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}。
-2. 转至[基础架构 SSH 密钥视图 ![外部链接图标](../icons/launch-glyph.svg)](https://control.bluemix.net/devices/sshkeys){: new_window}。您也可以单击**菜单** > **经典基础架构** > **设备** > **管理** > **SSH 密钥**。
+2. 转至[基础架构 SSH 密钥视图 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}。您也可以单击**菜单** > **经典基础架构** > **设备** > **管理** > **SSH 密钥**。
 3. 单击**添加**。
 4. 将先前创建的公用密钥的内容复制并粘贴到密钥内容中。
 5. 为密钥指定名称，然后单击**添加**。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -22,14 +22,26 @@ Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code)
 ## 스타터 킷 선택
 {: #select-a-starter-kit}
 
-2. [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/dashboard/apps){: new_window}에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하십시오.
-3. 다음 카테고리 중 하나에서 Mendix 로우 코드 스타터 킷을 선택하십시오.
-  * [모바일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson 웹 또는 모바일 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [웹 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-app)
-4. **앱 작성**을 클릭하십시오.
-5. 앱 이름을 지정하십시오. 
-6. **작성**을 클릭하십시오.
+1. [{{site.data.keyword.cloud_notm}} 앱 서비스 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/dashboard){: new_window}에서 **시작하기**를 클릭하십시오. 
+2. 다음 카테고리 중 하나에서 Mendix 로우 코드 스타터 킷을 선택하십시오.
+  * [모바일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson 웹 또는 모바일 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [웹 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
+3. **앱 작성**을 클릭하십시오.
+4. 앱 이름을 지정하십시오.
+5. **작성**을 클릭하십시오.
+
+<!-- 
+####### Promote CLOUD.IBM.COM links to prod when approved.
+1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
+2. Select a Mendix low-code starter kit from one of the following categories:
+  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
+3. Click **Create app**.
+4. Name your app.
+5. Click **Create**.
+-->
 
 ## IBM에 Mendix 및 링크 계정에서 프로젝트를 작성할 권한 부여
 {: #link-mendix-account}

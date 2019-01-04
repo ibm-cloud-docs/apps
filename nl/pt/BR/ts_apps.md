@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2018
 
-lastupdated: "2018-10-23"
+lastupdated: "2018-11-21"
 
 ---
 
@@ -16,6 +16,7 @@ lastupdated: "2018-10-23"
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
 
 # Resolução de problemas para criar apps
 {: #managingapps}
@@ -25,6 +26,7 @@ Problemas gerais com a criação de apps podem incluir apps que não podem ser a
 
 ## Você possui mudanças não salvas
 {: #ts_unsaved_changes}
+{: troubleshoot}
 
 Quando você clica em itens na página de detalhes do app, pode ser incapaz de executar quaisquer ações e pode ser solicitado a salvar as mudanças antes que possa continuar.
 
@@ -41,6 +43,7 @@ Feche a janela de mensagem e, em seguida, clique em **RECONFIGURAR** em sua áre
 
 ## O failover automático entre regiões do {{site.data.keyword.Bluemix_notm}} não está disponível
 {: #ts_failover}
+{: troubleshoot}
 
 Não é possível usar failover automático entre regiões do {{site.data.keyword.Bluemix_notm}}. No entanto, é possível usar um provedor DNS que suporte failover entre muitos endereços IP como uma solução alternativa.
 
@@ -61,6 +64,7 @@ nslookup mybluemix.net
 
 ## Impossível alternar apps para o modo de depuração
 {: #ts_debug}
+{: troubleshoot}
 
 Não será possível ativar o modo de depuração se a versão da Java virtual machine (JVM) for 8 ou anterior.
 
@@ -134,6 +138,7 @@ Se a sua JVM de ambiente de trabalho for IBM JVM 7 ou 8, ou uma versão anterior
 
 ## Não é possível reutilizar nomes de apps excluídos
 {: #ts_reuse_appname}
+{: troubleshoot}
 
 Depois de excluir um app, é possível reutilizar o nome do app somente depois de excluir a rota do app.
 
@@ -175,6 +180,7 @@ exemplo:
 
 ## Não é possível recuperar espaços na organização
 {: #ts_retrieve_space}
+{: troubleshoot}
 
 Não será possível criar um app ou um serviço se a sua organização atual não tiver um espaço associado a ela.
 
@@ -189,13 +195,14 @@ Esse erro geralmente ocorre na primeira vez que você tenta criar um app ou um s
 Certifique-se de que você criou um espaço em sua organização atual. Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
 
-* Na barra de menus, clique em **Gerenciar > Conta > Organizações**. Selecione a organização em que você deseja criar o espaço e clique em **Criar um espaço**.
+* Na barra de menus, clique em **Gerenciar > Conta** e selecione **Organizações do Cloud Foundry**. Selecione a organização em que você deseja criar o espaço e clique em **Criar um espaço**.
 * Na interface da linha de comandos do Cloud Foundry, digite `cf create-space <space_name> -o <organization_name>`.
 
 Tente novamente. Se essa mensagem ocorrer novamente, acesse a página de status do [{{site.data.keyword.Bluemix_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window} para verificar se um serviço ou um componente tem um problema.
 
 ## Não é possível executar as ações solicitadas
 {: #ts_authority}
+{: troubleshoot}
 
 Não é possível concluir ações sem a autoridade de acesso apropriada.
 
@@ -217,6 +224,7 @@ Para obter o nível de autoridade apropriado, use um dos métodos a seguir.
 
 ## Não é possível acessar serviços do {{site.data.keyword.Bluemix_notm}} devido a erros de autorização
 {: #ts_vcap}
+{: troubleshoot}
 
 Erros de autorização poderão ocorrer quando o seu app acessar um serviço do {{site.data.keyword.Bluemix_notm}}, se as credenciais de serviço estiverem codificadas permanentemente no app.
 
@@ -237,6 +245,7 @@ Para obter mais informações sobre os comandos que podem ser usados em outras l
 
 ## Não é possível implementar apps usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
 {: #ts_bm_tools_facet}
+{: troubleshoot}
 
 Quando uma máscara não suportada é aplicada ao projeto Eclipse, talvez você não consiga implementar os apps no {{site.data.keyword.Bluemix_notm}} usando o IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
 
@@ -256,6 +265,7 @@ Para remover a máscara, no IBM Eclipse Tools for {{site.data.keyword.Bluemix_no
 
 ## Erros 502 Gateway inválido são recebidos
 {: #ts_502_error}
+{: troubleshoot}
 
 Se você receber erros 502 Gateway inválido quando interagir com apps no {{site.data.keyword.Bluemix_notm}}, verifique a página de status do {{site.data.keyword.Bluemix_notm}} e, em seguida, execute as ações apropriadas.
 
@@ -279,6 +289,7 @@ Se você suspeitar que um serviço do {{site.data.keyword.Bluemix_notm}} está i
 
 ## Cota do disco excedida
 {: #ts_disk_quota}
+{: troubleshoot}
 
 Se o espaço em disco se esgotar, será possível modificar manualmente a cota do disco para obter mais espaço em disco.
 
@@ -306,25 +317,29 @@ por push o app para o {{site.data.keyword.Bluemix_notm}}:
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
 
-## Os apps Android não podem receber {{site.data.keyword.mobilepushshort}}
+## Apps Android não podem receber o {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
+{: troubleshoot}
 
-Os apps Android em determinadas regiões em que o Google não é acessível não podem receber notificações enviadas por meio do serviço IBM {{site.data.keyword.mobilepushshort}}. Nesse caso, uma solução alternativa é usar serviços de terceiros.
+Os apps Android em determinadas regiões em que o Google não é acessível não podem receber notificações enviadas por meio
+do serviço IBM {{site.data.keyword.mobilepushshort}}. Nesse caso, uma solução alternativa é usar serviços de terceiros.
 
 Você liga um serviço {{site.data.keyword.mobilepushshort}} para seu app do {{site.data.keyword.Bluemix_notm}} e envia uma mensagem para os dispositivos registrados. No entanto, os apps que são desenvolvidos no Android não podem receber suas notificações em certas regiões.
 {: tsSymptoms}
 
-O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar as notificações para apps móveis que são desenvolvidos no Android. Para ativar o recebimento de notificações em apps Android, o serviço Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que os apps Android não podem acessar o serviço GCM, os apps Android não podem receber o {{site.data.keyword.mobilepushshort}}.
+O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar as notificações para apps móveis que são desenvolvidos no Android. Para ativar o recebimento de notificações em apps Android, o serviço
+Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que os apps Android não podem acessar o serviço GCM, os apps Android não podem receber o {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
 Como uma solução alternativa, use os serviços de terceiros que não dependem do serviço GCM, por exemplo, [Pushy ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://pushy.me){: new_window}, [getui ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.getui.com/){: new_window} e [jpush ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
-## Org's services limit is exceeded
+## O limite de serviços da organização é excedido
 {: #ts_servicelimit}
+{: troubleshoot}
 
-Se você for usuário de uma conta Lite, talvez não seja possível criar um app no {{site.data.keyword.Bluemix_notm}} se
-o limite de serviços da sua organização tiver sido excedido.
+Se você é usuário de uma conta Lite, talvez não seja possível criar um app no {{site.data.keyword.Bluemix_notm}} se o
+limite de serviços da sua organização for excedido.
 Ao tentar criar um app no {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir é exibida:
 {: tsSymptoms}
 
@@ -339,21 +354,21 @@ Exclua quaisquer instâncias de serviços que não forem necessárias ou remova 
   * Para excluir uma instância de serviços, é possível usar o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos.
 
     Para usar o console do {{site.data.keyword.Bluemix_notm}} para excluir uma instância de serviço, conclua as etapas a seguir:
-	  1. No painel Serviços, clique no menu **Ações** do serviço que você deseja excluir.
+	  1. Na lista de recursos, clique no menu **Ações** para o serviço que você deseja excluir.
 	  2. Clique em **Excluir serviço**. É solicitado que você remonte o app ao qual a instância de serviço estava ligada.
 
     Para usar a interface da linha de comandos para excluir uma instância de serviço, conclua as etapas a seguir:
-   3. Desvincule a instância de serviço de um app. Insira `cf unbind-service <appname> <service_instance_name>`. 	
-   4. Exclua a instância de serviço. Insira `cf delete-service <service_instance_name>`.
+   3. Desvincule a instância de serviço de um app. Insira `cf unbind-service <appname> <service_instance_name>`.
+	  4. Exclua a instância de serviço. Insira `cf delete-service <service_instance_name>`.
 	  5. Depois de excluir a instância de serviço, você pode desejar remontar o app ao qual a instância de serviço estava vinculada. Insira `cf restage <appname>`.
 
   * Para remover o limite no número de instâncias de serviço que você pode ter, faça upgrade de sua conta Lite para uma conta faturável. Para obter mais informações, consulte [Fazendo upgrade da conta](/docs/account/index.html#upgrade-to-paygo).
 
-## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
+## Os arquivos executáveis não podem ser executados no {{site.data.keyword.Bluemix_notm}}
 {: #ts_executable}
+{: troubleshoot}
 
-Pode ser que você não consiga executar os arquivos executáveis no {{site.data.keyword.Bluemix_notm}}, caso esses executáveis tenham sido desenvolvidos e construídos em um ambiente diferente.
-
+Talvez você não consiga executar os arquivos executáveis no {{site.data.keyword.Bluemix_notm}} se eles foram desenvolvidos e construídos em um ambiente diferente.
 Não será possível executar executáveis no {{site.data.keyword.Bluemix_notm}} quando eles tiverem sido desenvolvidos e construídos em um ambiente diferente.
 {: tsSymptoms}
 
@@ -372,10 +387,12 @@ Por exemplo:
 ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 
-## Org's memory limit is exceeded
+## O limite de memória da organização é excedido
 {: #ts_outofmemory}
+{: troubleshoot}
 
-Se você for um usuário da conta Lite, talvez não seja possível implementar um app no {{site.data.keyword.Bluemix_notm}} se você excedeu o limite de memória de sua organização. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. A cota máxima de memória para uma conta Lite é de 256 MB e pode ser aumentada somente fazendo upgrade para uma conta faturável.
+Se você é um usuário de conta Lite, talvez não seja possível implementar um app no {{site.data.keyword.Bluemix_notm}}
+se o limite de memória de sua organização for excedido. É possível reduzir a memória que seus apps usam ou aumentar a cota de memória de sua conta. A cota máxima de memória para uma conta Lite é de 256 MB e pode ser aumentada somente fazendo upgrade para uma conta faturável.
 
 Ao implementar um app para o {{site.data.keyword.Bluemix_notm}}, a mensagem de erro a seguir é exibida:
 {: tsSymptoms}
@@ -390,13 +407,16 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 
   * Para aumentar a cota de memória da conta, faça upgrade da conta Lite para uma conta faturável. Para obter mais informações, consulte [Fazendo upgrade da conta](/docs/account/index.html#upgrade-to-paygo).
   * Para reduzir a memória usada pelos apps, use o console do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos do Cloud Foundry.
-    Se você usar o console do {{site.data.keyword.Bluemix_notm}}, conclua as etapas a seguir:
-    1. Selecione o app por meio do painel. A página de detalhes do app é aberta.
+
+    Se você usar o console do {{site.data.keyword.Bluemix_notm}}, as etapas a seguir deverão ser concluídas:
+
+    1. Selecione o app na lista de recursos. A página de detalhes do app é aberta.
     2. Na área de janela de tempo de execução, é possível reduzir o limite de memória máximo ou os números de instâncias de app ou ambos, para seu app.
 
     Se você usar a interface da linha de comandos, conclua as etapas a seguir:
-    1. Verifique a quantidade de memória que está sendo usada para os apps: 	
-```
+    1. Verifique a quantidade de memória que está sendo usada para os apps:
+
+	  ```
 	  ibmcloud cf list
 	  ```
 
@@ -412,6 +432,7 @@ Esse erro ocorre quando a quantia de memória restante para a sua organização 
 
 ## Os apps não são reiniciados automaticamente
 {: #ts_apps_not_auto_restarted}
+{: troubleshoot}
 
 Um app não é reiniciado automaticamente quando um serviço que você liga ao app para de funcionar.
 
@@ -432,6 +453,7 @@ Além disso, é possível codificar o app para identificar e recuperar de proble
 
 ## As variáveis definidas pelo usuário são perdidas quando um app é enviado por push
 {: #ts_varsnotretained}
+{: troubleshoot}
 
 Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, as variáveis especificadas são reconfiguradas a menos que você salve as salve no arquivo manifest.
 
@@ -445,9 +467,39 @@ Ao enviar por push um app para o {{site.data.keyword.Bluemix_notm}} a partir do 
 as variáveis que você especificou no assistente são salvas para o arquivo manifest de seu aplicativo. Na próxima vez em que você abrir o assistente, as variáveis serão exibidas automaticamente.
 {: tsResolve}
 
+<!-- begin STAGING ONLY -->
+
+## O {{site.data.keyword.Bluemix_notm}} Live Sync Debug não é iniciado por meio da linha de comandos
+{: #ts_no_debug}
+{: troubleshoot}
+
+Você ativou o recurso {{site.data.keyword.Bluemix_notm}} Live Sync Debug para o app usando a linha de comandos, mas não é possível acessar a interface de depuração.
+
+Você ativou o recurso de depuração para seu aplicativo configurando a variável de
+ambiente **BLUEMIX_APP_MGMT_ENABLE**. No entanto, não é possível acessar a interface com o usuário de Depuração em `app_url/bluemix-debug/manage`.
+{: tsSymptoms}
+
+O recurso de Depuração não pode ser ativado nestas situações:
+{: tsCauses}
+
+  * Quando o `manifest` contém o atributo de comando
+  * Quando você usa a opção **-c** para enviar por push um app
+para o {{site.data.keyword.Bluemix_notm}}
+
+Use uma das opções a seguir para resolver o problema:
+{: tsResolve}
+
+  * A prática recomendada é usar o buildpack IBM Node.js para iniciar o app. Para obter mais informações, consulte a seção Comando de inicialização do tópico [Implementando um aplicativo Node.js no {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).
+  * Desative o comando para seu app existente revisando o atributo de
+comando no `manifest.yml` para o comando: null ou editando seu
+comando push para incluir `-c Null`.
+  * Remova o atributo de **comando** do `manifest.yml`. Em seguida, exclua o app atual do {{site.data.keyword.Bluemix_notm}} e envie por push o app novamente.
+
+<!-- end STAGING ONLY -->
 
 ## As organizações não podem ser localizadas no {{site.data.keyword.Bluemix_notm}}
 {: #ts_orgs}
+{: troubleshoot}
 
 Talvez você não consiga localizar sua organização no {{site.data.keyword.Bluemix_notm}} ao trabalhar em uma região {{site.data.keyword.Bluemix_notm}}.
 
@@ -483,6 +535,7 @@ Se você estiver enviando por push seu aplicativo para o {{site.data.keyword.Blu
 
 ## As rotas do app não podem ser criadas
 {: #ts_hostistaken}
+{: troubleshoot}
 
 Ao implementar um app no {{site.data.keyword.Bluemix_notm}}, a rota do app não pode ser criada se o nome do host especificado já estiver sendo usado.
 
@@ -503,7 +556,8 @@ dos métodos a seguir:
   * Se você implementar seu aplicativo usando o arquivo `manifest.yml`, especifique o nome do host na opção host.
     ```
     host: host_name
-	```
+	  ```
+
   * Se você implementar o aplicativo por meio do prompt de comandos, use o comando `ibmcloud cf
 push` com a opção **-n**.
     ```
@@ -512,6 +566,7 @@ push` com a opção **-n**.
 
 ## Os apps WAR não podem ser enviados por push usando o comando ibmcloud cf push
 {: #ts_cf_war}
+{: troubleshoot}
 
 Talvez você não consiga usar o comando `ibmcloud cf push` para implementar um app da
 web arquivado no {{site.data.keyword.Bluemix_notm}} se o local do app não estiver especificado corretamente.
@@ -539,6 +594,7 @@ Para obter mais informações sobre o comando `ibmcloud cf push`, insira `ibmclo
 
 ## Caracteres de byte duplo não são exibidos de forma adequada quando os apps são enviados por push para o {{site.data.keyword.Bluemix_notm}}
 {: #ts_doublebytes}
+{: troubleshoot}
 
 Os caracteres de byte duplo poderão não ser exibidos corretamente se o suporte Unicode não estiver configurado corretamente para os arquivos servlet ou JSP.
 
@@ -552,16 +608,17 @@ O problema poderá ocorrer se o suporte Unicode não estiver configurado correta
 {: tsResolve}
 
   * No arquivo de origem servlet
-    ```
+  ```
 	response.setContentType("text/html; charset=UTF-8");
 	```
-  * No arquivo JSP
-    ```
+  * No JSP
+  ```
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
 
 ## Não é possível implementar apps Node.js
 {: #ts_nodejs_deploy}
+{: troubleshoot}
 
 É possível encontrar problemas ao atualizar um app Node.js ou implementar um app Node.js no {{site.data.keyword.Bluemix_notm}}.
 
@@ -587,28 +644,28 @@ Use um dos métodos a seguir, dependendo da causa do problema:
 
   * Especifique o comando inicial por um dos métodos a seguir:
      * Use a interface da linha de comandos do Cloud Foundry. Por exemplo:
-        ```
-		ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-		```
+      ```
+		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+		  ```
     * Use o arquivo [package.json ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.npmjs.com/package/jsonfile){: new_window}. Por
 exemplo:
 	    ```
-		{
-      ...
-  	   "scripts": {
-	 		 "start": "node app.js"
+		  {
+        ...
+  	    "scripts": {
+	 		  "start": "node app.js"
  	   }
-	}
+	    }
 	    ```
     * Use o arquivo `manifest.yml`. Por
 exemplo:
 	    ```
-		applications:
+		  applications:
   name: MyUniqueNodejs01
   ...
-  command: node app.js
+      command: node app.js
   ...
-        ```
+      ```
 
   * Assegure-se de que um arquivo `package.json` exista em seu app Node.js para que o buildpack Node.js possa reconhecer o app. Assegure-se de que esse arquivo esteja no diretório-raiz de seu app.
     O exemplo a seguir mostra um arquivo `package.json` simples:
@@ -634,6 +691,7 @@ Para mais dicas sobre apps Node.js, veja [Dicas para aplicativos Node.js ![Ícon
 
 ## Erros de configuração aparecem no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty para o Eclipse
 {: #ts_eclipse}
+{: troubleshoot}
 
 Se você vir erros de configuração no arquivo `server.xml` depois de importar um app {{site.data.keyword.Bluemix_notm}} Liberty para o Eclipse, poderá ser necessário remover o arquivo `server.xml` do projeto.
 
@@ -648,6 +706,7 @@ O buildpack do Liberty usa o arquivo `server.xml` para configurar o app e gera u
 
 ## Os aplicativos não podem ser colocados em estágios usando buildpacks customizados
 {: #ts_bp_compilation}
+{: troubleshoot}
 
 Você poderá não ser capaz de implementar um app no {{site.data.keyword.Bluemix_notm}} com um buildpack customizado se os scripts no buildpack não forem arquivos executáveis.
 
@@ -661,7 +720,8 @@ Esse problema poderá ocorrer se scripts, como o script de detecção, o script 
 {: tsResolve}
 
 ## Não é possível implementar um app do Delivery Pipeline no {{site.data.keyword.Bluemix_notm}} Continuous Delivery
- {: #ts_devops_to_bm}
+{: #ts_devops_to_bm}
+{: troubleshoot}
 
  Talvez não seja possível implementar seu app com o {{site.data.keyword.deliverypipeline}} no {{site.data.keyword.contdelivery_short}} se o arquivo `manifest.yml` não estiver presente em seu app.
 
@@ -678,6 +738,7 @@ aplicativo](/docs/manageapps/depapps.html#appmanifest).
 
 ## Os apps Meteor não podem ser enviados por push
 {: #ts_meteor}
+{: troubleshoot}
 
 Talvez não seja possível enviar um aplicativo Meteor por push para o {{site.data.keyword.Bluemix_notm}} caso o buildpack não seja especificado corretamente.
 
@@ -696,7 +757,34 @@ exemplo:
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
   * Se você implementar o aplicativo por meio do prompt de comandos, use o comando `ibmcloud cf
-push` e especifique o buildpack customizado usando a opção **-b**. Por exemplo:
-    ```
+push` e especifique o buildpack customizado usando a opção **-b**. Por
+exemplo:
+  ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+
+## Cota de armazenamento excedida
+{: #exceed_quota}
+
+Se as tarefas de construção ou implementação falharem e você vir a mensagem a seguir, será possível excluir as imagens com os comandos da CLI a seguir. `Status:
+desautorizado: você excedeu a cota de armazenamento. Exclua uma ou mais imagens ou revise a cota de armazenamento e o plano de precificação.`
+
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) se ainda não a tiver.
+* Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no espaço em que você está.
+* Liste as imagens usando `ibmcloud cr images`.
+* Exclua todas as imagens não utilizadas usando `ibmcloud cr image-rm <respository>:<tag>`.
+* Execute novamente a tarefa de construção ou de implementação que falhou.
+
+## Acessando os logs do Kubernetes
+{: #access_kube_logs}
+
+Se o aplicativo não estiver em execução e você não puder acessar o terminal de funcionamento, tente examinar os logs no cluster.
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) se ainda não a tiver.
+* Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no espaço em que você está.
+* Liste os clusters usando `ibmcloud cs clusters`,
+* Aponte para o cluster correspondente usando `ibmcloud cs cluster-config <cluster-name>`.
+* Exporte a variável de ambiente que está listada.
+* Visualize os pods usando `kubectl get pods`. Se for necessário instalar o `kubectl`, consulte [Instalação e configuração do kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+* É possível visualizar os logs no app usando `kubectl logs <pod-name>.`
+
+

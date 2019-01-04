@@ -2,15 +2,23 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-29"
 
 ---
+
+{:new_window: target="_blank"}
+{:shortdesc: .shortdesc}
+{:screen: .screen}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:tip: .tip}
+{:note: .note}
 
 # Qu'est-ce qui caractérise une bonne application ?
 {: #best-practice}
 
-Créez votre application dans {{site.data.keyword.Bluemix_notm}} pour bénéficier de tout ce qu'un cloud peut offrir. Les meilleures pratiques décrites ci-après vous aideront à développer des applications prêtes pour le cloud.
-{:shortdesc}
+Créez votre application dans {{site.data.keyword.cloud}} pour bénéficier de tout ce qu'un cloud peut offrir. Les meilleures pratiques décrites ci-après vous aideront à développer des applications prêtes pour le cloud.
+{: shortdesc}
 
 ## Créez une application indépendante de la topologie
 
@@ -20,13 +28,13 @@ Construisez votre application de façon à ce qu'elle soit aussi générique et 
 
 ## Partez du principe que le système de fichiers local n'est pas permanent
 
-Etant donné qu'une application peut être déplacée, supprimée ou dupliquée dans le cloud, ne vous fiez pas aux fichiers consignés dans le système de fichiers. Si une application utilise le système de fichiers local comme cache pour les informations utilisées fréquemment, notamment les journaux d'application, les informations sont perdues quand l'instance est arrêtée et redémarrée à un autre emplacement ou sur une machine virtuelle différente.
+Etant donné qu'une application peut être déplacée, supprimée ou dupliquée dans le cloud, ne vous fiez pas aux fichiers consignés dans le système de fichiers. Si une application utilise le système de fichiers local comme cache pour les informations utilisées fréquemment (notamment les journaux d'application), les informations sont perdues lorsque l'instance est arrêtée et redémarrée à un autre emplacement ou sur une autre machine virtuelle.
 
 Vous pouvez stocker les informations dans un service, par exemple une base de données SQL ou NoSQL, au lieu de les stocker dans le système de fichiers local. Dans un environnement de cloud dynamique, il est également essentiel que vos journaux soient disponibles dans un service qui survit aux instances d'application dans lesquelles les journaux sont générés.
 
-## Stockez l'état de la session hors de votre application
+## Exclusion de l'état de session de votre application
 
-L'état de votre système est défini par vos bases de données et votre espace de stockage partagé, et non par chaque instance d'application individuelle en cours d'exécution. L'état, quel qu'il soit, limite l'évolutivité d'une application. Essayez de réduire l'impact de l'état de session en le stockant à un emplacement centralisé sur le serveur.
+L'état de votre système est défini par vos bases de données et votre espace de stockage partagé, et non par chaque instance d'application individuelle en cours d'exécution. L'état, quel qu'il soit, limite l'extensibilité d'une application. Essayez de réduire l'impact de l'état de session en le stockant à un emplacement centralisé sur le serveur.
 
 Si vous ne pouvez pas éliminer l'état de session entièrement, envoyez-le dans un magasin hautement disponible externe à votre serveur d'applications, Les magasins peuvent être IBM WebSphere eXtreme Scale, Redis, Memcached, ou encore une base de données externe.
 
@@ -39,19 +47,19 @@ L'extraction de dépendances propres à l'environnement dans un ensemble de fich
 ## Créez votre application sous une architecture multi-régions
 {: #multiregion}
 
-Exécutez plusieurs instances afin d'éviter des durées d'indisponibilité dans une région unique, mais pour distribuer une application encore plus robuste, envisagez d'utiliser une architecture multi-région.
+Vous pouvez exécuter plusieurs instances afin d'éviter des indisponibilités dans une région unique. Pour mettre à disposition une application encore plus robuste, pensez à utiliser une architecture multi-région.
 
 ## Prenez soin de surveiller vos applications
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic ![Icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}. Consultez [Surveillance et journalisation](../monitor_log/logging.html#logging) pour plus d'informations.
+{{site.data.keyword.Bluemix_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic ![Icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Bénéficiez des options de support
 {: #support}
 
 Le forfait payant {{site.data.keyword.Bluemix_notm}} offre plusieurs autres types de compte avec un support payant facultatif. Quel que soit le type de votre compte, si vous prévoyez de mettre en production une application sur {{site.data.keyword.Bluemix_notm}}, envisagez de vous inscrire à cette option.
 
-Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](../get-support/howtogetsupport.html), afin de vous prémunir contre les problèmes imprévisibles.
+Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](/docs/get-support/howtogetsupport.html), afin de vous prémunir contre les problèmes imprévisibles.
 
 ## Evitez les API d'infrastructure dans votre application
 
@@ -69,7 +77,7 @@ Les applications reposant sur des protocoles standard sont plus résilientes lor
 
 ## Utilisez des bibliothèques de compatibilité au lieu des fonctions spécifiques au système d'exploitation
 
-Si vous avez déjà utilisé des fonctions propres au système d'exploitation, vous pouvez résoudre le problème en utilisant des bibliothèques de compatibilité, par exemple Cygwin et Mono. Cygwin est une bibliothèque de compatibilité qui fournit un ensemble d'outils Linux dans un environnement Windows. Mono est une bibliothèque de compatibilité qui fournit des capacités Windows .NET dans Linux.
+Si vous avez déjà utilisé des fonctions propres au système d'exploitation, vous pouvez résoudre le problème en utilisant des bibliothèques de compatibilité, par exemple Cygwin et Mono. Cygwin est une bibliothèque de compatibilité qui fournit un ensemble d'outils Linux dans un environnement Windows. Mono est une bibliothèque de compatibilité qui fournit des outils Windows .NET dans Linux.
 
 Evitez les dépendances propres au système d'exploitation ; à la place, utilisez des services mis à disposition par l'infrastructure de middleware ou les fournisseurs de services.
 

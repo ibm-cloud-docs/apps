@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 
 | Diretório-raiz                                     | Descrição                       |
 |:------------------------------------------------|:------------------------------------------|
-|`package.json | Arquivo de metadados |
+|`package.json | Informações de metadados sobre o pacote, incluindo o nome, a versão e as dependências. |
 |cli-config.yml | Opções de configuração de CLI |
 |manifest.yml | Arquivo de implementação do Cloud Foundry |
 |Dockerfile | Dockerfile para comandos `ibmcloud dev run`, `ibmcloud dev deploy` e `docker` |
 |Ferramentas do Dockerfile | Dockerfile para `ibmcloud dev build` e `ibmcloud dev test` |
 |Docker-compose.yml | Configuração de serviço de aplicativo para o Docker Compose |
-|Webpack.config.js | Configuração do webpack para informações relacionadas à construção |
+|Webpack.config.js | Configuração de pacote da web para as informações relacionadas à construção |
 | LICENÇA | Arquivo de licença |
 |README.md | Descrição do app |
 {: caption="Tabela 1. Conteúdo de um diretório-raiz do app Node.js gerado" caption-side="top"}
@@ -54,8 +54,8 @@ A tabela a seguir lista os diretórios e os arquivos comuns que estão incluído
 
 | Diretório `./chart/<projectname>/` | Descrição |
 |:------------------------------------------------|:------------------------------------------|
-| `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
-| `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
-| `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
-| `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
+| Diretório `./chart/<projectname>/Chart.yaml` | Gráfico Helm |
+| Diretório `./chart/<projectname>/values.yaml` | Valores do gráfico Helm |
+| Diretório `./chart/<projectname>/templates/deployment.yaml` | Modelo de implementação |
+| Diretório `./chart/<projectname>/templates/service.yaml` | Modelo de serviço |
 {: caption="Tabela 5. Conteúdo de um diretório de gráfico do app Node.js gerado" caption-side="top"}

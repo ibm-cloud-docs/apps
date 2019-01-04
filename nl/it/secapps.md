@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-12"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-07-12"
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Creazione di richieste di firma del certificato
 {: #ssl_csr}
@@ -18,7 +19,7 @@ lastupdated: "2018-07-12"
 Puoi proteggere le tue applicazioni caricando dei certificati SSL e limitando l'accesso alle applicazioni.
 {:shortdesc}
 
-Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.Bluemix}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server. Un CSR è un messaggio che viene inviato a un'autorità di certificazione per richiedere la firma di una chiave pubblica
+Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyword.cloud}}, devi creare una richiesta di firma del certificato, o CSR, sul tuo server. Un CSR è un messaggio che viene inviato a un'autorità di certificazione per richiedere la firma di una chiave pubblica
 e le informazioni associate. Più comunemente, i CSR sono in formato PKCS #10. Il CSR include una chiave pubblica, un nome comune, un'organizzazione, una città, uno stato, un paese ed una e-mail. Le richieste di certificato SSL
 vengono accettate solo con una lunghezza di chiave CSR pari a 2048 bit.
 
@@ -78,7 +79,7 @@ Se il tuo proprietario di account dispone di un account di prova gratuita, devi 
 Prima di poter caricare i certificati, devi creare una
 richiesta di firma del certificato.
 
-Quando utilizzi un dominio personalizzato, per servire il certificato SSL, utilizza i seguenti endpoint della regione per fornire la rotta URL per la tua organizzazione in {{site.data.keyword.Bluemix_notm}}:
+Quando utilizzi un dominio personalizzato, per servire il certificato SSL, utilizza i seguenti endpoint della regione per fornire la rotta URL per la tua organizzazione in {{site.data.keyword.cloud_notm}}:
 
 * US-South - `secure.us-south.bluemix.net`
 * US-East - `secure.us-east.bluemix.net`
@@ -88,7 +89,7 @@ Quando utilizzi un dominio personalizzato, per servire il certificato SSL, utili
 
 Per caricare un certificato per la tua applicazione, attieniti alla seguente procedura,
 
-1. Vai al tuo dashboard.
+1. Vai all'elenco risorse.
 
 2. Seleziona la tua applicazione per aprire la vista dei dettagli ad essa relativa.
 
@@ -98,8 +99,6 @@ Per caricare un certificato per la tua applicazione, attieniti alla seguente pro
 
 5. Fai clic su **Carica** nella colonna Certificato SSL e seleziona il tuo dominio personalizzato.
 
-6. Sfoglia per caricare un certificato, una chiave privata e, facoltativamente, un certificato intermedio o un certificato client. Per abilitare il truststore certificato client, devi caricare un file truststore certificato client che definisce l'accesso utente consentito al tuo dominio personalizzato.
-
   #### Certificato
 
     Un documento digitale che esegue il bind di una chiave pubblica all'identità del proprietario del certificato,
@@ -108,7 +107,7 @@ certificazione e viene firmato in maniera digitale da tale autorità.
 
     Un certificato viene in genere emesso e firmato da un'autorità di certificazione. Tuttavia, per scopi di test e di sviluppo, puoi utilizzare un certificato autofirmato.
 
-    In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
+    In {{site.data.keyword.cloud_notm}} sono supportati i seguenti tipi di certificati:
 
 	* PEM (`pem`, `.crt`, `.cer` e `.cert`)
 	* DER (`.der` o `.cer`)
@@ -120,7 +119,7 @@ certificazione e viene firmato in maniera digitale da tale autorità.
 solo dalla chiave pubblica corrispondente. Inoltre, la chiave privata viene utilizzata per decrittografare i messaggi crittografati con la chiave pubblica corrispondente. La chiave privata è conservata sul sistema dell'utente e protetta da password.
 
     In
-{{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di chiavi private:
+{{site.data.keyword.cloud_notm}} sono supportati i seguenti tipi di chiavi private:
 
     * PEM (`pem`, `.key`)
     * PKCS #8 (`p8`, `pk8`)
@@ -138,13 +137,14 @@ che inizia dalla CA radice attendibile, passa per quello intermedio e termina co
     Se abiliti questa opzione caricando un file truststore certificato client, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
 il browser web gli richiede di fornire un certificato client per il dominio. Utilizza l'opzione di caricamento file **Truststore certificato client** per definire i certificati lato client a cui consenti di accedere al tuo dominio personalizzato.
 
-  **Nota:** la funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.Bluemix_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Il codice client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html).
+  La funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.cloud_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Il codice client che accede alle applicazioni {{site.data.keyword.Bluemix_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html).
+  {: note}
 
   #### Truststore certificato client
 
   Il truststore certificato client include i certificati client per gli utenti a cui desideri consentire l'accesso alla tua applicazione. Carica un file truststore certificato client per abilitare l'opzione per richiedere un certificato client.
 
-   In {{site.data.keyword.Bluemix_notm}} sono supportati i seguenti tipi di certificati:
+   In {{site.data.keyword.cloud_notm}} sono supportati i seguenti tipi di certificati:
 
       * PEM (pem, .crt, .cer e .cert)
       * PKCS #7 (p7b, p7r, spc)
@@ -156,5 +156,5 @@ Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/infrast
 
 Per eliminare un certificato oppure sostituirne uno esistente con uno nuovo, attieniti alla seguente procedura.
 
-1. Vai a **Gestisci** > **Account** > **Organizzazioni Cloud Foundry**.
+1. Vai a **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**.
 2. Nella colonna delle azioni, seleziona **Domini** dal menu di azioni aggiuntive. Nel menu delle azioni aggiuntive per l'organizzazione, fai clic su **Rimuovi dall'organizzazione**.

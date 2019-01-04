@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}에서 앱을 작성하십시오.
 
-1. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 페이지에서 언어에 맞는 스타터 킷을 선택하십시오. 예를 들어, Node.js 애플리케이션의 경우에는 **Express.js 백엔드**로 이동하여 **스타터 킷 선택**을 클릭하십시오.
+1. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/) 페이지에서 언어에 맞는 스타터 킷을 선택하십시오. 예를 들어, Node.js 애플리케이션의 경우에는 **Express.js 백엔드**로 이동하여 **스타터 킷 선택**을 클릭하십시오.
 
 2. 앱 이름을 입력하십시오. 이 튜토리얼의 경우에는 `ExpressBackend`를 사용하십시오.
 
@@ -68,7 +68,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
 
 도구 체인을 작성한 마지막 단계에서 앱을 클라우드에 배치합니다. 도구 체인은 코드를 찾을 수 있는 앱을 위한 Git 저장소를 작성합니다. 저장소에 액세스하려면 다음 단계를 따르십시오. 앱을 클라우드에 푸시하기 전에 테스트를 위해 앱을 로컬로 빌드할 수 있습니다.
 
-1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행할 수 있습니다.
+1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행하십시오.
 2. 앱을 통합된 개발 환경으로 가져오십시오.
 3. 코드를 수정하십시오.
 4. 개인 액세스 토큰을 추가하여 [Git 인증](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 설정하십시오.

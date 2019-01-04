@@ -2,11 +2,17 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
 앱 작성
 
     {: .navgroup id="learn"}
-    index.md
+    {: .topicgroup}
+    시작하기
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+    
     development_process.md
     best-practice.md
     patterns.md
@@ -17,10 +23,8 @@
     앱 작성
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
-        tutorials/tutorial_custom.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        create-deploy-cli.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
 
@@ -28,29 +32,37 @@
     앱 배치 및 통합
         vsi-deploy.md
         deploying/containers.md
+        tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_starter_kube.md
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    connect_external_app.md
+    
+    {: .topicgroup}
+    환경에 인증 정보 추가
+        creds_overview.md
+        creds_kube.md
+        creds_cf.md
+        creds_vsi.md
+
     mngapps.md
     updapps.md
     secapps.md
-    building-apps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 명령행 참조](https://console.bluemix.net/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools 명령행 참조](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
     IBM Cloud 개발자 대시보드
-        [Apple](https://console.bluemix.net/developer/appledevelopment/dashboard)
-        [금융](https://console.bluemix.net/developer/finance/dashboard)
-        [모바일](https://console.bluemix.net/developer/mobile/dashboard)
-        [보안](https://console.bluemix.net/developer/security/dashboard)
-        [Watson](https://console.bluemix.net/developer/watson/dashboard)
-        [웹 앱](https://console.bluemix.net/developer/appservice/dashboard)
+        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
+        [금융](https://cloud.ibm.com/developer/finance/dashboard)
+        [모바일](https://cloud.ibm.com/developer/mobile/dashboard)
+        [보안](https://cloud.ibm.com/developer/security/dashboard)
+        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
+        [웹 앱](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     앱 컨텐츠
@@ -67,6 +79,6 @@
     ts_apps.md
     [IBM Cloud Slack 개발자 도구 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API 참조](https://console.bluemix.net/apidocs/functions)
-    [모바일 SDK](https://console.bluemix.net/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [Cloud Functions API 참조](https://cloud.ibm.com/apidocs/functions)
+    [모바일 SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

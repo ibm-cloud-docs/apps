@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-13"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -22,14 +22,26 @@ Mendix é um ambiente de desenvolvimento de pouco código e um conjunto de ferra
 ## Selecionando um kit do iniciador
 {: #select-a-starter-kit}
 
-2. No painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/dashboard/apps){: new_window}, clique no ícone de **Menu** ![Ícone de menu](../../icons/icon_hamburger.svg).
-3. Selecione um kit do iniciador de pouco código do Mendix em uma das seguintes categorias:
-  * [Móvel![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Aplicativo móvel ou da web do Watson ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Aplicativo da web ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-app)
-4. Clique em  ** Criar app **.
-5. Nomeie o aplicativo. 
-6. Clique em **Criar**.
+1. No [Painel do {{site.data.keyword.cloud_notm}} App Service ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/dashboard){: new_window}, clique em **Introdução**.
+2. Selecione um kit do iniciador de pouco código do Mendix em uma das seguintes categorias:
+  * [Móvel![ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Aplicativo móvel ou da web do Watson ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Aplicativo da web ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
+3. Clique em  ** Criar app **.
+4. Nomeie o aplicativo.
+5. Clique em **Criar**.
+
+<!-- 
+####### Promote CLOUD.IBM.COM links to prod when approved.
+1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
+2. Select a Mendix low-code starter kit from one of the following categories:
+  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
+3. Click **Create app**.
+4. Name your app.
+5. Click **Create**.
+-->
 
 ## Autorizando a IBM a criar o projeto em Mendix e vincular as contas
 {: #link-mendix-account}

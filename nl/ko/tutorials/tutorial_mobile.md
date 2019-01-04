@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # 스타터 킷을 사용한 모바일 애플리케이션 작성
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}}는 모바일 앱을 빠르게 작성할 수 있도록 모바일 스타터 킷을 제공합니다. 앱 서비스 스타터 킷에서 언어, 프레임워크 및 도구를 선택하여 사전 구성된 사용자 정의 앱에 대한 작업을 시작하십시오. 이 튜토리얼에서는 필요한 도구를 설치한 후 앱을 빌드하여 로컬로 실행하고, 이를 클라우드에 배치하는 방법을 알아볼 수 있습니다.
+{{site.data.keyword.cloud}}는 모바일 앱을 빠르게 작성할 수 있도록 모바일 스타터 킷을 제공합니다. 앱 서비스 스타터 킷에서 언어, 프레임워크 및 도구를 선택하여 사전 구성된 사용자 정의 앱에 대한 작업을 시작하십시오. 이 튜토리얼에서는 필요한 도구를 설치한 후 앱을 빌드하여 로컬로 실행하고, 이를 클라우드에 배치하는 방법을 알아볼 수 있습니다.
 {: shortdesc}
 
 ## 1단계. 도구 설치
 {: #install-tools}
 
-[개발자 도구](/docs/cli/index.html)를 설치하십시오.
+[{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html)을 설치하십시오.
 
 Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌드 명령에 대해 실행되어야 합니다. Docker 계정을 작성하고, Docker 앱을 실행하고, 로그인해야 합니다.
 
@@ -29,7 +30,7 @@ Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌
 {: #create-devex}
 
 1. {{site.data.keyword.Bluemix}}에 {{site.data.keyword.dev_console}} 앱을 작성하십시오.
-2. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) 페이지에서 원하는 기능에 따라 스타터 킷을 선택하십시오. 예를 들어, Watson Language 애플리케이션인 경우에는 **Swift Kitura**를 클릭하십시오.
+2. {{site.data.keyword.dev_console}}의 [스타터 킷 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/) 페이지에서 원하는 기능에 따라 스타터 킷을 선택하십시오. 예를 들어, Watson Language 애플리케이션인 경우에는 **Swift Kitura**를 클릭하십시오.
 3. 앱 이름을 입력하십시오. 이 튜토리얼의 경우 `WatsonApp`을 사용하십시오.
 4. 언어 플랫폼을 선택하십시오. 이 튜토리얼의 경우에는 `Swift`를 사용하십시오.
 5. 언어 및 프레임워크를 선택하십시오. 일부 스타터 킷은 하나의 언어로만 사용 가능할 수 있습니다.
@@ -65,7 +66,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 리소스를 추�
 
 도구 체인을 작성한 마지막 단계에서 앱을 클라우드에 배치합니다. 도구 체인은 코드를 찾을 수 있는 앱을 위한 Git 저장소를 작성합니다. 저장소에 액세스하려면 다음 단계를 따르십시오. 앱을 클라우드에 푸시하기 전에 테스트를 위해 앱을 로컬로 빌드할 수 있습니다.
 
-1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행할 수 있습니다.
+1. 앱 서비스 창에서 **코드 다운로드** 또는 **저장소 복제**를 클릭하여 로컬로 코드 관련 작업을 수행하십시오.
 2. 앱을 통합된 개발 환경으로 가져오십시오.
 3. 코드를 수정하십시오.
 4. 개인 액세스 토큰을 추가하여 [Git 인증](/docs/services/ContinuousDelivery/git_working.html#git_authentication)을 설정하십시오.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Mobile Anwendung mit einem Starter-Kit erstellen
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} stellt Starter-Kits für Mobilgeräte bereit, die Sie bei der schnellen Erstellung einer mobilen App unterstützen. Wählen Sie in den Starter-Kits des App-Service eine Sprache, ein Framework und Tools aus, um mit der Arbeit mit einer vorkonfigurierten angepassten App zu beginnen. In diesem Lernprogramm erfahren Sie, wie Sie die erforderlichen Tools installieren, wie Sie die App erstellen und lokal ausführen und wie Sie die App in der Cloud bereitstellen.
+{{site.data.keyword.cloud}} stellt Starter-Kits für Mobilgeräte bereit, die Sie bei der schnellen Erstellung einer mobilen App unterstützen. Wählen Sie in den Starter-Kits des App-Service eine Sprache, ein Framework und Tools aus, um mit der Arbeit mit einer vorkonfigurierten angepassten App zu beginnen. In diesem Lernprogramm erfahren Sie, wie Sie die erforderlichen Tools installieren, wie Sie die App erstellen und lokal ausführen und wie Sie die App in der Cloud bereitstellen.
 {: shortdesc}
 
 ## Schritt 1. Tools installieren
 {: #install-tools}
 
-Installieren Sie die [Entwicklertools](/docs/cli/index.html).
+Installieren Sie die [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 
 Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 
@@ -29,7 +30,7 @@ Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt we
 {: #create-devex}
 
 1. Erstellen Sie eine {{site.data.keyword.dev_console}}-App in {{site.data.keyword.Bluemix}}.
-2. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit auf der Basis der gewünschten Features aus. Wählen Sie für eine Watson Language-Anwendung beispielsweise **Swift Kitura** aus.
+2. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit auf der Basis der gewünschten Features aus. Wählen Sie für eine Watson Language-Anwendung beispielsweise **Swift Kitura** aus.
 3. Geben Sie Ihren App-Namen ein. Verwenden Sie im Rahmen dieses Lernprogramms `WatsonApp`.
 4. Wählen Sie Ihre Sprachplattform aus. Verwenden Sie im Rahmen dieses Lernprogramms `Swift`.
 5. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.

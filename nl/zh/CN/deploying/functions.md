@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-25"
+lastupdated: "2018-11-29"
 
 ---
 {:new_window: target="_blank"}
@@ -14,20 +14,20 @@ lastupdated: "2018-07-25"
 # 创建无服务器应用程序
 {: #serverless}
 
-对于无服务器开发，您可以使用 IBM 的功能即服务 (FaaS) 产品 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 运行应用程序逻辑以响应事件，或通过 HTTP 从 Web 或移动应用程序直接进行调用，而无需供应或管理服务器。{{site.data.keyword.openwhisk_short}} 可执行系统管理，如自动扩展、可用性管理和维护，以便您作为开发者可以专注于编写应用程序逻辑。
+对于无服务器开发，您可以使用 IBM 的函数即服务 (FaaS) 产品 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 运行应用程序逻辑以响应事件，或通过 HTTP 从 Web 或移动应用程序直接进行调用，而无需供应或管理服务器。{{site.data.keyword.openwhisk_short}} 可执行系统管理，如自动扩展、可用性管理和维护，以便您作为开发者可以专注于编写应用程序逻辑。
 {:shortdesc}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 用户界面 (UI) 或 命令行界面 (CLI) 来开发应用程序。这两个界面具有类似的应用程序开发功能。CLI 提供了对部署和操作的更多控制权。有关 {{site.data.keyword.openwhisk_short}} 的更详细信息，请查看完整的[文档](/docs/openwhisk/index.html)。
+您可以使用 {{site.data.keyword.openwhisk_short}} 用户界面 (UI) 或 命令行界面 (CLI) 来开发应用程序。这两个界面具有类似的应用程序开发功能。CLI 提供了对部署和操作的更多控制权。有关 {{site.data.keyword.openwhisk_short}} 的更详细信息，请查看完整的 [Openwhisk 文档](/docs/openwhisk/index.html)。
 
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #ui}
 
-在[浏览器 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/openwhisk/actions){:new_window} 中试用 {{site.data.keyword.openwhisk_short}}。转至[概念 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/openwhisk/learn){:new_window} 页面，以快速导览 {{site.data.keyword.openwhisk_short}} 用户界面。
+在[浏览器 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/openwhisk/actions){:new_window} 中试用 {{site.data.keyword.openwhisk_short}}。转至[概念 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/openwhisk/learn){:new_window} 页面，以快速导览 {{site.data.keyword.openwhisk_short}} 用户界面。
 
 ## 使用 CLI 进行开发
 {: #openwhisk_start_configure_cli}
 
-要了解有关使用 {{site.data.keyword.openwhisk_short}} CLI 进行安装和开发的更多信息，请[设置 {{site.data.keyword.openwhisk_short}} CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.{DomainName}/openwhisk/cli){:new_window}。
+要了解有关使用 {{site.data.keyword.openwhisk_short}} CLI 进行安装和开发的更多信息，请[设置 {{site.data.keyword.openwhisk_short}} CLI ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/openwhisk/cli){:new_window}。
 
 ## 将 API 和数据集公开为 Web 操作
 {: #containers}
@@ -58,3 +58,4 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 {: #sdk}
 
 {{site.data.keyword.openwhisk_short}} 为 iOS 和 watchOS 设备提供[移动 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)，支持移动应用程序轻松发送远程触发器和调用远程操作。它还提供支持无服务器应用程序的[无服务器框架 SDK ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](/docs/openwhisk/openwhisk_goserverless.html){:new_window}。
+

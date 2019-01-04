@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -30,7 +30,7 @@ O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve
 
 Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}. Selecione a linguagem que for melhor para seu projeto ser iniciado.
 
-1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem.
+1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem.
 2. Insira o nome do app e um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota de seu app, `abc-devhost.mybluemix.net`
 3. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
 4. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
@@ -55,10 +55,10 @@ A entrega contínua é ativada para alguns aplicativos. É possível ativar a en
 
 1. Na janela de serviço do app, clique em **Implementar na nuvem**.
 2. Selecione um método de implementação. Configure seu método de implementação de acordo com as instruções para o método escolhido.
+  * Implementar em um cluster do Kubernetes. Crie um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
+  * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
 
-    * Implementar em um cluster do Kubernetes. Crie um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-
-    * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
+Para obter mais informações, consulte [Criando cadeias de ferramentas](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
 
 ## Etapa 5. Criar e executar o app localmente
 {: #build-run}
@@ -83,7 +83,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
   ```
   {: pre}
 
-7.  Obtenha as credenciais.
+7. Obtenha as credenciais.
 
   ```bash
   ibmcloud dev get-credentials
@@ -104,7 +104,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
   ```
   {: pre}
 
-10.  Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
+10. Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
 
 ## Etapa 6. Implementar seu app
 {: #deploy}
@@ -118,20 +118,19 @@ Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção
 Também é possível implementar seu app manualmente por meio de sua cadeia de ferramentas DevOps:
 
 1. Na janela Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
-
 2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e o histórico.
+
+Para obter mais informações, consulte [Construindo e implementando](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
 
 ### Implementar usando o {{site.data.keyword.dev_cli_short}}
 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
-
 ```
 ibmcloud dev deploy
 ```
 {: pre}
 
 Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
-
 ```
 ibmcloud dev deploy --target <container>
 ```

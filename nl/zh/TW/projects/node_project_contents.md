@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2015, 2018
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-16"
 ---
 
 {:shortdesc: .shortdesc}
@@ -20,13 +20,13 @@ lastupdated: "2018-05-22"
 
 |根目錄|說明|
 |:------------------------------------------------|:------------------------------------------|
-|package.json |meta 資料檔案|
+|package.json |有關套件的 Meta 資料資訊，包括名稱、版本及相依關係。|
 |cli-config.yml |CLI 配置選項|
 |manifest.yml |Cloud Foundry 部署檔案|
 |Dockerfile |`ibmcloud dev run`、`ibmcloud dev deploy` 及 `docker` 指令的 Dockerfile|
 | Dockerfile-tools |`ibmcloud dev build` 及 `ibmcloud dev test` 的 Dockerfile|
 |docker-compose.yml |Docker Compose 的應用程式服務配置|
-|webpack.config.js |建置相關資訊的 Webpack 配置|
+|webpack.config.js |建置相關資訊的 Web 套件配置|
 | LICENSE |授權檔|
 |README.md |應用程式的說明|
 {: caption="表 1. 產生的 Node.js 應用程式根目錄的內容" caption-side="top"}

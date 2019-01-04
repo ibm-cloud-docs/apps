@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+lastupdated: "2018-11-28"
 
 ---
 
@@ -31,7 +31,7 @@ O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve
 
 Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}.
 
-1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Backend do Express.js** e clique em **Selecionar kit do iniciador**.
+1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Backend do Express.js** e clique em **Selecionar kit do iniciador**.
 
 2. Insira o nome de seu app. Para este tutorial, use `ExpressBackend`.
 

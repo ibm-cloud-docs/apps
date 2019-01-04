@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-10-10"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,17 +11,18 @@ lastupdated: "2018-10-10"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Création d'une application mobile à l'aide d'un kit de démarrage
 {: #tutorial}
 
-{{site.data.keyword.Bluemix}} inclut des kits de démarrage mobiles vous permettant de créer plus facilement et plus rapidement une application mobile. Choisissez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez apprendre à installer les outils dont vous avez besoin, générer et exécuter l'application localement et la déployer dans le cloud.
+{{site.data.keyword.cloud}} inclut des kits de démarrage mobiles vous permettant de créer plus facilement et plus rapidement une application mobile. Choisissez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez apprendre à installer les outils dont vous avez besoin, générer et exécuter l'application localement et la déployer dans le cloud.
 {: shortdesc}
 
 ## Etape 1. Installer les outils
 {: #install-tools}
 
-Installez les [outils de développement](/docs/cli/index.html).
+Installez [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 
 Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 
@@ -29,7 +30,7 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 {: #create-devex}
 
 1. Créez une application {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix}}.
-2. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.ng.bluemix.net/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage correspondant aux fonctions dont vous avez besoin. Par exemple, pour une application Watson Language, sélectionnez **Swift Kitura**.
+2. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage correspondant aux fonctions dont vous avez besoin. Par exemple, pour une application Watson Language, sélectionnez **Swift Kitura**.
 3. Entrez le nom de votre application. Pour ce tutoriel, utilisez `WatsonApp`.
 4. Sélectionnez votre plateforme de langage. Pour ce tutoriel, utilisez `Swift`.
 5. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
