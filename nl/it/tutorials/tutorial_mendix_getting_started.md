@@ -22,7 +22,7 @@ Mendix è un insieme di strumenti e un ambiente di sviluppo a basso codice che t
 ## Selezione di un kit starter
 {: #select-a-starter-kit}
 
-2. Dal [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/dashboard){: new_window}, fai clic sull'icona **Menu** ![icona Menu](../../icons/icon_hamburger.svg).
+2. Dal [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/dashboard/apps){: new_window}, fai clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg).
 3. Seleziona un kit starter a basso codice Mendix da una delle seguenti categorie:
   * [Mobile ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson Web or Mobile App ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
@@ -52,7 +52,7 @@ Una volta completata l'autorizzazione, il tuo browser ritorna all'applicazione M
 
 Viene creata una toolchain DevOps. La toolchain integra il tuo progetto Mendix nella piattaforma Mendix nel tuo ambiente {{site.data.keyword.cloud_notm}}. Un'applicazione predefinita viene distribuita alla tua distribuzione di destinazione in modo da consentirti di verificare che l'applicazione sia stata distribuita correttamente al completamento della toolchain DevOps.
 
-Le distribuzioni Mendix Cloud Foundry richiedono il servizio database PostGRES, che non ha un livello Lite. Se vuoi valutare i kit starter Mendix utilizzando un account lite, puoi indicare come destinazione un cluster Kubernetes di prova.
+Le distribuzioni Mendix Cloud Foundry richiedono il servizio database PostGRES, che non ha un livello Lite.   Se vuoi valutare i kit starter Mendix utilizzando un account lite, puoi indicare come destinazione un cluster Kubernetes di prova.
 {: tip}
 
 Se hai selezionato un cluster Kubernetes per la distribuzione, vedi l'[esercitazione Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) per imparare come configurare il tuo cluster per l'uso di produzione.

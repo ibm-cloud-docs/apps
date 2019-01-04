@@ -28,7 +28,7 @@ Il provisioning di un'istanza del server virtuale e la sua distribuzione può es
 ## Prima di iniziare
 {: #prereqs}
 
-Esegui l'upgrade a un account Pagamento a consumo. Per utilizzare le istanze virtuali, il tuo account {{site.data.keyword.cloud_notm}} deve essere abilitato per l'infrastruttura classica. Per eseguire un upgrade del tuo account, vai a **Gestisci** > **Fatturazione e utilizzo** > **Fatturazione** nella console.
+Esegui l'aggiornamento a un account Pagamento a consumo. Per utilizzare le istanze virtuali, il tuo account {{site.data.keyword.cloud_notm}} deve essere abilitato per l'infrastruttura classica. Per aggiornare il tuo account, vai a **Gestisci** > **Fatturazione e utilizzo** > **Fatturazione** nella console.
 
 **Importante:** non viene eseguito il bind dei servizi all'istanza del server virtuale. Non puoi aggiungere servizi a un'applicazione in un server virtuale.
 
@@ -37,7 +37,7 @@ Esegui l'upgrade a un account Pagamento a consumo. Per utilizzare le istanze vir
 
 L'App Service esegue il provisioning di un'istanza del server virtuale per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
-1. [Crea un'applicazione](apps/index.html#createapp). 
+1. [Crea un'applicazione](index.html#createapp). 
 2. Fai clic su **Deploy to Cloud** dalla pagina dei dettagli dell'applicazione.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 

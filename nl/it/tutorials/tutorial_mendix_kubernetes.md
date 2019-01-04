@@ -48,7 +48,7 @@ Il dashboard del servizio {{site.data.keyword.cos_full_notm}} viene aperto in un
 ## Configurazione dell'archiviazione persistente
 {: #kubernetes-storage}
 
-Attieniti quindi alla documentazione per [Archiviazione dei dati su {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html).  `PersistentVolumeClaim` e `PersistentVolume` vengono creati all'interno del tuo cluster Kubernetes e possono essere utilizzati dall'istanza del database PostGres che è in esecuzione all'interno del tuo cluster come parte dell'applicazione Mendix. Assicurati di creare il `PersistentVolumeClaim` utilizzando il bucket `my-mendix-bucket` come descritto nel passo precedente e riesamina il nome del `PersistentVolumeClaim` per l'utilizzo nel passo successivo.
+Attieniti quindi alla documentazione per [Archiviazione dei dati su {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html). `PersistentVolumeClaim` e `PersistentVolume` vengono creati all'interno del tuo cluster Kubernetes e possono essere utilizzati dall'istanza del database PostGres che è in esecuzione all'interno del tuo cluster come parte dell'applicazione Mendix. Assicurati di creare il `PersistentVolumeClaim` utilizzando il bucket `my-mendix-bucket` come descritto nel passo precedente e riesamina il nome del `PersistentVolumeClaim` per l'utilizzo nel passo successivo.
 
 ## Modifica del file `postgres-deployment.yaml`
 {: #postgres-deployment}
@@ -100,7 +100,7 @@ Dopo l'esecuzione del commit delle modifiche al tuo file `postgres-deployment.ya
 
 Per rieseguire la distribuzione, vai alla pagina dei dettagli della tua applicazione e fai clic su **Deploy Application** all'interno del tile **Deployment details**. Se la distribuzione non riesce all'interno della toolchain DevOps con un errore che indica che non è stato possibile trovare il file `.mda` dell'applicazione, devi eseguirne nuovamente l'esportazione da Mendix. Puoi eseguire l'esportazione procedendo in tal senso dall'applicazione desktop Mendix Modeler oppure facendo clic su **Edit on Mendix**. Quindi, all'interno dell'interfaccia web Mendix, vai alla sezione **Environments** e attieniti alla procedura dopo che hai fatto clic su **Create package from teamserver**. Dopo che la tua applicazione è stata esportata da Mendix, torna alla pagina dei dettagli dell'applicazione e fai nuovamente clic su **Deploy Application**. L'ultima applicazione esportata viene distribuita al tuo cluster Kubernetes utilizzando la toolchain DevOps {{site.data.keyword.cloud_notm}}. Dopo che la distribuzione è stata completata correttamente, la tua applicazione è attiva e pronta per l'uso di produzione.
 
-## Informazioni aggiuntive 
+## Informazioni aggiuntive
 {: #additional-information}
 
-Per ulteriori dettagli relativi all'architettura per quanto riguarda l'esecuzione di applicazioni Mendix in ambienti Kubernetes, riesamina la sezione [Run Mendix on Kubernetes](https://docs.mendix.com/deployment/docker/run-mendix-on-kubernetes) della documentazione utente di Mendix.
+Per ulteriori dettagli relativi all'architettura per quanto riguarda l'esecuzione di applicazioni Mendix in ambienti Kubernetes, riesamina la sezione [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) della documentazione utente di Mendix.
