@@ -464,11 +464,11 @@ se guardan en el archivo de manifiesto de su aplicación. La próxima vez que ab
 
 <!-- begin STAGING ONLY -->
 
-## {{site.data.keyword.Bluemix_notm}} Live Sync Debug no se inicia desde la línea de mandatos 
+## {{site.data.keyword.Bluemix_notm}} Live Sync Debug no se inicia desde la línea de mandatos
 {: #ts_no_debug}
 {: troubleshoot}
 
-Ha habilitado la característica de {{site.data.keyword.Bluemix_notm}} Live Sync Debug para la app desde la línea de mandatos, pero no puede acceder a la interfaz de Debug. 
+Ha habilitado la característica de {{site.data.keyword.Bluemix_notm}} Live Sync Debug para la app desde la línea de mandatos, pero no puede acceder a la interfaz de Debug.
 
 Debería habilitar la característica de depuración de su app configurando la variable de entono **BLUEMIX_APP_MGMT_ENABLE**. No obstante, no puede acceder a la interfaz de usuario de Debug en
 `app_url/bluemix-debug/manage`.
@@ -558,7 +558,7 @@ Es posible que no pueda utilizar el mandato `ibmcloud cf push` para desplegar un
 
 Si carga una app WAR en {{site.data.keyword.Bluemix_notm}} mediante el mandato `ibmcloud cf push`, verá el siguiente mensaje de error:
 {: tsSymptoms}
-`Error de transferencia: no se pueden obtener instancias debido a un error de transferencia. `
+`Error de transferencia: no se pueden obtener instancias debido a un error de transferencia.`
 
 Este problema puede suceder si no se especifica el archivo WAR o si no se especifica la vía de acceso al archivo WAR.
 {: tsCauses}

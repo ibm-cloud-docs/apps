@@ -56,7 +56,7 @@ Las configuraciones más relevantes son las siguientes:
 
 * `build`: los atributos context y dockerfile no son necesarios puesto que son los valores predeterminados, pero que se pueden sobrescribir en este formato. El atributo context define la vía de acceso al nombre del Dockerfile que se especifica en el atributo dockerfile.
 
-* `tty`si especifica este atributo, los contenedores pueden seguir ejecutándose y no salir inmediatamente, lo que es necesario para el soporte de Docker Compose.
+* `tty`: si especifica este atributo, los contenedores pueden seguir ejecutándose y no salir inmediatamente, lo que es necesario para el soporte de Docker Compose.
 
 * `command`: este atributo especifica el mandato que se va a ejecutar dentro de los contenedores.
 

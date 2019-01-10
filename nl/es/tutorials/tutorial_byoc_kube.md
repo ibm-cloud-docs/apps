@@ -42,7 +42,7 @@ Pulse `Control+C` para detener la ejecución de Docker.
 ## Opcional. Adición de recursos a la app
 {: #add_resources}
 
-Añada un recurso de servicio a la aplicación y {{site.data.keyword.cloud_notm}} crea el servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
+Añada un recurso de servicio a la aplicación e {{site.data.keyword.cloud_notm}} crea el servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
 
 El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps/reqnsi.html).
 
@@ -56,17 +56,17 @@ Para obtener más información sobre cómo copiar credenciales en el entorno, co
 ## Preparación de la app para el despliegue utilizando una cadena de herramientas DevOps
 {: #connect_toolchain}
 
-En este paso, adjuntará una cadena de herramientas DevOps a la aplicación y la configurará para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}. 
+En este paso, adjuntará una cadena de herramientas DevOps a la aplicación y la configurará para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}.
 
-La cadena de herramientas DevOps es lo suficientemente flexible como para permitir la ejecución gestionada de etapas arbitrarias de ejecución de un script de shell. Es decir, puede hacer casi cualquier cosa con una cadena de herramientas DevOps. Esta sección se centra en el despliegue de la app en un clúster de Kubernetes, y se tiene en cuenta la "preparación para el futuro" en relación al escalado de DevOps y a la aplicación de prácticas recomendadas. 
+La cadena de herramientas DevOps es lo suficientemente flexible como para permitir la ejecución gestionada de etapas arbitrarias de ejecución de un script de shell. Es decir, puede hacer casi cualquier cosa con una cadena de herramientas DevOps. Esta sección se centra en el despliegue de la app en un clúster de Kubernetes, y se tiene en cuenta la "preparación para el futuro" en relación al escalado de DevOps y a la aplicación de prácticas recomendadas.
 
-El establecimiento de un enlace entre la app, la cadena de herramientas y el repositorio es un paso encaminado a organizar los activos del producto. También ayuda a agregar una vista de su repositorio de origen con el flujo de trabajo de DevOps, las instancias de la app en ejecución y los servicios dependientes en todos los destinos de despliegue. 
+El establecimiento de un enlace entre la app, la cadena de herramientas y el repositorio es un paso encaminado a organizar los activos del producto. También ayuda a agregar una vista de su repositorio de origen con el flujo de trabajo de DevOps, las instancias de la app en ejecución y los servicios dependientes en todos los destinos de despliegue.
 
 En la página Conectar cadena de herramientas, dispone de algunas opciones:
 
 * Conectar la app a una cadena de herramientas existente.
 * Conectar la app a una cadena de herramientas existente que no contiene el repositorio. A continuación, conectar la cadena de herramientas a su repositorio más adelante.
-* Conectar la app a una cadena de herramientas nueva. 
+* Conectar la app a una cadena de herramientas nueva.
 
 ### Conectar la app a una cadena de herramientas existente
 {: #connect_toolchain_repo}
@@ -98,7 +98,8 @@ Tiene estas opciones para conectar la app a una nueva cadena de herramientas:
 
 Si desea crear una cadena de herramientas desde cero y conectarla a la app, siga estos pasos. También puede crear todas las integraciones para crear la app y desplegarla en el clúster de Kubernetes. La característica de cadena de herramientas DevOps ofrece plantillas, pero estos pasos le muestran cómo configurar una cadena de herramientas DevOps desde cero.
 
-Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre la página [Crear una cadena de herramientas](https://{DomainName}/devops/create) en el [panel de control de DevOps](https://{DomainName}/devops/) en un nuevo separador del navegador. Después de crear y configurar la cadena de herramientas en dicho separador, debe volver a la página **Conectar una cadena de herramientas** en la app y renovar la página. {:tip}
+Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre la página [Crear una cadena de herramientas](https://{DomainName}/devops/create) en el [panel de control de DevOps](https://{DomainName}/devops/) en un nuevo separador del navegador. Después de crear y configurar la cadena de herramientas en dicho separador, debe volver a la página **Conectar una cadena de herramientas** en la app y renovar la página.
+{:tip}
 
 1. En la página **Crear una cadena de herramientas**, pulse la plantilla **Crear su propia cadena de herramientas**.
 2. En la página **Crear su propia cadena de herramientas**, escriba un nombre para la cadena de herramientas, seleccione una región y un grupo de recursos (predeterminado) y pulse **Crear**.
@@ -114,7 +115,7 @@ Puede configurar la cadena de herramientas DevOps con la integración de GitHub 
 3. En la página **Configurar la integración** de GitHub, siga estos pasos:
   * Seleccione (o escriba) el URL del **Servidor GitHub**.
   * Si ve el mensaje "No autorizado en GitHub", pulse **Autorizar**. A continuación, en la página **Autorizar cadenas de herramientas de IBM Cloud**, pulse **Autorizar a IBM-Cloud**. Luego escriba su contraseña de GitHub.
-  * En la página **Configurar la integración**, seleccione **Existente** para el **Tipo de repositorio** para que la cadena de herramientas DevOps configure el repositorio con un webhook y _no_ copie ni bifurque su repositorio. 
+  * En la página **Configurar la integración**, seleccione **Existente** para el **Tipo de repositorio** para que la cadena de herramientas DevOps configure el repositorio con un webhook y _no_ copie ni bifurque su repositorio.
   * Escriba el **URL de repositorio**. (Por ejemplo, `https://github.com/yourrepo/spring-boot-hello-world`).
   * Espere un momento; es posible que se le solicite autorizar a GitHub a que otorgue permiso a la cadena de herramientas DevOps para que utilice la API ReST de GitHub para configurar el repositorio con los webhooks necesarios para activar la cadena de herramientas.
   * Pulse **Crear integración**.
@@ -123,7 +124,7 @@ Ha configurado esta cadena de herramientas DevOps con una integración para el r
 
 ## Adición de un Delivery Pipeline para crear, probar y desplegar la app
 
-Delivery Pipeline es donde tiene lugar el trabajo. 
+Delivery Pipeline es donde tiene lugar el trabajo.
 
 1. Pulse **Añadir una herramienta**.
 2. Seleccione **Delivery Pipeline**.
@@ -131,7 +132,7 @@ Delivery Pipeline es donde tiene lugar el trabajo.
  * Especifique "Integración continua" para el nombre del conducto.
  * Pulse **Crear integración**.
 
-Ha creado un conducto de entrega vacío. A continuación, defina las etapas de conducto para dirigir la entrada (el contenido del repositorio GitHub) a su destino. Puesto que en esta guía de aprendizaje se presupone que tiene un repositorio GitHub que genera una imagen de Docker de trabajo y que está dirigido a un clúster de IBM Containers Kubernetes, creará etapas del conducto con entradas, scripts de shell y salidas destinadas a alcanzar este objetivo. 
+Ha creado un conducto de entrega vacío. A continuación, defina las etapas de conducto para dirigir la entrada (el contenido del repositorio GitHub) a su destino. Puesto que en esta guía de aprendizaje se presupone que tiene un repositorio GitHub que genera una imagen de Docker de trabajo y que está dirigido a un clúster de IBM Containers Kubernetes, creará etapas del conducto con entradas, scripts de shell y salidas destinadas a alcanzar este objetivo.
 
 ### Configuración de la etapa de conducto "Crear y publicar"
 
@@ -140,13 +141,13 @@ Ha creado un conducto de entrega vacío. A continuación, defina las etapas de c
 3. En el separador **Entrada** de la página **Configuración de etapa**, complete los campos tal como se indica a continuación:
   * Para el nombre de la etapa, escriba **Crear y publicar imagen de Docker**.
   * **Tipo de entrada**: seleccione **Repositorio Git**.
-  * **Repositorio Git**: seleccione el repositorio GitHub. 
-  * **Rama**: seleccione la rama que utiliza para la integración continua. 
+  * **Repositorio Git**: seleccione el repositorio GitHub.
+  * **Rama**: seleccione la rama que utiliza para la integración continua.
 4. Pulse el separador **Trabajos** y complete los campos tal como se indica a continuación:
-  * Pulse el icono **Añadir trabajo '+'** y seleccione **Crear** para el tipo de trabajo. 
+  * Pulse el icono **Añadir trabajo '+'** y seleccione **Crear** para el tipo de trabajo.
   * Escriba un nombre, como por ejemplo **Crear y publicar**.
   * **Tipo de compilador**: seleccione **Registro de contenedor**.
-  * **Región de IBM Cloud**: seleccione la región en la que se encuentra el clúster de Kubernetes. 
+  * **Región de IBM Cloud**: seleccione la región en la que se encuentra el clúster de Kubernetes.
   * **Clave de API**: seleccione **Especificar una clave de API existente**. Si no tiene una clave o no conoce la clave de la API, puede [obtener una clave de API](https://{DomainName}/iam/#/apikeys) abriendo otra ventana del navegador y navegando a **Gestionar** > **Seguridad** > **Claves de API de plataforma**. Asegúrese de guardar esta clave en un lugar seguro.
   * **Nombre de cuenta**: este campo se completa automáticamente cuando se especifica una clave de API.
   * **Espacio de nombres de registro de contenedor**: especifique el [espacio de nombres de registro de contenedor](https://{DomainName}/containers-kubernetes/registry/namespaces) (lo encontrará pulsando el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccionando **Contenedores** > **Registro** > **Espacios de nombres**.)
@@ -172,18 +173,18 @@ Hasta el momento, ha publicado una imagen de Docker en el registro privado de im
 
 1. En la página del conducto de entrega, pulse **Añadir una etapa**.
 2. En el separador **Entrada** de la página **Configuración de etapa**, complete los campos tal como se indica a continuación:
-  * **Nombre **: escriba **Desplegar**.
+  * **Nombre**: escriba **Desplegar**.
   * **Tipo de entrada**: seleccione **Crear artefactos**.
   * **Etapa**: seleccione **Compilar y publicar imagen de Docker**.
   * **Trabajo**: seleccione **Compilar y publicar**.
   * **Desencadenante de etapa**: puesto que este es el conducto de integración continua, seleccione el valor predeterminado **Ejecutar trabajos y luego se completará la etapa anterior**.
 3. Pulse el separador **Trabajos** y complete los campos tal como se indica a continuación:
-  * Pulse el icono **Añadir trabajo '+'** y seleccione **Desplegar** para el tipo de trabajo. 
+  * Pulse el icono **Añadir trabajo '+'** y seleccione **Desplegar** para el tipo de trabajo.
   * Escriba un nombre, como por ejemplo **Desplegar en clúster de integración continua**.
   * **Tipo de desplegador**: seleccione **Kubernetes**.
-  * **Región de IBM Cloud**: seleccione la región en la que se encuentra el clúster de Kubernetes. 
+  * **Región de IBM Cloud**: seleccione la región en la que se encuentra el clúster de Kubernetes.
   * **Clave de API**: seleccione **Especificar una clave de API existente**. Si no tiene una clave o no conoce la clave de la API, puede [obtener una clave de API](https://{DomainName}/iam/#/apikeys) abriendo otra ventana del navegador y navegando a **Gestionar** > **Seguridad** > **Claves de API de plataforma**. Asegúrese de guardar esta clave en un lugar seguro.
-  * Acepte el resto de valores predeterminados. 
+  * Acepte el resto de valores predeterminados.
 4. Pulse **Guardar**. Ahora aparece en la cadena de caracteres la etapa de conducto "Desplegar".
 
 ### Prueba de la etapa de conducto "Desplegar en clúster"

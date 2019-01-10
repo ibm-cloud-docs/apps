@@ -31,7 +31,7 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 
 Cree una app personalizada en el panel de control de {{site.data.keyword.cloud}}:
 
-1. En el panel de control de panel de control de [{{site.data.keyword.cloud}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") ](https://{DomainName}), seleccione **Crear** para crear una aplicación personalizada.
+1. En el panel de control de panel de control de [{{site.data.keyword.cloud}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}), seleccione **Crear** para crear una aplicación personalizada.
 
   También puede crear una app personalizada en la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}, seleccione **Crear** para crear una aplicación personalizada.
   {: tip}
@@ -63,7 +63,7 @@ La entrega continua está habilitada para algunas aplicaciones. Puede habilitar 
 2. Seleccione un método de despliegue. Configure el método de despliegue de acuerdo con las instrucciones correspondientes al método que elija:
   * Desplegar en un clúster Kubernetes. Cree un clúster de hosts, denominados nodos de trabajador, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
   * Desplegar con Cloud Foundry, donde no necesita gestionar la infraestructura subyacente.
-  * Desplegar en una instancia de servidor virtual. 
+  * Desplegar en una instancia de servidor virtual.
 
 El despliegue de la app en la nube en el último paso crea automáticamente una cadena de herramientas. La cadena de herramientas crea un repositorio Git para la app en el que puede encontrar el código. Para obtener más información, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html).
 

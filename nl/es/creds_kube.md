@@ -34,13 +34,13 @@ Debe añadir manualmente las credenciales de servicio al entorno de despliegue e
 
 Como medida de precaución, puede codificar la aplicación para confirmar que su entorno está completo en la base principal de la aplicación. No desea que el despliegue de una aplicación en un clúster cuyo entorno no está completo suponga una interrupción para el producto. Es posible que aplicación no se inicie y la configuración de Kubernetes puede impedir de forma automática tales interrupciones.
 
-Supongamos que tiene las dos variables de entorno siguientes: 
+Supongamos que tiene las dos variables de entorno siguientes:
 * `SECRET`
 * `NOT_SECRET`
 
 Para una base de datos, las variables pueden ser `APIKEY` y `DB_URL`, donde la primera es confidencial y la segunda no lo es.
 
-En Java, podría escribir algo parecido a lo siguiente en la base principal de la aplicación: 
+En Java, podría escribir algo parecido a lo siguiente en la base principal de la aplicación:
 ```java
 if (System.getenv("SECRET") == null) {
     throw new RuntimeException("Environment variable 'SECRET' is not set!");
@@ -65,7 +65,7 @@ En el archivo `deployment.yml` de Kubernetes, se pueden definir las variables de
 
 #### Establezca el despliegue para obtener las credenciales del entorno
 
-En la sección con ` kind: Deployment`, añada el código de ejemplo siguiente a un nivel de sangrado después de `spec.template.spec.containers`:
+En la sección con `kind: Deployment`, añada el código de ejemplo siguiente a un nivel de sangrado después de `spec.template.spec.containers`:
 ```yaml
 env:
   - name: SECRET
@@ -85,16 +85,16 @@ clave `KEY_SECRET` se resuelvan en un valor.
 
 #### Instalación de las herramientas necesarias
 
-Utilice un terminal de la estación de trabajo para instalar las siguientes herramientas: 
+Utilice un terminal de la estación de trabajo para instalar las siguientes herramientas:
 
 1. Instale la [CLI de {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
-2. Inicie una sesión con el mandato `ibmcloud login`. 
-3. Conéctese a su clúster con el mandato `ibmcloud cs cluster-config {your_cluster_name}`. 
+2. Inicie una sesión con el mandato `ibmcloud login`.
+3. Conéctese a su clúster con el mandato `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copie y pegue el mandato `export` para ejecutarlo desde un terminal.
 
 #### Defina el secreto en el clúster
 
-La {{site.data.keyword.dev_cli_notm}} proporciona `kubectl`, que puede ejecutar porque está conectado al clúster de Kubernetes. 
+La {{site.data.keyword.dev_cli_notm}} proporciona `kubectl`, que puede ejecutar porque está conectado al clúster de Kubernetes.
 
 Para definir el secreto que se puede resolver, utilice estos mandatos `kubectl`:
 ```console
@@ -117,19 +117,19 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
 3. Pulse `Descargar código` para volver a generar el proyecto con los fragmentos de código inyectados.
 4. Para acceder a las credenciales localmente, copie y sustituya los archivos siguientes del archivo `.zip` recién generado en el clon local de Git para acceder a las credenciales. Todavía tiene que crear un secreto de Kubernetes en el clúster para alojar las credenciales.
 
-	- `chart/{appName}/bindings.yaml` - Genera una variable de entorno en el clúster de Kubernetes que apunta al secreto. 
-	- `src/main/resources/localdev-config.json` - Acceso a las credenciales mientras la app se ejecuta localmente. 
-  - `src/main/resources/mappings.json` - Una correlación para proporcionar acceso al método [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) para acceder a las variables de entorno desde el código. 
-  - `manifest.yml` - Este archivo enlaza el servicio a la aplicación Cloud Foundry. 
+	- `chart/{appName}/bindings.yaml` - Genera una variable de entorno en el clúster de Kubernetes que apunta al secreto.
+	- `src/main/resources/localdev-config.json` - Acceso a las credenciales mientras la app se ejecuta localmente.
+  - `src/main/resources/mappings.json` - Una correlación para proporcionar acceso al método [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) para acceder a las variables de entorno desde el código.
+  - `manifest.yml` - Este archivo enlaza el servicio a la aplicación Cloud Foundry.
 
 Si más adelante decide desplegar en una aplicación Cloud Foundry con un recurso de Controlador de recursos (ubicado en un grupo de recursos en lugar de en una organización o espacio), debe copiar un archivo más.
 {: note}
 
-5. [Visualice](https://cloud.ibm.com/containers-kubernetes/clusters) el clúster de Kubernetes con la región correspondiente (EE.UU. sur si es uno gratuito). 
+5. [Visualice](https://cloud.ibm.com/containers-kubernetes/clusters) el clúster de Kubernetes con la región correspondiente (EE.UU. sur si es uno gratuito).
 6. Pulse en el clúster y seleccione **Panel de control de Kubernetes** en la parte superior derecha para ver el panel de control del clúster.
-7. Desplácese hacia abajo hasta que vea una sección con la etiqueta **Secrets**. Puede ver un secreto correspondiente a su instancia de servicio de {{site.data.keyword.cloudant_short_notm}} que utiliza el siguiente convenio `binding-{appName}-{serviceName}-{timestamp}`. En el archivo `chart/{appName}/bindings.yaml`, encontrará el secreto de {{site.data.keyword.cloudant_short_notm}} correspondiente. 
+7. Desplácese hacia abajo hasta que vea una sección con la etiqueta **Secrets**. Puede ver un secreto correspondiente a su instancia de servicio de {{site.data.keyword.cloudant_short_notm}} que utiliza el siguiente convenio `binding-{appName}-{serviceName}-{timestamp}`. En el archivo `chart/{appName}/bindings.yaml`, encontrará el secreto de {{site.data.keyword.cloudant_short_notm}} correspondiente.
 8. Ahora puede crear uno correspondiente para la instancia de Cloud Object Storage con el nombre de secreto que ya se ha generado en `chart/{appName}/bindings.yaml` y que tiene un aspecto parecido a `binding-create-app-ktibr-cloudobjectstor-1538170732311`.
-9. Vaya a la página **Detalles de la app** en el panel de control y copie las credenciales correspondientes a la instancia de Cloud Object Storage. Consulte la siguiente salida de credenciales de ejemplo: 
+9. Vaya a la página **Detalles de la app** en el panel de control y copie las credenciales correspondientes a la instancia de Cloud Object Storage. Consulte la siguiente salida de credenciales de ejemplo:
 ```yaml
 {
   "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
@@ -139,17 +139,17 @@ Si más adelante decide desplegar en una aplicación Cloud Foundry con un recurs
 ```
 {: codeblock}
 
-10. Asegúrese de que el clúster se haya configurado utilizando `ibmcloud cs cluster-config {your_cluster_name}` y exportando el mandato en las instrucciones siguientes. 
-11. Utilice el mandato `echo` para colocar las credenciales en el archivo `binding`. 
+10. Asegúrese de que el clúster se haya configurado utilizando `ibmcloud cs cluster-config {your_cluster_name}` y exportando el mandato en las instrucciones siguientes.
+11. Utilice el mandato `echo` para colocar las credenciales en el archivo `binding`.
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
 
-12. Cree el secreto con `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Si vuelve al panel de control del clúster de Kubernetes, podrá ver el secreto que ha creado. 
+12. Cree el secreto con `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Si vuelve al panel de control del clúster de Kubernetes, podrá ver el secreto que ha creado.
 
-Si está realizando el despliegue en una aplicación de Cloud Foundry, tiene que crear un servicio proporcionado por el usuario si utiliza una instancia de Controlador de recursos (si el recurso reside en un grupo de recursos en lugar de en una organización o espacio).
+Si está realizando el despliegue en una aplicación de Cloud Foundry, tiene que crear un servicio proporcionado por el usuario si utiliza una instancia de Controlador de recursos (si el recurso reside en un grupo de recursos en lugar de en una organización o espacio). 
 {: note}
   
   ```console
@@ -159,11 +159,11 @@ Si está realizando el despliegue en una aplicación de Cloud Foundry, tiene que
 
   El nombre del servicio proporcionado por el usuario se encuentra en el archivo `manifest.yml` con el nombre de instancia correspondiente.
 
-13. Ahora puede acceder al secreto a través de las variables de entorno con el método `env.getProperty` cuando la aplicación se ejecute en el clúster de Kubernetes. 
+13. Ahora puede acceder al secreto a través de las variables de entorno con el método `env.getProperty` cuando la aplicación se ejecute en el clúster de Kubernetes.
 
 ### Cómo se prepara el clúster de Kubernetes
 
-Utilice la característica **Desplegar en la nube** para desplegar la app en su clúster de Kubernetes de IBM Containers. La característica prepara el clúster de Kubernetes con secretos para las credenciales de los recursos que están asociados a la app. Para ver los resultados de la preparación del clúster, siga estos pasos: 
+Utilice la característica **Desplegar en la nube** para desplegar la app en su clúster de Kubernetes de IBM Containers. La característica prepara el clúster de Kubernetes con secretos para las credenciales de los recursos que están asociados a la app. Para ver los resultados de la preparación del clúster, siga estos pasos:
 
 1. Ejecute este mandato para ver los resultados: `kubectl get secrets`:
   ```
@@ -201,7 +201,7 @@ Utilice la característica **Desplegar en la nube** para desplegar la app en su 
   ```
   {: screen}
 
-  El `binding` es el valor codificado en base64 del secreto. Si se decodifica, muestra el JSON sin formato de las `credenciales` de la instancia del recurso, más algunos valores `iam_...` : 
+  El `binding` es el valor codificado en base64 del secreto. Si se decodifica, muestra el JSON sin formato de las `credenciales` de la instancia del recurso, más algunos valores `iam_...` :
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -218,12 +218,12 @@ Utilice la característica **Desplegar en la nube** para desplegar la app en su 
   ```
   {: screen}
 
-El código de la aplicación no puede recuperar el secreto de Kubernetes a no ser que el archivo `deployment.yml` declare un valor `env` que haga referencia al secreto. Si utiliza un kit de inicio, este código se genera automáticamente. 
+El código de la aplicación no puede recuperar el secreto de Kubernetes a no ser que el archivo `deployment.yml` declare un valor `env` que haga referencia al secreto. Si utiliza un kit de inicio, este código se genera automáticamente.
 
 ### El código generado por el kit de inicio
 {: #sk_kube_generated_code}
 
-En este caso, ha creado esta aplicación a partir de un kit de inicio. El código que se genera a partir de un kit de inicio se crea de forma que sea portátil para que se pueda ejecutar localmente, en Cloud Foundry o en Kubernetes. Se utiliza la biblioteca, `IBMCloudEnv`, para proporcionar una capa de sintetización entre el código de la aplicación y la recuperación de las variables de entorno que contienen las credenciales correspondientes a los recursos (instancias de servicio). 
+En este caso, ha creado esta aplicación a partir de un kit de inicio. El código que se genera a partir de un kit de inicio se crea de forma que sea portátil para que se pueda ejecutar localmente, en Cloud Foundry o en Kubernetes. Se utiliza la biblioteca, `IBMCloudEnv`, para proporcionar una capa de abstracción entre el código de la aplicación y la recuperación de las variables de entorno que contienen las credenciales correspondientes a los recursos (instancias de servicio).
 
 El código que se crea a partir del kit de inicio tiene una dependencia para la biblioteca `IBMCloudEnv` y genera la siguiente salida:
 
@@ -238,9 +238,9 @@ El código que se crea a partir del kit de inicio tiene una dependencia para la 
   ```
   {: codeblock}
 
-  El `secretKeyRef.name` expone el secreto de Kubernetes definido de modo que lo pueda recuperar la aplicación como una variable de entorno sencilla en el código de aplicación. 
+  El `secretKeyRef.name` expone el secreto de Kubernetes definido de modo que lo pueda recuperar la aplicación como una variable de entorno sencilla en el código de aplicación.
 
-* Las instrucciones para la biblioteca `IBMCloudEnv ` se encapsulan en un archivo `mappings.json`, que se encuentra en el código base generado por el kit de inicio. El archivo `mappings.json` contiene definiciones individuales para cada credencial:
+* Las instrucciones para la biblioteca `IBMCloudEnv` se encapsulan en un archivo `mappings.json`, que se encuentra en el código base generado por el kit de inicio. El archivo `mappings.json` contiene definiciones individuales para cada credencial:
   ```json
   "cloudant_apikey": {
     "searchPatterns": [
@@ -265,9 +265,9 @@ para guiar la lógica de `IBMCloudEnv`.
 
 La biblioteca `IBMCloudEnv` detecta automáticamente si la aplicación se está ejecutando en Kubernetes, Cloud Foundry o una instancia de servidor virtual (se trata como un docker local), y aplica el `searchPattern` correcto para encontrar el valor que se devuelve.
 
-Por lo tanto, el archivo `mappings.json` se debe considerar como _la lista definitiva_ de los valores preconfigurados e inmediatamente disponibles que proceden del entorno en el que se va a ejecutar la app. Los valores se rellenan en el entorno correspondiente al clúster que ha seleccionado como destino al utilizar la característica **Desplegar en la nube**. 
+Por lo tanto, el archivo `mappings.json` se debe considerar como _la lista definitiva_ de los valores preconfigurados e inmediatamente disponibles que proceden del entorno en el que se va a ejecutar la app. Los valores se rellenan en el entorno correspondiente al clúster que ha seleccionado como destino al utilizar la característica **Desplegar en la nube**.
 
-**Atención**: en el momento de escribir esta documentación, la preparación del entorno _siempre_ se realiza para todas las credenciales correspondientes a todos los recursos asociados a una app, pero _no todas las referencias `env`_ se encuentran en el archivo `bindings.yml` o en el archivo `mappings.json`. En estos casos, debe colocar dichas referencias usted mismo. Si ya ha decidido un despliegue de destino y no necesita la sintetización de la biblioteca de `IBMCloudEnv`, consulte la sección "Su código + (despliegue de destino)" que se ajuste a su decisión.
+**Atención**: en el momento de escribir esta documentación, la preparación del entorno _siempre_ se realiza para todas las credenciales correspondientes a todos los recursos asociados a una app, pero _no todas las referencias `env`_ se encuentran en el archivo `bindings.yml` o en el archivo `mappings.json`. En estos casos, debe colocar dichas referencias usted mismo. Si ya ha decidido un despliegue de destino y no necesita la abstracción de la biblioteca de `IBMCloudEnv`, consulte la sección "Su código + (despliegue de destino)" que se ajuste a su decisión.
 
 Algunos kits de inicio no incluyen la referencia a la dependencia `IBMCloudEnv` o a los archivos `manifest.yml` o `mappings.json`.
 {: note}
