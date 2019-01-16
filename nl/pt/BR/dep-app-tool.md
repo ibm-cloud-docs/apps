@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
   years: 2018
-
-lastupdated: "2018-07-25"
+lastupdated: "2018-12-17"
 
 ---
 
@@ -13,60 +12,54 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Implementando apps
 {: #deploy}
 
-É possível implementar seus apps com uma cadeia de ferramentas ou uma interface da linha de comandos. Uma cadeia de ferramentas é um conjunto de integrações de ferramentas. A interface da linha de comandos é uma maneira simples de implementar seus apps e instâncias de serviço.
+É possível implementar seus apps com uma cadeia de ferramentas ou com a interface da linha de comandos (CLI). Uma cadeia de ferramentas é um conjunto de integrações de ferramentas. A CLI é uma maneira simples de implementar seus apps e instâncias de serviço.
 {: shortdesc}
 
-## Implementando apps com cadeias de ferramentas
+## Implementando apps usando cadeias de ferramentas
 {: #toolchains_getting_started}
 
-As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. É possível criar uma cadeia de ferramentas de duas formas: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de
-ferramentas a partir de um app. Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. Com uma cadeia de ferramentas configurada corretamente, a implementação do app é fácil.  Um ciclo de implementação de construção é iniciado automaticamente com cada mesclagem na ramificação principal em seu repositório.
 
-Com uma cadeia de ferramentas configurada adequadamente, a implementação de seu app é trivial: um ciclo de construção/implementação será iniciado automaticamente com cada mesclagem para a ramificação principal em seu repositório.
+É possível criar uma cadeia de ferramentas de uma de duas maneiras: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de ferramentas por meio de um app. Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
-Todas as cadeias de ferramentas criadas por meio de um painel do desenvolvedor do {{site.data.keyword.Bluemix}} são configuradas para implementação automática.
-{: tip}
-
-## Implementando aplicativos com a interface da linha de comandos
+## Implementando apps usando a CLI
 {: #cli}
 
-O IBM Cloud fornece uma CLI robusta, bem como plug-ins e extensões de ferramentas do desenvolvedor que se integram com a CLI.
+O {{site.data.keyword.cloud_notm}} fornece uma CLI robusta, além de plug-ins e extensões de ferramentas do desenvolvedor que se integram à CLI.
 
-Use a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}} para implementar seus aplicativos e instâncias de serviço.
-{:shortdesc}
-
-Antes de iniciar, [faça download e instale a interface da linha de comandos do {{site.data.keyword.Bluemix_notm}}](/docs/cli/index.html).
+Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 
 <p>
-<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>
 </p>
 
-**Restrição:** a ferramenta de linha de comandos não é suportada por Cygwin. Use a ferramenta em uma janela de linha de comandos diferente da janela de linha de comandos do Cygwin.
-{:prereq}
-
-Após a instalação da interface da linha de comandos, é possível iniciar:
+A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da janela de linha de comandos do Cygwin.
+{: important}
 
   1. {: download} Faça download do código do app em um novo diretório para configurar seu ambiente de desenvolvimento.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Abre em uma nova guia ou janela)"></a>
+    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Fazer download do código do aplicativo” title="(Abre em uma nova guia ou janela)"></a>
 
   2. Mude para o diretório no qual o seu código está localizado.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  Faça mudanças em seu código de app. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.Bluemix_notm}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar "Obrigado por criar..." para dizer algo novo. Assegure-se de que o app seja executado localmente antes de implementá-lo de volta no {{site.data.keyword.Bluemix_notm}}.
+  3.  Faça mudanças em seu código de app. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.cloud_notm}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar a linha `Thanks for creating ...`. Assegure-se de que o app seja executado localmente antes de implementá-lo de volta no {{site.data.keyword.cloud_notm}}.
 
-    Anote o arquivo `manifest.yml`. Ao implementar seu app de volta no {{site.data.keyword.Bluemix_notm}}, esse arquivo será usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros essenciais.
+    Anote o arquivo `manifest.yml`. Ao implementar seu app de volta no {{site.data.keyword.cloud_notm}}, esse arquivo será usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros essenciais.
 
-    Preste atenção também no arquivo `README.md`, que contém detalhes como instruções de construção, se aplicável.
+    Revise também o arquivo `README.md`, que contém detalhes, como instruções de construção, se aplicável.
 
-    Nota: caso seu aplicativo seja um app Liberty, deve-se construí-lo antes da reimplementação.
+  Caso seja um app Liberty, deve-se construí-lo antes que seja novamente implementado.
+  {: note}
 
-  4. Conecte e efetue login no {{site.data.keyword.Bluemix_notm}}.
+  4. Conecte e efetue login no {{site.data.keyword.cloud_notm}}.
 
   <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
 
@@ -76,10 +69,11 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   <pre class="pre"><code class="hljs">ibmcloud login -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Nota**: quando o valor contém um espaço, deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name`, por exemplo, `-o "my org"`.
+  Caso o valor contenha um espaço, deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name`, por exemplo, `-o "my org"`.
+  {: note}
 
-  5. Em <var class="keyword varname">your_new_directory</var>, reimplemente seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [a documentação da CLI](/docs/cli/idt/commands.html#deploy).
+  5. Em seu novo diretório, implemente seu app no {{site.data.keyword.cloud_notm}} usando o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [a documentação da CLI](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs"> ibmcloud dev deploy  <var class="keyword varname" data-hd-keyref="app_name"> app_name </var> </code></pre>
 
-  6. Acesse seu app procurando https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.
+  6. Acesse o app em https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -35,9 +35,8 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
 ## Antes de começar
 {: #prereqs}
 
-* Siga as etapas para [Criando apps por meio de seu próprio
-repositório de código](/docs/apps/tutorials/tutorial_byoc.html) para criar um app.
-* No painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![Ícone de menu](../../icons/icon_hamburger.svg) e selecione **Contêineres** para [configurar um cluster de Kubernetes](/docs/containers/container_index.html).
+* Crie um app. Consulte [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials/tutorial_byoc.html) para obter mais informações.
+* No [console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg) e selecione **Contêineres** para [configurar um cluster do Kubernetes](/docs/containers/container_index.html).
 * Para confirmar se o app é executado no Docker, execute os comandos a seguir:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -46,10 +45,9 @@ repositório de código](/docs/apps/tutorials/tutorial_byoc.html) para criar um 
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Em seguida, visite a sua URL, como `http://localhost/springboothelloworld/sayhello`.   
-Pressione `Ctrl + C` para parar a execução do Docker.
+* Em seguida, acesse sua URL, como `http://localhost/springboothelloworld/sayhello`. Pressione as teclas Ctrl + C para parar a execução do Docker.
 
-## Opcional. Incluindo recursos no app
+## Incluindo recursos em seu app (opcional)
 {: #add_resources}
 
 Inclua um recurso de serviço no aplicativo e o {{site.data.keyword.cloud_notm}} cria o serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
@@ -60,16 +58,9 @@ serviço para o aplicativo usando uma instância de serviço. Uma instância de 
 Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para
 obter mais informações, consulte [Incluindo um serviço no app](/docs/apps/reqnsi.html).
 
-### Copiando as credenciais de serviço para o ambiente
+Depois de incluir um recurso de serviço no app, deve-se copiar as credenciais do serviço para seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps/creds_kube.html).
 
-Depois de incluir um recurso de serviço no app, observe que as credenciais para esse serviço são exibidas na
-caixa **Credenciais**. Deve-se copiar as credenciais para o ambiente de implementação.
-
-Para obter mais informações sobre a cópia de credenciais para o ambiente, consulte
-[Incluindo credenciais no ambiente do Kubernetes](/docs/apps/creds_kube.html).
-
-
-## Preparando o app para implementação usando uma cadeia de ferramentas do DevOps
+## Preparando seu app para implementação
 {: #connect_toolchain}
 
 Nessa etapa, você anexa uma cadeia de ferramentas do DevOps ao aplicativo e a configura para que seja implementada
@@ -84,7 +75,7 @@ Estabelecer um link entre o app, a cadeia de ferramentas e o repositório é uma
 ativos do produto. Isso também ajuda a agregar uma visualização do repositório de origem com o fluxo de trabalho do
 DevOps, com as instâncias de app em execução e com os serviços dependentes em todos os destinos de implementação.
 
-Na página Conectar a cadeia de ferramentas, você tem algumas opções:
+Na página Conectar cadeia de ferramentas, você tem algumas opções:
 
 * Conecte o app a uma cadeia de ferramentas existente.
 * Conecte o app a uma cadeia de ferramentas existente que não contenha o seu repositório. Então, conecte
@@ -101,9 +92,7 @@ definiu no app. É mais provável que você queira selecionar uma dessas cadeias
 ### Conecte o app a uma cadeia de ferramentas existente que não contenha o seu repositório
 {: #connect_toolchain_notrepo}
 
-Se você tiver uma ou mais cadeias de ferramentas do DevOps associadas à sua conta, mas não conectadas ao
-repositório Git especificado durante a criação do app, essas cadeias de ferramentas serão exibidas na
-tabela intitulada **Sem o seu repositório**. É possível selecionar uma dessas cadeias de ferramentas e
+Se você tiver uma ou mais cadeias de ferramentas do DevOps associadas à sua conta, mas não estiverem conectadas ao repositório Git especificado durante a criação do app, essas cadeias de ferramentas serão exibidas na tabela **Sem o seu repositório**. É possível selecionar uma dessas cadeias de ferramentas e
 conectá-la ao app, mas deve-se também incluir manualmente o seu repositório nessa cadeia de ferramentas.
 
 Para obter mais informações sobre como incluir o repositório na cadeia de ferramentas, consulte:
@@ -117,156 +106,91 @@ repositórios Git e o rastreamento de problema](/docs/services/ContinuousDeliver
 ### Conectar o app a uma nova cadeia de ferramentas
 {: #create_toolchain}
 
-Você tem essas opções para conectar o app a uma nova cadeia de ferramentas:
-* Se você não desejar criar uma cadeia de ferramentas do DevOps do zero, será possível ativar o código
-existente para a nuvem usando o comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). 
-O comando gera um modelo de cadeia de ferramentas do DevOps que você verifica no repositório. Em seguida, use esse
-modelo como o conjunto de instrução para o que a cadeia de ferramentas do DevOps cria. Para obter mais informações,
-consulte a [documentação da CLI](/docs/apps/create-deploy-cli.html#byoc).
-* Crie uma cadeia de ferramentas do DevOps do zero dentro do console. Se você deseja controlar totalmente a
+Se você deseja controlar totalmente a
 criação da cadeia de ferramentas do DevOps sem nenhuma mudança no repositório de código, crie a cadeia de
-ferramentas do zero. Para obter mais informações, consulte [Criando uma cadeia
-de ferramentas do DevOps do zero](#create_toolchain_scratch).
+ferramentas do zero. Crie também
+todas as integrações para construir o app e implementá-lo no cluster do Kubernetes. 
 
-#### Criando uma cadeia de ferramentas do DevOps do zero
-{: #create_toolchain_scratch}
+1. Na página Criar uma cadeia de ferramentas, clique no modelo **Construir sua própria cadeia de ferramentas**.
+2. Insira um nome para a sua cadeia de ferramentas, selecione uma região e um grupo de recursos (padrão) e clique em **Criar**.
 
-Se você deseja criar uma cadeia de ferramentas do zero e conectá-la ao app, conclua estas etapas. Crie também
-todas as integrações para construir o app e implementá-lo no cluster do Kubernetes. O recurso de cadeia de ferramentas
-do DevOps oferece modelos, mas essas etapas mostram como configurar uma cadeia de ferramentas do DevOps do zero.
-
-Ao escolher criar uma cadeia de ferramentas por meio do novo app, a página
-[Criar uma cadeia de ferramentas](https://{DomainName}/devops/create) no
-[Painel do DevOps](https://{DomainName}/devops/) é aberta em uma nova guia no navegador. Depois de
-criar e configurar a cadeia de ferramentas nessa guia, deve-se voltar para a página **Conectar a uma cadeia
-de ferramentas** no app e atualizar a página.
+Quando você escolhe criar uma cadeia de ferramentas por meio de seu novo app, a página [Criar uma cadeia de ferramentas](https://{DomainName}/devops/create) no painel do DevOps é aberta em uma nova guia em seu navegador. Depois de criar e configurar a cadeia de ferramentas nessa guia, deve-se voltar para a página Conectar uma cadeia de ferramentas em seu app e atualizá-la.
 {:tip}
 
-1. Na página **Criar uma cadeia de ferramentas**, clique no modelo **Construir
-sua própria cadeia de ferramentas**.
-2. Na página **Construir sua própria cadeia de ferramentas**, insira um nome para a
-cadeia de ferramentas, selecione uma região e um grupo de recursos (padrão) e clique em **Criar**.
-
-Uma cadeia de ferramentas vazia sem ferramentas ou integrações pré-configuradas é criada. Continue a configurar e
-testar a nova cadeia de ferramentas concluindo as etapas restantes.
+Se você não desejar criar uma cadeia de ferramentas do DevOps do zero, será possível ativar o código
+existente para a nuvem usando o comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). O comando gera um modelo de cadeia de ferramentas do DevOps que você verifica no repositório. Em seguida, use esse
+modelo como o conjunto de instrução para o que a cadeia de ferramentas do DevOps cria. Para obter mais informações,
+consulte a [documentação da CLI](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Incluindo uma integração do GitHub
 
-É possível configurar a cadeia de ferramentas do DevOps com a integração do GitHub usando as etapas a seguir:
+Configure a cadeia de ferramentas do DevOps com uma integração do seu repositório GitHub para que a cadeia de ferramentas configure um webhook no repositório a fim de que as solicitações pull e os pushes de código nesse repositório enviem um POST para a cadeia de ferramentas. 
 
 1. No modelo de cadeia de ferramentas do DevOps, clique em **Incluir uma ferramenta**.
-2. Selecione **GitHub** (se o repositório estiver realmente no GitHub público ou no
-Enterprise GitHub).
-3. Na página **Configurar a integração** para o GitHub, conclua estas etapas:
-  * Selecione (ou insira) a URL do **Servidor GitHub**.
-  * Se você vir uma mensagem "Desautorizado no GitHub", clique em **Autorizar**. Em seguida,
-na página **Autorizar cadeias de ferramentas do IBM Cloud**, clique em **Autorizar IBM Cloud**. Em
-seguida, insira a senha do GitHub.
-  * Na página **Configurar a integração**, selecione **Existente** para o
-**Tipo de repositório** para que a cadeia de ferramentas do DevOps configure o repositório
-com um webhook e _não_ faça nenhuma bifurcação ou cópia do repositório.
-  * Insira a **URL do repositório**. Por exemplo, `https://github.com/yourrepo/spring-boot-hello-world`).
-  * Aguarde alguns instantes e você pode ser solicitado a autorizar o GitHub a conceder permissão à cadeia de
-ferramentas do DevOps para usar a API de REST do GitHub para configurar o repositório com os webhooks necessários
-para acionar a cadeia de ferramentas.
-  * Clique em
+2. Selecione **GitHub** se o repositório estiver no GitHub público ou no GitHub corporativo.
+3. Selecione ou insira a URL do servidor GitHub.
+4. Uma mensagem `Unauthorized on GitHub` pode ser exibida. Nesse caso, clique em **Autorizar**. Em seguida, na página Autorizar cadeias de ferramentas do IBM Cloud, clique em **Autorizar o IBM Cloud** e insira sua senha do GitHub.
+5. Na página Configurar a integração, selecione **Existente** para o tipo de repositório para que a cadeia de ferramentas do DevOps configure o repositório com um webhook e não faça nenhuma bifurcação ou cópia de seu repositório.
+6. Insira a URL do repositório, por exemplo, `https://github.com/yourrepo/spring-boot-hello-world`.
+7. Depois de alguns instantes, é possível que você seja solicitado a autorizar o GitHub a conceder permissão à cadeia de ferramentas do DevOps para que ela use a API de REST do GitHub para configurar seu repositório com os webhooks necessários para acionar a cadeia de ferramentas.
+8.  Clique em
 **Criar integração**.
 
-Você configurou essa cadeia de ferramentas do DevOps com uma integração para o repositório GitHub. Fazer isso
-permite que a cadeia de ferramentas configure um webhook no repositório para que as solicitações pull e os
-pushes de código nesse repositório acionem um POST para a cadeia de ferramentas. É possível consultar as configurações do
-repositório para ver o novo webhook.
+É possível visualizar o novo webhook nas configurações do repositório.
 
-## Incluindo um pipeline de entrega para construir, testar e implementar o app
-
-O pipeline de entrega é onde o trabalho acontece.
+## Incluindo um pipeline de entrega
 
 1. Clique em **Incluir uma ferramenta**.
 2. Selecione **Pipeline de entrega**.
-3. Na página **Configurar a integração** para o pipeline de entrega, conclua estas etapas:
- * Insira "Integração contínua" para o nome do pipeline.
- * Clique em
-**Criar integração**.
+3. Insira `Continuous Integration` para o nome do pipeline e clique em **Criar integração**.
 
-Você criou um pipeline de entrega vazio. Em seguida, defina os estágios de pipeline para direcionar a entrada
-(o conteúdo do repositório GitHub) para o seu destino. Como esse tutorial supõe que você tem um repositório GitHub que
+## Configurando os estágios do pipeline
+
+Configure os estágios do pipeline para direcionarem sua entrada (os conteúdos do repositório GitHub) para o destino correto. Como esse tutorial supõe que você tem um repositório GitHub que
 produz uma imagem do Docker ativa e está destinando um cluster do IBM Containers Kubernetes, crie estágios de
 pipeline com entradas, shell scripts e saídas que atinjam esse objetivo.
 
-### Configurando o estágio de pipeline "Construir e publicar"
-
-1. Clique no pipeline de entrega que você criou.
-2. Na página Pipeline de entrega, clique em **Incluir um estágio**.
-3. Na guia **Entrada** da página **Configuração de estágio**,
-preencha os campos da seguinte forma:
-  * Para o nome do estágio, digite **Construir e publicar imagem do Docker**.
-  * **Tipo de entrada**: selecione **Repositório Git**.
-  * **Repositório Git**: selecione o repositório GitHub.
-  * **Ramificação**: selecione a ramificação que você usa para a integração contínua.
-4. Clique na guia **Tarefas** e preencha os campos da seguinte forma:
-  * Clique no ícone **Incluir tarefa '+'** e selecione **Construir** para o tipo de tarefa.
-  * Insira um nome, tal como **Construir e publicar**.
-  * **Tipo de construtor**: selecione **Registro de contêiner**.
-  * **Região do IBM Cloud**: selecione a região em que o cluster do Kubernetes está
-localizado.
-  * **Chave de API**: Selecione **Inserir uma chave de API existente**. Se
-você não tiver uma chave ou não souber a chave de API, será possível
-[obter uma chave de API](https://{DomainName}/iam/#/apikeys) abrindo uma janela separada do navegador e
-navegando para **Gerenciar** > **Segurança** > **Chaves de API da
-plataforma**. Certifique-se de manter essa chave em um local seguro.
-  * **Nome da conta**: esse campo é automaticamente preenchido quando você insere uma
-chave de API.
-  * **Namespace do registro do contêiner**: insira o [namespace do registro do contêiner](https://{DomainName}/containers-kubernetes/registry/namespaces) (É possível localizá-lo clicando no ícone **Menu** ![Ícone de menu](../../icons/icon_hamburger.svg) e selecionando **Contêineres** > **Registro** > **Namespaces**.)
-  * **Nome da imagem do Docker**: Insira **contínuo** porque esse
-estágio de construção de pipeline é para a construção contínua da ramificação de integração contínua do repositório.
-  * **Construir script**: observe o shell script. Ele não tem as instruções de construção
-do app para o _seu_ repositório. É necessário incluir uma linha ou mais após a primeira linha `#!/bin/bash`. 
-Por exemplo, para um repositório que é construído usando maven, você pode incluir algumas linhas semelhantes ao exemplo
+1. Configure seu estágio de pipeline `build and publish`.
+  1. Selecione o pipeline de entrega criado e clique em **Incluir um estágio**.
+  2. Clique na guia **Entrada** e preencha os campos conforme a seguir:
+    * Insira `build and publish Docker image` para o nome do estágio.
+    * Selecione **Repositório Git** para o tipo de entrada.
+    * Selecione seu repositório GitHub.
+    * Selecione a ramificação usada para integração contínua.
+  3.  Clique na guia **Tarefas** e, em seguida, clique em **Incluir Tarefa '+'** e preencha os campos conforme a seguir:
+    * Selecione **Construir** para o tipo de tarefa.
+    * Insira `build and publish` para o nome.
+    * Selecione **Registro de contêiner** para o tipo de construtor.
+    * Selecione a região na qual o cluster do Kubernetes está localizado.
+    * Selecione **Inserir uma chave de API existente**. Se você não tiver uma chave de API, consulte [Criando uma chave de API](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Insira o namespace de registro de contêiner, que é possível localizar clicando no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg) e selecionando **Contêineres** > **Registro** > **Namespaces**.
+    * Para o nome da imagem do Docker, insira `continuous` porque esse estágio de construção de pipeline é para a construção contínua da ramificação de integração contínua de seu repositório.
+    * Edite o script de construção incluindo uma linha ou mais depois da primeira linha `#!/bin/bash`. Por exemplo, para um repositório que é construído usando maven, você pode incluir algumas linhas semelhantes ao exemplo
 a seguir:
 
-    ```bash
-    export JAVA_HOME=/opt/IBM/java8
-    # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
-    export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-    mvn -B clean verify
-    ```
-    {: codeblock}
-5. Clique **Salvar.** Agora, o estágio de pipeline "Construir e publicar" aparece na cadeia de ferramentas.
-
-### Testando o estágio de pipeline "Construir e publicar"
-
-Clique no ícone **Reproduzir** até que a compilação seja bem-sucedida. Você sabe que ela está funcional quando o estágio fica verde e a saída do script confirma as suas expectativas. O objetivo nesse estágio é publicar uma imagem do Docker em seu registro de imagem. Se o script não exibir o suficiente para a sua confiança, será possível ver o registro de imagem para confirmar a publicação clicando no ícone **Menu** ![Ícone de menu](../../icons/icon_hamburger.svg) e, então, selecionar **Contêineres** > **Registro** > **Repositórios privados**. Em
-seguida, confirme se um repositório que termina com o nome `/continuous` é listado. (Lembre-se, esse
-era o nome da imagem.)
-
-### Configurando o estágio de pipeline "Implementar no cluster"
-
-Até agora, você publicou uma imagem do Docker para o registro de imagem do Docker privado. Agora, é hora de criar
-um estágio que implemente essa imagem para o cluster do Kubernetes.
-
-1. Na página Pipeline de entrega, clique em **Incluir um estágio**.
-2. Na guia **Entrada** da página **Configuração de estágio**, preencha os campos da seguinte forma:
-  * **Nome**: digite **Implementar**.
-  * **Tipo de entrada**: selecione **Artefatos de construção**.
-  * **Estágio**: selecione **Construir e publicar imagem do Docker**.
-  * **Tarefa**: selecione **Construir e publicar**.
-  * **Acionador de estágio**: como esse é o pipeline de integração contínua, selecione o padrão **Executar tarefas e, em seguida, o estágio anterior será concluído**.
-3. Clique na guia **Tarefas** e preencha os campos da seguinte forma:
-  * Clique no ícone **Incluir tarefa '+'** e selecione **Implementar** para o tipo de tarefa.
-  * Insira um nome, como **Implementar no cluster de integração contínua**.
-  * **Tipo de implementador**: selecione **Kubernetes**.
-  * **Região do IBM Cloud**: selecione a região em que o cluster do Kubernetes está localizado.
-  * **Chave de API**: selecione **Inserir uma chave de API existente**. Se
-você não tiver uma chave ou não souber a chave de API, será possível
-[obter uma chave de API](https://{DomainName}/iam/#/apikeys) abrindo uma janela separada do navegador e
-navegando para **Gerenciar** > **Segurança** > **Chaves de API da
-plataforma**. Certifique-se de manter essa chave em um local seguro.
-  * Aceite as configurações padrão restantes.
-4. Clique **Salvar.** Agora, o estágio de pipeline "Implementar" aparece na cadeia de ferramentas.
-
-### Testando o estágio de pipeline "Implementar no cluster"
-
-Clique no ícone **Reproduzir** até que a compilação seja bem-sucedida. Você sabe que ela
-está funcional quando o estágio fica verde e a saída do script confirma as suas expectativas. É possível visualizar os logs para o
-estágio. Perto do final dos logs, localize um link clicável para o app em execução. No entanto, somente _você_ conhece a raiz de contexto e o caminho do seu app. Anexe
-o caminho correto para confirmar se que está executado.
+      ```bash
+      export JAVA_HOME=/opt/IBM/java8
+      # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
+      export MAVEN_OPTS="-  
+      Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      mvn -B clean verify
+      ```
+      {: codeblock}
+  4. Clique em **Salvar**. 
+2. Teste seu estágio de pipeline `build and publish` clicando no ícone **Reproduzir** até que a construção seja bem-sucedida. Um estágio de verde indica que a construção foi bem-sucedida. 
+3. Configure o estágio de pipeline `deploy to cluster` para implementar a imagem do Docker em seu cluster do Kubernetes. 
+  1. Na página Pipeline de entrega, clique em **Incluir um estágio**.
+  2. Clique na guia **Entrada** e preencha os campos conforme a seguir:
+    * Insira `deploy to cluster` para o nome.
+    * Selecione **Construir artefatos** para o tipo de entrada.
+    * Selecione **Construir e publicar imagem do Docker** para o estágio.
+    * Selecione **Construir e publicar** para a tarefa.
+    * Como esse é seu pipeline de integração contínua, aceite a opção padrão para o acionador de estágio.
+  3. Clique na guia **Tarefas** e, em seguida, clique em **Incluir tarefa '+'** e preencha os campos conforme a seguir:
+    * Insira `deploy to continuous integration cluster` para o nome.
+    * Selecione **Kubernetes** para o tipo de implementador.
+    * Selecione a região na qual o cluster do Kubernetes está localizado.
+    * Insira sua chave de API existente. 
+  4. Clique em **Salvar**.
+4. Teste seu estágio de pipeline `deploy to cluster` clicando no ícone **Reproduzir** até que a construção seja bem-sucedida. Um estágio de verde indica que a construção foi bem-sucedida. É possível visualizar os logs para o
+estágio. Perto do final dos logs, localize um link clicável para o app em execução. Anexe o caminho correto para seu app confirmar que é executado.
