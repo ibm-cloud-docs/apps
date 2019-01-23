@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}
@@ -38,7 +38,7 @@ Creating apps
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-
+    
     {: .topicgroup}
     Adding credentials to your environment
         creds_overview.md
@@ -65,12 +65,11 @@ Creating apps
         [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    App contents
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
+    IBM Cloud Programming Guides
+        [Go](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [Node](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}

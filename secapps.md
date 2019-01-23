@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-17"
+  years: 2015, 2019
+lastupdated: "2019-01-15"
 
 ---
 
@@ -23,7 +23,7 @@ Before you can upload the SSL certificates to which you’re entitled with {{sit
 
 ## Creating a CSR
 
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command line tool ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.openssl.org/){:new_window}:
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command-line tool ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.openssl.org/){:new_window}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -41,7 +41,8 @@ For the CSR to be valid, the following information must be entered when you crea
 
 <dl>
 <dt>Country name</dt>
-<dd>A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") before you create the CSR.</dd>
+<dd>A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, before you create the CSR, check the [list of ISO country codes ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.iso.org/obp/ui/#search).
+</dd>
 <dt>State or province</dt>
 <dd>The full, unabbreviated name of the state or province.</dd>
 <dt>Locality</dt>
@@ -51,7 +52,7 @@ For the CSR to be valid, the following information must be entered when you crea
 <dt>Organization unit</dt>
 <dd>The branch name of your company that is ordering the certificate, such as accounting or marketing.</dd>
 <dt>Common name</dt>
-<dd>The fully-qualified domain name (FQDN) for which you’re requesting the SSL certificate.</dd>
+<dd>The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.</dd>
 </dl>
 
 ## Uploading SSL certificates
@@ -87,7 +88,7 @@ To upload a certificate for your application, complete the following steps:
     The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.cloud_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
     {: note}
   
-  * Client certificat trust store (optional): Includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
+  * Client certificate truststore (optional): Includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
   
     You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
     {: tip}
