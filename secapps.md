@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -54,6 +54,9 @@ For the CSR to be valid, the following information must be entered when you crea
 <dt>Common name</dt>
 <dd>The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.</dd>
 </dl>
+
+You can use Subject Alternative Names (SAN) but the provided hostnames must not be issued in other deployed certificates to prevent CN collisions.
+{: note}
 
 ## Uploading SSL certificates
 {: #ssl_certificate}
