@@ -55,7 +55,7 @@ For the CSR to be valid, the following information must be entered when you crea
 <dd>The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.</dd>
 </dl>
 
-You can use Subject Alternative Names (SAN) but the provided hostnames must not be issued in other deployed certificates to prevent CN collisions.
+You can use Subject Alternative Names (SAN), but the provided host names must not be issued in other deployed certificates to prevent CN collisions.
 {: note}
 
 ## Uploading SSL certificates
