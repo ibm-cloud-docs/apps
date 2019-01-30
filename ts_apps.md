@@ -39,7 +39,6 @@ When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** fields on 
 Close the message dialog, and click **RESET** in your runtime pane.
 {: tsResolve}
 
-
 ## Automatic failover between {{site.data.keyword.cloud_notm}} regions isn't available
 {: #ts_failover}
 {: troubleshoot}
@@ -60,81 +59,6 @@ When you configure your DNS settings, you must specify the public IP addresses o
 nslookup cloud.ibm.com
 ```
 {: codeblock}
-
-
-## Can't switch apps into debug mode
-{: #ts_debug}
-{: troubleshoot}
-
-You can't enable the debug mode if the Java virtual machine (JVM) version is 8 or earlier.
-
-After you select **Enable application debug**, the tools try to switch the app into the debug mode. Then, the Eclipse workbench begins a debug session. When the tools successfully enable debug mode, the web application status displays `Updating mode`, `Developing`, and `Debugging`.
-{: tsSymptoms}
-
-However, when the tools fail to enable the debug mode, the web application status displays `Updating mode` and `Developing` only, and doesn't display `Debugging`. The tools might also display the following error message in the Console view:
-
-```
-bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-at java.util.concurrent.FutureTask.run(FutureTask.java:277)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.lang.Thread.run(Thread.java:785)
-Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
-at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 more
-Caused by: java.util.concurrent.TimeoutException
-at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
-... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-at java.util.concurrent.FutureTask.run(FutureTask.java:277)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.lang.Thread.run(Thread.java:785)
-Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 more
-Caused by: java.util.concurrent.TimeoutException
-at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
-... 7 more
-```
-{: screen}
-
-The following Java virtual machine (JVM) versions can't establish a debug session: IBM JVM 7, IBM JVM 8, and previous versions of Oracle JVM 8.
-{: tsCauses}
-
-If your workbench JVM is one of these versions, you might have issues when you create a debug session. Your workbench JVM version is typically the system JVM of your local computer. Your system JVM isn't the same as the JVM of your running {{site.data.keyword.cloud_notm}} Java&trade; application. The {{site.data.keyword.cloud_notm}} Java application almost always runs on IBM JVM, and sometimes runs on OpenJDK JVM.
-
-To check the version of Java that {{site.data.keyword.eclipsetoolsfull}} runs, complete the following steps:
-{: tsResolve}
-
-  1. In IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, select **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
-  2. Find the `eclipse.vm` property from the list. The following line is an example of an `eclipse.vm` property:
-
-	```
-	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
-	```
-
-  3. At the command line, enter `java -version` from the `bin` directory of your Java installation. Your IBM JVM version information is displayed.
-
-If your workbench JVM is IBM JVM 7 or 8, or a previous version of Oracle JVM 8, complete the following steps to switch to Oracle JVM 8:
-
-  1. Download and then install Oracle JVM 8, see [Java SE Downloads ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window} for details.
-  2. Restart Eclipse.
-  3. Check whether the `eclipse.vm` property points to your new installation of Oracle JVM 8.
 
 
 ## Can't reuse names of deleted apps
@@ -178,7 +102,6 @@ Complete the following steps to delete the unused route:
   ```
   {: codeblock}
 
-
 ## Can't retrieve spaces in the org
 {: #ts_retrieve_space}
 {: troubleshoot}
@@ -200,7 +123,6 @@ Ensure that you created a space in your current organization. To create a space,
 * In the Cloud Foundry command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
-
 
 ## Can't perform requested actions
 {: #ts_authority}
@@ -224,7 +146,6 @@ To get the appropriate authority level, use one of the following methods.
 * Select another organization and space for which you have the Developer role.
 * Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
 
-
 ## Can't access {{site.data.keyword.cloud_notm}} services because of authorization errors
 {: #ts_vcap}
 {: troubleshoot}
@@ -245,7 +166,6 @@ process.env.VCAP_SERVICES
 ```
 
 For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
-
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
@@ -270,7 +190,6 @@ If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first c
     * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
   * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
   * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information.
-
 
 ## Disk quota is exceeded
 {: #ts_disk_quota}
@@ -298,7 +217,6 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 	```
   {: codeblock}
 
-
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 {: troubleshoot}
@@ -313,7 +231,6 @@ IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messagin
 
 As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [getui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
-
 
 ## Org's services limit is exceeded
 {: #ts_servicelimit}
@@ -345,7 +262,6 @@ Delete any services instances that aren't needed, or remove the limit on the num
 
   * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
 
-
 ## Executable files can't be run on {{site.data.keyword.cloud_notm}}
 {: #ts_executable}
 {: troubleshoot}
@@ -371,7 +287,6 @@ For example:
 ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
 {: codeblock}
-
 
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
@@ -438,22 +353,6 @@ ibmcloud cf push appname -p app_path
 
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures.
 
-
-## User-defined variables are lost when an app is pushed
-{: #ts_varsnotretained}
-{: troubleshoot}
-
-When you push an app to {{site.data.keyword.cloud_notm}} from IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, the variables that you specified are reset unless you save the variables to the manifest file.
-
-The variables that you specified are lost after you push an app to {{site.data.keyword.cloud_notm}} from IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}.
-{: tsSymptoms}
-
-The variables that you specified are saved only if you save them to the manifest file.
-{: tsCauses}
-
-When you push an app to {{site.data.keyword.cloud_notm}} from IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, select the **Save to the manifest file** check box in the Application details page of the Application wizard. Then, the variables that you specified in the wizard are saved to the manifest file for your application. The next time that you open the wizard, the variables are displayed automatically.
-{: tsResolve}
-
 <!-- begin STAGING ONLY -->
 
 ## {{site.data.keyword.cloud_notm}} Live Sync Debug doesn't start from the command line
@@ -510,7 +409,6 @@ cf api https://api.eu-gb.cf.cloud.ibm.com
 ```
 {: codeblock}
 
-If you're pushing your application to {{site.data.keyword.cloud_notm}} by using the Eclipse tools, you must first create an {{site.data.keyword.cloud_notm}} server and specify the API endpoint of the {{site.data.keyword.cloud_notm}} region that your organization was created in. For more information about using the Eclipse tools, see [Deploying apps with IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
 
 ## App routes can't be created
 {: #ts_hostistaken}
