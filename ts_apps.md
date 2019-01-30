@@ -385,7 +385,7 @@ Use one of the following options to resolve the issue:
 
 You might not be able to locate your organization on {{site.data.keyword.cloud_notm}} when working on a {{site.data.keyword.cloud_notm}} region.
 
-You can log in to the {{site.data.keyword.cloud_notm}} console successfully, but you can't push apps by using the Cloud Foundry command line interface or the Eclipse plug-in.
+You can log in to the {{site.data.keyword.cloud_notm}} console successfully, but you can't push apps by using the Cloud Foundry command line interface.
 {: tsSymptoms}
 
 When you try to push an application to {{site.data.keyword.cloud_notm}} by using the Cloud Foundry command line interface, you see one of the following error messages with the organization name that is specified in the message:
@@ -393,10 +393,6 @@ When you try to push an application to {{site.data.keyword.cloud_notm}} by using
 `Error finding org`
 
 `Organization not found`
-
-When you try to push an application to {{site.data.keyword.cloud_notm}} by using the Cloud Foundry Eclipse plug-in, you see the following error message:
-
-`cloudspace not found.`
 
 This problem occurs because the API endpoint of the region that you want to work with isn't specified, and the organization you're looking for might be in a different region.
 {: tsCauses}
