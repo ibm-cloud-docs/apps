@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-17"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,18 +26,19 @@ General problems with creating apps might include apps that can't be updated, or
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-When you click items on the app details page, you might be unable to take any actions. You also might be prompted to save changes before you can proceed.
+When you click items on the app details page, you might be unable to take any actions. You also might be prompted to save changes before you can continue.
 
 When you try to check your app or services on the app details page, the following error message is displayed:
 {: tsSymptoms}
 
 `You have unsaved changes. Are you sure you want to leave this page?`
 
-When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** fields on the runtime pane, the values change. This behavior is by design. However, you are prompted to save the memory or instance settings before you go to another page.
+When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** fields on the runtime pane, the values change. This behavior is by design. However, you're prompted to save the memory or instance settings before you go to another page.
 {: tsCauses}
 
 Close the message dialog, and click **RESET** in your runtime pane.
 {: tsResolve}
+
 
 ## Automatic failover between {{site.data.keyword.cloud_notm}} regions isn't available
 {: #ts_failover}
@@ -51,7 +52,7 @@ When an {{site.data.keyword.cloud_notm}} region becomes unavailable, the apps th
 {{site.data.keyword.cloud_notm}} doesn't yet provide automatic failover from one region to another.
 {: tsCauses}
 
-You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.cloud_notm}} regions. DNS providers with this feature include NSONE, Akamai, Dyn.
+You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.cloud_notm}} regions. DNS providers with this feature include NSONE, Akamai, and Dyn.
 {: tsResolve}
 
 When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.cloud_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.cloud_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window.
@@ -59,6 +60,7 @@ When you configure your DNS settings, you must specify the public IP addresses o
 nslookup cloud.ibm.com
 ```
 {: codeblock}
+
 
 ## Can't switch apps into debug mode
 {: #ts_debug}
@@ -109,6 +111,7 @@ at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketC
 at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
 ... 7 more
 ```
+{: screen}
 
 The following Java virtual machine (JVM) versions can't establish a debug session: IBM JVM 7, IBM JVM 8, and previous versions of Oracle JVM 8.
 {: tsCauses}
@@ -175,6 +178,7 @@ Complete the following steps to delete the unused route:
   ```
   {: codeblock}
 
+
 ## Can't retrieve spaces in the org
 {: #ts_retrieve_space}
 {: troubleshoot}
@@ -197,6 +201,7 @@ Ensure that you created a space in your current organization. To create a space,
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
 
+
 ## Can't perform requested actions
 {: #ts_authority}
 {: troubleshoot}
@@ -216,8 +221,9 @@ You don't have the appropriate level of authority to perform the actions.
 To get the appropriate authority level, use one of the following methods.
 {: tsResolve}
 
-* Select another organization and space for which you have the developer role.
-* Ask the org manager to change your role to developer or to create a space and then assign you a developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
+* Select another organization and space for which you have the Developer role.
+* Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
+
 
 ## Can't access {{site.data.keyword.cloud_notm}} services because of authorization errors
 {: #ts_vcap}
@@ -237,26 +243,9 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 ```
 process.env.VCAP_SERVICES
 ```
+
 For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
 
-
-## Can't deploy apps by using IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}
-{: #ts_bm_tools_facet}
-{: troubleshoot}
-
-When an unsupported facet is applied to your Eclipse project, you might not be able to deploy your apps to {{site.data.keyword.cloud_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}.
-
-You can successfully deploy your app to {{site.data.keyword.cloud_notm}} by using the Cloud Foundry CLI. However, you can't deploy the app to {{site.data.keyword.cloud_notm}} by using the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, and you see the error message: `Project facet <facet_name> is not supported.` For example:
-{: tsSymptoms}
-`Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
-
-The IBM Eclipse Tools for {{site.data.keyword.cloud_notm}} map projects to {{site.data.keyword.cloud_notm}} runtimes by project facets. Facets define the requirements for Java EE projects in Eclipse, and are used as part of the runtime configuration so that different runtimes are associated with different projects. If the facet that is applied to the project isn't supported by the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, you can't deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}.
-{: tsCauses}
-
-You must remove the facet from the Eclipse project so that you can deploy your app by using the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}.
-{: tsResolve}
-
-To remove the facet, in the IBM Eclipse Tools for {{site.data.keyword.cloud_notm}}, click **Project > Properties > Project Facets** for the project. Then, clear the check box for the unsupported facet.
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
@@ -282,13 +271,14 @@ If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first c
   * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
   * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information.
 
+
 ## Disk quota is exceeded
 {: #ts_disk_quota}
 {: troubleshoot}
 
 If you run out of disk space, you can manually modify the disk quota to get more disk space.
 
-When you run out of disk space, you might see a message that states that the disk quota is exceeded. To resolve the problem, you might have tried scaling up your app instance to get more disk space. For example, you might scale from 256 MB to 1256 MB by changing the memory quota on the app details page. However, because the disk quota remained the same, you did not get more disk space.
+When you run out of disk space, you might see a message that states that the disk quota is exceeded. To resolve the problem, you might have tried scaling up your app instance to get more disk space. For example, you might scale from 256 - 1256 MB by changing the memory quota on the app details page. However, because the disk quota remained the same, you didn't get more disk space.
 {: tsSymptoms}
 
 The default disk quota that is allocated for an app is 1 GB. If you need more disk space, you must manually specify the disk quota.
@@ -298,7 +288,7 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
 {: tsResolve}
 
   * In the manifest.yml file, add the following item:
-    ```
+  ```yaml
 	disk_quota: <disk_quota>
 	```
   * Use the **-k** option with the `ibmcloud cf push` command when you push your app to {{site.data.keyword.cloud_notm}}:
@@ -306,6 +296,8 @@ Use one of the following methods to specify your disk quota. The maximum disk qu
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
+  {: codeblock}
+
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -321,6 +313,7 @@ IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messagin
 
 As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [getui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
+
 
 ## Org's services limit is exceeded
 {: #ts_servicelimit}
@@ -352,6 +345,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 
   * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
 
+
 ## Executable files can't be run on {{site.data.keyword.cloud_notm}}
 {: #ts_executable}
 {: troubleshoot}
@@ -370,11 +364,14 @@ When you push the executable to {{site.data.keyword.cloud_notm}}, you must speci
 ```
 ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+{: codeblock}
 
 For example:
 ```
 ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
+{: codeblock}
+
 
 ## Org's memory limit is exceeded
 {: #ts_outofmemory}
@@ -404,18 +401,18 @@ You can either increase the memory quota of your account, or reduce the memory t
     If you use the command line interface, complete the following steps:
 
     1. Check how much memory is being used for your apps:
+  	  ```
+	    ibmcloud cf list
+	    ```
+      {: codeblock}
 
-	  ```
-	  ibmcloud cf list
-	  ```
-
-	  The `ibmcloud cf list` command lists all the apps that you deployed in your current space. The status of each app is also displayed.
+	    The `ibmcloud cf list` command lists all the apps that you deployed in your current space. The status of each app is also displayed.
 
     2. To reduce the amount of memory that is used by your app, reduce the number of app instances or the maximum memory limit, or both:
-
-	  ```
-	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
+	    ```
+	    ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
+      {: codeblock}
 
     3. Restart your app for the changes to take effect.
 
@@ -437,8 +434,10 @@ You can manually restart the app by typing the following command in the command 
 ```
 ibmcloud cf push appname -p app_path
 ```
+{: codeblock}
 
 In addition, you can code the app to identify and recover from problems such as outages, exceptions, and connection failures.
+
 
 ## User-defined variables are lost when an app is pushed
 {: #ts_varsnotretained}
@@ -531,7 +530,7 @@ The host name that you specify must be unique within the domain that you are usi
 {: tsResolve}
 
   * If you deploy your application by using the `manifest.yml` file, specify the host name in the host option.
-    ```
+    ```yaml
     host: host_name
 	  ```
 
@@ -539,6 +538,7 @@ The host name that you specify must be unique within the domain that you are usi
     ```
     ibmcloud cf push appname -p app_path -n host_name
     ```
+    {: codeblock}
 
 ## WAR apps can't be pushed by using the ibmcloud cf push command
 {: #ts_cf_war}
@@ -559,10 +559,13 @@ Use the **-p** option to specify a WAR file or add the path to the WAR file. For
 ```
 ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
+{: codeblock}
 
 ```
 ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
+{: codeblock}
+
 For more information about the `ibmcloud cf push` command, enter `ibmcloud cf push -h`.
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.cloud_notm}}
@@ -581,13 +584,16 @@ You can use the following code in your servlet or JSP file:
 {: tsResolve}
 
   * In the servlet source file
-  ```
+  ```java
 	response.setContentType("text/html; charset=UTF-8");
 	```
+  {: codeblock}
+
   * In the JSP
-  ```
+  ```jsp
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
+  {: codeblock}
 
 ## Node.js apps can't be deployed
 {: #ts_nodejs_deploy}
@@ -618,8 +624,10 @@ Use one of the following methods, depending on the cause of the problem:
       ```
 		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		  ```
+      {: codeblock}
+
     * Use the [package.json ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/jsonfile){: new_window} file. For example:
-	    ```
+	    ```json
 		  {
         ...
   	    "scripts": {
@@ -627,6 +635,7 @@ Use one of the following methods, depending on the cause of the problem:
  	    }
 	    }
 	    ```
+
     * Use the `manifest.yml` file. For example:
 	    ```
 		  applications:
@@ -638,7 +647,7 @@ Use one of the following methods, depending on the cause of the problem:
 
   * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app.
     The following example shows a simple `package.json` file:
-	```
+	```json
 	{
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -719,13 +728,15 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
 {: tsResolve}
 
   * If you deploy your app by using the `manifest.yml` file, specify the URL or the name of your custom buildpack by using the buildpack option. For example:
-  ```
+  ```yaml
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
+
   * If you deploy your application from the command prompt, use the `ibmcloud cf push` command and specify your custom buildpack by using the **-b** option. For example:
   ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+  {: codeblock}
 
 ## Exceeded your storage quota
 {: #exceed_quota}
@@ -733,7 +744,7 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
 If the build or deploy jobs fail, and you see the following message, you can delete your images with the following CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
-* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you are in.
+* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your images by using `ibmcloud cr images`.
 * Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
 * Rerun the build or deploy job that failed.
@@ -743,11 +754,44 @@ If the build or deploy jobs fail, and you see the following message, you can del
 
 If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
-* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you are in.
+* Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.
 * Export the environment variable that is listed.
 * View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 * You can view the logs in your app by using `kubectl logs <pod-name>.`
+
+
+## Starting `docker` fails with "file not found" message
+{: #docker_not_found}
+{: troubleshoot}
+
+When you try to start Docker, the following error message is displayed:
+{: tsSymptoms}
+
+```
+An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+```
+{: screen}
+
+The Docker client isn't installed, or it's installed but not started.
+{: tsCauses}
+
+Ensure [Docker](https://docs.docker.com/install/) is installed, and start it.
+{: tsResolve}
+
+
+## Building an app fails with Docker error
+{: #build_error}
+{: troubleshoot}
+
+When you try to build an app with the `ibmcloud dev build` command, it fails with a Docker username/password error. 
+{: tsSymptoms}
+
+Incorrect Docker Hub credentials are being used to authenticate. 
+{: tsCauses}
+
+Log out of Docker Hub in the Docker client.
+{: tsResolve}
 
 
