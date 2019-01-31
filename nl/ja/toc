@@ -2,17 +2,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 アプリの作成
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    はじめに
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
+    index.md
     development_process.md
     best-practice.md
     patterns.md
@@ -21,6 +15,11 @@
     {: .navgroup id="howto"}
     {: .topicgroup}
     アプリの作成
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
@@ -30,6 +29,7 @@
 
     {: .topicgroup}
     アプリのデプロイと統合
+        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
@@ -65,12 +65,11 @@
         [Web アプリ](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    アプリ・コンテンツ
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
+    IBM Cloud プログラミング・ガイド
+        [進む](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [ノード](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}

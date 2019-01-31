@@ -2,17 +2,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 Creación de apps
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    Iniciación
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
+    index.md
     development_process.md
     best-practice.md
     patterns.md
@@ -21,6 +15,11 @@ Creación de apps
     {: .navgroup id="howto"}
     {: .topicgroup}
     Creación de apps
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
@@ -30,6 +29,7 @@ Creación de apps
 
     {: .topicgroup}
     Despliegue e integración de apps
+        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
@@ -65,20 +65,19 @@ Creación de apps
         [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Contenidos de la app
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
+    Guías de programación de IBM Cloud
+        [Go](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [Node](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_apps.md
-    [Canal de herramientas de desarrollador de IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [Canal de Slack developer-tools de IBM Cloud](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Referencia de API de funciones de Cloud](https://cloud.ibm.com/apidocs/functions)
+    [Referencia de API de Cloud Functions](https://cloud.ibm.com/apidocs/functions)
     [SDK móvil](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

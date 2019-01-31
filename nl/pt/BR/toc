@@ -2,17 +2,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 Criando aplicativos
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    Introdução
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
+    index.md
     development_process.md
     best-practice.md
     patterns.md
@@ -20,7 +14,12 @@ Criando aplicativos
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Criando apps
+    Criando aplicativos
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
@@ -29,7 +28,8 @@ Criando aplicativos
         tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    Implementando e integrando apps
+    Implementando e integrando aplicativos
+        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
@@ -65,12 +65,11 @@ Criando aplicativos
         [Apps da web](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    Conteúdos do app
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
+    Guias de programação do IBM Cloud
+        [Go](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [Node](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}
