@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -27,8 +27,8 @@ Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de
 ## Avant de commencer
 {: #prereqs}
 
-* Suivez la procédure de [création d'applications à partir de votre propre référentiel de codes](/docs/apps/tutorials/tutorial_byoc.html) pour créer une application.
-* A partir du tableau de bord [{{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window}, cliquez sur l'icône **Menu**![Icône Menu](../../icons/icon_hamburger.svg) et sélectionnez **Conteneurs** pour [configurer un cluster Kubernetes](/docs/containers/container_index.html).
+* Créez une application. Pour plus d'informations, voir [Création d'applications à partir de votre propre référentiel de codes](/docs/apps/tutorials/tutorial_byoc.html).
+* Dans la console [{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window}, cliquez sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) puis sélectionnez **Conteneurs** pour [configurer un cluster Kubernetes](/docs/containers/container_index.html).
 * Pour confirmer que votre application s'exécute dans Docker, exécutez les commandes suivantes :
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -37,10 +37,9 @@ Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Ensuite, consultez votre URL, comme `http://localhost/springboothelloworld/sayhello`.   
-Appuyez sur les touches `Ctrl+C` pour arrêter l'exécution de Docker.
+* Ensuite, accédez à votre URL (`http://localhost/springboothelloworld/sayhello` par exemple). Appuyez sur les touches Ctrl+C pour arrêter l'exécution de Docker.
 
-## Ajout de ressources à votre application (Facultatif)
+## Ajout de ressources à votre application (facultatif)
 {: #add_resources}
 
 Ajoutez une ressource de service à votre application, {{site.data.keyword.cloud_notm}} crée alors le service pour vous. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration. {{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une
@@ -48,14 +47,9 @@ instance de service. Une instance de service peut être partagée entre plusieur
 
 Ce processus met à disposition une instance de service, crée une clé de ressource (données d'identification) et l'associe à votre application. Pour plus d'informations, voir [Ajout d'un service à votre application](/docs/apps/reqnsi.html).
 
-### Copie de données d'identification de service dans votre environnement
+Une fois que vous avez ajouté une ressource de service à votre application, vous devez copier les données d'identification du service dans votre environnement de déploiement. Pour plus d'informations, voir [Ajout de données d'identification à votre environnement Kubernetes](/docs/apps/creds_kube.html).
 
-Une fois que vous avez ajouté une ressource de service à votre application, notez que les données d'identification de ce service s'affichent dans la zone **Données d'identification**. Vous devez copier les données d'identification dans votre environnement de déploiement.
-
-Pour plus d'informations sur la copie des données d'identification dans votre environnement, voir [Ajout de données d'identification à votre environnement Kubernetes](/docs/apps/creds_kube.html).
-
-
-## Préparation de votre application pour le déploiement en utilisant une chaîne d'outils DevOps
+## Préparation de votre application pour le déploiement
 {: #connect_toolchain}
 
 Dans cette étape, vous allez associer une chaîne d'outils DevOps à l'application et allez la configurer afin qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.cloud_notm}} Kubernetes.
@@ -90,104 +84,80 @@ Pour plus d'informations sur l'ajout de votre référentiel à votre chaîne d'o
 ### Connexion de votre application à une nouvelle chaîne d'outils
 {: #create_toolchain}
 
-Les méthodes suivantes permettent de connecter votre application à une nouvelle chaîne d'outils :
-* Si vous ne souhaitez pas créer de toute nouvelle chaîne d'outils DevOps, vous pouvez activer sur le cloud votre code existant en utilisant la commande [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). La commande génère un modèle de chaîne d'outils DevOps que vous réservez dans votre référentiel. Vous devez alors utiliser ce modèle en tant que jeu d'instructions pour les éléments créés par la chaîne d'outils DevOps. Pour plus d'informations, voir la [documentation de l'interface CLI](/docs/apps/create-deploy-cli.html#byoc).
-* Créez une toute nouvelle chaîne d'outils DevOps dans la console. Si vous souhaitez complètement contrôler la création de la chaîne d'outils DevOps sans que votre référentiel de code ne soit modifié, créez une toute nouvelle chaîne d'outils. Pour plus d'informations, voir [Création d'une toute nouvelle chaîne d'outils DevOps](#create_toolchain_scratch).
+Si vous souhaitez complètement contrôler la création de la chaîne d'outils DevOps sans que votre référentiel de code ne soit modifié, créez une toute nouvelle chaîne d'outils. Vous créez également toutes les intégrations pour générer votre application et la déployer dans le cluster Kubernetes. 
 
-#### Création d'une toute nouvelle chaîne d'outils DevOps
-{: #create_toolchain_scratch}
+1. Sur la page Créer une chaîne d'outils, cliquez sur le modèle **Construisez votre propre chaîne d'outils**.
+2. Entrez un nom pour votre chaîne d'outils, sélectionnez une région et un groupe de ressources puis cliquez sur **Créer**.
 
-Si vous souhaitez créer une toute nouvelle chaîne d'outils et la connecter à votre application, procédez comme suit. Vous créez également toutes les intégrations pour générer votre application et la déployer dans le cluster Kubernetes. La fonction de chaîne d'outils DevOps inclut des modèles mais cette procédure permet de configurer une toute nouvelle chaîne d'outils DevOps.
-
-Lorsque vous choisissez de créer une chaîne d'outils à partir de votre nouvelle application, la page [Créer une chaîne d'outils](https://{DomainName}/devops/create) du [tableau de bord DevOps](https://{DomainName}/devops/) s'affiche dans un nouvel onglet de votre navigateur. Une fois que vous avez créé et configuré votre chaîne d'outils dans cet onglet, vous devez revenir à la page **Connecter la chaîne d'outils** dans votre application et actualiser la page.
+Lorsque vous choisissez de créer une chaîne d'outils à partir de votre nouvelle application, la page [Créer une chaîne d'outils](https://{DomainName}/devops/create) du tableau de bord DevOps s'affiche dans un nouvel onglet de votre navigateur. Une fois que vous avez créé et configuré votre chaîne d'outils dans cet onglet, vous devez revenir à la page Connecter la chaîne d'outils dans votre application et actualiser la page.
 {:tip}
 
-1. Sur la page **Créer une chaîne d'outils**, cliquez sur le modèle **Construisez votre propre chaîne d'outils**.
-2. Sur la page **Construisez votre propre chaîne d'outils**, entrez un nom pour votre chaîne d'outils, sélectionnez une région et un groupe de ressources puis cliquez sur **Créer**.
-
-Une chaîne d'outils vide sans intégration ou outil préconfiguré est créée. Configurez et testez votre nouvelle chaîne d'outils en effectuant les étapes suivantes.
+Si vous ne souhaitez pas créer de toute nouvelle chaîne d'outils DevOps, vous pouvez activer sur le cloud votre code existant en utilisant la commande [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). La commande génère un modèle de chaîne d'outils DevOps que vous réservez dans votre référentiel. Vous devez alors utiliser ce modèle en tant que jeu d'instructions pour les éléments créés par la chaîne d'outils DevOps. Pour plus d'informations, voir la [documentation de l'interface CLI](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Ajout d'une intégration GitHub
 
-Vous pouvez configurer la chaîne d'outils DevOps avec l'intégration GitHub en procédant comme suit :
+Configurez la chaîne d'outils DevOps avec une intégration de votre référentiel GitHub pour que la chaîne d'outils définisse un webhook dans votre référentiel afin que les demandes d'extraction et les transmissions de code dans ce référentiel envoient un événement POST à la chaîne d'outils. 
 
 1. Dans votre modèle de chaîne d'outils DevOps, cliquez sur **Ajouter un outil**.
-2. Sélectionnez **GitHub** (si votre référentiel se trouve sur Public GitHub ou Enterprise GitHub).
-3. Sur la page **Configurer l'intégration** pour GitHub, procédez comme suit :
-  * Sélectionnez (ou entrez) l'URL de **GitHub Server**.
-  * Si un message "Non autorisé sur GitHub" s'affiche, cliquez sur **Autoriser**. Puis sur la page **Autoriser IBM Cloud Toolchains**, cliquez sur **Autoriser IBM-Cloud**. Entrez ensuite votre mot de passe GitHub.
-  * Sur la page **Configurer l'intégration**, sélectionnez **Existant** dans la zone **Type de référentiel** afin que la chaîne d'outils DevOps configure le référentiel avec un webhook et n'effectue _aucune_ déviation ou copie de votre référentiel.
-  * Entrez votre **URL de référentiel**. (Par exemple, `https://github.com/yourrepo/spring-boot-hello-world`).
-  * Attendez quelques instants. Une invite peut alors s'afficher vous demandant d'autoriser GitHub à accorder des droits à la chaîne d'outils DevOps afin d'utiliser l'API ReST GitHub pour configurer votre référentiel avec les webhooks nécessaires au déclenchement de la chaîne d'outils.
-  * Cliquez sur **Créer une intégration**.
+2. Sélectionnez **GitHub** si votre référentiel se trouve sur Public GitHub ou Enterprise GitHub.
+3. Sélectionnez ou entrez l'URL du serveur GitHub.
+4. Un message `Unauthorized on GitHub` peut être affiché. Le cas échéant, cliquez sur **Autoriser**. Puis sur la page Autoriser IBM Cloud Toolchains, cliquez sur Autoriser IBM-Cloud et entrez votre mot de passe GitHub.
+5. Sur la page Configurer l'intégration, sélectionnez **Existant** pour le type de référentiel afin que la chaîne d'outils DevOps configure le référentiel avec un webhook et n'effectue aucune déviation ou copie de votre référentiel.
+6. Entrez votre URL de référentiel, par exemple `https://github.com/yourrepo/spring-boot-hello-world`.
+7. Attendez quelques instants. Une invite peut alors s'afficher vous demandant d'autoriser GitHub à accorder des droits à la chaîne d'outils DevOps afin d'utiliser l'API ReST GitHub pour configurer votre référentiel avec les webhooks nécessaires au déclenchement de la chaîne d'outils.
+8.  Cliquez sur **Créer une intégration**.
 
-Vous avez configuré cette chaîne d'outils DevOps avec une intégration pour votre référentiel GitHub. Ainsi, vous permettez à la chaîne d'outils de définir un webhook dans votre référentiel afin que les demandes d'extraction et les envois de code par commandes push dans ce référentiel déclenchent un événement POST dans la chaîne d'outils. Vous pouvez consulter les paramètres de votre référentiel pour voir le nouveau webhook.
+Vous pouvez afficher le nouveau webhook à partir de vos paramètres de référentiel.
 
-## Ajout d'un élément Delivery Pipeline pour générer, tester et déployer votre application
-
-Les différentes actions ont lieu dans Delivery Pipeline.
+## Ajout d'un composant Delivery Pipeline
 
 1. Cliquez sur **Ajouter un outil**.
 2. Sélectionnez **Delivery Pipeline**.
-3. Sur la page **Configurer l'intégration** pour Delivery Pipeline, procédez comme suit :
- * Entrez "Intégration continue" comme nom de pipeline.
- * Cliquez sur **Créer une intégration**.
+3. Entrez `Intégration continue` comme nom de pipeline puis cliquez sur **Créer une intégration**.
 
-Vous avez créé un pipeline de distribution vide. Vous définissez ensuite des étapes de pipeline pour diriger votre entrée (contenu du référentiel GitHub) vers sa destination. Etant donné que ce tutoriel suppose que vous avez un référentiel GitHub qui génère une image Docker fonctionnelle et qui cible un cluster IBM Containers Kubernetes, vous créez des étapes de pipeline avec des entrées, des scripts shell et des sorties permettant d'atteindre cet objectif.
+## Configuration de vos étapes de pipeline
 
-### Configuration de l'étape de pipeline de génération et de publication
+Configurez les étapes de pipeline pour diriger votre entrée (contenu du référentiel GitHub) vers la destination appropriée. Etant donné que ce tutoriel suppose que vous avez un référentiel GitHub qui génère une image Docker fonctionnelle et qui cible un cluster IBM Containers Kubernetes, vous créez des étapes de pipeline avec des entrées, des scripts shell et des sorties permettant d'atteindre cet objectif.
 
-1. Cliquez sur le pipeline de distribution que vous avez créé.
-2. Sur la page Delivery Pipeline, cliquez sur **Ajouter une étape**.
-3. Sur l'onglet **Entrée** de la page **Configuration de l'étape**, renseignez les zones de la manière suivante :
-  * Pour le nom de l'étape, entrez **Générer & publier l'image Docker**.
-  * **Type d'entrée** - Sélectionnez **Référentiel Git**.
-  * **Référentiel Git** - Sélectionnez votre référentiel GitHub.
-  * **Branche** - Sélectionnez la branche utilisée pour l'intégration continue.
-4. Cliquez sur l'onglet **Travaux** puis renseignez les zones de la manière suivante :
-  * Cliquez sur l'icône **Ajouter un travail '+'** et sélectionnez **Génération** pour le type de travail.
-  * Entrez un nom, comme **Générer & publier**.
-  * **Type de générateur** - Sélectionnez **Container Registry**.
-  * **Région IBM Cloud** - Sélectionnez la région dans laquelle se trouve votre cluster Kubernetes.
-  * **Clé d'API** - Sélectionnez **Entrer une clé d'API existante**. Si vous n'avez pas de clé ou ne connaissez pas votre clé d'API, vous pouvez [obtenir une clé d'API](https://{DomainName}/iam/#/apikeys) en ouvrant une autre fenêtre de navigateur et en accédant à **Gérer** > **Sécurité** > **Clés d'API de la plateforme**. Pensez à conserver cette clé à un emplacement sûr.
-  * **Nom de compte** - Cette zone est renseignée automatiquement lorsque vous entrez une clé d'API.
-  * **Espace de nom de Container Registry** - Entrez l'[espace de nom du registre de conteneur](https://{DomainName}/containers-kubernetes/registry/namespaces) (vous pouvez le trouver en cliquant sur l'icône **Menu**![Icône Menu](../../icons/icon_hamburger.svg) et en sélectionnant **Conteneurs** > **Registre** > **Espaces de nom**.)
-  * **Nom d'image Docker** - Entrez **continu** car cette étape de génération de pipeline s'applique à la génération continue de la branche d'intégration continue de votre référentiel.
-  * **Script de génération** - Notez le script shell. Les instructions de génération d'application sont manquantes pour _votre_ référentiel. Vous devez ajouter au moins une ligne après la première ligne `#!/bin/bash`. Par exemple, pour un référentiel généré en utilisant maven, vous pouvez ajouter quelques lignes similaires à l'exemple suivant :
+1. Configurez votre étape de pipeline de `génération et de publication`.
+  1. Sélectionnez le pipeline de distribution que vous avez créé puis cliquez sur **Ajouter une étape**.
+  2. Cliquez sur l'onglet **Entrée** puis renseignez les zones de la manière suivante :
+    * Entrez `générer et publier votre image Docker` comme nom d'étape.
+    * Sélectionnez **Référentiel Git** comme type d'entrée.
+    * Sélectionnez votre référentiel GitHub.
+    * Sélectionnez la branche utilisée pour l'intégration continue.
+  3.  Cliquez sur l'onglet **Travaux**, sur **Ajouter un travail '+'** puis renseignez les zones de la manière suivante :
+    * Sélectionnez l'option de génération**** pour le type de travail.
+    * Entrez `générer et publier` comme nom.
+    * Sélectionnez **Container Registry** comme type de générateur.
+    * Sélectionnez la région dans laquelle se trouve votre cluster Kubernetes.
+    * Sélectionnez **Entrer une clé d'API existante**. Si vous n'avez pas de clé d'API, voir [Création d'une clé d'API](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Entrez l'espace de nom du registre de conteneur que vous pouvez trouver en cliquant sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) et en sélectionnant **Conteneurs** > **Registre** > **Espaces de nom**.
+    * Pour le nom de l'image Docker, entrez `continu` car cette étape de génération de pipeline s'applique à la génération continue de la branche d'intégration en continu de votre référentiel.
+    * Editez le script de génération en ajoutant une ou plusieurs lignes après la première ligne `#!/bin/bash`. Par exemple, pour un référentiel généré en utilisant maven, vous pouvez ajouter quelques lignes similaires à l'exemple suivant :
 
-    ```bash
-    export JAVA_HOME=/opt/IBM/java8
-    # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
-    export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-    mvn -B clean verify
-    ```
-    {: codeblock}
-5. Cliquez sur **Sauvegarder**. Votre étape de pipeline de génération et de publication apparaît désormais dans votre chaîne d'outils.
-
-### Test de votre étape de pipeline de génération et de publication
-
-Cliquez sur l'icône **Ecouter** jusqu'à ce que la génération aboutisse. Vous savez que cette opération fonctionne lorsque l'étape devient verte et que la sortie du script confirme vos attentes. L'objectif de cette étape est de publier une image Docker dans votre registre d'images. Si le script ne s'affiche pas suffisamment, vous pouvez consulter le registre d'images pour confirmer la publication en cliquant sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) puis en sélectionnant **Conteneurs** > **Registre** > **Référentiels privés**. Confirmez ensuite qu'un référentiel qui se termine par le nom `/continu` est répertorié. Nous vous rappelons qu'il s'agit du nom de l'image. 
-
-### Configuration de l'étape de pipeline de déploiement sur un cluster
-
-Jusqu'à présent, vous avez publié une image Docker dans votre registre d'images Docker privé. Maintenant, nous allons créer une étape qui déploie cette image dans votre cluster Kubernetes.
-
-1. Sur la page Delivery Pipeline, cliquez sur **Ajouter une étape**.
-2. Sur l'onglet **Entrée** de la page **Configuration de l'étape**, renseignez les zones de la manière suivante :
-  * **Nom** - Entrez **Déployer**.
-  * **type d'entrée** - Sélectionnez **Artefacts de génération**.
-  * **Etape** - Sélectionnez **Générer & publier l'image Docker**.
-  * **Travail** - Sélectionnez **Générer & publier**.
-  * **Déclencheur d'étape** - Etant donné qu'il s'agit de votre pipeline d'intégration continue, sélectionnez l'option **Exécuter les travaux lorsque l'étape précédente est terminée** par défaut.
-3. Cliquez sur l'onglet **Travaux** puis renseignez les zones de la manière suivante :
-  * Cliquez sur l'icône **Ajouter un travail '+'** et sélectionnez **Déployer** comme type de travail.
-  * Entrez un nom, comme **Déployer sur un cluster d'intégration continue**.
-  * **Type de déployeur** - Sélectionnez **Kubernetes**.
-  * **Région IBM Cloud** - Sélectionnez la région dans laquelle se trouve votre cluster Kubernetes.
-  * **Clé d'API** - Sélectionnez **Entrer une clé d'API existante**. Si vous n'avez pas de clé ou ne connaissez pas votre clé d'API, vous pouvez [obtenir une clé d'API](https://{DomainName}/iam/#/apikeys) en ouvrant une autre fenêtre de navigateur et en accédant à **Gérer** > **Sécurité** > **Clés d'API de la plateforme**. Pensez à conserver cette clé à un emplacement sûr.
-  * Acceptez les autres paramètres par défaut.
-4. Cliquez sur **Sauvegarder**. Votre étape de pipeline de déploiement apparaît désormais dans votre chaîne d'outils.
-
-### Test de votre étape de pipeline de déploiement sur un cluster
-
-Cliquez sur l'icône **Ecouter** jusqu'à ce que la génération aboutisse. Vous savez que cette opération fonctionne lorsque l'étape devient verte et que la sortie du script confirme vos attentes. Vous pouvez afficher les journaux pour l'étape. Dans la dernière partie des journaux, recherchez un lien vers l'application en cours d'exécution. Toutefois, _vous_ seul connaissez le chemin et la racine du contexte de votre application. Ajoutez le chemin correct afin de confirmer que l'application s'exécute.
+      ```bash
+      export JAVA_HOME=/opt/IBM/java8
+      # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
+      export MAVEN_OPTS="-  
+      Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      mvn -B clean verify
+      ```
+      {: codeblock}
+  4. Cliquez sur **Enregistrer**. 
+2. Testez votre étape de pipeline de `génération et de publication` en cliquant sur l'icône **Exécuter** jusqu'à ce que la génération aboutisse. L'étape Vert indique que la génération a abouti. 
+3. Configurez votre étape de pipeline de `déploiement dans le cluster` afin de déployer l'image Docker dans votre cluster Kubernetes. 
+  1. Sur la page Delivery Pipeline, cliquez sur **Ajouter une étape**.
+  2. Cliquez sur l'onglet **Entrée** puis renseignez les zones de la manière suivante :
+    * Entrez `Déploiement dans le cluster` comme nom.
+    * Sélectionnez **Artefacts de génération** pour le type d'entrée.
+    * Sélectionnez l'option de génération et de publication d'image Docker**** pour l'étape.
+    * Sélectionnez l'option de génération et de publication**** pour le travail.
+    * Etant donné qu'il s'agit de votre pipeline d'intégration continue, acceptez l'option par défaut pour le déclencheur d'étape.
+  3. Cliquez sur l'onglet **Travaux**, sur **Ajouter un travail '+'** puis renseignez les zones de la manière suivante :
+    * Entrez `Déploiement dans le cluster d'intégration continue` comme nom.
+    * Sélectionnez **Kubernetes** comme type de déployeur.
+    * Sélectionnez la région dans laquelle se trouve votre cluster Kubernetes.
+    * Entrez votre clé d'API existante. 
+  4. Cliquez sur **Enregistrer**.
+4. Testez votre étape de pipeline de déploiement sur le cluster`` en cliquant sur l'icône **Exécuter** jusqu'à ce que la génération aboutisse. L'étape Vert indique que la génération a abouti. Vous pouvez afficher les journaux pour l'étape. Dans la dernière partie des journaux, recherchez un lien vers l'application en cours d'exécution. Ajoutez le chemin correct de votre application afin de confirmer que cette dernière s'exécute.

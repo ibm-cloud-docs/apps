@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-03"
 
 ---
 
@@ -27,8 +27,8 @@ Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di arch
 ## Prima di iniziare
 {: #prereqs}
 
-* Attieniti alla procedura per [Creazione di applicazioni dal tuo repository di codice](/docs/apps/tutorials/tutorial_byoc.html) per creare un'applicazione.
-* Dal [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window}, fai clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e seleziona **Containers** per [configurare un cluster Kubernetes](/docs/containers/container_index.html).
+* Crea un'applicazione. Per ulteriori informazioni, vedi [Creazione di applicazioni dal tuo repository di codice](/docs/apps/tutorials/tutorial_byoc.html).
+* Dalla [console {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window}, fai clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e seleziona **Containers** per [configurare un cluster Kubernetes](/docs/containers/container_index.html).
 * Per confermare che la tua applicazione sia eseguita in Docker, esegui questi comandi:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -36,10 +36,9 @@ Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di arch
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Visita quindi il tuo URL, come ad esempio `http://localhost/springboothelloworld/sayhello`.   
-Premi `Ctrl+C` per arrestare l'esecuzione del Docker.
+* Quindi, vai al tuo URL, ad esempio `http://localhost/springboothelloworld/sayhello`. Premi i tasti Ctrl+C per arrestare l'esecuzione Docker.
 
-## Facoltativo. Aggiunta di risorse alla tua applicazione
+## Aggiunta di risorse alla tua applicazione (facoltativo)
 {: #add_resources}
 
 Aggiungi una risorsa di servizio alla tua applicazione e {{site.data.keyword.cloud_notm}} crea il servizio per tuo conto. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
@@ -48,23 +47,18 @@ applicazioni Web.
 
 Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps/reqnsi.html).
 
-### Copia delle credenziali di servizio nel tuo ambiente
+Dopo aver aggiunto una risorsa di servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps/creds_kube.html).
 
-Dopo che hai aggiunto una risorsa di servizio alla tua applicazione, nota che le credenziali per tale servizio sono visualizzate nella casella **Credenziali**. Devi copiare le credenziali nel tuo ambiente di distribuzione.
-
-Per ulteriori informazioni sulla copia di credenziali nel tuo ambiente, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps/creds_kube.html).
-
-
-## Preparazione della tua applicazione per la distribuzione utilizzando una toolchain DevOps
+## Preparazione della tua applicazione per la distribuzione
 {: #connect_toolchain}
 
 In questo passo, connetti una toolchain DevOps all'applicazione e la configuri per essere distribuita a un cluster Kubernetes che è ospitato nel servizio Kubernetes {{site.data.keyword.cloud_notm}}.
 
 La toolchain DevOps è abbastanza flessibile da consentire l'esecuzione gestita di fasi arbitrarie di esecuzione dello script di shell. In altre parole, puoi fare quasi tutto con una toolchain DevOps. L'ambito di questa sezione si concentra sulla distribuzione della tua applicazione su un cluster Kubernetes, tenendo al tempo stesso in mente le misure che saranno necessarie in futuro per il DevOps ridimensionato e le migliori prassi del cloud.
 
-Stabilire una connessione tra la tua applicazione, la toolchain e il repository è un passo in avanti nell'organizzazione dei tuoi asset del prodotto. Aiuta anche ad aggregare una vista del tuo repository di origine con il tuo flusso di lavoro DevOps, le tue istanze dell'applicazione in esecuzione e i servizi dipendenti in tutte le tue destinazioni di distribuzione. 
+Stabilire una connessione tra la tua applicazione, la toolchain e il repository è un passo in avanti nell'organizzazione dei tuoi asset del prodotto. Aiuta anche ad aggregare una vista del tuo repository di origine con il tuo flusso di lavoro DevOps, le tue istanze dell'applicazione in esecuzione e i servizi dipendenti in tutte le tue destinazioni di distribuzione.
 
-Nella pagina Connect Toolchain, disponi di alcune opzioni:
+Nella pagina Connect Toolchain, hai alcune opzioni:
 
 * Connetti la tua applicazione a una toolchain esistente.
 * Connetti la tua applicazione a una toolchain esistente che non contiene il tuo repository. Connetti quindi la toolchain al tuo repository in un secondo momento.
@@ -78,7 +72,7 @@ Se hai una o più toolchain DevOps che sono già connesse al repository Git che 
 ### Connetti la tua applicazione a una toolchain esistente che non contiene il tuo repository
 {: #connect_toolchain_notrepo}
 
-Se hai una o più toolchain DevOps che sono associate al tuo account, ma non sono connesse al repository Git che hai specificato durante la creazione della tua applicazione, tali toolchain sono visualizzate nella tabella etichettata **without your repo**. Puoi selezionare una di queste toolchain e connetterla alla tua applicazione ma devi anche aggiungere manualmente il tuo repository a tale toolchain.
+Se hai una o più toolchain DevOps che sono associate al tuo account, ma non sono connesse al repository Git che hai specificato durante la creazione della tua applicazione, tali toolchain sono visualizzate nella tabella **Without your repo**. Puoi selezionare una di queste toolchain e connetterla alla tua applicazione ma devi anche aggiungere manualmente il tuo repository a tale toolchain.
 
 Per ulteriori informazioni sull'aggiunta del tuo repository alla tua toolchain, vedi:
 
@@ -90,104 +84,80 @@ Per ulteriori informazioni sull'aggiunta del tuo repository alla tua toolchain, 
 ### Connetti la tua applicazione a una nuova toolchain
 {: #create_toolchain}
 
-Disponi di queste opzioni per connettere la tua applicazione ad una nuova toolchain:
-* Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Il comando genera un modello di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale modello come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps/create-deploy-cli.html#byoc).
-* Crea una toolchain DevOps da zero all'interno della console. Se vuoi controllare completamente la creazione della toolchain DevOps senza alcuna modifica nel repository del codice, crea la toolchain da zero. Per ulteriori informazioni, vedi [Creazione di una toolchain DevOps da zero](#create_toolchain_scratch).
+Se vuoi controllare completamente la creazione della toolchain DevOps senza alcuna modifica nel repository del codice, crea la toolchain da zero. Crei anche tutte le integrazioni per creare la tua applicazione e distribuirla al cluster Kubernetes. 
 
-#### Creazione di una toolchain DevOps da zero
-{: #create_toolchain_scratch}
+1. Nella pagina Create a Toolchain, fai clic sul modello **Build your own toolchain**.
+2. Immetti un nome per la tua toolchain, seleziona una regione e un gruppo di risorse (predefinito) e fai clic su **Create**.
 
-Se vuoi creare una toolchain da zero e connetterla alla tua applicazione, completa questa procedura. Crei anche tutte le integrazioni per creare la tua applicazione e distribuirla al cluster Kubernetes. La funzione toolchain DevOps offre dei modelli, ma questa procedura mostra come configurare una toolchain DevOps da zero.
-
-Quando scegli di creare una toolchain dalla tua nuova applicazione, la pagina [Create a Toolchain](https://{DomainName}/devops/create) viene aperta nel [dashboard DevOps](https://{DomainName}/devops/) in una nuova scheda nel tuo browser. Dopo che hai creato e configurato la tua toolchain in tale scheda, devi tornare alla pagina **Connect a toolchain** nella tua applicazione e aggiornare la pagina.
+Quando scegli di creare una toolchain dalla tua nuova applicazione, la pagina [Create a Toolchain](https://{DomainName}/devops/create) nel dashboard DevOps si apre in una nuova scheda del tuo browser. Dopo aver creato e configurato la tua toolchain in tale scheda, devi tornare alla pagina Connect a toolchain nella tua applicazione e aggiornare la pagina.
 {:tip}
 
-1. Nella pagina **Create a Toolchain**, fai clic sul modello **Build your own toolchain**.
-2. Nella pagina **Build your own toolchain**, immetti un nome per la tua toolchain, seleziona una regione e un gruppo di risorse (predefinito) e fai clic su **Create**.
-
-Viene creata una toolchain vuota senza strumenti o integrazioni preconfigurati. Continua a configurare e testare la tua nuova toolchain completando i passi rimanenti.
+Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Il comando genera un modello di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale modello come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Aggiunta di un'integrazione GitHub
 
-Puoi configurare la toolchain DevOps con l'integrazione GitHub utilizzando la seguente procedura:
+Configura la toolchain DevOps con un'integrazione per il tuo repository GitHub per consentire alla toolchain di impostare un webhook nel tuo repository in modo che le richieste di pull e i push di codice in tale repository inviino un POST alla toolchain. 
 
 1. Nel tuo modello di toolchain DevOps, fai clic su **Add a Tool**.
-2. Seleziona **GitHub** (se il tuo repository si trova in effetti sul GitHub pubblico o su Enterprise GitHub).
-3. Nella pagina **Configure the Integration** per GitHub, completa la seguente procedura:
-  * Seleziona (o immetti) l'URL del **GitHub Server**.
-  * Se vedi un messaggio "Unauthorized on GitHub", fai clic su **Authorize**. Quindi, nella pagina **Authorize IBM Cloud Toolchains**, fai clic su **Authorize IBM-Cloud**. Immetti quindi la tua password GitHub.
-  * Nella pagina **Configure the Integration**, seleziona **Existing** per **Repository Type** in modo che la toolchain DevOps configuri il repository con un webhook e _non_ crei fork o copie del tuo repository.
-  * Immetti il tuo URL repository (**Repository URL**). Ad esempio, `https://github.com/yourrepo/spring-boot-hello-world`).
-  * Attendi qualche minuto; ti potrebbe essere richiesto di autorizzare GitHub a concedere l'autorizzazione alla toolchain DevOps di utilizzare la API REST GitHub per configurare il tuo repository con i webhook che sono necessari per attivare la toolchain.
-  * Fai clic su **Crea integrazione**.
+2. Seleziona **GitHub** se il tuo repository si trova su GitHub pubblico o su GitHub Enterprise.
+3. Seleziona o immetti l'URL del server GitHub.
+4. Potrebbe essere visualizzato il messaggio `Unauthorized on GitHub`. In questo caso, fai clic su **Authorize**. Quindi, nella pagina Authorize IBM Cloud Toolchains, fai clic su **Authorize IBM-Cloud** e immetti la tua password GitHub.
+5. Nella pagina Configure the Integration, seleziona **Existing** per il tipo di repository in modo che la toolchain DevOps configuri il repository con un webhook e non crei alcun fork o copia del tuo repository.
+6. Immetti il tuo URL repository, ad esempio `https://github.com/yourrepo/spring-boot-hello-world`.
+7. Dopo qualche istante, ti potrebbe essere chiesto di autorizzare GitHub a concedere l'autorizzazione alla toolchain DevOps di utilizzare l'API REST GitHub per configurare il tuo repository con i webhook necessari per attivare la toolchain.
+8.  Fai clic su **Create Integration**.
 
-Hai configurato questa toolchain DevOps con un'integrazione per il tuo repository GitHub. In questo modo, alla toolchain è consentito impostare un webhook nel tuo repository in modo che le richieste di pull e i push di codice in tale repository attivino un POST alla toolchain. Puoi guardare nelle impostazioni del tuo repository per vedere il nuovo webhook.
+Puoi visualizzare il nuovo webhook dalle impostazioni del tuo repository.
 
-## Aggiunta di una Delivery Pipeline per creare, testare e distribuire la tua applicazione
-
-La Delivery Pipeline è dove viene eseguita la maggior parte del lavoro.
+## Aggiunta di una delivery pipeline
 
 1. Fai clic su **Add a Tool**.
 2. Seleziona **Delivery Pipeline**.
-3. Nella pagina **Configure the Integration** per Delivery Pipeline, completa questa procedura:
- * Immetti "Continuous Integration" per il nome della pipeline.
- * Fai clic su **Crea integrazione**.
+3. Immetti `Continuous Integration` per il nome della pipeline e fai clic su **Create Integration**.
 
-Hai creato una delivery pipeline vuota. Definisci quindi le fasi della pipeline per indirizzare il tuo input (il contenuto del repository GitHub) alla sua destinazione. Poiché questa esercitazione presume che tu abbia un repository GitHub che produce un'immagine Docker funzionante e utilizza un cluster Kubernetes di IBM Containers, crei delle fasi della pipeline con input, script di shell e output che conseguono tale obiettivo.
+## Configurazione delle fasi della tua pipeline
 
-### Configurazione della fase della pipeline "Build and Publish"
+Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del repository GitHub) alla destinazione corretta. Poiché questa esercitazione presume che tu abbia un repository GitHub che produce un'immagine Docker funzionante e utilizza un cluster Kubernetes di IBM Containers, crei delle fasi della pipeline con input, script di shell e output che conseguono tale obiettivo.
 
-1. Fai clic sulla delivery pipeline che hai creato.
-2. Nella pagina della delivery pipeline, fai clic su **Add a Stage**.
-3. Nella scheda **Input** della pagina **Stage Configuration**, completa i campi nel seguente modo:
-  * Per Stage Name, immetti **Build & Publish Docker Image**.
-  * **Input type**: seleziona **Git repository**.
-  * **Git repository**: Seleziona il tuo repository GitHub.
-  * **Branch**: seleziona il ramo che usi per l'integrazione continua.
-4. Fai clic sulla scheda **Jobs** e completa i campi nel seguente modo:
-  * Fai clic sull'icona **Add Job '+'** e seleziona **Build** per il tipo di lavoro.
-  * Immetti un nome, come ad esempio **Build & Publish**.
-  * **Builder type**: seleziona **Container Registry**.
-  * **IBM Cloud region**: seleziona la regione dove si trova il tuo cluster Kubernetes.
-  * **API key**: seleziona **Enter an existing API key**. Se non hai una chiave o non conosci la tua chiave API, puoi [ottenere una chiave API](https://{DomainName}/iam/#/apikeys) aprendo una finestra del browser separata e andando a **Manage** > **Security** > **Platform API Keys**. Assicurati di tenere questa chiave in un posto sicuro.
-  * **Account name**: questo campo viene completato automaticamente quando immetti una chiave API.
-  * **Container Registry namespace**: immetti lo [spazio dei nomi del registro contenitori](https://{DomainName}/containers-kubernetes/registry/namespaces) (puoi trovarlo facendo clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e selezionando **Containers** > **Registry** > **Namespaces**).
-  * **Docker image name**: immetti **continuous** poiché questa fase di build della pipeline è per la build continua del ramo di integrazione continuo del tuo repository.
-  * **Build script**: nota lo script di shell. Non ha le istruzioni di build dell'applicazione per il _tuo_ repository. Devi aggiungere una riga o più dopo la prima riga `#!/bin/bash`. Ad esempio, per un repository creato utilizzando maven, potresti aggiungere delle righe simili al seguente esempio:
+1. Configura la fase della pipeline `build and publish`.
+  1. Seleziona la delivery pipeline che hai creato e fai clic su **Add a Stage**.
+  2. Fai clic sulla scheda **Input** e completa i campi nel seguente modo:
+    * Immetti `build and publish Docker image` per il nome della fase.
+    * Seleziona **Git repository** per il tipo di input.
+    * Seleziona il tuo repository GitHub.
+    * Seleziona il ramo che usi per l'integrazione continua.
+  3.  Fai clic sulla scheda **Jobs**, fai clic su **Add Job '+'** e completa i campi nel seguente modo:
+    * Seleziona **Build** per il tipo di lavoro.
+    * Immetti `build and publish` per il nome.
+    * Seleziona **Container Registry** per il tipo di builder.
+    * Seleziona la regione in cui si trova il tuo cluster Kubernetes.
+    * Seleziona **Enter an existing API key**. Se non hai una chiave API, consulta [Creazione di una chiave API](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Immetti lo spazio dei nomi del registro contenitore, che puoi trovare facendo clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e selezionando **Containers** > **Registry** > **Namespaces**.
+    * Per il nome dell'immagine Docker, immetti `continuous` poiché questa fase di build della pipeline è per la build continua del ramo di integrazione continua del tuo repository.
+    * Modifica lo script di build aggiungendo una o più righe dopo la prima riga `#!/bin/bash`. Ad esempio, per un repository creato utilizzando maven, potresti aggiungere delle righe simili al seguente esempio:
 
-    ```bash
-    export JAVA_HOME=/opt/IBM/java8
-    # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
-    export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
-    mvn -B clean verify
-    ```
-    {: codeblock}
-5. Fai clic su **Save**. La tua fase della pipeline "Build and Publish" ora compare nella tua toolchain.
-
-### Esecuzione di test della tua fase di pipeline "Build and Publish"
-
-Fai clic sull'icona **Play** fino a che la compilazione (build) non riesce. Sai che funziona quando la fase diventa verde e l'output dello script conferma le tue aspettative. L'obiettivo in questa fase è pubblicare un'immagine Docker nel tuo registro delle immagini. Se non ritieni sufficiente quanto visualizzato dallo script, puoi visualizzare il registro immagini per confermare la pubblicazione facendo clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e selezionando quindi **Containers** > **Registry** > **Private Repositories**. Conferma quindi che sia elencato un repository che termina con il nome `/continuous`. (Ricorda, questo era il nome dell'immagine).
-
-### Configurazione della fase della pipeline "Deploy to Cluster"
-
-Finora, hai pubblicato un'immagine Docker nel tuo registro delle immagini Docker privato. Ora, è il momento di creare una fase che distribuisce questa immagine al tuo cluster Kubernetes.
-
-1. Nella pagina della delivery pipeline, fai clic su **Add a Stage**.
-2. Nella scheda **Input** della pagina **Stage Configuration**, completa i campi nel seguente modo:
-  * **Name**: immetti **Deploy**.
-  * **Input type**: seleziona **Build artifacts**.
-  * **Stage**: seleziona **Build & Publish Docker Image**.
-  * **Job**: seleziona **Build & Publish**.
-  * **Stage trigger**: poiché questa è la tua pipeline di integrazione continua, seleziona il valore **Run jobs then the previous stage is completed** predefinito.
-3. Fai clic sulla scheda **Jobs** e completa i campi nel seguente modo:
-  * Fai clic sull'icona **Add Job '+'** e seleziona **Deploy** per il tipo di lavoro.
-  * Immetti un nome, come ad esempio **Deploy to Continuous Integration Cluster**.
-  * **Deployer type**: seleziona **Kubernetes**.
-  * **IBM Cloud region**: seleziona la regione dove si trova il tuo cluster Kubernetes.
-  * **API key**: seleziona **Enter an existing API key**. Se non hai una chiave o non conosci la tua chiave API, puoi [ottenere una chiave API](https://{DomainName}/iam/#/apikeys) aprendo una finestra del browser separata e andando a **Manage** > **Security** > **Platform API Keys**. Assicurati di tenere questa chiave in un posto sicuro.
-  * Accetta le restanti impostazioni predefinite.
-4. Fai clic su **Save**. La tua fase di pipeline "Deploy" ora appare nella tua toolchain.
-
-### Esecuzione di test della tua fase di pipeline "Deploy to Cluster"
-
-Fai clic sull'icona **Play** fino a che la compilazione (build) non riesce. Sai che funziona quando la fase diventa verde e l'output dello script conferma le tue aspettative. Puoi visualizzare i log per la fase. Verso la fine dei log, trova un link selezionabile all'applicazione in esecuzione. Tuttavia, solo _tu_ conosci la root di contesto e il percorso della tua applicazione. Accoda il percorso corretto per confermarne l'esecuzione.
+      ```bash
+      export JAVA_HOME=/opt/IBM/java8
+      # the MAVEN_OPTS, -B flag, and stopping the phases just prior to 'install' are recommended:
+      export MAVEN_OPTS="-  
+      Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+      mvn -B clean verify
+      ```
+      {: codeblock}
+  4. Fai clic su **Save**. 
+2. Verifica la fase della tua pipeline `build and publish` facendo clic sull'icona **Play** fino a che la build non riesce. Una fase di colore verde indica che la build è riuscita. 
+3. Configura la fase della pipeline `deploy to cluster` per distribuire l'immagine Docker al tuo cluster Kubernetes. 
+  1. Nella pagina della delivery pipeline, fai clic su **Add a Stage**.
+  2. Fai clic sulla scheda **Input** e completa i campi nel seguente modo:
+    * Immetti `deploy to cluster` per il nome.
+    * Seleziona **Build artifacts** per il tipo di input.
+    * Seleziona **Build & Publish Docker Image** per la fase.
+    * Seleziona **Build & Publish** per il lavoro.
+    * Poiché questa è la tua pipeline di integrazione continua, accetta l'opzione predefinita per il trigger della fase.
+  3. Fai clic sulla scheda **Jobs**, fai clic su **Add Job '+'** e completa i campi nel seguente modo:
+    * Immetti `deploy to continuous integration cluster` per il nome.
+    * Seleziona **Kubernetes** per il tipo di deployer.
+    * Seleziona la regione in cui si trova il tuo cluster Kubernetes.
+    * Immetti la tua chiave API esistente. 
+  4. Fai clic su **Save**.
+4. Verifica la fase della tua pipeline `deploy to cluster` facendo clic sull'icona **Play** fino a che la build non riesce. Una fase di colore verde indica che la build è riuscita. Puoi visualizzare i log per la fase. Verso la fine dei log, trova un link selezionabile all'applicazione in esecuzione. Aggiungi il percorso corretto per la tua applicazione per confermarne l'esecuzione.
