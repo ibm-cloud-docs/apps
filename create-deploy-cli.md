@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,20 +15,20 @@ lastupdated: "2018-12-04"
 {:note: .note}
 
 # Creating and deploying apps by using the CLI
-{: #developing}
+{: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.cloud}} command line interface (CLI) to create and deploy your app. 
+You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to create and deploy your app. 
 
 You can either create a starter app from scratch or cloud-enable your existing app code. 
 {: note}
 
 ## Before you begin
-{: #prereqs}
+{: #prereqs-app-cli}
 
-You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli/index.html). 
+You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli/index.html#overview). 
 
 ## Creating a starter app from scratch
-{: #create}
+{: #create-app-cli}
 
 Creating an app from scratch is useful if you don't already have existing code to begin with and would rather start from a language, or framework starter template.
 
@@ -43,7 +43,7 @@ Creating an app from scratch is useful if you don't already have existing code t
 Creating the app and toolchain takes a few seconds to complete.
 
 ## Generating deployment and cloud enablement assets
-{: #byoc}
+{: #byoc-cli}
 
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Note that this command is in Beta, and not all languages and/or app structures are supported. The following instructions illustrate how to use this functionality with a sample repository, but the steps are roughly the same for your own codebase.
 
@@ -67,11 +67,11 @@ This option can be used if you already have an existing codebase and want to gen
 ### Important Notes
  - If you've already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
  - You can also choose to only generate deployment and cloud enablement files without connecting to an {{site.data.keyword.cloud_notm}} app by running [`ibmcloud dev enable --no-create`](/docs/cli/idt/commands.html#enable).
- - To manually configure a toolchain and deployment files, follow [this guide.](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial) This can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
+ - To manually configure a toolchain and deployment files, follow [this guide.](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial-byoc-kube) This can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
  - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
 
 ## Building your app and running it locally
-{: #build-run}
+{: #build-run-app-cli}
 
 Regardless of which option you used to create your app, you can now build it and run it locally.
 
@@ -85,7 +85,7 @@ You can also use [compound commands](/docs/cli/idt/commands.html#compound) like 
 {: tip}
 
 ## Adding a service and modify the code
-{: #add-service}
+{: #resources-app-cli}
 
 Now that your app can run locally, you can add a service and modify some code. 
 
@@ -96,7 +96,7 @@ Now that your app can run locally, you can add a service and modify some code.
 5. Save any files that you modified.
 
 ## Deploying to {{site.data.keyword.cloud_notm}}
-{: #deploy}
+{: #deploy-app-cli}
 
 You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured. 
 
@@ -121,7 +121,7 @@ You can manually deploy your app by using the [`deploy`](/docs/cli/idt/commands.
 4. Wait a few minutes for the deployment to complete.
 
 ## Viewing your app
-{: #view}
+{: #view-app-cli}
 
 1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command. 

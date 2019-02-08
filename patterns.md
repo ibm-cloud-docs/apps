@@ -56,7 +56,7 @@ Choose a micro-service starter kit for your language and framework requirements.
 ## Mobile
 {: #mobile}
 
-Mobile apps are different from the other patterns because they have a significant client-side component. The pattern might include direct connection to mobile services like push notifications, authentication, and mobile analytics. Mobile services are known as Mobile Backend as a Service or MBaaS pattern. They also might have a dedicated [Backend-for-frontend](#bff).
+Mobile apps are different from the other patterns because they have a significant client-side component. The pattern might include direct connection to mobile services like push notifications, authentication, and mobile analytics. Mobile services are known as Mobile Backend as a Service or MBaaS pattern. They also might have a dedicated [Backend-for-frontend](/docs/apps/patterns.html#bff).
 
 {{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift, Android, and Cordova. You can find starter kits for Mobile pattern on the [{{site.data.keyword.cloud_notm}} Mobile developer dashboard](https://{DomainName}/developer/mobile/dashboard).
 

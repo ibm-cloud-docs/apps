@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-04"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-12-04"
 {:note: .note}
 
 # Adding credentials to your Kubernetes environment
-{: #add_credentials}
+{: #add-credentials-kube}
 
 Learn how to add service credentials to your Kubernetes deployment environment.
 {: shortdesc}
@@ -26,7 +26,7 @@ You must manually add service credentials to your deployment environment in thes
  * You add a service to a starter kit-based app _after_ it was deployed.
 
 ## Your code + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -86,7 +86,7 @@ Configure the cluster so that the _secretKeyRef_ with the name `name-secret` and
 
 Use a terminal on your workstation to install the following tools:
 
-1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html).
+1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview).
 2. Log in by using the `ibmcloud login` command.
 3. Connect to your cluster by running `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copy and paste the `export` command to run it from a terminal.
@@ -109,7 +109,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 Now that the Kubernetes cluster is prepared with a resolvable secret, you can update your application to use the environment variables that are defined in the `deployment.yml` file.
 
 ## Starter kit app + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. Go to the **App Details** page of your app.
 2. To create an instance of Cloud Object Storage, select **Add Resource** > **Storage** > **Cloud Object Storage** > **Lite plan (Free)** > **Create**.
@@ -220,7 +220,7 @@ Use the **Deploy to cloud** feature to deploy your app to your IBM Containers Ku
 The Kubernetes secret isn't retrievable by your application code unless the `deployment.yml` declares an `env` value that references the secret. When you use a starter kit, such code is generated automatically.
 
 ### The starter kit generated code
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
 In this case, you created this application from a starter kit. The code that is generated from a starter kit is made to be portable to run locally, in Cloud Foundry, or in Kubernetes. The library, `IBMCloudEnv`, is used to provide an abstraction layer between the application code and the retrieval of the environment variables that hold the credentials for the resources (service instances).
 

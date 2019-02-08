@@ -17,7 +17,7 @@ If you have an existing app, you can host it on {{site.data.keyword.cloud}} with
 ## Migrating apps
 {: #migrating}
 
-If you need your app to access your on-premises data or services, you can use [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/secure_gateway.html) to establish a secured tunnel between an {{site.data.keyword.cloud_notm}} organization and your enterprise backend network. For details, see [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
+If you need your app to access your on-premises data or services, you can use [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) to establish a secured tunnel between an {{site.data.keyword.cloud_notm}} organization and your enterprise backend network. For details, see [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 If you need help with your migration, [{{site.data.keyword.cloud_notm}} Migration Services ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/migration-services){: new_window} are available.
 
@@ -26,7 +26,7 @@ If you need help with your migration, [{{site.data.keyword.cloud_notm}} Migratio
 
 In the {{site.data.keyword.cloud_notm}} [catalog ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window}, you can choose a managed environment like Kubernetes or Cloud Foundry, or can you host your app directly on a bare metal or virtual server.
 
-On a virtual deployment, most of your app's operations are managed by {{site.data.keyword.cloud_notm}}. A [virtual](/docs/vsi/vsi_about.html) deployment is best if your workload is spread out across geographic regions and you want to use an {{site.data.keyword.cloud_notm}} hypervisor to manage your deployments. A [bare metal](/docs/bare-metal/index.html) deployment is best if you need direct access to a dedicated physical server for higher performance.
+On a virtual deployment, most of your app's operations are managed by {{site.data.keyword.cloud_notm}}. A [virtual](/docs/vsi/vsi_about.html) deployment is best if your workload is spread out across geographic regions and you want to use an {{site.data.keyword.cloud_notm}} hypervisor to manage your deployments. A [bare metal](/docs/bare-metal/index.html#getting-started) deployment is best if you need direct access to a dedicated physical server for higher performance.
 
 You also have many options for:
 * Selecting the type of [storage ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} that's right for you from block storage, file storage, or Object Storage.

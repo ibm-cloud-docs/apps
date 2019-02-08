@@ -88,7 +88,7 @@ To upload a certificate for your application, complete the following steps:
   * Intermediate certificate (optional): A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization. Use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before you deploy it to production.
   * Enable request of client certificate: When you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. 
 
-    The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.cloud_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html).
+    The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.cloud_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346 ![External link icon](../icons/launch-glyph.svg "External link icon")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} and [Securing data with TLS](/docs/get-support/appsectls.html#tlssupportwithdraw).
     {: note}
   
   * Client certificate truststore (optional): Includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
@@ -96,6 +96,6 @@ To upload a certificate for your application, complete the following steps:
     You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
     {: tip}
 
-For more information, see [Importing SSL certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+For more information, see [Importing SSL certificates](/docs/ssl-certificates/import-ssl-certificate.html).
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-03"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-01-03"
 {:tip: .tip}
 
 # Deploying your own code to a Kubernetes cluster
-{: #tutorial}
+{: #tutorial-byoc-kube}
 
 Learn how to create an app in {{site.data.keyword.cloud}} by using your existing app repository. You can connect your existing DevOps toolchain or create one, and continuously deliver an app to a secure container in a Kubernetes cluster. This tutorial helps you set up a continuous integration DevOps pipeline so that the change is automatically built and propagated all the way to your deployed app in the Kubernetes cluster.
 {: shortdesc}
@@ -25,10 +25,10 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 {: tip}
 
 ## Before you begin
-{: #prereqs}
+{: #prereqs-byoc-kube}
 
-* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials/tutorial_byoc.html) for more information.
-* From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers/container_index.html).
+* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) for more information.
+* From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers/container_index.html#container_index).
 * To confirm that your app runs in Docker, run the following commands:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -39,16 +39,16 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 * Then, go to your URL, such as `http://localhost/springboothelloworld/sayhello`. Press the Ctrl+C keys to stop the Docker run.
 
 ## Adding resources to your app (optional)
-{: #add_resources}
+{: #resources-byoc-kube}
 
 Add a service resource to your application and {{site.data.keyword.cloud_notm}} creates the service for you. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information. {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
-This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps/reqnsi.html).
+This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps/reqnsi.html#add-resource).
 
-After you add a service resource to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html).
+After you add a service resource to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html#add_credentials).
 
 ## Preparing your app for deployment
-{: #connect_toolchain}
+{: #deploy-byoc-kube}
 
 In this step, you attach a DevOps toolchain to the application and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
 
@@ -80,7 +80,7 @@ For more information about adding your repo to your toolchain, see:
 
 
 ### Connect your app to a new toolchain
-{: #create_toolchain}
+{: #toolchain-byoc-kube-create}
 
 If you want to fully control the creation of the DevOps toolchain with no changes in your code repository, create the toolchain from scratch. You also create all of the integrations to build your app and deploy it to Kubernetes cluster. 
 
@@ -90,7 +90,7 @@ If you want to fully control the creation of the DevOps toolchain with no change
 When you choose to create a toolchain from your new app, the [Create a Toolchain](https://{DomainName}/devops/create) page in the DevOps dashboard opens in a new tab in your browser. After you create and configure your toolchain in that tab, you must go back to the Connect a toolchain page in your app and refresh the page.
 {:tip}
 
-If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc).
+If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc-cli).
 
 ## Adding a GitHub integration
 

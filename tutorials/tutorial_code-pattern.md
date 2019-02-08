@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-19"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -13,13 +13,13 @@ lastupdated: "2018-12-19"
 {:screen: .screen}
 
 # Creating an app with a code pattern
-{: #create_codepattern}
+{: #tutorial-codepattern}
 
 You can use a code pattern to quickly create your app and deploy it to {{site.data.keyword.cloud}}. You can either view the code in GitHub or create and build an app on {{site.data.keyword.cloud_notm}}, where you can use a DevOps toolchain to automatically deploy your app.
 {: shortdesc}
 
 ## Step 1. Create an app
-{: #create-app}
+{: #create-codepattern}
 
 1. Go to [IBM Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} and select the code pattern that you want. For example, you can select the [Build a MEAN Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/build-a-mean-web-app/){:new_window} code pattern.
 
@@ -29,13 +29,13 @@ You can use a code pattern to quickly create your app and deploy it to {{site.da
     * On the code pattern's page, click the link for building an app on {{site.data.keyword.cloud_notm}}. 
     * In the `README.md` file in the GitHub repo, click the link for using a starter kit to create the app. 
 
-4. On the **Create app** page, name your app, select a resource group, optionally provide tags, and click **Create**. For more information about tags, see [Working with tags](/docs/resources/tagging_resources.html).
+4. On the **Create app** page, name your app, select a resource group, optionally provide tags, and click **Create**. For more information about tags, see [Working with tags](/docs/resources/tagging_resources.html#tag).
 
   To go back to the code pattern, click **View code pattern**. Check the `README.md` file in the repository to find out whether you need to take more actions to get your app up and running.
   {: tip}
 
 ## Step 2. Adding resources
-{: #add-resources}
+{: #resources-codepattern}
 
 You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. This process creates a resource instance, creates a resource key (credentials), and binds it to your app. For this tutorial, add a place to manage your data.
 
@@ -48,13 +48,17 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 
 After you add a resource to your app, or if any services are required for your app, notice that the credentials for that service are displayed in the **Credentials** box. You must manually copy the credentials to your deployment environment.
 
-For more information about copying credentials to your environment, see [Credentials overview](/docs/apps/creds_overview.html).
+For more information about copying credentials to your environment, see [Credentials overview](/docs/apps/creds_overview.html#credentials_overview).
 
 ## Step 4. Deploying to {{site.data.keyword.cloud_notm}}
-{: #deploy}
+{: #deploy-codepattern}
+
+You can deploy your app to {{site.data.keyword.cloud_notm}} several ways, but a DevOps toolchain is the best way to deploy production apps. With a DevOps toolchain, you can easily automate deployments to lots of environments and quickly add monitoring, logging, and alert services to help manage your app as it grows.
+
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about), or [Virtual Server (VSI)](/docs/vsi/vsi_index.html).}
 
 1. On the **App details** page, click **Deploy to cloud**.
 2. Select a deployment method, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
 
-For more information about deployment methods, builds, and pipelines, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
+For more information about deployment methods, builds, and pipelines, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_build_deploy).

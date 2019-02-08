@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Adding a service to your app
-{: #add_service}
+# Adding a resource to your app
+{: #add-resource}
 
-When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add resources from the App Details page. However, you can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
+When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add resources from the App details page. However, you can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
-You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the App Details page. You can provision a particular type of resource (a service) directly from the {{site.data.keyword.cloud_notm}} catalog.
+You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the App Details page. You can provision a particular type of resource directly from the {{site.data.keyword.cloud_notm}} catalog.
 
-## Discovering services
-{: #discover_services}
+## Discovering resources
+{: #discover-resources}
 
 You can see all the services that are available in {{site.data.keyword.cloud_notm}} in the following ways:
 
@@ -35,7 +35,7 @@ You can select the service that you need when you develop applications. Once you
 You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.cloud_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.cloud_notm}} services](/docs/resources/connect_external_app#externalapp).
 
 ## Requesting a new service instance
-{: #req_instance}
+{: #request-instance}
 
 To request a new service instance, you must use the {{site.data.keyword.cloud_notm}} user interface or the {{site.data.keyword.cloud_notm}} command line interface.
 
@@ -65,7 +65,7 @@ If you use the {{site.data.keyword.cloud_notm}} command line interface to reques
 You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Configuring your application
-{: #config}
+{: #configure-app}
 
 After you bind a service instance to your application, you must configure your application to interact with the service.
 
@@ -150,4 +150,4 @@ To create a user-provided service instance and bind it to an application, comple
 	OK
 	```
 
-You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service ![External link icon](../icons/launch-glyph.svg "External link icon")](#config){: new_window}.
+You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service](/docs/apps/reqnsi.html#configure-app).

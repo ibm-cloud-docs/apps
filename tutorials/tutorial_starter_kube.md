@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-26"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-26"
 {:tip: .tip}
 
 # Deploying a starter kit app to a Kubernetes cluster
-{: #tutorial}
+{: #tutorial-starterkit-kube}
 
 Learn how to create an app in {{site.data.keyword.cloud}} by using a blank starter kit and a Kubernetes toolchain, and continuously deliver the app to a secure container in a Kubernetes cluster. Your continuous integration DevOps pipeline can be configured so that your code changes are automatically built and propagated to the app that’s in the Kube cluster. If you already have a pipeline, you can connect it to your app.
 {: shortdesc}
@@ -28,14 +28,14 @@ First, see the following starter kit flow diagram and its corresponding overview
 ![Starter kit flow diagram](../images/starterkit-flow.png) 
 
 ## Before you begin
-{: #prereqs}
+{: #prereqs-starterkit-kube}
 
-* Create a **Java + Spring** app by using a [starter kit](/docs/apps/tutorials/tutorial_starter-kit.html).
+* Create a **Java + Spring** app by using a [starter kit](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html).
 * Set up [Docker ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-started){: new_window}.
 
 ## Adding resources to your app
-{: #add_resources}
+{: #resources-starterkit-kube}
 
 Add an {{site.data.keyword.cloud_notm}} service resource to your application. The following steps provision a Cloudant instance, create a resource key (credentials), and bind it to your app.
 
@@ -47,7 +47,7 @@ Add an {{site.data.keyword.cloud_notm}} service resource to your application. Th
 6. Optional. If you want to take a quick look at your app code after you add resources, click **Download code**. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can easily extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}}, or add it to your code management repository.
 
 ## Deploying your app by using a DevOps toolchain
-{: #deploy_app}
+{: #deploy-starterkit-kube}
 
 Attach a DevOps toolchain to the application, and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
 
@@ -62,14 +62,14 @@ Attach a DevOps toolchain to the application, and configure it to be deployed to
 5. On the **Configure toolchain** page, enter a toolchain name, select a region, select a resource group, and then click **Create**. The **App Details** page is displayed, along with deployment information about your toolchain.
 
 ## Viewing your repository
-{: #view_repo}
+{: #view-repo-starterkit-kube}
 
 1. On the **App Details** page, click **View repo**. The Git repo that the starter kit generated is displayed.
 2. Optional. Configure SSH on your desktop by following the on-screen instructions.
 3. Optional. Create a personal access token on your account by following the on-screen instructions.
 
 ## Viewing the toolchain tools, logs, and history
-{: #view_logs}
+{: #view-logs-starterkit-kube}
 
 1. When the deployment stage is finished, the **App Details** page is displayed, along with deployment information about your toolchain.
 2. Access the toolchain by clicking **View toolchain**. The **Overview** tab of the toolchain page is displayed, which shows the tools that are included with the toolchain. This example includes the following tools that were preselected in the starter kit when the toolchain was created:
@@ -91,7 +91,7 @@ Attach a DevOps toolchain to the application, and configure it to be deployed to
 If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps/ts_apps.html#access_kube_logs) to look for errors.
 
 ## Next steps
-{: #next_steps notoc}
+{: #next-steps-startkit-kube notoc}
 
 * Access the service configuration in your code:
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring/configuration.html#configuration#accessing-credentials).

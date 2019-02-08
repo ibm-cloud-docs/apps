@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2018-07-23"
 {:tip: .tip}
 
 # Using containers with Kubernetes
-{: #containers}
+{: #containers-kube}
 
 Get started with {{site.data.keyword.containershort}} by deploying highly available apps in Docker containers that run in Kubernetes clusters. Manage your team development with Git, and then use the DevOps Toolchain to manage the deployment of your app to Kubernetes.
 {: shortdesc}
@@ -35,7 +35,7 @@ When you create back-end or web-serving apps, you can deploy them to the {{site.
 ## Binding services
 {: #bind-services}
 
-As the toolchain is created, the services that you associated with your app are bound to the Kubernetes cluster by using Kubernetes secrets. Secrets are used to manage the service credentials outside of your running app. The app reads the secrets and then retrieves the values that it needs to start running. Binding services enable you to deploy the app to another Kubernetes environment that might be using production level {{site.data.keyword.cloud_notm}} service instances.
+As the toolchain is created, the services that you associated with your app are bound to the Kubernetes cluster by using Kubernetes secrets. Secrets are used to manage the service credentials outside of your running app. The app reads the secrets and then retrieves the values that it needs to start running. Binding services enable you to deploy the app to another Kubernetes environment that might be using production level {{site.data.keyword.cloud}} service instances.
 
 If you delete the service or the secrets, you need to manually bind them again or delete and re-create the toolchain.
 {: tip}

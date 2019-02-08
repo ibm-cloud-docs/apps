@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -16,24 +16,28 @@ lastupdated: "2018-12-17"
 {:important: .important}
 
 # Deploying apps
-{: #deploy}
+{: #deploying-apps}
 
 You can deploy your apps with a toolchain or the command-line interface (CLI). A toolchain is a set of tool integrations. The CLI is a simple way to deploy your apps and service instances.
 {: shortdesc}
 
 ## Deploying apps by using toolchains
-{: #toolchains_getting_started}
+{: #toolchain-deploy-apps}
 
-Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. With a properly configured toolchain, deploying your app is easy.  A build-deploy cycle automatically starts with each merge to the master branch in your repo.
+Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. With a properly configured toolchain, deploying your app is easy. A build-deploy cycle automatically starts with each merge to the master branch in your repo.
 
-You can create a toolchain in one of two ways: use a template to create a toolchain or create a toolchain from an app. To learn more about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+You can create a toolchain in these ways:
+* Use a template to create a toolchain.
+* Create a toolchain from an app.
+
+To learn more about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Deploying apps by using the CLI
-{: #cli}
+{: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins and developer tool extensions that integrate with the CLI.
 
-Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html).
+Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download IBM Cloud Developer Tools" /></a>

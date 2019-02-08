@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -144,7 +144,7 @@ To get the appropriate authority level, use one of the following methods.
 {: tsResolve}
 
 * Select another organization and space for which you have the Developer role.
-* Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html) for details.
+* Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html#orgsspacesusers) for details.
 
 ## Can't access {{site.data.keyword.cloud_notm}} services because of authorization errors
 {: #ts_vcap}
@@ -181,7 +181,7 @@ A Bad Gateway error usually happens when you go to a website that uses a proxy s
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
 
-If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page. A workaround might be to use the service in another {{site.data.keyword.cloud_notm}} region. Detailed information is available in [Using services in another region ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/services/reqnsi.html#cross_region_service){: new_window}. If the service status is normal, try the following steps to solve the problem:
+If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app#externalapp){: new_window}. If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
 
   * Retry the action:
@@ -647,7 +647,7 @@ If the build or deploy jobs fail, and you see the following message, you can del
 {: #access_kube_logs}
 
 If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.

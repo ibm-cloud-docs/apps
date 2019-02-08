@@ -30,11 +30,11 @@ Services don't bind to the virtual server instance. You cannot add services to a
 {: important}
 
 ## Creating and deploying apps
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 The App Service provisions a virtual server instance for you, loads an image that includes your app, creates a Devops toolchain, and initiates the first deployment cycle for you.
 
-1. [Create an app](tutorials/tutorial_scratch.html). 
+1. [Create an app](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Click **Deploy to Cloud** from the app details page.
 3. Select **Deploy to a Virtual Server** along with the region in which to run your server.
 
@@ -63,14 +63,14 @@ To view these environment properties, complete the following steps.
 
 | Property  | Description  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | The [infrastructure API key](#iaas-key) is from the classic infrastructure console. |
-| `TF_VAR_ibm_sl_username` | The [infrastructure user name](#user-key) that identifies the classic infrastructure account |
-| `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [API key](#platform-key) is used to enable service creation. |
-| `PUBLIC_KEY` | [Public key](#public-key) that is defined to enable access to the virtual server instance. |
-| `PRIVATE_KEY` | [Private key](#public-key) that is defined to enable access to the virtual server instance. You must use `\n` newline style formatting. |
+| `TF_VAR_ibm_sl_api_key` | The [infrastructure API key](/docs/apps/vsi-deploy.html#iaas-key) is from the classic infrastructure console. |
+| `TF_VAR_ibm_sl_username` | The [infrastructure user name](/docs/apps/vsi-deploy.html#user-key) that identifies the classic infrastructure account |
+| `TF_VAR_ibm_cloud_api_key` | The {{site.data.keyword.cloud_notm}} [API key](/docs/apps/vsi-deploy.html#platform-key) is used to enable service creation. |
+| `PUBLIC_KEY` | [Public key](/docs/apps/vsi-deploy.html#public-key) that is defined to enable access to the virtual server instance. |
+| `PRIVATE_KEY` | [Private key](/docs/apps/vsi-deploy.html#public-key) that is defined to enable access to the virtual server instance. You must use `\n` newline style formatting. |
 | `VI_INSTANCE_NAME` | Auto-generated name for the virtual server instance |
-| `GIT_USER` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab user name is required. |
-| `GIT_PASSWORD` | If you set the [Terraform state](#tform-state) to store the state of the apply command, the GitLab password is required. |
+| `GIT_USER` | If you set the [Terraform state](/docs/apps/vsi-deploy.html#tform-state) to store the state of the apply command, the GitLab user name is required. |
+| `GIT_PASSWORD` | If you set the [Terraform state](/docs/apps/vsi-deploy.html#tform-state) to store the state of the apply command, the GitLab password is required. |
 {: caption="Table 1. Environment variables to change for enablement" caption-side="top"}
 
 
@@ -85,7 +85,7 @@ Terraform requires a classic infrastructure API key to create infrastructure res
 4. Copy or download the API key `TF_VAR_ibm_sl_api_key`, and save it in a safe place. You can retrieve the details of the API key later by using the **View details** option from the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu.
 5. Paste the copied API key value into the toolchain configuration to replace the `TF_VAR_ibm_sl_api_key`.
 
-For more information, see [Managing classic infrastructure API keys](/docs/iam/classic_infra_keys.html) and [Classic infrastructure permissions](/docs/iam/infrastructureaccess.html).
+For more information, see [Managing classic infrastructure API keys](/docs/iam/classic_infra_keys.html#classic_keys) and [Classic infrastructure permissions](/docs/iam/infrastructureaccess.html#infrapermission).
 
 #### Classic infrastructure user name
 {: #user-key}
@@ -147,7 +147,7 @@ To enable the state storage, `GIT_USER` and `GIT_PASSWORD` are automatically con
 The Terraform state is stored in a branch that is called `terraform`, and doesn't trigger the pipeline to run if it was changed.
 
 ### Enabling Git operations
-{: #git-repo}
+{: #git-repo-vsi}
 
 When the app is deployed to {{site.data.keyword.cloud_notm}}, a GitLab repository is created to host the code for source code management. You can use Git operations to enable teams to work and deliver changes to your app. The folders included in this repository and an explanation of their contents.
 
@@ -193,7 +193,7 @@ variable "datacenter" {
 ```
 
 ### Understanding the toolchain stages
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 The toolchain shows infrastructure and app deployment in one simple pipeline. Break the infrastructure as code part into one pipeline and the app deployment into another pipeline.
 

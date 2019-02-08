@@ -43,7 +43,7 @@ After you create your starter kit app and toolchain, you start your development 
 
 ![Develop locally](images/dev_code_locally.png "Develop locally") Figure 3. Developing locally flow
 
-The basic functions for {{site.data.keyword.dev_cli_notm}} are `ibmcloud dev build` and `ibmcloud dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) for more details.
+The basic functions for {{site.data.keyword.dev_cli_notm}} are `ibmcloud dev build` and `ibmcloud dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview) for more details.
 {: tip}
 
 ## Deliver and manage in {{site.data.keyword.cloud_notm}}

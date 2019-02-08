@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-12-13"
+  years: 2016, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -15,97 +15,95 @@ lastupdated: "2018-12-13"
 {:note: .note}
 
 # Creating an app from scratch
-{: #tutorial}
+{: #tutorial-scratch}
 
-You can create a custom application from scratch by using services and a runtime. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
+You can create a custom application from scratch by using services and a runtime. 
 {: shortdesc}
 
-## Step 1. Install the tools
-{: #install-tools}
+## Before you begin
+{: #prereqs-scratch}
 
-Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), which include Docker. 
+* Create a Docker account, run the Docker app, and sign in. Docker must be running for the build commands to work.
+* If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry/prepare-account.html#prepare).
 
-Docker is installed as part of the Developer Tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
+## Creating your app
+{: #create-scratch}
 
-## Step 2. Create an app from scratch
-{: #create-devex}
+1. From your [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com), click **Create an app** in the Apps widget.
 
-Create a custom app in the {{site.data.keyword.cloud}} dashboard:
-
-1. From the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), select **Create** to create a custom application.
-
-  You can also create a custom app from the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select **Create** to create a custom application.
+  You can also create a custom app from the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}.
   {: tip}
 
-2. Enter your app name. For this tutorial, use `CustomProject`.
-3. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.cloud.ibm.com`
-4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources/tagging_resources.html).
-5. Select your language and framework. Some starter kits might be available only in one language.
+2. Enter a name for your app. For this tutorial, type `CustomProject`.
+3. Enter a unique host name, for example, `abc-devhost`. The host name is used for your app's route, for example, `abc-devhost.cloud.ibm.com`
+4. You can optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources/tagging_resources.html#tag).
+5. Select your language and framework. Some starter kits might be available in only one language.
 6. Select your pricing plan. You can use the free option for this tutorial.
 7. Click **Create**.
 
-## Step 3. Add resources (Optional)
-{: #add-services}
+## Adding resources (optional)
+{: #resources-scratch}
 
-You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, you can add a place to manage your data.
 
 1. From the App Service window, select click **Add Resource**.
 2. Select the kind of service you want. For example, select **Data** > **Next** > **Cloudant** > **Next**.
 3. Select your pricing plan. You can use the free option for this tutorial.
 4. Click **Create**.
 
-## Step 4. Building and running the app locally
-{: #build-run}
+## Building and running the app locally
+{: #build-run-scratch}
 
-You can also build the app locally for testing before you push it to the cloud.
+You can also build the app locally for testing before you deploy it to the cloud.
 
 1. From the App Service window, click **Download Code** or **Clone your repo** to work with your code locally.
 2. Import the app to your integrated development environment.
 3. Modify the code.
 4. Set up [Git authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication) by adding a personal access token.
-5. Log in to the {{site.data.keyword.cloud_notm}} command line interface. If your organization uses federated logins, use the `-sso` option.
+5. Log in to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). If your organization uses federated logins, use the `-sso` option, for example:
 
   ```bash
   ibmcloud login -sso
   ```
   {: pre}
 
-6. Set your org and space targets.
+6. Run the following command to set your org and space targets.
 
   ```bash
   ibmcloud target --cf
   ```
   {: pre}
 
-7. Get the credentials.
+7. Run the following command to retrieve the credentials.
 
   ```bash
   ibmcloud dev get-credentials
   ```
   {: pre}
 
-8. Make sure that Docker is running and build your app in a local development container from the directory.
+8. Make sure that Docker is running, and run the following command to build your app in a local development container from the directory.
 
   ```bash
   ibmcloud dev build
   ```
   {: pre}
 
-9. Run your app in a local development container.
+9. Run the following command to run your app in a local development container.
 
   ```bash
   ibmcloud dev run
   ```
   {: pre}
 
-10. Open your browser to `http://localhost:3000`. Your port number might be different depending on your chosen runtime.
+10. Go to `http://localhost:3000` in your browser. Your port number might be different depending on your chosen runtime.
 
-## Step 5. Deploy your app
-{: #deploy}
+## Deploying your app
+{: #deploy-scratch}
 
 You can deploy your app to {{site.data.keyword.cloud_notm}} several ways, but a DevOps toolchain is the best way to deploy production apps. With a DevOps toolchain, you can easily automate deployments to lots of environments and quickly add monitoring, logging, and alert services to help manage your app as it grows.
 
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment platform you choose, whether it's Kubernetes or Cloud Foundry.
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about), or [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
 
 All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
 {: note}
@@ -122,20 +120,21 @@ You can also manually deploy your app from your DevOps toolchain:
 Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
 For more information, see:
-* [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html) with Continuous Delivery.
-* [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html) from a template.
+* [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_build_deploy) with Continuous Delivery.
+* [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started) from a template.
 
 ### Automatic deployment with a DevOps toolchain
 
 1. From the App Details page, click **Deploy to Cloud**.
 2. Select a deployment method. Set up your deployment method according to the instructions for the method you choose:
-  * Deploy to a Kubernetes Cluster. Create a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
-  * Deploy with Cloud Foundry, where you don’t need to manage the underlying infrastructure.
-  * Deploy to a Virtual Server Instance.
+  * **Deploy to [Kubernetes](/docs/apps/deploying/containers.html#containers)**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
+  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** or **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
+  * **Deploy to a [Virtual Server](/docs/apps/vsi-deploy.html#vsi-deploy)**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you.
 
 Deploying your app to the cloud in the last step creates a toolchain automatically. The toolchain creates a Git repository for your app where you can find the code. 
 
 ### Deploy by using the {{site.data.keyword.dev_cli_short}}
+{: #deploy-scratch-cli}
 
 To deploy your app to Cloud Foundry, enter the following command:
 ```
@@ -149,7 +148,7 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-## Step 6. Verify that your app is running
-{: #verify}
+## Verifying that your app is running
+{: #verify-scratch}
 
 After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.cloud.ibm.com`. Go to that URL in your browser.

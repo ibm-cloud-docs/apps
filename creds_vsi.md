@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Adding credentials to your virtual instance or local docker environment
-{: #add_credentials}
+{: #add-credentials-vsi}
 
 Learn how to add service credentials to your virtual server instance or local docker deployment environment.
 {: shortdesc}
 
 ## Your code + Virtual Server Instance or local docker
-{: #byoc_vsi}
+{: #credentials-byoc-vsi}
 
 Under VSI or local docker, the environment is entirely yours. For example, you can write your code like the following example, and provide the credential's environment value to your application when you run it.
 ```
@@ -43,13 +43,14 @@ docker run -p 80:8080 -e password="someThingSensitive"
 {: codeblock}
 
 ## Starter kit + VSI (or local Docker)
-{: #sk_vsi}
+{: #credentials-starterkit-vsi}
 
 ### How the virtual server instance is prepared
 
 The environment is entirely under your control, as if you're running the application from your notebook. In other words, local Docker. Because VSI is effectively bare metal from the running application's perspective, no _secrets_ (like in Kubernetes) or _services_ (like in Cloud Foundry) exist.
 
-### The starter kit-generated code
+### The starter kit generated code
+{: #starterkit-generated-code-vsi}
 
 Code that is generated from a starter kit has the native `IBMCloudEnv` library, which abstracts the retrieval of environment values so that the application code is portable to run on several target deployments. With virtual or local Docker, that environment must be prepared with values that satisfy the `IBMCloudEnv` library that _don't necessarily_ come from actual environment variables.
 
@@ -76,7 +77,7 @@ If you use `git clone` on the created GitLab repository to start active developm
 You can retrieve the `server/localdev-config.json` file by completing these steps:
 
 1. Use `git clone` on the Git lab repository that was automatically created when you used the "Deploy to Cloud" feature.
-2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html), which includes the `dev` plug-in.
+2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview), which includes the `dev` plug-in.
 3. Use the `ibmcloud` command line to log in to {{site.data.keyword.cloud_notm}}.
 4. Run `ibmcloud dev get-credentials`, which refers to the `cli-config.yml` file. The `cli-config.yml` file includes information about which application and generation job has the credentials.
 
