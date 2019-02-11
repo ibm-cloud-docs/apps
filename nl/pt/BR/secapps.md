@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -64,6 +64,9 @@ empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.<
 <dt>Nome comum</dt>
 <dd>O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.</dd>
 </dl>
+
+É possível usar Subject Alternnative Names (SAN), mas os nomes de host fornecidos não devem ser emitidos em outros certificados implementados para evitar colisões de CN.
+{: note}
 
 ## Fazendo upload de certificados SSL
 {: #ssl_certificate}

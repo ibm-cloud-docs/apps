@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -54,6 +54,9 @@ CSR이 유효하려면 CSR을 작성할 때 다음 정보를 입력해야 합니
 <dt>공통 이름</dt>
 <dd>SSL 인증서 요청의 대상인 완전한 도메인 이름(FQDN)입니다.</dd>
 </dl>
+
+SAN(Subject Alternative Names)을 사용할 수 있지만 CN 충돌을 방지하기 위해 제공된 호스트 이름을 배치된 다른 인증서에 발행하면 안 됩니다.
+{: note}
 
 ## SSL 인증서 업로드
 {: #ssl_certificate}
