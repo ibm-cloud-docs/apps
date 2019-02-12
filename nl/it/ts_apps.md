@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2018
-
-lastupdated: "2018-11-21"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -28,112 +26,39 @@ I problemi generali con la creazione delle applicazioni potrebbero includere app
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire delle azioni ed è possibile che ti venga richiesto di salvare le modifiche prima di continuare.
+Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire le azioni. È possibile che ti venga richiesto di salvare le modifiche prima di poter continuare.
 
-Quanto tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, continui a visualizzare il seguente messaggio di errore:
+Quando tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 `You have unsaved changes. Are you sure you want to leave this page?`
 
-Quando passi il mouse sul campo **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento previsto; tuttavia, il messaggio di errore ti richiede di salvare le impostazioni della memoria o dell'istanza prima di uscire dalla pagina.
+Quando passi il mouse sui campi **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento progettato. Tuttavia ti viene richiesto di salvare le impostazioni della memoria o dell'istanza prima di passare a un'altra pagina.
 {: tsCauses}
 
-Chiudi la finestra del messaggio, quindi fai clic su **REIMPOSTA** nel riquadro del runtime.
+Chiudi la finestra di dialogo del messaggio e fai clic su **RESET** nel tuo riquadro di runtime.
 {: tsResolve}
 
-## Il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}} non è disponibile
+## Il failover automatico tra le regioni {{site.data.keyword.cloud_notm}} non è disponibile
 {: #ts_failover}
 {: troubleshoot}
 
-Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra molti indirizzi IP.
+Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.cloud}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra molti indirizzi IP.
 
-Quando una regione {{site.data.keyword.Bluemix_notm}} non è più disponibile, anche le applicazioni in esecuzione in tale regione non saranno più disponibili, anche se le stesse applicazioni sono in esecuzione in un'altra regione {{site.data.keyword.Bluemix_notm}}.
+Quando una regione {{site.data.keyword.cloud_notm}} non è più disponibile, anche le applicazioni in esecuzione in tale regione non saranno più disponibili, anche se le stesse applicazioni sono in esecuzione in un'altra regione {{site.data.keyword.cloud_notm}}.
 {: tsSymptoms}
 
-{{site.data.keyword.Bluemix_notm}} non fornisce ancora il failover automatico da una regione all'altra.
+{{site.data.keyword.cloud_notm}} non fornisce ancora il failover automatico da una regione all'altra.
 {: tsCauses}
 
-Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.Bluemix_notm}}. I provider DNS con questa funzione comprendono NSONE, Akamai, Dyn.
+Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.cloud_notm}}. I provider DNS con questa funzione comprendono NSONE, Akamai e Dyn.
 {: tsResolve}
 
-Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.Bluemix_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico di una regione {{site.data.keyword.Bluemix_notm}}, utilizza il comando `nslookup`. Ad esempio, puoi immettere il seguente comando in una finestra della riga di comando.
-
+Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.cloud_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico di una regione {{site.data.keyword.cloud_notm}}, utilizza il comando `nslookup`. Ad esempio, puoi immettere il seguente comando in una finestra della riga di comando.
 ```
-nslookup mybluemix.net
+nslookup cloud.ibm.com
 ```
-
-## Impossibile attivare la modalità di debug nelle applicazioni
-{: #ts_debug}
-{: troubleshoot}
-
-Non puoi abilitare la modalità di debug se la versione della JVM (Java virtual machine) è 8 o precedente.
-
-Dopo aver selezionato **Enable application debug**, gli strumenti tentano di attivare la modalità di debug nell'applicazione. Quindi, il workbench di Eclipse avvia una sessione di debug. Quando gli strumenti hanno abilitato correttamente la modalità di debug, lo stato dell'applicazione web visualizza `Updating mode`, `Developing` e `Debugging`.
-{: tsSymptoms}
-
-Tuttavia, quando gli strumenti non riescono ad abilitare la modalità di debug, lo stato dell'applicazione web visualizza solo `Updating mode` e `Developing` e non visualizza `Debugging`. Gli strumenti visualizzano inoltre il seguente messaggio di errore nella vista Console:
-
-```
-bluemixMgmgClient - ???? [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-at java.util.concurrent.FutureTask.run(FutureTask.java:277)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.lang.Thread.run(Thread.java:785)
-Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
-at  org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-at  com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 more
-Caused by: java.util.concurrent.TimeoutException
-at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
-... 7 more
-[2016-01-15 13:33:51.075] bluemixMgmgClient - ????  [pool-1-thread-1] .... ERROR --- ClientProxyImpl: Cannot create the  websocket connections for MyWebProj
-com.ibm.ws.cloudoe.management.client.exception.ApplicationManagementException: javax.websocket.DeploymentException: The HTTP request to initiate the  WebSocket connection failed
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:161)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl$RunServerTask.run(ClientProxyImpl.java:267)
-at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:522)
-at java.util.concurrent.FutureTask.run(FutureTask.java:277)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1153)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-at java.lang.Thread.run(Thread.java:785)
-Caused by: javax.websocket.DeploymentException: The HTTP request to initiate the WebSocket connection failed
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:315)
-at com.ibm.ws.cloudoe.management.client.impl.ClientProxyImpl.onNewClientSocket(ClientProxyImpl.java:158)
-... 6 more
-Caused by: java.util.concurrent.TimeoutException
-at org.apache.tomcat.websocket.AsyncChannelWrapperSecure$WrapperFuture.get(AsyncChannelWrapperSecure.java:505)
-at org.apache.tomcat.websocket.WsWebSocketContainer.processResponse(WsWebSocketContainer.java:542)
-at org.apache.tomcat.websocket.WsWebSocketContainer.connectToServer(WsWebSocketContainer.java:296)
-... 7 more
-```
-
-Le seguenti versioni della JVM (Java virtual machine) non riescono a stabilire una sessione di debug: IBM JVM 7, IBM JVM 8 e versioni precedenti di Oracle JVM 8.
-{: tsCauses}
-
-Se la tua JVM del workbench è di una di queste versioni, potresti avere problemi durante la creazione di una sessione di debug. La versione JVM del workbench è normalmente la JVM di sistema del tuo computer locale. La tua JVM di sistema non è uguale a quella della tua applicazione Java&trade; {{site.data.keyword.Bluemix_notm}} in esecuzione. L'applicazione Java {{site.data.keyword.Bluemix_notm}} viene quasi sempre eseguita sulla JVM IBM e alcune volte sulla JVM OpenJDK.
-
-Per controllare la versione di Java eseguita da {{site.data.keyword.eclipsetoolsfull}}, completa la seguente procedura:
-{: tsResolve}
-
-  1. In IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona **Help** > **About Eclipse** > **Installation Details** > **Configuration**.
-  2. Trova la proprietà `eclipse.vm` dall'elenco. La seguente linea è un esempio di una proprietà `eclipse.vm`:
-
-	```
-	eclipse.vm=C:\Program Files\IBM\ibm-java-sdk-80-win-x86_64\bin\..\jre\bin\j9vm\jvm.dll
-	```
-
-  3. Nella riga di comando, immetti `java -version` dalla directory `bin` della tua installazione Java. Vengono visualizzate le informazioni sulla tua versione Java IBM.
-
-Se il JVM workbench JVM è IBM JVM 7 o 8 o una versione precedente di Oracle JVM 8, completa la seguente procedura per passare a Oracle JVM 8:
-
-  1. Scarica e installa Oracle JVM 8; per i dettagli consulta [Java SE Downloads ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.oracle.com/technetwork/java/javase/downloads/index.html){: new_window}.
-  2. Riavvia Eclipse.
-  3. Controlla se la proprietà `eclipse.vm` punta alla tua nuova installazione di Oracle JVM 8.
+{: codeblock}
 
 
 ## Impossibile riutilizzare i nomi di applicazioni eliminate
@@ -154,28 +79,28 @@ Per eliminare la rotta non utilizzata, completa la seguente procedura:
 {: tsResolve}
 
   1. Controlla se la rotta appartiene allo spazio corrente immettendo il seguente comando:
-
     ```
     ibmcloud cf routes
     ```
+    {: codeblock}
 
   2. Se la rotta non appartiene allo spazio corrente, passa allo spazio o all'organizzazione a cui appartiene immettendo il seguente comando:
-
     ```
     ibmcloud cf target -o org_name -s space_name
     ```
+    {: codeblock}
 
   3. Elimina la rotta dell'applicazione immettendo il seguente comando:
-
     ```
     ibmcloud cf delete-route domain_name -n host_name
     ```
+    {: codeblock}
 
   Ad esempio:
-
   ```
-  ibmcloud cf delete-route mybluemix.net -n app001
+  ibmcloud cf delete-route cf.cloud.ibm.com -n app001
   ```
+  {: codeblock}
 
 ## Impossibile richiamare gli spazi in un'organizzazione
 {: #ts_retrieve_space}
@@ -183,7 +108,7 @@ Per eliminare la rotta non utilizzata, completa la seguente procedura:
 
 Non puoi creare un'applicazione o un servizio se alla tua organizzazione corrente non è associato alcuno spazio.
 
-Quando tenti di creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
+Quando tenti di creare un'applicazione in {{site.data.keyword.cloud_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 `BXNUI0515E: Gli spazi nell'organizzazione non sono stati recuperati. Si è verificato un problema di rete oppure la tua organizzazione corrente non dispone di uno spazio associato ad essa.`
@@ -197,7 +122,7 @@ Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per crea
 * Dalla barra dei menu, fai clic su **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**. Seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
 * Nell'interfaccia riga di comando Cloud Foundry, immetti `cf create-space <space_name> -o <organization_name>`.
 
-Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
+Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati di {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
 
 ## Impossibile effettuare le azioni richieste
 {: #ts_authority}
@@ -221,13 +146,13 @@ Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti meto
 * Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore.
 * Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](/docs/admin/orgs_spaces.html) per i dettagli.
 
-## Impossibile accedere ai servizi {{site.data.keyword.Bluemix_notm}} a causa di errori di autorizzazione
+## Impossibile accedere ai servizi {{site.data.keyword.cloud_notm}} a causa di errori di autorizzazione
 {: #ts_vcap}
 {: troubleshoot}
 
-Gli errori di autorizzazione potrebbero verificarsi quando la tua applicazione accede a un servizio {{site.data.keyword.Bluemix_notm}} e le credenziali del servizio sono hardcoded nell'applicazione.
+Gli errori di autorizzazione potrebbero verificarsi quando la tua applicazione accede a un servizio {{site.data.keyword.cloud_notm}} e le credenziali del servizio sono hardcoded nell'applicazione.
 
-Dopo aver configurato l'applicazione per comunicare con un servizio {{site.data.keyword.Bluemix_notm}}, distribuisci l'applicazione a {{site.data.keyword.Bluemix_notm}}. Tuttavia, non riesci a utilizzare l'applicazione per accedere al servizio {{site.data.keyword.Bluemix_notm}} e ricevi un messaggio di errore.
+Dopo aver configurato l'applicazione per comunicare con un servizio {{site.data.keyword.cloud_notm}}, distribuisci l'applicazione a {{site.data.keyword.cloud_notm}}. Tuttavia, non riesci a utilizzare l'applicazione per accedere al servizio {{site.data.keyword.cloud_notm}} e ricevi un messaggio di errore.
 {: tsSymptoms}
 
 Le credenziali hardcoded nell'applicazione potrebbero non essere corrette. Ogni volta che il servizio viene ricreato, le credenziali per accedervi cambiano.
@@ -239,37 +164,14 @@ Invece di impostare come hardcoded le credenziali nella tua applicazione, utiliz
 ```
 process.env.VCAP_SERVICES
 ```
+
 Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} e [Ruby ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
-
-
-## Impossibile distribuire le applicazioni utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}
-{: #ts_bm_tools_facet}
-{: troubleshoot}
-
-Quando al tuo progetto Eclipse viene applicato un facet non supportato, potresti non essere in grado di distribuire le
-tue applicazioni a {{site.data.keyword.Bluemix_notm}} utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
-
-Puoi distribuire correttamente la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando la CLI Cloud Foundry. Tuttavia, non puoi distribuire l'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} e visualizzi il messaggio di errore: `Project facet <facet_name> is not supported.` Ad esempio:
-{: tsSymptoms}
-`Project facet Cloud Foundry Standalone Application version 1.0 is not supported.`
-
-IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}} associa i progetti ai runtime {{site.data.keyword.Bluemix_notm}} in base ai facet di progetto. I facet definiscono i requisiti per i progetti Java EE in Eclipse e sono utilizzati come parte della configurazione di runtime, in modo che runtime differenti siano associati a progetti differenti. Se il facet applicato al progetto non è supportato da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, non puoi distribuire la tua applicazione utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
-{: tsCauses}
-
-Devi rimuovere il facet dal progetto Eclipse in modo da poter distribuire la tua applicazione utilizzando IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
-{: tsResolve}
-
-Per rimuovere il
-facet, in IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, fai clic su **Project>Properties>Project Facets** per il progetto. Deseleziona quindi la casella di spunta per il facet non supportato.
 
 ## Ricezione di errori 502 Bad Gateway
 {: #ts_502_error}
 {: troubleshoot}
 
-Se ricevi degli errori 502 Bad Gateway quando interagisci
-con le applicazioni su {{site.data.keyword.Bluemix_notm}},
-controlla la pagina degli stati di {{site.data.keyword.Bluemix_notm}}
-ed effettua le operazioni appropriate.
+Se ricevi degli errori `502 Bad Gateway` quando interagisci con le applicazioni su {{site.data.keyword.cloud_notm}}, controlla la pagina degli stati di {{site.data.keyword.cloud_notm}} ed effettua le operazioni appropriate.
 
 Ricevi dei messaggi di errore che iniziano con 502 Bad Gateway. Ad esempio, potresti vedere `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
@@ -280,7 +182,7 @@ browser. Questo codice di stato indica che il server principale del sito non ha 
 
 Altre cause meno comuni di un errore Bad Gateway sono interruzioni ISP (Internet Service Provider), configurazioni firewall non valide ed errori della cache del browser.
 
-Se sospetti che un servizio {{site.data.keyword.Bluemix_notm}} sia inattivo, controlla prima la pagina sugli [stati di {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione potrebbe essere quella di utilizzare il servizio in un'altra regione {{site.data.keyword.Bluemix_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo dei servizi in un'altra regione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
+Se sospetti che un servizio {{site.data.keyword.cloud_notm}} sia inattivo, controlla prima la pagina sugli [stati di {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione potrebbe essere quella di utilizzare il servizio in un'altra regione {{site.data.keyword.cloud_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo dei servizi in un'altra regione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
 prova le seguenti operazioni per risolvere il problema:
 {: tsResolve}
 
@@ -289,8 +191,8 @@ prova le seguenti operazioni per risolvere il problema:
     * Utilizza un browser differente.
     * Riavvia il router, il modem e il computer. Il riavvio di questi
 dispositivi può cancellare i diversi errori che portano all'errore 502.
-  * Attendi e riprova in seguito. Possono verificarsi dei problemi temporanei con il tuo provider dei servizi internet o con i servizi {{site.data.keyword.Bluemix_notm}}. Puoi attendere finché i problemi non vengono risolti.
-  * Se il problema persiste, contatta il supporto {{site.data.keyword.Bluemix_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.Bluemix_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
+  * Attendi e riprova in seguito. Possono verificarsi dei problemi temporanei con il tuo provider dei servizi internet o con i servizi {{site.data.keyword.cloud_notm}}. Puoi attendere finché i problemi non vengono risolti.
+  * Se il problema persiste, contatta il supporto {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
 
 ## Quota disco superata
 {: #ts_disk_quota}
@@ -302,9 +204,7 @@ ottenere ulteriore spazio sul disco.
 Se esaurisci lo spazio su disco, potresti visualizzare un messaggio
 che indica che la quota di disco è stata superata. Per risolvere il problema,
 potresti aver tentato di ridimensionare la tua istanza dell'applicazione per ottenere ulteriore spazio
-su disco. Ad esempio, avresti potuto eseguire il ridimensionamento da 256 MB a 1256 MB modificando
-la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poiché la quota di
-disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco.
+su disco. Ad esempio, avresti potuto eseguire il ridimensionamento da 256 a 1256 MB modificando la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poiché la quota di disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco.
 {: tsSymptoms}
 
 La quota di disco predefinita assegnata a un'applicazione è 1
@@ -317,22 +217,23 @@ sufficiente, prova un servizio esterno come [Object Store](/docs/services/Object
 {: tsResolve}
 
   * Nel file manifest.yml, aggiungi la seguente voce:
-    ```
+  ```yaml
 	disk_quota: <quota_disco>
 	```
-  * Utilizza l'opzione **-k** con il comando `ibmcloud cf push` quando esegui il push della tua applicazione a {{site.data.keyword.Bluemix_notm}}:
-    
+  * Utilizza l'opzione **-k** con il comando `ibmcloud cf push` quando esegui il push della tua applicazione a {{site.data.keyword.cloud_notm}}:
+
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
+  {: codeblock}
 
-## Android apps can't receive {{site.data.keyword.mobilepushshort}}
+## Le applicazioni Android non possono ricevere {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
 {: troubleshoot}
 
-In alcune regioni in cui Google non è accessibile, le applicazioni Android non possono ricevere le notifiche che invii tramite il servizio IBM {{site.data.keyword.mobilepushshort}} service. In questo caso, una soluzione potrebbe consistere nell'utilizzare servizi di terze parti.
+In alcune regioni in cui Google non è accessibile, le applicazioni Android non possono ricevere le notifiche che invii tramite il servizio IBM {{site.data.keyword.mobilepushshort}}. In questo caso, una soluzione potrebbe consistere nell'utilizzare servizi di terze parti.
 
-Esegui il bind di un servizio {{site.data.keyword.mobilepushshort}} per la tua applicazione {{site.data.keyword.Bluemix_notm}} e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni sviluppate su Android non possono ricevere le tue notifiche in determinate regioni.
+Esegui il bind di un servizio {{site.data.keyword.mobilepushshort}} per la tua applicazione {{site.data.keyword.cloud_notm}} e invii un messaggio ai dispositivi registrati. Tuttavia, le applicazioni sviluppate su Android non possono ricevere le tue notifiche in determinate regioni.
 {: tsSymptoms}
 
 Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (Google Cloud Messaging) per inviare notifiche alle applicazioni mobili sviluppate su Android. Per consentire alle applicazioni Android di ricevere le notifiche,
@@ -343,16 +244,17 @@ mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il 
 Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://pushy.me){: new_window}, [getui ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.getui.com/){: new_window} e [jpush ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.jpush.cn/){: new_window}.
 {: tsResolve}
 
-## Org's services limit is exceeded
+## Limite dei servizi dell'organizzazione superato
 {: #ts_servicelimit}
 {: troubleshoot}
 
-Se utilizzi un account utente Lite, potresti non riuscire a creare un'applicazione in {{site.data.keyword.Bluemix_notm}} se hai superato il limite dei servizi della tua organizzazione.
+Se utilizzi un account utente Lite, potresti non riuscire a creare un'applicazione in {{site.data.keyword.cloud_notm}} se hai superato il limite dei servizi della tua organizzazione.
 
-Quando provi a creare un'applicazione in {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
+Quando tenti di creare un'applicazione in {{site.data.keyword.cloud_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite dei servizi dell'organizzazione."`
+`BXNUI2032E: La risorsa <service_instances> non è stata creata. Si è verificato un errore mentre Cloud Foundry stava venendo contattato per creare la risorsa. Messaggio di Cloud Foundry: "È stato superato il limite
+dei servizi dell'organizzazione."`
 
 Questo errore si verifica quando superi il limite per il numero di istanze del servizio che puoi avere per l'account.
 {: tsCauses}
@@ -360,56 +262,65 @@ Questo errore si verifica quando superi il limite per il numero di istanze del s
 Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite per il numero di istanze del servizio che puoi avere.
 {: tsResolve}
 
-  * Per eliminare un'istanza dei servizi, puoi utilizzare la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando.
+  * Per eliminare un'istanza dei servizi, puoi utilizzare la console {{site.data.keyword.cloud_notm}} o l'interfaccia riga di comando.
 
-    Per utilizzare la console {{site.data.keyword.Bluemix_notm}} per eliminare un'istanza del servizio, completa la seguente procedura:
+    Per utilizzare la console {{site.data.keyword.cloud_notm}} per eliminare un'istanza del servizio, completa la seguente procedura:
 	  1. Nell'elenco risorse, fai clic sul menu **Azioni** per il servizio che vuoi eliminare.
 	  2. Fai clic su **Elimina servizio**. Ti viene richiesto di preparare nuovamente l'applicazione a cui era associata l'istanza del servizio.
 
-    Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del servizio, completa la seguente procedura:
-	  3. Annulla il bind dell'istanza del servizio a un'applicazione. Immetti `cf unbind-service <appname> <service_instance_name>`.
+    Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
+servizio, completa la seguente procedura:
+	  3. Annulla il bind dell'istanza del servizio da un'applicazione. Immetti `cf unbind-service <appname> <service_instance_name>`.
 	  4. Elimina l'istanza del servizio. Immetti `cf delete-service <service_instance_name>`.
 	  5. Dopo che hai eliminato l'istanza del servizio, potresti voler ripreparare la tua applicazione a cui era associata mediante bind l'istanza del servizio. Immetti `cf restage <appname>`.
 
-  * Per rimuovere il limite sul numero di istanze del servizio di cui disponi, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Upgrade del tuo account](/docs/account/index.html#upgrade-to-paygo).
+  * Per rimuovere il limite sul numero di istanze del servizio che puoi avere, aggiorna il tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
 
-## Executable files can't be run on {{site.data.keyword.Bluemix_notm}}
+## Impossibile eseguire i file eseguibili su {{site.data.keyword.cloud_notm}}
 {: #ts_executable}
 {: troubleshoot}
 
-Potresti non riuscire ad eseguire i file eseguibili su {{site.data.keyword.Bluemix_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
+Potresti non riuscire ad eseguire i file eseguibili su {{site.data.keyword.cloud_notm}} se tali eseguibili sono stati sviluppati e creati in un ambiente diverso.
 
-Non puoi eseguire gli eseguibili su {{site.data.keyword.Bluemix_notm}} se questi eseguibili sono stati sviluppati e creati in un ambiente diverso.
+Non puoi eseguire gli eseguibili su {{site.data.keyword.cloud_notm}} se questi eseguibili sono stati sviluppati e creati in un ambiente diverso.
 {: tsSymptoms}
 
-Se il contenuto di cui desideri eseguire il push a {{site.data.keyword.Bluemix_notm}} è già un eseguibile, il contenuto è stato creato precedentemente e non è necessario crearlo in {{site.data.keyword.Bluemix_notm}}. In questo caso, non è richiesto alcun pacchetto di build per l'eseguibile da eseguire
-su {{site.data.keyword.Bluemix_notm}}. Devi indicare esplicitamente a {{site.data.keyword.Bluemix_notm}} che non è richiesto alcun pacchetto di build.
+Se il contenuto che desideri distribuire a {{site.data.keyword.cloud_notm}} è
+già un eseguibile, il contenuto è stato creato precedentemente e non è necessario
+crearlo in {{site.data.keyword.cloud_notm}}. In questo caso, non è richiesto alcun pacchetto di build per l'eseguibile da eseguire
+su {{site.data.keyword.cloud_notm}}. Devi indicare esplicitamente a {{site.data.keyword.cloud_notm}} che non è richiesto alcun pacchetto di build.
 {: tsCauses}
 
-Quando esegui il push dell'eseguibile a {{site.data.keyword.Bluemix_notm}}, devi specificare un `null-buildpack`, che indica che non è richiesto alcun pacchetto di build. Specifica un `null-buildpack` utilizzando l'opzione **-b** con il comando `ibmcloud cf push`:
+Quando distribuisci l'eseguibile a {{site.data.keyword.cloud_notm}},
+devi specificare `null-buildpack`, che indica che
+non è richiesto alcun pacchetto di build. Specifica `null-buildpack` utilizzando l'opzione **-b** con il comando `ibmcloud cf push`:
 {: tsResolve}
 
 ```
 ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
+{: codeblock}
 
 Ad esempio:
 ```
 ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
+{: codeblock}
 
-## Org's memory limit is exceeded
+## Limite di memoria dell'organizzazione superato
 {: #ts_outofmemory}
 {: troubleshoot}
 
-Se utilizzi un account utente Lite, potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} se hai superato il limite di memoria della tua organizzazione. Puoi
+Se utilizzi un account utente Lite, potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.cloud_notm}} se hai superato il limite di memoria della tua organizzazione. Puoi
 ridurre la memoria utilizzata dalle tue applicazioni o aumentare la quota di memoria
 del tuo account. La quota massima di memoria per un account Lite è 256 MB e può essere aumentata solo eseguendo l'upgrade a un account fatturabile.
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, viene visualizzato il seguente messaggio di errore:
+Quando distribuisci un'applicazione a {{site.data.keyword.cloud_notm}}, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
-`FAILED Errore server, codice di stato: 400, codice di errore: 100005, messaggio: È stato superato il limite di memoria dell'organizzazione.`
+`FAILED Server error,
+status code: 400, error code: 100005, message: You have exceeded your
+organization's memory limit.`
 
 Questo errore si verifica quando la quantità di memoria rimanente per la tua organizzazione è inferiore alla quantità di memoria richiesta dall'applicazione che desideri distribuire. La quota massima di memoria per un account Lite è 256 MB.
 {: tsCauses}
@@ -417,29 +328,29 @@ Questo errore si verifica quando la quantità di memoria rimanente per la tua or
 Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizzata dalle tue applicazioni.
 {: tsResolve}
 
-  * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Upgrade del tuo account](/docs/account/index.html#upgrade-to-paygo).
-  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.Bluemix_notm}} o l'interfaccia riga di comando Cloud Foundry.
+  * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.cloud_notm}} o l'interfaccia riga di comando Cloud Foundry. 
 
-    Se utilizzi la console {{site.data.keyword.Bluemix_notm}}, completa la seguente procedura:
+    Se utilizzi la console {{site.data.keyword.cloud_notm}}, completa la seguente procedura:
 
     1. Seleziona la tua applicazione dall'elenco risorse. Viene visualizzata la pagina dei dettagli dell'applicazione.
     2. Nel riquadro runtime, puoi ridurre il limite massimo di memoria o il numero di istanze dell'applicazione, o entrambi, per tua applicazione.
 
     Se utilizzi l'interfaccia riga di comando, completa la seguente procedura:
 
-    1. Controlla quanta memoria è in uso per le tue applicazioni:
+    1. Verifica la quantità di memoria utilizzata per le tue applicazioni:
+  	  ```
+	    ibmcloud cf list
+	    ```
+      {: codeblock}
 
-	  ```
-	  ibmcloud cf list
-	  ```
-
-	  Il comando `ibmcloud cf list` elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
+	    Il comando `ibmcloud cf list` elenca tutte le applicazioni che hai distribuito nel tuo spazio corrente. Viene visualizzato anche lo stato di ciascuna applicazione.
 
     2. Per ridurre la quantità di memoria utilizzata dalla tua applicazione, riduci il numero di istanze dell'applicazione e/o il limite massimo di memoria.
-
-	  ```
-	  ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
+	    ```
+	    ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
       ```
+      {: codeblock}
 
     3. Riavvia la tua applicazione per rendere effettive le modifiche.
 
@@ -449,7 +360,7 @@ Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizza
 
 Un'applicazione non si riavvia automaticamente se un servizio che associ mediante bind all'applicazione smette di funzionare.
 
-Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.Bluemix_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
+Quando un servizio che associ mediante bind a un'applicazione viene arrestato in modo anomalo, nell'applicazione potrebbero verificarsi dei problemi come interruzioni, eccezioni ed errori di connessione. {{site.data.keyword.cloud_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi.
 {: tsSymptoms}
 
 Questo è il funzionamento progettato da Cloud Foundry.
@@ -461,36 +372,17 @@ Puoi riavviare manualmente l'applicazione immettendo il seguente comando nell'in
 ```
 ibmcloud cf push appname -p app_path
 ```
+{: codeblock}
 
 Inoltre, puoi codificare l'applicazione per identificare e risolvere problemi come interruzioni, eccezioni ed errori di connessione.
 
-## Le variabili definite dall'utente vengono perse dopo l'esecuzione del push di un'applicazione
-{: #ts_varsnotretained}
-{: troubleshoot}
-
-Quando esegui il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, le variabili che hai specificato vengono reimpostate a meno che non salvi tali variabili nel file
-manifest.
-
-Le variabili che hai specificato vengono perse in seguito all'esecuzione del push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}.
-{: tsSymptoms}
-
-Le variabili specificate vengono mantenute solo se le salvi
-nel file manifest.
-{: tsCauses}
-
-Quando esegui il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} da IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}, seleziona la casella di spunta **Salva nel file manifest** nella pagina Dettagli applicazione della procedura guidata Applicazione. Quindi,
-le variabili che hai specificato nella
-procedura guidata vengono
-salvate nel file manifest della tua applicazione. La prossima volta che apri la procedura guidata, le variabili vengono visualizzate automaticamente.
-{: tsResolve}
-
 <!-- begin STAGING ONLY -->
 
-## Il debug di {{site.data.keyword.Bluemix_notm}} Live Sync non si avvia dalla riga di comando
+## Il debug di {{site.data.keyword.cloud_notm}} Live Sync non si avvia dalla riga di comando
 {: #ts_no_debug}
 {: troubleshoot}
 
-Hai abilitato la funzione Debug di {{site.data.keyword.Bluemix_notm}} Live Sync per la tua applicazione utilizzando la riga di comando, ma non riesci ad accedere all'interfaccia Debug.
+Hai abilitato la funzione Debug di {{site.data.keyword.cloud_notm}} Live Sync per la tua applicazione utilizzando la riga di comando, ma non riesci ad accedere all'interfaccia Debug.
 
 Hai abilitato la funzione Debug per la tua applicazione impostando la variabile di ambiente **BLUEMIX_APP_MGMT_ENABLE**. Tuttavia, non riesci ad accedere all'interfaccia utente Debug in `app_url/bluemix-debug/manage`.
 {: tsSymptoms}
@@ -499,59 +391,53 @@ La funzione Debug non può essere abilitata nelle seguenti situazioni:
 {: tsCauses}
 
   * Quando `manifest.yml` contiene l'attributo di comando
-  * Quando utilizzi l'opzione **-c** per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}
+  * Quando utilizzi l'opzione **-c** per distribuire un'applicazione a {{site.data.keyword.cloud_notm}}
 
 Per risolvere il problema utilizza una delle seguenti opzioni:
 {: tsResolve}
 
-  * La procedura consigliata è quella di utilizzare il pacchetto di build IBM Node.js per avviare l'applicazione. Per ulteriori informazioni, consulta la sezione del comando di avvio dell'argomento [Distribuzione di un'applicazione Node.js a {{site.data.keyword.Bluemix_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).
+  * La procedura consigliata è quella di utilizzare il pacchetto di build IBM Node.js per avviare l'applicazione. Per ulteriori informazioni, consulta la sezione del comando di avvio dell'argomento [Distribuzione di un'applicazione Node.js a {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime).
   * Disabilita il comando per la tua applicazione esistente riesaminando l'attributo di comando in `manifest.yml` per command: null o modificando il comando push per includere `-c null`.
-  * Rimuovi l'attributo di **comando** da `manifest.yml`. Elimina quindi l'applicazione corrente da {{site.data.keyword.Bluemix_notm}} ed esegui nuovamente il push dell'applicazione.
+  * Rimuovi l'attributo di **comando** da `manifest.yml`. Elimina quindi l'applicazione corrente da {{site.data.keyword.cloud_notm}} ed esegui nuovamente il push dell'applicazione.
 
 <!-- end STAGING ONLY -->
 
-## Impossibile trovare le organizzazioni in {{site.data.keyword.Bluemix_notm}}
+## Impossibile trovare le organizzazioni in {{site.data.keyword.cloud_notm}}
 {: #ts_orgs}
 {: troubleshoot}
 
-Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.Bluemix_notm}} quando
-lavori su una regione {{site.data.keyword.Bluemix_notm}}.
+Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.cloud_notm}} quando
+lavori su una regione {{site.data.keyword.cloud_notm}}.
 
-Puoi accedere correttamente alla console {{site.data.keyword.Bluemix_notm}} ma non puoi eseguire il push delle applicazioni utilizzando l'interfaccia riga di comando Cloud Foundry o il plug-in Eclipse.
+Puoi accedere correttamente alla console {{site.data.keyword.cloud_notm}} ma non puoi eseguire il push delle applicazioni utilizzando l'interfaccia riga di comando Cloud Foundry.
 {: tsSymptoms}
 
-Quando provi ad eseguire il push di un'applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, vedi uno dei seguenti messaggi di errore con il nome dell'organizzazione specificato nel messaggio.
+Quando provi ad eseguire il push di un'applicazione a {{site.data.keyword.cloud_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, vedi uno dei seguenti messaggi di errore con il nome dell'organizzazione specificato nel messaggio.
 
 `Error finding org`
 
 `Organization not found`
 
-Quando tenti di eseguire il push di un'applicazione a {{site.data.keyword.Bluemix_notm}}
-utilizzando il plug-in Eclipse Cloud Foundry, visualizzi il seguente messaggio di
-errore:
-
-`cloudspace not found.`
-
 Questo problema si verifica poiché l'endpoint API della regione che vuoi utilizzare non è specificato e l'organizzazione che stai cercando potrebbe trovarsi in una regione differente.
 {: tsCauses}
 
-Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, immetti il comando `cf api` e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.Bluemix_notm}} Europa
+Se stai eseguendo il push della tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, immetti il comando `cf api` e specifica l'endpoint API della regione. Ad esempio, immetti il seguente comando per stabilire una connessione alla regione {{site.data.keyword.cloud_notm}} Europa
 Regno Unito:
 {: tsResolve}
 
 ```
-cf api https://api.eu-gb.bluemix.net
+cf api https://api.eu-gb.cf.cloud.ibm.com
 ```
+{: codeblock}
 
-Se stai eseguendo il push della tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando gli strumenti Eclipse, devi prima creare un server {{site.data.keyword.Bluemix_notm}} e specificare l'endpoint API della regione {{site.data.keyword.Bluemix_notm}} in cui è stata creata la tua organizzazione. Per ulteriori informazioni sull'utilizzo degli strumenti Eclipse, vedi [Distribuzione di applicazioni con IBM Eclipse Tools for {{site.data.keyword.Bluemix_notm}}](/docs/manageapps/eclipsetools/eclipsetools.html).
 
 ## Impossibile creare rotte di applicazione
 {: #ts_hostistaken}
 {: troubleshoot}
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
+Quando distribuisci un'applicazione a {{site.data.keyword.cloud_notm}}, la rotta dell'applicazione non può essere creata se il nome host da te specificato è già in uso.
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}}, visualizzi il seguente messaggio di errore:
+Quando distribuisci un'applicazione a {{site.data.keyword.cloud_notm}}, visualizzi il seguente messaggio di errore:
 {: tsSymptoms}
 
 `Creating route hostname.domainname ... FAILED Server error, status code: 400, error code: 210003, message: The host is taken: hostname`
@@ -566,7 +452,7 @@ seguenti metodi:
 {: tsResolve}
 
   * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica il nome host nell'opzione host.
-    ```
+    ```yaml
     host: host_name
 	  ```
 
@@ -574,14 +460,15 @@ seguenti metodi:
     ```
     ibmcloud cf push appname -p app_path -n host_name
     ```
+    {: codeblock}
 
 ## Non è possibile eseguire il push di applicazioni WAR utilizzando il comando ibmcloud cf push
 {: #ts_cf_war}
 {: troubleshoot}
 
-Potresti non riuscire a utilizzare il comando `ibmcloud cf push` per distribuire un'applicazione web archiviata a {{site.data.keyword.Bluemix_notm}} se l'ubicazione dell'applicazione non è specificata correttamente.
+Potresti non riuscire a utilizzare il comando `ibmcloud cf push` per distribuire un'applicazione web archiviata a {{site.data.keyword.cloud_notm}} se l'ubicazione dell'applicazione non è specificata correttamente.
 
-Quando carichi un'applicazione WAR in {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud cf push`, vedi il seguente messaggio di errore:
+Quando carichi un'applicazione WAR in {{site.data.keyword.cloud_notm}} utilizzando il comando `ibmcloud cf push`, vedi il seguente messaggio di errore:
 {: tsSymptoms}
 `Staging error: cannot get instances since staging failed.`
 
@@ -595,19 +482,22 @@ un file WAR o aggiungere il percorso del file WAR. Ad esempio:
 ```
 ibmcloud cf push MyUniqueAppName01 -p app.war
 ```
+{: codeblock}
 
 ```
 ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 ```
+{: codeblock}
+
 Per ulteriori informazioni sul comando `ibmcloud cf push` , immetti `ibmcloud cf push -h`.
 
-## I caratteri double-byte non vengono visualizzati correttamente quando viene eseguito il push delle applicazioni a {{site.data.keyword.Bluemix_notm}}
+## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni a {{site.data.keyword.cloud_notm}}
 {: #ts_doublebytes}
 {: troubleshoot}
 
 I caratteri double-byte potrebbero non essere visualizzati correttamente se il supporto Unicode non è adeguatamente configurato per i file servlet o JSP.
 
-Quando viene eseguito il push di un'applicazione a {{site.data.keyword.Bluemix_notm}}, i caratteri double-byte specificati all'interno dell'applicazione non vengono visualizzati correttamente.
+Quando un'applicazione viene distribuita a {{site.data.keyword.cloud_notm}}, i caratteri double-byte specificati all'interno dell'applicazione non vengono visualizzati correttamente.
 {: tsSymptoms}
 
 Il problema può verificarsi se il supporto Unicode non è configurato correttamente per i file servlet o JSP.
@@ -617,22 +507,25 @@ Puoi utilizzare il seguente codice nel tuo file servlet o JSP:
 {: tsResolve}
 
   * Nel file di origine servlet
-  ```
+  ```java
 	response.setContentType("text/html; charset=UTF-8");
 	```
+  {: codeblock}
+
   * Nel JSP
-  ```
+  ```jsp
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	```
+  {: codeblock}
 
 ## Impossibile distribuire le applicazioni Node.js
 {: #ts_nodejs_deploy}
 {: troubleshoot}
 
-Potresti riscontrare dei problemi quando aggiorni un'applicazione Node.js o la distribuisci a {{site.data.keyword.Bluemix_notm}}.
+Potresti riscontrare dei problemi quando aggiorni un'applicazione Node.js o la distribuisci a {{site.data.keyword.cloud_notm}}.
 
 Quando aggiorni un'applicazione Node.js o distribuisci la tua applicazione Node.js
-a {{site.data.keyword.Bluemix_notm}},
+a {{site.data.keyword.cloud_notm}},
 potresti visualizzare uno dei seguenti messaggi di errore:
 {: tsSymptoms}
 
@@ -656,9 +549,10 @@ Utilizza uno dei seguenti metodi in base alla causa del problema:
       ```
 		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
 		  ```
-    * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/jsonfile){: new_window}. Ad
-esempio:
-	    ```
+      {: codeblock}
+
+    * Utilizza il file [package.json ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.npmjs.com/package/jsonfile){: new_window}. Ad esempio:
+	    ```json
 		  {
         ...
   	    "scripts": {
@@ -666,8 +560,8 @@ esempio:
  	   }
 	    }
 	    ```
-    * Utilizza il file `manifest.yml`. Ad
-esempio:
+
+    * Utilizza il file `manifest.yml`. Ad esempio:
 	    ```
 		  applications:
   name: MyUniqueNodejs01
@@ -676,9 +570,11 @@ esempio:
   ...
       ```
 
-  * Assicurati che nella tua applicazione Node.js sia presente un file `package.json` in modo che il pacchetto di build Node.js possa riconoscere l'applicazione. Assicurati inoltre che questo file si trovi nella directory root della tua applicazione.
-    Il seguente esempio mostra un semplice file `package.json`:
-	```
+  * Assicurati che nella tua applicazione Node.js sia presente un file  `package.json` in modo che il pacchetto di build Node.js possa riconoscere l'applicazione. Assicurati inoltre che questo file si trovi nella directory root della tua applicazione.
+    Il seguente
+                                                  esempio mostra un semplice file
+                                                  `package.json`:
+	```json
 	{
         "name": "MyUniqueNodejs01",
         "version": "0.0.1",
@@ -698,16 +594,16 @@ esempio:
 
 Per ulteriori suggerimenti relativi alle applicazioni Node.js, vedi [Tips for Node.js Applications ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
 
-## Sono presenti degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse
+## Sono presenti degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.cloud_notm}} Liberty in Eclipse
 {: #ts_eclipse}
 {: troubleshoot}
 
-Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, potresti dover rimuovere il file `server.xml` dal progetto.
+Se vedi degli errori di configurazione nel file `server.xml` dopo aver importato un'applicazione {{site.data.keyword.cloud_notm}} Liberty in Eclipse, potresti dover rimuovere il file `server.xml` dal progetto.
 
-Dopo aver importato un'applicazione {{site.data.keyword.Bluemix_notm}} Liberty in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
+Dopo aver importato un'applicazione {{site.data.keyword.cloud_notm}} Liberty in Eclipse, vedi degli errori di configurazione nel file `server.xml` dalla vista Problemi di Eclipse.
 {: tsSymptoms}
 
-Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'applicazione e genera un file `runtime-vars.xml` quando viene eseguito il push dell'applicazione Liberty a {{site.data.keyword.Bluemix_notm}}. Quando importi l'applicazione in Eclipse, il file `runtime-vars.xml` non esiste nel tuo ambiente locale.
+Il pacchetto di build Liberty utilizza il file `server.xml` per configurare l'applicazione e genera un file `runtime-vars.xml` quando viene eseguito il push dell'applicazione Liberty a {{site.data.keyword.cloud_notm}}. Quando importi l'applicazione in Eclipse, il file `runtime-vars.xml` non esiste nel tuo ambiente locale.
 {: tsCauses}
 
 Puoi risolvere questo problema rimuovendo il file server.xml dal progetto. Il pacchetto di build crea il file `server.xml` dinamicamente quando
@@ -718,9 +614,9 @@ esegui il push dell'applicazione come un'applicazione WAR. Per ulteriori informa
 {: #ts_bp_compilation}
 {: troubleshoot}
 
-Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}} con un pacchetto di build personalizzato se gli script in questo pacchetto non sono file eseguibili.
+Potresti non riuscire a distribuire un'applicazione a {{site.data.keyword.cloud_notm}} con un pacchetto di build personalizzato se gli script in questo pacchetto non sono file eseguibili.
 
-Quando distribuisci un'applicazione a {{site.data.keyword.Bluemix_notm}} con un pacchetto di build personalizzato, visualizzi il messaggio di errore `La preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
+Quando distribuisci un'applicazione a {{site.data.keyword.cloud_notm}} con un pacchetto di build personalizzato, visualizzi il messaggio di errore `La preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
 {: tsSymptoms}
 
 Questo problema potrebbe verificarsi se gli script, ad esempio lo script di rilevamento, lo script di compilazione e lo script di rilascio, non sono eseguibili.
@@ -729,7 +625,7 @@ Questo problema potrebbe verificarsi se gli script, ad esempio lo script di rile
 Puoi utilizzare il comando [Git update ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://git-scm.com/docs/git-update-index){: new_window} per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
 {: tsResolve}
 
-## Impossibile distribuire un'applicazione da Delivery Pipeline in {{site.data.keyword.Bluemix_notm}} Continuous Delivery
+## Impossibile distribuire un'applicazione da Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
 {: #ts_devops_to_bm}
 {: troubleshoot}
 
@@ -738,7 +634,7 @@ Puoi utilizzare il comando [Git update ![Icona link esterno](../icons/launch-gly
  Quando distribuisci un'applicazione con {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, potresti visualizzare il messaggio di errore `Unable to detect a supported application type`.
  {: tsSymptoms}
 
- Questo problema potrebbe verificarsi perché la pipeline richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.Bluemix_notm}}.
+ Questo problema potrebbe verificarsi perché la pipeline richiede un file `manifest.yml` per distribuire un'applicazione a {{site.data.keyword.cloud_notm}}.
  {: tsCauses}
 
  Per risolvere questo problema, devi creare un file `manifest.yml`. Per ulteriori informazioni su come creare un file `manifest.yml`,
@@ -746,13 +642,13 @@ vedi [Manifest
 dell'applicazione](/docs/manageapps/depapps.html#appmanifest).
  {: tsResolve}
 
-## Impossibile eseguire il push delle applicazioni Meteor
+## Impossibile distribuire le applicazioni Meteor
 {: #ts_meteor}
 {: troubleshoot}
 
-Potresti non riuscire ad eseguire il push di un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}} se il pacchetto di build non è specificato correttamente.
+Potresti non riuscire a distribuire un'applicazione Meteor a {{site.data.keyword.cloud_notm}} se il pacchetto di build non è specificato correttamente.
 
-Quando distribuisci un'applicazione Meteor a {{site.data.keyword.Bluemix_notm}}, potresti visualizzare il messaggio di errore `La
+Quando distribuisci un'applicazione Meteor a {{site.data.keyword.cloud_notm}}, potresti visualizzare il messaggio di errore `La
 preparazione dell'applicazione non è riuscita e, pertanto, non ci sono istanze da visualizzare.`
 {: tsSymptoms}
 
@@ -763,13 +659,15 @@ Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, 
 {: tsResolve}
 
   * Se distribuisci la tua applicazione utilizzando il file `manifest.yml`, specifica l'URL o il nome del pacchetto di build personalizzato usando l'opzione buildpack. Ad esempio:
-  ```
+  ```yaml
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
+
   * Se distribuisci la tua applicazione dal prompt dei comandi, utilizza il comando `ibmcloud cf push` e specifica il tuo pacchetto di build personalizzato usando l'opzione **-b**. Ad esempio:
   ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
+  {: codeblock}
 
 ## Exceeded your storage quota
 {: #exceed_quota}
@@ -793,5 +691,38 @@ Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di 
 * Esporta la variabile di ambiente che è elencata.
 * Visualizza i tuoi pod utilizzando `kubectl get pods`. Se devi installare `kubectl`, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 * Puoi visualizzare i log nella tua applicazione utilizzando `kubectl logs <pod-name>.`
+
+
+## Starting `docker` fails with "file not found" message
+{: #docker_not_found}
+{: troubleshoot}
+
+Quando tenti di avviare Docker, viene visualizzato il seguente messaggio:
+{: tsSymptoms}
+
+```
+An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+```
+{: screen}
+
+Il client Docker non è installato oppure lo è ma non è stato avviato.
+{: tsCauses}
+
+Assicurati che [Docker](https://docs.docker.com/install/) sia installato e avvialo.
+{: tsResolve}
+
+
+## Building an app fails with Docker error
+{: #build_error}
+{: troubleshoot}
+
+Quando tenti di creare un'applicazione con il comando `ibmcloud dev build`, il processo non riesce e ricevi un errore nome utente/password Docker.
+{: tsSymptoms}
+
+Stanno venendo utilizzate per l'autenticazione delle credenziali Docker Hub non corrette.
+{: tsCauses}
+
+Esci da Docker Hub nel client Docker.
+{: tsResolve}
 
 

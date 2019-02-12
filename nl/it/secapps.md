@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -62,6 +62,9 @@ personale. Per le società, assicurati di includere il suffisso di registrazione
 <dd>Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.</dd>
 </dl>
 
+Puoi utilizzare i nomi alternativi dell'oggetto (SAN), ma i nomi host forniti non devono essere emessi in altri certificati distribuiti per evitare collisioni CN.
+{: note}
+
 ## Caricamento di certificati SSL
 {: #ssl_certificate}
 
@@ -107,7 +110,7 @@ il browser web gli richiede di fornire un certificato client per il dominio.
   * Truststore certificato client (facoltativo): include i certificati client per gli utenti a cui vuoi consentire l'accesso alla tua applicazione. Carica un file truststore certificato client per abilitare l'opzione per richiedere un certificato client.
   
     Puoi configurare l'autenticazione reciproca caricando un truststore certificato client che includa una chiave pubblica nei suoi metadati.
-  {: tip}
+    {: tip}
 
 Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
