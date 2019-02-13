@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -84,14 +84,27 @@ Attach a DevOps toolchain to the application, and configure it to be deployed to
 	   * Publishes the image to your private container registry.
 	 * The DEPLOY stage retrieves the container image from your container registry and then deploys it to your Kubernetes cluster.
 3. Click **Delivery Pipeline**. The pipeline stages are displayed.
-4. In the DEPLOY stage, click **View logs and history**.
-5. At the end of the log, look for `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`, which is the URL where you can access your application.
-6. Go to the `/health` endpoint at `http://<ipaddress>:<port>/health`. If the application is running in the cluster, a message that includes `{"status":"UP"}` is displayed.
+4. In the **Deploy Stage** tile, click **View logs and history**.
 
-If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps/ts_apps.html#access_kube_logs) to look for errors.
+## Verifying that your app is running
+{: #verify-starterkit-kube}
+
+After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+
+1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
+2. Click **View logs and history**.
+3. In the log file, find the application URL:
+
+    At the end of the log file, search for `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
+
+FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #next-steps-startkit-kube notoc}
+
+* If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps/ts_apps.html#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring/configuration.html#configuration#accessing-credentials).

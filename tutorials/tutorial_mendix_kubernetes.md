@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -99,6 +99,21 @@ Be sure to replace `{pvc-name}` with the name of your `PersistentVolumeClaim` fr
 Once your `postgres-deployment.yaml` file changes are committed back to the repository, a new execution of the DevOps pipeline is automatically triggered. However, it deploys the default application again. You must redeploy the latest version of the Mendix application in order for the latest version of your application to be deployed with the latest persistent volume changes.
 
 To redeploy, go to your application details page, and click **Deploy Application** within the **Deployment details** tile. If the deployment fails inside the DevOps toolchain with an error that indicates that the application's `.mda` file cannot be found, then you must export it from Mendix again. You can export by exporting from the Mendix Modeler desktop application, or by clicking **Edit on Mendix**. Then, within the Mendix web interface, go to the **Environments** section and follow the steps after you click **Create package from teamserver**. Once your application is exported from Mendix, go back to the application's details page and click **Deploy Application** again. The last exported application is deployed to your Kubernetes cluster by using the {{site.data.keyword.cloud}} DevOps toolchain. Once the deployment completes successfully, your application is live and ready for production use.
+
+## Verifying that your app is running
+{: #verify-mendix-kube}
+
+After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+
+1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
+2. Click **View logs and history**.
+3. In the log file, find the application URL:
+
+    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.cloud.ibm.com` or `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Additional information
 {: #more-info-mendix-kube}

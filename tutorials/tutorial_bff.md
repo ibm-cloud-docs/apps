@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-06"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,11 +11,12 @@ lastupdated: "2019-02-06"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Creating a backend-for-frontend app
 {: #tutorial-bff}
 
-You can create an app from a backend-for-frontend starter. Use these starters to build backend-for-frontend apps in Node.js, Java&reg, or Swift by using various frameworks: Express.js, MicroProfile/ Java EE, Kitura, or Spring. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
+You can create an app from a backend-for-frontend starter. Use these starters to build backend-for-frontend apps in Node.js, Java&reg, or Swift by using various frameworks: Express.js, MicroProfile/ Java&reg EE, Kitura, or Spring. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1. Before you begin
@@ -144,4 +145,14 @@ ibmcloud dev deploy --target <container>
 ## Step 7. Verify that your app is running
 {: #verify-bff}
 
-After you deploy your app, the DevOps pipeline or command line points you to the URL for your app, for example `abc-devhost.cloud.ibm.com`. Go to that URL in your browser.
+After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+
+1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
+2. Click **View logs and history**.
+3. In the log file, find the application URL:
+
+    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.cloud.ibm.com` or `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.

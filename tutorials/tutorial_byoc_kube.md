@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -93,6 +93,7 @@ When you choose to create a toolchain from your new app, the [Create a Toolchain
 If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc-cli).
 
 ## Adding a GitHub integration
+{: #github-byoc-kube}
 
 Configure the DevOps toolchain with an integration for your GitHub repo for the toolchain to set a webhook in your repo so that pull requests and code pushes in that repo send a POST to the toolchain. 
 
@@ -108,12 +109,14 @@ Configure the DevOps toolchain with an integration for your GitHub repo for the 
 You can view the new webhook from your repo settings.
 
 ## Adding a delivery pipeline
+{: #pipeline-byoc-kube}
 
 1. Click **Add a Tool**.
 2. Select **Delivery Pipeline**.
 3. Enter `Continuous Integration` for the pipeline name, and click **Create Integration**.
 
 ## Configuring your pipeline stages
+{: #pipelineconfig-byoc-kube}
 
 Configure the pipeline stages to direct your input (the GitHub repo contents) to the correct destination. Because this tutorial assumes that you have a GitHub repo that produces a working Docker image and is targeting an IBM Containers Kubernetes cluster, you create pipeline stages with inputs, shell scripts, and outputs that achieve this goal.
 
@@ -158,4 +161,19 @@ Configure the pipeline stages to direct your input (the GitHub repo contents) to
     * Select the region where your Kubernetes cluster is located.
     * Enter your existing API key. 
   4. Click **Save**.
-4. Test your `deploy to cluster` pipeline stage by clicking the **Play** icon until the build succeeds. A stage of green indicates that the build is successful. You can view the logs for the stage. Near the end of the logs, find a clickable link to the running app. Append the correct path for your app to confirm that it runs.
+4. Test your `deploy to cluster` pipeline stage by clicking the **Play** icon until the build succeeds. A stage of green indicates that the build is successful.
+
+## Verifying that your app is running
+{: #verify-byoc-kube}
+
+After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+
+1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
+2. Click **View logs and history**.
+3. In the log file, find the application URL:
+
+    At the end of the log file, search for `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
