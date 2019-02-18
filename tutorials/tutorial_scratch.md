@@ -23,7 +23,7 @@ You can create a custom application from scratch by using services and a runtime
 ## Before you begin
 {: #prereqs-scratch}
 
-* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), which include Docker. 
+* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html), which include Docker. 
 * Create a Docker account, run the Docker app, and sign in. Docker must be running for the build commands to work.
 * If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry/prepare-account.html#prepare).
 

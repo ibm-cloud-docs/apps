@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## Step 1. Before you begin
 {: #prereqs-mobile}
 
-* Install the [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html#overview).
+* Install the [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry/prepare-account.html#prepare).
 

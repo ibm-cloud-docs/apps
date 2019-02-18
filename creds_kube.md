@@ -86,7 +86,7 @@ Configure the cluster so that the _secretKeyRef_ with the name `name-secret` and
 
 Use a terminal on your workstation to install the following tools:
 
-1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview).
+1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html).
 2. Log in by using the `ibmcloud login` command.
 3. Connect to your cluster by running `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copy and paste the `export` command to run it from a terminal.

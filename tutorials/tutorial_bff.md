@@ -22,7 +22,7 @@ You can create an app from a backend-for-frontend starter. Use these starters to
 ## Step 1. Before you begin
 {: #prereqs-bff}
 
-* Install the [developer tools](/docs/cli/index.html#overview).
+* Install the [developer tools](/docs/cli/index.html).
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry/prepare-account.html#prepare).
 

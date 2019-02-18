@@ -647,7 +647,7 @@ If the build or deploy jobs fail, and you see the following message, you can del
 {: #access_kube_logs}
 
 If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.

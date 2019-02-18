@@ -25,7 +25,7 @@ You can either create a starter app from scratch or cloud-enable your existing a
 ## Before you begin
 {: #prereqs-app-cli}
 
-You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli/index.html#overview). 
+You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli/index.html). 
 
 ## Creating a starter app from scratch
 {: #create-app-cli}

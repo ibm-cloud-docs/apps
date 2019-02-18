@@ -24,7 +24,7 @@ You can create an application in {{site.data.keyword.cloud}} by using your exist
 
 Be sure that you have the following prerequisites ready to go:
 
- * Install the [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/cli/index.html#overview).
+ * Install the [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/cli/index.html).
  * See [What makes a good app?](/docs/apps/best-practice.html#best-practice) for best practices for creating apps.
  * You must have a Git source code repository from any of the following providers: GitHub, GitHub Enterprise, Git lab, BitBucket, or Rational.
  * If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry/prepare-account.html#prepare).

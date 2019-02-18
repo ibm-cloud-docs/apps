@@ -37,10 +37,10 @@ To learn more about toolchains, see [Creating toolchains](/docs/services/Continu
 
 {{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins and developer tool extensions that integrate with the CLI.
 
-Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview).
+Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html).
 
 <p>
-<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download IBM Cloud Developer Tools" /></a>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html" target="_blank" title="(Opens in a new tab or window)"><img class="image" src="images/btn_bx_commandline.svg" alt="Download IBM Cloud Developer Tools" /></a>
 </p>
 
 The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cygwin command-line window.

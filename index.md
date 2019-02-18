@@ -22,7 +22,7 @@ You can build enterprise-ready mobile and web applications in {{site.data.keywor
 ## Before you begin
 {: #prereqs-getting-started}
 
-You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) for installation details.
+You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see [Getting started with the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) for installation details.
 
 ## Step 1. Create your app
 {: #create-getting-started}
