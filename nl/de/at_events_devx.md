@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2018
-lastupdated: "2018-06-29"
+  years: 2016, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -18,17 +18,17 @@ lastupdated: "2018-06-29"
 # {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}}events
 {: #at_events}
 
-Als Sicherheitsbeauftragter, Prüfer oder Manager eines bestimmten Bereichs können Sie mit dem Service {{site.data.keyword.cloudaccesstrailfull}} die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.dev_console}} in {{site.data.keyword.Bluemix_notm}} verfolgen.
+Als Sicherheitsbeauftragter, Prüfer oder Manager eines bestimmten Bereichs können Sie mit dem Service {{site.data.keyword.cloudaccesstrailfull}} die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.dev_console}} in {{site.data.keyword.cloud}} verfolgen.
 {: shortdesc}
 
-Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet die von Benutzern gestarteten Aktivitäten auf, durch die sich der Status eines Service in {{site.data.keyword.Bluemix_notm}} ändert. Weitere Informationen hierzu finden Sie im Abschnitt mit [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ).
+Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet die von Benutzern gestarteten Aktivitäten auf, durch die sich der Status eines Service in {{site.data.keyword.cloud_notm}} ändert. Weitere Informationen hierzu finden Sie im Abschnitt mit [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov).
 
 ## Wo werden Ereignisse angezeigt?
-{: #ui}
+{: #view-events-ui}
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse sind in der {{site.data.keyword.cloudaccesstrailshort}}-Kontodomäne verfügbar, die zu der {{site.data.keyword.Bluemix_notm}}-Region gehört, in der {{site.data.keyword.dev_console}}-Ereignisse generiert werden.
+{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse sind in der {{site.data.keyword.cloudaccesstrailshort}}-Kontodomäne verfügbar, die zu der {{site.data.keyword.cloud_notm}}-Region gehört, in der {{site.data.keyword.dev_console}}-Ereignisse generiert werden.
 
-Weitere Informationen zum Einstieg in die Überwachung der Benutzeraktionen finden Sie im [Lernprogramm 'Einführung'](/docs/services/cloud-activity-tracker/index.html). 
+Weitere Informationen zum Einstieg in die Überwachung der Benutzeraktionen finden Sie im [Lernprogramm 'Einführung'](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
 
 ## Ereignisliste
 {: #events}
@@ -51,7 +51,7 @@ In der folgenden Tabelle werden die Aktionen aufgeführt, die das Generieren von
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>Ein Ereignis wird generiert, wenn eine der folgenden Situationen eintritt: </br><ul><li>Bei der Anwendung tritt eine Änderung auf, z. B. dadurch, dass der Name der Anwendung von einem Benutzer geändert wird. </li><li>Eine neue Ressource wird bereitgestellt und zu einer Anwendung hinzugefügt.</li><li>Eine vorhandene Ressource wird zu einer Anwendung hinzugefügt.</li><li>Ein Service wird in einer Anwendung entfernt.</li><li>Für eine Anwendung wird Code generiert.</li><li>Eine DevOps-Toolchain wird über die Umgebung für Entwicklererfahrungen hinzugefügt, indem z. B. die Option *In Cloud bereitstellen* ausgewählt wird.</li></ul></td>
+	  <td>Ein Ereignis wird generiert, wenn eine der folgenden Situationen eintritt: </br><ul><li>Bei der Anwendung tritt eine Änderung auf, z. B. dadurch, dass der Name der Anwendung von einem Benutzer geändert wird. </li><li>Eine neue Ressource wird erstellt und zu einer Anwendung hinzugefügt.</li><li>Eine vorhandene Ressource wird zu einer Anwendung hinzugefügt.</li><li>Ein Service wird in einer Anwendung entfernt.</li><li>Für eine Anwendung wird Code generiert.</li><li>Eine DevOps-Toolchain wird über die Umgebung für Entwicklererfahrungen hinzugefügt, indem z. B. die Option *In Cloud bereitstellen* ausgewählt wird.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>

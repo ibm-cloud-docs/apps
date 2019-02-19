@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 
 # App mit einem Starter-Kit erstellen
-{: #create_starterkit}
+{: #tutorial-starterkit}
 
 Mit einem Starter-Kit können Sie Ihre App schnell zum Einsatz bringen und auf zukünftige Entwicklungen vorbereiten. Wählen Sie ein Starter-Kit und eine Programmiersprache aus, erstellen Sie eine App und richten Sie dann eine DevOps-Toolchain ein, um Ihre App automatisch bereitzustellen. Sie können den Code auch für eine sofortige Überprüfung herunterladen.
 {: shortdesc}
@@ -29,7 +29,7 @@ Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 * [Finanzen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/finance/dashboard){:new_window}
 
 ## Schritt 1. App erstellen
-{: #create-app}
+{: #create-starterkit}
 
 1. Klicken Sie im [{{site.data.keyword.cloud}}-Dashboard](https://{DomainName}) auf das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) > **Web-Apps**.
 
@@ -40,17 +40,19 @@ Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
     Um zu sehen, was im Starter-Kit enthalten ist, erweitern Sie die Kachel im Dashboard [App-Service-Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits){:new_window}. Die Starter-Kit-Option "Anwendung erstellen" kann als leere Starter-App verwendet und an Ihre Bedürfnisse angepasst werden.
     {: tip}
 
-4. Benennen Sie Ihre App, wählen Sie Ihre Sprache aus und klicken Sie auf **Erstellen**.
+4. Benennen Sie Ihre App, wählen Sie eine Ressourcengruppe aus, geben Sie optional Tags an, wählen Sie die Sprache aus und klicken Sie auf **Erstellen**.
     
     Großartiger Start! Sie haben soeben eine App erstellt.
 
-Klicken Sie auf der Seite mit den App-Details auf **Code herunterladen**. Prüfen Sie die Datei `README.md` in der heruntergeladenen komprimierten Datei, um herauszufinden, ob Sie weitere Aktionen ausführen müssen, um Ihre Starter-App betriebsbereit zu machen.
+Klicken Sie auf der Seite "App-Details" auf **Code herunterladen**. Prüfen Sie die Datei `README.md` in der heruntergeladenen komprimierten Datei, um herauszufinden, ob Sie weitere Aktionen ausführen müssen, um Ihre Starter-App betriebsbereit zu machen.
 {: tip}
 
-Weitere Informationen finden Sie unter [Basis-Web-App mit einem Starter-Kit erstellen](/docs/apps/tutorials/tutorial_web.html).
+Weitere Informationen finden Sie in den folgenden Abschnitten:
+ * [Basis-Web-App mit einem Starter-Kit erstellen](/docs/apps/tutorials/tutorial_web.html#tutorial-webapp)
+ * [Mit Tags arbeiten](/docs/resources/tagging_resources.html#tag)
 
 ## Schritt 2. Ressourcen hinzufügen
-{: #add-services}
+{: #resources-starterkit}
 
 Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
 
@@ -60,9 +62,15 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 4. Klicken Sie auf **Erstellen**.
 
 ## Schritt 3. In {{site.data.keyword.cloud_notm}} bereitstellen
+{: #deploy-starterkit}
 
-{: #deploy}
+Klicken Sie auf der Seite "App-Details" auf **In Cloud bereitstellen**, wählen Sie eine Bereitstellungsumgebung aus und klicken Sie auf **Erstellen**. {{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline.
 
-Klicken Sie auf der Seite mit den App-Details auf **In Cloud bereitstellen**, wählen Sie eine Bereitstellungsmethode aus (z. B. Kubernetes-Cluster oder Cloud Foundry-App) und klicken Sie auf **Erstellen**. {{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline. Öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App in wenigen Minuten anzeigen können.
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsumgebung angepasst, die Sie auswählen, ob [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) oder [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
 
-Wenn Sie Ihre App über die Befehlszeile bereitstellen möchten, verwenden Sie `ibmcloud dev deploy`. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html).
+Nachdem Sie Ihre Bereitstellungsumgebung ausgewählt haben, öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App innerhalb weniger Minuten anzeigen können.
+
+Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
+{: note}
+
+Wenn Sie Ihre App über die Befehlszeile bereitstellen möchten, verwenden Sie `ibmcloud dev deploy`. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 {:new_window: target="_blank"}
@@ -17,10 +17,10 @@ lastupdated: "2018-11-29"
 Para desenvolvimento sem servidor, é possível usar a oferta Functions as a service (FaaS) da IBM, {{site.data.keyword.openwhisk}}. É possível executar a lógica do aplicativo com o {{site.data.keyword.openwhisk_short}} em resposta a eventos ou chamadas diretas de apps da web ou móveis sobre HTTP sem provisionar ou gerenciar servidores. O {{site.data.keyword.openwhisk_short}} executa administração do sistema, como auto-scaling, gerenciamento de disponibilidade e manutenção para que você, como desenvolvedor, possa se concentrar na gravação de lógica do aplicativo.
 {:shortdesc}
 
-É possível usar a interface com o usuário (UI) ou a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para desenvolver seus aplicativos. Ambas têm recursos semelhantes para desenvolver aplicativos. A CLI fornece mais controle sobre sua implementação e operações. Para obter informações mais detalhadas sobre o {{site.data.keyword.openwhisk_short}}, consulte a [documentação do Openwhisk](/docs/openwhisk/index.html) completa.
+É possível usar a interface com o usuário (UI) ou a interface da linha de comandos (CLI) do {{site.data.keyword.openwhisk_short}} para desenvolver seus aplicativos. Ambas têm recursos semelhantes para desenvolver aplicativos. A CLI fornece mais controle sobre sua implementação e operações. Para obter informações mais detalhadas sobre o {{site.data.keyword.openwhisk_short}}, verifique a [documentação](/docs/openwhisk/index.html).
 
 ## {{site.data.keyword.openwhisk_short}} UI
-{: #ui}
+{: #serverless-apps-ui}
 
 Experimente o {{site.data.keyword.openwhisk_short}} no [navegador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/openwhisk/actions){:new_window}. Acesse a página [Conceitos ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/openwhisk/learn){:new_window} para obter um tour rápido da interface com o usuário do {{site.data.keyword.openwhisk_short}}.
 
@@ -30,7 +30,7 @@ Experimente o {{site.data.keyword.openwhisk_short}} no [navegador ![Ícone de li
 Para saber mais sobre como instalar e desenvolver com a CLI do {{site.data.keyword.openwhisk_short}}, consulte [Configurando a CLI do {{site.data.keyword.openwhisk_short}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/openwhisk/cli){:new_window}.
 
 ## Expondo APIs e conjuntos de dados como ações da web
-{: #containers}
+{: #expose-actions}
 
 Por padrão, o {{site.data.keyword.openwhisk_short}} define ações que requerem uma chave de autenticação. Em ambientes de dispositivo móvel de produção, muitas vezes é necessário autorizar clientes móveis com base em fluxos OAuth para expor APIs e conjuntos de dados específicos.
 
@@ -39,14 +39,12 @@ O {{site.data.keyword.openwhisk_short}} permite que os desenvolvedores exponham 
 Para expor uma ação como uma ação da web, acesse a guia **Terminais** de sua ação e selecione **Ativar como ação da web**.
 
 Agora, os usuários podem acessar a ação por meio de um navegador ou solicitação cURL, por exemplo:
-
 ```
-curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackage/helloWorld.json?name=aaron
+curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage/helloWorld.json?name=aaron
 ```
 {: codeblock}
 
 **Saída:**
-
 ```json
 {
     message: "Hello aaron!"
@@ -57,5 +55,5 @@ curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackag
 ### SDK
 {: #sdk}
 
-O {{site.data.keyword.openwhisk_short}} fornece um [SDK móvel](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk) para dispositivos iOS e watchOS que permite que os apps móveis enviem facilmente acionadores remotos e chamem ações remotas. Ele também fornece um [SDK de estrutura sem servidor ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} que permite aplicativos sem servidor.
+O {{site.data.keyword.openwhisk_short}} fornece um [SDK móvel](/docs/openwhisk/openwhisk_mobile_sdk.html#openwhisk_mobile_sdk) para dispositivos iOS e watchOS que permite que os apps móveis enviem facilmente acionadores remotos e chamem ações remotas. Ele também fornece um [SDK de estrutura sem servidor ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} que permite aplicativos sem servidor.
 

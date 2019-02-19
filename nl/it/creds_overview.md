@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -24,9 +24,9 @@ Acquisisci informazioni su come aggiungere manualmente delle credenziali di serv
 In generale, vuoi che la tua logica dell'applicazione acquisisca le credenziali di servizio sensibili, quali le password o le chiavi API del database, dall'ambiente in cui la tua applicazione viene eseguita. In questo modo, non conservi le credenziali nel tuo repository del codice sorgente. I database nei tuoi ambienti di integrazione, pre-produzione e produzione continue sono isolati l'uno dall'altro.
 
 Se crei un'applicazione utilizzando un modello di kit starter, l'ambiente viene preparato per tuo conto automaticamente. Non importa se la tua destinazione di distribuzione è:
-  * [Kubernetes](/docs/apps/creds_kube.html)
-  * [Cloud Foundry](/docs/apps/creds_cf.html)
-  * [VSI (Virtual Server Instance) (anche docker locale)](/docs/apps/creds_vsi.html)
+  * [Kubernetes](/docs/apps/creds_kube.html#add-credentials-kube)
+  * [Ambiente Cloud Foundry pubblico o Cloud Foundry Enterprise](/docs/apps/creds_cf.html#add-credentials-cf)
+  * [VSI (Virtual Server Instance) (anche docker locale)](/docs/apps/creds_vsi.html#add-credentials-vsi)
   
 Viene fornita la procedura per come configurare l'ambiente. I kit starter generano del codice che utilizza una libreria dipendente per rendere il codice portatile per l'esecuzione su qualsiasi destinazione della distribuzione. Infine, non viene utilizzata alcuna logica di ramo per rilevare in quale destinazione di distribuzione è in esecuzione l'applicazione.
 

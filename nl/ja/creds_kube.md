@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-14"
 {:note: .note}
 
 # Kubernetes 環境への資格情報の追加
-{: #add_credentials}
+{: #add-credentials-kube}
 
 Kubernetes デプロイメント環境にサービス資格情報を追加する方法について説明します。
 {: shortdesc}
@@ -26,13 +26,13 @@ Kubernetes デプロイメント環境にサービス資格情報を追加する
  * デプロイされた_後_ のスターター・キット・ベースのアプリにサービスを追加する。
 
 ## ユーザー作成コード + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
 ### 正しいコーディング
 
-予防措置として、アプリケーションのメイン・エントリー・ポイントにおいて、アプリケーションの環境が完全であることを確認するようにアプリケーションをコーディングできます。環境が完全でないために製品に中断をもたらすようなアプリケーションをクラスターにプロモートすることは避けなければなりません。アプリケーションが開始を拒否することで、Kubernetes 構成がそのような中断を自動的に防止できます。
+予防措置として、アプリケーションのメイン・エントリー・ポイントにおいて、アプリケーションの環境が完全であることを確認するようにアプリケーションをコーディングできます。 環境が完全でないために製品に中断をもたらすようなアプリケーションをクラスターにプロモートすることは避けなければなりません。 アプリケーションが開始を拒否することで、Kubernetes 構成がそのような中断を自動的に防止できます。
 
 以下の 2 つの環境変数があるとします。
 * `SECRET`
@@ -86,7 +86,7 @@ env:
 
 ワークステーションの端末を使用して、以下のツールをインストールします。
 
-1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html) をインストールします。
+1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview) をインストールします。
 2. `ibmcloud login` コマンドを使用してログインします。
 3. `ibmcloud cs cluster-config {your_cluster_name}` を実行してクラスターに接続します。
 4. `export` コマンドをコピー・アンド・ペーストして、端末からコマンドを実行します。
@@ -109,12 +109,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 これで、解決可能なシークレットが Kubernetes クラスターに準備されたので、`deployment.yml` ファイルに定義されている環境変数を使用するようにアプリケーションを更新できます。
 
 ## スターター・キット・アプリ + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. **アプリの詳細**ページに移動します。
 2. Cloud Object Storage のインスタンスを作成するために、**「リソースの追加」**>**「ストレージ」**>**「Cloud Object Storage」**>**「ライト・プラン (無料)」**>**「作成」**を選択します。
 3. `「コードのダウンロード」`をクリックして、注入されたコード・スニペットでプロジェクトを再生成します。
-4. 資格情報にローカルでアクセスするために、新しく生成された `.zip` ファイルにある以下のファイルをローカル Git クローンにコピーおよび置換して、資格情報にアクセスします。資格情報をホストするために、クラスター内に Kubernetes Secret を作成する必要があります。
+4. 資格情報にローカルでアクセスするために、新しく生成された `.zip` ファイルにある以下のファイルをローカル Git クローンにコピーおよび置換して、資格情報にアクセスします。 この場合も、資格情報をホストするために、クラスター内に Kubernetes シークレットを作成する必要があります。
 
 	- `chart/{appName}/bindings.yaml` - シークレットを指す環境変数を Kubernetes クラスター内に生成します。
 	- `src/main/resources/localdev-config.json` - アプリをローカルで実行するときに資格情報にアクセスします。
@@ -126,9 +126,9 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 5. 対応する地域 (無料の場合は米国南部) で Kubernetes クラスターを[表示](https://cloud.ibm.com/containers-kubernetes/clusters)します。
 6. クラスターをクリックし、右上にある**「Kubernetes ダッシュボード」**を選択してクラスター・ダッシュボードを表示します。
-7. **「シークレット (Secrets)」**というラベルのセクションが表示されるまでスクロールダウンします。{{site.data.keyword.cloudant_short_notm}} サービス・インスタンスのシークレットが表示されます。これには、`binding-{appName}-{serviceName}-{timestamp}` という規則が使用されています。`chart/{appName}/bindings.yaml` ファイル内に、対応する {{site.data.keyword.cloudant_short_notm}} シークレットがあります。
+7. **「シークレット (Secrets)」**というラベルのセクションが表示されるまでスクロールダウンします。 {{site.data.keyword.cloudant_short_notm}} サービス・インスタンスのシークレットが表示されます。これには、`binding-{appName}-{serviceName}-{timestamp}` という規則が使用されています。 `chart/{appName}/bindings.yaml` ファイル内に、対応する {{site.data.keyword.cloudant_short_notm}} シークレットがあります。
 8. これで、`chart/{appName}/bindings.yaml` に既に生成されているシークレット名を使用して、Cloud Object Storage インスタンス用の対応するシークレットを作成できます。このシークレットは、`binding-create-app-ktibr-cloudobjectstor-1538170732311` などのようになります。
-9. ダッシュボードの**「アプリの詳細」**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。以下の資格情報の出力例を参照してください。
+9. ダッシュボードの**「アプリの詳細」**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。 以下の資格情報の出力例を参照してください。
 ```yaml
 {
   "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
@@ -146,9 +146,9 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: codeblock}
 
-12. `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding` を使用してシークレットを作成します。Kubernetes クラスター・ダッシュボードに戻ると、作成したシークレットを確認できます。
+12. `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding` を使用してシークレットを作成します。 Kubernetes クラスター・ダッシュボードに戻ると、作成したシークレットを確認できます。
 
-デプロイ先が Cloud Foundry アプリケーションの場合に、リソース・コントローラーのインスタンスを使用するには (リソースが、組織またはスペースでなくリソース・グループ内に存在する場合)、ユーザー提供のサービスを作成する必要があります。
+デプロイ先が Cloud Foundry アプリケーションの場合に、リソース・コントローラーのインスタンスを使用するには (リソースが、組織またはスペースでなくリソース・グループ内に存在する場合)、ユーザー提供のサービスを作成する必要があります。 
 {: note}
   
   ```console
@@ -162,7 +162,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 ### Kubernetes クラスターの準備方法
 
-**「クラウドにデプロイ」**フィーチャーを使用して、アプリを IBM Containers Kubernetes クラスターにデプロイします。このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。以下のステップを実行して、クラスター準備の結果を確認できます。
+**「クラウドにデプロイ」**フィーチャーを使用して、アプリを IBM Containers Kubernetes クラスターにデプロイします。 このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。 以下のステップを実行して、クラスター準備の結果を確認できます。
 
 1. 次のコマンドを実行して結果を表示します。`kubectl get secrets`:
   ```
@@ -200,7 +200,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: screen}
 
-  `binding` は、base64 でエンコードされたシークレットの値です。これをデコードすると、値はリソース・インスタンスの `credentials` から取得した未加工 JSON といくつかの `iam_...` 値であることが分かります。
+  `binding` は、base64 でエンコードされたシークレットの値です。 これをデコードすると、値はリソース・インスタンスの `credentials` から取得した未加工 JSON といくつかの `iam_...` 値であることが分かります。
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -217,12 +217,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: screen}
 
-`deployment.yml` に、シークレットを参照する `env` 値が宣言されている場合を除いて、アプリケーション・コードで Kubernetes Secret は取得できません。スターター・キットを使用すると、そのようなコードが自動的に生成されます。
+`deployment.yml` に、シークレットを参照する `env` 値が宣言されている場合を除いて、アプリケーション・コードで Kubernetes シークレットは取得できません。 スターター・キットを使用すると、そのようなコードが自動的に生成されます。
 
 ### スターター・キットによって生成されるコード
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
-この Case では、アプリケーションの作成元はスターター・キットです。スターター・キットで生成されたコードは、ローカル、Cloud Foundry、または Kubernetes で実行できるように移植可能になります。アプリケーション・コードと、リソース (サービス・インスタンス) の資格情報を保持する環境変数の取得との間の抽象化層を提供するために、ライブラリー `IBMCloudEnv` が使用されます。
+この Case では、アプリケーションの作成元はスターター・キットです。 スターター・キットで生成されたコードは、ローカル、Cloud Foundry、または Kubernetes で実行できるように移植可能になります。 アプリケーション・コードと、リソース (サービス・インスタンス) の資格情報を保持する環境変数の取得との間の抽象化層を提供するために、ライブラリー `IBMCloudEnv` が使用されます。
 
 スターター・キットから作成されるコードには、`IBMCloudEnv` ライブラリーに対する依存関係があり、コードによって以下の出力が生成されます。
 
@@ -239,7 +239,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
   `secretKeyRef.name` は、アプリケーションがアプリケーション・コード内で単純な環境変数としてシークレットを取得できるように、定義された Kubernetes シークレットを公開します。
 
-* `IBMCloudEnv` ライブラリーの命令は、`mappings.json` ファイル内にカプセル化されています。このファイルはスターター・キットによって生成されるコード・ベースの一部です。`mappings.json` には、各資格情報の個別の定義があります。
+* `IBMCloudEnv` ライブラリーの命令は、`mappings.json` ファイル内にカプセル化されています。このファイルはスターター・キットによって生成されるコード・ベースの一部です。 `mappings.json` には、各資格情報の個別の定義があります。
   ```json
   "cloudant_apikey": {
     "searchPatterns": [
@@ -263,9 +263,9 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 `IBMCloudEnv` ライブラリーは、アプリケーションが Kubernetes、Cloud Foundry、または仮想サーバー・インスタンス (ローカル Docker と同様に扱われます) のいずれで実行されているかを自動的に検出し、正しい `searchPattern` を適用して、返す値を見つけます。
 
-したがって、`mappings.json` ファイルは、アプリが実行される環境から取得された、事前構成済みですぐに使用可能な値の_確定的なリスト_ と見なされます。値は、**「クラウドにデプロイ」**フィーチャーを使用したときにターゲットにしたクラスターの環境で取り込まれます。
+したがって、`mappings.json` ファイルは、アプリが実行される環境から取得された、事前構成済みですぐに使用可能な値の_確定的なリスト_ と見なされます。 値は、**「クラウドにデプロイ」**フィーチャーを使用したときにターゲットにしたクラスターの環境で取り込まれます。
 
-**注意**:  この資料の執筆時点において、環境の準備は、_常に_、アプリに関連付けられたすべてのリソースのすべての資格情報を対象に実行されますが、`bindings.yml` ファイルまたは `mappings.json` ファイル内には、_必ずしもすべての `env` 参照が配置されるわけではありません_。その場合、そのような参照はユーザーが自身で配置する必要があります。既にターゲット・デプロイメントを決定しており、`IBMCloudEnv` ライブラリーの抽象化が不要の場合は、決定したデプロイメントに適した『ユーザー作成コード + (ターゲット・デプロイメント)』セクションを参照してください。
+**注意**:  この資料の執筆時点において、環境の準備は、_常に_、アプリに関連付けられたすべてのリソースのすべての資格情報を対象に実行されますが、`bindings.yml` ファイルまたは `mappings.json` ファイル内には、_必ずしもすべての `env` 参照が配置されるわけではありません_。 その場合、そのような参照はユーザーが自身で配置する必要があります。 既にターゲット・デプロイメントを決定しており、`IBMCloudEnv` ライブラリーの抽象化が不要の場合は、決定したデプロイメントに適した『ユーザー作成コード + (ターゲット・デプロイメント)』セクションを参照してください。
 
 一部のスターター・キットは、`IBMCloudEnv` 依存関係、`manifest.yml` ファイル、および `mappings.json` ファイルへの参照をいっさい組み込みません。
 {: note}

@@ -56,7 +56,7 @@ BFF は、通常、REST パターンを使用して API を公開しますが、
 ## モバイル
 {: #mobile}
 
-モバイル・アプリは、重要なクライアント・サイド・コンポーネントがあるため、他のパターンとは異なります。 このパターンには、プッシュ通知、認証、Mobile Analytics のようなモバイル・サービスへの直接接続が含まれる場合があります。 モバイル・サービスは、Mobile Backend as a Service または MBaaS パターンと呼ばれます。 これらのサービスは、専用の [Backend-for-frontend](#bff) を持つ場合があります。
+モバイル・アプリは、重要なクライアント・サイド・コンポーネントがあるため、他のパターンとは異なります。 このパターンには、プッシュ通知、認証、Mobile Analytics のようなモバイル・サービスへの直接接続が含まれる場合があります。 モバイル・サービスは、Mobile Backend as a Service または MBaaS パターンと呼ばれます。 これらのサービスは、専用の [Backend-for-frontend](/docs/apps/patterns.html#bff) を持つ場合があります。
 
 {{site.data.keyword.cloud_notm}} は、iOS Swift、Android、および Cordova のためのいくつかのモバイル・スターター・キットを提供します。 [{{site.data.keyword.cloud_notm}} モバイル開発者ダッシュボード](https://{DomainName}/developer/mobile/dashboard)で、モバイル・パターンのスターター・キットを見つけることができます。
 

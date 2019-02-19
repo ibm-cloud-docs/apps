@@ -57,7 +57,7 @@ Escolha um kit do iniciador de microsserviço para seus requisitos de linguagem 
 ## Dispositivo móvel
 {: #mobile}
 
-Os apps móveis são diferentes dos outros padrões porque eles têm um componente significativo do lado do cliente. O padrão pode incluir conexão direta com serviços móveis, tais como notificações push, autenticação e análise de dados móvel. Os serviços móveis são conhecidos como Backend móvel como serviço ou padrão MBaaS. Eles também podem ter um [Backend-for-frontend](#bff) dedicado.
+Os apps móveis são diferentes dos outros padrões porque eles têm um componente significativo do lado do cliente. O padrão pode incluir conexão direta com serviços móveis, tais como notificações push, autenticação e análise de dados móvel. Os serviços móveis são conhecidos como Backend móvel como serviço ou padrão MBaaS. Eles também podem ter um [Backend-for-frontend](/docs/apps/patterns.html#bff) dedicado.
 
 O {{site.data.keyword.cloud_notm}} oferece vários kits do iniciador de dispositivo móvel para iOS Swift, Android e Cordova. É possível localizar os kits do iniciador para o padrão móvel no Painel do desenvolvedor do [{{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
 

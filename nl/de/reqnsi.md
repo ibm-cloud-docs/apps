@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Service zur App hinzufügen
-{: #add_service}
+# Ihrer App eine Ressource hinzufügen
+{: #add-resource}
 
-Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Ressourcen von der Seite "App-Details" hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
-Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der Seite mit den App-Details Ihrer App hinzufügen. Sie können einen bestimmten Typ von Ressource (einen Service) direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog bereitstellen.
+Sie können eine Instanz der Ressource anfordern und unabhängig von Ihrer App verwenden oder Sie können die Ressourceninstanz von der Seite "App-Details" Ihrer App hinzufügen. Sie können einen bestimmten Typ einer Ressource direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog bereitstellen.
 
-## Services entdecken
-{: #discover_services}
+## Ressourcen erkennen
+{: #discover-resources}
 
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.cloud_notm}} verfügbaren Services anzuzeigen:
 
@@ -39,7 +39,7 @@ Services manuell codieren, wie Sie auch externe Anwendungen oder Tools von ander
 zur Verwendung von {{site.data.keyword.cloud_notm}}-Services codieren. Weitere Informationen finden Sie unter [Externe Anwendungen und Tools von anderen Anbietern für die Verwendung von {{site.data.keyword.cloud_notm}}-Services aktivieren](/docs/resources/connect_external_app#externalapp).
 
 ## Neue Serviceinstanz anfordern
-{: #req_instance}
+{: #request-instance}
 
 Um eine neue Serviceinstanz anzufordern, müssen Sie die {{site.data.keyword.cloud_notm}}-Benutzerschnittstelle oder die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle verwenden.
 
@@ -71,7 +71,7 @@ Wenn Sie zum Anfordern einer Serviceinstanz die {{site.data.keyword.cloud_notm}}
 Sie können eine Serviceinstanz nur an die App-Instanzen binden, die sich in demselben Bereich bzw. in derselben Organisation befinden. Sie können allerdings Serviceinstanzen aus anderen Bereichen oder Organisationen auf dieselbe Weise wie eine externe App verwenden. Anstatt eine Bindung zu erstellen, verwenden Sie die Berechtigungsnachweise, um Ihre App-Instanz direkt zu konfigurieren. Weitere Informationen dazu, wie externe Apps {{site.data.keyword.cloud_notm}}-Services verwenden, finden Sie unter [Externe Apps für die Verwendung von {{site.data.keyword.cloud_notm}}-Services aktivieren ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Anwendung konfigurieren
-{: #config}
+{: #configure-app}
 
 Nachdem Sie eine Serviceinstanz an Ihre Anwendung gebunden haben, müssen Sie Ihre Anwendung für die Interaktion mit dem Service konfigurieren.
 
@@ -156,4 +156,4 @@ Führen Sie die folgenden Schritte aus, um eine vom Benutzer zur Verfügung gest
 	OK
 	```
 
-Sie können Ihre Anwendung nun für die Verwendung der externen Services konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](#config){: new_window}.
+Sie können Ihre Anwendung nun für die Verwendung der externen Services konfigurieren. Informationen zum Konfigurieren Ihrer Anwendung für die Interaktion mit einem Service finden Sie unter [Anwendung für die Interaktion mit einem Service konfigurieren](/docs/apps/reqnsi.html#configure-app).

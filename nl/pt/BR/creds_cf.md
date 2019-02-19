@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Incluindo credenciais no ambiente do Cloud Foundry
-{: #add_credentials}
+{: #add-credentials-cf}
 
-Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry.
+Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Seu código + Cloud Foundry
-{: #byoc_cf}
+{: #credentials-byoc-cf}
 
 No espaço do Cloud Foundry em que o aplicativo existe, é possível definir o que o Cloud Foundry chama de um serviço fornecido pelo usuário. Um serviço fornecido pelo usuário é um JSON em sequência armazenado como se fosse um serviço de ligação no espaço do Cloud Foundry. Depois de efetuar login e se conectar à organização e ao espaço do Cloud Foundry, conclua as etapas a seguir para criar e ligar um serviço.
 
@@ -31,7 +31,7 @@ No espaço do Cloud Foundry em que o aplicativo existe, é possível definir o q
   {: codeblock}
 
 2. Configure o aplicativo Cloud Foundry para se ligar ao serviço fornecido pelo usuário incluindo na seção de serviços:
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -65,18 +65,18 @@ analisá-lo no JSON e localizar a credencial necessária (node.js-like pseudocod
 
 
 ## App do kit do iniciador + Cloud Foundry
-{: #sk_cf}
+{: #credentials-starterkit-cf}
 
 ### Como o espaço do Cloud Foundry é preparado
 
 Use o recurso **Implementar para nuvem** para implementar o app no espaço do Cloud Foundry.
 
 Se a instância de recurso baseada em Cloud Foundry está no mesmo espaço do Cloud Foundry como o aplicativo
-Cloud Foundry implementado, consulte a [próxima seção](#cf_resource_same).
+Cloud Foundry implementado, consulte a [próxima seção](/docs/apps/creds_cf.html#cf_resource_same).
 
-Se a instância de recurso baseada em Cloud Foundry está em um espaço diferente do espaço de destino para o aplicativo Cloud Foundry, consulte a [seção a seguir](#cf_resource_different).
+Se a instância de recurso baseada em Cloud Foundry está em um espaço diferente do espaço de destino para o aplicativo Cloud Foundry, consulte a [seção a seguir](/docs/apps/creds_cf.html#cf_resource_different).
 
-Se o recurso que você associou ao aplicativo for baseado no Resource Controller, consulte [Resource Controller](#cf_resource_controller).
+Se o recurso que você associou ao aplicativo for baseado no Resource Controller, consulte [Resource Controller](/docs/apps/creds_cf.html#cf_resource_controller).
 
 #### O recurso baseado em Cloud Foundry está no mesmo espaço que o app implementado
 {: #cf_resource_same}
@@ -91,9 +91,9 @@ cf services
 ```
 {: codeblock}
 
-Saída:
+Saída de exemplo:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -116,7 +116,7 @@ cf services
 
 Saída de exemplo:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided
@@ -129,8 +129,9 @@ ver os valores, deve-se primeiro ligar um aplicativo ao serviço do Cloud Foundr
 Felizmente, o código que é gerado por meio de um kit do iniciador é preenchido automaticamente com as ligações corretas para recuperar e usar os valores do ambiente definido para ele no espaço do Cloud Foundry no qual o aplicativo é executado.
 
 ### O código gerado pelo kit do iniciador
+{: #starterkit-generated-code-cf}
 
-Antes de continuar, consulte [App do kit do iniciador + kube](/docs/apps/creds_kube.html#sk_kube_generated_code). Em seguida, aplique a mudança a seguir:
+Antes de continuar, consulte [App do kit do iniciador + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). Em seguida, aplique a mudança a seguir:
 
 * Embora o código gerado forneça o `deployment.yml`, ele não é aplicável para um aplicativo que é implementado no Cloud Foundry. Em vez disso, `manifest.yml` _é_ aplicável e seu conteúdo é mostrado como _ligação_ para os dois serviços que são criados no espaço do Cloud Foundry:
   ```yaml

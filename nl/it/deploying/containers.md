@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2018-07-23"
 {:tip: .tip}
 
 # Utilizzo di contenitori con Kubernetes
-{: #containers}
+{: #containers-kube}
 
 Inizia a utilizzare {{site.data.keyword.containershort}} distribuendo applicazioni altamente disponibili nei contenitori Docker eseguiti nei cluster Kubernetes. Gestisci lo sviluppo del tuo team con Git e utilizza quindi la toolchain DevOps per gestire la distribuzione della tua applicazione su Kubernetes.
 {: shortdesc}
@@ -35,7 +35,7 @@ Quando crei applicazioni di back-end o web-serving, puoi distribuirle al servizi
 ## Bind di servizi
 {: #bind-services}
 
-Quando viene creata la toolchain, i servizi che hai associato alla tua applicazioni vengono collegati al cluster Kubernetes utilizzando i segreti Kubernetes. I segreti vengono utilizzati per gestire le credenziali del servizio al di fuori della tua applicazione in esecuzione. L'applicazione legge i segreti e quindi richiama i valori di cui ha bisogno per avviare l'esecuzione. Il bind dei servizi ti consente di distribuire l'applicazione in un altro ambiente Kubernetes che potrebbe utilizzare istanze del servizio {{site.data.keyword.cloud_notm}} a livello di produzione.
+Quando viene creata la toolchain, i servizi che hai associato alla tua applicazioni vengono collegati al cluster Kubernetes utilizzando i segreti Kubernetes. I segreti vengono utilizzati per gestire le credenziali del servizio al di fuori della tua applicazione in esecuzione. L'applicazione legge i segreti e quindi richiama i valori di cui ha bisogno per avviare l'esecuzione. Il bind dei servizi ti consente di distribuire l'applicazione in un altro ambiente Kubernetes che potrebbe utilizzare istanze del servizio {{site.data.keyword.cloud}} a livello di produzione.
 
 Se elimini il servizio o i segreti, devi ricollegarli manualmente o eliminare e ricreare la toolchain.
 {: tip}

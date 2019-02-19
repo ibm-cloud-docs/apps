@@ -17,7 +17,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}}는 IBM Z 암호화를 클라우드에 제공합니다. {{site.data.keyword.cloud_notm}}는 금융 및 재무 서비스에서 필요로 하는 동일한 암호화 기술을 제공합니다.
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}는 산업의 가장 높은 보안 레벨(FIPS 140-2 레벨 4)로 사용하지 않는 중, 사용 중 및 전송 중에 키와 암호를 보호합니다. {{site.data.keyword.hscrypto}}는 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html) 서비스를 이용한 키 저장소이며 IBM Z의 하이퍼 보안 환경에서 키를 보호합니다.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}}는 산업의 가장 높은 보안 레벨(FIPS 140-2 레벨 4)로 사용하지 않는 중, 사용 중 및 전송 중에 키와 암호를 보호합니다. {{site.data.keyword.hscrypto}}는 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) 서비스를 이용한 키 저장소이며 IBM Z의 하이퍼 보안 환경에서 키를 보호합니다.
 
 ## ACSP 클라이언트 설치 및 구성
 {: ##crypto_config}

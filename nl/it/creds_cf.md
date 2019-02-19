@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Aggiunta di credenziali al tuo ambiente Cloud Foundry
-{: #add_credentials}
+{: #add-credentials-cf}
 
-Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambiente di distribuzione Cloud Foundry.
+Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambiente di distribuzione Cloud Foundry. Queste istruzioni si applicano a entrambi gli ambienti [Cloud Foundry pubblico](/docs/cloud-foundry-public/about-cf.html#about-cf) e [Cloud Foundry Enterprise](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Il tuo codice + Cloud Foundry
-{: #byoc_cf}
+{: #credentials-byoc-cf}
 
 Nello spazio Cloud Foundry in cui esiste la tua applicazione, puoi definire quello che Cloud Foundry chiama un servizio fornito dall'utente. Un servizio fornito dall'utente è un JSON in stringhe archiviato come se fosse un servizio associabile mediante build nello spazio Cloud Foundry. Dopo che hai eseguito l'accesso e stabilito una connessione all'organizzazione e allo spazio Cloud Foundry, completa la seguente procedura per creare un servizio ed eseguirne il bind.
 
@@ -31,7 +31,7 @@ Nello spazio Cloud Foundry in cui esiste la tua applicazione, puoi definire quel
   {: codeblock}
 
 2. Configura la tua applicazione Cloud Foundry per eseguire il bind al servizio fornito dall'utente mediante aggiunta alla sezione services:
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -64,17 +64,17 @@ Nello spazio Cloud Foundry in cui esiste la tua applicazione, puoi definire quel
 
 
 ## Applicazione kit starter + Cloud Foundry
-{: #sk_cf}
+{: #credentials-starterkit-cf}
 
 ### Come viene preparato lo spazio Cloud Foundry
 
 Utilizza la funzione **Deploy to cloud** per distribuire la tua applicazione al tuo spazio Cloud Foundry.
 
-Se l'istanza della risorsa basata su Cloud Foundry è lo stesso spazio Cloud Foundry dell'applicazione Cloud Foundry distribuita, vedi la [prossima sezione](#cf_resource_same).
+Se l'istanza della risorsa basata su Cloud Foundry è lo stesso spazio Cloud Foundry dell'applicazione Cloud Foundry distribuita, vedi la [prossima sezione](/docs/apps/creds_cf.html#cf_resource_same).
 
-Se l'istanza della risorsa basata su Cloud Foundry si trova in uno spazio diverso da quello di destinazione per l'applicazione Cloud Foundry, vedi la [sezione successiva](#cf_resource_different).
+Se l'istanza della risorsa basata su Cloud Foundry si trova in uno spazio diverso da quello di destinazione per l'applicazione Cloud Foundry, vedi la [sezione successiva](/docs/apps/creds_cf.html#cf_resource_different).
 
-Se la risorsa che hai associato nella tua applicazione è basata su Resource Controller, vedi [Resource Controller](#cf_resource_controller).
+Se la risorsa che hai associato nella tua applicazione è basata su Resource Controller, vedi [Resource Controller](/docs/apps/creds_cf.html#cf_resource_controller).
 
 #### La risorsa basata su Cloud Foundry si trova nello stesso spazio dell'applicazione distribuita
 {: #cf_resource_same}
@@ -87,9 +87,9 @@ cf services
 ```
 {: codeblock}
 
-Output:
+Output di esempio:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -112,7 +112,7 @@ cf services
 
 Output di esempio:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided
@@ -124,8 +124,9 @@ Cloud Foundry non consente la visibilità al valore di eventuali credenziali del
 Fortunatamente, il codice generato da un kit starter viene compilato automaticamente con i bind corretti per richiamare e utilizzare i valori dall'ambiente per esso definito nello spazio Cloud Foundry in cui viene eseguita l'applicazione.
 
 ### Il codice generato dal kit starter
+{: #starterkit-generated-code-cf}
 
-Prima di continuare, vedi [Applicazione kit starter + kube](/docs/apps/creds_kube.html#sk_kube_generated_code). Applica quindi la seguente modifica:
+Prima di continuare, vedi [Applicazione kit starter + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). Applica quindi la seguente modifica:
 
 * Anche se il codice generato fornisce il `deployment.yml`, non è applicabile per un'applicazione distribuita a Cloud Foundry. _È_ piuttosto `manifest.yml` ad essere applicabile e il suo contenuto viene visualizzato per eseguire il _bind_ ai due servizi creati nello spazio Cloud Foundry:
   ```yaml
@@ -152,4 +153,3 @@ La libreria astrae parte della complessità legata al richiamo dei valori di amb
 **Attenzione:**:  analogamente all'invito a fare attenzione espresso nella sezione a cui si fa riferimento, la preparazione dell'ambiente è _sempre_ eseguita per tutte le credenziali per tutte le risorse associate a un'applicazione e tutti i servizi (`services`) sono elencati in `manifest.yml` ma _non tutti i riferimenti di credenziali_ sono inseriti nel file `mappings.json`. In questi casi, devi inserire tali riferimenti personalmente. Dopo che hai deciso in merito alla distribuzione di destinazione e non hai bisogno dell'astrazione della libreria `IBMCloudEnv`, consulta la sezione "Il tuo codice + (distribuzione di destinazione)" adatta alla tua decisione.
 
 **Prestare particolare attenzione**: alcuni kit starter non includono per niente il riferimento alla dipendenza `IBMCloudEnv` e ai file `manifest.yml` o `mappings.json`.
-

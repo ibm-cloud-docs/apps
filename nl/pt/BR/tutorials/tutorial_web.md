@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-28"
+  years: 2015, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -13,31 +13,32 @@ lastupdated: "2018-11-28"
 {:pre: .pre}
 
 # Criando um app básico da web com um kit do iniciador
-{: #tutorial}
+{: #tutorial-webapp}
 
-O {{site.data.keyword.Bluemix}} oferece vários kits do iniciador para ajudar você a obter a codificação rapidamente. Escolha uma linguagem, uma estrutura e ferramentas dos kits do iniciador do Serviço de app para começar a trabalhar com um app customizado pré-configurado. Neste tutorial, você percorrerá as etapas para instalar as ferramentas necessárias e, em seguida, construirá e executará o app localmente e o implementará na nuvem.
+O {{site.data.keyword.cloud}} oferece vários kits do iniciador para ajudar você a obter a codificação rapidamente. Escolha uma linguagem, uma estrutura e ferramentas dos kits do iniciador do Serviço de app para começar a trabalhar com um app customizado pré-configurado. Neste tutorial, você percorrerá as etapas para instalar as ferramentas necessárias e, em seguida, construirá e executará o app localmente e o implementará na nuvem.
 {: shortdesc}
 
 ## Etapa 1. Instale as ferramentas
-{: #install-tools}
+{: #prereqs-webapp}
 
-Instale as [ferramentas do desenvolvedor](/docs/cli/index.html).
+Instale as [ferramentas do desenvolvedor](/docs/cli/index.html#overview).
 
 O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 
 ## Etapa 2. Selecione um kit do iniciador
-{: #create-devex}
+{: #create-webapp}
 
-Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}. Selecione a linguagem que for melhor para seu projeto ser iniciado.
+Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Selecione a linguagem que for melhor para seu projeto ser iniciado.
 
 1. Na página [Kits do iniciador ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/developer/appservice/starter-kits/) no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem.
-2. Insira o nome do app e um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota de seu app, `abc-devhost.mybluemix.net`
-3. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
-4. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
-5. Clique em **Criar**.
+2. Insira o nome do app e um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota de seu app, `abc-devhost.cloud.ibm.com`
+3. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources/tagging_resources.html#tag).
+4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+6. Clique em **Criar**.
 
 ## Etapa 3. Incluir recursos (opcional)
-{: #add-services}
+{: #resources-webapp}
 
 É possível incluir recursos que aprimoram seu app com o poder cognitivo do Watson, incluir serviços móveis ou serviços de segurança. Para este tutorial, inclua um local para gerenciar seus dados.
 
@@ -47,21 +48,20 @@ Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.
 4. Clique em **Criar**.
 
 ## Etapa 4. Criar uma cadeia de ferramentas do DevOps
-{: #add-toolchain}
+{: #toolchain-webapp}
 
-A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para a plataforma de implementação escolhida, seja Kubernetes ou Cloud Foundry.
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles serão customizados para o ambiente de implementação que você escolher, quer ele seja [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) ou [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
 
 A entrega contínua é ativada para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
 
-1. Na janela de serviço do app, clique em **Implementar na nuvem**.
-2. Selecione um método de implementação. Configure seu método de implementação de acordo com as instruções para o método escolhido.
-  * Implementar em um cluster do Kubernetes. Crie um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativos altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * Implemente com o Cloud Foundry, no qual não é necessário gerenciar a infraestrutura subjacente.
+Clique em **Implementar na nuvem** na página Detalhes do app, selecione um ambiente de implementação e clique em **Criar**. O {{site.data.keyword.cloud_notm}} automaticamente cria uma cadeia de ferramentas aberta e completa com um repositório Git e um pipeline de entrega contínua.
 
-Para obter mais informações, consulte [Criando cadeias de ferramentas](https://{DomainName}/docs/services/ContinuousDelivery/toolchains_working.html).
+Após você selecionar o seu ambiente de implementação, abra o componente de pipeline de sua nova cadeia de ferramentas para iniciar o processo de construção e implementação inicial para que você possa ver o seu novo app em minutos.
+
+Para obter mais informações, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Etapa 5. Criar e executar o app localmente
-{: #build-run}
+{: #build-run-webapp}
 
 A implementação de seu app na nuvem na última etapa criou uma cadeia de ferramentas. Uma cadeia de ferramentas cria um repositório Git para seu app no qual é possível localizar o código. Siga estas etapas para acessar o repositório. É possível construir o app localmente para teste antes de enviá-lo por push para a nuvem.
 
@@ -69,7 +69,7 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
 2. Importe o app para seu ambiente de desenvolvimento integrado.
 3. Modifique o código.
 4. Configure a [Autenticação Git](/docs/services/ContinuousDelivery/git_working.html#git_authentication) incluindo um token de acesso pessoal.
-5. Efetue login na interface da linha de comandos do {{site.data.keyword.Bluemix}}. Se a sua organização usar logins federados, use a opção `-sso`.
+5. Efetue login na interface da linha de comandos do {{site.data.keyword.cloud_notm}}. Se a sua organização usar logins federados, use a opção `-sso`.
 
   ```bash
   ibmcloud login -sso
@@ -107,9 +107,10 @@ A implementação de seu app na nuvem na última etapa criou uma cadeia de ferra
 10. Abra seu navegador para `http://localhost:3000`. Seu número de porta pode ser diferente, dependendo do tempo de execução escolhido.
 
 ## Etapa 6. Implementar seu app
-{: #deploy}
+{: #deploy-webapp}
 
 ### Implementar usando uma cadeia de ferramentas
+{: #deploy-webapp-toolchain}
 
 É possível implementar seu app no {{site.data.keyword.cloud_notm}} de várias maneiras, mas uma cadeia de ferramentas do DevOps é a melhor maneira de implementar apps de produção. Com uma cadeia de ferramentas do DevOps, é possível automatizar facilmente implementações para muitos ambientes e incluir rapidamente serviços de monitoramento, criação de log e alerta para ajudar a gerenciar seu app à medida que ele cresce.
 
@@ -120,9 +121,10 @@ Também é possível implementar seu app manualmente por meio de sua cadeia de f
 1. Na janela Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
 2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e o histórico.
 
-Para obter mais informações, consulte [Construindo e implementando](/docs/services/ContinuousDelivery/pipeline_build_deploy.html).
+Para obter mais informações, consulte [Construindo e implementando](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_build_deploy).
 
 ### Implementar usando o {{site.data.keyword.dev_cli_short}}
+{: #deploy-webapp-cli}
 
 Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
 ```
@@ -137,6 +139,16 @@ ibmcloud dev deploy --target <container>
 {: pre}
 
 ## Etapa 7. Verificar se o app está em execução
-{: #verify}
+{: #verify-webapp}
 
-Após a implementação de seu app, o pipeline ou a linha de comandos do DevOps aponta para a URL de seu app, por exemplo, `abc-devhost.mybluemix.net`. Acesse essa URL em seu navegador.
+Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos apontará a você a URL para o seu app.
+
+1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
+2. Clique em **Visualizar logs e histórico**.
+3. No arquivo de log, localize a URL do aplicativo:
+
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.cloud.ibm.com` ou `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
+
+Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para visualizar a URL de seu app. Em seguida, acesse a URL em seu navegador.

@@ -17,7 +17,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} は、IBM Z の暗号化をクラウドに導入します。 {{site.data.keyword.cloud_notm}} は、銀行サービスや金融サービスで使用されているものと同じ暗号テクノロジーを提供します。
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} は、鍵とデータを、保存されているか、使用中や転送中であるかにかかわらず、業界の最高レベルのセキュリティーである FIPS 140-2 レベル 4 で保護します。{{site.data.keyword.hscrypto}} は、[{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html) サービスの鍵ストアであり、鍵を IBM Z の非常にセキュアな環境で保護します。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} は、鍵とデータを、保存されているか、使用中や転送中であるかにかかわらず、業界の最高レベルのセキュリティーである FIPS 140-2 レベル 4 で保護します。{{site.data.keyword.hscrypto}} は、[{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) サービスの鍵ストアであり、鍵を IBM Z の非常にセキュアな環境で保護します。
 
 ## ACSP クライアントのインストールおよび構成
 {: ##crypto_config}

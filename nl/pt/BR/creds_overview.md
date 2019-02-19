@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -26,12 +26,10 @@ ou senhas do banco de dados, por meio do ambiente no qual o aplicativo é execut
 credenciais no repositório de código-fonte. Os bancos de dados nos ambientes de integração contínua,
 de pré-produção e de produção ficam em quarentena uns dos outros.
 
-Se você criar um app usando um modelo de kit do iniciador, o ambiente será preparado automaticamente. 
-Não importa se o destino de implementação é:
-  * [Kubernetes](/docs/apps/creds_kube.html)
-  * [Cloud
-Foundry](/docs/apps/creds_cf.html)
-  * [Instância de servidor virtual (também docker local)](/docs/apps/creds_vsi.html)
+Se você criar um app usando um modelo de kit do iniciador, o ambiente será preparado automaticamente. Não importa se o destino de implementação é:
+  * [Kubernetes](/docs/apps/creds_kube.html#add-credentials-kube)
+  * [Cloud Foundry Public ou Cloud Foundry Enterprise Environment](/docs/apps/creds_cf.html#add-credentials-cf)
+  * [Instância de servidor virtual (também docker local)](/docs/apps/creds_vsi.html#add-credentials-vsi)
   
 As etapas são fornecidas para como configurar o ambiente. Os kits do iniciador geram o código que usa uma
 biblioteca dependente para tornar o código móvel para execução em qualquer um dos destinos de implementação. Por último, nenhuma

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ A extração de dependências específicas do ambiente em um conjunto de arquivo
 ## Assegure-se de que você esteja monitorando seus apps
 {: #monitoring}
 
-O {{site.data.keyword.Bluemix_notm}} torna mais fácil monitorar o seu aplicativo com serviços como [New Relic ![Ícone de link externo](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+O {{site.data.keyword.cloud_notm}} torna mais fácil monitorar o seu aplicativo com serviços como [New Relic ![Ícone de link externo](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Tire proveito de opções de suporte
 {: #support}
 
-O plano de precificação pago do {{site.data.keyword.Bluemix_notm}} oferece uma série de tipos de contas diferentes com suporte pago opcional. Não importa o tipo de sua conta, se você planeja trazer um aplicativo para produção no {{site.data.keyword.Bluemix_notm}}, considere a inscrição nesta opção.
+O plano de precificação pago do {{site.data.keyword.cloud_notm}} oferece uma série de tipos de contas diferentes com suporte pago opcional. Não importa o tipo de sua conta, se você planeja trazer um aplicativo para produção no {{site.data.keyword.cloud_notm}}, considere a inscrição nesta opção.
 
-Com ou sem suporte pago, é possível obter ajuda conforme descrito em [Suporte](/docs/get-support/howtogetsupport.html), que oferece seguro contra problemas imprevistos.
+Com ou sem suporte pago, é possível obter ajuda conforme descrito em [Suporte](/docs/get-support/howtogetsupport.html#getting-customer-support), que oferece seguro contra problemas imprevistos.
 
 ## Evite APIs de infraestrutura em seu app
 

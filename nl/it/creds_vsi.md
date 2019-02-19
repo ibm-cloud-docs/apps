@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Aggiunta di credenziali al tuo ambiente docker locale o di istanza virtuale
-{: #add_credentials}
+{: #add-credentials-vsi}
 
 Acquisisci informazioni su come aggiungere delle credenziali di servizio al tuo ambiente di distribuzione docker locale o di VSI (Virtual Server Instance).
 {: shortdesc}
 
 ## Il tuo codice + VSI (Virtual Server Instance) o docker locale
-{: #byoc_vsi}
+{: #credentials-byoc-vsi}
 
 Nella VSI o nel docker locale, l'ambiente è interamente tuo. Ad esempio puoi scrivere il tuo codice, come il seguente esempio, e fornire un valore di ambiente della credenziale alla tua applicazione quando la esegui.
 ```
@@ -43,13 +43,14 @@ docker run -p 80:8080 -e password="someThingSensitive"
 {: codeblock}
 
 ## Kit starter + VSI (o Docker locale)
-{: #sk_vsi}
+{: #credentials-starterkit-vsi}
 
 ### Come viene preparata l'istanza del server virtuale (o VSI, Virtual Server Instance)
 
 L'ambiente è interamente sotto il tuo controllo, come se stessi eseguendo l'applicazione dal tuo notebook. In altre parole, Docker locale. Poiché la VSI è effettivamente bare metal, dalla prospettiva dell'applicazione in esecuzione, non esistono _segreti_ (come in Kubernetes) o _servizi_ (come in Cloud Foundry).
 
 ### Il codice generato dal kit starter
+{: #starterkit-generated-code-vsi}
 
 Il codice generato da un kit starter ha la libreria `IBMCloudEnv` nativa, che astrae il richiamo dei valori di ambiente in modo che il codice dell'applicazione sia portatile per l'esecuzione su diverse distribuzioni di destinazione. Con Docker virtuale o locale, tale ambiente deve essere preparato con i valori che soddisfano la libreria `IBMCloudEnv` che _non provengono necessariamente_ da variabili di ambiente effettive.
 
@@ -76,7 +77,7 @@ Se utilizzi `git clone` sul repository GitLab creato per avviare lo sviluppo att
 Puoi richiamare il file `server/localdev-config.json` completando la seguente procedura:
 
 1. Utilizza `git clone` sul repository GitLab che era stato creato automaticamente quando hai utilizzato la funzione "Deploy to Cloud".
-2. Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), che include il plug-in `dev`.
+2. Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), che include il plug-in `dev`.
 3. Utilizza la riga di comando `ibmcloud` per eseguire l'accesso a {{site.data.keyword.cloud_notm}}.
 4. Esegui `ibmcloud dev get-credentials`, che fa riferimento al file `cli-config.yml`. Il file `cli-config.yml` include le informazioni relative a quale lavoro di generazione e applicazione ha le credenziali.
 

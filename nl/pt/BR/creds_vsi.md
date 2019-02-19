@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,14 +14,14 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Incluindo credenciais na instância virtual ou no ambiente do Docker local
-{: #add_credentials}
+{: #add-credentials-vsi}
 
 Aprenda a incluir as credenciais de serviço na instância de servidor virtual ou no ambiente de implementação
 do Docker local.
 {: shortdesc}
 
 ## Seu código + instância de servidor virtual ou Docker local
-{: #byoc_vsi}
+{: #credentials-byoc-vsi}
 
 Sob o VSI ou o Docker local, o ambiente é inteiramente seu. Por exemplo, é possível gravar o código como no
 exemplo a seguir e fornecer o valor do ambiente da credencial para o aplicativo ao executá-lo.
@@ -45,7 +45,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 {: codeblock}
 
 ## Kit do iniciador + VSI (ou Docker local)
-{: #sk_vsi}
+{: #credentials-starterkit-vsi}
 
 ### Como a instância de servidor virtual é preparada
 
@@ -54,6 +54,7 @@ em execução, não existe nenhum _segredo_ (como no Kubernetes) ou _serviço_ (
 Foundry).
 
 ### O código gerado pelo kit do iniciador
+{: #starterkit-generated-code-vsi}
 
 O código gerado por meio de um kit do iniciador tem a biblioteca `IBMCloudEnv` nativa,
 que abstrai a recuperação dos valores do ambiente para que o código do aplicativo seja móvel para execução em
@@ -79,8 +80,7 @@ Por exemplo, observe a última linha na seção do arquivo `mappings.json`:
 {: codeblock}
 
 Se você usar o recurso "Implementar na nuvem" ao criar um app, o arquivo
-`/server/localdev-config.json` será removido do repositório GitLab. 
-Por razões de segurança, você não desejará colocar as suas credenciais em um repositório de código-fonte.
+`/server/localdev-config.json` será removido do repositório GitLab. Por razões de segurança, você não desejará colocar as suas credenciais em um repositório de código-fonte.
 
 Se você usar `git clone` no repositório GitLab criado para iniciar o desenvolvimento ativo,
 observe que o arquivo `.gitignore` ignorará especificamente o `server/localdev-config.json` para ajudar a evitar check-ins acidentais de um arquivo que tenha
@@ -91,11 +91,9 @@ trabalha em um notebook.
 
 1. Use `git clone` no repositório GitLab que foi criado automaticamente quando
 você usou o recurso "Implementar na nuvem".
-2. Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), que
-inclui o plug-in `dev`.
+2. Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), que inclui o plug-in `dev`.
 3. Use a linha de comandos `ibmcloud` para efetuar login no {{site.data.keyword.cloud_notm}}.
-4. Execute `ibmcloud dev get-credentials`, que se refere ao arquivo `cli-config.yml`. 
-O arquivo `cli-config.yml` inclui informações sobre qual aplicativo e tarefa de geração tem as
+4. Execute `ibmcloud dev get-credentials`, que se refere ao arquivo `cli-config.yml`. O arquivo `cli-config.yml` inclui informações sobre qual aplicativo e tarefa de geração tem as
 credenciais.
 
 Se algum recurso for removido do aplicativo entre o uso do recurso "Implementar na nuvem" e o
@@ -107,12 +105,10 @@ Se você estiver executando o aplicativo em um contêiner do Docker, será poss�
 do Docker.
 
 Continuando com a seção "cloudant_apikey" por meio do arquivo `mappings.json`, observe o
-`env:cloudant_apikey` antes da linha `file...`. Isso significa que uma variável de ambiente denominada `cloudant_apikey` tem precedência sobre o conteúdo do arquivo. 
-Portanto, mesmo se o arquivo estiver presente na imagem do Docker que você construiu (o que não é necessário), será possível
+`env:cloudant_apikey` antes da linha `file...`. Isso significa que uma variável de ambiente denominada `cloudant_apikey` tem precedência sobre o conteúdo do arquivo. Portanto, mesmo se o arquivo estiver presente na imagem do Docker que você construiu (o que não é necessário), será possível
 substituir os valores passando-os na linha de comandos do Docker.
 
-Por
-exemplo:
+Por exemplo:
 ```console
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```

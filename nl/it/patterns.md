@@ -56,7 +56,7 @@ Scegli un kit starter del microservizio per i tuoi requisiti di linguaggio e fra
 ## Mobile
 {: #mobile}
 
-Le applicazioni mobili sono diverse dagli altri modelli perché hanno un componente lato client significativo. Il modello potrebbe includere la connessione diretta a servizi mobili come le notifiche push, l'autenticazione e l'analisi mobile. I servizi mobili sono noti come modello MBaaS (Mobile Backend as a Service). Possono anche avere un [backend-for-frontend](#bff) dedicato.
+Le applicazioni mobili sono diverse dagli altri modelli perché hanno un componente lato client significativo. Il modello potrebbe includere la connessione diretta a servizi mobili come le notifiche push, l'autenticazione e l'analisi mobile. I servizi mobili sono noti come modello MBaaS (Mobile Backend as a Service). Possono anche avere un [backend-for-frontend](/docs/apps/patterns.html#bff) dedicato.
 
 {{site.data.keyword.cloud_notm}} offre diversi kit starter per dispositivo mobile per iOS Swift, Android e Cordova. Puoi trovare i kit starter per il modello mobile nel [Dashboard dello sviluppatore mobile {{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/mobile/dashboard).
 

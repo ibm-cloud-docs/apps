@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-26"
+  years: 2018, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-26"
 {:tip: .tip}
 
 # Implementando um app do kit do iniciador para um cluster do Kubernetes
-{: #tutorial}
+{: #tutorial-starterkit-kube}
 
 Aprenda a criar um app no {{site.data.keyword.cloud}} usando um kit de iniciador em branco e uma cadeia
 de ferramentas do Kubernetes e entregue continuamente o app para um contêiner seguro em um cluster do Kubernetes. O
@@ -36,15 +36,14 @@ Primeiramente, consulte o diagrama de fluxo do iniciador a seguir e suas etapas 
 ![Fluxograma do kit do iniciador](../images/starterkit-flow.png) 
 
 ## Antes de começar
-{: #prereqs}
+{: #prereqs-starterkit-kube}
 
-* Crie um app **Java + Spring** usando um [kit do iniciador](/docs/apps/tutorials/tutorial_starter-kit.html).
-* Instale a CLI do [{{site.data.keyword.cloud_notm}} ](/docs/cli/index.html).
-* Configure o [Docker
-![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.docker.com/get-started){: new_window}.
+* Crie um app **Java + Spring** usando um [kit do iniciador](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
+* Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+* Configure o [Docker![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.docker.com/get-started){: new_window}.
 
 ## Incluindo recursos no app
-{: #add_resources}
+{: #resources-starterkit-kube}
 
 Inclua um recurso de serviço do {{site.data.keyword.cloud_notm}} no aplicativo. As etapas a seguir
 fornecem uma instância do Cloudant, criam uma chave de recurso (credenciais) e conecte-a ao app.
@@ -54,13 +53,12 @@ fornecem uma instância do Cloudant, criam uma chave de recurso (credenciais) e 
 3. Selecione **Cloudant** e clique em **Avançar**.
 4. Na página **Incluir Cloudant**, selecione a região (Sul dos EUA), o grupo de recursos
 (padrão) e o plano de precificação (Lite, uma instância grátis).
-5. Clique **Criar**. A página **Detalhes do app** é exibida e a
-instância do Cloudant é fornecida e ligada ao app. Observe que a chave de recursos do Cloudant (credenciais) é
+5. Clique em **Criar**. A página **Detalhes do app** é exibida e a instância do Cloudant é fornecida e ligada ao app. Observe que a chave de recursos do Cloudant (credenciais) é
 incluída no campo **Credenciais**.
-6. Opcional. Se desejar dar uma olhada rápida no código do app depois de incluir os recursos, clique em **Fazer download do código**. O código é transferido por download como um arquivo `.zip` que contém a estrutura completa do código do app. É possível extrair facilmente o arquivo e executar o código localmente usando o {{site.data.keyword.dev_cli_notm}} ou incluí-lo em seu repositório de gerenciamento de código.
+6. Opcional. Se desejar dar uma olhada rápida no código do app depois de incluir os recursos, clique em **Fazer download do código**. O código é transferido por download como um arquivo `.zip` que contém a estrutura do código do app completa. É possível extrair facilmente o arquivo e executar o código localmente usando o {{site.data.keyword.dev_cli_notm}} ou incluí-lo em seu repositório de gerenciamento de código.
 
 ## Implementando o app usando uma cadeia de ferramentas do DevOps
-{: #deploy_app}
+{: #deploy-starterkit-kube}
 
 Conecte uma cadeia de ferramentas do DevOps ao aplicativo e configure-a para ser implementada em um cluster do
 Kubernetes hospedado no serviço {{site.data.keyword.cloud_notm}} Kubernetes.
@@ -80,7 +78,7 @@ região **Sul dos EUA**, é possível fornecer um cluster grátis.
 selecione uma região, selecione um grupo de recursos e, em seguida, clique em **Criar**. A página **Detalhes do app** é exibida, juntamente com as informações de implementação sobre a cadeia de ferramentas.
 
 ## Visualizando o repositório
-{: #view_repo}
+{: #view-repo-starterkit-kube}
 
 1. Na página **Detalhes do app**, clique em **Visualizar repositório**. O
 repositório Git que o kit do iniciador gerou é exibido.
@@ -88,7 +86,7 @@ repositório Git que o kit do iniciador gerou é exibido.
 3. Opcional. Crie um token de acesso pessoal em sua conta, seguindo as instruções na tela.
 
 ## Visualizando as ferramentas, os logs e o histórico da cadeia de ferramentas
-{: #view_logs}
+{: #view-logs-starterkit-kube}
 
 1. Quando o estágio de implementação for concluído, a página **Detalhes do app** será exibida, juntamente com as informações de implementação sobre a cadeia de ferramentas.
 2. Acesse a cadeia de ferramentas clicando em **Visualizar cadeia de ferramentas**. A guia **Visão geral** da página da cadeia de ferramentas é exibida, que mostra as ferramentas que são
@@ -106,18 +104,29 @@ iniciador quando a cadeia de ferramentas foi criada:
 	 * O estágio IMPLEMENTAÇÃO recupera a imagem do contêiner do registro de contêiner e, em seguida,
 implementa-a no cluster do Kubernetes.
 3. Clique em **Delivery Pipeline**. Os estágios de pipeline são exibidos.
-4. No estágio IMPLEMENTAÇÃO, clique em **Visualizar os logs e o histórico**.
-5. No final do log, procure por `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`, que é a
-URL na qual é possível acessar o aplicativo.
-6. Acesse o terminal `/health` em `http://<ipaddress>:<port>/health`. Se o
-aplicativo estiver em execução no cluster, uma mensagem que inclui `{"status":"UP"}` será exibida.
+4. No bloco **Implementar estágio**, clique em **Visualizar logs e histórico**.
 
-Se você encontrar erros com a implementação, verifique o tópico de resolução de problemas para problemas
-conhecidos como [cota de armazenamento excedida](/docs/apps/ts_apps.html#exceed_quota) ou saiba
-como [acessar os logs do Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) para procurar erros.
+## Verificando se o seu app está em execução
+{: #verify-starterkit-kube}
+
+Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos apontará a você a URL para o seu app.
+
+1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
+2. Clique em **Visualizar logs e histórico**.
+3. No arquivo de log, localize a URL do aplicativo:
+
+    No término do arquivo de log, procure `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
+
+Se você estiver usando a linha de comandos, execute o comando [ ` ibmcloud dev view ` ](/docs/cli/idt/commands.html#view) para visualizar a URL de seu app. Em seguida, acesse a URL em seu navegador.
 
 ## Próximas Etapas
-{: #next_steps notoc}
+{: #next-steps-startkit-kube notoc}
+
+* Se você encontrar erros com a implementação, verifique o tópico de resolução de problemas para problemas
+conhecidos como [cota de armazenamento excedida](/docs/apps/ts_apps.html#exceed_quota) ou saiba
+como [acessar os logs do Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) para procurar erros.
 
 * Acesse a configuração de serviço no código:
 	- É possível usar a anotação _@Value_ ou usar o método _getProperty()_ da classe de

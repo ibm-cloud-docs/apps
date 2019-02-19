@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
 ---
 
@@ -14,34 +14,23 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Mendix를 사용하여 앱 작성
-{: #getting-started}
+{: #create-mendix}
 
 Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code) 개발 환경이자 도구 세트로, 더 적은 개발 리소스를 사용하여 보다 신속하게 여러 장치 애플리케이션을 제공하는 데 도움을 줍니다. Mendix 로우 코드 스타터 킷을 선택하면 Mendix 플랫폼에서 계정을 설정하고, 프로젝트를 시작하며, Cloud Foundry 또는 Kubernetes 클러스터 중에서 개발 환경을 선택하는 과정을 안내합니다.
 {: shortdesc}
 
 ## 스타터 킷 선택
-{: #select-a-starter-kit}
+{: #starterkit-mendix}
 
-1. [{{site.data.keyword.cloud_notm}} 앱 서비스 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/dashboard){: new_window}에서 **시작하기**를 클릭하십시오. 
+1. [{{site.data.keyword.cloud_notm}} 앱 서비스 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/dashboard){: new_window}에서 **시작하기**를 클릭하십시오.
 2. 다음 카테고리 중 하나에서 Mendix 로우 코드 스타터 킷을 선택하십시오.
   * [모바일 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
   * [Watson 웹 또는 모바일 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [웹 앱 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. **앱 작성**을 클릭하십시오.
-4. 앱 이름을 지정하십시오.
+4. **앱 세부사항** 페이지에서 앱의 이름을 지정하고 앱을 분류하기 위한 태그를 선택적으로 제공하십시오. 자세한 정보는 [태그에 대한 작업](/docs/resources/tagging_resources.html#tag)을 참조하십시오.
 5. **작성**을 클릭하십시오.
 
-<!-- 
-####### Promote CLOUD.IBM.COM links to prod when approved.
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
-2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
-3. Click **Create app**.
-4. Name your app.
-5. Click **Create**.
--->
 
 ## IBM에 Mendix 및 링크 계정에서 프로젝트를 작성할 권한 부여
 {: #link-mendix-account}
@@ -58,20 +47,20 @@ Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code)
 ## Mendix 앱의 배치 옵션 선택
 {: #select-deployment}
 
-1. **배치 환경 선택** 페이지에서 Cloud Foundry 또는 {{site.data.keyword.cloud_notm}}에서 실행되는 Kubernetes 클러스터 중 하나를 선택하십시오.
+1. **배치 환경 선택** 페이지에서 Cloud Foundry, 또는 {{site.data.keyword.cloud_notm}}에서 실행 중인 Kubernetes 클러스터 중 하나를 선택하십시오. 계정에 {{site.data.keyword.cfee_full_notm}}에 대한 액세스 권한이 있는 경우에는 **[퍼블릭 클라우드](/docs/cloud-foundry-public/about-cf.html#about-cf)** Cloud Foundry 배치자 유형을 선택하거나, 사용자 엔터프라이즈 전용으로 Cloud Foundry 애플리케이션을 호스팅하는 격리된 환경을 작성하고 관리하는 데 사용할 수 있는 **[엔터프라이즈 환경](/docs/cloud-foundry-public/cfee.html#cfee)** Cloud Foundry 배치자 유형을 선택할 수 있습니다. 
 2. 선택사항. Kubernetes 클러스터가 없는 경우 지금 하나를 작성할 수 있습니다.
 3. **도구 체인 구성** 페이지에서 사용자의 영역과 리소스 그룹을 선택한 후 **작성**을 클릭하십시오.
 
 DevOps 도구 체인이 작성됩니다. 도구 체인은 {{site.data.keyword.cloud_notm}} 환경에서 Mandix 플랫폼 내에 Mendix 프로젝트를 통합합니다. DevOps 도구 체인이 완료 시 애플리케이션이 배치되었는지 확인할 수 있도록 기본 애플리케이션이 대상 배치에 배치됩니다.
 
-Mendix Cloud Foundry 배치에는 Lite 티어 없는 PostGRES 데이터베이스 서비스가 필요합니다.   Lite 계정을 사용하여 Mendix 스타터 킷을 평가하려는 경우, 평가판 Kubernetes 클러스터를 대상으로 할 수 있습니다.
+Mendix Cloud Foundry 배치에는 Lite 티어 없는 PostGRES 데이터베이스 서비스가 필요합니다. Lite 계정을 사용하여 Mendix 스타터 킷을 평가하려는 경우, 평가판 Kubernetes 클러스터를 대상으로 할 수 있습니다.
 {: tip}
 
-배치에 Kubernetes 클러스터를 선택한 경우, [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)을 참조하여 프로덕션 사용을 위해 클러스터를 구성하는 방법을 알아보십시오.
+배치에 Kubernetes 클러스터를 선택한 경우, [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)을 참조하여 프로덕션 사용을 위해 클러스터를 구성하는 방법을 알아보십시오.
 
 
 ## Mendix 배치 및 배치 라이프사이클 계속 수행
-{: #development-lifecycle}
+{: #dev-lifecycle-mendix}
 
 Mendix는 로우 코드 작성 환경입니다. 개발 라이프사이클을 수행하려면 Mendix Modeler 데스크탑 애플리케이션에서 프로젝트를 열어야 합니다.
 
@@ -88,6 +77,6 @@ Mendix는 로우 코드 작성 환경입니다. 개발 라이프사이클을 수
 {: tip}
 
 ## 다음 단계 
-{: #next steps}
+{: #next-steps-mendix}
 
-앱을 {{site.data.keyword.containerlong_notm}}에 배치하려면 프로덕션 배치를 위해 앱을 구성하십시오. 자세한 정보는 [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)을 참조하십시오. 
+앱을 {{site.data.keyword.containerlong_notm}}에 배치하려면 프로덕션 배치를 위해 앱을 구성하십시오. 자세한 정보는 [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)을 참조하십시오.  

@@ -17,7 +17,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} porta la crittografia IBM Z nel cloud. {{site.data.keyword.cloud_notm}} offre la stessa tecnologia crittografica su cui si basano i servizi bancari e finanziari.
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protegge le tue chiavi e i tuoi dati inattivi, in uso e in transito al livello di sicurezza più elevato del settore – FIPS 140-2 Livello 4. {{site.data.keyword.hscrypto}} è il keystore per il servizio [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html) e protegge le tue chiavi in un ambiente altamente sicuro su IBM Z.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protegge le tue chiavi e i tuoi dati inattivi, in uso e in transito al livello di sicurezza più elevato del settore – FIPS 140-2 Livello 4. {{site.data.keyword.hscrypto}} è il keystore per il servizio [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) e protegge le tue chiavi in un ambiente altamente sicuro su IBM Z.
 
 ## Installazione e configurazione del client ACSP
 {: ##crypto_config}

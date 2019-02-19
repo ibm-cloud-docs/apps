@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Apps mit Mendix erstellen
-{: #getting-started}
+{: #create-mendix}
 
 Mendix ist eine Low-Code-Entwicklungsumgebung und ein Toolset, dass Ihnen dabei hilft, Anwendungen mit mehreren Geräten schneller und mit weniger Entwicklungsressourcen, die in {{site.data.keyword.cloud}} ausgeführt werden, zu liefern. Durch die Auswahl eines Mendix Low-Code-Starter-Kits werden Sie durch die Kontoeinrichtung auf eine Mendix-Plattform geführt, starten Ihr Projekt und wählen Ihre Entwicklungsumgebung entweder in der Cloud Foundry oder in Ihrem Kubernetes-Cluster aus.
 {: shortdesc}
 
 ## Starter-Kit auswählen
-{: #select-a-starter-kit}
+{: #starterkit-mendix}
 
 1. Klicken Sie im [{{site.data.keyword.cloud_notm}}-App-Service-Dashboard ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/dashboard){: new_window} auf **Einstieg**.
 2. Wählen Sie ein Mendix-Low-Code-Starter-Kit aus einer der folgenden Kategorien aus:
@@ -28,20 +28,9 @@ Mendix ist eine Low-Code-Entwicklungsumgebung und ein Toolset, dass Ihnen dabei 
   * [Watson Web oder Mobile App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [Web-App ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. Klicken Sie auf **Anwendung erstellen**.
-4. Benennen Sie Ihre App.
+4. Geben Sie auf der Seite **App-Details** den Namen Ihrer App und optional Tags an, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources/tagging_resources.html#tag).
 5. Klicken Sie auf **Erstellen**.
 
-<!-- 
-####### Promote CLOUD.IBM.COM links to prod when approved.
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
-2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
-3. Click **Create app**.
-4. Name your app.
-5. Click **Create**.
--->
 
 ## Autorisieren Sie IBM, um Ihr Projekt auf Mendix-und Linkkonten zu erstellen
 {: #link-mendix-account}
@@ -58,20 +47,20 @@ Nachdem die Autorisierung abgeschlossen ist, kehrt Ihr Browser zur Mendix-App zu
 ## Bereitstellungsoption für Ihre Mendix-App auswählen
 {: #select-deployment}
 
-1. Wählen Sie auf der Seite, auf der Sie eine **Bereitstellungsumgebung auswählen** können, die Option Cloud Foundry oder einen Ihrer Kubernetes-Cluster aus, die in {{site.data.keyword.cloud_notm}} ausgeführt werden.
+1. Wählen Sie auf der Seite **Bereitstellungsumgebung auswählen** die Option Cloud Foundry oder einen Ihrer Kubernetes-Cluster aus, die in {{site.data.keyword.cloud_notm}} ausgeführt werden. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Cloud Foundry-Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** oder den Cloud Foundry-Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
 2. Optional. Wenn Sie keinen Kubernetes-Cluster haben, können Sie jetzt einen erstellen.
 3. Wählen Sie auf der Seite **Toolchain konfigurieren** Ihre Region und Ihre Ressourcengruppe aus und klicken Sie anschließend auf **Erstellen**.
 
 Es wird eine DevOps-Toolchain erstellt. Die Toolchain integriert Ihr Mendix-Projekt auf der Mendix-Plattform in Ihre {{site.data.keyword.cloud_notm}}-Umgebung. Eine Standardanwendung wird in Ihrer Zielumgebung bereitgestellt, damit Sie überprüfen können, ob die Anwendung nach Ende der DevOps-Toolchain erfolgreich bereitgestellt wurde.
 
-Die Mendix Cloud Foundry-Implementierungen benötigen den PostGRES-Datenbankservice, der kein Lite-Tier aufweist.   Wenn Sie die Mendix-Starter-Kits mit einem Lite-Konto evaluieren möchten, können Sie einen Test-Kubernetes-Cluster als Ziel verwenden.
+Die Mendix Cloud Foundry-Implementierungen benötigen den PostGRES-Datenbankservice, der kein Lite-Tier aufweist. Wenn Sie die Mendix-Starter-Kits mit einem Lite-Konto evaluieren möchten, können Sie einen Test-Kubernetes-Cluster als Ziel verwenden.
 {: tip}
 
-Wenn Sie für die Bereitstellung einen Kubernetes-Cluster ausgewählt haben, erfahren Sie im [Lernprogramm für Mendix-Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) mehr über die Konfiguration Ihres Clusters für den Produktionseinsatz.
+Wenn Sie für die Bereitstellung einen Kubernetes-Cluster ausgewählt haben, erfahren Sie im [Lernprogramm für Mendix-Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube) mehr über die Konfiguration Ihres Clusters für den Produktionseinsatz.
 
 
 ## Mendix-Entwicklungs- und Bereitstellungslebenzyklus fortsetzen
-{: #development-lifecycle}
+{: #dev-lifecycle-mendix}
 
 Mendix ist eine Low-Code-Authoring-Umgebung. Der Entwicklungszyklus erfordert, dass Sie Ihr Projekt in der Desktopanwendung Mendix Modeler öffnen.
 
@@ -88,6 +77,6 @@ Alle Mendix-Anwendungen sollen in {{site.data.keyword.cloud_notm}} durch Klicken
 {: tip}
 
 ## Nächste Schritte 
-{: #next steps}
+{: #next-steps-mendix}
 
-Konfigurieren Sie Ihre App für die Bereitstellung in der Produktionsumgebung, um Ihre App in {{site.data.keyword.containerlong_notm}} bereitzustellen. Weitere Informationen finden Sie im [Lernprogramm für Mendix-Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html). 
+Konfigurieren Sie Ihre App für die Bereitstellung in der Produktionsumgebung, um Ihre App in {{site.data.keyword.containerlong_notm}} bereitzustellen. Weitere Informationen enthält das [Lernprogramm für Mendix-Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube). 

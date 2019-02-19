@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2018-07-23"
 {:tip: .tip}
 
 # Usando contêineres com Kubernetes
-{: #containers}
+{: #containers-kube}
 
 Inicie o {{site.data.keyword.containershort}} implementando apps altamente disponíveis nos contêineres do Docker que são executados nos clusters do Kubernetes. Gerencie o desenvolvimento de sua equipe com Git e, em seguida, use a Cadeia de ferramentas do DevOps para gerenciar a implementação de seu app para o Kubernetes.
 {: shortdesc}
@@ -35,7 +35,7 @@ Ao criar apps de backend ou de serviço da web, é possível implementá-los no 
 ## Ligando serviços
 {: #bind-services}
 
-À medida que a cadeia de ferramentas é criada, os serviços associados a seu app são ligados ao cluster do Kubernetes usando segredos do Kubernetes. Os segredos são usados para gerenciar as credenciais de serviço fora do seu app em execução. O app lê os segredos e, em seguida, recupera os valores que ele precisa para iniciar a execução. Os serviços de ligação permitem implementar o app em outro ambiente do Kubernetes que pode estar usando as instâncias de serviço de nível de produção do {{site.data.keyword.cloud_notm}}.
+À medida que a cadeia de ferramentas é criada, os serviços associados a seu app são ligados ao cluster do Kubernetes usando segredos do Kubernetes. Os segredos são usados para gerenciar as credenciais de serviço fora do seu app em execução. O app lê os segredos e, em seguida, recupera os valores que ele precisa para iniciar a execução. Os serviços de ligação permitem implementar o app em outro ambiente do Kubernetes que pode estar usando as instâncias de serviço de nível de produção do {{site.data.keyword.cloud}}.
 
 Se você excluir o serviço ou os segredos, será necessário ligá-los manualmente novamente ou excluir e recriar a cadeia de ferramentas.
 {: tip}

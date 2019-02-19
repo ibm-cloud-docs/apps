@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -58,14 +58,14 @@ Puoi eseguire più di una singola istanza per evitare tempi di inattività in un
 ## Assicurati di stare monitorando le tue applicazioni
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic ![Icona link esterno](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic ![Icona link esterno](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Approfitta delle opzioni di supporto
 {: #support}
 
-Il piano prezzi a pagamento di {{site.data.keyword.Bluemix_notm}} offre una serie di diversi tipi di account con supporto a pagamento facoltativo. Indipendentemente dal tuo tipo di account, se prevedi di portare un'applicazione in produzione su {{site.data.keyword.Bluemix_notm}}, considera questa opzione.
+Il piano prezzi a pagamento di {{site.data.keyword.cloud_notm}} offre una serie di diversi tipi di account con supporto a pagamento facoltativo. Indipendentemente dal tuo tipo di account, se prevedi di portare un'applicazione in produzione su {{site.data.keyword.cloud_notm}}, considera questa opzione.
 
-Con o senza il supporto a pagamento, puoi ottenere assistenza come descritto in [Supporto](/docs/get-support/howtogetsupport.html), che offre un'assicurazione contro problemi imprevisti.
+Con o senza il supporto a pagamento, puoi ottenere assistenza come descritto in [Supporto](/docs/get-support/howtogetsupport.html#getting-customer-support), che offre un'assicurazione contro problemi imprevisti.
 
 ## Evita API di infrastruttura nella tua applicazione
 

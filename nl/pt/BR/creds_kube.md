@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-14"
 {:note: .note}
 
 # Incluindo credenciais no ambiente do Kubernetes
-{: #add_credentials}
+{: #add-credentials-kube}
 
 Aprenda a incluir as credenciais de serviço no ambiente de implementação do Kubernetes.
 {: shortdesc}
@@ -23,11 +23,10 @@ Aprenda a incluir as credenciais de serviço no ambiente de implementação do K
 Deve-se incluir manualmente as credenciais de serviço no ambiente de implementação nestes cenários:
  * Ao trazer seu próprio código.
  * Ao iniciar por meio de um modelo de kit do iniciador em branco.
- * Ao incluir um serviço em um app baseado em kit do iniciador _depois_ que ele foi
-implementado.
+ * Ao incluir um serviço em um app baseado em kit do iniciador _depois_ que ele foi implementado.
 
 ## Seu código + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -92,7 +91,7 @@ chave `KEY_SECRET` seja resolvido para um valor.
 
 Use um terminal em sua estação de trabalho para instalar as ferramentas a seguir:
 
-1. Instale a CLI do [{{site.data.keyword.dev_cli_long}} ](/docs/cli/index.html).
+1. Instale a CLI do [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
 2. Efetue login usando o comando `ibmcloud login`.
 3. Conecte-se ao cluster executando `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copie e cole o comando `export` para executá-lo por meio de um terminal.
@@ -117,7 +116,7 @@ Agora que o cluster do Kubernetes está preparado com um segredo resolvível, é
 usar as variáveis de ambiente definidas no arquivo `deployment.yml`.
 
 ## App do kit do iniciador + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. Acesse a página **Detalhes do app** do app.
 2. Para criar uma instância do Cloud Object Storage, selecione **Incluir recurso** >
@@ -125,8 +124,7 @@ usar as variáveis de ambiente definidas no arquivo `deployment.yml`.
 3. Clique em `Fazer download do código` para gerar novamente o projeto com os fragmentos do
 código injetado.
 4. Para acessar as credenciais localmente, copie e substitua os arquivos a seguir por meio do arquivo
-`.zip` recém-gerado, para que o clone Git local acesse as credenciais. 
-Deve-se ainda criar um segredo do Kubernetes no cluster para hospedar as credenciais.
+`.zip` recém-gerado, para que o clone Git local acesse as credenciais. Deve-se ainda criar um segredo do Kubernetes no cluster para hospedar as credenciais.
 
 	- `chart/{appName}/bindings.yaml`: gera uma variável de ambiente no cluster do
 Kubernetes que aponta para o segredo.
@@ -175,7 +173,7 @@ cluster do Kubernetes, será possível ver o segredo que você criou.
 
 Se estiver implementando em um aplicativo do Cloud Foundry, será necessário criar um serviço fornecido pelo
 usuário se você estiver usando uma instância do Resource Controller (se o recurso residir em um grupo de recursos em vez
-de em uma organização ou espaço).
+de em uma organização ou espaço). 
 {: note}
   
   ```console
@@ -254,7 +252,7 @@ O segredo do Kubernetes não é recuperável pelo código do aplicativo, a menos
 usar um kit do iniciador, esse código será gerado automaticamente.
 
 ### O código gerado pelo kit do iniciador
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
 Nesse caso, você criou esse aplicativo por meio de um kit do iniciador. O código gerado por meio de um kit
 do iniciador é feito para ser móvel para executar localmente no Cloud Foundry ou em Kubernetes. A biblioteca,

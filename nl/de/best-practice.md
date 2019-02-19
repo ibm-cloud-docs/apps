@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ Sie können mehr als eine Instanz ausführen, um Ausfallzeiten in einer einzelne
 ## Überwachung Ihrer Apps sicherstellen
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} vereinfacht die Überwachung Ihrer Anwendungen durch Services wie [New Relic ![Symbol für externen Link](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} vereinfacht die Überwachung Ihrer Anwendungen durch Services wie [New Relic ![Symbol für externen Link](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Vorteile von Supportoptionen nutzen
 {: #support}
 
-Die gebührenpflichtigen {{site.data.keyword.Bluemix_notm}}-Preisstrukturpläne bieten eine Reihe unterschiedlicher Kontotypen mit optionalem gebührenpflichtigen Support. Eine Registrierung dieser Option sollten Sie ungeachtet Ihres Kontotyps auf jeden Fall in Erwägung ziehen, wenn Sie Ihre Anwendung in einer {{site.data.keyword.Bluemix_notm}}-Produktionsumgebung nutzen wollen.
+Die gebührenpflichtigen {{site.data.keyword.cloud_notm}}-Preisstrukturpläne bieten eine Reihe unterschiedlicher Kontotypen mit optionalem gebührenpflichtigen Support. Eine Registrierung dieser Option sollten Sie ungeachtet Ihres Kontotyps auf jeden Fall in Erwägung ziehen, wenn Sie Ihre Anwendung in einer {{site.data.keyword.cloud_notm}}-Produktionsumgebung nutzen wollen.
 
-Im Abschnitt zum Anfordern von [Unterstützung](/docs/get-support/howtogetsupport.html) ist beschrieben, wie Sie - ob mit oder ohne gebührenpflichtigem Support - Unterstützung anfordern, die Sie bei unvorhergesehenen Problemen schützt.
+Im Abschnitt zum Anfordern von [Unterstützung](/docs/get-support/howtogetsupport.html#getting-customer-support) ist beschrieben, wie Sie - ob mit oder ohne gebührenpflichtigem Support - Unterstützung anfordern, die Sie bei unvorhergesehenen Problemen schützt.
 
 ## Infrastruktur-APIs in der App vermeiden
 

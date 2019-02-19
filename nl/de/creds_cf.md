@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Berechtigungsnachweise Ihrer Cloud Foundry-Umgebung hinzufügen
-{: #add_credentials}
+{: #add-credentials-cf}
 
-Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Cloud Foundry-Bereitstellungsumgebung hinzufügen.
+Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Cloud Foundry-Bereitstellungsumgebung hinzufügen. Diese Anweisungen gelten sowohl für [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) als auch für [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Ihr Code + Cloud Foundry
-{: #byoc_cf}
+{: #credentials-byoc-cf}
 
 Im Cloud Foundry-Bereich, in dem sich Ihre Anwendung befindet, können Sie definieren, was bei Cloud Foundry als vom Benutzer zur Verfügung gestellter Service bezeichnet wird. Ein vom Benutzer zur Verfügung gestellter Service ist in Zeichenfolge konvertiertes JSON, gespeichert wie ein bindefähiger Service im Cloud Foundry-Bereich. Führen Sie die folgenden Schritte aus, um einen Service zu erstellen und zu binden, nachdem Sie sich angemeldet und eine Verbindung zu Cloud Foundry-Organisation und -Bereich hergestellt haben.
 
@@ -31,7 +31,7 @@ Im Cloud Foundry-Bereich, in dem sich Ihre Anwendung befindet, können Sie defin
   {: codeblock}
 
 2. Konfigurieren Sie Ihre Cloud Foundry-Anwendung durch eine Hinzufügung zum Abschnitt "services" so, dass sie an den vom Benutzer zur Verfügung gestellten Service gebunden wird:
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -64,17 +64,17 @@ Im Cloud Foundry-Bereich, in dem sich Ihre Anwendung befindet, können Sie defin
 
 
 ## Starter-Kit-App + Cloud Foundry
-{: #sk_cf}
+{: #credentials-starterkit-cf}
 
 ### Vorbereitung des Cloud Foundry-Bereichs
 
 Verwenden Sie die Funktion **In Cloud bereitstellen**, um Ihre App in Ihrem Cloud Foundry-Bereich bereitzustellen.
 
-Wenn sich die Cloud Foundry-basierte Ressourceninstanz im selben Cloud Foundry-Bereich wie die bereitgestellte Cloud Foundry-Anwendung befindet, lesen Sie den [nächsten Abschnitt](#cf_resource_same).
+Wenn sich die Cloud Foundry-basierte Ressourceninstanz im selben Cloud Foundry-Bereich wie die bereitgestellte Cloud Foundry-Anwendung befindet, lesen Sie den [nächsten Abschnitt](/docs/apps/creds_cf.html#cf_resource_same).
 
-Wenn sich die Cloud Foundry-basierte Ressourceninstanz in einem anderen Bereich als der Zielbereich für die Cloud Foundry-Anwendung befindet, lesen Sie den [folgenden Abschnitt](#cf_resource_different).
+Wenn sich die Cloud Foundry-basierte Ressourceninstanz in einem anderen Bereich als der Zielbereich für die Cloud Foundry-Anwendung befindet, lesen Sie den [folgenden Abschnitt](/docs/apps/creds_cf.html#cf_resource_different).
 
-Wenn die Ressource, die Sie Ihrer Anwendung zugeordnet haben, Resource Controller-basiert ist, lesen Sie den Abschnitt [Ressource Controller](#cf_resource_controller).
+Wenn die Ressource, die Sie Ihrer Anwendung zugeordnet haben, Resource Controller-basiert ist, lesen Sie den Abschnitt [Ressource Controller](/docs/apps/creds_cf.html#cf_resource_controller).
 
 #### Die Cloud Foundry-basierte Ressource befindet sich im selben Bereich wie die bereitgestellte App
 {: #cf_resource_same}
@@ -87,12 +87,12 @@ cf services
 ```
 {: codeblock}
 
-Ausgabe:
+Beispielausgabe:
 ```
-Abrufen von Services in Organisation rott@us.ibm.com / Bereich dev als rott@us.ibm.com...
+Abrufen von Services in Organisation test_user@us.ibm.com / Bereich dev als test_user@us.ibm.com...
 
-Name                                   Service             Plan              Gebund. Apps Letzte Operation
-blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                Erstellen war erfolgreich
+Name                                   Service             Plan              Gebund. Apps   Letzte Operation
+blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                  Erstellen war erfolgreich
 ```
 {: screen}
 
@@ -112,9 +112,9 @@ cf services
 
 Beispielausgabe:
 ```
-Abrufen von Services in Organisation rott@us.ibm.com / Bereich dev als rott@us.ibm.com...
+Abrufen von Services in Organisation test_user@us.ibm.com / Bereich dev als test_user@us.ibm.com...
 
-Name                                   Service             Plan              Gebund. Apps Letzte Operation
+Name                                   Service              Plan              Gebund. Apps   Letzte Operation
 blarg-cloudant-1538408663553           v. Benutzer bereitg.
 ```
 {: screen}
@@ -124,8 +124,9 @@ Cloud Foundry erlaubt nicht die Sichtbarkeit des Werts von Serviceberechtigungsn
 Erfreulicherweise wird der Code, der von einem Starter-Kit generiert wird, automatisch mit den korrekten Bindungen für das Abrufen und Verwenden der Werte aus der Umgebung bestückt, die für ihn im Cloud Foundry-Bereich, in dem die Anwendung ausgeführt wird, definiert ist.
 
 ### Vom Starter-Kit generierter Code
+{: #starterkit-generated-code-cf}
 
-Lesen Sie [Starter-Kit-App + Kubernetes](/docs/apps/creds_kube.html#sk_kube_generated_code), bevor Sie fortfahren. Führen Sie dann die folgende Änderung durch:
+Lesen Sie [Starter-Kit-App + Kubernetes](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode), bevor Sie fortfahren. Führen Sie dann die folgende Änderung durch:
 
 * Obwohl der generierte Code die Datei `deployment.yml` bereitstellt, ist sie für eine Anwendung, die in Cloud Foundry bereitgestellt wird, nicht anwendbar. Die Datei `manifest.yml` _ist_ dagegen anwendbar, und ihr Inhalt zeigt im Folgenden eine _Bindung_ an die beiden Services, die im Cloud Foundry-Bereich erstellt werden:
   ```yaml

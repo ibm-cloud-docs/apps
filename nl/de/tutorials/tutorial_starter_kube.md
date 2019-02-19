@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-26"
+  years: 2018, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-26"
 {:tip: .tip}
 
 # Starter-Kit-App in einem Kubernetes-Cluster bereitstellen
-{: #tutorial}
+{: #tutorial-starterkit-kube}
 
 Erfahren Sie, wie Sie eine App in {{site.data.keyword.cloud}} mit einem leeren Starter-Kit und einer Kubernetes-Toolchain erstellen und die App kontinuierlich an einen sicheren Container in einem Kubernetes-Cluster übergeben. Ihre DevOps-Pipeline für die kontinuierliche Integration kann so konfiguriert werden, dass Ihre Codeänderungen automatisch erstellt und an die App weitergegeben werden, die sich im Kubernetes-Cluster befindet. Wenn Sie bereits eine Pipeline haben, können Sie sie mit Ihrer App verbinden.
 {: shortdesc}
@@ -28,14 +28,14 @@ Sehen Sie sich zuerst das folgende Starter-Kit-Ablaufdiagramm und die zugehörig
 ![Starter-Kit-Ablaufdiagramm](../images/starterkit-flow.png) 
 
 ## Vorbereitende Schritte
-{: #prereqs}
+{: #prereqs-starterkit-kube}
 
-* Erstellen Sie eine **Java + Spring**-App mithilfe eines [Starter-Kits](/docs/apps/tutorials/tutorial_starter-kit.html).
+* Erstellen Sie eine **Java + Spring**-App mithilfe eines [Starter-Kits](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
 * Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
 * Richten Sie [Docker ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.docker.com/get-started){: new_window} ein.
 
 ## Ihrer App Ressourcen hinzufügen
-{: #add_resources}
+{: #resources-starterkit-kube}
 
 Fügen Sie Ihrer Anwendung eine {{site.data.keyword.cloud_notm}}-Serviceressource hinzu. Die folgenden Schritte stellen eine Cloudant-Instanz zur Verfügung, erstellen einen Ressourcenschlüssel (Berechtigungsnachweise) und stellen die Bindung an Ihre App her.
 
@@ -47,7 +47,7 @@ Fügen Sie Ihrer Anwendung eine {{site.data.keyword.cloud_notm}}-Serviceressourc
 6. Optional. Wenn Sie einen kurzen Blick auf Ihren App-Code werfen möchten, nachdem Sie Ressourcen hinzugefügt haben, klicken Sie auf **Code herunterladen**. Ihr Code wird in Form einer `.zip`-Datei heruntergeladen, die die vollständige App-Codestruktur enthält. Sie können die Datei einfach erstellen und den Code lokal mithilfe der {{site.data.keyword.dev_cli_notm}} ausführen oder Sie können ihn zu Ihrem Code-Management-Repository hinzufügen.
 
 ## App mithilfe einer DevOps-Toolchain bereitstellen
-{: #deploy_app}
+{: #deploy-starterkit-kube}
 
 Verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren Sie sie so, dass sie in einem Kubernetes-Cluster bereitgestellt wird, der im {{site.data.keyword.cloud_notm}}-Kubernetes-Service gehostet wird.
 
@@ -62,14 +62,14 @@ Verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren Sie sie 
 5. Geben Sie auf der Seite **Toolchain konfigurieren** einen Toolchainnamen ein, wählen Sie eine Region aus, wählen Sie eine Ressourcengruppe aus und klicken Sie dann auf **Erstellen**. Die Seite mit den **App-Details** wird mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
 
 ## Repository anzeigen
-{: #view_repo}
+{: #view-repo-starterkit-kube}
 
 1. Klicken Sie auf der Seite mit den **App-Details** auf **Repository anzeigen**. Das vom Starter-Kit generierte Git-Repository wird angezeigt.
 2. Optional. Konfigurieren Sie SSH auf Ihrem Desktop, indem Sie die Anweisungen auf dem Bildschirm befolgen.
 3. Optional. Erstellen Sie ein persönliches Zugriffstoken für Ihr Konto, indem Sie die Anweisungen auf dem Bildschirm befolgen.
 
 ## Toolchain-Tools, Protokolle und Verlauf anzeigen
-{: #view_logs}
+{: #view-logs-starterkit-kube}
 
 1. Wenn die Bereitstellungsstage abgeschlossen ist, wird die Seite mit den **App-Details** mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
 2. Greifen Sie auf die Toolchain zu, indem Sie auf **Toolchain anzeigen** klicken. Die Registerkarte **Übersicht** der Toolchainseite wird angezeigt, auf der die Tools aufgeführt werden, die in der Toolchain enthalten sind. Dieses Beispiel enthält die folgenden Tools, die im Starter-Kit vorausgewählt wurden, als die Toolchain erstellt wurde:
@@ -84,14 +84,27 @@ Verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren Sie sie 
 	   * Das Image in Ihrem privaten Container-Registry veröffentlicht.
 	 * Die BEREITSTELLUNGsstage ruft das Container-Image aus Ihrem Container-Registry ab und stellt es dann in Ihrem Kubernetes-Cluster bereit.
 3. Klicken Sie auf **Delivery Pipeline**. Die Pipeline-Stages werden angezeigt.
-4. Klicken Sie in der BEREITSTELLUNGsstage auf **Protokolle und Verlauf anzeigen**.
-5. Suchen Sie am Ende des Protokolls nach `ANWENDUNG ANZEIGEN UNTER: http://<ipaddress>:<port>`, wobei es sich um die URL handelt, unter der Sie auf Ihre Anwendung zugreifen können.
-6. Gehen Sie zum Endpunkt `/health` unter `http://<ipaddress>:<port>/health`. Wenn die Anwendung im Cluster ausgeführt wird, wird eine Nachricht angezeigt, die `{"status":"UP"}` enthält.
+4. Klicken Sie in der Kachel **Bereitstellungsstage** auf **Protokolle und Verlauf anzeigen**.
 
-Wenn bei der Bereitstellung Fehler auftreten, suchen Sie im Abschnitt zur Fehlerbehebung nach bekannten Problemen wie der [Überschreitung des Speicherkontingents](/docs/apps/ts_apps.html#exceed_quota) oder erfahren Sie, wie Sie [auf Kubernetes-Protokolle zugreifen](/docs/apps/ts_apps.html#access_kube_logs), um nach Fehlern zu suchen.
+## Ausführung der App verifizieren
+{: #verify-starterkit-kube}
+
+Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befehlszeile auf die URL für Ihre App.
+
+1. Klicken Sie in der Toolchain von DevOps auf **Delivery Pipeline** und wählen Sie **Bereitstellungsstage** aus.
+2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
+3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
+
+    Suchen Sie am Ende der Protokolldatei nach `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+
+4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
+
+Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.
 
 ## Nächste Schritte
-{: #next_steps notoc}
+{: #next-steps-startkit-kube notoc}
+
+* Wenn bei der Bereitstellung Fehler auftreten, suchen Sie im Abschnitt zur Fehlerbehebung nach bekannten Problemen wie der [Überschreitung des Speicherkontingents](/docs/apps/ts_apps.html#exceed_quota) oder erfahren Sie, wie Sie [auf Kubernetes-Protokolle zugreifen](/docs/apps/ts_apps.html#access_kube_logs), um nach Fehlern zu suchen.
 
 * Greifen Sie auf die Servicekonfiguration in Ihrem Code zu:
 	- Sie können die Anmerkung _@Value_ oder die Methode _getProperty()_ der Klasse 'Environment' des Spring-Frameworks verwenden. Weitere Informationen finden Sie unter [Auf Berechtigungsnachweise zugreifen](/docs/java-spring/configuration.html#configuration#accessing-credentials).

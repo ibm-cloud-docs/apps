@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Mendix を使用したアプリの作成
-{: #getting-started}
+{: #create-mendix}
 
 Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・アプリケーションを少ない開発リソースで迅速に配信できるよう支援する、ローコード開発環境およびツール・セットです。 Mendix ローコード・スターター・キットを選択することにより、ガイドに従って、Mendix プラットフォームでアカウントをセットアップし、プロジェクトを開始し、Cloud Foundry または Kubernetes クラスターのいずれかでデプロイメント環境を選択することができます。
 {: shortdesc}
 
 ## スターター・キットの選択
-{: #select-a-starter-kit}
+{: #starterkit-mendix}
 
 1. [{{site.data.keyword.cloud_notm}} アプリ・サービスのダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/dashboard){: new_window} で、**「開始」**をクリックします。
 2. 以下のいずれかのカテゴリーから、Mendix ローコード・スターター・キットを選択します。
@@ -28,20 +28,9 @@ Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・
   * [Watson Web アプリまたはモバイル・アプリ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [Web App ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. **「アプリの作成」**をクリックします。
-4. アプリに名前を付けます。
+4. **「アプリの詳細」**ページで、アプリに名前を付け、オプションで、アプリを分類するためのタグを指定します。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
 5. **「作成」**をクリックします。
 
-<!-- 
-####### Promote CLOUD.IBM.COM links to prod when approved.
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
-2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
-3. Click **Create app**.
-4. Name your app.
-5. Click **Create**.
--->
 
 ## Mendix でのプロジェクト作成およびアカウントのリンクを行うための IBM への許可
 {: #link-mendix-account}
@@ -58,20 +47,20 @@ Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・
 ## Mendix アプリのデプロイメント・オプションの選択
 {: #select-deployment}
 
-1. **「デプロイメント環境の選択 (Choose a deployment environment)」**ページで、Cloud Foundry を選択するか、または、{{site.data.keyword.cloud_notm}} で実行中のいずれかの Kubernetes クラスターを選択します。
+1. **「デプロイメント環境の選択 (Choose a deployment environment)」**ページで、Cloud Foundry を選択するか、または、{{site.data.keyword.cloud_notm}} で実行中のいずれかの Kubernetes クラスターを選択します。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかの Cloud Foundry デプロイヤー・タイプを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
 2. オプション。 Kubernetes クラスターがない場合は、この時点で作成できます。
 3. **「ツールチェーンの構成」**ページで、地域およびリソース・グループを選択し、**「作成」**をクリックします。
 
 DevOps ツールチェーンが作成されます。 このツールチェーンは、{{site.data.keyword.cloud_notm}} 環境の Mendix プラットフォーム内で Mendix プロジェクトを統合します。 ターゲット・デプロイメントにデフォルト・アプリケーションがデプロイされるので、DevOps ツールチェーンの完成時に、そのアプリケーションが正常にデプロイされたことを検証できます。
 
-Mendix Cloud Foundry デプロイメントには PostGRES データベース・サービスが必要ですが、このサービスにはライト層がありません。   ライト・アカウントを使用して Mendix スターター・キットを評価したい場合は、トライアル Kubernetes クラスターをターゲットにすることができます。
+Mendix Cloud Foundry デプロイメントには PostGRES データベース・サービスが必要ですが、このサービスにはライト層がありません。 ライト・アカウントを使用して Mendix スターター・キットを評価したい場合は、トライアル Kubernetes クラスターをターゲットにすることができます。
 {: tip}
 
-デプロイメントに Kubernetes クラスターを選択した場合は、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)を参照して、実動用にクラスターを構成する方法を確認してください。
+デプロイメントに Kubernetes クラスターを選択した場合は、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)を参照して、実動用にクラスターを構成する方法を確認してください。
 
 
 ## Mendix の開発とデプロイメントのライフサイクルの継続
-{: #development-lifecycle}
+{: #dev-lifecycle-mendix}
 
 Mendix は、ローコードのオーサリング環境です。 開発ライフサイクルでは、Mendix Modeler デスクトップ・アプリケーションでプロジェクトを開く必要があります。
 
@@ -88,6 +77,6 @@ Mendix は、ローコードのオーサリング環境です。 開発ライフ
 {: tip}
 
 ## 次のステップ 
-{: #next steps}
+{: #next-steps-mendix}
 
-アプリを {{site.data.keyword.containerlong_notm}} にデプロイするため、実動デプロイメント用にアプリを構成します。 詳しくは、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)を参照してください。 
+アプリを {{site.data.keyword.containerlong_notm}} にデプロイするため、実動デプロイメント用にアプリを構成します。 詳しくは、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)を参照してください。 

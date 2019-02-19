@@ -1,71 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-08-21"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:pre: .pre}
 {:screen: .screen}
+{:tip: .tip}
 
 # Esercitazione introduttiva
-{: #create}
+{: #tutorial-getting-started}
 
-In {{site.data.keyword.Bluemix}}, puoi creare applicazioni mobili e web a livello aziendale e sfruttare le estensioni cloud ospitate da {{site.data.keyword.Bluemix_notm}}. Puoi utilizzare la console {{site.data.keyword.Bluemix}} e gli strumenti della riga di comando per creare, eseguire e distribuire le tue applicazioni. Inizia a lavorare in due modi: creare un'applicazione con un kit starter che gestisca il processo per te oppure, se sai cosa vuoi, creare la tua applicazione con le risorse di cui hai bisogno.
-{:shortdesc}
-
-Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua applicazione e a prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
-
-I kit starter sono disponibili in molte categorie, tra cui:
-
-* [Watson ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
-* [Apple ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
-* [Mobile ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/mobile/dashboard){:new_window}
-* [Web App ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/appservice/dashboard){:new_window}
-* [Security ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/security/dashboard){:new_window}
-<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finance ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net/developer/finance/dashboard){:new_window}
+Puoi creare delle applicazioni web e mobili pronte per l'azienda in {{site.data.keyword.cloud}} e avvalerti delle estensioni cloud ospitate da {{site.data.keyword.cloud_notm}}. Hai diverse opzioni per iniziare a lavorare. Crea un'applicazione con un kit starter che gestisce il processo per tuo conto oppure, se sai cosa desideri, inizia da zero e crea la tua applicazione con le risorse di cui hai bisogno oppure utilizza il tuo repository esistente e porta il tuo codice.
+{: shortdesc}
 
 ## Prima di iniziare
+{: #prereqs-getting-started}
 
-[Registrati ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://console.bluemix.net){: new_window} per un account {{site.data.keyword.cloud_notm}}. Inserisci le informazioni relative a e-mail, nome, azienda, regione e numero di telefono.
+Puoi creare la tua applicazione utilizzando l'interfaccia di riga di comando (o CLI, command-line interface) o la console {{site.data.keyword.cloud_notm}}. Se desideri utilizzare la CLI, vedi [Introduzione alla CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) per i dettagli di installazione.
 
-Non ti serve una carta di credito per registrare un account gratuito. Inserirla però ti dà accesso a più risorse e ti rende più facile ottenere tutte le offerte di {{site.data.keyword.cloud_notm}}.
+## Passo 1. Crea la tua applicazione
+{: #create-getting-started}
 
-## Passo 1. Crea un'applicazione
-{: #project}
-
-1. Fai clic sull'icona **Menu** ![Icona menu](../icons/icon_hamburger.svg) > **Applicazioni Web**.
-
-2. Fai clic su **Inizia subito** nella sezione **Inizia dal web**.
-
-3. Seleziona un kit starter di tua scelta, leggi i dettagli e fai clic su **Crea**.
-
-   Per visualizzare ciò che è incluso nel kit starter, espandi il tile nel dashboard dei kit starter del servizio dell'applicazione.
-   {: tip}
-
-4. Fornisci un nome alla tua applicazione, seleziona il tuo linguaggio e fai clic su **Crea**.
-
-   Ottimo inizio! Hai appena creato un'applicazione.
-
-   Per esaminare il tuo codice, fai clic su **Scarica codice** nella pagina dei dettagli dell'applicazione. Controlla il file `README.md` nel file compresso scaricato per scoprire se devi effettuare ulteriori azioni per rendere operativa la tua applicazione starter.
-   {: tip}
+Crea un'applicazione selezionando uno dei seguenti punti di ingresso:
+* [Kit starter](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit): crea un'applicazione da una selezione di kit starter App Service che gestiscono il processo per tuo conto.
+* [Personalizzata](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch): se sai cosa desideri, crea un'applicazione personalizzata da zero con le risorse di cui hai bisogno utilizzando un kit starter vuoto.
+* [Porta il tuo codice](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc): porta il tuo codice mediante un collegamento al tuo repository di contenuto esistente. La tua applicazione e l'immagine Docker si devono trovare nello stesso repository.
+* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli): crea e distribuisci un'applicazione personalizzata o kit starter utilizzando gli strumenti per gli sviluppatori e la CLI.
+* [Modelli di codice](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern): utilizza un modello di codice IBM Developer come base per creare la tua applicazione.
+* [Catalogo {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://cloud.ibm.com/catalog){: new_window}: puoi sfogliare o cercare nel catalogo le applicazioni e i servizi che puoi creare e iniziare a utilizzare oggi stesso.
 
 ## Passo 2. Aggiungi risorse
-{: #addResources}
+{: #resources-getting-started}
 
-La maggior parte dei kit starter indicano a {{site.data.keyword.cloud_notm}} di eseguire automaticamente il provisioning delle risorse al tuo posto. Puoi anche associare ulteriori risorse alla tua applicazione facendo clic su **Aggiungi risorsa** nella pagina dei dettagli dell'applicazione.
+Quando utilizzi un kit starter per creare la tua applicazione, le tue risorse vengono create automaticamente per tuo conto. Puoi associare più risorse alla tua applicazione facendo clic su **Add Resource** nella pagina dei dettagli dell'applicazione nella console.
 
-Per sviluppare ed eseguire la tua applicazione localmente, utilizza la [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
-{: tip}
+Per aggiungere risorse utilizzando la CLI, esegui il seguente comando per aggiungere un servizio alla tua applicazione. Puoi selezionare un servizio esistente da uno già abilitato sul tuo account o aggiungerne uno nuovo. 
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps/reqnsi.html#add-resource).
 
 ## Passo 3. Distribuisci la tua applicazione
-{: #deploy}
+{: #deploy-getting-started}
 
-Fai clic su **Distribuisci a Cloud** nella pagina dei dettagli dell'applicazione, seleziona un metodo di distribuzione, ad esempio cluster Kubernetes o applicazione Cloud Foundry, e fai clic su **Crea**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta completa di un repository Git e della pipeline di fornitura continua. Visualizza il componente pipeline della tua nuova toolchain per iniziare a creare e distribuire il processo in modo che puoi visualizzare la tua nuova applicazione in pochi minuti.
+Puoi distribuire la tua applicazione utilizzando la console o la riga di comando.
 
-Ora sei pronto per lo sviluppo iterativo e la distribuzione continua.
+### Utilizzo della console
+{: #console-getting-started}
+
+Per distribuire la tua applicazione utilizzando la console, completa la seguente procedura:
+
+1. Nella pagina **App details**, fai clic su **Deploy to cloud**.
+2. Seleziona un metodo di distribuzione e fai clic su **Create**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta completa di un repository Git e della pipeline di fornitura continua.
+3. Apri la fase pipeline della tua nuova toolchain per visualizzare il processo di creazione e sviluppo in modo da poter vedere la tua nuova applicazione nel giro di qualche minuto.
+
+Per ulteriori informazioni, consulta la tabella dei contenuti per diversi argomenti di distribuzione nella sezione "Distribuzione e integrazione delle applicazioni".
+
+### Utilizzo della riga di comando
+{: #cli-getting-started}
+
+Per distribuire la tua applicazione utilizzando la riga di comando, esegui il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
+
+Ora sei pronto per lo sviluppo iterativo e la fornitura continua.

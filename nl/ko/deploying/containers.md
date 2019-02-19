@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2018-07-23"
 {:tip: .tip}
 
 # Kubernetes로 컨테이너 사용
-{: #containers}
+{: #containers-kube}
 
 Kubernetes 클러스터에서 실행되는 Docker 컨테이너에 고가용성 앱을 배치하여 {{site.data.keyword.containershort}}를 시작하십시오. Git을 사용하여 팀 개발을 관리한 후 DevOps 도구 체인을 사용하여 Kubernetes에 대한 앱 배치를 관리하십시오.
 {: shortdesc}
@@ -35,7 +35,7 @@ Kubernetes 클러스터에서 실행되는 Docker 컨테이너에 고가용성 �
 ## 서비스 바인딩
 {: #bind-services}
 
-도구 체인이 작성되면 앱과 연관된 서비스가 Kubernetes 시크릿을 사용하여 Kubernetes 클러스터에 바인드됩니다. 시크릿은 실행 중인 앱의 외부에서 서비스 인증 정보를 관리하는 데 사용됩니다. 앱은 시크릿을 읽은 후 실행을 시작하는 데 필요한 값을 검색합니다. 서비스를 바인드하면 프로덕션 레벨 {{site.data.keyword.cloud_notm}} 서비스 인스턴스를 사용하고 있을 수 있는 다른 Kubernetes 환경에 앱을 배치할 수 있습니다.
+도구 체인이 작성되면 앱과 연관된 서비스가 Kubernetes 시크릿을 사용하여 Kubernetes 클러스터에 바인드됩니다. 시크릿은 실행 중인 앱의 외부에서 서비스 인증 정보를 관리하는 데 사용됩니다. 앱은 시크릿을 읽은 후 실행을 시작하는 데 필요한 값을 검색합니다. 서비스를 바인드하면 프로덕션 레벨 {{site.data.keyword.cloud}} 서비스 인스턴스를 사용하고 있을 수 있는 다른 Kubernetes 환경에 앱을 배치할 수 있습니다.
 
 서비스 또는 시크릿을 삭제한 경우 수동으로 이를 다시 바인드하거나 도구 체인을 삭제한 후 다시 작성해야 합니다.
 {: tip}

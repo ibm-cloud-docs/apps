@@ -56,7 +56,7 @@ Wählen Sie ein Mikroservice-Starter-Kit für die jeweiligen Sprach- und Framewo
 ## Mobil
 {: #mobile}
 
-Apps für Mobilgeräte unterscheiden sich von den anderen Mustern, weil sie eine signifikante clientseitige Komponente enthalten. Das Muster könnte beispielsweise eine direkte Verbindung zu mobilen Services wie Push-Benachrichtigungen, Authentifizierung und Analysen für Mobilanwendungen umfassen. Mobile Services werden als MBaaS-Muster (Mobile Backend as a Service) bezeichnet. Sie können auch über ein dediziertes [BFF](#bff) verfügen.
+Apps für Mobilgeräte unterscheiden sich von den anderen Mustern, weil sie eine signifikante clientseitige Komponente enthalten. Das Muster könnte beispielsweise eine direkte Verbindung zu mobilen Services wie Push-Benachrichtigungen, Authentifizierung und Analysen für Mobilanwendungen umfassen. Mobile Services werden als MBaaS-Muster (Mobile Backend as a Service) bezeichnet. Sie können auch über ein dediziertes [BFF](/docs/apps/patterns.html#bff) verfügen.
 
 {{site.data.keyword.cloud_notm}} bietet diverse Starter-Kits für Mobilgeräte für iOS Swift, Android und Cordova. Sie finden die Starter-Kits für das Muster für Mobilgeräte im [{{site.data.keyword.cloud_notm}} Mobile-Entwicklerdashboard](https://{DomainName}/developer/mobile/dashboard).
 

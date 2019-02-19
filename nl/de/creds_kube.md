@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-14"
 {:note: .note}
 
 # Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen
-{: #add_credentials}
+{: #add-credentials-kube}
 
 Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Kubernetes-Bereitstellungsumgebung hinzufügen.
 {: shortdesc}
@@ -26,7 +26,7 @@ In den folgenden Szenarios müssen Sie Ihrer Bereitstellungsumgebung Servicebere
  * Sie fügen einen Service einer Starter-Kit-basierten App hinzu, _nachdem_ sie bereitgestellt wurde.
 
 ## Ihr Code + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -86,7 +86,7 @@ Konfigurieren Sie den Cluster so, dass der Parameter _secretKeyRef_ mit dem Name
 
 Verwenden Sie ein Terminal Ihrer Workstation zum Installieren der folgenden Tools:
 
-1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
+1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html#overview).
 2. Melden Sie sich mit dem Befehl `ibmcloud login` an.
 3. Stellen Sie eine Verbindung zu Ihrem Cluster her, indem Sie `ibmcloud cs cluster-config {ihr_cluster_name}` ausführen.
 4. Kopieren Sie den Befehl `export` und fügen Sie ihn ein, um ihn von einem Terminal aus auszuführen.
@@ -109,7 +109,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbereitet ist, können Sie Ihre Anwendung so aktualisieren, dass sie die Umgebungsvariablen verwendet, die in der Datei `deployment.yml` definiert sind.
 
 ## Starter-Kit-App + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. Rufen Sie die Seite Ihrer App mit den **App-Details** auf.
 2. Wählen Sie zum Erstellen einer Instanz von Cloud Object Storage **Ressource hinzufügen** > **Speicher** > **Cloud Object Storage** > **Lite-Plan (kostenfrei)** > **Erstellen** aus.
@@ -148,7 +148,7 @@ Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit
 
 12. Erstellen Sie den geheimen Schlüssel mit `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Wenn Sie in Ihr Kubernetes-Cluster-Dashboard zurückkehren, können Sie den von Ihnen erstellten geheimen Schlüssel sehen.
 
-Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet).
+Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet). 
 {: note}
   
   ```console
@@ -158,7 +158,7 @@ Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie ein
 
   Der Name Ihres vom Benutzer zur Verfügung gestellten Service befindet sich in der Datei `manifest.yml` mit dem entsprechenden Instanznamen.
 
-13. Sie können jetzt über die Umgebungsvariablen über die Methode `env.getProperty` auf ihren geheimen Schlüssel zugreifen, wenn Ihre Anwendung in Ihrem Kubernetes-Cluster ausgeführt wird.
+13. Sie können jetzt über die Umgebungsvariablen über die Methode `env.getProperty` auf Ihren geheimen Schlüssel zugreifen, wenn Ihre Anwendung in Ihrem Kubernetes-Cluster ausgeführt wird.
 
 ### Vorbereitung des Kubernetes-Clusters
 
@@ -175,7 +175,8 @@ Verwenden Sie die Funktion **In Cloud bereitstellen**, um Ihre App in Ihrem IBM 
   ```
   {: screen}
 
-  Sie können [weitere Informationen zu geheimen Schlüsseln](https://kubernetes.io/docs/concepts/configuration/secret/) anzeigen.   {: tip}
+  Sie können [weitere Informationen zu geheimen Schlüsseln](https://kubernetes.io/docs/concepts/configuration/secret/) anzeigen.
+  {: tip}
 
 2. Beachten Sie, dass der Name des geheimen Schlüssels der Ressourcenname ist.
 3. Zeigen Sie ausführliche Informationen zu dem geheimen Schlüssel unter Verwendung von `kubectl get secret binding-blarg-cloudant-1538408663553 -o=yaml` an:
@@ -219,7 +220,7 @@ Verwenden Sie die Funktion **In Cloud bereitstellen**, um Ihre App in Ihrem IBM 
 Der geheime Kubernetes-Schlüssel kann von Ihrem Anwendungscode nicht abgerufen werden, es sei denn, die Datei `deployment.yml` deklariert einen `env`-Wert, der auf den geheimen Schlüssel verweist. Wenn Sie ein Starter-Kit verwenden, wird solcher Code automatisch generiert.
 
 ### Vom Starter-Kit generierter Code
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
 In diesem Fall haben Sie diese Anwendung aus einem Starter-Kit erstellt. Der Code, der aus einem Starter-Kit generiert wird, ist portierbar, um lokal, in Cloud Foundry oder in Kubernetes ausgeführt werden zu können. Die Bibliothek `IBMCloudEnv` wird verwendet, um eine Abstraktionsebene zwischen dem Anwendungscode und dem Abrufen der Umgebungsvariablen bereitzustellen, die die Berechtigungsnachweise für die Ressourcen (Serviceinstanzen) enthalten.
 

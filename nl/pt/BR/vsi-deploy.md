@@ -33,12 +33,12 @@ Os serviços não se ligam à instância de servidor virtual. Não é possível 
 {: important}
 
 ## Criando e implementando os aplicativos
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 O App Service fornece uma instância de servidor virtual, carrega uma imagem que inclui o aplicativo,
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
-1. [Crie um aplicativo](index.html#createapp). 
+1. [Crie um aplicativo](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Clique em **Implementar na nuvem** na página de detalhes do aplicativo.
 3. Selecione **Implementar em um Virtual Server** juntamente com a região na qual o servidor deve ser executado.
 
@@ -69,25 +69,25 @@ seguir para aprender sobre as propriedades que estão disponíveis.
 
 | Propriedade  | Descrição  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](#iaas-key) é do
+| `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](/docs/apps/vsi-deploy.html#iaas-key) é do
 console da infraestrutura clássica. |
-| `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](#user-key) que
+| `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](/docs/apps/vsi-deploy.html#user-key) que
 identifica a conta da infraestrutura clássica |
-| `TF_VAR_ibm_cloud_api_key` | A [chave API da plataforma](#platform-key) do {{site.data.keyword.cloud_notm}} é usada para ativar a criação de serviço. |
-| `PUBLIC_KEY` | [Chave pública](#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
-| `PRIVATE_KEY` | [Chave privada](#public-key) que é definida para ativar o acesso à instância de servidor virtual. Deve-se usar a formatação de estilo de nova linha `\n`. |
+| `TF_VAR_ibm_cloud_api_key` | A {{site.data.keyword.cloud_notm}} [chave de API](/docs/apps/vsi-deploy.html#platform-key) é usada para ativar a criação de serviço. |
+| `PUBLIC_KEY` | [Chave pública](/docs/apps/vsi-deploy.html#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
+| `PRIVATE_KEY` | [Chave privada](/docs/apps/vsi-deploy.html#public-key) que é definida para ativar o acesso à instância de servidor virtual. Deve-se usar a formatação de estilo de nova linha `\n`. |
 | `VI_INSTANCE_NAME` | Nome gerado automaticamente para a instância do servidor virtual |
-| `GIT_USER` | Se você configurar o [estado do Terraform](#tform-state) para
+| `GIT_USER` | Se você configurar o [estado do Terraform](/docs/apps/vsi-deploy.html#tform-state) para
 armazenar o estado do comando apply, o nome de usuário do GitLab será necessário. |
-| `GIT_PASSWORD` | Se você configurar o [estado do Terraform](#tform-state) para
+| `GIT_PASSWORD` | Se você configurar o [estado do Terraform](/docs/apps/vsi-deploy.html#tform-state) para
 armazenar o estado do comando apply, a senha do GitLab será necessária. |
 {: caption="Tabela 1. Variáveis de ambiente a serem mudadas para a ativação" caption-side="top"}
 
 
-#### Chave da API de infraestrutura
+#### Chave de API de Infraestrutura Cláss
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
-O Terraform requer uma chave API de infraestrutura para criar recursos de infraestrutura. A chave de API é obtida automaticamente durante a implementação. Para recuperar manualmente uma chave, conclua as etapas a seguir.
+
+O Terraform requer uma chave de API de infraestrutura clássica para criar recursos de infraestrutura. A chave de API é obtida automaticamente durante a implementação. Para recuperar manualmente uma chave, conclua as etapas a seguir.
 
 1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
 2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
@@ -95,12 +95,12 @@ O Terraform requer uma chave API de infraestrutura para criar recursos de infrae
 4. Copie ou faça download da chave de API `TF_VAR_ibm_sl_api_key` e salve-a em um local seguro. É possível recuperar os detalhes da chave de API posteriormente usando a opção **Visualizar detalhes** no menu **Ações** ![Ícone de lista de ações](../icons/action-menu-icon.svg).
 5. Cole o valor da chave de API copiado na configuração da cadeia de ferramentas para substituir o `TF_VAR_ibm_sl_api_key`.
 
-Para obter mais informações, consulte [Gerenciando chaves de API da infraestrutura clássica](/docs/iam/classic_infra_keys.html) e [Permissões da infraestrutura clássica](/docs/iam/infrastructureaccess.html).
+Para obter mais informações, consulte [Gerenciando chaves de API da infraestrutura clássica](/docs/iam/classic_infra_keys.html#classic_keys) e [Permissões da infraestrutura clássica](/docs/iam/infrastructureaccess.html#infrapermission).
 
-#### Nome do usuário de infraestrutura
+#### Nome de usuário da infraestrutura clássica
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
-O nome do usuário de infraestrutura também é obtido automaticamente e usado durante a implementação. Para
+
+O nome de usuário da infraestrutura clássica também é obtido automaticamente e usado durante a implementação. Para
 obter manualmente o nome do usuário, conclua as etapas a seguir.
 
 1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
@@ -108,10 +108,10 @@ obter manualmente o nome do usuário, conclua as etapas a seguir.
 3. Localize a propriedade **Nome do usuário da VPN**.
 4. Recorte e cole esse valor e substitua a configuração da cadeia de ferramentas `TF_VAR_ibm_sl_username`.
 
-#### Chave de API do IBM Cloud
+#### Chave de API do {{site.data.keyword.cloud_notm}}
 {: #platform-key}
 
-Para criar serviços de nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave de API de plataforma é obtida automaticamente e armazenada como uma variável de ambiente no pipeline. Para recuperar manualmente uma chave da plataforma, conclua as etapas a seguir.
+Para criar serviços de nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave de API do {{site.data.keyword.cloud_notm}} é obtida automaticamente e armazenada como uma variável de ambiente em seu pipeline. Para recuperar manualmente uma chave de API do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir.
 
 1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
 2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
@@ -123,12 +123,12 @@ Para criar serviços de nível de plataforma no Terraform, como bancos de dados 
 
 #### Chaves públicas e privadas
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+
 Para que a cadeia de ferramentas instale o pacote do Debian na instância de servidor virtual, a infraestrutura de implementação gera automaticamente um par de chaves SSH privada/pública para transferir os conteúdos do Git para a instância.
 
 Para fazer isso manualmente:
 1. Em seu cliente, use as instruções a seguir para criar um [par de chaves pública e privada ![Ícone de link externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
+2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
 3. Clique em **Incluir**.
 4. Copie os conteúdos da chave pública que você criou anteriormente e cole-os nos conteúdos de chave.
 5. Forneça um nome à chave e clique em **Incluir**.
@@ -158,7 +158,7 @@ Para ativar o armazenamento de estado, `GIT_USER` e `GIT_PASSWORD` são configur
 O estado do Terraform é armazenado em uma ramificação chamada `terraform` e não aciona o pipeline para execução caso ele tenha sido mudado.
 
 ### Ativando as operações de Git
-{: #git-repo}
+{: #git-repo-vsi}
 
 Quando o aplicativo é implementado no {{site.data.keyword.cloud_notm}}, um repositório GitLab é criado
 para hospedar o código para o gerenciamento de código-fonte. É possível usar as operações de Git para permitir que as
@@ -206,7 +206,7 @@ variable "datacenter" {
 ```
 
 ### Entendendo os estágios da cadeia de ferramentas
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 A cadeia de ferramentas mostra a infraestrutura e a implementação do app em um pipeline simples. Quebre a parte da infraestrutura como código em um pipeline e a implementação do app em outro pipeline.
 

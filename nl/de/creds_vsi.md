@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Berechtigungsnachweise Ihrer virtuellen Instanz oder lokalen Docker-Umgebung hinzufügen
-{: #add_credentials}
+{: #add-credentials-vsi}
 
 Hier erfahren Sie, wie Sie Ihrer virtuellen Serverinstanz oder lokalen Docker-Bereitstellungsumgebung Serviceberechtigungsnachweise hinzufügen.
 {: shortdesc}
 
 ## Ihr Code + Virtual Server-Instanz oder lokale Docker-Instanz
-{: #byoc_vsi}
+{: #credentials-byoc-vsi}
 
 Sowohl bei einer VSI als auch einer lokalen Docker-Instanz gehört die Umgebung vollständig Ihnen. Beispielsweise können Sie Ihren Code wie im folgenden Beispiel schreiben und Ihrer Anwendung den Umgebungswert des Berechtigungsnachweises bei der Ausführung bereitstellen.
 ```
@@ -43,13 +43,14 @@ docker run -p 80:8080 -e password="someThingSensitive"
 {: codeblock}
 
 ## Starter-Kit + VSI (oder lokale Docker-Instanz)
-{: #sk_vsi}
+{: #credentials-starterkit-vsi}
 
 ### Vorbereitung der virtuellen Serverinstanz
 
 Die Umgebung ist vollständig unter Ihrer Kontrolle, so als ob Sie die Anwendung auf Ihrem Notebook ausführen. Mit anderen Worten: lokale Docker-Instanz. Da es sich bei der VSI aus der Perspektive der aktiven Anwendung um Bare Metal handelt, gibt es keine _geheimen Schlüssel_ (wie in Kubernetes) oder _Services_ (wie in Cloud Foundry).
 
 ### Vom Starter-Kit generierter Code
+{: #starterkit-generated-code-vsi}
 
 Code, der von einem Starter-Kit generiert wird, verfügt über die native Bibliothek `IBMCloudEnv`, die den Abruf von Umgebungswerten abstrahiert, sodass der Anwendungscode portierbar ist und auf mehreren Zielbereitstellungen ausgeführt werden kann. Bei virtueller oder lokaler Docker-Instanz muss diese Umgebung mit Werten vorbereitet werden, die der Bibliothek `IBMCloudEnv` gerecht werden und _nicht unbedingt_ aus tatsächlichen Umgebungsvariablen stammen.
 
@@ -76,7 +77,7 @@ Wenn Sie `git clone` für das erstellte GitLab-Repository verwenden, um die akti
 Sie können die Datei `server/localdev-config.json` abrufen, indem Sie die folgenden Schritte ausführen:
 
 1. Verwenden Sie `git clone` für das GitLab-Repository, das automatisch erstellt wurde, als Sie die Funktion "In Cloud bereitstellen" verwendet haben.
-2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html), die das Plug-in `dev` enthält.
+2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html#overview), die das Plug-in `dev` enthält.
 3. Verwenden Sie die `ibmcloud`-Befehlszeile, um sich bei {{site.data.keyword.cloud_notm}} anzumelden.
 4. Führen Sie den Befehl `ibmcloud dev get-credentials` aus, der auf die Datei `cli-config.yml` verweist. Die Datei `cli-config.yml` enthält Informationen darüber, welcher Anwendungs- und Generierungsjob über die Berechtigungsnachweise verfügt.
 

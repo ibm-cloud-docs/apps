@@ -56,7 +56,7 @@ BFF는 가장 일반적으로 REST 패턴을 사용하여 API를 노출하지만
 ## 모바일
 {: #mobile}
 
-모바일 앱은 중요한 클라이언트 측 컴포넌트를 포함하고 있으므로 다른 패턴과는 다릅니다. 이 패턴은 푸시 알림, 인증 및 모바일 분석과 같은 모바일 서비스에 대한 직접 연결을 포함할 수 있습니다. 모바일 서비스를 MBaaS(Mobile Backend as a Service) 또는 MBaaS 패턴이라고 합니다. 또한 전용 [프론트 엔드를 위한 백엔드](#bff)를 갖추고 있을 수 있습니다.
+모바일 앱은 중요한 클라이언트 측 컴포넌트를 포함하고 있으므로 다른 패턴과는 다릅니다. 이 패턴은 푸시 알림, 인증 및 모바일 분석과 같은 모바일 서비스에 대한 직접 연결을 포함할 수 있습니다. 모바일 서비스를 MBaaS(Mobile Backend as a Service) 또는 MBaaS 패턴이라고 합니다. 또한 전용 [프론트 엔드를 위한 백엔드](/docs/apps/patterns.html#bff)를 갖추고 있을 수 있습니다.
 
 {{site.data.keyword.cloud_notm}}에서는 몇 가지 iOS Swift, Android 및 Cordova용 모바일 스타터 킷을 제공합니다. 모바일 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 모바일 개발자 대시보드](https://{DomainName}/developer/mobile/dashboard)에서 찾을 수 있습니다.
 

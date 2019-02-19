@@ -30,11 +30,11 @@ Services werden nicht an die virtuelle Serverinstanz gebunden. Sie können Servi
 {: important}
 
 ## Apps erstellen und implementieren
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
-1. [Erstellen Sie eine App](index.html#createapp). 
+1. [Erstellen Sie eine App](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Klicken Sie auf der Detailseite der App auf **In Cloud bereitstellen**.
 3. Wählen Sie die Option zur Bereitstellung auf einem virtuellen Server gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll.
 
@@ -56,28 +56,28 @@ Die Pipeline verwendet eine Reihe von Benutzerkontoeigenschaften und ein neues S
 
 Führen Sie die folgenden Schritte aus, um diese Umgebungseigenschaften anzuzeigen. 
 
-1. Klicken Sie auf der Seite mit den App-Details auf **Toolchain anzeigen**.
+1. Klicken Sie auf der Seite "App-Details" auf **Toolchain anzeigen**.
 2. Klicken Sie auf die Kachel **Delivery Pipeline**.
 3. Klicken Sie auf das Symbol für die **Konfiguration der Stage** und dann für die Build-Stage auf **Stage konfigurieren**.
 4. Klicken Sie auf die Registerkarte **Umgebungseigenschaften**, um die Eigenschaften anzuzeigen. Die folgende Tabelle enthält Informationen zu den verfügbaren Eigenschaften.
 
 | Eigenschaft  | Beschreibung  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | Der [Infrastruktur-API-Schlüssel](#iaas-key) stammt aus der klassischen Infrastrukturkonsole. |
-| `TF_VAR_ibm_sl_username` | Der [Infrastrukturbenutzername](#user-key), der das klassische Infrastrukturkonto kennzeichnet. |
-| `TF_VAR_ibm_cloud_api_key` | Der für die Serviceerstellung erforderliche {{site.data.keyword.cloud_notm}} [Plattform-API-Schlüssel](#platform-key). |
-| `PUBLIC_KEY` | Der für den Zugriff auf die virtuelle Serverinstanz definierte [öffentliche Schlüssel](#public-key). |
-| `PRIVATE_KEY` | Der für den Zugriff auf die virtuelle Serverinstanz definierte [private Schlüssel](#public-key). Sie müssen für den Zeilenumbruch die Formatierung `\n` verwenden. |
+| `TF_VAR_ibm_sl_api_key` | Der [Infrastruktur-API-Schlüssel](/docs/apps/vsi-deploy.html#iaas-key) stammt aus der klassischen Infrastrukturkonsole. |
+| `TF_VAR_ibm_sl_username` | Der [Infrastrukturbenutzername](/docs/apps/vsi-deploy.html#user-key), der das klassische Infrastrukturkonto kennzeichnet. |
+| `TF_VAR_ibm_cloud_api_key` | Der {{site.data.keyword.cloud_notm}} [API-Schlüssel](/docs/apps/vsi-deploy.html#platform-key) wird zur Aktivierung der Serviceerstellung verwendet. |
+| `PUBLIC_KEY` | Der für den Zugriff auf die virtuelle Serverinstanz definierte [öffentliche Schlüssel](/docs/apps/vsi-deploy.html#public-key). |
+| `PRIVATE_KEY` | Der für den Zugriff auf die virtuelle Serverinstanz definierte [private Schlüssel](/docs/apps/vsi-deploy.html#public-key). Sie müssen für den Zeilenumbruch die Formatierung `\n` verwenden. |
 | `VI_INSTANCE_NAME` | Der automatisch generierte Name für die virtuelle Serverinstanz. |
-| `GIT_USER` | Wenn Sie den [Terraform-Status](#tform-state) so festgelegt haben, dass der Status des Befehls zum Anwenden (apply) gespeichert wird, ist der GitLab-Benutzername erforderlich. |
-| `GIT_PASSWORD` | Wenn Sie den [Terraform-Status](#tform-state) so festgelegt haben, dass der Status des Befehls zum Anwenden (apply) gespeichert wird, ist das GitLab-Kennwort erforderlich. |
+| `GIT_USER` | Wenn Sie den [Terraform-Status](/docs/apps/vsi-deploy.html#tform-state) so festgelegt haben, dass der Status des Befehls zum Anwenden (apply) gespeichert wird, ist der GitLab-Benutzername erforderlich. |
+| `GIT_PASSWORD` | Wenn Sie den [Terraform-Status](/docs/apps/vsi-deploy.html#tform-state) so festgelegt haben, dass der Status des Befehls zum Anwenden (apply) gespeichert wird, ist das GitLab-Kennwort erforderlich. |
 {: caption="Tabelle 1. Umgebungsvariablen, die für die Aktivierung geändert werden müssen" caption-side="top"}
 
 
-#### Infrastruktur-API-Schlüssel
+#### API-Schlüssel für klassische Infrastruktur
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
-Terraform erfordert einen Infrastruktur-API-Schlüssel zum Erstellen von Infrastrukturressourcen. Der API-Schlüssel wird automatisch während der Bereitstellung abgerufen. Um einen Schlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.
+
+Terraform erfordert einen API-Schlüssel für eine klassische Infrastruktur zum Erstellen von Infrastrukturressourcen. Der API-Schlüssel wird automatisch während der Bereitstellung abgerufen. Um einen Schlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.
 
 1. Wechseln Sie zur [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Sie können auch auf **Verwalten** > **Zugriff (IAM)** klicken und **Benutzer** auswählen.
 2. Klicken Sie auf einen Benutzernamen und dann auf **Benutzerdetails**.
@@ -85,22 +85,22 @@ Terraform erfordert einen Infrastruktur-API-Schlüssel zum Erstellen von Infrast
 4. Kopieren Sie den API-Schlüssel ` TF_VAR_ibm_sl_api_key`, oder laden Sie ihn herunter, und speichern Sie ihn an einem sicheren Ort. Sie können die Details des API-Schlüssels später über die Option **Details anzeigen** im Menü **Aktionen** ![Symbol für Aktionsliste](../icons/action-menu-icon.svg) abrufen.
 5. Fügen Sie den kopierten API-Schlüsselwert in die Toolchainkonfiguration ein, um `TF_VAR_ibm_sl_api_key` zu ersetzen.
 
-Weitere Informationen finden Sie unter [API-Schlüssel für klassische Infrastruktur verwalten](/docs/iam/classic_infra_keys.html) und [Berechtigungen für klassische Infrastruktur](/docs/iam/infrastructureaccess.html).
+Weitere Informationen finden Sie unter [API-Schlüssel für klassische Infrastruktur verwalten](/docs/iam/classic_infra_keys.html#classic_keys) und [Berechtigungen für klassische Infrastruktur](/docs/iam/infrastructureaccess.html#infrapermission).
 
-#### Infrastrukturbenutzername
+#### Benutzername für klassische Infrastruktur
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
-Der Infrastrukturbenutzername wird ebenfalls automatisch abgerufen und während der Bereitstellung verwendet. Um den Benutzernamen manuell abzurufen, führen Sie die folgenden Schritte aus.
+
+Der Benutzername für die klassische Infrastruktur wird ebenfalls automatisch abgerufen und während der Bereitstellung verwendet. Um den Benutzernamen manuell abzurufen, führen Sie die folgenden Schritte aus.
 
 1. Wechseln Sie zur [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Sie können auch auf **Verwalten** > **Zugriff (IAM)** klicken und **Benutzer** auswählen.
 2. Klicken Sie auf einen Benutzernamen und dann auf **Benutzerdetails**.
 3. Suchen Sie die Eigenschaft **VPN-Benutzername**.
 4. Schneiden Sie den zugehörigen Wert aus und ersetzen Sie durch ihn den Wert der Toolchainkonfigurationseigenschaft `TF_VAR_ibm_sl_username`.
 
-#### IBM Cloud-API-Schlüssel
+#### {{site.data.keyword.cloud_notm}}-API-Schlüssel
 {: #platform-key}
 
-Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbanken und Compose-Services, wird der Plattform-API-Schlüssel automatisch abgerufen und als Umgebungsvariable in Ihrer Pipeline gespeichert. Um einen Plattformschlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.
+Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbanken und Compose-Services, wird der {{site.data.keyword.cloud_notm}}-API-Schlüssel automatisch abgerufen und als Umgebungsvariable in Ihrer Pipeline gespeichert. Um einen {{site.data.keyword.cloud_notm}}-API-Schlüssel manuell abzurufen, führen Sie die folgenden Schritte aus.
 
 1. Wechseln Sie zur [Benutzerliste ![Symbol für externen Link](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Sie können auch auf **Verwalten** > **Zugriff (IAM)** klicken und **Benutzer** auswählen.
 2. Klicken Sie auf einen Benutzernamen und dann auf **Benutzerdetails**.
@@ -112,12 +112,12 @@ Zur Erstellung von Services auf Plattformebene in Terraform, wie z. B. Datenbank
 
 #### Öffentliche und private Schlüssel
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+
 Damit die Toolchain die Debian-Paketierung in der virtuellen Serverinstanz installiert, generiert die Bereitstellungsinfrastruktur automatisch ein SSH-Schlüsselpaar mit privatem und öffentlichem Schlüssel, um den Git-Inhalt zur Instanz zu übertragen.
 
 Gehen Sie wie folgt vor, um diese Schritte manuell auszuführen:
 1. Erstellen Sie auf dem Client wie im Folgenden beschrieben ein [Schlüsselpaar aus öffentlichem und privatem Schlüssel![Symbol für externen Link](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Rufen Sie die [Ansicht für die SSH-Schlüssel der Infrastruktur ![Symbol für externen Link](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window} auf. Sie können auch auf **Menü** > **Klassische Infrastruktur** > **Geräte** > **Verwalten** > **SSH-Schlüssel** klicken.
+2. Rufen Sie die [Ansicht für die SSH-Schlüssel der Infrastruktur ![Symbol für externen Link](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window} auf. Sie können auch auf **Menü** > **Klassische Infrastruktur** > **Geräte** > **Verwalten** > **SSH-Schlüssel** klicken.
 3. Klicken Sie auf **Hinzufügen**.
 4. Kopieren Sie den Inhalt des zuvor erstellten öffentlichen Schlüssels und fügen Sie ihn in den Schlüsselinhalt ein.
 5. Geben Sie dem Schlüssel einen Namen und klicken Sie auf **Hinzufügen**.
@@ -147,7 +147,7 @@ Zum Aktivieren des Statusspeichers werden `GIT_USER` und `GIT_PASSWORD` automati
 Der Terraform-Status wird in einem Zweig namens `terraform` gespeichert und löst die Pipeline-Ausführung nicht aus, wenn eine Änderung ermittelt wurde.
 
 ### Git-Operationen aktivieren
-{: #git-repo}
+{: #git-repo-vsi}
 
 Wenn die App in {{site.data.keyword.cloud_notm}} bereitgestellt wird, wird ein GitLab-Repository erstellt, um den Code für die Quellcodeverwaltung zu hosten. Sie können Git-Operationen verwenden, um Teams zu ermöglichen, Änderungen an Ihrer App vorzunehmen und bereitzustellen. Im Folgenden wird der Inhalt der Ordner in diesem Repository beschrieben.
 
@@ -193,7 +193,7 @@ variable "datacenter" {
 ```
 
 ### Toolchain-Stages verstehen
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 Die Toolchain stellt die Bereitstellung von Infrastruktur und Apps in einer einfachen Pipeline dar. Unterteilen Sie diese Pipeline in zwei Pipelines: eine Pipeline für den IaC-Bereich und eine Pipeline für die Bereitstellung der App.
 

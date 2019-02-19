@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -26,17 +26,17 @@ I problemi generali con la creazione delle applicazioni potrebbero includere app
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potresti non riuscire ad eseguire le azioni. È possibile che ti venga richiesto di salvare le modifiche prima di poter continuare.
+Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potesti non essere in grado di eseguire alcuna azione. Ti potrebbe anche essere richiesto di salvare le modifiche prima di poter continuare.
 
-Quando tenti di controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, viene visualizzato il seguente messaggio di errore:
+Quando provi a controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 `You have unsaved changes. Are you sure you want to leave this page?`
 
-Quando passi il mouse sui campi **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro del runtime, i valori cambiano. Questo è il funzionamento progettato. Tuttavia ti viene richiesto di salvare le impostazioni della memoria o dell'istanza prima di passare a un'altra pagina.
+Quando passi il puntatore del tuo mouse sui campi **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro di runtime, i valori cambiano. Questa è la modalità di funzionamento prevista. Tuttavia, ti viene richiesto di salvare le impostazioni di memoria o istanza prima di andare a un'altra pagina.
 {: tsCauses}
 
-Chiudi la finestra di dialogo del messaggio e fai clic su **RESET** nel tuo riquadro di runtime.
+Chiudi la finestra di dialogo del messaggio e fai clic su **REIMPOSTA** nel tuo riquadro di runtime.
 {: tsResolve}
 
 ## Il failover automatico tra le regioni {{site.data.keyword.cloud_notm}} non è disponibile
@@ -122,7 +122,7 @@ Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per crea
 * Dalla barra dei menu, fai clic su **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**. Seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
 * Nell'interfaccia riga di comando Cloud Foundry, immetti `cf create-space <space_name> -o <organization_name>`.
 
-Riprova. Se visualizzi di nuovo questo messaggio, vai alla pagina sugli [stati di {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha qualche problema.
+Riprova. Se questo messaggio si verifica nuovamente, vai alla pagina [Stato {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window} per controllare se un servizio o un componente ha un problema.
 
 ## Impossibile effettuare le azioni richieste
 {: #ts_authority}
@@ -143,8 +143,8 @@ Non disponi del livello di autorità adeguato per eseguire le azioni.
 Per ottenere il livello di autorità appropriato, utilizza uno dei seguenti metodi.
 {: tsResolve}
 
-* Seleziona un'altra organizzazione e uno spazio per cui disponi del ruolo di sviluppatore.
-* Chiedi al gestore organizzazione di modificare il tuo ruolo in sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo sviluppatore. Consulta [Gestione di organizzazioni e spazi](/docs/admin/orgs_spaces.html) per i dettagli.
+* Seleziona un'organizzazione e uno spazio diversi per cui disponi del ruolo di sviluppatore.
+* Chiedi al gestore organizzazione di modificare il tuo ruolo in Sviluppatore oppure di creare uno spazio e assegnarti quindi un ruolo di Sviluppatore. Consulta [Gestione di organizzazioni e spazi](/docs/admin/orgs_spaces.html#orgsspacesusers) per i dettagli.
 
 ## Impossibile accedere ai servizi {{site.data.keyword.cloud_notm}} a causa di errori di autorizzazione
 {: #ts_vcap}
@@ -171,7 +171,7 @@ Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di
 {: #ts_502_error}
 {: troubleshoot}
 
-Se ricevi degli errori `502 Bad Gateway` quando interagisci con le applicazioni su {{site.data.keyword.cloud_notm}}, controlla la pagina degli stati di {{site.data.keyword.cloud_notm}} ed effettua le operazioni appropriate.
+Se ricevi degli errori `502 Bad Gateway` quando interagisci con le applicazioni in {{site.data.keyword.cloud_notm}}, controlla la pagina dello stato {{site.data.keyword.cloud_notm}} ed esegui quindi le azioni appropriate.
 
 Ricevi dei messaggi di errore che iniziano con 502 Bad Gateway. Ad esempio, potresti vedere `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
@@ -182,7 +182,7 @@ browser. Questo codice di stato indica che il server principale del sito non ha 
 
 Altre cause meno comuni di un errore Bad Gateway sono interruzioni ISP (Internet Service Provider), configurazioni firewall non valide ed errori della cache del browser.
 
-Se sospetti che un servizio {{site.data.keyword.cloud_notm}} sia inattivo, controlla prima la pagina sugli [stati di {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione potrebbe essere quella di utilizzare il servizio in un'altra regione {{site.data.keyword.cloud_notm}}. Informazioni dettagliate sono disponibili in [Utilizzo dei servizi in un'altra regione ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se lo stato del servizio è normale,
+Se sospetti che un servizio {{site.data.keyword.cloud_notm}} è inattivo, controlla prima la pagina dello stato [{{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://ibm.biz/bluemixstatus){: new_window}. Una soluzione temporanea potrebbe essere quella di [utilizzare il servizio in un'altra regione {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp){: new_window}. Se lo stato del servizio è normale,
 prova le seguenti operazioni per risolvere il problema:
 {: tsResolve}
 
@@ -192,7 +192,7 @@ prova le seguenti operazioni per risolvere il problema:
     * Riavvia il router, il modem e il computer. Il riavvio di questi
 dispositivi può cancellare i diversi errori che portano all'errore 502.
   * Attendi e riprova in seguito. Possono verificarsi dei problemi temporanei con il tuo provider dei servizi internet o con i servizi {{site.data.keyword.cloud_notm}}. Puoi attendere finché i problemi non vengono risolti.
-  * Se il problema persiste, contatta il supporto {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
+  * Se il problema persiste, contatta il supporto {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Come contattare il supporto {{site.data.keyword.cloud_notm}}![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
 
 ## Quota disco superata
 {: #ts_disk_quota}
@@ -204,7 +204,9 @@ ottenere ulteriore spazio sul disco.
 Se esaurisci lo spazio su disco, potresti visualizzare un messaggio
 che indica che la quota di disco è stata superata. Per risolvere il problema,
 potresti aver tentato di ridimensionare la tua istanza dell'applicazione per ottenere ulteriore spazio
-su disco. Ad esempio, avresti potuto eseguire il ridimensionamento da 256 a 1256 MB modificando la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poiché la quota di disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco.
+su disco. Ad esempio, potresti aver eseguito il ridimensionamento da 256 MB a 1256 MB modificando
+la quota di memoria nella pagina dei dettagli dell'applicazione. Tuttavia, poiché la quota di
+disco è rimasta la stessa, non hai ottenuto ulteriore spazio su disco.
 {: tsSymptoms}
 
 La quota di disco predefinita assegnata a un'applicazione è 1
@@ -270,9 +272,9 @@ Elimina tutte le istanze dei servizi che non sono necessarie o rimuovi il limite
 
     Per utilizzare l'interfaccia riga di comando per eliminare un'istanza del
 servizio, completa la seguente procedura:
-	  3. Annulla il bind dell'istanza del servizio da un'applicazione. Immetti `cf unbind-service <appname> <service_instance_name>`.
+	  3. Annulla l'associazione mediante bind dell'istanza del servizio a un'applicazione. Immetti `cf unbind-service <appname> <service_instance_name>`.
 	  4. Elimina l'istanza del servizio. Immetti `cf delete-service <service_instance_name>`.
-	  5. Dopo che hai eliminato l'istanza del servizio, potresti voler ripreparare la tua applicazione a cui era associata mediante bind l'istanza del servizio. Immetti `cf restage <appname>`.
+	  5. Dopo aver eliminato l'istanza del servizio, potresti voler preparare nuovamente l'applicazione a cui era associata mediante bind l'istanza del servizio. Immetti `cf restage <appname>`.
 
   * Per rimuovere il limite sul numero di istanze del servizio che puoi avere, aggiorna il tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
 
@@ -293,7 +295,7 @@ su {{site.data.keyword.cloud_notm}}. Devi indicare esplicitamente a {{site.data.
 
 Quando distribuisci l'eseguibile a {{site.data.keyword.cloud_notm}},
 devi specificare `null-buildpack`, che indica che
-non è richiesto alcun pacchetto di build. Specifica `null-buildpack` utilizzando l'opzione **-b** con il comando `ibmcloud cf push`:
+non è richiesto alcun pacchetto di build. Specifica un `null-buildpack` utilizzando l'opzione **-b** con il comando `ibmcloud cf push`:
 {: tsResolve}
 
 ```
@@ -329,7 +331,7 @@ Puoi aumentare la quota di memoria del tuo account o ridurre la memoria utilizza
 {: tsResolve}
 
   * Per aumentare la quota di memoria del tuo account, esegui l'upgrade del tuo account Lite a un account fatturabile. Per ulteriori informazioni, vedi [Aggiornamento del tuo account](/docs/account/index.html#upgrade-to-paygo).
-  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.cloud_notm}} o l'interfaccia riga di comando Cloud Foundry. 
+  * Per ridurre la memoria utilizzata dalle tue applicazioni, utilizza la console {{site.data.keyword.cloud_notm}} o l'interfaccia riga di comando Cloud Foundry.
 
     Se utilizzi la console {{site.data.keyword.cloud_notm}}, completa la seguente procedura:
 
@@ -409,7 +411,7 @@ Per risolvere il problema utilizza una delle seguenti opzioni:
 Potresti non riuscire a individuare la tua organizzazione in {{site.data.keyword.cloud_notm}} quando
 lavori su una regione {{site.data.keyword.cloud_notm}}.
 
-Puoi accedere correttamente alla console {{site.data.keyword.cloud_notm}} ma non puoi eseguire il push delle applicazioni utilizzando l'interfaccia riga di comando Cloud Foundry.
+Puoi accedere alla console {{site.data.keyword.cloud_notm}} correttamente ma non puoi eseguire il push delle applicazioni utilizzando l'interfaccia riga di comando Cloud Foundry.
 {: tsSymptoms}
 
 Quando provi ad eseguire il push di un'applicazione a {{site.data.keyword.cloud_notm}} utilizzando l'interfaccia riga di comando Cloud Foundry, vedi uno dei seguenti messaggi di errore con il nome dell'organizzazione specificato nel messaggio.
@@ -675,7 +677,7 @@ Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, 
 Se i lavori di build o di distribuzione non riescono, e vedi il seguente messaggio, puoi eliminare le tue immagini con i seguenti comandi CLI. `Stato: non autorizzato: È stata superata la quota di archiviazione. Eliminare una o più immagini o rivedere la quota di archiviazione e il piano dei prezzi.`
 
 * Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), se non lo hai già fatto.
-* Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
+* Accedi a {{site.data.keyword.cloud_notm}} utilizzando`ibmcloud login` ed eseguine l'indirizzamento allo spazio in cui ti trovi.
 * Elenca le tue immagini utilizzando `ibmcloud cr images`.
 * Elimina le eventuali immagini inutilizzate servendoti di `ibmcloud cr image-rm <respository>:<tag>`.
 * Esegui nuovamente il lavoro di build o di distribuzione che non era riuscito.
@@ -684,8 +686,8 @@ Se i lavori di build o di distribuzione non riescono, e vedi il seguente messagg
 {: #access_kube_logs}
 
 Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di integrità, prova a guardare i log nel cluster.
-* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), se non lo hai già fatto.
-* Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
+* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), se non lo hai già fatto.
+* Accedi a {{site.data.keyword.cloud_notm}} utilizzando`ibmcloud login` ed eseguine l'indirizzamento allo spazio in cui ti trovi.
 * Elenca i tuoi cluster utilizzando `ibmcloud cs clusters`,
 * Indica come destinazione il tuo cluster corrispondente utilizzando `ibmcloud cs cluster-config <cluster-name>`.
 * Esporta la variabile di ambiente che è elencata.
@@ -697,32 +699,32 @@ Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di 
 {: #docker_not_found}
 {: troubleshoot}
 
-Quando tenti di avviare Docker, viene visualizzato il seguente messaggio:
+Quando provi ad avviare Docker, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+È stato riscontrato un errore exec: "docker": executable file not found in $PATH durante la creazione dell'immagine Docker.
 ```
 {: screen}
 
-Il client Docker non è installato oppure lo è ma non è stato avviato.
+Il client Docker non è installato oppure è installato ma non è stato avviato.
 {: tsCauses}
 
 Assicurati che [Docker](https://docs.docker.com/install/) sia installato e avvialo.
 {: tsResolve}
 
 
-## Building an app fails with Docker error
+## La creazione di un'applicazione non riesce con l'errore Docker
 {: #build_error}
 {: troubleshoot}
 
-Quando tenti di creare un'applicazione con il comando `ibmcloud dev build`, il processo non riesce e ricevi un errore nome utente/password Docker.
+Quando provi a creare un'applicazione con il comando `ibmcloud dev build`, l'operazione non riesce con un errore nomeutente/password Docker.
 {: tsSymptoms}
 
-Stanno venendo utilizzate per l'autenticazione delle credenziali Docker Hub non corrette.
+Si stanno utilizzando delle credenziali Docker Hub non corrette per l'autenticazione.
 {: tsCauses}
 
-Esci da Docker Hub nel client Docker.
+Disconnettiti da Docker Hub nel client Docker.
 {: tsResolve}
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# 앱에 서비스 추가
-{: #add_service}
+# 앱에 리소스 추가
+{: #add-resource}
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}에서 앱을 작성할 때 앱 세부사항 페이지에서 리소스를 추가할 수 있습니다. 또한 앱의 컨텍스트에 속하지 않는 {{site.data.keyword.cloud_notm}} 카탈로그로부터 직접 리소스를 프로비저닝할 수도 있습니다.
 {: shortdesc}
 
-사용자는 리소스의 인스턴스를 요청하고 앱과 무관하게 이를 사용하거나, 앱 세부사항 페이지에서 앱에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스(서비스)를 {{site.data.keyword.cloud_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다.
+사용자는 리소스의 인스턴스를 요청하고 앱과 무관하게 이를 사용하거나, 앱 세부사항 페이지에서 앱에 리소스 인스턴스를 추가할 수 있습니다. 특정 유형의 리소스를 {{site.data.keyword.cloud_notm}} 카탈로그로부터 직접 프로비저닝할 수 있습니다. 
 
-## 서비스 발견
-{: #discover_services}
+## 리소스 검색
+{: #discover-resources}
 
 다음 방법으로 {{site.data.keyword.cloud_notm}}에서 사용 가능한 모든 서비스를 확인할 수 있습니다.
 
@@ -32,10 +32,10 @@ lastupdated: "2018-11-29"
 
 {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
-다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 서드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 서드파티 도구가 {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 설정](/docs/resources/connect_external_app#externalapp)을 참조하십시오. 
+다른 지역에서 호스팅되는 서비스가 해당 지역에서 사용 가능할 경우 이 서비스도 사용할 수 있습니다. 이러한 서비스는 인터넷을 통해 액세스할 수 있으며 API 엔드포인트를 사용합니다. {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 외부 애플리케이션 또는 서드파티 도구를 코딩할 때와 동일한 방식으로 이러한 서비스를 사용하도록 애플리케이션을 수동으로 코딩해야 합니다. 자세한 정보는 [외부 애플리케이션 및 서드파티 도구가 {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 설정](/docs/resources/connect_external_app#externalapp)을 참조하십시오.
 
 ## 새 서비스 인스턴스 요청
-{: #req_instance}
+{: #request-instance}
 
 새 서비스 인스턴스를 요청하려면 {{site.data.keyword.cloud_notm}} 사용자 인터페이스 또는 {{site.data.keyword.cloud_notm}} 명령행 인터페이스를 사용해야 합니다.
 
@@ -62,10 +62,10 @@ ibmcloud dev edit
 2. 프롬프트에 따라 리소스 그룹을 선택하고 새 데이터 관련 서비스를 작성하고 Cloudant와 같은 애플리케이션에 연결하십시오. 서비스의 지역 및 플랜을 선택해야 합니다.
 3. 서비스가 작성되면 인증 정보를 포함한 여러 파일이 애플리케이션 디렉토리에 추가되어 사용자가 서비스를 애플리케이션으로 통합할 수 있습니다. 임의 파일을 수동으로 병합하거나 이 단계를 건너뛸 수 있습니다.
 
-동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 외부 앱이 {{site.data.keyword.cloud_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/resources/connect_external_app#externalapp){: new_window}을 참조하십시오. 
+동일한 영역 또는 조직 내의 해당 앱 인스턴스에만 서비스 인스턴스를 바인딩할 수 있습니다. 단, 외부 앱이 사용하는 것과 동일한 방식으로 기타 영역 또는 조직에서 서비스 인스턴스를 사용할 수 있습니다. 바인딩을 작성하는 대신 인증 정보를 사용하여 앱 인스턴스를 직접 구성하십시오. 외부 앱이 {{site.data.keyword.cloud_notm}} 서비스를 사용하는 방법에 대한 자세한 정보는 [외부 앱이 {{site.data.keyword.cloud_notm}} 서비스를 사용하도록 설정 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/resources/connect_external_app#externalapp){: new_window}을 참조하십시오.
 
 ## 애플리케이션 구성
-{: #config}
+{: #configure-app}
 
 서비스 인스턴스를 애플리케이션에 바인딩한 후에는 애플리케이션이 서비스와 상호작용하도록 구성해야 합니다.
 
@@ -150,4 +150,4 @@ Kubernetes 시크릿에 저장된 서비스 인증 정보는 기본적으로 bas
 	OK
 	```
 
-이제 외부 서비스를 사용하도록 애플리케이션을 구성할 수 있습니다. 서비스와 상호작용하도록 애플리케이션을 구성하는 방법은 [서비스와 상호작용하도록 애플리케이션 구성 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](#config){: new_window}을 참조하십시오.
+이제 외부 서비스를 사용하도록 애플리케이션을 구성할 수 있습니다. 서비스와 상호작용하도록 애플리케이션을 구성하는 방법에 대한 정보는 [서비스와 상호작용하도록 애플리케이션 구성](/docs/apps/reqnsi.html#configure-app)을 참조하십시오. 

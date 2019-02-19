@@ -1,71 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-08-21"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:pre: .pre}
 {:screen: .screen}
+{:tip: .tip}
 
 # 入門チュートリアル
-{: #create}
+{: #tutorial-getting-started}
 
-{{site.data.keyword.Bluemix}} では、エンタープライズレベルのモバイル・アプリケーションおよび Web アプリケーションを作成し、{{site.data.keyword.Bluemix_notm}} でホストされているクラウド拡張機能を利用できます。 アプリを作成、実行、およびデプロイするには、{{site.data.keyword.Bluemix}} コンソールおよびコマンド・ライン・ツールを使用できます。 開始するには、プロセスを管理するスターター・キットを使用してアプリを作成するか、何が必要かがわかっている場合は必要なリソースを使用してアプリをビルドするかの 2 つの方法を使用します。
-{:shortdesc}
-
-スターター・キットを使用して、アプリを素早く開始し、今後の開発に備えることができます。 スターター・キットとプログラミング言語を選択し、アプリを作成した後、自動的にアプリをデプロイするように DevOps ツールチェーンをセットアップします。 即時検査用のコードをダウンロードすることもできます。
-
-スターター・キットは、以下の多くのカテゴリーで使用可能です。
-
-* [Watson ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
-* [Apple ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
-* [Mobile ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/mobile/dashboard){:new_window}
-* [Web App ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/appservice/dashboard){:new_window}
-* [Security ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/security/dashboard){:new_window}
-<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finance ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net/developer/finance/dashboard){:new_window}
+{{site.data.keyword.cloud}} で企業向けのモバイル・アプリケーションおよび Web アプリケーションを作成でき、{{site.data.keyword.cloud_notm}} でホストされているクラウド拡張機能を利用できます。開始する方法にはいくつかあります。プロセスを管理してくれるスターター・キットを使用してアプリを作成するか、または、何が必要かが分かっている場合は、必要なリソースと共に最初からアプリを作成するか、既存のリポジトリーを使用して独自のコードを持ち込みます。
+{: shortdesc}
 
 ## 始める前に
+{: #prereqs-getting-started}
 
-{{site.data.keyword.cloud_notm}} アカウントの [登録![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://console.bluemix.net){: new_window} をしてください。 E メール、名前、会社、地域、電話番号を入力します。
-
-無料アカウントの登録にクレジット・カードは必要ありません。 ただし、クレジット・カードを入力すると、より多くのリソースへのアクセスが可能になり、{{site.data.keyword.cloud_notm}} で提供されるすべてのものをより簡単に利用できます。
+アプリの作成は、{{site.data.keyword.cloud_notm}} コンソールまたはコマンド・ライン・インターフェース (CLI) を使用して行うことができます。CLI を使用する場合、インストールの詳細について、[{{site.data.keyword.cloud_notm}} CLI の概要](/docs/cli/index.html#overview)を参照してください。
 
 ## ステップ 1. アプリの作成
-{: #project}
+{: #create-getting-started}
 
-1. **メニュー**・アイコン![メニュー・アイコン](../icons/icon_hamburger.svg) > **「Web アプリ」**をクリックします。
-
-2. **「Web から開始 (Start from the Web)」**セクションで**「開始」**をクリックします。
-
-3. 任意のスターター・キットを選択し、詳細を読み、**「作成」**をクリックします。
-
-   スターター・キットに含まれる内容を表示するには、アプリ・サービス・スターター・キットのダッシュボード上のタイルを展開します。
-   {: tip}
-
-4. アプリに名前を付け、言語を選択して、**「作成」**をクリックします。
-
-   素晴らしいスタートです。 これでアプリが作成されました。
-
-   コードを検査するには、アプリの詳細ページで**「コードのダウンロード (Download Code)」**をクリックします。 ダウンロードした圧縮ファイルの中の `README.md` ファイルを参照して、スターター・アプリを稼働状態にするためにさらに操作が必要かどうかを確認します。
-   {: tip}
+以下のエントリー・ポイントのいずれかを選択して、アプリを作成します。
+* [スターター・キット](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit): ユーザーのためにプロセスを管理してくれるアプリ・サービス・スターター・キットのいずれかを選択してアプリを作成します。
+* [カスタム](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch): 何が必要なのかが分かっている場合、ブランクのスターター・キットを使用して、必要なリソースと共にカスタム・アプリを最初から作成します。
+* [独自のコードの持ち込み](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc): 既存の独自のコンテンツ・リポジトリーにリンクすることによって、独自のコードを持ち込みます。アプリと Docker イメージは同じリポジトリー内に配置する必要があります。
+* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli): CLI および開発者ツールを使用して、カスタム・アプリまたはスターター・キット・アプリを作成してデプロイします。
+* [コード・パターン](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern): アプリを作成するためのベースとして IBM 開発者コード・パターンを使用します。
+* [{{site.data.keyword.cloud_notm}} カタログ ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/catalog){: new_window}: カタログを参照または検索して、今日作成して使用を開始できるアプリおよびサービスを見つけます。
 
 ## ステップ 2. リソースの追加
-{: #addResources}
+{: #resources-getting-started}
 
-ほとんどのスターター・キットは、自動的にリソースをプロビジョンするよう {{site.data.keyword.cloud_notm}} に指示します。 アプリの詳細ページの**「リソースの追加」**をクリックして、さらにリソースをアプリに関連付けることもできます。
+スターター・キットを使用してアプリを作成する場合、リソースは自動的に作成されます。コンソールでアプリの詳細ページの**「リソースの追加」**をクリックすることによって、さらにリソースをアプリに関連付けることができます。
 
-アプリをローカルで開発および実行するには、[{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)を使用します。
-{: tip}
+CLI を使用してリソースを追加するには、サービスをアプリに追加するために次のコマンドを実行します。ご使用のアカウントで既に使用可能になっている既存のサービスを選択することも、新規サービスを追加することもできます。 
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+詳しくは、[アプリへのサービスの追加](/docs/apps/reqnsi.html#add-resource)を参照してください。
 
 ## ステップ 3. アプリのデプロイ
-{: #deploy}
+{: #deploy-getting-started}
 
-アプリの詳細ページで**「クラウドにデプロイ (Deploy to Cloud)」**をクリックし、デプロイメント方式 (例えば、Kubernetes クラスターや Cloud Foundry アプリ) を選択して、**「作成」**をクリックします。 {{site.data.keyword.cloud_notm}} は、Git リポジトリーと継続的デリバリー・パイプラインを備えたオープン・ツールチェーンを自動的に作成します。 新しいツールチェーンのパイプライン・コンポーネントを開いて、最初のビルドとデプロイのプロセスを開始すると、数分後には新しいアプリを確認できます。
+コンソールまたはコマンド・ラインを使用してアプリをデプロイできます。
+
+### コンソールの使用
+{: #console-getting-started}
+
+コンソールを使用してアプリをデプロイするには、以下の手順を実行します。
+
+1. **「アプリの詳細」**ページで、**「クラウドにデプロイ」**をクリックします。
+2. デプロイメント方式を選択し、**「作成」**をクリックします。 {{site.data.keyword.cloud_notm}} は、Git リポジトリーと継続的デリバリー・パイプラインを備えたオープン・ツールチェーンを自動的に作成します。
+3. 新しいツールチェーンのパイプライン・ステージを開いて、ビルドとデプロイメントのプロセスを表示すると、数分後に新しいアプリが表示されます。
+
+詳しくは、『アプリのデプロイと統合』セクションで、さまざまなデプロイメントについてのトピックの目次を参照してください。
+
+### コマンド・ラインの使用
+{: #cli-getting-started}
+
+コマンド・ラインを使用してアプリをデプロイするには、`ibmcloud dev deploy` コマンドを実行します。詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps/create-deploy-cli.html#create-deploy-app-cli)を参照してください。
 
 これで、反復型開発と継続的デリバリーのための設定ができました。

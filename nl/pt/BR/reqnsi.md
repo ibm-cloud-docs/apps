@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,17 +11,17 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Incluindo um serviço em seu app
-{: #add_service}
+# Incluindo um recurso em seu app
+{: #add-resource}
 
 Ao criar um app com o {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, é possível incluir recursos por meio da página Detalhes do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.cloud_notm}}, fora do contexto de seu app.
 {: shortdesc}
 
 É possível solicitar uma instância do recurso e usá-la independentemente do app ou incluir a instância de recurso
-no app por meio da página Detalhes do app. É possível provisionar um tipo específico de recurso (um serviço) diretamente do catálogo do {{site.data.keyword.cloud_notm}}.
+no app por meio da página Detalhes do app. É possível provisionar um tipo específico de recurso diretamente do catálogo do {{site.data.keyword.cloud_notm}}.
 
-## Descobrindo serviços
-{: #discover_services}
+## Descobrindo Recursos
+{: #discover-resources}
 
 É possível ver todos os serviços que estão disponíveis no {{site.data.keyword.cloud_notm}} das maneiras a seguir:
 
@@ -40,7 +40,7 @@ codifica aplicativos externos ou ferramentas de terceiros para usar os serviços
 {{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Permitindo que aplicativos externos e ferramentas de terceiros usem os serviços do {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp).
 
 ## Solicitando uma nova instância de serviço
-{: #req_instance}
+{: #request-instance}
 
 Para solicitar uma nova instância de serviço, deve-se usar a interface com o usuário do {{site.data.keyword.cloud_notm}} ou a interface da linha de comandos do {{site.data.keyword.cloud_notm}}.
 
@@ -74,7 +74,7 @@ ajudar você a integrar o serviço ao aplicativo. É possível mesclar manualmen
 É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os apps externos usam os serviços do {{site.data.keyword.cloud_notm}}, consulte [ Ativando apps externos para usar os serviços do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Configurando seu aplicativo
-{: #config}
+{: #configure-app}
 
 Depois de ligar uma instância de serviço ao aplicativo, deve-se configurar o aplicativo para interagir com o serviço.
 
@@ -173,4 +173,4 @@ exemplo:
 	OK
 	```
 
-Agora é possível configurar o seu aplicativo para usar os serviços externos. Para obter informações sobre como configurar o seu aplicativo para interagir com um serviço, consulte [Configurando o seu aplicativo para interagir com um serviço ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](#config){: new_window}.
+Agora é possível configurar o seu aplicativo para usar os serviços externos. Para obter informações sobre como configurar o seu aplicativo para interagir com um serviço, consulte [Configurando seu aplicativo para interagir com um serviço](/docs/apps/reqnsi.html#configure-app).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-26"
+  years: 2018, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-26"
 {:tip: .tip}
 
 # Distribuzione di un'applicazione kit starter a un cluster Kubernetes
-{: #tutorial}
+{: #tutorial-starterkit-kube}
 
 Acquisisci informazioni su come creare un'applicazione in {{site.data.keyword.cloud}} utilizzando uno starter kit vuoto e una toolchain Kubernetes e fornire in modo continuo l'applicazione a un contenitore protetto in un cluster Kubernetes. La tua pipeline DevOps di integrazione continua può essere configurata in modo che le tue modifiche al codice vengano compilate e propagate automaticamente all'applicazione che si trova nel cluster Kube. Se già hai una pipeline, la puoi connettere alla tua applicazione.
 {: shortdesc}
@@ -28,14 +28,14 @@ Innanzitutto, vedi il seguente diagramma di flusso del kit starter e i suoi corr
 ![Diagramma di flusso del kit starter](../images/starterkit-flow.png) 
 
 ## Prima di iniziare
-{: #prereqs}
+{: #prereqs-starterkit-kube}
 
-* Crea un'applicazione **Java + Spring** utilizzando un [kit starter](/docs/apps/tutorials/tutorial_starter-kit.html).
+* Crea un'applicazione **Java + Spring** utilizzando un [kit starter](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
 * Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 * Configura [Docker ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.docker.com/get-started){: new_window}.
 
 ## Aggiunta di risorse alla tua applicazione
-{: #add_resources}
+{: #resources-starterkit-kube}
 
 Aggiungi una risorsa di servizio {{site.data.keyword.cloud_notm}} alla tua applicazione. La seguente procedura esegue il provisioning di un'istanza Cloudant, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione.
 
@@ -47,7 +47,7 @@ Aggiungi una risorsa di servizio {{site.data.keyword.cloud_notm}} alla tua appli
 6. Facoltativo. Se vuoi dare una rapida occhiata al tuo codice applicativo dopo che hai aggiunto le risorse, fai clic su **Download code**. Il tuo codice viene scaricato come un file `.zip` che contiene l'intera struttura del codice applicativo. Puoi facilmente estrarre il file ed eseguire il codice localmente utilizzando la {{site.data.keyword.dev_cli_notm}} o aggiungerlo al tuo repository di gestione del codice.
 
 ## Distribuzione della tua applicazione utilizzando una toolchain DevOps
-{: #deploy_app}
+{: #deploy-starterkit-kube}
 
 Collega una toolchain DevOps all'applicazione e configurala in modo che venga distribuita a un cluster Kubernetes ospitato nel servizio Kubernetes {{site.data.keyword.cloud_notm}}.
 
@@ -62,14 +62,14 @@ Collega una toolchain DevOps all'applicazione e configurala in modo che venga di
 5. Nella pagina **Configure toolchain**, immetti un nome toolchain, seleziona una regione, seleziona un gruppo di risorse e fai quindi clic su **Create**. Viene visualizzata la pagina **App Details**, insieme alle informazioni di distribuzione relative alla tua toolchain.
 
 ## Visualizzazione del tuo repository
-{: #view_repo}
+{: #view-repo-starterkit-kube}
 
-1. Nella pagina **App Details**, fai clic su **View repo**.Viene visualizzato il repository Git generato dal kit starter.
+1. Nella pagina **App Details**, fai clic su **View repo**. Viene visualizzato il repository Git generato dal kit starter.
 2. Facoltativo. Configura SSH sul tuo desktop attenendoti alle istruzioni a schermo.
 3. Facoltativo. Crea un token di accesso personale sul tuo account attenendoti alle istruzioni a schermo.
 
 ## Visualizzazione di cronologia, log e strumenti della toolchain
-{: #view_logs}
+{: #view-logs-starterkit-kube}
 
 1. Una volta finita la fase di distribuzione, viene visualizzata la pagina **App Details**, insieme alle informazioni di distribuzione relative alla tua toolchain.
 2. Accedi alla toolchain facendo clic su **View toolchain**. Viene visualizzata la scheda **Overview** della pagina del toolchain, che mostra gli strumenti inclusi con la toolchain. Questo esempio include i seguenti strumenti, che erano stati preselezionati nel kit starter quando era stata creata la toolchain.
@@ -84,14 +84,27 @@ Collega una toolchain DevOps all'applicazione e configurala in modo che venga di
 	   * Pubblica l'immagine nel tuo registro contenitore privato.
 	 * La fase di distribuzione (DEPLOY) richiama l'immagine contenitore dal tuo registro contenitore e ne esegue quindi la distribuzione al tuo cluster Kubernetes.
 3. Fai clic su **Delivery Pipeline**. Vengono visualizzate le fasi della pipeline.
-4. Nella fase di distribuzione (DEPLOY), fai clic su **View logs and history**.
-5. Alla fine del log, cerca `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`, che è l'URL dove puoi accedere alla tua applicazione.
-6. Vai all'endpoint `/health` all'indirizzo `http://<ipaddress>:<port>/health`. Se l'applicazione è in esecuzione nel cluster, viene visualizzato un messaggio che include `{"status":"UP"}`.
+4. Nel tile **Deploy Stage**, fai clic su **View logs and history**.
 
-Se riscontri degli errori con la distribuzione, controlla l'argomento di risoluzione dei problemi per i problemi noti come [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota) o scopri come [accedere ai log Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) per cercare gli errori.
+## Verifica che la tua applicazione sia in esecuzione
+{: #verify-starterkit-kube}
+
+Dopo che hai distribuito la tua applicazione, la Delivery Pipeline o la riga di comando ti indirizzano all'URL per la tua applicazione.
+
+1. Dalla tua toolchain DevOps, fai clic su **Delivery Pipeline** e seleziona quindi **Deploy Stage**.
+2. Fai clic su **View logs and history**.
+3. Nel file di log, trova l'URL dell'applicazione:
+
+    Alla fine del file di log, cerca `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Vai all'URL nel tuo browser. Se l'applicazione è in esecuzione, viene visualizzato un messaggio che include `Congratulations` o `{"status":"UP"}`.
+
+Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) per visualizzare l'URL della tua applicazione. Vai quindi all'URL nel tuo browser.
 
 ## Passi successivi
-{: #next_steps notoc}
+{: #next-steps-startkit-kube notoc}
+
+* Se riscontri degli errori con la distribuzione, controlla l'argomento di risoluzione dei problemi per i problemi noti come [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota) o scopri come [accedere ai log Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) per cercare gli errori.
 
 * Accedi alla configurazione del servizio nel tuo codice:
 	- Puoi utilizzare l'annotazione _@Value_ oppure utilizzare il metodo _getProperty()_ della classe dell'ambiente framework Spring. Per ulteriori informazioni, vedi [Accesso alle credenziali](/docs/java-spring/configuration.html#configuration#accessing-credentials).

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-11-28"
+  years: 2016, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -11,36 +11,36 @@ lastupdated: "2018-11-28"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
-# Back-End-for-Front-End-API erstellen
-{: #tutorial}
+# Back-End-for-Front-End-App erstellen
+{: #tutorial-bff}
 
-Sie können eine App auf der Basis eines Back-End-for-Front-End-Starters erstellen. Verwenden Sie diese Starter, um Back-End-for-Front-End-APIs in Node.js, Java oder Swift mithilfe verschiedener Frameworks zu erstellen: Express.js, MicroProfile/ Java EE, Kitura oder Spring. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie sie in der Cloud bereitgestellt wird.
+Sie können eine App auf der Basis eines Back-End-for-Front-End-Starters erstellen. Verwenden Sie diese Starter, um Back-End-for-Front-End-Apps in Node.js, Java&reg oder Swift mithilfe verschiedener Frameworks zu erstellen: Express.js, MicroProfile/ Java&reg EE, Kitura oder Spring. Sie erfahren, wie die erforderlichen Tools installiert werden, wie die App lokal erstellt und ausgeführt wird und wie sie in der Cloud bereitgestellt wird.
 {: shortdesc}
 
-## Schritt 1. Tools installieren
-{: #install-tools}
+## Schritt 1. Vorbereitende Schritte
+{: #prereqs-bff}
 
-Installieren Sie die [Entwicklertools](/docs/cli/index.html).
-
-Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
+* Installieren Sie die [Entwicklertools](/docs/cli/index.html#overview).
+* Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
+* Wenn Sie vorhaben, Ihre App in [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about) bereitzustellen, müssen Sie [Ihr {{site.data.keyword.cloud_notm}}-Konto vorbereiten](/docs/cloud-foundry/prepare-account.html#prepare).
 
 ## Schritt 2. App erstellen
-{: #create-devex}
+{: #create-bff}
 
 Erstellen Sie eine App in der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}}.
 
 1. Wählen Sie auf der Seite [Starter-Kits ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/developer/appservice/starter-kits/) in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus. Wechseln Sie für eine Node.js-Anwendung beispielsweise zu **Express.js Backend** und klicken Sie auf **Starter-Kit auswählen**.
-
 2. Geben Sie Ihren App-Namen ein. Verwenden Sie im Rahmen dieses Lernprogramms `ExpressBackend`.
-
-3. Geben Sie einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Dieser Hostname gibt die Route Ihrer App an: `abc-devhost.mybluemix.net`.
-4. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
-5. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
-6. Klicken Sie auf **Erstellen**.
+3. Geben Sie einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Dieser Hostname gibt die Route Ihrer App an: `abc-devhost.cloud.ibm.com`
+4. Optional. Geben Sie Tags an, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources/tagging_resources.html#tag).
+5. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
+6. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
+7. Klicken Sie auf **Erstellen**.
 
 ## Schritt 3. Ressourcen hinzufügen (optional)
-{: #add-services}
+{: #resources-bff}
 
 Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
 
@@ -50,21 +50,21 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 4. Klicken Sie auf **Erstellen**.
 
 ## Schritt 4. DevOps-Toolchain erstellen
-{: #add-toolchain}
+{: #toolchain-bff}
 
-Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsplattform - z. B. Kubernetes oder Cloud Foundry - angepasst.
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die ausgewählte Bereitstellungsumgebung angepasst, die Sie auswählen, ob [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) oder [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
 
-Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuous Delivery aktivieren, um Builds, Tests und Bereitstellungen über die Delivery Pipeline und GitHub zu automatisieren.
+Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
+{: note}
 
-1. Klicken Sie im Fenster des App-Service auf **In Cloud bereitstellen**.
-2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie die Bereitstellungsmethode ein, indem Sie die Anweisungen für die ausgewählte Methode ausführen.
-
-    * Führen Sie die Bereitstellung in einem Kubernetes-Cluster aus. Erstellen Sie einen Cluster mit Hosts, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
-
-    * Führen Sie die Bereitstellung mit Cloud Foundry aus. Hier müssen Sie die zugrunde liegende Infrastruktur nicht verwalten.
+1. Klicken Sie auf der Seite "App-Details" auf **In Cloud bereitstellen**.
+2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie Ihre Bereitstellungsmethode entsprechend den Anweisungen für die ausgewählte Methode ein:
+  * **Führen Sie die Bereitstellung in [Kubernetes](/docs/apps/deploying/containers.html#containers)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können ein Cluster erstellen oder in einem vorhandenen Cluster bereitstellen.
+  * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** oder den Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
+  * **Führen Sie die Bereitstellung in einem [virtuellen Server](/docs/apps/vsi-deploy.html#vsi-deploy)** aus. Diese Option stellt eine virtuelle Serverinstanz bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
 ## Schritt 5. App erstellen und lokal ausführen
-{: #build-run}
+{: #build-run-bff}
 
 Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Toolchain erstellt. Eine Toolchain erstellt ein Git-Repository für die App, in dem Sie den Code anzeigen können. Führen Sie diese Schritte aus, um auf Ihr Repository zuzugreifen. Sie können die App zu Testzwecken lokal erstellen, bevor Sie sie in der Cloud bereitstellen.
 
@@ -72,7 +72,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
 2. Importieren Sie die App in die integrierte Entwicklungsumgebung.
 3. Ändern Sie den Code.
 4. Richten Sie die [Git-Authentifizierung](/docs/services/ContinuousDelivery/git_working.html#git_authentication) ein, indem Sie ein persönliches Zugriffstoken hinzufügen.
-5. Melden Sie sich bei der {{site.data.keyword.Bluemix}}-Befehlszeilenschnittstelle an. Wenn in Ihrer Organisation föderierte Anmeldungen verwendet werden, wählen Sie die Option `-sso` aus.
+5. Melden Sie sich bei der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle an. Wenn in Ihrer Organisation föderierte Anmeldungen verwendet werden, wählen Sie die Option `-sso` aus.
 
   ```bash
   ibmcloud login -sso
@@ -110,9 +110,10 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
 10.  Öffnen Sie in Ihrem Browser diese Adresse: `http://localhost:3000`. Abhängig von der ausgewählten Laufzeit kann die Portnummer davon abweichen.
 
 ## Schritt 6. App bereitstellen
-{: #deploy}
+{: #deploy-bff}
 
 ### Bereitstellung: Toolchain verwenden
+{: #deploy-bff-toolchain}
 
 Für die Bereitstellung der App in {{site.data.keyword.cloud_notm}} stehen mehrere Möglichkeiten zur Verfügung, eine DevOps-Toolchain ist jedoch für die Bereitstellung von Produktions-Apps am besten geeignet. Mit einer DevOps-Toolchain können Sie ohne großen Aufwand Bereitstellungen in vielen Umgebungen automatisieren und schnell Überwachungs-, Protokollierungs- und Alert-Services hinzufügen, die Sie bei der Verwaltung Ihrer ständig weiterentwickelten App unterstützen.
 
@@ -125,6 +126,7 @@ Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstelle
 2. Klicken Sie auf **Delivery Pipeline**. Hier können Sie Builds starten, die Bereitstellung verwalten sowie Protokolle und den Verlauf anzeigen.
 
 ### Bereitstellung: {{site.data.keyword.dev_cli_short}} verwenden
+{: #deploy-bff-cli}
 
 Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
 
@@ -141,6 +143,16 @@ ibmcloud dev deploy --target <container>
 {: pre}
 
 ## Schritt 7. Ausführung der App verifizieren
-{: #verify}
+{: #verify-bff}
 
-Nach der Bereitstellung der App verweist die DevOps-Pipeline bzw. die Befehlszeile auf die URL für Ihre App, z. B. `abc-devhost.mybluemix.net`. Rufen Sie diese URL im Browser auf.
+Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befehlszeile auf die URL für Ihre App.
+
+1. Klicken Sie in der Toolchain von DevOps auf **Delivery Pipeline** und wählen Sie **Bereitstellungsstage** aus.
+2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
+3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
+
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view`. Zum Beispiel wird in der Protokolldatei eine Zeile angezeigt, die `urls: my-app-devhost.cloud.ibm.com` ähnelt, oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+
+4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
+
+Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.

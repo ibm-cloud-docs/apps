@@ -30,11 +30,11 @@ Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, V
 {: important}
 
 ## Creazione e distribuzione di applicazioni
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
-1. [Crea un'applicazione](index.html#createapp). 
+1. [Crea un'applicazione](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Fai clic su **Deploy to Cloud** dalla pagina dei dettagli dell'applicazione.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 
@@ -63,21 +63,21 @@ Per visualizzare queste proprietà di ambiente, completa la seguente procedura.
 
 | Proprietà  | Descrizione  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](#iaas-key) viene dalla console dell'infrastruttura classica. |
-| `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](#user-key) che identifica l'account dell'infrastruttura classica |
-| `TF_VAR_ibm_cloud_api_key` | La [chiave API della piattaforma](#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
-| `PUBLIC_KEY` | La [chiave pubblica](#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). |
-| `PRIVATE_KEY` | La [chiave privata](#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). Devi utilizzare la formattazione di stile nuova riga `\n`. |
+| `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](/docs/apps/vsi-deploy.html#iaas-key) viene dalla console dell'infrastruttura classica. |
+| `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](/docs/apps/vsi-deploy.html#user-key) che identifica l'account dell'infrastruttura classica |
+| `TF_VAR_ibm_cloud_api_key` | La [chiave API](/docs/apps/vsi-deploy.html#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
+| `PUBLIC_KEY` | La [chiave pubblica](/docs/apps/vsi-deploy.html#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). |
+| `PRIVATE_KEY` | La [chiave privata](/docs/apps/vsi-deploy.html#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). Devi utilizzare la formattazione di stile nuova riga `\n`. |
 | `VI_INSTANCE_NAME` | Il nome generato automaticamente per l'istanza del server virtuale (o VSI, Virtual Server Instance). |
-| `GIT_USER` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
-| `GIT_PASSWORD` | Se imposti lo [stato Terraform](#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
+| `GIT_USER` | Se imposti lo [stato Terraform](/docs/apps/vsi-deploy.html#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
+| `GIT_PASSWORD` | Se imposti lo [stato Terraform](/docs/apps/vsi-deploy.html#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
 {: caption="Tabella 1. Variabili di ambiente da modificare per l'abilitazione" caption-side="top"}
 
 
-#### Chiave API dell'infrastruttura
+#### Chiave API dell'infrastruttura classica
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
-Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell'infrastruttura. La chiave API viene ottenuta automaticamente durante la distribuzione. Per richiamare manualmente una chiave, completa la seguente procedura.
+
+Terraform richiede una chiave API dell'infrastruttura classica per creare le risorse dell'infrastruttura. La chiave API viene ottenuta automaticamente durante la distribuzione. Per richiamare manualmente una chiave, completa la seguente procedura.
 
 1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
@@ -85,22 +85,22 @@ Terraform richiede una chiave API dell'infrastruttura per creare le risorse dell
 4. Copia o scarica la chiave API `TF_VAR_ibm_sl_api_key` e salvala in un luogo sicuro. Puoi richiamare i dettagli della chiave API in un secondo momento utilizzando l'opzione **Visualizza dettagli** dal menu **Azioni** ![Icona di elenco di azioni](../icons/action-menu-icon.svg).
 5. Incolla il valore di chiave API copiato nella configurazione della toolchain per sostituire il valore `TF_VAR_ibm_sl_api_key`.
 
-Per ulteriori informazioni, vedi i documenti relativi alla [gestione delle chiavi API dell'infrastruttura classica](/docs/iam/classic_infra_keys.html) e alle [autorizzazioni dell'infrastruttura classica](/docs/iam/infrastructureaccess.html).
+Per ulteriori informazioni, vedi i documenti relativi alla [gestione delle chiavi API dell'infrastruttura classica](/docs/iam/classic_infra_keys.html#classic_keys) e alle [autorizzazioni dell'infrastruttura classica](/docs/iam/infrastructureaccess.html#infrapermission).
 
-#### Nome utente dell'infrastruttura
+#### Nome utente dell'infrastruttura classica
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
-Il nome utente dell'infrastruttura viene anche ottenuto automaticamente e utilizzato durante la distribuzione. Per ottenere manualmente il nome utente, completa la seguente procedura.
+
+Anche il nome utente dell'infrastruttura classica viene ottenuto automaticamente e utilizzato durante la distribuzione. Per ottenere manualmente il nome utente, completa la seguente procedura.
 
 1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
 3. Individua la proprietà **Nome utente VPN**.
 4. Taglia e incolla questo valore e sostituisci il valore `TF_VAR_ibm_sl_username` della configurazione della toolchain.
 
-#### Chiave API IBM Cloud
+#### Chiave API {{site.data.keyword.cloud_notm}}
 {: #platform-key}
 
-Per creare servizi a livello di piattaforma in Terraform, come database e servizi di composizione, la chiave API della piattaforma viene automaticamente ottenuta ed archiviata come una variabile di ambiente nella tua pipeline. Per richiamare manualmente una chiave di piattaforma, completa la seguente procedura.
+Per creare servizi a livello di piattaforma in Terraform, come i database e i servizi Compose, la chiave API {{site.data.keyword.cloud_notm}} viene automaticamente ottenuta e memorizzata come una variabile di ambiente nella tua pipeline. Per richiamare manualmente una chiave API {{site.data.keyword.cloud_notm}}, completa la seguente procedura.
 
 1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
@@ -112,12 +112,12 @@ Per creare servizi a livello di piattaforma in Terraform, come database e serviz
 
 #### Chiavi pubbliche e private
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+
 Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale (o VSI, Virtual Server Instance), l'infrastruttura di distribuzione genera automaticamente una coppia di chiavi SSH privata e pubblica per trasferire i contenuti Git all'istanza.
 
 Per effettuare questa operazione manualmente:
 1. Nel tuo client, utilizza le seguenti istruzioni per creare una [coppia di chiavi pubblica e privata ![Icona link esterno](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
+2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
 3. Fai clic su **Aggiungi**.
 4. Copia il contenuto della chiave pubblica che hai precedentemente creato e incollalo nel contenuto della chiave.
 5. Assegna un nome alla chiave e fai clic su **Aggiungi**.
@@ -147,7 +147,7 @@ Per abilitare l'archiviazione dello stato, `GIT_USER` e `GIT_PASSWORD` vengono a
 Lo stato di Terraform viene memorizzato in un ramo denominato `terraform` e non attiva l'esecuzione della pipeline se viene modificato.
 
 ### Abilitazione delle operazioni Git
-{: #git-repo}
+{: #git-repo-vsi}
 
 Quando l'applicazione viene distribuita a {{site.data.keyword.cloud_notm}}, viene creato un repository GitLab per ospitare il codice per la gestione del codice di origine. Puoi utilizzare le operazioni Git per consentire ai team di lavorare e distribuire le modifiche alla tua applicazione. Le cartelle incluse in questo repository e una spiegazione del loro contenuto.
 
@@ -193,7 +193,7 @@ variable "datacenter" {
 ```
 
 ### Descrizione delle fasi della toolchain
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 La toolchain mostra la distribuzione dell'infrastruttura e dell'applicazione in una semplice pipeline. Suddividi l'infrastruttura come parte di codice in una pipeline e la distribuzione dell'applicazione in un'altra pipeline.
 

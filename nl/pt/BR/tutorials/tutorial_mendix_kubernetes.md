@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Implementando o aplicativo Mendix no {{site.data.keyword.containerlong_notm}}
-{: #getting-started}
+{: #deploy-mendix-kube}
 
 Por padrão, os aplicativos Mendix que direcionam a implementação para o {{site.data.keyword.containerlong}} são configurados em um modo de avaliação. Esse
 modo permite iniciar rapidamente a construção de um aplicativo e implementá-lo na nuvem, mas não configura a
@@ -23,18 +23,18 @@ ambiente de produção, definindo um volume de armazenamento persistente no Kube
 {: shortdesc}
 
 ## Antes de começar
-{: #prerequisites}
+{: #prereqs-mendix-kube}
 
 - Crie o aplicativo Mendix. Consulte
-[Criando aplicativos Mendix](/docs/apps/tutorials/tutorial_mendix_getting_started.html) para obter
+[Criando aplicativos Mendix](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix) para obter
 mais informações.
 - Instale a [{{site.data.keyword.dev_cli_notm}}interface da linha de
-comandos (CLI)](/docs/cli/index.html), que inclui a CLI do {{site.data.keyword.containershort_notm}}.
+comandos (CLI)](/docs/cli/index.html#overview), que inclui a CLI do {{site.data.keyword.containershort_notm}}.
 - Efetue login na CLI do `ibmcloud` e configure `kubectl` para o
 [ acesso ao cluster do Kubernetes](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
 
 ## Criando uma instância de serviço do Cloud Object Storage
-{: #cloud-object-storage}
+{: #cos-mendix-kube}
 
 Inicie na página de detalhes do aplicativo e use as etapas a seguir:
 1. Clique em **Incluir recurso**.
@@ -46,19 +46,19 @@ Inicie na página de detalhes do aplicativo e use as etapas a seguir:
   {: tip}
 
 ## Criando um depósito de armazenamento
-{: #storage-bucket}
+{: #storage-bucket-mendix-kube}
 
 Depois que uma instância do serviço do {{site.data.keyword.cos_full_notm}} estiver associada ao aplicativo Mendix, crie um depósito de armazenamento no qual os dados podem ser salvos. Para criar um depósito, clique em **...** para a instância do {{site.data.keyword.cos_full_notm}} e selecione **Abrir painel**.  
 
 O painel de serviço do {{site.data.keyword.cos_full_notm}} se abre em uma nova janela, na guia **Depósitos**. Clique em **Criar depósito** e siga as etapas para criar um depósito usando um nome exclusivo. Para os propósitos deste tutorial, crie um depósito chamado `my-mendix-bucket`.
 
 ## Configurando o armazenamento persistente
-{: #kubernetes-storage}
+{: #kube-storage-mendix}
 
-Em seguida, siga a documentação para [Armazenando dados no {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html). Um `PersistentVolumeClaim` e um `PersistentVolume` são criados dentro do cluster do Kubernetes e podem ser usados pela instância de banco de dados do PostGres que está em execução no cluster como parte do aplicativo Mendix. Certifique-se de criar o `PersistentVolumeClaim` usando o depósito `my-mendix-bucket`, conforme descrito na etapa anterior, e revisar o nome `PersistentVolumeClaim` para usar na próxima etapa.
+Em seguida, siga a documentação para [Armazenando dados no {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html#object_storage). Um `PersistentVolumeClaim` e um `PersistentVolume` são criados dentro do cluster do Kubernetes e podem ser usados pela instância de banco de dados do PostGres que está em execução no cluster como parte do aplicativo Mendix. Certifique-se de criar o `PersistentVolumeClaim` usando o depósito `my-mendix-bucket`, conforme descrito na etapa anterior, e revisar o nome `PersistentVolumeClaim` para usar na próxima etapa.
 
 ## Editando o arquivo `postgres-deployment.yaml`
-{: #postgres-deployment}
+{: #postgres-deploy-mendix}
 
 Após a configuração de um volume persistente para o cluster do Kubernetes, a próxima etapa é modificar a implementação do banco de dados do PostGres que está em execução no cluster. Primeiro, deve-se editar os arquivos no repositório Git que foi criado como parte da etapa de integração da cadeia de ferramentas do IBM DevOps. Para localizar o repositório Git, volte para a página de detalhes do aplicativo e clique no link da URL do Git por meio do bloco **Detalhes da implementação**.  
 
@@ -107,7 +107,7 @@ Certifique-se de substituir `{pvc-name}` pelo nome do `PersistentVolumeClaim` da
 etapa anterior e tenha cuidado para não sobrescrever o nome do aplicativo, que já está configurado no arquivo dentro do repositório Git. Em seguida, confirme as mudanças de volta ao repositório Git.
 
 ## Reimplementando
-{: #redeploy}
+{: #redeploy-mendix-kube}
 
 Após a confirmação das mudanças do arquivo `postgres-deployment.yaml` de volta
 ao repositório, uma nova execução do pipeline do DevOps será acionada automaticamente. No entanto, o
@@ -123,11 +123,26 @@ da web do Mendix, acesse a seção **Ambientes** e siga as etapas depois de clic
 pacote por meio do servidor de equipe**. Depois que o aplicativo for exportado do Mendix, volte para a
 página de detalhes do aplicativo e clique em **Implementar aplicativo** novamente. O último
 aplicativo exportado é implementado para o cluster do Kubernetes usando a cadeia de ferramentas do DevOps
-do {{site.data.keyword.cloud_notm}}. Quando a implementação for concluída com êxito, o aplicativo estará ativo
+do {{site.data.keyword.cloud}}. Quando a implementação for concluída com êxito, o aplicativo estará ativo
 e pronto para o uso de produção.
 
+## Verificando se o seu app está em execução
+{: #verify-mendix-kube}
+
+Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos apontará a você a URL para o seu app.
+
+1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
+2. Clique em **Visualizar logs e histórico**.
+3. No arquivo de log, localize a URL do aplicativo:
+
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.cloud.ibm.com` ou `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
+
+Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para visualizar a URL de seu app. Em seguida, acesse a URL em seu navegador.
+
 ## Informações adicionais
-{: #additional-information}
+{: #more-info-mendix-kube}
 
 Para obter mais detalhes arquiteturais sobre como executar os aplicativos Mendix em ambientes do Kubernetes,
 revise a seção [Executar o Mendix no

@@ -1,9 +1,8 @@
 ---
+
 copyright:
-
-  years: 2018
-
-lastupdated: "2018-07-25"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -13,71 +12,71 @@ lastupdated: "2018-07-25"
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 
 # Apps bereitstellen
-{: #deploy}
+{: #deploying-apps}
 
-Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittstelle bereitstellen. Eine Toolchain ist ein Satz von Toolintegrationen. Die Befehlszeilenschnittstelle ist eine einfache Möglichkeit, Ihre Apps und Serviceinstanzen bereitzustellen.
+Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittstelle (CLI) bereitstellen. Eine Toolchain ist ein Satz von Toolintegrationen. Die Befehlszeilenschnittstelle ist eine einfache Möglichkeit, Ihre Apps und Serviceinstanzen bereitzustellen.
 {: shortdesc}
 
-## Apps mit Toolchains bereitstellen
-{: #toolchains_getting_started}
+## Apps mithilfe von Toolchains bereitstellen
+{: #toolchain-deploy-apps}
 
-Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Sie können eine Toolchain auf zwei Arten erstellen: Erstellen Sie die Toolchain aus einer Vorlage oder aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](../services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen Ihrer App einfach. Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus.
 
-Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen ihrer App trivial: Bei jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository wird automatisch ein Erstellen-Bereitstellen-Zyklus ausgelöst.
+Sie können auf folgenden Wegen eine Toolchain erstellen:
+* Sie können eine Toolchain mithilfe einer Vorlage erstellen.
+* Sie können eine Toolchain aus einer App heraus erstellen.
 
-Alle über ein {{site.data.keyword.Bluemix}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
-{: tip}
+Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
-## Apps mit der Befehlszeilenschnittstelle bereitstellen
-{: #cli}
+## Apps über die Befehlszeilenschnittstelle (CLI) bereitstellen
+{: #cli-deploy-apps}
 
-IBM Cloud bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden.
+{{site.data.keyword.cloud_notm}} bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden.
 
-Zur Bereitstellung Ihrer Apps und Serviceinstanzen können Sie die {{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle verwenden.
-{:shortdesc}
-
-Bevor Sie beginnen, müssen Sie die [{{site.data.keyword.Bluemix_notm}}-Befehlszeilenschnittstelle herunterladen und installieren](/docs/cli/index.html).
+Bevor Sie beginnen, müssen Sie die {{site.data.keyword.cloud_notm}}-CLI [herunterladen und installieren](/docs/cli/index.html#overview).
 
 <p>
-<a class="xref" href="https://console.bluemix.net/docs/cli/index.html#overview" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet) "><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools herunterladen" /></a>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet) "><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools herunterladen" /></a>
 </p>
 
-**Einschränkung:** Das Befehlszeilentool wird von Cygwin nicht unterstützt. Verwenden Sie das Tool in einem anderen Befehlszeilenfenster als dem Cygwin-Befehlszeilenfenster.
-{:prereq}
-
-Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
+Die Befehlszeilenschnittstelle wird von Cygwin nicht unterstützt. Verwenden Sie das Tool in einem anderen Fenster als dem Cygwin-Befehlszeilenfenster.
+{: important}
 
   1. {: download} Laden Sie den Code für Ihre App in ein neues Verzeichnis herunter, um Ihre Entwicklungsumgebung einzurichten.
 
-    <a class="xref" href="http://bluemix.net" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
+    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
 
   2. Wechseln Sie in das Verzeichnis, in dem sich Ihr Code befindet.
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">neues_Verzeichnis</var></code></pre>
 
-  3.  Nehmen Sie Änderungen an Ihrem App-Code vor. Beispiel: Wenn Sie eine {{site.data.keyword.Bluemix_notm}}-Beispielanwendung verwenden und Ihre App die Datei `src/main/webapp/index.html` enthält, können Sie sie ändern und den Dankestext für die Erstellung in einen anderen Text ändern. Stellen Sie sicher, dass sich die App lokal ausführen lässt, bevor sie wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird.
+  3.  Nehmen Sie Änderungen an Ihrem App-Code vor. Beispiel: Wenn Sie eine {{site.data.keyword.cloud_notm}}-Beispielanwendung verwenden und Ihre App die Datei `src/main/webapp/index.html` enthält, können Sie sie ändern und den Dankestext für die Erstellung bearbeiten. Stellen Sie sicher, dass sich die App lokal ausführen lässt, bevor sie wieder in {{site.data.keyword.cloud_notm}} bereitgestellt wird.
 
-    Beachten Sie die Datei `manifest.yml`. Wenn Ihre App wieder in {{site.data.keyword.Bluemix_notm}} bereitgestellt wird, dient diese Datei zum Ermitteln der URL, der Speicherzuordnung, der Anzahl von Instanzen und anderer wichtiger Parameter für Ihre Anwendung.
+    Beachten Sie die Datei `manifest.yml`. Wenn Ihre App wieder in {{site.data.keyword.cloud_notm}} bereitgestellt wird, dient diese Datei zum Ermitteln der URL, der Speicherzuordnung, der Anzahl von Instanzen und anderer wichtiger Parameter für Ihre Anwendung.
 
-    Beachten Sie auch die Datei `README.md`, die gegebenenfalls Informationen wie Erstellungsanweisungen enthält.
+    Prüfen Sie auch den Inhalt der Datei `README.md`, die gegebenenfalls Informationen wie Erstellungsanweisungen enthält.
 
-    Hinweis: Wenn es sich bei Ihrer Anwendung um eine Liberty-App handelt, müssen Sie sie vor der erneuten Bereitstellung erstellen.
+  Wenn es sich bei Ihrer Anwendung um eine Liberty-App handelt, müssen Sie sie erstellen, bevor Sie sie erneut bereitstellen.
+  {: note}
 
-  4. Stellen Sie eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her und melden Sie sich an.
+  4. Stellen Sie eine Verbindung zu {{site.data.keyword.cloud_notm}} her und melden Sie sich an.
 
   <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">Domänenname</span></code></pre>
 
   <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">Benutzername</var> -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var></code></pre>
 
-  Wenn Sie eine eingebundene ID nutzen, fügen Sie die Option `-sso` hinzu.
+  Wenn Sie eine föderierte ID nutzen, fügen Sie die Option `-sso` hinzu.
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
 
-  **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
+  Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
+  {: note}
 
-  5. Führen Sie unter <var class="keyword varname">neues Verzeichnis</var> mit dem Befehl `ibmcloud dev deploy` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/cli/idt/commands.html#deploy).
+  5. Führen Sie in Ihrem neuen Verzeichnis mit dem Befehl `ibmcloud dev deploy` die Bereitstellung Ihrer App in {{site.data.keyword.cloud_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/cli/idt/commands.html#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 

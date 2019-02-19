@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 {:new_window: target="_blank"}
@@ -13,12 +13,12 @@ lastupdated: "2018-07-23"
 {:tip: .tip}
 
 # Container mit Kubernetes verwenden
-{: #containers}
+{: #containers-kube}
 
 Als Einstieg in {{site.data.keyword.containershort}} können Sie hoch verfügbare Apps in Docker-Containern bereitstellen, die in Kubernetes-Clustern ausgeführt werden. Verwalten Sie die Anwendungsentwicklung im Team mithilfe von Git und verwenden Sie dann die DevOps-Toolchain, um die Bereitstellung der App in Kubernetes zu verwalten.
 {: shortdesc}
 
-Bei Containern handelt es sich um eine Standardmethode zum Packen von Apps und allen zugehörigen Abhängigkeiten, die ein nahtloses Verschieben der Apps zwischen Umgebungen ermöglicht. Im Gegensatz zu virtuellen Maschinen wird bei Containern das Betriebssystem nicht in das Paket einbezogen. In Containern werden nur der App-Code, die Laufzeit, die Systemtools, die Bibliotheken und die Einstellungen gepackt. Container sind einfacher, portiertbarer und effizienter als virtuelle Maschinen.
+Bei Containern handelt es sich um eine Standardmethode zum Packen von Apps und allen zugehörigen Abhängigkeiten, die ein nahtloses Verschieben der Apps zwischen Umgebungen ermöglicht. Im Gegensatz zu virtuellen Maschinen wird bei Containern das Betriebssystem nicht in das Paket einbezogen. In Containern werden nur der App-Code, die Laufzeit, die Systemtools, die Bibliotheken und die Einstellungen gepackt. Container sind einfacher, portierbarer und effizienter als virtuelle Maschinen.
 
 [Einführung in {{site.data.keyword.containershort_notm}}](/docs/containers/container_index.html#container_index) enthält weitere Informationen zum Service.
 
@@ -35,7 +35,7 @@ Wenn Sie Back-End- oder Web-Serving-Apps erstellen, können Sie sie im {{site.da
 ## Services binden
 {: #bind-services}
 
-Beim Erstellen der Toolchain werden die Services, die Sie Ihrer App zugeordnet haben, an den Kubernetes-Cluster gebunden, indem geheime Kubernetes-Schlüssel verwendet werden. Geheime Schlüssel dienen zur Verwaltung der Serviceberechtigungsnachweise außerhalb der aktiven App. Die App liest die geheimen Schlüssel und ruft dann die Werte ab, die zum Starten der Ausführung benötigt werden. Das Binden von Services ermöglicht die Bereitstellung der App in einer anderen Kubernetes-Umgebung, die möglicherweise {{site.data.keyword.cloud_notm}}-Serviceinstanzen auf Produktionsniveau verwendet.
+Beim Erstellen der Toolchain werden die Services, die Sie Ihrer App zugeordnet haben, an den Kubernetes-Cluster gebunden, indem geheime Kubernetes-Schlüssel verwendet werden. Geheime Schlüssel dienen zur Verwaltung der Serviceberechtigungsnachweise außerhalb der aktiven App. Die App liest die geheimen Schlüssel und ruft dann die Werte ab, die zum Starten der Ausführung benötigt werden. Das Binden von Services ermöglicht die Bereitstellung der App in einer anderen Kubernetes-Umgebung, die möglicherweise {{site.data.keyword.cloud}}-Serviceinstanzen auf Produktionsniveau verwendet.
 
 Wenn Sie den Service oder die geheimen Schlüssel löschen, müssen Sie sie manuell erneut binden oder Sie müssen die Toolchain löschen und erneut erstellen.
 {: tip}
