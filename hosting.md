@@ -17,7 +17,7 @@ If you have an existing app, you can host it on {{site.data.keyword.cloud}} with
 ## Migrating apps
 {: #migrating}
 
-If you need your app to access your on-premises data or services, you can use [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) to establish a secured tunnel between an {{site.data.keyword.cloud_notm}} organization and your enterprise backend network. For details, see [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
+If you need your app to access your on-premises data or services, you can use [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html) to establish a secured tunnel between an {{site.data.keyword.cloud_notm}} organization and your enterprise backend network. For details, see [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 If you need help with your migration, [{{site.data.keyword.cloud_notm}} Migration Services ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/migration-services){: new_window} are available.
 

@@ -107,7 +107,7 @@ FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/
 * If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps/ts_apps.html#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
-	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring/configuration.html#configuration#accessing-credentials).
+	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Add new credentials to your Kubernetes environment:
-	- When you add another service to your application after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed application and GitLab repository. You must [manually add the credentials](/docs/apps/creds_kube.html#sk_kube) to the deployment environment.
+	- When you add another service to your application after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed application and GitLab repository. You must [manually add the credentials](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) to the deployment environment.

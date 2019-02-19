@@ -48,7 +48,7 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 
 After you add a resource to your app, or if any services are required for your app, notice that the credentials for that service are displayed in the **Credentials** box. You must manually copy the credentials to your deployment environment.
 
-For more information about copying credentials to your environment, see [Credentials overview](/docs/apps/creds_overview.html#credentials_overview).
+For more information about copying credentials to your environment, see [Credentials overview](/docs/apps/creds_overview.html).
 
 ## Step 4. Deploying to {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

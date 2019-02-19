@@ -118,7 +118,7 @@ Now that the Kubernetes cluster is prepared with a resolvable secret, you can up
 
 	- `chart/{appName}/bindings.yaml` - Generates an environment variable in your Kubernetes cluster that points to your secret.
 	- `src/main/resources/localdev-config.json` - Access credentials while you run your app runs locally.
-  - `src/main/resources/mappings.json` - A mapping to provide access to the [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) method to access your environment variables from the code.
+  - `src/main/resources/mappings.json` - A mapping to provide access to the [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) method to access your environment variables from the code.
   - `manifest.yml` - This file binds your service to your Cloud Foundry application.
 
 If you later choose to deploy to a Cloud Foundry application with a Resource Controller resource (located in a resource group instead of an organization or space), then you must copy one more file.

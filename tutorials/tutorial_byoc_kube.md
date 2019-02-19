@@ -43,9 +43,9 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 
 Add a service resource to your application and {{site.data.keyword.cloud_notm}} creates the service for you. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information. {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
-This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps/reqnsi.html#add-resource).
+This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a resource to your app](/docs/apps/reqnsi.html#).
 
-After you add a service resource to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html#add_credentials).
+After you add a service resource to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html).
 
 ## Preparing your app for deployment
 {: #deploy-byoc-kube}

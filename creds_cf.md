@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Adding credentials to your Cloud Foundry environment
 {: #add-credentials-cf}
 
-Learn how to add service credentials to your Cloud Foundry deployment environment. These instructions apply to both [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) and [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
+Learn how to add service credentials to your Cloud Foundry deployment environment. These instructions apply to both [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) and [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
 {: shortdesc}
 
 ## Your code + Cloud Foundry
