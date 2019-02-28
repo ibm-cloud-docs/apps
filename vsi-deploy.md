@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ Services don't bind to the virtual server instance. You cannot add services to a
 
 The App Service provisions a virtual server instance for you, loads an image that includes your app, creates a Devops toolchain, and initiates the first deployment cycle for you.
 
-1. [Create an app](tutorials/tutorial_scratch.html). 
+1. [Create an app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
 2. Click **Deploy to Cloud** from the app details page.
 3. Select **Deploy to a Virtual Server** along with the region in which to run your server.
 
