@@ -10,7 +10,7 @@ Creating apps
     development_process.md
     best-practice.md
     patterns.md
- 
+
     {: .topicgroup}
     Related links
         [Strategies for resilient applications](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
@@ -43,7 +43,7 @@ Creating apps
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    
+
     {: .topicgroup}
     Adding credentials to your environment
         creds_overview.md
@@ -51,7 +51,6 @@ Creating apps
         creds_cf.md
         creds_vsi.md
 
-    mngapps.md
     updapps.md
     secapps.md
     hosting.md
