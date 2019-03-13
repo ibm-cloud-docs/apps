@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-13"
 
 ---
 
@@ -27,10 +27,6 @@ You must manually add service credentials to your deployment environment in thes
 
 ## Your code + Kubernetes
 {: #credentials-byoc-kube}
-
-<!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
-
-### Code it right
 
 As a precaution, you can code your application to confirm that its environment is complete in your application's main entry point. You don't want to promotion an application into a cluster whose environment isn't complete to cause disruption to your product. The application might refuse to start, and your Kubernetes configuration can automatically prevent such disruptions.
 
@@ -86,7 +82,7 @@ Configure the cluster so that the _secretKeyRef_ with the name `name-secret` and
 
 Use a terminal on your workstation to install the following tools:
 
-1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html).
+1. Install the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 2. Log in by using the `ibmcloud login` command.
 3. Connect to your cluster by running `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copy and paste the `export` command to run it from a terminal.
@@ -118,13 +114,13 @@ Now that the Kubernetes cluster is prepared with a resolvable secret, you can up
 
 	- `chart/{appName}/bindings.yaml` - Generates an environment variable in your Kubernetes cluster that points to your secret.
 	- `src/main/resources/localdev-config.json` - Access credentials while you run your app runs locally.
-  - `src/main/resources/mappings.json` - A mapping to provide access to the [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) method to access your environment variables from the code.
+  - `src/main/resources/mappings.json` - A mapping to provide access to the [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) method to access your environment variables from the code.
   - `manifest.yml` - This file binds your service to your Cloud Foundry application.
 
 If you later choose to deploy to a Cloud Foundry application with a Resource Controller resource (located in a resource group instead of an organization or space), then you must copy one more file.
 {: note}
 
-5. [View](https://cloud.ibm.com/containers-kubernetes/clusters) your Kubernetes cluster with corresponding region (US-South if it was free).
+5. [View](https://cloud.ibm.com/containers-kubernetes/clusters){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") your Kubernetes cluster with corresponding region (US-South if it was free).
 6. Click into your cluster and select **Kubernetes Dashboard** in the upper right to view your cluster dashboard.
 7. Scroll down until you see a section that is labeled **Secrets**. You can see a secret for your {{site.data.keyword.cloudant_short_notm}} service instance that uses the following convention `binding-{appName}-{serviceName}-{timestamp}`. In the `chart/{appName}/bindings.yaml` file, you can find the corresponding {{site.data.keyword.cloudant_short_notm}} secret.
 8. Now you can create a corresponding one for your Cloud Object Storage instance with the secret name that is already generated in the `chart/{appName}/bindings.yaml`, which looks something like `binding-create-app-ktibr-cloudobjectstor-1538170732311`.
@@ -175,7 +171,7 @@ Use the **Deploy to cloud** feature to deploy your app to your IBM Containers Ku
   ```
   {: screen}
 
-  You can view [more documentation about secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+  You can view [more documentation about secrets](https://kubernetes.io/docs/concepts/configuration/secret/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
   {: tip}
 
 2. Observe that the name of the secret is the resource name.
