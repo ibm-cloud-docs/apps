@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
+
+subcollection: creating-apps
 
 ---
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-03-14"
+
+keywords: apps, create apps, add resources, deploy apps
+
+subcollection: creating-apps
 
 ---
 

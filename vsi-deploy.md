@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-14"
+
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, vm, delivery pipeline
+
+subcollection: creating-apps
 
 ---
 

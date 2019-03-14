@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials
+
+subcollection: creating-apps
 
 ---
 
@@ -12,14 +16,13 @@ lastupdated: "2019-02-01"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:important: .important}
 
 # Credentials overview
 {: #credentials_overview}
 
 Learn how to manually add service credentials to your deployment environment.
 {: shortdesc}
-
-<!-- After PUP: Maybe provide links to the credentials section of the programming guides, such as https://cloud.ibm.com/docs/swift/cloudnative/configuration.html#configuration-->
 
 In general, you want your application logic to acquire sensitive service credentials, such as database API keys or passwords, from the environment in which your application runs. That way, you don't keep credentials in your source code repository. Databases in your continuous integration, pre-production, and production environments are quarantined from each other.
 
@@ -39,7 +42,7 @@ The administrator or DevOps engineer is then responsible for preparing the envir
 However, you must prepare the target deployment environment in any of the following scenarios:
  * You bring your own code.
  * You start from a blank starter kit template.
- * You add a service to a starter kit-based app _after_ it was deployed.
+ * You add a service to a starter kit-based app after it was deployed.
 
 
 

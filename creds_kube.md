@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -23,7 +27,7 @@ Learn how to add service credentials to your Kubernetes deployment environment.
 You must manually add service credentials to your deployment environment in these scenarios:
  * You bring your own code.
  * You start from a blank starter kit template.
- * You add a service to a starter kit-based app _after_ it was deployed.
+ * You add a service to a starter kit-based app after it was deployed.
 
 ## Your code + Kubernetes
 {: #credentials-byoc-kube}

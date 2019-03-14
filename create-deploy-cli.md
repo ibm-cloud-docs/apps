@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-08"
+lastupdated: "2019-03-14"
+
+keywords: apps, create, build, deploy, cli, web app, microservice
+
+subcollection: creating-apps
 
 ---
 
