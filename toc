@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}
@@ -51,6 +51,7 @@ Creating apps
         creds_cf.md
         creds_vsi.md
 
+    mngdomains.md
     updapps.md
     secapps.md
     hosting.md
