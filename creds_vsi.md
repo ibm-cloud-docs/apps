@@ -56,7 +56,7 @@ The environment is entirely under your control, as if you're running the applica
 ### The starter kit generated code
 {: #starterkit-generated-code-vsi}
 
-Code that is generated from a starter kit has the native `IBMCloudEnv` library, which abstracts the retrieval of environment values so that the application code is portable to run on several target deployments. With virtual or local Docker, that environment must be prepared with values that satisfy the `IBMCloudEnv` library that _don't necessarily_ come from actual environment variables.
+Code that is generated from a starter kit has the native `IBMCloudEnv` library, which abstracts the retrieval of environment values so that the application code is portable to run on several deployment targets. With virtual or local Docker, that environment must be prepared with values that satisfy the `IBMCloudEnv` library that _don't necessarily_ come from actual environment variables.
 
 For your convenience, the `mappings.json` instructions that are included with the starter kit-generated output, have references to a local file from which the `IBMCloudEnv` library sources the values that the application can use.
 
@@ -74,18 +74,18 @@ For example, notice the last line in the following section from the `mappings.js
 ```
 {: codeblock}
 
-If you use the "Deploy to Cloud" feature when you create an app, the `/server/localdev-config.json` file is removed from the GitLab repository. For security reasons, you don't want to put your credentials in a source code repository.
+If you use the "Configure continous delivery" feature when you create an app, the `/server/localdev-config.json` file is removed from the GitLab repository. For security reasons, you don't want to put your credentials in a source code repository.
 
 If you use `git clone` on the created GitLab repository to start active development, notice that the `.gitignore` file specifically ignores `server/localdev-config.json` to help prevent accidental check-in of a file that has sensitive credentials. However, VSI _does_ need that file, as does the Developer that works on a notebook.
 
 You can retrieve the `server/localdev-config.json` file by completing these steps:
 
-1. Use `git clone` on the Git lab repository that was automatically created when you used the "Deploy to Cloud" feature.
-2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html), which includes the `dev` plug-in.
+1. Use `git clone` on the Git lab repository that was automatically created when you used the "Configure continous delivery" feature.
+2. Install the [{{site.data.keyword.cloud_notm}} CLI](//docs/cli?topic=cloud-cli-ibmcloud-cli), which includes the `dev` plug-in.
 3. Use the `ibmcloud` command line to log in to {{site.data.keyword.cloud_notm}}.
 4. Run `ibmcloud dev get-credentials`, which refers to the `cli-config.yml` file. The `cli-config.yml` file includes information about which application and generation job has the credentials.
 
-If any resource is removed from the application between using the "Deploy to Cloud" feature and `ibmcloud dev get-credentials`, the downloaded file `/server/localdev-config.json` wouldn't have all of the credentials your original `git clone` codebase might require.
+If any service is removed from the application between using the "Configure continous delivery" feature and `ibmcloud dev get-credentials`, the downloaded file `/server/localdev-config.json` wouldn't have all of the credentials your original `git clone` codebase might require.
 {: tip}
 
 If you're running your application in a Docker container, you might choose to remove the `/server/localdev-config.json` file entirely and pass the environment variables on the Docker command line.
@@ -93,7 +93,7 @@ If you're running your application in a Docker container, you might choose to re
 Continuing with the "cloudant_apikey" section from the `mappings.json` file, notice the `env:cloudant_apikey` before the `file...` line. That means an environment variable that is named `cloudant_apikey` takes precedence over the contents of the file. So, even if the file is present in the Docker image that you built (which isn't required), you can override values by passing them on the Docker command line.
 
 For example:
-```console
+```
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```
 {: codeblock}

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-15"
+
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -22,20 +26,20 @@ By default, Mendix applications that target deployment to the {{site.data.keywor
 ## Before you begin
 {: #prereqs-mendix-kube}
 
-- Create your Mendix app. See [Creating Mendix apps](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix) for more information.
-- Install the [{{site.data.keyword.dev_cli_notm}} command-line interface (CLI)](/docs/cli/index.html), which includes the {{site.data.keyword.containershort_notm}} CLI.
-- Log in to the `ibmcloud` CLI and configure `kubectl` for [access to the Kubernetes cluster](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
+* Create your Mendix app. See [Creating Mendix apps](/docs/apps/tutorials/tutorial_mendix_getting_started.html) for more information.
+* Install the [{{site.data.keyword.dev_cli_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli), which includes the {{site.data.keyword.containershort_notm}} CLI.
+* Log in to the `ibmcloud` CLI and configure `kubectl` for [access to the Kubernetes cluster](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
 
 ## Creating a Cloud Object Storage service instance
 {: #cos-mendix-kube}
 
-Start from your application's details page and use the following steps:
-1. Click **Add Resource**.
+Start from your **App details** page, and use the following steps:
+1. Click **Add service**.
 2. Select **Storage**, and click **Next**.
 3. Next, select the **Cloud Object Storage** option and click **Next**.
 4. You're presented with pricing plans for your {{site.data.keyword.cos_full_notm}} instance. Select the pricing plan that best suits your needs, and then click **Create** to create an instance of the {{site.data.keyword.cos_full_notm}} service for use with your Mendix application.
 
-  If you prefer to use an existing instance of the {{site.data.keyword.cos_full_notm}} service, click **Add Resource**, and select the existing instance for your application to use.
+  If you prefer to use an existing instance of the {{site.data.keyword.cos_full_notm}} service, click **Add service**, and select the existing instance for your application to use.
   {: tip}
 
 ## Creating a storage bucket
@@ -48,12 +52,12 @@ The {{site.data.keyword.cos_full_notm}} service dashboard opens in a new window,
 ## Configuring persistent storage
 {: #kube-storage-mendix}
 
-Next, follow the documentation for [Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html#object_storage). A `PersistentVolumeClaim` and `PersistentVolume` are created within your Kubernetes cluster, and can be used by the PostGres database instance that is running within your cluster as part of the Mendix application. Be sure to create the `PersistentVolumeClaim` by using the `my-mendix-bucket` bucket as described in the previous step, and review the `PersistentVolumeClaim` name for use in the next step.
+Next, follow the documentation for [Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html). A `PersistentVolumeClaim` and `PersistentVolume` are created within your Kubernetes cluster, and can be used by the PostGres database instance that is running within your cluster as part of the Mendix application. Be sure to create the `PersistentVolumeClaim` by using the `my-mendix-bucket` bucket as described in the previous step, and review the `PersistentVolumeClaim` name for use in the next step.
 
 ## Editing the `postgres-deployment.yaml` file
 {: #postgres-deploy-mendix}
 
-Once a persistent volume is configured for your Kubernetes cluster, the next step is to modify the PostGres database deployment that is running within your cluster. First, you must edit the files in the Git repository that were created as part of the IBM DevOps toolchain integration step. To find the Git repository, go back to the app details page, and click the Git url link from the **Deployment details** tile.  
+After a persistent volume is configured for your Kubernetes cluster, the next step is to modify the PostGres database deployment that is running within your cluster. First, you must edit the files in the Git repository that were created as part of the IBM DevOps toolchain integration step. To find the Git repository, return to the **App details** page, and click the Git URL link from the **Deployment details** tile.
 
 You can either clone the Git repository to your local machine, or make the following changes in the online editor. Open up the `chart/{app name}/templates/postgres-deployment.yaml` file (replace `{app name}` with the name of your Mendix app). The file doesn't have any existing `volumeMount` or `volumes` entries by default, so all data is stored in-memory within the running deployment pod. You must add both `volumeMount` and `volumes` entries to the Kubernetes `deployment.yaml` file so that data is saved to the {{site.data.keyword.cos_full_notm}} bucket and isn't lost if the pod restarts. 
 
@@ -96,9 +100,9 @@ Be sure to replace `{pvc-name}` with the name of your `PersistentVolumeClaim` fr
 ## Redeploying
 {: #redeploy-mendix-kube}
 
-Once your `postgres-deployment.yaml` file changes are committed back to the repository, a new execution of the DevOps pipeline is automatically triggered. However, it deploys the default application again. You must redeploy the latest version of the Mendix application in order for the latest version of your application to be deployed with the latest persistent volume changes.
+After your `postgres-deployment.yaml` file changes are committed back to the repository, a new execution of the DevOps pipeline is automatically triggered. However, it deploys the default application again. You must redeploy the latest version of the Mendix application in order for the latest version of your application to be deployed with the latest persistent volume changes.
 
-To redeploy, go to your application details page, and click **Deploy Application** within the **Deployment details** tile. If the deployment fails inside the DevOps toolchain with an error that indicates that the application's `.mda` file cannot be found, then you must export it from Mendix again. You can export by exporting from the Mendix Modeler desktop application, or by clicking **Edit on Mendix**. Then, within the Mendix web interface, go to the **Environments** section and follow the steps after you click **Create package from teamserver**. Once your application is exported from Mendix, go back to the application's details page and click **Deploy Application** again. The last exported application is deployed to your Kubernetes cluster by using the {{site.data.keyword.cloud}} DevOps toolchain. Once the deployment completes successfully, your application is live and ready for production use.
+To redeploy, go to your **App details** page, and click **Configure continuous delivery** within the **Deploy your app** tile. If the deployment fails inside the DevOps toolchain with an error that indicates that the application's `.mda` file cannot be found, then you must export it from Mendix again. You can export by exporting from the Mendix Modeler desktop application, or by clicking **Edit on Mendix**. Then, within the Mendix web interface, go to the **Environments** section and follow the steps after you click **Create package from teamserver**. After your application is exported from Mendix, return to the **App details** page, and click **onfigure continuous delivery** again. The last exported application is deployed to your Kubernetes cluster by using the {{site.data.keyword.cloud}} DevOps toolchain. Once the deployment completes successfully, your application is live and ready for production use.
 
 ## Verifying that your app is running
 {: #verify-mendix-kube}
@@ -109,7 +113,7 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 2. Click **View logs and history**.
 3. In the log file, find the application URL:
 
-    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.cloud.ibm.com` or `View the application health at: http://<ipaddress>:<port>/health`.
+    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 

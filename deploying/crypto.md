@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-03-14"
+
+keywords: apps, key protection, ACSP client, data protection
+
+subcollection: creating-apps
 
 ---
 {:new_window: target="_blank"}
@@ -17,7 +21,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} brings IBM Z cryptography to the cloud. {{site.data.keyword.cloud_notm}} offers the same cryptographic technology that banking and financial services rely on.
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protect your keys and your data at rest, in use, and in transit at the industry's highest security level – FIPS 140-2 Level 4. {{site.data.keyword.hscrypto}} is the keystore for the [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) service and protect your keys in a hyper secure environment on IBM Z.
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protect your keys and your data at rest, in use, and in transit at the industry's highest security level – FIPS 140-2 Level 4. {{site.data.keyword.hscrypto}} is the keystore for the [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto?topic=hs-crypto-get-started) service and protect your keys in a hyper secure environment on IBM Z.
 
 ## Installing and configuring the ACSP client
 {: ##crypto_config}
@@ -65,4 +69,4 @@ Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is r
 ## Next steps
 {: ##next-steps}
 
-An easy way to adopt {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} is to start with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}. For more information about the {{site.data.keyword.hsplatform}}, see [Getting Started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](/docs/services/hypersecure-platform/index.html).
+An easy way to adopt {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} is to start with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}. For more information about the {{site.data.keyword.hsplatform}}, see [Getting Started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](/docs/services/hypersecure-platform?topic=services/hypersecure-platform-getting-started-with-ibm-cloud-hyper-protect-developer-starter-kits).

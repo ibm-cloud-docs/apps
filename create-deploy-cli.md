@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, create, build, deploy, cli, web app, microservice
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Creating and deploying apps by using the CLI
 {: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to create and deploy your app. 
+You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to create and deploy your application. 
 
 You can either create a starter app from scratch or cloud-enable your existing app code. 
 {: note}
@@ -29,22 +29,25 @@ You can either create a starter app from scratch or cloud-enable your existing a
 ## Before you begin
 {: #prereqs-app-cli}
 
-You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli/index.html). 
+You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli). 
 
 ## Creating a starter app from scratch
 {: #create-app-cli}
 
-Creating an app from scratch is useful if you don't already have existing code to begin with and would rather start from a language, or framework starter template.
+Creating an app from scratch is useful if you don't already have existing code to begin with and would rather start from a language or a framework starter template.
 
 1. Run the [`ibmcloud dev create`](/docs/cli/idt/commands.html#create) command in the directory of your choice.
 2. Select **Backend Service / Web App** as the application type.
 3. Select **Node** as the language type.
 4. Select **Node.js Web App with Express.js (Web App)** as the starter kit to use.
-5. Enter a name for your app and select the resource group that you want to use (if necessary). Don't add services for now.
+5. Enter a name for your app, and select the resource group that you want to use (if necessary). Don't add services for now.
 6. Select the **IBM DevOps, using Cloud Foundry** option to create a DevOps toolchain. You might need to set up SSH keys to complete this step.
   If you set a passphrase for your SSH key, you are required to enter this code.
   {: note}
-7. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.cloud.ibm.com`.
+7. Enter a unique host name; for example, `abc-devhost`. This host name is your app's route; for example, `abc-devhost.mybluemix.net`.
+
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 Creating the app and toolchain takes a few seconds to complete.
 
@@ -53,7 +56,7 @@ Creating the app and toolchain takes a few seconds to complete.
 
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Note that this command is in Beta, and not all languages and/or app structures are supported. The following instructions illustrate how to use this functionality with a sample repository, but the steps are roughly the same for your own codebase.
 
-1. Log in to {{site.data.keyword.cloud_notm}} by running ibmcloud login then target an org and space.
+1. Log in to {{site.data.keyword.cloud_notm}} by running `ibmcloud login`, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld) by running the following command in the directory of your choice.
 
   ```
@@ -68,13 +71,13 @@ This option can be used if you already have an existing codebase and want to gen
 7. Select the option to create a new {{site.data.keyword.cloud_notm}} app that is linked to this Git repository. See **Important Notes** for details.
 8. Don't add services for now.
 9. Wait a few seconds for the operations to complete. 
-10. Once completed, you can manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
+10. After the operations are completed, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
 
 ### Important Notes
  - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
  - You can also choose to generate deployment and cloud enablement files without connecting to an {{site.data.keyword.cloud_notm}} app by running [`ibmcloud dev enable --no-create`](/docs/cli/idt/commands.html#enable).
- - To manually configure a toolchain and deployment files, follow [the tutorial](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial-byoc-kube). This can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
- - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
+ - To manually configure a toolchain and deployment files, follow [the tutorial](/docs/apps/tutorials/tutorial_byoc_kube.html). This can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
+ - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app, and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
 
 ## Building your app and running it locally
 {: #build-run-app-cli}
@@ -114,7 +117,7 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
 1. Run the `git add .` command.
 2. Run the `git commit -m "made changes"` command to commit changes.
 3. Run the `git push origin master` command to push to the master branch.
-4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the App Details screen in the {{site.data.keyword.cloud_notm}} console by running the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command from the app directory.
+4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command from the app directory.
 5. View the pipeline within the toolchain to verify that a new build started.
 
 ### Manually deploying your app
@@ -132,4 +135,4 @@ You can manually deploy your app by using the [`deploy`](/docs/cli/idt/commands.
 1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt/commands.html#console) command. 
 
-**To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com) - Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**
+**To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com). Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/).**

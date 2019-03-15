@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, starter kit
+
+subcollection: creating-apps
 
 ---
 
@@ -31,7 +35,7 @@ Starter kits are available in many categories, including:
 ## Step 1. Create an app
 {: #create-starterkit}
 
-1. From the [{{site.data.keyword.cloud}} dashboard](https://{DomainName}), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) > **Web Apps**.
+1. From the [{{site.data.keyword.cloud}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) > **Web Apps**.
 
 2. Click **Get Started** in the **Start from the Web** section.
 
@@ -44,19 +48,19 @@ Starter kits are available in many categories, including:
     
     Great start! You just created an app.
 
-To inspect your code, click **Download Code** on the app details page. Check the `README.md` file in the downloaded compressed file to find out whether you need to take more actions to get your starter app up and running.
+To inspect your code, click **Download code** on the **App details** page. Check the `README.md` file in the downloaded compressed file to find out whether you need to take more actions to get your starter app up and running.
 {: tip}
 
 For more information, see the following topics:
- * [Creating a basic web app with a starter kit](/docs/apps/tutorials/tutorial_web.html#tutorial-webapp)
- * [Working with tags](/docs/resources/tagging_resources.html#tag)
+ * [Creating a basic web app with a starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-webapp)
+ * [Working with tags](/docs/resources?topic=resources-tag)
 
-## Step 2. Adding resources
+## Step 2. Adding services
 {: #resources-starterkit}
 
-You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
 
-1. From the app service window, select click **Add Resource**.
+1. On the **App details** page, click **Add service**.
 2. Select the kind of service you want. For example, select **Data** > **Next** > **Cloudant** > **Next**.
 3. Select your pricing plan. There is a free option that you can use for this tutorial.
 4. Click **Create**.
@@ -64,13 +68,13 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 ## Step 3. Deploy to {{site.data.keyword.cloud_notm}}
 {: #deploy-starterkit}
 
-Click **Deploy to Cloud** on the App details page, select a deployment environment, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
+Click **Configure continuous delivery** on the **App details** page, select a deployment target, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about), or [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 After you select your deployment environment, open the pipeline component of your new toolchain to start the initial build and deployment process so that you can see your new app in minutes.
 
 All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
 {: note}
 
-To deploy your app with the command line, use `ibmcloud dev deploy`. For more information, see [Creating and deploying apps by using the CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
+To deploy your app with the command line, use `ibmcloud dev deploy`. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
