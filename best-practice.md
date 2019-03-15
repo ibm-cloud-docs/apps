@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, best practices
 
@@ -53,19 +53,19 @@ Extracting environment-specific dependencies into a set of property files is an 
 
 You can run more than one instance to avoid downtime in a single region. To deliver an even more robust application, consider a multi-region architecture.
 
-For information about minimizing downtime and creating resilient architectures that achieve maximum availability, see the [Strategies for resilient applications tutorial](/docs/tutorials/strategies-for-resilient-applications.html).
+For information about minimizing downtime and creating resilient architectures that achieve maximum availability, see the [Strategies for resilient applications tutorial](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Ensure you're monitoring your apps
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} makes it easy to monitor your application with services like [New Relic ![External link icon](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} makes it easy to monitor your application with services like [New Relic](http://newrelic.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Take advantage of support options
 {: #support}
 
 {{site.data.keyword.cloud_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.cloud_notm}}, consider enrolling in this option.
 
-With or without paid support, you can get help as described at [support](/docs/get-support/howtogetsupport.html#getting-customer-support), which offers insurance against unforeseen issues.
+With or without paid support, you can get help as described at [support](/docs/get-support?topic=get-support-getting-customer-support), which offers insurance against unforeseen issues.
 
 ## Avoid infrastructure APIs in your app
 
@@ -91,6 +91,6 @@ Your app might be installed frequently on-demand on the dynamic cloud environmen
 
 Capture your app installation as a uniform set of scripts that is independent of the operating system. Keep your app installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the app installation.
 
-For more information about cloud-ready apps, see [The 12-factor app ![External link icon](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
+For more information about cloud-ready apps, see [The 12-factor app](http://12factor.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 

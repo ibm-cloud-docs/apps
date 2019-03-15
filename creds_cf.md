@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, credentials, Cloud Foundry
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Adding credentials to your Cloud Foundry environment
 {: #add-credentials-cf}
 
-Learn how to add service credentials to your Cloud Foundry deployment environment. These instructions apply to both [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) and [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
+Learn how to add service credentials to your Cloud Foundry deployment environment. These instructions apply to both [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) and [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
 
 ## Your code + Cloud Foundry
@@ -72,18 +72,18 @@ In the Cloud Foundry space in which your application exists, you can define what
 
 ### How the Cloud Foundry space is prepared
 
-Use the **Deploy to cloud** feature to deploy your app to your Cloud Foundry space.
+Use the **Configure continuous delivery** feature to deploy your app to your Cloud Foundry space.
 
-If the Cloud Foundry-based resource instance is in the same Cloud Foundry space as the deployed Cloud Foundry application, see the [next section](/docs/apps/creds_cf.html#cf_resource_same).
+If the Cloud Foundry-based service instance is in the same Cloud Foundry space as the deployed Cloud Foundry application, see the [next section](/docs/apps?topic=creating-apps-add-credentials-cf).
 
-If the Cloud Foundry-based resource instance is in a different space than the target space for the Cloud Foundry application, see the [following section](/docs/apps/creds_cf.html#cf_resource_different).
+If the Cloud Foundry-based service instance is in a different space than the target space for the Cloud Foundry application, see the [following section](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_different).
 
-If the resource that you associated with your application is Resource Controller-based, see [Resource Controller](/docs/apps/creds_cf.html#cf_resource_controller).
+If the service that you associated with your application is Resource Controller-based, see [Resource Controller](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_controller).
 
-#### The Cloud Foundry-based resource is in the same space as the deployed app
+#### The Cloud Foundry-based service is in the same space as the deployed app
 {: #cf_resource_same}
 
-If the resource that you associated with your application is Cloud Foundry-based, the resource is "bindable" in Cloud Foundry. You can see the service in your Cloud Foundry space by connecting your `cf` command line with the correct region + org + space. You can tell if the resource is Cloud Foundry-based at the time of resource creation, if you were asked in which Cloud Foundry organization and space to create the resource.
+If the service that you associated with your application is Cloud Foundry-based, the service is "bindable" in Cloud Foundry. You can see the service in your Cloud Foundry space by connecting your `cf` command line with the correct region + org + space. You can tell if the service is Cloud Foundry-based at the time of service creation, if you were asked in which Cloud Foundry organization and space to create the service.
 
 You can view bound applications by running the following command:
 ```console
@@ -100,15 +100,15 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 ```
 {: screen}
 
-#### The Cloud Foundry-based resource is in a different space from the deployed app
+#### The Cloud Foundry-based service is in a different space from the deployed app
 {: #cf_resource_different}
 
 Cloud Foundry doesn't support "binding" a Cloud Foundry application to a Cloud Foundry service when the application and service aren't in the same Cloud Foundry space. The Cloud Foundry space must be prepared with "user-provided" services, and the following section is applicable.
 
-#### The Resource Controller-based resource is associated with your app
+#### The Resource Controller-based service is associated with your app
 {: #cf_resource_controller}
 
-If the resource you associated with your application is ResourceController based (you can tell that it is `ResourceController` based at the time of resource creation, if you were asked in which resource group to create the resource), the resource is _not_ "bindable" in Cloud Foundry. The Cloud Foundry space must be prepared with resource credentials so that the application can reference them in code. The preparation is done for you automatically, and you can observe the results of the space preparation by connecting the `cf` command line to your space by running:
+If the service you associated with your application is Resource Controller-based, the service is _not_ "bindable" in Cloud Foundry. You can tell that it is Resource Controller-based at the time of service creation if you were asked in which resource group to create the service. The Cloud Foundry space must be prepared with service credentials so that the application can reference them in code. The preparation is done for you automatically, and you can observe the results of the space preparation by connecting the `cf` command line to your space by running:
 ```console
 cf services
 ```
@@ -130,7 +130,7 @@ Thankfully, the code that is generated from a starter kit is automatically popul
 ### The starter kit generated code
 {: #starterkit-generated-code-cf}
 
-Before you continue, see [Starter kit app + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). Then, apply the following change:
+Before you continue, see [Starter kit app + kube](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube-gencode). Then, apply the following change:
 
 * Although the generated code provides the `deployment.yml`, it isn't applicable for an application that is deployed to Cloud Foundry. Rather, `manifest.yml` _is_ applicable, and its contents are shown to _bind_ to the two services that are created in the Cloud Foundry space:
   ```yaml
@@ -153,7 +153,3 @@ Before you continue, see [Starter kit app + kube](/docs/apps/creds_kube.html#cre
 The rest of the documentation from the prior subsection once again applies. The `IBMCloudEnv` library abstracts the retrieval of the values from the environment in which the application runs.
 
 The library abstracts some complexity in retrieving environment values from Cloud Foundry. In Cloud Foundry, a running application is provided with an environment variable named `VCAP_SERVICES` whose value is stringified JSON, and has holds the values for bound service credentials, no matter if the service is a service instance _in_ the Cloud Foundry space or a user-defined service value. The top-level keys in the parsed JSON from `VCAP_SERVICES` environment variable are the Cloud Foundry `label` associated with the services that are Cloud Foundry-based, and the key `user-provided` whose value holds an array of credentials for all of the "user-provided" services.
-
-**Caution**:  Similar to the caution expressed in the referred section, environment preparation is _always_ performed for all credentials for all resources that are associated with an app, and all `services` are listed in the `manifest.yml`, but _not all credential references_ are placed in the `mappings.json` file. In these cases, you're required to place such references yourself. Once you decide on a target deployment, and don't need the abstraction of the `IBMCloudEnv` library, refer to the "Your Code + (target deployment)" section that fits with your decision.
-
-**Double Caution**:  Some starter kits don't include the reference to the `IBMCloudEnv` dependency, the `manifest.yml`, or the `mappings.json` files at all.

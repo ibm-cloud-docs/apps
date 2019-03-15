@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-12-04"
+  years: 2015, 2018
+lastupdated: "2019-03-15"
+
+subcollection: apps
 
 ---
 

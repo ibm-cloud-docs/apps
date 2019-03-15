@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, applications, troubleshooting 
 
@@ -126,7 +126,7 @@ Ensure that you created a space in your current organization. To create a space,
 * From the menu bar, click **Manage > Account**, and select **Cloud Foundry orgs**. Select the organization that you want to create the space in, and click **Create a Space**.
 * In the Cloud Foundry command line interface, type `cf create-space <space_name> -o <organization_name>`.
 
-Try again. If this message occurs again, go to the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page to check whether a service or component has an issue.
+Try again. If this message occurs again, go to the [{{site.data.keyword.cloud_notm}} status](http://ibm.biz/bluemixstatus){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page to check whether a service or component has an issue.
 
 ## Can't perform requested actions
 {: #ts_authority}
@@ -148,7 +148,7 @@ To get the appropriate authority level, use one of the following methods.
 {: tsResolve}
 
 * Select another organization and space for which you have the Developer role.
-* Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/admin/orgs_spaces.html#orgsspacesusers) for details.
+* Ask the org manager to change your role to Developer or to create a space and then assign you a Developer role. See [Managing organizations and spaces](/docs/iam?topic=iam-cfaccess#cfaccess) for details.
 
 ## Can't access {{site.data.keyword.cloud_notm}} services because of authorization errors
 {: #ts_vcap}
@@ -169,7 +169,7 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 process.env.VCAP_SERVICES
 ```
 
-For more information about the commands that you can use in other program languages, see [Java ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} and [Ruby ![External link icon](../icons/launch-glyph.svg "External link icon")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+For more information about the commands that you can use in other program languages, see [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
@@ -185,7 +185,7 @@ A Bad Gateway error usually happens when you go to a website that uses a proxy s
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
 
-If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status ![External link icon](../icons/launch-glyph.svg "External link icon")](http://ibm.biz/bluemixstatus){: new_window} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app#externalapp){: new_window}. If the service status is normal, try the following steps to solve the problem:
+If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](http://ibm.biz/bluemixstatus){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app#externalapp){: new_window}. If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
 
   * Retry the action:
@@ -193,7 +193,7 @@ If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first c
     * Use a different browser.
     * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
   * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/support/index.html#contacting-bluemix-support){: new_window} for more information.
+  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/support/index.html#contacting-bluemix-support){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more information.
 
 ## Disk quota is exceeded
 {: #ts_disk_quota}
@@ -207,10 +207,10 @@ When you run out of disk space, you might see a message that states that the dis
 The default disk quota that is allocated for an app is 1 GB. If you need more disk space, you must manually specify the disk quota.
 {: tsCauses}
 
-Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/ObjectStorage/index.html).
+Use one of the following methods to specify your disk quota. The maximum disk quota that you can specify is 2 GB. If 2 GB is still not enough, try an external service such as [Object Store](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers).
 {: tsResolve}
 
-  * In the manifest.yml file, add the following item:
+  * In the `manifest.yml` file, add the following item:
   ```yaml
 	disk_quota: <disk_quota>
 	```
@@ -233,7 +233,7 @@ You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.ke
 IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on Android. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy ![External link icon](../icons/launch-glyph.svg "External link icon")](https://pushy.me){: new_window}, [getui ![External link icon](../icons/launch-glyph.svg "External link icon")](http://www.getui.com/){: new_window}, and [jpush ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.jpush.cn/){: new_window}.
+As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy](https://pushy.me){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), [getui](http://www.getui.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and [jpush](https://www.jpush.cn/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 {: tsResolve}
 
 ## Org's services limit is exceeded
@@ -264,7 +264,7 @@ Delete any services instances that aren't needed, or remove the limit on the num
 	  4. Delete the service instance. Enter `cf delete-service <service_instance_name>`.
 	  5. After you delete the service instance, you might want to restage your app that the service instance was bound to. Enter `cf restage <appname>`.
 
-  * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
+  * To remove the limit on the number of service instances that you can have, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account?topic=account-accounts#upgrade-to-paygo).
 
 ## Executable files can't be run on {{site.data.keyword.cloud_notm}}
 {: #ts_executable}
@@ -309,7 +309,7 @@ This error occurs when the amount of memory that is remaining for your organizat
 You can either increase the memory quota of your account, or reduce the memory that your apps use.
 {: tsResolve}
 
-  * To increase the memory quota of your account, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account/index.html#upgrade-to-paygo).
+  * To increase the memory quota of your account, upgrade your Lite account to a billable account. For more information, see [Upgrading your account](/docs/account?topic=account-accounts#upgrade-to-paygo).
   * To reduce the memory that your apps use, use either the {{site.data.keyword.cloud_notm}} console or the Cloud Foundry command line interface.
 
     If you use the {{site.data.keyword.cloud_notm}} console, complete the following steps:
@@ -377,7 +377,7 @@ The Debug feature can't be enabled in these situations:
 Use one of the following options to resolve the issue:
 {: tsResolve}
 
-  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) topic.
+  * The recommended practice is to use the IBM Node.js buildpack to start the app. For more information, see the Startup command section of the [Deploying a Node.js application to {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) topic.
   * Disable the command for your existing app either by revising the command attribute in your `manifest.yml` to command: null or by editing your push command to include `-c null`.
   * Remove the **command** attribute from the `manifest.yml`. Then, delete the current app from {{site.data.keyword.cloud_notm}} and push the app again.
 
@@ -524,7 +524,7 @@ Use one of the following methods, depending on the cause of the problem:
 		  ```
       {: codeblock}
 
-    * Use the [package.json ![External link icon](../icons/launch-glyph.svg "External link icon")](https://www.npmjs.com/package/jsonfile){: new_window} file. For example:
+    * Use the [package.json](https://www.npmjs.com/package/jsonfile){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") file. For example:
 	    ```json
 		  {
         ...
@@ -563,7 +563,7 @@ Use one of the following methods, depending on the cause of the problem:
  }
     ```
 
-For more tips about Node.js apps, see [Tips for Node.js Applications ![External link icon](../icons/launch-glyph.svg "External link icon")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
+For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
@@ -577,7 +577,7 @@ After you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse, y
 Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.cloud_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
 {: tsCauses}
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty/index.html).
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime).
 {: tsResolve}
 
 ## Apps can't be staged by using custom buildpacks
@@ -592,7 +592,7 @@ When you deploy an app to {{site.data.keyword.cloud_notm}} with a custom buildpa
 This problem might happen if scripts, such as the detect script, the compile script, and the release script, aren't executable.
 {: tsCauses}
 
-You can use the [Git update ![External link icon](../icons/launch-glyph.svg "External link icon")](http://git-scm.com/docs/git-update-index){: new_window} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [Git update](http://git-scm.com/docs/git-update-index){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -607,7 +607,7 @@ You can use the [Git update ![External link icon](../icons/launch-glyph.svg "Ext
  This problem might happen because the pipeline requires a `manifest.yml` file to deploy an app to {{site.data.keyword.cloud_notm}}.
  {: tsCauses}
 
- To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/manageapps/depapps.html#appmanifest).
+ To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest).
  {: tsResolve}
 
 ## Meteor apps can't be pushed
@@ -641,7 +641,7 @@ To use a custom buildpack for Meteor apps, use one of the following methods:
 
 If the build or deploy jobs fail, and you see the following message, you can delete your images with the following CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your images by using `ibmcloud cr images`.
 * Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
@@ -651,12 +651,12 @@ If the build or deploy jobs fail, and you see the following message, you can del
 {: #access_kube_logs}
 
 If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.
 * Export the environment variable that is listed.
-* View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+* View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 * You can view the logs in your app by using `kubectl logs <pod-name>.`
 
 
@@ -675,7 +675,7 @@ An error exec: "docker": executable file not found in $PATH was encountered whil
 The Docker client isn't installed, or it's installed but not started.
 {: tsCauses}
 
-Ensure [Docker](https://docs.docker.com/install/) is installed, and start it.
+Ensure [Docker](https://docs.docker.com/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") is installed, and start it.
 {: tsResolve}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, deploy, deploying apps, toolchains, cli
 
@@ -34,14 +34,14 @@ You can create a toolchain in these ways:
 * Use a template to create a toolchain.
 * Create a toolchain from an app.
 
-To learn more about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+To learn more about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Deploying apps by using the CLI
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins and developer tool extensions that integrate with the CLI.
 
-Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html).
+Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cygwin command-line window.
 {: important}
@@ -76,7 +76,7 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
   If the value contains a space, you must add single or double quotation marks around `username`, `org_name`, and  `space_name`, for example, `-o "my org"`.
   {: note}
 
-  5. From your new directory, deploy your app to {{site.data.keyword.cloud_notm}} by using the `ibmcloud dev deploy` command. For more information, see [the CLI documentation](/docs/cli/idt/commands.html#deploy).
+  5. From your new directory, deploy your app to {{site.data.keyword.cloud_notm}} by using the `ibmcloud dev deploy` command. For more information, see [the CLI documentation](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

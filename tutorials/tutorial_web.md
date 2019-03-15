@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-15"
+
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -15,13 +19,13 @@ lastupdated: "2019-02-13"
 # Creating a basic web app with a starter kit
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} offers many starter kits to help you get coding quickly. Choose a language, framework, and tools from the App Service starter kits to start working with a pre-configured custom app. In this tutorial, you walk through the steps to install the tools you need, and then build and run the app locally and deploy it to the cloud.
+{{site.data.keyword.cloud}} offers many starter kits to help you get coding quickly. Choose a language, framework, and tools from the App Service starter kits to start working with a preconfigured custom application. In this tutorial, you walk through the steps to install the tools you need, and then build and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1. Install the tools
 {: #prereqs-webapp}
 
-Install the [developer tools](/docs/cli/index.html).
+Install the [developer tools](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 
@@ -30,19 +34,22 @@ Docker is installed as part of the developer tools. Docker must be running for t
 
 Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Select the language that's best for your project to get started.
 
-1. From the [starter kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/) page in the {{site.data.keyword.dev_console}}, select a starter kit for your language.
-2. Enter your app name and a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.cloud.ibm.com`
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources/tagging_resources.html#tag).
+1. From the [starter kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit for your language.
+2. Enter your app name and a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`.
+3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 4. Select your language and framework. Some starter kits might be available only in one language.
 5. Select your pricing plan. There is a free option that you can use for this tutorial.
 6. Click **Create**.
 
-## Step 3. Add resources (Optional)
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
+
+## Step 3. Add services (Optional)
 {: #resources-webapp}
 
-You can add resources that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
 
-1. From the app service window, select click **Add Resource**.
+1. On the **App details** page, click **Add services**.
 2. Select the kind of service you want. For example, select **Data** > **Next** > **Cloudant** > **Next**.
 3. Select your pricing plan. There is a free option that you can use for this tutorial.
 4. Click **Create**.
@@ -50,25 +57,25 @@ You can add resources that enhance your app with the cognitive power of Watson, 
 ## Step 4. Create a DevOps toolchain
 {: #toolchain-webapp}
 
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about), or [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment target you choose, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
-Click **Deploy to Cloud** on the App details page, select a deployment environment, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
+Click **Configure continuous delivery** on the **App details** page, select a deployment target, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 
-After you select your deployment environment, open the pipeline component of your new toolchain to start the initial build and deployment process so that you can see your new app in minutes.
+After you select your deployment target, open the pipeline component of your new toolchain to start the initial build and deployment process so that you can see your new app in minutes.
 
-For more information, see [Creating toolchains](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+For more information, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Step 5. Build and run the app locally
 {: #build-run-webapp}
 
 Deploying your app to the cloud in the last step created a toolchain. A toolchain creates a Git repository for your app where you can find the code there. Follow these steps to access your repo. You can build the app locally for testing before you push it to the cloud.
 
-1. From the app service window, click **Download Code** or **Clone your repo** to work with your code locally.
+1. On the **App details** page, click **Download code** or **Clone your repo** to work with your code locally.
 2. Import the app to your integrated development environment.
 3. Modify the code.
-4. Set up [Git authentication](/docs/services/ContinuousDelivery/git_working.html#git_authentication) by adding a personal access token.
+4. Set up [Git authentication](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) by adding a personal access token.
 5. Log in to the {{site.data.keyword.cloud_notm}} command line interface. If your organization uses federated logins, use the `-sso` option.
 
   ```bash
@@ -118,10 +125,10 @@ With a properly configured toolchain, a build-deploy cycle automatically starts 
 
 You can also manually deploy your app from your DevOps toolchain:
 
-1. From the App Details window, click **View Toolchain**.
-2. Click **Delivery pipeline** where you can start builds, manage deployment and view logs and history.
+1. On the **App details** page, click **View toolchain**.
+2. Click **Delivery Pipeline** where you can start builds, manage deployment and view logs and history.
 
-For more information, see [Building and deploying](/docs/services/ContinuousDelivery/pipeline_build_deploy.html#deliverypipeline_build_deploy).
+For more information, see [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
 
 ### Deploy by using the {{site.data.keyword.dev_cli_short}}
 {: #deploy-webapp-cli}
@@ -147,8 +154,8 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 2. Click **View logs and history**.
 3. In the log file, find the application URL:
 
-    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.cloud.ibm.com` or `View the application health at: http://<ipaddress>:<port>/health`.
+    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.

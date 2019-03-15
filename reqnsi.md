@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-15"
 
 keywords: apps, services, add service, application
 
@@ -15,28 +15,28 @@ subcollection: creating-apps
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Adding a resource to your app
+# Adding a service to your app
 {: #add-resource}
 
-When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add resources from the App details page. However, you can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
+When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add services from the App details page. However, you can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
-You can request an instance of the resource and use it independently of your app, or you can add the resource instance to your app from the App Details page. You can provision a particular type of resource directly from the {{site.data.keyword.cloud_notm}} catalog.
+You can request an instance of the service and use it independently of your app, or you can add the service instance to your app from the App details page. You can provision a particular type of service directly from the {{site.data.keyword.cloud_notm}} catalog.
 
-## Discovering resources
+## Discovering service
 {: #discover-resources}
 
 You can see all the services that are available in {{site.data.keyword.cloud_notm}} in the following ways:
 
 * From the {{site.data.keyword.cloud_notm}} console. View the {{site.data.keyword.cloud_notm}} catalog.
 * From the command line. Use the `ibmcloud service offerings` command.
-* From your own application. Use the [GET /v2/services Services API ![External link icon](../icons/launch-glyph.svg "External link icon")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 You can select the service that you need when you develop applications. Once you select it, {{site.data.keyword.cloud_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information.
 
 {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
-You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.cloud_notm}} services. For more information, see [Enabling external applications and third-party tools to use {{site.data.keyword.cloud_notm}} services](/docs/resources/connect_external_app#externalapp).
+You can also use services that are hosted in other regions if those services are available in those regions. These services must be accessible from the internet and have API endpoints. You must manually code your application to use these services in the same way that you code external applications or third-party tools to use {{site.data.keyword.cloud_notm}} services. For more information, see [Connecting services to external apps](/docs/resources?topic=resources-externalapp).
 
 ## Requesting a new service instance
 {: #request-instance}
@@ -66,7 +66,7 @@ If you use the {{site.data.keyword.cloud_notm}} command line interface to reques
 2. Follow the prompts to select a resource group, and to create and connect a new data-related service to your application, such as Cloudant. You might need to select a region and plan for the service.
 3. When the service is created, several files, including credentials, are added to your application directory to help you integrate the service into your application. You can manually merge any files or skip this step for now.
 
-You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services ![External link icon](../icons/launch-glyph.svg "External link icon")](/docs/resources/connect_external_app#externalapp){: new_window}.
+You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services](/docs/resources?topic=resources-externalapp#externalapp).
 
 ## Configuring your application
 {: #configure-app}
@@ -79,7 +79,7 @@ Each service might require a different mechanism for communicating with applicat
 * To interact with mobile back-end services, use the information that {{site.data.keyword.cloud_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services often work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
 * To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.cloud_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. For more information, see [Apps won't be automatically restarted](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. For more information, see [Apps won't be automatically restarted](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
 
 ## Accessing services across {{site.data.keyword.cloud_notm}} deployment environments
 {: #migrate_instance}
@@ -95,10 +95,10 @@ Service credentials that are stored in a Kubernetes secret are base64 encoded an
 
 **Important**: Do not reference or expose your service credentials directly in your deployment YAML file. Deployment YAML files are not designed to hold sensitive data and do not encrypt your service credentials by default. To properly store and access this information, you must use a Kubernetes secret. 
 
-1. [Bind the service to your cluster](/docs/containers/cs_integrations.html#adding_cluster). 
+1. [Bind the service to your cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
 2. To access your service credentials from your app pod, choose between the following options. 
-   - [Mount the secret as a volume to your pod](#mount_secret)
-   - [Reference the secret in environment variables](#reference_secret)
+   - Mount the secret as a volume to your pod
+   - Reference the secret in environment variables
 
 ## Creating a user-provided service instance
 {: #user_provide_services}
@@ -154,4 +154,4 @@ To create a user-provided service instance and bind it to an application, comple
 	OK
 	```
 
-You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service](/docs/apps/reqnsi.html#configure-app).
+You can now configure your application to use the external services. For information on how to configure your application to interact with a service, see [Configuring your application to interact with a service](/docs/apps?topic=creating-apps-add-resource#configure-app).
