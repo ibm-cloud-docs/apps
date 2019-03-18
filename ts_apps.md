@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, applications, troubleshooting 
 
@@ -347,11 +347,11 @@ When a service that you bind to an app crashes, problems such as outages, except
 This behavior is by design of Cloud Foundry.
 {: tsCauses}
 
-You can manually restart the app by typing the following command in the command line interface:
+You can manually restart an app that is already deployed by typing the following command in the command-line interface:
 {: tsResolve}
 
 ```
-ibmcloud cf push appname -p app_path
+ibmcloud cf restart <APPNAME>
 ```
 {: codeblock}
 

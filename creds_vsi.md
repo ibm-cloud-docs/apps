@@ -81,7 +81,7 @@ If you use `git clone` on the created GitLab repository to start active developm
 You can retrieve the `server/localdev-config.json` file by completing these steps:
 
 1. Use `git clone` on the Git lab repository that was automatically created when you used the "Configure continous delivery" feature.
-2. Install the [{{site.data.keyword.cloud_notm}} CLI](//docs/cli?topic=cloud-cli-ibmcloud-cli), which includes the `dev` plug-in.
+2. Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli), which includes the `dev` plug-in.
 3. Use the `ibmcloud` command line to log in to {{site.data.keyword.cloud_notm}}.
 4. Run `ibmcloud dev get-credentials`, which refers to the `cli-config.yml` file. The `cli-config.yml` file includes information about which application and generation job has the credentials.
 
