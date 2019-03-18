@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
 
@@ -26,9 +26,9 @@ By default, Mendix applications that target deployment to the {{site.data.keywor
 ## Before you begin
 {: #prereqs-mendix-kube}
 
-* Create your Mendix app. See [Creating Mendix apps](/docs/apps/tutorials/tutorial_mendix_getting_started.html) for more information.
+* Create your Mendix app. See [Creating Mendix apps](/docs/apps/tutorials?topic=creating-apps-create-mendix) for more information.
 * Install the [{{site.data.keyword.dev_cli_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli), which includes the {{site.data.keyword.containershort_notm}} CLI.
-* Log in to the `ibmcloud` CLI and configure `kubectl` for [access to the Kubernetes cluster](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
+* Log in to the `ibmcloud` CLI and configure `kubectl` for [access to the Kubernetes cluster](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3).
 
 ## Creating a Cloud Object Storage service instance
 {: #cos-mendix-kube}
@@ -52,7 +52,7 @@ The {{site.data.keyword.cos_full_notm}} service dashboard opens in a new window,
 ## Configuring persistent storage
 {: #kube-storage-mendix}
 
-Next, follow the documentation for [Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html). A `PersistentVolumeClaim` and `PersistentVolume` are created within your Kubernetes cluster, and can be used by the PostGres database instance that is running within your cluster as part of the Mendix application. Be sure to create the `PersistentVolumeClaim` by using the `my-mendix-bucket` bucket as described in the previous step, and review the `PersistentVolumeClaim` name for use in the next step.
+Next, follow the documentation for [Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage). A `PersistentVolumeClaim` and `PersistentVolume` are created within your Kubernetes cluster, and can be used by the PostGres database instance that is running within your cluster as part of the Mendix application. Be sure to create the `PersistentVolumeClaim` by using the `my-mendix-bucket` bucket as described in the previous step, and review the `PersistentVolumeClaim` name for use in the next step.
 
 ## Editing the `postgres-deployment.yaml` file
 {: #postgres-deploy-mendix}
@@ -117,9 +117,9 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Additional information
 {: #more-info-mendix-kube}
 
-For more architectural detail on running Mendix applications in Kubernetes environments, review the [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) section of the Mendix user documentation.
+For more architectural detail on running Mendix applications in Kubernetes environments, review the [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") section of the Mendix user documentation.

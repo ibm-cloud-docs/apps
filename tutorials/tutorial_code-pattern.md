@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, code pattern, DevOps, toolchain, service credentials
 
@@ -25,7 +25,7 @@ You can use a code pattern to quickly create your application and deploy it to {
 ## Step 1. Create an app
 {: #create-codepattern}
 
-1. Go to [IBM Developer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} and select the code pattern that you want. For example, you can select the [Build a MEAN Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/build-a-mean-web-app/){:new_window} code pattern.
+1. Go to [IBM Developer](https://developer.ibm.com/patterns/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") and select the code pattern that you want. For example, you can select the [Build a MEAN Web App](https://developer.ibm.com/patterns/build-a-mean-web-app/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") code pattern.
 
 2. Read the code pattern's description, and view the GitHub repository and `README.md` file. To view the repo, click **Get the code**, which opens the GitHub repo for the code pattern.
 

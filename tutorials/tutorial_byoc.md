@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, byoc, code repository, continuous delivery, cli, deploy
 
@@ -38,7 +38,7 @@ Be sure that you have the following prerequisites ready to go:
 
 To create an app and connect it with your source repo, complete these steps:
 
-1. From  your [dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Create an app** in the **Apps** tile.
+1. From  your [dashboard](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click **Create an app** in the **Apps** tile.
 2. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 3. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
 4. Click **Create**. The **App details** page is displayed.

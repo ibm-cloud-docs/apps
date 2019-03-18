@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, starter kit, Kubernetes, cluster
 
@@ -34,9 +34,9 @@ First, see the following starter kit flow diagram and its corresponding overview
 ## Before you begin
 {: #prereqs-starterkit-kube}
 
-* Create a **Java + Spring** app by using a [starter kit](/docs/apps/tutorials/tutorial_starter-kit.html).
+* Create a **Java + Spring** app by using a [starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli).
-* Set up [Docker ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.docker.com/get-started){: new_window}.
+* Set up [Docker](https://www.docker.com/get-started){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Adding services to your app
 {: #resources-starterkit-kube}
@@ -103,12 +103,12 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
+FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #next-steps-startkit-kube notoc}
 
-* If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps/ts_apps.html#access_kube_logs) to look for errors.
+* If you encounter errors with deployment, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=creating-apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).

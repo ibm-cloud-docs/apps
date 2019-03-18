@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
 
@@ -31,8 +31,8 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 ## Before you begin
 {: #prereqs-byoc-kube}
 
-* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials/tutorial_byoc.html) for more information.
-* From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers/container_index.html).
+* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) for more information.
+* From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers?topic=containers-getting-started).
 * To confirm that your app runs in Docker, run the following commands:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -49,7 +49,7 @@ Add a service to your application, and {{site.data.keyword.cloud_notm}} creates 
 
 This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-resource).
 
-After you add a service to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps/creds_kube.html).
+After you add a service to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps?topic=creating-apps-add-credentials-kube).
 
 ## Preparing your app for deployment
 {: #deploy-byoc-kube}
@@ -78,9 +78,9 @@ If you have one or more DevOps toolchains that are associated with your account,
 
 For more information about adding your repo to your toolchain, see:
 
- * [Configuring Git repos and issue tracking](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [Configuring GitHub](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [Configuring GitLab](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [Configuring Git repos and issue tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configuring GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### Connect your app to a new toolchain
@@ -92,7 +92,7 @@ If you want to fully control the creation of the DevOps toolchain with no change
 2. Enter a name for your toolchain, select a region and resource group (default), and click **Create**.
 3. After you create the toolchain, use the breadcrumbs in your browser to return to the **App details** page, which indicates that continuous delivery is configured.
 
-If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt/commands.html#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps/create-deploy-cli.html#byoc-cli).
+If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
 ## Adding a GitHub integration
 {: #github-byoc-kube}
@@ -134,7 +134,7 @@ Configure the pipeline stages to direct your input (the GitHub repo contents) to
     * Enter `build and publish` for the name.
     * Select **Container Registry** for the builder type.
     * Select the region where your Kubernetes cluster is located.
-    * Select **Enter an existing API key**. If you don't have an API key, see [Creating an API key](/docs/iam/userid_keys.html#create_user_key). 
+    * Select **Enter an existing API key**. If you don't have an API key, see [Creating an API key](/docs/iam?topic=iam-userapikey#create_user_key). 
     * Enter the container registry namespace, which you can find by clicking the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and selecting **Containers** > **Registry** > **Namespaces**.
     * For the Docker image name, enter `continuous` because this pipeline build stage is for the continuous build of your repo's continuous integration branch.
     * Edit the build script by adding a line or more after the first `#!/bin/bash` line. For example, for a repo that is built by using maven, you might add a few lines similar to the following example:
@@ -178,4 +178,4 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.

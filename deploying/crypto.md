@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-18"
 
 keywords: apps, key protection, ACSP client, data protection
 
@@ -24,11 +24,11 @@ subcollection: creating-apps
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protect your keys and your data at rest, in use, and in transit at the industry's highest security level – FIPS 140-2 Level 4. {{site.data.keyword.hscrypto}} is the keystore for the [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto?topic=hs-crypto-get-started) service and protect your keys in a hyper secure environment on IBM Z.
 
 ## Installing and configuring the ACSP client
-{: ##crypto_config}
+{: #crypto_config}
 
-Before you install the Advanced Cryptography Service Provider (ACSP) client, create and provision an instance of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} from the [catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/hyper-protect-crypto-services){:new_window}. Then, you must install and configure the (ACSP) client in your environment.
+Before you install the Advanced Cryptography Service Provider (ACSP) client, create and provision an instance of the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} from the [catalog](https://{DomainName}/catalog/services/hyper-protect-crypto-services){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). Then, you must install and configure the (ACSP) client in your environment.
 
-1. Download the installation package from the [GitHub repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. In the **packages** folder, choose the installation package file that is suitable for your operating system and CPU architecture. For example, for Ubuntu on x86, choose `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
+1. Download the installation package from the [GitHub repository](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"). In the **packages** folder, choose the installation package file that is suitable for your operating system and CPU architecture. For example, for Ubuntu on x86, choose `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
 2. Install the package to install the ACSP client libraries with the `dpkg` command, for example, `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`.
 3. In your {{site.data.keyword.hscrypto}} service instance in {{site.data.keyword.cloud_notm}}, select **Manage** from the navigator.
 4. In the manage window, click **Download Config** to download the `acsp_client_credentials.uue` file.
@@ -67,6 +67,6 @@ Before you install the Advanced Cryptography Service Provider (ACSP) client, cre
 Now your ACSP client is operational and your {{site.data.keyword.hscrypto}} is ready to use!
 
 ## Next steps
-{: ##next-steps}
+{: #next-steps notoc}
 
 An easy way to adopt {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} is to start with the {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}. For more information about the {{site.data.keyword.hsplatform}}, see [Getting Started with {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](/docs/services/hypersecure-platform?topic=services/hypersecure-platform-getting-started-with-ibm-cloud-hyper-protect-developer-starter-kits).

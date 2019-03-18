@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
 
@@ -33,7 +33,7 @@ When you create back-end or web-serving apps, you can deploy them to the {{site.
 
 1. Deploy your app to the cloud by setting up an automated cloud pipeline.
 2. Click **Configure continous delivery**.
-3. Select **IBM Kubernetes Service** as the target. You need to [create a cluster ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window} if you don't already have one.
+3. Select **IBM Kubernetes Service** as the target. You need to [create a cluster](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") if you don't already have one.
 4. After your deployment is complete, check out your live app in the cloud by getting the URL in the logs from your deploy stage of the delivery pipeline. The last IP address with a port is your app's new home, for example, 169.60.133.124:32355.
 
 ## Binding services
@@ -44,7 +44,7 @@ As the toolchain is created, the services that you associated with your app are 
 If you delete the service or the secrets, you need to manually bind them again or delete and re-create the toolchain.
 {: tip}
 
-For more information, see [Secrets ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://kubernetes.io/docs/concepts/configuration/secret/){:new_window}.
+For more information, see [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Starting development
 {: #dev}
@@ -69,13 +69,13 @@ For more information, see [Getting started with IBM Cloud Container Registry](/d
 
 The deployment stage retrieves the latest image from the {{site.data.keyword.registryshort_notm}} and then deploys it into your Kubernetes cluster by using a Helm chart. The Helm chart was added to your app when you deployed to the cloud. Helm charts make it easy to manage the deployment steps of the packaged container image.
 
-For more information, see [Charts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://docs.helm.sh/developing_charts/){:new_window}.
+For more information, see [Charts](https://docs.helm.sh/developing_charts/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}.
+{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Checking app security
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} supports scanning the packaged container images for security vulnerabilities. Security scanning is essential for supporting enterprise-grade applications.
 
-View the containers [image repository ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/containers-kubernetes/registry/private){:new_window} to check for potential security vulnerabilities.
+View the containers [image repository](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") to check for potential security vulnerabilities.

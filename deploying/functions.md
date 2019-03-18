@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-03-18"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk
 
@@ -26,12 +26,12 @@ You can use the {{site.data.keyword.openwhisk_short}} user interface (UI) or the
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
 
-Try out {{site.data.keyword.openwhisk_short}} in your [browser ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/openwhisk/actions){:new_window}. Go to the [Concepts ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/openwhisk/learn){:new_window} page for a quick tour of the {{site.data.keyword.openwhisk_short}} user interface.
+Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/openwhisk/actions){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")}. Go to the [Concepts](https://{DomainName}/openwhisk/learn){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page for a quick tour of the {{site.data.keyword.openwhisk_short}} user interface.
 
 ## Developing with the CLI
 {: #openwhisk_start_configure_cli}
 
-To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/openwhisk/cli){:new_window}.
+To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/openwhisk/cli){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Exposing APIs and data sets as web actions
 {: #expose-actions}
@@ -59,5 +59,5 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions. It also provides a [serverless framework SDK ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){:new_window} that enables serverless applications.
+{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions. It also provides a [serverless framework SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") that enables serverless applications.
 

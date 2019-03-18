@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, starter kit
 
@@ -25,12 +25,12 @@ You can use a starter kit to quickly get your app started and prepare it for fut
 You can create an app from a selection of starter kits, including a blank one if you would like to customize build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
 
 Starter kits are available in many categories, including:
-* [Watson ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/watson/dashboard){:new_window}
-* [Apple ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appledevelopment/dashboard){:new_window}
-* [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/mobile/dashboard){:new_window}
-* [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/dashboard){:new_window}
-* [Security ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/security/dashboard){:new_window}
-* [Finance ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/finance/dashboard){:new_window}
+* [Watson](https://{DomainName}/developer/watson/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Apple](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Mobile](https://{DomainName}/developer/mobile/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Web App](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Security](https://{DomainName}/developer/security/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [Finance](https://{DomainName}/developer/finance/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 ## Step 1. Create an app
 {: #create-starterkit}
@@ -41,7 +41,7 @@ Starter kits are available in many categories, including:
 
 3. Select a starter kit of your choice, read the details, and click **Create**.
     
-    To see what is included in the starter kit, expand the tile on the [App Service Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits){:new_window} dashboard. The "Create App" starter kit option can be used as a blank starter app and customized further to match your needs.
+    To see what is included in the starter kit, expand the tile on the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") dashboard. The "Create App" starter kit option can be used as a blank starter app and customized further to match your needs.
     {: tip}
 
 4. Name your app, select a resource group, optionally provide tags, select your language, and click **Create**.

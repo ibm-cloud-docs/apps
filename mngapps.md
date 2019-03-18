@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2018
 lastupdated: "2019-03-15"
 
-subcollection: apps
+subcollection: creating-apps
 
 ---
 

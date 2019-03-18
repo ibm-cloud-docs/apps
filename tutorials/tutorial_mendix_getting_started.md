@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-18"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app
 
@@ -26,13 +26,13 @@ Mendix is a low-code development environment and toolset that helps you deliver 
 ## Selecting a starter kit
 {: #starterkit-mendix}
 
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/dashboard){: new_window}, click **Get Started**.
+1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click **Get Started**.
 2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
+  * [Mobile](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+  * [Watson Web or Mobile App](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+  * [Web App](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 3. Click **Create app**.
-4. On the **App details** page, name your app and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources/tagging_resources.html).
+4. On the **App details** page, name your app and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 5. Click **Create**.
 
 
@@ -51,7 +51,7 @@ After the authorization is complete, your browser returns to the Mendix app that
 ## Selecting a deployment target for your Mendix app
 {: #select-deployment}
 
-1. On the **Select a deployment target** page, select Cloud Foundry or one of your Kubernetes clusters that is running on {{site.data.keyword.cloud_notm}}. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a Cloud Foundry deployer type of either **[Public Cloud](/docs/cloud-foundry-public/about-cf.html)** or **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
+1. On the **Select a deployment target** page, select Cloud Foundry or one of your Kubernetes clusters that is running on {{site.data.keyword.cloud_notm}}. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a Cloud Foundry deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** or **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
 2. Optional. If you don't have a Kubernetes cluster, you can create one now.
 3. On the **Configure toolchain** page, select your region and resource group, and then click **Create**.
 
@@ -60,7 +60,7 @@ A DevOps toolchain is created. The toolchain integrates your Mendix project with
 Mendix Cloud Foundry deployments require the PostGRES database service, which doesn't have a lite tier. If you want to evaluate the Mendix starter kits by using a lite account, you can target a trial Kubernetes cluster.
 {: tip}
 
-If you selected a Kubernetes cluster for deployment, see the [Mendix Kubernetes tutorial](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) to learn how to configure your cluster for production use.
+If you selected a Kubernetes cluster for deployment, see the [Mendix Kubernetes tutorial](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube) to learn how to configure your cluster for production use.
 
 
 ## Continuing the Mendix development and deployment lifecycle
@@ -83,4 +83,4 @@ All Mendix applications are to be deployed to {{site.data.keyword.cloud_notm}} b
 ## Next steps 
 {: #next-steps-mendix}
 
-To deploy your app to the {{site.data.keyword.containerlong_notm}}, configure your app for production deployment. For more information, see the [Mendix Kubernetes tutorial](/docs/apps/tutorials/tutorial_mendix_kubernetes.html). 
+To deploy your app to the {{site.data.keyword.containerlong_notm}}, configure your app for production deployment. For more information, see the [Mendix Kubernetes tutorial](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube). 
