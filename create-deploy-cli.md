@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-28"
 
 keywords: apps, create, build, deploy, cli, web app, microservice
 
@@ -124,7 +124,7 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
 
 You can manually deploy your app by using the [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For example, use the following steps to manually deploy your app to Kubernetes.
 
-1. Ensure that you [created a Kubernetes cluster](https://{DomainName}/containers-kubernetes/overview){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+1. Ensure that you [created a Kubernetes cluster](https://{DomainName}/kubernetes/overview){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 2. Run the [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
 3. When prompted, confirm the cluster and container image name to use.
 4. Wait a few minutes for the deployment to complete.
@@ -135,4 +135,4 @@ You can manually deploy your app by using the [`deploy`](/docs/cli/idt?topic=clo
 1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command. 
 
-**To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").**
+**To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").**

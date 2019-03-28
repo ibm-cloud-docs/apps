@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-28"
 
 keywords: apps, credentials, Kubernetes
 
@@ -131,7 +131,7 @@ Now that the Kubernetes cluster is prepared with a resolvable secret, you can up
   If you later choose to deploy to a Cloud Foundry application with a Resource Controller resource (located in a resource group instead of an organization or space), then you must copy one more file.
   {: note}
 
-5. [View your Kubernetes cluster](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") with corresponding region (US-South if it was free).
+5. [View your Kubernetes cluster](https://{DomainName}/kubernetes/clusters){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") with corresponding region (US-South if it was free).
 
 6. Click into your cluster and select **Kubernetes Dashboard** in the upper right to view your cluster dashboard.
 
