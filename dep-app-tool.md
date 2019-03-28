@@ -2,8 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
-
+lastupdated: "2019-03-28"
 keywords: apps, deploy, deploying apps, toolchains, cli
 
 subcollection: creating-apps
@@ -22,10 +21,10 @@ subcollection: creating-apps
 # Deploying apps
 {: #deploying-apps}
 
-You can deploy your apps with a toolchain or the command-line interface (CLI). A toolchain is a set of tool integrations. The CLI is a simple way to deploy your apps and service instances.
+You can deploy your apps with a DevOps toolchain or the command-line interface (CLI). A DevOps toolchain is a set of tool integrations. The CLI is a simple way to deploy your apps and service instances.
 {: shortdesc}
 
-## Deploying apps by using toolchains
+## Deploying apps by using DevOps toolchains
 {: #toolchain-deploy-apps}
 
 Open toolchains are available in the Public and Dedicated environments on {{site.data.keyword.Bluemix}}. With a properly configured toolchain, deploying your app is easy. A build-deploy cycle automatically starts with each merge to the master branch in your repo.
@@ -54,7 +53,7 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">your_new_directory</var></code></pre>
 
-  3.  Make changes to your app code. For example, if you're using aN {{site.data.keyword.cloud_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it back to {{site.data.keyword.cloud_notm}}.
+  3.  Make changes to your app code. For example, if you're using an {{site.data.keyword.cloud_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it back to {{site.data.keyword.cloud_notm}}.
 
     Take note of the `manifest.yml` file. When deploying your app back to {{site.data.keyword.cloud_notm}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters.
 

@@ -35,7 +35,7 @@ Starter kits are available in many categories, including:
 ## Step 1. Create an app
 {: #create-starterkit}
 
-1. From the [{{site.data.keyword.cloud}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) > **Web Apps**.
+1. From the [{{site.data.keyword.cloud}} dashboard](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) > **Web Apps**.
 
 2. Click **Get Started** in the **Start from the Web** section.
 
