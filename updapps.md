@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, custom domain, Kubernetes
+keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom route, dns, domainname, domain name, endpoint
 
 subcollection: creating-apps
 

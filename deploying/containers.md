@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
+keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
 subcollection: creating-apps
 
@@ -33,7 +33,7 @@ When you create back-end or web-serving apps, you can deploy them to the {{site.
 
 1. Deploy your app to the cloud by setting up an automated cloud pipeline.
 2. Click **Configure continous delivery**.
-3. Select **IBM Kubernetes Service** as the target. You need to [create a cluster](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") if you don't already have one.
+3. Select **IBM Kubernetes Service** as the target. You need to [create a cluster](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") if you don't already have one.
 4. After your deployment is complete, check out your live app in the cloud by getting the URL in the logs from your deploy stage of the delivery pipeline. The last IP address with a port is your app's new home, for example, 169.60.133.124:32355.
 
 ## Binding services
@@ -71,11 +71,11 @@ The deployment stage retrieves the latest image from the {{site.data.keyword.reg
 
 For more information, see [Charts](https://docs.helm.sh/developing_charts/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.cloud_notm}} supports a number of [preconfigured Helm Charts](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Checking app security
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} supports scanning the packaged container images for security vulnerabilities. Security scanning is essential for supporting enterprise-grade applications.
 
-View the containers [image repository](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") to check for potential security vulnerabilities.
+View the containers [image repository](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") to check for potential security vulnerabilities.

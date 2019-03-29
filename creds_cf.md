@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, credentials, Cloud Foundry
+keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
 
 subcollection: creating-apps
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, applications, troubleshooting 
+keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
 subcollection: creating-apps
 
@@ -63,7 +63,6 @@ When you configure your DNS settings, you must specify the public IP addresses o
 nslookup cloud.ibm.com
 ```
 {: codeblock}
-
 
 ## Can't reuse names of deleted apps
 {: #ts_reuse_appname}

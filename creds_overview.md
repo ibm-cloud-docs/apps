@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, credentials
+keywords: apps, credentials, service, add service credentials, environment, deployment
 
 subcollection: creating-apps
 

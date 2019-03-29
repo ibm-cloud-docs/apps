@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 

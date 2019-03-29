@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, scratch, developer tools
+keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
 subcollection: creating-apps
 

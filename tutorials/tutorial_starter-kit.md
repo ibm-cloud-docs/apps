@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, starter kit
+keywords: apps, starter kit, create app starter kit, basic app, simple app
 
 subcollection: creating-apps
 

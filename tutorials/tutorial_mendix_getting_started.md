@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, Mendix, starter kit, developer tools, Mendix app
+keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
 subcollection: creating-apps
 

@@ -2,8 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
-keywords: apps, deploy, deploying apps, toolchains, cli
+lastupdated: "2019-03-29"
+
+keywords: apps, deploy, deploying apps, toolchains, cli, cloud
 
 subcollection: creating-apps
 

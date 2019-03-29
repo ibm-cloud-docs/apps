@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-03-29"
 
-keywords: apps, create, build, deploy, cli, web app, microservice
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
