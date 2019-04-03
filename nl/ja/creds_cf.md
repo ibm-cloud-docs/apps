@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, credentials, Cloud Foundry
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-01"
 # Cloud Foundry 環境への資格情報の追加
 {: #add-credentials-cf}
 
-Cloud Foundry デプロイメント環境にサービス資格情報を追加する方法について説明します。 これらの説明は、[Cloud Foundry パブリック](/docs/cloud-foundry-public/about-cf.html#about-cf)と [Cloud Foundry エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)の両方に当てはまります。
+Cloud Foundry デプロイメント環境にサービス資格情報を追加する方法について説明します。 これらの説明は、[Cloud Foundry パブリック](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)と [Cloud Foundry エンタープライズ環境](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)の両方に当てはまります。
 {: shortdesc}
 
 ## ユーザー作成コード + Cloud Foundry
@@ -68,18 +72,18 @@ Cloud Foundry デプロイメント環境にサービス資格情報を追加す
 
 ### Cloud Foundry スペースの準備方法
 
-**「クラウドにデプロイ」**フィーチャーを使用して、アプリを Cloud Foundry スペースにデプロイします。
+**「継続的デリバリーの構成 (Configure continuous delivery)」**フィーチャーを使用して、アプリを Cloud Foundry スペースにデプロイします。
 
-Cloud Foundry ベースのリソース・インスタンスが、デプロイされる Cloud Foundry アプリケーションと同じ Cloud Foundry スペース内にある場合は、[次のセクション](/docs/apps/creds_cf.html#cf_resource_same)を参照してください。
+Cloud Foundry ベースのサービス・インスタンスが、デプロイされる Cloud Foundry アプリケーションと同じ Cloud Foundry スペース内にある場合は、[次のセクション](/docs/apps?topic=creating-apps-add-credentials-cf)を参照してください。
 
-Cloud Foundry ベースのリソース・インスタンスが、Cloud Foundry アプリケーションのターゲット・スペースとは異なるスペースにある場合は、[その後のセクション](/docs/apps/creds_cf.html#cf_resource_different)を参照してください。
+Cloud Foundry ベースのサービス・インスタンスが、Cloud Foundry アプリケーションのターゲット・スペースとは異なるスペースにある場合は、[その後のセクション](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_different)を参照してください。
 
-アプリケーションに関連付けたリソースがリソース・コントローラー・ベースの場合は、[リソース・コントローラー](/docs/apps/creds_cf.html#cf_resource_controller)を参照してください。
+アプリケーションに関連付けたサービスがリソース・コントローラー・ベースの場合は、[リソース・コントローラー](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_controller)を参照してください。
 
-#### Cloud Foundry ベースのリソースが、デプロイされるアプリと同じスペース内にある場合
+#### Cloud Foundry ベースのサービスが、デプロイされるアプリと同じスペース内にある場合
 {: #cf_resource_same}
 
-アプリケーションに関連付けたリソースが Cloud Foundry ベースの場合、リソースは Cloud Foundry 内で「バインド可能」です。 `cf` コマンド・ラインを正しい地域 + 組織 + スペースに接続することで、Cloud Foundry スペース内のサービスを表示できます。 リソースが Cloud Foundry ベースかどうかは、リソース作成時にどの Cloud Foundry 組織およびスペース内にリソースを作成するかを尋ねられたかどうかで分かります。
+アプリケーションに関連付けたサービスが Cloud Foundry ベースの場合、サービスは Cloud Foundry 内で「バインド可能」です。 `cf` コマンド・ラインを正しい地域 + 組織 + スペースに接続することで、Cloud Foundry スペース内のサービスを表示できます。 サービスが Cloud Foundry ベースかどうかは、サービス作成時にどの Cloud Foundry 組織およびスペース内にサービスを作成するかを尋ねられたかどうかで分かります。
 
 以下のコマンドを実行して、バインド済みアプリケーションを表示できます。
 ```console
@@ -96,15 +100,15 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 ```
 {: screen}
 
-#### Cloud Foundry ベースのリソースが、デプロイされるアプリとは異なるスペース内にある場合
+#### Cloud Foundry ベースのサービスが、デプロイされるアプリとは異なるスペース内にある場合
 {: #cf_resource_different}
 
 アプリケーションとサービスが同じ Cloud Foundry スペース内にない場合、Cloud Foundry は、Cloud Foundry サービスへの Cloud Foundry アプリケーションの「バインディング」をサポートしません。 「ユーザー提供」のサービスを含んだ Cloud Foundry スペースを準備する必要があり、以下のセクションが適用されます。
 
-#### リソース・コントローラー・ベースのリソースがアプリに関連付けられている場合
+#### リソース・コントローラー・ベースのサービスがアプリに関連付けられている場合
 {: #cf_resource_controller}
 
-アプリケーションに関連付けたリソースがリソース・コントローラー・ベースである場合 (リソース作成時、どのリソース・グループ内にリソースを作成するか尋ねられた場合、そのリソースは `ResourceController` ベースであることが分かります)、リソースは、Cloud Foundry 内で「バインド可能」では_ありません_。 アプリケーションがコード内でリソース資格情報を参照できるように、Cloud Foundry スペースにその資格情報を準備する必要があります。 準備は自動的に行われ、`cf` コマンド・ラインをスペースに接続し、以下を実行することにより、スペースの準備の結果を監視できます。
+アプリケーションに関連付けたサービスがリソース・コントローラー・ベースの場合、サービスは Cloud Foundry 内で「バインド可能」では_ありません_。サービスがリソース・コントローラー・ベースかどうかは、サービス作成時にどのリソース・グループ内にサービスを作成するか尋ねられたかどうかで分かります。アプリケーションがコード内でサービス資格情報を参照できるように、Cloud Foundry スペースにその資格情報を準備する必要があります。 準備は自動的に行われ、`cf` コマンド・ラインをスペースに接続し、以下を実行することにより、スペースの準備の結果を監視できます。
 ```console
 cf services
 ```
@@ -126,7 +130,7 @@ Cloud Foundry では、サービス資格情報がエンコードされている
 ### スターター・キットによって生成されるコード
 {: #starterkit-generated-code-cf}
 
-続行する前に、[スターター・キット・アプリ + Kubernetes](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode) を参照してください。 次に、以下の変更を適用します。
+続行する前に、[スターター・キット・アプリ + Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube-gencode) を参照してください。 次に、以下の変更を適用します。
 
 * 生成されるコードによって `deployment.yml` が提供されますが、Cloud Foundry にデプロイされるアプリケーションには適用できません。 代わりに、`manifest.yml` が_適用可能_ であり、その内容は、Cloud Foundry スペースで作成された 2 つのサービスに_バインド_ されることがわかります。
   ```yaml
@@ -149,7 +153,3 @@ Cloud Foundry では、サービス資格情報がエンコードされている
 前のサブセクションにある残りの資料が、ここでも再度適用されます。 `IBMCloudEnv` ライブラリーは、アプリケーションが実行される環境からの値の取得を抽象化します。
 
 このライブラリーは、Cloud Foundry から環境の値を取得する際の複雑さを抽象化します。 Cloud Foundry では、実行中のアプリケーションに `VCAP_SERVICES` という名前の環境変数が用意されます。この環境変数の値はストリング化された JSON であり、サービスが Cloud Foundry スペース _内の_ サービス・インスタンスであるか、ユーザー定義のサービス値であるかにかかわらず、バインドされたサービス資格情報の値を保持します。 `VCAP_SERVICES` 環境変数から解析された JSON の最上位のキーは、Cloud Foundry ベースのサービスに関連付けられた Cloud Foundry `label` と、すべての「ユーザー提供」サービスの資格情報の配列を値に保持するキー `user-provided` になります。
-
-**注意**:  参照先セクションで示されている注意と同様に、環境の準備は、_常に_、アプリに関連付けられたすべてのリソースのすべての資格情報を対象に実行され、すべての `services` が `manifest.yml` 内にリストされますが、`mappings.json` ファイル内には、_必ずしもすべての資格情報参照_ が配置されるわけではありません。 その場合、そのような参照はユーザー自身が配置する必要があります。 ターゲット・デプロイメントを決定した後は、`IBMCloudEnv` ライブラリーの抽象化が不要であれば、決定したデプロイメントに適した『ユーザー作成コード + (ターゲット・デプロイメント)』セクションを参照してください。
-
-**二重注意**: 一部のスターター・キットは、`IBMCloudEnv` 依存関係、`manifest.yml` ファイル、および `mappings.json` ファイルへの参照をいっさい組み込みません。

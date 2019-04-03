@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
+
+subcollection: creating-apps
 
 ---
 
@@ -52,7 +56,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 ### スターター・キットによって生成されるコード
 {: #starterkit-generated-code-vsi}
 
-スターター・キットから生成されるコードには、ネイティブの `IBMCloudEnv` ライブラリーがあります。このライブラリーは、アプリケーション・コードを移植可能にして複数のターゲット・デプロイメントで実行できるように、環境値の取得を抽象化します。 仮想またはローカル Docker では、その環境に、`IBMCloudEnv` ライブラリーを満たす値が準備されなければなりませんが、それらの値は、_必ずしも_ 実際の環境変数から取得する必要はありません。
+スターター・キットから生成されるコードには、ネイティブの `IBMCloudEnv` ライブラリーがあります。このライブラリーは、アプリケーション・コードを移植可能にして複数のデプロイメント・ターゲットで実行できるように、環境値の取得を抽象化します。 仮想またはローカル Docker では、その環境に、`IBMCloudEnv` ライブラリーを満たす値が準備されなければなりませんが、それらの値は、_必ずしも_ 実際の環境変数から取得する必要はありません。
 
 ユーザーにとって便利なように、スターター・キットによって生成される出力に含まれる `mappings.json` の命令には、アプリケーションが使用できる値を `IBMCloudEnv` ライブラリーが入手する元となるローカル・ファイルへの参照が含まれます。
 
@@ -70,18 +74,18 @@ docker run -p 80:8080 -e password="someThingSensitive"
 ```
 {: codeblock}
 
-アプリの作成時に「クラウドにデプロイ」フィーチャーを使用すると、`/server/localdev-config.json` ファイルは GitLab リポジトリーから削除されます。 セキュリティー上の理由から、資格情報はソース・コード・リポジトリー内に入れないでください。
+アプリの作成時に「継続的デリバリーの構成 (Configure continous delivery)」フィーチャーを使用すると、`/server/localdev-config.json` ファイルは GitLab リポジトリーから削除されます。セキュリティー上の理由から、資格情報はソース・コード・リポジトリー内に入れないでください。
 
 作成された GitLab リポジトリーに対し `git clone` を使用してアクティブな開発を開始した場合、機密性の高い資格情報を含んだファイルが誤ってチェックインされないように、`.gitignore` ファイルが `server/localdev-config.json` を具体的に無視する点に注意してください。 ただし、ノートブックで作業する開発者と同じように、VSI はこのファイルを_必要とします_。
 
 以下のステップを実行して、`server/localdev-config.json` ファイルを取得できます。
 
-1. 「クラウドにデプロイ」フィーチャーを使用したときに自動的に作成された GitLab リポジトリーに対して `git clone` を使用します。
-2. `dev` プラグインを含んでいる [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) をインストールします。
+1. 「継続的デリバリーの構成 (Configure continous delivery)」フィーチャーを使用したときに自動的に作成された Git lab リポジトリーに対して `git clone` を使用します。
+2. `dev` プラグインを含んでいる [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。
 3. `ibmcloud` コマンド・ラインを使用して、{{site.data.keyword.cloud_notm}} にログインします。
 4. `ibmcloud dev get-credentials` を実行します。これで、`cli-config.yml` ファイルを参照します。 `cli-config.yml` ファイルには、資格情報を持つアプリケーションおよび生成ジョブに関する情報が含まれています。
 
-「クラウドにデプロイ」フィーチャーを使用してから `ibmcloud dev get-credentials` を使用するまでの間に、いずれかのリソースがアプリケーションから削除された場合、ダウンロードされたファイル `/server/localdev-config.json` には、オリジナルの `git clone` コードベースが必要とする資格情報がすべては含まれないことになります。
+「継続的デリバリーの構成 (Configure continous delivery)」フィーチャーを使用してから `ibmcloud dev get-credentials` を使用するまでの間に、いずれかのサービスが削除された場合、ダウンロードされたファイル `/server/localdev-config.json` には、オリジナルの `git clone` コードベースが必要とする資格情報がすべては含まれないことになります。
 {: tip}
 
 アプリケーションを Docker コンテナーで実行している場合は、`/server/localdev-config.json` ファイルを完全に削除し、Docker コマンド・ラインで環境変数を渡すことを選択できます。
@@ -89,7 +93,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 `mappings.json` ファイルの「cloudant_apikey」セクションの続きで、`file...` 行の前の `env:cloudant_apikey` に注目してください。 これは、`cloudant_apikey` という名前の環境変数がファイルの内容よりも優先されることを意味します。 したがって、作成した Docker イメージ内にファイルが存在する場合でも (これは必須ではありません)、Docker コマンド・ラインで値を渡すことにより、値をオーバーライドできます。
 
 例えば次のようにします。
-```console
+```
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```
 {: codeblock}

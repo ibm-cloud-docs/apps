@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # コマンド・ライン・インターフェースを使用したアプリのデプロイ
 
@@ -55,7 +56,8 @@ lastupdated: "2018-05-22"
 
     該当する場合にはビルド手順などの詳細が含まれている `README.md` ファイルにも注意を払ってください。
 
-    注: アプリケーションが Liberty アプリである場合、再デプロイする前にビルドする必要があります。
+    アプリケーションが Liberty アプリである場合、再デプロイする前にビルドする必要があります。
+    {: note}
 
   4. {{site.data.keyword.Bluemix_notm}} に接続し、ログインします。
 
@@ -67,7 +69,8 @@ lastupdated: "2018-05-22"
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **注**: `username`、`org_name`、および `space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
+  `username`、`org_name`、および `space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
+  {: note}
 
   5. `ibmcloud app push` コマンドを使用して、<var class="keyword varname">your_new_directory</var> からアプリを {{site.data.keyword.Bluemix_notm}} に再デプロイします。 `ibmcloud app push` コマンドについて詳しくは、『[アプリケーションのアップロード](/docs/starters/upload_app.html)』を参照してください。
 
