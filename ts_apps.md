@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-03"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -122,8 +122,8 @@ This error often occurs the first time that you try to create an app or a servic
 Ensure that you created a space in your current organization. To create a space, use one of the following methods:
 {: tsResolve}
 
-* From the menu bar, click **Manage > Account**, and select **Cloud Foundry orgs**. Select the organization that you want to create the space in, and click **Create a Space**.
-* In the Cloud Foundry command line interface, type `cf create-space <space_name> -o <organization_name>`.
+* From the menu bar, click **Manage > Account**, and select **Cloud Foundry orgs**. Click the name of the organization that you want to create the space in, and click **Add a space**.
+* In the Cloud Foundry command-line interface, type `cf create-space <space_name> -o <organization_name>`.
 
 Try again. If this message occurs again, go to the [{{site.data.keyword.cloud_notm}} status](http://ibm.biz/bluemixstatus){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page to check whether a service or component has an issue.
 
