@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-04"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -31,7 +31,7 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 ## Before you begin
 {: #prereqs-byoc-kube}
 
-* Create an app. See [Creating apps from your own code repository](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) for more information.
+* [Create an app from your own code repository](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
 * From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers?topic=containers-getting-started).
 * To confirm that your app runs in Docker, run the following commands:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
@@ -45,7 +45,7 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 ## Adding services to your app (optional)
 {: #resources-byoc-kube}
 
-Add a service to your application, and {{site.data.keyword.cloud_notm}} creates the service instance for you. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information. {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
+After you create your app, you can add a service to your app from the **App details** page. {{site.data.keyword.cloud_notm}} creates the service instance for you. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile applications generates configuration information. {{site.data.keyword.cloud_notm}} provides the resources of a service to your application by using a service instance. A service instance can be shared across web applications.
 
 This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-resource).
 
@@ -54,52 +54,38 @@ After you add a service to your app, you must copy the credentials for the servi
 ## Preparing your app for deployment
 {: #deploy-byoc-kube}
 
-In this step, you attach a DevOps toolchain to the application and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
+In this step, you connect a DevOps toolchain to the application and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.containershort_notm}}.
 
 The DevOps toolchain is flexible enough to allow managed execution of arbitrary stages of shell script execution. In other words, you can do nearly anything with a DevOps toolchain. The scope of this section focuses on deployment of your app on a Kubernetes cluster, while keeping in mind "future-proofing" for scaled DevOps and cloud best practices.
 
 Establishing a link between your app, toolchain, and repo is a step toward organizing your product assets. It also helps aggregate a view of your source repository with your DevOps workflow, your running app instances, and dependent services across all of your deployment targets.
 
-On the Connect Toolchain page, you have a few options:
+### Connecting an existing DevOps toolchain
 
-* Connect your app to an existing toolchain.
-* Connect your app to an existing toolchain that doesn't contain your repo. Then, connect the toolchain to your repo later.
-* Connect your app to a new toolchain.
+If you already have a DevOps toolchain, complete these steps:
 
-### Connect your app to an existing toolchain
-{: #connect_toolchain_repo}
+1. On the **App details** page, click **Configure continuous delivery**. The **Deploy my app** page is displayed.
+2. Select the toolchain that you want to connect to your app, and click **Enable deployment**. The **App details** page is displayed, indicating that continuous delivery is configured.
 
-If you have one or more DevOps toolchains that are already connected to the Git repo that you specified during your app creation, those toolchains are displayed in the **With repo** table. The toolchain must be configured to retrieve the source from the same repository that you defined in the app. You most likely want to select one of those toolchains to connect to your app.
+If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+{: tip}
 
-### Connect your app to an existing toolchain that doesn't contain your repo
-{: #connect_toolchain_notrepo}
-
-If you have one or more DevOps toolchains that are associated with your account, but are not connected to the Git repo that you specified during your app creation, those toolchains are displayed in the **Without your repo** table. You can select one of those toolchains and connect it to your app, but you must also manually add your repo to that toolchain.
-
-For more information about adding your repo to your toolchain, see:
-
- * [Configuring Git repos and issue tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
- * [Configuring GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
- * [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
-
-
-### Connect your app to a new toolchain
-{: #toolchain-byoc-kube-create}
+### Creating a DevOps toolchain
 
 If you want to fully control the creation of the DevOps toolchain with no changes in your code repository, create the toolchain from scratch. You also create all of the integrations to build your app and deploy it to Kubernetes cluster. 
 
-1. On the Create a Toolchain page, click the **Build your own toolchain** template.
-2. Enter a name for your toolchain, select a region and resource group (default), and click **Create**.
-3. After you create the toolchain, use the breadcrumbs in your browser to return to the **App details** page, which indicates that continuous delivery is configured.
+1. On the **App details** page, click **Create DevOps toolchain.** The **Create a toolchain** page is displayed.
+2. Select the **Build your own toolchain** template.
+3. On the **Build your own toolchain** page, enter a name for your toolchain, select a region and resource group (default), and click **Create**.
+4. Use the breadcrumbs in the browser window to return to the **App details** page, which indicates that continuous delivery is configured.
+5. On the **App details** page, click **View toolchain** to configure your new DevOps toolchain.
 
-If you don't want to create a DevOps toolchain from scratch, you can cloud-enable your existing code by using the [`ibmcloud dev enable` command](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). The command generates a DevOps toolchain template that you check into your repository. Then, you use that template as the instruction set for what the DevOps toolchain creates. For more information, see the [CLI documentation](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
-
-## Adding a GitHub integration
+### Adding a GitHub integration
 {: #github-byoc-kube}
 
-Configure the DevOps toolchain with an integration for your GitHub repo for the toolchain to set a webhook in your repo so that pull requests and code pushes in that repo send a POST to the toolchain. 
+Configure the DevOps toolchain with an integration for your GitHub repo for the toolchain. This sets a webhook in your repo so that pull requests and code pushes in that repo send a POST to the toolchain.
 
-1. In your DevOps toolchain template, click **Add a Tool**.
+1. In your empty DevOps toolchain template, click **Add a Tool**.
 2. Select **GitHub** if your repository is on public GitHub or on Enterprise GitHub.
 3. Select or enter the GitHub server URL.
 4. An `Unauthorized on GitHub` message might be displayed. If so, click **Authorize**. Then, on the Authorize IBM Cloud Toolchains page, click **Authorize IBM-Cloud**, and enter your GitHub password.
@@ -110,14 +96,14 @@ Configure the DevOps toolchain with an integration for your GitHub repo for the 
 
 You can view the new webhook from your repo settings.
 
-## Adding a delivery pipeline
+### Adding a delivery pipeline
 {: #pipeline-byoc-kube}
 
 1. Click **Add a Tool**.
 2. Select **Delivery Pipeline**.
 3. Enter `Continuous Integration` for the pipeline name, and click **Create Integration**.
 
-## Configuring your pipeline stages
+### Configuring your pipeline stages
 {: #pipelineconfig-byoc-kube}
 
 Configure the pipeline stages to direct your input (the GitHub repo contents) to the correct destination. Because this tutorial assumes that you have a GitHub repo that produces a working Docker image and is targeting an IBM Containers Kubernetes cluster, you create pipeline stages with inputs, shell scripts, and outputs that achieve this goal.
@@ -168,14 +154,18 @@ Configure the pipeline stages to direct your input (the GitHub repo contents) to
 ## Verifying that your app is running
 {: #verify-byoc-kube}
 
-After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+The Delivery Pipeline or command line points you to the URL for your app.
 
 1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
 2. Click **View logs and history**.
-3. In the log file, find the application URL:
-
-    At the end of the log file, search for `View the application health at: http://<ipaddress>:<port>/health`.
-
+3. In the log file, find the application URL. At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to open the page of a manually deployed app in your default browser.
+
+## Related information
+
+ * [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+ * [Configuring Git repos and issue tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configuring GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
