@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-04"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -35,7 +35,7 @@ You can create an application from a Microservice Basic Starter. Use these start
 
 Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
-1. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a Starter Kit for your language. For example, for a Node.js application, go to **Express.js Microservice** and click **Select Starter Kit**.
+1. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a Starter Kit for your language. For example, for a Node.js application, go to **Express.js Microservice** and click **Select Starter Kit**.
 2. Enter your app name. For this tutorial, use `MicroserviceProject`.
 3. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`.
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
@@ -43,7 +43,7 @@ Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console
 6. Select your pricing plan. There is a free option that you can use for this tutorial.
 7. Click **Create**.
 
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Step 3. Add services (Optional)
