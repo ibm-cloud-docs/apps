@@ -73,9 +73,9 @@ Creating apps
     {: .topicgroup}
     IBM Cloud Programming Guides
         [Go](/go/go-getting-started)
-        [Spring](/java/java-overview)
+        [Java](/java/java-overview)
         [Swift](/swift/swift-getting_started_swift)
-        [Node](/node/nodejs-create_project)
+        [Node](/node/nodejs-node-getting-started)
 
     at_events_devx.md
     {: .navgroup-end}
