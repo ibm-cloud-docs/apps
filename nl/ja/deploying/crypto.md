@@ -1,12 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-03-18"
-
-keywords: apps, key protection, ACSP client, data protection
-
-subcollection: creating-apps
+  years: 2018
+lastupdated: "2018-07-23"
 
 ---
 {:new_window: target="_blank"}
@@ -21,14 +17,14 @@ subcollection: creating-apps
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} は、IBM Z の暗号化をクラウドに導入します。 {{site.data.keyword.cloud_notm}} は、銀行サービスや金融サービスで使用されているものと同じ暗号テクノロジーを提供します。
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} は、鍵とデータを、保存されているか、使用中や転送中であるかにかかわらず、業界の最高レベルのセキュリティーである FIPS 140-2 レベル 4 で保護します。{{site.data.keyword.hscrypto}} は、[{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto?topic=hs-crypto-get-started) サービスの鍵ストアであり、鍵を IBM Z の非常にセキュアな環境で保護します。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} は、鍵とデータを、保存されているか、使用中や転送中であるかにかかわらず、業界の最高レベルのセキュリティーである FIPS 140-2 レベル 4 で保護します。{{site.data.keyword.hscrypto}} は、[{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) サービスの鍵ストアであり、鍵を IBM Z の非常にセキュアな環境で保護します。
 
 ## ACSP クライアントのインストールおよび構成
-{: #crypto_config}
+{: ##crypto_config}
 
-Advanced Cryptography Service Provider (ACSP) クライアントをインストールする前に、[カタログ ](https://{DomainName}/catalog/services/hyper-protect-crypto-services){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") から {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} のインスタンスを作成してプロビジョンしてください。 次に、ご使用の環境に ACSP クライアントをインストールして構成する必要があります。
+Advanced Cryptography Service Provider (ACSP) クライアントをインストールする前に、[カタログ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/catalog/services/hyper-protect-crypto-services){:new_window} から {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} のインスタンスを作成してプロビジョンしてください。 次に、ご使用の環境に ACSP クライアントをインストールして構成する必要があります。
 
-1. [GitHub リポジトリー ](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") からインストール・パッケージをダウンロードします。 **packages** フォルダーで、ご使用のオペレーティング・システムと CPU アーキテクチャーに適したインストール・パッケージ・ファイルを選択します。 例えば、x86 上の Ubuntu の場合、`acsp-pkcs11-client_1.5-3.5_amd64.deb` を選択します。
+1. [GitHub リポジトリー ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window} からインストール・パッケージをダウンロードします。 **packages** フォルダーで、ご使用のオペレーティング・システムと CPU アーキテクチャーに適したインストール・パッケージ・ファイルを選択します。 例えば、x86 上の Ubuntu の場合、`acsp-pkcs11-client_1.5-3.5_amd64.deb` を選択します。
 2. `dpkg` コマンド (例えば、`dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`) を使用して、ACSP クライアント・ライブラリーをインストールするためのパッケージをインストールします。
 3. {{site.data.keyword.cloud_notm}} の {{site.data.keyword.hscrypto}} サービス・インスタンスで、ナビゲーターから**「管理」**を選択します。
 4. 「管理」ウィンドウで、**「構成のダウンロード (Download Config)」**をクリックして `acsp_client_credentials.uue` ファイルをダウンロードします。
@@ -67,6 +63,6 @@ Advanced Cryptography Service Provider (ACSP) クライアントをインスト�
 これで、ACSP クライアントは作動可能になり、{{site.data.keyword.hscrypto}} を使用する準備ができました。
 
 ## 次のステップ
-{: #next-steps notoc}
+{: ##next-steps}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} を簡単に導入するには、{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} を開始します。 {{site.data.keyword.hsplatform}} について詳しくは、[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} の概説](/docs/services/hypersecure-platform?topic=services/hypersecure-platform-getting-started-with-ibm-cloud-hyper-protect-developer-starter-kits)を参照してください。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} を簡単に導入するには、{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} を開始します。 {{site.data.keyword.hsplatform}} について詳しくは、『[{{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}} の概説 (Getting started with IBM Cloud Hyper Protect Developer Starter Kits)](/docs/services/hypersecure-platform/index.html)』を参照してください。

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# 向应用程序添加服务
-{: #add_service}
+# 向应用程序添加资源
+{: #add-resource}
 
 使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 创建应用程序时，可以在“应用程序详细信息”页面中添加资源。但是，您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.cloud_notm}}“目录”供应资源。
 {: shortdesc}
 
-您可以请求一个资源实例，然后独立于应用程序使用该实例，也可以在“应用程序详细信息”页面中将资源实例添加到应用程序中。您可以直接在 {{site.data.keyword.cloud_notm}}“目录”中供应特定类型的资源（服务）。
+您可以请求一个资源实例，然后独立于应用程序使用该实例，也可以在“应用程序详细信息”页面中将资源实例添加到应用程序中。您可以直接在 {{site.data.keyword.cloud_notm}}“目录”中供应特定类型的资源。
 
-## 发现服务
-{: #discover_services}
+## 发现资源
+{: #discover-resources}
 
 通过下列方式，您可以在 {{site.data.keyword.cloud_notm}} 中查看所有可用服务：
 
@@ -35,7 +35,7 @@ lastupdated: "2018-11-29"
 您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照与编码外部应用程序或第三方工具以使用 {{site.data.keyword.cloud_notm}} 服务相同的方式来手动编码应用程序以使用这些服务。有关更多信息，请参阅[允许外部应用程序和第三方工具使用 {{site.data.keyword.cloud_notm}} 服务](/docs/resources/connect_external_app#externalapp)。
 
 ## 请求新的服务实例
-{: #req_instance}
+{: #request-instance}
 
 要请求新的服务实例，必须使用 {{site.data.keyword.cloud_notm}} 用户界面或 {{site.data.keyword.cloud_notm}} 命令行界面。
 
@@ -65,7 +65,7 @@ ibmcloud dev edit
 只能将服务实例绑定到位于同一空间或组织中的应用程序实例。不过，也可以按照与外部应用程序相同的方式使用其他空间或组织中的服务实例。不要创建绑定，请改用凭证来直接配置应用程序实例。有关外部应用程序如何使用 {{site.data.keyword.cloud_notm}} 服务的更多信息，请参阅[允许外部应用程序使用 {{site.data.keyword.cloud_notm}} 服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/resources/connect_external_app#externalapp){: new_window}。
 
 ## 配置应用程序
-{: #config}
+{: #configure-app}
 
 将服务实例绑定到应用程序后，必须将应用程序配置为与服务交互。
 
@@ -150,4 +150,4 @@ ibmcloud service user-provided-create testups2 -l syslog://example2.com
 	OK
 	```
 
-现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](#config){: new_window}。
+现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互](/docs/apps/reqnsi.html#configure-app)。

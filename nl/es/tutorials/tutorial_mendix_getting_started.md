@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Creación de apps con Mendix
-{: #getting-started}
+{: #create-mendix}
 
 Mendix es un entorno de desarrollo con poco código y un conjunto de herramientas que le ayuda a entregar aplicaciones de varios dispositivos que se ejecutan en {{site.data.keyword.cloud}} con mayor rapidez y con menos recursos de desarrollo. Si selecciona un kit de inicio Mendix con poco código, se le guía para configurar su cuenta en Mendix Platform, iniciar el proyecto y seleccionar el entorno de despliegue en Cloud Foundry o en el clúster de Kubernetes.
 {: shortdesc}
 
 ## Selección de un kit de inicio
-{: #select-a-starter-kit}
+{: #starterkit-mendix}
 
 1. En el [panel de control de {{site.data.keyword.cloud_notm}} App Service ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/dashboard){: new_window}, pulse **Iniciación**.
 2. Seleccione un kit de inicio de Mendix con poco código de una de las siguientes categorías:
@@ -28,20 +28,9 @@ Mendix es un entorno de desarrollo con poco código y un conjunto de herramienta
   * [Watson Web o Mobile App ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [App Web ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. Pulse **Crear app**.
-4. Asigne un nombre a la app.
+4. En la página **Detalles de la app**, asigne un nombre a la app y, si lo desea, especifique etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources/tagging_resources.html#tag).
 5. Pulse **Crear**.
 
-<!-- 
-####### Promote CLOUD.IBM.COM links to prod when approved.
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
-2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
-3. Click **Create app**.
-4. Name your app.
-5. Click **Create**.
--->
 
 ## Autorización a IBM para crear su proyecto en Mendix y para enlazar cuentas
 {: #link-mendix-account}
@@ -58,27 +47,27 @@ Una vez que se haya completado la autorización, el navegador vuelve a la app Me
 ## Selección de una opción de despliegue para la app Mendix
 {: #select-deployment}
 
-1. En la página **Elegir un entorno de despliegue**, seleccione Cloud Foundry o uno de los clústeres de Kubernetes que se ejecutan en {{site.data.keyword.cloud_notm}}.
+1. En la página **Elegir un entorno de despliegue**, seleccione Cloud Foundry o uno de los clústeres de Kubernetes que se ejecutan en {{site.data.keyword.cloud_notm}}. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de Cloud Foundry **[nube pública](/docs/cloud-foundry-public/about-cf.html#about-cf)** o **[entorno de empresa](/docs/cloud-foundry-public/cfee.html#cfee)**, que puede utilizar para crear y gestionar entornos aislados para alojar aplicaciones de Cloud Foundry exclusivamente para su empresa.
 2. Opcional. Si no tiene un clúster de Kubernetes, puede crear uno ahora.
 3. En la página **Configurar cadena de herramientas**, seleccione su región y grupo de recursos y, a continuación, pulse **Crear**.
 
 Se crea una cadena de herramientas DevOps. La cadena de herramientas integra el proyecto Mendix dentro de la plataforma Mendix en el entorno de {{site.data.keyword.cloud_notm}}. Se despliega una aplicación predeterminada en el despliegue de destino de modo que pueda verificar que la aplicación se ha desplegado correctamente al finalizar la cadena de herramientas DevOps.
 
-Los despliegues de Mendix Cloud Foundry requieren el servicio de base de datos PostGRES, que no tiene un nivel Lite.   Si desea evaluar los kits de inicio de Mendix utilizando una cuenta Lite, puede elegir como destino un clúster de Kubernetes de prueba.
+Los despliegues de Mendix Cloud Foundry requieren el servicio de base de datos PostGRES, que no tiene un nivel Lite. Si desea evaluar los kits de inicio de Mendix utilizando una cuenta Lite, puede elegir como destino un clúster de Kubernetes de prueba.
 {: tip}
 
-Si ha seleccionado un clúster de Kubernetes para el despliegue, consulte la [guía de aprendizaje de Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) para aprender a configurar el clúster para su uso en producción.
+Si ha seleccionado un clúster de Kubernetes para el despliegue, consulte la [guía de aprendizaje de Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube) para aprender a configurar el clúster para su uso en producción.
 
 
 ## Continuación con el ciclo de vida de desarrollo y de despliegue de Mendix
-{: #development-lifecycle}
+{: #dev-lifecycle-mendix}
 
 Mendix es un entorno de creación con poco código. El ciclo de vida de desarrollo requiere que abra el proyecto en la aplicación de escritorio Mendix Modeler.
 
 1. Desde la aplicación {{site.data.keyword.cloud_notm}}, pulse **Editar en Mendix**.
 2. En el portal web de Mendix, pulse **Editar en Desktop Modeler**.
   La aplicación Mendix se abre en el modelador de escritorio.
-3. Edite el app Mendix y guarde los cambios.
+3. Edite la app Mendix y guarde los cambios.
 4. Utilice el menú **Ejecutar** de la aplicación Mendix Desktop Modeler y seleccione la opción **Ejecutar**.
   El paquete de despliegue se crea y se carga en Mendix. Una vez que se haya creado el paquete de despliegue, puede desplegar la aplicación en {{site.data.keyword.cloud_notm}}.
 5. Para desplegar la aplicación Mendix, vuelva a la página **Detalles de app** en {{site.data.keyword.cloud_notm}} y pulse **Desplegar aplicación**.
@@ -88,6 +77,6 @@ Todas las aplicaciones Mendix se despliegan en {{site.data.keyword.cloud_notm}} 
 {: tip}
 
 ## Pasos siguientes 
-{: #next steps}
+{: #next-steps-mendix}
 
-Para desplegar la app en {{site.data.keyword.containerlong_notm}}, configure la app para el despliegue en producción. Para obtener más información, consulte [Guía de aprendizaje de Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html). 
+Para desplegar la app en {{site.data.keyword.containerlong_notm}}, configure la app para el despliegue en producción. Para obtener más información, consulte la [guía de aprendizaje de Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube). 

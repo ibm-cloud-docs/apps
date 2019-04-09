@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -16,24 +16,28 @@ lastupdated: "2018-12-17"
 {:important: .important}
 
 # Distribuzione delle applicazioni
-{: #deploy}
+{: #deploying-apps}
 
 Puoi distribuire le tue applicazioni con una toolchain o con la CLI (command-line interface). Una toolchain è un insieme di integrazioni dello strumento. La CLI è un modo semplice per distribuire le tue applicazioni e istanze del servizio.
 {: shortdesc}
 
 ## Distribuzione di applicazioni mediante le toolchain
-{: #toolchains_getting_started}
+{: #toolchain-deploy-apps}
 
-Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Con una toolchain correttamente configurata, distribuire la tua applicazione è semplice.  Un ciclo di creazione-distribuzione viene avviato automaticamente con tutte le unioni al ramo master nel tuo repository.
+Le toolchain aperte sono disponibili negli ambienti pubblico e dedicato in {{site.data.keyword.Bluemix}}. Con una toolchain correttamente configurata, distribuire la tua applicazione è semplice. Un ciclo di creazione-distribuzione viene avviato automaticamente con tutte le unioni al ramo master nel tuo repository.
 
-Puoi creare una toolchain in due modi diversi: utilizzando un template o creandola da un'applicazione. Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Puoi creare una toolchain in questi modi:
+* Utilizza un template per creare una toolchain.
+* Crea una toolchain da un'applicazione.
+
+Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Distribuzione di applicazioni mediante la CLI
-{: #cli}
+{: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} fornisce una solida CLI e i plug-in e le estensioni degli strumenti per sviluppatori che si integrano con la CLI.
 
-Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica IBM Cloud Developer Tools" /></a>

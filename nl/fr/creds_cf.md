@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Ajout de données d'identification à votre environnement Cloud Foundry
-{: #add_credentials}
+{: #add-credentials-cf}
 
-Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Cloud Foundry.
+Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Cloud Foundry. Ces instructions s'appliquent à [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) et à [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Votre code + Cloud Foundry
-{: #byoc_cf}
+{: #credentials-byoc-cf}
 
 Dans l'espace Cloud Foundry où se trouve votre application, vous pouvez définir quel élément Cloud Foundry appelle un service fourni par un utilisateur. Un service fourni par l'utilisateur est un élément JSON sous forme de chaîne stocké comme s'il s'agissait d'un service reliable dans l'espace Cloud Foundry. Une fois que vous vous connectez à l'espace et à l'organisation Cloud Foundry, procédez comme suit pour créer et lier un service.
 
@@ -31,7 +31,7 @@ Dans l'espace Cloud Foundry où se trouve votre application, vous pouvez défini
   {: codeblock}
 
 2. Configurez votre application Cloud Foundry afin de l'associer au service fourni par l'utilisateur en ajoutant la section services :
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -64,17 +64,17 @@ Dans l'espace Cloud Foundry où se trouve votre application, vous pouvez défini
 
 
 ## Application de kit de démarrage + Cloud Foundry
-{: #sk_cf}
+{: #credentials-starterkit-cf}
 
 ### Préparation de l'espace Cloud Foundry
 
 Utilisez la fonction **Déployer dans le cloud** pour déployer votre application dans votre espace Cloud Foundry.
 
-Si l'instance de ressource reposant sur Cloud Foundry se trouve dans le même espace Cloud Foundry que l'application Cloud Foundry déployée, voir la [section suivante](#cf_resource_same).
+Si l'instance de ressource reposant sur Cloud Foundry se trouve dans le même espace Cloud Foundry que l'application Cloud Foundry déployée, voir la [section suivante](/docs/apps/creds_cf.html#cf_resource_same).
 
-Si l'instance de ressource reposant sur Cloud Foundry se trouve dans un autre espace que l'espace cible pour l'application Cloud Foundry, voir la [section suivante](#cf_resource_different).
+Si l'instance de ressource reposant sur Cloud Foundry se trouve dans un autre espace que l'espace cible pour l'application Cloud Foundry, voir la [section suivante](/docs/apps/creds_cf.html#cf_resource_different).
 
-Si la ressource associée à votre application repose sur le contrôleur de ressources, voir [Contrôleur de ressources](#cf_resource_controller).
+Si la ressource associée à votre application repose sur le contrôleur de ressources, voir [Contrôleur de ressources](/docs/apps/creds_cf.html#cf_resource_controller).
 
 #### La ressource reposant sur Cloud Foundry se trouve dans le même espace que l'application déployée
 {: #cf_resource_same}
@@ -87,9 +87,9 @@ cf services
 ```
 {: codeblock}
 
-Sortie :
+Exemple de sortie :
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -112,7 +112,7 @@ cf services
 
 Exemple de sortie :
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided
@@ -124,8 +124,9 @@ Cloud Foundry ne permet pas de voir la valeur des données d'identification de s
 Le code généré à partir d'un kit de démarrage est automatiquement chargé avec les liaisons correctes afin d'extraire et d'utiliser les valeurs de l'environnement défini pour ce code dans l'espace Cloud Foundry où l'application s'exécute.
 
 ### Le kit de démarrage a généré le code
+{: #starterkit-generated-code-cf}
 
-Avant de continuer, voir [Application de kit de démarrage + Kubernetes](/docs/apps/creds_kube.html#sk_kube_generated_code). Appliquez ensuite la modification suivante :
+Avant de continuer, voir [Application de kit de démarrage + Kubernetes](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). Appliquez ensuite la modification suivante :
 
 * Bien que le code fournisse le fichier `deployment.yml`, il ne s'applique pas aux applications déployées dans Cloud Foundry. En revanche, le fichier `manifest.yml` _est_ applicable et son contenu s'affiche afin d'être _lié_ aux deux services créés dans l'espace Cloud Foundry :
   ```yaml

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-28"
+  years: 2018, 2019
+lastupdated: "2019-02-06"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-28"
 {:tip: .tip}
 
 # Création d'applications à l'aide de Mendix
-{: #getting-started}
+{: #create-mendix}
 
 Mendix est un environnement et un ensemble d'outils de développement qui utilise peu de code et vous permet de distribuer plus rapidement des applications multi-dispositif, avec moins de ressources de développement, qui s'exécutent sur {{site.data.keyword.cloud}}. Si vous sélectionnez un kit de démarrage Mendix qui utilise peut de code, celui-ci vous aide à configurer votre compte sur la plateforme Mendix, à démarrer votre projet et à sélectionner votre environnement de déploiement dans Cloud Foundry ou sur votre cluster Kubernetes.
 {: shortdesc}
 
 ## Sélection d'un kit de démarrage
-{: #select-a-starter-kit}
+{: #starterkit-mendix}
 
 1. Sur le tableau de bord [{{site.data.keyword.cloud_notm}} App Service ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/dashboard){: new_window}, cliquez sur **Initiation**.
 2. Sélectionnez un kit de démarrage Mendix qui utilise peu de code à partir de l'une des catégories suivantes :
@@ -28,20 +28,9 @@ Mendix est un environnement et un ensemble d'outils de développement qui utilis
   * [Application Web Watson ou mobile ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [Application Web ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. Cliquez sur **Créer une application**.
-4. Donnez un nom à votre application.
+4. Sur la page **Détails de l'application**, nommez votre application et créez éventuellement des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources/tagging_resources.html#tag).
 5. Cliquez sur **Créer**.
 
-<!-- 
-####### Promote CLOUD.IBM.COM links to prod when approved.
-1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
-2. Select a Mendix low-code starter kit from one of the following categories:
-  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
-  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
-  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
-3. Click **Create app**.
-4. Name your app.
-5. Click **Create**.
--->
 
 ## Autoriser IBM à créer votre projet sur Mendix et des comptes liés
 {: #link-mendix-account}
@@ -58,20 +47,20 @@ Une fois l'autorisation effectuée, votre navigateur revient sur l'application M
 ## Sélection d'une option de déploiement pour votre application Mendix
 {: #select-deployment}
 
-1. Sur la page **Choisir un environnement de déploiement**, sélectionnez Cloud Foundry ou l'un de vos clusters Kubernetes qui s'exécutent sur {{site.data.keyword.cloud_notm}}.
+1. Sur la page **Choisissez un environnement de déploiement**, sélectionnez Cloud Foundry ou un de vos clusters Kubernetes qui s'exécutent sur {{site.data.keyword.cloud_notm}}. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur Cloud Foundry de type **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** ou **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise.
 2. Facultatif. Si vous ne possédez pas de cluster Kubernetes, vous pouvez en créer un maintenant.
 3. Sur la page **Configurer la chaîne d'outils**, sélectionnez votre région et votre groupe de ressources, puis cliquez sur **Créer**.
 
 Une chaîne d'outils DevOps est créée. La chaîne d'outils intègre votre projet Mendix au sein de la plateforme Mendix dans votre environnement {{site.data.keyword.cloud_notm}}. Une application par défaut est déployée sur votre déploiement cible afin de vous permettre de vérifier que l'application a bien été déployée lors de l'achèvement de la chaîne d'outils DevOps.
 
-Les déploiements Mendix Cloud Foundry requièrent le service de base de données PostGRES, qui ne dispose pas d'un niveau simplifié.   Si vous souhaitez évaluer les kits de démarrage Mendix en utilisant un compte simplifié, vous pouvez cibler un cluster kubernetes d'essai.
+Les déploiements Mendix Cloud Foundry requièrent le service de base de données PostGRES, qui ne dispose pas d'un niveau simplifié. Si vous souhaitez évaluer les kits de démarrage Mendix en utilisant un compte simplifié, vous pouvez cibler un cluster kubernetes d'essai.
 {: tip}
 
-Si vous avez sélectionné un cluster kubernetes pour déploiement, consultez le [tutoriel Mendix kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html) pour savoir comment configurer votre cluster pour une utilisation en production.
+Si vous avez sélectionné un cluster kubernetes pour déploiement, consultez le [tutoriel Mendix kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube) pour savoir comment configurer votre cluster pour une utilisation en production.
 
 
 ## Poursuite du cycle de vie de développement et de déploiement de Mendix
-{: #development-lifecycle}
+{: #dev-lifecycle-mendix}
 
 Mendix est un environnement de création qui utilise peu de code. Dans le cadre du cycle de vie de développement, vous devez ouvrir votre projet dans l'application pour ordinateur de bureau Mendix Modeler.
 
@@ -88,6 +77,6 @@ Toutes les applications Mendix seront déployées sur {{site.data.keyword.cloud_
 {: tip}
 
 ## Etapes suivantes 
-{: #next steps}
+{: #next-steps-mendix}
 
-Pour déployer votre application sur {{site.data.keyword.containerlong_notm}}, configurez-la pour déploiement en production. Pour plus d'informations, voir [Tutoriel Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html). 
+Pour déployer votre application sur {{site.data.keyword.containerlong_notm}}, configurez-la pour déploiement en production. Pour plus d'informations, voir le [tutoriel Mendix Kubernetes](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube). 

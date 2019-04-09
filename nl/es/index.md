@@ -1,71 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-08-21"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
+{:pre: .pre}
 {:screen: .screen}
+{:tip: .tip}
 
 # Guía de aprendizaje de iniciación
-{: #create}
+{: #tutorial-getting-started}
 
-En {{site.data.keyword.Bluemix}}, puede crear aplicaciones web y móviles a nivel de empresa y aprovechar las extensiones de nube alojadas por {{site.data.keyword.Bluemix_notm}}. Puede utilizar la consola de {{site.data.keyword.Bluemix}} y las herramientas de línea de mandatos para crear, ejecutar y desplegar las apps. Puede empezar de dos formas: creando una con un kit de inicio que gestiona el proceso en su nombre, o si conoce exactamente lo que necesita, compilando su app con los recursos que necesite.
-{:shortdesc}
-
-Utilice un kit de inicio para empezar rápidamente su app y prepárela para el futuro desarrollo. Seleccione un kit de inicio y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente. También puede descargar el código para una inspección inmediata.
-
-Los kits de inicio están disponibles para muchas categoría, entre otras:
-
-* [Watson ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
-* [Apple ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
-* [Móvil ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/mobile/dashboard){:new_window}
-* [App Web ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/appservice/dashboard){:new_window}
-* [Seguridad ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/security/dashboard){:new_window}
-<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finanzas ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/developer/finance/dashboard){:new_window}
+Puede crear aplicaciones web y móviles listas para la empresa en {{site.data.keyword.cloud}} y aprovechar las extensiones de nube contenidas en {{site.data.keyword.cloud_notm}}. Dispone de varias opciones para comenzar a trabajar. Puede crear una app con un kit de inicio que gestione el proceso en su nombre, o, si sabe exactamente lo que necesita, puede comenzar desde cero y crear su app con los recursos que necesite, o bien puede utilizar el repositorio existente y traer su propio código.
+{: shortdesc}
 
 ## Antes de empezar
+{: #prereqs-getting-started}
 
-[Regístrese ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net){: new_window} para una cuenta de {{site.data.keyword.cloud_notm}}. Especifique su correo electrónico, nombre, empresa, región, y número de teléfono.
+Puede crear su app mediante la consola de {{site.data.keyword.cloud_notm}} o mediante la interfaz de línea de mandatos (CLI). Si desea utilizar la CLI, consulte [Iniciación con la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) para ver detalles sobre la instalación.
 
-No es necesaria una tarjeta de crédito para registrarse y obtener una cuenta gratuita. Sin embargo, si especifica una tarjeta de crédito, tendrá acceso a más recursos y podrá acceder a todo lo que {{site.data.keyword.cloud_notm}} ofrece.
+## Paso 1. Crear su app
+{: #create-getting-started}
 
-## Paso 1. Crear una app
-{: #project}
-
-1. Pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) > **Apps web**.
-
-2. Pulse **Iniciación** en la sección **Empezar desde web**.
-
-3. Seleccione el kit de inicio que desee, lea los detalles y pulse **Crear**.
-
-   Para ver lo que se incluye en el kit de inicio, expanda el mosaico en el panel de control de Kits de inicio de App Service.
-   {: tip}
-
-4. Proporcione un nombre para la app, seleccione el idioma y pulse **Crear**.
-
-   Acaba de crear una app.
-
-   Para inspeccionar el código, pulse **Descargar código** en la página de detalles de la app. Consulte el archivo `README.md` del archivo comprimido descargado para averiguar si es necesario realizar algo más para ejecutar su app de inicio.
-   {: tip}
+Para crear una app, seleccione uno de los siguientes puntos de partida:
+* [Kit de inicio](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit): cree una app a partir de una selección de kits de inicio de servicio de app que gestionan el proceso automáticamente.
+* [Personalizada](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch): si sabe lo que quiere, cree una app personalizada desde cero con los recursos que necesite utilizando un kit de inicio en blanco.
+* [Traiga su propio código](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc): traiga su propio código estableciendo un enlace con su propio repositorio de contenido existente. La app y la imagen de Docker deben estar situadas en el mismo repositorio.
+* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli): cree y despliegue una app personalizada o de kit de inicio utilizando la CLI y las herramientas del desarrollador.
+* [Patrones de código](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern): utilice un patrón de código de IBM Developer como base para crear su app.
+* [Catálogo de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/catalog){: new_window}: puede examinar o buscar en el catálogo las apps y los servicios que puede crear y comenzar a utilizar hoy mismo.
 
 ## Paso 2. Añadir recursos
-{: #addResources}
+{: #resources-getting-started}
 
-La mayoría de los kits de inicio indican a {{site.data.keyword.cloud_notm}} iniciar de forma automática el suministro de recursos en su nombre. También es posible asociar más recursos a su app pulsando **Añadir recurso** en la página de detalles de la app.
+Si utiliza un kit de inicio para crear su app, los recursos se crean automáticamente. Puede asociar más recursos a su app pulsando **Añadir recurso** en la página de detalles de la app de la consola.
 
-Para desarrollar y ejecutar la app de forma local, utilice [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
-{: tip}
+Para añadir recursos mediante la CLI, ejecute el mandato siguiente para añadir un servicio a la app. Puede seleccionar un servicio existente de uno ya habilitado en su cuenta, o añadir un nuevo servicio. 
+```
+ibmcloud dev edit
+```
+{: codeblock}
+
+Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps/reqnsi.html#add-resource).
 
 ## Paso 3. Desplegar la app
-{: #deploy}
+{: #deploy-getting-started}
 
-Pulse **Desplegar en la nube** en la página de detalles de la app, seleccione un método de despliegue, como por ejemplo clúster de Kubernetes o app de Cloud Foundry, y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua. Abra el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos su nueva app.
+Puede desplegar la app utilizando la consola o la línea de mandatos.
 
-Estará ahora preparado para el desarrollo iterativo y la entrega continua.
+### Utilización de la consola
+{: #console-getting-started}
+
+Para desplegar la app mediante la consola, siga los pasos siguientes:
+
+1. En la página **Detalles de la app**, pulse **Desplegar en la nube**.
+2. Seleccione un método de despliegue y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua.
+3. Abra la etapa del conducto de la nueva cadena de herramientas para ver el proceso de compilación y despliegue de forma que pueda visualizar en unos minutos su nueva app.
+
+Para obtener más información, consulte la tabla de contenido para ver los diversos temas sobre despliegue en la sección "Despliegue e integración de apps".
+
+### Utilización de la línea de mandatos
+{: #cli-getting-started}
+
+Para desplegar la app con la línea de mandatos, ejecute el mandato `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) para obtener más información.
+
+Ahora está preparado para el desarrollo iterativo y la entrega continua.

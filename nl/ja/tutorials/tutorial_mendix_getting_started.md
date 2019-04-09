@@ -2,11 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
-
-keywords: apps, Mendix, starter kit, developer tools, Mendix app
-
-subcollection: creating-apps
+lastupdated: "2019-02-06"
 
 ---
 
@@ -20,19 +16,19 @@ subcollection: creating-apps
 # Mendix を使用したアプリの作成
 {: #create-mendix}
 
-Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・アプリケーションを少ない開発リソースで迅速に配信できるよう支援する、ローコード開発環境およびツール・セットです。 Mendix ローコード・スターター・キットを選択することにより、ガイドに従ってMendix プラットフォームでアカウントをセットアップし、プロジェクトを開始し、Cloud Foundry または Kubernetes クラスターのいずれかでデプロイメント・ターゲットを選択することができます。
+Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・アプリケーションを少ない開発リソースで迅速に配信できるよう支援する、ローコード開発環境およびツール・セットです。 Mendix ローコード・スターター・キットを選択することにより、ガイドに従って、Mendix プラットフォームでアカウントをセットアップし、プロジェクトを開始し、Cloud Foundry または Kubernetes クラスターのいずれかでデプロイメント環境を選択することができます。
 {: shortdesc}
 
 ## スターター・キットの選択
 {: #starterkit-mendix}
 
-1. [{{site.data.keyword.cloud_notm}} アプリ・サービスのダッシュボード ](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") で、**「開始」**をクリックします。
+1. [{{site.data.keyword.cloud_notm}} アプリ・サービスのダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/dashboard){: new_window} で、**「開始」**をクリックします。
 2. 以下のいずれかのカテゴリーから、Mendix ローコード・スターター・キットを選択します。
-  * [モバイル](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
-  * [Watson Web アプリまたはモバイル・アプリ ](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
-  * [Web App ](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")
+  * [モバイル ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web アプリまたはモバイル・アプリ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. **「アプリの作成」**をクリックします。
-4. **「アプリの詳細」**ページで、アプリに名前を付け、オプションで、アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
+4. **「アプリの詳細」**ページで、アプリに名前を付け、オプションで、アプリを分類するためのタグを指定します。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
 5. **「作成」**をクリックします。
 
 
@@ -46,21 +42,21 @@ Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・
 3. プロンプトが出されたら、E メール・アドレス、パスワード、および国を入力し、**「作成」**をクリックします。
 4. **「Mendix アカウントへのアクセスを許可する (Authorize access to your Mendix account)」**ページで、**「許可」**をクリックします。
 
-許可が完了したら、ブラウザーは作成中の Mendix アプリに戻ります。 **「デプロイメント・ターゲットの選択 (Select a deployment target)」**ページが表示されます。
+許可が完了したら、ブラウザーは作成中の Mendix アプリに戻ります。 **「デプロイメント環境の選択 (Choose a deployment environment)」**ページが表示されます。
 
-## Mendix アプリのデプロイメント・ターゲットの選択
+## Mendix アプリのデプロイメント・オプションの選択
 {: #select-deployment}
 
-1. **「デプロイメント・ターゲットの選択 (Select a deployment target)」**ページで、Cloud Foundry を選択するか、または {{site.data.keyword.cloud_notm}} で実行中のいずれかの Kubernetes クラスターを選択します。ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、**[パブリック・クラウド](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**のいずれかの Cloud Foundry デプロイヤー・タイプを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
+1. **「デプロイメント環境の選択 (Choose a deployment environment)」**ページで、Cloud Foundry を選択するか、または、{{site.data.keyword.cloud_notm}} で実行中のいずれかの Kubernetes クラスターを選択します。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかの Cloud Foundry デプロイヤー・タイプを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
 2. オプション。 Kubernetes クラスターがない場合は、この時点で作成できます。
 3. **「ツールチェーンの構成」**ページで、地域およびリソース・グループを選択し、**「作成」**をクリックします。
 
-DevOps ツールチェーンが作成されます。 このツールチェーンは、{{site.data.keyword.cloud_notm}} 環境の Mendix プラットフォーム内で Mendix プロジェクトを統合します。 デプロイメント・ターゲットにデフォルト・アプリケーションがデプロイされるので、DevOps ツールチェーンの完成時に、そのアプリケーションが正常にデプロイされたことを検証できます。
+DevOps ツールチェーンが作成されます。 このツールチェーンは、{{site.data.keyword.cloud_notm}} 環境の Mendix プラットフォーム内で Mendix プロジェクトを統合します。 ターゲット・デプロイメントにデフォルト・アプリケーションがデプロイされるので、DevOps ツールチェーンの完成時に、そのアプリケーションが正常にデプロイされたことを検証できます。
 
 Mendix Cloud Foundry デプロイメントには PostGRES データベース・サービスが必要ですが、このサービスにはライト層がありません。 ライト・アカウントを使用して Mendix スターター・キットを評価したい場合は、トライアル Kubernetes クラスターをターゲットにすることができます。
 {: tip}
 
-デプロイメントに Kubernetes クラスターを選択した場合は、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube)を参照して、実動用にクラスターを構成する方法を確認してください。
+デプロイメントに Kubernetes クラスターを選択した場合は、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)を参照して、実動用にクラスターを構成する方法を確認してください。
 
 
 ## Mendix の開発とデプロイメントのライフサイクルの継続
@@ -74,13 +70,13 @@ Mendix は、ローコードのオーサリング環境です。 開発ライフ
 3. Mendix アプリを編集し、変更を保存します。
 4. Mendix Desktop Modeler アプリケーションの**「実行」**メニューを使用し、**「実行」**オプションを選択します。
   デプロイメント・パッケージが作成され、Mendix にアップロードされます。 デプロイメント・パッケージが作成された後、アプリケーションを {{site.data.keyword.cloud_notm}} にデプロイできます。
-5. Mendix アプリケーションをデプロイするため、{{site.data.keyword.cloud_notm}} の**アプリの詳細**ページに戻り、**「デプロイ」**をクリックします。
+5. Mendix アプリケーションをデプロイするため、{{site.data.keyword.cloud_notm}} の**「アプリの詳細 (App details)」**ページに戻り、**「アプリケーションのデプロイ (Deploy Application)」**をクリックします。
   この操作によってアプリケーションの DevOps ツールチェーンが開始されます。このツールチェーンは、Mendix から最新のデプロイメントをプルし、それをターゲット環境にデプロイします。 デプロイメントが完了した後、最新版のアプリケーションが自動的に開始され、使用可能になります。
 
-すべての Mendix アプリケーションは、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、{{site.data.keyword.cloud_notm}} にデプロイされます。IBM DevOps インターフェースを介して Mendix ツールチェーンを手動で起動しないでください。 DevOps インターフェースを介してツールチェーンを手動で起動すると、Mendix デプロイメントに不可欠な必須メタデータの不足が原因でデプロイメントが失敗する可能性があります。 アプリケーションの状態によっては、DevOps ツールチェーンの起動中に失敗したり、デプロイされたアプリケーションでエラーが発生したりする可能性があります。 ツールチェーンを手動で起動して障害が発生した場合は、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、アプリケーション・デプロイメントをリストアできます。この操作によって、必須メタデータを含む Mendix アプリケーションの完全な DevOps フローがトリガーされます。
+すべての Mendix アプリケーションは、{{site.data.keyword.cloud_notm}} 上の**「アプリの詳細」**ページで**「アプリケーションのデプロイ」**をクリックすることによって、{{site.data.keyword.cloud_notm}} にデプロイされます。 IBM DevOps インターフェースを介して Mendix ツールチェーンを手動で起動しないでください。 DevOps インターフェースを介してツールチェーンを手動で起動すると、Mendix デプロイメントに不可欠な必須メタデータの不足が原因でデプロイメントが失敗する可能性があります。 アプリケーションの状態によっては、DevOps ツールチェーンの起動中に失敗したり、デプロイされたアプリケーションでエラーが発生したりする可能性があります。 ツールチェーンを手動で起動して障害が発生した場合は、{{site.data.keyword.cloud_notm}} 上の**「アプリの詳細」**ページで**「アプリケーションのデプロイ」**をクリックすることによって、アプリケーション・デプロイメントをリストアできます。 この操作によって、必須メタデータを含む Mendix アプリケーションの完全な DevOps フローがトリガーされます。
 {: tip}
 
 ## 次のステップ 
 {: #next-steps-mendix}
 
-アプリを {{site.data.keyword.containerlong_notm}} にデプロイするため、実動デプロイメント用にアプリを構成します。 詳しくは、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube)を参照してください。 
+アプリを {{site.data.keyword.containerlong_notm}} にデプロイするため、実動デプロイメント用にアプリを構成します。 詳しくは、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)を参照してください。 

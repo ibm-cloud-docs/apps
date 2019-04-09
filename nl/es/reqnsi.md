@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Cómo añadir un servicio a la app
-{: #add_service}
+# Cómo añadir un recurso a la app
+{: #add-resource}
 
-Cuando se crea una app con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puede añadir recursos desde la página Detalles de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.cloud_notm}}, fuera del contexto de su app.
+Cuando se crea una app con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puede añadir recursos desde la página de detalles de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.cloud_notm}}, fuera del contexto de su app.
 {: shortdesc}
 
-Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app desde la página Detalles de la app. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.cloud_notm}}.
+Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app desde la página Detalles de la app. Puede suministrar un determinado tipo de recurso directamente desde el catálogo de {{site.data.keyword.cloud_notm}}.
 
-## Descubrimiento de servicios
-{: #discover_services}
+## Descubrimiento de recursos
+{: #discover-resources}
 
 Puede ver todos los servicios disponibles en {{site.data.keyword.cloud_notm}} de las maneras siguientes:
 
@@ -35,7 +35,7 @@ Puede seleccionar el servicio que necesita cuando desarrolla aplicaciones. Cuand
 También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica aplicaciones externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Permitir que aplicaciones externas y herramientas de terceros utilicen servicios de {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp).
 
 ## Solicitud de una nueva instancia de servicio
-{: #req_instance}
+{: #request-instance}
 
 Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.cloud_notm}} o la interfaz de la línea de mandatos de {{site.data.keyword.cloud_notm}}.
 
@@ -66,7 +66,7 @@ Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de
 un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas los servicios de {{site.data.keyword.cloud_notm}}, consulte [Permitir que apps externas utilicen servicios de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Configuración de la aplicación
-{: #config}
+{: #configure-app}
 
 Después de enlazar una instancia de servicio a una aplicación, debe configurar la aplicación para que interactúe con el servicio.
 
@@ -151,4 +151,4 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
 	OK
 	```
 
-Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para interactuar con un servicio ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#config){: new_window}.
+Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](/docs/apps/reqnsi.html#configure-app).

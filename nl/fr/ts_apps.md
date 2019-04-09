@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -144,7 +144,7 @@ Pour obtenir le niveau d'autorisation approprié, utilisez l'une des méthodes s
 {: tsResolve}
 
 * Sélectionnez une autre organisation et un espace où le rôle Développeur vous a été attribué.
-* Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous affecter le rôle Développeur. Voir [Gestion des organisations et des espaces](/docs/admin/orgs_spaces.html) pour plus d'informations.
+* Demandez au responsable de l'organisation de vous attribuer le rôle Développeur ou de créer un espace, puis de vous affecter le rôle Développeur. Voir [Gestion des organisations et des espaces](/docs/admin/orgs_spaces.html#orgsspacesusers) pour plus d'informations.
 
 ## Impossible d'accéder aux services {{site.data.keyword.cloud_notm}} en raison d'erreurs d'autorisation
 {: #ts_vcap}
@@ -181,7 +181,7 @@ Une erreur de passerelle incorrecte se produit généralement lorsque vous accé
 
 Motifs moins fréquents d'une erreur de passerelle incorrecte : interruptions du fournisseur d'accès internet, configurations incorrectes du pare-feu et erreurs de cache du navigateur.
 
-Si vous suspectez l'arrêt d'un service {{site.data.keyword.cloud_notm}}, consultez d'abord la page [{{site.data.keyword.cloud_notm}} Statut ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://ibm.biz/bluemixstatus){: new_window}. Une solution de contournement peut consister à utiliser le service dans une autre région {{site.data.keyword.cloud_notm}}. Des informations détaillées sont disponibles dans la section [Utilisation des services dans une autre région ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème :
+Si vous suspectez l'arrêt d'un service {{site.data.keyword.cloud_notm}}, consultez d'abord la page [{{site.data.keyword.cloud_notm}} Statut ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://ibm.biz/bluemixstatus){: new_window}. L'[utilisation du service dans une autre région {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp){: new_window} peut être une solution palliative. Si le statut du service est normal, essayez la procédure suivante pour résoudre le problème :
 {: tsResolve}
 
   * Réessayez l'action :
@@ -211,7 +211,7 @@ Utilisez l'une des méthodes suivantes pour spécifier votre quota de disque. Le
 	disk_quota: <disk_quota>
 	```
   * Utilisez l'option **-k** avec la commande `ibmcloud cf push` lorsque vous envoyez par commande push votre application à {{site.data.keyword.cloud_notm}} :
-
+    
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
@@ -241,7 +241,7 @@ Si vous utilisez un compte Lite, il se peut que vous ne puissiez pas créer d'ap
 Lorsque vous tentez de créer une application dans {{site.data.keyword.cloud_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
-`BXNUI2032E: La ressource <service_instances> n'a pas été créée. While Cloud Foundry was being contacted to create the resource, an error occurred. Message Cloud Foundry : "You have exceeded your organization's services limit."`
+`BXNUI2032E: The <service_instances> resource wasn't created. While Cloud Foundry was being contacted to create the resource, an error occurred. Message Cloud Foundry : "You have exceeded your organization's services limit."`
 
 Cette erreur survient lorsque le nombre maximal d'instances de service dont vous pouvez disposer pour votre compte est dépassé.
 {: tsCauses}
@@ -647,7 +647,7 @@ Si les travaux de génération ou de déploiement échouent et que le message su
 {: #access_kube_logs}
 
 Si l'application n'est pas en cours d'exécution et que vous ne pouvez pas accéder au noeud final de santé, consultez les journaux du cluster.
-* Installez l'[interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) si vous n'en disposez pas encore.
+* Installez l'[interface CLI {{site.data.keyword.cloud_notm}}] (/docs/cli/index.html#overview) si vous ne l'avez pas encore.
 * Connectez-vous à {{site.data.keyword.cloud_notm}} en utilisant `ibmcloud login` et faites en sorte qu'il désigne l'espace dans lequel vous vous trouvez.
 * Répertoriez vos clusters en utilisant `ibmcloud cs clusters`,
 * Désignez votre cluster correspondant en utilisant `ibmcloud cs cluster-config <cluster-name>`.
@@ -679,10 +679,10 @@ Vérifiez que [Docker](https://docs.docker.com/install/) est installé puis dém
 {: #build_error}
 {: troubleshoot}
 
-Lorsque vous tentez de générer une application avec la commande `ibmcloud dev build`, cette opération échoue suite à une erreur de nom d'utilisateur/mot de passe Docker.
+Lorsque vous tentez de générer une application avec la commande `ibmcloud dev build`, cette opération échoue suite à une erreur de nom d'utilisateur/mot de passe Docker. 
 {: tsSymptoms}
 
-Des données d'identification Docker Hub incorrectes ont été utilisées pour l'authentification.
+Des données d'identification Docker Hub incorrectes ont été utilisées pour l'authentification. 
 {: tsCauses}
 
 Déconnectez Docker Hub dans le client Docker.

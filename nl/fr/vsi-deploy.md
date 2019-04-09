@@ -30,11 +30,11 @@ Les services ne sont pas liés à l'instance de serveur virtuel. Vous ne pouvez 
 {: important}
 
 ## Création et déploiement d'applications
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 Le service d'application met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils Devops et initie le premier cycle de déploiement pour vous.
 
-1. [Créez une application](index.html#createapp). 
+1. [Créez une application](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Cliquez sur **Déployer dans le cloud** sur la page des détails de l'application.
 3. Sélectionnez **Déployer sur un serveur virtuel** en même temps que la région dans laquelle votre serveur doit s'exécuter.
 
@@ -63,21 +63,21 @@ Pour afficher ces propriétés d'environnement, procédez comme suit :
 
 | Propriété  | Description  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | La [clé d'API de l'infrastructure](#iaas-key) provient de la console d'infrastructure classique. |
-| `TF_VAR_ibm_sl_username` | [Nom d'utilisateur de l'infrastructure](#user-key) identifiant le compte d'infrastructure classique. |
-| `TF_VAR_ibm_cloud_api_key` | La [clé d'API de plateforme](#platform-key) {{site.data.keyword.cloud_notm}} permet d'activer la création de service. |
-| `PUBLIC_KEY` | [Clé publique](#public-key) définie pour activer l'accès à l'instance de serveur virtuel. |
-| `PRIVATE_KEY` | [Clé privée](#public-key) définie pour activer l'accès à l'instance de serveur virtuel. Vous devez utiliser le formatage de style de nouvelle ligne `\n`. |
+| `TF_VAR_ibm_sl_api_key` | La [clé d'API de l'infrastructure](/docs/apps/vsi-deploy.html#iaas-key) provient de la console d'infrastructure classique. |
+| `TF_VAR_ibm_sl_username` | [Nom d'utilisateur de l'infrastructure](/docs/apps/vsi-deploy.html#user-key) identifiant le compte d'infrastructure classique. |
+| `TF_VAR_ibm_cloud_api_key` | La clé d'API {{site.data.keyword.cloud_notm}}[](/docs/apps/vsi-deploy.html#platform-key) permet d'activer la création de service. |
+| `PUBLIC_KEY` | [Clé publique](/docs/apps/vsi-deploy.html#public-key) définie pour activer l'accès à l'instance de serveur virtuel. |
+| `PRIVATE_KEY` | [Clé privée](/docs/apps/vsi-deploy.html#public-key) définie pour activer l'accès à l'instance de serveur virtuel. Vous devez utiliser le formatage de style de nouvelle ligne `\n`. |
 | `VI_INSTANCE_NAME` | Nom généré automatiquement pour l'instance de serveur virtuel |
-| `GIT_USER` | Si vous définissez l'[état Terraform](#tform-state) afin de stocker l'état de la commande apply, le nom d'utilisateur GitLab est requis. |
-| `GIT_PASSWORD` | Si vous définissez l'[état Terraform](#tform-state) afin de stocker l'état de la commande apply, le mot de passe GitLab est requis. |
+| `GIT_USER` | Si vous définissez l'[état Terraform](/docs/apps/vsi-deploy.html#tform-state) afin de stocker l'état de la commande apply, le nom d'utilisateur GitLab est requis. |
+| `GIT_PASSWORD` | Si vous définissez l'[état Terraform](/docs/apps/vsi-deploy.html#tform-state) afin de stocker l'état de la commande apply, le mot de passe GitLab est requis. |
 {: caption="Tableau 1. Variables d'environnement à changer pour l'activation" caption-side="top"}
 
 
-#### Clé d'API de l'infrastructure
+#### Clé d'API d'infrastructure classique
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
-Pour pouvoir créer des ressources d'infrastructure, Terraform doit avoir une clé d'API d'infrastructure. La clé d'API est obtenue automatiquement lors du déploiement. Pour extraire manuellement une clé, procédez comme indiqué ci-après.
+
+Pour pouvoir créer des ressources d'infrastructure, Terraform doit avoir une clé d'API d'infrastructure classique. La clé d'API est obtenue automatiquement lors du déploiement. Pour extraire manuellement une clé, procédez comme indiqué ci-après.
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Vous pouvez également cliquer sur **Gérer** > **Accès (IAM)** et sélectionner **Utilisateurs**.
 2. Cliquez sur un nom d'utilisateur puis sur **Détails de l'utilisateur**.
@@ -85,22 +85,22 @@ Pour pouvoir créer des ressources d'infrastructure, Terraform doit avoir une cl
 4. Copiez ou téléchargez la clé d'API `TF_VAR_ibm_sl_api_key` et sauvegardez-la à un emplacement sûr. Vous pouvez extraire ultérieurement les détails de la clé d'API en utilisant l'option **Afficher les détails** dans le menu **Actions** ![Icône Liste des actions](../icons/action-menu-icon.svg).
 5. Collez la valeur de la clé d'API copiée dans la configuration de chaîne d'outils pour remplacer l'élément `TF_VAR_ibm_sl_api_key`.
 
-Pour plus d'informations, voir [Gestion des clés d'API d'infrastructure classique](/docs/iam/classic_infra_keys.html) et [Droits d'infrastructure classique](/docs/iam/infrastructureaccess.html).
+Pour plus d'informations, voir [Gestion des clés d'API d'infrastructure classique](/docs/iam/classic_infra_keys.html#classic_keys) et [Droits d'infrastructure classique](/docs/iam/infrastructureaccess.html#infrapermission).
 
-#### Nom d'utilisateur de l'infrastructure
+#### Nom d'utilisateur de l'infrastructure classique
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
-Le nom d'utilisateur de l'infrastructure est également obtenu et utilisé automatiquement lors du déploiement. Pour obtenir manuellement le nom d'utilisateur, procédez comme indiqué ci-après.
+
+Le nom d'utilisateur de l'infrastructure classique est également obtenu et utilisé automatiquement lors du déploiement. Pour obtenir manuellement le nom d'utilisateur, procédez comme indiqué ci-après.
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Vous pouvez également cliquer sur **Gérer** > **Accès (IAM)** et sélectionner **Utilisateurs**.
 2. Cliquez sur un nom d'utilisateur puis sur **Détails de l'utilisateur**.
 3. Recherchez la propriété **Nom d'utilisateur VPN**.
 4. Coupez et collez cette valeur et remplacez la configuration de chaîne d'outils `TF_VAR_ibm_sl_username`.
 
-#### Clé d'API IBM Cloud
+#### Clé d'API {{site.data.keyword.cloud_notm}}
 {: #platform-key}
 
-Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API de plateforme est automatiquement obtenue et stockée sous forme de variable d'environnement dans votre pipeline. Pour extraire manuellement une clé de plateforme, procédez comme indiqué ci-après.
+Pour créer des services de niveau de plateforme dans Terraform (bases de données et services Compose, par exemple), la clé d'API {{site.data.keyword.cloud_notm}} est automatiquement obtenue et stockée sous forme de variable d'environnement dans votre pipeline. Pour extraire manuellement une clé d'API {{site.data.keyword.cloud_notm}}, procédez comme suit.
 
 1. Accédez à la [liste d'utilisateurs ![Icône de lien externe](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Vous pouvez également cliquer sur **Gérer** > **Accès (IAM)** et sélectionner **Utilisateurs**.
 2. Cliquez sur un nom d'utilisateur puis sur **Détails de l'utilisateur**.
@@ -112,12 +112,12 @@ Pour créer des services de niveau de plateforme dans Terraform (bases de donné
 
 #### Clés publiques et privées
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+
 Pour que la chaîne d'outils puisse installer le package Debian dans l'instance de serveur virtuel, l'infrastructure de déploiement génère automatiquement une paie de clés SSH privée et publique afin de transférer le contenu Git vers l'instance.
 
 Pour exécuter cette opération manuellement :
 1. Sur votre client, suivez les instructions présentées ci-dessous pour créer une [paire clé publique/clé privée ![Icône de lien externe](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Accédez à la [vue des clés SSH de l'infrastructure ![Icône de lien externe](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}. Vous pouvez également cliquer sur **Menu** > **Infrastructure classique** > **Périphériques** > **Gérer** > **Clés SSH**.
+2. Accédez à la [vue des clés SSH de l'infrastructure ![Icône de lien externe](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. Vous pouvez également cliquer sur **Menu** > **Infrastructure classique** > **Périphériques** > **Gérer** > **Clés SSH**.
 3. Cliquez sur **Ajouter**.
 4. Copiez le contenu de la clé publique précédemment créée et collez-le dans le contenu de la clé.
 5. Donnez un nom à la clé puis cliquez sur **Ajouter**.
@@ -147,7 +147,7 @@ Pour permettre le stockage d'état, `GIT_USER` et `GIT_PASSWORD` sont automatiqu
 L'état Terraform est stocké dans une branche appelée `terraform` et ne déclenche pas l'exécution du pipeline en cas de modification.
 
 ### Activation des opérations Git
-{: #git-repo}
+{: #git-repo-vsi}
 
 Lorsque l'application est déployée dans {{site.data.keyword.cloud_notm}}, un référentiel GitLab est créé en vue d'héberger le code pour la gestion du code source. Vous pouvez utiliser les opérations Git pour permettre à vos équipes de travailler et de modifier votre application. Vous pouvez consulter les dossiers inclus dans ce référentiel ainsi qu'une description de leur contenu.
 
@@ -193,7 +193,7 @@ variable "datacenter" {
 ```
 
 ### Présentation des étapes de la chaîne d'outils
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 La chaîne d'outils affiche l'infrastructure et le déploiement d'application dans un pipeline simple. Placez l'infrastructure sous forme de partie de code dans un pipeline et le déploiement d'application dans un autre.
 

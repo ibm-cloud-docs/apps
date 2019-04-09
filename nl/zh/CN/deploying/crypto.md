@@ -17,7 +17,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 在云上运用了 IBM Z 密码术。{{site.data.keyword.cloud_notm}} 所提供的加密技术与银行和金融服务所依赖的加密技术相同。
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 可对静态、使用中和传输中的密钥和数据提供业界最高安全级别（FIPS 140-2 4 级）的保护。{{site.data.keyword.hscrypto}} 是 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html) 服务的密钥库，可在 IBM Z 上通过超安全环境来保护您的密钥。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 可对静态、使用中和传输中的密钥和数据提供业界最高安全级别（FIPS 140-2 4 级）的保护。{{site.data.keyword.hscrypto}} 是 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) 服务的密钥库，可在 IBM Z 上通过超安全环境来保护您的密钥。
 
 ## 安装和配置 ACSP 客户机
 {: ##crypto_config}

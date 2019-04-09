@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ lastupdated: "2018-11-29"
 ## 确保在监视应用程序
 {: #monitoring}
 
-通过 {{site.data.keyword.Bluemix_notm}}，可轻松使用 [New Relic ![外部链接图标](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window} 等服务来监视应用程序。
+通过 {{site.data.keyword.cloud_notm}}，可轻松使用 [New Relic ![外部链接图标](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window} 等服务来监视应用程序。
 
 ## 利用支持选项
 {: #support}
 
-{{site.data.keyword.Bluemix_notm}} 付费价格套餐提供了多种不同的帐户类型以及可选的付费支持。不管您的帐户类型是什么，如果您计划将应用程序放入 {{site.data.keyword.Bluemix_notm}} 上的生产环境，请考虑选择此选项。
+{{site.data.keyword.cloud_notm}} 付费价格套餐提供了多种不同的帐户类型以及可选的付费支持。不管您的帐户类型是什么，如果您计划将应用程序放入 {{site.data.keyword.cloud_notm}} 上的生产环境，请考虑选择此选项。
 
-不管是否使用付费支持，您都可以如[支持](/docs/get-support/howtogetsupport.html)中所述获取帮助，从而避免遭受未预见的问题。
+不管是否使用付费支持，您都可以如[支持](/docs/get-support/howtogetsupport.html#getting-customer-support)中所述获取帮助，从而避免遭受未预见的问题。
 
 ## 避免使用应用程序中的基础架构 API
 

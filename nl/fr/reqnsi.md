@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,18 +11,18 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Ajout d'un service à votre application
-{: #add_service}
+# Ajout d'une ressource à votre application
+{: #add-resource}
 
 Lorsque vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des ressources à partir de la page Détails de l'application. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
 {: shortdesc}
 
-Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre application à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de ressource (un service) directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
+Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre application à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de ressource directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
 
-## Reconnaissance de services
-{: #discover_services}
+## Découverte des ressources
+{: #discover-resources}
 
-Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.cloud_notm}} comme suit :
+Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.cloud_notm}} en procédant comme suit :
 
 * Depuis la console {{site.data.keyword.cloud_notm}}. Affichez le catalogue {{site.data.keyword.cloud_notm}}.
 * A partir de la ligne de commande, utilisez la commande `ibmcloud service offerings`.
@@ -36,7 +36,7 @@ instance de service. Une instance de service peut être partagée entre plusieur
 Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation de ces services de la même façon que vous codez les applications externes ou les outils tiers pour l'utilisation des services {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Utilisation des services {{site.data.keyword.cloud_notm}} avec des applications externes et des outils tiers](/docs/resources/connect_external_app#externalapp).
 
 ## Demande de nouvelle instance de service
-{: #req_instance}
+{: #request-instance}
 
 Pour demander une nouvelle instance de service, vous devez utiliser l'interface utilisateur {{site.data.keyword.cloud_notm}} ou l'interface de ligne de commande {{site.data.keyword.cloud_notm}}.
 
@@ -67,7 +67,7 @@ Si vous utilisez l'interface de ligne de commande {{site.data.keyword.cloud_notm
 Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur l'utilisation des services {{site.data.keyword.cloud_notm}}, voir [Utilisation des services {{site.data.keyword.cloud_notm}} avec des applications externes et des outils tiers![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/resources/connect_external_app#externalapp){: new_window}.
 
 ## Configuration de votre application
-{: #config}
+{: #configure-app}
 
 Une fois que vous avez lié une instance de service à votre application, vous devez configurer votre application pour
 qu'elle interagisse avec le service.
@@ -153,4 +153,4 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
 	OK
 	```
 
-A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](#config){: new_window}.
+A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](/docs/apps/reqnsi.html#configure-app).

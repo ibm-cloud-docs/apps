@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-14"
 {:note: .note}
 
 # Ajout de données d'identification à votre environnement Kubernetes
-{: #add_credentials}
+{: #add-credentials-kube}
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Kubernetes.
 {: shortdesc}
@@ -26,7 +26,7 @@ Vous devez ajouter manuellement des données d'identification de service à votr
  * Lorsque vous ajoutez un service à une application reposant sur un kit de démarrage _après_ son déploiement.
 
 ## Votre code + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -86,7 +86,7 @@ Configurez le cluster de telle sorte que l'élément _secretKeyRef_ ayant le nom
 
 Utilisez un terminal sur votre poste de travail pour installer les outils suivants :
 
-1. Installez l'interface CLI [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+1. Installez l'interface CLI [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
 2. Connectez-vous en utilisant la commande `ibmcloud login`.
 3. Connectez-vous à votre cluster en exécutant `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copiez et collez la commande `export` pour l'exécuter à partir d'un terminal.
@@ -109,7 +109,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être résolu, vous pouvez mettre à jour votre application pour utiliser les variables d'environnement définies dans le fichier `deployment.yml`.
 
 ## Application de kit de démarrage + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. Accédez à la page **Détails de l'application** de votre application.
 2. Pour créer une instance de Cloud Object Storage, sélectionnez **Ajouter une ressource** > **Stockage** > **Cloud Object Storage** > **Plan limité (gratuit)** > **Créer**.
@@ -148,7 +148,7 @@ Si vous choisissez ultérieurement d'effectuer un déploiement dans une applicat
 
 12. Créez le secret avec `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Si vous retournez dans votre tableau de bord de cluster Kubernetes, vous pouvez voir le secret que vous avez créé.
 
-Si vous effectuez le déploiement dans une application Cloud Foundry, vous devez créer un service fourni par l'utilisateur si vous utilisez une instance de contrôleur de ressources (si la ressource se trouve dans un groupe de ressources et non dans une organisation ou un espace).
+Si vous effectuez le déploiement dans une application Cloud Foundry, vous devez créer un service fourni par l'utilisateur si vous utilisez une instance de contrôleur de ressources (si la ressource se trouve dans un groupe de ressources et non dans une organisation ou un espace). 
 {: note}
   
   ```console
@@ -220,11 +220,11 @@ Utilisez la fonction **Déployer dans le cloud** afin de déployer votre applica
 Le secret Kubernetes ne peut pas être extrait par votre code d'application sauf si le fichier `deployment.yml` déclare une valeur `env` qui référence le secret. Lorsque vous utilisez un kit de démarrage, un code de ce type est généré automatiquement.
 
 ### Le kit de démarrage a généré du code
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
 Dans ce cas, vous avez créé cette application à partir d'un kit de démarrage. Le code généré à partir d'un kit de démarrage est conçu pour être portable et pour s'exécuter localement, dans Cloud Foundry ou dans Kubernetes. La bibliothèque, `IBMCloudEnv`, permet de fournir une couche d'abstraction entre le code d'application et l'extraction des variables d'environnement contenant les données d'identification pour les ressources (instances de service).
 
-Le code créé à partir du kit de démarrage a une dépendance par rapport à la bibliothèque `IBMCloudEnv` et génère la sortie suivante. 
+Le code créé à partir du kit de démarrage a une dépendance par rapport à la bibliothèque `IBMCloudEnv` et génère la sortie suivante.
 
 * Un fichier `bindings.yml`, qui est inclus en ligne dans le fichier `deployment.yml`, avec ce contenu :
   ```yaml

@@ -30,11 +30,11 @@ lastupdated: "2018-11-29"
 {: important}
 
 ## 建立及部署應用程式
-{: #create-deploy}
+{: #create-deploy-vsi}
 
 App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
-1. [建立應用程式](index.html#createapp)。 
+1. [建立應用程式](tutorials/tutorial_scratch.html#tutorial-scratch)。 
 2. 從應用程式詳細資料頁面按一下**部署至雲端**。
 3. 選取**部署至虛擬伺服器**以及要在其中執行伺服器的地區。
 
@@ -63,21 +63,21 @@ App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程�
 
 |內容|說明|
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` |[基礎架構 API 金鑰](#iaas-key)來自標準基礎架構主控台。|
-| `TF_VAR_ibm_sl_username` |識別標準基礎架構帳戶的[基礎架構使用者名稱](#user-key)。|
-| `TF_VAR_ibm_cloud_api_key` |{{site.data.keyword.cloud_notm}} [平台 API 金鑰](#platform-key)用來啟用服務建立。|
-| `PUBLIC_KEY` |已定義以便啟用虛擬伺服器實例存取的[公開金鑰](#public-key)。|
-| `PRIVATE_KEY` |已定義以便啟用虛擬伺服器實例存取的[私密金鑰](#public-key)。您必須使用 `\n` 的新增一行樣式格式。|
+| `TF_VAR_ibm_sl_api_key` |[基礎架構 API 金鑰](/docs/apps/vsi-deploy.html#iaas-key)來自標準基礎架構主控台。|
+| `TF_VAR_ibm_sl_username` |識別標準基礎架構帳戶的[基礎架構使用者名稱](/docs/apps/vsi-deploy.html#user-key)。|
+| `TF_VAR_ibm_cloud_api_key` |{{site.data.keyword.cloud_notm}} [API 金鑰](/docs/apps/vsi-deploy.html#platform-key)用來啟用服務建立。|
+| `PUBLIC_KEY` |已定義以便啟用虛擬伺服器實例存取的[公開金鑰](/docs/apps/vsi-deploy.html#public-key)。|
+| `PRIVATE_KEY` |已定義以便啟用虛擬伺服器實例存取的[私密金鑰](/docs/apps/vsi-deploy.html#public-key)。您必須使用 `\n` 的新增一行樣式格式。|
 | `VI_INSTANCE_NAME` |自動產生的虛擬伺服器實例名稱。|
-| `GIT_USER` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 使用者名稱是必要項目。|
-| `GIT_PASSWORD` |如果您設定 [Terraform 狀態](#tform-state)以儲存 apply 指令的狀態，則 GitLab 密碼是必要項目。|
+| `GIT_USER` |如果您設定 [Terraform 狀態](/docs/apps/vsi-deploy.html#tform-state)以儲存 apply 指令的狀態，則 GitLab 使用者名稱是必要項目。|
+| `GIT_PASSWORD` |如果您設定 [Terraform 狀態](/docs/apps/vsi-deploy.html#tform-state)以儲存 apply 指令的狀態，則 GitLab 密碼是必要項目。|
 {: caption="表 1. 變更啟用的環境變數" caption-side="top"}
 
 
-#### 基礎架構 API 金鑰
+#### 標準基礎架構 API 金鑰
 {: #iaas-key}
-<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
-Terraform 需要基礎架構 API 金鑰以便建立基礎架構資源。在部署期間會自動取得 API 金鑰。若要手動擷取金鑰，請完成下列步驟。
+
+Terraform 需要標準基礎架構 API 金鑰以便建立基礎架構資源。在部署期間會自動取得 API 金鑰。若要手動擷取金鑰，請完成下列步驟。
 
 1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
 2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
@@ -85,22 +85,22 @@ Terraform 需要基礎架構 API 金鑰以便建立基礎架構資源。在部�
 4. 複製或下載 API 金鑰 `TF_VAR_ibm_sl_api_key`，並將它儲存在安全的地方。您稍後可以使用**動作** ![「動作清單」圖示](../icons/action-menu-icon.svg) 功能表中的**檢視詳細資料**選項，來擷取 API 金鑰的詳細資料。
 5. 將複製的 API 金鑰值貼入工具鏈配置中，以取代 `TF_VAR_ibm_sl_api_key`。
 
-如需相關資訊，請參閱[管理標準基礎架構 API 金鑰](/docs/iam/classic_infra_keys.html)及[標準基礎架構許可權](/docs/iam/infrastructureaccess.html)。
+如需相關資訊，請參閱[管理標準基礎架構 API 金鑰](/docs/iam/classic_infra_keys.html#classic_keys)及[標準基礎架構許可權](/docs/iam/infrastructureaccess.html#infrapermission)。
 
-#### 基礎架構使用者名稱
+#### 標準基礎架構使用者名稱
 {: #user-key}
-<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
-基礎架構使用者名稱也會在部署期間自動取得及使用。若要手動取得使用者名稱，請完成下列步驟。
+
+標準基礎架構使用者名稱也會在部署期間自動取得及使用。若要手動取得使用者名稱，請完成下列步驟。
 
 1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
 2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
 3. 找出 **VPN 使用者名稱**內容。
 4. 剪下並貼上此值，然後取代工具鏈配置 `TF_VAR_ibm_sl_username`。
 
-#### IBM Cloud API 金鑰
+#### {{site.data.keyword.cloud_notm}} API 金鑰
 {: #platform-key}
 
-為了在 Terraform 中建立像是資料庫及組合服務的平台層次服務，會自動取得平台 API 金鑰，並將其儲存為管線中的環境變數。若要手動擷取平台金鑰，請完成下列步驟。
+為了在 Terraform 中建立像是資料庫及組合服務的平台層次服務，會自動取得 {{site.data.keyword.cloud_notm}} API 金鑰，並將其儲存為管線中的環境變數。若要手動擷取 {{site.data.keyword.cloud_notm}} API 金鑰，請完成下列步驟。
 
 1. 移至[使用者清單 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您也可以按一下**管理** > **存取 (IAM)**，然後選取**使用者**。
 2. 按一下使用者名稱，然後按一下**使用者詳細資料**。
@@ -112,12 +112,12 @@ Terraform 需要基礎架構 API 金鑰以便建立基礎架構資源。在部�
 
 #### 公開和私密金鑰
 {: #public-key}
-<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
+
 若要讓工具鏈能將 Debian 套件安裝至虛擬伺服器實例，部署基礎架構會自動產生私密及公開 SSH 金鑰組，以便將 Git 內容傳送到實例。
 
 若要手動進行，請執行下列動作：
 1. 在您的用戶端中，使用下列指示來建立[公開和私密金鑰組 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}。
-2. 移至[基礎架構 SSH 金鑰視圖 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **裝置** > **管理** > **SSH 金鑰**。
+2. 移至[基礎架構 SSH 金鑰視圖 ![外部鏈結圖示](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}。您也可以按一下**功能表** > **標準基礎架構** > **裝置** > **管理** > **SSH 金鑰**。
 3. 按一下**新增**。
 4. 複製您先前建立之公開金鑰的內容，並貼入金鑰內容中。
 5. 為金鑰命名，然後按一下**新增**。
@@ -147,7 +147,7 @@ Terraform 支援儲存 Terraform `apply` 指令的狀態。這個狀態檔會執
 Terraform 狀態會儲存在稱為 `terraform` 的分支，且在變更時不會觸發管線執行。
 
 ### 啟用 Git 作業
-{: #git-repo}
+{: #git-repo-vsi}
 
 當應用程式部署至 {{site.data.keyword.cloud_notm}} 時，會建立 GitLab 儲存庫以管理程式碼，進行原始碼管理之用。您可以使用 Git 作業，讓團隊能工作並交付應用程式的變更。資料夾會與其內容的說明包含在此儲存庫中。
 
@@ -193,7 +193,7 @@ variable "datacenter" {
 ```
 
 ### 瞭解工具鏈階段
-{: #toolchain-stages}
+{: #toolchain-stages-vsi}
 
 工具鏈會以一個簡單的管線顯示基礎架構及應用程式部署。將基礎架構作為程式碼的部分分成一個管線，將應用程式部署分成另一個管線。
 

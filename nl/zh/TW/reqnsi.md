@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -11,16 +11,16 @@ lastupdated: "2018-11-29"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# 將服務新增至應用程式
-{: #add_service}
+# 將資源新增至應用程式
+{: #add-resource}
 
 使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增資源。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
 {: shortdesc}
 
-您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從「應用程式詳細資料」頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的資源（服務）。
+您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從「應用程式詳細資料」頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的資源。
 
-## 探索服務
-{: #discover_services}
+## 探索資源
+{: #discover-resources}
 
 您可以用下列方式查看 {{site.data.keyword.cloud_notm}} 中可用的所有服務：
 
@@ -29,7 +29,7 @@ lastupdated: "2018-11-29"
 * 從指令行。使用 `ibmcloud service offerings` 指令。
 * 從您自己的應用程式。請使用 [GET /v2/services Services API ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
 
-在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同服務類型的佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
+在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
 
 {{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
@@ -37,7 +37,7 @@ lastupdated: "2018-11-29"
 如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[讓外部應用程式及協力廠商工具能使用 {{site.data.keyword.cloud_notm}} 服務](/docs/resources/connect_external_app#externalapp)。
 
 ## 要求新的服務實例
-{: #req_instance}
+{: #request-instance}
 
 若要要求新的服務實例，您必須使用 {{site.data.keyword.cloud_notm}} 使用者介面或 {{site.data.keyword.cloud_notm}} 指令行介面。
 
@@ -67,7 +67,7 @@ lastupdated: "2018-11-29"
 您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.cloud_notm}} 服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/resources/connect_external_app#externalapp){: new_window}。
 
 ## 配置應用程式
-{: #config}
+{: #configure-app}
 
 將服務實例連結至應用程式之後，您必須配置應用程式以與服務互動。
 
@@ -160,4 +160,4 @@ lastupdated: "2018-11-29"
 	OK
 	```
 
-您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式與服務互動的相關資訊，請參閱[配置應用程式以與服務互動 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](#config){: new_window}。
+您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](/docs/apps/reqnsi.html#configure-app)。

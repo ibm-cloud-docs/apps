@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ lastupdated: "2018-11-29"
 ## 確定您正在監視應用程式
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} 讓您可以使用服務（例如 [New Relic ![外部鏈結圖示](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}）輕鬆地監視應用程式。
+{{site.data.keyword.cloud_notm}} 讓您可以使用服務（例如 [New Relic ![外部鏈結圖示](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}）輕鬆地監視應用程式。
 
 ## 利用支援選項
 {: #support}
 
-{{site.data.keyword.Bluemix_notm}} 付費定價方案提供若干不同的帳戶類型以及選用性的付費支援。不論帳戶的類型為何，如果您計劃讓應用程式在 {{site.data.keyword.Bluemix_notm}} 上進入正式作業，請考慮登記此選項。
+{{site.data.keyword.cloud_notm}} 付費定價方案提供若干不同的帳戶類型以及選用性的付費支援。不論帳戶的類型為何，如果您計劃讓應用程式在 {{site.data.keyword.cloud_notm}} 上進入正式作業，請考慮登記此選項。
 
-不論是否使用付費支援，您都可以如[支援](/docs/get-support/howtogetsupport.html)所述取得協助，支援能對於無法預料的問題提供保險。
+不論是否使用付費支援，您都可以如[支援](/docs/get-support/howtogetsupport.html#getting-customer-support)所述取得協助，支援能對於無法預料的問題提供保險。
 
 ## 避免在應用程式中使用基礎架構 API
 

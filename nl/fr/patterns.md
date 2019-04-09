@@ -56,7 +56,7 @@ Choisissez un kit de démarrage de micro-service en fonction de vos exigences d'
 ## Mobile
 {: #mobile}
 
-Les applications mobiles sont différents des autres modèles car elles comportent un composant côté client significatif. Le modèle peut inclure une connexion directe aux services mobiles, telle que les notifications push, l'authentification et l'analytique mobile. Les services mobiles sont dénommés système de back end mobile sous forme de services ou encore modèle MBaaS. Ils peuvent également disposer d'une solution [Backend-for-frontend](#bff) dédiée.
+Les applications mobiles sont différents des autres modèles car elles comportent un composant côté client significatif. Le modèle peut inclure une connexion directe aux services mobiles, telle que les notifications push, l'authentification et l'analytique mobile. Les services mobiles sont dénommés système de back end mobile sous forme de services ou encore modèle MBaaS. Ils peuvent également disposer d'une solution [Backend-for-frontend](/docs/apps/patterns.html#bff) dédiée.
 
 {{site.data.keyword.cloud_notm}} offre plusieurs kits de démarrage mobiles pour iOS, Swift, Android et Cordova. Vous trouverez des kits de démarrage pour le modèle mobile dans le [tableau de bord de développeur d'{{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
 

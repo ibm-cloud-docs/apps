@@ -56,7 +56,7 @@ BFF 最常使用 REST 模式来公开 API，但您也可以将 BFF 设计为通�
 ## 移动
 {: #mobile}
 
-移动应用程序不同于其他模式，其具有一个重要的客户机端组件。此模式可能包含与移动服务（如推送通知、认证和移动分析）的直接连接。移动服务称为“移动后端即服务”(MBaaS) 模式。还可能有专用的[服务于前端的后端](#bff)。
+移动应用程序不同于其他模式，其具有一个重要的客户机端组件。此模式可能包含与移动服务（如推送通知、认证和移动分析）的直接连接。移动服务称为“移动后端即服务”(MBaaS) 模式。还可能有专用的[服务于前端的后端](/docs/apps/patterns.html#bff)。
 
 {{site.data.keyword.cloud_notm}} 针对 iOS Swift、Android 和 Cordova 提供了多个移动入门模板工具包。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 开发者仪表板](https://{DomainName}/developer/mobile/dashboard)上找到“移动”模式的入门模板工具包。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ Puede ejecutar más de una instancia para evitar el tiempo de inactividad en una
 ## Asegúrese de supervisar sus apps
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} facilita la supervisión de su aplicación con servicios como, por ejemplo, [New Relic ![Icono de enlace externo](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} facilita la supervisión de su aplicación con servicios como, por ejemplo, [New Relic ![Icono de enlace externo](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Saque partido a las opciones de soporte
 {: #support}
 
-El plan de precios de pago de {{site.data.keyword.Bluemix_notm}} ofrece un número de tipos de cuenta distintos con soporte de pago opcional. Sin importar el tipo de cuenta, si piensa en llevar una aplicación a producción en {{site.data.keyword.Bluemix_notm}}, considere la posibilidad de inscribirse en esta opción.
+El plan de precios de pago de {{site.data.keyword.cloud_notm}} ofrece un número de tipos de cuenta distintos con soporte de pago opcional. Sin importar el tipo de cuenta, si piensa en llevar una aplicación a producción en {{site.data.keyword.cloud_notm}}, considere la posibilidad de inscribirse en esta opción.
 
-Con o sin soporte de pago, puede obtener ayuda como se describe en [soporte](/docs/get-support/howtogetsupport.html), que ofrece seguro contra problemas imprevistos.
+Con o sin soporte de pago, puede obtener ayuda como se describe en [soporte](/docs/get-support/howtogetsupport.html#getting-customer-support), que ofrece seguro contra problemas imprevistos.
 
 ## Evite API de infraestructura en su app
 

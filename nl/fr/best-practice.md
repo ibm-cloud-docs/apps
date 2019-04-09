@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-29"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -52,14 +52,14 @@ Vous pouvez exécuter plusieurs instances afin d'éviter des indisponibilités d
 ## Prenez soin de surveiller vos applications
 {: #monitoring}
 
-{{site.data.keyword.Bluemix_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic ![Icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic ![Icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
 
 ## Bénéficiez des options de support
 {: #support}
 
-Le forfait payant {{site.data.keyword.Bluemix_notm}} offre plusieurs autres types de compte avec un support payant facultatif. Quel que soit le type de votre compte, si vous prévoyez de mettre en production une application sur {{site.data.keyword.Bluemix_notm}}, envisagez de vous inscrire à cette option.
+Le forfait payant {{site.data.keyword.cloud_notm}} offre plusieurs autres types de compte avec un support payant facultatif. Quel que soit le type de votre compte, si vous prévoyez de mettre en production une application sur {{site.data.keyword.cloud_notm}}, envisagez de vous inscrire à cette option.
 
-Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](/docs/get-support/howtogetsupport.html), afin de vous prémunir contre les problèmes imprévisibles.
+Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](/docs/get-support/howtogetsupport.html#getting-customer-support), afin de vous prémunir contre les problèmes imprévisibles.
 
 ## Evitez les API d'infrastructure dans votre application
 
