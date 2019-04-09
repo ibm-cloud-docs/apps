@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-11-14"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # Ajout de données d'identification à votre environnement de docker local ou d'instance virtuelle
-{: #add-credentials-vsi}
+{: #add_credentials}
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement de docker local ou d'instance virtuelle.
 {: shortdesc}
 
 ## Votre code + Instance de serveur virtuel ou docker local
-{: #credentials-byoc-vsi}
+{: #byoc_vsi}
 
 Sous VSI ou votre docker local, l'environnement est entièrement à vous. Par exemple, vous pouvez créer un code similaire à l'exemple suivant et fournir la valeur d'environnement des données d'identification à votre application lors de son exécution.
 ```
@@ -43,14 +43,13 @@ docker run -p 80:8080 -e password="someThingSensitive"
 {: codeblock}
 
 ## Kit de démarrage + VSI (ou docker local)
-{: #credentials-starterkit-vsi}
+{: #sk_vsi}
 
 ### Mode de préparation de l'instance de serveur virtuel
 
 L'environnement est entièrement sous votre contrôle comme si vous exécutiez l'application depuis votre ordinateur portable (autrement dit, le docker local). Etant donné que VSI est réellement non virtualisé du point de vue de l'application en cours d'exécution, il n'existe aucun _secret_ (comme dans Kubernetes) ou _service_ (comme dans Cloud Foundry).
 
-### Le kit de démarrage a généré du code
-{: #starterkit-generated-code-vsi}
+### Code généré par kit de démarrage
 
 Le code généré à partir d'un kit de démarrage inclut la bibliothèque `IBMCloudEnv`, qui abstrait l'extraction des valeurs d'environnement de telle sorte que le code d'application soit portable afin d'être exécuté sur plusieurs déploiements cible. Avec le docker virtuel ou local, cet environnement doit être préparé avec des valeurs qui répondent à la bibliothèque `IBMCloudEnv` et qui ne proviennent _pas nécessairement_ de variables d'environnement réelles.
 
@@ -77,7 +76,7 @@ Si vous utilisez `git clone` sur le référentiel GitLab créé pour démarrer l
 Vous pouvez extraire le fichier `server/localdev-config.json` en procédant comme suit :
 
 1. Utilisez `git clone` sur le référentiel Gitlab automatiquement créé lors de l'utilisation de la fonction "Déployer sur le cloud".
-2. Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), qui inclut le plug-in `dev`.
+2. Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), qui inclut le plug-in `dev`.
 3. Utilisez la ligne de commande `ibmcloud` pour vous connecter à {{site.data.keyword.cloud_notm}}.
 4. Exécutez `ibmcloud dev get-credentials`, qui fait référence au fichier `cli-config.yml`. Le fichier `cli-config.yml` inclut des informations décrivant quelle application ou quel travail de génération inclut les données d'identification.
 

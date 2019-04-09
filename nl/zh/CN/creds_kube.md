@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-11-14"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-01"
 {:note: .note}
 
 # 向 Kubernetes 环境添加凭证
-{: #add-credentials-kube}
+{: #add_credentials}
 
 了解如何向 Kubernetes 部署环境添加服务凭证。
 {: shortdesc}
@@ -26,13 +26,13 @@ lastupdated: "2019-02-01"
  * 在部署了服务_之后_，将其添加到基于入门模板工具包的应用程序。
 
 ## 代码 + Kubernetes
-{: #credentials-byoc-kube}
+{: #byoc_kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
 ### 正确编码
 
-作为预防措施，您可以对应用程序进行编码，以确认其环境在应用程序的主入口点中已完成。您不希望将应用程序升级到因其环境未完成而会导致您产品中断的集群中。应用程序可能会拒绝启动，并且 Kubernetes 配置可以自动防止此类中断。
+作为预防措施，您可以对应用程序进行编码，以确认其环境在应用程序的主入口点中已完成。您不希望将应用程序升级到环境未完成的集群中，从而导致对您的产品造成中断。应用程序可能会拒绝启动，并且 Kubernetes 配置可以自动防止此类中断。
 
 假定您有以下两个环境变量：
 * `SECRET`
@@ -86,7 +86,7 @@ env:
 
 使用工作站上的终端来安装以下工具：
 
-1. 安装 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview)。
+1. 安装 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)。
 2. 使用 `ibmcloud login` 命令登录。
 3. 通过运行 `ibmcloud cs cluster-config {your_cluster_name}` 来连接到集群。
 4. 复制并粘贴 `export` 命令以从终端运行此命令。
@@ -109,7 +109,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 既然 Kubernetes 集群已准备好可解析的私钥，那么可以更新应用程序以使用在 `deployment.yml` 文件中定义的环境变量。
 
 ## 入门模板工具包应用程序 + Kubernetes
-{: #credentials-starterkit-kube}
+{: #sk_kube}
 
 1. 转至应用程序的**应用程序详细信息**页面。
 2. 要创建 Cloud Object Storage 的实例，请选择**添加资源** > **存储器** > **Cloud Object Storage** > **轻量套餐（免费）** > **创建**。
@@ -220,7 +220,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 除非 `deployment.yml` 声明了引用私钥的 `env` 值，否则应用程序代码无法检索 Kubernetes 私钥。使用入门模板工具包时，会自动生成此类代码。
 
 ### 入门模板工具包生成的代码
-{: #credentials-starterkit-kube-gencode}
+{: #sk_kube_generated_code}
 
 在本例中，您是通过入门模板工具包创建的此应用程序。对于通过入门模板工具包生成的代码，可使其具有可移植性，能在本地、Cloud Foundry 或 Kubernetes 中运行。`IBMCloudEnv` 库用于在应用程序代码与检索环境变量之间提供抽象层；环境变量用于保存资源（服务实例）的凭证。
 
@@ -265,7 +265,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 因此，`mappings.json` 文件将被视为包含预配置值和立即可用值的_最终列表_，这些值来自应用程序要在其中运行的环境。使用**部署到云**功能时，会在您设定为目标的集群的环境中填充这些值。
 
-**注意**：截至编写本文档时，对于与应用程序关联的所有资源的所有凭证，会_始终_执行环境准备，但_并非所有 `env` 引用_都会放在 `bindings.yml` 文件或 `mappings.json` 文件中。在这些情况下，您必须自行放入此类引用。如果您已经决定了目标部署，并且不需要 `IBMCloudEnv` 库的抽象化处理，请参阅与您的决策相适应的“代码 +（目标部署）”部分。
+**注意**：截至编写本文档时，对于与应用程序关联的所有资源的所有凭证，会_始终_执行环境准备，但_并非所有 `env` 引用_都会放在 `bindings.yml` 文件或 `mappings.json` 文件中。在这些情况下，您必须自行放入此类引用。如果您已经决定了目标部署，并且不需要 `IBMCloudEnv` 库的抽象，请参阅与您的决策相适应的“代码 +（目标部署）”部分。
 
 某些入门模板工具包根本不包含对 `IBMCloudEnv` 依赖关系、`manifest.yml` 或 `mappings.json` 文件的引用。
 {: note}

@@ -89,7 +89,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
   * 啟用用戶端憑證的要求：當您啟用此選項時，嘗試存取 SSL 保護網域的使用者會被要求提供用戶端憑證。例如，在 Web 瀏覽器中，當使用者嘗試存取 SSL 保護的網域時，Web 瀏覽器會提示使用者提供網域的用戶端憑證。
  
 
-    {{site.data.keyword.cloud_notm}} 網域管理中的自訂憑證特性取決於「傳輸層安全 (TLS)」通訊協定的「伺服器名稱指示 (SNI)」延伸。存取自訂憑證所保護之 {{site.data.keyword.cloud_notm}} 應用程式的用戶端程式碼必須支援 TLS 實作中的 SNI 延伸。如需相關資訊，請參閱 [RFC 4346 的第 7.4.2 節 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 及[使用傳輸層安全 (TLS) 保護資料](/docs/get-support/appsectls.html#tlssupportwithdraw)。
+    {{site.data.keyword.cloud_notm}} 網域管理中的自訂憑證特性取決於「傳輸層安全 (TLS)」通訊協定的「伺服器名稱指示 (SNI)」延伸。存取自訂憑證所保護之 {{site.data.keyword.cloud_notm}} 應用程式的用戶端程式碼必須支援 TLS 實作中的 SNI 延伸。如需相關資訊，請參閱 [RFC 4346 的第 7.4.2 節 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 及[使用傳輸層安全 (TLS) 保護資料](/docs/get-support/appsectls.html)。
   {: note}
   
   * 用戶端憑證信任儲存庫（選用）：包含要容許存取您應用程式之使用者的用戶端憑證。請上傳用戶端憑證信任儲存庫檔案，以啟用要求用戶端憑證的選項。
@@ -97,6 +97,6 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
     您可以藉由上傳 meta 資料中包含公開金鑰的用戶端憑證信任儲存庫，來設定交互鑑別。
   {: tip}
 
-如需相關資訊，請參閱[匯入 SSL 憑證](/docs/ssl-certificates/import-ssl-certificate.html)。
+如需相關資訊，請參閱[匯入 SSL 憑證](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)。
 
 

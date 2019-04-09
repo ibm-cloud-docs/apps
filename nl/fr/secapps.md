@@ -88,7 +88,7 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
   * Certificat intermédiaire (facultatif) - Certificat subordonné émis par l'autorité de certification racine accréditée spécifiquement pour émettre des certificats serveur d'entité de fin. Le résultat est une chaîne de certificats qui débute à l'autorité de certification racine accréditée, continue avec le certificat intermédiaire et se finit par le certificat SSL émis pour l'organisation. Utilisez un certificat intermédiaire pour vérifier l'authenticité du certificat principal. Les certificats intermédiaires sont généralement obtenus auprès d'un tiers digne de confiance. Vous n'aurez peut-être pas besoin de certificat intermédiaire si vous testez votre application avant de la déployer en production.
   * Activer la demande de certificat client - Lorsque vous activez cette option, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir un certificat client pour le domaine. 
 
-    La fonction de certificat personnalisé dans la gestion des domaines {{site.data.keyword.cloud_notm}} dépend de l'extension SNI (Server Name Indication) du protocole TLS (Transport Layer Security). Le code client qui accède aux applications {{site.data.keyword.cloud_notm}} protégées par des certificats personnalisés doit prendre en charge l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} et [Sécurisation des données avec TLS](/docs/get-support/appsectls.html#tlssupportwithdraw).
+    La fonction de certificat personnalisé dans la gestion des domaines {{site.data.keyword.cloud_notm}} dépend de l'extension SNI (Server Name Indication) du protocole TLS (Transport Layer Security). Le code client qui accède aux applications {{site.data.keyword.cloud_notm}} protégées par des certificats personnalisés doit prendre en charge l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} et [Sécurisation des données avec TLS](/docs/get-support/appsectls.html).
     {: note}
   
   * Fichier de clés certifiées de certificat client (facultatif) - Inclut les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Téléchargez un fichier de ce type pour pouvoir demander un certificat client.
@@ -96,6 +96,6 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
     Vous pouvez configurer l'authentification mutuelle en téléchargeant un fichier de clés certifiées de certificat client incluant une clé publique dans ses métadonnées.
     {: tip}
 
-Pour plus d'informations, voir [Importation de certificats SSL](/docs/ssl-certificates/import-ssl-certificate.html).
+Pour plus d'informations, voir [Importation de certificats SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
 

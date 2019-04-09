@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-13"
+  years: 2016, 2017, 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -11,36 +11,36 @@ lastupdated: "2019-02-13"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:tip: .tip}
 
-# 创建服务于前端的后端应用程序
-{: #tutorial-bff}
+# 创建服务于前端的后端 API
+{: #tutorial}
 
-您可以使用服务于前端的后端入门模板来创建应用程序。借助这些入门模板，您可以通过使用以下各种框架来构建用 Node.js、Java&reg 或 Swift 语言编写的服务于前端的后端应用程序：Express.js、MicroProfile/Java&reg EE、Kitura 或 Spring。您将了解如何安装所需的工具，如何在本地构建和运行应用程序，以及如何将应用程序部署到云上。
+您可以使用服务于前端的后端入门模板来创建应用程序。借助这些入门模板，您可以通过使用以下各种框架来构建服务于前端的后端 Node.js、Java 或 Swift API：Express.js、MicroProfile/Java EE、Kitura 或 Spring。您将了解如何安装所需的工具，如何在本地构建和运行应用程序，以及如何将应用程序部署到云上。
 {: shortdesc}
 
-## 步骤 1. 开始之前
-{: #prereqs-bff}
+## 步骤 1. 安装工具
+{: #install-tools}
 
-* 安装 [Developer Tools](/docs/cli/index.html#overview)。
-* Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行中，构建命令才会有效。您必须创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。
-* 如果计划将应用程序部署到 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry/prepare-account.html#prepare)。
+安装 [Developer Tools](/docs/cli/index.html)。
+
+Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行中，构建命令才会有效。您必须创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。
 
 ## 步骤 2. 创建应用程序
-{: #create-bff}
+{: #create-devex}
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中创建应用程序。
 
 1. 在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/starter-kits/) 页面中，选择适用于您语言的入门模板工具包。例如，对于 Node.js 应用程序，请转至 **Express.js 后端**，然后单击**选择入门模板工具包**。
+
 2. 输入应用程序名称。对于本教程，请使用 `ExpressBackend`。
-3. 输入唯一的主机名，例如 `abc-devhost`。此主机名就是您应用程序的路径：`abc-devhost.cloud.ibm.com`。
-4. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources/tagging_resources.html#tag)。
-5. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
-6. 选择价格套餐。对于本教程，可以使用免费选项。
-7. 单击**创建**。
+
+3. 输入唯一的主机名，例如 `abc-devhost`。此主机名就是您应用程序的路径：`abc-devhost.mybluemix.net`。
+4. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
+5. 选择价格套餐。对于本教程，可以使用免费选项。
+6. 单击**创建**。
 
 ## 步骤 3. 添加资源（可选）
-{: #resources-bff}
+{: #add-services}
 
 您可以通过添加资源，利用 Watson 的认知功能来增强应用程序，还可以添加移动服务或安全服务。对于本教程，请添加一个用于管理数据的位置。
 
@@ -50,21 +50,21 @@ lastupdated: "2019-02-13"
 4. 单击**创建**。
 
 ## 步骤 4. 创建 DevOps 工具链
-{: #toolchain-bff}
+{: #add-toolchain}
 
-启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署环境（[Kubernetes](/docs/containers/container_index.html#container_index)、[Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) 或[虚拟服务器 (VSI)](/docs/vsi/vsi_index.html)）对它们进行定制。
+启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署平台（Kubernetes 或 Cloud Foundry）对它们进行定制。
 
-在 {{site.data.keyword.cloud_notm}} 开发者仪表板中创建的所有工具链都会配置为自动部署。
-{: note}
+某些应用程序已启用了持续交付。启用持续交付后，即可通过 Delivery Pipeline 和 GitHub 进行自动构建、测试和部署。
 
-1. 在“应用程序详细信息”页面中，单击**部署到云**。
-2. 选择部署方法。根据您所选方法的指示信息来设置部署方法：
-  * **部署到 [Kubernetes](/docs/apps/deploying/containers.html#containers)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
-  * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public/about-cf.html#about-cf)**或**[企业环境](/docs/cloud-foundry-public/cfee.html#cfee)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
-  * **部署到[虚拟服务器](/docs/apps/vsi-deploy.html#vsi-deploy)**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
+1. 在 App Service 窗口中，单击**部署到云**。
+2. 选择部署方法。根据所选方法的指示信息来设置部署方法。
+
+    * 部署到 Kubernetes 集群。创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
+
+    * 使用 Cloud Foundry 进行部署。此方法不需要管理底层基础架构。
 
 ## 步骤 5. 在本地构建和运行应用程序
-{: #build-run-bff}
+{: #build-run}
 
 在上一个步骤中将应用程序部署到云后，即创建了工具链。工具链会为应用程序创建一个 Git 存储库，您可以在其中查找代码。要访问该存储库，请执行以下步骤。您可以在本地构建并测试应用程序，然后再将应用程序推送到云上。
 
@@ -72,7 +72,7 @@ lastupdated: "2019-02-13"
 2. 将应用程序导入到集成开发环境中。
 3. 修改代码。
 4. 通过添加个人访问令牌来设置 [Git 认证](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。
-5. 登录到 {{site.data.keyword.cloud_notm}} 命令行界面。如果您的组织使用联合登录，请使用 `-sso` 选项。
+5. 登录到 {{site.data.keyword.Bluemix}} 命令行界面。如果您的组织使用联合登录，请使用 `-sso` 选项。
 
   ```bash
   ibmcloud login -sso
@@ -96,26 +96,25 @@ lastupdated: "2019-02-13"
 8. 确保 Docker 正在运行，然后在目录中的本地开发容器中构建应用程序。
 
   ```bash
-ibmcloud dev build
-```
+  ibmcloud dev build
+  ```
   {: pre}
 
 9. 在本地开发容器中运行应用程序。
 
   ```bash
-ibmcloud dev run
-```
+  ibmcloud dev run
+  ```
   {: pre}
 
 10.  在浏览器中打开 `http://localhost:3000`。您的端口号可能会有所不同，具体取决于所选的运行时。
 
 ## 步骤 6. 部署应用程序
-{: #deploy-bff}
+{: #deploy}
 
 ### 使用工具链进行部署
-{: #deploy-bff-toolchain}
 
-有多种方式可以将应用程序部署到 {{site.data.keyword.cloud_notm}}，但 DevOps 工具链是部署生产应用程序的最佳方式。通过 DevOps 工具链，您可以轻松地将应用程序自动部署到多个环境中，还可以快速地添加监视、日志记录和警报服务，从而更好地管理应用程序的日常发展。
+有多种方式可以将应用程序部署到 {{site.data.keyword.cloud_notm}}，但 DevOps 工具链是部署生产应用程序的最佳方式。通过 DevOps 工具链，您可以轻松地将应用程序自动部署到多个环境中，还可以快速地添加监视、日志记录和警报服务，从而更好地管理日益增长的应用程序。
 
 使用正确配置的工具链时，每次合并到存储库中的主分支后，都会自动启动构建/部署周期。在 {{site.data.keyword.cloud_notm}} 开发者仪表板中创建的所有工具链都会配置为自动部署。
 
@@ -126,7 +125,6 @@ ibmcloud dev run
 2. 单击 **Delivery Pipeline**，在其中可以启动构建、管理部署以及查看日志和历史记录。
 
 ### 使用 {{site.data.keyword.dev_cli_short}} 进行部署
-{: #deploy-bff-cli}
 
 要将应用程序部署到 Cloud Foundry，请输入以下命令：
 
@@ -143,16 +141,6 @@ ibmcloud dev deploy --target <container>
 {: pre}
 
 ## 步骤 7. 验证应用程序是否正在运行
-{: #verify-bff}
+{: #verify}
 
-应用程序部署完成后，Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
-
-1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
-2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
-
-    在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.cloud.ibm.com` 或 `View the application health at: http://<ipaddress>:<port>/health`。
-
-4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
-
-如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+应用程序部署完成后，DevOps 管道或命令行会指示您前往应用程序的 URL，例如 `abc-devhost.mybluemix.net`。请在浏览器中打开该 URL。

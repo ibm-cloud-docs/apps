@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-01-03"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # Despliegue de su propio código en un clúster de Kubernetes
-{: #tutorial-byoc-kube}
+{: #tutorial}
 
 Obtenga información sobre cómo crear una app en {{site.data.keyword.cloud}} utilizando el repositorio de apps existente. Puede conectar su cadena de herramientas DevOps existente o crear una, y entregar de forma continua una app a un contenedor seguro en un clúster de Kubernetes. Esta guía de aprendizaje le ayuda a configurar un conducto de DevOps de integración continua de modo que el cambio se compile y se propague automáticamente a la app desplegada en el clúster de Kubernetes.
 {: shortdesc}
@@ -25,10 +25,10 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
 {: tip}
 
 ## Antes de empezar
-{: #prereqs-byoc-kube}
+{: #prereqs}
 
-* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) para obtener más información.
-* En la consola de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Contenedores** para [configurar un clúster de Kubernetes](/docs/containers/container_index.html#container_index).
+* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html) para obtener más información.
+* En la [consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Contenedores** para [configurar un clúster de Kubernetes](/docs/containers/container_index.html).
 * Para confirmar que la app se ejecuta en Docker, ejecute los mandatos siguientes:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -39,16 +39,16 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
 * A continuación, vaya al URL, como por ejemplo `http://localhost/springboothelloworld/sayhello`. Pulse Control+C para detener la ejecución de Docker.
 
 ## Adición de recursos a la app (opcional)
-{: #resources-byoc-kube}
+{: #add_resources}
 
 Añada un recurso de servicio a la aplicación e {{site.data.keyword.cloud_notm}} crea el servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
 
-El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps/reqnsi.html#add-resource).
+El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps/reqnsi.html).
 
-Después de añadir un recurso de servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps/creds_kube.html#add_credentials).
+Después de añadir un recurso de servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps/creds_kube.html).
 
 ## Preparación de la app para el despliegue
-{: #deploy-byoc-kube}
+{: #connect_toolchain}
 
 En este paso, adjuntará una cadena de herramientas DevOps a la aplicación y la configurará para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}.
 
@@ -80,7 +80,7 @@ Para obtener más información sobre cómo añadir el repositorio a la cadena de
 
 
 ### Conectar la app a una nueva cadena de herramientas
-{: #toolchain-byoc-kube-create}
+{: #create_toolchain}
 
 Si desea controlar por completo la creación de la cadena de herramientas DevOps sin cambios en el repositorio de código, cree la cadena de herramientas desde cero. También puede crear todas las integraciones para crear la app y desplegarla en el clúster de Kubernetes. 
 
@@ -91,10 +91,9 @@ Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre 
 {:tip}
 
 Si no desea crear una cadena de herramientas DevOps desde cero, puede habilitar para la nube su código existente utilizando el mandato [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). El mandato genera una plantilla de cadena de herramientas DevOps que se incorpora al repositorio. A continuación, utilice dicha plantilla como conjunto de instrucciones para lo que crea la cadena de herramientas DevOps. Para obtener más información, consulte la
-[documentación de CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
+[documentación de CLI](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Adición de una integración de GitHub
-{: #github-byoc-kube}
 
 Configure la cadena de herramientas DevOps con una integración para su GitHub para que la cadena de herramientas establezca un webhook en el repositorio, de modo que las solicitudes de extracción y los envíos de código en dicho repositorio envíen POST a la cadena de herramientas. 
 
@@ -110,14 +109,12 @@ Configure la cadena de herramientas DevOps con una integración para su GitHub p
 Puede ver el nuevo webhook de los valores del repositorio.
 
 ## Adición de un conducto de entrega
-{: #pipeline-byoc-kube}
 
 1. Pulse **Añadir una herramienta**.
 2. Seleccione **Delivery Pipeline**.
 3. Especifique `Integración continua` como nombre del conducto y pulse **Crear integración**.
 
 ## Configuración de las etapas del conducto
-{: #pipelineconfig-byoc-kube}
 
 Configure las etapas del conducto para dirigir la entrada (el contenido del repositorio GitHub) al destino correcto. Puesto que en esta guía de aprendizaje se presupone que tiene un repositorio GitHub que genera una imagen de Docker de trabajo y que está dirigido a un clúster de IBM Containers Kubernetes, creará etapas del conducto con entradas, scripts de shell y salidas destinadas a alcanzar este objetivo.
 
@@ -162,19 +159,4 @@ Configure las etapas del conducto para dirigir la entrada (el contenido del repo
     * Seleccione la región en la que se encuentra el clúster de Kubernetes.
     * Especifique la clave de API existente. 
   4. Pulse **Guardar**.
-4. Para probar la etapa del conducto `desplegar en clúster`, pulse el icono **Reproducir** hasta que la compilación sea correcta. Una etapa verde indica que la compilación ha resultado correcta.
-
-## Verificación de que la app se está ejecutando
-{: #verify-byoc-kube}
-
-Después de desplegar la app, el conducto de entrega o la línea de mandatos le apunta al URL para la app.
-
-1. Desde la cadena de herramientas de DevOps, pulse **Delivery Pipeline** y luego seleccione **Etapa de despliegue**.
-2. Pulse **Ver registros e historial**.
-3. En el archivo de registro, busque el URL de la aplicación:
-
-    Al final del archivo de registro, busque `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
-
-4. Vaya al URL en el navegador. Si la app se está ejecutando, se muestra un mensaje que incluye `Enhorabuena` o `{"status":"UP"}`.
-
-Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para ver el URL de la app. Luego vaya al URL en el navegador.
+4. Para probar la etapa del conducto `desplegar en clúster`, pulse el icono **Reproducir** hasta que la compilación sea correcta. Una etapa verde indica que la compilación ha resultado correcta. Puede ver los registros correspondientes a la etapa. Casi al final de los registros, busque un enlace a la app en ejecución sobre el que puede pulsar. Añada la vía de acceso correcta correspondiente a la app para confirmar que se ejecuta.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -144,7 +144,7 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 选择您具有其开发者角色的另一个组织和空间。
-* 请求组织管理者将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html#orgsspacesusers)。
+* 请求组织管理者将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html)。
 
 ## 由于授权错误而无法访问 {{site.data.keyword.cloud_notm}} 服务
 {: #ts_vcap}
@@ -182,7 +182,7 @@ process.env.VCAP_SERVICES
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。
 
-如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。变通方法可能是[在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务](/docs/resources/connect_external_app#externalapp){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。变通方法可能是在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务。有关详细信息，请参阅[在其他区域中使用服务 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/services/reqnsi.html#cross_region_service){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -260,9 +260,9 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 	  2. 单击**删除服务**。系统会提示您重新编译打包服务实例所绑定到的应用程序。
 
     要使用命令行界面删除服务实例，请完成以下步骤：
-	  3. 取消服务实例与应用程序的绑定。输入 `cf unbind-service <appname> <service_instance_name>`.
-	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`.
-	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`.
+	  3. 取消服务实例与应用程序的绑定。输入 `cf unbind-service <appname> <service_instance_name>`。
+	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`。
+	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`。
 
   * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
 
@@ -657,7 +657,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: #access_kube_logs}
 
 如果应用程序未在运行，并且您无法访问该运行状况端点，请尝试查看集群中的日志。
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)，请进行安装。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cs clusters` 列出集群。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向相应的集群。

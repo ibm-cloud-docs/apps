@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-02-01"
+  years: 2016, 2018
+lastupdated: "2018-06-29"
 
 ---
 
@@ -18,17 +18,17 @@ lastupdated: "2019-02-01"
 # Evénements {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}}
 {: #at_events}
 
-En tant que responsable de la sécurité, auditeur ou gestionnaire, vous pouvez utiliser le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec {{site.data.keyword.dev_console}} dans {{site.data.keyword.cloud}}.
+En tant que responsable de la sécurité, auditeur ou gestionnaire, vous pouvez utiliser le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec {{site.data.keyword.dev_console}} dans {{site.data.keyword.Bluemix_notm}}.
 {: shortdesc}
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités démarrées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov).
+Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités démarrées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov ).
 
 ## Emplacement des événements
-{: #view-events-ui}
+{: #ui}
 
-Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le domaine de compte {{site.data.keyword.cloudaccesstrailshort}}, lui même disponible dans la région {{site.data.keyword.cloud_notm}} où les événements {{site.data.keyword.dev_console}} sont générés.
+Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le domaine de compte {{site.data.keyword.cloudaccesstrailshort}}, lui même disponible dans la région {{site.data.keyword.Bluemix_notm}} où les événements {{site.data.keyword.dev_console}} sont générés.
 
-Pour commencer à surveiller les actions utilisateur, consultez le [tutoriel d'initiation](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Pour commencer à surveiller les actions de vos utilisateurs, consultez le [tutoriel d'initiation](/docs/services/cloud-activity-tracker/index.html).
 
 ## Liste des événements
 {: #events}
@@ -51,7 +51,7 @@ Le tableau suivant répertorie les actions qui génèrent un événement :
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>Un événement est généré lorsqu'une des situations suivantes a lieu : </br><ul><li>L'application a été modifiée (un utilisateur a modifié le nom de l'application, par exemple). </li><li>Une nouvelle ressource est créée et ajoutée à une application.</li><li>Une ressource existante est ajoutée à une application.</li><li>Un service est retiré d'une application.</li><li>Du code est généré pour une application.</li><li>Une chaîne d'outils DevOps est ajoutée via l'expérience des développeurs, par exemple, lors de la sélection de l'option *Déployer dans le cloud*.</li></ul></td>
+	  <td>Un événement est généré lorsqu'une des situations suivantes a lieu : </br><ul><li>L'application a été modifiée (un utilisateur a modifié le nom de l'application, par exemple). </li><li>Une nouvelle ressource est mise à disposition et ajoutée à une application.</li><li>Une ressource existante est ajoutée à une application.</li><li>Un service est retiré d'une application.</li><li>Du code est généré pour une application.</li><li>Une chaîne d'outils DevOps est ajoutée via l'expérience des développeurs, par exemple, lors de la sélection de l'option *Déployer dans le cloud*.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>

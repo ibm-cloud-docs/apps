@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,14 +26,14 @@ lastupdated: "2019-02-01"
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-アプリの詳細ページで項目をクリックしたときに、アクションを実行できない場合があります。 続行する前に、変更を保存するように求めるプロンプトが出される場合もあります。
+アプリの詳細ページで項目をクリックしたときに、アクションを実行できない場合があります。続行する前に、変更を保存するように求めるプロンプトが出される場合もあります。
 
 アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージが表示されます。
 {: tsSymptoms}
 
 `保存されていない変更があります。 このページを終了してよろしいですか?`
 
-マウスをスクロールして、「ランタイム」ペインの**「インスタンス」**フィールドまたは**「メモリー割り当て量」**フィールドの上に移動すると、それらの値が変わります。 この動作は、設計によるものです。 ただし、別のページに移動する前にメモリー設定またはインスタンス設定を保存するよう求めるプロンプトが表示されます。
+マウスをスクロールして、「ランタイム」ペインの**「インスタンス」**フィールドまたは**「メモリー割り当て量」**フィールドの上に移動すると、それらの値が変わります。 この動作は、設計によるものです。ただし、別のページに移動する前にメモリー設定またはインスタンス設定を保存するよう求めるプロンプトが表示されます。
 {: tsCauses}
 
 メッセージ・ダイアログを閉じ、ランタイム・ペインの**「リセット」**をクリックします。
@@ -144,7 +144,7 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 開発者役割を持つ別の組織およびスペースを選択します。
-* 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。 詳しくは、『[組織とスペースの管理](/docs/admin/orgs_spaces.html#orgsspacesusers)』を参照してください。
+* 自分の役割を開発者に変更するように、またはスペースを作成して自分に開発者役割を割り当てるように組織マネージャーに依頼します。詳しくは、『[組織とスペースの管理](/docs/admin/orgs_spaces.html)』を参照してください。
 
 ## 許可エラーのため、{{site.data.keyword.cloud_notm}} サービスにアクセスできない
 {: #ts_vcap}
@@ -181,7 +181,7 @@ Bad Gateway エラーは通常、Web サイトをホストするメイン・サ�
 
 Bad Gateway エラーのその他のまれな原因として、インターネット・サービス・プロバイダー (ISP) のドロップアウト、ファイアウォール構成の誤り、ブラウザー・キャッシュのエラーがあります。
 
-{{site.data.keyword.cloud_notm}} サービスがダウンしていると疑われる場合は、まず [{{site.data.keyword.cloud_notm}} 状況![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。 回避策として、[別の {{site.data.keyword.cloud_notm}} 地域でそのサービスを使用する](/docs/resources/connect_external_app#externalapp){: new_window}ことができます。 サービスの状況が正常の場合には、以下のステップで問題を解決してください。
+{{site.data.keyword.cloud_notm}} サービスがダウンしていると疑われる場合は、まず [{{site.data.keyword.cloud_notm}} 状況![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://ibm.biz/bluemixstatus){: new_window}ページを確認してください。 回避策として、別の {{site.data.keyword.cloud_notm}} 地域でそのサービスを使用することができます。 『[サービスを別の地域で使用![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](/docs/services/reqnsi.html#cross_region_service){: new_window}』に詳しい説明があります。 サービスの状況が正常の場合には、以下のステップで問題を解決してください。
 {: tsResolve}
 
   * アクションを再試行します。
@@ -197,7 +197,7 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 
 ディスク・スペースを使い尽くした場合には、手動でディスク割り当て量を変更して、ディスク・スペースを追加することができます。
 
-ディスク・スペースを使い尽くしたときに、ディスク割り当て量を超えたというメッセージが表示される場合があります。 この問題を解決するために、アプリ・インスタンスをスケールアップしてディスク・スペースを追加しようとした可能性があります。 例えば、アプリの詳細ページでメモリー割り当て量を変更して 256 MB から 1256 MB に拡大した、などです。 しかし、ディスク割り当て量は同じままであったために、ディスク・スペースは追加されませんでした。
+ディスク・スペースを使い尽くしたときに、ディスク割り当て量を超えたというメッセージが表示される場合があります。 この問題を解決するために、アプリ・インスタンスをスケールアップしてディスク・スペースを追加しようとした可能性があります。 例えば、アプリの詳細ページでメモリー割り当て量を変更して 256 MB から 1256 MB に拡大した、などです。しかし、ディスク割り当て量は同じままであったために、ディスク・スペースは追加されませんでした。
 {: tsSymptoms}
 
 アプリに割り当てられるデフォルトのディスク割り当て量は 1 GB です。 追加のディスク・スペースが必要な場合は、ディスク割り当て量を手動で指定する必要があります。
@@ -211,7 +211,7 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 	disk_quota: <disk_quota>
 	```
   * アプリを {{site.data.keyword.cloud_notm}} にプッシュするときに、以下のように `ibmcloud cf push` コマンドに **-k** オプションを使用します。
-    
+
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
@@ -223,10 +223,10 @@ Bad Gateway エラーのその他のまれな原因として、インターネ�
 
 Google にアクセス不能な特定地域の Android アプリは、IBM {{site.data.keyword.mobilepushshort}} サービスで送信した通知を受信できません。 この場合、回避策はサード・パーティーのサービスを使用することです。
 
-{{site.data.keyword.cloud_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。 ただし、Android で開発されたアプリは、特定の地域で通知を受信できません。
+{{site.data.keyword.cloud_notm}} アプリに {{site.data.keyword.mobilepushshort}} サービスをバインドして、登録デバイスにメッセージを送信します。ただし、Android で開発されたアプリは、特定の地域で通知を受信できません。
 {: tsSymptoms}
 
-IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android で開発されたモバイル・アプリに通知をディスパッチします。 Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
+IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android で開発されたモバイル・アプリに通知をディスパッチします。Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
 {: tsCauses}
 
 回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://pushy.me){: new_window}、[getui ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](http://www.getui.com/){: new_window}、および [jpush ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.jpush.cn/){: new_window}) を使用してください。
@@ -256,11 +256,11 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 	  2. **「サービスの削除 (Delete Service)」**をクリックします。 そのサービス・インスタンスがバインドされていたアプリを再ステージするようにプロンプトが出されます。
 
     コマンド・ライン・インターフェースを使用してサービス・インスタンスを削除するには、以下の手順を実行します。
-	  3. アプリからサービス・インスタンスをアンバインドします。 `cf unbind-service <appname> <service_instance_name>` を入力します。
-	  4. サービス・インスタンスを削除します。 `cf delete-service <service_instance_name>` を入力します。
-	  5. サービス・インスタンスを削除した後、サービス・インスタンスがバインドされていたアプリを再ステージすることもできます。 `cf restage <appname>` を入力します。
+	  3. アプリからサービス・インスタンスをアンバインドします。`cf unbind-service <appname> <service_instance_name>` を入力します。
+	  4. サービス・インスタンスを削除します。`cf delete-service <service_instance_name>` を入力します。
+	  5. サービス・インスタンスを削除した後、サービス・インスタンスがバインドされていたアプリを再ステージすることもできます。`cf restage <appname>` を入力します。
 
-  * 使用できるサービス・インスタンス数の上限を撤廃するには、ライト・アカウントを有料アカウントにアップグレードします。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
+  * 使用できるサービス・インスタンス数の上限を撤廃するには、ライト・アカウントを有料アカウントにアップグレードします。詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
 
 ## 実行可能ファイルが {{site.data.keyword.cloud_notm}} で実行できない
 {: #ts_executable}
@@ -274,7 +274,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 {{site.data.keyword.cloud_notm}} にプッシュしたいコンテンツが既に実行可能ファイルであれば、そのコンテンツは前にビルドされており、{{site.data.keyword.cloud_notm}} でビルドする必要はありません。 その場合、{{site.data.keyword.cloud_notm}} でその実行可能ファイルを実行するためにビルドパックは必要ありません。 {{site.data.keyword.cloud_notm}} には、ビルドパックが不要であることを明示的に示さなければなりません。
 {: tsCauses}
 
-その実行可能ファイルを {{site.data.keyword.cloud_notm}} にプッシュするときに、ビルドパックが不要であることを示す `null-buildpack` を指定する必要があります。 `ibmcloud cf push` コマンドで **-b** オプションを使用して `null-buildpack` を指定します。
+その実行可能ファイルを {{site.data.keyword.cloud_notm}} にプッシュするときに、ビルドパックが不要であることを示す `null-buildpack` を指定する必要があります。`ibmcloud cf push` コマンドで **-b** オプションを使用して `null-buildpack` を指定します。
 {: tsResolve}
 
 ```
@@ -292,7 +292,8 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 {: #ts_outofmemory}
 {: troubleshoot}
 
-ライト・アカウントのユーザーの場合、組織のメモリー限度を超過すると、{{site.data.keyword.cloud_notm}} にアプリをデプロイできなくなることがあります。 ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
+ライト・アカウントのユーザーの場合、組織のメモリー限度を超過すると、{{site.data.keyword.cloud_notm}} にアプリをデプロイできなくなることがあります。ユーザーにできるのは、自分のアプリが使用するメモリーを削減すること、あるいは自分のアカウントのメモリー割り当て量を増やすことです。 ライト・アカウントの最大メモリー割り当て量は 256 MB で、これは有料アカウントにアップグレードすることでのみ増やすことができます。
+
 
 アプリを {{site.data.keyword.cloud_notm}} にデプロイすると、次のエラー・メッセージが表示されます。
 {: tsSymptoms}
@@ -305,12 +306,12 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 自分のアカウントのメモリー割り当て量を増やすか、自分のアプリが使用するメモリーを減らすか、そのいずれかを行うことができます。
 {: tsResolve}
 
-  * アカウントのメモリー割り当て量を増やすには、ライト・アカウントを有料アカウントにアップグレードしてください。 詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
+  * アカウントのメモリー割り当て量を増やすには、ライト・アカウントを有料アカウントにアップグレードしてください。詳しくは、『[アカウントのアップグレード](/docs/account/index.html#upgrade-to-paygo)』を参照してください。
   * アプリが使用するメモリーを削減するには、{{site.data.keyword.cloud_notm}} コンソールまたは Cloud Foundry コマンド・ライン・インターフェースのいずれかを使用します。
 
     {{site.data.keyword.cloud_notm}} コンソールを使用する場合は、以下の手順を実行します。
 
-    1. リソース・リストからアプリを選択します。 アプリ詳細ページが開きます。
+    1. リソース・リストからアプリを選択します。アプリ詳細ページが開きます。
     2. 「ランタイム」ペインで、そのアプリの最大メモリー上限またはアプリ・インスタンス数のいずれか、あるいはその両方を減らすことができます。
 
     コマンド・ライン・インターフェースを使用する場合は、以下の手順を実行します。
@@ -648,7 +649,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
 {: #access_kube_logs}
 
 アプリケーションが実行されておらず、ヘルス・エンドポイントにアクセスできない場合、クラスター内のログを調べてください。
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) がまだない場合は、インストールします。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) がまだない場合は、インストールします。
 * `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
 * `ibmcloud cs clusters` を使用して、クラスターをリストします。
 * `ibmcloud cs cluster-config <cluster-name>` を使用して、該当するクラスターを指します。
@@ -680,10 +681,10 @@ Docker クライアントがインストールされていないか、インス�
 {: #build_error}
 {: troubleshoot}
 
-`ibmcloud dev build` コマンドを使用してアプリをビルドしようとすると、Docker のユーザー名/パスワードのエラーで失敗します。 
+`ibmcloud dev build` コマンドを使用してアプリをビルドしようとすると、Docker のユーザー名/パスワードのエラーで失敗します。
 {: tsSymptoms}
 
-認証に不適切な Docker Hub の資格情報が使用されています。 
+認証に不適切な Docker Hub の資格情報が使用されています。
 {: tsCauses}
 
 Docker クライアントで Docker ハブからログアウトします。

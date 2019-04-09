@@ -56,7 +56,7 @@ BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，從使�
 ## 行動
 {: #mobile}
 
-行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線。行動服務稱為「行動後端即服務」，或 MBaaS 模式。它們也有專用的 [Backend for Frontend](/docs/apps/patterns.html#bff)。
+行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線。行動服務稱為「行動後端即服務」，或 MBaaS 模式。它們也有專用的 [Backend for Frontend](#bff)。
 
 {{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://{DomainName}/developer/mobile/dashboard)上找到「行動」模式的入門範本套件。
 

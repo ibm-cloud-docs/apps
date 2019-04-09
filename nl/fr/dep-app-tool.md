@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-12-17"
 
 ---
 
@@ -16,28 +16,24 @@ lastupdated: "2019-02-01"
 {:important: .important}
 
 # Déploiement d'applications
-{: #deploying-apps}
+{: #deploy}
 
 Vous pouvez déployer vos applications avec une chaîne d'outils ou l'interface de ligne de commande (CLI). Une chaîne d'outils est un ensemble d'intégrations d'outils. L'interface de ligne de commande constitue un moyen simple de déployer vos applications et vos instances de service.
 {: shortdesc}
 
 ## Déploiement d'applications en utilisant des chaînes d'outils
-{: #toolchain-deploy-apps}
+{: #toolchains_getting_started}
 
 Des chaînes d'outils ouvertes sont disponibles dans les environnements {{site.data.keyword.Bluemix}} Public et Dédié. Avec une chaîne d'outils correctement configurée, le déploiement de votre application devient un jeu d'enfants. Un cycle de génération-déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel.
 
-Vous pouvez créer une chaîne d'outils d'une des manières suivantes :
-* En utilisant un modèle pour créer une chaîne d'outils.
-* En créant une chaîne d'outils à partir d'une application.
-
-Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Vous pouvez créer une chaîne d'outils de deux manières, soit à l'aide d'un modèle, soit à partir d'une application. Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Déploiement d'applications en utilisant l'interface de ligne de commande
-{: #cli-deploy-apps}
+{: #cli}
 
 {{site.data.keyword.cloud_notm}} fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande.
 
-Avant de commencer, [téléchargez et installez l'interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
+Avant de commencer, [téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger IBM Cloud Developer Tools" /></a>

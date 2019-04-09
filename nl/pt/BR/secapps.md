@@ -114,7 +114,7 @@ protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por
     O recurso de certificado customizado no gerenciamento de domínio do
 {{site.data.keyword.cloud_notm}} depende da
 extensão de Indicação de Nome do Servidor (SNI) do protocolo de
-Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.cloud_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Assegurando dados com TLS](/docs/get-support/appsectls.html#tlssupportwithdraw).
+Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.cloud_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Assegurando dados com TLS](/docs/get-support/appsectls.html).
     {: note}
   
   * Armazenamento confiável de certificado de cliente (opcional): inclui os certificados de cliente para os usuários aos quais você deseja permitir acesso ao seu aplicativo. Faça upload de um arquivo de armazenamento confiável de certificado de cliente para ativar a opção para solicitar um certificado de cliente.
@@ -122,6 +122,6 @@ Segurança da Camada de Transporte (TLS). O código do cliente que acessa os apl
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}
 
-Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates/import-ssl-certificate.html).
+Para obter mais informações, veja [Importando SSL Certificates](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
 

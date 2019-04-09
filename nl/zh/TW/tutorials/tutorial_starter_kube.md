@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-13"
+  years: 2018
+lastupdated: "2018-11-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # 將入門範本套件應用程式部署至 Kubernetes 叢集
-{: #tutorial-starterkit-kube}
+{: #tutorial}
 
 了解如何使用空白的入門範本套件及 Kubernetes 工具鏈在 {{site.data.keyword.cloud}} 中建立應用程式，並持續將應用程式遞送至 Kubernetes 叢集裡的安全容器。您可以配置 Continuous Integration DevOps 管線，以自動建置程式碼變更，並將這些變更傳播到 Kubernetes 叢集裡的應用程式。如果您已有管線，則可以將它連接至應用程式。
 {: shortdesc}
@@ -28,14 +28,14 @@ lastupdated: "2019-02-13"
 ![入門範本套件流程圖](../images/starterkit-flow.png) 
 
 ## 開始之前
-{: #prereqs-starterkit-kube}
+{: #prereqs}
 
-* 使用[入門範本套件](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit)來建立 **Java + Spring** 應用程式。
+* 使用[入門範本套件](/docs/apps/tutorials/tutorial_starter-kit.html)來建立 **Java + Spring** 應用程式。
 * 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
 * 設定 [Docker ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.docker.com/get-started){: new_window}。
 
 ## 將資源新增至應用程式
-{: #resources-starterkit-kube}
+{: #add_resources}
 
 將 {{site.data.keyword.cloud_notm}} 服務資源新增至應用程式。下列步驟會佈建 Cloudant 實例、建立資源金鑰 (credentials)，並將它連結至應用程式。
 
@@ -47,7 +47,7 @@ lastupdated: "2019-02-13"
 6. 選用。如果您想要在新增資源之後快速查看應用程式碼，請按一下**下載程式碼**。您的程式碼會下載為包含完整應用程式碼結構的 `.zip` 檔案。您可以使用 {{site.data.keyword.dev_cli_notm}} 輕鬆地解壓縮檔案並在本端執行程式碼，或將其新增至程式碼管理儲存庫。
 
 ## 使用 DevOps 工具鏈來部署應用程式
-{: #deploy-starterkit-kube}
+{: #deploy_app}
 
 將 DevOps 工具鏈連接至應用程式，並將它配置為部署至 {{site.data.keyword.cloud_notm}} Kubernetes 服務中管理的 Kubernetes 叢集。
 
@@ -62,14 +62,14 @@ lastupdated: "2019-02-13"
 5. 在**配置工具鏈**頁面上，輸入工具鏈名稱、選取地區、選取資源群組，然後按一下**建立**。即會顯示**應用程式詳細資料**頁面，以及有關工具鏈的部署資訊。
 
 ## 檢視儲存庫
-{: #view-repo-starterkit-kube}
+{: #view_repo}
 
 1. 在**應用程式詳細資料**頁面上，按一下**檢視儲存庫**。即會顯示入門範本套件產生的 Git 儲存庫。
 2. 選用。遵循畫面上的指示，在桌面上配置 SSH。
 3. 選用。遵循畫面上的指示，在帳戶上建立個人存取記號。
 
 ## 檢視工具鏈工具、日誌及歷程
-{: #view-logs-starterkit-kube}
+{: #view_logs}
 
 1. 部署階段完成時，即會顯示**應用程式詳細資料**頁面，以及有關工具鏈的部署資訊。
 2. 按一下**檢視工具鏈**來存取工具鏈。即會顯示工具鏈頁面的**概觀**標籤，其中顯示工具鏈隨附的工具。此範例包含在建立工具鏈時，已在入門範本套件預先選取的下列工具：
@@ -77,34 +77,21 @@ lastupdated: "2019-02-13"
   * 包含應用程式原始碼的 Git 儲存庫。
   * Eclipse Orion 實例，這是可編輯應用程式的 Web 型 IDE。
   * 由可自訂的建置並部署階段組成的 Delivery Pipeline。
-	 * 「建置」階段會將應用程式容器化。更明確地說，建置階段會：
+	 * BUILD 階段會將應用程式容器化。更明確地說，建置階段會：
 	   * 複製 GitLab 儲存庫。
 	   * 建置應用程式。
 	   * 建置 Docker 映像檔。
 	   * 將映像檔發佈至專用 Container Registry。
-	 * 「部署」階段會從 Container Registry 擷取容器映像檔，然後將其部署至 Kubernetes 叢集。
+	 * DEPLOY 階段會從 Container Registry 擷取容器映像檔，然後將其部署至 Kubernetes 叢集。
 3. 按一下 **Delivery Pipeline**。即會顯示管線階段。
-4. 在**部署階段**磚中，按一下**檢視日誌和歷程**。
+4. 在 DEPLOY 階段中，按一下**檢視日誌和歷程**。
+5. 在日誌尾端，尋找 `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`，這是您可用來存取應用程式的 URL。
+6. 移至 `/health` 端點，網址為 `http://<ipaddress>:<port>/health`。如果應用程式正在叢集裡執行，則會顯示包含 `{"status":"UP"}` 的訊息。
 
-## 驗證應用程式正在執行
-{: #verify-starterkit-kube}
-
-部署應用程式之後，Delivery Pipeline 或指令行會將您指向應用程式的 URL。
-
-1. 從 DevOps 工具鏈中，按一下 **Delivery Pipeline**，然後選取**部署階段**。
-2. 按一下**檢視日誌和歷程**。
-3. 在日誌檔中，尋找應用程式 URL：
-
-    在日誌檔結尾，搜尋 `View the application health at: http://<ipaddress>:<port>/health`。
-
-4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
-
-如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。
+如果您在部署時遇到錯誤，請檢查疑難排解主題以找出[超出儲存空間配額](/docs/apps/ts_apps.html#exceed_quota)這類已知問題，或了解如何[存取 Kubernetes 日誌](/docs/apps/ts_apps.html#access_kube_logs)來尋找錯誤。
 
 ## 後續步驟
-{: #next-steps-startkit-kube notoc}
-
-* 如果您在部署時遇到錯誤，請檢查疑難排解主題以找出[超出儲存空間配額](/docs/apps/ts_apps.html#exceed_quota)這類已知問題，或了解如何[存取 Kubernetes 日誌](/docs/apps/ts_apps.html#access_kube_logs)來尋找錯誤。
+{: #next_steps notoc}
 
 * 在程式碼中存取服務配置：
 	- 您可以使用 _@Value_ 註釋，或使用 Spring 架構環境類別 _getProperty()_ 方法。如需相關資訊，請參閱[存取認證](/docs/java-spring/configuration.html#configuration#accessing-credentials)。

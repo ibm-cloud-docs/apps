@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-11-14"
 
 ---
 
@@ -24,9 +24,9 @@ Découvrez comment ajouter manuellement des données d'identification de service
 En général, vous souhaitez que votre logique d'application se procure les données d'identification de service sensibles, comme les clés ou les mots de passe d'API de base de données, à partir de l'environnement où s'exécute votre application. Ainsi, vous ne conservez pas les données d'identification dans votre référentiel de codes source. Les bases de données de vos environnements d'intégration continue, de pré-production et de production sont mises en quarantaine ou isolées les unes des autres.
 
 Si vous créez une application en utilisant un modèle de kit de démarrage, l'environnement est préparé pour vous automatiquement. Votre cible de déploiement peut être de type suivant :
-  * [Kubernetes](/docs/apps/creds_kube.html#add-credentials-kube)
-  * [Cloud Foundry Public ou Cloud Foundry Enterprise Environment](/docs/apps/creds_cf.html#add-credentials-cf)
-  * [Instance de serveur virtuel (également docker local)](/docs/apps/creds_vsi.html#add-credentials-vsi)
+  * [Kubernetes](/docs/apps/creds_kube.html)
+  * [Cloud Foundry](/docs/apps/creds_cf.html)
+  * [Instance de serveur virtuel (également docker local)](/docs/apps/creds_vsi.html)
   
 Cette procédure permet de configurer l'environnement. Les kits de démarrage génèrent du code qui utilise une bibliothèque dépendante afin de rendre le code portable pour qu'il s'exécute sur une des cibles de déploiement. Pour finir, aucune ramification n'est utilisée pour détecter dans quelle cible de déploiement l'application s'exécute.
 

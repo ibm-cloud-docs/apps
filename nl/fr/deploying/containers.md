@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-07-23"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # Utilisation de conteneurs avec Kubernetes
-{: #containers-kube}
+{: #containers}
 
 Commencez à utiliser {{site.data.keyword.containershort}} en déployant des applications hautement disponibles dans des conteneurs Docker s'exécutant dans des clusters Kubernetes. Gérez votre développement coopératif avec Git puis utilisez la chaîne d'outils DevOps pour gérer le déploiement de votre application dans Kubernetes.
 {: shortdesc}
@@ -35,7 +35,7 @@ Lorsque vous créez des applications de back end ou de service Web, vous pouvez 
 ## Liaison de services
 {: #bind-services}
 
-Lorsque la chaîne d'outils est créée, les services associés à votre application sont liés au cluster Kubernetes en utilisant des valeurs confidentielles Kubernetes. Ces dernières permettent de gérer les données d'identification de service en dehors de votre application en cours d'exécution. L'application lit les valeurs confidentielles puis extrait les valeurs requises pour le démarrage de l'exécution. La liaison des services vous permet de déployer l'application dans un autre environnement Kubernetes pouvant utiliser des instances de service {{site.data.keyword.cloud}} de niveau de production.
+Lorsque la chaîne d'outils est créée, les services associés à votre application sont liés au cluster Kubernetes en utilisant des valeurs confidentielles Kubernetes. Ces dernières permettent de gérer les données d'identification de service en dehors de votre application en cours d'exécution. L'application lit les valeurs confidentielles puis extrait les valeurs requises pour le démarrage de l'exécution. La liaison des services vous permet de déployer l'application dans un autre environnement Kubernetes pouvant utiliser des instances de service {{site.data.keyword.cloud_notm}} de niveau de production.
 
 Si vous supprimez le service ou les valeurs confidentielles, vous devez les lier manuellement à nouveau ou supprimer et recréer la chaîne d'outils.
 {: tip}

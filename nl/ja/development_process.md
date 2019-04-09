@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-03-14"
+
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -43,7 +47,7 @@ lastupdated: "2018-11-29"
 
 ![ローカルで開発](images/dev_code_locally.png "ローカルで開発") 図 3. ローカルで開発のフロー
 
-{{site.data.keyword.dev_cli_notm}}の基本機能は `ibmcloud dev build` と `ibmcloud dev run` ですが、CLI ははるかに多くを提供しています。 詳しくは、『[{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview)』を参照してください。
+{{site.data.keyword.dev_cli_notm}}の基本機能は `ibmcloud dev build` と `ibmcloud dev run` ですが、CLI ははるかに多くを提供しています。 詳しくは、『[{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html)』を参照してください。
 {: tip}
 
 ## {{site.data.keyword.cloud_notm}} でのデリバリーおよび管理

@@ -1,75 +1,52 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-04"
+  years: 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
 
-# Tutorial Introdução
-{: #tutorial-getting-started}
+# Criando aplicativos no {{site.data.keyword.Bluemix_notm}}
+{: #create}
 
-É possível construir aplicativos móveis e da web prontos para a empresa no {{site.data.keyword.cloud}} e aproveitar as extensões de nuvem que são hospedadas pelo {{site.data.keyword.cloud_notm}}. Você tem várias opções para iniciar. Crie um app com um kit do iniciador que gerencia o processo para você ou, se você souber o que deseja, comece do zero e construa o seu app com os recursos necessários ou use o seu repositório existente e traga o seu próprio código.
-{: shortdesc}
+No {{site.data.keyword.Bluemix}}, é possível construir aplicativos móveis e da web no nível corporativo e aproveitar as extensões de nuvem hospedadas pelo {{site.data.keyword.Bluemix_notm}}. É possível usar o console do {{site.data.keyword.Bluemix}} e as ferramentas de linha de comandos para construir, executar e implementar seus aplicativos. Siga este cenário de desenvolvimento de ponta a ponta
+para iniciar.
 
-## Antes de começar
-{: #prereqs-getting-started}
+## Etapa 1: Inscreva-se para uma conta do {{site.data.keyword.Bluemix_notm}}
+{: #sign-up}
 
-É possível criar o seu app usando o console ou a interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}}. Se você desejar usar a CLI, consulte [Introdução à CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) para obter detalhes da instalação.
+Acesse [bluemix.net](bluemix.net). Insira seu e-mail, seu nome, sua empresa, sua região, seu número de telefone e você concluiu o processo. Não é necessário um cartão de crédito para se inscrever para uma conta grátis. Sinta-se livre para dar uma olhada.
 
-## Etapa 1. Criar o seu app
-{: #create-getting-started}
+## Etapa 2: Procure por meio do catálogo
+{: #catalog}
 
-Crie um app selecionando um dos pontos de entrada a seguir:
-* [Kit do iniciador](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit): crie um app por meio de uma seleção de kits do iniciador do App Service que gerenciam o processo para você.
-* [Customizado](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch): se você sabe o que deseja, construa um app customizado do zero com os recursos dos quais precisa usando um kit do iniciador em branco.
-* [Traga o seu próprio código](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc): traga o seu próprio código vinculando ao seu próprio repositório de conteúdo existente. O
-app e a imagem do Docker devem estar localizados no mesmo repositório.
-* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli): crie e implemente um app customizado ou do kit do iniciador usando ferramentas da CLI e do Desenvolvedor.
-* [Padrões de código](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern): use um padrão de código do IBM Developer como uma base para criar o seu app.
-* [Catálogo do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://cloud.ibm.com/catalog){: new_window}: é possível navegar ou procurar o catálogo para apps e serviços que você pode criar e começar a usar hoje.
+O catálogo do {{site.data.keyword.Bluemix_notm}} lista os recursos de infraestrutura e plataforma que ele oferece. É possível começar a construir seu aplicativo selecionando uma máquina virtual, um contêiner ou o Cloudant, um aplicativo do Cloud Foundry. Se precisar de recursos de plataforma, o {{site.data.keyword.Bluemix_notm}} também oferece modelos, que fornecem os tempos de execução e outros serviços para ajudá-lo a iniciar a construção.
 
-## Etapa 2. Incluir recursos
-{: #resources-getting-started}
+## Etapa 3: Criar um recurso
+{: #resource}
 
-Quando você usar um kit do iniciador para criar o seu app, os seus recursos serão criados automaticamente para você. É possível associar mais recursos ao seu app clicando em **Incluir recurso** na página de detalhes do app no console.
+1. Em seu [painel](https://console.bluemix.net/dashboard/apps/), clique em **Criar recurso**.
 
-Para incluir recursos usando a CLI, execute o comando a seguir para incluir um serviço em seu app. É possível selecionar um serviço existente de um já
-ativado na conta ou incluir um novo serviço. 
-```
-ibmcloud dev edit
-```
-{: codeblock}
+2. No catálogo, selecione um aplicativo na seção Plataforma. Em seguida, escolha seu tempo de execução. Por exemplo, é possível escolher um ambiente de tempo de execução da IBM, como o Liberty for Java, que seja suportado pelos buildpacks IBM. Também é possível escolher tempos de execução da Comunidade, como o Tomcat, que dependem de software livre e buildpacks de terceiros.
 
-Para
-obter mais informações, consulte [Incluindo um serviço no app](/docs/apps/reqnsi.html#add-resource).
+  * [Introdução aos contêineres](../containers/container_index.html)
+  * [Introdução ao Openwhisk](../openwhisk/index.html)
+  * [Criando apps Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
 
-## Etapa 3. Implementar seu app
-{: #deploy-getting-started}
+3. Insira o nome de seu aplicativo, o nome do host e escolha seu plano de precificação.
 
-É possível implementar o seu app usando o console ou a line da linha de comandos.
+4. Selecione seu estilo de desenvolvimento. É possível editar seu aplicativo em seu editor de texto preferencial e usar a linha de comandos do {{site.data.keyword.Bluemix_notm}} para implementá-la no {{site.data.keyword.Bluemix_notm}}. Também é possível usar o {{site.data.keyword.Bluemix_notm}} DevOps Services para implementar seu aplicativo de um navegador ou usar o Eclipse Tools for {{site.data.keyword.Bluemix_notm}} para trabalhar em aplicativos no ambiente de desenvolvimento integrado do Eclipse.
 
-### Utilizando o Console
-{: #console-getting-started}
+## Etapa 4: Iniciar inclusão de código
+{: #code}
 
-Para implementar o seu app usando o console, conclua as etapas a seguir:
+Cada aplicativo vem com uma seção de introdução que ajuda você a obter todos os softwares e conteúdo necessários para começar a trabalhar.
 
-1. Na página **Detalhes do app**, clique em **Implementar na nuvem**.
-2. Selecione um método de implementação e clique em **Criar**. O {{site.data.keyword.cloud_notm}} automaticamente cria uma cadeia de ferramentas aberta e completa com um repositório Git e um pipeline de entrega contínua.
-3. Abra o estágio de pipeline de sua nova cadeia de ferramentas para visualizar o processo de construção e implementação para que seja possível visualizar o seu novo app em minutos.
+Em seu painel, clique em seu aplicativo e, em seguida, clique em **Introdução**, que pode ajudá-lo a obter o software necessário para desenvolver seu aplicativo, apontar-lhe o código-fonte e ajudá-lo a implementar seu aplicativo pela primeira vez.
 
-Para obter mais informações, consulte o índice para vários tópicos de implementação na seção "Implementando e integrando apps".
+## Próximas Etapas
+{: #next}
 
-### Utilizando a linha de comandos
-{: #cli-getting-started}
-
-Para implementar o seu app usando a linha de comandos, execute o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
-
-Agora você está configurado para desenvolvimento iterativo e entrega contínua.
+Depois que seu aplicativo for desenvolvido, use nossos guias de [melhores práticas](best-practice.html) e [disponibilidade de nuvem](cloud-ready.html) para garantir que seu aplicativo esteja pronto para {{site.data.keyword.Bluemix_notm}}. Em seguida, [implemente](../starters/install_cli.html) seu aplicativo.

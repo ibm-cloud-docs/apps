@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-12-17"
 
 ---
 
@@ -16,28 +16,24 @@ lastupdated: "2019-02-01"
 {:important: .important}
 
 # 部署应用程序
-{: #deploying-apps}
+{: #deploy}
 
 您可以使用工具链或命令行界面 (CLI) 来部署应用程序。工具链是一组工具集成。CLI 是一种部署应用程序和服务实例的简单方法。
 {: shortdesc}
 
 ## 使用工具链部署应用程序
-{: #toolchain-deploy-apps}
+{: #toolchains_getting_started}
 
 开放工具链在 {{site.data.keyword.Bluemix}} 上的 Public 和 Dedicated 环境中可用。通过正确配置工具链，您可以轻松部署应用程序。每次合并到存储库中的主分支后，都会自动启动构建/部署周期。
 
-您可以通过以下方式来创建工具链：
-* 使用模板来创建工具链。
-* 通过应用程序创建工具链。
-
-要了解有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)。
+您可以通过以下两种方式中的一种来创建工具链：使用模板创建工具链或通过应用程序创建工具链。要了解有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)。
 
 ## 使用 CLI 部署应用程序
-{: #cli-deploy-apps}
+{: #cli}
 
 {{site.data.keyword.cloud_notm}} 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工具扩展。
 
-开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)。
+开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 IBM Cloud Developer Tools" /></a>

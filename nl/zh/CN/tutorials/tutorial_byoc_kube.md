@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-01-03"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # 将您自己的代码部署到 Kubernetes 集群
-{: #tutorial-byoc-kube}
+{: #tutorial}
 
 了解如何使用现有应用程序存储库在 {{site.data.keyword.cloud}} 中创建应用程序。您可以连接现有 DevOps 工具链或创建 DevOps 工具链，然后持续将应用程序交付到 Kubernetes 集群中的安全容器。本教程将帮助您设置持续集成 DevOps 管道，以便更改可自动构建并一路传播到 Kubernetes 集群中部署的应用程序。
 {: shortdesc}
@@ -25,10 +25,10 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 {: tip}
 
 ## 开始之前
-{: #prereqs-byoc-kube}
+{: #prereqs}
 
-* 创建应用程序。有关更多信息，请参阅[通过您自己的代码存储库创建应用程序](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc)。
-* 在 [{{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window} 中，单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器**以[配置 Kubernetes 集群](/docs/containers/container_index.html#container_index)。
+* 创建应用程序。有关更多信息，请参阅[通过您自己的代码存储库创建应用程序](/docs/apps/tutorials/tutorial_byoc.html)。
+* 在 [{{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window} 中，单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器**以[配置 Kubernetes 集群](/docs/containers/container_index.html)。
 * 要确认应用程序是否在 Docker 中运行，请运行以下命令：
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -39,16 +39,16 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 * 然后，转至您的 URL，例如 `http://localhost/springboothelloworld/sayhello`。按 Ctrl+C 键可停止 Docker 运行。
 
 ## 向应用程序添加资源（可选）
-{: #resources-byoc-kube}
+{: #add_resources}
 
 将服务资源添加到应用程序，然后 {{site.data.keyword.cloud_notm}} 会为您创建服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。{{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
 
-此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加服务](/docs/apps/reqnsi.html#add-resource)。
+此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加服务](/docs/apps/reqnsi.html)。
 
-将服务资源添加到应用程序后，您必须将服务的凭证复制到部署环境。有关更多信息，请参阅[向 Kubernetes 环境添加凭证](/docs/apps/creds_kube.html#add_credentials)。
+将服务资源添加到应用程序后，您必须将服务的凭证复制到部署环境。有关更多信息，请参阅[向 Kubernetes 环境添加凭证](/docs/apps/creds_kube.html)。
 
 ## 准备应用程序以进行部署
-{: #deploy-byoc-kube}
+{: #connect_toolchain}
 
 在此步骤中，您将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.cloud_notm}} Kubernetes 服务中托管的 Kubernetes 集群。
 
@@ -80,7 +80,7 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 
 
 ### 将应用程序连接到新的工具链
-{: #toolchain-byoc-kube-create}
+{: #create_toolchain}
 
 如果要对 DevOps 工具链创建有完全控制权，而不更改代码存储库，请从头开始创建工具链。您还可以创建所有集成来构建应用程序，并将其部署到 Kubernetes 集群。 
 
@@ -90,10 +90,9 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 选择通过新应用程序创建工具链时，会在浏览器的新选项卡中打开 DevOps 仪表板中的[创建工具链](https://{DomainName}/devops/create)页面。在该选项卡中创建并配置工具链后，必须返回到应用程序中的“连接工具链”页面，然后刷新该页面。
 {:tip}
 
-如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt/commands.html#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps/create-deploy-cli.html#byoc-cli)。
+如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt/commands.html#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps/create-deploy-cli.html#byoc)。
 
 ## 添加 GitHub 集成
-{: #github-byoc-kube}
 
 将 DevOps 工具链配置为集成 GitHub 存储库以允许工具链在存储库中设置 Webhook，以便该存储库中的拉取请求和代码推送操作向工具链发送 POST 操作。 
 
@@ -109,14 +108,12 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 您可以从存储库设置查看新的 Webhook。
 
 ## 添加 Delivery Pipeline
-{: #pipeline-byoc-kube}
 
 1. 单击**添加工具**。
 2. 选择 **Delivery Pipeline**。
 3. 针对管道名称输入 `Continuous Integration`，然后单击**创建集成**。
 
 ## 配置管道阶段
-{: #pipelineconfig-byoc-kube}
 
 将管道阶段配置为将输入（GitHub 存储库内容）定向到正确的目标。本教程假定您具有的 GitHub 存储库可生成正常工作的 Docker 映像，并且正在使用 IBM Containers Kubernetes 集群，因此您可创建包含输入、shell 脚本和输出的管道阶段以实现此目标。
 
@@ -161,19 +158,4 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
     * 选择 Kubernetes 集群所在的区域。
     * 输入现有 API 密钥。 
   4. 单击**保存**。
-4. 通过单击**播放**图标，直至构建成功，以测试 `deploy to cluster` 管道阶段。绿色阶段指示构建成功。
-
-## 验证应用程序是否正在运行
-{: #verify-byoc-kube}
-
-应用程序部署完成后，Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
-
-1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
-2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
-
-    在日志文件末尾，搜索 `View the application health at: http://<ipaddress>:<port>/health`。
-
-4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
-
-如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+4. 通过单击**播放**图标，直至构建成功，以测试 `deploy to cluster` 管道阶段。绿色阶段指示构建成功。您可以查看该阶段的日志。在日志末尾附近，找到运行中应用程序的可单击链接。请附加应用程序的正确路径以确认它是否在运行。

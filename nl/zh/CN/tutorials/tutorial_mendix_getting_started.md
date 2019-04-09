@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-06"
+  years: 2018
+lastupdated: "2018-11-28"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2019-02-06"
 {:tip: .tip}
 
 # 使用 Mendix 创建应用程序
-{: #create-mendix}
+{: #getting-started}
 
 Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少的开发资源更快地交付在 {{site.data.keyword.cloud}} 上运行的多设备应用程序。当您选择 Mendix 低代码入门模板工具包后，系统会指导您在 Mendix Platform 上设置帐户，启动项目，并从 Cloud Foundry 或 Kubernetes 集群中选择部署环境。
 {: shortdesc}
 
 ## 选择入门模板工具包
-{: #starterkit-mendix}
+{: #select-a-starter-kit}
 
 1. 在 [{{site.data.keyword.cloud_notm}} App Service 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/dashboard){: new_window} 中，单击**入门**。
 2. 从以下类别中选择一个 Mendix 低代码入门模板工具包：
@@ -28,9 +28,20 @@ Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少�
   * [Watson Web 或移动应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
   * [Web 应用程序 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/starter-kits/mendix-web-app)
 3. 单击**创建应用程序**。
-4. 在**应用程序详细信息**页面上，对应用程序命名，并可选择性提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources/tagging_resources.html#tag)。
+4. 为您的应用程序命名。
 5. 单击**创建**。
 
+<!-- 
+####### Promote CLOUD.IBM.COM links to prod when approved.
+1. From the [{{site.data.keyword.cloud_notm}} App Service dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/dashboard){: new_window}, click **Get Started**.
+2. Select a Mendix low-code starter kit from one of the following categories:
+  * [Mobile ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-mobile-app)
+  * [Watson Web or Mobile App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-or-mobile-app-with-watson)
+  * [Web App ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/developer/appservice/starter-kits/mendix-web-app)
+3. Click **Create app**.
+4. Name your app.
+5. Click **Create**.
+-->
 
 ## 授权 IBM 在 Mendix 上创建项目并链接帐户
 {: #link-mendix-account}
@@ -47,7 +58,7 @@ Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少�
 ## 选择 Mendix 应用程序的部署选项
 {: #select-deployment}
 
-1. 在**选择部署环境**页面上，选择 Cloud Foundry 或在 {{site.data.keyword.cloud_notm}} 上运行的其中一个 Kubernetes 集群。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择 Cloud Foundry 部署程序类型**[公共云](/docs/cloud-foundry-public/about-cf.html#about-cf)**或**[企业环境](/docs/cloud-foundry-public/cfee.html#cfee)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
+1. 在**选择部署环境**页面上，选择 Cloud Foundry 或某个在 {{site.data.keyword.cloud_notm}} 上运行的 Kubernetes 集群。
 2. 可选。如果您没有 Kubernetes 集群，可以立即创建一个。
 3. 在**配置工具链**页面上，选择您的区域和资源组，然后单击**创建**。
 
@@ -56,11 +67,11 @@ Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少�
 Mendix Cloud Foundry 部署需要 PostGRES 数据库服务，但该服务没有轻量层。如果您想要使用轻量帐户评估 Mendix 入门模板工具包，可以部署到试用版 Kubernetes 集群。
 {: tip}
 
-如果选择了 Kubernetes 集群来进行部署，请参阅 [Mendix Kubernetes 教程](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)来了解如何配置集群以便用于生产环境。
+如果选择了 Kubernetes 集群来进行部署，请参阅 [Mendix Kubernetes 教程](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)来了解如何配置集群以便用于生产环境。
 
 
 ## 继续 Mendix 部署和部署生命周期
-{: #dev-lifecycle-mendix}
+{: #development-lifecycle}
 
 Mendix 是一个低代码编写环境。开发生命周期要求您在 Mendix Modeler 桌面应用程序中打开项目。
 
@@ -74,6 +85,6 @@ Mendix 是一个低代码编写环境。开发生命周期要求您在 Mendix Mo
 {: tip}
 
 ## 后续步骤 
-{: #next-steps-mendix}
+{: #next steps}
 
-要将应用程序部署到 {{site.data.keyword.containerlong_notm}}，请针对生产部署配置您的应用程序。有关更多信息，请参阅 [Mendix Kubernetes 教程](/docs/apps/tutorials/tutorial_mendix_kubernetes.html#deploy-mendix-kube)。 
+要将应用程序部署到 {{site.data.keyword.containerlong_notm}}，请针对生产部署配置您的应用程序。有关更多信息，请参阅 [Mendix Kubernetes 教程](/docs/apps/tutorials/tutorial_mendix_kubernetes.html)。 

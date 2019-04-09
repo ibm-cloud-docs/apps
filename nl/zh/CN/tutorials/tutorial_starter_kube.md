@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-13"
+  years: 2018
+lastupdated: "2018-11-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # 将入门模板工具包应用程序部署到 Kubernetes 集群
-{: #tutorial-starterkit-kube}
+{: #tutorial}
 
 了解如何使用空白入门模板工具包和 Kubernetes 工具链在 {{site.data.keyword.cloud}} 中创建应用程序，并持续将应用程序交付到 Kubernetes 集群中的安全容器。可配置持续集成 DevOps 管道，以便自动构建代码更改并将其传播到 Kube 集群中的应用程序。如果您已有管道，那么可以将其连接到应用程序。
 {: shortdesc}
@@ -28,14 +28,14 @@ lastupdated: "2019-02-13"
 ![入门模板工具包流程图](../images/starterkit-flow.png) 
 
 ## 开始之前
-{: #prereqs-starterkit-kube}
+{: #prereqs}
 
-* 使用[入门模板工具包](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit)创建 **Java + Spring** 应用程序。
+* 使用[入门模板工具包](/docs/apps/tutorials/tutorial_starter-kit.html)创建 **Java + Spring** 应用程序。
 * 安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
 * 设置 [Docker ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.docker.com/get-started){: new_window}。
 
 ## 向应用程序添加资源
-{: #resources-starterkit-kube}
+{: #add_resources}
 
 向应用程序添加 {{site.data.keyword.cloud_notm}} 服务资源。以下步骤将供应 Cloudant 实例，创建资源密钥（凭证），并将其绑定到应用程序。
 
@@ -44,10 +44,10 @@ lastupdated: "2019-02-13"
 3. 选择 **Cloudant**，然后单击**下一步**。
 4. 在**添加 Cloudant** 页面上，选择区域 (US-South)、资源组（缺省值）和价格套餐（轻量 - 一个免费实例）。
 5. 单击**创建**。这将显示**应用程序详细信息**页面，供应 Cloudant 实例并将其绑定到应用程序。请注意，Cloudant 资源密钥（凭证）将添加到**凭证**字段。
-6. 可选。如果要在添加资源后快速查看应用程序代码，请单击**下载代码**。代码会下载为 `.zip` 文件，其中包含完整的应用程序代码结构。您可以使用 {{site.data.keyword.dev_cli_notm}} 轻松解压缩该文件并在本地运行代码，或者将其添加到代码管理存储库中。
+6. 可选。如果要在添加资源后快速查看应用程序代码，请单击**下载代码**。代码将下载为一个 `.zip` 文件，其中包含完整的应用程序代码结构。您可以使用 {{site.data.keyword.dev_cli_notm}} 轻松解压缩该文件并在本地运行代码，或者将其添加到代码管理存储库。
 
 ## 使用 DevOps 工具链部署应用程序
-{: #deploy-starterkit-kube}
+{: #deploy_app}
 
 将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.cloud_notm}} Kubernetes 服务中托管的 Kubernetes 集群。
 
@@ -62,14 +62,14 @@ lastupdated: "2019-02-13"
 5. 在**配置工具链**页面上，输入工具链名称，选择区域，选择资源组，然后单击**创建**。这将显示**应用程序详细信息**页面，以及有关工具链的部署信息。
 
 ## 查看存储库
-{: #view-repo-starterkit-kube}
+{: #view_repo}
 
 1. 在**应用程序详细信息**页面上，单击**查看存储库**。这将显示入门模板工具包生成的 Git 存储库。
 2. 可选。遵循屏幕上的指示信息，在桌面上配置 SSH。
 3. 可选。遵循屏幕上的指示信息，在帐户上创建个人访问令牌。
 
 ## 查看工具链工具、日志和历史记录
-{: #view-logs-starterkit-kube}
+{: #view_logs}
 
 1. 部署阶段完成后，将显示**应用程序详细信息**页面，以及有关工具链的部署信息。
 2. 通过单击**查看工具链**来访问工具链。这将显示工具链页面的**概述**选项卡，其中显示工具链随附的工具。此示例包含的以下工具是创建工具链时在入门模板工具包中预先选择的工具：
@@ -84,27 +84,14 @@ lastupdated: "2019-02-13"
 	   * 将映像发布到专用容器注册表。
 	 * DEPLOY 阶段用于从容器注册表检索容器映像，然后将其部署到 Kubernetes 集群。
 3. 单击 **Delivery Pipeline**。这将显示管道各阶段。
-4. 在 **Deploy 阶段**磁贴中，单击**查看日志和历史记录**。
+4. 在 DEPLOY 阶段中，单击**查看日志和历史记录**。
+5. 在日志末尾，查找 `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`，这是可以访问应用程序的 URL。
+6. 转至 `/health` 端点：`http://<ipaddress>:<port>/health`。如果应用程序正在集群中运行，那么将显示包含 `{"status":"UP"}` 的消息。
 
-## 验证应用程序是否正在运行
-{: #verify-starterkit-kube}
-
-应用程序部署完成后，Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
-
-1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
-2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
-
-    在日志文件末尾，搜索 `View the application health at: http://<ipaddress>:<port>/health`。
-
-4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
-
-如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+如果在部署时遇到错误，请查看故障诊断主题以了解[超过存储配额](/docs/apps/ts_apps.html#exceed_quota)等已知问题，或者了解如何[访问 Kubernetes 日志](/docs/apps/ts_apps.html#access_kube_logs)来查找错误。
 
 ## 后续步骤
-{: #next-steps-startkit-kube notoc}
-
-* 如果在部署时遇到错误，请查看故障诊断主题以了解[超过存储配额](/docs/apps/ts_apps.html#exceed_quota)等已知问题，或者了解如何[访问 Kubernetes 日志](/docs/apps/ts_apps.html#access_kube_logs)来查找错误。
+{: #next_steps notoc}
 
 * 访问代码中的服务配置：
 	- 可以使用 _@Value_ 注释，也可以使用 Spring 框架环境类 _getProperty()_ 方法。有关更多信息，请参阅[访问凭证](/docs/java-spring/configuration.html#configuration#accessing-credentials)。

@@ -56,7 +56,7 @@ Elija un kit de inicio de microservicio para los requisitos de idioma y de infra
 ## Móvil
 {: #mobile}
 
-Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un [programa de fondo para programa de usuario](/docs/apps/patterns.html#bff) dedicado.
+Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un [programa de fondo para programa de usuario](#bff) dedicado.
 
 {{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Encontrará los kits de inicio para el patrón Mobile en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
 

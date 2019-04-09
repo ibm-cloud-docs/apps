@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-13"
+  years: 2018
+lastupdated: "2018-11-26"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # Déploiement d'une application de kit de démarrage dans un cluster Kubernetes
-{: #tutorial-starterkit-kube}
+{: #tutorial}
 
 Découvrez comment créer une application dans {{site.data.keyword.cloud}} en utilisant un kit de démarrage vide et une chaîne d'outils Kubernetes et en mettant à disposition en continu l'application dans un conteneur sécurisé d'un cluster Kubernetes. Votre pipeline DevOps d'intégration continue peut être configuré afin que vos modifications de code soient automatiquement générées et propagées dans l'application se trouvant dans le cluster Kube. Si vous disposez déjà d'un pipeline, vous pouvez le connecter à votre application.
 {: shortdesc}
@@ -28,14 +28,14 @@ Toute d'abord, consultez l'organigramme du kit de démarrage suivant et ses éta
 ![Organigramme du kit de démarrage](../images/starterkit-flow.png) 
 
 ## Avant de commencer
-{: #prereqs-starterkit-kube}
+{: #prereqs}
 
-* Créez une application **Java + Spring** en utilisant un [kit de démarrage](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
+* Créez une application **Java + Spring** en utilisant un kit de démarrage [](/docs/apps/tutorials/tutorial_starter-kit.html).
 * Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 * Configurez [Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.docker.com/get-started){: new_window}.
 
 ## Ajout de ressources à votre application
-{: #resources-starterkit-kube}
+{: #add_resources}
 
 Ajoutez une ressource de service {{site.data.keyword.cloud_notm}} à votre application. La procédure suivante met à disposition une instance Cloudant, crée une clé de ressource (données d'identification) et l'associe à votre application.
 
@@ -47,7 +47,7 @@ Ajoutez une ressource de service {{site.data.keyword.cloud_notm}} à votre appli
 6. Facultatif. Si vous souhaitez parcourir rapidement votre code d'application après l'ajout de ressources, cliquez sur **Télécharger le code**. Votre code est téléchargé en tant que fichier `.zip` contenant l'ensemble de la structure du code d'application. Vous pouvez facilement extraire le fichier et exécuter le code localement à l'aide du plug-in {{site.data.keyword.dev_cli_notm}} ou l'ajouter à votre référentiel de gestion de code.
 
 ## Déploiement de votre application à l'aide d'une chaîne d'outils DevOps
-{: #deploy-starterkit-kube}
+{: #deploy_app}
 
 Associez une chaîne d'outils DevOps à l'application et configurez-la de telle sorte qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.cloud_notm}} Kubernetes.
 
@@ -62,14 +62,14 @@ Associez une chaîne d'outils DevOps à l'application et configurez-la de telle 
 5. Sur la page **Configurer la chaîne d'outils**, entrez un nom de chaîne d'outils, sélectionnez une région, sélectionnez un groupe de ressources puis cliquez sur **Créer**. La page **Détails de l'application** s'affiche avec les informations de déploiement concernant votre chaîne d'outils.
 
 ## Affichage de votre référentiel
-{: #view-repo-starterkit-kube}
+{: #view_repo}
 
 1. Sur la page **Détails de l'application**, cliquez sur **Afficher le référentiel**. Le référentiel Git généré par le kit de démarrage s'affiche.
 2. Facultatif. Configurez SSH sur votre bureau en suivant les instructions à l'écran.
 3. Facultatif. Créez un jeton d'accès personnel sur votre compte en suivant les instructions à l'écran.
 
 ## Affichage de l'historique, des journaux et des outils de chaîne d'outils
-{: #view-logs-starterkit-kube}
+{: #view_logs}
 
 1. Une fois l'étape de déploiement terminée, la page **Détails de l'application** s'affiche ainsi que les informations de déploiement concernant votre chaîne d'outils.
 2. Accédez à la chaîne d'outils en cliquant sur **Afficher la chaîne d'outils**. L'onglet **Vue d'ensemble** de la page de chaîne d'outils s'affiche. Il présente les outils inclus avec la chaîne d'outils. Cet exemple inclut les outils suivants présélectionnés dans le kit de démarrage lors de la création de la chaîne d'outils :
@@ -84,27 +84,14 @@ Associez une chaîne d'outils DevOps à l'application et configurez-la de telle 
 	   * publie l'image dans votre registre de conteneur privé.
 	 * L'étape de déploiement extrait l'image de conteneur de votre registre de conteneur puis la déploie dans votre cluster Kubernetes.
 3. Cliquez sur **Delivery Pipeline**. Les étapes de pipeline s'affichent.
-4. Dans la vignette **Etape de déploiement**, cliquez sur **Afficher les journaux et l'historique**.
+4. Dans l'étape de déploiement, cliquez sur **Afficher les journaux et l'historique**.
+5. A la fin du journal, recherchez `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`, qui correspond à l'URL à partir de laquelle vous pouvez accéder à votre application.
+6. Accédez au noeud final `/health` dans `http://<ipaddress>:<port>/health`. Si l'application est en cours d'exécution dans le cluster, un message qui inclut `{"status":"UP"}` s'affiche.
 
-## Vérification que votre application est en cours d'exécution
-{: #verify-starterkit-kube}
-
-Une fois votre application déployée, Delivery Pipeline ou la ligne de commande indique l'URL de votre application.
-
-1. Dans votre chaîne d'outils DevOps, cliquez sur **Delivery Pipeline** puis sélectionnez **Etape de déploiement**.
-2. Cliquez sur **Afficher les journaux et l'historique**.
-3. Dans le fichier journal, recherchez l'URL de l'application :
-
-    A la fin du fichier journal, recherchez `View the application health at: http://<ipaddress>:<port>/health`.
-
-4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
-
-Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) pour afficher l'URL de votre application. Accédez ensuite à l'URL dans votre navigateur.
+Si des erreurs surviennent lors du déploiement, consultez la rubrique de traitement des incidents concernant les problèmes connus, comme le [dépassement du quota de stockage](/docs/apps/ts_apps.html#exceed_quota) ou découvrez comment [accéder aux journaux Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) pour rechercher des erreurs.
 
 ## Etapes suivantes
-{: #next-steps-startkit-kube notoc}
-
-* Si des erreurs surviennent lors du déploiement, consultez la rubrique de traitement des incidents concernant les problèmes connus, comme le [dépassement du quota de stockage](/docs/apps/ts_apps.html#exceed_quota) ou découvrez comment [accéder aux journaux Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) pour rechercher des erreurs.
+{: #next_steps notoc}
 
 * Accédez à la configuration de service dans votre code :
 	- Vous pouvez utiliser l'annotation _@Value_ ou utiliser la méthode _getProperty()_ de la classe d'environnement de structure Spring. Pour plus d'informations, voir [Accès aux données d'identification](/docs/java-spring/configuration.html#configuration#accessing-credentials).

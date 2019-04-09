@@ -89,7 +89,7 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
   * 中间证书（可选）：一种由可信根认证中心 (CA) 发放的下级证书，专门用于发放最终实体服务器证书。结果是一条证书链，以可信根 CA 开始，接着是中间证书，最后以发放给组织的 SSL 证书结束。使用中间证书来验证主证书的真实性。中间证书通常是从可信的第三方获取的。在将应用程序部署到生产之前对其进行测试时，可能无需中间证书。
   * 启用客户机证书请求：如果启用此选项，那么会要求尝试访问受 SSL 保护的域的用户提供客户机端证书。例如，在 Web 浏览器中，当用户尝试访问受 SSL 保护的域时，Web 浏览器会提示用户提供该域的客户机证书。 
 
-    {{site.data.keyword.cloud_notm}} 域管理中的定制证书功能取决于传输层安全性 (TLS) 协议的服务器名称指示 (SNI) 扩展。访问受定制证书保护的 {{site.data.keyword.cloud_notm}} 应用程序的客户机代码必须在 TLS 实现中支持 SNI 扩展。有关更多信息，请参阅 [RFC 4346 的第 7.4.2 部分 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 和[使用 TLS 确保数据安全](/docs/get-support/appsectls.html#tlssupportwithdraw)。
+    {{site.data.keyword.cloud_notm}} 域管理中的定制证书功能取决于传输层安全性 (TLS) 协议的服务器名称指示 (SNI) 扩展。访问受定制证书保护的 {{site.data.keyword.cloud_notm}} 应用程序的客户机代码必须在 TLS 实现中支持 SNI 扩展。有关更多信息，请参阅 [RFC 4346 的第 7.4.2 部分 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 和[使用 TLS 确保数据安全](/docs/get-support/appsectls.html)。
     {: note}
   
   * 客户机证书信任库（可选）：包含您希望允许访问您应用程序的用户的客户机证书。请上传客户机证书信任库文件，以启用此选项来请求客户机证书。
@@ -97,6 +97,6 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
     可以通过上传其元数据中包含公用密钥的客户机证书信任库来设置相互认证。
   {: tip}
 
-有关更多信息，请参阅[导入 SSL 证书](/docs/ssl-certificates/import-ssl-certificate.html)。
+有关更多信息，请参阅[导入 SSL 证书](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)。
 
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-11-14"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2019-02-01"
 {:note: .note}
 
 # Adición de credenciales al entorno de Kubernetes
-{: #add-credentials-kube}
+{: #add_credentials}
 
 Aprenda a añadir credenciales de servicio al entorno de despliegue de Kubernetes.
 {: shortdesc}
@@ -26,7 +26,7 @@ Debe añadir manualmente las credenciales de servicio al entorno de despliegue e
  * Añade un servicio a una app basada en un kit de inicio _después_ de que se despliegue.
 
 ## Su código + Kubernetes
-{: #credentials-byoc-kube}
+{: #byoc_kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -87,7 +87,7 @@ clave `KEY_SECRET` se resuelvan en un valor.
 
 Utilice un terminal de la estación de trabajo para instalar las siguientes herramientas:
 
-1. Instale la CLI de [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
+1. Instale la [CLI de {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
 2. Inicie una sesión con el mandato `ibmcloud login`.
 3. Conéctese a su clúster con el mandato `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copie y pegue el mandato `export` para ejecutarlo desde un terminal.
@@ -110,7 +110,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 Ahora que el clúster de Kubernetes está preparado con un secreto que se puede resolver, puede actualizar la aplicación para que utilice las variables de entorno definidas en el archivo `deployment.yml`.
 
 ## App de kit de inicio + Kubernetes
-{: #credentials-starterkit-kube}
+{: #sk_kube}
 
 1. Vaya a la página **Detalles de la app** de la app.
 2. Para crear una instancia de Cloud Object Storage, seleccione **Añadir recurso** > **Almacenamiento** > **Cloud Object Storage** > **Plan Lite (gratuito)** > **Crear**.
@@ -221,7 +221,7 @@ Utilice la característica **Desplegar en la nube** para desplegar la app en su 
 El código de la aplicación no puede recuperar el secreto de Kubernetes a no ser que el archivo `deployment.yml` declare un valor `env` que haga referencia al secreto. Si utiliza un kit de inicio, este código se genera automáticamente.
 
 ### El código generado por el kit de inicio
-{: #credentials-starterkit-kube-gencode}
+{: #sk_kube_generated_code}
 
 En este caso, ha creado esta aplicación a partir de un kit de inicio. El código que se genera a partir de un kit de inicio se crea de forma que sea portátil para que se pueda ejecutar localmente, en Cloud Foundry o en Kubernetes. Se utiliza la biblioteca, `IBMCloudEnv`, para proporcionar una capa de abstracción entre el código de la aplicación y la recuperación de las variables de entorno que contienen las credenciales correspondientes a los recursos (instancias de servicio).
 

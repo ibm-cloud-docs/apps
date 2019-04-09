@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-11-14"
 
 ---
 
@@ -14,14 +14,13 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # 將認證新增至 Cloud Foundry 環境
-{: #add-credentials-cf}
+{: #add_credentials}
 
 了解如何將服務認證新增至 Cloud Foundry 部署環境。
-這些指示適用於 [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) 及 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)。
 {: shortdesc}
 
 ## 您的程式碼 + Cloud Foundry
-{: #credentials-byoc-cf}
+{: #byoc_cf}
 
 在應用程式存在的 Cloud Foundry 空間中，您可以定義 Cloud Foundry 怎麼稱呼使用者提供的服務。使用者提供的服務是字串化的 JSON，它被儲存成彷彿是 Cloud Foundry 空間中的可連結服務。在登入並連接至 Cloud Foundry 組織及空間之後，請完成下列步驟來建立並連結服務。
 
@@ -32,7 +31,7 @@ lastupdated: "2019-02-01"
   {: codeblock}
 
 2. 藉由新增至服務區段，將 Cloud Foundry 應用程式配置為連結至使用者提供的服務：
-  ```yaml
+  ```
   ---
   applications:
   - instances: 1
@@ -65,17 +64,17 @@ lastupdated: "2019-02-01"
 
 
 ## 入門範本套件應用程式 + Cloud Foundry
-{: #credentials-starterkit-cf}
+{: #sk_cf}
 
 ### 如何準備 Cloud Foundry 空間
 
 使用**部署至雲端**特性，將您的應用程式部署至 Cloud Foundry 空間。
 
-如果以 Cloud Foundry 為基礎的資源實例與已部署的 Cloud Foundry 應用程式位於相同的 Cloud Foundry 空間中，請參閱[下一節](/docs/apps/creds_cf.html#cf_resource_same)。
+如果以 Cloud Foundry 為基礎的資源實例與已部署的 Cloud Foundry 應用程式位於相同的 Cloud Foundry 空間中，請參閱[下一節](#cf_resource_same)。
 
-如果以 Cloud Foundry 為基礎的資源實例所在的空間與 Cloud Foundry 應用程式的目標空間不同，請參閱[接下來的小節](/docs/apps/creds_cf.html#cf_resource_different)。
+如果以 Cloud Foundry 為基礎的資源實例所在的空間與 Cloud Foundry 應用程式的目標空間不同，請參閱[接下來的小節](#cf_resource_different)。
 
-如果與應用程式相關聯的資源是以資源控制器為基礎，請參閱[資源控制器](/docs/apps/creds_cf.html#cf_resource_controller)。
+如果與應用程式相關聯的資源是以資源控制器為基礎，請參閱[資源控制器](#cf_resource_controller)。
 
 #### 以 Cloud Foundry 為基礎的資源與已部署應用程式位於相同的空間中
 {: #cf_resource_same}
@@ -88,9 +87,9 @@ cf services
 ```
 {: codeblock}
 
-輸出範例：
+輸出：
 ```
-Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
+Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -113,7 +112,7 @@ cf services
 
 輸出範例：
 ```
-Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
+Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided
@@ -125,9 +124,8 @@ Cloud Foundry 不容許在 `cf service` 或 `cf services` 指令行看到任何�
 值得慶幸的是，從入門範本套件產生的程式碼會自動移入正確的連結，以從應用程式執行所在的 Cloud Foundry 空間針對其所定義的環境中擷取並使用這些值。
 
 ### 入門範本套件產生的程式碼
-{: #starterkit-generated-code-cf}
 
-在繼續之前，請參閱[入門範本套件應用程式 + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode)。然後，套用下列變更：
+在繼續之前，請參閱[入門範本套件應用程式 + kube](/docs/apps/creds_kube.html#sk_kube_generated_code)。然後，套用下列變更：
 
 * 雖然產生的程式碼會提供 `deployment.yml`，但它不適用於部署至 Cloud Foundry 的應用程式。相反地，`manifest.yml` 則_適用_，而且會顯示其內容，以_連結_ 至兩個在 Cloud Foundry 空間中建立的服務。
   ```yaml

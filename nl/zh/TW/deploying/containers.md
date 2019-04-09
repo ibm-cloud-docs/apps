@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-07-23"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # 使用容器搭配 Kubernetes
-{: #containers-kube}
+{: #containers}
 
 在執行於 Kubernetes 叢集的 Docker 容器中部署高可用性的應用程式，以開始使用 {{site.data.keyword.containershort}}。使用 Git 管理您的團隊開發，然後使用 DevOps 工具鏈管理應用程式對 Kubernetes 的部署。
 {: shortdesc}
@@ -36,7 +36,7 @@ lastupdated: "2019-02-01"
 ## 連結服務
 {: #bind-services}
 
-建立工具鏈時，您與應用程式相關聯的服務會使用 Kubernetes 密碼連結至 Kubernetes 叢集。密碼用來在執行中應用程式之外管理服務認證。應用程式會讀取密碼，然後擷取開始執行所需要的值。連結服務讓您能將應用程式部署至另一個 Kubernetes 環境，該環境可能是使用正式作業層次的 {{site.data.keyword.cloud}} 服務實例。
+建立工具鏈時，您與應用程式相關聯的服務會使用 Kubernetes 密碼連結至 Kubernetes 叢集。密碼用來在執行中應用程式之外管理服務認證。應用程式會讀取密碼，然後擷取開始執行所需要的值。連結服務讓您能將應用程式部署至另一個 Kubernetes 環境，該環境可能是使用正式作業層次的 {{site.data.keyword.cloud_notm}} 服務實例。
 
 如果您刪除服務或密碼，則需要手動重新連結它們，或是服務並重建工具鏈。
 {: tip}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-07-23"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # 将容器与 Kubernetes 配合使用
-{: #containers-kube}
+{: #containers}
 
 通过在 Kubernetes 集群中运行的 Docker 容器中部署高可用性应用程序，开始使用 {{site.data.keyword.containershort}}。使用 Git 来管理团队开发，然后使用 DevOps 工具链来管理如何将应用程序部署到 Kubernetes。
 {: shortdesc}
@@ -30,12 +30,12 @@ lastupdated: "2019-02-01"
 1. 通过设置自动化云管道，将应用程序部署到云上。
 2. 单击**部署到云**。
 3. 选择 Kubernetes 作为目标。如果您还没有集群，那么需要[创建集群 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/containers-kubernetes/catalog/cluster/create){:new_window}。
-4. 部署完成后，通过从 Delivery Pipeline 的部署阶段的日志中获取 URL，检查您的应用程序是否已在云中。最后一个带端口的 IP 地址是应用程序的新主页，例如 169.60.133.124:32355。
+4. 部署完成后，通过从 Delivery Pipeline 的部署阶段获取日志中的 URL，检查您的在线应用程序是否已在云中。最后一个带端口的 IP 地址是应用程序的新主页，例如 169.60.133.124:32355。
 
 ## 绑定服务
 {: #bind-services}
 
-创建工具链后，与应用程序相关联的服务都会通过 Kubernetes 私钥绑定到 Kubernetes 集群。私钥用于管理运行中应用程序外部的服务凭证。应用程序会读取私钥，然后检索开始运行所需的值。通过绑定服务，您可以将应用程序部署到可能正在使用生产级别 {{site.data.keyword.cloud}} 服务实例的其他 Kubernetes 环境。
+创建工具链后，与应用程序相关联的服务都会通过 Kubernetes 私钥绑定到 Kubernetes 集群。私钥用于管理运行中应用程序外部的服务凭证。应用程序会读取私钥，然后检索开始运行所需的值。通过绑定服务，您可以将应用程序部署到可能正在使用生产级别 {{site.data.keyword.cloud_notm}} 服务实例的其他 Kubernetes 环境。
 
 如果删除了服务或私钥，您需要重新手动绑定它们，或者删除并重新创建工具链。
 {: tip}
@@ -63,11 +63,11 @@ lastupdated: "2019-02-01"
 ### 部署阶段
 {: #deploy-stage}
 
-部署阶段会从 {{site.data.keyword.registryshort_notm}} 中检索最新映像，然后使用 Helm chart 将其部署到 Kubernetes 集群中。Helm chart 是在您将应用程序部署到云时添加到应用程序中的。通过 Helm chart，您可以轻松地管理打包的容器映像的部署步骤。
+部署阶段会从 {{site.data.keyword.registryshort_notm}} 中检索最新映像，然后使用 Helm 图表将其部署到 Kubernetes 集群中。Helm 图表是在您将应用程序部署到云时添加到应用程序中的。通过 Helm 图表，您可以轻松地管理打包的容器映像的部署步骤。
 
 有关更多信息，请参阅 [Charts ![外部链接图标](../../icons/launch-glyph.svg " 外部链接图标")](https://docs.helm.sh/developing_charts/){:new_window}。
 
-{{site.data.keyword.cloud_notm}} 支持若干[预配置的 Helm chart ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}。
+{{site.data.keyword.cloud_notm}} 支持若干[预配置的 Helm 图表 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/containers-kubernetes/solutions/helm-charts){:new_window}。
 
 ## 检查应用程序安全性
 {: #sec}

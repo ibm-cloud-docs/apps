@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, applications, activity tracking events
+
+subcollection: creating-apps
 
 ---
 
@@ -21,14 +25,14 @@ lastupdated: "2019-02-01"
 セキュリティー担当者、監査員、または管理者として、お客様は {{site.data.keyword.cloudaccesstrailfull}} サービスを使用して、ユーザーおよびアプリケーションが {{site.data.keyword.cloud}} の {{site.data.keyword.dev_console}} とどのように対話しているかをトラッキングすることができます。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} でサービスの状態を変更する、ユーザーが開始したアクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov) についてのページを参照してください。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.cloud_notm}} でサービスの状態を変更する、ユーザーが開始したアクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov) についてのページを参照してください。
 
 ## イベントの表示先
 {: #view-events-ui}
 
 {{site.data.keyword.cloudaccesstrailshort}} イベントは、{{site.data.keyword.dev_console}} イベントが生成される {{site.data.keyword.cloud_notm}} 領域内にある {{site.data.keyword.cloudaccesstrailshort}} アカウント・ドメインで使用可能です。
 
-ユーザーのアクションのモニターを開始するには、『[入門チュートリアル](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)』を参照してください。
+ユーザーのアクションのモニターを開始するには、『[入門チュートリアル](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started)』を参照してください。
 
 ## イベント・リスト
 {: #events}

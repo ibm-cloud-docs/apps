@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-04"
+  years: 2018
+lastupdated: "2018-11-29"
 
 ---
 {:new_window: target="_blank"}
@@ -17,10 +17,10 @@ lastupdated: "2019-02-04"
 要進行無伺服器開發，您可以使用 IBM 的函數即服務 (FaaS) 供應項目 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 執行應用程式邏輯以回應事件，或透過 HTTP 導向來自 Web 或行動應用程式的呼叫，而不必佈建或管理伺服器。{{site.data.keyword.openwhisk_short}} 會執行系統管理，例如自動擴充、可用性管理及維護，以便身為開發人員的您可以專注於撰寫應用程式邏輯。
 {:shortdesc}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 使用者介面 (UI) 或指令行介面 (CLI) 來開發應用程式。兩者都具有類似的應用程式開發功能。CLI 提供部署與作業的更多控制。如需 {{site.data.keyword.openwhisk_short}} 的詳細資訊，請參閱[文件](/docs/openwhisk/index.html)。
+您可以使用 {{site.data.keyword.openwhisk_short}} 使用者介面 (UI) 或指令行介面 (CLI) 來開發應用程式。兩者都具有類似的應用程式開發功能。CLI 提供部署與作業的更多控制。如需有關 {{site.data.keyword.openwhisk_short}} 的詳細資訊，請參閱完整的 [Openwhisk 文件](/docs/openwhisk/index.html)。
 
 ## {{site.data.keyword.openwhisk_short}} 使用者介面
-{: #serverless-apps-ui}
+{: #ui}
 
 在您的[瀏覽器 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/openwhisk/actions){:new_window} 試用 {{site.data.keyword.openwhisk_short}}。移至[概念 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/openwhisk/learn){:new_window} 頁面，以取得 {{site.data.keyword.openwhisk_short}} 使用者介面的快速導覽。
 
@@ -30,7 +30,7 @@ lastupdated: "2019-02-04"
 若要進一步瞭解如何使用 {{site.data.keyword.openwhisk_short}} CLI 來安裝及開發，請參閱[設定 {{site.data.keyword.openwhisk_short}} CLI ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/openwhisk/cli){:new_window}。
 
 ## 將 API 及資料集公開為 Web 動作
-{: #expose-actions}
+{: #containers}
 
 依預設，{{site.data.keyword.openwhisk_short}} 會定義需要鑑別金鑰的動作。在正式作業的行動環境中，經常必須根據 OAuth 流程授權行動用戶端，以公開 API 及特定資料集。
 
@@ -39,12 +39,14 @@ lastupdated: "2019-02-04"
 若要將動作公開為 Web 動作，請移至動作的**端點**標籤，然後選取**啟用為 Web 動作**。
 
 現在，使用者可以從瀏覽器或 cURL 要求聯繫動作，例如：
+
 ```
-curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage/helloWorld.json?name=aaron
+curl https://openwhisk.ng.bluemix.net/api/v1/web/aaron.m.liberatore_dev/MyPackage/helloWorld.json?name=aaron
 ```
 {: codeblock}
 
 **輸出：**
+
 ```json
 {
     message: "Hello aaron!"
@@ -55,5 +57,5 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} 為 iOS 及 watchOS 裝置提供[行動 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#openwhisk_mobile_sdk)，讓行動應用程式能輕鬆地傳送遠端觸發程式及呼叫遠端動作。它也提供[無伺服器架構 SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} 以啟用無伺服器應用程式。
+{{site.data.keyword.openwhisk_short}} 為 iOS 及 watchOS 裝置提供[行動 SDK](/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)，讓行動應用程式能輕鬆地傳送遠端觸發程式及呼叫遠端動作。它也提供[無伺服器架構 SDK ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](/docs/openwhisk/openwhisk_goserverless.html){:new_window} 以啟用無伺服器應用程式。
 

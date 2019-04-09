@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-07-23"
 
 ---
 {:new_window: target="_blank"}
@@ -13,7 +13,7 @@ lastupdated: "2019-02-01"
 {:tip: .tip}
 
 # Utilización de contenedores con Kubernetes
-{: #containers-kube}
+{: #containers}
 
 Empiece con {{site.data.keyword.containershort}} desplegando apps de alta disponibilidad en contenedores Docker que se ejecutan en clústeres de Kubernetes. Gestione el desarrollo en equipo con Git y, a continuación, utilice la Cadena de herramientas de DevOps para gestionar el despliegue de la app en Kubernetes.
 {: shortdesc}
@@ -35,7 +35,7 @@ Al crear apps de fondo o de servicio web, puede desplegarlas en el servicio de {
 ## Enlace de servicios
 {: #bind-services}
 
-A medida que se crea la cadena de herramientas, los servicios que asocia a su app están enlazados al clúster de Kubernetes utilizando los secretos de Kubernetes. Los secretos se utilizan para gestionar las credenciales de servicio fuera de la app en ejecución. La app lee los secretos y, a continuación, recupera los valores que necesita para empezar a ejecutarse. El enlace de servicios le permite desplegar la app en otro entorno de Kubernetes que podría estar utilizando instancias de servicio {{site.data.keyword.cloud}} de nivel de producción.
+A medida que se crea la cadena de herramientas, los servicios que asocia a su app están enlazados al clúster de Kubernetes utilizando los secretos de Kubernetes. Los secretos se utilizan para gestionar las credenciales de servicio fuera de la app en ejecución. La app lee los secretos y, a continuación, recupera los valores que necesita para empezar a ejecutarse. El enlace de servicios le permite desplegar la app en otro entorno de Kubernetes que podría estar utilizando instancias de servicio {{site.data.keyword.cloud_notm}} de nivel de producción.
 
 Si suprime el servicio o los secretos, debe enlazarlos de nuevo manualmente o suprimir y volver a crear la cadena de herramientas.
 {: tip}

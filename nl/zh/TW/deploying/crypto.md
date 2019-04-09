@@ -17,7 +17,7 @@ lastupdated: "2018-07-23"
 {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} 為雲端帶來了 IBM Z 加密法。{{site.data.keyword.cloud_notm}} 提供的是金融與財務服務所依賴的相同加密技術。
 {:shortdesc}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 以業界最高的安全層次 FIPS 140-2 Level 4 來保護靜止、使用中及傳送的金鑰和資料。{{site.data.keyword.hscrypto}} 是 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) 服務的金鑰儲存庫，並且以超安全的 IBM Z 環境保護您的金鑰。
+{{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} 以業界最高的安全層次 FIPS 140-2 Level 4 來保護靜止、使用中及傳送的金鑰和資料。{{site.data.keyword.hscrypto}} 是 [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html) 服務的金鑰儲存庫，並且以超安全的 IBM Z 環境保護您的金鑰。
 
 ## 安裝及配置 ACSP 用戶端
 {: ##crypto_config}

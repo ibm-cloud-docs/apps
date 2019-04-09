@@ -19,22 +19,22 @@ lastupdated: "2018-11-29"
 # 部署虚拟服务器
 {: #vsi-deploy}
 
-如果您有现收现付帐户，那么可以使用 {{site.data.keyword.cloud}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 将应用程序部署到多种类型的环境中，包括虚拟服务器实例。虚拟服务器实例会模拟裸机机器，是将内部部署工作负载移动到云上时常见的部署选择。
+如果您有现买现付帐户，那么可以使用 {{site.data.keyword.cloud}} [App Service ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} 将应用程序部署到多种类型的环境中，包括虚拟服务器实例。虚拟服务器实例会模拟裸机机器，是将内部部署工作负载移动到云上时常见的部署选择。
 {: shortdesc}
 
 与其他配置相比，虚拟服务器实例可以为所有工作负载类型提供更好的透明度、可预测性和自动化功能。与裸机服务器相结合，还可以创建出独特的工作负载组合。例如，可以使用运行基于 Debian Linux 的操作系统的裸机和 GPU 配置来创建高性能的数据库逻辑或机器学习。
 
-供应和部署虚拟服务器实例的过程可能很复杂和耗时。但是，使用 {{site.data.keyword.cloud_notm}} App Service，可以快速地启动并运行虚拟服务器实例。
+供应和部署虚拟服务器实例的过程可能很复杂和耗时。但是，使用 {{site.data.keyword.cloud_notm}} App Service，可以快速地设置和运行虚拟服务器实例。
 
 服务未绑定到虚拟服务器实例。您无法向虚拟服务器中的应用程序添加服务。
 {: important}
 
 ## 创建和部署应用程序
-{: #create-deploy-vsi}
+{: #create-deploy}
 
 App Service 会为您供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
-1. [创建应用程序](tutorials/tutorial_scratch.html#tutorial-scratch)。 
+1. [创建应用程序](index.html#createapp)。 
 2. 在应用程序详细信息页面中，单击**部署到云**。
 3. 选择**部署到虚拟服务器**以及运行服务器的区域。
 
@@ -64,44 +64,44 @@ App Service 会为您供应虚拟服务器实例，装入包含您的应用程�
 |属性|描述
 |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | [基础架构 API 密钥](/docs/apps/vsi-deploy.html#iaas-key)来自经典基础架构控制台。|
-| `TF_VAR_ibm_sl_username` |用于标识经典基础架构帐户的[基础架构用户名](/docs/apps/vsi-deploy.html#user-key) |
-| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [API 密钥](/docs/apps/vsi-deploy.html#platform-key)用于支持服务创建。|
-| `PUBLIC_KEY` | [公用密钥](/docs/apps/vsi-deploy.html#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。|
-| `PRIVATE_KEY` | [专用密钥](/docs/apps/vsi-deploy.html#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。必须使用 `\n` 换行符样式格式。|
+| `TF_VAR_ibm_sl_api_key` | [基础架构 API 密钥](#iaas-key)来自经典基础架构控制台。|
+| `TF_VAR_ibm_sl_username` | 用于标识经典基础架构帐户的[基础架构用户名](#user-key) |
+| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [平台 API 密钥](#platform-key)用于确保能够进行服务创建。|
+| `PUBLIC_KEY` | [公用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。|
+| `PRIVATE_KEY` | [专用密钥](#public-key)，可定义该密钥来允许对虚拟服务器实例的访问。必须使用 `\n` 换行符样式格式。|
 | `VI_INSTANCE_NAME` | 自动为虚拟服务器实例生成的名称 |
-| `GIT_USER` |如果将 [Terraform 状态](/docs/apps/vsi-deploy.html#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 用户名。|
-| `GIT_PASSWORD` |如果将 [Terraform 状态](/docs/apps/vsi-deploy.html#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 密码。|
+| `GIT_USER` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 用户名。|
+| `GIT_PASSWORD` | 如果将 [Terraform 状态](#tform-state)设置为存储 apply 命令的状态，那么需要 GitLab 密码。|
 {: caption="表 1. 为启用管道而更改的环境变量" caption-side="top"}
 
 
-#### 经典基础架构 API 密钥
+#### 基础架构 API 密钥
 {: #iaas-key}
-
-Terraform 需要经典基础架构 API 密钥来创建基础架构资源。API 密钥在部署期间自动获取。要手动检索该密钥，请完成以下步骤。
+<!-- This section is incomplete. The UI doesn't have a button named classic instructure API key. -->
+Terraform 需要基础架构 API 密钥来创建基础架构资源。API 密钥在部署期间自动获取。要手动检索该密钥，请完成以下步骤。
 
 1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
 2. 单击用户名，然后单击**用户详细信息**。
 3. 单击“API 密钥”部分中的**添加经典基础架构密钥**。
-4. 复制或下载 API 密钥 `TF_VAR_ibm_sl_api_key`，并将其保存在安全的位置。要检索该 API 密钥的详细信息，可以使用**操作** ![“操作列表”图标](../icons/action-menu-icon.svg) 菜单中的**查看详细信息**选项。
+4. 复制或下载 API 密钥 `TF_VAR_ibm_sl_api_key`，并将其保存在安全的位置。您可以稍后使用**操作** ![“操作列表”图标](../icons/action-menu-icon.svg) 菜单中的**查看详细信息**选项来检索 API 密钥的详细信息。
 5. 将复制的 API 密钥值粘贴到工具链配置中，以替换 `TF_VAR_ibm_sl_api_key`。
 
-有关更多信息，请参阅[管理经典基础架构 API 密钥](/docs/iam/classic_infra_keys.html#classic_keys)和[经典基础架构许可权](/docs/iam/infrastructureaccess.html#infrapermission)。
+有关更多信息，请参阅[管理经典基础架构 API 密钥](/docs/iam/classic_infra_keys.html)和[经典基础架构许可权](/docs/iam/infrastructureaccess.html)。
 
-#### 经典基础架构用户名
+#### 基础架构用户名
 {: #user-key}
-
-部署期间，还会自动获取并使用经典基础架构用户名。要手动获取该用户名，请完成以下步骤。
+<!-- This section is incomplete. The UI doesn't have a VPN User Name property. -->
+部署期间，还会自动获取并使用基础架构用户名。要手动获取该用户名，请完成以下步骤。
 
 1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
 2. 单击用户名，然后单击**用户详细信息**。
 3. 找到 **VPN 用户名**属性。
 4. 剪切并粘贴此值，然后替换工具链配置 `TF_VAR_ibm_sl_username`。
 
-#### {{site.data.keyword.cloud_notm}} API 密钥
+#### IBM Cloud API 密钥
 {: #platform-key}
 
-为了在 Terraform 中创建平台级别的服务（如数据库和 Compose 服务），系统会自动获取 {{site.data.keyword.cloud_notm}} API 密钥，并将其存储为管道中的环境变量。要手动检索 {{site.data.keyword.cloud_notm}} API 密钥，请完成以下步骤。
+为了在 Terraform 中创建平台级别的服务（如数据库和 Compose 服务），系统会自动获取平台 API 密钥，并将其存储为管道中的环境变量。要手动检索平台密钥，请完成以下步骤。
 
 1. 转至[用户列表 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}。您还可以单击**管理** > **访问权 (IAM)**，然后选择**用户**。
 2. 单击用户名，然后单击**用户详细信息**。
@@ -113,12 +113,12 @@ Terraform 需要经典基础架构 API 密钥来创建基础架构资源。API �
 
 #### 公用密钥和专用密钥
 {: #public-key}
-
+<!-- Cannot verify these steps until we get an infrastructure account. Step 2 is showing the incorrect UI steps, but we cannot see the correct UI. -->
 为了使工具链能够将 Debian 打包安装到虚拟服务器实例中，部署基础架构会自动生成专用和公用 SSH 密钥对，以用于将 Git 内容传输到实例。
 
 要手动执行此操作，请执行以下步骤：
 1. 在客户机中，使用以下指示信息来创建[公用和专用密钥对 ![外部链接图标](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}。
-2. 转至[基础架构 SSH 密钥视图 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}。您也可以单击**菜单** > **经典基础架构** > **设备** > **管理** > **SSH 密钥**。
+2. 转至[基础架构 SSH 密钥视图 ![外部链接图标](../icons/launch-glyph.svg)](https://{DomainName}/devices/sshkeys){: new_window}。您也可以单击**菜单** > **经典基础架构** > **设备** > **管理** > **SSH 密钥**。
 3. 单击**添加**。
 4. 将先前创建的公用密钥的内容复制并粘贴到密钥内容中。
 5. 为密钥指定名称，然后单击**添加**。
@@ -148,7 +148,7 @@ Terraform 支持存储 Terraform `apply` 命令的状态。此状态文件会第
 Terraform 状态存储在称为 `terraform` 的分支中，即使发生更改，也不会触发管道运行。
 
 ### 启用 Git 操作
-{: #git-repo-vsi}
+{: #git-repo}
 
 在将应用程序部署到 {{site.data.keyword.cloud_notm}} 时，会创建一个 GitLab 存储库来托管代码，以便管理源代码。您可以使用 Git 操作，让团队通过合作来交付对应用程序的更改。下面列出了此存储库中包含的文件夹以及对文件夹内容的说明。
 
@@ -194,7 +194,7 @@ variable "datacenter" {
 ```
 
 ### 了解工具链阶段
-{: #toolchain-stages-vsi}
+{: #toolchain-stages}
 
 工具链会显示一个简单管道中的基础架构和应用程序部署。将“基础架构即代码”部分划分到一个管道中，而将应用程序部署划分到另一个管道中。
 
