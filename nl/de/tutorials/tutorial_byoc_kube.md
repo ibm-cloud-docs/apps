@@ -44,9 +44,9 @@ Ein _Cluster_ ist eine Gruppe von Ressourcen, Workerknoten, Netzen und Speichere
 Fügen Sie eine Serviceressource zu Ihrer Anwendung hinzu und {{site.data.keyword.cloud_notm}} erstellt den Service für Sie. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt. {{site.data.keyword.cloud_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
 genutzt werden.
 
-Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps/reqnsi.html#add-resource).
+Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Ihrer App eine Ressource hinzufügen](/docs/apps/reqnsi.html#).
 
-Nachdem Sie eine Serviceressource zu Ihrer Anwendung hinzugefügt haben, müssen Sie die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren. Weitere Informationen hierzu enthält [Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen](/docs/apps/creds_kube.html#add_credentials).
+Nachdem Sie eine Serviceressource zu Ihrer Anwendung hinzugefügt haben, müssen Sie die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren. Weitere Informationen hierzu enthält [Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen](/docs/apps/creds_kube.html).
 
 ## App für die Bereitstellung vorbereiten
 {: #deploy-byoc-kube}

@@ -22,7 +22,7 @@ Puede crear aplicaciones web y móviles listas para la empresa en {{site.data.ke
 ## Antes de empezar
 {: #prereqs-getting-started}
 
-Puede crear su app mediante la consola de {{site.data.keyword.cloud_notm}} o mediante la interfaz de línea de mandatos (CLI). Si desea utilizar la CLI, consulte [Iniciación con la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) para ver detalles sobre la instalación.
+Puede crear su app mediante la consola de {{site.data.keyword.cloud_notm}} o mediante la interfaz de línea de mandatos (CLI). Si desea utilizar la CLI, consulte [Iniciación con la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) para ver detalles sobre la instalación.
 
 ## Paso 1. Crear su app
 {: #create-getting-started}

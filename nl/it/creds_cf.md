@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Aggiunta di credenziali al tuo ambiente Cloud Foundry
 {: #add-credentials-cf}
 
-Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambiente di distribuzione Cloud Foundry. Queste istruzioni si applicano a entrambi gli ambienti [Cloud Foundry pubblico](/docs/cloud-foundry-public/about-cf.html#about-cf) e [Cloud Foundry Enterprise](/docs/cloud-foundry-public/cfee.html#cfee).
+Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambiente di distribuzione Cloud Foundry. Queste istruzioni si applicano a entrambi gli ambienti [Cloud Foundry pubblico](/docs/cloud-foundry-public/about-cf.html) e [Cloud Foundry Enterprise](/docs/cloud-foundry-public/cfee.html).
 {: shortdesc}
 
 ## Il tuo codice + Cloud Foundry

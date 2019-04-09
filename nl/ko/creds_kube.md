@@ -86,7 +86,7 @@ env:
 
 워크스테이션에서 터미널을 사용하여 다음 도구를 설치하십시오.
 
-1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview)를 설치하십시오.
+1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)를 설치하십시오.
 2. `ibmcloud login` 명령을 사용하여 로그인하십시오.
 3. `ibmcloud cs cluster-config {your_cluster_name}`을 실행하여 클러스터에 연결하십시오.
 4. `export` 명령을 복사하여 붙여넣고 터미널에서 이를 실행하십시오.
@@ -118,7 +118,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 	- `chart/{appName}/bindings.yaml` - 시크릿을 지시하는 Kubernetes 클러스터에서 환경 변수를 생성합니다.
 	- `src/main/resources/localdev-config.json` - 로컬로 앱을 실행하는 중에 인증 정보에 액세스합니다.
-  - `src/main/resources/mappings.json` - 코드에서 환경 변수에 액세스하기 위한 [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) 메소드에 대한 액세스를 제공하는 맵핑입니다.
+  - `src/main/resources/mappings.json` - 코드에서 환경 변수에 액세스하기 위한 [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) 메소드에 대한 액세스를 제공하는 맵핑입니다.
   - `manifest.yml` - 이 파일은 서비스를 Cloud Foundry 애플리케이션에 바인딩합니다.
 
 나중에 리소스 제어기 리소스(조직 또는 영역이 아닌 리소스 그룹에 있는)로 Cloud Foundry 애플리케이션에 배치하도록 선택하는 경우에는 1개의 추가 파일을 복사해야 합니다.

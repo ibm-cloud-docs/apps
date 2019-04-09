@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -37,11 +37,7 @@ lastupdated: "2019-02-01"
 
 {{site.data.keyword.cloud_notm}} には、堅固な CLI と、CLI に統合されるプラグインおよび開発者ツール拡張機能が用意されています。
 
-開始する前に、[{{site.data.keyword.cloud_notm}} CLI をダウンロードしてインストールします](/docs/cli/index.html#overview)。
-
-<p>
-<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(新しいタブまたはウィンドウで開きます)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools のダウンロード" /></a>
-</p>
+開始する前に、[{{site.data.keyword.cloud_notm}} CLI をダウンロードしてインストールします](/docs/cli/index.html)。
 
 CLI は、Cygwin によってサポートされていません。 このツールは Cygwin コマンド・ライン・ウィンドウ以外のウィンドウで使用してください。
 {: important}

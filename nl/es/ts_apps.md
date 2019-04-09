@@ -654,7 +654,7 @@ Si los trabajos de compilación o de despliegue fallan y ve el siguiente mensaje
 {: #access_kube_logs}
 
 Si la aplicación no se está ejecutando y no puede acceder al punto final de estado, intente examinar los registros del clúster.
-* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) si aún no lo ha hecho.
+* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) si aún no lo ha hecho.
 * Inicie una sesión en {{site.data.keyword.cloud_notm}} con `ibmcloud login` y apunte al espacio en el que se encuentra.
 * Obtenga una lista de sus clústeres con `ibmcloud cs clusters`,
 * Apunte al clúster correspondiente con `ibmcloud cs cluster-config <cluster-name>`.

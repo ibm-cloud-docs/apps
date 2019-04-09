@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 ## 始める前に
 {: #prereqs-scratch}
 
-* [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview) をインストールします。これには Docker が含まれています。 
+* [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html) をインストールします。これには Docker が含まれています。 
 * Docker アカウントを作成して、Docker アプリを実行し、サインインします。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。
 * アプリを [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about) にデプロイする予定の場合、[{{site.data.keyword.cloud_notm}} アカウントを準備](/docs/cloud-foundry/prepare-account.html#prepare)する必要があります。
 
@@ -37,7 +37,7 @@ lastupdated: "2019-02-13"
 
 2. アプリの名前を入力します。 このチュートリアルでは、`CustomProject` と入力します。
 3. 固有のホスト名 (例えば、`abc-devhost`) を入力します。ホスト名は、アプリの経路に使用されます。 例えば、`abc-devhost.cloud.ibm.com` です。
-4. オプションで、アプリを分類するためのタグを指定できます。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
+4. オプションで、アプリを分類するためのタグを指定できます。 詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
 5. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
 6. 価格プランを選択します。 このチュートリアルでは、無料オプションを使用できます。
 7. **「作成」**をクリックします。
@@ -127,8 +127,8 @@ DevOps ツールチェーンからアプリを手動でデプロイすること�
 
 1. アプリの詳細ページで、**「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
 2. デプロイメント方式を選択します。 選択した方式の説明に従って、デプロイメント方式をセットアップします。
-  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
+  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
   * **[仮想サーバー](/docs/apps/vsi-deploy.html#vsi-deploy)にデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
 最後のステップでアプリをクラウドにデプロイすることで、ツールチェーンが自動的に作成されます。 ツールチェーンによってアプリ用の Git リポジトリーが作成され、ユーザーはそこでコードを見つけることができます。 
@@ -157,8 +157,8 @@ ibmcloud dev deploy --target <container>
 2. **「ログおよび履歴の表示」**をクリックします。
 3. ログ・ファイルで、アプリケーション URL を見つけます。
 
-    ログ・ファイルの末尾で `urls` または `view` という語を探します。例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+    ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
-コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。次に、ブラウザーでその URL にアクセスします。
+コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。

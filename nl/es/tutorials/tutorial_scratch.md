@@ -23,7 +23,7 @@ Puede crear una aplicación personalizada desde cero mediante servicios y un tie
 ## Antes de empezar
 {: #prereqs-scratch}
 
-* Instale la [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), que incluye Docker. 
+* Instale la [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html), que incluye Docker. 
 * Cree una cuenta de Docker, ejecute la app de Docker e inicie una sesión. Docker debe estar en ejecución para que funcionen los mandatos de compilación.
 * Si tiene intención de desplegar la app en [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 

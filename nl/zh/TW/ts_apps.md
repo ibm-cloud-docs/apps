@@ -651,7 +651,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: #access_kube_logs}
 
 如果應用程式不在執行中，且您無法存取性能端點，請嘗試查看叢集裡的日誌。
-* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)，則請予以安裝。
+* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，如果您還沒有它的話。
 * 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
 * 使用 `ibmcloud cs clusters` 列出您的叢集。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的對應叢集。

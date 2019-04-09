@@ -29,7 +29,7 @@ ambiente de produção, definindo um volume de armazenamento persistente no Kube
 [Criando aplicativos Mendix](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix) para obter
 mais informações.
 - Instale a [{{site.data.keyword.dev_cli_notm}}interface da linha de
-comandos (CLI)](/docs/cli/index.html#overview), que inclui a CLI do {{site.data.keyword.containershort_notm}}.
+comandos (CLI)](/docs/cli/index.html), que inclui a CLI do {{site.data.keyword.containershort_notm}}.
 - Efetue login na CLI do `ibmcloud` e configure `kubectl` para o
 [ acesso ao cluster do Kubernetes](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
 

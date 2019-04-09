@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## Passo 1. Installa gli strumenti
 {: #prereqs-webapp}
 
-Installa gli [strumenti sviluppatore](/docs/cli/index.html#overview).
+Installa gli [strumenti sviluppatore](/docs/cli/index.html).
 
 Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 
@@ -30,12 +30,12 @@ Docker viene installato come parte degli strumenti per sviluppatori. Affinché i
 
 I kit starter sono disponibili in molti linguaggi e framework in {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Per iniziare, seleziona il linguaggio più adatto al tuo progetto.
 
-1. Dalla pagina dei [starter kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio.
+1. Dalla pagina dei [kit starter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio.
 2. Immetti il nome della tua applicazione e un nome host univoco, ad esempio `abc-devhost`. Questo nome host è l'instradamento della tua applicazione, `abc-devhost.cloud.ibm.com`
 3. Facoltativo. Fornisci le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources/tagging_resources.html#tag).
 4. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
 5. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-6. Fai clic su **Create**.
+6. Fai clic su **Crea**.
 
 ## Passo 3. Aggiungi risorse (facoltativo)
 {: #resources-webapp}

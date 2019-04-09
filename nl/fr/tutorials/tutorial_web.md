@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## Etape 1. Installer les outils
 {: #prereqs-webapp}
 
-Installez les [outils de développement](/docs/cli/index.html#overview).
+Installez les [outils de développement](/docs/cli/index.html).
 
 Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 

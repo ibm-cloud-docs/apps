@@ -25,7 +25,7 @@ lastupdated: "2019-02-08"
 ## 開始之前
 {: #prereqs-app-cli}
 
-您必須安裝 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 外掛程式，以及其他建議的外掛程式和工具。如需相關資訊，請參閱[開始使用 IBM Cloud CLI](/docs/cli/index.html#overview)。 
+您必須安裝 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 外掛程式，以及其他建議的外掛程式和工具。如需相關資訊，請參閱[開始使用 IBM Cloud CLI](/docs/cli/index.html)。 
 
 ## 從頭開始建立入門範本應用程式
 {: #create-app-cli}

@@ -77,7 +77,7 @@ Se utilizzi `git clone` sul repository GitLab creato per avviare lo sviluppo att
 Puoi richiamare il file `server/localdev-config.json` completando la seguente procedura:
 
 1. Utilizza `git clone` sul repository GitLab che era stato creato automaticamente quando hai utilizzato la funzione "Deploy to Cloud".
-2. Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), che include il plug-in `dev`.
+2. Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), che include il plug-in `dev`.
 3. Utilizza la riga di comando `ibmcloud` per eseguire l'accesso a {{site.data.keyword.cloud_notm}}.
 4. Esegui `ibmcloud dev get-credentials`, che fa riferimento al file `cli-config.yml`. Il file `cli-config.yml` include le informazioni relative a quale lavoro di generazione e applicazione ha le credenziali.
 

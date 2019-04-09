@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 {: #prereqs-mendix-kube}
 
 - Mendix 앱을 작성하십시오. 자세한 정보는 [Mendix 앱 작성](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix)을 참조하십시오.
-- {{site.data.keyword.containershort_notm}} CLI를 포함하여 [{{site.data.keyword.dev_cli_notm}} 명령행 인터페이스(CLI)](/docs/cli/index.html#overview)를 설치하십시오.
+- {{site.data.keyword.containershort_notm}} CLI를 포함하여 [{{site.data.keyword.dev_cli_notm}} 명령행 인터페이스(CLI)](/docs/cli/index.html)를 설치하십시오.
 - `ibmcloud` CLI에 로그인하고 [Kubernetes 클러스터에 액세스](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)할 수 있도록 `kubectl`을 구성하십시오.
 
 ## Cloud Object Storage 서비스 인스턴스 작성
@@ -103,17 +103,17 @@ spec:
 ## 앱이 실행 중인지 확인
 {: #verify-mendix-kube}
 
-앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다. 
+앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다.
 
-1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오. 
-2. **로그 및 히스토리 보기**를 클릭하십시오. 
-3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 
+1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
+2. **로그 및 히스토리 보기**를 클릭하십시오.
+3. 로그 파일에서 애플리케이션 URL을 찾으십시오.
 
-    로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.cloud.ibm.com` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다. 
+    로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.cloud.ibm.com` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
 
-4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다. 
+4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오. 
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
 
 ## 추가 정보
 {: #more-info-mendix-kube}

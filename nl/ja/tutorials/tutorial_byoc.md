@@ -24,7 +24,7 @@ lastupdated: "2019-02-01"
 
 以下の前提条件が整っていることを確認します。
 
- * [{{site.data.keyword.dev_cli_long}} コマンド・ライン・インターフェース (CLI)](/docs/cli/index.html#overview) をインストールします。
+ * [{{site.data.keyword.dev_cli_long}} コマンド・ライン・インターフェース (CLI)](/docs/cli/index.html) をインストールします。
  * アプリを作成するためのベスト・プラクティスについて、[良いアプリを作成するには](/docs/apps/best-practice.html#best-practice)を参照してください。
  * GitHub、GitHub Enterprise、GitLab、BitBucket、または Rational のいずれかのプロバイダーからの Git ソース・コード・リポジトリーが必要です。
  * アプリを [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about) にデプロイする予定の場合、[{{site.data.keyword.cloud_notm}} アカウントを準備](/docs/cloud-foundry/prepare-account.html#prepare)する必要があります。
@@ -35,7 +35,7 @@ lastupdated: "2019-02-01"
 アプリを作成し、それをソース・リポジトリーに接続するには、以下のステップを実行します。
 
 1. [ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}){: new_window} で、**「アプリ」**タイルの**「アプリの作成」**をクリックします。
-2. アプリに名前を付け、リソース・グループを選択します。さらに、オプションで、アプリを分類するためのタグを指定します。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
+2. アプリに名前を付け、リソース・グループを選択します。さらに、オプションで、アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
 3. **「独自のコードを持ち込む (Bring your own code)」**を選択し、使用する Git リポジトリーへの URL を提供します。 アプリと Docker イメージは同じリポジトリー内に配置する必要があります。
 4. **「作成」**をクリックします。
 
@@ -83,8 +83,8 @@ DevOps ツールチェーンをアプリに接続したら、以下のステッ�
 
 1. アプリの詳細ページで、**「クラウドにデプロイ」**をクリックします。
 2. デプロイメント方式を選択します。 選択した方式の説明に従って、デプロイメント方式をセットアップします。
-  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
+  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
   * **[仮想サーバー](/docs/apps/vsi-deploy.html#vsi-deploy)にデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
 

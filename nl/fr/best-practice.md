@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-02-19"
 
 ---
 
@@ -48,6 +48,8 @@ L'extraction de dépendances propres à l'environnement dans un ensemble de fich
 {: #multiregion}
 
 Vous pouvez exécuter plusieurs instances afin d'éviter des indisponibilités dans une région unique. Pour mettre à disposition une application encore plus robuste, pensez à utiliser une architecture multi-région.
+
+Pour plus d'informations sur la réduction du temps d'indisponibilité et sur la création d'architectures résilientes qui garantissent une disponibilité maximale, consultez le [tutoriel Strategies for resilient applications](/docs/tutorials/strategies-for-resilient-applications.html).
 
 ## Prenez soin de surveiller vos applications
 {: #monitoring}

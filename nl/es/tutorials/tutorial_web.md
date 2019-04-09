@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## Paso 1. Instalar las herramientas
 {: #prereqs-webapp}
 
-Instale las [herramientas del desarrollador](/docs/cli/index.html#overview).
+Instale las [herramientas del desarrollador](/docs/cli/index.html).
 
 Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 

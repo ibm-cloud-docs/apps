@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## 步驟 1. 開始之前
 {: #prereqs-bff}
 
-* 安裝[開發人員工具](/docs/cli/index.html#overview)。
+* 安裝[開發人員工具](/docs/cli/index.html)。
 * Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
 * 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry/prepare-account.html#prepare)。
 

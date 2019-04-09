@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-02-19"
 
 ---
 
@@ -48,6 +48,8 @@ La extracción de las dependencias específicas del entorno a un conjunto de arc
 {: #multiregion}
 
 Puede ejecutar más de una instancia para evitar el tiempo de inactividad en una sola región. Para ofrecer una aplicación más sólida, tenga en cuenta la posibilidad de utilizar una arquitectura de varias regiones.
+
+Para obtener información sobre cómo minimizar el tiempo de inactividad y cómo crear arquitecturas resistentes que alcancen la máxima disponibilidad, consulte la [Guía de aprendizaje sobre estrategias para aplicaciones resistentes](/docs/tutorials/strategies-for-resilient-applications.html).
 
 ## Asegúrese de supervisar sus apps
 {: #monitoring}

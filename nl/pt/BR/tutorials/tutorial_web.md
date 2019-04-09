@@ -21,7 +21,7 @@ O {{site.data.keyword.cloud}} oferece vários kits do iniciador para ajudar voc�
 ## Etapa 1. Instale as ferramentas
 {: #prereqs-webapp}
 
-Instale as [ferramentas do desenvolvedor](/docs/cli/index.html#overview).
+Instale as [ferramentas do desenvolvedor](/docs/cli/index.html).
 
 O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 

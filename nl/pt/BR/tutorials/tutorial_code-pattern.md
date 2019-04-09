@@ -48,7 +48,7 @@ lastupdated: "2019-02-01"
 
 Após você incluir um recurso em seu app ou se algum serviço for necessário para o seu app, observe que as credenciais para esse serviço são exibidas na caixa **Credenciais**. Deve-se copiar manualmente as credenciais para o seu ambiente de implementação.
 
-Para obter mais informações sobre como copiar credenciais para o seu ambiente, consulte [Visão geral de credenciais](/docs/apps/creds_overview.html#credentials_overview).
+Para obter mais informações sobre como copiar credenciais para o seu ambiente, consulte [Visão geral de credenciais](/docs/apps/creds_overview.html).
 
 ## Etapa 4. Implementando no {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

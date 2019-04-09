@@ -22,7 +22,7 @@ O {{site.data.keyword.cloud}} oferece kits móveis do iniciador para ajudar a cr
 ## Etapa 1. Antes de Iniciar
 {: #prereqs-mobile}
 
-* Instale o [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html#overview).
+* Instale o [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
 * O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 * Se você planeja implementar o seu app no [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), deverá [preparar a sua conta do {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 

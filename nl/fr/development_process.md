@@ -43,7 +43,7 @@ Après avoir créé votre application de kit de démarrage et votre chaîne d'ou
 
 ![Développement en local](images/dev_code_locally.png "Développement en local") Figure 3. Flux de développement en local
 
-Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `ibmcloud dev build` et `ibmcloud dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview).
+Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `ibmcloud dev build` et `ibmcloud dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html).
 {: tip}
 
 ## Distribution et gestion dans {{site.data.keyword.cloud_notm}}

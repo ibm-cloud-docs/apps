@@ -17,7 +17,7 @@ lastupdated: "2018-12-04"
 ## 迁移应用程序
 {: #migrating}
 
-如果您需要应用程序访问内部部署数据或服务，那么可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) 在 {{site.data.keyword.cloud_notm}} 组织和企业后端网络之间建立一条安全的隧道。有关详细信息，请参阅 [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
+如果您需要应用程序访问内部部署数据或服务，那么可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html) 在 {{site.data.keyword.cloud_notm}} 组织和企业后端网络之间建立一条安全的隧道。有关详细信息，请参阅 [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
 
 如果您需要有关迁移的帮助，可以使用 [{{site.data.keyword.cloud_notm}} Migration Services ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/migration-services){: new_window}。
 

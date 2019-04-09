@@ -10,6 +10,11 @@ Création d'applications
     development_process.md
     best-practice.md
     patterns.md
+ 
+    {: .topicgroup}
+    Liens connexes
+        [Strategies for resilient applications](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
+        [Continuous deployment to Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

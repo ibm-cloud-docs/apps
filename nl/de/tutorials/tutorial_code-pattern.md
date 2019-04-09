@@ -48,7 +48,7 @@ Sie können Ressourcen, die Ihre App mit der kognitiven Leistung von Watson funk
 
 Nachdem Sie Ihrer App eine Ressource hinzugefügt haben, oder wenn für Ihre App Services erforderlich sind, weisen wir darauf hin, dass die Berechtigungsnachweise für diesen Service im Feld **Berechtigungsnachweise** angezeigt werden. Sie müssen die Berechtigungsnachweise manuell in Ihre Bereitstellungsumgebung kopieren.
 
-Weitere Informationen zum Kopieren von Berechtigungsnachweisen in Ihre Umgebung finden Sie unter [Übersicht über Berechtigungsnachweise](/docs/apps/creds_overview.html#credentials_overview).
+Weitere Informationen zum Kopieren von Berechtigungsnachweisen in Ihre Umgebung finden Sie unter [Übersicht über Berechtigungsnachweise](/docs/apps/creds_overview.html).
 
 ## Schritt 4. In {{site.data.keyword.cloud_notm}} bereitstellen
 {: #deploy-codepattern}

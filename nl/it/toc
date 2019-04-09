@@ -10,6 +10,11 @@ Creazione di applicazioni
     development_process.md
     best-practice.md
     patterns.md
+ 
+    {: .topicgroup}
+    Link correlati
+        [Strategies for resilient applications](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
+        [Continuous Deployment to Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -56,7 +61,7 @@ Creazione di applicazioni
     [IBM Cloud Developer Tools command line reference](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    Dashboard di sviluppo IBM Cloud
+    Dashboard dello sviluppatore IBM Cloud
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
         [Finance](https://cloud.ibm.com/developer/finance/dashboard)
         [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)

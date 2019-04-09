@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -22,7 +22,7 @@ lastupdated: "2018-11-29"
 종량과금제 계정이 있으면 {{site.data.keyword.cloud}} [앱 서비스 ![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}를 사용하여 가상 서버 인스턴스를 포함하여 여러 유형의 환경에 앱을 배치할 수 있습니다. 가상 서버 인스턴스는 온프레미스 워크로드를 클라우드로 이동할 때의 일반적인 배치 선택사항이며 베어메탈 머신을 에뮬레이트합니다.
 {: shortdesc}
 
-가상 서버 인스턴스는 다른 구성과 비교할 때 모든 워크로드 유형에 대해 더 나은 투명성, 예측 가능성 및 자동화를 제공합니다. 고유 워크로드 조합을 작성하려면 이를 베어메탈 서버와 결합하십시오. 예를 들어, Debian Linux 기반 운영 체제를 실행 중인 베어메탈 및 GPU 구성을 사용하여 고성능 데이터베이스 로직 또는 기계 학습을 작성할 수 있습니다.
+가상 서버 인스턴스는 다른 구성과 비교할 때 모든 워크로드 유형에 대해 더 나은 투명성, 예측 가능성 및 자동화를 제공합니다. 고유 워크로드 조합을 작성하려면 이를 베어메탈 서버와 결합하십시오. 예를 들어, Debian Linux 기반 운영 체제를 실행하는 베어메탈 및 GPU 구성을 사용하여 고성능 데이터베이스 로직 또는 기계 학습을 작성할 수 있습니다.
 
 가상 서버 인스턴스를 프로비저닝하고 배치하는 작업은 복잡하고 시간이 많이 걸리는 프로세스지만 {{site.data.keyword.cloud_notm}} 앱 서비스를 사용하면 이를 신속하게 시작하고 실행할 수 있습니다.
 
@@ -34,7 +34,7 @@ lastupdated: "2018-11-29"
 
 앱 서비스는 가상 서버를 사용자에 맞게 프로비저닝하고 앱이 포함된 이미지를 로드하며 Devops 도구 체인을 작성하고 첫 번째 배치 사이클을 시작합니다.
 
-1. [앱을 작성](tutorials/tutorial_scratch.html#tutorial-scratch)하십시오. 
+1. [앱을 작성](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)하십시오. 
 2. 앱 세부사항 페이지에서 **클라우드에 배치**를 클릭하십시오.
 3. 서버를 실행할 지역과 함께 **가상 서버에 배치**를 선택하십시오.
 
@@ -100,7 +100,7 @@ Terraform은 인프라 리소스를 작성하는 데 클래식 인프라 API 키
 #### {{site.data.keyword.cloud_notm}} API 키
 {: #platform-key}
 
-Terraform에서 데이터베이스 및 Compose 서비스와 같은 플랫폼 레벨 서비스를 작성하려는 경우 {{site.data.keyword.cloud_notm}} API 키는 자동으로 확보되어 파이프라인에 환경 변수로서 저장됩니다. {{site.data.keyword.cloud_notm}} API 키를 수동으로 검색하려면 다음 단계를 완료하십시오. 
+Terraform에서 데이터베이스 및 Compose 서비스와 같은 플랫폼 레벨 서비스를 작성하려는 경우 {{site.data.keyword.cloud_notm}} API 키는 자동으로 확보되어 파이프라인에 환경 변수로서 저장됩니다. {{site.data.keyword.cloud_notm}} API 키를 수동으로 검색하려면 다음 단계를 완료하십시오.
 
 1. [사용자 목록![외부 링크 아이콘](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}으로 이동하십시오. **관리** > **액세스(IAM)**를 클릭하고 **사용자**를 선택할 수도 있습니다.
 2. 사용자 이름을 클릭한 후 **사용자 세부사항**을 클릭하십시오.

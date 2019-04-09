@@ -24,7 +24,7 @@ lastupdated: "2019-02-01"
 
 确保以下先决条件已准备就绪：
 
- * 安装 [{{site.data.keyword.dev_cli_long}} 命令行界面 (CLI)](/docs/cli/index.html#overview)。
+ * 安装 [{{site.data.keyword.dev_cli_long}} 命令行界面 (CLI)](/docs/cli/index.html)。
  * 请参阅[优秀应用程序的要素是什么？](/docs/apps/best-practice.html#best-practice)以获取创建应用程序的最佳实践。
  * 您必须具有来自以下任一提供者的 Git 源代码存储库：GitHub、GitHub Enterprise、GitLab、BitBucket 或 Rational。
  * 如果计划将应用程序部署到 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry/prepare-account.html#prepare)。

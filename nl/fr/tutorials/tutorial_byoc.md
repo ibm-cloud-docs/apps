@@ -24,7 +24,7 @@ Vous pouvez créer une application dans {{site.data.keyword.cloud}} en utilisant
 
 Assurez-vous que les éléments prérequis suivants sont disponibles et prêts à être utilisés :
 
- * Installez l'interface de ligne de commande (CLI) [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
+ * Installez l'interface de ligne de commande (CLI) [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
  * Voir [Qu'est-ce qui caractérise une bonne application ?](/docs/apps/best-practice.html#best-practice) pour connaître les meilleures pratiques en matière de création d'applications.
  * Vous devez avoir un référentiel de codes source Git d'un des fournisseurs suivants : GitHub, GitHub Enterprise, Git lab, BitBucket ou Rational.
  * Si vous envisagez de déployer votre application dans [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), vous devez [préparer votre compte {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).

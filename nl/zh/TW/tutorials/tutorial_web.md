@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## 步驟 1. 安裝工具
 {: #prereqs-webapp}
 
-安裝[開發人員工具](/docs/cli/index.html#overview)。
+安裝[開發人員工具](/docs/cli/index.html)。
 
 Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
 

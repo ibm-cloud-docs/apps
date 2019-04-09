@@ -43,7 +43,7 @@ lastupdated: "2018-11-29"
 
 ![本地开发](images/dev_code_locally.png "本地开发") 图 3.“本地开发”流程
 
-{{site.data.keyword.dev_cli_notm}} 的基本功能为 `ibmcloud dev build` 和 `ibmcloud dev run`，但该 CLI 还提供了更多功能。有关更多详细信息，请参阅 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview)。
+{{site.data.keyword.dev_cli_notm}} 的基本功能为 `ibmcloud dev build` 和 `ibmcloud dev run`，但该 CLI 还提供了更多功能。有关更多详细信息，请参阅 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html)。
 {: tip}
 
 ## 在 {{site.data.keyword.cloud_notm}} 中交付和管理

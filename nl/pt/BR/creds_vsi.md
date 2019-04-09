@@ -91,7 +91,8 @@ trabalha em um notebook.
 
 1. Use `git clone` no repositório GitLab que foi criado automaticamente quando
 você usou o recurso "Implementar na nuvem".
-2. Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), que inclui o plug-in `dev`.
+2. Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), que
+inclui o plug-in `dev`.
 3. Use a linha de comandos `ibmcloud` para efetuar login no {{site.data.keyword.cloud_notm}}.
 4. Execute `ibmcloud dev get-credentials`, que se refere ao arquivo `cli-config.yml`. O arquivo `cli-config.yml` inclui informações sobre qual aplicativo e tarefa de geração tem as
 credenciais.
