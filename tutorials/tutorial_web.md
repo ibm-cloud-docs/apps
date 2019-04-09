@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-02"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -41,7 +41,7 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 5. Select your pricing plan. There is a free option that you can use for this tutorial.
 6. Click **Create**.
 
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Step 3. Add services (Optional)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-02"
 
 keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
 
@@ -43,7 +43,7 @@ Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console
 6. Select your pricing plan. There is a free option that you can use for this tutorial.
 7. Click **Create**.
 
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Step 3. Add services (Optional)

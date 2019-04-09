@@ -46,7 +46,7 @@ Creating an app from scratch is useful if you don't already have existing code t
   {: note}
 7. Enter a unique host name; for example, `abc-devhost`. This host name is your app's route; for example, `abc-devhost.mybluemix.net`.
 
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 Creating the app and toolchain takes a few seconds to complete.

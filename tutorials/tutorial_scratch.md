@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-02"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -46,7 +46,7 @@ You can create a custom application from scratch by using services and a runtime
 6. Select your pricing plan. You can use the free option for this tutorial.
 7. Click **Create**.
 
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/apps/tutorials?topic=creating-apps-update-domain).
+The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Adding services (optional)
