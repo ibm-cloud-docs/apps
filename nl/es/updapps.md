@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-15"
+  years: 2015, 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -17,16 +17,16 @@ lastupdated: "2018-02-15"
 Puede utilizar la línea de mandatos o {{site.data.keyword.Bluemix}} Continous Delivery para actualizar las aplicaciones en {{site.data.keyword.Bluemix_notm}}. En muchos casos, incluso para los paquetes de compilación integrados como Node.js, también debe escribir un parámetro -c para especificar el mandato que se sebe utilizar para iniciar la aplicación.
 {:shortdesc}
 
-## Creación y utilización de un dominio personalizado
+##Creación y utilización de un dominio personalizado
 {: #domain}
 
-Para apps de Cloud Foundry y grupos de contenedores, puede utilizar un dominio personalizado en el URL de la aplicación en lugar del dominio del sistema {{site.data.keyword.Bluemix_notm}} predeterminado, que es mybluemix.net.
+Para apps de CF y grupos de contenedores, puede utilizar un dominio personalizado en el URL de la aplicación en lugar del dominio del sistema {{site.data.keyword.Bluemix_notm}} predeterminado, que es mybluemix.net.
 
 Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.Bluemix_notm}}. Para utilizar un dominio personalizado, debe registrar el dominio personalizado en un servidor DNS público, configurar el dominio personalizado en {{site.data.keyword.Bluemix_notm}} y, a continuación, correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}} en el servidor DNS público. Después de correlacionar el dominio personalizado con el dominio del sistema {{site.data.keyword.Bluemix_notm}}, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.Bluemix_notm}}.
 
 Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_notm}} puede utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de línea de mandatos bluemix.
 
-### Utilización de la consola {{site.data.keyword.Bluemix_notm}}
+### Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}:
 
   1. Cree un dominio personalizado para la organización.
 
@@ -45,7 +45,7 @@ Para crear y utilizar un dominio personalizado en {{site.data.keyword.Bluemix_no
 	3. Pulse **Añadir ruta** y especifique la ruta que desea utilizar para la aplicación.
 	4. Pulse **Guardar**.
 
-### Uso de la interfaz de línea de mandatos de bluemix
+### Utilice la interfaz de línea de mandatos bluemix:
 
   1. Cree un dominio personalizado para la organización con el siguiente mandato:
 
@@ -289,4 +289,3 @@ En este ejemplo, *Blue* es la aplicación previamente desplegada y *Green* es la
 {: #general}
 
 [Despliegues azul-verde ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-

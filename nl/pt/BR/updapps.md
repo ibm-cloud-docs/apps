@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-15"
+  years: 2015, 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
@@ -17,10 +17,11 @@ lastupdated: "2018-02-15"
 É possível usar a linha de comandos ou o {{site.data.keyword.Bluemix}} Continuous Delivery para atualizar os aplicativos no {{site.data.keyword.Bluemix_notm}}. Em muitos casos, mesmo para os buildpacks integrados, como o Node.js, deve-se também fornecer um parâmetro -c para especificar qual comando será usado para iniciar seu aplicativo.
 {:shortdesc}
 
-## Criando e usando um domínio customizado
+##Criando e usando um domínio customizado
 {: #domain}
 
-Para apps Cloud Foundry e grupos de contêiner, é possível usar um domínio customizado na URL de seu aplicativo, em vez do domínio de sistema padrão do {{site.data.keyword.Bluemix_notm}} que é mybluemix.net.
+Para aplicativos CF e grupos de contêiner, é possível usar um domínio customizado na URL de seu aplicativo, em vez do domínio de sistema padrão do {{site.data.keyword.Bluemix_notm}} que é
+mybluemix.net.
 
 Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.Bluemix_notm}}. Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público, configurar o domínio customizado no {{site.data.keyword.Bluemix_notm}} e, em seguida, mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.Bluemix_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema do
 {{site.data.keyword.Bluemix_notm}}, as
@@ -29,7 +30,8 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 
 É possível criar e usar um domínio customizado no {{site.data.keyword.Bluemix_notm}} usando a interface com o usuário do {{site.data.keyword.Bluemix_notm}} ou a interface da linha de comandos bluemix.
 
-### Usando o console {{site.data.keyword.Bluemix_notm}}
+### Utilize a interface com o usuário do
+{{site.data.keyword.Bluemix_notm}}:
 
   1. Crie um domínio customizado para sua organização.
 
@@ -50,7 +52,7 @@ solicitações de seu domínio customizado serão roteadas para seu aplicativo n
 	3. Clique em **Incluir rota** e especifique a rota que você deseja usar para o aplicativo.
 	4. Clique em **Salvar**.
 
-### Usando a interface da linha de comandos Bluemix
+### Use a interface da linha de comandos bluemix:
 
   1. Crie um domínio customizado para sua organização, inserindo o comando a seguir:
 
@@ -308,4 +310,3 @@ estiver em vigor.
 {: #general}
 
 [Implementações de Blue-green ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
-
