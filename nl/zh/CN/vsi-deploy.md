@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-28"
+  years: 2018
+lastupdated: "2018-11-29"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2019-02-28"
 
 App Service 会为您供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
-1. [创建应用程序](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)。 
+1. [创建应用程序](tutorials/tutorial_scratch.html#tutorial-scratch)。 
 2. 在应用程序详细信息页面中，单击**部署到云**。
 3. 选择**部署到虚拟服务器**以及运行服务器的区域。
 

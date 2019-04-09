@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Incluindo credenciais no ambiente do Cloud Foundry
 {: #add-credentials-cf}
 
-Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
+Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Seu código + Cloud Foundry

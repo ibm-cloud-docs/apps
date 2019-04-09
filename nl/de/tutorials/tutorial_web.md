@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## Schritt 1. Tools installieren
 {: #prereqs-webapp}
 
-Installieren Sie die [Entwicklertools](/docs/cli/index.html).
+Installieren Sie die [Entwicklertools](/docs/cli/index.html#overview).
 
 Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt werden, damit die Buildbefehle funktionieren. Sie müssen ein Docker-Konto erstellen, die Docker-App ausführen und sich anmelden.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -37,7 +37,11 @@ lastupdated: "2019-03-01"
 
 {{site.data.keyword.cloud_notm}} 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工具扩展。
 
-开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
+开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)。
+
+<p>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="（在新选项卡或窗口中打开）"><img class="image" src="images/btn_bx_commandline.svg" alt="下载 IBM Cloud Developer Tools" /></a>
+</p>
 
 Cygwin 不支持 CLI。请在非 Cygwin 命令行窗口中使用该工具。
 {: important}

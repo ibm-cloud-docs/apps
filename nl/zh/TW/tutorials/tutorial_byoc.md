@@ -24,7 +24,7 @@ lastupdated: "2019-02-01"
 
 請確定已備妥下列必要條件：
 
- * 安裝 [{{site.data.keyword.dev_cli_long}} 指令行介面 (CLI)](/docs/cli/index.html)。
+ * 安裝 [{{site.data.keyword.dev_cli_long}} 指令行介面 (CLI)](/docs/cli/index.html#overview)。
  * 參閱[構成良好應用程式的要點？](/docs/apps/best-practice.html#best-practice)，以取得建立應用程式的最佳作法。
  * 您必須具有來自下列任何提供者的 Git 原始碼儲存庫：GitHub、GitHub Enterprise、Git Lab、BitBucket 或 Rational。
  * 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry/prepare-account.html#prepare)。

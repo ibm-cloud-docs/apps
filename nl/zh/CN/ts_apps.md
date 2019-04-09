@@ -657,7 +657,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: #access_kube_logs}
 
 如果应用程序未在运行，并且您无法访问该运行状况端点，请尝试查看集群中的日志。
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，请进行安装。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cs clusters` 列出集群。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向相应的集群。

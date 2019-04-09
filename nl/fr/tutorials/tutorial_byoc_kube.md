@@ -45,9 +45,9 @@ Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de
 Ajoutez une ressource de service à votre application, {{site.data.keyword.cloud_notm}} crée alors le service pour vous. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration. {{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une
 instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
 
-Ce processus met à disposition une instance de service, crée une clé de ressource (données d'identification) et l'associe à votre application. Pour plus d'informations, voir [Ajout d'une ressource à votre application](/docs/apps/reqnsi.html#).
+Ce processus met à disposition une instance de service, crée une clé de ressource (données d'identification) et l'associe à votre application. Pour plus d'informations, voir [Ajout d'un service à votre application](/docs/apps/reqnsi.html#add-resource).
 
-Une fois que vous avez ajouté une ressource de service à votre application, vous devez copier les données d'identification du service dans votre environnement de déploiement. Pour plus d'informations, voir [Ajout de données d'identification à votre environnement Kubernetes](/docs/apps/creds_kube.html).
+Une fois que vous avez ajouté une ressource de service à votre application, vous devez copier les données d'identification du service dans votre environnement de déploiement. Pour plus d'informations, voir [Ajout de données d'identification à votre environnement Kubernetes](/docs/apps/creds_kube.html#add_credentials).
 
 ## Préparation de votre application pour le déploiement
 {: #deploy-byoc-kube}

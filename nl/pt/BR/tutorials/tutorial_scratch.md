@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 ## Antes de começar
 {: #prereqs-scratch}
 
-* Instale o [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html), que inclui o Docker. 
+* Instale o [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), que inclui o Docker. 
 * Crie uma conta do Docker, execute o app do Docker e conecte-se. O Docker deve estar em execução para que os comandos de construção funcionem.
 * Se você planeja implementar o seu app no [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), deverá [preparar a sua conta do {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 

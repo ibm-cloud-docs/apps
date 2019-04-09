@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-19"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -48,8 +48,6 @@ lastupdated: "2018-02-19"
 {: #multiregion}
 
 単一地域でのダウン時間を回避するために、複数のインスタンスを実行できます。 より堅固なアプリケーションを提供するには、複数地域アーキテクチャーを検討してください。
-
-ダウン時間の最小化および最大限の可用性を実現する回復力のあるアーキテクチャーの作成について詳しくは、[回復力のあるアプリケーションのための戦略 (Strategies for resilient applications) のチュートリアル](/docs/tutorials/strategies-for-resilient-applications.html)を参照してください。
 
 ## アプリのモニタリングの確実な実施
 {: #monitoring}

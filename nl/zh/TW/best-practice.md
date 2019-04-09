@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-19"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -48,8 +48,6 @@ lastupdated: "2018-02-19"
 {: #multiregion}
 
 您可以執行多個實例，以避免單一地區的關閉時間。若要提供更為強健的應用程式，請考慮使用多地區架構。
-
-如需最小化關閉時間以及建立可達到最大可用性之回復型架構的相關資訊，請參閱[回復型應用程式的策略指導教學](/docs/tutorials/strategies-for-resilient-applications.html)。
 
 ## 確定您正在監視應用程式
 {: #monitoring}

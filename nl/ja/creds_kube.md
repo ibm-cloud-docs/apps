@@ -86,7 +86,7 @@ env:
 
 ワークステーションの端末を使用して、以下のツールをインストールします。
 
-1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html) をインストールします。
+1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview) をインストールします。
 2. `ibmcloud login` コマンドを使用してログインします。
 3. `ibmcloud cs cluster-config {your_cluster_name}` を実行してクラスターに接続します。
 4. `export` コマンドをコピー・アンド・ペーストして、端末からコマンドを実行します。
@@ -118,7 +118,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 	- `chart/{appName}/bindings.yaml` - シークレットを指す環境変数を Kubernetes クラスター内に生成します。
 	- `src/main/resources/localdev-config.json` - アプリをローカルで実行するときに資格情報にアクセスします。
-  - `src/main/resources/mappings.json` - コードから環境変数にアクセスするための [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) メソッドへのアクセスを可能にするマッピング。
+  - `src/main/resources/mappings.json` - コードから環境変数にアクセスするための [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) メソッドへのアクセスを可能にするマッピング。
   - `manifest.yml` - このファイルによってサービスが Cloud Foundry アプリケーションにバインドされます。
 
 後で、リソース・コントローラー・リソース (組織またはスペースでなくリソース・グループ内にあるリソース) を含んだ Cloud Foundry アプリケーションにデプロイする場合は、もう 1 つファイルをコピーする必要があります。

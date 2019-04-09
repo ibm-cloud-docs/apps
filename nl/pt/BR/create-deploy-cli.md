@@ -25,7 +25,7 @@ lastupdated: "2019-02-08"
 ## Antes de começar
 {: #prereqs-app-cli}
 
-Deve-se instalar a CLI do {{site.data.keyword.cloud_notm}}, o plug-in da CLI do {{site.data.keyword.dev_cli_notm}} e outros plug-ins e ferramentas recomendados. Para obter mais informações, consulte [Introdução à CLI do IBM Cloud](/docs/cli/index.html). 
+Deve-se instalar a CLI do {{site.data.keyword.cloud_notm}}, o plug-in da CLI do {{site.data.keyword.dev_cli_notm}} e outros plug-ins e ferramentas recomendados. Para obter mais informações, consulte [Introdução à CLI do IBM Cloud](/docs/cli/index.html#overview). 
 
 ## Criando um app iniciador do zero
 {: #create-app-cli}

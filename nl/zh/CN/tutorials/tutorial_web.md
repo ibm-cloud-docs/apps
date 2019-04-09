@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## 步骤 1. 安装工具
 {: #prereqs-webapp}
 
-安装 [Developer Tools](/docs/cli/index.html)。
+安装 [Developer Tools](/docs/cli/index.html#overview)。
 
 Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行中，构建命令才会有效。您必须创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。
 

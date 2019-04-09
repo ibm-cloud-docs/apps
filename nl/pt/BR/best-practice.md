@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-19"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -48,8 +48,6 @@ A extração de dependências específicas do ambiente em um conjunto de arquivo
 {: #multiregion}
 
 É possível executar mais de uma instância para evitar o tempo de inatividade em uma única região. Para entregar um aplicativo ainda mais robusto, considere uma arquitetura de várias regiões.
-
-Para obter informações sobre como minimizar o tempo de inatividade e criar arquiteturas resilientes que atingem a máxima disponibilidade, consulte o [Tutorial Estratégias para aplicativos resilientes](/docs/tutorials/strategies-for-resilient-applications.html).
 
 ## Assegure-se de que você esteja monitorando seus apps
 {: #monitoring}

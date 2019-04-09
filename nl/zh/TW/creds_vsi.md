@@ -77,7 +77,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 您可以完成下列步驟，來擷取 `server/localdev-config.json` 檔案：
 
 1. 在使用「部署至雲端」特性時自動建立的 Git Lab 儲存庫上，使用 `git clone`。
-2. 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，其中包括 `dev` 外掛程式。
+2. 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)，其中包括 `dev` 外掛程式。
 3. 使用 `ibmcloud` 指令行來登入 {{site.data.keyword.cloud_notm}}。
 4. 執行 `ibmcloud dev get-credentials`，它會參照 `cli-config.yml` 檔案。`cli-config.yml` 檔案包含哪個應用程式及產生工作具有認證的相關資訊。
 

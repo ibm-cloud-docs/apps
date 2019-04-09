@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Cloud Foundry 환경에 인증 정보 추가
 {: #add-credentials-cf}
 
-Cloud Foundry 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다. 이러한 지시사항은 [Cloud Foundry 퍼블릭](/docs/cloud-foundry-public/about-cf.html) 및 [Cloud Foundry 엔터프라이즈 환경](/docs/cloud-foundry-public/cfee.html) 모두에 적용됩니다.
+Cloud Foundry 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다. 이러한 지시사항은 [Cloud Foundry 퍼블릭](/docs/cloud-foundry-public/about-cf.html#about-cf) 및 [Cloud Foundry 엔터프라이즈 환경](/docs/cloud-foundry-public/cfee.html#cfee) 모두에 적용됩니다.
 {: shortdesc}
 
 ## 사용자 코드 + Cloud Foundry

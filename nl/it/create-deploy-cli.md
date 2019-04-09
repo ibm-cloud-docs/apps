@@ -25,12 +25,12 @@ Puoi creare un'applicazione starter da zero oppure abilitare al cloud il tuo cod
 ## Prima di iniziare
 {: #prereqs-app-cli}
 
-Devi installare la CLI {{site.data.keyword.cloud_notm}}, il plug-in CLI {{site.data.keyword.dev_cli_notm}} e gli altri plug-in e strumenti consigliati. Per ulteriori informazioni, vedi [Introduzione alla CLI IBM Cloud](/docs/cli/index.html). 
+Devi installare la CLI {{site.data.keyword.cloud_notm}}, il plug-in CLI {{site.data.keyword.dev_cli_notm}} e gli altri plug-in e strumenti consigliati. Per ulteriori informazioni, vedi [Introduzione alla CLI IBM Cloud](/docs/cli/index.html#overview). 
 
 ## Creazione di un'applicazione starter da zero
 {: #create-app-cli}
 
-La creazione di un'applicazione da zero è utile se, per iniziare, non hai già del codice esistente e vuoi piuttosto iniziare da un template starter di framework o linguaggio.
+La creazione di un'applicazione da zero è utile se, per iniziare, non hai già del codice esistente e vuoi piuttosto iniziare da un modello starter di framework o linguaggio.
 
 1. Esegui il comando [`ibmcloud dev create`](/docs/cli/idt/commands.html#create) nella directory di tua scelta.
 2. Seleziona **Backend Service / Web App** come tipo di applicazione.

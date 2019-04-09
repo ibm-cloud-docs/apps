@@ -25,7 +25,7 @@ Vous pouvez soit créer une toute nouvelle application, soit activer sur le clou
 ## Avant de commencer
 {: #prereqs-app-cli}
 
-Vous devez installer l'interface CLI {{site.data.keyword.cloud_notm}}, le plug-in d'interface CLI {{site.data.keyword.dev_cli_notm}} et d'autres plug-in et outils recommandés. Pour plus d'informations, voir [Initiation à l'interface de ligne de commande IBM Cloud](/docs/cli/index.html). 
+Vous devez installer l'interface CLI {{site.data.keyword.cloud_notm}}, le plug-in d'interface CLI {{site.data.keyword.dev_cli_notm}} et d'autres plug-in et outils recommandés. Pour plus d'informations, voir [Initiation à l'interface de ligne de commande IBM Cloud](/docs/cli/index.html#overview). 
 
 ## Création d'une toute nouvelle application de démarrage
 {: #create-app-cli}

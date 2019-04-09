@@ -22,7 +22,7 @@ Vous pouvez générer des applications mobiles et Web adaptées aux entreprises 
 ## Avant de commencer
 {: #prereqs-getting-started}
 
-Vous pouvez créer votre application en utilisant la console {{site.data.keyword.cloud_notm}} ou l'interface de ligne de commande (CLI). Si vous souhaitez utiliser cette dernière, consultez la section [Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) pour obtenir des informations détaillées sur l'installation.
+Vous pouvez créer votre application en utilisant la console {{site.data.keyword.cloud_notm}} ou l'interface de ligne de commande (CLI). Si vous souhaitez utiliser l'interface CLI, consultez la section [Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) pour obtenir des informations détaillées sur l'installation.
 
 ## Etape 1. Créer votre application
 {: #create-getting-started}

@@ -22,7 +22,7 @@ Puede crear una app a partir de un iniciador de programa de fondo para programa 
 ## Paso 1. Antes de empezar
 {: #prereqs-bff}
 
-* Instale las [herramientas del desarrollador](/docs/cli/index.html).
+* Instale las [herramientas del desarrollador](/docs/cli/index.html#overview).
 * Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 * Si tiene intención de desplegar la app en [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 

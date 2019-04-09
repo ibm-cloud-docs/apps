@@ -107,7 +107,7 @@ lastupdated: "2019-02-13"
 * 如果您在部署時遇到錯誤，請檢查疑難排解主題以找出[超出儲存空間配額](/docs/apps/ts_apps.html#exceed_quota)這類已知問題，或了解如何[存取 Kubernetes 日誌](/docs/apps/ts_apps.html#access_kube_logs)來尋找錯誤。
 
 * 在程式碼中存取服務配置：
-	- 您可以使用 _@Value_ 註釋，或使用 Spring 架構環境類別 _getProperty()_ 方法。如需相關資訊，請參閱[存取認證](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
+	- 您可以使用 _@Value_ 註釋，或使用 Spring 架構環境類別 _getProperty()_ 方法。如需相關資訊，請參閱[存取認證](/docs/java-spring/configuration.html#configuration#accessing-credentials)。
 
 * 將新認證新增至 Kubernetes 環境：
-	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動新增認證](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube)至部署環境。
+	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動新增認證](/docs/apps/creds_kube.html#sk_kube)至部署環境。

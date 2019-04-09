@@ -87,7 +87,7 @@ clave `KEY_SECRET` se resuelvan en un valor.
 
 Utilice un terminal de la estación de trabajo para instalar las siguientes herramientas:
 
-1. Instale la [CLI de {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+1. Instale la CLI de [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
 2. Inicie una sesión con el mandato `ibmcloud login`.
 3. Conéctese a su clúster con el mandato `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copie y pegue el mandato `export` para ejecutarlo desde un terminal.
@@ -119,7 +119,7 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
 
 	- `chart/{appName}/bindings.yaml` - Genera una variable de entorno en el clúster de Kubernetes que apunta al secreto.
 	- `src/main/resources/localdev-config.json` - Acceso a las credenciales mientras la app se ejecuta localmente.
-  - `src/main/resources/mappings.json` - Una correlación para proporcionar acceso al método [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) para acceder a las variables de entorno desde el código.
+  - `src/main/resources/mappings.json` - Una correlación para proporcionar acceso al método [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) para acceder a las variables de entorno desde el código.
   - `manifest.yml` - Este archivo enlaza el servicio a la aplicación Cloud Foundry.
 
 Si más adelante decide desplegar en una aplicación Cloud Foundry con un recurso de Controlador de recursos (ubicado en un grupo de recursos en lugar de en una organización o espacio), debe copiar un archivo más.

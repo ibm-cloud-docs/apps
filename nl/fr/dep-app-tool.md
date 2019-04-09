@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -37,7 +37,11 @@ Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'out
 
 {{site.data.keyword.cloud_notm}} fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande.
 
-Avant de commencer, [téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Avant de commencer, [téléchargez et installez l'interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
+
+<p>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger IBM Cloud Developer Tools" /></a>
+</p>
 
 L'interface de ligne de commande n'est pas prise en charge par Cygwin. Utilisez l'outil dans une fenêtre autre que la fenêtre de ligne de commande Cygwin.
 {: important}

@@ -43,7 +43,7 @@ lastupdated: "2018-11-29"
 
 ![在本端開發](images/dev_code_locally.png "在本端開發") 圖 3. 在本端開發流程
 
-{{site.data.keyword.dev_cli_notm}} 的基本函數是 `ibmcloud dev build` 和 `ibmcloud dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html)。
+{{site.data.keyword.dev_cli_notm}} 的基本函數是 `ibmcloud dev build` 和 `ibmcloud dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview)。
 {: tip}
 
 ## 在 {{site.data.keyword.cloud_notm}} 中交付和管理

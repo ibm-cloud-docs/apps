@@ -26,7 +26,7 @@ em seguida, conectar uma cadeia de ferramentas do DevOps ao aplicativo para impl
 
 Verifique se os pré-requisitos a seguir estão prontos:
 
- * Instale a [interface da linha de comandos (CLI) do {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+ * Instale a interface da linha de comandos (CLI) do [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
  * Consulte [O que torna bom um app?](/docs/apps/best-practice.html#best-practice) para obter as melhores
 práticas para criar apps.
  * Deve-se ter um repositório de código-fonte Git de qualquer um dos seguintes provedores: GitHub,

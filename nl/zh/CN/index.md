@@ -22,7 +22,7 @@ lastupdated: "2019-02-04"
 ## 开始之前
 {: #prereqs-getting-started}
 
-您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来创建应用程序。如果要使用 CLI，请参阅 [{{site.data.keyword.cloud_notm}} CLI 入门](/docs/cli/index.html)以获取安装详细信息。
+您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来创建应用程序。如果要使用 CLI，请参阅 [{{site.data.keyword.cloud_notm}} CLI 入门](/docs/cli/index.html#overview)以获取安装详细信息。
 
 ## 步骤 1. 创建应用程序
 {: #create-getting-started}

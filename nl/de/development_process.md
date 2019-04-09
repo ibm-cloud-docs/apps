@@ -43,7 +43,7 @@ Nachdem Sie Ihre Starter-Kit-App und Ihre Toolchain erstellt haben, starten Sie 
 
 ![Lokal entwickeln](images/dev_code_locally.png "Lokal entwickeln") Abbildung 3. Lokal entwickeln
 
-Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `ibmcloud dev build` und `ibmcloud dev run`, doch die Befehlszeilenschnittstelle (CLI) hat noch sehr viel mehr zu bieten. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html).
+Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `ibmcloud dev build` und `ibmcloud dev run`, doch die Befehlszeilenschnittstelle (CLI) hat noch sehr viel mehr zu bieten. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview).
 {: tip}
 
 ## In {{site.data.keyword.cloud_notm}} bereitstellen und verwalten

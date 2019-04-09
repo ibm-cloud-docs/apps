@@ -39,11 +39,11 @@ lastupdated: "2018-11-29"
 ## 로컬로 개발
 {: #develop_locally}
 
-스타터 킷 앱 및 도구 체인을 작성한 후에는 로컬로 개발을 시작합니다. 저장소에서 코드를 로컬 워크스테이션에 복제한 후 IDE로 가져오십시오. {{site.data.keyword.dev_cli_long}}을 사용하여 로컬 시스템에서 클라우드 앱을 빌드하고, 실행하고 테스트하십시오. {{site.data.keyword.dev_cli_notm}}은 사용자를 위해 로컬 컨테이너를 작성하고 관리합니다. 클라우드에서 앱이 실행되고 있는 것을 확인할 준비가 되면 클라우드 저장소에 푸시하고 변경사항을 병합하십시오.
+스타터 킷 앱 및 도구 체인을 작성한 후에는 로컬로 개발을 시작합니다. 저장소에서 코드를 로컬 워크스테이션에 복제한 후 IDE로 가져오십시오. {{site.data.keyword.dev_cli_long}}을 사용하여 로컬 시스템에서 클라우드 앱을 빌드하고, 실행하고 테스트하십시오. {{site.data.keyword.dev_cli_notm}}은 사용자를 위해 로컬 컨테이너를 작성하고 관리합니다. 클라우드에서 앱이 실행되고 있는 것을 확인할 준비가 되면 클라우드 저장소에 푸시하고 변경사항을 병합하십시오. 
 
 ![로컬로 개발](images/dev_code_locally.png "로컬로 개발") 그림 3. 로컬로 개발 플로우
 
-{{site.data.keyword.dev_cli_notm}}의 기본 기능은 `ibmcloud dev build` 및 `ibmcloud dev run`이지만 이 CLI는 그 외에도 더 많은 기능을 제공합니다. 세부사항은 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html)의 내용을 참조하십시오.
+{{site.data.keyword.dev_cli_notm}}의 기본 기능은 `ibmcloud dev build` 및 `ibmcloud dev run`이지만 이 CLI는 그 외에도 더 많은 기능을 제공합니다. 세부사항은 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview)의 내용을 참조하십시오.
 {: tip}
 
 ## {{site.data.keyword.cloud_notm}}에서의 전달 및 관리
@@ -58,7 +58,7 @@ DevOps 파이프라인의 상태를 확인하려면 Delivery Pipeline 대시보�
 
 ![전달 및 관리](images/dev_deliver_and_manage.png "전달 및 관리") 그림 4. 전달 및 관리 플로우
 
-[{{site.data.keyword.cloud_notm}}에서의 지속적 개발](/docs/services/ContinuousDelivery/index.html#cd_getting_started)에 대해 자세히 알아보십시오.
+[{{site.data.keyword.cloud_notm}}에서의 지속적 개발](/docs/services/ContinuousDelivery/index.html#cd_getting_started)에 대해 자세히 알아보십시오. 
 
 ## 통합
 

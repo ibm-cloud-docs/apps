@@ -649,7 +649,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: #access_kube_logs}
 
 애플리케이션이 실행 중이 아니며 상태 엔드포인트에 액세스할 수 없는 경우에는 클러스터의 로그 보기를 시도하십시오.
-* 아직 설치되지 않았으면 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)를 설치하십시오.
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)가 아직 없는 경우에는 이를 설치하십시오.
 * `ibmcloud login`을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하고 사용자가 현재 있는 영역을 가리키십시오.
 * `ibmcloud cs clusters`를 사용하여 클러스터를 나열하십시오.
 * `ibmcloud cs cluster-config <cluster-name>`을 사용하여 대응되는 클러스터를 지시하십시오.

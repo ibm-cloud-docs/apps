@@ -23,7 +23,7 @@ Standardmäßig werden Mendix-Anwendungen, die Zielbereitstellungen für {{site.
 {: #prereqs-mendix-kube}
 
 - Ihre Mendix-App erstellen. Weitere Informationen finden Sie unter [Mendix-Apps erstellen](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix).
-- Installieren Sie die [{{site.data.keyword.dev_cli_notm}}-CLI (Command-Line Interface)](/docs/cli/index.html), die die {{site.data.keyword.containershort_notm}}-CLI umfasst.
+- Installieren Sie die [{{site.data.keyword.dev_cli_notm}}-CLI (Command-Line Interface)](/docs/cli/index.html#overview), die die {{site.data.keyword.containershort_notm}}-CLI umfasst.
 - Melden Sie sich bei der `ibmcloud`-CLI an und konfigurieren Sie `kubectl` für den [Zugriff auf die Kubernetes-Cluster](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
 
 ## Cloud Object Storage-Serviceinstanz erstellen

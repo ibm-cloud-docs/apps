@@ -10,12 +10,6 @@
     development_process.md
     best-practice.md
     patterns.md
-    
- 
-    {: .topicgroup}
-    相關鏈結
-        [回復型應用程式的策略](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
-        [連續部署至 Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

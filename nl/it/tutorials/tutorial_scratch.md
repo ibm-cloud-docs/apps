@@ -23,7 +23,7 @@ Puoi creare un'applicazione personalizzata da zero utilizzando i servizi e un ru
 ## Prima di iniziare
 {: #prereqs-scratch}
 
-* Installa la [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html), che include Docker. 
+* Installa la [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), che include Docker. 
 * Crea un account Docker, esegui l'applicazione Docker ed esegui l'accesso. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione.
 * Se intendi distribuire la tua applicazione a [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 
@@ -40,7 +40,7 @@ Puoi creare un'applicazione personalizzata da zero utilizzando i servizi e un ru
 4. Puoi, facoltativamente, fornire le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources/tagging_resources.html#tag).
 5. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili in un solo linguaggio.
 6. Seleziona il tuo piano prezzi. Per questa esercitazione, puoi usare l'opzione gratuita.
-7. Fai clic su **Crea**.
+7. Fai clic su **Create**.
 
 ## Aggiunta di risorse (facoltativo)
 {: #resources-scratch}
@@ -50,7 +50,7 @@ Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognit
 1. Dalla finestra App Service, fai clic su **Add Resource**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. Per questa esercitazione, puoi usare l'opzione gratuita.
-4. Fai clic su **Crea**.
+4. Fai clic su **Create**.
 
 ## Creazione ed esecuzione dell'applicazione localmente
 {: #build-run-scratch}

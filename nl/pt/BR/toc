@@ -10,11 +10,6 @@ Criando aplicativos
     development_process.md
     best-practice.md
     patterns.md
- 
-    {: .topicgroup}
-    Links relacionados
-        [Estratégias para aplicativos resilientes](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
-        [Implementação contínua para o Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

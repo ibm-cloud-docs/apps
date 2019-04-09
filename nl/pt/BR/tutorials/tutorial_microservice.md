@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## Etapa 1. Instale as ferramentas
 {: #prereqs-microservice}
 
-* Instale as [ferramentas do desenvolvedor](/docs/cli/index.html).
+* Instale as [ferramentas do desenvolvedor](/docs/cli/index.html#overview).
 * O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 * Se você planeja implementar o seu app no [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), deverá [preparar a sua conta do {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 

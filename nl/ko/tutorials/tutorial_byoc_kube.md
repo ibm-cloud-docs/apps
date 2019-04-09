@@ -43,9 +43,9 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
 
 애플리케이션에 서비스 리소스를 추가하면 {{site.data.keyword.cloud_notm}}에서 서비스를 작성합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
-이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 리소스 추가](/docs/apps/reqnsi.html#)를 참조하십시오.
+이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 서비스 추가](/docs/apps/reqnsi.html#add-resource)를 참조하십시오.
 
-앱에 서비스 리소스를 추가한 후에는 서비스에 대한 인증 정보를 배치 환경에 복사해야 합니다. 자세한 정보는 [Kubernetes 환경에 인증 정보 추가](/docs/apps/creds_kube.html)를 참조하십시오.
+앱에 서비스 리소스를 추가한 후에는 서비스에 대한 인증 정보를 배치 환경에 복사해야 합니다. 자세한 정보는 [Kubernetes 환경에 인증 정보 추가](/docs/apps/creds_kube.html#add_credentials)를 참조하십시오.
 
 ## 배치를 위한 앱 준비
 {: #deploy-byoc-kube}
@@ -111,7 +111,7 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 ## Delivery Pipeline 추가
 {: #pipeline-byoc-kube}
 
-1. **도구 추가**를 클릭하십시오.
+1. **도구에 추가**를 클릭하십시오.
 2. **Delivery Pipeline**을 선택하십시오.
 3. 파이프라인 이름에 대해 `Continuous Integration`을 입력하고 **통합 작성**을 클릭하십시오.
 
@@ -166,14 +166,14 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 ## 앱이 실행 중인지 확인
 {: #verify-byoc-kube}
 
-앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다.
+앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다. 
 
-1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
-2. **로그 및 히스토리 보기**를 클릭하십시오.
-3. 로그 파일에서 애플리케이션 URL을 찾으십시오.
+1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오. 
+2. **로그 및 히스토리 보기**를 클릭하십시오. 
+3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 
 
-    로그 파일의 끝에서 `View the application health at: http://<ipaddress>:<port>/health`를 찾으십시오.
+    로그 파일의 끝에서 `View the application health at: http://<ipaddress>:<port>/health`를 찾으십시오. 
 
-4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
+4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다. 
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오. 

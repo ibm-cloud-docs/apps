@@ -17,7 +17,7 @@ lastupdated: "2019-02-01"
 {: #add-credentials-cf}
 
 了解如何將服務認證新增至 Cloud Foundry 部署環境。
-這些指示適用於 [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) 及 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html)。
+這些指示適用於 [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) 及 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)。
 {: shortdesc}
 
 ## 您的程式碼 + Cloud Foundry

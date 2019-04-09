@@ -77,7 +77,7 @@ Si vous utilisez `git clone` sur le référentiel GitLab créé pour démarrer l
 Vous pouvez extraire le fichier `server/localdev-config.json` en procédant comme suit :
 
 1. Utilisez `git clone` sur le référentiel Gitlab automatiquement créé lors de l'utilisation de la fonction "Déployer sur le cloud".
-2. Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), qui inclut le plug-in `dev`.
+2. Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), qui inclut le plug-in `dev`.
 3. Utilisez la ligne de commande `ibmcloud` pour vous connecter à {{site.data.keyword.cloud_notm}}.
 4. Exécutez `ibmcloud dev get-credentials`, qui fait référence au fichier `cli-config.yml`. Le fichier `cli-config.yml` inclut des informations décrivant quelle application ou quel travail de génération inclut les données d'identification.
 

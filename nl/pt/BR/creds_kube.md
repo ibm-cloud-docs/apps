@@ -91,7 +91,7 @@ chave `KEY_SECRET` seja resolvido para um valor.
 
 Use um terminal em sua estação de trabalho para instalar as ferramentas a seguir:
 
-1. Instale a CLI do [{{site.data.keyword.dev_cli_long}} ](/docs/cli/index.html).
+1. Instale a CLI do [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
 2. Efetue login usando o comando `ibmcloud login`.
 3. Conecte-se ao cluster executando `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copie e cole o comando `export` para executá-lo por meio de um terminal.
@@ -130,7 +130,7 @@ código injetado.
 Kubernetes que aponta para o segredo.
 	- `src/main/resources/localdev-config.json`: credenciais de acesso enquanto o app é executado localmente.
   - `src/main/resources/mappings.json`: um mapeamento para fornecer acesso ao método
-[`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials)
+[`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials)
 para acessar as variáveis de ambiente por meio do código..
   - `manifest.yml`: esse arquivo liga o serviço ao aplicativo Cloud Foundry.
 

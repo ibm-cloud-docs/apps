@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## Passo 1. Prima di iniziare
 {: #prereqs-mobile}
 
-* Installa [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html).
+* Installa [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html#overview).
 * Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 * Se intendi distribuire la tua applicazione a [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 
@@ -30,13 +30,13 @@ lastupdated: "2019-02-13"
 {: #create-mobile}
 
 1. Crea un'applicazione {{site.data.keyword.dev_console}} in {{site.data.keyword.cloud_notm}}.
-2. Dalla pagina dei [kit stater ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter in base alle funzioni che desideri. Ad esempio, per un'applicazione di linguaggio Watson, seleziona **Swift Kitura**.
+2. Dalla pagina dei [Starter Kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter in base alle funzioni che desideri. Ad esempio, per un'applicazione di linguaggio Watson, seleziona **Swift Kitura**.
 3. Immetti il nome della tua applicazione. Per questa esercitazione, utilizza `WatsonApp`.
 4. Facoltativo. Fornisci le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources/tagging_resources.html).
 5. Seleziona la tua piattaforma di linguaggio. Per questa esercitazione, utilizza `Swift`.
 6. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
 7. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-8. Fai clic su **Crea**.
+8. Fai clic su **Create**.
 
 ## Passo 3. Aggiungi risorse (facoltativo)
 {: #resources-mobile}
@@ -46,7 +46,7 @@ Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognit
 1. Dalla finestra App Service, fai clic su **Add Resource**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-4. Fai clic su **Crea**.
+4. Fai clic su **Create**.
 
 ## Passo 4. Crea una toolchain DevOps
 {: #toolchain-mobile}

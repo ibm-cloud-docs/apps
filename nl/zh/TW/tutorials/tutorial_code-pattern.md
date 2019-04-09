@@ -48,7 +48,7 @@ lastupdated: "2019-02-01"
 
 在您將資源新增至應用程式之後，或者，如果需要應用程式的任何服務，請注意，該服務的認證會顯示在**認證**方框中。您必須手動將認證複製至部署環境。
 
-如需將認證複製至環境的相關資訊，請參閱[認證概觀](/docs/apps/creds_overview.html)。
+如需將認證複製至環境的相關資訊，請參閱[認證概觀](/docs/apps/creds_overview.html#credentials_overview)。
 
 ## 步驟 4. 部署至 {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

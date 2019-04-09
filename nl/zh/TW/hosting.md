@@ -17,7 +17,7 @@ lastupdated: "2018-12-04"
 ## 移轉應用程式
 {: #migrating}
 
-如果您的應用程式需要存取內部部署資料或服務，可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html)，在 {{site.data.keyword.cloud_notm}} 組織與企業後端網路之間建立安全通道。如需詳細資料，請參閱[透過主控台使用 {{site.data.keyword.cloud_notm}} Secure Gateway 來連接企業後端 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
+如果您的應用程式需要存取內部部署資料或服務，可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg)，在 {{site.data.keyword.cloud_notm}} 組織與企業後端網路之間建立安全通道。如需詳細資料，請參閱[透過主控台使用 {{site.data.keyword.cloud_notm}} Secure Gateway 來連接企業後端 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}。
 
 如果您在移轉時需要協助，則可以使用 [{{site.data.keyword.cloud_notm}} 移轉服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/migration-services){: new_window}。
 

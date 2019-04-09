@@ -17,7 +17,7 @@ Si tiene una app existente, puede alojarla en {{site.data.keyword.cloud}} con to
 ## Migración de apps
 {: #migrating}
 
-Si necesita que su app acceda a sus servicios o datos locales, utilice [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html) para establecer una conexión de túnel seguro entre una organización de {{site.data.keyword.cloud_notm}} y su red de fondo empresarial. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con {{site.data.keyword.cloud_notm}} Secure Gateway a través de la consola ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
+Si necesita que su app acceda a sus servicios o datos locales, utilice [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) para establecer una conexión de túnel seguro entre una organización de {{site.data.keyword.cloud_notm}} y su red de fondo empresarial. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con {{site.data.keyword.cloud_notm}} Secure Gateway a través de la consola ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
 Si necesita ayuda con la migración, dispone de [servicios de migración de {{site.data.keyword.cloud_notm}}![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/cloud/migration-services){: new_window}.
 

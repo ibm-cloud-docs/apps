@@ -19,13 +19,13 @@ lastupdated: "2019-02-08"
 
 Sie können die {{site.data.keyword.cloud}}-Befehlszeilenschnittstelle (CLI) verwenden, um Ihre App zu erstellen und bereitzustellen. 
 
-Sie können entweder eine Starter-App völlig neu erstellen oder Ihren vorhandenen App-Code cloudfähig machen.
+Sie können entweder eine Starter-App völlig neu erstellen oder Ihren vorhandenen App-Code cloudfähig machen. 
 {: note}
 
 ## Vorbereitende Schritte
 {: #prereqs-app-cli}
 
-Sie müssen die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle, das Plug-in {{site.data.keyword.dev_cli_notm}} für die Befehlszeilenschnittstelle und weitere empfohlene Plug-ins und Tools installieren. Weitere Informationen finden Sie in [Einführung in die IBM Cloud-Befehlszeilenschnittstelle](/docs/cli/index.html). 
+Sie müssen die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle, das Plug-in {{site.data.keyword.dev_cli_notm}} für die Befehlszeilenschnittstelle und weitere empfohlene Plug-ins und Tools installieren. Weitere Informationen finden Sie in [Einführung in die IBM Cloud-Befehlszeilenschnittstelle](/docs/cli/index.html#overview). 
 
 ## Starter-App völlig neu erstellen
 {: #create-app-cli}

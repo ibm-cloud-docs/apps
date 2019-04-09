@@ -22,7 +22,7 @@ Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambie
 
 Devi aggiungere manualmente le credenziali del servizio al tuo ambiente di distribuzione in questi scenari:
  * Porti il tuo codice personale.
- * Inizi da un template di kit starter vuoto.
+ * Inizi da un modello di kit starter vuoto.
  * Aggiungi un servizio a un'applicazione basata sul kit starter _dopo_ che ne è stata eseguita la distribuzione.
 
 ## Il tuo codice + Kubernetes
@@ -86,7 +86,7 @@ Configura il cluster in modo che la _secretKeyRef_ con il nome `name-secret` e l
 
 Utilizza un terminale sulla tua workstation per installare i seguenti strumenti:
 
-1. Installa la CLI [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+1. Installa la [CLI {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
 2. Esegui l'accesso utilizzando il comando `ibmcloud login`.
 3. Stabilisci una connessione al tuo cluster eseguendo `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copia e incolla il comando `export` per eseguirlo da un terminale.
@@ -118,7 +118,7 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
 
 	- `chart/{appName}/bindings.yaml` - genera una variabile di ambiente nel tuo cluster Kubernetes che punta al tuo segreto.
 	- `src/main/resources/localdev-config.json` - Accedi alle credenziali mentre esegui la tua applicazione in locale.
-  - `src/main/resources/mappings.json` - un'associazione per fornire l'accesso al metodo [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) per accedere alle tue variabili di ambiente dal codice.
+  - `src/main/resources/mappings.json` - un'associazione per fornire l'accesso al metodo [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) per accedere alle tue variabili di ambiente dal codice.
   - `manifest.yml` - questo file esegue il bind del tuo servizio alla tua applicazione Cloud Foundry.
 
 Se in un secondo momento scegli di eseguire una distribuzione a un'applicazione Cloud Foundry con una risorsa Resource Controller (che si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio), devi copiare un altro file.

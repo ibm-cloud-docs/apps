@@ -25,7 +25,7 @@ lastupdated: "2019-02-08"
 ## 始める前に
 {: #prereqs-app-cli}
 
-{{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI プラグイン、およびその他の推奨プラグインとツールをインストールする必要があります。 詳しくは、[IBM Cloud CLI の概要](/docs/cli/index.html)を参照してください。 
+{{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI プラグイン、およびその他の推奨プラグインとツールをインストールする必要があります。 詳しくは、[IBM Cloud CLI の概要](/docs/cli/index.html#overview)を参照してください。 
 
 ## スターター・アプリを最初から作成する
 {: #create-app-cli}
@@ -69,7 +69,7 @@ lastupdated: "2019-02-08"
 ### 重要事項
  - {{site.data.keyword.cloud_notm}} コンソールを使用して既に {{site.data.keyword.cloud_notm}} アプリを作成済みであった場合は、アプリ・ディレクトリー内で、前のセクションのステップ 2 から 5 を続行します。 ステップ 6 については、ローカル・コードを既存のアプリに接続するオプションを選択できます。
  - [`ibmcloud dev enable --no-create`](/docs/cli/idt/commands.html#enable) を実行することにより、{{site.data.keyword.cloud_notm}} アプリに接続せずに、デプロイメント・ファイルおよびクラウド対応ファイルの生成を選択することもできます。
- - ツールチェーンおよびデプロイメント・ファイルを手動で構成するには、[チュートリアル](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial-byoc-kube)に従ってください。 これは、相互に関連する複数の Web アプリまたはマイクロサービスに対する Continuous Delivery ツールチェーンを構成しようとする場合に役立ちます。
+ - ツールチェーンおよびデプロイメント・ファイルを手動で構成するには、[チュートリアル](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial-byoc-kube)に従ってください。これは、相互に関連する複数の Web アプリまたはマイクロサービスに対する Continuous Delivery ツールチェーンを構成しようとする場合に役立ちます。
  - 既存のコードベースがまだ Git リポジトリー内にない場合は、アプリ・ディレクトリー内で、前のセクションのステップ 2 から 5 を続行します。 ステップ 6 については、新規 {{site.data.keyword.cloud_notm}} アプリを作成し、それを (新しく作成された GitLab リポジトリーを持つ) DevOps ツールチェーンにデプロイするオプションを選択できます。
 
 ## アプリのビルドとローカルでの実行

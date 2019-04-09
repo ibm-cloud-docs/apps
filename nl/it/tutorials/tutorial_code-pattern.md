@@ -42,13 +42,13 @@ Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognit
 1. Dalla pagina **App details**, fai clic su **Add resource**.
 2. Seleziona il tipo di risorsa che desideri. 
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione lite.
-4. Fai clic su **Crea**.
+4. Fai clic su **Create**.
 
 ## Passo 3. Copia delle credenziali del servizio nel tuo ambiente
 
 Dopo che hai aggiunto una risorsa alla tua applicazione, o se è richiesto qualsiasi altro servizio per la tua applicazione, nota che le credenziali per tale servizio sono visualizzate nella casella **Credentials**. Devi copiare manualmente le credenziali nel tuo ambiente di sviluppo.
 
-Per ulteriori informazioni sulla copia delle credenziali nel tuo ambiente, vedi [Panoramica delle credenziali](/docs/apps/creds_overview.html).
+Per ulteriori informazioni sulla copia delle credenziali nel tuo ambiente, vedi [Panoramica delle credenziali](/docs/apps/creds_overview.html#credentials_overview).
 
 ## Passo 4. Distribuzione a {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

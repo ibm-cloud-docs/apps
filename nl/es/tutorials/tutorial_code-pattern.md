@@ -48,7 +48,7 @@ Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, 
 
 Después de añadir un recurso a la app, o si se necesita algún servicio para la app, tenga en cuenta que las credenciales para dicho servicio se muestran en el recuadro **Credenciales**. Debe copiar manualmente las credenciales en el entorno de despliegue.
 
-Para obtener más información sobre cómo copiar credenciales en el entorno, consulte [Visión general de las credenciales](/docs/apps/creds_overview.html).
+Para obtener más información sobre cómo copiar credenciales en el entorno, consulte [Visión general de las credenciales](/docs/apps/creds_overview.html#credentials_overview).
 
 ## Paso 4. Desplegar en {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

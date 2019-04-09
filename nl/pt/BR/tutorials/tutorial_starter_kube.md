@@ -131,9 +131,9 @@ como [acessar os logs do Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) p
 * Acesse a configuração de serviço no código:
 	- É possível usar a anotação _@Value_ ou usar o método _getProperty()_ da classe de
 ambiente Spring Framework. Para obter mais informações, consulte
-[Acessando as credenciais](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
+[Acessando as credenciais](/docs/java-spring/configuration.html#configuration#accessing-credentials).
 
 * Inclua novas credenciais no ambiente do Kubernetes:
 	- Ao incluir outro serviço no aplicativo depois que a cadeia de ferramentas do DevOps é criada, essas
-credenciais de serviço não serão automaticamente atualizadas para o aplicativo implementado e o repositório GitLab. Deve-se [incluir manualmente as credenciais](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) no ambiente de
+credenciais de serviço não serão automaticamente atualizadas para o aplicativo implementado e o repositório GitLab. Deve-se [incluir manualmente as credenciais](/docs/apps/creds_kube.html#sk_kube) no ambiente de
 implementação.

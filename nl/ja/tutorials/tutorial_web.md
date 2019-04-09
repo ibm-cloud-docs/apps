@@ -21,7 +21,7 @@ lastupdated: "2019-02-13"
 ## ステップ 1. ツールのインストール
 {: #prereqs-webapp}
 
-[開発者ツール](/docs/cli/index.html)をインストールします。
+[開発者ツール](/docs/cli/index.html#overview)をインストールします。
 
 Docker は開発者ツールの一部としてインストールされます。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。 Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 
@@ -32,7 +32,7 @@ Docker は開発者ツールの一部としてインストールされます。 
 
 1. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/) ページから、ご使用の言語に対応するスターター・キットを選択します。
 2. アプリ名と固有のホスト名 (例えば、`abc-devhost`) を入力します。このホスト名は、アプリの経路 `abc-devhost.cloud.ibm.com` です。
-3. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
+3. オプション。 アプリを分類するためのタグを指定します。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html#tag)』を参照してください。
 4. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
 5. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
 6. **「作成」**をクリックします。
@@ -147,8 +147,8 @@ ibmcloud dev deploy --target <container>
 2. **「ログおよび履歴の表示」**をクリックします。
 3. ログ・ファイルで、アプリケーション URL を見つけます。
 
-    ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+    ログ・ファイルの末尾で `urls` または `view` という語を探します。例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
-コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。
+コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。次に、ブラウザーでその URL にアクセスします。

@@ -77,7 +77,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 다음 단계를 완료하여 `server/localdev-config.json` 파일을 검색할 수 있습니다.
 
 1. "클라우드에 배치" 기능을 사용할 때 자동으로 작성된 GitLab 저장소에서 `git clone`을 사용하십시오.
-2. `dev` 플러그인이 포함된 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)를 설치하십시오.
+2. `dev` 플러그인이 포함된 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)를 설치하십시오.
 3. `ibmcloud` 명령행을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하십시오.
 4. `cli-config.yml` 파일을 참조하는 `ibmcloud dev get-credentials`를 실행하십시오. `cli-config.yml` 파일에는 인증 정보를 보유한 애플리케이션 및 생성 작업에 대한 정보가 포함되어 있습니다.
 

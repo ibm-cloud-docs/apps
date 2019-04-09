@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -37,7 +37,11 @@ Para obtener más información sobre las cadenas de herramientas, consulte [Crea
 
 {{site.data.keyword.cloud_notm}} proporciona una CLI sólida así como plugins y extensiones de herramientas de desarrollador que se integran con la CLI.
 
-Antes de empezar, [descargue e instale la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Antes de empezar, [descargue e instale la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
+
+<p>
+<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Se abre en un nuevo separador o ventana)"><img class="image" src="images/btn_bx_commandline.svg" alt="Descargar IBM Cloud Developer Tools" /></a>
+</p>
 
 La CLI no recibe soporte de Cygwin. Utilice la herramienta en una ventana que no sea la ventana de línea de mandatos de Cygwin.
 {: important}

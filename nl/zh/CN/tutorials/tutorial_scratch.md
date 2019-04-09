@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 ## 开始之前
 {: #prereqs-scratch}
 
-* 安装 [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html)，其中包含 Docker。 
+* 安装 [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview)，其中包含 Docker。 
 * 创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。Docker 必须处于运行中，构建命令才会有效。
 * 如果计划将应用程序部署到 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry/prepare-account.html#prepare)。
 

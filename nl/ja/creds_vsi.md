@@ -77,7 +77,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 以下のステップを実行して、`server/localdev-config.json` ファイルを取得できます。
 
 1. 「クラウドにデプロイ」フィーチャーを使用したときに自動的に作成された GitLab リポジトリーに対して `git clone` を使用します。
-2. `dev` プラグインを含んでいる [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) をインストールします。
+2. `dev` プラグインを含んでいる [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) をインストールします。
 3. `ibmcloud` コマンド・ラインを使用して、{{site.data.keyword.cloud_notm}} にログインします。
 4. `ibmcloud dev get-credentials` を実行します。これで、`cli-config.yml` ファイルを参照します。 `cli-config.yml` ファイルには、資格情報を持つアプリケーションおよび生成ジョブに関する情報が含まれています。
 

@@ -107,7 +107,7 @@ Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](
 * Se riscontri degli errori con la distribuzione, controlla l'argomento di risoluzione dei problemi per i problemi noti come [exceeding storage quota](/docs/apps/ts_apps.html#exceed_quota) o scopri come [accedere ai log Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) per cercare gli errori.
 
 * Accedi alla configurazione del servizio nel tuo codice:
-	- Puoi utilizzare l'annotazione _@Value_ oppure utilizzare il metodo _getProperty()_ della classe dell'ambiente framework Spring. Per ulteriori informazioni, vedi [Accesso alle credenziali](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
+	- Puoi utilizzare l'annotazione _@Value_ oppure utilizzare il metodo _getProperty()_ della classe dell'ambiente framework Spring. Per ulteriori informazioni, vedi [Accesso alle credenziali](/docs/java-spring/configuration.html#configuration#accessing-credentials).
 
 * Aggiungi nuove credenziali al tuo ambiente Kubernetes:
-	- Quando aggiungi un altro servizio alla tua applicazione dopo che è stata creata la toolchain DevOps, queste credenziali di servizio non vengono aggiornate automaticamente alla tua applicazione distribuita e al tuo repository GitLab. Devi [aggiungere manualmente le credenziali](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) all'ambiente di distribuzione.
+	- Quando aggiungi un altro servizio alla tua applicazione dopo che è stata creata la toolchain DevOps, queste credenziali di servizio non vengono aggiornate automaticamente alla tua applicazione distribuita e al tuo repository GitLab. Devi [aggiungere manualmente le credenziali](/docs/apps/creds_kube.html#sk_kube) all'ambiente di distribuzione.

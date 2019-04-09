@@ -17,7 +17,7 @@ lastupdated: "2019-02-01"
 {: #add-credentials-cf}
 
 了解如何向 Cloud Foundry 部署环境添加服务凭证。
-这些指示信息适用于 [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) 和 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html)。
+这些指示信息适用于 [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) 和 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)。
 {: shortdesc}
 
 ## 代码 + Cloud Foundry

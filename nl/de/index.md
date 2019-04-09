@@ -22,7 +22,7 @@ Sie können auf Unternehmen abgestimmte mobile und Webanwendungen in {{site.data
 ## Vorbereitende Schritte
 {: #prereqs-getting-started}
 
-Sie können Ihre App mithilfe der {{site.data.keyword.cloud_notm}}-Konsole oder der Befehlszeilenschnittstelle (Command-Line Interface, CLI) erstellen. Wenn Sie die CLI verwenden möchten, lesen Sie den Abschnitt [Einführung in die {{site.data.keyword.cloud_notm}}-CLI](/docs/cli/index.html), der Installationsdetails enthält.
+Sie können Ihre App mithilfe der {{site.data.keyword.cloud_notm}}-Konsole oder der Befehlszeilenschnittstelle (Command-Line Interface, CLI) erstellen. Wenn Sie die CLI verwenden möchten, lesen Sie den Abschnitt [Einführung in die {{site.data.keyword.cloud_notm}}-CLI](/docs/cli/index.html#overview), der Installationsdetails enthält.
 
 ## Schritt 1. App erstellen
 {: #create-getting-started}

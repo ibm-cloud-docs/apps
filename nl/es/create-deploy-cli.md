@@ -25,7 +25,7 @@ Puede crear una app de inicio desde cero o habilitar para la nube su código de 
 ## Antes de empezar
 {: #prereqs-app-cli}
 
-Debe instalar la CLI de {{site.data.keyword.cloud_notm}}, el plugin de la CLI de {{site.data.keyword.dev_cli_notm}} y otras herramientas y plugins recomendados. Para obtener más información, consulte [Iniciación a la CLI de IBM Cloud](/docs/cli/index.html). 
+Debe instalar la CLI de {{site.data.keyword.cloud_notm}}, el plugin de la CLI de {{site.data.keyword.dev_cli_notm}} y otras herramientas y plugins recomendados. Para obtener más información, consulte [Iniciación a la CLI de IBM Cloud](/docs/cli/index.html#overview). 
 
 ## Creación de una app de inicio desde cero
 {: #create-app-cli}

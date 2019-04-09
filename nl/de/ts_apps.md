@@ -647,7 +647,7 @@ Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht
 {: #access_kube_logs}
 
 Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt zugreifen können, versuchen Sie, die Protokolle im Cluster anzuschauen.
-* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
+* Installieren Sie die [{{site.data.keyword.cloud_notm}}-CLI](/docs/cli/index.html#overview), wenn sie noch nicht vorhanden ist.
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
 * Listen Sie Ihre Cluster mit `ibmcloud cs clusters` auf.
 * Verweisen Sie mit `ibmcloud cs cluster-config <clustername>` auf Ihren entsprechenden Cluster.

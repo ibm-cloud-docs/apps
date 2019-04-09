@@ -22,7 +22,7 @@ Vous pouvez créer une application à partir d'un kit de démarrage BFF (backend
 ## Etape 1. Avant de commencer
 {: #prereqs-bff}
 
-* Installez les [outils de développement](/docs/cli/index.html).
+* Installez les [outils de développement](/docs/cli/index.html#overview).
 * Docker est installé en tant qu'outil de développement. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution. Vous devez créer un compte Docker, exécuter l'application Docker et vous connecter.
 * Si vous envisagez de déployer votre application dans [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), vous devez [préparer votre compte {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 
@@ -33,7 +33,7 @@ Créez une application dans {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 
 1. Sur la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage. Par exemple, pour une application Node.js, accédez à **Express.js Backend** et cliquez sur **Sélectionner un kit de démarrage**.
 2. Entrez le nom de votre application. Pour ce tutoriel, utilisez `ExpressBackend`.
-3. Entrez un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.cloud.ibm.com`.
+3. Entrez un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.cloud.ibm.com`. 
 4. Facultatif. Créez des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources/tagging_resources.html#tag).
 5. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
 6. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.

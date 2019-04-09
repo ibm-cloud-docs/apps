@@ -648,7 +648,7 @@ Meteor アプリにカスタム・ビルドパックを使用するには、以�
 {: #access_kube_logs}
 
 アプリケーションが実行されておらず、ヘルス・エンドポイントにアクセスできない場合、クラスター内のログを調べてください。
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) がまだない場合は、インストールします。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) がまだない場合は、インストールします。
 * `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
 * `ibmcloud cs clusters` を使用して、クラスターをリストします。
 * `ibmcloud cs cluster-config <cluster-name>` を使用して、該当するクラスターを指します。

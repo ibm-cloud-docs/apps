@@ -17,7 +17,7 @@ lastupdated: "2019-02-08"
 # CLI를 사용하여 앱 작성 및 배치
 {: #create-deploy-app-cli}
 
-{{site.data.keyword.cloud}} 명령행 인터페이스(CLI)를 사용하여 앱을 작성하고 배치할 수 있습니다. 
+{{site.data.keyword.cloud}} 명령행 인터페이스(CLI)를 사용하여 앱을 작성하고 배치할 수 있습니다.  
 
 처음부터 스타터 앱을 작성하거나 기존 앱 코드를 클라우드-사용으로 설정 할 수 있습니다. 
 {: note}
@@ -25,7 +25,7 @@ lastupdated: "2019-02-08"
 ## 시작하기 전에
 {: #prereqs-app-cli}
 
-{{site.data.keyword.cloud_notm}} CLI, {{site.data.keyword.dev_cli_notm}} CLI 플러그인 및 기타 권장 플러그인과 도구를 설치해야 합니다. 자세한 정보는 [IBM Cloud CLI 시작하기](/docs/cli/index.html)를 참조하십시오. 
+{{site.data.keyword.cloud_notm}} CLI, {{site.data.keyword.dev_cli_notm}} CLI 플러그인 및 기타 권장 플러그인과 도구를 설치해야 합니다. 자세한 정보는 [IBM Cloud CLI 시작하기](/docs/cli/index.html#overview)를 참조하십시오. 
 
 ## 처음부터 스타터 앱 작성
 {: #create-app-cli}
@@ -40,7 +40,7 @@ lastupdated: "2019-02-08"
 6. DevOps 도구 체인을 작성하려면 **IBM DevOps, Cloud Foundry 사용** 옵션을 선택하십시오. 이 단계를 완료하기 위해 SSH 키를 설정해야 할 수 있습니다.
   SSH 키에 대해 비밀번호 문구를 설정하는 경우에는 이 코드를 입력해야 합니다.
   {: note}
-7. 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트인 `abc-devhost.cloud.ibm.com`입니다.
+7. 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트인 `abc-devhost.cloud.ibm.com`입니다. 
 
 앱 및 도구 체인 작성을 완료하는 데 몇 초가 걸립니다.
 
@@ -49,7 +49,7 @@ lastupdated: "2019-02-08"
 
 이 옵션은 이미 기존 코드 베이스를 보유 중이며 [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable)을 사용하여 단일 마이크로서비스 또는 웹 앱의 배치 및 클라우드 인에이블먼트 자산을 생성하고자 하는 경우에 사용될 수 있습니다. 이 명령은 베타 상태이며 일부 언어 및/또는 앱 구조는 지원되지 않음을 유념하십시오. 다음 지시사항에서는 샘플 저장소에서 이 기능을 사용하는 방법을 보여주지만, 해당 단계는 자체 코드 베이스에 대해 거의 동일합니다.
 
-1. ibmcloud login 명령을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인한 후에 조직 및 영역을 대상으로 지정하십시오.
+1. ibmcloud login 명령을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인한 후에 조직 및 영역을 대상으로 지정하십시오. 
 2. 선택한 디렉토리에서 다음 명령을 실행하여 [Hello World 샘플 앱](https://github.com/IBM-Cloud/node-helloworld)을 복제하십시오.
 
   ```
@@ -64,11 +64,11 @@ lastupdated: "2019-02-08"
 7. 이 Git 저장소에 링크된 새 {{site.data.keyword.cloud_notm}} 앱을 작성하는 옵션을 선택하십시오. 세부사항은 **중요 참고사항**를 참조하십시오.
 8. 지금은 서비스를 추가하지 마십시오.
 9. 오퍼레이션이 완료될 때까지 잠시 기다리십시오. 
-10. 일단 완료되면 앱 디렉토리에 저장된 배치 및 클라우드 인에이블먼트 파일을 수동으로 병합할 수 있습니다. `git diff` 또는 이와 유사한 도구를 사용하여 `.merge` 표시가 있는 새 파일을 병합하십시오.
+10. 일단 완료되면 앱 디렉토리에 저장된 배치 및 클라우드 인에이블먼트 파일을 수동으로 병합할 수 있습니다. `git diff` 또는 이와 유사한 도구를 사용하여 `.merge` 표시가 있는 새 파일을 병합하십시오. 
 
 ### 중요 참고사항
  - {{site.data.keyword.cloud_notm}} 콘솔을 사용하여 {{site.data.keyword.cloud_notm}} 앱을 이미 작성한 경우에는 앱 디렉토리에서 이전 절의 2 - 5단계를 수행하십시오. 6단계의 경우, 로컬 코드를 기존 앱에 연결하는 옵션을 선택할 수 있습니다.
- - [`ibmcloud dev enable --no-create`](/docs/cli/idt/commands.html#enable)를 실행하여 {{site.data.keyword.cloud_notm}} 앱에 연결하지 않고 배치 및 클라우드 인에이블먼트 파일 생성을 수행하도록 선택할 수도 있습니다.
+ - [`ibmcloud dev enable --no-create`](/docs/cli/idt/commands.html#enable)를 실행하여 {{site.data.keyword.cloud_notm}} 앱에 연결하지 않고 배치 및 클라우드 인에이블먼트 파일 생성을 수행하도록 선택할 수도 있습니다. 
  - 도구 체인 및 배치 파일을 수동으로 구성하려는 경우에는 [이 튜토리얼](/docs/apps/tutorials/tutorial_byoc_kube.html#tutorial-byoc-kube)을 따르십시오. 이는 둘 이상의 상호 연관된 웹 앱이나 마이크로서비스에 대해 Continuous Delivery 도구 체인을 구성하고자 할 때 유용할 수 있습니다.
  - 기존 코드 베이스가 아직 Git 저장소에 없는 경우에는 앱 디렉토리에서 이전 절의 2 - 5단계를 수행하십시오. 6단계의 경우, 새 {{site.data.keyword.cloud_notm}} 앱을 작성하고 이를 DevOps 도구 체인(이에는 새로 작성된 GitLab 저장소가 있음)에 배치하는 옵션을 선택할 수 있습니다.
 
@@ -80,7 +80,7 @@ lastupdated: "2019-02-08"
 1. 애플리케이션 디렉토리로 이동하여 Docker가 시스템에서 실행 중인지 확인하십시오.
 2. [`ibmcloud dev build`](/docs/cli/idt/commands.html#build) 명령을 실행하여 앱을 빌드하십시오.
 3. [`ibmcloud dev run`](/docs/cli/idt/commands.html#run) 명령을 실행하여 앱을 로컬로 실행하십시오.
-4. `http://localhost:3000` 또는 이와 유사한 URL에서 로컬로 실행 중인 앱을 보십시오.
+4. `http://localhost:3000` 또는 이와 유사한 URL에서 로컬로 실행 중인 앱을 보십시오. 
 5. 앱을 중지하려면 **Ctrl+C** 키를 누르십시오.
 
 `ibmcloud dev build/run`과 같은 [복합 명령](/docs/cli/idt/commands.html#compound)을 사용하여 순차적으로 빌드 다음에 실행을 발행할 수도 있습니다.
@@ -105,7 +105,7 @@ lastupdated: "2019-02-08"
 ### DevOps 도구 체인을 사용하여 앱 배치
 앱의 DevOps 도구 체인을 아직 작성하지 않았으며 앱이 아직 Git 저장소에 없는 경우에는 [`ibmcloud dev edit`](/docs/cli/idt/commands.html#edit) 명령을 실행할 수 있습니다. "DevOps 구성"에 대한 프롬프트에 따라 새 도구 체인에 배치(하고 새 GitLab 저장소를 작성)하십시오.
 
-앱에 대한 DevOps 도구 체인을 작성하고 나면 새 빌드 배치는 코드를 커미트하고 이를 도구 체인의 저장소에 푸시하는 것처럼 단순합니다. 
+앱에 대한 DevOps 도구 체인을 작성하고 나면 새 빌드 배치는 코드를 커미트하고 이를 도구 체인의 저장소에 푸시하는 것처럼 단순합니다.  
 
 1. `git add .` 명령을 실행하십시오.
 2. `git commit -m "made changes"` 명령을 실행하여 변경사항을 커미트하십시오.

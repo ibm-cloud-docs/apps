@@ -48,7 +48,7 @@ lastupdated: "2019-02-01"
 
 将资源添加到应用程序后，或者如果应用程序需要任何服务，请注意，该服务的凭证会显示在**凭证**框中。您必须手动将凭证复制到部署环境。
 
-有关将凭证复制到环境的更多信息，请参阅[凭证概述](/docs/apps/creds_overview.html)。
+有关将凭证复制到环境的更多信息，请参阅[凭证概述](/docs/apps/creds_overview.html#credentials_overview)。
 
 ## 步骤 4. 部署到 {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

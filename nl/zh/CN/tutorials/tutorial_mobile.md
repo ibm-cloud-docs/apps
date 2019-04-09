@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## 步骤 1. 开始之前
 {: #prereqs-mobile}
 
-* 安装 [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html)。
+* 安装 [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html#overview)。
 * Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行中，构建命令才会有效。您必须创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。
 * 如果计划将应用程序部署到 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry/prepare-account.html#prepare)。
 

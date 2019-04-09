@@ -43,7 +43,7 @@ Dopo che hai creato la tua toolchain e la tua applicazione kit starter, inizi il
 
 ![Sviluppa localmente](images/dev_code_locally.png "Sviluppa localmente") Figura 3. Sviluppa localmente il flusso
 
-Le funzioni di base per {{site.data.keyword.dev_cli_notm}} sono `ibmcloud dev build` e `ibmcloud dev run`, ma la CLI offre molto di più. Consulta [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) per ulteriori dettagli.
+Le funzioni di base per {{site.data.keyword.dev_cli_notm}} sono `ibmcloud dev build` e `ibmcloud dev run`, ma la CLI offre molto di più. Consulta [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview) per ulteriori dettagli.
 {: tip}
 
 ## Fornisci e gestisci in {{site.data.keyword.cloud_notm}}

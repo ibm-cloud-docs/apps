@@ -647,7 +647,7 @@ Si les travaux de génération ou de déploiement échouent et que le message su
 {: #access_kube_logs}
 
 Si l'application n'est pas en cours d'exécution et que vous ne pouvez pas accéder au noeud final de santé, consultez les journaux du cluster.
-* Installez l'[interface CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) si vous n'en disposez pas encore.
+* Installez l'[interface CLI {{site.data.keyword.cloud_notm}}] (/docs/cli/index.html#overview) si vous ne l'avez pas encore.
 * Connectez-vous à {{site.data.keyword.cloud_notm}} en utilisant `ibmcloud login` et faites en sorte qu'il désigne l'espace dans lequel vous vous trouvez.
 * Répertoriez vos clusters en utilisant `ibmcloud cs clusters`,
 * Désignez votre cluster correspondant en utilisant `ibmcloud cs cluster-config <cluster-name>`.

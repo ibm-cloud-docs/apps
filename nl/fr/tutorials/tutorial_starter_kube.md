@@ -107,7 +107,7 @@ Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view
 * Si des erreurs surviennent lors du déploiement, consultez la rubrique de traitement des incidents concernant les problèmes connus, comme le [dépassement du quota de stockage](/docs/apps/ts_apps.html#exceed_quota) ou découvrez comment [accéder aux journaux Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) pour rechercher des erreurs.
 
 * Accédez à la configuration de service dans votre code :
-	- Vous pouvez utiliser l'annotation _@Value_ ou utiliser la méthode _getProperty()_ de la classe d'environnement de structure Spring. Pour plus d'informations, voir [Accès aux données d'identification](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
+	- Vous pouvez utiliser l'annotation _@Value_ ou utiliser la méthode _getProperty()_ de la classe d'environnement de structure Spring. Pour plus d'informations, voir [Accès aux données d'identification](/docs/java-spring/configuration.html#configuration#accessing-credentials).
 
 * Ajoutez de nouvelles données d'identification à votre environnement Kubernetes :
-	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) dans l'environnement de déploiement.
+	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification](/docs/apps/creds_kube.html#sk_kube) dans l'environnement de déploiement.

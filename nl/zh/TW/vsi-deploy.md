@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-28"
+  years: 2018
+lastupdated: "2018-11-29"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2019-02-28"
 
 App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
-1. [建立應用程式](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)。 
+1. [建立應用程式](tutorials/tutorial_scratch.html#tutorial-scratch)。 
 2. 從應用程式詳細資料頁面按一下**部署至雲端**。
 3. 選取**部署至虛擬伺服器**以及要在其中執行伺服器的地區。
 

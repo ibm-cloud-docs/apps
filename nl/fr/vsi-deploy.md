@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-28"
+  years: 2018
+lastupdated: "2018-11-29"
 
 ---
 
@@ -34,7 +34,7 @@ Les services ne sont pas liés à l'instance de serveur virtuel. Vous ne pouvez 
 
 Le service d'application met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils Devops et initie le premier cycle de déploiement pour vous.
 
-1. [Créez une application](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
+1. [Créez une application](tutorials/tutorial_scratch.html#tutorial-scratch). 
 2. Cliquez sur **Déployer dans le cloud** sur la page des détails de l'application.
 3. Sélectionnez **Déployer sur un serveur virtuel** en même temps que la région dans laquelle votre serveur doit s'exécuter.
 

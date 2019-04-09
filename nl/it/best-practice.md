@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-19"
+lastupdated: "2018-12-04"
 
 ---
 
@@ -54,8 +54,6 @@ al bus di un servizio o a un programma di bilanciamento dei carichi con un nome 
 {: #multiregion}
 
 Puoi eseguire più di una singola istanza per evitare tempi di inattività in una singola regione. Per fornire un'applicazione ancora più solida, prendi in considerazione un'architettura a più regioni.
-
-Per informazioni sulla riduzione al minimo del tempo di inattività e la creazione di architetture resilienti che raggiungono una massima disponibilità, vedi l'[esercitazione Strategies for resilient applications](/docs/tutorials/strategies-for-resilient-applications.html).
 
 ## Assicurati di stare monitorando le tue applicazioni
 {: #monitoring}
