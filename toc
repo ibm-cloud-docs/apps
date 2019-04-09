@@ -10,6 +10,7 @@ Creating apps
     development_process.md
     best-practice.md
     patterns.md
+    starter-kits.md
 
     {: .topicgroup}
     Related links
