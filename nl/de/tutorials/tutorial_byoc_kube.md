@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-01-03"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-02-13"
 {:tip: .tip}
 
 # Eigenen Code in einem Kubernetes-Cluster bereitstellen
-{: #tutorial-byoc-kube}
+{: #tutorial}
 
 Hier erfahren Sie, wie Sie eine App in {{site.data.keyword.cloud}} mithilfe Ihres vorhandenen App-Repositorys erstellen. Sie können Ihre vorhandene DevOps-Toolchain verbinden oder eine erstellen und eine App kontinuierlich an einen sicheren Container in einem Kubernetes-Cluster übergeben. Dieses Lernprogramm unterstützt Sie bei der Einrichtung einer DevOps-Pipeline für kontinuierliche Integration, sodass die Änderung automatisch erstellt und bis zu Ihrer bereitgestellten App im Kubernetes-Cluster weitergeleitet wird.
 {: shortdesc}
@@ -25,10 +25,10 @@ Ein _Cluster_ ist eine Gruppe von Ressourcen, Workerknoten, Netzen und Speichere
 {: tip}
 
 ## Vorbereitende Schritte
-{: #prereqs-byoc-kube}
+{: #prereqs}
 
-* Erstellen Sie eine App. Weitere Informationen hierzu enthält [Apps aus Ihrem eigenen Code-Repository erstellen](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc).
-* Klicken Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} auf das Symbol **Menü** ![Menu icon](../../icons/icon_hamburger.svg) und wählen Sie **Container** aus, um [einen Kubernetes-Cluster zu konfigurieren](/docs/containers/container_index.html#container_index).
+* Erstellen Sie eine App. Weitere Informationen hierzu enthält [Apps aus Ihrem eigenen Code-Repository erstellen](/docs/apps/tutorials/tutorial_byoc.html).
+* Klicken Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} auf das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) und wählen Sie **Container** aus, um [einen Kubernetes-Cluster zu konfigurieren](/docs/containers/container_index.html).
 * Führen Sie die folgenden Befehle aus, um zu bestätigen, dass Ihre App in Docker ausgeführt wird:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -39,17 +39,17 @@ Ein _Cluster_ ist eine Gruppe von Ressourcen, Workerknoten, Netzen und Speichere
 * Rufen Sie dann Ihre URL auf, wie z. B. `http://localhost/springboothelloworld/sayhello`. Drücken Sie die Tastenkombination Strg+C, um die Ausführung von Docker zu stoppen.
 
 ## Ressourcen zu Ihrer App hinzufügen (optional)
-{: #resources-byoc-kube}
+{: #add_resources}
 
 Fügen Sie eine Serviceressource zu Ihrer Anwendung hinzu und {{site.data.keyword.cloud_notm}} erstellt den Service für Sie. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt. {{site.data.keyword.cloud_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
 genutzt werden.
 
-Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps/reqnsi.html#add-resource).
+Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps/reqnsi.html).
 
-Nachdem Sie eine Serviceressource zu Ihrer Anwendung hinzugefügt haben, müssen Sie die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren. Weitere Informationen hierzu enthält [Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen](/docs/apps/creds_kube.html#add_credentials).
+Nachdem Sie eine Serviceressource zu Ihrer Anwendung hinzugefügt haben, müssen Sie die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren. Weitere Informationen hierzu enthält [Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen](/docs/apps/creds_kube.html).
 
 ## App für die Bereitstellung vorbereiten
-{: #deploy-byoc-kube}
+{: #connect_toolchain}
 
 In diesem Schritt verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren sie so, dass sie in einem Kubernetes-Cluster bereitgestellt wird, der im {{site.data.keyword.cloud_notm}}-Kubernetes-Service gehostet wird.
 
@@ -81,7 +81,7 @@ Weitere Informationen zum Hinzufügen Ihres Repositorys zu Ihrer Toolchain finde
 
 
 ### Ihre App mit einer neuen Toolchain verbinden
-{: #toolchain-byoc-kube-create}
+{: #create_toolchain}
 
 Wenn Sie die Erstellung der DevOps-Toolchain vollständig unter Kontrolle haben möchten, ohne dass Änderungen in Ihrem Code-Repository vorgenommen werden, erstellen Sie die Toolchain von Grund auf völlig neu. Außerdem müssen Sie auch alle Integrationen zum Erstellen Ihrer App erstellen und stellen diese im Kubernetes-Cluster bereit. 
 
@@ -91,10 +91,9 @@ Wenn Sie die Erstellung der DevOps-Toolchain vollständig unter Kontrolle haben 
 Wenn Sie sich dafür entscheiden, eine Toolchain aus Ihrer neuen App zu erstellen, wird die Seite [Toolchain erstellen](https://{DomainName}/devops/create) im DevOps-Dashboard in einer neuen Registerkarte in Ihrem Browser geöffnet. Nachdem Sie Ihre Toolchain in dieser Registerkarte erstellt und konfiguriert haben, müssen Sie in Ihrer App die Seite  'Toolchain verbinden' wieder aufsuchen und ihre Anzeige aktualisieren.
 {:tip}
 
-Wenn Sie keine DevOps-Toolchain völlig neu erstellen möchten, können Sie Ihren vorhandenen Code mit dem Befehl [`ibmcloud dev enable` cloudfähig machen.](/docs/cli/idt/commands.html#enable). Der Befehl generiert eine DevOps-Toolchain-Vorlage, die Sie in Ihrem Repository einchecken. Dann verwenden Sie diese Vorlage als Instruktionssatz für das, was die DevOps-Toolchain erstellen soll. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/apps/create-deploy-cli.html#byoc-cli).
+Wenn Sie keine DevOps-Toolchain völlig neu erstellen möchten, können Sie Ihren vorhandenen Code mit dem Befehl [`ibmcloud dev enable` cloudfähig machen.](/docs/cli/idt/commands.html#enable). Der Befehl generiert eine DevOps-Toolchain-Vorlage, die Sie in Ihrem Repository einchecken. Dann verwenden Sie diese Vorlage als Instruktionssatz für das, was die DevOps-Toolchain erstellen soll. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/apps/create-deploy-cli.html#byoc).
 
 ## GitHub-Integration hinzufügen
-{: #github-byoc-kube}
 
 Konfigurieren Sie die DevOps-Toolchain mit einer Integration für Ihr GitHub-Repository für die Toolchain, um einen Webhook in Ihrem Repository zu setzen, sodass Pull-Anforderungen und Code-Push-Operationen in diesem Repository eine POST-Anforderung an die Toolchain senden. 
 
@@ -110,14 +109,12 @@ Konfigurieren Sie die DevOps-Toolchain mit einer Integration für Ihr GitHub-Rep
 Sie können den neuen Webhook in den Repositoryeinstellungen anzeigen.
 
 ## Delivery Pipeline hinzufügen
-{: #pipeline-byoc-kube}
 
 1. Klicken Sie auf **Tool hinzufügen**.
 2. Wählen Sie **Delivery Pipeline** aus.
 3. Geben Sie `Continuous Integration` als Namen für die Pipeline ein und klicken Sie auf **Integration erstellen**.
 
 ## Pipeline-Stages konfigurieren
-{: #pipelineconfig-byoc-kube}
 
 Konfigurieren Sie die Pipeline-Stages, um Ihre Eingaben (d. h. den Inhalt des GitHub-Repositorys) an das richtige Ziel zu übertragen. Da in diesem Lernprogramm davon ausgegangen wird, dass Sie ein GitHub-Repository haben, das ein funktionierendes Docker-Image erstellt und einen IBM Containers-Kubernetes-Cluster verwendet, erstellen Sie Pipeline-Stages mit Eingaben, Shell-Scripts und Ausgaben, mit denen dieser Zweck erreicht wird.
 
@@ -162,19 +159,4 @@ Konfigurieren Sie die Pipeline-Stages, um Ihre Eingaben (d. h. den Inhalt des Gi
     * Wählen Sie die Region aus, in der sich Ihr Kubernetes-Cluster befindet.
     * Geben Sie Ihren vorhandenen API-Schlüssel ein. 
   4. Klicken Sie auf **Speichern**.
-4. Testen Sie Ihre Pipeline-Stage `deploy to cluster`, indem Sie auf das Symbol **Wiedergabe** klicken, bis der Build erfolgreich ist. Die Anzeige einer Stage in grün gibt an, dass der Build erfolgreich war.
-
-## Ausführung der App verifizieren
-{: #verify-byoc-kube}
-
-Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befehlszeile auf die URL für Ihre App.
-
-1. Klicken Sie in der Toolchain von DevOps auf **Delivery Pipeline** und wählen Sie **Bereitstellungsstage** aus.
-2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
-3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
-
-    Suchen Sie am Ende der Protokolldatei nach `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
-
-4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
-
-Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.
+4. Testen Sie Ihre Pipeline-Stage `deploy to cluster`, indem Sie auf das Symbol **Wiedergabe** klicken, bis der Build erfolgreich ist. Die Anzeige einer Stage in grün gibt an, dass der Build erfolgreich war. Sie können die Protokolle für die Stage anzeigen. In der Nähe vom Ende der Protokolle finden Sie einen anklickbaren Link zur ausgeführten App. Hängen Sie den richtigen Pfad an, zu bestätigen, dass er funktioniert.

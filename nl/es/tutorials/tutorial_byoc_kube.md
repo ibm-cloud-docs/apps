@@ -27,7 +27,7 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
 ## Antes de empezar
 {: #prereqs}
 
-* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html) para obtener más información.
+* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html) para obtener más información. 
 * En la [consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Contenedores** para [configurar un clúster de Kubernetes](/docs/containers/container_index.html).
 * Para confirmar que la app se ejecuta en Docker, ejecute los mandatos siguientes:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
@@ -82,25 +82,24 @@ Para obtener más información sobre cómo añadir el repositorio a la cadena de
 ### Conectar la app a una nueva cadena de herramientas
 {: #create_toolchain}
 
-Si desea controlar por completo la creación de la cadena de herramientas DevOps sin cambios en el repositorio de código, cree la cadena de herramientas desde cero. También puede crear todas las integraciones para crear la app y desplegarla en el clúster de Kubernetes. 
+Si desea controlar por completo la creación de la cadena de herramientas DevOps sin cambios en el repositorio de código, cree la cadena de herramientas desde cero. También puede crear todas las integraciones para crear la app y desplegarla en el clúster de Kubernetes.  
 
 1. En la página Crear una cadena de herramientas, pulse la plantilla **Crear su propia cadena de herramientas**.
 2. Escriba un nombre para la cadena de herramientas, seleccione una región y un grupo de recursos (predeterminado) y pulse **Crear**.
 
-Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre la página [Crear una cadena de herramientas](https://{DomainName}/devops/create) en el panel de control de DevOps en un nuevo separador del navegador. Después de crear y configurar la cadena de herramientas en dicho separador, debe volver a la página Conectar una cadena de herramientas en la app y renovar la página.
-{:tip}
+Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre la página [Crear una cadena de herramientas](https://{DomainName}/devops/create) en el panel de control de DevOps en un nuevo separador del navegador. Después de crear y configurar la cadena de herramientas en dicho separador, debe volver a la página Conectar una cadena de herramientas en la app y renovar la página. {:tip}
 
 Si no desea crear una cadena de herramientas DevOps desde cero, puede habilitar para la nube su código existente utilizando el mandato [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). El mandato genera una plantilla de cadena de herramientas DevOps que se incorpora al repositorio. A continuación, utilice dicha plantilla como conjunto de instrucciones para lo que crea la cadena de herramientas DevOps. Para obtener más información, consulte la
 [documentación de CLI](/docs/apps/create-deploy-cli.html#byoc).
 
 ## Adición de una integración de GitHub
 
-Configure la cadena de herramientas DevOps con una integración para su GitHub para que la cadena de herramientas establezca un webhook en el repositorio, de modo que las solicitudes de extracción y los envíos de código en dicho repositorio envíen POST a la cadena de herramientas. 
+Configure la cadena de herramientas DevOpos con una integración para su GitHub para que la cadena de herramientas establezca un webhook en el repositorio, de modo que las solicitudes de extracción y los envíos de código en dicho repositorio envíen POST a la cadena de herramientas.  
 
 1. En la plantilla de la cadena de herramientas DevOps, pulse **Añadir una herramienta**.
 2. Seleccione **GitHub** si el repositorio se encuentra en GitHub público o en Enterprise GitHub.
-3. Seleccione o escriba el URL del servidor GitHub.
-4. Es posible que aparezca el mensaje `No autorizado en GitHub`. Si es así, pulse **Autorizar**. A continuación, en la página Autorizar cadenas de herramientas de IBM Cloud, pulse **Autorizar a IBM Cloud** y escriba su contraseña de GitHub.
+3. Seleccione o escriba el URL del servidor GitHub. 
+4. Es posible que aparezca el mensaje `No autorizado en GitHub`. Si es así, pulse **Autorizar**. A continuación, en la página Autorizar cadenas de herramientas de IBM Cloud, pulse **Autorizar a IBM Cloud** y escriba su contraseña de GitHub. 
 5. En la página Configurar la integración, seleccione **Existente** para el Tipo de repositorio para que la cadena de herramientas DevOps configure el repositorio con un webhook y no copie ni bifurque su repositorio.
 6. Escriba el URL de su repositorio, por ejemplo `https://github.com/yourrepo/spring-boot-hello-world`.
 7. Transcurridos unos momentos, es posible que se le solicite que autorice a GitHub a que otorgue permiso a la cadena de herramientas DevOps para que utilice la API ReST de GitHub para configurar el repositorio con los webhooks necesarios para activar la cadena de herramientas.
@@ -123,16 +122,16 @@ Configure las etapas del conducto para dirigir la entrada (el contenido del repo
   2. Pulse el separador **Entrada** y complete los campos tal como se indica a continuación:
     * Especifique `compilar y publicar imagen de Docker` como nombre de la etapa.
     * Seleccione **Repositorio Git** como tipo de entrada.
-    * Seleccione su repositorio GitHub.
+    * Seleccione su repositorio GitHub. 
     * Seleccione la rama que utiliza para la integración continua.
   3.  Pulse el separador **Trabajados**, pulse **Añadir trabajo '+'** y complete los campos del siguiente modo:
     * Seleccione **Compilar** como tipo de trabajo.
-    * Especifique `compilar y publicar` como nombre.
+    * Especifique `compilar y publicar` como nombre. 
     * Seleccione **Registro de contenedor** como tipo de compilador.
     * Seleccione la región en la que se encuentra el clúster de Kubernetes.
     * Seleccione **Especificar una clave de API existente**. Si no tiene ninguna clave de API, consulte [Creación de una clave de API](/docs/iam/userid_keys.html#creating-an-api-key). 
     * Especifique el espacio de nombres del registro de contenedor, que encontrará pulsando el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccionando **Contenedores** > **Registro** > **Espacios de nombres**.
-    * Para el nombre de la imagen de Docker, especifique `continuo` porque la etapa de compilación del conducto correspondiente a la compilación continua de la rama de integración continua del repositorio.
+    * Para el nombre de la imagen de Docker, especifique `continuo` porque la etapa de compilación del conducto correspondiente a la compilación continua de la rama de integración continua del repositorio. 
     * Edite el script de compilación para añadir una o varias líneas después de la primera línea `#!/bin/bash`. Por ejemplo, para un repositorio que se crea utilizando maven, puede añadir algunas líneas similares a las del ejemplo siguiente:
 
       ```bash
@@ -144,17 +143,17 @@ Configure las etapas del conducto para dirigir la entrada (el contenido del repo
       ```
       {: codeblock}
   4. Pulse **Guardar**. 
-2. Para probar la etapa del conducto `compilar y publicar`, pulse el icono **Reproducir** hasta que la compilación sea correcta. Una etapa verde indica que la compilación ha resultado correcta. 
-3. Configure la etapa del conducto `desplegar en clúster` para desplegar la imagen de Docker en el clúster Kubernetes. 
+2. Para probar la etapa del conducto `compilar y publicar`, pulse el icono **Reproducir** hasta que la compilación sea correcta. Una etapa verde indica que la compilación ha resultado correcta.  
+3. Configure la etapa del conducto `desplegar en clúster` para desplegar la imagen de Docker en el clúster Kubernetes.  
   1. En la página del conducto de entrega, pulse **Añadir una etapa**.
   2. Pulse el separador **Entrada** y complete los campos tal como se indica a continuación:
-    * Especifique `desplegar en clúster` como nombre.
+    * Especifique `desplegar en clúster` como nombre. 
     * Seleccione **Compilar artefactos** como tipo de tipo de entrada.
     * Seleccione **Compilar y publicar imagen de Docker** para la etapa.
-    * Seleccione **Compilar y publicar** para el trabajo.
-    * Puesto que este es el conducto de integración continua, acepte la opción predeterminada para el desencadenante de la etapa.
+    * Seleccione **Compilar y publicar** para el trabajo. 
+    * Puesto que este es el conducto de integración continua, acepte la opción predeterminada para el desencadenante de la etapa. 
   3. Pulse el separador **Trabajados**, pulse **Añadir trabajo '+'** y complete los campos del siguiente modo:
-    * Especifique `desplegar en clúster de integración continua` como nombre.
+    * Especifique `desplegar en clúster de integración continua` como nombre. 
     * Seleccione **Kubernetes** para el tipo de desplegador.
     * Seleccione la región en la que se encuentra el clúster de Kubernetes.
     * Especifique la clave de API existente. 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-12-17"
 
 ---
 
@@ -16,28 +16,24 @@ lastupdated: "2019-02-01"
 {:important: .important}
 
 # Apps bereitstellen
-{: #deploying-apps}
+{: #deploy}
 
 Sie können Ihre Apps mit einer Toolchain oder über eine Befehlszeilenschnittstelle (CLI) bereitstellen. Eine Toolchain ist ein Satz von Toolintegrationen. Die Befehlszeilenschnittstelle ist eine einfache Möglichkeit, Ihre Apps und Serviceinstanzen bereitzustellen.
 {: shortdesc}
 
 ## Apps mithilfe von Toolchains bereitstellen
-{: #toolchain-deploy-apps}
+{: #toolchains_getting_started}
 
 Offene Toolchains sind in den Public- und Dedicated-Umgebungen unter {{site.data.keyword.Bluemix}} verfügbar. Mit einer ordnungsgemäß konfigurierten Toolchain ist das Bereitstellen Ihrer App einfach. Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus.
 
-Sie können auf folgenden Wegen eine Toolchain erstellen:
-* Sie können eine Toolchain mithilfe einer Vorlage erstellen.
-* Sie können eine Toolchain aus einer App heraus erstellen.
-
-Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Sie können eine Toolchain auf zwei Arten erstellen: Entweder erstellen Sie die Toolchain aus einer Vorlage oder Sie erstellen sie aus einer App. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Apps über die Befehlszeilenschnittstelle (CLI) bereitstellen
-{: #cli-deploy-apps}
+{: #cli}
 
 {{site.data.keyword.cloud_notm}} bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden.
 
-Bevor Sie beginnen, müssen Sie die {{site.data.keyword.cloud_notm}}-CLI [herunterladen und installieren](/docs/cli/index.html#overview).
+Bevor Sie beginnen, müssen Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle herunterladen und installieren](/docs/cli/index.html).
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Wird auf einer neuen Registerkarte oder in einem neuen Fenster geöffnet) "><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools herunterladen" /></a>
