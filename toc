@@ -34,7 +34,7 @@ Creating apps
         tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    Deploying and integrating apps
+    Deploying apps
         dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
@@ -43,7 +43,11 @@ Creating apps
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
-    reqnsi.md
+    {: .topicgroup}
+    Configuring
+        reqnsi.md
+        mngdomains.md
+        secapps.md
 
     {: .topicgroup}
     Adding credentials to your environment
@@ -52,9 +56,14 @@ Creating apps
         creds_cf.md
         creds_vsi.md
 
-    mngdomains.md
-    secapps.md
-    hosting.md
+    {: .topicgroup}
+    Migrating apps
+        hosting.md
+
+    {: .topicgroup}
+    Integrating apps with DevOps
+        toolchains.md
+
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
