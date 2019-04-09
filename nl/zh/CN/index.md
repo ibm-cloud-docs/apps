@@ -1,52 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
 
-# 在 {{site.data.keyword.Bluemix_notm}} 中创建应用程序
-{: #create}
+# 入门教程
+{: #tutorial-getting-started}
 
-在 {{site.data.keyword.Bluemix}} 中，可以构建企业级移动和 Web 应用程序，并可利用由 {{site.data.keyword.Bluemix_notm}} 托管的云扩展。构建、运行和部署应用程序时，可以使用 {{site.data.keyword.Bluemix}} 控制台和命令行工具。请按照以下步骤开始此端到端开发场景。
+在 {{site.data.keyword.cloud}} 中，可以构建企业就绪型移动和 Web 应用程序，并可利用由 {{site.data.keyword.cloud_notm}} 托管的云扩展。您有多个选项可开始此操作。使用用于管理过程的入门模板工具包来创建应用程序；使用所需的资源从头开始构建应用程序（如果您知道自己需要什么）；或者使用现有存储库并自带代码。
+{: shortdesc}
 
+## 开始之前
+{: #prereqs-getting-started}
 
-## 步骤 1：注册 {{site.data.keyword.Bluemix_notm}} 帐户
-{: #sign-up}
+您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来创建应用程序。如果要使用 CLI，请参阅 [{{site.data.keyword.cloud_notm}} CLI 入门](/docs/cli/index.html#overview)以获取安装详细信息。
 
-转至 [bluemix.net](bluemix.net)。输入您的电子邮件、姓名、公司、区域和电话号码即可。您无需信用卡就可以注册免费帐户。然后可随意浏览。
+## 步骤 1. 创建应用程序
+{: #create-getting-started}
 
-## 步骤 2：浏览目录
-{: #catalog}
+通过选择以下其中一个入口点来创建应用程序：
+* [入门模板工具包](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit)：通过选择的用于管理过程的 App Service 入门模板工具包来创建应用程序。
+* [定制](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch)：如果您知道自己需要什么，请通过空白入门模板工具包使用所需资源从头开始构建定制应用程序。
+* [自带代码](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc)：通过链接到您自己的现有内容存储库来使用自己的代码。应用程序和 Docker 映像必须位于同一存储库中。
+* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli)：使用 CLI 和 Developer Tools 来创建和部署定制或入门模板工具包应用程序。
+* [代码模式](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern)：使用 IBM Developer 代码模式作为创建应用程序的基础。
+* [{{site.data.keyword.cloud_notm}} 目录 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://cloud.ibm.com/catalog){: new_window}：可以在目录中浏览或搜索可以创建并立即开始使用的应用程序和服务。
 
-{{site.data.keyword.Bluemix_notm}}“目录”列出了它提供的基础架构和平台资源。您可以通过选择虚拟机、容器或 Cloudant（即 Cloud Foundry 应用程序）来开始构建应用程序。如果您需要平台资源，{{site.data.keyword.Bluemix_notm}} 还提供有样板，其中有多种运行时和其他服务可帮助您开始进行构建。
+## 步骤 2. 添加资源
+{: #resources-getting-started}
 
-## 步骤 3：创建资源
-{: #resource}
+使用入门模板工具包创建应用程序时，会自动为您创建资源。您可以通过在控制台的“应用程序详细信息”页面上单击**添加资源**，将更多资源与应用程序相关联。
 
-1. 在[仪表板](https://console.bluemix.net/dashboard/apps/)中，单击**创建资源**。
+要使用 CLI 添加资源，请运行以下命令向应用程序添加服务。您可以从已在帐户上启用的服务中选择现有服务，或添加新服务。 
+```
+ibmcloud dev edit
+```
+{: codeblock}
 
-2. 从“目录”的“平台”部分中选择应用程序。然后，选择运行时。例如，可以选择 IBM buildpack 支持的 IBM 运行时环境，例如 Liberty for Java。您还可以选择依赖于开放式源代码和第三方 buildpack 的社区运行时，例如 Tomcat。
+有关更多信息，请参阅[向应用程序添加服务](/docs/apps/reqnsi.html#add-resource)。
 
-  * [Containers 入门](../containers/container_index.html)
-  * [Openwhisk 入门](../openwhisk/index.html)
-  * [创建 Cloud Foundry 应用程序](../cfapps/index.html#creating_cloud_foundry_apps)
+## 步骤 3. 部署应用程序
+{: #deploy-getting-started}
 
-3. 输入应用程序名称和主机名，并选择价格套餐。
+您可以使用控制台或命令行来部署应用程序。
 
-4. 选择开发样式。可以在首选文本编辑器中编辑应用程序，并使用 {{site.data.keyword.Bluemix_notm}} 命令行将其部署到 {{site.data.keyword.Bluemix_notm}}。此外，还可以使用 {{site.data.keyword.Bluemix_notm}} DevOps Services 从浏览器部署应用程序，或者使用 Eclipse Tools for {{site.data.keyword.Bluemix_notm}} 在 Eclipse 集成开发环境中处理应用程序。
+### 使用控制台
+{: #console-getting-started}
 
-## 步骤 4：开始添加代码
-{: #code}
+要使用控制台来部署应用程序，请完成以下步骤：
 
-每个应用程序都有一个入门部分，可帮助您获得开始工作所需的所有软件和内容。
+1. 在**应用程序详细信息**页面上，单击**部署到云**。
+2. 选择部署方法，然后单击**创建**。{{site.data.keyword.cloud_notm}} 会自动创建开放工具链，该工具链配套提供 Git 存储库和持续交付管道。
+3. 打开新工具链的管道阶段，以查看构建和部署过程，这样您在几分钟后就可以查看新应用程序。
 
-在仪表板中，单击应用程序，然后单击**入门**，这可以帮助您获得开发应用程序所需的软件，指向源代码以及帮助您首次部署应用程序。
+有关更多信息，请参阅目录以查看“部署和集成应用程序”部分中的各种部署主题。
 
-## 后续步骤
-{: #next}
+### 使用命令行
+{: #cli-getting-started}
 
-开发应用程序后，请使用我们的[最佳实践](best-practice.html)和[云就绪](cloud-ready.html)指南，以确保应用程序已准备好用于 {{site.data.keyword.Bluemix_notm}}。然后，[部署](../starters/install_cli.html)应用程序。
+要使用命令行来部署应用程序，请运行 `ibmcloud dev deploy` 命令。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps/create-deploy-cli.html#create-deploy-app-cli)。
+
+现在，您已准备就绪，可进行迭代开发和持续交付。

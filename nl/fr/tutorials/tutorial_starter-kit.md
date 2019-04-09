@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 
 # Création d'une application à l'aide d'un kit de démarrage
-{: #create_starterkit}
+{: #tutorial-starterkit}
 
 Vous pouvez utiliser un kit de démarrage pour que votre application démarre rapidement et pour la préparer à des développements futurs. Choisissez un kit de démarrage et un langage de programmation, créez une application, puis configurez une chaîne d'outils DevOps pour déployer automatiquement votre application. Vous pouvez également télécharger le code pour un examen immédiat.
 {: shortdesc}
@@ -29,7 +29,7 @@ Les kits de démarrage sont disponibles dans de nombreuses catégories, telles q
 * [Finance ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/finance/dashboard){:new_window}
 
 ## Etape 1. Créer une application
-{: #create-app}
+{: #create-starterkit}
 
 1. A partir du tableau de bord [{{site.data.keyword.cloud}}](https://{DomainName}), cliquez sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) > **Applications Web**.
 
@@ -40,17 +40,19 @@ Les kits de démarrage sont disponibles dans de nombreuses catégories, telles q
     Pour savoir ce qui est inclus dans le kit de démarrage, développez la vignette sur le tableau de bord des [kits de démarrage de service d'application ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits){:new_window}. L'option de kit de démarrage "Créer une appli" peut être utilisée en tant qu'application Starter vide puis être personnalisée afin de répondre à vos besoins.
     {: tip}
 
-4. Donnez un nom à votre application, sélectionnez votre langage, puis cliquez sur **Créer**.
+4. Donnez un nom à votre application, sélectionnez un groupe de ressources, créez éventuellement des étiquettes, sélectionnez votre langage, puis cliquez sur **Créer**.
     
     C'est un bon début ! Vous venez de créer une application.
 
 Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des détails d'application. Consultez le fichier `README.md` se trouvant dans le fichier compressé téléchargé pour savoir si vous devez exécuter d'autres actions pour rendre votre application de démarrage opérationnelle.
 {: tip}
 
-Pour plus d'informations, voir [Création d'une application Web basique avec un kit de démarrage](/docs/apps/tutorials/tutorial_web.html).
+Pour plus d'informations, consultez les rubriques suivantes :
+ * [Création d'une application Web basique avec un kit de démarrage](/docs/apps/tutorials/tutorial_web.html#tutorial-webapp)
+ * [Utilisation d'étiquettes](/docs/resources/tagging_resources.html#tag)
 
 ## Etape 2. Ajouter des ressources
-{: #add-services}
+{: #resources-starterkit}
 
 Vous pouvez ajouter des ressources qui améliorent votre application avec la puissance cognitive de Watson, ajoutent des services mobiles ou des services de sécurité. Pour ce tutoriel, ajoutez un emplacement pour gérer vos données.
 
@@ -60,8 +62,15 @@ Vous pouvez ajouter des ressources qui améliorent votre application avec la pui
 4. Cliquez sur **Créer**.
 
 ## Etape 3. Déployer dans {{site.data.keyword.cloud_notm}}
-{: #deploy}
+{: #deploy-starterkit}
 
-Cliquez sur **Déployer dans le cloud** sur la page Détails de l'application, sélectionnez une méthode de déploiement, par exemple, Cluster Kubernetes ou Application Cloud Foundry, puis cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue. Ouvrez le composant pipeline de votre nouvelle chaîne d'outils afin de commencer le processus de génération et de déploiement initial de sorte que vous puissiez voir votre application après quelques minutes.
+Cliquez sur **Déployer dans le cloud** sur la page Détails de l'application, sélectionnez un environnement de déploiement puis cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue.
 
-Pour déployer votre application avec la ligne de commande, utilisez `ibmcloud dev deploy`. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html).
+L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de l'environnement de déploiement choisi, [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) ou [Virtual Server (VSI)](/docs/vsi/vsi_index.html).
+
+Une fois que vous avez sélectionné votre environnement de déploiement, ouvrez le composant Pipeline de votre nouvelle chaîne d'outils pour démarrer le processus de génération et de déploiement initial de sorte que vous puissiez voir votre application après quelques minutes.
+
+Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
+{: note}
+
+Pour déployer votre application avec la ligne de commande, utilisez `ibmcloud dev deploy`. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).

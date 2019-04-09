@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -24,9 +24,9 @@ lastupdated: "2018-11-14"
 一般而言，您想要應用程式邏輯從執行應用程式的環境中，獲得機密服務認證，例如資料庫 API 金鑰或密碼。如此一來，您就不會將認證保存在原始碼儲存庫中。Continuous Integration、正式作業前及正式作業環境中的資料庫會彼此隔離。
 
 如果您使用入門範本套件範本來建立應用程式，則會自動為您準備環境。不論您的部署目標是：
-  * [Kubernetes](/docs/apps/creds_kube.html)
-  * [Cloud Foundry](/docs/apps/creds_cf.html)
-  * [虛擬伺服器實例（亦即本端 Docker）](/docs/apps/creds_vsi.html)
+  * [Kubernetes](/docs/apps/creds_kube.html#add-credentials-kube)
+  * [Cloud Foundry Public 或 Cloud Foundry Enterprise Environment](/docs/apps/creds_cf.html#add-credentials-cf)
+  * [虛擬伺服器實例（亦即本端 Docker）](/docs/apps/creds_vsi.html#add-credentials-vsi)
   
 這些步驟是針對如何配置環境而提供。入門範本套件會產生程式碼來使用相依程式庫，讓程式碼成為可攜式，以在任何部署目標上執行。最後，不會使用任何分支邏輯來偵測執行應用程式的部署目標。
 
@@ -39,7 +39,7 @@ lastupdated: "2018-11-14"
 不過，您必須在下列任何情境中準備目標部署環境：
  * 自帶程式碼。
  * 從空白的入門範本套件範本開始。
- * 將部署_過_ 的服務新增至以入門範本套件為基礎的應用程式。
+ * 將服務新增至部署_過_ 且以入門範本套件為基礎的應用程式。
 
 
 

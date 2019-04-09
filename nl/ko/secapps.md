@@ -90,7 +90,7 @@ SAN(Subject Alternative Names)을 사용할 수 있지만 CN 충돌을 방지하
 
     {{site.data.keyword.cloud_notm}} 도메인 관리의
 사용자 정의 인증서 기능은 TLS(Transport Layer Security) 프로토콜의
-SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 인증서로 보호되는 {{site.data.keyword.cloud_notm}} 애플리케이션에 액세스하는 클라이언트 코드는 TLS 구현에서 SNI 확장을 지원해야 합니다. 자세한 정보는 [RFC 4346의 섹션 7.4.2 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 및 [TLS로 데이터 보안](/docs/get-support/appsectls.html)을 참조하십시오.
+SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 인증서로 보호되는 {{site.data.keyword.cloud_notm}} 애플리케이션에 액세스하는 클라이언트 코드는 TLS 구현에서 SNI 확장을 지원해야 합니다. 자세한 정보는 [RFC 4346의 섹션 7.4.2 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 및 [TLS로 데이터 보안](/docs/get-support/appsectls.html#tlssupportwithdraw)을 참조하십시오.
     {: note}
   
   * 클라이언트 인증서 신뢰 저장소(선택사항): 애플리케이션에 대한 액세스를 허용할 사용자에 대한 클라이언트 인증서가 포함됩니다. 클라이언트 인증서를 요청하는 옵션을 사용으로 설정하려면 클라이언트 인증서 신뢰 저장소 파일을 업로드하십시오.
@@ -98,6 +98,6 @@ SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 �
     메타데이터에 공개 키가 포함된 클라이언트 인증서 신뢰 저장소를 업로드하여 상호 인증을 설정할 수 있습니다.
     {: tip}
 
-자세한 정보는 [SSL 인증서 가져오기](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate)를 참조하십시오.
+자세한 정보는 [SSL 인증서 가져오기](/docs/ssl-certificates/import-ssl-certificate.html)를 참조하십시오.
 
 

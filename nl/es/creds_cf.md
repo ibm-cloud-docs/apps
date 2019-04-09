@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -14,13 +14,13 @@ lastupdated: "2018-11-14"
 {:tip: .tip}
 
 # Adición de credenciales al entorno de Cloud Foundry
-{: #add_credentials}
+{: #add-credentials-cf}
 
-Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry.
+Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry. Estas instrucciones se aplican tanto a [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) como a [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
 {: shortdesc}
 
 ## Su código + Cloud Foundry
-{: #byoc_cf}
+{: #credentials-byoc-cf}
 
 En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qué servicio de Cloud Foundry llama a un servicio proporcionado por el usuario. Un servicio proporcionado por el usuario es un JSON binario almacenado como si fuera un servicio que se puede enlazar en el espacio de Cloud Foundry. Después de iniciar la sesión y de conectarse a la organización y al espacio de Cloud Foundry, siga los pasos siguientes para crear y enlazar un servicio.
 
@@ -31,7 +31,7 @@ En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qu
   {: codeblock}
 
 2. Configure la aplicación de Cloud Foundry para enlazarla con el servicio proporcionado por el usuario añadiendo a la sección de servicios:
-  ```
+  ```yaml
   ---
   applications:
   - instances: 1
@@ -64,17 +64,17 @@ En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qu
 
 
 ## App de kit de inicio + Cloud Foundry
-{: #sk_cf}
+{: #credentials-starterkit-cf}
 
 ### Cómo se prepara el espacio de Cloud Foundry
 
-Utilice la característica **Desplegar en la nube** para desplegar la app en su espacio de Cloud Foundry. 
+Utilice la característica **Desplegar en la nube** para desplegar la app en su espacio de Cloud Foundry.
 
-Si la instancia de recurso basada en Cloud Foundry está en el mismo espacio de Cloud Foundry que la aplicación de Cloud Foundry desplegada, consulte la [siguiente sección](#cf_resource_same).
+Si la instancia de recurso basada en Cloud Foundry está en el mismo espacio de Cloud Foundry que la aplicación de Cloud Foundry desplegada, consulte la [siguiente sección](/docs/apps/creds_cf.html#cf_resource_same).
 
-Si la instancia de recurso basada en Cloud Foundry está en un espacio distinto del espacio de destino para la aplicación de Cloud Foundry, consulte la [sección siguiente](#cf_resource_different).
+Si la instancia de recurso basada en Cloud Foundry está en un espacio distinto del espacio de destino para la aplicación de Cloud Foundry, consulte la [sección siguiente](/docs/apps/creds_cf.html#cf_resource_different).
 
-Si el recurso que ha asociado con la aplicación está basado en Controlador de recursos, consulte [Controlador de recursos](#cf_resource_controller).
+Si el recurso que ha asociado con la aplicación está basado en Controlador de recursos, consulte [Controlador de recursos](/docs/apps/creds_cf.html#cf_resource_controller).
 
 #### El recurso basado en Cloud Foundry está en el mismo espacio que la app desplegada
 {: #cf_resource_same}
@@ -87,9 +87,9 @@ cf services
 ```
 {: codeblock}
 
-Salida:
+Resultado de ejemplo:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers                create succeeded
@@ -99,7 +99,7 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 #### El recurso basado en Cloud Foundry se encuentra en un espacio diferente de la app desplegada
 {: #cf_resource_different}
 
-Cloud Foundry no da soporte al "enlace" de una aplicación de Cloud Foundry con un servicio de Cloud Foundry cuando la aplicación y el servicio no están en el mismo espacio de Cloud Foundry. El espacio de Cloud Foundry debe estar preparado con servicios "proporcionados por el usuario", y se aplica la siguiente sección. 
+Cloud Foundry no da soporte al "enlace" de una aplicación de Cloud Foundry con un servicio de Cloud Foundry cuando la aplicación y el servicio no están en el mismo espacio de Cloud Foundry. El espacio de Cloud Foundry debe estar preparado con servicios "proporcionados por el usuario", y se aplica la siguiente sección.
 
 #### El recurso basado en Controlador de recursos está asociado a la app
 {: #cf_resource_controller}
@@ -112,7 +112,7 @@ cf services
 
 Resultado de ejemplo:
 ```
-Getting services in org rott@us.ibm.com / space dev as rott@us.ibm.com...
+Getting services in org test_user@us.ibm.com / space dev as test_user@us.ibm.com...
 
 name                                   service             plan              bound apps   last operation
 blarg-cloudant-1538408663553           user-provided
@@ -124,8 +124,9 @@ Cloud Foundry no permite la visibilidad del valor de las credenciales de servici
 Afortunadamente, el código generado a partir de un kit de inicio se llena automáticamente con los enlaces correctos para recuperar y utilizar los valores del entorno que se han definido para el mismo en el espacio de Cloud Foundry en el que se ejecuta la aplicación.
 
 ### El código generado por el kit de inicio
+{: #starterkit-generated-code-cf}
 
-Antes de continuar, consulte [App de kit de inicio + kube](/docs/apps/creds_kube.html#sk_kube_generated_code). A continuación, aplique el cambio siguiente:
+Antes de continuar, consulte [App de kit de inicio + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). A continuación, aplique el cambio siguiente:
 
 * Aunque el código generado proporciona el archivo `deployment.yml`, no se puede aplicar para una aplicación que se despliegue en Cloud Foundry. En su lugar _se_ aplica el archivo `manifest.yml` y su contenido se muestra en _bind_ para los dos servicios que se crean en el espacio de Cloud Foundry:
   ```yaml
@@ -145,13 +146,13 @@ Antes de continuar, consulte [App de kit de inicio + kube](/docs/apps/creds_kube
   ```
   {: codeblock}
 
-Se vuelve a aplicar el resto de la documentación correspondiente a la subsección anterior. La biblioteca `IBMCloudEnv` sintetiza la recuperación de los valores desde el entorno en el que se ejecuta la aplicación.
+Se vuelve a aplicar el resto de la documentación correspondiente a la subsección anterior. La biblioteca `IBMCloudEnv` abstrae la recuperación de los valores desde el entorno en el que se ejecuta la aplicación.
 
-La biblioteca sintetiza cierta complejidad en la recuperación de valores de entorno de Cloud Foundry. En Cloud Foundry, se proporciona una aplicación en ejecución con una variable de entorno denominada `VCAP_SERVICES` cuyo valor es un JSON binario y que contiene los valores de las credenciales de servicio enlazadas, independientemente de si el servicio es una instancia de servicio que está _en_ el espacio de Cloud Foundry o un valor de servicio definido por el usuario. Las claves de nivel superior de la variable de entorno JSON de `VCAP_SERVICES` son
+La biblioteca abstrae cierta complejidad en la recuperación de valores de entorno de Cloud Foundry. En Cloud Foundry, se proporciona una aplicación en ejecución con una variable de entorno denominada `VCAP_SERVICES` cuyo valor es un JSON binario y que contiene los valores de las credenciales de servicio enlazadas, independientemente de si el servicio es una instancia de servicio que está _en_ el espacio de Cloud Foundry o un valor de servicio definido por el usuario. Las claves de nivel superior de la variable de entorno JSON de `VCAP_SERVICES` son
 la `etiqueta` de Cloud Foundry asociada a los servicios basados en Cloud Foundry y la clave `proporcionada por el usuario`
 cuyo valor contiene una matriz de credenciales para todos los servicios "proporcionados por el usuario".
 
 **Atención**: de forma similar al aviso de atención de la sección a la que se hace referencia, la preparación del entorno  _siempre_ se realiza para todas las credenciales de todos los recursos asociados con una app, y todos los `servicios`
-se listan en el archivo `manifest.yml`, pero _no todas las referencias de credenciales_ se colocan en el archivo `mappings.json`. En estos casos, tiene que colocar usted mismo dichas referencias. Cuando decida el despliegue de destino y no necesite la sintetización de la biblioteca de `IBMCloudEnv`, consulte la sección "Su código + (despliegue de destino)" que se ajuste a su decisión.
+se listan en el archivo `manifest.yml`, pero _no todas las referencias de credenciales_ se colocan en el archivo `mappings.json`. En estos casos, tiene que colocar usted mismo dichas referencias. Cuando decida el despliegue de destino y no necesite la abstracción de la biblioteca de `IBMCloudEnv`, consulte la sección "Su código + (despliegue de destino)" que se ajuste a su decisión.
 
 **Doble atención**: algunos kits de inicio no incluyen la referencia a la dependencia `IBMCloudEnv` o a los archivos `manifest.yml` o `mappings.json`.

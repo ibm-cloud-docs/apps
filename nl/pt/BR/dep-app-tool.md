@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-12-17"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -16,24 +16,28 @@ lastupdated: "2018-12-17"
 {:important: .important}
 
 # Implementando apps
-{: #deploy}
+{: #deploying-apps}
 
 É possível implementar seus apps com uma cadeia de ferramentas ou com a interface da linha de comandos (CLI). Uma cadeia de ferramentas é um conjunto de integrações de ferramentas. A CLI é uma maneira simples de implementar seus apps e instâncias de serviço.
 {: shortdesc}
 
 ## Implementando apps usando cadeias de ferramentas
-{: #toolchains_getting_started}
+{: #toolchain-deploy-apps}
 
-As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. Com uma cadeia de ferramentas configurada corretamente, a implementação do app é fácil.  Um ciclo de implementação de construção é iniciado automaticamente com cada mesclagem na ramificação principal em seu repositório.
+As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Dedicated no {{site.data.keyword.Bluemix}}. Com uma cadeia de ferramentas configurada corretamente, a implementação do app é fácil. Um ciclo de implementação de construção é iniciado automaticamente com cada mesclagem na ramificação principal em seu repositório.
 
-É possível criar uma cadeia de ferramentas de uma de duas maneiras: usar um modelo para criar uma cadeia de ferramentas ou criar uma cadeia de ferramentas por meio de um app. Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+É possível criar uma cadeia de ferramentas destas maneiras:
+* Use um modelo para criar uma cadeia de ferramentas.
+* Crie uma cadeia de ferramentas por meio de um app.
+
+Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
 ## Implementando apps usando a CLI
-{: #cli}
+{: #cli-deploy-apps}
 
 O {{site.data.keyword.cloud_notm}} fornece uma CLI robusta, além de plug-ins e extensões de ferramentas do desenvolvedor que se integram à CLI.
 
-Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>

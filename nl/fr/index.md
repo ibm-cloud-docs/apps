@@ -1,52 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
 
-# Création d'applications dans {{site.data.keyword.Bluemix_notm}}
-{: #create}
+# Tutoriel d'initiation
+{: #tutorial-getting-started}
 
-Dans {{site.data.keyword.Bluemix}}, vous pouvez générer des applications mobiles et Web au niveau de l'entreprise, et bénéficier des extensions cloud hébergées par {{site.data.keyword.Bluemix_notm}}. Vous pouvez utiliser les outils de ligne de commande et la console {{site.data.keyword.Bluemix}} pour générer, exécuter et déployer vos applications. Suivez ce scénario de développement de bout en bout pour
-commencer.
+Vous pouvez générer des applications mobiles et Web adaptées aux entreprises dans {{site.data.keyword.cloud}} et tirer parti des extensions cloud hébergées par {{site.data.keyword.cloud_notm}}. Vous pouvez commencer de différentes manières. Vous pouvez créer une application avec un kit de démarrage qui gère le processus pour vous, ou, si vous savez précisément ce que vous voulez, générer vous-même votre application avec les ressources dont vous avez besoin ou utiliser votre référentiel existant ainsi que votre propre code.
+{: shortdesc}
 
-## Etape 1 : Inscrivez-vous pour obtenir un compte {{site.data.keyword.Bluemix_notm}}
-{: #sign-up}
+## Avant de commencer
+{: #prereqs-getting-started}
 
-Accédez à [bluemix.net](bluemix.net). Indiquez vos e-mail, nom, société, région, numéro de téléphone, ainsi que ce que vous avez fait. Vous n'avez pas besoin d'une carte de crédit pour créer un compte gratuit. N'hésitez pas à explorer.
+Vous pouvez créer votre application en utilisant la console {{site.data.keyword.cloud_notm}} ou l'interface de ligne de commande (CLI). Si vous souhaitez utiliser l'interface CLI, consultez la section [Initiation à l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) pour obtenir des informations détaillées sur l'installation.
 
-## Etape 2 : Consultez le catalogue
-{: #catalog}
+## Etape 1. Créer votre application
+{: #create-getting-started}
 
-Le catalogue {{site.data.keyword.Bluemix_notm}} répertorie les ressources d'infrastructure et de plateforme proposées. Vous pouvez commencer à générer votre application en sélectionnant une machine virtuelle, un conteneur, Cloudant ou une application Cloud Foundry. Si vous avez besoin de ressources de plateforme, {{site.data.keyword.Bluemix_notm}} propose également des conteneurs boilerplate, qui fournissent des environnement d'exécution et autres services pour vous aider à vous lancer.
+Créez une application en sélectionnant un des points d'entrée suivants :
+* [Kit de démarrage](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit) - Créez une application à partir d'une sélection de kits de démarrage de service d'application qui gèrent le processus pour vous.
+* [Personnalisé](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch) - Si vous savez ce que vous voulez, générez une application personnalisée avec les ressources dont vous avez besoin en utilisant un kit de démarrage vide.
+* [Utilisation de votre propre code](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) - Utilisez votre propre code en le liant à votre propre référentiel de contenu. Votre application et votre image Docker doivent se trouver dans le même référentiel.
+* [Interface CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) - Créez et déployez une application personnalisée ou de kit de démarrage en utilisant l'interface CLI et les outils Developer.
+* [Modèles de code](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern) - Utilisez un modèle de code IBM Developer comme base pour la création de votre application.
+* [Catalogue {{site.data.keyword.cloud_notm}}![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://cloud.ibm.com/catalog){: new_window} - Vous pouvez parcourir le catalogue ou rechercher dans ce dernier des applications et des services que vous pouvez créer et commencer à utiliser dès aujourd'hui.
 
-## Etape 3 : Créez une ressource
-{: #resource}
+## Etape 2. Ajouter des ressources
+{: #resources-getting-started}
 
-1. Dans votre [tableau de bord](https://console.bluemix.net/dashboard/apps/), cliquez sur **Créer une ressource**.
+Lorsque vous utilisez un kit de démarrage pour créer votre application, vos ressources sont automatiquement créées pour vous. Vous pouvez associer des ressources supplémentaires à votre application en cliquant sur **Ajouter une ressource** sur la page des détails d'application de la console.
 
-2. Depuis le catalogue, sélectionnez une application à la section Plateforme. Sélectionnez ensuite votre environnement d'exécution. Vous pouvez, par exemple, choisir un environnement d'exécution IBM comme Liberty for Java, pris en charge par les packs de construction IBM. Vous pouvez également opter pour une solution communautaire, telle que Tomcat, qui repose sur des packs de construction open source et tiers.
+Pour ajouter des ressources en utilisant l'interface CLI, exécutez la commande suivante pour ajouter un service à votre application. Vous pouvez sélectionner un service déjà activé sur votre compte ou ajouter un nouveau service. 
+```
+ibmcloud dev edit
+```
+{: codeblock}
 
-  * [Initiation aux conteneurs](../containers/container_index.html)
-  * [Initiation à Openwhisk](../openwhisk/index.html)
-  * [Création d'applications Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
+Pour plus d'informations, voir [Ajout d'un service à votre application](/docs/apps/reqnsi.html#add-resource).
 
-3. Entrez vos nom d'application, nom d'hôte et sélectionnez votre plan de tarification.
+## Etape 3. Déployer votre application
+{: #deploy-getting-started}
 
-4. Sélectionnez votre style de développement. Vous pouvez éditer votre application dans votre éditeur de texte préféré et utiliser la ligne de commande {{site.data.keyword.Bluemix_notm}} pour la déployer sur {{site.data.keyword.Bluemix_notm}}. Vous pouvez également utiliser les services {{site.data.keyword.Bluemix_notm}} DevOps pour déployer votre application depuis un navigateur ou utiliser les outils Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour travailler sur vos applications dans l'environnement de développement intégré Eclipse.
+Vous pouvez déployer votre application en utilisant la console ou la ligne de commande.
 
-## Etape 4 : Commencez à ajouter du code
-{: #code}
+### Utilisation de la console
+{: #console-getting-started}
 
-Chaque application est fournie avec une section d'initiation qui vous aide à réunir tout les logiciels et le contenu dont vous avez besoin pour commencer à travailler.
+Pour déployer votre application en utilisant la console, procédez comme suit :
 
-Dans votre tableau de bord, cliquez sur votre application, puis cliquez sur **Initiation**, qui peut vous aider à réunir les logiciel dont vous avez besoin pour développer votre application, vous indique le code source et vous aide à déployer votre application pour la première fois.
+1. Sur la page **Détails de l'application**, cliquez sur **Déployer dans le cloud**.
+2. Sélectionnez une méthode de déploiement puis cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue.
+3. Ouvrez l'étape de pipeline de votre nouvelle chaîne d'outils pour afficher le processus de génération et de déploiement de sorte que vous puissiez voir votre nouvelle application après quelques minutes.
 
-## Etapes suivantes
-{: #next}
+Pour plus d'informations, consultez la table des matières présentant les différentes rubriques de déploiement dans la section "Déploiement et intégration d'applications".
 
-Une fois votre application développée, utilisez nos guides des [meilleures pratiques](best-practice.html) et de [préparation au cloud](cloud-ready.html) pour vous assurer que votre application est prête pour {{site.data.keyword.Bluemix_notm}}. [Déployez](../starters/install_cli.html) ensuite votre application.
+### Utilisation de la ligne de commande
+{: #cli-getting-started}
+
+Pour déployer votre application en utilisant la ligne de commande, exécutez la commande `ibmcloud dev deploy`. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
+
+Vous êtes maintenant prêt pour des tâches de développement itératif et de distribution continue.

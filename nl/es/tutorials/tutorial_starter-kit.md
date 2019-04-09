@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 
 # Creación de una app con un kit de inicio
-{: #create_starterkit}
+{: #tutorial-starterkit}
 
 Utilice un kit de inicio para empezar rápidamente su app y prepárela para el futuro desarrollo. Seleccione un kit de inicio y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente. También puede descargar el código para una inspección inmediata.
 {: shortdesc}
@@ -29,7 +29,7 @@ Los kits de inicio están disponibles para muchas categoría, entre otras:
 * [Finanzas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/finance/dashboard){:new_window}
 
 ## Paso 1. Crear una app
-{: #create-app}
+{: #create-starterkit}
 
 1. En el [panel de control de {{site.data.keyword.cloud}}](https://{DomainName}), pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) > **Apps web**.
 
@@ -40,17 +40,19 @@ Los kits de inicio están disponibles para muchas categoría, entre otras:
     Para ver lo que se incluye en el kit de inicio, expanda el mosaico del panel de control [Kits de inicio de servicio de app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits){:new_window}. La opción del kit de inicio "Crear app" se puede utilizar como app de inicio en blanco y se puede personalizar para que se ajuste a sus necesidades.
     {: tip}
 
-4. Proporcione un nombre para la app, seleccione el idioma y pulse **Crear**.
+4. Proporcione un nombre para la app, seleccione un grupo de recursos, si lo desea proporcione etiquetas, seleccione el idioma y pulse **Crear**.
     
     Acaba de crear una app.
 
 Para inspeccionar el código, pulse **Descargar código** en la página de detalles de la app. Consulte el archivo `README.md` del archivo comprimido descargado para averiguar si es necesario realizar algo más para ejecutar su app de inicio.
 {: tip}
 
-Para obtener más información, consulte [Creación de una app web básica con un kit de inicio](/docs/apps/tutorials/tutorial_web.html).
+Para obtener más información, consulte los siguientes temas:
+ * [Creación de una app web básica con un kit de inicio](/docs/apps/tutorials/tutorial_web.html#tutorial-webapp)
+ * [Cómo trabajar con etiquetas](/docs/resources/tagging_resources.html#tag)
 
-## Paso 2. Adición de recursos
-{: #add-services}
+## Paso 2. Añadir recursos
+{: #resources-starterkit}
 
 Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, para añadir servicios móviles o servicios de seguridad. Para esta guía de aprendizaje, añada un lugar para gestionar los datos.
 
@@ -60,8 +62,15 @@ Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, 
 4. Pulse **Crear**.
 
 ## Paso 3. Desplegar en {{site.data.keyword.cloud_notm}}
-{: #deploy}
+{: #deploy-starterkit}
 
-Pulse **Desplegar en la nube** en la página de detalles de la app, seleccione un método de despliegue, como por ejemplo clúster de Kubernetes o app de Cloud Foundry, y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua. Abra el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos su nueva app.
+Pulse **Desplegar en la nube** en la página de detalles de la app, seleccione un entorno de despliegue y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua.
 
-Para desplegar la app con la línea de mandatos, utilice `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps/create-deploy-cli.html) para obtener más información.
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el entorno de desarrollo que elija, que puede ser [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) o [Servidor virtual (VSI)](/docs/vsi/vsi_index.html).
+
+Después de seleccionar el entorno de despliegue, abra el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos su nueva app.
+
+Todas las cadenas de herramientas creadas a partir de un panel de control de desarrollador de {{site.data.keyword.cloud_notm}} se configuran para un despliegue automático.
+{: note}
+
+Para desplegar la app con la línea de mandatos, utilice `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) para obtener más información.

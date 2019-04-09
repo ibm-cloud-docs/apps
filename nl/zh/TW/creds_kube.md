@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-02-01"
 
 ---
 
@@ -15,7 +15,7 @@ lastupdated: "2018-11-14"
 {:note: .note}
 
 # 將認證新增至 Kubernetes 環境
-{: #add_credentials}
+{: #add-credentials-kube}
 
 了解如何將服務認證新增至 Kubernetes 部署環境。
 {: shortdesc}
@@ -26,7 +26,7 @@ lastupdated: "2018-11-14"
  * 將服務新增至部署_過_ 且以入門範本套件為基礎的應用程式。
 
 ## 您的程式碼 + Kubernetes
-{: #byoc_kube}
+{: #credentials-byoc-kube}
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
@@ -80,13 +80,13 @@ env:
 
 * 按一下**儲存**。
 
-配置叢集，讓名稱為 `name-secret` 且索引鍵為 `KEY_SECRET` 的 _secretKeyRef_ 解析為一個值。
+配置叢集，讓名稱為 `name-secret` 且金鑰為 `KEY_SECRET` 的 _secretKeyRef_ 解析為一個值。
 
 #### 安裝必備工具
 
 使用工作站上的終端機來安裝下列工具：
 
-1. 安裝 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)。
+1. 安裝 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview)。
 2. 使用 `ibmcloud login` 指令來登入。
 3. 執行 `ibmcloud cs cluster-config {your_cluster_name}` 來連接至您的叢集。
 4. 複製並貼上 `export` 指令，以從終端機執行。
@@ -109,7 +109,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 既然 Kubernetes 叢集已備妥可解析的密碼，您就可以更新應用程式，以使用 `deployment.yml` 檔案中定義的環境變數。
 
 ## 入門範本套件應用程式 + Kubernetes
-{: #sk_kube}
+{: #credentials-starterkit-kube}
 
 1. 移至應用程式的**應用程式詳細資料**頁面。
 2. 若要建立 Cloud Object Storage 的實例，請選取**新增資源** > **儲存空間** > **Cloud Object Storage** > **精簡方案（免費）** > **建立**。
@@ -138,7 +138,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 ```
 {: codeblock}
 
-10. 確定是使用 `ibmcloud cs cluster-config {your_cluster_name}` 配置叢集，然後按照以下指示匯出指令。
+10. 確定是使用 `ibmcloud cs cluster-config {your_cluster_name}` 並按照接下來的指示匯出該指令，來配置叢集。
 11. 使用 `echo` 指令，將認證放入 `binding` 檔案。
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -220,7 +220,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 您的應用程式碼無法擷取 Kubernetes 密碼，除非 `deployment.yml` 宣告參照該密碼的 `env` 值。使用入門範本套件時，會自動產生這類程式碼。
 
 ### 入門範本套件產生的程式碼
-{: #sk_kube_generated_code}
+{: #credentials-starterkit-kube-gencode}
 
 在此情況下，您從入門範本套件建立此應用程式。從入門範本套件產生的程式碼會成為可攜式程式碼，可以在本端、Cloud Foundry 或 Kubernetes 中執行。程式庫 `IBMCloudEnv` 是用來提供應用程式碼與環境變數擷取作業之間的抽象層，而這些環境變數保存了資源（服務實例）的認證。
 
@@ -261,9 +261,9 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: codeblock}
 
-`IBMCloudEnv` 程式庫會自動偵測您的應用程式是在 Kubernetes、Cloud Foundry 還是虛擬伺服器實例中執行（視為與本端 Docker 相同），並套用正確的 `searchPattern` 來尋找要傳回的值。
+`IBMCloudEnv` 程式庫會自動偵測您的應用程式是在 Kubernetes、Cloud Foundry 還是虛擬伺服器實例中執行（處理方式與本端 Docker 相同），並套用正確的 `searchPattern` 來尋找要傳回的值。
 
-因此，`mappings.json` 檔案會被視為預先配置且立即可用之值的_最終清單_，而這些值來自執行應用程式的環境。在環境中，會對您在使用**部署至雲端**特性時設為目標的叢集，移入這些值。
+因此，`mappings.json` 檔案會被視為預先配置且立即可用之值的_最終清單_，而這些值來自執行應用程式的環境。這些值會移入您在使用**部署至雲端**特性時設為目標的叢集環境中。
 
 **注意**：在撰寫本文件時，環境準備_一律_ 會針對與應用程式相關聯之所有資源的所有認證來執行，但_並非所有 `env` 參照_ 都會放入 `bindings.yml` 檔案或 `mappings.json` 檔案中。在這些情況下，您必須自己放置這類參照。如果您已決定目標部署，而且不需要 `IBMCloudEnv` 程式庫的抽象化，請參閱適合您決策的「您的程式碼 +（目標部署）」一節。
 

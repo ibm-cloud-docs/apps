@@ -2,11 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
-
-keywords: apps, credentials, Kubernetes
-
-subcollection: creating-apps
+lastupdated: "2019-02-01"
 
 ---
 
@@ -90,7 +86,7 @@ env:
 
 ワークステーションの端末を使用して、以下のツールをインストールします。
 
-1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。
+1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview) をインストールします。
 2. `ibmcloud login` コマンドを使用してログインします。
 3. `ibmcloud cs cluster-config {your_cluster_name}` を実行してクラスターに接続します。
 4. `export` コマンドをコピー・アンド・ペーストして、端末からコマンドを実行します。
@@ -112,46 +108,37 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 これで、解決可能なシークレットが Kubernetes クラスターに準備されたので、`deployment.yml` ファイルに定義されている環境変数を使用するようにアプリケーションを更新できます。
 
-## スターター・キット・アプリと Kubernetes
+## スターター・キット・アプリ + Kubernetes
 {: #credentials-starterkit-kube}
 
 1. **アプリの詳細**ページに移動します。
-
-2. Cloud Object Storage のインスタンスを作成するために、**「サービスの追加」**>**「ストレージ」**>**「Cloud Object Storage」**>**「ライト・プラン (無料)」**>**「作成」**を選択します。
-
-3. **「コードのダウンロード」**をクリックして、注入されたコード・スニペットでプロジェクトを再生成します。
-
+2. Cloud Object Storage のインスタンスを作成するために、**「リソースの追加」**>**「ストレージ」**>**「Cloud Object Storage」**>**「ライト・プラン (無料)」**>**「作成」**を選択します。
+3. `「コードのダウンロード」`をクリックして、注入されたコード・スニペットでプロジェクトを再生成します。
 4. 資格情報にローカルでアクセスするために、新しく生成された `.zip` ファイルにある以下のファイルをローカル Git クローンにコピーおよび置換して、資格情報にアクセスします。 この場合も、資格情報をホストするために、クラスター内に Kubernetes シークレットを作成する必要があります。
 
-   - `chart/{appName}/bindings.yaml` - シークレットを指す環境変数を Kubernetes クラスター内に生成します。
-   - `src/main/resources/localdev-config.json` - アプリをローカルで実行するときに資格情報にアクセスします。
-   - `src/main/resources/mappings.json` - コードから環境変数にアクセスするための [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) メソッドへのアクセスを可能にするマッピング。
-   - `manifest.yml` - このファイルによってサービスが Cloud Foundry アプリケーションにバインドされます。
+	- `chart/{appName}/bindings.yaml` - シークレットを指す環境変数を Kubernetes クラスター内に生成します。
+	- `src/main/resources/localdev-config.json` - アプリをローカルで実行するときに資格情報にアクセスします。
+  - `src/main/resources/mappings.json` - コードから環境変数にアクセスするための [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) メソッドへのアクセスを可能にするマッピング。
+  - `manifest.yml` - このファイルによってサービスが Cloud Foundry アプリケーションにバインドされます。
 
-  後で、リソース・コントローラー・リソース (組織またはスペースでなくリソース・グループ内にあるリソース) を含んだ Cloud Foundry アプリケーションにデプロイする場合は、もう 1 つファイルをコピーする必要があります。
-  {: note}
+後で、リソース・コントローラー・リソース (組織またはスペースでなくリソース・グループ内にあるリソース) を含んだ Cloud Foundry アプリケーションにデプロイする場合は、もう 1 つファイルをコピーする必要があります。
+{: note}
 
-5. [対応する地域 (無料の場合は米国南部) で Kubernetes クラスター](https://{DomainName}/containers-kubernetes/clusters){: new_window}
-![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を表示します。
-
+5. 対応する地域 (無料の場合は米国南部) で Kubernetes クラスターを[表示](https://cloud.ibm.com/containers-kubernetes/clusters)します。
 6. クラスターをクリックし、右上にある**「Kubernetes ダッシュボード」**を選択してクラスター・ダッシュボードを表示します。
-
 7. **「シークレット (Secrets)」**というラベルのセクションが表示されるまでスクロールダウンします。 {{site.data.keyword.cloudant_short_notm}} サービス・インスタンスのシークレットが表示されます。これには、`binding-{appName}-{serviceName}-{timestamp}` という規則が使用されています。 `chart/{appName}/bindings.yaml` ファイル内に、対応する {{site.data.keyword.cloudant_short_notm}} シークレットがあります。
-
 8. これで、`chart/{appName}/bindings.yaml` に既に生成されているシークレット名を使用して、Cloud Object Storage インスタンス用の対応するシークレットを作成できます。このシークレットは、`binding-create-app-ktibr-cloudobjectstor-1538170732311` などのようになります。
-
-9. ダッシュボードの**アプリの詳細**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。 以下の資格情報の出力例を参照してください。
-  ```yaml
-  {
-    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+9. ダッシュボードの**「アプリの詳細」**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。 以下の資格情報の出力例を参照してください。
+```yaml
+{
+  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
-  }    
-  ```
-  {: codeblock}
+}    
+```
+{: codeblock}
 
 10. `ibmcloud cs cluster-config {your_cluster_name}` を使用し、その後の命令内のコマンドをエクスポートして、クラスターが構成されていることを確認します。
-
 11. `echo` コマンドを使用して、資格情報を `binding` ファイルに入れます。
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -161,8 +148,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 12. `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding` を使用してシークレットを作成します。 Kubernetes クラスター・ダッシュボードに戻ると、作成したシークレットを確認できます。
 
-  デプロイ先が Cloud Foundry アプリケーションの場合に、リソース・コントローラーのインスタンスを使用するには (リソースが、組織またはスペースでなくリソース・グループ内に存在する場合)、ユーザー提供のサービスを作成する必要があります。 
-  {: note}
+デプロイ先が Cloud Foundry アプリケーションの場合に、リソース・コントローラーのインスタンスを使用するには (リソースが、組織またはスペースでなくリソース・グループ内に存在する場合)、ユーザー提供のサービスを作成する必要があります。 
+{: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -175,7 +162,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 ### Kubernetes クラスターの準備方法
 
-**「継続的デリバリーの構成 (Configure continuous delivery)」**フィーチャーを使用して、アプリを IBM Kubernetes クラスターにデプロイします。このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。 以下のステップを実行して、クラスター準備の結果を確認できます。
+**「クラウドにデプロイ」**フィーチャーを使用して、アプリを IBM Containers Kubernetes クラスターにデプロイします。 このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。 以下のステップを実行して、クラスター準備の結果を確認できます。
 
 1. 次のコマンドを実行して結果を表示します。`kubectl get secrets`:
   ```
@@ -213,7 +200,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: screen}
 
-  `binding` は、base64 でエンコードされたシークレットの値です。 これをデコードすると、値はサービス・インスタンスの `credentials` から取得した未加工 JSON と、いくつかの `iam_...` 値であることが分かります。
+  `binding` は、base64 でエンコードされたシークレットの値です。 これをデコードすると、値はリソース・インスタンスの `credentials` から取得した未加工 JSON といくつかの `iam_...` 値であることが分かります。
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -235,7 +222,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 ### スターター・キットによって生成されるコード
 {: #credentials-starterkit-kube-gencode}
 
-この Case では、アプリケーションの作成元はスターター・キットです。 スターター・キットで生成されたコードは、ローカル、Cloud Foundry、または Kubernetes で実行できるように移植可能になります。 アプリケーション・コードとサービス・インスタンスの資格情報を保持する環境変数の取得との間の抽象化層を提供するために、ライブラリー `IBMCloudEnv` が使用されます。
+この Case では、アプリケーションの作成元はスターター・キットです。 スターター・キットで生成されたコードは、ローカル、Cloud Foundry、または Kubernetes で実行できるように移植可能になります。 アプリケーション・コードと、リソース (サービス・インスタンス) の資格情報を保持する環境変数の取得との間の抽象化層を提供するために、ライブラリー `IBMCloudEnv` が使用されます。
 
 スターター・キットから作成されるコードには、`IBMCloudEnv` ライブラリーに対する依存関係があり、コードによって以下の出力が生成されます。
 
@@ -276,4 +263,9 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 `IBMCloudEnv` ライブラリーは、アプリケーションが Kubernetes、Cloud Foundry、または仮想サーバー・インスタンス (ローカル Docker と同様に扱われます) のいずれで実行されているかを自動的に検出し、正しい `searchPattern` を適用して、返す値を見つけます。
 
-したがって、`mappings.json` ファイルは、アプリが実行される環境から取得された、事前構成済みですぐに使用可能な値の_確定的なリスト_ と見なされます。 値は、**「継続的デリバリーの構成 (Configure continuous delivery)」**フィーチャーを使用したときにターゲットにしたクラスターの環境で取り込まれます。
+したがって、`mappings.json` ファイルは、アプリが実行される環境から取得された、事前構成済みですぐに使用可能な値の_確定的なリスト_ と見なされます。 値は、**「クラウドにデプロイ」**フィーチャーを使用したときにターゲットにしたクラスターの環境で取り込まれます。
+
+**注意**:  この資料の執筆時点において、環境の準備は、_常に_、アプリに関連付けられたすべてのリソースのすべての資格情報を対象に実行されますが、`bindings.yml` ファイルまたは `mappings.json` ファイル内には、_必ずしもすべての `env` 参照が配置されるわけではありません_。 その場合、そのような参照はユーザーが自身で配置する必要があります。 既にターゲット・デプロイメントを決定しており、`IBMCloudEnv` ライブラリーの抽象化が不要の場合は、決定したデプロイメントに適した『ユーザー作成コード + (ターゲット・デプロイメント)』セクションを参照してください。
+
+一部のスターター・キットは、`IBMCloudEnv` 依存関係、`manifest.yml` ファイル、および `mappings.json` ファイルへの参照をいっさい組み込みません。
+{: note}

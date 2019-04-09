@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-01"
 
 ---
 
@@ -144,7 +144,7 @@ Para obtener el nivel de autorización adecuado, utilice uno de los siguientes m
 {: tsResolve}
 
 * Seleccione otra organización y otro espacio de los que tenga el rol de Desarrollador.
-* Pida al gestor de la organización que le cambie el rol a Desarrollador o que cree un espacio y le asigne un rol de Desarrollador. Consulte [Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html) para obtener detalles.
+* Pida al gestor de la organización que le cambie el rol a Desarrollador o que cree un espacio y le asigne un rol de Desarrollador. Consulte [Gestión de organizaciones y espacios](/docs/admin/orgs_spaces.html#orgsspacesusers) para obtener detalles.
 
 ## No se puede acceder a los servicios de {{site.data.keyword.cloud_notm}} debido a errores de autorización
 {: #ts_vcap}
@@ -181,7 +181,7 @@ Los errores de pasarela errónea suelen ocurrir cuando va a un sitio web que uti
 
 Otras causas menos habituales de un error de pasarela errónea son caídas del ISP (proveedor de servicios de Internet), configuraciones erróneas de cortafuegos y errores de caché de navegador.
 
-Si cree que algún servicio de {{site.data.keyword.cloud_notm}} no está disponible, compruebe primero la [página de estado de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo puede utilizar el servicio en otra región de {{site.data.keyword.cloud_notm}}. Hay disponible información detallada en [Utilización de servicios en otra región ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema:
+Si cree que algún servicio de {{site.data.keyword.cloud_notm}} no está disponible, compruebe primero la [página de estado de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://ibm.biz/bluemixstatus){: new_window}. Como método alternativo puede [utilizar el servicio en otra región de {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp){: new_window}. Si el estado del servicio es normal, pruebe los pasos siguientes para resolver el problema:
 {: tsResolve}
 
   * Reintente la acción:
@@ -654,7 +654,7 @@ Si los trabajos de compilación o de despliegue fallan y ve el siguiente mensaje
 {: #access_kube_logs}
 
 Si la aplicación no se está ejecutando y no puede acceder al punto final de estado, intente examinar los registros del clúster.
-* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) si aún no lo ha hecho.
+* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) si aún no lo ha hecho.
 * Inicie una sesión en {{site.data.keyword.cloud_notm}} con `ibmcloud login` y apunte al espacio en el que se encuentra.
 * Obtenga una lista de sus clústeres con `ibmcloud cs clusters`,
 * Apunte al clúster correspondiente con `ibmcloud cs cluster-config <cluster-name>`.
