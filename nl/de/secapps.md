@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-01-15"
 
 ---
 
@@ -42,8 +42,7 @@ Damit die CSR gültig ist, müssen bei ihrer Erstellung die folgenden Angaben ge
 
 <dl>
 <dt>Landesname</dt>
-<dd>Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.iso.org/obp/ui/#search) zurate.
-</dd>
+<dd>Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.iso.org/obp/ui/#search) zurate.</dd>
 <dt>Bundesland oder Kanton</dt>
 <dd>Der vollständige und ungekürzte Name des Bundeslands oder des Kantons.</dd>
 <dt>Standort</dt>
@@ -55,9 +54,6 @@ Damit die CSR gültig ist, müssen bei ihrer Erstellung die folgenden Angaben ge
 <dt>Allgemeiner Name</dt>
 <dd>Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.</dd>
 </dl>
-
-Sie können SANs (Subject Alternative Names) verwenden, die angegebenen Hostnamen dürfen jedoch nicht in anderen bereitgestellten Zertifikaten verwendet werden, um CN-Konflikte zu vermeiden.
-{: note}
 
 ## SSL-Zertifikate hochladen
 {: #ssl_certificate}
@@ -89,7 +85,7 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Anwendung ho
   * Zwischenzertifikat (optional): Ein untergeordnetes Zertifikat, das von der Zertifizierungsstelle für Trusted Roots speziell dafür ausgegeben wird, Serverzertifikate für End-Entitäten auszugeben. Im Ergebnis erhält man eine Zertifikatskette, die mit der Zertifizierungsstelle für Trusted Roots beginnt und über das Zwischenzertifikat zum SSL-Zertifikat gelangt, das für die Organisation ausgegeben wird. Verwenden Sie ein Zwischenzertifikat, um die Authentizität des Hauptzertifikats zu prüfen. Zwischenzertifikate werden normalerweise von einem vertrauenswürdigen Dritten angefordert. Möglicherweise benötigen Sie kein Zwischenzertifikat, wenn Sie Ihre Anwendung vor der Bereitstellung für die Produktion testen.
   * Anforderung eines Clientzertifikats aktivieren: Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. 
 
-    Die Funktion für angepasste Zertifikate in der {{site.data.keyword.cloud_notm}}-Domänenverwaltung hängt von der SNI-Erweiterung (Server Name Indication) des TLS-Protokolls (Transport Layer Security) ab. Der Client-Code, der auf {{site.data.keyword.cloud_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, muss die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} sowie unter [Daten mit TLS schützen](/docs/get-support/appsectls.html#tlssupportwithdraw).
+    Die Funktion für angepasste Zertifikate in der {{site.data.keyword.cloud_notm}}-Domänenverwaltung hängt von der SNI-Erweiterung (Server Name Indication) des TLS-Protokolls (Transport Layer Security) ab. Der Client-Code, der auf {{site.data.keyword.cloud_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, muss die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} sowie unter [Daten mit TLS schützen](/docs/get-support/appsectls.html).
     {: note}
   
   * Truststore für Clientzertifikate (optional): Dieser enthält die Clientzertifikate für die Benutzer, denen Sie Zugriff auf Ihre Anwendung erteilen möchten. Laden Sie eine Truststore-Datei für Clientzertifikate hoch, um die Option zum Anfordern eines Clientzertifikats zu aktivieren.
@@ -97,6 +93,6 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Anwendung ho
     Sie können die gegenseitige Authentifizierung konfigurieren, indem Sie einen Truststore mit Clientzertifikaten hochladen, der in den zugehörigen Metadaten einen öffentlichen Schlüssel enthält.
     {: tip}
 
-Weitere Informationen finden Sie in [SSL-Zertifikate importieren](/docs/ssl-certificates/import-ssl-certificate.html).
+Weitere Informationen finden Sie in [SSL-Zertifikate importieren](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
 
 

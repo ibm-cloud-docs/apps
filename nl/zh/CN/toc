@@ -2,17 +2,11 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 创建应用程序
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    入门
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
+    index.md
     development_process.md
     best-practice.md
     patterns.md
@@ -21,6 +15,11 @@
     {: .navgroup id="howto"}
     {: .topicgroup}
     创建应用程序
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
         tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
@@ -30,6 +29,7 @@
 
     {: .topicgroup}
     部署和集成应用程序
+        dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
@@ -65,12 +65,11 @@
         [Web 应用程序](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    应用程序内容
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
+    IBM Cloud 编程指南
+        [执行](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [节点](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}
