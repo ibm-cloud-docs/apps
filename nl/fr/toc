@@ -2,82 +2,39 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
 Création d'applications
 
     {: .navgroup id="learn"}
     index.md
-    development_process.md
     best-practice.md
-    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    Création d'applications
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-        tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_web.md
-        tutorials/tutorial_bff.md
-        tutorials/tutorial_microservice.md
-        tutorials/tutorial_mobile.md
-        deploying/functions.md
-        tutorials/tutorial_mendix_getting_started.md
+    Développement d'applications
+        [Développement avec les outils Eclipse](../starters/deploy_eclipsetools.html)
 
     {: .topicgroup}
-    Déploiement et intégration d'applications
-        dep-app-tool.md
-        vsi-deploy.md
-        deploying/containers.md
-        tutorials/tutorial_byoc_kube.md
-        tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
-        tutorials/tutorial_mendix_kubernetes.md
+    Déploiement d'applications
+        install_cli.md
+        ../starters/upload_app.md
 
     reqnsi.md
-    
-    {: .topicgroup}
-    Ajout de données d'identification à votre environnement
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    mngapps.md
-    updapps.md
-    secapps.md
     hosting.md
-    {: .navgroup-end}
-
-    {: .navgroup id="reference"}
-    [Document de référence portant sur la ligne de commande IBM Cloud Developer Tools](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    Tableaux de bord de développeur IBM Cloud
-        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Finance](https://cloud.ibm.com/developer/finance/dashboard)
-        [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
-        [Sécurité](https://cloud.ibm.com/developer/security/dashboard)
-        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Applications Web](https://cloud.ibm.com/developer/appservice/dashboard)
+    Gestion d'applications
+        mngapps.md
+        updapps.md
 
     {: .topicgroup}
-    Guides de programmation IBM Cloud
-        [Go](https://cloud.ibm.com/docs/go)
-        [Spring](https://cloud.ibm.com/docs/java-spring)
-        [Swift](https://cloud.ibm.com/docs/swift)
-        [Node](https://cloud.ibm.com/docs/node)
-
-    at_events_devx.md
+    Sécurisation d'applications
+        overview.md
+        secapps.md
+        deployment.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_apps.md
-    [Canal d'outils de développeur IBM Cloud Slack](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Référence d'API de fonctions cloud](https://cloud.ibm.com/apidocs/functions)
-    [SDK pour applications mobiles](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [Traitement des incidents liés à la gestion des applications](../troubleshoot/ts_apps.html)
     {: .navgroup-end}
