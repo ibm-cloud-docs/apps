@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2018
+lastupdated: "2018-02-15"
 
 ---
 
@@ -18,19 +18,17 @@ Vous pouvez utiliser la ligne de commande ou {{site.data.keyword.Bluemix}} Conti
 commande à utiliser pour démarrer votre application.
 {:shortdesc}
 
-##Création et utilisation d'un domaine personnalisé
+## Création et utilisation d'un domaine personnalisé
 {: #domain}
 
-Pour les applications CF et les groupes de conteneurs, vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu
-du domaine de système
-{{site.data.keyword.Bluemix_notm}} par défaut, à savoir mybluemix.net.
+Pour les applications Cloud Foundry et les groupes de conteneurs, vous pouvez utiliser un domaine personnalisé dans l'adresse URL de votre application au lieu du domaine de système {{site.data.keyword.Bluemix_notm}} par défaut, à savoir mybluemix.net.
 
 Les domaines fournissent la route d'URL allouée à votre organisation dans {{site.data.keyword.Bluemix_notm}}. Pour utiliser un domaine personnalisé, vous devez enregistrer le domaine personnalisé sur un serveur DNS public, configurer ce domaine dans {{site.data.keyword.Bluemix_notm}}, puis mapper ce domaine au domaine de système {{site.data.keyword.Bluemix_notm}} sur le serveur DNS public. Une fois que votre domaine personnalisé est mappé au domaine de système {{site.data.keyword.Bluemix_notm}}, les requêtes de votre domaine personnalisé sont acheminées à votre application
 dans {{site.data.keyword.Bluemix_notm}}.
 
 Vous pouvez créer et utiliser un domaine personnalisé dans {{site.data.keyword.Bluemix_notm}} en utilisant l'interface utilisateur {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande bluemix.
 
-### Utilisez l'interface utilisateur {{site.data.keyword.Bluemix_notm}} :
+### Utilisation de la console {{site.data.keyword.Bluemix_notm}}
 
   1. Créez un domaine personnalisé pour votre organisation.
 
@@ -50,7 +48,7 @@ Vous pouvez aussi utiliser `exemple.mon_entreprise.com` pour associer la route `
 	3. Cliquez sur **Ajouter une route** et spécifiez la route à utiliser pour l'application.
 	4. Cliquez sur **Sauvegarder**.
 
-### Utilisez l'interface de ligne de commande bluemix :
+### Utilisation de l'interface de ligne de commande Bluemix 
 
   1. Créez un domaine personnalisé pour votre organisation en lançant la commande suivante :
 
@@ -174,7 +172,7 @@ mise à jour à {{site.data.keyword.Bluemix_notm}} :
   ...
   ```
 
-  Résultats : 
+  Résultats :
     * Deux instances de l'application sont déployées, l'instance *Blue* et l'instance *Green*.
 	* L'application *Green* s'exécute et répond à l'adresse URL `Blue.mybluemix.net`.
 
@@ -225,7 +223,7 @@ Dans cet exemple, *Blue* est l'ancienne version déployée et
   ...
   ```
 
-  Résultats : 
+  Résultats :
 
     * Deux instances de l'application sont déployées, l'instance *Blue* et l'instance *Green*.
 	* L'application *Blue* répond à l'adresse URL `Blue.mybluemix.net`. De plus, l'application *Green*
@@ -306,3 +304,4 @@ répond aux deux adresses URL : `Green.mybluemix.net` et `Blue.mybluemix.net`.
 {: #general}
 
 [Déploiements Blue-Green ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+
