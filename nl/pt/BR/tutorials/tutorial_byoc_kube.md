@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-03"
+lastupdated: "2019-02-13"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2019-01-03"
 {:tip: .tip}
 
 # Implementando o seu próprio código em um cluster do Kubernetes
-{: #tutorial}
+{: #tutorial-byoc-kube}
 
 Aprenda a criar um app no {{site.data.keyword.cloud}} usando o repositório de app existente. É possível
 conectar a cadeia de ferramentas do DevOps existente ou criar uma e entregar continuamente um app para um contêiner
@@ -33,10 +33,10 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
 {: tip}
 
 ## Antes de começar
-{: #prereqs}
+{: #prereqs-byoc-kube}
 
-* Crie um app. Consulte [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials/tutorial_byoc.html) para obter mais informações.
-* No [console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg) e selecione **Contêineres** para [configurar um cluster do Kubernetes](/docs/containers/container_index.html).
+* Crie um app. Consulte [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) para obter mais informações.
+* No [console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg) e selecione **Contêineres** para [configurar um cluster do Kubernetes](/docs/containers/container_index.html#container_index).
 * Para confirmar se o app é executado no Docker, execute os comandos a seguir:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -48,7 +48,7 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
 * Em seguida, acesse sua URL, como `http://localhost/springboothelloworld/sayhello`. Pressione as teclas Ctrl + C para parar a execução do Docker.
 
 ## Incluindo recursos em seu app (opcional)
-{: #add_resources}
+{: #resources-byoc-kube}
 
 Inclua um recurso de serviço no aplicativo e o {{site.data.keyword.cloud_notm}} cria o serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
 e um serviço de notificação push para aplicativos móveis gera
@@ -56,12 +56,12 @@ informações de configuração. O {{site.data.keyword.cloud_notm}} fornece os r
 serviço para o aplicativo usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre os aplicativos da web.
 
 Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para
-obter mais informações, consulte [Incluindo um serviço no app](/docs/apps/reqnsi.html).
+obter mais informações, consulte [Incluindo um serviço no app](/docs/apps/reqnsi.html#add-resource).
 
-Depois de incluir um recurso de serviço no app, deve-se copiar as credenciais do serviço para seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps/creds_kube.html).
+Depois de incluir um recurso de serviço no app, deve-se copiar as credenciais do serviço para seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps/creds_kube.html#add_credentials).
 
 ## Preparando seu app para implementação
-{: #connect_toolchain}
+{: #deploy-byoc-kube}
 
 Nessa etapa, você anexa uma cadeia de ferramentas do DevOps ao aplicativo e a configura para que seja implementada
 em um cluster do Kubernetes hospedado no serviço {{site.data.keyword.cloud_notm}} Kubernetes.
@@ -104,7 +104,7 @@ repositórios Git e o rastreamento de problema](/docs/services/ContinuousDeliver
 
 
 ### Conectar o app a uma nova cadeia de ferramentas
-{: #create_toolchain}
+{: #toolchain-byoc-kube-create}
 
 Se você deseja controlar totalmente a
 criação da cadeia de ferramentas do DevOps sem nenhuma mudança no repositório de código, crie a cadeia de
@@ -120,9 +120,10 @@ Quando você escolhe criar uma cadeia de ferramentas por meio de seu novo app, a
 Se você não desejar criar uma cadeia de ferramentas do DevOps do zero, será possível ativar o código
 existente para a nuvem usando o comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). O comando gera um modelo de cadeia de ferramentas do DevOps que você verifica no repositório. Em seguida, use esse
 modelo como o conjunto de instrução para o que a cadeia de ferramentas do DevOps cria. Para obter mais informações,
-consulte a [documentação da CLI](/docs/apps/create-deploy-cli.html#byoc).
+consulte a [documentação da CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
 
 ## Incluindo uma integração do GitHub
+{: #github-byoc-kube}
 
 Configure a cadeia de ferramentas do DevOps com uma integração do seu repositório GitHub para que a cadeia de ferramentas configure um webhook no repositório a fim de que as solicitações pull e os pushes de código nesse repositório enviem um POST para a cadeia de ferramentas. 
 
@@ -139,12 +140,14 @@ Configure a cadeia de ferramentas do DevOps com uma integração do seu reposit�
 É possível visualizar o novo webhook nas configurações do repositório.
 
 ## Incluindo um pipeline de entrega
+{: #pipeline-byoc-kube}
 
 1. Clique em **Incluir uma ferramenta**.
 2. Selecione **Pipeline de entrega**.
 3. Insira `Continuous Integration` para o nome do pipeline e clique em **Criar integração**.
 
 ## Configurando os estágios do pipeline
+{: #pipelineconfig-byoc-kube}
 
 Configure os estágios do pipeline para direcionarem sua entrada (os conteúdos do repositório GitHub) para o destino correto. Como esse tutorial supõe que você tem um repositório GitHub que
 produz uma imagem do Docker ativa e está destinando um cluster do IBM Containers Kubernetes, crie estágios de
@@ -186,11 +189,25 @@ a seguir:
     * Selecione **Construir e publicar imagem do Docker** para o estágio.
     * Selecione **Construir e publicar** para a tarefa.
     * Como esse é seu pipeline de integração contínua, aceite a opção padrão para o acionador de estágio.
-  3. Clique na guia **Tarefas** e, em seguida, clique em **Incluir tarefa '+'** e preencha os campos conforme a seguir:
+  3. Clique na guia **Tarefas** e, em seguida, clique em **Incluir Tarefa '+'** e preencha os campos conforme a seguir:
     * Insira `deploy to continuous integration cluster` para o nome.
     * Selecione **Kubernetes** para o tipo de implementador.
     * Selecione a região na qual o cluster do Kubernetes está localizado.
     * Insira sua chave de API existente. 
   4. Clique em **Salvar**.
-4. Teste seu estágio de pipeline `deploy to cluster` clicando no ícone **Reproduzir** até que a construção seja bem-sucedida. Um estágio de verde indica que a construção foi bem-sucedida. É possível visualizar os logs para o
-estágio. Perto do final dos logs, localize um link clicável para o app em execução. Anexe o caminho correto para seu app confirmar que é executado.
+4. Teste seu estágio de pipeline `deploy to cluster` clicando no ícone **Reproduzir** até que a construção seja bem-sucedida. Um estágio de verde indica que a construção foi bem-sucedida.
+
+## Verificando se o seu app está em execução
+{: #verify-byoc-kube}
+
+Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos apontará a você a URL para o seu app.
+
+1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
+2. Clique em **Visualizar logs e histórico**.
+3. No arquivo de log, localize a URL do aplicativo:
+
+    No término do arquivo de log, procure `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
+
+Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para visualizar a URL de seu app. Em seguida, acesse a URL em seu navegador.
