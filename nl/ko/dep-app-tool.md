@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-01"
+  years: 2018
+lastupdated: "2018-12-17"
 
 ---
 
@@ -16,28 +16,24 @@ lastupdated: "2019-02-01"
 {:important: .important}
 
 # 앱 배치
-{: #deploying-apps}
+{: #deploy}
 
 도구 체인 또는 명령행 인터페이스(CLI)를 사용하여 앱을 배치할 수 있습니다. 도구 체인은 도구 통합 세트입니다. CLI는 앱 및 서비스 인스턴스를 배치하는 간단한 방법입니다.
 {: shortdesc}
 
 ## 도구 체인을 사용한 앱 배치
-{: #toolchain-deploy-apps}
+{: #toolchains_getting_started}
 
-공개 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 알맞게 구성된 도구 체인을 사용하면 손쉽게 앱을 배치할 수 있습니다. 빌드-배치 주기는 저장소의 마스터 분기에 대한 각각의 병합으로 자동 시작됩니다.
+공개 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 알맞게 구성된 도구 체인을 사용하면 손쉽게 앱을 배치할 수 있습니다. 빌드-배치 주기는 저장소의 마스터 분기에 대한 각각의 병합으로 자동 시작됩니다. 
 
-도구 체인은 다음 방법으로 작성할 수 있습니다. 
-* 템플리트를 사용하여 도구 체인을 작성합니다. 
-* 앱에서 도구 체인을 작성합니다. 
-
-도구 체인에 대해 자세히 알아보려면 [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)을 참조하십시오.
+두 가지 방법 중 하나로 도구 체인을 작성할 수 있습니다. 하나는 템플리트를 사용한 도구 체인 작성이며, 다른 하나는 앱에서 도구 체인 작성입니다. 도구 체인에 대해 자세히 알아보려면 [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)을 참조하십시오.
 
 ## CLI를 사용하여 앱 배치
-{: #cli-deploy-apps}
+{: #cli}
 
-{{site.data.keyword.cloud_notm}}에서는 강력한 CLI 및 이 CLI와 통합되는 플러그인과 개발자 도구 확장기능을 제공합니다.
+{{site.data.keyword.cloud_notm}}에서는 강력한 CLI 및 이 CLI와 통합되는 플러그인과 개발자 도구 확장기능을 제공합니다. 
 
-시작하기 전에 [{{site.data.keyword.cloud_notm}} CLI를 다운로드 및 설치](/docs/cli/index.html#overview)하십시오. 
+시작하기 전에 [{{site.data.keyword.cloud_notm}} CLI를 다운로드 및 설치](/docs/cli/index.html)하십시오.
 
 <p>
 <a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools 다운로드" /></a>
@@ -58,7 +54,7 @@ CLI는 Cygwin에 의해 지원되지 않습니다. Cygwin 명령행 창 이외�
 
     `manifest.yml` 파일에 주의하십시오. 앱을 다시 {{site.data.keyword.cloud_notm}}에 배치할 때 이 파일이 애플리케이션의 URL, 메모리 할당, 인스턴스 수 및 기타 중요한 매개변수 판별에 사용됩니다.
 
-    또한 빌드 지시사항 등의 세부사항이 포함되어 있는 `README.md` 파일을 검토하십시오(해당하는 경우).
+    또한 빌드 지시사항 등의 세부사항이 포함되어 있는 `README.md` 파일을 검토하십시오(해당하는 경우). 
 
   애플리케이션이 Liberty 앱인 경우에는 다시 배치하기 전에 우선 이를 빌드해야 합니다.
   {: note}
@@ -80,4 +76,4 @@ CLI는 Cygwin에 의해 지원되지 않습니다. Cygwin 명령행 창 이외�
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
-  6. https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>으로 이동하여 앱에 액세스하십시오.
+  6. https://<var class="keyword varname" data-hd-keyref="app_url">app_url</var>.<span class="keyword" data-hd-keyref="APPDomain">AppDomainName</span>으로 이동하여 앱에 액세스하십시오. 
