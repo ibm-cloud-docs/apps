@@ -2,39 +2,82 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
 앱 작성
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
+    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    앱 개발
-        [Eclipse Tools로 개발](../starters/deploy_eclipsetools.html)
+    앱 작성
+        tutorials/tutorial_starter-kit.md
+        tutorials/tutorial_scratch.md
+        tutorials/tutorial_byoc.md
+        create-deploy-cli.md
+        tutorials/tutorial_code-pattern.md
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
+        tutorials/tutorial_microservice.md
+        tutorials/tutorial_mobile.md
+        deploying/functions.md
+        tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    앱 배치
-        install_cli.md
-        ../starters/upload_app.md
+    앱 배치 및 통합
+        dep-app-tool.md
+        vsi-deploy.md
+        deploying/containers.md
+        tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_starter_kube.md
+        deploying/crypto.md
+        tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
+    
+    {: .topicgroup}
+    환경에 인증 정보 추가
+        creds_overview.md
+        creds_kube.md
+        creds_cf.md
+        creds_vsi.md
+
+    mngapps.md
+    updapps.md
+    secapps.md
     hosting.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud Developer Tools 명령행 참조](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    앱 관리
-        mngapps.md
-        updapps.md
+    IBM Cloud 개발자 대시보드
+        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
+        [금융](https://cloud.ibm.com/developer/finance/dashboard)
+        [모바일](https://cloud.ibm.com/developer/mobile/dashboard)
+        [보안](https://cloud.ibm.com/developer/security/dashboard)
+        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
+        [웹 앱](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    앱 보안
-        overview.md
-        secapps.md
-        deployment.md
+    IBM Cloud 프로그래밍 가이드
+        [이동](https://cloud.ibm.com/docs/go)
+        [Spring](https://cloud.ibm.com/docs/java-spring)
+        [Swift](https://cloud.ibm.com/docs/swift)
+        [노드](https://cloud.ibm.com/docs/node)
+
+    at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [앱 관리 문제점 해결](../troubleshoot/ts_apps.html)
+    ts_apps.md
+    [IBM Cloud Slack 개발자 도구 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
+    [Cloud Functions API 참조](https://cloud.ibm.com/apidocs/functions)
+    [모바일 SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

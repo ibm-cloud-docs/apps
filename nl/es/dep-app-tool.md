@@ -24,7 +24,7 @@ Puede desplegar sus apps con una cadena de herramientas o con una interfaz de l�
 ## Despliegue de apps mediante cadenas de herramientas
 {: #toolchains_getting_started}
 
-Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Con una cadena de herramientas correctamente configurada, el despliegue de una app resulta sencillo. Un ciclo de despliegue de compilación se inicia automáticamente después de cada fusión en la rama maestra en su repositorio. 
+Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Con una cadena de herramientas correctamente configurada, el despliegue de una app resulta sencillo.  Un ciclo de despliegue de compilación se inicia automáticamente después de cada fusión en la rama maestra en su repositorio.
 
 Puede crear una cadena de herramientas de estas dos maneras: utilizando una plantilla para crear la cadena de herramientas o creando una cadena de herramientas desde una app. Para obtener más información sobre las cadenas de herramientas, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
 
@@ -50,7 +50,7 @@ La CLI no recibe soporte de Cygwin. Utilice la herramienta en una ventana que no
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">su_nuevo_directorio</var></code></pre>
 
-  3.  Realice los cambios al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.cloud_notm}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarla y editar la línea `Thanks for creating ...`.  Asegúrese de que la app se ejecuta localmente
+  3.  Realice los cambios al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.cloud_notm}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarla y editar la línea `Thanks for creating ...`. Asegúrese de que la app se ejecuta localmente
 antes de volver a desplegarla en {{site.data.keyword.cloud_notm}}.
 
     Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
@@ -59,7 +59,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
     Revise también el archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede.
 
-  Si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.{: note}
+  Si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.
+  {: note}
 
   4. Conecte e inicie una sesión en {{site.data.keyword.cloud_notm}}.
 
@@ -71,7 +72,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">nombre_organización</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</code></pre>
 
-  Si el valor contiene un espacio, debe especificar `nombre_usuario`, `nombre_organización` y `nombre_espacio` entre comillas simples o dobles, por ejemplo `-o "my org"`.{: note}
+  Si el valor contiene un espacio, debe especificar `nombre_usuario`, `nombre_organización` y `nombre_espacio` entre comillas simples o dobles, por ejemplo `-o "my org"`.
+  {: note}
 
   5. Desde el nuevo directorio, despliegue la app en {{site.data.keyword.cloud_notm}} con el mandato `ibmcloud dev deploy`. Para obtener más información, consulte [la documentación de CLI](/docs/cli/idt/commands.html#deploy).
 
