@@ -1,51 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
 
-# {{site.data.keyword.Bluemix_notm}}에서 앱 작성
-{: #create}
+# 시작하기 튜토리얼
+{: #tutorial-getting-started}
 
-{{site.data.keyword.Bluemix}}에서 엔터프라이즈 레벨 모바일 및 웹 애플리케이션을 빌드하고 {{site.data.keyword.Bluemix_notm}}로 호스팅되는 클라우드 확장을 활용할 수 있습니다. {{site.data.keyword.Bluemix}} 콘솔 및 명령행 도구를 사용하여 앱을 빌드 및 실행하고 배치할 수 있습니다. 이 엔드 투 엔드 개발 시나리오에 따라 시작하십시오.
+{{site.data.keyword.cloud}}에서 엔터프라이즈 레벨 모바일 및 웹 애플리케이션을 빌드하고 {{site.data.keyword.cloud_notm}}에서 호스팅하는 클라우드 확장을 활용할 수 있습니다. 시작하는 데 대해서는 몇 가지 선택사항이 있습니다. 사용자 대신 프로세스를 관리하는 스타터 킷을 사용하여 앱을 작성할 수 있으며, 필요한 것이 무엇인지 아는 경우에는 처음부터 시작하여 필요한 리소스로 앱을 빌드하거나 기존 저장소를 사용하며 자신의 코드를 여기로 가져올 수 있습니다.
+{: shortdesc}
 
-## 1단계: {{site.data.keyword.Bluemix_notm}} 계정 등록
-{: #sign-up}
+## 시작하기 전에
+{: #prereqs-getting-started}
 
-[bluemix.net](bluemix.net)으로 이동하십시오. 이메일, 이름, 회사, 지역, 전화번호만 입력하면 됩니다. 무료 계정을 등록하는 데 신용카드가 필요하지 않습니다. 편하게 둘러보십시오. 
+{{site.data.keyword.cloud_notm}} 콘솔 또는 명령행 인터페이스(CLI)를 사용하여 앱을 작성할 수 있습니다. CLI를 사용하려는 경우 설치 세부사항은 [{{site.data.keyword.cloud_notm}} CLI 시작하기](/docs/cli/index.html#overview)를 참조하십시오. 
 
-## 2단계: 카탈로그 살펴보기
-{: #catalog}
+## 1단계. 앱 작성
+{: #create-getting-started}
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그는 제공하는 인프라 및 플랫폼 리소스를 나열합니다. 가상 머신, 컨테이너 또는 Cloudant, Cloud Foundry 앱을 선택하여 앱 빌드를 시작할 수 있습니다. 플랫폼 리소스가 필요한 경우 {{site.data.keyword.Bluemix_notm}}는 런타임 및 기타 서비스를 제공하여 빌드 시작을 지원하는 표준 유형도 제공합니다. 
+다음 시작점 중 하나를 선택하여 앱을 작성하십시오. 
+* [스타터 킷](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit): 사용자 대신 프로세스를 관리하는 앱 서비스 스타터 킷을 선택하여 앱을 작성하십시오. 
+* [사용자 정의](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch): 필요한 것이 무엇인지 아는 경우에는 비어 있는 스타터 킷을 사용하여 필요한 리소스로 사용자 정의 앱을 처음부터 빌드하십시오. 
+* [자신의 코드 가져오기](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc): 기존 컨텐츠 저장소를 링크하여 자신의 코드를 가져오십시오. 앱 및 Docker 이미지는 동일한 저장소에 있어야 합니다.
+* [CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli): CLI 및 개발자 도구를 사용하여 사용자 정의 앱 또는 스타터 킷 앱을 작성하고 배치하십시오. 
+* [코드 패턴](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern): IBM Developer 코드 패턴을 앱 작성의 기초로 사용하십시오. 
+* [{{site.data.keyword.cloud_notm}} 카탈로그 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/catalog){: new_window}: 카탈로그에서 바로 작성하여 사용하기 시작할 수 있는 앱 및 서비스를 찾아보거나 검색할 수 있습니다. 
 
-## 3단계: 리소스 작성
-{: #resource}
+## 2단계. 리소스 추가
+{: #resources-getting-started}
 
-1. [대시보드](https://console.bluemix.net/dashboard/apps/)에서 **리소스 작성**을 클릭하십시오.
+앱을 작성하는 데 스타터 킷을 사용하는 경우에는 리소스가 자동으로 작성됩니다. 콘솔의 앱 세부사항 페이지에서 **리소스 추가**를 클릭하여 추가 리소스를 앱과 연관시킬 수 있습니다. 
 
-2. 카탈로그의 플랫폼 섹션에서 앱을 선택하십시오. 그런 다음 런타임을 선택하십시오. 예를 들어, IBM 빌드팩에서 지원하는 IBM 런타임 환경(예: Liberty for Java)을 선택할 수 있습니다. 또한 오픈 소스 및 써드파티 빌드팩에 의존하는 커뮤니티 런타임(예: Tomcat)도 선택할 수 있습니다. 
+CLI를 사용하여 리소스를 추가하려는 경우에는 다음 명령을 실행하여 앱에 서비스를 추가하십시오. 계정에서 이미 사용되고 있는 기존 서비스 중 하나를 선택하거나 새 서비스를 추가할 수 있습니다. 
+```
+ibmcloud dev edit
+```
+{: codeblock}
 
-  * [Containers 시작하기](../containers/container_index.html)
-  * [Openwhisk 시작하기](../openwhisk/index.html)
-  * [Cloud Foundry 앱 작성](../cfapps/index.html#creating_cloud_foundry_apps)
+자세한 정보는 [앱에 서비스 추가](/docs/apps/reqnsi.html#add-resource)를 참조하십시오.
 
-3. 앱 이름, 호스트 이름을 입력한 후 가격 책정 플랜을 선택하십시오. 
+## 3단계. 앱 배치
+{: #deploy-getting-started}
 
-4. 개발 스타일을 선택하십시오. 원하는 텍스트 편집기에서 앱을 편집하고 {{site.data.keyword.Bluemix_notm}} 명령행을 사용하여 {{site.data.keyword.Bluemix_notm}}에 배치할 수 있습니다. 또한 {{site.data.keyword.Bluemix_notm}} DevOps Services를 사용하여 브라우저에서 애플리케이션을 배치하거나 Eclipse Tools for {{site.data.keyword.Bluemix_notm}}를 사용하여 Eclipse 통합 개발 환경에서 애플리케이션에 대해 작업할 수도 있습니다. 
+콘솔 또는 명령행 인터페이스를 사용하여 앱을 배치할 수 있습니다. 
 
-## 4단계: 코드 추가 시작
-{: #code}
+### 콘솔 사용
+{: #console-getting-started}
 
-각 앱은 작업 시작에 필요한 모든 소프트웨어 및 컨텐츠를 가져오는 데 도움이 되는 시작하기 섹션과 함께 제공합니다. 
+콘솔을 사용하여 앱을 배치하려면 다음 단계를 완료하십시오. 
 
-앱을 개발하는 데 필요한 소프트웨어를 가져오고, 소스 코드를 가리키고, 처음으로 앱 배치 시 지원할 수 있도록 대시보드에서 앱을 클릭한 후 **시작하기**를 클릭하십시오.
+1. **앱 세부사항** 페이지에서 **클라우드에 배치**를 클릭하십시오. 
+2. 배치 방법을 선택하고 **작성**을 클릭하십시오. {{site.data.keyword.cloud_notm}}가 Git 저장소와 지속적 Delivery Pipeline을 모두 갖춘 공개 도구 체인을 자동으로 작성합니다.
+3. 새 도구 체인의 파이프라인 단계를 열어 빌드 및 배치 프로세스를 보고 나면 몇 분 내에 새 앱을 확인할 수 있습니다. 
 
-## 다음 단계
-{: #next}
+자세한 정보는 "앱 배치 및 통합" 절에 있는 다양한 배치 주제에 대한 목차를 참조하십시오. 
 
-앱이 개발되면 [우수 사례](best-practice.html) 및 [클라우드 준비성](cloud-ready.html) 안내서를 사용하여 앱이 {{site.data.keyword.Bluemix_notm}}를 실행할 준비가 되었는지 확인하십시오. 그런 다음 앱 [배치](../starters/install_cli.html)를 수행하십시오. 
+### 명령행 사용
+{: #cli-getting-started}
+
+명령행을 사용하여 앱을 배치하려면 `ibmcloud dev deploy` 명령을 사용하십시오. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps/create-deploy-cli.html#create-deploy-app-cli)를 참조하십시오.
+
+이제 반복 배치 및 지속적 딜리버리를 수행할 준비가 되었습니다. 

@@ -1,35 +1,38 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, application, migrating apps, hosting apps, migrating, hosting
+
+subcollection: creating-apps
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
-# アプリのホスティング
+# アプリのマイグレーションおよびホスティング
 {: #hosting}
 
-既存のアプリがある場合は、必要なすべてのインフラストラクチャーまたはプラットフォームのサービスを含めて IBM Cloud でホストすることができます。また、{{site.data.keyword.Bluemix_notm}} インフラストラクチャーを利用して、{{site.data.keyword.Bluemix_notm}} 用に特定して開発したアプリをホストすることもできます。
-{:shortdesc}
+既存のアプリがある場合は、必要なすべてのインフラストラクチャーまたはプラットフォームのサービスを含めて {{site.data.keyword.cloud}} でホストすることができます。 アプリを一度にすべてクラウド環境にシフトするのではなく、インクリメンタルに {{site.data.keyword.cloud_notm}} にマイグレーションすることもできます。
 
 ## アプリのマイグレーション
+{: #migrating}
+
+アプリがオンプレミスのデータやサービスにアクセスする必要がある場合は、[{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg) を使用して、{{site.data.keyword.cloud_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。 詳細については、[Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+
+マイグレーションについて支援が必要な場合は、[{{site.data.keyword.cloud_notm}} Migration Services](https://www.ibm.com/cloud/migration-services){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")を使用できます。
+
+## アプリのホスティング
 {: #ht_hostapp}
 
-アプリを完全にクラウド環境に移す代わりに、アプリを {{site.data.keyword.Bluemix_notm}} にインクリメンタルにマイグレーションできます。アプリの一部を先にマイグレーションし、Cloud Integration サービスを使用して、既存のデータまたは SoR (Systems of Record、定型業務処理システム) に接続することができます。
+{{site.data.keyword.cloud_notm}} [カタログ](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")で、Kubernetes や Cloud Foundry などの管理対象環境を選択したり、ベア・メタル・サーバーや仮想サーバー上で直接アプリをホストしたりすることができます。
 
-{{site.data.keyword.Bluemix_notm}} アプリで、SoR などのバックエンドのデータやサービスへのアクセスが必要になる場合があります。{{site.data.keyword.Bluemix_notm}} では、Secure Gateway サービスを使用して、{{site.data.keyword.Bluemix_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。 このサービスによって、{{site.data.keyword.Bluemix_notm}} 上のアプリがバックエンド・ネットワークのデータおよびサービスにアクセスできるようになります。 詳細については、[Reaching enterprise backend with Bluemix Secure Gateway via console ![「外部リンク」アイコン](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} を参照してください。
+仮想デプロイメントの場合、ほとんどのアプリの操作は {{site.data.keyword.cloud_notm}} によって管理されます。 ワークロードが複数の地理的地域に広がっており、{{site.data.keyword.cloud_notm}} ハイパーバイザーを使用してデプロイメントを管理したい場合は、[仮想](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers)デプロイメントが最適です。 より高いパフォーマンスを求めて専用物理サーバーに直接アクセスする必要がある場合は、[ベア・メタル](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started)・デプロイメントが最適です。
 
-{{site.data.keyword.Bluemix_notm}} は既存のアプリをホストし、{{site.data.keyword.Bluemix_notm}} でのすべてのインフラストラクチャーを提供できます。[カタログ](https://console.bluemix.net/catalog/?taxonomyNavigation=apps)で、アプリをベア・メタル・サーバーのクラウドでホストするか、または仮想サーバーでホストするかを選択できます。
-
-アプリのパーツは、1 度に全部、またはコンポーネントごとに {{site.data.keyword.Bluemix_notm}} にマイグレーションできます。アプリをマイグレーションする際に提供されるいくつかのサービスをご覧ください。
-
-* ブロック・ストレージ、ファイル・ストレージ、またはオブジェクト・ストレージから、自分に適した[ストレージ](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage)のタイプを選択します。
-* 自分に必要な[ネットワーク](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork)のタイプを選択します。
-* {{site.data.keyword.Bluemix_notm}} Kubernetes テクノロジーを利用するには、[コンテナリゼーション](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers)・サービスを選択します。
-
-## 次のステップ
-{: #next-steps}
-
-複数の地域でサービスのホスティングが可能な場合は、どこでアプリをホストするかを選択できます。[アプリの更新](updapps.html)で、アプリをホストする地域を選択し、カスタム URL を編集できます。
+また、以下に対する多くのオプションがあります。
+* ブロック・ストレージ、ファイル・ストレージ、またはオブジェクト・ストレージから、適切な[ストレージ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")のタイプの選択。
+* 必要な[ネットワーク ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のタイプの選択。
+* {{site.data.keyword.cloud_notm}} Kubernetes テクノロジーを活用するための、[コンテナリゼーション ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") サービスの選択。

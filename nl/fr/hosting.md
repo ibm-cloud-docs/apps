@@ -2,35 +2,33 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-11-29"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
 
-# Hébergement d'applications
+# Migration et hébergement d'applications
 {: #hosting}
 
-Si vous possédez déjà une application, vous pouvez l'héberger sur IBM Cloud avec tous les services d'infrastructure ou de plateforme dont vous avez besoin. Vous pouvez également profiter de l'infrastructure {{site.data.keyword.Bluemix_notm}} pour héberger des applications que vous avez développées de façon spécifique pour {{site.data.keyword.Bluemix_notm}}.
-{:shortdesc}
+Si vous possédez déjà une application, vous pouvez l'héberger sur {{site.data.keyword.Bluemix}} avec tous les services d'infrastructure ou de plateforme dont vous avez besoin. Vous pouvez également faire migrer votre application vers {{site.data.keyword.Bluemix_notm}} de manière incrémentielle au lieu de déplacer toutes les parties de votre application en une seule fois vers l'environnement de cloud.
 
 ## Migration d'applications
+{: #migrating}
+
+Si votre application doit accéder à vos données ou à vos services sur site, vous pouvez utiliser [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/secure_gateway.html) pour établir un tunnel sécurisé entre une organisation {{site.data.keyword.Bluemix_notm}} et votre réseau de back end d'entreprise. Pour plus de détails, voir [Reaching enterprise backend with {{site.data.keyword.Bluemix_notm}} Secure Gateway via console ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
+
+Si vous avez besoin d'aide pour votre effectuer votre migration, des [services de migration IBM Cloud![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/migration-services){: new_window} sont disponibles.
+
+## Hébergement d'applications
 {: #ht_hostapp}
 
-Vous pouvez migrer vos applications dans {{site.data.keyword.Bluemix_notm}} de façon incrémentielle au lieu de les envoyer intégralement dans l'environnement de cloud. Vous pouvez d'abord migrer une partie de votre application puis vous connecter aux
-données ou au système d'enregistrement qui existent en utilisant le service Cloud Integration.
+Dans {{site.data.keyword.Bluemix_notm}} [catalog![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window}, vous pouvez choisir un environnement géré, tel que Kubernetes ou Cloud Foundry, ou vous pouvez héberger votre application directement sur un serveur bare metal ou un serveur virtuel.
 
-Pour vos applications {{site.data.keyword.Bluemix_notm}}, vous pouvez avoir besoin d'accéder aux données de back end ou à des services comme un système d'enregistrement. Dans {{site.data.keyword.Bluemix_notm}}, vous pouvez utiliser le service Secure Gateway afin d'établir un tunnel sécurisé entre une organisation {{site.data.keyword.Bluemix_notm}} et le réseau de back end de l'entreprise. Le service permet aux applications dans {{site.data.keyword.Bluemix_notm}} d'accéder aux données et aux services du réseau de back end. Pour plus de détails, voir [Reaching enterprise backend with Bluemix Secure Gateway via console ![Icône de lien externe](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
+Sur un déploiement virtuel, la majeure partie des opérations de votre application est gérée par {{site.data.keyword.Bluemix_notm}}. Un déploiement [virtuel](/docs/vsi/vsi_about.html) est préférable si votre charge de travail est répartie sur plusieurs régions géographiques et que vous souhaitez utiliser un hyperviseur {{site.data.keyword.Bluemix_notm}} pour gérer vos déploiements. Un déploiement [bare metal](/docs/bare-metal/index.html) est optimal si vous avez besoin d'un accès direct à un serveur physique dédié pour de meilleures performances.
 
-{{site.data.keyword.Bluemix_notm}} peut héberger votre application existante et fournir toute l'infrastructure de {{site.data.keyword.Bluemix_notm}}. Dans le [catalogue](https://console.bluemix.net/catalog/?taxonomyNavigation=apps), vous pouvez choisir si vous hébergez votre application dans le cloud sur un serveur bare metal ou sur un serveur virtuel. 
-
-Vous pouvez migrer des parties de l'application vers {{site.data.keyword.Bluemix_notm}} en une seule fois ou bien composant par composant. Vous pouvez consulter quelques-uns des services que nous offrons lors de la migration de votre application.
-
-* Sélectionnez le type de [stockage](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage) qui vous convient : stockage par blocs, stockage de fichiers, ou stockage d'objets.
-* Sélectionnez le type de [réseau](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork) dont vous avez besoin.
-* Sélectionnez un service de [conteneurisation](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers) afin de bénéficier de la technologie Kubernetes de {{site.data.keyword.Bluemix_notm}}.
-
-## Etapes suivantes
-{: #next-steps}
-
-Si votre service peut être hébergé sur plusieurs régions, vous pouvez sélectionner la région de votre choix. Dans [Mise à jour d'applications](updapps.html), vous pouvez sélectionner les régions où votre application est hébergée et éditer votre URL personnalisée.
+Vous disposez également de nombreuses options pour :
+* Sélectionner le type de [stockage![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} qui vous convient : stockage par blocs, stockage de fichiers ou stockage d'objets.
+* Sélectionner le type de [réseau![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} dont vous avez besoin.
+* Sélectionner un service de [conteneurisation![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} pour bénéficier de la technologie Kubernetes {{site.data.keyword.Bluemix_notm}}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+lastupdated: "2018-11-06"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-01-18"
 # Vérification du statut d'une application
 {: #manageapps}
 
-Le tableau de bord de la console {{site.data.keyword.Bluemix}} fournit des informations récapitulatives sur les applications que vous avez créées. Ces informations récapitulatives incluent le nom, l'icône, l'URL, le contexte d'exécution, le statut d'exécution, ainsi que les instances de service liées à l'application.
+La liste de vos ressources se trouvant dans la console {{site.data.keyword.Bluemix}} fournit des informations récapitulatives sur les applications que vous avez créées. Ces informations récapitulatives incluent le nom, l'icône, l'URL, le contexte d'exécution, le statut d'exécution, ainsi que les instances de service liées à l'application.
 {:shortdesc}
 
 ## Comprendre le statut d'une application
 {: #status}
 
-Depuis le tableau de bord, vous pouvez afficher le statut de chaque application :
+Depuis la liste des ressources, vous pouvez afficher le statut de chaque application. La colonne d'état de chaque application vous pouvez de voir si les instances de cette application sont en cours d'exécution.
 
 <dl>
 <dt>
@@ -57,12 +57,12 @@ Votre application n'est pas en cours d'exécution. L'icône rouge indique que l'
 </dd>
 </dl>
 
-## Affichage du tableau de bord des détails d'application
+## Affichage des détails de l'application
 {: #viewingapps}
 
-Vous pouvez afficher des informations sur une application en cliquant sur son nom dans votre tableau de bord. Ensuite, vous pouvez afficher la page Vue d'ensemble de l'application.
+Vous pouvez afficher des informations supplémentaires sur une application en cliquant sur son nom dans votre liste de ressources. Ensuite, vous pouvez afficher la page Vue d'ensemble de l'application.
 
-Sur la page Vue d'ensemble de l'application, une fois l'application déployée, vous pouvez démarrer, arrêter, redémarrer ou, dans le cas des applications Web, modifier le nombre d'instances et la quantité de mémoire utilisée par l'application. Pour les applications Web, {{site.data.keyword.Bluemix_notm}} n'ajuste pas automatiquement votre application en fonction de sa charge, et vous devez donc gérer cet aspect vous-même.
+Sur la page Vue d'ensemble de l'application, une fois l'application déployée, vous pouvez démarrer, arrêter, redémarrer ou, dans le cas d'applications Web, modifier le nombre d'instances et la quantité de mémoire utilisée par l'application. Pour les applications Web, {{site.data.keyword.Bluemix_notm}} n'ajuste pas automatiquement votre application en fonction de sa charge, et vous devez donc gérer cet aspect vous-même.
 
-Les applications peuvent être redéployées si une mise à jour est effectuée. Le mécanisme de mise à jour de l'application est identique au mécanisme utilisé pour déployer initialement l'application. {{site.data.keyword.Bluemix_notm}}
+Si une mise à jour est effectuée, les applications peuvent être redéployées. Le mécanisme de mise à jour de l'application est identique au mécanisme utilisé pour déployer initialement l'application. {{site.data.keyword.Bluemix_notm}}
 arrête toutes les instances en cours d'exécution et les remplace automatiquement par de nouvelles instances.

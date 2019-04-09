@@ -1,51 +1,72 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2018, 2019
+lastupdated: "2019-02-04"
 
 ---
 
 {:shortdesc: .shortdesc}
+{:new_window: target="_blank"}
+{:codeblock: .codeblock}
+{:pre: .pre}
+{:screen: .screen}
+{:tip: .tip}
 
-# Apps in {{site.data.keyword.Bluemix_notm}} erstellen
-{: #create}
+# Lernprogramm 'Einführung'
+{: #tutorial-getting-started}
 
-In {{site.data.keyword.Bluemix}} können Sie auf Unternehmen abgestimmte Mobil- und Webanwendungen erstellen und von {{site.data.keyword.Bluemix_notm}} gehostete Clouderweiterungen nutzen. Mit der {{site.data.keyword.Bluemix}}-Konsole und den Befehlszeilentools können Sie Ihre Apps erstellen, ausführen und bereitstellen. Zum Einstieg können Sie das in diesem Abschnitt vorgestellte durchgängige Entwicklungsszenario befolgen.
+Sie können auf Unternehmen abgestimmte mobile und Webanwendungen in {{site.data.keyword.cloud}} erstellen und die Vorteile von Cloud-Erweiterungen nutzen, die von {{site.data.keyword.cloud_notm}} gehostet werden. Es stehen verschiedene Optionen für den Einstieg zur Auswahl. Erstellen Sie eine App mit einem Starter-Kit, das den Prozess für Sie verwaltet, oder wenn Ihre Pläne bereits festliegen, erstellen Sie eine völlig neue App mit den benötigten Ressourcen, oder verwenden Sie Ihr vorhandenes Repository und bringen Sie Ihren eigenen Code mit.
+{: shortdesc}
 
-## Schritt 1: {{site.data.keyword.Bluemix_notm}}-Konto registrieren
-{: #sign-up}
+## Vorbereitende Schritte
+{: #prereqs-getting-started}
 
-Rufen Sie die Seite [bluemix.net](bluemix.net) auf. Geben Sie dort einfach E-Mail-Adresse, Namen, Unternehmen, Region und Telefonnummer ein. Zur Registrierung für ein kostenloses Konto benötigen Sie keine Kreditkarte. Danach können Sie sich einfach einmal umsehen.
+Sie können Ihre App mithilfe der {{site.data.keyword.cloud_notm}}-Konsole oder der Befehlszeilenschnittstelle (Command-Line Interface, CLI) erstellen. Wenn Sie die CLI verwenden möchten, lesen Sie den Abschnitt [Einführung in die {{site.data.keyword.cloud_notm}}-CLI](/docs/cli/index.html#overview), der Installationsdetails enthält.
 
-## Schritt 2: Katalog durchsuchen
-{: #catalog}
+## Schritt 1. App erstellen
+{: #create-getting-started}
 
-Im {{site.data.keyword.Bluemix_notm}}-Katalog sind die verfügbaren Infrastruktur- und Plattformressourcen aufgeführt. Sie können die Erstellung Ihrer App damit beginnen, dass Sie eine virtuelle Maschine, einen Container oder aber Cloudant (also eine Cloud Foundry-App) auswählen. Falls Sie Plattformressourcen benötigen, bietet {{site.data.keyword.Bluemix_notm}} außerdem Boilerplates, die Laufzeiten und andere Service bereitstellen, mit denen Ihnen der Einstieg in die Entwicklung erleichtert wird.
+Erstellen Sie eine App, indem Sie einen der folgenden Eingangspunkte auswählen:
+* [Starter-Kit:](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit) Erstellen Sie eine App aus einer Auswahl von Starter-Kits für den App-Service, die den Prozess für Sie verwalten.
+* [Angepasst:](/docs/apps/tutorials/tutorial_scratch.html#tutorial-scratch) Wenn Ihre Pläne bereits festliegen, erstellen Sie eine völlig neue angepasste App mit den benötigten Ressourcen, indem Sie ein leeres Starter-Kit verwenden.
+* [Eigenen Code integrieren:](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) Sie können Ihren eigenen Code einbringen, indem Sie eine Verknüpfung zu einem eigenen vorhandenen Content-Repository herstellen. Ihre App und das Docker-Image müssen sich im selben Repository befinden.
+* [CLI:](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) Erstellen Sie eine angepasste oder eine Starter-Kit-App und stellen Sie sie bereit, indem Sie die CLI sowie Entwicklertools verwenden.
+* [Codemuster:](/docs/apps/tutorials/tutorial_code-pattern.html#tutorial-codepattern) Verwenden Sie ein IBM Entwickler-Codemuster als Basis für die Erstellung Ihrer App.
+* [{{site.data.keyword.cloud_notm}}-Katalog ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/catalog){: new_window}: Sie können den Katalog nach Apps und Services durchsuchen, die Sie erstellen und noch am selben Tag nutzen können.
 
-## Schritt 3: Ressource erstellen
-{: #resource}
+## Schritt 2. Ressourcen hinzufügen
+{: #resources-getting-started}
 
-1. Klicken Sie im [Dashboard](https://console.bluemix.net/dashboard/apps/) auf **Ressource erstellen**.
+Wenn Sie zur Erstellung Ihrer App ein Starter-Kit verwenden, werden Ihre Ressourcen automatisch für Sie erstellt. Sie können Ihrer App noch weitere Ressourcen zuordnen, indem Sie auf der Seite "App-Details" auf **Ressource hinzufügen** klicken.
 
-2. Wählen Sie im Abschnitt 'Plattform' des Katalogs eine App aus. Wählen Sie anschließend die Laufzeit aus. Sie können beispielsweise eine der IBM Laufzeitumgebungen wie 'Liberty for Java' auswählen, die durch IBM Buildpacks unterstützt werden. Sie können aber auch Community-Laufzeiten wie beispielsweise 'Tomcat' auswählen, die sich auf Open-Source- und Drittanbieter-Buildpacks stützen.
+Führen Sie den folgenden Befehl aus, um einen Service zu Ihrer App hinzuzufügen und Ressourcen über die CLI zu nutzen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen neuen Service hinzufügen. 
+```
+ibmcloud dev edit
+```
+{: codeblock}
 
-  * [Einführung in Container](../containers/container_index.html)
-  * [Einführung in Openwhisk](../openwhisk/index.html)
-  * [Cloud Foundry-Apps erstellen](../cfapps/index.html#creating_cloud_foundry_apps)
+Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps/reqnsi.html#add-resource).
 
-3. Geben Sie den Namen Ihrer App sowie den Hostnamen ein und wählen Sie Ihren Preistarif aus.
+## Schritt 3. App bereitstellen
+{: #deploy-getting-started}
 
-4. Wählen Sie Ihren Entwicklungsstil aus. Sie können die App im Texteditor Ihrer Wahl bearbeiten und sie über die {{site.data.keyword.Bluemix_notm}}-Befehlszeile in {{site.data.keyword.Bluemix_notm}} bereitstellen. Außerdem können Sie Ihre App mithilfe von {{site.data.keyword.Bluemix_notm}} DevOps Services über einen Browser bereitstellen oder die Eclipse-Tools für {{site.data.keyword.Bluemix_notm}} nutzen, um in der integrierten Eclipse-Entwicklungsumgebung an Apps zu arbeiten.
+Sie können Ihre App über die Konsole oder über die Befehlszeile bereitstellen.
 
-## Schritt 4: Code hinzufügen
-{: #code}
+### Verwendung der Konsole
+{: #console-getting-started}
 
-Jede App enthält einen Einführungsabschnitt, in dem Sie erfahren, welche Software und Inhalte Sie benötigen, um mit der Arbeit beginnen zu können.
+Führen Sie die folgenden Schritte aus, um die App über die Konsole zu verwenden:
 
-Klicken Sie im Dashboard auf Ihre App und dann auf **Einführung**. Anschließend erhalten Sie Hinweise auf die Software, die Sie für die Entwicklung Ihrer App benötigen, Verweise auf den Quellcode sowie Hilfe bei der erstmaligen Bereitstellung Ihrer App.
+1. Klicken Sie auf der Seite **App-Details** auf **In Cloud bereitstellen**.
+2. Wählen Sie eine Bereitstellungsmethode aus und klicken Sie auf **Erstellen**. {{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline.
+3. Öffnen Sie die Pipeline-Stage Ihrer neuen Toolchain, um den Build- und Bereitstellungsprozess anzuzeigen, damit Sie Ihre neue App innerhalb weniger Minuten anzeigen können.
 
-## Nächste Schritte
-{: #next}
+Weitere Informationen finden Sie im Inhaltsverzeichnis für verschiedene Bereitstellungsthemen im Abschnitt "App bereitstellen und integrieren".
 
-Nachdem Sie Ihre App entwickelt haben, können Sie mithilfe der Informationen in den Abschnitten über die [Best Practices](best-practice.html) und die [Vorbereitung für die Cloud](cloud-ready.html) feststellen, ob Ihre App für {{site.data.keyword.Bluemix_notm}} geeignet ist. Anschließend können Sie Ihre App [bereitstellen](../starters/install_cli.html).
+### Verwendung der Befehlszeile
+{: #cli-getting-started}
+
+Führen Sie den Befehl `ibmcloud dev deploy` aus, um Ihre App über die Befehlszeile bereitzustellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
+
+Jetzt sind Sie bereit für die iterative Entwicklung und Continuous Delivery.

@@ -1,287 +1,119 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-01-18"
+  years: 2015, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, custom domain, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
 {:shortdesc: .shortdesc}
+{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# アプリの更新
+# カスタム・ドメインの追加と使用
 {: #updatingapps}
 
-コマンド・ラインまたは {{site.data.keyword.Bluemix}} Continous Delivery を使用して、{{site.data.keyword.Bluemix_notm}} 内のアプリケーションを更新できます。多くの場合、Node.js などの組み込みビルドパックにおいても、-c パラメーターを使用して、アプリケーションの開始にどのコマンドを使用するかを指定する必要があります。
+ドメインは、{{site.data.keyword.cloud}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインはアプリケーションの要求をユーザーが所有する URL に送ります。カスタム・ドメインとして、共有ドメイン、共有サブドメイン、または共有ドメインおよびホストを使用できます。 カスタム・ドメインが指定されない場合、{{site.data.keyword.cloud_notm}} は、アプリケーションへの経路にデフォルトの共有ドメインを使用します。 カスタム・ドメインの作成と使用には、{{site.data.keyword.cloud_notm}} コンソールまたはコマンド・ライン・インターフェースのいずれかを使用できます。
 {:shortdesc}
 
-##カスタム・ドメインの作成と使用
-{: #domain}
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
+{: tip}
 
-CF アプリおよびコンテナー・グループには、デフォルトの {{site.data.keyword.Bluemix_notm}} システム・ドメイン (mybluemix.net) の代わりに、カスタム・ドメインをアプリケーションの URL 内で使用できます。
+カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.cloud_notm}} 内にカスタム・ドメインを構成する必要があります。 次に、パブリック DNS サーバー上の {{site.data.keyword.cloud_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。ご使用のカスタム・ドメインがシステム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.cloud_notm}} 内のアプリケーションに経路指定されます。
 
-ドメインは、{{site.data.keyword.Bluemix_notm}} で各組織に割り振られた URL 経路を指定します。 カスタム・ドメインを使用するには、パブリック DNS サーバーにカスタム・ドメインを登録し、{{site.data.keyword.Bluemix_notm}} 内にカスタム・ドメインを構成し、パブリック DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。 ご使用のカスタム・ドメインが {{site.data.keyword.Bluemix_notm}} システム・ドメインにマップされると、そのカスタム・ドメインへの要求は {{site.data.keyword.Bluemix_notm}} 内のアプリケーションに経路指定されます。
+## {{site.data.keyword.cloud_notm}} コンソールからカスタム・ドメインを追加する
+{: #custom-domain-console}
 
-{{site.data.keyword.Bluemix_notm}} でのカスタム・ドメインの作成と使用は、{{site.data.keyword.Bluemix_notm}} ユーザー・インターフェース、または bluemix コマンド・ライン・インターフェースを使用して行います。
+コンソールを使用して組織のカスタム・ドメインを追加するには、以下の手順を実行します。
 
-### {{site.data.keyword.Bluemix_notm}} ユーザー・インターフェースを使用する
+1. **「管理」 > 「アカウント」**と進み、**「Cloud Foundry の組織」**を選択します。
+2. カスタム・ドメインを作成する組織の名前をクリックします。
+3. **「ドメイン」**タブをクリックして、使用可能なドメインのリストを表示します。
+4. **「ドメインの追加」**をクリックして、ドメイン名を入力して地域を選択します。
+5. 更新を確認して **「追加」**をクリックします。
 
-  1. 自分の組織のカスタム・ドメインを作成します。
+## カスタム・ドメインを使用した経路をアプリケーションに追加する
 
-	1. 自分の組織の**「管理」**&gt;**「アカウント」**&gt;**「Cloud Foundry の組織」**&gt;**「詳細を表示」**と進みます。その後、**「Cloud Foundry の組織の編集 (Edit Cloud Foundry Org)」**&gt;**「ドメイン」**をクリックします。
+1. [{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")から**「メニュー」**アイコン![「メニュー」アイコン](../../icons/icon_hamburger.svg)をクリックして**「リソース・リスト」**を選択します。
+2. **「リソース・リスト」**ページで**「Cloud Foundry アプリ」**をクリックします。
+3. 経路を追加するアプリケーションをクリックします。アプリの**「概要」**ページが表示されます。
+4. **「経路」**メニューを選択し、**「経路の編集」**を選択します。
+5. **「経路の追加」**をクリックし、アプリケーションに使用する経路を指定します。
+6. **「保存」**をクリックして更新を確認します。
 
-	2. **「ドメイン」**タブで**「ドメインの追加」**をクリックし、カスタム・ドメイン名を入力し、**「保存」**をクリックします。
+例えば、`*.mycompany.com` を使用して経路 `www.mybluemix.net` をアプリに関連付けることができます。 `example.mycompany.com` を使用して、経路 `www.example.bluemix.net` をアプリに関連付けることもできます。
+{: tip}
 
-	**注**: 例えば、`mycompany.com` を使用して、経路 `www.mycompany.com` をアプリに関連付けることができます。 `example.mycompany.com` を使用して、経路 `www.example.mycompany.com` をアプリに関連付けることもできます。
+## {{site.data.keyword.cloud_notm}} コマンド・ライン・インターフェースからカスタム・ドメインを追加する
+{: #custom-domain-cli}
 
-  2. カスタム・ドメインを使用した経路をアプリケーションに追加します。
+1. Cloud Foundry アプリの場合は、次のコマンドを入力して対象の Cloud Foundry API エンドポイントに接続します。
+   ```
+   ibmcloud target --cf-api <CF_ENDPOINT>
+   ```
+   
+   **Cloud Foundry API エンドポイント:**
+   * US-SOUTH - `api.us-south.cf.cloud.ibm.com`
+   * US-EAST - `api.us-east.cf.cloud.ibm.com`
+   * EU-DE - `api.eu-de.cf.cloud.ibm.com`
+   * EU-GB - `api.eu-gb.cf.cloud.ibm.com`
+   * AU-SYD - `api.au-syd.cf.cloud.ibm.com`
+   
+2. 次のコマンドを入力して、自分の組織のカスタム・ドメインを作成します。
+   ```
+   ibmcloud app domain-create <MY_ORGNAME> <MY_DOMAIN>
+   ```
 
-    1. **「メニュー」**アイコン ![メニュー・アイコン](../icons/icon_hamburger.svg) &gt; **「ダッシュボード」**をクリックし、次に、経路を追加するアプリケーションの行をクリックします。 **「概要」** ページが表示されます。
+3. カスタム・ドメインを使用した経路をアプリケーションに追加します。
 
-	2. **「経路」**メニューで、**「経路の編集」**を選択します。
+   Cloud Foundry アプリの場合、次のコマンドを入力します。
+   ```
+   ibmcloud app route-map <MY_APPNAME> <MY_DOMAIN> -n <MY_HOSTNAME>
+   ```
+   
+## カスタム・ドメインをシステム・ドメインにマップする
+{: #mapcustomdomain}
 
-	3. **「経路の追加」**をクリックし、アプリケーションに使用する経路を指定します。
-	4. **「保存」**をクリックします。
+{{site.data.keyword.cloud_notm}} でカスタム・ドメインを構成した後、登録された DNS サーバー上の {{site.data.keyword.cloud_notm}} システム・ドメインにカスタム・ドメインをマップします。
 
-### bluemix コマンド・ライン・インターフェースを使用する
+1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。 CNAME レコードのセットアップ手順は、使用している DNS プロバイダーによって異なります。 例えば、GoDaddy を使用する場合、GoDaddy の[ドメインのヘルプ ](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にあるガイダンスに従ってください。
+2. アプリケーションが実行されている {{site.data.keyword.cloud_notm}} 地域のセキュア・エンドポイントにカスタム・ドメイン・ネームをマップします。 以下の地域エンドポイントを使用して、{{site.data.keyword.cloud_notm}} で組織に割り振られた URL 経路を指定します。 例えば、CNAME を `<custom-domain>.us-east.cf.cloud.ibm.com にポイントします。`
 
-  1. 次のコマンドを入力して、自分の組織のカスタム・ドメインを作成します。
+  **Cloud Foundry エンドポイント:**
+  * US-SOUTH - `custom-domain.us-south.cf.cloud.ibm.com`
+  * US-EAST - `custom-domain.us-east.cf.cloud.ibm.com`
+  * EU-DE - `custom-domain.eu-de.cf.cloud.ibm.com`
+  * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
+  * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-    ```
-    bluemix app domain-create <your org name> mydomain
-    ```
+## アプリケーションへのアクセス
+{: #access-app}
 
-    *organization_name*: 組織の名前。
-
-    *mydomain*: 使用するカスタム・ドメイン名。
-
-  2. カスタム・ドメインを使用した経路をアプリケーションに追加します。 CF アプリの場合、次のコマンドを入力します。
-
-    ```
-    bluemix app route-map myapp mydomain -n host_name
-    ```
-
-    コンテナー・グループの場合、次のコマンドを入力します。
-     ```
-     cf ic route map -n host_name -d mydomain mycontainergroup
-     ```
-
-    *myapp*: CF アプリの場合、アプリケーションの名前。
-
-    *mydomain*: カスタム・ドメインの名前 (例えば、`www.mydomain.mybluemix.net`)。
-
-    *host_name*: アプリケーションに使用する経路内のホスト名。
-
-    *mycontainergroup*: コンテナー・グループの場合、コンテナー・グループの名前。
-
-{{site.data.keyword.Bluemix_notm}} でカスタム・ドメインを構成した後、登録された DNS サーバー上の {{site.data.keyword.Bluemix_notm}} システム・ドメインにカスタム・ドメインをマップする必要があります。
-
-  1. DNS サーバー上のカスタム・ドメイン・ネームに 'CNAME' レコードをセットアップします。 CNAME レコードのセットアップ手順は、使用している DNS プロバイダーによって異なります。 例えば、GoDaddy を使用する場合、GoDaddy の[ドメインのヘルプ ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window}にあるガイダンスに従ってください。
-  2. アプリケーションが実行されている {{site.data.keyword.Bluemix_notm}} 地域のセキュア・エンドポイントにカスタム・ドメイン・ネームをマップします。 以下の地域エンドポイントを使用して、{{site.data.keyword.Bluemix_notm}} で組織に割り振られた URL 経路を指定します。
-
-    * US-SOUTH: `secure.us-south.bluemix.net`
-    * US-EAST: `secure.us-east.bluemix.net`
-    * EU-DE: `secure.eu-de.bluemix.net`
-    * EU-GB: `secure.eu-gb.bluemix.net`
-    * AU-SYD: `secure.au-syd.bluemix.net`
-
-ブラウザーまたはコマンド・ライン・インターフェースで、myapp アプリケーションにアクセスするための URL を次のように入力します。
-
+ブラウザーで以下の URL を入力し、アプリケーションにアクセスします。ここで、`hostname` はお使いのホスト名、`mydomain` はドメイン名です。
 ```
-http://host_name.mydomain
-```
-
-**注:** 孤立した経路を削除するには、以下のコマンドを使用します。
-
-```
-bluemix app route-delete domain -n hostname -f
+http://hostname.mydomain
 ```
 
-*domain* はご使用のドメインの名前で、*hostname* はご使用のアプリケーションの経路のホスト名です。 **bluemix app route-delete** コマンドについて詳しくは、`bluemix app route-delete -h` と入力してください。
+## 孤立した経路の削除
+{: #remove-orphaned-route}
 
-##Blue-Green デプロイメント
-{: #blue_green}
+孤立した経路を削除するには、以下のコマンドを実行します。
+```
+ibmcloud app route-delete <MY_DOMAIN> -n <MY_HOSTNAME> -f
+```
+{: tip}
 
-{{site.data.keyword.Bluemix_notm}} は、継続的デリバリーを可能にし、ダウン時間イベントを最小限にする Blue-Green デプロイメント手法をサポートしています。
+このサンプルにおいて、`domain` はご使用のドメインの名前で、`hostname` はご使用のアプリケーションの経路のホスト名です。 `ibmcloud app route-delete` コマンドについて詳しくは、コマンド `ibmcloud app route-delete -h` を入力してください。
 
-*Blue-Green デプロイメント* は、Blue と Green という 2 つのほぼ同じ実稼働環境からなるゼロ・ダウン時間デプロイメント手法です。 この 2 つは、開発者が意図的に変更した成果物によって (通常、アプリケーションのバージョンによって) 異なります。 いずれの時点でも、少なくとも 1 つの環境がアクティブです。 Blue-Green デプロイメント手法を使用すると、以下のような利点があります。
+## Kubernetes アプリにカスタム・ドメインを使用する
+{: #kube-custom-domain}
 
-* テストの最終ステージからライブ・プロダクションへ、ソフトウェアを素早く移行する。
-* アプリケーションへのトラフィックを阻害することなく、アプリケーションの新規バージョンをデプロイする。
-* ロールバックを迅速に行う。 ご使用の環境のいずれかに問題がある場合は、他の環境に素早く切り替えることができます。
+IBM Cloud Kubernetes Service のホスト名のサブドメインは `containers.appdomain.cloud` です。IBM が提供する入口のサブドメインのワイルドカード `*.<cluster_name>.<region>.containers.mybluemix.net` は、ご使用のクラスターにデフォルトで登録されています。IBM 提供の TLS 証明書はワイルドカード証明書ですので、ワイルドカード・サブドメインに使用できます。カスタム・ドメインを使用する場合は、カスタム・ドメインを `*.custom_domain.net` などのワイルドカード・ドメインとして登録する必要があります。TLS を使用するには、ワイルドカード証明書を取得する必要があります。詳しくは、[名前空間内の複数ドメイン](/docs/containers?topic=containers-ingress#multi-domains)を参照してください。
 
-{{site.data.keyword.Bluemix_notm}} に既にデプロイ済みのアプリケーションがあり、そのアプリケーションを新規バージョンに更新する場合は、以下の 2 つのアプローチのいずれかを使用して Blue-Green デプロイメントを確実にすることができます。
-
-###例: bluemix app rename コマンドの使用
-
-この例では、アプリケーションの名前は Blue です。 この例では、**bluemix app rename** コマンドを使用して、アプリケーションのトラフィックを阻害することなく *Blue* のバージョンを更新する方法を示しています。 オプションで、*Blue* の更新されたバージョンが導入された時点で、現在の古いバージョンを削除することもできます。
-
-1. *Blue* アプリを {{site.data.keyword.Bluemix_notm}} にプッシュします。
-
-  ```
-  bluemix app push Blue
-  ```
-
-  結果: *Blue* アプリが実行中で、URL `Blue.mybluemix.net` に応答しています。
-
-2. **bluemix app rename** コマンドを使用して、*Blue* アプリを *Green* に名前変更します。
-
-  ```
-  bluemix app rename Blue Green
-  ```
-
-  **bluemix app list** コマンドを使用して、現行スペースに含まれるアプリケーションをリストします。
-
-  ```
-  ...
-  name             requested state   instances   memory   disk   urls
-  Green            started           1/1         1G       1G	 Blue.mybluemix.net
-  ...
-  ```
-
-  結果: *Green* アプリが実行中で、URL `Blue.mybluemix.net` に応答しています。
-
-3. 必要な変更を行い、更新された *Blue* バージョンを準備します。 更新されたこの *Blue* アプリを {{site.data.keyword.Bluemix_notm}} にプッシュします。
-
-  ```
-  bluemix app push Blue
-  ```
-
-  **bluemix app list** コマンドを使用して、現行スペースに含まれるアプリケーションをリストします。
-
-  ```
-  ...
-  name             requested state   instances   memory   disk   urls
-  Green            started           1/1         1G       1G	 Blue.mybluemix.net
-  Blue             started           1/1         1G       1G	 Blue.mybluemix.net
-  ...
-  ```
-
-  結果:
-    * 使用しているアプリケーションの 2 つのインスタンス、*Blue* と *Green* がデプロイされています。
-	* *Green* アプリが実行中で、URL `Blue.mybluemix.net` に応答しています。
-
-4. オプション: 使用しているアプリの古いバージョン (*Green*) を削除する場合は、**bluemix app delete** コマンドを使用します。
-
-  ```
-  bluemix app delete Green -f
-  ```
-
-  **bluemix app route-map** コマンドを使用して、スペース内の経路をリストします。
-
-  ```
-  ...
-  host             domain           apps
-  Blue             mybluemix.net    Blue
-  ...
-  ```
-
-  結果: *Blue* アプリが、URL `Blue.mybluemix.net` に応答しています。
-
-###例: bluemix app route-map コマンドの使用
-
-この例では、*Blue* は以前デプロイされたアプリケーションで *Green* は更新後のバージョンです。 この例では、**bluemix app route-map** コマンドを使用して、アプリケーションのトラフィックを阻害することなく *Blue* のバージョンを更新する方法を示しています。 オプションで、*Blue* の更新されたバージョンが導入された時点で、現在の古いバージョンを削除することもできます。
-
-1. *Blue* アプリを {{site.data.keyword.Bluemix_notm}} にプッシュします。
-
-  ```
-  bluemix app push Blue
-  ```
-
-  結果: *Blue* アプリが実行中で、URL `Blue.mybluemix.net` に応答しています。
-
-2. 必要な変更を行い、*Green* バージョンを準備します。 この *Green* アプリを {{site.data.keyword.Bluemix_notm}} にプッシュします。
-
-  ```
-  bluemix app push Green
-  ```
-
-  **bluemix app route-map** コマンドを使用して、現行スペースに含まれるアプリケーションをリストします。
-
-  ```
-  ...
-  host             domain           apps
-  Blue             mybluemix.net    Blue
-  Green            mybluemix.net    Green
-  ...
-  ```
-
-  結果:
-
-    * 使用しているアプリの 2 つのインスタンス、*Blue* と *Green* がデプロイされています。
-	* *Blue* アプリが、URL `Blue.mybluemix.net` に応答しています。 そして、*Green* アプリは、URL `Green.mybluemix.net` に応答しています。
-
-3. *Blue* アプリを *Green* アプリにマップし、`Blue.mybluemix.net` へのトラフィックがすべて、*Blue* アプリと *Green* アプリの両方に経路指定されるようにします。
-
-  ```
-  bluemix app route-map Green mybluemix.net -n Blue
-  ```
-
-  bluemix app route-map コマンドを使用して、スペース内の経路をリストします。
-
-  ```
-  ...
-  host             domain           apps
-  Blue             mybluemix.net    Blue, Green
-  Green            mybluemix.net    Green
-  ...
-  ```
-
-  結果:
-
-    * これで、CF ルーターが、Blue.mybluemix.net 向けのトラフィックを、Blue アプリと Green アプリの両方に送信するようになりました。
-	* CF ルーターは、Green.mybluemix.net 向けのトラフィックを、引き続き Green アプリに送信します。
-
-4. *Green* が期待どおりに稼動していることを確認したら、*Blue* アプリから `Blue.mybluemix.net` 経路を削除します。
-
-  ```
-  bluemix app route-unmap Blue mybluemix.net -n Blue
-  ```
-
-  bluemix app route-map コマンドを使用して、スペース内の経路をリストします。
-
-  ```
-  ...
-  host             domain           apps
-  Blue             mybluemix.net    Green
-  Green            mybluemix.net    Green
-  ...
-  ```
-
-  結果: CF ルーターは、*Blue* アプリへのトラフィックの送信を停止します。 *Green* アプリが、`Green.mybluemix.net` と `Blue.mybluemix.net` の両方の URL に応答しています。
-
-5. *Green* アプリへの `Green.mybluemix.net` 経路を削除します。
-
-  ```
-  bluemix app route-unmap Green mybluemix.net -n Green
-  ```
-
-  結果: CF ルーターは、*Blue* アプリへのトラフィックの送信を停止します。 *Green* アプリが、URL `Blue.mybluemix.net` に応答しています。
-
-6. オプション: アプリケーションの古いバージョン (*Blue*) を削除したい場合は、`bluemix app delete` コマンドを使用します。
-
-  ```
-  bluemix app delete Blue -f
-  ```
-
-  bluemix app route-map コマンドを使用して、スペース内の経路をリストします。
-
-  ```
-  ...
-  host             domain           apps
-  Blue             mybluemix.net    Green
-  ...
-  ```
-
-  結果: *Green* アプリが URL `Blue.mybluemix.net` に応答しています。
-
-
-# 関連リンク
-{: #rellinks notoc}
-
-## 関連リンク
-{: #general}
-
-[Blue-Green デプロイメント ![「外部リンク」アイコン](../icons/launch-glyph.svg "「外部リンク」アイコン")](http://martinfowler.com/bliki/BlueGreenDeployment.html){:new_window}
+[このチュートリアル](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes)をご確認ください。Web アプリケーションのスキャフォールド、それをコンテナーでローカルで実行する方法、さらにそれを IBM Kubernetes Service で作成した Kubernetes クラスターにデプロイする方法について詳しく説明されています。また、カスタム・ドメインをバインドし、環境の正常性を監視し、アプリケーションを拡張する方法についても説明されています。

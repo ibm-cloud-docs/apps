@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-01-18"
+lastupdated: "2018-05-22"
 
 ---
 
@@ -33,7 +33,7 @@ Utilisez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}} pou
 Avant de commencer, téléchargez et installez l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}.
 
 <p>
-<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande Bluemix" /> </a>
+<a class="xref" href="https://clis.ng.bluemix.net" target="_blank" title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"><img class="image" src="images/btn_bx_commandline.svg" alt="Télécharger l'interface de ligne de commande IBM Cloud" /> </a>
 </p>
 
 **Restriction :** l'outil de ligne de commande n'est pas pris en charge par Cygwin. Utilisez-le dans une fenêtre de ligne de commande autre que Cygwin.
@@ -49,7 +49,7 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">votre_nouveau_répertoire</var></code></pre>
 
-  3.  Modifiez le code de votre application si nécessaire. Par exemple, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute en local avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
+  3.  Modifiez le code de votre application. Par exemple, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute localement avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
 
     Tenez compte du fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels.
 
@@ -59,18 +59,18 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   4. Connectez-vous à {{site.data.keyword.Bluemix_notm}}.
 
-  <pre class="pre"><code class="hljs">bluemix api https://api.<span class="keyword" data-hd-keyref="DomainName">nom_domaine</span></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">DomainName</span></code></pre>
 
-  <pre class="pre"><code class="hljs">bluemix login -u <var class="keyword varname" data-hd-keyref="user_ID">nom_utilisateur</var> -o <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">username</var> -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var></code></pre>
 
-  Si vous vous servez d'un ID fédéré, utilisez l'option `-sso`.
+  Si vous utilisez un ID fédéré, utilisez l'option `-sso`.
 
-  <pre class="pre"><code class="hljs">bluemix login  -o <var class="keyword varname" data-hd-keyref="org_name">nom_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nom_espace</var> -sso</code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Remarque **: vous devez ajouter des apostrophes ou des guillemets autour de `nom_utilisateur`, `nom_org` et `nom_espace`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
+  **Remarque **: vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
 
-  5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `bluemix app push`. Pour plus d'informations sur la commande `bx app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
+  5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `ibmcloud app push`. Pour plus d'informations sur la commande `ibmcloud app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
 
-  <pre class="pre"><code class="hljs">bluemix app push <var class="keyword varname" data-hd-keyref="app_name">nom_app</var></code></pre>
+  <pre class="pre"><code class="hljs">ibmcloud app push <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
   6. Accédez à votre application via https://<var class="keyword varname" data-hd-keyref="app_url">url_app</var>.<span class="keyword" data-hd-keyref="APPDomain">nom_domaine_app</span>.
