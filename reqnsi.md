@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-08"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -22,6 +22,11 @@ When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 {: shortdesc}
 
 You can request an instance of the service and use it independently of your app, or you can add the service instance to your app from the App details page. You can provision a particular type of service directly from the {{site.data.keyword.cloud_notm}} catalog.
+
+## Auto-provisioned services
+{: #auto-provision}
+
+If a starter kit specifies required services, {{site.data.keyword.cloud_notm}} automatically creates instances of those services when you create your app. You can also manually create services or select existing service instances to add to your app after it's created. You can see a list of service instances that are associated with your app in the **App details** page, along with service credentials in case you need them later.
 
 ## Discovering services
 {: #discover-resources}
