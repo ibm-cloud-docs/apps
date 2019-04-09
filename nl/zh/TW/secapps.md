@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-01-15"
 
 ---
 
@@ -54,9 +54,6 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 <dt>通用名稱</dt>
 <dd>您要求 SSL 憑證的完整網域名稱 (FQDN)。</dd>
 </dl>
-
-您可以使用「主體替代名稱 (SAN)」，但所提供的主機名稱不得發出於其他已部署的憑證，以避免 CN 衝突。
-{: note}
 
 ## 上傳 SSL 憑證
 {: #ssl_certificate}

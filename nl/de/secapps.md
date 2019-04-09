@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-01-15"
 
 ---
 
@@ -42,8 +42,7 @@ Damit die CSR gültig ist, müssen bei ihrer Erstellung die folgenden Angaben ge
 
 <dl>
 <dt>Landesname</dt>
-<dd>Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.iso.org/obp/ui/#search) zurate.
-</dd>
+<dd>Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.iso.org/obp/ui/#search) zurate.</dd>
 <dt>Bundesland oder Kanton</dt>
 <dd>Der vollständige und ungekürzte Name des Bundeslands oder des Kantons.</dd>
 <dt>Standort</dt>
@@ -55,9 +54,6 @@ Damit die CSR gültig ist, müssen bei ihrer Erstellung die folgenden Angaben ge
 <dt>Allgemeiner Name</dt>
 <dd>Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.</dd>
 </dl>
-
-Sie können SANs (Subject Alternative Names) verwenden, die angegebenen Hostnamen dürfen jedoch nicht in anderen bereitgestellten Zertifikaten verwendet werden, um CN-Konflikte zu vermeiden.
-{: note}
 
 ## SSL-Zertifikate hochladen
 {: #ssl_certificate}
