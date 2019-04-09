@@ -1,69 +1,68 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-29"
+  years: 2015, 2016, 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{: codeblock: .codeblock}
-{:note: .note}
 
 # Cómo añadir un servicio a la app
 {: #add_service}
 
-Cuando se crea una app con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puede añadir recursos desde la página Detalles de la app. También puede suministrarlos directamente desde el catálogo de {{site.data.keyword.cloud_notm}}, fuera del contexto de su app.
+Para añadir un servicio a su aplicación, solicite una instancia del servicio y configure la aplicación para que interactúe con el servicio.
 {: shortdesc}
 
-Puede solicitar una instancia del recurso y utilizarla independientemente de la app, o puede añadir la instancia de recurso a la app desde la página Detalles de la app. Puede suministrar un determinado tipo de recurso (un servicio) directamente desde el catálogo de {{site.data.keyword.cloud_notm}}.
+Puede ver todos los servicios disponibles en {{site.data.keyword.Bluemix_notm}} de las maneras siguientes:
 
-## Descubrimiento de servicios
-{: #discover_services}
+* Desde la consola de {{site.data.keyword.Bluemix_notm}}. Consulte el Catálogo de {{site.data.keyword.Bluemix_notm}}.
+* Desde la interfaz de línea de mandatos bluemix. Utilice el mandato **bluemix service offerings**.
+* Desde la propia aplicación. Utilice la [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
 
-Puede ver todos los servicios disponibles en {{site.data.keyword.cloud_notm}} de las maneras siguientes:
+Puede seleccionar el servicio que necesita cuando desarrolla app. En la selección,
+{{site.data.keyword.Bluemix_notm}} plan del servicio interactúa con el servicio y realiza los pasos necesarios para suministrar los recursos al servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para app móviles genera información de configuración.
 
-* Desde la consola de {{site.data.keyword.cloud_notm}}. Visualice el catálogo de {{site.data.keyword.cloud_notm}}.
-* Desde la línea de mandatos. Utilice el mandato `ibmcloud service offerings`.
-* Desde la propia aplicación. Utilice [GET /v2/services Services API ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+{{site.data.keyword.Bluemix_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre app web.
 
-Puede seleccionar el servicio que necesita cuando desarrolla aplicaciones. Cuando lo haya seleccionado, {{site.data.keyword.cloud_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración.
-
-{{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
-
-También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica aplicaciones externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Permitir que aplicaciones externas y herramientas de terceros utilicen servicios de {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp).
+También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica app externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [Habilitación de app externas y de herramientas de terceros para utilizar servicios {{site.data.keyword.Bluemix_notm}}](#accser_external).
 
 ## Solicitud de una nueva instancia de servicio
 {: #req_instance}
 
-Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.cloud_notm}} o la interfaz de la línea de mandatos de {{site.data.keyword.cloud_notm}}.
+Para solicitar una nueva instancia de servicio, debe utilizar la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} o la interfaz de la línea de mandatos
+bluemix.
 
-Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser imprevisibles.
-{: note}
+**Nota:** Cuando especifique el nombre de servicio, no utilice caracteres que no sean alfabéticos o caracteres numéricos, puesto que los resultados podrían ser erróneos.
 
-Si utiliza la interfaz de usuario de {{site.data.keyword.cloud_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
+Si utiliza la interfaz de usuario de {{site.data.keyword.Bluemix_notm}} para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. En el catálogo de {{site.data.keyword.cloud_notm}}, pulse en el mosaico del servicio que desea añadir. Se abre la página de detalles del servicio.
+1. En el **Catálogo** de {{site.data.keyword.Bluemix_notm}}, pulse el mosaico correspondiente al servicio que desea añadir. Se abre la página de detalles del servicio.
 
-2. Especifique un nombre en el campo **Nombre de servicio**. Se proporciona un nombre predeterminado. Puede modificar el nombre en el campo o dejarlo tal cual.
+2. Especifique un nombre en el campo **Nombre de servicio**. Se proporciona un nombre de servicio predeterminado. Puede modificar el nombre en el campo o dejarlo tal cual.
 
-3. Cumplimente más campos o selecciones y, a continuación, pulse **CREAR**.
+3. Rellene los otros campos o selecciones y, a continuación, pulse **CREAR**.
 
-Si utiliza la interfaz de línea de mandatos {{site.data.keyword.cloud_notm}} para solicitar una instancia de servicio, descargue la app de forma local, abra la línea de mandatos y cambie al directorio de la app.
+Si utiliza la interfaz de línea de mandatos bluemix para solicitar una instancia de servicio, siga los siguientes pasos:
 
-1. Ejecute el mandato siguiente para añadir un servicio a la app. Puede seleccionar un servicio existente de uno ya habilitado en su cuenta, o añadir un nuevo servicio.
+1. Utilice el mandato **bluemix service offerings** para encontrar el nombre y el plan del servicio que necesita.
 
-  ```bash
-  ibmcloud dev edit
-  ```
-  {: pre}
+2. Utilice el mandato siguiente para crear una instancia de servicio, done nombre_servicio es el nombre del servicio, plan_servicio es el plan del servicio e
+instancia_servicio es el nombre que desea utilizar para esta instancia de servicio.
 
-2. Siga las indicaciones para seleccionar un grupo de recursos y para crear y conectar un nuevo servicio relacionado con datos a la aplicación, como por ejemplo Cloudant. Es posible que tenga que seleccionar una región y un plan para el servicio.
-3. Cuando se crea el servicio, se añaden varios archivos al directorio de la aplicación, incluidas las credenciales, para ayudarle a integrar el servicio en la aplicación. Puede fusionar manualmente los archivos o saltarse este paso por ahora.
+```
+bluemix service create service_name service_plan service_instance
+```
+
+3. Utilice el siguiente mandato para enlazar una instancia de servicio a una aplicación, donde nombre_app es el nombre de la aplicación e instancia_servicio es el nombre de la instancia de servicio.
+
+```
+bluemix service bind appname service_instance
+```
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear
-un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas los servicios de {{site.data.keyword.cloud_notm}}, consulte [Permitir que apps externas utilicen servicios de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/resources/connect_external_app#externalapp){: new_window}.
+un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre cómo utilizan las apps externas los servicios de {{site.data.keyword.Bluemix_notm}}, consulte [Habilitación de apps externas para utilizar servicios de {{site.data.keyword.Bluemix_notm}}](#accser_external){: new_window}.
 
 ## Configuración de la aplicación
 {: #config}
@@ -72,42 +71,84 @@ Después de enlazar una instancia de servicio a una aplicación, debe configurar
 
 Cada servicio puede requerir un mecanismo diferente para comunicarse con las aplicaciones. Estos mecanismos están documentados como parte de la definición de servicio con fines informativos cuando desarrolle aplicaciones. Para una mayor coherencia, los mecanismos son necesarios para que la aplicación interactúe con el servicio.
 
-* Para interactuar con servicios de base de datos, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como, por ejemplo, el ID de usuario, la contraseña y el URI de acceso para la aplicación.
-* Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
-* Para interactuar con aplicaciones web o código en la nube del servidor para aplicaciones móviles, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
+* Para interactuar con servicios de base de datos, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como, por ejemplo, el ID de usuario, la contraseña y el URI de acceso para la aplicación.
+* Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
+* Para interactuar con app web o código en la nube del servidor para app móviles, utilice la información que {{site.data.keyword.Bluemix_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
 
-Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.cloud_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.Bluemix_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte el tema de resolución de problemas [Las apps no se reiniciarán automáticamente](/docs/troubleshoot/ts_apps.html#ts_topmenubar).
 
-## Acceso a servicios en los entornos de despliegue de {{site.data.keyword.cloud_notm}}
-{: #migrate_instance}
+## Habilitación de apps externas
+{: #accser_external}
 
-{{site.data.keyword.cloud_notm}} ofrece muchas opciones de despliegue y puede acceder a un servicio que se está ejecutando en un entorno desde un entorno diferente. Por ejemplo, si tiene un servicio que se está ejecutando en Cloud Foundry, puede acceder a dicho servicio desde una aplicación que se esté ejecutando en un clúster de Kubernetes.
+Es posible que tenga app que se crearon y ejecutaron fuera de {{site.data.keyword.Bluemix_notm}},
+o puede que utilice herramientas de terceros. Si los servicios de {{site.data.keyword.Bluemix_notm}} proporcionan claves que están accesibles en Internet, puede utilizarlas con las apps locales o herramientas de terceros.
 
-### Ejemplo: Acceda a un servicio de Cloud Foundry desde un pod de Kubernetes
+Los siguientes servicios proporcionan claves de servicio que puede utilizar de forma externa:
 
-Para acceder a un servicio de Cloud Foundry desde un pod de un clúster de Kubernetes, debe enlazar el servicio al clúster para almacenar las credenciales del servicio en un secreto de Kubernetes. A continuación, puede poner esta información a disposición de la app. 
-{: shortdesc}
+* {{site.data.keyword.amashort_old}} <!--Advanced Mobile Access-->
+* {{site.data.keyword.alchemyapishort}} <!--AlchemyAPI-->
+* {{site.data.keyword.alertnotificationshort}} <!--Alert Notification-->
+* {{site.data.keyword.sparks}} <!--Analytics for Apache Spark-->
+* {{site.data.keyword.appseccloudshort}} <!--Application Security on Cloud-->
+* {{site.data.keyword.blockchain}} <!--Blockchain-->
+* {{site.data.keyword.cloudant}} <!--Cloudant&reg; NoSQL DB-->
+* {{site.data.keyword.iotmapinsights_short}} <!--Context Mapping-->
+* {{site.data.keyword.conversationshort}} <!--Conversation-->
+* {{site.data.keyword.dashdbshort}} <!--dashDB-->
+* {{site.data.keyword.discoveryshort}} <!--Discovery-->
+* {{site.data.keyword.documentconversionshort}} <!--Document Conversion-->
+* {{site.data.keyword.iotdriverinsights_short}} <!--Driver Behavior-->
+* {{site.data.keyword.geospatialshort_Geospatial}} <!--Geospatial Analytics-->
+* {{site.data.keyword.GlobalizationPipeline_short}} <!--Globalization Pipeline-->
+* {{site.data.keyword.appconserviceshort}} <!--IBM&reg; App Connect-->
+* {{site.data.keyword.dataworks_short}} <!--IBM&reg; Data Connect-->
+* {{site.data.keyword.graphshort}} <!--IBM&reg; Graph-->
+* {{site.data.keyword.iotelectronics_full}} <!--IBM&reg; IoT for Electronics-->
+* {{site.data.keyword.twittershort}} <!--Insights for Twitter-->
+* {{site.data.keyword.iot4auto_short}} <!--IoT for Automotive-->
+* {{site.data.keyword.iotinsurance_short}} <!--IoT for Insurance-->
+* {{site.data.keyword.languagetranslatorshort}} <!--Language Translator-->
+* {{site.data.keyword.dwl_short}} <!--Lift-->
+* {{site.data.keyword.messagehub}} <!--Message Hub-->
+* {{site.data.keyword.mobileanalytics_short}} <!--Mobile Analytics-->
+* {{site.data.keyword.nlclassifiershort}} <!--Natural Language Classifier-->
+* {{site.data.keyword.objectstorageshort}} <!--Object Storage-->
+* {{site.data.keyword.personalityinsightsshort}} <!--Personality Insights-->
+* {{site.data.keyword.HybridConnect_short}} <!--Product Insights-->
+* {{site.data.keyword.mobilepush}} <!--Push-->
+* {{site.data.keyword.retrieveandrankshort}} <!--Retrieve and Rank-->
+* {{site.data.keyword.speechtotextshort}} <!-- Speech to Text-->
+* {{site.data.keyword.streaminganalyticsshort}} <!--Streaming Analytics-->
+* {{site.data.keyword.texttospeechshort}} <!--Text to Speech-->
+* {{site.data.keyword.toneanalyzershort}} <!--Tone Analyzer-->
+* {{site.data.keyword.tradeoffanalyticsshort}} <!--Tradeoff Analytics-->
+* {{site.data.keyword.weather_short}} <!--Weather Company Data-->
+* {{site.data.keyword.workloadscheduler}} <!--Workload Scheduler-->
 
-Las credenciales de servicio que se almacenan en un secreto de Kubernetes están codificadas con base64 y cifradas en etcd de forma predeterminada. 
+Para habilitar una app externa o una herramienta de terceros para que utilice un servicio {{site.data.keyword.Bluemix_notm}}, siga estos pasos:
 
-**Importante**: No haga referencia ni exponga las credenciales de servicio directamente en el archivo YAML de despliegue. Los archivos YAML de despliegue no están diseñados para contener datos confidenciales y no cifran las credenciales de servicio de forma predeterminada. Para almacenar correctamente esta información y acceder a ella, debe utilizar un secreto de Kubernetes. 
+1. Solicite una instancia del servicio.
+    1. En el Panel de control de la interfaz de usuario de {{site.data.keyword.Bluemix_notm}}, pulse **Crear recurso**. Se visualiza el Catálogo.
+    2. En el Catálogo, seleccione el servicio que desee pulsando el mosaico del servicio. Se abre la página de detalles del servicio.
+    3. En la ventana de servicio, deje la selección de lista predeterminada **Conectar a:** como **Dejar sin enlazar**. Esta selección significa que el servicio no se conecta a una app de {{site.data.keyword.Bluemix_notm}}.
+    4. Realice las selecciones que necesite. A continuación, pulse en **Crear**. Se creará una instancia de servicio y se mostrará el Panel de control del servicio.
+2. En el Panel de control del servicio, puede seleccionar **Credenciales de servicio** para visualizar o añadir credenciales en formato JSON. Seleccione un conjunto de credenciales y pulse **Ver credenciales** en la columna de acciones. Utilice la clave API que se muestra como credenciales para conectarse a la instancia del servicio.
 
-1. [Enlace el servicio al clúster](/docs/containers/cs_integrations.html#adding_cluster). 
-2. Para acceder a las credenciales de servicio desde su pod de app, elija una de las siguientes opciones. 
-   - [Monte el secreto como un volumen en el pod](#mount_secret)
-   - [Haga referencia al secreto en variables de entorno](#reference_secret)
+La aplicación que se ejecuta fuera de {{site.data.keyword.Bluemix_notm}} ahora puede acceder al servicio de {{site.data.keyword.Bluemix_notm}}.
+
+**Nota:** Si desea suprimir instancias de servicio o comprobar la información de facturación, debe volver al Panel de control de la interfaz de usuario para gestionar las instancias de servicio.
 
 ## Creación de una instancia del servicio proporcionada por el usuario
 {: #user_provide_services}
 
-Es posible que tenga servicios gestionados fuera de {{site.data.keyword.cloud_notm}}. Si tiene credenciales para acceder a estos servicios externos desde Internet, puede crear instancias de servicio proporcionadas por el usuario de {{site.data.keyword.cloud_notm}} para representar y comunicarse con los servicios externos.
+Es posible que tenga recursos gestionados fuera de {{site.data.keyword.Bluemix_notm}}. Si tiene credenciales para acceder a estos recursos externos desde Internet, puede crear instancias de servicio proporcionadas por el usuario de {{site.data.keyword.Bluemix_notm}} para representar y comunicarse con los recursos externos.
 
 Para crear una instancia de servicio proporcionada por el usuario y enlazarla a una aplicación, siga los pasos siguientes:
 
-1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato `ibmcloud service user-provided-create`:
-    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos `ibmcloud` le solicitará de uno en uno cada parámetro. Por ejemplo:
+1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato **bluemix service user-provided-create**:
+    * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos bx le solicitará de uno en uno cada parámetro. Por ejemplo:
         ```
-        ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
+        bluemix service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
         dbname> sampledb01
@@ -117,38 +158,38 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l`. Especifique el destino que proporciona el software de gestión de registros de terceros. Por ejemplo:
+    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción **-l** y especifique el destino que proporciona el software de gestión de registro del otro proveedor. Por ejemplo:
 
         ```
-        ibmcloud service user-provided-create testups2 -l syslog://example.com
+        bluemix service user-provided-create testups2 -l syslog://example.com
         Creating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato `ibmcloud service user-provided-update`.
+    Si desea actualizar uno o varios parámetros de la instancia de servicio proporcionada por el usuario, utilice el mandato **bluemix service user-provided-update**.
 
-    * Para actualizar una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y especifique las claves y valores de parámetros en un objeto JSON. Por ejemplo:
+    * Para actualizar una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y especifique las claves y valores de parámetros en un objeto json. Por ejemplo:
 
         ```
-        ibmcloud service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
+        bluemix service user-provided-update testups1 -p "{\"username\":\"pubsubuser2\",\"password\":\"p@$$w0rd2\"}"
         Updating user provided service testups1 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción `-l`. Por ejemplo:
+    * Para crear una instancia de servicio que proporcione información a software de gestión de registros de un otro proveedor, utilice la opción -l. Por ejemplo:
 
         ```
-        ibmcloud service user-provided-create testups2 -l syslog://example2.com
+        bluemix service user-provided-create testups2 -l syslog://example2.com
         Updating user provided service testups2 in org my-org / space dev as user@sample.com...
         OK
         ```
 
-2. Enlace la instancia de servicio a la aplicación con el mandato `ibmcloud service bind`. Por ejemplo:
+2. Enlace la instancia de servicio a la aplicación con el mandato `bluemix service bind`. Por ejemplo:
 
 	```
-	ibmcloud service bind myapp testups1
+	bluemix service bind myapp testups1
 	Binding service testups1 to app myapp in org my-org / space dev as user@sample.com...
 	OK
 	```
 
-Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para interactuar con un servicio ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](#config){: new_window}.
+Ahora puede configurar la aplicación para que utilice recursos externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](#config){: new_window}.

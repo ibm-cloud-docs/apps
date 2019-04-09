@@ -1,107 +1,149 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-24"
+  years: 2015, 2017, 2018
+lastupdated: "2018-01-18"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:tip: .tip}
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:note: .note}
 
-# Creación de solicitudes de firma de certificado
-{: #ssl_csr}
+# Protección de apps
+{: #securingapps}
 
-Puede proteger las aplicaciones creando y cargando certificados SSL y limitando el acceso a las aplicaciones.
+
+Puede proteger las apps subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
-Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.cloud}}, debe crear una solicitud de firma de certificado (CSR) en el servidor. Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
-y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública, así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
+## Creación de solicitudes de firma de certificado
+{: #ssl_csr}
+
+Para poder cargar los certificados SSL a los que esté autorizado con {{site.data.keyword.Bluemix}}, debe
+crear una solicitud de firma de certificado (CSR) en el servidor.
+
+Una CSR es un mensaje que se envía a una entidad emisora de certificados para solicitar la firma de una clave pública
+y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública,
+así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
 sólo están aceptadas con una longitud de claves CSR de 2048 bits.
 
-## Creación de una CSR
+Para que la CSR sea válida, se debe especificar la siguiente información al generar la CSR:
 
-Los métodos para crear una CSR varían en función del sistema operativo. En el ejemplo siguiente se
+#### Nombre de país
+
+  Un código de dos dígitos que representa el país o la región. Por ejemplo, "US" representa los Estados Unidos. Para otros países o regiones, consulte la [lista de códigos de países ISO ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo")](https://www.iso.org/obp/ui/#search){:new_window} antes de crear la CSR.
+
+#### Estado o provincia
+
+  El nombre completo no abreviado del estado o de la provincia.
+
+#### Localidad
+
+  El nombre completo del pueblo o ciudad.
+
+#### Organización
+
+  El nombre completo de la empresa, como esté registrada legalmente en su localidad, o el nombre personal. Para las empresas, asegúrese de incluir el sufijo de registro, como por ejemplo Ltd., Inc. o NV.
+
+#### Unidad organizativa
+
+  Nombre de la rama de su empresa que está pidiendo el certificado, como por ejemplo Contabilidad o
+Marketing.
+
+#### Nombre común
+
+  Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.
+
+Los métodos para crear una CSR varían en función del sistema operativo. El ejemplo siguiente
 muestra cómo crear una CSR utilizando [la herramienta de línea de mandatos OpenSSL ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://www.openssl.org/){:new_window}:
 
 ```
-openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
+openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
+    privatekey.key
 ```
-{: codeblock}
 
-La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las aplicaciones que tienen problemas de compatibilidad con el certificado SHA-256.
-{: tip}
+**Nota:** La implementación SHA-512 de OpenSSL depende del soporte del compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
 
 Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Después de crear la CSR, puede generar el certificado SSL en una entidad emisora de certificados pública.
-
-### Contenido necesario de CSR
-
-Para que la CSR sea válida, debe especificarse la siguiente información al crear la CSR:
-
-<dl>
-<dt>Nombre de país</dt>
-<dd>Un código de dos dígitos correspondiente al país o a la región. Por ejemplo, `US` es el código de país correspondiente a Estados Unidos. Para otros países o regiones, consulte la [lista de códigos de países ISO ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.iso.org/obp/ui/#search).
-</dd>
-<dt>Estado o provincia</dt>
-<dd>El nombre completo no abreviado del estado o de la provincia.</dd>
-<dt>Localidad</dt>
-<dd>El nombre completo del pueblo o la ciudad.</dd>
-<dt>Organización</dt>
-<dd>El nombre completo de la empresa, como esté registrada legalmente en su localidad, o el nombre personal. Para las empresas, asegúrese de incluir el sufijo de registro, como por ejemplo Ltd., Inc. o NV.</dd>
-<dt>Unidad organizativa</dt>
-<dd>Nombre de la rama de su empresa que está pidiendo el certificado, como por ejemplo contabilidad o
-marketing.</dd>
-<dt>Nombre común</dt>
-<dd>Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.</dd>
-</dl>
-
-Puede utilizar Nombres alternativos de sujeto (SAN, Subject Alternative Names), pero los nombres de host proporcionados no pueden haberse emitido en otros certificados desplegados para evitar conflictos de CN.
-{: note}
 
 ## Carga de certificados SSL
 {: #ssl_certificate}
 
-Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la aplicación a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes. Si el propietario de su cuenta tiene una cuenta Lite gratuita, debe actualizar su cuenta para cargar un certificado.
+Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la aplicación a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes.
 
-Si utiliza un dominio personalizado para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.cloud_notm}}:
+Por cada organización de {{site.data.keyword.Bluemix_notm}} con un propietario de cuenta que tenga un plan de tipo Pague según uso o un plan de suscripción, tiene derecho a cuatro cargas de certificado. Por cada organización con un propietario de cuenta que tenga una cuenta de prueba gratuita, debe actualizar su cuenta para cargar un certificado.
 
-* US-South - `custom-domain.us-south.cf.cloud.ibm.com`
-* US-East - `custom-domain.us-east.cf.cloud.ibm.com`
-* EU-DE - `custom-domain.eu-de.cf.cloud.ibm.com`
-* EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
-* AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
+Para poder cargar los certificados, debe crear una
+solicitud de firma de certificado. Consulte [Creación de solicitudes de firma de certificado](#ssl_csr).
 
-Para cargar un certificado para su aplicación, complete los siguientes pasos:
+Cuando utiliza un dominio personalizado, para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.Bluemix_notm}}:
 
-1. Vaya a la lista de recursos en la consola de {{site.data.keyword.cloud_notm}}.
+  * US-South: secure.us-south.bluemix.net
+  * US-East: secure.us-east.bluemix.net
+  * EU-DE: secure.eu-de.bluemix.net
+  * EU-GB: secure.eu-gb.bluemix.net
+  * AU-SYD: secure.au-syd.bluemix.net
 
-2. Seleccione su app para ver los detalles de la app.
 
-3. Pulse **Rutas** > **Gestionar dominios**.
+Para cargar un certificado para la aplicación:
 
-4. En la columna Acciones, pulse el icono Acciones ![Icono Más acciones](../icons/action-menu-icon.svg) > **Dominios**.
+1. Vaya a su panel de control.
 
-5. Pulse **Cargar** en la columna Certificado SSL y seleccione su dominio personalizado:
-  
-  * Certificado: documento digital que enlaza una clave pública con la identidad del propietario
-del certificado, permitiendo de este modo autenticar al propietario de este certificado. Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
-  * Clave privada: patrón algorítmico utilizado para cifrar mensajes que solo se pueden descifrar con la clave pública correspondiente. La clave privada también se utiliza para descifrar mensajes que se han cifrado mediante la clave pública correspondiente. La clave privada se guarda en el sistema del usuario y se
+2. Seleccione el nombre de la app de la que desea ver su vista de detalles.
+
+3. Seleccione el desplegable **Rutas** y, a continuación, seleccione **Gestionar dominios**.
+
+3. Para su dominio personalizado, pulse **Cargar certificado**.
+
+4. Busque el certificado, clave privada y, si lo desea, certificado intermedio que desee cargar. También puede marcar el recuadro de selección para habilitar las solicitudes de un certificado de cliente. Si habilita la opción para solicitar un certificado de cliente, deberá cargar un archivo de almacén de confianza de certificados de cliente que defina el acceso de usuario permitido para su dominio personalizado.
+
+  #### Certificado
+
+    Documento digital que enlaza una clave pública con la identidad del propietario
+del certificado, permitiendo de este modo autenticar al propietario de este certificado. Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente.
+
+    Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
+
+    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
+
+	* PEM (pem, .crt, .cer y .cert)
+	* DER (.der o .cer )
+	* PKCS #7 (p7b, p7r, spc)
+
+  #### Clave privada
+
+    Patrón algorítmico que se utiliza para cifrar mensajes que sólo la correspondiente clave pública puede descifrar. La clave privada también se utiliza para descifrar mensajes que se han cifrado mediante la clave pública correspondiente. La clave privada se guarda en el sistema del usuario y se
 protege mediante una contraseña.
-  * Certificado intermedio (opcional): certificado subordinado emitido por la entidad emisora de certificados (CA) raíz de confianza específicamente para emitir certificados del servidor de la entidad final. El resultado es una cadena de certificados que empieza en la entidad emisora de certificados raíz de confianza, pasa por el certificado intermedio y termina con la emisión del certificado SSL a la organización. Utilice a un certificado intermedio para verificar la autenticidad del certificado principal. Los certificados intermedios normalmente se obtienen de un tercero de confianza. Es posible que no necesite un certificado intermedio para probar la aplicación antes de desplegarla en producción.
-  * Habilitar solicitud de certificado de cliente: si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. 
 
-    La característica de certificado personalizado de la gestión del dominio {{site.data.keyword.cloud_notm}} depende de la extensión Indicación de Nombres del Servidor (SNI) del protocolo de seguridad de la capa de transporte (TLS). El código de cliente que accede a las aplicaciones {{site.data.keyword.cloud_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
-    {: note}
-  
-  * Almacén de confianza de certificados de cliente (opcional): incluye los certificados de cliente para los usuarios a los que desea permitir el acceso a la aplicación. Cargue un archivo de almacén de confianza de certificado de cliente para habilitar la opción de solicitud de certificado de cliente.
-  
-    Puede configurar la autenticación mutua cargando un almacén de confianza de certificado de cliente que incluya una clave pública en sus metadatos.
-    {: tip}
+    En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de claves públicas:
 
-Para obtener más información, consulte [Importación de certificados SSL](/docs/infrastructure/ssl-certificates/import-ssl-certificate.html#import-an-ssl-certificate).
+    * PEM (pem, .key)
+    * PKCS #8 (p8, pk8)
 
+    **Limitación:** Las claves privadas protegidas con una contraseña no se pueden cargar.
 
+  #### Certificado intermedio
+
+    Certificado subordinado emitido por la entidad emisora de certificados (CA) raíz de confianza específicamente para emitir certificados del servidor de la entidad final. El resultado es una cadena de certificados que empieza en la entidad emisora de certificados raíz de confianza, pasa por el certificado intermedio y termina con la emisión del certificado SSL a la organización.
+
+    Debe utilizar a un certificado intermedio para verificar la autenticidad del certificado principal. Los certificados intermedios normalmente se obtienen de un tercero de confianza. Es posible que no necesite un certificado intermedio para probar la aplicación antes de desplegarla en producción.
+
+  #### Habilitar solicitud de certificado de cliente
+
+    Si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio. Utilice la opción de carga de archivo de **Almacén de confianza de certificado de cliente** para definir los certificados del lado del cliente que permiten acceder al dominio personalizado.
+
+  **Nota:** La característica de certificado personalizado de la gestión de dominios de {{site.data.keyword.Bluemix_notm}} depende de la extensión Server Name Indication (SNI) del protocolo de seguridad de la capa de transporte (TLS). Por lo tanto, el código de cliente que accede a las apps {{site.data.keyword.Bluemix_notm}} que se protegen mediante certificados personalizados deben admitir la extensión SNI de la implementación de TLS. Para obtener más información, consulte [sección 7.4.2 de RFC 4346 ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} y [Protección de datos con TLS](/docs/get-support/appsectls.html).
+
+  #### Almacén de confianza de certificado de cliente
+
+  El almacén de confianza de certificado de cliente es un archivo que contiene los certificados de cliente para los usuarios que desea que puedan acceder a la aplicación. Si habilita la opción para solicitar un certificado de cliente, cargue un archivo de almacén de confianza de certificado de cliente.
+
+   En {{site.data.keyword.Bluemix_notm}} se da soporte a los siguientes tipos de certificados:
+
+      * PEM (pem, .crt, .cer y .cert)
+	  * DER (.der o .cer )
+      * PKCS #7 (p7b, p7r, spc)
+
+Para suprimir un certificado o sustituir un certificado existente con uno nuevo, vaya a **Gestionar** > **Cuenta** > **Organizaciones de Cloud Foundry**. A continuación, pulse **Ver detalles** > **Editar Organización** > **Dominios** para sustituir o reemplazar un certificado para un dominio personalizado.

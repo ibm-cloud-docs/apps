@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017, 2018
-lastupdated: "2018-11-06"
+lastupdated: "2018-01-18"
 
 ---
 
@@ -12,13 +12,13 @@ lastupdated: "2018-11-06"
 # Verificando o status de seu app
 {: #manageapps}
 
-A lista de recursos no console do {{site.data.keyword.Bluemix}} fornece as informações de resumo para os aplicativos que você criou. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app.
+Seu painel no console do {{site.data.keyword.Bluemix}} fornece informações de resumo para os aplicativos que você criou. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app.
 {:shortdesc}
 
 ## Entendendo o status de seu app
 {: #status}
 
-Na lista de recursos, é possível visualizar o status de cada aplicativo. Na coluna de estado para cada aplicativo, é possível ver se as instâncias do app estão em execução.
+Em seu painel, é possível visualizar o status de cada aplicativo:
 
 <dl>
 <dt>
@@ -56,12 +56,12 @@ Seu app não está em execução. O ícone vermelho indica que o app está inici
 </dd>
 </dl>
 
-## Visualizando os detalhes do app
+## Visualizando seu painel de detalhes do app
 {: #viewingapps}
 
-É possível visualizar mais informações sobre um app clicando no nome dele na lista de recursos. Em seguida, é possível ver a página Visão geral do app.
+É possível visualizar mais informações sobre um app clicando no nome dele em seu painel. Em seguida, é possível ver a página Visão geral do app.
 
-Na página Visão geral dos apps, após a implementação de um app, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória usada pelo app. Para aplicativos da web, o {{site.data.keyword.Bluemix_notm}} não escala automaticamente seu app com base em sua carga, então é necessário gerenciar isso sozinho.
+Na página Visão geral de apps, depois que um app é implementado, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória que é usada pelo app. Para aplicativos da web, o {{site.data.keyword.Bluemix_notm}} não escala automaticamente seus apps com base em sua carga, então deve-se gerenciar isso sozinho.
 
-Se uma atualização é feita, os apps podem ser reimplementados. O mecanismo para atualizar o app é o mesmo mecanismo que é usado para implementá-lo originalmente. {{site.data.keyword.Bluemix_notm}} para todas as instâncias em execução
+Os apps poderão ser reimplementados se uma atualização for feita. O mecanismo para atualizar o app é o mesmo mecanismo que é usado para implementá-lo originalmente. {{site.data.keyword.Bluemix_notm}} para todas as instâncias em execução
 e as substitui por novas instâncias automaticamente.

@@ -2,33 +2,34 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2017-01-26"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 
-# Apps migrieren und hosten
+# Apps hosten
 {: #hosting}
 
-Vorhandene Apps können Sie unter {{site.data.keyword.cloud}} mit allen benötigten Infrastruktur- oder Plattformservices hosten. Sie können Ihre App auch inkrementell zu {{site.data.keyword.cloud_notm}} migrieren, statt sie in einem Gang komplett in die Cloudumgebung zu schieben.
+Vorhandene Apps können Sie in IBM Cloud mit allen benötigten Infrastruktur- oder Plattformservices hosten. Bei vorhandenen Apps können Sie die Vorteile der {{site.data.keyword.Bluemix_notm}}-Infrastruktur für das Hosting von Apps nutzen, die Sie speziell für {{site.data.keyword.Bluemix_notm}} entwickelt haben.
+{:shortdesc}
 
 ## Apps migrieren
-{: #migrating}
-
-Wenn Ihre App auf Ihre lokalen Daten oder Services zugreifen soll, können Sie mit [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) einen sicheren Tunnel zwischen einer {{site.data.keyword.cloud_notm}}-Organisation und Ihrem Unternehmens-Back-End einrichten. Details hierzu finden Sie unter [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
-
-Wenn Sie Unterstützung bei der Migration benötigen, sind [{{site.data.keyword.cloud_notm}} Migrationsservices ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/cloud/migration-services){: new_window} verfügbar.
-
-## Apps hosten
 {: #ht_hostapp}
 
-Im {{site.data.keyword.cloud_notm}}-[Katalog ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} können Sie eine verwaltete Umgebung wie Kubernetes oder Cloud Foundry auswählen oder alternativ Ihre App direkt auf einem Bare-Metal- oder virtuellen Server hosten.
+Vorhandene Apps können Sie nach und nach auf {{site.data.keyword.Bluemix_notm}} migrieren, statt die Apps vollständig auf die Cloudumgebung umzustellen. Sie können zuerst einen Teil der App migrieren und danach mit dem Service 'Cloud Integration' eine Verbindung zu vorhandenen Daten oder einem System of Record herstellen.
 
-In einer virtuellen Bereitstellung werden die meisten Operationen Ihrer App von {{site.data.keyword.cloud_notm}} verwaltet. Eine [virtuelle](/docs/vsi/vsi_about.html) Bereitstellung ist am besten geeignet, wenn die Workload über geografische Regionen verteilt ist und Sie einen {{site.data.keyword.cloud_notm}}-Hypervisor zum Verwalten Ihrer Bereitstellungen verwenden möchten. Eine [Bare-Metal](/docs/bare-metal/index.html#getting-started)-Bereitstellung eignet sich am besten, wenn Sie direkten Zugriff auf einen dedizierten physischen Server für hohe Leistung benötigen.
+Es kann erforderlich sein, für die {{site.data.keyword.Bluemix_notm}}-Apps auf Back-End-Daten oder -Services zuzugreifen, zum Beispiel auf ein System of Record (SOR, Kerndatensystem). In {{site.data.keyword.Bluemix_notm}} können Sie den Service 'Secure Gateway' zum Herstellen eines sicheren Tunnels zwischen einer {{site.data.keyword.Bluemix_notm}}-Organisation und dem Back-End-Netz eines Unternehmens verwenden. Mithilfe des Service können die Apps in {{site.data.keyword.Bluemix_notm}} auf die Daten und Services des Back-End-Netzes zugreifen. Details hierzu finden Sie unter [Reaching enterprise backend with Bluemix Secure Gateway via console ![Symbol für externen Link](../icons/launch-glyph.svg)](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window}.
 
-Folgende Optionen stehen unter Umständen ebenfalls zur Verfügung:
-* Auswahl des geeigneten Typs von [Speicher![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} (Blockspeicher, Dateispeicher oder Objektspeicher).
-* Auswahl des erforderlichen Typs von [Netzwerk![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window}.
-* Auswahl eines [Containerisierungsservice![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window}, um die Kubernetes-Technologie von {{site.data.keyword.cloud_notm}} zu nutzen.
+{{site.data.keyword.Bluemix_notm}} kann bereits vorhandene Apps hosten und die gesamte benötigte Infrastruktur bereitstellen. Im [Katalog](https://console.bluemix.net/catalog/?taxonomyNavigation=apps) können Sie auswählen, ob Sie als Host für Ihre App einen Bare-Metal-Server oder einen virtuellen Server verwenden möchten. Eine [Bare-Metal](../bare-metal/index.html#about-bare-metal-servers)-Bereitstellung eignet sich am besten, wenn Sie einen dedizierten physischen Server für hohe Leistung benötigen. Eine [virtuelle](/vsi/vsi_index.html#provisioning-a-virtual-server) Bereitstellung ist am besten geeignet, wenn die Workload über geografische Regionen verteilt ist und Sie einen {{site.data.keyword.Bluemix_notm}}-Hypervisor zum Verwalten Ihrer Bereitstellungen verwenden möchten.
+
+Sie können die einzelnen Komponenten einer App entweder komplett auf einmal oder nacheinander auf {{site.data.keyword.Bluemix_notm}} migrieren. Berücksichtigen Sie beim Migrieren Ihrer App unter anderem die folgenden Services, die Sie nutzen können:
+
+* Wählen Sie den Typ des für Sie geeigneten [Speichers](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slstorage) aus (Blockspeicher, Dateispeicher oder Objektspeicher).
+* Wählen Sie den Typ des benötigten [Netzes](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=slnetwork) aus.
+* Wählen Sie einen Service für die [Containerisierung](https://console.bluemix.net/catalog/?taxonomyNavigation=apps&category=containers) aus, um die Kubernetes-Technologie von {{site.data.keyword.Bluemix_notm}} zu nutzen.
+
+## Nächste Schritte
+{: #next-steps}
+
+Falls Ihr Service in mehreren Regionen gehostet werden kann, können Sie auswählen, wo Ihre App gehostet werden soll. Registrieren Sie sich hierzu und fügen Sie Ihre angepassten URL-Angaben in Ihrer App in {{site.data.keyword.Bluemix_notm}} hinzu. Wählen Sie anschließend die Regionen aus, in denen Ihre App gehostet wird. Der Abschnitt [Apps aktualisieren](updapps.html) enthält weitere Informationen zur Bereitstellung Ihrer App.

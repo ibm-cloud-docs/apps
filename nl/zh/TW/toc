@@ -2,83 +2,39 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/development_process.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html"}
 建立應用程式
 
     {: .navgroup id="learn"}
-    {: .topicgroup}
-    開始使用
-        tutorials/tutorial_starter-kit.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-    
-    development_process.md
+    index.md
     best-practice.md
-    patterns.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
-    建立應用程式
-        tutorials/tutorial_web.md
-        tutorials/tutorial_bff.md
-        tutorials/tutorial_microservice.md
-        tutorials/tutorial_mobile.md
-        deploying/functions.md
-        tutorials/tutorial_mendix_getting_started.md
+    開發應用程式
+        [使用 Eclipse Tools 進行開發](../starters/deploy_eclipsetools.html)
 
     {: .topicgroup}
-    部署及整合應用程式
-        vsi-deploy.md
-        deploying/containers.md
-        tutorials/tutorial_byoc_kube.md
-        tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
-        tutorials/tutorial_mendix_kubernetes.md
+    部署應用程式
+        install_cli.md
+        ../starters/upload_app.md
 
     reqnsi.md
-    
-    {: .topicgroup}
-    將認證新增至環境
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    mngapps.md
-    updapps.md
-    secapps.md
     hosting.md
-    {: .navgroup-end}
-
-    {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 指令行參考資料](https://cloud.ibm.com/docs/cli/idt/commands.html)
 
     {: .topicgroup}
-    IBM 開發人員儀表板
-        [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [財務](https://cloud.ibm.com/developer/finance/dashboard)
-        [行動](https://cloud.ibm.com/developer/mobile/dashboard)
-        [安全](https://cloud.ibm.com/developer/security/dashboard)
-        [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Web 應用程式](https://cloud.ibm.com/developer/appservice/dashboard)
+    管理應用程式
+        mngapps.md
+        updapps.md
 
     {: .topicgroup}
-    應用程式內容
-        projects/compose_file.md
-        projects/java_project_contents.md
-        projects/node_project_contents.md
-        projects/python_project_contents.md
-        projects/swift_project_contents.md
-
-    at_events_devx.md
+    保護應用程式安全
+        overview.md
+        secapps.md
+        deployment.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    ts_apps.md
-    [IBM Cloud Slack developer-tools 頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API 參考資料](https://cloud.ibm.com/apidocs/functions)
-    [行動 SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [管理應用程式疑難排解](../troubleshoot/ts_apps.html)
     {: .navgroup-end}

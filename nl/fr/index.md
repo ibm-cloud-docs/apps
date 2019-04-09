@@ -2,70 +2,51 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-01-18"
 
 ---
 
 {:shortdesc: .shortdesc}
-{:tip: .tip}
-{:new_window: target="_blank"}
-{:codeblock: .codeblock}
-{:screen: .screen}
 
-# Tutoriel d'initiation
+# Création d'applications dans {{site.data.keyword.Bluemix_notm}}
 {: #create}
 
-Dans {{site.data.keyword.Bluemix}}, vous pouvez générer des applications mobiles et Web au niveau de l'entreprise, et tirer parti des extensions cloud hébergées par {{site.data.keyword.Bluemix_notm}}. Vous pouvez utiliser les outils de ligne de commande et la console {{site.data.keyword.Bluemix}} pour générer, exécuter et déployer vos applications. Démarrez de deux façons : en créant une application avec un kit de démarrage qui gère le processus pour vous, ou, si vous savez précisément ce que vous voulez, en générant votre application avec les ressources dont vous avez besoin.
-{:shortdesc}
+Dans {{site.data.keyword.Bluemix}}, vous pouvez générer des applications mobiles et Web au niveau de l'entreprise, et bénéficier des extensions cloud hébergées par {{site.data.keyword.Bluemix_notm}}. Vous pouvez utiliser les outils de ligne de commande et la console {{site.data.keyword.Bluemix}} pour générer, exécuter et déployer vos applications. Suivez ce scénario de développement de bout en bout pour
+commencer.
 
-Vous pouvez utiliser un kit de démarrage pour que votre application démarre rapidement et pour la préparer à des développements futurs. Choisissez un kit de démarrage et un langage de programmation, créez une application, puis configurez une chaîne d'outils DevOps pour déployer automatiquement votre application. Vous pouvez également télécharger le code pour un examen immédiat.
+## Etape 1 : Inscrivez-vous pour obtenir un compte {{site.data.keyword.Bluemix_notm}} 
+{: #sign-up}
 
-Les kits de démarrage sont disponibles dans de nombreuses catégories, telles que les suivantes :
+Accédez à [bluemix.net](bluemix.net). Indiquez vos e-mail, nom, société, région, numéro de téléphone, ainsi que ce que vous avez fait. Vous n'avez pas besoin d'une carte de crédit pour créer un compte gratuit. N'hésitez pas à explorer.
 
-* [Watson ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/watson/dashboard){:new_window}
-* [Apple ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appledevelopment/dashboard){:new_window}
-* [Mobile ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/mobile/dashboard){:new_window}
-* [Application Web ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/appservice/dashboard){:new_window}
-* [Sécurité ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/security/dashboard){:new_window}
-<!--* [Watson Data Platform developer console](https://console.bluemix.net/developer/dataplatform)-->
-* [Finance ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/developer/finance/dashboard){:new_window}
+## Etape 2 : Consultez le catalogue
+{: #catalog}
 
-## Avant de commencer
+Le catalogue {{site.data.keyword.Bluemix_notm}} répertorie les ressources d'infrastructure et de plateforme proposées. Vous pouvez commencer à générer votre application en sélectionnant une machine virtuelle, un conteneur, Cloudant ou une application Cloud Foundry. Si vous avez besoin de ressources de plateforme, {{site.data.keyword.Bluemix_notm}} propose également des conteneurs boilerplate, qui fournissent des environnement d'exécution et autres services pour vous aider à vous lancer. 
 
-[Inscrivez-vous ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net){: new_window} pour obtenir un compte {{site.data.keyword.cloud_notm}}. Indiquez votre adresse électronique, votre nom, le nom de votre société, votre région et votre numéro de téléphone.
+## Etape 3 : Créez une ressource
+{: #resource}
 
-Vous n'avez pas besoin de carte de crédit pour obtenir un compte gratuit. Cependant, si vous entrez un numéro de carte de crédit, vous pourrez accéder à davantage de ressources et pourrez plus facilement vous procurer toutes les offres {{site.data.keyword.cloud_notm}}.
+1. Dans votre [tableau de bord](https://console.bluemix.net/dashboard/apps/), cliquez sur **Créer une ressource**.
 
-## Etape 1. Créer une application
-{: #project}
+2. Depuis le catalogue, sélectionnez une application à la section Plateforme. Sélectionnez ensuite votre environnement d'exécution. Vous pouvez, par exemple, choisir un environnement d'exécution IBM comme Liberty for Java, pris en charge par les packs de construction IBM. Vous pouvez également opter pour une solution communautaire, telle que Tomcat, qui repose sur des packs de construction open source et tiers.
 
-1. Cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) > **Applications Web**.
+  * [Initiation aux conteneurs](../containers/container_index.html)
+  * [Initiation à Openwhisk](../openwhisk/index.html)
+  * [Création d'applications Cloud Foundry](../cfapps/index.html#creating_cloud_foundry_apps)
 
-2. Cliquez sur **Initiation** dans la section **Démarrer à partir du Web**.
+3. Entrez vos nom d'application, nom d'hôte et sélectionnez votre plan de tarification. 
 
-3. Sélectionnez un kit de démarrage de votre choix, lisez les détails, puis cliquez sur **Créer**.
+4. Sélectionnez votre style de développement. Vous pouvez éditer votre application dans votre éditeur de texte préféré et utiliser la ligne de commande {{site.data.keyword.Bluemix_notm}} pour la déployer sur {{site.data.keyword.Bluemix_notm}}. Vous pouvez également utiliser les services {{site.data.keyword.Bluemix_notm}} DevOps pour déployer votre application depuis un navigateur ou utiliser les outils Eclipse Tools for {{site.data.keyword.Bluemix_notm}} pour travailler sur vos applications dans l'environnement de développement intégré Eclipse.
 
-   Pour voir ce qui est inclus dans le kit de démarrage, développez la vignette sur le tableau de bord des kits de démarrage de service d'application.
-   {: tip}
+## Etape 4 : Commencez à ajouter du code
+{: #code}
 
-4. Donnez un nom à votre application, sélectionnez votre langage, puis cliquez sur **Créer**.
+Chaque application est fournie avec une section d'initiation qui vous aide à réunir tout les logiciels et le contenu dont vous avez besoin pour commencer à travailler. 
 
-   C'est un bon début ! Vous venez de créer une application.
+Dans votre tableau de bord, cliquez sur votre application, puis cliquez sur **Initiation**, qui peut vous aider à réunir les logiciel dont vous avez besoin pour développer votre application, vous indique le code source et vous aide à déployer votre application pour la première fois.
 
-   Pour examiner votre code, cliquez sur **Télécharger le code** sur la page des détails d'application. Consultez le fichier `README.md` se trouvant dans le fichier compressé téléchargé pour savoir si vous devez exécuter d'autres actions pour rendre votre application de démarrage opérationnelle.
-   {: tip}
+## Etapes suivantes
+{: #next}
 
-## Etape 2. Ajouter des ressources
-{: #addResources}
-
-La majeure partie des kits de démarrage demande à {{site.data.keyword.cloud_notm}} de mettre automatiquement des ressources à votre disposition. Vous pouvez également associer davantage de ressources à votre application en cliquant sur **Ajouter une ressource** sur la page des détails d'application.
-
-Pour développer et exécuter votre application localement utilisez le [{{site.data.keyword.dev_cli_notm}}](../cli/idt/index.html)
-{: tip}
-
-## Etape 3. Déployer votre application
-{: #deploy}
-
-Cliquez sur **Déployer dans Cloud** sur la page des détails d'application, sélectionnez une méthode de déploiement, par exemple, Cluster Kubernetes ou Application Cloud Foundry, puis cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue. Ouvrez le composant pipeline de votre nouvelle chaîne d'outils afin de commencer le processus de génération et de déploiement initial de sorte que vous puissiez voir votre application après quelques minutes.
-
-Vous êtes maintenant prêt pour des tâches de développement itératif et de distribution continue.
+Une fois votre application développée, utilisez nos guides des [meilleures pratiques](best-practice.html) et de [préparation au cloud](cloud-ready.html) pour vous assurer que votre application est prête pour {{site.data.keyword.Bluemix_notm}}. [Déployez](../starters/install_cli.html) ensuite votre application.
