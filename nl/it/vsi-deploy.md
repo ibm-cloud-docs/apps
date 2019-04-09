@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, V
 
 L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
-1. [Crea un'applicazione](tutorials/tutorial_scratch.html#tutorial-scratch). 
+1. [Crea un'applicazione](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
 2. Fai clic su **Deploy to Cloud** dalla pagina dei dettagli dell'applicazione.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 

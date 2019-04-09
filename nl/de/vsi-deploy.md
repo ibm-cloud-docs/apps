@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ Services werden nicht an die virtuelle Serverinstanz gebunden. Sie können Servi
 
 Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
-1. [Erstellen Sie eine App](tutorials/tutorial_scratch.html#tutorial-scratch). 
+1. [Erstellen Sie eine App](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
 2. Klicken Sie auf der Detailseite der App auf **In Cloud bereitstellen**.
 3. Wählen Sie die Option zur Bereitstellung auf einem virtuellen Server gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll.
 

@@ -48,7 +48,7 @@ Vous pouvez ajouter des ressources qui améliorent votre application avec la pui
 
 Une fois que vous avez ajouté une ressource à votre application ou si des services sont requis pour votre application, notez que les données d'identification de ce service s'affichent dans la zone **Données d'identification**. Vous devez copier manuellement ces informations dans votre environnement de déploiement.
 
-Pour plus d'informations sur la copie des données d'identification dans votre environnement, voir [Présentation des données d'identification](/docs/apps/creds_overview.html#credentials_overview).
+Pour plus d'informations sur la copie des données d'identification dans votre environnement, voir [Présentation des données d'identification](/docs/apps/creds_overview.html).
 
 ## Etape 4. Déployer dans {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}

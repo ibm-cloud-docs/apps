@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 {: #prereqs-mendix-kube}
 
 - 建立 Mendix 應用程式。如需相關資訊，請參閱[建立 Mendix 應用程式](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix)。
-- 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli/index.html#overview)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
+- 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli/index.html)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
 - 登入 `ibmcloud` CLI 並配置 `kubectl` 以便[存取 Kubernetes 叢集](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)。
 
 ## 建立 Cloud Object Storage 服務實例

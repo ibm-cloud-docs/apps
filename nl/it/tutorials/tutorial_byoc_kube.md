@@ -45,9 +45,9 @@ Aggiungi una risorsa di servizio alla tua applicazione e {{site.data.keyword.clo
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione. {{site.data.keyword.cloud_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le
 applicazioni Web.
 
-Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps/reqnsi.html#add-resource).
+Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di una risorsa alla tua applicazione](/docs/apps/reqnsi.html#).
 
-Dopo aver aggiunto una risorsa di servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps/creds_kube.html#add_credentials).
+Dopo aver aggiunto una risorsa di servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps/creds_kube.html).
 
 ## Preparazione della tua applicazione per la distribuzione
 {: #deploy-byoc-kube}
@@ -86,20 +86,20 @@ Per ulteriori informazioni sull'aggiunta del tuo repository alla tua toolchain, 
 
 Se vuoi controllare completamente la creazione della toolchain DevOps senza alcuna modifica nel repository del codice, crea la toolchain da zero. Crei anche tutte le integrazioni per creare la tua applicazione e distribuirla al cluster Kubernetes. 
 
-1. Nella pagina Create a Toolchain, fai clic sul modello **Build your own toolchain**.
+1. Nella pagina Create a Toolchain, fai clic sul template **Build your own toolchain**.
 2. Immetti un nome per la tua toolchain, seleziona una regione e un gruppo di risorse (predefinito) e fai clic su **Create**.
 
 Quando scegli di creare una toolchain dalla tua nuova applicazione, la pagina [Create a Toolchain](https://{DomainName}/devops/create) nel dashboard DevOps si apre in una nuova scheda del tuo browser. Dopo aver creato e configurato la tua toolchain in tale scheda, devi tornare alla pagina Connect a toolchain nella tua applicazione e aggiornare la pagina.
 {:tip}
 
-Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Il comando genera un modello di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale modello come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
+Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Il comando genera un template di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale template come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
 
 ## Aggiunta di un'integrazione GitHub
 {: #github-byoc-kube}
 
 Configura la toolchain DevOps con un'integrazione per il tuo repository GitHub per consentire alla toolchain di impostare un webhook nel tuo repository in modo che le richieste di pull e i push di codice in tale repository inviino un POST alla toolchain. 
 
-1. Nel tuo modello di toolchain DevOps, fai clic su **Add a Tool**.
+1. Nel tuo template di toolchain DevOps, fai clic su **Add a Tool**.
 2. Seleziona **GitHub** se il tuo repository si trova su GitHub pubblico o su GitHub Enterprise.
 3. Seleziona o immetti l'URL del server GitHub.
 4. Potrebbe essere visualizzato il messaggio `Unauthorized on GitHub`. In questo caso, fai clic su **Authorize**. Quindi, nella pagina Authorize IBM Cloud Toolchains, fai clic su **Authorize IBM-Cloud** e immetti la tua password GitHub.
@@ -147,7 +147,7 @@ Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del 
       mvn -B clean verify
       ```
       {: codeblock}
-  4. Fai clic su **Save**. 
+  4. Fai clic su **Salva**. 
 2. Verifica la fase della tua pipeline `build and publish` facendo clic sull'icona **Play** fino a che la build non riesce. Una fase di colore verde indica che la build è riuscita. 
 3. Configura la fase della pipeline `deploy to cluster` per distribuire l'immagine Docker al tuo cluster Kubernetes. 
   1. Nella pagina della delivery pipeline, fai clic su **Add a Stage**.
@@ -162,7 +162,7 @@ Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del 
     * Seleziona **Kubernetes** per il tipo di deployer.
     * Seleziona la regione in cui si trova il tuo cluster Kubernetes.
     * Immetti la tua chiave API esistente. 
-  4. Fai clic su **Save**.
+  4. Fai clic su **Salva**.
 4. Verifica la fase della tua pipeline `deploy to cluster` facendo clic sull'icona **Play** fino a che la build non riesce. Una fase di colore verde indica che la build è riuscita.
 
 ## Verifica che la tua applicazione sia in esecuzione

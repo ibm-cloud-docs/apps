@@ -22,7 +22,7 @@ lastupdated: "2019-02-04"
 ## Antes de começar
 {: #prereqs-getting-started}
 
-É possível criar o seu app usando o console ou a interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}}. Se você desejar usar a CLI, consulte [Introdução à CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) para obter detalhes da instalação.
+É possível criar o seu app usando o console ou a interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}}. Se você desejar usar a CLI, consulte [Introdução à CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) para obter detalhes da instalação.
 
 ## Etapa 1. Criar o seu app
 {: #create-getting-started}

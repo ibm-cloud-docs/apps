@@ -78,7 +78,7 @@ Si utiliza `git clone` en el repositorio de GitLab creado para iniciar el desarr
 Puede recuperar el archivo `server/localdev-config.json` siguiendo estos pasos:
 
 1. Utilice `git clone` en el repositorio de Git lab que se ha creado automáticamente cuando ha utilizado la característica "Desplegar en la nube".
-2. Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), que incluye el plugin `dev`.
+2. Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), que incluye el plugin `dev`.
 3. Utilice la línea de mandatos `ibmcloud` para iniciar una sesión en {{site.data.keyword.cloud_notm}}.
 4. Ejecute `ibmcloud dev get-credentials`, que hace referencia al archivo `cli-config.yml`. El archivo `cli-config.yml` incluye información sobre la aplicación y el trabajo de generación que tiene las credenciales.
 

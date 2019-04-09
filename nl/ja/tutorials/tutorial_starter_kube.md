@@ -99,7 +99,7 @@ DevOps ツールチェーンをアプリケーションに接続し、{{site.dat
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
-コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。次に、ブラウザーでその URL にアクセスします。
+コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。
 
 ## 次のステップ
 {: #next-steps-startkit-kube notoc}
@@ -107,7 +107,7 @@ DevOps ツールチェーンをアプリケーションに接続し、{{site.dat
 * デプロイメントでエラーが発生した場合は、既知の問題に関するトラブルシューティング・トピック (例えば、[ストレージ割り当て量の超過](/docs/apps/ts_apps.html#exceed_quota)) を確認するか、[Kubernetes ログにアクセス](/docs/apps/ts_apps.html#access_kube_logs)して、エラーを探す方法を調べてください。
 
 * コード内のサービス構成にアクセスします。
-	- _@Value_ アノテーションを使用するか、Spring フレームワーク環境クラス _getProperty()_ メソッドを使用できます。 詳しくは、[資格情報へのアクセス](/docs/java-spring/configuration.html#configuration#accessing-credentials)を参照してください。
+	- _@Value_ アノテーションを使用するか、Spring フレームワーク環境クラス _getProperty()_ メソッドを使用できます。 詳しくは、[資格情報へのアクセス](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)を参照してください。
 
 * 新しい資格情報を Kubernetes 環境に追加します。
-	- DevOps ツールチェーンが作成された後に別のサービスをアプリケーションに追加した場合、それらのサービス資格情報は、デプロイ済みアプリケーションおよび GitLab リポジトリーに自動的には更新されません。 デプロイメント環境に[資格情報を手動で追加](/docs/apps/creds_kube.html#sk_kube)する必要があります。
+	- DevOps ツールチェーンが作成された後に別のサービスをアプリケーションに追加した場合、それらのサービス資格情報は、デプロイ済みアプリケーションおよび GitLab リポジトリーに自動的には更新されません。 デプロイメント環境に[資格情報を手動で追加](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube)する必要があります。

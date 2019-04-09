@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-02-19"
 
 ---
 
@@ -48,6 +48,8 @@ Das Extrahieren von umgebungsspezifischen Abhängigkeiten in eine Reihe von Eige
 {: #multiregion}
 
 Sie können mehr als eine Instanz ausführen, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren Anwendung kann es sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen.
+
+Informationen zum Minimieren der Ausfallzeit und zum Erstellen ausfallsicherer Architekturen, die eine maximale Verfügbarkeit aufweisen, finden Sie im Lernprogramm [Strategien für ausfallsichere Anwendungen](/docs/tutorials/strategies-for-resilient-applications.html).
 
 ## Überwachung Ihrer Apps sicherstellen
 {: #monitoring}

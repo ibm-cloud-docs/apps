@@ -23,7 +23,7 @@ lastupdated: "2019-02-13"
 {: #prereqs-mendix-kube}
 
 - Mendix アプリを作成します。 詳しくは、『[Mendix アプリの作成](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix)』を参照してください。
-- [{{site.data.keyword.dev_cli_notm}} コマンド・ライン・インターフェース (CLI)](/docs/cli/index.html#overview) をインストールします。これには {{site.data.keyword.containershort_notm}} CLI が含まれています。
+- [{{site.data.keyword.dev_cli_notm}} コマンド・ライン・インターフェース (CLI)](/docs/cli/index.html) をインストールします。これには {{site.data.keyword.containershort_notm}} CLI が含まれています。
 - `ibmcloud` CLI にログインし、[Kubernetes クラスターへのアクセス](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)のために `kubectl` を構成します。
 
 ## Cloud Object Storage サービス・インスタンスの作成
@@ -109,11 +109,11 @@ spec:
 2. **「ログおよび履歴の表示」**をクリックします。
 3. ログ・ファイルで、アプリケーション URL を見つけます。
 
-    ログ・ファイルの末尾で `urls` または `view` という語を探します。例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+    ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
-コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。次に、ブラウザーでその URL にアクセスします。
+コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。
 
 ## 追加情報
 {: #more-info-mendix-kube}

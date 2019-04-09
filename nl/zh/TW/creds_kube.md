@@ -86,7 +86,7 @@ env:
 
 使用工作站上的終端機來安裝下列工具：
 
-1. 安裝 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html#overview)。
+1. 安裝 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)。
 2. 使用 `ibmcloud login` 指令來登入。
 3. 執行 `ibmcloud cs cluster-config {your_cluster_name}` 來連接至您的叢集。
 4. 複製並貼上 `export` 指令，以從終端機執行。
@@ -118,7 +118,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 	- `chart/{appName}/bindings.yaml` - 在 Kubernetes 叢集裡，產生指向您密碼的環境變數。
 	- `src/main/resources/localdev-config.json` - 在本端執行應用程式時存取認證。
-  - `src/main/resources/mappings.json` - 提供存取 [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) 方法的對映，以從程式碼存取您的環境變數。
+  - `src/main/resources/mappings.json` - 提供存取 [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) 方法的對映，以從程式碼存取您的環境變數。
   - `manifest.yml` - 此檔案會將您的服務連結至 Cloud Foundry 應用程式。
 
 如果您稍後選擇部署至具有「資源控制器」資源（位於資源群組而非組織或空間）的 Cloud Foundry 應用程式，則必須再複製一個檔案。

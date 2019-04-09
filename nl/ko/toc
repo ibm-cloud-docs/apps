@@ -10,6 +10,11 @@
     development_process.md
     best-practice.md
     patterns.md
+ 
+    {: .topicgroup}
+    관련 링크
+        [복원성 애플리케이션에 대한 전략](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
+        [Kubernetes에 대한 지속적인 배치](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -66,10 +71,10 @@
 
     {: .topicgroup}
     IBM Cloud 프로그래밍 가이드
-        [이동](https://cloud.ibm.com/docs/go)
+        [Go](https://cloud.ibm.com/docs/go)
         [Spring](https://cloud.ibm.com/docs/java-spring)
         [Swift](https://cloud.ibm.com/docs/swift)
-        [노드](https://cloud.ibm.com/docs/node)
+        [Node](https://cloud.ibm.com/docs/node)
 
     at_events_devx.md
     {: .navgroup-end}

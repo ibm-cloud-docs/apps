@@ -107,7 +107,7 @@ Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`
 * Wenn bei der Bereitstellung Fehler auftreten, suchen Sie im Abschnitt zur Fehlerbehebung nach bekannten Problemen wie der [Überschreitung des Speicherkontingents](/docs/apps/ts_apps.html#exceed_quota) oder erfahren Sie, wie Sie [auf Kubernetes-Protokolle zugreifen](/docs/apps/ts_apps.html#access_kube_logs), um nach Fehlern zu suchen.
 
 * Greifen Sie auf die Servicekonfiguration in Ihrem Code zu:
-	- Sie können die Anmerkung _@Value_ oder die Methode _getProperty()_ der Klasse 'Environment' des Spring-Frameworks verwenden. Weitere Informationen finden Sie unter [Auf Berechtigungsnachweise zugreifen](/docs/java-spring/configuration.html#configuration#accessing-credentials).
+	- Sie können die Anmerkung _@Value_ oder die Methode _getProperty()_ der Klasse 'Environment' des Spring-Frameworks verwenden. Weitere Informationen finden Sie unter [Auf Berechtigungsnachweise zugreifen](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Fügen Sie Ihrer Kubernetes-Umgebung neue Berechtigungsnachweise hinzu:
-	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen der Bereitstellungsumgebung [die Berechtigungsnachweise manuell hinzufügen](/docs/apps/creds_kube.html#sk_kube).
+	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen der Bereitstellungsumgebung [die Berechtigungsnachweise manuell hinzufügen](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube).

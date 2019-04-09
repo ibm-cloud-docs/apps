@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -38,7 +38,7 @@ Os serviços não se ligam à instância de servidor virtual. Não é possível 
 O App Service fornece uma instância de servidor virtual, carrega uma imagem que inclui o aplicativo,
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
-1. [Crie um aplicativo](tutorials/tutorial_scratch.html#tutorial-scratch). 
+1. [Crie um aplicativo](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
 2. Clique em **Implementar na nuvem** na página de detalhes do aplicativo.
 3. Selecione **Implementar em um Virtual Server** juntamente com a região na qual o servidor deve ser executado.
 

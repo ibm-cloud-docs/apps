@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ lastupdated: "2018-11-29"
 
 App Service によって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、Devops ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
-1. [アプリを作成](tutorials/tutorial_scratch.html#tutorial-scratch)します。 
+1. [アプリを作成](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)します。 
 2. アプリの詳細ページから**「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
 3. **「仮想サーバーへのデプロイ (Deploy to a Virtual Server)」** を、サーバーを実行する地域と共に選択します。
 

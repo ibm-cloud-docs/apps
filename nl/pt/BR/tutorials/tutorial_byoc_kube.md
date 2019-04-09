@@ -55,10 +55,9 @@ e um serviço de notificação push para aplicativos móveis gera
 informações de configuração. O {{site.data.keyword.cloud_notm}} fornece os recursos de um
 serviço para o aplicativo usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre os aplicativos da web.
 
-Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para
-obter mais informações, consulte [Incluindo um serviço no app](/docs/apps/reqnsi.html#add-resource).
+Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para obter mais informações, consulte [Incluindo um recurso em seu app](/docs/apps/reqnsi.html#).
 
-Depois de incluir um recurso de serviço no app, deve-se copiar as credenciais do serviço para seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps/creds_kube.html#add_credentials).
+Depois de incluir um recurso de serviço no app, deve-se copiar as credenciais do serviço para seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps/creds_kube.html).
 
 ## Preparando seu app para implementação
 {: #deploy-byoc-kube}

@@ -43,7 +43,7 @@ Após você criar o seu app do kit do iniciador e a cadeia de ferramentas, você
 
 ![Desenvolver localmente](images/dev_code_locally.png "Desenvolver localmente") Figura 3. Desenvolvendo o fluxo localmente
 
-As funções básicas para o {{site.data.keyword.dev_cli_notm}} são `ibmcloud dev build` e `ibmcloud dev run`, mas a CLI oferece muito mais. Veja [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview) para obter mais detalhes.
+As funções básicas para o {{site.data.keyword.dev_cli_notm}} são `ibmcloud dev build` e `ibmcloud dev run`, mas a CLI oferece muito mais. Veja [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) para obter mais detalhes.
 {: tip}
 
 ## Entregar e gerenciar no {{site.data.keyword.cloud_notm}}

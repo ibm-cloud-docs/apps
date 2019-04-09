@@ -24,7 +24,7 @@ Puede crear una aplicación en {{site.data.keyword.cloud}} utilizando su reposit
 
 Asegúrese de que cumple con los siguientes requisitos previos:
 
- * Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview).
+ * Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
  * Consulte [¿Qué hace que una app sea buena?](/docs/apps/best-practice.html#best-practice) para ver las prácticas recomendadas para crear apps.
  * Debe tener un repositorio de código fuente Git de cualquiera de estos proveedores: GitHub, GitHub Enterprise, Git lab, BitBucket o Rational.
  * Si tiene intención de desplegar la app en [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).

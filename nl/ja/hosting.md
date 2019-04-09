@@ -17,7 +17,7 @@ lastupdated: "2018-12-04"
 ## アプリのマイグレーション
 {: #migrating}
 
-アプリがオンプレミスのデータやサービスにアクセスする必要がある場合は、[{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html#getting-started-with-sg) を使用して、{{site.data.keyword.cloud_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。 詳細については、[Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} を参照してください。
+アプリがオンプレミスのデータやサービスにアクセスする必要がある場合は、[{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway/index.html) を使用して、{{site.data.keyword.cloud_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。 詳細については、[Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} を参照してください。
 
 マイグレーションについて支援が必要な場合は、[{{site.data.keyword.cloud_notm}} Migration Services![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/cloud/migration-services){: new_window}を使用できます。
 

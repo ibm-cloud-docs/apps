@@ -25,7 +25,7 @@ lastupdated: "2019-02-08"
 ## 开始之前
 {: #prereqs-app-cli}
 
-必须安装 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 插件以及其他建议的插件和工具。有关更多信息，请参阅 [IBM Cloud CLI 入门](/docs/cli/index.html#overview)。 
+必须安装 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 插件以及其他建议的插件和工具。有关更多信息，请参阅 [IBM Cloud CLI 入门](/docs/cli/index.html)。 
 
 ## 从头开始创建入门模板应用程序
 {: #create-app-cli}

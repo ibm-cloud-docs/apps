@@ -223,7 +223,7 @@ sufficiente, prova un servizio esterno come [Object Store](/docs/services/Object
 	disk_quota: <quota_disco>
 	```
   * Utilizza l'opzione **-k** con il comando `ibmcloud cf push` quando esegui il push della tua applicazione a {{site.data.keyword.cloud_notm}}:
-
+    
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
@@ -686,7 +686,7 @@ Se i lavori di build o di distribuzione non riescono, e vedi il seguente messagg
 {: #access_kube_logs}
 
 Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di integrità, prova a guardare i log nel cluster.
-* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview), se non lo hai già fatto.
+* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html), se non lo hai già fatto.
 * Accedi a {{site.data.keyword.cloud_notm}} utilizzando`ibmcloud login` ed eseguine l'indirizzamento allo spazio in cui ti trovi.
 * Elenca i tuoi cluster utilizzando `ibmcloud cs clusters`,
 * Indica come destinazione il tuo cluster corrispondente utilizzando `ibmcloud cs cluster-config <cluster-name>`.
@@ -718,10 +718,10 @@ Assicurati che [Docker](https://docs.docker.com/install/) sia installato e avvia
 {: #build_error}
 {: troubleshoot}
 
-Quando provi a creare un'applicazione con il comando `ibmcloud dev build`, l'operazione non riesce con un errore nomeutente/password Docker.
+Quando provi a creare un'applicazione con il comando `ibmcloud dev build`, l'operazione non riesce con un errore nomeutente/password Docker. 
 {: tsSymptoms}
 
-Si stanno utilizzando delle credenziali Docker Hub non corrette per l'autenticazione.
+Si stanno utilizzando delle credenziali Docker Hub non corrette per l'autenticazione. 
 {: tsCauses}
 
 Disconnettiti da Docker Hub nel client Docker.

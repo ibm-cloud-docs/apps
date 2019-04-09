@@ -96,8 +96,7 @@ Conclua as etapas a seguir para excluir a rota não usada:
     ```
     {: codeblock}
 
-  Por
-exemplo:
+  Por exemplo:
   ```
   ibmcloud cf delete-route cf.cloud.ibm.com -n app001
   ```
@@ -289,8 +288,7 @@ ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
 ```
 {: codeblock}
 
-Por
-exemplo:
+Por exemplo:
 ```
 ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
 ```
@@ -650,15 +648,13 @@ Esse problema ocorre porque nenhum buildpack integrado é fornecido para apps Me
 Para usar um buildpack customizado para apps Meteor, use um dos métodos a seguir:
 {: tsResolve}
 
-  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por
-exemplo:
+  * Se você implementar seu app usando o arquivo `manifest.yml`, especifique a URL ou o nome de seu buildpack customizado usando a opção buildpack. Por exemplo:
   ```yaml
   buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
   ```
 
   * Se você implementar o aplicativo por meio do prompt de comandos, use o comando `ibmcloud cf
-push` e especifique o buildpack customizado usando a opção **-b**. Por
-exemplo:
+push` e especifique o buildpack customizado usando a opção **-b**. Por exemplo:
   ```
 	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
 	```
@@ -680,7 +676,7 @@ desautorizado: você excedeu a cota de armazenamento. Exclua uma ou mais imagens
 {: #access_kube_logs}
 
 Se o aplicativo não estiver em execução e você não puder acessar o terminal de funcionamento, tente examinar os logs no cluster.
-* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) se ainda não a tiver.
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) se ainda não a tiver.
 * Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no qual você está.
 * Liste os clusters usando `ibmcloud cs clusters`,
 * Aponte para o cluster correspondente usando `ibmcloud cs cluster-config <cluster-name>`.

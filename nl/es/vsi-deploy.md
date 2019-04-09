@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-02-28"
 
 ---
 
@@ -34,7 +34,7 @@ Los servicios no están vinculados a la instancia de servidor virtual. No puede 
 
 El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue.
 
-1. [Cree una app](tutorials/tutorial_scratch.html#tutorial-scratch). 
+1. [Cree una app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
 2. Pulse **Desplegar en la nube** en la página de detalles de la app.
 3. Seleccione **Desplegar en un servidor virtual** junto con la región en la que se va a ejecutar el servidor.
 

@@ -23,7 +23,7 @@ Per impostazione predefinita, le applicazioni Mendix che indirizzano la distribu
 {: #prereqs-mendix-kube}
 
 - Crea la tua applicazione Mendix. Per ulteriori informazioni, vedi [Creazione di applicazioni con Mendix](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix).
-- Installa l'[interfaccia riga di comando (o CLI, command-line interface) {{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview), che include la CLI {{site.data.keyword.containershort_notm}}.
+- Installa la [CLI (command-line interface) {{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html), che include la CLI {{site.data.keyword.containershort_notm}}.
 - Accedi alla CLI `ibmcloud` e configura `kubectl` per l'[accesso al cluster Kubernetes](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
 
 ## Creazione di un'istanza del servizio Cloud Object Storage

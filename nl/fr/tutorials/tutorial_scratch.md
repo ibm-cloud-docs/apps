@@ -23,7 +23,7 @@ Vous pouvez créer une toute nouvelle application personnalisée en utilisant de
 ## Avant de commencer
 {: #prereqs-scratch}
 
-* Installez [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html#overview), qui inclut Docker. 
+* Installez [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html), qui inclut Docker. 
 * Créez un compte Docker, exécutez l'application Docker puis connectez-vous. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution.
 * Si vous envisagez de déployer votre application dans [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), vous devez [préparer votre compte {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 
@@ -108,7 +108,7 @@ L'activation d'une chaîne d'outils permet de créer un environnement de dévelo
 Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
 {: note}
 
-### Déploiement manuel avec une chaîne d'outils DevOps 
+### Déploiement manuel avec une chaîne d'outils DevOps
 
 Avec une chaîne d'outils correctement configurée, un cycle de génération-déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. 
 

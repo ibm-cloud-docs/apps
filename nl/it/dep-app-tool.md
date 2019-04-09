@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -37,11 +37,7 @@ Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/do
 
 {{site.data.keyword.cloud_notm}} fornisce una solida CLI e i plug-in e le estensioni degli strumenti per sviluppatori che si integrano con la CLI.
 
-Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
-
-<p>
-<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Si apre in una nuova scheda o finestra)"><img class="image" src="images/btn_bx_commandline.svg" alt="Scarica IBM Cloud Developer Tools" /></a>
-</p>
+Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 
 La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra diversa da quella della riga di comando di Cygwin.
 {: important}

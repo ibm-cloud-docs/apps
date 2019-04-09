@@ -22,7 +22,7 @@ lastupdated: "2019-02-04"
 ## 開始之前
 {: #prereqs-getting-started}
 
-您可以使用 {{site.data.keyword.cloud_notm}} 主控台或指令行介面 (CLI) 來建立應用程式。如果您要使用 CLI，請參閱[開始使用 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview) 以取得安裝詳細資料。
+您可以使用 {{site.data.keyword.cloud_notm}} 主控台或指令行介面 (CLI) 來建立應用程式。如果您要使用 CLI，請參閱[開始使用 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html) 以取得安裝詳細資料。
 
 ## 步驟 1. 建立應用程式
 {: #create-getting-started}

@@ -24,7 +24,7 @@ Sie können eine Anwendung in {{site.data.keyword.cloud}} erstellen, indem Sie I
 
 Stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
- * Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html#overview).
+ * Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
  * Lesen Sie [Bewährte Verfahren (Best Practices) für die Erstellung guter Apps](/docs/apps/best-practice.html#best-practice), um bewährte Verfahren zum Erstellen von Apps kennenzulernen.
  * Sie müssen über ein Git-Quellcode-Repository von einem der folgenden Anbieter verfügen: GitHub, GitHub Enterprise, GitLab, BitBucket oder Rational.
  * Wenn Sie vorhaben, Ihre App in [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about) bereitzustellen, müssen Sie [Ihr {{site.data.keyword.cloud_notm}}-Konto vorbereiten](/docs/cloud-foundry/prepare-account.html#prepare).
@@ -83,7 +83,7 @@ Nachdem Sie eine DevOps-Toolchain mit Ihrer App verbunden haben, führen Sie die
 
 1. Klicken Sie auf der Seite "App-Details" auf **In Cloud bereitstellen**.
 2. Wählen Sie eine Bereitstellungsmethode aus. Richten Sie Ihre Bereitstellungsmethode entsprechend den Anweisungen für die ausgewählte Methode ein:
-  * **Führen Sie die Bereitstellung in [Kubernetes](/docs/apps/deploying/containers.html#containers)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster ausführen.
+  * **Führen Sie die Bereitstellung in [Kubernetes](/docs/apps/deploying/containers.html#containers)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster vornehmen.
   * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** oder den Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
   * **Führen Sie die Bereitstellung in einem [virtuellen Server](/docs/apps/vsi-deploy.html#vsi-deploy)** aus. Diese Option stellt eine virtuelle Serverinstanz bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 

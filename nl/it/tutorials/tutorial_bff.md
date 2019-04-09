@@ -22,7 +22,7 @@ Puoi creare un'applicazione da uno starter di backend-for-frontend. Utilizza que
 ## Passo 1. Prima di iniziare
 {: #prereqs-bff}
 
-* Installa gli [strumenti sviluppatore](/docs/cli/index.html#overview).
+* Installa gli [strumenti sviluppatore](/docs/cli/index.html).
 * Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 * Se intendi distribuire la tua applicazione a [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
 
@@ -31,13 +31,13 @@ Puoi creare un'applicazione da uno starter di backend-for-frontend. Utilizza que
 
 Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}.
 
-1. Dalla pagina dei [Starter Kits ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio. Ad esempio, per un'applicazione Node.js, vai a **Express.js Backend** e fai clic su **Select Starter Kit**.
+1. Dalla pagina dei [kit starter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio. Ad esempio, per un'applicazione Node.js, vai a **Express.js Backend** e fai clic su **Select Starter Kit**.
 2. Immetti il nome della tua applicazione. Per questa esercitazione, utilizza `ExpressBackend`.
 3. Immetti un nome host univoco, ad esempio `abc-devhost`. Questo nome host è l'instradamento della tua applicazione, `abc-devhost.cloud.ibm.com`
 4. Facoltativo. Fornisci le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources/tagging_resources.html#tag).
 5. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
 6. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-7. Fai clic su **Create**.
+7. Fai clic su **Crea**.
 
 ## Passo 3. Aggiungi risorse (facoltativo)
 {: #resources-bff}
@@ -47,7 +47,7 @@ Puoi aggiungere risorse che migliorano la tua applicazione con la potenza cognit
 1. Dalla finestra App Service, fai clic su **Add Resource**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-4. Fai clic su **Create**.
+4. Fai clic su **Crea**.
 
 ## Passo 4. Crea una toolchain DevOps
 {: #toolchain-bff}

@@ -86,7 +86,7 @@ Konfigurieren Sie den Cluster so, dass der Parameter _secretKeyRef_ mit dem Name
 
 Verwenden Sie ein Terminal Ihrer Workstation zum Installieren der folgenden Tools:
 
-1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html#overview).
+1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
 2. Melden Sie sich mit dem Befehl `ibmcloud login` an.
 3. Stellen Sie eine Verbindung zu Ihrem Cluster her, indem Sie `ibmcloud cs cluster-config {ihr_cluster_name}` ausführen.
 4. Kopieren Sie den Befehl `export` und fügen Sie ihn ein, um ihn von einem Terminal aus auszuführen.
@@ -118,7 +118,7 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
 
 	- `chart/{appName}/bindings.yaml` - Generiert eine Umgebungsvariable in Ihrem Kubernetes-Cluster, die auf Ihren geheimen Schlüssel verweist.
 	- `src/main/resources/localdev-config.json` - Auf Berechtigungsnachweise während der lokalen Ausführung Ihrer App zugreifen.
-  - `src/main/resources/mappings.json` - Eine Zuordnung für die Bereitstellung des Zugriffs auf die Methode [`env.getProperty()`](/docs/java-spring/configuration.html#configuration#accessing-credentials) für den Zugriff auf Ihre Umgebungsvariablen aus dem Code.
+  - `src/main/resources/mappings.json` - Eine Zuordnung für die Bereitstellung des Zugriffs auf die Methode [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) für den Zugriff auf Ihre Umgebungsvariablen aus dem Code.
   - `manifest.yml` - Diese Datei bindet Ihren Service an Ihre Cloud Foundry-Anwendung.
 
 Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit einer Resource Controller-Ressource entscheiden (die sich in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet), müssen Sie eine weitere Datei kopieren.
@@ -148,7 +148,7 @@ Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit
 
 12. Erstellen Sie den geheimen Schlüssel mit `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Wenn Sie in Ihr Kubernetes-Cluster-Dashboard zurückkehren, können Sie den von Ihnen erstellten geheimen Schlüssel sehen.
 
-Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet). 
+Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet).
 {: note}
   
   ```console

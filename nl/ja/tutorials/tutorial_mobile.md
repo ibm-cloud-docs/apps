@@ -22,7 +22,7 @@ lastupdated: "2019-02-13"
 ## ステップ 1. 始める前に
 {: #prereqs-mobile}
 
-* [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html#overview) をインストールします。
+* [{{site.data.keyword.dev_cli_short}}](/docs/cli/index.html) をインストールします。
 * Docker は開発者ツールの一部としてインストールされます。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。 Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 * アプリを [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about) にデプロイする予定の場合、[{{site.data.keyword.cloud_notm}} アカウントを準備](/docs/cloud-foundry/prepare-account.html#prepare)する必要があります。
 
@@ -32,7 +32,7 @@ lastupdated: "2019-02-13"
 1. {{site.data.keyword.cloud_notm}} で {{site.data.keyword.dev_console}}・アプリを作成します。
 2. {{site.data.keyword.dev_console}}の[「スターター・キット」![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/) ページから、必要な機能に基づいてスターター・キットを選択します。 例えば、Watson Language アプリケーションの場合、**「Swift Kitura」**を選択します。
 3. アプリ名を入力します。 このチュートリアルでは、`WatsonApp` を使用します。
-4. オプション。 アプリを分類するためのタグを指定します。詳しくは、『[タグの処理](/docs/resources/tagging_resources.html)』を参照してください。
+4. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources/tagging_resources.html)』を参照してください。
 5. ご使用の言語プラットフォームを選択します。 このチュートリアルでは、`Swift` を使用します。
 6. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
 7. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
@@ -58,8 +58,8 @@ Watson のコグニティブ機能でアプリを拡張するリソースを追�
 
 1. アプリの詳細ページで、**「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
 2. デプロイメント方式を選択します。 選択した方式の説明に従って、デプロイメント方式をセットアップします。
-  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
+  * **[Kubernetes](/docs/apps/deploying/containers.html#containers) にデプロイ**します。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public/about-cf.html#about-cf)**または**[エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
   * **[仮想サーバー](/docs/apps/vsi-deploy.html#vsi-deploy)にデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
 ## ステップ 5. アプリのビルドおよびローカルでの実行
@@ -189,8 +189,8 @@ ibmcloud dev deploy --target <container>
 2. **「ログおよび履歴の表示」**をクリックします。
 3. ログ・ファイルで、アプリケーション URL を見つけます。
 
-    ログ・ファイルの末尾で `urls` または `view` という語を探します。例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+    ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.cloud.ibm.com` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
-コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。次に、ブラウザーでその URL にアクセスします。
+コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt/commands.html#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。

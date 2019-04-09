@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Berechtigungsnachweise Ihrer Cloud Foundry-Umgebung hinzufügen
 {: #add-credentials-cf}
 
-Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Cloud Foundry-Bereitstellungsumgebung hinzufügen. Diese Anweisungen gelten sowohl für [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html#about-cf) als auch für [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee).
+Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Cloud Foundry-Bereitstellungsumgebung hinzufügen. Diese Anweisungen gelten sowohl für [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) als auch für [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
 {: shortdesc}
 
 ## Ihr Code + Cloud Foundry

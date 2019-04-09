@@ -77,7 +77,7 @@ Wenn Sie `git clone` für das erstellte GitLab-Repository verwenden, um die akti
 Sie können die Datei `server/localdev-config.json` abrufen, indem Sie die folgenden Schritte ausführen:
 
 1. Verwenden Sie `git clone` für das GitLab-Repository, das automatisch erstellt wurde, als Sie die Funktion "In Cloud bereitstellen" verwendet haben.
-2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html#overview), die das Plug-in `dev` enthält.
+2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html), die das Plug-in `dev` enthält.
 3. Verwenden Sie die `ibmcloud`-Befehlszeile, um sich bei {{site.data.keyword.cloud_notm}} anzumelden.
 4. Führen Sie den Befehl `ibmcloud dev get-credentials` aus, der auf die Datei `cli-config.yml` verweist. Die Datei `cli-config.yml` enthält Informationen darüber, welcher Anwendungs- und Generierungsjob über die Berechtigungsnachweise verfügt.
 

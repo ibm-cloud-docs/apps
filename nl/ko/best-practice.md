@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-02-19"
 
 ---
 
@@ -48,6 +48,8 @@ lastupdated: "2018-12-04"
 {: #multiregion}
 
 둘 이상의 인스턴스를 실행하여 단일 지역에서 가동 중단 시간을 피할 수 있습니다. 보다 강력한 애플리케이션을 제공하려면 다중 지역 아키텍처를 고려하십시오.
+
+가동 중단 시간을 최소화하고 최대한의 가용성을 확보할 수 있는 복원성 아키텍처를 작성하는 방법에 대한 정보는 [복원성 애플리케이션에 대한 전략 튜토리얼](/docs/tutorials/strategies-for-resilient-applications.html)을 참조하십시오.
 
 ## 앱 모니터링 상시 수행
 {: #monitoring}

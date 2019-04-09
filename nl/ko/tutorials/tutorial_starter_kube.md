@@ -84,22 +84,22 @@ lastupdated: "2019-02-13"
 	   * 이미지를 개인용 컨테이너 레지스트리에 공개합니다.
 	 * 배치 단계는 컨테이너 레지스트리에서 컨테이너 이미지를 검색한 후 이를 Kubernetes 클러스터에 배치합니다.
 3. **Delivery Pipeline**을 클릭하십시오. 파이프라인 단계가 표시됩니다.
-4. **배치 단계** 타일에서 **로그 및 히스토리 보기**를 클릭하십시오. 
+4. **배치 단계** 타일에서 **로그 및 히스토리 보기**를 클릭하십시오.
 
 ## 앱이 실행 중인지 확인
 {: #verify-starterkit-kube}
 
-앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다. 
+앱을 배치하고 나면 Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니다.
 
-1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오. 
-2. **로그 및 히스토리 보기**를 클릭하십시오. 
-3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 
+1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
+2. **로그 및 히스토리 보기**를 클릭하십시오.
+3. 로그 파일에서 애플리케이션 URL을 찾으십시오.
 
-    로그 파일의 끝에서 `View the application health at: http://<ipaddress>:<port>/health`를 찾으십시오. 
+    로그 파일의 끝에서 `View the application health at: http://<ipaddress>:<port>/health`를 찾으십시오.
 
-4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다. 
+4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오. 
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
 
 ## 다음 단계
 {: #next-steps-startkit-kube notoc}
@@ -107,7 +107,7 @@ lastupdated: "2019-02-13"
 * 배치에서 오류가 발생하면 [스토리지 할당양 초과](/docs/apps/ts_apps.html#exceed_quota) 등의 알려진 문제에 대해 문제점 해결 주제를 확인하거나 [Kubernetes 로그에 액세스](/docs/apps/ts_apps.html#access_kube_logs)하여 오류를 찾는 방법에 대해 알아보십시오.
 
 * 코드에서 서비스 구성에 액세스:
-	- _@Value_ 어노테이션을 사용하거나 Spring 프레임워크 환경 클래스 _getProperty()_ 메소드를 사용할 수 있습니다. 자세한 정보는 [인증 정보에 액세스](/docs/java-spring/configuration.html#configuration#accessing-credentials)를 참조하십시오.
+	- _@Value_ 어노테이션을 사용하거나 Spring 프레임워크 환경 클래스 _getProperty()_ 메소드를 사용할 수 있습니다. 자세한 정보는 [인증 정보에 액세스](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)를 참조하십시오.
 
 * Kubernetes 환경에 인증 정보 새로 추가:
-	- DevOps 도구 체인이 작성된 후에 다른 서비스를 애플리케이션에 추가하는 경우, 해당 서비스 인증 정보는 배치된 애플리케이션 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 직접 배치 환경에 [인증 정보를 수동으로 추가](/docs/apps/creds_kube.html#sk_kube)해야 합니다.
+	- DevOps 도구 체인이 작성된 후에 다른 서비스를 애플리케이션에 추가하는 경우, 해당 서비스 인증 정보는 배치된 애플리케이션 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 직접 배치 환경에 [인증 정보를 수동으로 추가](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube)해야 합니다.

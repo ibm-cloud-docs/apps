@@ -107,7 +107,7 @@ lastupdated: "2019-02-13"
 * 如果在部署时遇到错误，请查看故障诊断主题以了解[超过存储配额](/docs/apps/ts_apps.html#exceed_quota)等已知问题，或者了解如何[访问 Kubernetes 日志](/docs/apps/ts_apps.html#access_kube_logs)来查找错误。
 
 * 访问代码中的服务配置：
-	- 可以使用 _@Value_ 注释，也可以使用 Spring 框架环境类 _getProperty()_ 方法。有关更多信息，请参阅[访问凭证](/docs/java-spring/configuration.html#configuration#accessing-credentials)。
+	- 可以使用 _@Value_ 注释，也可以使用 Spring 框架环境类 _getProperty()_ 方法。有关更多信息，请参阅[访问凭证](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
 
 * 向 Kubernetes 环境添加新凭证：
-	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须向部署环境[手动添加凭证](/docs/apps/creds_kube.html#sk_kube)。
+	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须向部署环境[手动添加凭证](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube)。

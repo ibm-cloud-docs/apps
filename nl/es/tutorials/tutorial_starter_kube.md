@@ -107,7 +107,7 @@ Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs
 * Si recibe errores durante el despliegue, consulte el tema sobre resolución de problemas para ver problemas conocidos como [superación de la cuota de almacenamiento](/docs/apps/ts_apps.html#exceed_quota) o bien consulte cómo [acceder a los registros de Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) para buscar errores.
 
 * Acceda a la configuración del servicio en el código:
-	- Puede utilizar la anotación _@Value_ o bien puede utilizar el método _getProperty()_ de la clase de entorno Spring. Para obtener más información, consulte [Acceso a credenciales](/docs/java-spring/configuration.html#configuration#accessing-credentials).
+	- Puede utilizar la anotación _@Value_ o bien puede utilizar el método _getProperty()_ de la clase de entorno Spring. Para obtener más información, consulte [Acceso a credenciales](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Añada nuevas credenciales al entorno de Kubernetes:
-	- Cuando se añade otro servicio a la aplicación después de que se cree la cadena de herramientas de DevOps, dichas credenciales de servicio no se actualizan automáticamente en la aplicación desplegada y en el repositorio GitLab. Debe [añadir manualmente las credenciales](/docs/apps/creds_kube.html#sk_kube) al entorno de despliegue.
+	- Cuando se añade otro servicio a la aplicación después de que se cree la cadena de herramientas de DevOps, dichas credenciales de servicio no se actualizan automáticamente en la aplicación desplegada y en el repositorio GitLab. Debe [añadir manualmente las credenciales](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) al entorno de despliegue.

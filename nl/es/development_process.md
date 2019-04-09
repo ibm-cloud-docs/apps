@@ -43,7 +43,7 @@ Después de crear su cadena de herramientas y la app de kit de inicio, iniciará
 
 ![Desarrollo local](images/dev_code_locally.png "Desarrollo local") Figura 3. Flujo de desarrollo local
 
-Las funciones básicas para {{site.data.keyword.dev_cli_notm}} son `ibmcloud dev build` e `ibmcloud dev run`, sin embargo, la interfaz de línea de mandatos (CLI) ofrece mucho más. Consulte [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html#overview) para obtener más detalles.
+Las funciones básicas para {{site.data.keyword.dev_cli_notm}} son `ibmcloud dev build` e `ibmcloud dev run`, sin embargo, la interfaz de línea de mandatos (CLI) ofrece mucho más. Consulte [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) para obtener más detalles.
 {: tip}
 
 ## Gestión y entrega en {{site.data.keyword.cloud_notm}}

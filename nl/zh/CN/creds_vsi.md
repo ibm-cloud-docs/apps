@@ -77,7 +77,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 您可以通过完成以下步骤来检索 `server/localdev-config.json` 文件：
 
 1. 对使用“部署到云”功能时自动创建的 GitLab 存储库运行 `git clone`。
-2. 安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html#overview)，其中包含 `dev` 插件。
+2. 安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，其中包含 `dev` 插件。
 3. 使用 `ibmcloud` 命令行登录到 {{site.data.keyword.cloud_notm}}。
 4. 运行 `ibmcloud dev get-credentials`，它引用的是 `cli-config.yml` 文件。`cli-config.yml` 文件包含有关哪个应用程序和生成作业具有凭证的信息。
 

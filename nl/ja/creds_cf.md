@@ -16,7 +16,7 @@ lastupdated: "2019-02-01"
 # Cloud Foundry 環境への資格情報の追加
 {: #add-credentials-cf}
 
-Cloud Foundry デプロイメント環境にサービス資格情報を追加する方法について説明します。 これらの説明は、[Cloud Foundry パブリック](/docs/cloud-foundry-public/about-cf.html#about-cf)と [Cloud Foundry エンタープライズ環境](/docs/cloud-foundry-public/cfee.html#cfee)の両方に当てはまります。
+Cloud Foundry デプロイメント環境にサービス資格情報を追加する方法について説明します。 これらの説明は、[Cloud Foundry パブリック](/docs/cloud-foundry-public/about-cf.html)と [Cloud Foundry エンタープライズ環境](/docs/cloud-foundry-public/cfee.html)の両方に当てはまります。
 {: shortdesc}
 
 ## ユーザー作成コード + Cloud Foundry

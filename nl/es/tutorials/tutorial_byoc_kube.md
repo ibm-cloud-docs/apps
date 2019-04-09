@@ -43,16 +43,16 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
 
 Añada un recurso de servicio a la aplicación e {{site.data.keyword.cloud_notm}} crea el servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
 
-El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps/reqnsi.html#add-resource).
+El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Cómo añadir un recurso a la app](/docs/apps/reqnsi.html#).
 
-Después de añadir un recurso de servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps/creds_kube.html#add_credentials).
+Después de añadir un recurso de servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps/creds_kube.html).
 
 ## Preparación de la app para el despliegue
 {: #deploy-byoc-kube}
 
 En este paso, adjuntará una cadena de herramientas DevOps a la aplicación y la configurará para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}.
 
-La cadena de herramientas DevOps es lo suficientemente flexible como para permitir la ejecución gestionada de etapas arbitrarias de ejecución de un script de shell. Es decir, puede hacer casi cualquier cosa con una cadena de herramientas DevOps. Esta sección se centra en el despliegue de la app en un clúster de Kubernetes, y se tiene en cuenta la "preparación para el futuro" en relación al escalado de DevOps y a la aplicación de prácticas recomendadas.
+La cadena de herramientas DevOps es lo suficientemente flexible como para permitir la ejecución gestionada de etapas arbitrarias de ejecución de un script de shell. Es decir, puede hacer casi cualquier cosa con una cadena de herramientas DevOps. Esta sección se centra en el despliegue de la app en un clúster de Kubernetes, y se tiene en cuenta la "preparación para el futuro" en relación con el escalado de DevOps y a la aplicación de prácticas recomendadas.
 
 El establecimiento de un enlace entre la app, la cadena de herramientas y el repositorio es un paso encaminado a organizar los activos del producto. También ayuda a agregar una vista de su repositorio de origen con el flujo de trabajo de DevOps, las instancias de la app en ejecución y los servicios dependientes en todos los destinos de despliegue.
 

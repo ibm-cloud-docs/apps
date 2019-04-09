@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -26,9 +26,9 @@ lastupdated: "2019-02-01"
 
 공개 도구 체인은 {{site.data.keyword.Bluemix}}의 퍼블릭 및 데디케이티드 환경에서 사용 가능합니다. 알맞게 구성된 도구 체인을 사용하면 손쉽게 앱을 배치할 수 있습니다. 빌드-배치 주기는 저장소의 마스터 분기에 대한 각각의 병합으로 자동 시작됩니다.
 
-도구 체인은 다음 방법으로 작성할 수 있습니다. 
-* 템플리트를 사용하여 도구 체인을 작성합니다. 
-* 앱에서 도구 체인을 작성합니다. 
+도구 체인은 다음 방법으로 작성할 수 있습니다.
+* 템플리트를 사용하여 도구 체인을 작성합니다.
+* 앱에서 도구 체인을 작성합니다.
 
 도구 체인에 대해 자세히 알아보려면 [도구 체인 작성](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)을 참조하십시오.
 
@@ -37,11 +37,7 @@ lastupdated: "2019-02-01"
 
 {{site.data.keyword.cloud_notm}}에서는 강력한 CLI 및 이 CLI와 통합되는 플러그인과 개발자 도구 확장기능을 제공합니다.
 
-시작하기 전에 [{{site.data.keyword.cloud_notm}} CLI를 다운로드 및 설치](/docs/cli/index.html#overview)하십시오. 
-
-<p>
-<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(새 탭 또는 창에서 열림)"><img class="image" src="images/btn_bx_commandline.svg" alt="IBM Cloud Developer Tools 다운로드" /></a>
-</p>
+시작하기 전에 [{{site.data.keyword.cloud_notm}} CLI를 다운로드 및 설치](/docs/cli/index.html)하십시오.
 
 CLI는 Cygwin에 의해 지원되지 않습니다. Cygwin 명령행 창 이외의 창에서 도구를 사용하십시오.
 {: important}

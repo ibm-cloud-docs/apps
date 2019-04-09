@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-01"
 
 ---
 
@@ -37,11 +37,7 @@ Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferra
 
 O {{site.data.keyword.cloud_notm}} fornece uma CLI robusta, além de plug-ins e extensões de ferramentas do desenvolvedor que se integram à CLI.
 
-Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview).
-
-<p>
-<a class="xref" href="https://cloud.ibm.com/docs/cli/index.html#overview" target="_blank" title="(Abre em uma nova guia ou janela)"><img class="image" src="images/btn_bx_commandline.svg" alt="Fazer download do IBM Cloud Developer Tools" /></a>
-</p>
+Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
 
 A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da janela de linha de comandos do Cygwin.
 {: important}
