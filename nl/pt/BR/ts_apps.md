@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -145,7 +145,7 @@ Para obter o nível de autoridade apropriado, use um dos métodos a seguir.
 {: tsResolve}
 
 * Selecione outra organização e outro espaço para os quais você tem a função de Desenvolvedor.
-* Peça ao gerente da organização para mudar sua função para Desenvolvedor ou para criar um espaço e, em seguida, designar a você uma função de Desenvolvedor. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html#orgsspacesusers) para obter detalhes.
+* Peça ao gerente da organização para mudar sua função para Desenvolvedor ou para criar um espaço e, em seguida, designar a você uma função de Desenvolvedor. Veja [Gerenciando organizações e espaços](/docs/admin/orgs_spaces.html) para obter detalhes.
 
 ## Não é possível acessar serviços do {{site.data.keyword.cloud_notm}} devido a erros de autorização
 {: #ts_vcap}
@@ -182,7 +182,7 @@ Um erro de Gateway inválido geralmente acontece quando você acessa um website 
 
 Outras causas menos comuns de um erro de Gateway inválido são os dropouts do provedor de serviços da Internet (ISP), configurações de firewall inválidas e erros de cache do navegador.
 
-Se você suspeitar que um serviço do {{site.data.keyword.cloud_notm}} está inativo, primeiro, verifique a página [{{site.data.keyword.cloud_notm}} status ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window}. Uma solução alternativa pode ser [usar o serviço em outra região do {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
+Se você suspeitar que um serviço do {{site.data.keyword.cloud_notm}} está inativo, primeiro, verifique a página [{{site.data.keyword.cloud_notm}} status ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://ibm.biz/bluemixstatus){: new_window}. Uma solução alternativa poderia ser usar o serviço em outra região do {{site.data.keyword.cloud_notm}}. Informações detalhadas estão disponíveis em [Usando serviços em outra região ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -215,7 +215,7 @@ Use um dos métodos a seguir para especificar sua cota do disco. A cota máxima 
 	disk_quota: <disk_quota>
 	```
   * Use the **-k** option with the `ibmcloud cf push` command when you push your app to {{site.data.keyword.cloud_notm}}:
-    
+
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
@@ -245,7 +245,7 @@ Se você é um usuário da conta Lite, talvez não seja possível criar um app n
 Quando você tenta criar um app no {{site.data.keyword.cloud_notm}}, a mensagem de erro a seguir é exibida:
 {: tsSymptoms}
 
-`BXNUI2032E: O <service_instances> recurso não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
+`BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
 
 Esse erro ocorre quando você excede o limite no número de instâncias de serviço que pode ter para sua conta.
 {: tsCauses}
@@ -680,7 +680,7 @@ desautorizado: você excedeu a cota de armazenamento. Exclua uma ou mais imagens
 {: #access_kube_logs}
 
 Se o aplicativo não estiver em execução e você não puder acessar o terminal de funcionamento, tente examinar os logs no cluster.
-* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html#overview) se ainda não a tiver.
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html) se ainda não a tiver.
 * Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no qual você está.
 * Liste os clusters usando `ibmcloud cs clusters`,
 * Aponte para o cluster correspondente usando `ibmcloud cs cluster-config <cluster-name>`.
@@ -712,10 +712,10 @@ Assegure-se de que o [Docker](https://docs.docker.com/install/) está instalado 
 {: #build_error}
 {: troubleshoot}
 
-Quando você tenta construir um app com o comando `ibmcloud dev build`, isso resulta em falha com um erro de nome do usuário/senha do Docker. 
+Quando você tenta construir um app com o comando `ibmcloud dev build`, isso resulta em falha com um erro de nome do usuário/senha do Docker.
 {: tsSymptoms}
 
-Credenciais incorretas do Docker Hub estão sendo usadas para autenticação. 
+Credenciais incorretas do Docker Hub estão sendo usadas para autenticação.
 {: tsCauses}
 
 Efetue logout do Docker Hub no cliente Docker.

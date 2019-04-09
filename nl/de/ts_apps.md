@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,7 +26,7 @@ Allgemeine Probleme im Zusammenhang mit der Erstellung von Apps können sein, da
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Wenn Sie auf der Detailseite der App auf bestimmte Elemente klicken, können Sie möglicherweise keine Aktionen ausführen. Darüber hinaus werden Sie möglicherweise dazu aufgefordert, Änderungen zu speichern, bevor Sie den Vorgang fortsetzen können.
+Wenn Sie auf der Detailseite der App auf bestimmte Elemente klicken, können Sie möglicherweise keine Aktionen ausführen. Darüber hinaus werden Sie möglicherweise dazu aufgefordert, Änderungen zu speichern, bevor Sie den Vorgang fortsetzen können. 
 
 Wenn Sie versuchen, Ihre App oder Services auf der Detailseite der App zu prüfen, wird die folgende Fehlernachricht angezeigt:
 {: tsSymptoms}
@@ -144,7 +144,7 @@ Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der nachfol
 {: tsResolve}
 
 * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen.
-* Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html#orgsspacesusers).
+* Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html).
 
 ## Auf {{site.data.keyword.cloud_notm}}-Services kann aufgrund von Berechtigungsfehlern nicht zugegriffen werden
 {: #ts_vcap}
@@ -181,7 +181,7 @@ Zu einem Fehler des Typs 'Bad Gateway' kommt es in der Regel, wenn Sie eine Webs
 
 Andere, weniger häufige Ursachen eines Fehlers vom Typ 'Bad Gateway' sind Ausfälle des Internet-Service-Providers, falsche Firewallkonfigurationen und Fehler des Browser-Cache.
 
-Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist, überprüfen Sie zunächst die Seite für den [{{site.data.keyword.cloud_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Als Ausweichlösung können Sie [den Service in einer anderen {{site.data.keyword.cloud_notm}}-Region verwenden](/docs/resources/connect_external_app#externalapp){: new_window}. Wenn der Status des Service als normal angegeben ist, versuchen Sie anhand der folgenden Schritte, das Problem zu beheben:
+Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist, überprüfen Sie zunächst die Seite für den [{{site.data.keyword.cloud_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Als Ausweichlösung können Sie den Service in einer anderen {{site.data.keyword.cloud_notm}}-Region verwenden. Ausführliche Informationen finden Sie in [Services in einer anderen Region verwenden ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/services/reqnsi.html#cross_region_service){: new_window}. Wenn der Status des Service als normal angegeben ist, versuchen Sie anhand der folgenden Schritte, das Problem zu beheben:
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
@@ -197,7 +197,7 @@ Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist
 
 Wenn der Plattenspeicher knapp wird, können Sie das Plattenkontingent manuell so ändern, dass mehr Plattenspeicher zur Verfügung steht.
 
-Wenn der Plattenspeicher knapp wird, wird möglicherweise eine Nachricht angezeigt, die besagt, dass das Plattenkontingent überschritten wurde. Zur Lösung des Problems haben Sie möglicherweise versucht, für Ihre App-Instanz ein Scale-up durchzuführen, um mehr Plattenspeicher zu erhalten. Sie haben beispielsweise versucht, ein Scale-up von 256 MB auf 1256 MB durchzuführen, und zwar durch Ändern des Speicherkontingents auf der Seite "App-Details". Da jedoch das Plattenkontingent dasselbe geblieben ist, haben Sie nicht mehr Plattenspeicher erhalten.
+Wenn der Plattenspeicher knapp wird, wird möglicherweise eine Nachricht angezeigt, die besagt, dass das Plattenkontingent überschritten wurde. Zur Lösung des Problems haben Sie möglicherweise versucht, für Ihre App-Instanz ein Scale-up durchzuführen, um mehr Plattenspeicher zu erhalten. Sie haben beispielsweise versucht, ein Scale-up von 256 MB auf 1256 MB durchzuführen, und zwar durch Ändern des Speicherkontingents auf der Seite mit den App-Details. Da jedoch das Plattenkontingent dasselbe geblieben ist, haben Sie nicht mehr Plattenspeicher erhalten.
 {: tsSymptoms}
 
 Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt 1 GB. Wenn Sie mehr Plattenspeicher benötigen, müssen Sie das Plattenkontingent manuell angeben.
@@ -211,7 +211,7 @@ Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. S
 	disk_quota: <disk_quota>
 	```
   * Verwenden Sie die Option **-k** im Befehl `ibmcloud cf push`, wenn Sie die App per Push-Operation an {{site.data.keyword.cloud_notm}} übertragen:
-    
+
   ```
 	ibmcloud cf push appname -p app_path -k <disk_quota>
 	```
@@ -306,7 +306,7 @@ Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von
 {: tsResolve}
 
   * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie in [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
-  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.cloud_notm}} -Konsole oder die Befehlszeilenschnittstelle von Cloud Foundry'.
+  * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.cloud_notm}} -Konsole oder die Befehlszeilenschnittstelle von Cloud Foundry'. 
 
     Wenn Sie die {{site.data.keyword.cloud_notm}}-Konsole verwenden, führen Sie die folgenden Schritte aus:
 
@@ -647,7 +647,7 @@ Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht
 {: #access_kube_logs}
 
 Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt zugreifen können, versuchen Sie, die Protokolle im Cluster anzuschauen.
-* Installieren Sie die [{{site.data.keyword.cloud_notm}}-CLI](/docs/cli/index.html#overview), wenn sie noch nicht vorhanden ist.
+* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
 * Listen Sie Ihre Cluster mit `ibmcloud cs clusters` auf.
 * Verweisen Sie mit `ibmcloud cs cluster-config <clustername>` auf Ihren entsprechenden Cluster.
@@ -679,10 +679,10 @@ Stellen Sie sicher, dass [Docker](https://docs.docker.com/install/) installiert 
 {: #build_error}
 {: troubleshoot}
 
-Beim Erstellen einer App mit dem Befehl `ibmcloud dev build` schlägt dieser mit einem Docker-Fehler in Bezug auf den Benutzernamen/das Kennwort fehl. 
+Beim Erstellen einer App mit dem Befehl `ibmcloud dev build` schlägt dieser mit einem Docker-Fehler in Bezug auf den Benutzernamen/das Kennwort fehl.
 {: tsSymptoms}
 
-Die für die Authentifizierung verwendeten Docker Hub-Berechtigungsnachweise sind nicht korrekt. 
+Die für die Authentifizierung verwendeten Docker Hub-Berechtigungsnachweise sind nicht korrekt.
 {: tsCauses}
 
 Melden Sie sich im Docker-Client von Docker Hub ab.
