@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -55,6 +55,9 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
 <dt>公共名称</dt>
 <dd>为其请求 SSL 证书的标准域名 (FQDN)。</dd>
 </dl>
+
+您可以使用主体备用名称 (SAN)，但提供的主机名不能在其他部署的证书中发布，以防止 CN 冲突。
+{: note}
 
 ## 上传 SSL 证书
 {: #ssl_certificate}

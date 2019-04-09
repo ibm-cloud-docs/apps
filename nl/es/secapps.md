@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -58,6 +58,9 @@ marketing.</dd>
 <dt>Nombre común</dt>
 <dd>Nombre de dominio completo (FQDN) para el que está solicitando el certificado SSL.</dd>
 </dl>
+
+Puede utilizar Nombres alternativos de sujeto (SAN, Subject Alternative Names), pero los nombres de host proporcionados no pueden haberse emitido en otros certificados desplegados para evitar conflictos de CN.
+{: note}
 
 ## Carga de certificados SSL
 {: #ssl_certificate}

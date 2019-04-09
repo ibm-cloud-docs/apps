@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-15"
+lastupdated: "2019-01-24"
 
 ---
 
@@ -26,8 +26,7 @@ Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une
 Les méthodes de création d'une demande de signature de certificat varient selon le système d'exploitation. L'exemple suivant présente comment créer une demande de signature de certificat à l'aide de l'[outil de ligne de commande OpenSSL![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://www.openssl.org/){:new_window} :
 
 ```
-openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
-    privatekey.key
+openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 ```
 {: codeblock}
 
@@ -56,12 +55,15 @@ Pour que la demande de signature de certificat soit valide, les informations sui
 <dd>Nom de domaine complet pour lequel vous demandez le certificat SSL.</dd>
 </dl>
 
+Vous pouvez utiliser des noms alternatifs (SAN) mais les noms d'hôte fournis ne doivent pas être émis dans d'autres certificats déployés et ce afin d'éviter des collisions de nom commun.
+{: note}
+
 ## Téléchargement de certificats SSL
 {: #ssl_certificate}
 
 Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialité des communications avec votre application et empêcher les écoutes clandestines, les altérations et les falsifications de messages Si votre propriétaire de compte dispose d'un compte Lite gratuit, vous devez mettre à niveau votre compte pour télécharger un certificat.
 
-Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, utilisez les noeuds finaux de région suivants afin de fournir la route d'URL de votre organisation dans {{site.data.keyword.cloud_notm}} :
+Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, utilisez les noeuds finals de région suivants afin de fournir la route d'URL de votre organisation dans {{site.data.keyword.cloud_notm}} :
 
 * Etats-Unis (Sud) - `custom-domain.us-south.cf.cloud.ibm.com`
 * Etats-Unis (Est) - `custom-domain.us-east.cf.cloud.ibm.com`
