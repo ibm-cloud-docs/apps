@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-04-10"
 
 keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
 
@@ -25,7 +25,7 @@ You can build enterprise-ready mobile and web applications in {{site.data.keywor
 
 Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
 
-Do you need help deciding where to start? See this diagram for ideas!
+Do you need help with deciding where to start? See this diagram for ideas!
 
 ![Developer experience overview](images/dev-journey.png "Developer experience overview")
 
@@ -39,7 +39,7 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 
 Create an app by selecting one of the following entry points:
 
-* [Starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific, and produce production-ready apps in various programming languages and architectural patterns.
+* [Starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific and produce production-ready apps in various programming languages and architectural patterns.
 * [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}. For more information, see [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
 * [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
 * If you know what you want, build a [custom app](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) from scratch with the services that you need by using a blank starter kit.
@@ -51,7 +51,7 @@ Create an app by selecting one of the following entry points:
 
 When you use a starter kit to create your app, your services are automatically created for you. You can associate more services with your app by clicking **Create service** on the **App details** page in the console.
 
-To add services by using the CLI, run the following command to add a service to your app. You can select an existing service from one that's already enabled on your account, or add a new service. 
+Run the following command to add a service to your app by using the CLI. You can select an existing service from one that's already enabled on your account, or add a service. 
 ```
 ibmcloud dev edit
 ```
@@ -62,7 +62,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=creati
 ## Step 3. Deploy your app
 {: #deploy-getting-started}
 
-You can deploy your app by using the console or the command line.
+You can deploy your app by using the console or the CLI.
 
 ### Using the console
 {: #console-getting-started}
@@ -75,10 +75,10 @@ To deploy your app by using the console, complete the following steps:
 
 For more information, see the table of contents for various deployment topics in the "Deploying and integrating apps" section.
 
-### Using the command line
+### Using the CLI
 {: #cli-getting-started}
 
-To deploy your app by using the command line, run the `ibmcloud dev deploy` command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+To deploy your app by using the CLI, run the `ibmcloud dev deploy` command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Now you're set for iterative development and continuous delivery.
 
