@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
+
+subcollection: creating-apps
 
 ---
 
@@ -52,7 +56,7 @@ L'environnement est entièrement sous votre contrôle comme si vous exécutiez l
 ### Le kit de démarrage a généré du code
 {: #starterkit-generated-code-vsi}
 
-Le code généré à partir d'un kit de démarrage inclut la bibliothèque `IBMCloudEnv`, qui abstrait l'extraction des valeurs d'environnement de telle sorte que le code d'application soit portable afin d'être exécuté sur plusieurs déploiements cible. Avec le docker virtuel ou local, cet environnement doit être préparé avec des valeurs qui répondent à la bibliothèque `IBMCloudEnv` et qui ne proviennent _pas nécessairement_ de variables d'environnement réelles.
+Le code généré à partir d'un kit de démarrage inclut la bibliothèque `IBMCloudEnv` native, qui agit sur l'extraction des valeurs d'environnement de façon à ce que le code d'application soit portable afin d'être exécuté sur plusieurs cibles de déploiement. Avec le docker virtuel ou local, cet environnement doit être préparé avec des valeurs qui répondent à la bibliothèque `IBMCloudEnv` et qui ne proviennent _pas nécessairement_ de variables d'environnement réelles.
 
 Pour vous faciliter la tâche, les instructions `mappings.json` incluses avec la sortie générée par le kit de démarrage ont des références à un fichier local à partir duquel la bibliothèque `IBMCloudEnv` dérive les valeurs que l'application peut utiliser.
 
@@ -70,18 +74,18 @@ Par exemple, notez la dernière ligne dans la section suivante du fichier `mappi
 ```
 {: codeblock}
 
-Si vous utilisez la fonction "Déployer dans le cloud" lorsque vous créez une application, le fichier `/server/localdev-config.json` est retiré du référentiel GitLab. Pour des raisons de sécurité, il est préférable de ne pas placer vos données d'identification dans un référentiel de codes source.
+Si vous utilisez la fonction "Configurer la distribution continue" quand vous créez une application, le fichier `/server/localdev-config.json` est retiré du référentiel GitLab. Pour des raisons de sécurité, il est préférable de ne pas placer vos données d'identification dans un référentiel de codes source.
 
 Si vous utilisez `git clone` sur le référentiel GitLab créé pour démarrer le développement actif, notez que le fichier `.gitignore` ignore spécifiquement `server/localdev-config.json` pour empêcher un enregistrement accidentel d'un fichier incluant des données d'identification sensibles. Toutefois, VSI__ a besoin de ce fichier, tout comme le développeur qui utilise un ordinateur portable.
 
 Vous pouvez extraire le fichier `server/localdev-config.json` en procédant comme suit :
 
-1. Utilisez `git clone` sur le référentiel Gitlab automatiquement créé lors de l'utilisation de la fonction "Déployer sur le cloud".
-2. Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), qui inclut le plug-in `dev`.
+1. Utilisez `git clone` sur le référentiel Gitlab qui a été automatiquement créé lors de l'utilisation de la fonction "Configurer la distribution continue".
+2. Installez l'interface de ligne de commande [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), qui inclut le plug-in `dev`.
 3. Utilisez la ligne de commande `ibmcloud` pour vous connecter à {{site.data.keyword.cloud_notm}}.
 4. Exécutez `ibmcloud dev get-credentials`, qui fait référence au fichier `cli-config.yml`. Le fichier `cli-config.yml` inclut des informations décrivant quelle application ou quel travail de génération inclut les données d'identification.
 
-Si une ressource est retirée de l'application entre l'utilisation de la fonction "Déployer dans le cloud" et `ibmcloud dev get-credentials`, le fichier téléchargé `/server/localdev-config.json` n'aura alors pas toutes les données d'identification pouvant être requises par votre codebase `git clone` d'origine.
+Si un service est retiré de l'application entre l'utilisation de la fonction "Configurer la distribution continue" et `ibmcloud dev get-credentials`, le fichier téléchargé `/server/localdev-config.json` n'aura pas toutes les données d'identification pouvant être requises par votre codebase `git clone` d'origine.
 {: tip}
 
 Si vous exécutez votre application dans un conteneur Docker, vous pouvez choisir de retirer le fichier `/server/localdev-config.json` entièrement et de transmettre les variables d'environnement sur la ligne de commande Docker.
@@ -89,7 +93,7 @@ Si vous exécutez votre application dans un conteneur Docker, vous pouvez choisi
 A partir de la section "cloudant_apikey" du fichier `mappings.json`, notez l'élément `env:cloudant_apikey` avant la ligne `file...`. Cela signifie qu'une variable d'environnement nommée `cloudant_apikey` est prioritaire par rapport au contenu du fichier. De plus, même si le fichier se trouve dans l'image Docker que vous avez générée (qui n'est pas requise), vous pouvez remplacer les valeurs en les transmettant à la ligne de commande Docker.
 
 Par exemple :
-```console
+```
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```
 {: codeblock}

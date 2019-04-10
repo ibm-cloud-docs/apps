@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, services, add service, application
+
+subcollection: creating-apps
 
 ---
 
@@ -11,23 +15,22 @@ lastupdated: "2019-02-01"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Incluindo um recurso em seu app
+# Incluindo um serviço em seu app
 {: #add-resource}
 
-Ao criar um app com o {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, é possível incluir recursos por meio da página Detalhes do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.cloud_notm}}, fora do contexto de seu app.
+Ao criar um app com o {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, é possível incluir serviços da página de detalhes do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.cloud_notm}}, fora do contexto de seu app.
 {: shortdesc}
 
-É possível solicitar uma instância do recurso e usá-la independentemente do app ou incluir a instância de recurso
-no app por meio da página Detalhes do app. É possível provisionar um tipo específico de recurso diretamente do catálogo do {{site.data.keyword.cloud_notm}}.
+É possível solicitar uma instância do serviço e usá-la independentemente de seu app ou é possível incluir a instância de serviço em seu app na página de detalhes do app. É possível provisionar um tipo específico de serviço diretamente do catálogo do {{site.data.keyword.cloud_notm}}.
 
-## Descobrindo Recursos
+## Descobrindo serviço
 {: #discover-resources}
 
 É possível ver todos os serviços que estão disponíveis no {{site.data.keyword.cloud_notm}} das maneiras a seguir:
 
 * No console do {{site.data.keyword.cloud_notm}}. Visualize o catálogo do {{site.data.keyword.cloud_notm}}.
 * Por meio da linha de comandos. Use o `ibmcloud ofertas de serviço` comando.
-* A partir de seu próprio aplicativo. Use a [API de serviços GET /v2/services ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* A partir de seu próprio aplicativo. Use a [API de serviços GET /v2/services ](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 É possível selecionar o serviço necessário ao desenvolver aplicativos. Depois de selecioná-lo, o {{site.data.keyword.cloud_notm}} provisiona o serviço. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados e um serviço de notificação push para aplicativos móveis gera informações de configuração.
 
@@ -37,7 +40,7 @@ serviço para o aplicativo usando uma instância de serviço. Uma instância de 
 É possível também usar serviços que são hospedados em outras regiões, se esses serviços estiverem disponíveis nessas regiões. Esses serviços devem ser acessíveis pela internet e possuírem terminais de API. Deve-se
 codificar manualmente o aplicativo para usar esses serviços da mesma maneira que você
 codifica aplicativos externos ou ferramentas de terceiros para usar os serviços
-{{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Permitindo que aplicativos externos e ferramentas de terceiros usem os serviços do {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp).
+{{site.data.keyword.cloud_notm}}. Para obter mais informações, consulte [Conectando serviços a apps externos](/docs/resources?topic=resources-externalapp).
 
 ## Solicitando uma nova instância de serviço
 {: #request-instance}
@@ -71,7 +74,7 @@ aplicativo, como o Cloudant. Pode ser necessário selecionar uma região e um pl
 3. Quando o serviço é criado, vários arquivos, incluindo as credenciais, são incluídos no diretório do aplicativo para
 ajudar você a integrar o serviço ao aplicativo. É possível mesclar manualmente quaisquer arquivos ou ignorar essa etapa por enquanto.
 
-É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os apps externos usam os serviços do {{site.data.keyword.cloud_notm}}, consulte [ Ativando apps externos para usar os serviços do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](/docs/resources/connect_external_app#externalapp){: new_window}.
+É possível ligar uma instância de serviço apenas àquelas instâncias do app que estão no mesmo espaço ou organização. No entanto, é possível usar instâncias de serviço de outros espaços ou organizações da mesma maneira que um app externo faz. Em vez de criar uma ligação, use as credenciais para configurar sua instância do app diretamente. Para obter mais informações sobre como os apps externos usam os serviços do {{site.data.keyword.cloud_notm}}, consulte [Ativando aplicativos externos para usar os serviços do {{site.data.keyword.cloud_notm}}](/docs/resources?topic=resources-externalapp#externalapp).
 
 ## Configurando seu aplicativo
 {: #configure-app}
@@ -90,7 +93,7 @@ informações que o {{site.data.keyword.cloud_notm}} fornece como
 as credenciais de tempo de execução no ambiente *VCAP_SERVICES* do
 aplicativo. O valor da variável de ambiente *VCAP_SERVICES* é a serialização de um objeto JSON. A variável contém os dados de tempo de execução que são necessários para interagir com os serviços aos quais o aplicativo está ligado. O formato dos dados é diferente para serviços diferentes. Talvez seja necessário ler a documentação do serviço sobre o que deve-se esperar e como interpretar cada parte de informação.
 
-Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.cloud_notm}} não reinicia automaticamente o aplicativo para se recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades, exceções e falhas de conexão. Para obter mais informações, consulte [Os aplicativos não serão reinicializados automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.cloud_notm}} não reinicia automaticamente o aplicativo para se recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades, exceções e falhas de conexão. Para obter mais informações, consulte [Os aplicativos não serão reinicializados automaticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
 
 ## Acessando serviços em ambientes de implementação do {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -110,10 +113,10 @@ etcd.
 **Importante**: não faça referência nem exponha as credenciais de serviço diretamente no arquivo YAML de implementação. Por padrão, os arquivos YAML de implementação não são projetados para reter os dados sensíveis e não
 criptografam as credenciais de serviço. Para armazenar e acessar adequadamente essas informações, deve-se usar um segredo do Kubernetes. 
 
-1. [ Ligar o serviço ao seu cluster ](/docs/containers/cs_integrations.html#adding_cluster). 
+1. [ Ligar o serviço ao seu cluster ](/docs/containers?topic=containers-integrations#adding_cluster). 
 2. Para acessar as credenciais de serviço por meio do pod do app, escolha entre as opções a seguir. 
-   - [Montar o segredo como um volume para o pod](#mount_secret)
-   - [ Referenciar o segredo em variáveis de ambiente ](#reference_secret)
+   - Monte o segredo como um volume em seu pod
+   - Referencie o segredo em variáveis de ambiente
 
 ## Criando uma instância de serviço fornecida pelo usuário
 {: #user_provide_services}
@@ -173,4 +176,4 @@ exemplo:
 	OK
 	```
 
-Agora é possível configurar o seu aplicativo para usar os serviços externos. Para obter informações sobre como configurar o seu aplicativo para interagir com um serviço, consulte [Configurando seu aplicativo para interagir com um serviço](/docs/apps/reqnsi.html#configure-app).
+Agora é possível configurar o seu aplicativo para usar os serviços externos. Para obter informações sobre como configurar o seu aplicativo para interagir com um serviço, consulte [Configurando seu aplicativo para interagir com um serviço](/docs/apps?topic=creating-apps-add-resource#configure-app).

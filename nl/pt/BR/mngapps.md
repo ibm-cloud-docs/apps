@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-11-06"
+  years: 2015, 2018
+lastupdated: "2019-03-15"
+
+subcollection: creating-apps
 
 ---
 
@@ -12,7 +14,7 @@ lastupdated: "2018-11-06"
 # Verificando o status de seu app
 {: #manageapps}
 
-A lista de recursos no console do {{site.data.keyword.Bluemix}} fornece as informações de resumo para os aplicativos que você criou. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app.
+A lista de recursos no console do {{site.data.keyword.cloud}} fornece as informações de resumo para os aplicativos que você criou. As informações de resumo incluem o nome, ícone, URL, tempo de execução, status de execução e instâncias de serviço que estão ligadas ao app.
 {:shortdesc}
 
 ## Entendendo o status de seu app
@@ -61,7 +63,7 @@ Seu app não está em execução. O ícone vermelho indica que o app está inici
 
 É possível visualizar mais informações sobre um app clicando no nome dele na lista de recursos. Em seguida, é possível ver a página Visão geral do app.
 
-Na página Visão geral dos apps, após a implementação de um app, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória usada pelo app. Para aplicativos da web, o {{site.data.keyword.Bluemix_notm}} não escala automaticamente seu app com base em sua carga, então é necessário gerenciar isso sozinho.
+Na página Visão geral dos apps, após a implementação de um app, é possível iniciar, parar, reiniciar ou, no caso de aplicativos da web, modificar o número de instâncias e a quantia de memória usada pelo app. Para aplicativos da web, o {{site.data.keyword.cloud_notm}} não escala automaticamente seu app com base em sua carga, então é necessário gerenciar isso sozinho.
 
-Se uma atualização é feita, os apps podem ser reimplementados. O mecanismo para atualizar o app é o mesmo mecanismo que é usado para implementá-lo originalmente. {{site.data.keyword.Bluemix_notm}} para todas as instâncias em execução
+Se uma atualização é feita, os apps podem ser reimplementados. O mecanismo para atualizar o app é o mesmo mecanismo que é usado para implementá-lo originalmente. {{site.data.keyword.cloud_notm}} para todas as instâncias em execução
 e as substitui por novas instâncias automaticamente.

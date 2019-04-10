@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Lorsque vous créez une application à partir d'un kit de démarrage, un code es
 
 Le projet inclut un fichier `README` contenant les détails techniques du projet et expliquant ce qui est nécessaire pour que votre application soit prête à s'exécuter.
 
-Pour plus d'informations, voir la console de développeur [{{site.data.keyword.cloud_notm}} pour les ressources d'apprentissage Apple](https://console.bluemix.net/developer/appledevelopment/learning-resources).
+Pour plus d'informations, voir la console de développeur [{{site.data.keyword.cloud_notm}} pour les ressources d'apprentissage Apple](https://cloud.ibm.com/developer/appledevelopment/learning-resources).
 {: tip}
 
 ### Quel type de contenu d'application est généré ?

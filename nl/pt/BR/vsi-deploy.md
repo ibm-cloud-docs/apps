@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
+
+subcollection: creating-apps
 
 ---
 
@@ -19,7 +23,7 @@ lastupdated: "2019-02-28"
 # Implementando em um servidor virtual
 {: #vsi-deploy}
 
-Se você tiver uma conta pré-paga, será possível usar o {{site.data.keyword.cloud}} [App Service ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} para implementar os apps para vários tipos de ambientes, incluindo instâncias de servidor virtual. Uma instância de
+Se você tiver uma conta Pré-paga, será possível usar o {{site.data.keyword.cloud}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para implementar seus apps para muitos tipos de ambientes, incluindo instâncias de servidor virtual. Uma instância de
 servidor virtual emula uma máquina bare metal e é uma opção de implementação comum ao mover cargas de trabalho no local
 para a nuvem.
 {: shortdesc}
@@ -39,8 +43,8 @@ O App Service fornece uma instância de servidor virtual, carrega uma imagem que
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
 1. [Crie um aplicativo](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Clique em **Implementar na nuvem** na página de detalhes do aplicativo.
-3. Selecione **Implementar em um Virtual Server** juntamente com a região na qual o servidor deve ser executado.
+2. Clique em **Configurar entrega contínua** por meio da página **Detalhes do app**.
+3. Selecione **Implementar em um Servidor virtual**, juntamente com a região na qual executar o servidor.
 
 ## Como o processo de implementação funciona
 
@@ -48,11 +52,11 @@ O processo de implementação do servidor virtual consiste em várias tecnologia
 
 ### Implementando por meio do Terraform
 
-Qualquer um dos kits do iniciador do App Service pode ser implementado em uma instância virtual criada dinamicamente por meio do [Terraform ![Ícone de link externo](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}, uma estrutura de software livre de infraestrutura como código. 
+Qualquer um dos kits iniciadores do App Service pode ser implementado em uma instância virtual criada dinamicamente por meio do [Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), uma infraestrutura de software livre como estrutura de código. 
 
 ### Ativando sua implementação de pipeline
 
-Ao criar um kit do iniciador que usa o {{site.data.keyword.cloud_notm}} [App Service ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, a instância do servidor virtual é ativada. Após o app ser criado, será possível escolher onde deseja implementá-lo. Os kits do iniciador são ativados para suportar a implementação usando uma cadeia de ferramentas de Entrega Contínua. Os kits do iniciador podem ter como destino o Kubernetes, o Cloud Foundry e as Instâncias do Virtual Server. A cadeia de ferramentas inclui um repositório de código-fonte e um pipeline de implementação.
+Quando você cria um kit do iniciador que usa o {{site.data.keyword.cloud_notm}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), a instância de servidor virtual é ativada. Após o app ser criado, será possível escolher onde deseja implementá-lo. Os kits do iniciador são ativados para suportar a implementação usando uma cadeia de ferramentas de Entrega Contínua. Os kits do iniciador podem ter como destino o Kubernetes, o Cloud Foundry e as Instâncias do Virtual Server. A cadeia de ferramentas inclui um repositório de código-fonte e um pipeline de implementação.
 
 A opção do servidor virtual funciona em fases. Primeiro, o código do aplicativo é preparado e armazenado em um
 repositório Git GitLab e o código-fonte cria uma cadeia de ferramentas com um pipeline. O pipeline é definido para construir o código e o empacotá-lo em um formato de gerenciador de pacote do Debian. Em seguida, Terraform provisões uma instância virtual. Finalmente, o app é implementado, instalado e iniciado dentro da imagem virtual em execução e seu funcionamento é validado.
@@ -69,17 +73,17 @@ seguir para aprender sobre as propriedades que estão disponíveis.
 
 | Propriedade  | Descrição  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](/docs/apps/vsi-deploy.html#iaas-key) é do
+| `TF_VAR_ibm_sl_api_key` | A [chave API de infraestrutura](/docs/apps?topic=creating-apps-vsi-deploy#iaas-key) é do
 console da infraestrutura clássica. |
-| `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](/docs/apps/vsi-deploy.html#user-key) que
+| `TF_VAR_ibm_sl_username` | O [nome de usuário da infraestrutura](/docs/apps?topic=creating-apps-vsi-deploy#user-key) que
 identifica a conta da infraestrutura clássica |
-| `TF_VAR_ibm_cloud_api_key` | A {{site.data.keyword.cloud_notm}} [chave de API](/docs/apps/vsi-deploy.html#platform-key) é usada para ativar a criação de serviço. |
-| `PUBLIC_KEY` | [Chave pública](/docs/apps/vsi-deploy.html#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
-| `PRIVATE_KEY` | [Chave privada](/docs/apps/vsi-deploy.html#public-key) que é definida para ativar o acesso à instância de servidor virtual. Deve-se usar a formatação de estilo de nova linha `\n`. |
+| `TF_VAR_ibm_cloud_api_key` | A {{site.data.keyword.cloud_notm}} [chave de API](/docs/apps?topic=creating-apps-vsi-deploy#platform-key) é usada para ativar a criação de serviço. |
+| `PUBLIC_KEY` | [Chave pública](/docs/apps?topic=creating-apps-vsi-deploy#public-key) que é definida para ativar o acesso à instância de servidor virtual. |
+| `PRIVATE_KEY` | [Chave privada](/docs/apps?topic=creating-apps-vsi-deploy#public-key) que é definida para ativar o acesso à instância de servidor virtual. Deve-se usar a formatação de estilo de nova linha `\n`. |
 | `VI_INSTANCE_NAME` | Nome gerado automaticamente para a instância do servidor virtual |
-| `GIT_USER` | Se você configurar o [estado do Terraform](/docs/apps/vsi-deploy.html#tform-state) para
+| `GIT_USER` | Se você configurar o [estado do Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) para
 armazenar o estado do comando apply, o nome de usuário do GitLab será necessário. |
-| `GIT_PASSWORD` | Se você configurar o [estado do Terraform](/docs/apps/vsi-deploy.html#tform-state) para
+| `GIT_PASSWORD` | Se você configurar o [estado do Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) para
 armazenar o estado do comando apply, a senha do GitLab será necessária. |
 {: caption="Tabela 1. Variáveis de ambiente a serem mudadas para a ativação" caption-side="top"}
 
@@ -89,13 +93,13 @@ armazenar o estado do comando apply, a senha do GitLab será necessária. |
 
 O Terraform requer uma chave de API de infraestrutura clássica para criar recursos de infraestrutura. A chave de API é obtida automaticamente durante a implementação. Para recuperar manualmente uma chave, conclua as etapas a seguir.
 
-1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+1. Acesse a [lista de usuários](https://{DomainName}/iam#/users){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
 2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
 3. Clique em **Incluir uma chave de infraestrutura clássica** na seção de chaves de API.
 4. Copie ou faça download da chave de API `TF_VAR_ibm_sl_api_key` e salve-a em um local seguro. É possível recuperar os detalhes da chave de API posteriormente usando a opção **Visualizar detalhes** no menu **Ações** ![Ícone de lista de ações](../icons/action-menu-icon.svg).
 5. Cole o valor da chave de API copiado na configuração da cadeia de ferramentas para substituir o `TF_VAR_ibm_sl_api_key`.
 
-Para obter mais informações, consulte [Gerenciando chaves de API da infraestrutura clássica](/docs/iam/classic_infra_keys.html#classic_keys) e [Permissões da infraestrutura clássica](/docs/iam/infrastructureaccess.html#infrapermission).
+Para obter mais informações, consulte [Gerenciando chaves de API da infraestrutura clássica](/docs/iam?topic=iam-classic_keys#classic_keys) e [Permissões da infraestrutura clássica](/docs/iam?topic=iam-infrapermission#infrapermission).
 
 #### Nome de usuário da infraestrutura clássica
 {: #user-key}
@@ -103,7 +107,7 @@ Para obter mais informações, consulte [Gerenciando chaves de API da infraestru
 O nome de usuário da infraestrutura clássica também é obtido automaticamente e usado durante a implementação. Para
 obter manualmente o nome do usuário, conclua as etapas a seguir.
 
-1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+1. Acesse a [lista de usuários](https://{DomainName}/iam#/users){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
 2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
 3. Localize a propriedade **Nome do usuário da VPN**.
 4. Recorte e cole esse valor e substitua a configuração da cadeia de ferramentas `TF_VAR_ibm_sl_username`.
@@ -113,7 +117,7 @@ obter manualmente o nome do usuário, conclua as etapas a seguir.
 
 Para criar serviços de nível de plataforma no Terraform, como bancos de dados e serviços de edição, a chave de API do {{site.data.keyword.cloud_notm}} é obtida automaticamente e armazenada como uma variável de ambiente em seu pipeline. Para recuperar manualmente uma chave de API do {{site.data.keyword.cloud_notm}}, conclua as etapas a seguir.
 
-1. Acesse a [lista de usuários ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
+1. Acesse a [lista de usuários](https://{DomainName}/iam#/users){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Também é possível clicar em **Gerenciar** > **Acessar (IAM)** e selecionar **Usuários**.
 2. Clique em um nome de usuário e, em seguida, clique em **Detalhes do usuário**.
 3. Localize a seção Chaves de API e clique em **Criar uma chave de API do IBM Cloud**.
 4. Insira um nome e uma descrição e clique em **Criar**.
@@ -127,8 +131,8 @@ Para criar serviços de nível de plataforma no Terraform, como bancos de dados 
 Para que a cadeia de ferramentas instale o pacote do Debian na instância de servidor virtual, a infraestrutura de implementação gera automaticamente um par de chaves SSH privada/pública para transferir os conteúdos do Git para a instância.
 
 Para fazer isso manualmente:
-1. Em seu cliente, use as instruções a seguir para criar um [par de chaves pública e privada ![Ícone de link externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Acesse a [visualização de chaves SSH de infraestrutura ![Ícone de link externo](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
+1. Em seu cliente, use as instruções a seguir para criar um [par de chaves pública e privada](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}![cliente](../icons/launch-glyph.svg "Ícone de link externo").
+2. Acesse a [Visualização de chaves SSH da infraestrutura](https://{DomainName}/iam/#/users){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Também é possível clicar em **Menu** > **Infraestrutura clássica** >**Dispositivos** > **Gerenciar** > **Chaves SSH**.
 3. Clique em **Incluir**.
 4. Copie os conteúdos da chave pública que você criou anteriormente e cole-os nos conteúdos de chave.
 5. Forneça um nome à chave e clique em **Incluir**.
@@ -167,7 +171,7 @@ equipes trabalhem e entreguem as mudanças para o aplicativo. As pastas incluíd
 #### Pasta Debian
 {: #debian-folder}
 
-A pasta `debian` retém a configuração necessária para ativar o empacotamento do app em um [pacote Debian. ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window}
+A pasta `debian` retém a configuração que é necessária para ativar o pacote do app em um [pacote Debian](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 #### Pasta do Terraform
 {: #terraform-folder}
@@ -193,9 +197,9 @@ resource "ibm_compute_vm_instance" "vm1" {
 }
 ```
 
-Também é possível provisionar servidores bare metal com o Terraform. Para obter mais informações, consulte [Documentação do IBM Terraform Provider ![Ícone de link externo](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} e [Repositório GIT do IBM Terraform Provider ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}.
+Também é possível provisionar servidores bare metal com o Terraform. Para obter mais informações, consulte a [Documentação do IBM Terraform Provider ](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Repositório GIT do IBM Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
-O `variables.tf` pode ser usado para mudar o data center que você deseja ter como destino para criar a instância virtual. Para ver a lista de data centers definidos na plataforma, consulte [Data centers ![Ícone de link externo](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}.
+O `variables.tf` pode ser usado para mudar o data center que você deseja ter como destino para criar a instância virtual. Para ver a lista de data centers definidos na plataforma, consulte [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 Por padrão, o arquivo Terraform está configurado para Washington e `wdc04`.
 ```json

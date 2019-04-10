@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-03-14"
+
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+
+subcollection: creating-apps
 
 ---
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, applications, troubleshooting 
+
+subcollection: creating-apps
 
 ---
 
@@ -122,7 +126,7 @@ nslookup cloud.ibm.com
 * 메뉴 표시줄에서 **관리 > 계정**을 클릭하고 **Cloud Foundry 조직**을 선택하십시오. 영역을 작성할 조직을 선택하고 **영역 작성**을 클릭하십시오.
 * Cloud Foundry 명령행 인터페이스에서 다음을 입력하십시오. `cf create-space <space_name> -o <organization_name>`.
 
-다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.cloud_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
+다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.cloud_notm}} 상태 ](http://ibm.biz/bluemixstatus){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 
 ## 요청된 조치를 수행할 수 없음
 {: #ts_authority}
@@ -144,7 +148,7 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 개발자 역할이 있는 다른 조직과 영역을 선택하십시오.
-* 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/admin/orgs_spaces.html#orgsspacesusers)를 참조하십시오.
+* 조직 관리자에게 문의하여 사용자의 역할을 개발자 역할로 변경하거나 영역을 작성한 다음 사용자에게 개발자 역할을 지정하십시오. 세부사항은 [조직 및 영역 관리](/docs/iam?topic=iam-cfaccess#cfaccess)를 참조하십시오.
 
 ## 권한 오류로 인해 {{site.data.keyword.cloud_notm}} 서비스에 액세스할 수 없음
 {: #ts_vcap}
@@ -165,7 +169,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 및 [Ruby ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}를 참조하십시오.
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 ## 502 잘못된 게이트웨이 오류가 수신됨
 {: #ts_502_error}
@@ -181,7 +185,7 @@ process.env.VCAP_SERVICES
 
 잘못된 게이트웨이 오류의 덜 일반적인 기타 원인은 ISP(Internet Service Provider) 드롭아웃, 잘못된 방화벽 구성 및 브라우저 캐시 오류입니다.
 
-{{site.data.keyword.cloud_notm}} 서비스의 작동이 중지된 것으로 의심되는 경우 먼저 [{{site.data.keyword.cloud_notm}} 상태 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://ibm.biz/bluemixstatus){: new_window} 페이지를 확인하십시오. 임시 해결책으로 [다른 {{site.data.keyword.cloud_notm}} 지역의 서비스를 사용](/docs/resources/connect_external_app#externalapp){: new_window}할 수 있습니다. 서비스 상태가 정상이면 다음 단계를 수행하여 문제를 해결하십시오.
+{{site.data.keyword.cloud_notm}} 서비스의 작동이 중지된 것으로 의심되는 경우 먼저 [{{site.data.keyword.cloud_notm}} 상태 ](http://ibm.biz/bluemixstatus){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 페이지를 확인하십시오. 임시 해결책으로 [다른 {{site.data.keyword.cloud_notm}} 지역의 서비스를 사용](/docs/resources/connect_external_app#externalapp){: new_window}할 수 있습니다. 서비스 상태가 정상이면 다음 단계를 수행하여 문제를 해결하십시오.
 {: tsResolve}
 
   * 조치 재시도:
@@ -189,7 +193,7 @@ process.env.VCAP_SERVICES
     * 다른 브라우저를 사용하십시오.
     * 라우터, 모뎀 및 컴퓨터를 다시 시작하십시오. 이 디바이스를 다시 부팅하면 오류 502의 원인이 되는 다양한 오류를 정리할 수 있습니다.
   * 대기한 후 나중에 다시 시도하십시오. 인터넷 서비스 제공업체 또는 {{site.data.keyword.cloud_notm}} 서비스에 일시적인 문제점이 발생할 수 있습니다. 일시적인 문제점이 해결될 때까지 대기할 수 있습니다.
-  * 문제점이 계속 존재하면 {{site.data.keyword.cloud_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 지원 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](/docs/support/index.html#contacting-bluemix-support){: new_window}에 문의하십시오.
+  * 문제점이 계속 존재하면 {{site.data.keyword.cloud_notm}} 지원 센터에 문의하십시오. 자세한 정보는 [{{site.data.keyword.cloud_notm}} 지원 문의 ](/docs/support/index.html#contacting-bluemix-support){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 ## 디스크 할당량이 초과됨
 {: #ts_disk_quota}
@@ -203,10 +207,10 @@ process.env.VCAP_SERVICES
 하나의 앱에 대해 할당되는 기본 디스크 할당량은 1GB입니다. 추가 디스크 공간이 필요한 경우에는 디스크 할당량을 수동으로 지정해야 합니다.
 {: tsCauses}
 
-다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](/docs/services/ObjectStorage/index.html) 등의 외부 서비스를 사용해 보십시오.
+다음 방법 중 하나를 사용하여 디스크 할당량을 지정하십시오. 지정할 수 있는 최대 디스크 할당량은 2GB입니다. 2GB로도 충분하지 않은 경우에는 [오브젝트 저장소](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers) 등의 외부 서비스를 사용해 보십시오.
 {: tsResolve}
 
-  * manifest.yml 파일에서 다음 항목을 추가하십시오.
+  * `manifest.yml` 파일에 다음 항목을 추가하십시오.
   ```yaml
 	disk_quota: <disk_quota>
 	```
@@ -229,7 +233,7 @@ Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.dat
 IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
-임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://pushy.me){: new_window}, [getui ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.getui.com/){: new_window} 및 [jpush ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.jpush.cn/){: new_window}).
+임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ](https://pushy.me){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘"), [getui ](http://www.getui.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [jpush ](https://www.jpush.cn/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")).
 {: tsResolve}
 
 ## 조직의 서비스 한계를 초과함
@@ -260,7 +264,7 @@ Lite 계정 사용자인 경우 조직의 서비스 한계를 초과하면 {{sit
 	  4. 서비스 인스턴스를 삭제합니다. `cf delete-service <service_instance_name>`을 입력하십시오.
 	  5. 서비스 인스턴스를 삭제한 후에 서비스 인스턴스가 바인드된 앱을 다시 스테이징하려고 할 수 있습니다. `cf restage <appname>`을 입력하십시오.
 
-  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면, Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
+  * 보유할 수 있는 서비스 인스턴스 수에 대한 한계를 제거하려면, Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account?topic=account-accounts#upgrade-to-paygo)를 참조하십시오.
 
 ## 실행 파일을 {{site.data.keyword.cloud_notm}}에서 실행할 수 없음
 {: #ts_executable}
@@ -307,7 +311,7 @@ Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 앱�
 계정의 메모리 할당량을 늘리거나, 앱에서 사용하는 메모리를 줄일 수 있습니다.
 {: tsResolve}
 
-  * 계정의 메모리 할당량을 늘리려면, Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account/index.html#upgrade-to-paygo)를 참조하십시오.
+  * 계정의 메모리 할당량을 늘리려면, Lite 계정을 청구 가능 계정으로 업그레이드하십시오. 자세한 정보는 [계정 업그레이드](/docs/account?topic=account-accounts#upgrade-to-paygo)를 참조하십시오.
   * 앱에서 사용하는 메모리를 줄이려면, {{site.data.keyword.cloud_notm}} 콘솔 또는 Cloud Foundry 명령행 인터페이스를 사용하십시오.
 
     {{site.data.keyword.cloud_notm}} 콘솔을 사용하는 경우 다음 단계를 수행하십시오.
@@ -345,11 +349,11 @@ Lite 계정 사용자인 경우 조직의 메모리 한계를 초과하면 앱�
 이 동작은 Cloud Foundry의 의도된 동작입니다.
 {: tsCauses}
 
-명령행 인터페이스에 다음 명령을 입력하여 앱을 수동으로 다시 시작할 수 있습니다.
+명령행 인터페이스에 다음 명령을 입력하여 이미 배치된 앱을 수동으로 다시 시작할 수 있습니다.
 {: tsResolve}
 
 ```
-ibmcloud cf push appname -p app_path
+ibmcloud cf restart <APPNAME>
 ```
 {: codeblock}
 
@@ -375,7 +379,7 @@ ibmcloud cf push appname -p app_path
 다음 옵션 중 하나를 사용하여 문제를 해결하십시오.
 {: tsResolve}
 
-  * 권장 사례는 IBM Node.js 빌드팩을 사용하여 앱을 시작하는 것입니다. 자세한 정보는 [Node.js 애플리케이션을 {{site.data.keyword.cloud_notm}}에 배치](/docs/runtimes/nodejs/index.html#nodejs_runtime) 주제의 시작 명령 섹션을 참조하십시오.
+  * 권장 사례는 IBM Node.js 빌드팩을 사용하여 앱을 시작하는 것입니다. 자세한 정보는 [Node.js 애플리케이션을 {{site.data.keyword.cloud_notm}}에 배치](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) 주제의 시작 명령 절을 참조하십시오.
   * `manifest.yml`의 명령 속성을 command: null로 수정하거나 `-c null`을 포함하도록 푸시 명령을 편집하여 기존 앱의 명령을 사용 안함으로 설정하십시오.
   * **명령** 속성을 `manifest.yml`에서 제거하십시오. 그리고 {{site.data.keyword.cloud_notm}}에서 현재 앱을 삭제하고 앱을 다시 푸시하십시오.
 
@@ -522,7 +526,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.cloud_notm}}에 배치�
 		  ```
       {: codeblock}
 
-    * [package.json ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.npmjs.com/package/jsonfile){: new_window} 파일을 사용하십시오. 예를 들어, 다음과 같습니다.
+    * [package.json ](https://www.npmjs.com/package/jsonfile){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 파일을 사용하십시오. 예를 들어, 다음과 같습니다.
 	    ```json
 		  {
         ...
@@ -561,7 +565,7 @@ Node.js 앱을 업데이트하거나 {{site.data.keyword.cloud_notm}}에 배치�
  }
     ```
 
-Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}을 참조하십시오.
+Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 ## {{site.data.keyword.cloud_notm}} Liberty 앱을 Eclipse로 가져온 후에 `server.xml` 파일에서 구성 오류가 나타남
 {: #ts_eclipse}
@@ -575,7 +579,7 @@ Node.js 앱에 대한 추가 팁은 [Node.js 애플리케이션에 대한 팁 ![
 Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드팩은 `server.xml` 파일을 사용하여 앱을 구성하고 `runtime-vars.xml` 파일을 생성합니다. 앱을 Eclipse로 가져오면 `runtime-vars.xml` 파일이 로컬 환경에 없습니다.
 {: tsCauses}
 
-이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](/docs/runtimes/liberty/index.html)를 참조하십시오.
+이 문제점은 프로젝트에서 server.xml 파일을 제거하여 해결할 수 있습니다. 앱을 WAR 앱으로 푸시하면 빌드팩이 동적으로 `server.xml` 파일을 작성합니다. 자세한 정보는 [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime)를 참조하십시오.
 {: tsResolve}
 
 ## 사용자 정의 빌드팩을 사용하여 앱을 스테이징할 수 없음
@@ -590,7 +594,7 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
 이 문제점은 발견 스크립트, 컴파일 스크립트, 릴리스 스크립트 등의 스크립트가 실행 가능하지 않을 경우에 발생합니다.
 {: tsCauses}
 
-[Git update ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://git-scm.com/docs/git-update-index){: new_window} 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
+[Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} Continuous Delivery에서 Delivery Pipeline의 앱을 배치할 수 없음
@@ -605,7 +609,7 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
  이 문제점은 앱을 {{site.data.keyword.cloud_notm}}에 배치하려면 파이프라인에 `manifest.yml` 파일이 필요하기 때문에 발생할 수 있습니다.
  {: tsCauses}
 
- 이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/manageapps/depapps.html#appmanifest)를 참조하십시오.
+ 이 문제점을 해결하려면 `manifest.yml` 파일을 작성해야 합니다. `manifest.yml` 파일을 작성하는 방법에 대한 자세한 정보는 [애플리케이션 Manifest](/docs/cloud-foundry/deploy-apps.html#appmanifest)를 참조하십시오.
  {: tsResolve}
 
 ## Meteor 앱을 푸시할 수 없음
@@ -639,7 +643,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 
 빌드 또는 배치 작업에 실패하고 다음 메시지가 나타나는 경우에는 다음 CLI 명령을 사용하여 이미지를 삭제할 수 있습니다. `상태: 권한 없음: 스토리지 할당량을 초과했습니다. 하나 이상의 이미지를 삭제하거나 스토리지 할당량과 가격 플랜을 검토하십시오.`
 
-* 아직 설치되지 않았으면 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)를 설치하십시오.
+* 아직 설치되지 않았으면 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
 * `ibmcloud login`을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하고 사용자가 현재 있는 영역을 가리키십시오.
 * `ibmcloud cr images`를 사용하여 이미지를 나열하십시오.
 * `ibmcloud cr image-rm <respository>:<tag>`를 사용하여 사용하지 않는 이미지를 삭제하십시오.
@@ -649,12 +653,12 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: #access_kube_logs}
 
 애플리케이션이 실행 중이 아니며 상태 엔드포인트에 액세스할 수 없는 경우에는 클러스터의 로그 보기를 시도하십시오.
-* 아직 설치되지 않았으면 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)를 설치하십시오.
+* 아직 설치되지 않았으면 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
 * `ibmcloud login`을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하고 사용자가 현재 있는 영역을 가리키십시오.
 * `ibmcloud cs clusters`를 사용하여 클러스터를 나열하십시오.
 * `ibmcloud cs cluster-config <cluster-name>`을 사용하여 대응되는 클러스터를 지시하십시오.
 * 나열된 환경 변수를 내보내십시오.
-* `kubectl get pods`를 사용하여 팟(Pod)을 보십시오. `kubectl` 설치가 필요하면 [kubectl 설치 및 설정](https://kubernetes.io/docs/tasks/tools/install-kubectl/)을 참조하십시오.
+* `kubectl get pods`를 사용하여 팟(Pod)을 보십시오. `kubectl` 설치가 필요하면 [kubectl 설치 및 설정](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 * 다음을 사용하여 앱에서 로그를 볼 수 있습니다. `kubectl logs <pod-name>`
 
 
@@ -673,7 +677,7 @@ An error exec: "docker": executable file not found in $PATH was encountered whil
 Docker 클라이언트가 설치되지 않았거나 설치되었지만 시작되지 않았습니다.
 {: tsCauses}
 
-[Docker](https://docs.docker.com/install/)가 설치되어 있는지 확인한 후 시작하십시오.
+[Docker](https://docs.docker.com/install/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")가 설치되어 있는지 확인하고 시작하십시오.
 {: tsResolve}
 
 

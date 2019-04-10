@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-03-15"
+
+keywords: apps, application, SSL certificates, access, restrict access
+
+subcollection: creating-apps
 
 ---
 
@@ -26,7 +30,7 @@ solicitações de certificado SSL são aceitas somente com um comprimento da cha
 
 ## Criando uma CSR
 
-Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando a [ferramenta de linha de comandos OpenSSL ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://www.openssl.org/){:new_window}:
+Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando a [ferramenta de linha de comandos OpenSSL ](http://www.openssl.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -50,7 +54,7 @@ Para que a CSR seja válida, as informações a seguir devem ser inseridas ao cr
 <dt>Nome do país</dt>
 <dd>Um código com dois dígitos para o país ou a região. Por exemplo, `US` é o código do país para os Estados Unidos. Para
 outros países ou regiões, antes de criar a CSR, verifique a [lista
-de códigos de país ISO ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://www.iso.org/obp/ui/#search).
+de códigos de país ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 </dd>
 <dt>Estado ou território</dt>
 <dd>O nome completo sem abreviação do estado ou do município.</dd>
@@ -114,7 +118,7 @@ protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por
     O recurso de certificado customizado no gerenciamento de domínio do
 {{site.data.keyword.cloud_notm}} depende da
 extensão de Indicação de Nome do Servidor (SNI) do protocolo de
-Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.cloud_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Assegurando dados com TLS](/docs/get-support/appsectls.html#tlssupportwithdraw).
+Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.cloud_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Assegurando dados com TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
     {: note}
   
   * Armazenamento confiável de certificado de cliente (opcional): inclui os certificados de cliente para os usuários aos quais você deseja permitir acesso ao seu aplicativo. Faça upload de um arquivo de armazenamento confiável de certificado de cliente para ativar a opção para solicitar um certificado de cliente.
@@ -122,6 +126,6 @@ Segurança da Camada de Transporte (TLS). O código do cliente que acessa os apl
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}
 
-Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates/import-ssl-certificate.html).
+Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
 
 

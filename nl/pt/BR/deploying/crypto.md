@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-23"
+  years: 2018, 2019
+lastupdated: "2019-03-18"
+
+keywords: apps, key protection, ACSP client, data protection
+
+subcollection: creating-apps
 
 ---
 {:new_window: target="_blank"}
@@ -17,15 +21,15 @@ lastupdated: "2018-07-23"
 O {{site.data.keyword.cloud}} {{site.data.keyword.hscrypto}} traz a criptografia IBM Z para a nuvem. O {{site.data.keyword.cloud_notm}} oferece a mesma tecnologia criptográfica da qual os serviços bancários e financeiros dependem.
 {:shortdesc}
 
-O {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protege suas chaves e dados inativos, em uso e em trânsito no nível de segurança mais alto da indústria - FIPS 140-2 Nível 4. O {{site.data.keyword.hscrypto}} é o keystore do serviço [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto/index.html#get-started) e protege suas chaves em um ambiente de hipersegurança no IBM Z.
+O {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} protege suas chaves e dados inativos, em uso e em trânsito no nível de segurança mais alto da indústria - FIPS 140-2 Nível 4. O {{site.data.keyword.hscrypto}} é o keystore do serviço [{{site.data.keyword.keymanagementservicelong_notm}}](/docs/services/hs-crypto?topic=hs-crypto-get-started) e protege suas chaves em um ambiente de hipersegurança no IBM Z.
 
 ## Instalando e configurando o cliente ACSP
-{: ##crypto_config}
+{: #crypto_config}
 
 Antes de instalar o cliente do Advanced Cryptography Service Provider (ACSP), crie e forneça uma
-instância do {{site.data.keyword.cloud_notm}}{{site.data.keyword.hscrypto}} por meio do[ catálogo do ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}/catalog/services/hyper-protect-crypto-services){:new_window}. Em seguida, deve-se instalar e configurar o cliente (ACSP) em seu ambiente.
+instância do {{site.data.keyword.cloud_notm}}{{site.data.keyword.hscrypto}} por meio do[ catálogo do ](https://{DomainName}/catalog/services/hyper-protect-crypto-services){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). Em seguida, deve-se instalar e configurar o cliente (ACSP) em seu ambiente.
 
-1. Faça download do pacote de instalação por meio do [Repositório GitHub ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){:new_window}. Na pasta de **pacotes**, escolha o arquivo de pacote de instalação que for adequado para seu sistema operacional e arquitetura de CPU. Por exemplo, para Ubuntu on x86, escolha `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
+1. Faça download do pacote de instalação por meio do [Repositório GitHub ](https://github.com/ibm-developer/ibm-cloud-hyperprotectcrypto){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"). Na pasta de **pacotes**, escolha o arquivo de pacote de instalação que for adequado para seu sistema operacional e arquitetura de CPU. Por exemplo, para Ubuntu on x86, escolha `acsp-pkcs11-client_1.5-3.5_amd64.deb`.
 2. Instale o pacote para instalar as bibliotecas do cliente ACSP com o comando `dpkg`, por exemplo, `dpkg -i acsp-pkcs11-client_1.5-3.5_amd64.deb`.
 3. Na instância de serviço do {{site.data.keyword.hscrypto}} no {{site.data.keyword.cloud_notm}}, selecione **Gerenciar** no navegador.
 4. Na janela de gerenciamento, clique em **Fazer download da configuração** para fazer download do arquivo `acsp_client_credentials.uue`.
@@ -64,6 +68,6 @@ instância do {{site.data.keyword.cloud_notm}}{{site.data.keyword.hscrypto}} por
 Agora seu cliente ACSP está operacional e seu {{site.data.keyword.hscrypto}} está pronto para usar!
 
 ## Próximas Etapas
-{: ##next-steps}
+{: #next-steps notoc}
 
-Uma maneira fácil de adotar o {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} é iniciar com o {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}. Para obter mais informações sobre o {{site.data.keyword.hsplatform}}, consulte [Introdução ao {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](/docs/services/hypersecure-platform/index.html).
+Uma maneira fácil de adotar o {{site.data.keyword.cloud_notm}} {{site.data.keyword.hscrypto}} é iniciar com o {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}. Para obter mais informações sobre o {{site.data.keyword.hsplatform}}, consulte [Introdução ao {{site.data.keyword.cloud_notm}} {{site.data.keyword.hsplatform}}](/docs/services/hypersecure-platform?topic=services/hypersecure-platform-getting-started-with-ibm-cloud-hyper-protect-developer-starter-kits).

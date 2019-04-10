@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ A criação de um app por meio de um kit do iniciador produz automaticamente um 
 
 O projeto inclui um arquivo `README` que tem detalhes técnicos do projeto e explica o que é necessário para que seu app esteja pronto para execução.
 
-Para obter mais informações, veja o console do desenvolvedor do [{{site.data.keyword.cloud_notm}} para os recursos para aprendizado da Apple](https://console.bluemix.net/developer/appledevelopment/learning-resources).
+Para obter mais informações, veja o console do desenvolvedor do [{{site.data.keyword.cloud_notm}} para os recursos para aprendizado da Apple](https://cloud.ibm.com/developer/appledevelopment/learning-resources).
 {: tip}
 
 ### Qual conteúdo do app é produzido?

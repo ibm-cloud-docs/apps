@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, applications, activity tracking events
+
+subcollection: creating-apps
 
 ---
 
@@ -21,14 +25,14 @@ lastupdated: "2019-02-01"
 En tant que responsable de la sécurité, auditeur ou gestionnaire, vous pouvez utiliser le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec {{site.data.keyword.dev_console}} dans {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités démarrées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov).
+Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre les activités démarrées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 
 ## Emplacement des événements
 {: #view-events-ui}
 
 Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le domaine de compte {{site.data.keyword.cloudaccesstrailshort}}, lui même disponible dans la région {{site.data.keyword.cloud_notm}} où les événements {{site.data.keyword.dev_console}} sont générés.
 
-Pour commencer à surveiller les actions utilisateur, consultez le [tutoriel d'initiation](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Pour commencer à surveiller les actions utilisateur, consultez le [tutoriel d'initiation](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started).
 
 ## Liste des événements
 {: #events}

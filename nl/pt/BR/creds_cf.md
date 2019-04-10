@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, credentials, Cloud Foundry
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-01"
 # Incluindo credenciais no ambiente do Cloud Foundry
 {: #add-credentials-cf}
 
-Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
+Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
 
 ## Seu código + Cloud Foundry
@@ -69,21 +73,18 @@ analisá-lo no JSON e localizar a credencial necessária (node.js-like pseudocod
 
 ### Como o espaço do Cloud Foundry é preparado
 
-Use o recurso **Implementar para nuvem** para implementar o app no espaço do Cloud Foundry.
+Use o recurso **Configurar entrega contínua** para implementar seu app em seu espaço do Cloud Foundry.
 
-Se a instância de recurso baseada em Cloud Foundry está no mesmo espaço do Cloud Foundry como o aplicativo
-Cloud Foundry implementado, consulte a [próxima seção](/docs/apps/creds_cf.html#cf_resource_same).
+Se a instância de serviço baseada no Cloud Foundry estiver no mesmo espaço do Cloud Foundry que o aplicativo Cloud Foundry implementado, consulte a [próxima seção](/docs/apps?topic=creating-apps-add-credentials-cf).
 
-Se a instância de recurso baseada em Cloud Foundry está em um espaço diferente do espaço de destino para o aplicativo Cloud Foundry, consulte a [seção a seguir](/docs/apps/creds_cf.html#cf_resource_different).
+Se a instância de serviço baseada no Cloud Foundry estiver em um espaço diferente do espaço de destino para o aplicativo Cloud Foundry, consulte a [seção a seguir](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_different).
 
-Se o recurso que você associou ao aplicativo for baseado no Resource Controller, consulte [Resource Controller](/docs/apps/creds_cf.html#cf_resource_controller).
+Se o serviço que você associou ao seu aplicativo for baseado no Resource Controller, consulte [Resource Controller](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_controller).
 
-#### O recurso baseado em Cloud Foundry está no mesmo espaço que o app implementado
+#### O serviço baseado no Cloud Foundry está no mesmo espaço que o app implementado
 {: #cf_resource_same}
 
-Se o recurso que você associou ao aplicativo for baseado em Cloud Foundry, o recurso será "de ligação" no Cloud Foundry. É possível ver o serviço no espaço do Cloud Foundry conectando a linha de comandos `cf` com a região correta mais a organização e o espaço. É
-possível dizer se o recurso é baseado no Cloud Foundry no momento de sua criação, se a organização e o espaço do Cloud
-Foundry nos quais criá-lo foram solicitados a você.
+Se o serviço que você associou ao seu aplicativo for baseado no Cloud Foundry, o serviço será "ligável" ao Cloud Foundry. É possível ver o serviço no espaço do Cloud Foundry conectando a linha de comandos `cf` com a região correta mais a organização e o espaço. É possível dizer se o serviço é baseado no Cloud Foundry no momento da criação dele, se foi perguntado a você em qual organização e espaço do Cloud Foundry criar o serviço.
 
 É possível visualizar os aplicativos ligados executando o comando a seguir:
 ```console
@@ -100,15 +101,15 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 ```
 {: screen}
 
-#### O recurso baseado em Cloud Foundry está em um espaço diferente do app implementado
+#### O serviço baseado no Cloud Foundry está em um espaço diferente do app implementado
 {: #cf_resource_different}
 
 O Cloud Foundry não suporta a "ligação" de um aplicativo Cloud Foundry a um serviço do Cloud Foundry quando o aplicativo e o serviço não estão no mesmo espaço do Cloud Foundry. O espaço do Cloud Foundry deve ser preparado com os serviços "fornecidos pelo usuário" e a seção a seguir é aplicável.
 
-#### O recurso baseado no Resource Controller é associado ao app
+#### O serviço baseado no Resource Controller está associado ao seu app
 {: #cf_resource_controller}
 
-Se o recurso que você associou ao aplicativo for baseado em ResourceController (você pode dizer que ele é `ResourceController` com base no horário da criação do recurso, se o grupo de recursos no qual criar o recurso foi solicitado a você), o recurso _não_ será "de ligação" no Cloud Foundry. O espaço do Cloud Foundry deve ser preparado com as credenciais de recurso para que o aplicativo possa referenciá-las no código. A preparação é feita automaticamente e é possível observar os resultados da preparação do espaço conectando a linha de comandos `cf` ao espaço executando:
+Se o serviço que você associou ao seu aplicativo for baseado no Resource Controller, o serviço _não_ será "ligável" ao Cloud Foundry. É possível dizer se o serviço é baseado no Resource Controller no momento da criação dele, se foi perguntado a você em qual grupo de recursos criar o serviço.O espaço do Cloud Foundry deve ser preparado com credenciais de serviço para que o aplicativo possa referenciá-las no código. A preparação é feita automaticamente e é possível observar os resultados da preparação do espaço conectando a linha de comandos `cf` ao espaço executando:
 ```console
 cf services
 ```
@@ -131,7 +132,7 @@ Felizmente, o código que é gerado por meio de um kit do iniciador é preenchid
 ### O código gerado pelo kit do iniciador
 {: #starterkit-generated-code-cf}
 
-Antes de continuar, consulte [App do kit do iniciador + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). Em seguida, aplique a mudança a seguir:
+Antes de continuar, consulte [App do kit do iniciador + kube](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube-gencode). Em seguida, aplique a mudança a seguir:
 
 * Embora o código gerado forneça o `deployment.yml`, ele não é aplicável para um aplicativo que é implementado no Cloud Foundry. Em vez disso, `manifest.yml` _é_ aplicável e seu conteúdo é mostrado como _ligação_ para os dois serviços que são criados no espaço do Cloud Foundry:
   ```yaml
@@ -160,9 +161,3 @@ serviço é uma instância de serviço _no_ espaço do Cloud Foundry ou um valor
 chaves de nível superior no JSON analisado por meio da variável de ambiente `VCAP_SERVICES` são a
 `label` do Cloud Foundry associada aos serviços baseados em Cloud Foundry e a chave
 `user-provided`, cujo valor retém uma matriz de credenciais para todos os serviços "fornecidos pelo usuário".
-
-**Cuidado**: semelhante ao cuidado expresso na seção referida, a preparação do ambiente _sempre_ é executada para todas as credenciais para todos os recursos associados a um app e todos os `services` são listados no `manifest.yml`, mas _nem todas as referências de credencial_ são colocadas no arquivo `mappings.json`. Nesses casos, é necessário que você mesmo coloque essas referências. Depois
-de decidir sobre uma implementação de destino e não precisar da abstração da biblioteca `IBMCloudEnv`, consulte a seção "Seu código + (implementação de destino)" que se ajusta à sua decisão.
-
-**Muita atenção**: alguns kits do iniciador não incluem de forma alguma a referência para a
-dependência `IBMCloudEnv`, para `manifest.yml` ou para os arquivos `mappings.json`.

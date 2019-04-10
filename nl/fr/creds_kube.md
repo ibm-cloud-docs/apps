@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -78,7 +82,7 @@ env:
 ```
 {: codeblock}
 
-* Cliquez sur **Sauvegarder**.
+* Cliquez sur **Enregistrer**.
 
 Configurez le cluster de telle sorte que l'élément _secretKeyRef_ ayant le nom `name-secret` et la clé `KEY_SECRET` soit résolu en une valeur.
 
@@ -86,7 +90,7 @@ Configurez le cluster de telle sorte que l'élément _secretKeyRef_ ayant le nom
 
 Utilisez un terminal sur votre poste de travail pour installer les outils suivants :
 
-1. Installez l'interface CLI [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+1. Installez l'interface de ligne de commande [ {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 2. Connectez-vous en utilisant la commande `ibmcloud login`.
 3. Connectez-vous à votre cluster en exécutant `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copiez et collez la commande `export` pour l'exécuter à partir d'un terminal.
@@ -108,37 +112,45 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être résolu, vous pouvez mettre à jour votre application pour utiliser les variables d'environnement définies dans le fichier `deployment.yml`.
 
-## Application de kit de démarrage + Kubernetes
+## Application de kit de démarrage et Kubernetes
 {: #credentials-starterkit-kube}
 
 1. Accédez à la page **Détails de l'application** de votre application.
-2. Pour créer une instance de Cloud Object Storage, sélectionnez **Ajouter une ressource** > **Stockage** > **Cloud Object Storage** > **Plan limité (gratuit)** > **Créer**.
-3. Cliquez sur `Télécharger le code` pour regénérer votre projet avec les fragments de code injectés.
+
+2. Pour créer une instance de Cloud Object Storage, sélectionnez **Ajouter un service** > **Stockage** > **Cloud Object Storage** > **Lite plan (Free)** > **Créer**.
+
+3. Cliquez sur **Télécharger le code** pour regénérer votre projet avec les fragments de code injectés.
+
 4. Pour accéder aux données d'identification localement, copiez et remplacez les fichiers suivants à partir du fichier `.zip` nouvellement généré dans votre clone Git local pour accéder aux données d'identification. Vous devez toujours créer un secret Kubernetes dans votre cluster afin d'héberger les données d'identification.
 
-	- `chart/{appName}/bindings.yaml` - Génère une variable d'environnement dans votre cluster Kubernetes qui désigne votre secret.
-	- `src/main/resources/localdev-config.json` - Accédez aux données d'identification tout en exécutant votre application localement.
-  - `src/main/resources/mappings.json` - Mappage fournissant l'accès à la méthode [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) pour accéder à vos variables d'environnement à partir du code.
-  - `manifest.yml` - Ce fichier lie votre service à votre application Cloud Foundry.
+   - `chart/{appName}/bindings.yaml` - Génère une variable d'environnement dans votre cluster Kubernetes qui désigne votre secret.
+   - `src/main/resources/localdev-config.json` - Accédez aux données d'identification tout en exécutant votre application localement.
+   - `src/main/resources/mappings.json` - Mappage fournissant l'accès à la méthode [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) pour accéder à vos variables d'environnement à partir du code.
+   - `manifest.yml` - Ce fichier lie votre service à votre application Cloud Foundry.
 
-Si vous choisissez ultérieurement d'effectuer un déploiement dans une application Cloud Foundry avec une ressource de contrôleur de ressources (se trouvant dans un groupe de ressources et non dans une organisation ou un espace), vous devez alors copier un fichier supplémentaire.
-{: note}
+  Si vous choisissez ultérieurement d'effectuer un déploiement dans une application Cloud Foundry avec une ressource de contrôleur de ressources (se trouvant dans un groupe de ressources et non dans une organisation ou un espace), vous devez alors copier un fichier supplémentaire.
+  {: note}
 
-5. [Affichez](https://cloud.ibm.com/containers-kubernetes/clusters) votre cluster Kubernetes avec la région correspondante (US-South si cette région est disponible).
+5. [Affichez votre cluster Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec la région correspondante (US-South si cette région est disponible gratuitement).
+
 6. Cliquez dans votre cluster et sélectionnez **Tableau de bord Kubernetes** dans la partie supérieure droite pour afficher votre tableau de bord de cluster.
+
 7. Faites défiler l'écran jusqu'à ce que vous voyez une section nommée **Secrets**. Vous pouvez voir un secret pour votre instance de service {{site.data.keyword.cloudant_short_notm}} qui utilise la convention `binding-{appName}-{serviceName}-{timestamp}`. Dans le fichier `chart/{appName}/bindings.yaml`, vous pouvez trouver le secret {{site.data.keyword.cloudant_short_notm}} correspondant.
+
 8. Vous pouvez désormais créer un élément correspondant pour votre instance Cloud Object Storage avec le nom secret déjà généré dans le fichier `chart/{appName}/bindings.yaml`, qui est similaire à `binding-create-app-ktibr-cloudobjectstor-1538170732311`.
+
 9. Accédez à la page **Détails de l'application** dans le tableau de bord et copiez les données d'identification pour l'instance Cloud Object Storage. Voir l'exemple de sortie de données d'identification suivant :
-```yaml
-{
-  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+  ```yaml
+  {
+    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
-}    
-```
-{: codeblock}
+  }    
+  ```
+  {: codeblock}
 
 10. Assurez-vous que votre cluster est configuré en utilisant `ibmcloud cs cluster-config {your_cluster_name}` et en exportant la commande dans les instructions qui suivent.
+
 11. Utilisez la commande `echo` pour placer les données d'identification dans un fichier `binding`.
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -148,8 +160,8 @@ Si vous choisissez ultérieurement d'effectuer un déploiement dans une applicat
 
 12. Créez le secret avec `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Si vous retournez dans votre tableau de bord de cluster Kubernetes, vous pouvez voir le secret que vous avez créé.
 
-Si vous effectuez le déploiement dans une application Cloud Foundry, vous devez créer un service fourni par l'utilisateur si vous utilisez une instance de contrôleur de ressources (si la ressource se trouve dans un groupe de ressources et non dans une organisation ou un espace). 
-{: note}
+  Si vous effectuez le déploiement dans une application Cloud Foundry, vous devez créer un service fourni par l'utilisateur si vous utilisez une instance de contrôleur de ressources (si la ressource se trouve dans un groupe de ressources et non dans une organisation ou un espace). 
+  {: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -162,7 +174,7 @@ Si vous effectuez le déploiement dans une application Cloud Foundry, vous devez
 
 ### Préparation du cluster Kubernetes
 
-Utilisez la fonction **Déployer dans le cloud** afin de déployer votre application dans votre cluster IBM Containers Kubernetes. La fonction prépare votre cluster Kubernetes avec des secrets pour les données d'identification des ressources associées à votre application. Vous pouvez observer les résultats de la préparation du cluster en procédant comme suit :
+Utilisez la fonction **Configurer la distribution continue** pour déployer votre application dans votre espace IBM Kubernetes. La fonction prépare votre cluster Kubernetes avec des secrets pour les données d'identification des ressources associées à votre application. Vous pouvez observer les résultats de la préparation du cluster en procédant comme suit :
 
 1. Exécutez la commande `kubectl get secrets` pour afficher les résultats :
   ```
@@ -200,7 +212,7 @@ Utilisez la fonction **Déployer dans le cloud** afin de déployer votre applica
   ```
   {: screen}
 
-  La `liaison` est la valeur codée en Base64 du secret. Son décodage permet de découvrir qu'il s'agit uniquement de l'élément JSON brut provenant des `données d'identification` de l'instance de ressource plus des valeurs `iam_...` :
+  La `liaison` est la valeur codée en Base64 du secret. Son décodage permet de découvrir qu'il s'agit uniquement de l'élément JSON brut provenant des `données d'identification` de l'instance de service, plus certaines valeurs `iam_...`  :
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -222,7 +234,7 @@ Le secret Kubernetes ne peut pas être extrait par votre code d'application sauf
 ### Le kit de démarrage a généré du code
 {: #credentials-starterkit-kube-gencode}
 
-Dans ce cas, vous avez créé cette application à partir d'un kit de démarrage. Le code généré à partir d'un kit de démarrage est conçu pour être portable et pour s'exécuter localement, dans Cloud Foundry ou dans Kubernetes. La bibliothèque, `IBMCloudEnv`, permet de fournir une couche d'abstraction entre le code d'application et l'extraction des variables d'environnement contenant les données d'identification pour les ressources (instances de service).
+Dans ce cas, vous avez créé cette application à partir d'un kit de démarrage. Le code généré à partir d'un kit de démarrage est conçu pour être portable et pour s'exécuter localement, dans Cloud Foundry ou dans Kubernetes. La bibliothèque, `IBMCloudEnv`, permet de fournir une couche d'abstraction entre le code d'application et l'extraction des variables d'environnement contenant les données d'identification pour les instances de service.
 
 Le code créé à partir du kit de démarrage a une dépendance par rapport à la bibliothèque `IBMCloudEnv` et génère la sortie suivante.
 
@@ -263,9 +275,4 @@ Le code créé à partir du kit de démarrage a une dépendance par rapport à l
 
 La bibliothèque `IBMCloudEnv` détecte automatiquement si votre application s'exécute dans Kubernetes, Cloud Foundry ou une instance de serveur virtuel (traitement identique à celui du docker local) et applique l'élément `searchPattern` correct pour trouver la valeur à renvoyer.
 
-C'est pourquoi, le fichier `mappings.json` doit être considéré comme _liste définitive_ des valeurs préconfigurées et immédiatement disponibles provenant de l'environnement dans lequel votre application doit s'exécuter. Les valeurs sont chargées dans l'environnement pour le cluster ciblé lors de l'utilisation de la fonction **Déployer dans le cloud**.
-
-**Attention** : Au moment de la rédaction de cette documentation, la préparation de l'environnement est _toujours_ effectuée pour toutes les données d'identification de toutes les ressources associées à une application mais _les références `env`_ ne sont pas toutes placées dans le fichier `bindings.yml` ou `mappings.json`. Vous devez alors effectuer cette action vous-même. Si vous avez déjà choisi un déploiement cible et que vous n'avez pas besoin de l'abstraction de la bibliothèque `IBMCloudEnv`, consultez la section "Votre code + (déploiement cible)" correspondant à votre décision.
-
-Certains kits de démarrage n'incluent pas la référence à la dépendance `IBMCloudEnv`, au fichier `manifest.yml` ou au fichier `mappings.json`.
-{: note}
+C'est pourquoi, le fichier `mappings.json` doit être considéré comme _liste définitive_ des valeurs préconfigurées et immédiatement disponibles provenant de l'environnement dans lequel votre application doit s'exécuter. Les valeurs sont chargées dans l'environnement pour le cluster ciblé lors de l'utilisation de la fonction **Configurer la distribution continue**.

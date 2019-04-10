@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ As cadeias de ferramentas abertas estão disponíveis nos ambientes Public e Ded
 * Use um modelo para criar uma cadeia de ferramentas.
 * Crie uma cadeia de ferramentas por meio de um app.
 
-Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Para saber mais sobre cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Implementando apps usando a CLI
 {: #cli-deploy-apps}
 
 O {{site.data.keyword.cloud_notm}} fornece uma CLI robusta, além de plug-ins e extensões de ferramentas do desenvolvedor que se integram à CLI.
 
-Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da janela de linha de comandos do Cygwin.
 {: important}
 
   1. {: download} Faça download do código do app em um novo diretório para configurar seu ambiente de desenvolvimento.
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Fazer download do código do aplicativo” title="(Abre em uma nova guia ou janela)"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Abre em uma nova guia ou janela)"></a>
 
   2. Mude para o diretório no qual o seu código está localizado.
 
@@ -72,7 +76,7 @@ A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da
   Caso o valor contenha um espaço, deve-se incluir aspas simples ou duplas ao redor de `username`, `org_name` e `space_name`, por exemplo, `-o "my org"`.
   {: note}
 
-  5. Em seu novo diretório, implemente seu app no {{site.data.keyword.cloud_notm}} usando o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [a documentação da CLI](/docs/cli/idt/commands.html#deploy).
+  5. Em seu novo diretório, implemente seu app no {{site.data.keyword.cloud_notm}} usando o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [a documentação da CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   <pre class="pre"><code class="hljs"> ibmcloud dev deploy  <var class="keyword varname" data-hd-keyref="app_name"> app_name </var> </code></pre>
 

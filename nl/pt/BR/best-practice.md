@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-19"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, best practices
+
+subcollection: creating-apps
 
 ---
 
@@ -49,19 +53,19 @@ A extração de dependências específicas do ambiente em um conjunto de arquivo
 
 É possível executar mais de uma instância para evitar o tempo de inatividade em uma única região. Para entregar um aplicativo ainda mais robusto, considere uma arquitetura de várias regiões.
 
-Para obter informações sobre como minimizar o tempo de inatividade e criar arquiteturas resilientes que atingem a máxima disponibilidade, consulte o [Tutorial Estratégias para aplicativos resilientes](/docs/tutorials/strategies-for-resilient-applications.html).
+Para obter informações sobre como minimizar o tempo de inatividade e criar arquiteturas resilientes que atingem a máxima disponibilidade, consulte o [Tutorial Estratégias para aplicativos resilientes](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Assegure-se de que você esteja monitorando seus apps
 {: #monitoring}
 
-O {{site.data.keyword.cloud_notm}} torna mais fácil monitorar o seu aplicativo com serviços como [New Relic ![Ícone de link externo](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+O {{site.data.keyword.cloud_notm}} torna mais fácil monitorar seu aplicativo com serviços como o [New Relic](http://newrelic.com/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Tire proveito de opções de suporte
 {: #support}
 
 O plano de precificação pago do {{site.data.keyword.cloud_notm}} oferece uma série de tipos de contas diferentes com suporte pago opcional. Não importa o tipo de sua conta, se você planeja trazer um aplicativo para produção no {{site.data.keyword.cloud_notm}}, considere a inscrição nesta opção.
 
-Com ou sem suporte pago, é possível obter ajuda conforme descrito em [Suporte](/docs/get-support/howtogetsupport.html#getting-customer-support), que oferece seguro contra problemas imprevistos.
+Com ou sem suporte pago, é possível obter ajuda conforme descrito em [Suporte](/docs/get-support?topic=get-support-getting-customer-support), que oferece seguro contra problemas imprevistos.
 
 ## Evite APIs de infraestrutura em seu app
 
@@ -87,6 +91,6 @@ Seu app pode ser instalado frequentemente sob demanda no ambiente de nuvem dinâ
 
 Capture sua instalação do aplicativo como um conjunto uniforme de scripts que é independente do sistema operacional. Mantenha a instalação do app pequena e móvel para adaptar-se a diferentes técnicas de automação. Além disso, minimize as dependências que são requeridas pela instalação do app.
 
-Para obter mais informações sobre apps prontos para nuvem, veja [O app de 12 fatores ![Ícone de link externo](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
+Para obter mais informações sobre apps prontos para nuvem, consulte [O app de 12 fatores](http://12factor.net/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 

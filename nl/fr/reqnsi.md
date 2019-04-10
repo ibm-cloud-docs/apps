@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, services, add service, application
+
+subcollection: creating-apps
 
 ---
 
@@ -11,29 +15,29 @@ lastupdated: "2019-02-01"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Ajout d'une ressource à votre application
+# Ajout d'un service à votre application
 {: #add-resource}
 
-Lorsque vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des ressources à partir de la page Détails de l'application. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
+Quand vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des services à partir de la page Détails de l'application. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
 {: shortdesc}
 
-Vous pouvez demander une instance de la ressource et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de ressource à votre application à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de ressource directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
+Vous pouvez demander une instance du service et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de service à votre application  à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de service directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
 
-## Découverte des ressources
+## Reconnaissance d'un service
 {: #discover-resources}
 
 Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.cloud_notm}} en procédant comme suit :
 
 * Depuis la console {{site.data.keyword.cloud_notm}}. Affichez le catalogue {{site.data.keyword.cloud_notm}}.
-* A partir de la ligne de commande, utilisez la commande `ibmcloud service offerings`.
-* Depuis votre propre application. Utilisez l'[API GET /v2/services Services ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Depuis la ligne de commande. Utilisez la commande `ibmcloud service offerings`.
+* Depuis votre propre application. Utilisez l'API [GET /v2/services Services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois le service sélectionné, {{site.data.keyword.cloud_notm}} met le service à disposition. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
 
 {{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une
 instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
 
-Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation de ces services de la même façon que vous codez les applications externes ou les outils tiers pour l'utilisation des services {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Utilisation des services {{site.data.keyword.cloud_notm}} avec des applications externes et des outils tiers](/docs/resources/connect_external_app#externalapp).
+Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation de ces services de la même façon que vous codez les applications externes ou les outils tiers pour l'utilisation des services {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Connexion de services à des applications externes](/docs/resources?topic=resources-externalapp).
 
 ## Demande de nouvelle instance de service
 {: #request-instance}
@@ -64,7 +68,9 @@ Si vous utilisez l'interface de ligne de commande {{site.data.keyword.cloud_notm
 2. Suivez les invites pour sélectionner un groupe de ressources et pour créer et connecter à votre application (Cloudant, par exemple) un service lié aux données. Il peut être nécessaire de sélectionner une région et un plan pour le service.
 3. Lorsque le service est créé, plusieurs fichiers (notamment les données d'identification) sont ajoutés au répertoire d'application afin que vous puissiez plus facilement intégrer le service à votre application. Vous pouvez fusionner manuellement des fichiers ou ignorer cette étape pour l'instant.
 
-Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur l'utilisation des services {{site.data.keyword.cloud_notm}}, voir [Utilisation des services {{site.data.keyword.cloud_notm}} avec des applications externes et des outils tiers![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](/docs/resources/connect_external_app#externalapp){: new_window}.
+Vous ne pouvez lier une instance de service qu'aux instances d'application se trouvant dans le même espace ou la même organisation. Toutefois, vous pouvez utiliser des instances de service provenant d'autres espaces ou d'autres organisations, à l'instar d'une application externe. Au lieu de créer une liaison, utilisez les données d'identification afin de configurer directement votre instance d'application. Pour plus d'informations sur la façon
+dont les applications externes utilisent les services {{site.data.keyword.cloud_notm}}, voir [Utilisation des
+services {{site.data.keyword.cloud_notm}} avec des applications externes](/docs/resources?topic=resources-externalapp#externalapp).
 
 ## Configuration de votre application
 {: #configure-app}
@@ -78,7 +84,7 @@ Chaque service peut nécessiter un mécanisme différent pour communiquer avec l
 * Pour interagir avec des services de back end mobile, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme l'identité de l'application, les informations de sécurité propres au client et l'URI d'accès pour l'application. En général, les services mobiles fonctionnent en contexte les uns avec les autres de sorte que les informations de contexte, comme le nom du développeur de l'application et l'utilisateur qui utilise l'application, puissent être partagées entre les services.
 * Pour interagir avec des applications Web ou le code de cloud côté client pour les applications mobiles, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme les données d'identification d'exécution dans la variable d'environnement *VCAP_SERVICES* de l'application. La valeur de la variable d'environnement *VCAP_SERVICES* est la sérialisation d'un objet JSON. La variable contient les données d'exécution requises pour interagir avec les services auxquels l'application est liée. Le format des données varie selon les services. Reportez-vous à la documentation du service pour plus de détails sur la manière d'interpréter chaque élément d'information.
 
-Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Pour plus d'informations, voir [Les applications ne sont pas redémarrées automatiquement](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Pour plus d'informations, voir [Les applications ne sont pas redémarrées automatiquement](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
 
 ## Accès à des services via des environnements de déploiement {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -94,10 +100,10 @@ Les données d'identification pour le service qui sont stockées dans une valeur
 
 **Important** : Ne référencez ou n'exposez pas vos données d'identification pour le service directement dans votre fichier YAML de déploiement. Les fichiers YAML de déploiement ne sont pas conçus pour contenir des données sensibles et ne chiffrent pas vos données d'identification pour le service par défaut. Pour stocker ces informations et y accéder correctement, vous devez utiliser une valeur confidentielle de Kubernetes. 
 
-1. [Liez le service à votre cluster](/docs/containers/cs_integrations.html#adding_cluster). 
+1. [Liez le service à votre cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
 2. Pour accéder aux données d'identification de votre service à partir du pod de votre application, choisissez l'une des options suivantes : 
-   - [Monter la valeur confidentielle en tant que volume sur votre pod](#mount_secret)
-   - [Référencer la valeur confidentielle dans les variables d'environnement](#reference_secret)
+   - Monter la valeur confidentielle sous forme de volume sur votre pod
+   - Référencer la valeur confidentielle dans les variables d'environnement
 
 ## Création d'une instance de service fournie par l'utilisateur
 {: #user_provide_services}
@@ -153,4 +159,4 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
 	OK
 	```
 
-A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](/docs/apps/reqnsi.html#configure-app).
+A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](/docs/apps?topic=creating-apps-add-resource#configure-app).

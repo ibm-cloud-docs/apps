@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -86,7 +90,7 @@ env:
 
 워크스테이션에서 터미널을 사용하여 다음 도구를 설치하십시오.
 
-1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)를 설치하십시오.
+1. [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
 2. `ibmcloud login` 명령을 사용하여 로그인하십시오.
 3. `ibmcloud cs cluster-config {your_cluster_name}`을 실행하여 클러스터에 연결하십시오.
 4. `export` 명령을 복사하여 붙여넣고 터미널에서 이를 실행하십시오.
@@ -108,37 +112,45 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 이제 Kubernetes 클러스터가 분석 가능한 시크릿과 함께 준비되었으므로 `deployment.yml` 파일에 정의된 환경 변수를 사용하도록 애플리케이션을 업데이트할 수 있습니다.
 
-## 스타터 킷 앱 + Kubernetes
+## 스타터 킷 앱 및 Kubernetes
 {: #credentials-starterkit-kube}
 
 1. 앱의 **앱 세부사항** 페이지로 이동하십시오.
-2. Cloud Object Storage의 인스턴스를 작성하려면 **리소스 추가** > **스토리지** > **Cloud Object Storage** > **Lite 플랜(무료)** > **작성**을 선택하십시오.
-3. `코드 다운로드`를 클릭하여 삽입된 코드 스니펫으로 프로젝트를 다시 생성하십시오.
+
+2. Cloud Object Storage의 인스턴스를 작성하려면 **서비스 추가** > **스토리지** > **Cloud Object Storage** > **Lite 플랜(무료)** > **작성**을 선택하십시오.
+
+3. **코드 다운로드**를 클릭하여 삽입된 코드 스니펫으로 프로젝트를 다시 생성하십시오.
+
 4. 로컬로 인증 정보에 액세스하려면 새로 생성된 `.zip` 파일에서 인증 정보에 액세스하기 위한 로컬 Git 복제본으로 다음 파일을 복사하여 대체하십시오. 인증 정보를 호스팅할 수 있도록 클러스터에서 여전히 Kubernetes 시크릿을 작성해야 합니다.
 
-	- `chart/{appName}/bindings.yaml` - 시크릿을 지시하는 Kubernetes 클러스터에서 환경 변수를 생성합니다.
-	- `src/main/resources/localdev-config.json` - 로컬로 앱을 실행하는 중에 인증 정보에 액세스합니다.
-  - `src/main/resources/mappings.json` - 코드에서 환경 변수에 액세스하기 위한 [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) 메소드에 대한 액세스를 제공하는 맵핑입니다.
-  - `manifest.yml` - 이 파일은 서비스를 Cloud Foundry 애플리케이션에 바인딩합니다.
+   - `chart/{appName}/bindings.yaml` - 시크릿을 지시하는 Kubernetes 클러스터에서 환경 변수를 생성합니다.
+   - `src/main/resources/localdev-config.json` - 로컬로 앱을 실행하는 중에 인증 정보에 액세스합니다.
+   - `src/main/resources/mappings.json` - 코드에서 환경 변수에 액세스하기 위한 [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) 메소드에 대한 액세스를 제공하는 맵핑입니다.
+   - `manifest.yml` - 이 파일은 서비스를 Cloud Foundry 애플리케이션에 바인딩합니다.
 
-나중에 리소스 제어기 리소스(조직 또는 영역이 아닌 리소스 그룹에 있는)로 Cloud Foundry 애플리케이션에 배치하도록 선택하는 경우에는 1개의 추가 파일을 복사해야 합니다.
-{: note}
+  나중에 리소스 제어기 리소스(조직 또는 영역이 아닌 리소스 그룹에 있는)로 Cloud Foundry 애플리케이션에 배치하도록 선택하는 경우에는 1개의 추가 파일을 복사해야 합니다.
+  {: note}
 
-5. 해당되는 지역(무료인 경우 미국 남부)의 Kubernetes 클러스터를 [보십시오](https://cloud.ibm.com/containers-kubernetes/clusters).
+5. 해당 지역(무료인 경우 미국 남부)의 [Kubernetes 클러스터 보기](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.
+
 6. 클러스터를 클릭하고 오른쪽 상단에서 **Kubernetes 대시보드**를 선택하여 클러스터 대시보드를 보십시오.
+
 7. **시크릿**이라는 레이블이 지정된 섹션이 보일 때까지 아래로 스크롤하십시오. `binding-{appName}-{serviceName}-{timestamp}` 규약을 사용하는 {{site.data.keyword.cloudant_short_notm}} 서비스 인스턴스의 시크릿을 볼 수 있습니다. `chart/{appName}/bindings.yaml` 파일에서 해당되는 {{site.data.keyword.cloudant_short_notm}} 시크릿을 찾을 수 있습니다.
+
 8. 이제 `binding-create-app-ktibr-cloudobjectstor-1538170732311`과 유사해 보이는 `chart/{appName}/bindings.yaml`에서 이미 생성된 시크릿 이름의 Cloud Object Storage 인스턴스에 대해 해당되는 항목을 작성할 수 있습니다.
+
 9. 대시보드의 **앱 세부사항** 페이지로 이동하여 Cloud Object Storage 인스턴스의 인증 정보를 복사하십시오. 다음의 예제 인증 정보 출력을 확인하십시오.
-```yaml
-{
-  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+  ```yaml
+  {
+    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
-}    
-```
-{: codeblock}
+  }    
+  ```
+  {: codeblock}
 
 10. `ibmcloud cs cluster-config {your_cluster_name}`을 사용하고 다음의 지시사항의 명령을 내보내서 클러스터가 구성되었는지 확인하십시오.
+
 11. `echo` 명령을 사용하여 인증 정보를 `binding` 파일에 두십시오.
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -148,8 +160,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 12. `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`으로 시크릿을 작성하십시오. Kubernetes 클러스터 대시보드로 되돌아가면 작성된 시크릿을 볼 수 있습니다.
 
-Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인스턴스를 사용 중이면 사용자 제공 서비스를 작성해야 합니다(리소스가 리소스 그룹 대 조직 또는 영역에 있는 경우). 
-{: note}
+  Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인스턴스를 사용 중이면 사용자 제공 서비스를 작성해야 합니다(리소스가 리소스 그룹 대 조직 또는 영역에 있는 경우). 
+  {: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -162,7 +174,7 @@ Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인
 
 ### Kubernetes 클러스터의 준비 방법
 
-**클라우드에 배치** 기능을 사용하여 앱을 IBM Containers Kubernetes 클러스터에 배치할 수 있습니다. 이 기능은 앱과 연관된 리소스의 인증 정보에 대한 시크릿으로 Kubernetes 클러스터를 준비합니다. 다음 단계를 완료하여 클러스터 준비의 결과를 관찰할 수 있습니다.
+**지속적 딜리버리 구성** 기능을 사용하여 앱을 IBM Kubernetes 클러스터에 배치할 수 있습니다. 이 기능은 앱과 연관된 리소스의 인증 정보에 대한 시크릿으로 Kubernetes 클러스터를 준비합니다. 다음 단계를 완료하여 클러스터 준비의 결과를 관찰할 수 있습니다.
 
 1. `kubectl get secrets` 명령을 실행하여 결과를 보십시오.
   ```
@@ -200,7 +212,7 @@ Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인
   ```
   {: screen}
 
-  `binding`은 시크릿의 base64 인코딩된 값입니다. 이를 디코딩하면 리소스 인스턴스의 `credentials` 및 일부 `iam_...` 값의 원시 JSON에 불과함이 드러납니다.
+  `binding`은 시크릿의 base64 인코딩된 값입니다. 이를 디코딩하면 서비스 인스턴스의 `credentials` 및 일부 `iam_...` 값의 원시 JSON에 불과함이 드러납니다.
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -222,7 +234,7 @@ Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인
 ### 스타터 킷에서 생성된 코드
 {: #credentials-starterkit-kube-gencode}
 
-이 경우에는 사용자가 스타터 킷에서 이 애플리케이션을 작성했습니다. 스타터 킷에서 생성된 코드는 Cloud Foundry 또는 Kubernetes에서 로컬로 실행되는 포터블 코드가 될 수 있습니다. `IBMCloudEnv` 라이브러리는 리소스(서비스 인스턴스)의 인증 정보를 보유하는 환경 변수의 검색 및 애플리케이션 코드 간의 추상 계층을 제공하는 데 사용됩니다.
+이 경우에는 사용자가 스타터 킷에서 이 애플리케이션을 작성했습니다. 스타터 킷에서 생성된 코드는 Cloud Foundry 또는 Kubernetes에서 로컬로 실행되는 이식 가능한 코드가 될 수 있습니다. `IBMCloudEnv` 라이브러리는 서비스 인스턴스의 인증 정보를 보유하는 환경 변수의 검색 및 애플리케이션 코드 간의 추상 계층을 제공하는 데 사용됩니다.
 
 스타터 킷에서 작성된 코드에는 `IBMCloudEnv` 라이브러리에 대한 종속성이 있으며 다음과 같은 결과를 생성합니다.
 
@@ -263,9 +275,4 @@ Cloud Foundry 애플리케이션을 배치하는 경우, 리소스 제어기 인
 
 `IBMCloudEnv` 라이브러리는 애플리케이션이 Kubernetes, Cloud Foundry 또는 가상 서버 인스턴스(로컬 Docker와 동일하게 처리됨)에서 실행 중인지 여부를 자동으로 감지하며, 올바른 `searchPattern`를 적용하여 리턴 값을 찾습니다.
 
-따라서 `mappings.json` 파일은 앱이 실행되는 환경에서 가져온 즉시 사용 가능한 사전 구성 값의 _정의 목록_으로 간주됩니다. 값은 **클라우드에 배치** 기능을 사용한 시점에 대상으로 지정한 클러스터의 환경에서 채워집니다.
-
-**주의**: 이 문서의 작성 시점에 환경 준비는 앱과 연관된 모든 리소스의 모든 인증 정보에 대해 _항상_ 수행되지만, _일부 `env` 참조_는 `bindings.yml` 파일이나 `mappings.json` 파일에 지정되지 않습니다. 이러한 경우에는 사용자가 직접 해당 참조를 지정해야 합니다. 이미 대상 배치를 결정했으며 `IBMCloudEnv` 라이브러리의 추상화가 필요하지 않은 경우에는 자체 의사결정에 맞는 "사용자 코드 + (대상 배치)" 절을 참조하십시오.
-
-일부 스타터 킷에는 `IBMCloudEnv` 종속 항목, `manifest.yml` 또는 `mappings.json` 파일에 대한 참조가 전혀 포함되지 않습니다.
-{: note}
+따라서 `mappings.json` 파일은 앱이 실행되는 환경에서 가져온 즉시 사용 가능한 사전 구성 값의 _정의 목록_으로 간주됩니다. 값은 **지속적 딜리버리 구성** 기능을 사용한 시점에 대상으로 지정한 클러스터의 환경에서 채워집니다.
