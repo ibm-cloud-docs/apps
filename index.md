@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-09"
 
 keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
 
@@ -23,9 +23,11 @@ subcollection: creating-apps
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need, or use your existing repository and bring your own code.
 {: shortdesc}
 
-Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) that you want to modernize and bring to the cloud or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), your developers can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
+Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
 
-[Programming guides](https://{DomainName}/docs/home/build){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure from {{site.data.keyword.baremetal_short}} to running as a serverless function.
+Do you need help deciding where to start? See this diagram for ideas!
+
+![Developer experience overview](images/dev-journey.png "Developer experience overview")
 
 ## Before you begin
 {: #prereqs-getting-started}
@@ -36,12 +38,13 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 {: #create-getting-started}
 
 Create an app by selecting one of the following entry points:
-* [Starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit): Create an app from a selection of App Service starter kits that manage the process for you.
-* [Custom](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch): If you know what you want, build a custom app from scratch with the resources you need by using a blank starter kit.
-* [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc): Bring your own code by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
-* [CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli): Create and deploy a custom or starter kit app by using the CLI and Developer tools.
-* [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern): Use an IBM Developer code pattern as a basis for creating your app.
-* [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"): You can browse or search the catalog for apps and services that you can create and start using today.
+
+* [Starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific, and produce production-ready apps in various programming languages and architectural patterns.
+* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}. For more information, see [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
+* [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
+* If you know what you want, build a [custom app](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) from scratch with the services that you need by using a blank starter kit.
+* Create and deploy a custom or starter kit app by using the [CLI and developer tools](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+* Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and start using today.
 
 ## Step 2. Add services
 {: #resources-getting-started}
@@ -78,3 +81,8 @@ For more information, see the table of contents for various deployment topics in
 To deploy your app by using the command line, run the `ibmcloud dev deploy` command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Now you're set for iterative development and continuous delivery.
+
+## Related information
+{: #related-getting-started}
+
+[Programming guides](https://{DomainName}/docs/home/build){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure from {{site.data.keyword.baremetal_short}} to running as a serverless function.
