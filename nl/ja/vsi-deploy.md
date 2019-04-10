@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
+
+subcollection: creating-apps
 
 ---
 
@@ -19,7 +23,7 @@ lastupdated: "2019-02-28"
 # 仮想サーバーへのデプロイ
 {: #vsi-deploy}
 
-従量課金 (PAYG) アカウントを保持している場合、{{site.data.keyword.cloud}} [アプリ・サービス ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} を使用して、仮想サーバー・インスタンスを含むさまざまなタイプの環境にアプリをデプロイできます。 仮想サーバー・インスタンスは、ベアメタル・マシンをエミュレートするものであり、オンプレミス・ワークロードをクラウドに移動する際の一般的なデプロイメント選択肢の 1 つです。
+従量課金 (PAYG) アカウントを保持している場合、{{site.data.keyword.cloud}} [アプリ・サービス ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用して、仮想サーバー・インスタンスを含むさまざまなタイプの環境にアプリをデプロイできます。 仮想サーバー・インスタンスは、ベアメタル・マシンをエミュレートするものであり、オンプレミス・ワークロードをクラウドに移動する際の一般的なデプロイメント選択肢の 1 つです。
 {: shortdesc}
 
 仮想サーバー・インスタンスは、すべてのワークロード・タイプにおいて、他の構成と較べて優れた透過性、予測可能性、および自動化を提供します。 これをベアメタル・サーバーと組み合わせると、ユニークなワークロードの組み合わせを作成できます。 例えば、ベアメタルと Debian Linux ベースのオペレーティング・システムを実行する GPU 構成で、高性能なデータベース・ロジックまたは機械学習を作成することができます。
@@ -35,7 +39,7 @@ lastupdated: "2019-02-28"
 App Service によって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、Devops ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
 1. [アプリを作成](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)します。 
-2. アプリの詳細ページから**「クラウドにデプロイ (Deploy to Cloud)」**をクリックします。
+2. **「アプリの詳細」**ページから**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 3. **「仮想サーバーへのデプロイ (Deploy to a Virtual Server)」** を、サーバーを実行する地域と共に選択します。
 
 ## デプロイメント・プロセスの仕組み
@@ -44,11 +48,11 @@ App Service によって、仮想サーバー・インスタンスがプロビ�
 
 ### Terraform を使用したデプロイ
 
-どの App Service スターター・キットも、オープン・ソースの Infrastructure as Code フレームワークである [Terraform ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} を使用して、動的に作成された仮想インスタンスにデプロイできます。 
+どの App Service スターター・キットも、オープン・ソースの Infrastructure as Code フレームワークである [Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用して、動的に作成された仮想インスタンスにデプロイできます。 
 
 ### パイプライン・デプロイメントの使用可能化
 
-{{site.data.keyword.cloud_notm}} [App Service ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}を使用するスターター・キットを作成する際は、仮想サーバー・インスタンスが使用可能になります。 アプリの作成後、アプリをデプロイする場所を選択できます。 スターター・キットでは、Continuous Delivery ツールチェーンを使用したデプロイメントのサポートが有効になっています。 スターター・キットは Kubernetes、Cloud Foundry、および仮想サーバー・インスタンスをターゲットとすることができます。 ツールチェーンにはソース・コード・リポジトリーとデプロイメント・パイプラインが含まれています。
+{{site.data.keyword.cloud_notm}} [App Service ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")を使用するスターター・キットを作成する際は、仮想サーバー・インスタンスが使用可能になります。 アプリの作成後、アプリをデプロイする場所を選択できます。 スターター・キットでは、Continuous Delivery ツールチェーンを使用したデプロイメントのサポートが有効になっています。 スターター・キットは Kubernetes、Cloud Foundry、および仮想サーバー・インスタンスをターゲットとすることができます。 ツールチェーンにはソース・コード・リポジトリーとデプロイメント・パイプラインが含まれています。
 
 仮想サーバー・オプションは段階的に機能します。 最初に、アプリ・コードが準備されて GitLab Git リポジトリーに保管され、ソース・コードによってパイプラインが備わったツールチェーンが作成されます。 このパイプラインは、コードをビルドして Debian Package マネージャー・フォーマットにパッケージするよう定義されています。 次に、Terraform が仮想インスタンスをプロビジョンします。 最後に、アプリがデプロイされ、インストールされ、実行中の仮想イメージ内で開始されて、その正常性が検証されます。
 
@@ -63,14 +67,14 @@ App Service によって、仮想サーバー・インスタンスがプロビ�
 
 | プロパティー  | 説明  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | [インフラストラクチャー API キー](/docs/apps/vsi-deploy.html#iaas-key)。クラシック・インフラストラクチャー・コンソールから取得できます。 |
-| `TF_VAR_ibm_sl_username` | [インフラストラクチャー・ユーザー名](/docs/apps/vsi-deploy.html#user-key)。クラシック・インフラストラクチャー・アカウントを識別します。 |
-| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [API キー](/docs/apps/vsi-deploy.html#platform-key)。サービス作成を使用可能にするために使用します。 |
-| `PUBLIC_KEY` | [パブリック・キー](/docs/apps/vsi-deploy.html#public-key)。仮想サーバー・インスタンスへのアクセスを使用可能するために。 |
-| `PRIVATE_KEY` | [プライベート・キー](/docs/apps/vsi-deploy.html#public-key)。仮想サーバー・インスタンスへのアクセスを使用可能にするために。 `\n` 改行スタイル・フォーマットを使用する必要があります。 |
+| `TF_VAR_ibm_sl_api_key` | [インフラストラクチャー API キー](/docs/apps?topic=creating-apps-vsi-deploy#iaas-key)。クラシック・インフラストラクチャー・コンソールから取得できます。 |
+| `TF_VAR_ibm_sl_username` | [インフラストラクチャー・ユーザー名](/docs/apps?topic=creating-apps-vsi-deploy#user-key)。クラシック・インフラストラクチャー・アカウントを識別します。 |
+| `TF_VAR_ibm_cloud_api_key` | {{site.data.keyword.cloud_notm}} [API キー](/docs/apps?topic=creating-apps-vsi-deploy#platform-key)。サービス作成を使用可能にするために使用します。 |
+| `PUBLIC_KEY` | [パブリック・キー](/docs/apps?topic=creating-apps-vsi-deploy#public-key)。仮想サーバー・インスタンスへのアクセスを使用可能するために。 |
+| `PRIVATE_KEY` | [プライベート・キー](/docs/apps?topic=creating-apps-vsi-deploy#public-key)。仮想サーバー・インスタンスへのアクセスを使用可能にするために。 `\n` 改行スタイル・フォーマットを使用する必要があります。 |
 | `VI_INSTANCE_NAME` | 仮想サーバー・インスタンス用に自動生成された名前です。 |
-| `GIT_USER` | apply コマンドの状態を保管するように [Terraform 状態](/docs/apps/vsi-deploy.html#tform-state)を設定する場合、GitLab ユーザー名が必要です。 |
-| `GIT_PASSWORD` | apply コマンドの状態を保管するように [Terraform 状態](/docs/apps/vsi-deploy.html#tform-state)を設定する場合、GitLab パスワードが必要です。 |
+| `GIT_USER` | apply コマンドの状態を保管するように [Terraform 状態](/docs/apps?topic=creating-apps-vsi-deploy#tform-state)を設定する場合、GitLab ユーザー名が必要です。 |
+| `GIT_PASSWORD` | apply コマンドの状態を保管するように [Terraform 状態](/docs/apps?topic=creating-apps-vsi-deploy#tform-state)を設定する場合、GitLab パスワードが必要です。 |
 {: caption="表 1. 使用可能にするために変更する環境変数" caption-side="top"}
 
 
@@ -79,20 +83,20 @@ App Service によって、仮想サーバー・インスタンスがプロビ�
 
 Terraform は、インフラストラクチャー・リソースを作成するためにクラシック・インフラストラクチャー API キーを必要とします。 API キーは、デプロイメント時に自動的に取得されます。 キーを手動で取得するには、以下のステップを実行します。
 
-1. [ユーザー・リスト ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window} にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
+1. [ユーザー・リスト ](https://{DomainName}/iam#/users){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
 2. ユーザー名をクリックし、**「ユーザーの詳細」**をクリックします。
 3. API キー・セクションで、**「クラシック・インフラストラクチャー・キーの追加 (Add a classic infrastructure key)」**をクリックします。
 4. API キー `TF_VAR_ibm_sl_api_key` をコピーまたはダウンロードし、安全な場所に保存します。 API キーの詳細は、後で**「アクション」** ![アクション・リスト・アイコン](../icons/action-menu-icon.svg) メニューの**「詳細を表示」**オプションを使用して取得できます。
 5. コピーした API キー値をツールチェーン構成に貼り付けて、`TF_VAR_ibm_sl_api_key` を置き換えます。
 
-詳しくは、[クラシック・インフラストラクチャー API キーの管理 (Managing classic infrastructure API keys)](/docs/iam/classic_infra_keys.html#classic_keys) および[クラシック・インフラストラクチャー許可 (Classic infrastructure permissions)](/docs/iam/infrastructureaccess.html#infrapermission) を参照してください。
+詳しくは、[クラシック・インフラストラクチャー API キーの管理 (Managing classic infrastructure API keys)](/docs/iam?topic=iam-classic_keys#classic_keys) および[クラシック・インフラストラクチャー許可 (Classic infrastructure permissions)](/docs/iam?topic=iam-infrapermission#infrapermission) を参照してください。
 
 #### クラシック・インフラストラクチャー・ユーザー名
 {: #user-key}
 
 クラシック・インフラストラクチャー・ユーザー名もデプロイメント時に自動的に取得されて使用されます。 ユーザー名を手動で取得するには、以下のステップを実行します。
 
-1. [ユーザー・リスト ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window} にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
+1. [ユーザー・リスト ](https://{DomainName}/iam#/users){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
 2. ユーザー名をクリックし、**「ユーザーの詳細」**をクリックします。
 3. **「VPN ユーザー名」**プロパティーを見つけます。
 4. この値をカット・アンド・ペーストして、ツールチェーン構成 `TF_VAR_ibm_sl_username` と置き換えます。
@@ -102,7 +106,7 @@ Terraform は、インフラストラクチャー・リソースを作成する�
 
 Terraform でデータベース・サービスや Compose サービスなどのプラットフォーム・レベル・サービスを作成するために、{{site.data.keyword.cloud_notm}} API キーが自動的に取得され、環境変数としてパイプラインに保管されます。 {{site.data.keyword.cloud_notm}} API キーを手動で取得するには、以下のステップを実行します。
 
-1. [ユーザー・リスト ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window} にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
+1. [ユーザー・リスト ](https://{DomainName}/iam#/users){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にアクセスします。 **「管理」**>**「アクセス (IAM)」**をクリックし、**「ユーザー」**を選択することもできます。
 2. ユーザー名をクリックし、**「ユーザーの詳細」**をクリックします。
 3. API キー・セクションを見つけ、**「IBM Cloud API キーの作成 (Create an IBM Cloud API key)」**をクリックします。
 4. 名前と説明を入力して**「作成」**をクリックします。
@@ -116,8 +120,8 @@ Terraform でデータベース・サービスや Compose サービスなどの�
 ツールチェーンで Debian パッケージを仮想サーバー・インスタンスにインストールするために、デプロイメント・インフラストラクチャーは、Git コンテンツをインスタンスに転送するためのプライベート SSH 鍵とパブリック SSH 鍵のペアを自動的に生成します。
 
 これを行うには、以下のようにします。
-1. クライアントで以下の手順を使用して、[パブリック・キーとプライベート・キーのペア![外部リンク・アイコン](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}を作成します。
-2. [インフラストラクチャー SSH 鍵ビュー ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window} にアクセスします。 **「メニュー」** > **「クラシック・インフラストラクチャー」** > **「デバイス」** > **「管理」** > **「SSH 鍵」**の順にクリックすることもできます。
+1. クライアントで以下の手順を使用して、[パブリック・キーとプライベート・キーのペア](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を作成します。
+2. [インフラストラクチャー SSH 鍵ビュー ](https://{DomainName}/iam/#/users){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にアクセスします。 **「メニュー」** > **「クラシック・インフラストラクチャー」** > **「デバイス」** > **「管理」** > **「SSH 鍵」**の順にクリックすることもできます。
 3. **「追加」**をクリックします。
 4. 以前作成したパブリック・キーのコンテンツをコピーし、キー・コンテンツにペーストします。
 5. キーに名前を付けて、**「追加」**をクリックします。
@@ -154,7 +158,7 @@ Terraform の状態は `terraform` というブランチに保管されており
 #### Debian フォルダー
 {: #debian-folder}
 
-`debian` フォルダーには、アプリを [Debian パッケージ ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window}にパッケージ化するために必要となる構成が保持されています。
+`debian` フォルダーには、アプリを [Debian パッケージ](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") にパッケージ化するために必要となる構成が保持されています。
 
 #### Terraform フォルダー
 {: #terraform-folder}
@@ -180,9 +184,9 @@ resource "ibm_compute_vm_instance" "vm1" {
 }
 ```
 
-また、Terraform でベアメタル・サーバーをプロビジョンすることもできます。 詳しくは、[IBM Terraform Provider の資料![外部リンク・アイコン](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} および [IBM Terraform Provider GIT Repo ![外部リンク・アイコン](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}を参照してください。
+また、Terraform でベアメタル・サーバーをプロビジョンすることもできます。 詳しくは、[IBM Terraform Provider の資料](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") および [IBM Terraform Provider GIT Repo ](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-仮想インスタンスの作成のターゲットとするデータ・センターを変更するには、`variables.tf` を使用できます。 プラットフォーム上の定義済みデータ・センターのリストを確認するには、[データ・センター![外部リンク・アイコン](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}を参照してください。
+仮想インスタンスの作成のターゲットとするデータ・センターを変更するには、`variables.tf` を使用できます。 プラットフォーム上の定義済みデータ・センターのリストを確認するには、[データ・センター](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 デフォルトで、Terraform ファイルは Washington および `wdc04` 向けに構成されています。
 ```json

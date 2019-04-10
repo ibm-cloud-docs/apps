@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # Déploiement d'applications avec l'interface de ligne de commande
 
@@ -49,13 +50,13 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">votre_nouveau_répertoire</var></code></pre>
 
-  3.  Modifiez le code de votre application. Par exemple, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer "Thanks for creating ..." pour indiquer un nouveau contenu. Vérifiez que l'application s'exécute localement avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
+  3.  Modifiez le code de votre application. Ainsi, si vous utilisez une application exemple {{site.data.keyword.Bluemix}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer la chaîne "Thanks for creating ..." pour le remplacer par quelque chose d'autre. Vérifiez que l'application s'exécute localement avant de la déployer à nouveau dans {{site.data.keyword.Bluemix_notm}}.
 
     Tenez compte du fichier `manifest.yml`. Lorsque vous déployez à nouveau votre application dans {{site.data.keyword.Bluemix_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instance et d'autres paramètres essentiels.
 
     Prêtez également attention au fichier `README.md`, qui contient des détails tels que les instructions de génération, le cas échéant.
 
-    Remarque : Si votre application est une application Liberty, vous devez la générer avant de la redéployer.
+    Si votre application est une application Liberty, vous devez la générer avant de la redéployer.{: note}
 
   4. Connectez-vous à {{site.data.keyword.Bluemix_notm}}.
 
@@ -67,7 +68,8 @@ Une fois l'interface de ligne de commande installée, vous pouvez commencer :
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Remarque **: vous devez ajouter des apostrophes ou des guillemets autour de `username`, `org_name` et `space_name`, si cette valeur contient un espace. Par exemple, `-o "my org"`.
+  Vous devez ajouter des apostrophes ou des guillemets autour des éléments `username`, `org_name` et `space_name`, si cette valeur contient un espace, `-o "my org"`, par exemple.
+  {: note}
 
   5. A partir de <var class="keyword varname">votre_nouveau_répertoire</var>, redéployez votre application dans {{site.data.keyword.Bluemix_notm}} à l'aide de la commande `ibmcloud app push`. Pour plus d'informations sur la commande `ibmcloud app push`, voir [Téléchargement de votre application](/docs/starters/upload_app.html).
 

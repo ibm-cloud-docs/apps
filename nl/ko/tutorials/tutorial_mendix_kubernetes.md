@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -22,20 +26,20 @@ lastupdated: "2019-02-13"
 ## 시작하기 전에
 {: #prereqs-mendix-kube}
 
-- Mendix 앱을 작성하십시오. 자세한 정보는 [Mendix 앱 작성](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix)을 참조하십시오.
-- {{site.data.keyword.containershort_notm}} CLI를 포함하여 [{{site.data.keyword.dev_cli_notm}} 명령행 인터페이스(CLI)](/docs/cli/index.html)를 설치하십시오.
-- `ibmcloud` CLI에 로그인하고 [Kubernetes 클러스터에 액세스](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3)할 수 있도록 `kubectl`을 구성하십시오.
+* Mendix 앱을 작성하십시오. 자세한 정보는 [Mendix 앱 작성](/docs/apps/tutorials?topic=creating-apps-create-mendix)을 참조하십시오.
+* {{site.data.keyword.containershort_notm}} CLI를 포함하여 [{{site.data.keyword.dev_cli_notm}} 명령행 인터페이스(CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
+* `ibmcloud` CLI에 로그인하고 [Kubernetes 클러스터에 액세스](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3)할 수 있도록 `kubectl`을 구성하십시오.
 
 ## Cloud Object Storage 서비스 인스턴스 작성
 {: #cos-mendix-kube}
 
-애플리케이션의 세부사항 페이지에서 시작하여 다음 단계를 수행하십시오.
-1. **리소스 추가**를 클릭하십시오.
+**앱 세부사항** 페이지에서 시작하여 다음 단계를 수행하십시오.
+1. **서비스 추가**를 클릭하십시오.
 2. **스토리지**를 선택하고 **다음**을 클릭하십시오.
 3. 다음으로, **Cloud Object Storage** 옵션을 선택하고 **다음**을 클릭하십시오.
 4.  {{site.data.keyword.cos_full_notm}} 인스턴스에 대한 가격 플랜이 제시됩니다. 사용자 요구에 가장 적합한 가격 플랜을 선택한 다음 **작성**을 클릭하여 Mendix 애플리케이션에서 사용할 {{site.data.keyword.cos_full_notm}} 서비스의 인스턴스를 작성하십시오.
 
-  {{site.data.keyword.cos_full_notm}} 서비스의 기존 인스턴스를 사용하려면 **리소스 추가**를 클릭하고 사용할 애플리케이션의 기존 인스턴스를 선택하십시오.
+  {{site.data.keyword.cos_full_notm}} 서비스의 기존 인스턴스를 사용하려면 **서비스 추가**를 클릭하고 사용할 애플리케이션의 기존 인스턴스를 선택하십시오.
   {: tip}
 
 ## 스토리지 버킷 작성
@@ -48,12 +52,12 @@ lastupdated: "2019-02-13"
 ## 지속적 스토리지 구성
 {: #kube-storage-mendix}
 
-다음으로, [{{site.data.keyword.cos_full_notm}}에 데이터 저장](/docs/containers/cs_storage_cos.html#object_storage)에 대한 문서를 따르십시오. `PersistentVolumeClaim` 및 `PersistentVolume`이 Kubernetes 클러스터에 작성되고, Mendix 애플리케이션의 일부로 클러스터에서 실행되는 PostGres 데이터베이스 인스턴스에서 이를 사용할 수 있습니다. 이전 단계에서 설명한 대로 `my-mendix-bucket` 버킷을 사용하여 `PersistentVolumeClaim`을 작성해야 하며 다음 단계에서 사용하기 위해 `PersistentVolumeClaim` 이름을 검토해야 합니다.
+다음으로, [{{site.data.keyword.cos_full_notm}}에 데이터 저장](/docs/containers?topic=containers-object_storage)에 대한 문서를 따르십시오. `PersistentVolumeClaim` 및 `PersistentVolume`이 Kubernetes 클러스터에 작성되고, Mendix 애플리케이션의 일부로 클러스터에서 실행되는 PostGres 데이터베이스 인스턴스에서 이를 사용할 수 있습니다. 이전 단계에서 설명한 대로 `my-mendix-bucket` 버킷을 사용하여 `PersistentVolumeClaim`을 작성해야 하며 다음 단계에서 사용하기 위해 `PersistentVolumeClaim` 이름을 검토해야 합니다.
 
 ## `postgres-deployment.yaml` 파일 편집
 {: #postgres-deploy-mendix}
 
-Kubernetes 클러스터에 대한 지속적 볼륨이 구성되면 다음 단계는 클러스터 내에서 실행되는 PostGres 데이터베이스 배치를 수정하는 것입니다. 먼저 IBM DevOps 도구 체인 통합 단계의 일부로 작성된 파일을 Git 저장소에서 편집해야 합니다. Git 저장소를 찾으려면 앱 세부사항 페이지로 돌아가 **배치 세부사항** 타일에서 Git URL 링크를 클릭하십시오.  
+Kubernetes 클러스터에 대한 지속적 볼륨이 구성되고 나면 다음 단계는 클러스터 내에서 실행되는 PostGres 데이터베이스 배치를 수정하는 것입니다. 먼저 IBM DevOps 도구 체인 통합 단계의 일부로 작성된 파일을 Git 저장소에서 편집해야 합니다. Git 저장소를 찾으려면 **앱 세부사항** 페이지로 돌아가서 **배치 세부사항** 타일에서 Git URL 링크를 클릭하십시오.
 
 Git 저장소를 로컬 시스템에 복제하거나 온라인 편집기에서 다음을 변경할 수 있습니다. `chart/{app name}/templates/postgres-deployment.yaml` 파일을 여십시오(`{app name}`은 Mendix 앱 이름으로 대체). 파일에는 기본적으로 기존 `volumeMount` 또는 `volumes` 항목이 없으므로 모든 데이터는 실행 중인 배치 팟(Pod) 내의 인메모리에 저장됩니다. 데이터를 {{site.data.keyword.cos_full_notm}}에 저장하고 팟을 다시 시작하는 경우에도 데이터가 유실되지 않도록 하려면 `volumeMount` 및 `volumes` 항목을 모두 Kubernetes `deployment.yaml` 파일에 추가해야 합니다. 
 
@@ -96,9 +100,9 @@ spec:
 ## 재배치
 {: #redeploy-mendix-kube}
 
-`postgres-deployment.yaml` 파일 변경사항을 저장소에 다시 커미트하면 새 DevOps 파이프라인 실행이 자동으로 트리거됩니다. 그러나 기본 애플리케이션을 다시 배치합니다. 지속적 볼륨에 대한 최신 변경사항이 포함된 최신 버전의 애플리케이션을 배치하려면 최신 버전의 Mendix 애플리케이션을 다시 배치해야 합니다.
+`postgres-deployment.yaml` 파일 변경사항이 저장소에 다시 커미트되고 나면 새 DevOps 파이프라인 실행이 자동으로 트리거됩니다. 그러나 기본 애플리케이션을 다시 배치합니다. 지속적 볼륨에 대한 최신 변경사항이 포함된 최신 버전의 애플리케이션을 배치하려면 최신 버전의 Mendix 애플리케이션을 다시 배치해야 합니다.
 
-다시 배치하려면 애플리케이션 세부사항 페이지로 이동하여 **배치 세부사항** 타일에 있는 **애플리케이션 배치**를 클릭하십시오. 애플리케이션의 `.mda` 파일을 찾을 수 없다는 오류와 함께 DevOps 도구 체인 내에서 배치가 실패하면 Mendix에서 애플리케이션을 다시 내보내야 합니다. Mendix Modeler 데스크탑 애플리케이션에서 내보내거나 **Mendix에서 편집**을 클릭하여 내보낼 수 있습니다. 그런 다음 Mendix 웹 인터페이스에서 **환경** 섹션으로 이동하여 **팀 서버에서 패키지 작성**을 클릭한 후 해당 단계를 수행하십시오. Mendix에서 애플리케이션을 내보내면, 애플리케이션의 세부사항 페이지로 돌아가 **애플리케이션 배치**를 다시 클릭하십시오. {{site.data.keyword.cloud}} DevOps 도구 체인을 사용하여 최근에 내보낸 애플리케이션을 Kubernetes 클러스터에 배치합니다. 배치가 완료되면, 애플리케이션이 활성 상태가 되고 프로덕션에 사용할 준비가 됩니다.
+다시 배치하려면 **앱 세부사항** 페이지로 이동하여 **앱 배치** 타일에 있는 **지속적 딜리버리 구성**을 클릭하십시오. 애플리케이션의 `.mda` 파일을 찾을 수 없다는 오류와 함께 DevOps 도구 체인 내에서 배치가 실패하면 Mendix에서 애플리케이션을 다시 내보내야 합니다. Mendix Modeler 데스크탑 애플리케이션에서 내보내거나 **Mendix에서 편집**을 클릭하여 내보낼 수 있습니다. 그런 다음 Mendix 웹 인터페이스에서 **환경** 섹션으로 이동하여 **팀 서버에서 패키지 작성**을 클릭한 후 해당 단계를 수행하십시오. Mendix에서 애플리케이션을 내보낸 후 **앱 세부사항** 페이지로 돌아가 **지속적 딜리버리 구성**을 한 번 더 클릭하십시오. {{site.data.keyword.cloud}} DevOps 도구 체인을 사용하여 최근에 내보낸 애플리케이션을 Kubernetes 클러스터에 배치합니다. 배치가 완료되면, 애플리케이션이 활성 상태가 되고 프로덕션에 사용할 준비가 됩니다.
 
 ## 앱이 실행 중인지 확인
 {: #verify-mendix-kube}
@@ -109,13 +113,13 @@ spec:
 2. **로그 및 히스토리 보기**를 클릭하십시오.
 3. 로그 파일에서 애플리케이션 URL을 찾으십시오.
 
-    로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.cloud.ibm.com` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
+    로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
 
 4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
 
 ## 추가 정보
 {: #more-info-mendix-kube}
 
-Kubernetes 환경에서 실행 중인 Mendix 애플리케이션에 대한 아키텍처 세부사항을 보려면 Mendix 사용자 문서의 [Kubernetes에서 Mendix 실행](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) 절을 검토하십시오.
+Kubernetes 환경에서 실행 중인 Mendix 애플리케이션에 대한 아키텍처 세부사항을 보려면 Mendix 사용자 문서의 [Kubernetes에서 Mendix 실행](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 절을 검토하십시오.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ Vous pouvez créer une chaîne d'outils d'une des manières suivantes :
 * En utilisant un modèle pour créer une chaîne d'outils.
 * En créant une chaîne d'outils à partir d'une application.
 
-Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Pour en savoir plus sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Déploiement d'applications en utilisant l'interface de ligne de commande
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} fournit une interface de ligne de commande robuste, ainsi que des plug-in et des extensions d'outil de développement qui s'intègrent à l'interface de ligne de commande.
 
-Avant de commencer, [téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Avant de commencer, [ téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 L'interface de ligne de commande n'est pas prise en charge par Cygwin. Utilisez l'outil dans une fenêtre autre que la fenêtre de ligne de commande Cygwin.
 {: important}
 
   1. {: download} Téléchargez le code de votre application dans un nouveau répertoire afin de configurer votre environnement de développement.
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Ouverture dans un nouvel onglet ou une nouvelle fenêtre)"></a>
 
   2. Placez-vous dans le répertoire dans lequel se trouve votre code.
 
@@ -72,7 +76,7 @@ L'interface de ligne de commande n'est pas prise en charge par Cygwin. Utilisez 
   Si la valeur contient un espace, vous devez ajouter des apostrophes ou des guillemets autour des éléments `username`, `org_name` et `space_name`. Par exemple, `-o "my org"`.
   {: note}
 
-  5. A partir du nouveau répertoire, déployez votre application dans {{site.data.keyword.cloud_notm}} en utilisant la commande `ibmcloud dev deploy`. Pour plus d'informations, voir la [documentation concernant l'interface CLI](/docs/cli/idt/commands.html#deploy).
+  5. A partir du nouveau répertoire, déployez votre application dans {{site.data.keyword.cloud_notm}} en utilisant la commande `ibmcloud dev deploy`. Pour plus d'informations, voir la [documentation concernant l'interface CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

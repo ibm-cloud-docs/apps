@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-03-15"
+
+keywords: apps, application, SSL certificates, access, restrict access
+
+subcollection: creating-apps
 
 ---
 
@@ -23,7 +27,7 @@ SSL 인증서를 작성하고 업로드하며 애플리케이션 액세스를 �
 
 ## CSR 작성
 
-CSR 작성 방법은 운영 체제에 따라 다릅니다. 다음 예는 [OpenSSL 명령행 도구 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://www.openssl.org/){:new_window}를 사용하여 CSR을 작성하는 방법을 보여줍니다.
+CSR 작성 방법은 운영 체제에 따라 다릅니다. 다음 예는 [OpenSSL 명령행 도구 ](http://www.openssl.org/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 사용하여 CSR을 작성하는 방법을 보여줍니다.
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -41,10 +45,10 @@ CSR이 유효하려면 CSR을 작성할 때 다음 정보를 입력해야 합니
 
 <dl>
 <dt>국가 이름</dt>
-<dd>국가 또는 지역의 두 자릿수 코드입니다. 예를 들어, `US`는 미국의 국가 코드입니다. 기타 국가 또는 지역의 경우에는 CSR을 작성하기 전에 [ISO 국가 코드의 목록 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.iso.org/obp/ui/#search)을 확인하십시오.
+<dd>국가 또는 지역의 두 자릿수 코드입니다. 예를 들어, `US`는 미국의 국가 코드입니다. 기타 국가 또는 지역의 경우에는 CSR을 작성하기 전에 [ISO 국가 코드의 목록](https://www.iso.org/obp/ui/#search){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 확인하십시오.
 </dd>
 <dt>시/도</dt>
-<dd>시/도의 축약되지 않은 전체 이름입니다.</dd>
+<dd>시/도 또는 주/지방의 축약되지 않은 전체 이름입니다.</dd>
 <dt>지역</dt>
 <dd>구/군/시의 전체 이름입니다.</dd>
 <dt>조직</dt>
@@ -90,7 +94,7 @@ SAN(Subject Alternative Names)을 사용할 수 있지만 CN 충돌을 방지하
 
     {{site.data.keyword.cloud_notm}} 도메인 관리의
 사용자 정의 인증서 기능은 TLS(Transport Layer Security) 프로토콜의
-SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 인증서로 보호되는 {{site.data.keyword.cloud_notm}} 애플리케이션에 액세스하는 클라이언트 코드는 TLS 구현에서 SNI 확장을 지원해야 합니다. 자세한 정보는 [RFC 4346의 섹션 7.4.2 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} 및 [TLS로 데이터 보안](/docs/get-support/appsectls.html#tlssupportwithdraw)을 참조하십시오.
+SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 인증서로 보호되는 {{site.data.keyword.cloud_notm}} 애플리케이션에 액세스하는 클라이언트 코드는 TLS 구현에서 SNI 확장을 지원해야 합니다. 자세한 정보는 [RFC 4346의 섹션 7.4.2 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [TLS로 데이터 보안](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw)을 참조하십시오.
     {: note}
   
   * 클라이언트 인증서 신뢰 저장소(선택사항): 애플리케이션에 대한 액세스를 허용할 사용자에 대한 클라이언트 인증서가 포함됩니다. 클라이언트 인증서를 요청하는 옵션을 사용으로 설정하려면 클라이언트 인증서 신뢰 저장소 파일을 업로드하십시오.
@@ -98,6 +102,6 @@ SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 �
     메타데이터에 공개 키가 포함된 클라이언트 인증서 신뢰 저장소를 업로드하여 상호 인증을 설정할 수 있습니다.
     {: tip}
 
-자세한 정보는 [SSL 인증서 가져오기](/docs/ssl-certificates/import-ssl-certificate.html)를 참조하십시오.
+자세한 정보는 [SSL 인증서 가져오기](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates)를 참조하십시오.
 
 

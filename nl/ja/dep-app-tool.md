@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ lastupdated: "2019-03-01"
 * テンプレートを使用してツールチェーンを作成する。
 * アプリからツールチェーンを作成する。
 
-ツールチェーンについて詳しくは、[ツールチェーンの作成](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)を参照してください。
+ツールチェーンについて詳しくは、[ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)を参照してください。
 
 ## CLI を使用したアプリのデプロイ
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} には、堅固な CLI と、CLI に統合されるプラグインおよび開発者ツール拡張機能が用意されています。
 
-開始する前に、[{{site.data.keyword.cloud_notm}} CLI をダウンロードしてインストールします](/docs/cli/index.html)。
+開始する前に、[{{site.data.keyword.cloud_notm}} CLI をダウンロードしてインストールします](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 
 CLI は、Cygwin によってサポートされていません。 このツールは Cygwin コマンド・ライン・ウィンドウ以外のウィンドウで使用してください。
 {: important}
 
   1. {: download} 開発環境をセットアップするため、アプリのコードを新規ディレクトリーにダウンロードします。
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(新しいタブまたはウィンドウで開く)"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(新しいタブまたはウィンドウで開く)"></a>
 
   2. コードが置かれているディレクトリーに移動します。
 
@@ -72,7 +76,7 @@ CLI は、Cygwin によってサポートされていません。 このツー�
   `username`、`org_name`、`space_name` の値にスペースが含まれている場合は、値のまわりに単一引用符または二重引用符を追加する必要があります。例えば、`-o "my org"` のように指定します。
   {: note}
 
-  5. 新規ディレクトリーから、`ibmcloud dev deploy` コマンドを使用して、アプリを {{site.data.keyword.cloud_notm}} にデプロイします。 詳しくは、[CLI の資料](/docs/cli/idt/commands.html#deploy)を参照してください。
+  5. 新規ディレクトリーから、`ibmcloud dev deploy` コマンドを使用して、アプリを {{site.data.keyword.cloud_notm}} にデプロイします。 詳しくは、[CLI の資料](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy)を参照してください。
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

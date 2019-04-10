@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
+
+subcollection: creating-apps
 
 ---
 
@@ -56,9 +60,7 @@ Foundry).
 ### O código gerado pelo kit do iniciador
 {: #starterkit-generated-code-vsi}
 
-O código gerado por meio de um kit do iniciador tem a biblioteca `IBMCloudEnv` nativa,
-que abstrai a recuperação dos valores do ambiente para que o código do aplicativo seja móvel para execução em
-diversas implementações de destino. Com o Docker virtual ou local, esse ambiente deve ser preparado com valores que
+O código que é gerado por meio de um kit do iniciador tem a biblioteca nativa `IBMCloudEnv`, que abstrai a recuperação de valores do ambiente para que o código do aplicativo possa ser movido para execução em vários destinos de implementação. Com o Docker virtual ou local, esse ambiente deve ser preparado com valores que
 satisfaçam a biblioteca `IBMCloudEnv` que _não necessariamente_ vêm de variáveis de
 ambiente reais.
 
@@ -79,8 +81,7 @@ Por exemplo, observe a última linha na seção do arquivo `mappings.json`:
 ```
 {: codeblock}
 
-Se você usar o recurso "Implementar na nuvem" ao criar um app, o arquivo
-`/server/localdev-config.json` será removido do repositório GitLab. Por razões de segurança, você não desejará colocar as suas credenciais em um repositório de código-fonte.
+Se você usar o recurso "Configurar entrega contínua" ao criar um app, o arquivo `/server/localdev-config.json` será removido do repositório GitLab. Por razões de segurança, você não desejará colocar as suas credenciais em um repositório de código-fonte.
 
 Se você usar `git clone` no repositório GitLab criado para iniciar o desenvolvimento ativo,
 observe que o arquivo `.gitignore` ignorará especificamente o `server/localdev-config.json` para ajudar a evitar check-ins acidentais de um arquivo que tenha
@@ -89,17 +90,13 @@ trabalha em um notebook.
 
 É possível recuperar o arquivo `server/localdev-config.json` concluindo estas etapas:
 
-1. Use `git clone` no repositório GitLab que foi criado automaticamente quando
-você usou o recurso "Implementar na nuvem".
-2. Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html), que
-inclui o plug-in `dev`.
+1. Use `git clone` no repositório de laboratório Git que foi criado automaticamente quando você usou o recurso "Configurar entrega contínua".
+2. Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), que inclui o plug-in `dev`.
 3. Use a linha de comandos `ibmcloud` para efetuar login no {{site.data.keyword.cloud_notm}}.
 4. Execute `ibmcloud dev get-credentials`, que se refere ao arquivo `cli-config.yml`. O arquivo `cli-config.yml` inclui informações sobre qual aplicativo e tarefa de geração tem as
 credenciais.
 
-Se algum recurso for removido do aplicativo entre o uso do recurso "Implementar na nuvem" e o
-`ibmcloud dev get-credentials`, o arquivo transferido por download `/server/localdev-config.json`
-não terá todas as credenciais que o código base `git clone` original pode requerer.
+Se algum serviço for removido do aplicativo entre o uso do recurso "Configurar entrega contínua" e `ibmcloud dev get-credentials`, o arquivo transferido por download `/server/localdev-config.json` não terá todas as credenciais que seu código base `git clone` original pode requerer.
 {: tip}
 
 Se você estiver executando o aplicativo em um contêiner do Docker, será possível optar por remover o arquivo `/server/localdev-config.json` completamente e passar as variáveis de ambiente na linha de comandos
@@ -110,7 +107,7 @@ Continuando com a seção "cloudant_apikey" por meio do arquivo `mappings.json`,
 substituir os valores passando-os na linha de comandos do Docker.
 
 Por exemplo:
-```console
+```
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```
 {: codeblock}

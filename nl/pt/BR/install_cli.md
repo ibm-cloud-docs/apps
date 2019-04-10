@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # Implementando aplicativos com a interface da linha de comandos
 
@@ -55,7 +56,8 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
     Preste atenção também no arquivo `README.md`, que contém detalhes como instruções de construção, se aplicável.
 
-    Nota: caso seu aplicativo seja um app Liberty, deve-se construí-lo antes da reimplementação.
+    Se o seu aplicativo for um app Liberty, ele deverá ser construído antes da reimplementação.
+    {: note}
 
   4. Conecte e efetue login no {{site.data.keyword.Bluemix_notm}}.
 
@@ -67,7 +69,8 @@ Após a instalação da interface da linha de comandos, é possível iniciar:
 
   <pre class="pre"><code class="hljs">ibmcloud login -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **Nota**: deve-se incluir aspas simples ou duplas ao redor `username`, `org_name` e `space_name` se o valor contém um espaço, por exemplo, `-o "my org"`.
+  Você deverá incluir aspas simples ou duplas em torno de `username`, `org_name` e `space_name` se o valor contiver um espaço, por exemplo, `-o "my org"`.
+  {: note}
 
   5. Por meio do <var class="keyword varname">your_new_directory</var>, reimplemente o seu app no {{site.data.keyword.Bluemix_notm}} usando o comando `ibmcloud app push`. Para obter mais informações sobre o comando `ibmcloud app push`, veja [Fazendo upload de seu aplicativo](/docs/starters/upload_app.html).
 

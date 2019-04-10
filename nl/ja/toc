@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
 アプリの作成
 
     {: .navgroup id="learn"}
@@ -10,11 +10,11 @@
     development_process.md
     best-practice.md
     patterns.md
- 
+
     {: .topicgroup}
     関連リンク
-        [回復力のあるアプリケーションのための戦略 (Strategies for resilient applications)](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
-        [Kubernetes への継続的デプロイメント (Continuous deployment to Kubernetes)](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
+        [回復力のあるアプリケーションのための戦略 (Strategies for resilient applications)](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Kubernetes への継続的デプロイメント (Continuous deployment to Kubernetes)](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -43,7 +43,7 @@
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    
+
     {: .topicgroup}
     環境への資格情報の追加
         creds_overview.md
@@ -51,14 +51,16 @@
         creds_cf.md
         creds_vsi.md
 
-    mngapps.md
+    mngdomains.md
     updapps.md
     secapps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools コマンド・ラインのリファレンス](https://cloud.ibm.com/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools コマンド・ライン・リファレンス](/cli/idt/cloud-cli-idt-cli)
+    [Cloud Functions API リファレンス](https://cloud.ibm.com/apidocs/functions)
+    [モバイル SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
 
     {: .topicgroup}
     IBM Cloud 開発者ダッシュボード
@@ -71,18 +73,16 @@
 
     {: .topicgroup}
     IBM Cloud プログラミング・ガイド
-        [進む](https://cloud.ibm.com/docs/go)
-        [Spring](https://cloud.ibm.com/docs/java-spring)
-        [Swift](https://cloud.ibm.com/docs/swift)
-        [ノード](https://cloud.ibm.com/docs/node)
+        [進む](/go/go-getting-started)
+        [Spring](/java/java-overview)
+        [Swift](/swift/swift-getting_started_swift)
+        [ノード](/node/nodejs-create_project)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_apps.md
-    [IBM Cloud Slack developer-tools チャネル](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [スタック・オーバーフロー](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API リファレンス](https://cloud.ibm.com/apidocs/functions)
-    [モバイル SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

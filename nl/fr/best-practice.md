@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-19"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, best practices
+
+subcollection: creating-apps
 
 ---
 
@@ -49,19 +53,19 @@ L'extraction de dépendances propres à l'environnement dans un ensemble de fich
 
 Vous pouvez exécuter plusieurs instances afin d'éviter des indisponibilités dans une région unique. Pour mettre à disposition une application encore plus robuste, pensez à utiliser une architecture multi-région.
 
-Pour plus d'informations sur la réduction du temps d'indisponibilité et sur la création d'architectures résilientes qui garantissent une disponibilité maximale, consultez le [tutoriel Strategies for resilient applications](/docs/tutorials/strategies-for-resilient-applications.html).
+Pour plus d'informations sur la réduction du temps d'indisponibilité et sur la création d'architectures résilientes qui garantissent une disponibilité maximale, consultez le [tutoriel Strategies for resilient applications](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Prenez soin de surveiller vos applications
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic ![Icône de lien externe](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic](http://newrelic.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Bénéficiez des options de support
 {: #support}
 
 Le forfait payant {{site.data.keyword.cloud_notm}} offre plusieurs autres types de compte avec un support payant facultatif. Quel que soit le type de votre compte, si vous prévoyez de mettre en production une application sur {{site.data.keyword.cloud_notm}}, envisagez de vous inscrire à cette option.
 
-Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](/docs/get-support/howtogetsupport.html#getting-customer-support), afin de vous prémunir contre les problèmes imprévisibles.
+Avec ou sans support payant, vous pouvez obtenir de l'aide comme décrit à la rubrique [support](/docs/get-support?topic=get-support-getting-customer-support), afin de vous prémunir contre les problèmes imprévisibles.
 
 ## Evitez les API d'infrastructure dans votre application
 
@@ -89,6 +93,6 @@ Votre application doit être installée fréquemment à la demande dans l'enviro
 
 Capturez votre installation d'application sous la forme d'un ensemble uniforme de scripts indépendant du système d'exploitation. Veillez à ce que l'installation de votre application reste petite et portable pour qu'elle puisse s'adapter à différentes techniques d'automatisation. De plus, limitez les dépendances requises par l'installation d'application.
 
-Pour plus d'informations sur les applications prêtes pour le cloud, voir [The twelve-factor app ![Icône de lien externe](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
+Pour plus d'informations sur les applications prêtes pour le cloud, voir [The twelve-factor app](http://12factor.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 

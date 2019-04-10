@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, starter kit, Kubernetes, cluster
+
+subcollection: creating-apps
 
 ---
 
@@ -21,7 +25,7 @@ Découvrez comment créer une application dans {{site.data.keyword.cloud}} en ut
 
 {{site.data.keyword.cloud_notm}} inclut des kits de démarrage vous permettant de générer les bases d'une application s'exécutant sur Kubernetes. Lorsque vous utilisez un kit de démarrage, il est facile de suivre un modèle de programmation natif de cloud qui utilise les meilleures pratiques {{site.data.keyword.cloud_notm}} pour le développement d'application. Les kits de démarrage génèrent des applications qui suivent le modèle de programmation natif de cloud. Ils incluent des scénarios de test, le diagnostic d'intégrité et des métriques dans chaque langage de programmation. Vous pouvez également mettre à disposition des services cloud qui sont ensuite initialisés dans votre application générée.
 
-Ce tutoriel utilise l'option de déploiement Kubernetes. Dans ce tutoriel, nous allons créer une application à partir d'un kit de démarrage de base en utilisant Java + Spring, en y ajoutant une instance de service Cloudant et en le déployant dans {{site.data.keyword.cloud_notm}} en utilisant un environnement Kubernetes.
+Ce tutoriel utilise la cible de déploiement Kubernetes. Dans ce tutoriel, vous allez créer une application à partir d'un kit de démarrage de base en utilisant Java + Spring, en y ajoutant une instance de service Cloudant et en la déployant dans {{site.data.keyword.cloud_notm}} via IBM Kubernetes Service.
 
 Toute d'abord, consultez l'organigramme du kit de démarrage suivant et ses étapes de présentation correspondantes.
 
@@ -30,34 +34,34 @@ Toute d'abord, consultez l'organigramme du kit de démarrage suivant et ses éta
 ## Avant de commencer
 {: #prereqs-starterkit-kube}
 
-* Créez une application **Java + Spring** en utilisant un [kit de démarrage](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
-* Installez l'interface CLI [{{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
-* Configurez [Docker ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.docker.com/get-started){: new_window}.
+* Créez une application **Java + Spring** en utilisant un [kit de démarrage](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
+* Installez l'interface de ligne de commande [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Configurez [Docker ](https://www.docker.com/get-started){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
-## Ajout de ressources à votre application
+## Ajout de services à votre application
 {: #resources-starterkit-kube}
 
-Ajoutez une ressource de service {{site.data.keyword.cloud_notm}} à votre application. La procédure suivante met à disposition une instance Cloudant, crée une clé de ressource (données d'identification) et l'associe à votre application.
+Ajoutez un service {{site.data.keyword.cloud_notm}} à votre application. La procédure suivante met à disposition une instance Cloudant, crée une clé de ressource (données d'identification) et l'associe à votre application.
 
-1. Sur la page **Détails de l'application**, cliquez sur **Ajouter une ressource**.
+1. Sur la page **Détails de l'application**, cliquez sur **Ajouter un service**.
 2. Sélectionnez **Données** puis cliquez sur **Suivant**..
 3. Sélectionnez **Cloudant** puis cliquez sur **Suivant**.
 4. Sur la page **Ajouter Cloudant**, sélectionnez la région (US-South), le groupe de ressources (valeur par défaut) et le plan de tarification (Lite - instance gratuite).
 5. Cliquez sur **Créer**. La page **Détails de l'application** s'affiche et l'instance Cloudant est mise à disposition et liée à votre application. Notez que la clé de ressource Cloudant (données d'identification) est ajoutée à la zone **Données d'identification**.
-6. Facultatif. Si vous souhaitez parcourir rapidement votre code d'application après l'ajout de ressources, cliquez sur **Télécharger le code**. Votre code est téléchargé en tant que fichier `.zip` contenant l'ensemble de la structure du code d'application. Vous pouvez facilement extraire le fichier et exécuter le code localement à l'aide du plug-in {{site.data.keyword.dev_cli_notm}} ou l'ajouter à votre référentiel de gestion de code.
+6. Facultatif. Si vous souhaitez parcourir rapidement votre code d'application après l'ajout de services, cliquez sur **Télécharger le code**. Votre code est téléchargé en tant que fichier `.zip` contenant l'ensemble de la structure du code d'application. Vous pouvez facilement extraire le fichier et exécuter le code localement à l'aide du plug-in {{site.data.keyword.dev_cli_notm}} ou l'ajouter à votre référentiel de gestion de code.
 
 ## Déploiement de votre application à l'aide d'une chaîne d'outils DevOps
 {: #deploy-starterkit-kube}
 
 Associez une chaîne d'outils DevOps à l'application et configurez-la de telle sorte qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.cloud_notm}} Kubernetes.
 
-1. Sur la page **Détails de l'application**, cliquez sur **Déployer dans le cloud**.
-2. Sur la page **Choisissez un environnement de déploiement**, sélectionnez **Déployer dans Kubernetes**.
+1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
+2. Sur la page **Sélectionner une cible de déploiement** page, sélectionnez **Déployer dans IBM Kubernetes Service**.
 3. Sélectionnez une région et un cluster. Si vous n'avez pas de cluster Kubernetes, cliquez sur **Créer un cluster**.
   * Sur la page **Créer un nouveau cluster**, sélectionnez l'emplacement, le type de cluster (gratuit), entrez un nom de cluster puis cliquez sur **Créer un cluster**.
   * Si nécessaire, suivez les instructions à l'écran pour obtenir l'accès à votre cluster.
   * Attendez que le cluster indique **PRET** pour créer la chaîne d'outils. Avec la région **US-South**, vous pouvez mettre à disposition un cluster gratuit.
-  * Retournez à la page **Choisissez un environnement de déploiement**.
+  * Retournez à la page **Sélectionner une cible de déploiement**.
 4. Cliquez sur **Suivant**. La page **Configurer la chaîne d'outils** s'affiche.
 5. Sur la page **Configurer la chaîne d'outils**, entrez un nom de chaîne d'outils, sélectionnez une région, sélectionnez un groupe de ressources puis cliquez sur **Créer**. La page **Détails de l'application** s'affiche avec les informations de déploiement concernant votre chaîne d'outils.
 
@@ -71,7 +75,7 @@ Associez une chaîne d'outils DevOps à l'application et configurez-la de telle 
 ## Affichage de l'historique, des journaux et des outils de chaîne d'outils
 {: #view-logs-starterkit-kube}
 
-1. Une fois l'étape de déploiement terminée, la page **Détails de l'application** s'affiche ainsi que les informations de déploiement concernant votre chaîne d'outils.
+1. Une fois l'étape de déploiement terminée, la page **Détails de l'application** s'affiche avec les informations de déploiement concernant votre chaîne d'outils.
 2. Accédez à la chaîne d'outils en cliquant sur **Afficher la chaîne d'outils**. L'onglet **Vue d'ensemble** de la page de chaîne d'outils s'affiche. Il présente les outils inclus avec la chaîne d'outils. Cet exemple inclut les outils suivants présélectionnés dans le kit de démarrage lors de la création de la chaîne d'outils :
   * Un dispositif de suivi de travaux permettant d'effectuer le suivi des modifications et des mises à jour de projet.
   * Un référentiel Git qui contient le code source de votre application.
@@ -99,15 +103,15 @@ Une fois votre application déployée, Delivery Pipeline ou la ligne de commande
 
 4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
 
-Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) pour afficher l'URL de votre application. Accédez ensuite à l'URL dans votre navigateur.
+Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) pour afficher l'URL de votre application. Accédez ensuite à l'URL dans votre navigateur.
 
 ## Etapes suivantes
 {: #next-steps-startkit-kube notoc}
 
-* Si des erreurs surviennent lors du déploiement, consultez la rubrique de traitement des incidents concernant les problèmes connus, comme le [dépassement du quota de stockage](/docs/apps/ts_apps.html#exceed_quota) ou découvrez comment [accéder aux journaux Kubernetes](/docs/apps/ts_apps.html#access_kube_logs) pour rechercher des erreurs.
+* Si des erreurs surviennent lors du déploiement, consultez la rubrique de traitement des incidents concernant les problèmes connus, comme le [dépassement du quota de stockage](/docs/apps?topic=creating-apps-managingapps#exceed_quota) ou découvrez comment [accéder aux journaux Kubernetes](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) pour rechercher des erreurs.
 
 * Accédez à la configuration de service dans votre code :
 	- Vous pouvez utiliser l'annotation _@Value_ ou utiliser la méthode _getProperty()_ de la classe d'environnement de structure Spring. Pour plus d'informations, voir [Accès aux données d'identification](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Ajoutez de nouvelles données d'identification à votre environnement Kubernetes :
-	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube) dans l'environnement de déploiement.
+	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification](/docs/apps?topic=creating-apps-add-credentials-kube) dans l'environnement de déploiement.

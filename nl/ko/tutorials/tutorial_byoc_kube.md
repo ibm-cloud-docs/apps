@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-13"
 # Kubernetes 클러스터에 자체 코드 배치
 {: #tutorial-byoc-kube}
 
-기존 앱 저장소를 사용하여 {{site.data.keyword.cloud}}에서 앱을 작성하는 방법에 대해 알아봅니다. 기존 DevOps 도구 체인을 연결하거나 새로 하나를 작성하고 Kubernetes 클러스터의 보안 컨테이너에 앱을 지속적으로 전달할 수 있습니다. 이 튜토리얼은 변경사항이 자동으로 빌드되어 Kubernetes 클러스터의 배치된 앱에 항상 전파될 수 있도록 지속적 통합 DevOps 파이프라인을 설정하는 데 도움을 줍니다.
+기존 앱 저장소를 사용하여 {{site.data.keyword.cloud}}에서 애플리케이션을 작성하는 방법에 대해 알아봅니다. 기존 DevOps 도구 체인을 연결하거나 새로 하나를 작성하고 Kubernetes 클러스터의 보안 컨테이너에 앱을 지속적으로 전달할 수 있습니다. 이 튜토리얼은 변경사항이 자동으로 빌드되어 Kubernetes 클러스터의 배치된 앱에 항상 전파될 수 있도록 지속적 통합 DevOps 파이프라인을 설정하는 데 도움을 줍니다.
 {: shortdesc}
 
 작업 중인 백엔드 애플리케이션에 대한 코드 베이스의 소스 코드 저장소가 이미 있는 경우, {{site.data.keyword.cloud_notm}}에서는 전체 제품 범위를 구성하는 모든 자산의 집계 보기로 이 자산을 구성하는 데 도움을 줍니다. {{site.data.keyword.cloud_notm}}에서는 사용자가 DevOps 도구 체인 기능을 사용할 때 확장 가능한 DevOps 워크플로우에서 시작하고 실행할 수 있도록 합니다. 이 튜토리얼은 모두 클라우드 우수 사례의 안내에 따라 경험이 풍부한 개발자나 DevOps 엔지니어가 대상 {{site.data.keyword.cloud_notm}} Kubernetes 클러스터를 확보 및 구성하고 DevOps 도구 체인을 구성 및 실행하도록 도움을 줍니다.
@@ -27,8 +31,8 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
 ## 시작하기 전에
 {: #prereqs-byoc-kube}
 
-* 앱을 작성하십시오. 자세한 정보는 [자체 코드 저장소에서 앱 작성](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc)을 참조하십시오.
-* [{{site.data.keyword.cloud_notm}} 콘솔 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하고 [Kubernetes 클러스터 구성](/docs/containers/container_index.html#container_index)을 위한 **컨테이너**를 선택하십시오.
+* 앱을 작성하십시오. 자세한 정보는 [자체 코드 저장소에서 앱 작성](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)을 참조하십시오.
+* [{{site.data.keyword.cloud_notm}} 콘솔 ](https://{DomainName}){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하고 [Kubernetes 클러스터 구성](/docs/containers?topic=containers-getting-started)을 위한 **컨테이너**를 선택하십시오.
 * 앱이 Docker에서 실행 중인지 확인하려면 다음 명령을 실행하십시오.
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -38,14 +42,14 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
   
 * 그리고 `http://localhost/springboothelloworld/sayhello` 등의 URL로 이동하십시오. Ctrl+C 키를 눌러서 Docker 실행을 중지하십시오.
 
-## 앱에 리소스 추가(선택사항)
+## 앱에 서비스 추가(선택사항)
 {: #resources-byoc-kube}
 
-애플리케이션에 서비스 리소스를 추가하면 {{site.data.keyword.cloud_notm}}에서 서비스를 작성합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
+애플리케이션에 서비스 리소스를 추가하면 {{site.data.keyword.cloud_notm}}에서 서비스 인스턴스를 작성합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
 
-이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 리소스 추가](/docs/apps/reqnsi.html#)를 참조하십시오.
+이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 서비스 추가](/docs/apps?topic=creating-apps-add-resource)를 참조하십시오.
 
-앱에 서비스 리소스를 추가한 후에는 서비스에 대한 인증 정보를 배치 환경에 복사해야 합니다. 자세한 정보는 [Kubernetes 환경에 인증 정보 추가](/docs/apps/creds_kube.html)를 참조하십시오.
+앱에 서비스를 추가한 후에는 서비스에 대한 인증 정보를 배치 환경에 복사해야 합니다. 자세한 정보는 [Kubernetes 환경에 인증 정보 추가](/docs/apps?topic=creating-apps-add-credentials-kube)를 참조하십시오.
 
 ## 배치를 위한 앱 준비
 {: #deploy-byoc-kube}
@@ -74,9 +78,9 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 
 저장소를 도구 체인에 추가하는 데 대한 자세한 정보는 다음을 참조하십시오.
 
- * [Git 저장소 및 문제 추적 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [GitHub 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [GitLab 구성](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [Git 저장소 및 문제 추적 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [GitHub 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [GitLab 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### 새 도구 체인에 앱 연결
@@ -86,16 +90,14 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 
 1. 도구 체인 작성 페이지에서 **자체 도구 체인 빌드** 템플리트를 클릭하십시오.
 2. 도구 체인의 이름을 입력하고 지역 및 리소스 그룹(기본값)을 선택한 후에 **작성**을 클릭하십시오.
+3. 도구 체인을 작성한 후, 브라우저의 이동 경로를 사용하여 **앱 세부사항** 페이지로 돌아가십시오. 이 페이지에 지속적 딜리버리가 구성되었음이 표시됩니다.
 
-새 앱에서 도구 체인 작성을 선택하는 경우에는 DevOps 대시보드의 [도구 체인 작성](https://{DomainName}/devops/create) 페이지가 브라우저의 새 탭에서 열립니다. 해당 탭에서 도구 체인을 작성하고 구성한 후에는 앱의 도구 체인 연결 페이지로 되돌아가서 페이지를 새로 고쳐야 합니다.
-{:tip}
-
-처음부터 DevOps 도구 체인 작성을 원하지 않으면 [`ibmcloud dev enable` 명령](/docs/cli/idt/commands.html#enable)을 사용하여 기존 코드를 클라우드-사용으로 설정할 수 있습니다. 이 명령은 저장소로 가져오는 DevOps 도구 체인 템플리트를 생성합니다. 그러면 해당 템플리트를 DevOps 도구 체인이 무엇을 작성하는지에 대한 지시사항 세트로서 사용하십시오. 자세한 정보는 [CLI 문서](/docs/apps/create-deploy-cli.html#byoc-cli)를 참조하십시오.
+처음부터 DevOps 도구 체인 작성을 원하지 않으면 [`ibmcloud dev enable` 명령](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)을 사용하여 기존 코드를 클라우드-사용으로 설정할 수 있습니다. 이 명령은 저장소로 가져오는 DevOps 도구 체인 템플리트를 생성합니다. 그러면 해당 템플리트를 DevOps 도구 체인이 무엇을 작성하는지에 대한 지시사항 세트로서 사용하십시오. 자세한 정보는 [CLI 문서](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)를 참조하십시오.
 
 ## GitHub 통합 추가
 {: #github-byoc-kube}
 
-해당 저장소의 가져오기 요청과 코드 푸시가 도구 체인에 POST를 전송할 수 있게, 도구 체인이 저장소의 웹훅을 설정하도록 GitHub 저장소에 대한 통합으로 DevOps 도구 체인을 구성하십시오. 
+해당 저장소의 가져오기(pull) 요청과 코드 푸시가 도구 체인에 POST를 전송할 수 있게, 도구 체인이 저장소의 웹훅을 설정하도록 GitHub 저장소에 대한 통합으로 DevOps 도구 체인을 구성하십시오. 
 
 1. DevOps 도구 체인 템플리트에서 **도구 추가**를 클릭하십시오.
 2. 저장소가 공용 GitHub 또는 Enterprise GitHub에 있는 경우에는 **GitHub**를 선택하십시오.
@@ -132,7 +134,7 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
     * 이름에 대해 `build and publish`를 입력하십시오.
     * 빌더 유형에 대해 **컨테이너 레지스트리**를 선택하십시오.
     * Kubernetes 클러스터가 있는 지역을 선택하십시오.
-    * **기존 API 키 입력**을 선택하십시오. API 키가 없으면 [API 키 작성](/docs/iam/userid_keys.html#creating-an-api-key)을 참조하십시오. 
+    * **기존 API 키 입력**을 선택하십시오. API 키가 없으면 [API 키 작성](/docs/iam?topic=iam-userapikey#create_user_key)을 참조하십시오. 
     * 컨테이너 레지스트리 네임스페이스를 입력하십시오. 이는 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하고 **컨테이너** > **레지스트리** > **네임스페이스**를 선택하여 찾을 수 있습니다.
     * 이 파이프라인 빌드 단계가 저장소의 지속적 통합 분기의 지속적 빌드에 대한 단계이므로, Docker 이미지 이름에 대해 `continuous`를 입력하십시오.
     * 첫 번째 `#!/bin/bash` 행 이후에 1개 이상의 행을 추가하여 빌드 스크립트를 편집하십시오. 예를 들어, maven을 사용하여 빌드된 저장소의 경우에는 다음 예와 유사한 몇 개의 행을 추가할 수 있습니다.
@@ -176,4 +178,4 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 
 4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 사용하여 앱의 URL을 보십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
