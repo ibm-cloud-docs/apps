@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, applications, activity tracking events
+
+subcollection: creating-apps
 
 ---
 
@@ -21,14 +25,14 @@ lastupdated: "2019-02-01"
 身為安全性管理者、審核員或管理員的您，可以使用 {{site.data.keyword.cloudaccesstrailfull}} 服務追蹤使用者和應用程式在 {{site.data.keyword.cloud}} 中與 {{site.data.keyword.dev_console}} 互動的情況。
 {: shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者啟動，且會變更 {{site.data.keyword.cloud_notm}} 中服務狀態的活動。如需相關資訊，請參閱[關於 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov)。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服務會記錄由使用者啟動，且會變更 {{site.data.keyword.cloud_notm}} 中服務狀態的活動。如需相關資訊，請參閱[關於 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov)。
 
 ## 在哪裡檢視事件
 {: #view-events-ui}
 
 {{site.data.keyword.cloudaccesstrailshort}} 事件提供於 {{site.data.keyword.cloudaccesstrailshort}} 帳戶網域，這提供於產生 {{site.data.keyword.dev_console}} 事件的 {{site.data.keyword.cloud_notm}} 地區。
 
-若要開始監視您使用者的動作，請參閱[入門指導教學](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+若要開始監視您使用者的動作，請參閱[入門指導教學](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started)。
 
 ## 事件清單
 {: #events}

@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
 建立應用程式
 
     {: .navgroup id="learn"}
@@ -11,11 +11,11 @@
     best-practice.md
     patterns.md
     
- 
+
     {: .topicgroup}
-    相關鏈結
-        [回復型應用程式的策略](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
-        [連續部署至 Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
+相關鏈結
+        [回復型應用程式的策略](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [連續部署至 Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -44,7 +44,7 @@
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    
+
     {: .topicgroup}
     將認證新增至環境
         creds_overview.md
@@ -52,14 +52,16 @@
         creds_cf.md
         creds_vsi.md
 
-    mngapps.md
+    mngdomains.md
     updapps.md
     secapps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 指令行參考資料](https://cloud.ibm.com/docs/cli/idt/commands.html)
+    [IBM Cloud Developer Tools 指令行參考資料](/cli/idt/cloud-cli-idt-cli)
+    [Cloud Functions API 參考資料](https://cloud.ibm.com/apidocs/functions)
+    [行動 SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
 
     {: .topicgroup}
     IBM 開發人員儀表板
@@ -71,19 +73,17 @@
         [Web 應用程式](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    IBM Cloud 程式設計手冊
-        [Go](https://cloud.ibm.com/docs/go)
-        [Spring](https://cloud.ibm.com/docs/java-spring)
-        [Swift](https://cloud.ibm.com/docs/swift)
-        [Node](https://cloud.ibm.com/docs/node)
+IBM Cloud 程式設計手冊
+        [Go](/go/go-getting-started)
+        [Spring](/java/java-overview)
+        [Swift](/swift/swift-getting_started_swift)
+        [Node](/node/nodejs-create_project)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_apps.md
-    [IBM Cloud Slack developer-tools 頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Cloud Functions API 參考資料](https://cloud.ibm.com/apidocs/functions)
-    [行動 SDK](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
+    [IBM Cloud Slack 開發人員工具頻道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [Stack Overflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

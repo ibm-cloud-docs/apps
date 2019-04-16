@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -16,35 +20,38 @@ lastupdated: "2019-02-13"
 # 建立微服務
 {: #tutorial-microservice}
 
-您可以從微服務基本入門範本建立應用程式。請使用這些入門範本，來建置具有 Web 架構選項的 Node、Java 或 Python 的微服務後端。您可以查看如何安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端。
+您可以從「微服務基本入門範本」建立應用程式。請使用這些入門範本，來建置具有 Web 架構選項的 Node、Java 或 Python 的微服務後端。您可以查看如何安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端。
 {: shortdesc}
 
 ## 步驟 1. 安裝工具
 {: #prereqs-microservice}
 
-* 安裝[開發人員工具](/docs/cli/index.html)。
+* 安裝[開發人員工具](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 * Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
-* 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry/prepare-account.html#prepare)。
+* 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
 
 ## 步驟 2. 建立應用程式
 {: #create-microservice}
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中建立應用程式：
 
-1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/) 頁面，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
+1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 頁面，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 微服務**，然後按一下**選取入門範本套件**。
 2. 輸入應用程式名稱。針對本指導教學，請使用 `MicroserviceProject`。
-3. 輸入唯一的主機名稱，例如 `abc-devhost`。此主機名稱是您應用程式的路徑：`abc-devhost.cloud.ibm.com`
-4. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources/tagging_resources.html#tag)。
+3. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，也就是 `abc-devhost.mybluemix.net`。
+4. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
 5. 選取語言及架構。部分入門範本套件可能只提供一種語言。
 6. 選取定價方案。有免費選項，您可以用於本指導教學。
 7. 按一下**建立**。
 
-## 步驟 3. 新增資源（選用）
+預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
+{: tip}
+
+## 步驟 3. 新增服務（選用）
 {: #resources-microservice}
 
-您可以新增資源，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
+您可以新增服務，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
 
-1. 從應用程式服務視窗，按一下**新增資源**。
+1. 在**應用程式詳細資料**頁面上，按一下**新增服務**。
 2. 選取您要的服務類型。例如，選取**資料** > **下一步** > **Cloudant** > **下一步**。
 3. 選取定價方案。有免費選項，您可以用於本指導教學。
 4. 按一下**建立**。
@@ -52,26 +59,26 @@ lastupdated: "2019-02-13"
 ## 步驟 4. 建立 DevOps 工具鏈
 {: #toolchain-microservice}
 
-啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們針對您所選擇的部署環境（[Kubernetes](/docs/containers/container_index.html#container_index)、[Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) 或[虛擬伺服器 (VSI)](/docs/vsi/vsi_index.html)）經過自訂。
+啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選擇的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
 
 從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 {: note}
 
-1. 從「應用程式詳細資料」頁面中，按一下**部署至雲端**。
-2. 選取部署方法。根據您所選方法的指示設定部署方法：
-  * **部署至 [Kubernetes](/docs/apps/deploying/containers.html#containers)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
-  * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public/about-cf.html#about-cf)**或**[企業環境](/docs/cloud-foundry-public/cfee.html#cfee)**的部署人員類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
-  * **部署至[虛擬伺服器](/docs/apps/vsi-deploy.html#vsi-deploy)**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
+1. 在**應用程式詳細資料**頁面上，按一下**配置持續交付**。
+2. 選取一個部署目標。根據您所選方法的指示設定部署目標：
+  * **部署至 [IBM Kubernetes Service](/docs/apps/deploying?topic=creating-apps-containers-kube)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
+  * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)**或**[企業環境](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**的部署人員類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
+  * **部署至[虛擬伺服器](/docs/apps?topic=creating-apps-vsi-deploy)**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
 ## 步驟 5. 在本端建置及執行應用程式
 {: #build-run-microservice}
 
 在前一個步驟中將應用程式部署至雲端時，已經建立了工具鏈。工具鏈會為您的應用程式建立 Git 儲存庫，您可以在該處找到程式碼。請遵循下列步驟來存取您的儲存庫。您可以在本端建置應用程式以進行測試，然後才將它推送至雲端。
 
-1. 從應用程式服務視窗，按一下**下載程式碼**或**複製儲存庫**，以在本端使用程式碼。
+1. 在**應用程式詳細資料**頁面上，按一下**下載程式碼**或**複製儲存庫**，以在本端使用程式碼。
 2. 將應用程式匯入至整合開發環境。
 3. 修改程式碼。
-4. 新增個人存取記號來設定 [Git 鑑別](/docs/services/ContinuousDelivery/git_working.html#git_authentication)。
+4. 新增個人存取記號來設定 [Git 鑑別](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication)。
 5. 登入 {{site.data.keyword.cloud_notm}} 指令行介面。如果您的組織使用聯合登入，請使用 `-sso` 選項。
 
   ```bash
@@ -122,7 +129,7 @@ lastupdated: "2019-02-13"
 
 您也可以從 DevOps 工具鏈手動部署應用程式：
 
-1. 從「應用程式詳細資料」視窗，按一下**檢視工具鏈**。
+1. 在**應用程式詳細資料**頁面上，按一下**檢視工具鏈**。
 
 2. 按一下 **Delivery Pipeline**，您可以在其中啟動建置、管理部署，以及檢視日誌和歷程。
 
@@ -152,8 +159,8 @@ ibmcloud dev deploy --target <container>
 2. 按一下**檢視日誌和歷程**。
 3. 在日誌檔中，尋找應用程式 URL：
 
-    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似 `urls: my-app-devhost.cloud.ibm.com` 或 `View the application health at: http://<ipaddress>:<port>/health`。
+    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 
 4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
 
-如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。
+如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。

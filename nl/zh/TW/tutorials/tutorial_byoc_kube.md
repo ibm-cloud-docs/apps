@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-13"
 # 將您自己的程式碼部署至 Kubernetes 叢集
 {: #tutorial-byoc-kube}
 
-了解如何使用現有的應用程式儲存庫，在 {{site.data.keyword.cloud}} 中建立應用程式。您可以連接現有的 DevOps 工具鏈或建立一個，並持續將應用程式遞送至 Kubernetes 叢集裡的安全容器。本指導教學協助您設定 Continuous Integration DevOps 管線，以自動建置變更，並傳播直到您在 Kubernetes 叢集裡部署的應用程式。
+瞭解如何使用現有應用程式儲存庫，在 {{site.data.keyword.cloud}} 中建立應用程式。您可以連接現有的 DevOps 工具鏈或建立一個，並持續將應用程式遞送至 Kubernetes 叢集裡的安全容器。本指導教學協助您設定 Continuous Integration DevOps 管線，以自動建置變更，並傳播直到您在 Kubernetes 叢集裡部署的應用程式。
 {: shortdesc}
 
 當您已有的原始碼儲存庫具有工作中後端應用程式的程式碼庫時，{{site.data.keyword.cloud_notm}} 會協助您將此資產組織成對於整個產品所涵蓋之所有資產的聚集視圖。當您使用 DevOps 工具鏈特性時，{{site.data.keyword.cloud_notm}} 能讓您開始可擴充的 DevOps 工作流程。本指導教學協助經驗豐富的開發人員或 DevOps 工程師獲得並配置目標 {{site.data.keyword.cloud_notm}} Kubernetes 叢集，以及配置並執行 DevOps 工具鏈，一切都在雲端最佳作法的指引下進行。
@@ -27,8 +31,8 @@ _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓�
 ## 開始之前
 {: #prereqs-byoc-kube}
 
-* 建立應用程式。如需相關資訊，請參閱[從您自己的程式碼儲存庫建立應用程式](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc)。
-* 從 [{{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}，按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg)，然後選取**容器**以[配置 Kubernetes 叢集](/docs/containers/container_index.html#container_index)。
+* 建立應用程式。如需相關資訊，請參閱[從您自己的程式碼儲存庫建立應用程式](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)。
+* 從 [{{site.data.keyword.cloud_notm}} 主控台 ](https://{DomainName}){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")，按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg)，然後選取**容器**以[配置 Kubernetes 叢集](/docs/containers?topic=containers-getting-started)。
 * 若要確認應用程式在 Docker 中執行，請執行下列指令：
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -38,15 +42,15 @@ _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓�
   
 * 然後，移至您的 URL，例如 `http://localhost/springboothelloworld/sayhello`。按 Ctrl+C 鍵，以停止 Docker 執行。
 
-## 將資源新增至應用程式（選用）
+## 將服務新增至應用程式（選用）
 {: #resources-byoc-kube}
 
-將服務資源新增至應用程式，而 {{site.data.keyword.cloud_notm}} 會為您建立服務。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
+將服務新增至應用程式，而 {{site.data.keyword.cloud_notm}} 會為您建立服務實例。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 {{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-此處理程序會佈建服務實例、建立資源金鑰（認證），並將它連結至應用程式。如需相關資訊，請參閱[將資源新增至應用程式](/docs/apps/reqnsi.html#)。
+此處理程序會佈建服務實例、建立資源金鑰（認證），並將它連結至應用程式。如需相關資訊，請參閱[將服務新增至應用程式](/docs/apps?topic=creating-apps-add-resource)。
 
-將服務資源新增至應用程式之後，您必須將服務的認證複製到部署環境。如需相關資訊，請參閱[將認證新增至 Kubernetes 環境](/docs/apps/creds_kube.html)。
+將服務新增至應用程式之後，您必須將服務的認證複製到部署環境。如需相關資訊，請參閱[將認證新增至 Kubernetes 環境](/docs/apps?topic=creating-apps-add-credentials-kube)。
 
 ## 準備應用程式以進行部署
 {: #deploy-byoc-kube}
@@ -75,9 +79,9 @@ DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Scr
 
 如需將儲存庫新增至工具鏈的相關資訊，請參閱：
 
- * [配置 Git 儲存庫及問題追蹤](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [配置 GitHub](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [配置 GitLab](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [配置 Git 儲存庫及問題追蹤](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### 將應用程式連接至新的工具鏈
@@ -87,11 +91,9 @@ DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Scr
 
 1. 在「建立工具鏈」頁面上，按一下**建置您自己的工具鏈**範本。
 2. 輸入工具鏈的名稱、選取地區和資源群組 (default)，然後按一下**建立**。
+3. 建立工具鏈之後，請使用瀏覽器中的瀏覽途徑回到**應用程式詳細資料**頁面，這表示持續交付已配置。
 
-當您選擇從新的應用程式建立工具鏈時，DevOps 儀表板中的[建立工具鏈](https://{DomainName}/devops/create)頁面會在瀏覽器的新標籤中開啟。在該標籤中建立並配置工具鏈之後，您必須回到應用程式中的「連接工具鏈」頁面，然後重新整理頁面。
-{:tip}
-
-如果您不想要從頭開始建立 DevOps 工具鏈，則可以使用 [`ibmcloud dev enable` 指令](/docs/cli/idt/commands.html#enable)來啟用現有程式碼的雲端功能。這個指令會產生 DevOps 工具鏈範本，您可以將它移入至儲存庫。然後，您可以使用該範本作為 DevOps 工具鏈所建立項目的指示集。如需相關資訊，請參閱 [CLI 文件](/docs/apps/create-deploy-cli.html#byoc-cli)。
+如果您不想要從頭開始建立 DevOps 工具鏈，則可以使用 [`ibmcloud dev enable` 指令](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)來啟用現有程式碼的雲端功能。這個指令會產生 DevOps 工具鏈範本，您可以將它移入至儲存庫。然後，您可以使用該範本作為 DevOps 工具鏈所建立項目的指示集。如需相關資訊，請參閱 [CLI 文件](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
 
 ## 新增 GitHub 整合
 {: #github-byoc-kube}
@@ -133,7 +135,7 @@ DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Scr
     * 輸入 `build and publish` 作為名稱。
     * 選取 **Container Registry** 作為建置器類型。
     * 選取 Kubernetes 叢集所在的地區。
-    * 選取**輸入現有 API 金鑰**。如果您沒有 API 金鑰，請參閱[建立 API 金鑰](/docs/iam/userid_keys.html#creating-an-api-key)。 
+    * 選取**輸入現有 API 金鑰**。如果您沒有 API 金鑰，請參閱[建立 API 金鑰](/docs/iam?topic=iam-userapikey#create_user_key)。 
     * 輸入 Container Registry 名稱空間（按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg)，然後選取**容器** > **登錄** > **名稱空間**，即可找到它）。
     * 針對 Docker 映像檔名稱，輸入 **continuous`，因為此管線建置階段是用於持續建置儲存庫的持續整合分支。
     * 編輯建置 Script，在第一行 `#!/bin/bash` 之後，新增一行以上。例如，對於使用 maven 建置的儲存庫，您可能會新增幾行，類似下列範例：
@@ -177,4 +179,4 @@ DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Scr
 
 4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
 
-如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。
+如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。

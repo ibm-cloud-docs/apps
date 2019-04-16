@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-19"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, best practices
+
+subcollection: creating-apps
 
 ---
 
@@ -49,19 +53,19 @@ lastupdated: "2018-02-19"
 
 您可以執行多個實例，以避免單一地區的關閉時間。若要提供更為強健的應用程式，請考慮使用多地區架構。
 
-如需最小化關閉時間以及建立可達到最大可用性之回復型架構的相關資訊，請參閱[回復型應用程式的策略指導教學](/docs/tutorials/strategies-for-resilient-applications.html)。
+如需最小化關閉時間以及建立可達到最大可用性之回復型架構的相關資訊，請參閱[回復型應用程式的策略指導教學](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications)。
 
 ## 確定您正在監視應用程式
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} 讓您可以使用服務（例如 [New Relic ![外部鏈結圖示](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}）輕鬆地監視應用程式。
+{{site.data.keyword.cloud_notm}} 讓您可以使用服務（例如 [New Relic](http://newrelic.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")）輕鬆地監視應用程式。
 
 ## 利用支援選項
 {: #support}
 
 {{site.data.keyword.cloud_notm}} 付費定價方案提供若干不同的帳戶類型以及選用性的付費支援。不論帳戶的類型為何，如果您計劃讓應用程式在 {{site.data.keyword.cloud_notm}} 上進入正式作業，請考慮登記此選項。
 
-不論是否使用付費支援，您都可以如[支援](/docs/get-support/howtogetsupport.html#getting-customer-support)所述取得協助，支援能對於無法預料的問題提供保險。
+不論是否使用付費支援，您都可以如[支援](/docs/get-support?topic=get-support-getting-customer-support)所述取得協助，支援能對於無法預料的問題提供保險。
 
 ## 避免在應用程式中使用基礎架構 API
 
@@ -87,6 +91,6 @@ lastupdated: "2018-02-19"
 
 請將應用程式安裝擷取為一組統一且與作業系統無關的 Script。請維持應用程式安裝短小精幹並且可攜，以適合不同的自動化技術。此外，也請將應用程式安裝所需的相依關係減到最少。
 
-如需具有雲端功能的應用程式相關資訊，請參閱 [The 12-factor app ![外部鏈結圖示](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
+如需具有雲端功能的相關資訊，請參閱 [The 12-factor app](http://12factor.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 

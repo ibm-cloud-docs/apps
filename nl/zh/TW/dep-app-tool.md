@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ lastupdated: "2019-03-01"
 * 使用範本來建立工具鏈。
 * 從應用程式建立工具鏈。
 
-若要進一步瞭解工具鏈，請參閱[建立工具鏈](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)。
+若要進一步瞭解工具鏈，請參閱[建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
 
 ## 使用 CLI 來部署應用程式
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} 提供強健的 CLI，以及與 CLI 整合的外掛程式和開發人員工具延伸規格。
 
-開始之前，[請下載並安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
+開始之前，[請下載並安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 
 Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工具。
 {: important}
 
   1. {: download}將您應用程式的程式碼下載至新的目錄，以設定開發環境。
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新分頁或視窗中開啟）"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新分頁或視窗中開啟）"></a>
 
   2. 切換至您程式碼所在的目錄。
 
@@ -72,7 +76,7 @@ Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工�
   如果值包含空格，您必須在 `username`、`org_name` 和 `space_name` 週圍加上單引號或雙引號，例如 `-o "my org"`。
   {: note}
 
-  5. 從您的新目錄，使用 `ibmcloud dev deploy` 指令以將應用程式部署至 {{site.data.keyword.cloud_notm}}。如需相關資訊，請參閱 [CLI 文件](/docs/cli/idt/commands.html#deploy)。
+  5. 從您的新目錄，使用 `ibmcloud dev deploy` 指令以將應用程式部署至 {{site.data.keyword.cloud_notm}}。如需相關資訊，請參閱 [CLI 文件](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy)。
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 

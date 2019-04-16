@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, applications, troubleshooting 
+
+subcollection: creating-apps
 
 ---
 
@@ -120,9 +124,9 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 從功能表列按一下**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。選取要在其中建立空間的組織，然後按一下**建立空間**。
-* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
+* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o<organization_name>`.
 
-請重試。如果此訊息再次出現，請前往 [{{site.data.keyword.cloud_notm}} 狀態 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/bluemixstatus){: new_window} 頁面，以檢查服務或元件是否有問題。
+請重試。如果此訊息再次出現，請前往 [{{site.data.keyword.cloud_notm}} 狀態 ](http://ibm.biz/bluemixstatus){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 頁面，以檢查服務或元件是否有問題。
 
 ## 無法執行所要求的動作
 {: #ts_authority}
@@ -144,7 +148,7 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 選取另一個您具有開發人員角色的組織及空間。
-* 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織和空間](/docs/admin/orgs_spaces.html#orgsspacesusers)。
+* 要求組織管理者將您的角色變更為開發人員，或建立空間，然後將開發人員角色指派給您。如需詳細資料，請參閱[管理組織和空間](/docs/iam?topic=iam-cfaccess#cfaccess)。
 
 ## 因為授權錯誤，所以無法存取 {{site.data.keyword.cloud_notm}} 服務
 {: #ts_vcap}
@@ -165,7 +169,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
+如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 和 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 
 
@@ -184,7 +188,7 @@ process.env.VCAP_SERVICES
 
 其他較少見的「錯誤的閘道」錯誤原因，包括網際網路服務供應商 (ISP) 脫離、不正確的防火牆配置及瀏覽器快取錯誤。
 
-如果您懷疑 {{site.data.keyword.cloud_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.cloud_notm}} 狀態 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://ibm.biz/bluemixstatus){: new_window} 頁面。[在另一個 {{site.data.keyword.cloud_notm}} 地區中使用服務](/docs/resources/connect_external_app#externalapp){: new_window}也許可以作為暫行解決方法。如果服務狀態正常，請嘗試下列步驟來解決問題：
+如果您懷疑 {{site.data.keyword.cloud_notm}} 服務已關閉，請先檢查 [{{site.data.keyword.cloud_notm}} 狀態 ](http://ibm.biz/bluemixstatus){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 頁面。[在另一個 {{site.data.keyword.cloud_notm}} 地區中使用服務](/docs/resources/connect_external_app#externalapp){: new_window}也許可以作為暫行解決方法。如果服務狀態正常，請嘗試下列步驟來解決問題：
 {: tsResolve}
 
   * 重試動作：
@@ -193,7 +197,7 @@ process.env.VCAP_SERVICES
     * 使用不同的瀏覽器。
     * 重新啟動路由器、數據機及電腦。將這些裝置重新開機可清除導致錯誤 502 的許多種錯誤。
   * 等待並於稍後再試一次。暫時發生的問題可能是由於網際網路服務供應商或 {{site.data.keyword.cloud_notm}} 服務所造成。您可能要等待暫時問題獲得解決。
-  * 如果問題仍然存在，請與 {{site.data.keyword.cloud_notm}} 支援中心聯絡。如需相關資訊，請參閱[聯絡 {{site.data.keyword.cloud_notm}} 支援中心 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/support/index.html#contacting-bluemix-support){: new_window}。
+  * 如果問題仍然存在，請與 {{site.data.keyword.cloud_notm}} 支援中心聯絡。如需相關資訊，請參閱[聯絡 {{site.data.keyword.cloud_notm}} 支援中心 ](/docs/support/index.html#contacting-bluemix-support){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## 已超出磁碟配額
 {: #ts_disk_quota}
@@ -207,11 +211,11 @@ process.env.VCAP_SERVICES
 配置給應用程式的預設磁碟配額是 1 GB。如果您需要更多磁碟空間，則必須手動指定磁碟配額。
 {: tsCauses}
 
-請使用下列其中一種方法來指定您的磁碟配額。您可以指定的磁碟配額上限是 2 GB。如果 2 GB 仍然不夠，請嘗試使用外部服務，例如 [Object Storage](/docs/services/ObjectStorage/index.html)。
+請使用下列其中一種方法來指定您的磁碟配額。您可以指定的磁碟配額上限是 2 GB。如果 2 GB 仍然不夠，請嘗試使用外部服務，例如 [Object Storage](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers)。
 {: tsResolve}
 
-  * 在 manifest.yml 檔案中，新增下列項目：
-    
+  * 在 `manifest.yml` 檔案中，新增下列項目：
+
   ```yaml
 	disk_quota: <disk_quota>
 	```
@@ -234,7 +238,7 @@ process.env.VCAP_SERVICES
 IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://pushy.me){: new_window}、[getui ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://www.getui.com/){: new_window} 及 [jpush ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.jpush.cn/){: new_window}。
+暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ](https://pushy.me){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")、[getui ](http://www.getui.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及 [jpush ](https://www.jpush.cn/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 {: tsResolve}
 
 ## 已超出組織的服務限制
@@ -265,7 +269,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GC
 	  4. 刪除服務實例。輸入 `cf delete-service <service_instance_name>`。
 	  5. 刪除服務實例之後，您可能要重新編譯打包服務實例所連結的應用程式。輸入 `cf restage <appname>`。
 
-  * 若要移除您可以擁有的服務實例數目的限制，請將您的「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account/index.html#upgrade-to-paygo)。
+  * 若要移除您可以擁有的服務實例數目的限制，請將您的「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account?topic=account-accounts#upgrade-to-paygo)。
 
 ## 執行檔無法在 {{site.data.keyword.cloud_notm}} 上執行
 {: #ts_executable}
@@ -310,7 +314,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 您可以增加帳戶的記憶體配額，或減少應用程式所使用的記憶體。
 {: tsResolve}
 
-  * 若要增加帳戶的記憶體配額，請將「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account/index.html#upgrade-to-paygo)。
+  * 若要增加帳戶的記憶體配額，請將「精簡」帳戶升級為計費帳戶。如需相關資訊，請參閱[升級帳戶](/docs/account?topic=account-accounts#upgrade-to-paygo)。
   * 若要減少應用程式所使用的記憶體，請使用 {{site.data.keyword.cloud_notm}} 主控台或 Cloud Foundry 指令行介面。
 
     如果您使用 {{site.data.keyword.cloud_notm}} 主控台，請完成下列步驟：
@@ -348,11 +352,11 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 此行為是 Cloud Foundry 的設計。
 {: tsCauses}
 
-您可以在指令行介面中鍵入下列指令，以手動重新啟動應用程式：
+您可以在指令行介面中鍵入下列指令，以手動重新啟動已部署的應用程式：
 {: tsResolve}
 
 ```
-ibmcloud cf push appname -p app_path
+ibmcloud cf restart <APPNAME>
 ```
 {: codeblock}
 
@@ -378,7 +382,7 @@ ibmcloud cf push appname -p app_path
 請使用下列其中一個選項來解決問題：
 {: tsResolve}
 
-  * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) 主題的「啟動指令」一節。
+  * 建議的作法是使用 IBM Node.js 建置套件來啟動應用程式。如需相關資訊，請參閱[將 Node.js 應用程式部署至 {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) 主題的「啟動指令」一節。
   * 將 `manifest.yml` 中的指令屬性修訂為 command: null，或編輯您的推送指令以包含 `-c null`，來停用現有應用程式的指令。
   * 從 `manifest.yml` 移除 **command** 屬性。然後，從 {{site.data.keyword.cloud_notm}} 中刪除現行應用程式，然後重新推送應用程式。
 
@@ -525,7 +529,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 		```
       {: codeblock}
 
-    * 使用 [package.json ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://www.npmjs.com/package/jsonfile){: new_window} 檔案。例如：
+    * 使用 [package.json ](https://www.npmjs.com/package/jsonfile){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 檔案。例如：
 	    ```json
 		  {
         ...
@@ -563,7 +567,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 
-如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
+如需 Node.js 應用程式的相關提示，請參閱 [Tips for Node.js Applications ](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## 將 {{site.data.keyword.cloud_notm}} Liberty 應用程式匯入至 Eclipse 之後，`server.xml` 檔案中出現配置錯誤
 {: #ts_eclipse}
@@ -577,7 +581,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且在將 Liberty 應用程式推送至 {{site.data.keyword.cloud_notm}} 時產生 `runtime-vars.xml` 檔案。將應用程式匯入至 Eclipse 時，本端環境中沒有 `runtime-vars.xml` 檔案。
 {: tsCauses}
 
-您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty/index.html)。
+您可以移除專案中的 server.xml 檔案，來解決此問題。將應用程式推送為 WAR 應用程式時，此建置套件會動態建立 `server.xml` 檔案。如需相關資訊，請參閱 [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime)。
 {: tsResolve}
 
 ## 無法使用自訂建置套件來編譯打包應用程式
@@ -592,7 +596,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 如果 Script（例如偵測 Script、編譯 Script 及釋放 Script）無法執行，就可能會發生此問題。
 {: tsCauses}
 
-您可以使用 [Git 更新 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://git-scm.com/docs/git-update-index){: new_window} 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
+您可以使用 [Git 更新 ](http://git-scm.com/docs/git-update-index){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 在 {{site.data.keyword.cloud_notm}} Continuous Delivery 中無法從 Delivery Pipeline 部署應用程式
@@ -607,7 +611,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
  因為管線需要 `manifest.yml` 檔案，才能將應用程式部署至 {{site.data.keyword.cloud_notm}}，所以可能會發生此問題。
  {: tsCauses}
 
- 若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](/docs/manageapps/depapps.html#appmanifest)。
+ 若要解決此問題，您必須建立 `manifest.yml` 檔案。如需如何建立 `manifest.yml` 檔案的相關資訊，請參閱[應用程式資訊清單](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
  {: tsResolve}
 
 ## 無法推送 Meteor 應用程式
@@ -641,7 +645,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 如果建置或部署工作失敗，且看到下列訊息，則您可以使用下列 CLI 指令來刪除映像檔。「狀態：未獲授權：您已超出儲存空間配額。請刪除一個以上的映像檔，或檢閱您的儲存空間配額及定價方案。」
 
-* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，如果您還沒有它的話。
+* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，請予以安裝。
 * 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
 * 使用 `ibmcloud cr images` 列出您的映像檔。
 * 使用 `ibmcloud cr image-rm <respository>:<tag>` 來刪除任何未用的映像檔。
@@ -651,12 +655,12 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: #access_kube_logs}
 
 如果應用程式不在執行中，且您無法存取性能端點，請嘗試查看叢集裡的日誌。
-* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，如果您還沒有它的話。
+* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，請予以安裝。
 * 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
 * 使用 `ibmcloud cs clusters` 列出您的叢集。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的對應叢集。
 * 匯出列出的環境變數。
-* 使用 `kubectl get pods` 檢視您的 Pod。如果您需要安裝 `kubectl`，請參閱[安裝並設定 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。
+* 使用 `kubectl get pods` 檢視您的 Pod。如果您需要安裝 `kubectl`，請參閱[安裝並設定 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 * 您可以使用 `kubectl logs <pod-name>` 來檢視應用程式中的日誌。
 
 
@@ -675,7 +679,7 @@ An error exec: "docker": executable file not found in $PATH was encountered whil
 Docker 用戶端未安裝，或是它已安裝但未啟動。
 {: tsCauses}
 
-請確定 [Docker](https://docs.docker.com/install/) 已安裝，然後啟動它。
+請確定 [Docker](https://docs.docker.com/install/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 已安裝，並且將它啟動。
 {: tsResolve}
 
 

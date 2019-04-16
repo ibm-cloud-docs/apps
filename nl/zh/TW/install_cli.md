@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # 使用指令行介面部署應用程式
 
@@ -55,7 +56,8 @@ lastupdated: "2018-05-22"
 
     也請注意 `README.md` 檔案，它包含建置指示這類詳細資料（適用時）。
 
-    附註：如果您的應用程式是 Liberty 應用程式，則必須先建置它，再重新部署。
+    如果您的應用程式是 Liberty 應用程式，則必須先建置它，再重新部署。
+    {: note}
 
   4. 連接並登入 {{site.data.keyword.Bluemix_notm}}。
 
@@ -67,7 +69,8 @@ lastupdated: "2018-05-22"
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">org_name</var> -s <var class="keyword varname" data-hd-keyref="space_name">space_name</var> -sso</code></pre>
 
-  **附註**：如果值包含空格，您必須在 `username`、`org_name` 和 `space_name` 週圍加上單引號或雙引號，例如 `-o "my org"`。
+  如果 `username`、`org_name` 和 `space_name` 的值包含空格，您必須用單引號或雙引號將其括住，例如，`-o "my org"`。
+  {: note}
 
   5. 從 <var class="keyword varname">your_new_directory</var> 中，使用 `ibmcloud app push` 指令以將應用程式重新部署至 {{site.data.keyword.Bluemix_notm}}。如需 `ibmcloud app push` 指令的相關資訊，請參閱[上傳應用程式](/docs/starters/upload_app.html)。
 

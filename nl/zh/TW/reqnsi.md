@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, services, add service, application
+
+subcollection: creating-apps
 
 ---
 
@@ -11,15 +15,15 @@ lastupdated: "2019-02-01"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# 將資源新增至應用程式
+# 將服務新增至應用程式
 {: #add-resource}
 
-使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增資源。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
+使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增服務。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
 {: shortdesc}
 
-您可以要求資源的實例，並單獨於應用程式之外來使用，也可以從「應用程式詳細資料」頁面，將資源實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的資源。
+您可以要求服務的實例，並單獨於應用程式之外使用，也可以從「應用程式詳細資料」頁面，將服務實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的服務。
 
-## 探索資源
+## 探索服務
 {: #discover-resources}
 
 您可以用下列方式查看 {{site.data.keyword.cloud_notm}} 中可用的所有服務：
@@ -27,14 +31,14 @@ lastupdated: "2019-02-01"
 
 * 從 {{site.data.keyword.cloud_notm}} 主控台。檢視 {{site.data.keyword.cloud_notm}} 型錄。
 * 從指令行。使用 `ibmcloud service offerings` 指令。
-* 從您自己的應用程式。請使用 [GET /v2/services Services API ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}。
+* 從您自己的應用程式。請使用 [GET /v2/services Services API ](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
 
 {{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[讓外部應用程式及協力廠商工具能使用 {{site.data.keyword.cloud_notm}} 服務](/docs/resources/connect_external_app#externalapp)。
+如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
 
 ## 要求新的服務實例
 {: #request-instance}
@@ -64,7 +68,7 @@ lastupdated: "2019-02-01"
 2. 遵循提示以選取資源群組，及建立新的資料相關服務並將它連接至您的應用程式，例如 Cloudant。您可能需要為服務選取地區及方案。
 3. 建立服務時，會將數個檔案（包括認證）新增至您的應用程式目錄，以協助您將服務整合到應用程式。您可以手動合併任何檔案，或是目前先跳過此步驟。
 
-您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.cloud_notm}} 服務 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](/docs/resources/connect_external_app#externalapp){: new_window}。
+您可以將服務實例僅連結至位於相同空間或組織中的應用程式實例。然而，使用其他空間或組織中的服務實例的方式，與使用外部應用程式的方式一樣。請使用認證直接配置應用程式實例，而非建立連結。如需外部應用程式如何使用 {{site.data.keyword.cloud_notm}} 服務的相關資訊，請參閱[讓外部應用程式能使用 {{site.data.keyword.cloud_notm}} 服務](/docs/resources?topic=resources-externalapp#externalapp)。
 
 ## 配置應用程式
 {: #configure-app}
@@ -85,7 +89,7 @@ lastupdated: "2019-02-01"
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted)。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted)。
 
 ## 跨 {{site.data.keyword.cloud_notm}} 部署環境存取服務
 {: #migrate_instance}
@@ -101,10 +105,10 @@ lastupdated: "2019-02-01"
 
 **重要事項**：請不要直接在部署 YAML 檔案中參照或公開您的服務認證。部署 YAML 檔案的設計並不是為了保留機密資料，且依預設不會加密您的服務認證。若要適當地儲存及存取此資訊，您必須使用 Kubernetes 密碼。 
 
-1. [將服務連結至您的叢集](/docs/containers/cs_integrations.html#adding_cluster)。 
+1. [將服務連結至您的叢集](/docs/containers?topic=containers-integrations#adding_cluster)。 
 2. 若要從應用程式 Pod 存取服務認證，請在下列選項之間進行選擇。 
-   - [將密碼以磁區的形式裝載至 Pod](#mount_secret)
-   - [在環境變數中參照密碼](#reference_secret)
+   - 將密碼以磁區形式裝載至 Pod
+   - 在環境變數中參照密碼
 
 ## 建立使用者提供的服務實例
 {: #user_provide_services}
@@ -160,4 +164,4 @@ lastupdated: "2019-02-01"
 	OK
 	```
 
-您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](/docs/apps/reqnsi.html#configure-app)。
+您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](/docs/apps?topic=creating-apps-add-resource#configure-app)。
