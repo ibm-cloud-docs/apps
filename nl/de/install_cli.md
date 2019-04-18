@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # Apps mit der Befehlszeilenschnittstelle bereitstellen
 
@@ -55,7 +56,8 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
     Beachten Sie auch die Datei `README.md`, die gegebenenfalls Informationen wie Erstellungsanweisungen enthält.
 
-    Hinweis: Wenn es sich bei Ihrer Anwendung um eine Liberty-App handelt, müssen Sie sie vor der erneuten Bereitstellung erstellen.
+    Wenn es sich bei Ihrer Anwendung um eine Liberty-App handelt, müssen Sie sie vor der erneuten Bereitstellung erstellen.
+    {: note}
 
   4. Stellen Sie eine Verbindung zu {{site.data.keyword.Bluemix_notm}} her und melden Sie sich an.
 
@@ -63,11 +65,12 @@ Nach der Installation der Befehlszeilenschnittstelle können Sie beginnen:
 
   <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">Benutzername</var> -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var></code></pre>
 
-  Wenn Sie eine eingebundene ID nutzen, fügen Sie die Option `-sso` hinzu.
+  Wenn Sie eine föderierte ID nutzen, fügen Sie die Option `-sso` hinzu.
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">Organisationsname</var> -s <var class="keyword varname" data-hd-keyref="space_name">Bereichsname</var> -sso</code></pre>
 
-  **Hinweis**: Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
+  Wenn der betreffende Wert ein Leerzeichen enthält, müssen `Benutzername`, `Organisationsname` und `Bereichsname` in Hochkommas oder Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
+  {: note}
 
   5. Führen Sie unter <var class="keyword varname">neues_Verzeichnis</var> mit dem Befehl `ibmcloud app push` ein erneutes Staging Ihrer App in {{site.data.keyword.Bluemix_notm}} durch. Weitere Informationen zum Befehl `ibmcloud app push` finden Sie unter [Anwendung hochladen](/docs/starters/upload_app.html).
 

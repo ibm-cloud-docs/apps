@@ -875,11 +875,11 @@
                     </g>
                 </g>
                 <text id="Admin-Console-for-IB" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="30" font-weight="300" fill="#0F212E">
-                    <tspan x="686.05" y="257">Admin Console for IBM Cloud Dedicate</tspan>
+                    <tspan x="686.05" y="257">Console di gestione per IBM Cloud dedicato</tspan>
                     <tspan x="1193.02" y="257" letter-spacing="0.709999979">d</tspan>
                 </text>
                 <text id="IBM-Cloud-UI" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="30" font-weight="300" letter-spacing="0.709999979" fill="#0F212E">
-                    <tspan x="608.305" y="785">IBM Cloud UI</tspan>
+                    <tspan x="608.305" y="785">IU IBM Cloud</tspan>
                 </text>
             </g>
         </g>

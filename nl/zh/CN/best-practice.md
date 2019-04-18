@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-19"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, best practices
+
+subcollection: creating-apps
 
 ---
 
@@ -49,19 +53,19 @@ lastupdated: "2018-02-19"
 
 您可以运行多个实例以避免单个区域中产生停机时间。要交付更稳健的应用程序，请考虑多区域体系结构。
 
-有关最大限度地减少停机时间和创建可实现最大可用性的弹性体系结构的信息，请参阅[弹性应用程序策略教程](/docs/tutorials/strategies-for-resilient-applications.html)。
+有关最大限度地减少停机时间和创建可实现最大可用性的弹性体系结构的信息，请参阅[弹性应用程序策略教程](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications)。
 
 ## 确保在监视应用程序
 {: #monitoring}
 
-通过 {{site.data.keyword.cloud_notm}}，可轻松使用 [New Relic ![外部链接图标](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window} 等服务来监视应用程序。
+通过 {{site.data.keyword.cloud_notm}}，可轻松使用 [New Relic](http://newrelic.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 等服务来监视应用程序。
 
 ## 利用支持选项
 {: #support}
 
 {{site.data.keyword.cloud_notm}} 付费价格套餐提供了多种不同的帐户类型以及可选的付费支持。不管您的帐户类型是什么，如果您计划将应用程序放入 {{site.data.keyword.cloud_notm}} 上的生产环境，请考虑选择此选项。
 
-不管是否使用付费支持，您都可以如[支持](/docs/get-support/howtogetsupport.html#getting-customer-support)中所述获取帮助，从而避免遭受未预见的问题。
+不管是否使用付费支持，您都可以如[支持](/docs/get-support?topic=get-support-getting-customer-support)中所述获取帮助，从而避免遭受未预见的问题。
 
 ## 避免使用应用程序中的基础架构 API
 
@@ -87,6 +91,6 @@ lastupdated: "2018-02-19"
 
 将应用程序安装作为一组独立于操作系统的统一脚本进行捕获。使应用程序安装保持较小且可移植，以适应不同的自动化方法。此外，尽可能减少应用程序安装需要的依赖关系。
 
-有关云就绪型应用程序的更多信息，请参阅 [The 12-factor app ![外部链接图标](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}。
+有关云就绪型应用程序的更多信息，请参阅 [The Twelve-Factor App](http://12factor.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 

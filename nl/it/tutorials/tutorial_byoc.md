@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, byoc, code repository, continuous delivery, cli, deploy
+
+subcollection: creating-apps
 
 ---
 
@@ -24,49 +28,43 @@ Puoi creare un'applicazione in {{site.data.keyword.cloud}} utilizzando il tuo re
 
 Assicurati di avere i seguenti prerequisiti pronti per essere utilizzati:
 
- * Installa la [CLI (command-line interface) {{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
- * Vedi [Cosa rende buona un'applicazione?](/docs/apps/best-practice.html#best-practice) per le prassi ottimali per la creazione di applicazioni.
+ * Installa la [CLI (command-line interface) {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+ * Vedi [Cosa rende buona un'applicazione?](/docs/apps?topic=creating-apps-best-practice) per le prassi ottimali per la creazione di applicazioni.
  * Devi disporre di un repository di codice sorgente Git da uno qualsiasi dei seguenti provider: GitHub, GitHub Enterprise, GitLab, BitBucket o Rational.
- * Se intendi distribuire la tua applicazione a [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry/index.html#about), devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry/prepare-account.html#prepare).
+ * Se intendi distribuire la tua applicazione a [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about), devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
 ## Passo 1: Crea un'applicazione con un repository esistente
 {: #create-byoc}
 
 Per creare un'applicazione e connetterla al tuo repository di origine, completa questa procedura:
 
-1. Dal tuo dashboard [ ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window}, fai clic su **Crea un'applicazione** nel tile **Applicazioni**.
-2. Denomina la tua applicazione, seleziona un gruppo di risorse e, facoltativamente, fornisci delle tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources/tagging_resources.html#tag).
-3. Seleziona **Porta il tuo codice** e fornisci l'URL al tuo repository Git. La tua applicazione e l'immagine Docker si devono trovare nello stesso repository.
-4. Fai clic su **Crea**.
+1. Dal tuo [dashboard](https://{DomainName}){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), fai clic su **Create an app** nel tile **Apps**.
+2. Denomina la tua applicazione, seleziona un gruppo di risorse e, facoltativamente, fornisci delle tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources?topic=resources-tag).
+3. Seleziona **Bring your own code** e fornisci l'URL al tuo repository Git. La tua applicazione e l'immagine Docker si devono trovare nello stesso repository.
+4. Fai clic su **Create**. Viene visualizzata la pagina **App details**. 
+5. Facoltativo. [Aggiungi servizi](/docs/apps?topic=creating-apps-add-resource) alla tua applicazione.
+6. Facoltativo. Se hai fornito delle tag quando hai creato l'applicazione, puoi modificarle facendo clic sull'icona **Edit** ![Icona Modifica](../../icons/edit-tagging.svg) che si trova accanto alle tag visualizzate.
+7. Facoltativo. Visualizza il tuo repository facendo clic su **View repo**.
 
-Viene visualizzata la pagina **App Details**. Da qui puoi:
-* [Aggiungere risorse](/docs/apps/reqnsi.html#add-resource) (facoltativo).
-* Se hai fornito delle tag quando hai creato l'applicazione, puoi modificarle facendo clic sull'icona **Modifica** ![Icona Modifica](../../icons/edit-tagging.svg) che si trova accanto alle tag visualizzate.
-* Connettere la tua applicazione a una toolchain DevOps facendo clic su **Connect to DevOps toolchain**. Se non hai già una toolchain, viene aperta la pagina **Connect DevOps Toolchain**. Fai clic su **Create DevOps toolchain**. A questo punto, viene aperta la pagina [Create a Toolchain](https://{DomainName}/devops/create) nel dashboard [DevOps](https://{DomainName}/devops/) in una nuova scheda nel tuo browser. Dopo che hai creato e configurato la tua toolchain in tale scheda, devi tornare alla pagina **Connect a toolchain** nella tua applicazione e aggiornare la pagina.
-* Visualizza il tuo repository facendo clic su **View repo**.
-* Acquisisci ulteriori informazioni sulle toolchain o sull'esperienza di creazione di applicazioni facendo clic su uno qualsiasi dei link correlati nella pagina **App Details**.
-
-## Passo 2: Connetti la tua applicazione a una toolchain DevOps
+## Passo 2. Distribuisci la tua applicazione
 {: #toolchain-byoc}
 
-Stabilire una connessione tra la tua applicazione, la toolchain e il repository è un passo in avanti nell'organizzazione dei tuoi asset del prodotto. Aiuta anche ad aggregare una vista del tuo repository di origine con il tuo flusso di lavoro DevOps, le tue istanze dell'applicazione in esecuzione e i servizi dipendenti in tutte le tue destinazioni di distribuzione. Per ulteriori informazioni, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Stabilire una connessione tra la tua applicazione, la toolchain e il repository è un passo in avanti nell'organizzazione dei tuoi asset del prodotto. Aiuta anche ad aggregare una vista del tuo repository di origine con il tuo flusso di lavoro DevOps, le tue istanze dell'applicazione in esecuzione e i servizi dipendenti in tutte le tue destinazioni di distribuzione. Per ulteriori informazioni, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
-Puoi connettere la tua applicazione a una toolchain DevOps utilizzando la CLI oppure la console {{site.data.keyword.cloud_notm}}.
+Puoi configurare la fornitura continua per la tua applicazione utilizzando la CLI oppure la console {{site.data.keyword.cloud_notm}}.
 
 ### Utilizzo della console
 {: #console-byoc-toolchain}
 
-  1. Connettere la tua applicazione a una toolchain DevOps facendo clic su **Connect to DevOps toolchain**. 
-  
-    Se non hai una toolchain esistente, fai clic su **Create DevOps toolchain**. 
-    
-  2. Dopo che hai creato e configurato la tua toolchain, torna alla pagina Connect a toolchain nella tua applicazione e aggiorna la pagina. 
+  1. Sulla pagina **App details**, connetti la tua applicazione a una toolchain DevOps facendo clic su **Configure continuous delivery**. Viene visualizzata la pagina **Deploy my app**. 
+  2. Se non hai una toolchain esistente, fai clic su **Create a toolchain**. Dopo aver creato la toolchain, utilizza i breadcrumb per tornare alla pagina **App details**, che indica che la fornitura continua è configurata.
+  3. Se hai una toolchain esistente, selezionala e poi fai clic su **Enable deployment**. Viene visualizzata la pagina **App details**, che indica che la fornitura continua è configurata. 
 
 ### Utilizzo della CLI
 
 Puoi utilizzare il comando `ibmcloud dev enable` per generare un template della toolchain DevOps che inserisci nel tuo repository come insieme di istruzioni che indica quello che la toolchain DevOps deve creare. 
 
-  1. Dalla finestra App Service, fai clic su **Download Code** o **Clone your repo** per lavorare con il tuo codice in locale.
+  1. Nella pagina **App details**, fai clic su **View repo** per utilizzare il tuo codice localmente. 
   2. Immetti il seguente comando:
     
     ```
@@ -74,17 +72,5 @@ Puoi utilizzare il comando `ibmcloud dev enable` per generare un template della 
     ```
    {: codeblock}
 
-Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli).
-
-## Passo 3. Distribuisci la tua applicazione
-{: #deploy-byoc}
-
-Dopo che hai collegato una toolchain DevOps alla tua applicazione, completa la seguente procedura per distribuirla a {{site.data.keyword.cloud_notm}}: 
-
-1. Dalla pagina App Details, fai clic su **Deploy to cloud**.
-2. Seleziona un metodo di distribuzione. Configura il tuo metodo di distribuzione in base alle istruzioni per il metodo che scegli:
-  * **Deploy to [Kubernetes](/docs/apps/deploying/containers.html#containers)**. Questa opzione crea un cluster di host, denominati nodi di lavoro, per distribuire e gestire contenitori delle applicazioni ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
-  * **Deploy to Cloud Foundry**. Questa opzione distribuisce la tua applicazione nativa del cloud senza che tu debba gestire l'infrastruttura sottostante. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer **[Public Cloud](/docs/cloud-foundry-public/about-cf.html#about-cf)** o **[Enterprise Environment](/docs/cloud-foundry-public/cfee.html#cfee)**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda.
-  * **Deploy to a [Virtual Server](/docs/apps/vsi-deploy.html#vsi-deploy)**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
-
+Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 

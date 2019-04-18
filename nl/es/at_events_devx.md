@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, applications, activity tracking events
+
+subcollection: creating-apps
 
 ---
 
@@ -15,20 +19,20 @@ lastupdated: "2019-02-01"
 {:download: .download}
 {:table: .aria-labeledby="caption"}
 
-# Sucesos de {{site.data.keyword.cloudaccesstrailshort}} de {{site.data.keyword.dev_console}}
+# Sucesos de {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}}
 {: #at_events}
 
 Como responsable de seguridad, auditor o gestor, puede utilizar el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con la {{site.data.keyword.dev_console}} en {{site.data.keyword.cloud}}.
 {: shortdesc}
 
-El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Acerca de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov).
+El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Acerca de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 
 ## Dónde ver los sucesos
 {: #view-events-ui}
 
 Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en el dominio de la cuenta de {{site.data.keyword.cloudaccesstrailshort}} que está disponible en la región de {{site.data.keyword.cloud_notm}} donde se generan los sucesos de {{site.data.keyword.dev_console}}.
 
-Para empezar a supervisar las acciones del usuario, consulte la [Guía de aprendizaje de iniciación](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+Para empezar a supervisar las acciones del usuario, consulte la [Guía de aprendizaje de iniciación](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started).
 
 ## Lista de sucesos
 {: #events}

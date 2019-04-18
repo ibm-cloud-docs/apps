@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ Puoi creare una toolchain in questi modi:
 * Utilizza un template per creare una toolchain.
 * Crea una toolchain da un'applicazione.
 
-Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Per ulteriori informazioni sulle toolchain, vedi [Creazione delle toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Distribuzione di applicazioni mediante la CLI
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} fornisce una solida CLI e i plug-in e le estensioni degli strumenti per sviluppatori che si integrano con la CLI.
 
-Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli/index.html).
+Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra diversa da quella della riga di comando di Cygwin.
 {: important}
 
   1. {: download} Scarica il codice per la tua applicazione in una nuova directory per configurare il tuo ambiente di sviluppo.
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Si apre in una nuova scheda o finestra)"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Si apre in una nuova scheda o finestra)"></a>
 
   2. Passa alla directory in cui si trova il codice.
 
@@ -72,7 +76,7 @@ La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra divers
   Se il valore contiene uno spazio, devi aggiungere virgolette singole o doppie intorno a `nomeutente`, `nome_org` e `nome_spazio`, ad esempio `-o "my org"`.
   {: note}
 
-  5. Dalla tua nuova directory, distribuisci la tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [la documentazione della CLI](/docs/cli/idt/commands.html#deploy).
+  5. Dalla tua nuova directory, distribuisci la tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [la documentazione della CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">nome_app</var></code></pre>
 

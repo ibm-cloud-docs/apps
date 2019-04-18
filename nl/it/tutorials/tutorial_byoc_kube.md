@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -27,8 +31,8 @@ Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di arch
 ## Prima di iniziare
 {: #prereqs-byoc-kube}
 
-* Crea un'applicazione. Per ulteriori informazioni, vedi [Creazione di applicazioni dal tuo repository di codice](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc).
-* Dalla [console {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window}, fai clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e seleziona **Containers** per [configurare un cluster Kubernetes](/docs/containers/container_index.html#container_index).
+* Crea un'applicazione. Per ulteriori informazioni, vedi [Creazione di applicazioni dal tuo repository di codice](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
+* Dalla [console {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), fai clic sull'icona **Menu** ![icona Menu](../../icons/icon_hamburger.svg) e seleziona **Containers** per [configurare un cluster Kubernetes](/docs/containers?topic=containers-getting-started).
 * Per confermare che la tua applicazione sia eseguita in Docker, esegui questi comandi:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -38,16 +42,16 @@ Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di arch
   
 * Quindi, vai al tuo URL, ad esempio `http://localhost/springboothelloworld/sayhello`. Premi i tasti Ctrl+C per arrestare l'esecuzione Docker.
 
-## Aggiunta di risorse alla tua applicazione (facoltativo)
+## Aggiunta di servizi alla tua applicazione (facoltativo)
 {: #resources-byoc-kube}
 
-Aggiungi una risorsa di servizio alla tua applicazione e {{site.data.keyword.cloud_notm}} crea il servizio per tuo conto. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
+Aggiungi un servizio alla tua applicazione e {{site.data.keyword.cloud_notm}} crea l'istanza del servizio per tuo conto. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione. {{site.data.keyword.cloud_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le
 applicazioni Web.
 
-Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di una risorsa alla tua applicazione](/docs/apps/reqnsi.html#).
+Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps?topic=creating-apps-add-resource).
 
-Dopo aver aggiunto una risorsa di servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps/creds_kube.html).
+Dopo aver aggiunto un servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube).
 
 ## Preparazione della tua applicazione per la distribuzione
 {: #deploy-byoc-kube}
@@ -76,9 +80,9 @@ Se hai una o più toolchain DevOps che sono associate al tuo account, ma non son
 
 Per ulteriori informazioni sull'aggiunta del tuo repository alla tua toolchain, vedi:
 
- * [Configurazione di Git Repos and Issue Tracking](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [Configurazione di GitHub](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [Configurazione di GitLab](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [Configurazione di Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configurazione di GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [Configurazione di GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### Connetti la tua applicazione a una nuova toolchain
@@ -88,11 +92,9 @@ Se vuoi controllare completamente la creazione della toolchain DevOps senza alcu
 
 1. Nella pagina Create a Toolchain, fai clic sul template **Build your own toolchain**.
 2. Immetti un nome per la tua toolchain, seleziona una regione e un gruppo di risorse (predefinito) e fai clic su **Create**.
+3. Dopo aver creato la toolchain, utilizza i breadcrumb nel tuo browser per tornare alla pagina **App details**, che indica che la fornitura continua è configurata.
 
-Quando scegli di creare una toolchain dalla tua nuova applicazione, la pagina [Create a Toolchain](https://{DomainName}/devops/create) nel dashboard DevOps si apre in una nuova scheda del tuo browser. Dopo aver creato e configurato la tua toolchain in tale scheda, devi tornare alla pagina Connect a toolchain nella tua applicazione e aggiornare la pagina.
-{:tip}
-
-Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). Il comando genera un template di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale template come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
+Se non vuoi creare una toolchain DevOps da zero, puoi abilitare al cloud il tuo codice esistente utilizzando il comando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Il comando genera un template di toolchain DevOps che inserisci nel tuo repository. Utilizzi quindi tale template come l'insieme di istruzioni per ciò che crea la toolchain DevOps. Per ulteriori informazioni, vedi la [documentazione della CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
 ## Aggiunta di un'integrazione GitHub
 {: #github-byoc-kube}
@@ -134,7 +136,7 @@ Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del 
     * Immetti `build and publish` per il nome.
     * Seleziona **Container Registry** per il tipo di builder.
     * Seleziona la regione in cui si trova il tuo cluster Kubernetes.
-    * Seleziona **Enter an existing API key**. Se non hai una chiave API, consulta [Creazione di una chiave API](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Seleziona **Enter an existing API key**. Se non hai una chiave API, consulta [Creazione di una chiave API](/docs/iam?topic=iam-userapikey#create_user_key). 
     * Immetti lo spazio dei nomi del registro contenitore, che puoi trovare facendo clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) e selezionando **Containers** > **Registry** > **Namespaces**.
     * Per il nome dell'immagine Docker, immetti `continuous` poiché questa fase di build della pipeline è per la build continua del ramo di integrazione continua del tuo repository.
     * Modifica lo script di build aggiungendo una o più righe dopo la prima riga `#!/bin/bash`. Ad esempio, per un repository creato utilizzando maven, potresti aggiungere delle righe simili al seguente esempio:
@@ -178,4 +180,4 @@ Dopo che hai distribuito la tua applicazione, la Delivery Pipeline o la riga di 
 
 4. Vai all'URL nel tuo browser. Se l'applicazione è in esecuzione, viene visualizzato un messaggio che include `Congratulations` o `{"status":"UP"}`.
 
-Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) per visualizzare l'URL della tua applicazione. Vai quindi all'URL nel tuo browser.
+Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) per visualizzare l'URL della tua applicazione. Vai quindi all'URL nel tuo browser.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, services, add service, application
+
+subcollection: creating-apps
 
 ---
 
@@ -11,15 +15,15 @@ lastupdated: "2019-02-01"
 {: codeblock: .codeblock}
 {:note: .note}
 
-# Aggiunta di una risorsa alla tua applicazione
+# Aggiunta di un servizio alla tua applicazione
 {: #add-resource}
 
-Quando crei un'applicazione con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puoi aggiungere le risorse dalla pagina App details. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.cloud_notm}}, fuori dal contesto della tua applicazione.
+Quando crei un'applicazione con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puoi aggiungere i servizi dalla pagina App details. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.cloud_notm}}, fuori dal contesto della tua applicazione.
 {: shortdesc}
 
-Puoi richiedere un'istanza della risorsa e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza della risorsa alla tua applicazione dalla pagina App Details. Puoi eseguire il provisioning di uno specifico tipo di risorsa direttamente dal catalogo {{site.data.keyword.cloud_notm}}.
+Puoi richiedere un'istanza del servizio e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza del servizio alla tua applicazione dalla pagina App details. Puoi eseguire il provisioning di uno specifico tipo di servizio direttamente dal catalogo {{site.data.keyword.cloud_notm}}.
 
-## Individuazione di risorse
+## Rilevamento del servizio 
 {: #discover-resources}
 
 Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.cloud_notm}}
@@ -27,7 +31,7 @@ nei seguenti modi:
 
 * Dalla console {{site.data.keyword.cloud_notm}}. Visualizza il catalogo {{site.data.keyword.cloud_notm}}.
 * Dalla riga di comando. Utilizza il comando `ibmcloud service offerings`.
-* Dalla tua applicazione. Utilizza l'[API di servizi GET /v2/services ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window}.
+* Dalla tua applicazione. Utilizza l'[API di servizi GET /v2/services ](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 Puoi selezionare il servizio di cui hai bisogno quando sviluppi le applicazioni. Una volta selezionato, {{site.data.keyword.cloud_notm}} esegue il provisioning del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
 servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione.
@@ -38,7 +42,7 @@ applicazioni Web.
 Se vi sono dei servizi disponibili in altre regioni, potrai utilizzare anche tali
 servizi. Questi servizi devono essere accessibili da Internet e avere degli endpoint API. Per utilizzare
 questi servizi, devi codificare manualmente l'applicazione nello stesso modo in cui codifichi le applicazioni
-esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Abilitazione di applicazioni esterne e strumenti di terze parti all'utilizzo di servizi {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app#externalapp).
+esterne o gli strumenti di terze parti per utilizzare i servizi {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, consulta [Collegare i servizi alle applicazioni esterne](/docs/resources?topic=resources-externalapp).
 
 ## Richiesta di una nuova istanza del servizio
 {: #request-instance}
@@ -69,7 +73,7 @@ Se utilizzi l'interfaccia della riga di comando {{site.data.keyword.cloud_notm}}
 2. Segui le istruzioni per selezionare un gruppo di risorse e per creare e collegare un nuovo servizio correlato ai dati alla tua applicazione, ad esempio Cloudant. Potresti dover selezionare una regione e un piano per il servizio.
 3. Quando il servizio viene creato, diversi file, incluse le credenziali, vengono aggiunti alla directory dell'applicazione per facilitarti ad integrare il servizio nella tua applicazione. Puoi unire manualmente tutti file o ignorare questo passo per ora.
 
-Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sul modo in cui le applicazioni esterne utilizzano i servizi {{site.data.keyword.cloud_notm}}, vedi [Abilitazione di applicazioni esterne a utilizzare servizi {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](/docs/resources/connect_external_app#externalapp){: new_window}.
+Puoi eseguire il bind a un'istanza del servizio per le sole istanze dell'applicazione che si trovano nello stesso spazio od organizzazione. Tuttavia, puoi utilizzare istanze di servizio provenienti da altri spazi od organizzazioni seguendo le modalità adottate dalle applicazioni esterne. Invece di creare un bind, utilizza le credenziali per configurare direttamente l'istanza della tua applicazione. Per ulteriori informazioni sull'uso dei servizi {{site.data.keyword.cloud_notm}} da parte delle applicazioni esterne, vedi [Abilitazione di applicazioni esterne all'utilizzo dei servizi {{site.data.keyword.cloud_notm}} ](/docs/resources?topic=resources-externalapp#externalapp).
 
 ## Configurazione della tua applicazione
 {: #configure-app}
@@ -97,7 +101,7 @@ diversi servizi. Potresti dover leggere la documentazione del servizio in merito
 e come interpretare ogni elemento di informazione.
 
 Se si verifica un arresto anomalo di un servizio di cui esegui il bind a un'applicazione,
-l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.cloud_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi [Le applicazioni non si riavviano automaticamente](/docs/troubleshoot/ts_apps.html#ts_apps_not_auto_restarted).
+l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.cloud_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi [Le applicazioni non si riavviano automaticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
 
 ## Accesso ai servizi negli ambienti di distribuzione di {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -113,10 +117,10 @@ Le credenziali del servizio memorizzate in un segreto Kubernetes sono codificate
 
 **Importante**: non indicare o esporre le credenziali del servizio direttamente nel tuo file YAML di distribuzione. I file YAML di distribuzione non sono progettati per contenere dati sensibili e non crittografano le credenziali del servizio per impostazione predefinita. Per memorizzare e accedere correttamente a queste informazioni, devi utilizzare un segreto Kubernetes. 
 
-1. [Esegui il bind del servizio al tuo cluster](/docs/containers/cs_integrations.html#adding_cluster). 
+1. [Esegui il bind del servizio al tuo cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
 2. Per accedere alle credenziali del servizio dal tuo pod dell'applicazione, scegli tra le seguenti opzioni. 
-   - [Monta il segreto come volume sul tuo pod](#mount_secret)
-   - [Fai riferimento al segreto nelle variabili di ambiente](#reference_secret)
+   - Monta il segreto come un volume al tuo pod
+   - Fai riferimento al segreto nelle variabili di ambiente
 
 ## Creazione di un'istanza del servizio fornito dall'utente
 {: #user_provide_services}
@@ -174,4 +178,4 @@ e specifica le chiavi e i valori di parametro in un oggetto JSON. Ad esempio:
 	OK
 	```
 
-Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio](/docs/apps/reqnsi.html#configure-app).
+Ora puoi configurare la tua applicazione per utilizzare i servizi esterni. Per informazioni su come configurare la tua applicazione per interagire con un servizio, vedi [Configurazione della tua applicazione per l'interazione con un servizio](/docs/apps?topic=creating-apps-add-resource#configure-app).

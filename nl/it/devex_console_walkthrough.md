@@ -22,7 +22,7 @@ lastupdated: "2018-11-29"
 
 Creando un'applicazione attraverso una console per sviluppatori {{site.data.keyword.cloud_notm}}, tutte le parti necessarie della tua applicazione vengono mantenute nel tuo account sul server {{site.data.keyword.cloud_notm}}.  In questo modo puoi spostarti avanti e indietro tra la GUI della console per sviluppatori e [{{site.data.keyword.dev_cli_notm}}](/docs/cli/idt/index.html) ogni volta tu scelga di farlo.
 
-Le console per sviluppatori {{site.data.keyword.cloud_notm}} ti offrono un percorso trasparente per creare un'applicazione starter pronta per la produzione per il caso di utilizzo che selezioni. Diamo un'occhiata ai passi che potresti eseguire nel tuo percorso.
+Le console per sviluppatori {{site.data.keyword.cloud_notm}} ti offrono un percorso trasparente per creare un'applicazione starter pronta per la produzione per il caso di utilizzo che selezioni.  Diamo un'occhiata ai passi che potresti eseguire nel tuo percorso.
 
 <!-- Ready to jump in?  Visit the [{{site.data.keyword.cloud_notm}} Web App developer console](https://{DomainName}/developer/appservice) to get started.
 {: tip} -->
@@ -46,14 +46,14 @@ In alcuni casi, se selezioni un kit starter vengono visualizzati ulteriori detta
 ##Vista Create New App
 {: #create_new_project_view}
 
-Dalla vista Create New App immetti un nome per la tua applicazione, fornisci informazioni sulla distribuzione e sull'instradamento e selezioni un linguaggio. Nota che a destra puoi anche vedere i servizi di cui viene eseguito automaticamente il provisioning quando crei la tua applicazione insieme a piani tariffari e termini per ciascuno di essi.  Fai clic su `Create` per passare alla vista App Details.  Se non hai già effettuato l'accesso a {{site.data.keyword.cloud_notm}}, questo è il momento in cui dovrai farlo.
+Dalla vista Create New App immetti un nome per la tua applicazione, fornisci informazioni sulla distribuzione e sull'instradamento e selezioni un linguaggio.  Nota che a destra puoi anche vedere i servizi di cui viene eseguito automaticamente il provisioning quando crei la tua applicazione insieme a piani tariffari e termini per ciascuno di essi.  Fai clic su `Create` per passare alla vista App Details.  Se non hai già effettuato l'accesso a {{site.data.keyword.cloud_notm}}, questo è il momento in cui dovrai farlo.
 
 ![Vista Create New App della console per sviluppatori](images/create_new_project_view.png "Vista Create New App") <br> *Vista Create New App della console per sviluppatori*
 
 ## Vista App Details
 {: #project_details_view}
 
-La vista App Details visualizza l'elenco dei servizi configurati per la tua applicazione. Per ciascun elemento nell'elenco, vengono visualizzati il nome del servizio, i link ad altre informazioni e un pulsante di *azioni* con tre punti allineati verticalmente. Le opzioni del pulsante di *azioni* comprendono la rimozione del servizio dall'applicazione, l'apertura del dashboard per il servizio e l'eliminazione del servizio. Nota che la rimozione di un'istanza del servizio rimuove solo l'associazione a questa applicazione e non elimina l'istanza del servizio.  Nota inoltre che le credenziali del servizio sono consolidate su questa vista, per cui non dovrai visitare le viste di ogni singola istanza del servizio per ottenerle. 
+La vista App Details visualizza l'elenco dei servizi configurati per la tua applicazione. Per ciascun elemento nell'elenco, vengono visualizzati il nome del servizio, i link ad altre informazioni e un pulsante di *azioni* con tre punti allineati verticalmente. Le opzioni del pulsante di *azioni* comprendono la rimozione del servizio dall'applicazione, l'apertura del dashboard per il servizio e l'eliminazione del servizio. Nota che la rimozione di un'istanza del servizio rimuove solo l'associazione a questa applicazione e non elimina l'istanza del servizio.  Nota inoltre che le credenziali del servizio sono consolidate su questa vista, per cui non dovrai visitare le viste di ogni singola istanza del servizio per ottenerle.
 
 ![Vista App Details della console per sviluppatori](images/project_details_view.png "Vista App Details") <br> *Vista App Details della console per sviluppatori*
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -15,7 +15,7 @@ lastupdated: "2018-07-05"
 # Desarrollo de apps
 {: #intro}
 
-La consola del desarrollador de {{site.data.keyword.cloud_notm}} ayuda a los desarrolladores a crear apps a partir de kits de inicio, a suministrar y conectar servicios clave optimizados para {{site.data.keyword.cloud_notm}} y a descargar rápidamente código de trabajo o a realizar la configuración para un suministro continuo. Puede crear, ver, configurar y gestionar la app y descargar el código de la misma. El uso de kits de inicio le ayuda a evaluar y probar con rapidez los servicios de {{site.data.keyword.cloud_notm}} con una sencilla app.
+La consola del desarrollador de {{site.data.keyword.cloud_notm}} ayuda a los desarrolladores a crear apps a partir de kits de inicio, a suministrar y conectar servicios clave optimizados para {{site.data.keyword.cloud_notm}} y a descargar rápidamente código funcional o a realizar la configuración para un suministro continuo. Puede crear, ver, configurar y gestionar la app y descargar el código de la misma. El uso de kits de inicio le ayuda a evaluar y probar con rapidez los servicios de {{site.data.keyword.cloud_notm}} con una sencilla app.
 {:shortdesc}
 
 ## ¿Qué es un kit de inicio?
@@ -51,7 +51,7 @@ Cuando se crea una app a partir de kit de inicio, automáticamente se crea un c�
 
 El proyecto incluye un archivo `README` con los detalles técnicos del proyecto y en el que se explica lo que necesita para que la app esté lista para ejecutarse.
 
-Para obtener más información, consulte la [consola del desarrollador de {{site.data.keyword.cloud_notm}} para recursos de aprendizaje de Apple](https://console.bluemix.net/developer/appledevelopment/learning-resources).
+Para obtener más información, consulte la [consola del desarrollador de {{site.data.keyword.cloud_notm}} para recursos de aprendizaje de Apple](https://cloud.ibm.com/developer/appledevelopment/learning-resources).
 {: tip}
 
 ### ¿Qué contenido de la app se genera?

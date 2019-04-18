@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, starter kit, Kubernetes, cluster
+
+subcollection: creating-apps
 
 ---
 
@@ -16,12 +20,12 @@ lastupdated: "2019-02-13"
 # Starter-Kit-App in einem Kubernetes-Cluster bereitstellen
 {: #tutorial-starterkit-kube}
 
-Erfahren Sie, wie Sie eine App in {{site.data.keyword.cloud}} mit einem leeren Starter-Kit und einer Kubernetes-Toolchain erstellen und die App kontinuierlich an einen sicheren Container in einem Kubernetes-Cluster übergeben. Ihre DevOps-Pipeline für die kontinuierliche Integration kann so konfiguriert werden, dass Ihre Codeänderungen automatisch erstellt und an die App weitergegeben werden, die sich im Kubernetes-Cluster befindet. Wenn Sie bereits eine Pipeline haben, können Sie sie mit Ihrer App verbinden.
+Erfahren Sie, wie Sie eine Anwendung in {{site.data.keyword.cloud}} mit einem leeren Starter-Kit und einer Kubernetes-Toolchain erstellen und die App kontinuierlich an einen sicheren Container in einem Kubernetes-Cluster übergeben. Ihre DevOps-Pipeline für die kontinuierliche Integration kann so konfiguriert werden, dass Ihre Codeänderungen automatisch erstellt und an die App weitergegeben werden, die sich im Kubernetes-Cluster befindet. Wenn Sie bereits eine Pipeline haben, können Sie sie mit Ihrer App verbinden.
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} bietet Starter-Kits, die Sie bei der Erstellung der Basis einer App unterstützen, die mit Kubernetes läuft. Wenn Sie ein Starter-Kit verwenden, ist es einfach, einem Modell für cloudnative Programmierung zu folgen, das bewährte Verfahren von {{site.data.keyword.cloud_notm}} für die Entwicklung von Apps verwendet. Starter-Kits generieren Apps, die dem Modell für cloudnative Programmierung folgen, und sie enthalten für jede Programmiersprache Testfälle, Statusprüfung und Metriken. Sie können auch Cloud-Services bereitstellen, die dann in Ihrer generierten Anwendung initialisiert werden.
 
-Dieses Lernprogramm verwendet die Kubernetes-Bereitstellungsoption. In diesem Lernprogramm erstellen wir eine Anwendung aus einem Basis-Starter-Kit, indem wir Java + Spring verwenden, eine Cloudant-Serviceinstanz hinzufügen und sie in {{site.data.keyword.cloud_notm}} mithilfe einer Kubernetes-Umgebung bereitstellen.
+Dieses Lernprogramm verwendet das Kubernetes-Bereitstellungsziel. In diesem Lernprogramm erstellen wir eine Anwendung aus einem Basis-Starter-Kit, indem wir Java + Spring verwenden, eine Cloudant-Serviceinstanz hinzufügen und sie in {{site.data.keyword.cloud_notm}} mithilfe von IBM Kubernetes Service bereitstellen.
 
 Sehen Sie sich zuerst das folgende Starter-Kit-Ablaufdiagramm und die zugehörigen Übersichtsschritte an.
 
@@ -30,48 +34,48 @@ Sehen Sie sich zuerst das folgende Starter-Kit-Ablaufdiagramm und die zugehörig
 ## Vorbereitende Schritte
 {: #prereqs-starterkit-kube}
 
-* Erstellen Sie eine **Java + Spring**-App mithilfe eines [Starter-Kits](/docs/apps/tutorials/tutorial_starter-kit.html#tutorial-starterkit).
-* Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
-* Richten Sie [Docker ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.docker.com/get-started){: new_window} ein.
+* Erstellen Sie eine **Java + Spring**-App mithilfe eines [Starter-Kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
+* Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Richten Sie [Docker ](https://www.docker.com/get-started){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") ein.
 
-## Ihrer App Ressourcen hinzufügen
+## Services Ihrer App hinzufügen
 {: #resources-starterkit-kube}
 
-Fügen Sie Ihrer Anwendung eine {{site.data.keyword.cloud_notm}}-Serviceressource hinzu. Die folgenden Schritte stellen eine Cloudant-Instanz zur Verfügung, erstellen einen Ressourcenschlüssel (Berechtigungsnachweise) und stellen die Bindung an Ihre App her.
+Fügen Sie Ihrer Anwendung einen {{site.data.keyword.cloud_notm}}-Service hinzu. Die folgenden Schritte stellen eine Cloudant-Instanz zur Verfügung, erstellen einen Ressourcenschlüssel (Berechtigungsnachweise) und stellen die Bindung an Ihre App her.
 
-1. Klicken Sie auf der Seite mit den **App-Details** auf **Ressource hinzufügen**.
+1. Klicken Sie auf der Seite **App-Details** auf **Service hinzufügen**.
 2. Wählen Sie **Daten** aus und klicken Sie auf **Weiter**.
 3. Wählen Sie **Cloudant** aus und klicken Sie auf **Weiter**.
 4. Wählen Sie auf der Seite **Cloudant hinzufügen** die Region (Vereinigte Staaten (Süden)), die Ressourcengruppe (Standard) und den Preistarif (Lite - eine kostenfreie Instanz) aus.
-5. Klicken Sie auf **Erstellen**. Die Seite mit den **App-Details** wird angezeigt, und die Cloudant-Instanz wird eingerichtet und an Ihre App gebunden. Beachten Sie, dass der Cloudant-Ressourcenschlüssel (Berechtigungsnachweise) dem Feld **Berechtigungsnachweise** hinzugefügt wird.
-6. Optional. Wenn Sie einen kurzen Blick auf Ihren App-Code werfen möchten, nachdem Sie Ressourcen hinzugefügt haben, klicken Sie auf **Code herunterladen**. Ihr Code wird in Form einer `.zip`-Datei heruntergeladen, die die vollständige App-Codestruktur enthält. Sie können die Datei einfach erstellen und den Code lokal mithilfe der {{site.data.keyword.dev_cli_notm}} ausführen oder Sie können ihn zu Ihrem Code-Management-Repository hinzufügen.
+5. Klicken Sie auf **Erstellen**. Die Seite **App-Details** wird angezeigt, und die Cloudant-Instanz wird bereitgestellt und an Ihre App gebunden. Beachten Sie, dass der Cloudant-Ressourcenschlüssel (Berechtigungsnachweise) dem Feld **Berechtigungsnachweise** hinzugefügt wird.
+6. Optional. Wenn Sie einen kurzen Blick auf Ihren App-Code werfen möchten, nachdem Sie Services hinzugefügt haben, klicken Sie auf **Code herunterladen**. Ihr Code wird in Form einer `.zip`-Datei heruntergeladen, die die vollständige App-Codestruktur enthält. Sie können die Datei einfach erstellen und den Code lokal mithilfe der {{site.data.keyword.dev_cli_notm}} ausführen oder Sie können ihn zu Ihrem Code-Management-Repository hinzufügen.
 
 ## App mithilfe einer DevOps-Toolchain bereitstellen
 {: #deploy-starterkit-kube}
 
 Verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren Sie sie so, dass sie in einem Kubernetes-Cluster bereitgestellt wird, der im {{site.data.keyword.cloud_notm}}-Kubernetes-Service gehostet wird.
 
-1. Klicken Sie auf der Seite mit den **App-Details** auf **In Cloud bereitstellen**.
-2. Wählen Sie auf der Seite **Bereitstellungsumgebung auswählen** die Option **In Kubernetes bereitstellen** aus.
+1. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**.
+2. Wählen Sie **In IBM Kubernetes Service bereitstellen** auf der Seite **Bereitstellungsziel auswählen** aus.
 3. Wählen Sie eine Region und einen Cluster aus. Wenn Sie keinen Kubernetes-Cluster haben, klicken Sie auf **Cluster erstellen**.
   * Wählen Sie auf der Seite **Neuen Cluster erstellen** den Standort und den Clustertyp (kostenfrei) aus, geben Sie einen Clusternamen ein und klicken Sie dann auf **Cluster erstellen**.
   * Falls erforderlich, befolgen Sie die Anweisungen auf dem Bildschirm, um Zugriff auf Ihren Cluster zu erhalten.
   * Warten Sie, bis der Cluster anzeigt, dass er **BEREIT** ist, um die Toolchain zu erstellen. Mit der Region **Vereinigte Staaten (Süden))** können Sie einen kostenfreien Cluster bereitstellen.
-  * Kehren Sie zur Seite **Bereitstellungsumgebung auswählen** zurück.
+  * Kehren Sie zur Seite **Bereitstellungsziel auswählen** zurück.
 4. Klicken Sie auf **Weiter**. Die Seite **Toolchain konfigurieren** wird angezeigt.
-5. Geben Sie auf der Seite **Toolchain konfigurieren** einen Toolchainnamen ein, wählen Sie eine Region aus, wählen Sie eine Ressourcengruppe aus und klicken Sie dann auf **Erstellen**. Die Seite mit den **App-Details** wird mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
+5. Geben Sie auf der Seite **Toolchain konfigurieren** einen Toolchainnamen ein, wählen Sie eine Region aus, wählen Sie eine Ressourcengruppe aus und klicken Sie dann auf **Erstellen**. Die Seite **App-Details** wird mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
 
 ## Repository anzeigen
 {: #view-repo-starterkit-kube}
 
-1. Klicken Sie auf der Seite mit den **App-Details** auf **Repository anzeigen**. Das vom Starter-Kit generierte Git-Repository wird angezeigt.
+1. Klicken Sie auf der Seite **App-Details** auf **Repository anzeigen**. Das vom Starter-Kit generierte Git-Repository wird angezeigt.
 2. Optional. Konfigurieren Sie SSH auf Ihrem Desktop, indem Sie die Anweisungen auf dem Bildschirm befolgen.
 3. Optional. Erstellen Sie ein persönliches Zugriffstoken für Ihr Konto, indem Sie die Anweisungen auf dem Bildschirm befolgen.
 
 ## Toolchain-Tools, Protokolle und Verlauf anzeigen
 {: #view-logs-starterkit-kube}
 
-1. Wenn die Bereitstellungsstage abgeschlossen ist, wird die Seite mit den **App-Details** mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
+1. Wenn die Bereitstellungsstage abgeschlossen ist, wird die Seite **App-Details** mit Bereitstellungsinformationen zu Ihrer Toolchain angezeigt.
 2. Greifen Sie auf die Toolchain zu, indem Sie auf **Toolchain anzeigen** klicken. Die Registerkarte **Übersicht** der Toolchainseite wird angezeigt, auf der die Tools aufgeführt werden, die in der Toolchain enthalten sind. Dieses Beispiel enthält die folgenden Tools, die im Starter-Kit vorausgewählt wurden, als die Toolchain erstellt wurde:
   * Ein Issues-Tracker zum Verfolgen von Projektaktualisierungen und -änderungen.
   * Ein Git-Repository, das den Quellcode Ihrer Anwendung enthält.
@@ -99,15 +103,15 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 
-Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.
+Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.
 
 ## Nächste Schritte
 {: #next-steps-startkit-kube notoc}
 
-* Wenn bei der Bereitstellung Fehler auftreten, suchen Sie im Abschnitt zur Fehlerbehebung nach bekannten Problemen wie der [Überschreitung des Speicherkontingents](/docs/apps/ts_apps.html#exceed_quota) oder erfahren Sie, wie Sie [auf Kubernetes-Protokolle zugreifen](/docs/apps/ts_apps.html#access_kube_logs), um nach Fehlern zu suchen.
+* Wenn bei der Bereitstellung Fehler auftreten, suchen Sie im Abschnitt zur Fehlerbehebung nach bekannten Problemen wie der [Überschreitung des Speicherkontingents](/docs/apps?topic=creating-apps-managingapps#exceed_quota) oder erfahren Sie, wie Sie [auf Kubernetes-Protokolle zugreifen](/docs/apps?topic=creating-apps-managingapps#access_kube_logs), um nach Fehlern zu suchen.
 
 * Greifen Sie auf die Servicekonfiguration in Ihrem Code zu:
 	- Sie können die Anmerkung _@Value_ oder die Methode _getProperty()_ der Klasse 'Environment' des Spring-Frameworks verwenden. Weitere Informationen finden Sie unter [Auf Berechtigungsnachweise zugreifen](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Fügen Sie Ihrer Kubernetes-Umgebung neue Berechtigungsnachweise hinzu:
-	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen der Bereitstellungsumgebung [die Berechtigungsnachweise manuell hinzufügen](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube).
+	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen der Bereitstellungsumgebung [die Berechtigungsnachweise manuell hinzufügen](/docs/apps?topic=creating-apps-add-credentials-kube).

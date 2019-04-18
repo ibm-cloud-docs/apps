@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, applications, troubleshooting 
+
+subcollection: creating-apps
 
 ---
 
@@ -122,7 +126,7 @@ nslookup cloud.ibm.com
 * 在菜单栏中，单击**管理 > 帐户**，然后选择 **Cloud Foundry 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
 * 在 Cloud Foundry 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`.
 
-请重试。如果再次出现此消息，请转至 [{{site.data.keyword.cloud_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面，检查服务或组件是否存在问题。
+请重试。如果再次出现此消息，请转至 [{{site.data.keyword.cloud_notm}} 状态 ](http://ibm.biz/bluemixstatus){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面，检查服务或组件是否存在问题。
 
 ## 无法执行请求的操作
 {: #ts_authority}
@@ -144,7 +148,7 @@ nslookup cloud.ibm.com
 {: tsResolve}
 
 * 选择您具有其开发者角色的另一个组织和空间。
-* 请求组织管理者将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/admin/orgs_spaces.html#orgsspacesusers)。
+* 请求组织管理者将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/iam?topic=iam-cfaccess#cfaccess)。
 
 ## 由于授权错误而无法访问 {{site.data.keyword.cloud_notm}} 服务
 {: #ts_vcap}
@@ -165,7 +169,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-有关其他程序语言中可以使用的命令的更多信息，请参阅 [Java ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} 和 [Ruby ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}。
+有关其他程序语言中可以使用的命令的更多信息，请参阅 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 
 ## 收到 502 无效网关错误
@@ -182,7 +186,7 @@ process.env.VCAP_SERVICES
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。
 
-如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://ibm.biz/bluemixstatus){: new_window} 页面。变通方法可能是[在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务](/docs/resources/connect_external_app#externalapp){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ](http://ibm.biz/bluemixstatus){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面。变通方法可能是[在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务](/docs/resources/connect_external_app#externalapp){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -193,7 +197,7 @@ process.env.VCAP_SERVICES
 
   * 稍等，然后重试。您的因特网服务提供商或 {{site.data.keyword.cloud_notm}} 服务可能发生了临时问题。您可以一直等到临时问题得到解决为止。
 
-  * 如果问题持续存在，请联系 {{site.data.keyword.cloud_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.cloud_notm}} 支持 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](/docs/support/index.html#contacting-bluemix-support){: new_window}。
+  * 如果问题持续存在，请联系 {{site.data.keyword.cloud_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.cloud_notm}} 支持 ](/docs/support/index.html#contacting-bluemix-support){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## 超出磁盘配额
 {: #ts_disk_quota}
@@ -207,11 +211,10 @@ process.env.VCAP_SERVICES
 为应用程序分配的缺省磁盘配额为 1 GB。如果您需要更多的磁盘空间，必须手动指定磁盘配额。 
 {: tsCauses}
 
-使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/ObjectStorage/index.html)。
+使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers)。
 {: tsResolve}
 
-  * 在 manifest.yml 文件中，添加以下项：
-    
+  * 在 `manifest.yml` 文件中，添加以下项：
   ```yaml
 	disk_quota: <disk_quota>
 	```
@@ -233,7 +236,7 @@ process.env.VCAP_SERVICES
 IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://pushy.me){: new_window}、[getui ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://www.getui.com/){: new_window} 和 [jpush ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.jpush.cn/){: new_window}。
+作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ](https://pushy.me){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")、[getui ](http://www.getui.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [jpush ](https://www.jpush.cn/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 {: tsResolve}
 
 ## 超过组织的服务限制
@@ -264,7 +267,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`.
 	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`.
 
-  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
+  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account?topic=account-accounts#upgrade-to-paygo)。
 
 ## 无法在 {{site.data.keyword.cloud_notm}} 上运行可执行文件
 {: #ts_executable}
@@ -309,7 +312,7 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 您可以增加帐户的内存配额，或者减少应用程序使用的内存。
 {: tsResolve}
 
-  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account/index.html#upgrade-to-paygo)。
+  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account?topic=account-accounts#upgrade-to-paygo)。
   * 要减少应用程序使用的内存，请使用 {{site.data.keyword.cloud_notm}} 控制台或 Cloud Foundry 命令行界面。
 
     如果使用 {{site.data.keyword.cloud_notm}} 控制台，请完成以下步骤：
@@ -350,11 +353,11 @@ ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandot
 此行为是 Cloud Foundry 故意为之。
 {: tsCauses}
 
-您可以通过在命令行界面中输入以下命令来手动重新启动应用程序：
+您可以通过在命令行界面中输入以下命令来手动重新启动已经部署的应用程序：
 {: tsResolve}
 
 ```
-ibmcloud cf push appname -p app_path
+ibmcloud cf restart <APPNAME>
 ```
 {: codeblock}
 
@@ -382,7 +385,7 @@ ibmcloud cf push appname -p app_path
 使用以下其中一个选项可解决该问题：
 {: tsResolve}
 
-  * 建议的做法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) 主题的“启动命令”部分。
+  * 建议的做法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) 主题的“启动命令”部分。
   * 通过将 `manifest.yml` 中的 command 属性修改为 command: null，或通过编辑 push 命令以包含 `-c null`，禁用现有应用程序的命令。
   * 从 `manifest.yml` 中除去 **command** 属性。然后，从 {{site.data.keyword.cloud_notm}} 中删除当前应用程序，并重新推送应用程序。
 
@@ -530,7 +533,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 		```
       {: codeblock}
 
-    * 使用 [package.json ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://www.npmjs.com/package/jsonfile){: new_window} 文件。例如：
+    * 使用 [package.json ](https://www.npmjs.com/package/jsonfile){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 文件。例如：
      ```json
 		  {
         ...
@@ -569,7 +572,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
  }
     ```
 
-有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}。
+有关 Node.js 应用程序的更多提示，请参阅 [Tips for Node.js Applications ](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## 将 {{site.data.keyword.cloud_notm}} Liberty 应用程序导入到 Eclipse 之后，`server.xml` 文件中出现配置错误
 {: #ts_eclipse}
@@ -583,7 +586,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 将 Liberty 应用程序推送到 {{site.data.keyword.cloud_notm}} 时，Liberty buildpack 会使用 `server.xml` 文件来配置应用程序，并生成 `runtime-vars.xml` 文件。将应用程序导入到 Eclipse 时，本地环境中不存在 `runtime-vars.xml` 文件。
 {: tsCauses}
 
-您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty/index.html)。
+您可以通过从项目中除去 server.xml 文件来解决此问题。将应用程序作为 WAR 应用程序进行推送时，buildpack 会动态创建 `server.xml` 文件。有关更多信息，请参阅 [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime)。
 {: tsResolve}
 
 ## 使用定制 buildpack 无法编译打包应用程序
@@ -598,7 +601,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
 如果脚本（如检测脚本、编译脚本和发布脚本）不可执行，那么可能发生此问题。
 {: tsCauses}
 
-您可以使用 [Git update ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](http://git-scm.com/docs/git-update-index){: new_window} 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
+您可以使用 [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 无法通过 {{site.data.keyword.cloud_notm}} Continuous Delivery 中的 Delivery Pipeline 部署应用程序
@@ -613,7 +616,7 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
  发生此问题的原因可能是管道需要使用 `manifest.yml` 文件将应用程序部署到 {{site.data.keyword.cloud_notm}}。
  {: tsCauses}
 
- 要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅 [应用程序清单](/docs/manageapps/depapps.html#appmanifest)。
+ 要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅 [应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
  {: tsResolve}
 
 ## 无法推送 Meteor 应用程序
@@ -647,7 +650,7 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 
 如果构建或部署作业失败，并且看到以下消息，那么可以使用以下 CLI 命令删除映像。`状态：未授权：您已超过了存储配额。请删除一个或多个映像，或者复查存储配额和价格套餐。`
 
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，请进行安装。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cr images` 列出映像。
 * 使用 `ibmcloud cr image-rm <respository>:<tag>` 删除任何未使用的映像。
@@ -657,12 +660,12 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 {: #access_kube_logs}
 
 如果应用程序未在运行，并且您无法访问该运行状况端点，请尝试查看集群中的日志。
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)，请进行安装。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cs clusters` 列出集群。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向相应的集群。
 * 导出所列出的环境变量。
-* 使用 `kubectl get pods` 查看 pod。如果需要安装 `kubectl`，请参阅[安装和设置 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。
+* 使用 `kubectl get pods` 查看 pod。如果需要安装 `kubectl`，请参阅[安装和设置 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "External linkicon")。
 * 可以使用 `kubectl logs <pod-name>` 来查看应用程序中的日志。`
 
 
@@ -681,10 +684,11 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 Docker 客户机未安装，或者已安装但未启动。
 {: tsCauses}
 
-确保 [Docker](https://docs.docker.com/install/) 已安装，并将其启动。
+确保 [Docker](https://docs.docker.com/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "External link icon") 已安装并启动。
 {: tsResolve}
 
-  ## 构建应用程序失败，并返回 Docker 错误
+  
+## 构建应用程序失败，并返回 Docker 错误
 {: #build_error}
 {: troubleshoot}
 

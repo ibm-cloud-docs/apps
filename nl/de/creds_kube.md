@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -86,7 +90,7 @@ Konfigurieren Sie den Cluster so, dass der Parameter _secretKeyRef_ mit dem Name
 
 Verwenden Sie ein Terminal Ihrer Workstation zum Installieren der folgenden Tools:
 
-1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
+1. Installieren Sie die [{{site.data.keyword.dev_cli_long}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 2. Melden Sie sich mit dem Befehl `ibmcloud login` an.
 3. Stellen Sie eine Verbindung zu Ihrem Cluster her, indem Sie `ibmcloud cs cluster-config {ihr_cluster_name}` ausführen.
 4. Kopieren Sie den Befehl `export` und fügen Sie ihn ein, um ihn von einem Terminal aus auszuführen.
@@ -108,37 +112,45 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbereitet ist, können Sie Ihre Anwendung so aktualisieren, dass sie die Umgebungsvariablen verwendet, die in der Datei `deployment.yml` definiert sind.
 
-## Starter-Kit-App + Kubernetes
+## Starter-Kit-App und Kubernetes
 {: #credentials-starterkit-kube}
 
-1. Rufen Sie die Seite Ihrer App mit den **App-Details** auf.
-2. Wählen Sie zum Erstellen einer Instanz von Cloud Object Storage **Ressource hinzufügen** > **Speicher** > **Cloud Object Storage** > **Lite-Plan (kostenfrei)** > **Erstellen** aus.
-3. Klicken Sie auf `Code herunterladen`, um Ihr Projekt mit den injizierten Code-Snippets neu zu generieren.
+1. Rufen Sie die Seite **App-Details** Ihrer App auf.
+
+2. Wählen Sie zum Erstellen einer Instanz von Cloud Object Storage **Service hinzufügen** > **Speicher** > **Cloud Object Storage** > **Lite-Plan (kostenfrei)** > **Erstellen** aus.
+
+3. Klicken Sie auf **Code herunterladen**, um Ihr Projekt mit den injizierten Code-Snippets neu zu generieren.
+
 4. Wenn Sie auf die Berechtigungsnachweise lokal zugreifen möchten, kopieren Sie die folgenden Dateien aus der neu generierten `.zip`-Datei auf Ihren lokalen Git-Klon (und ersetzen Sie dabei bereits vorhandene Versionen), um auf die Berechtigungsnachweise zuzugreifen. Sie müssen immer noch einen geheimen Kubernetes-Schlüssel in Ihrem Cluster erstellen, um die Berechtigungsnachweise zu hosten.
 
-	- `chart/{appName}/bindings.yaml` - Generiert eine Umgebungsvariable in Ihrem Kubernetes-Cluster, die auf Ihren geheimen Schlüssel verweist.
-	- `src/main/resources/localdev-config.json` - Auf Berechtigungsnachweise während der lokalen Ausführung Ihrer App zugreifen.
-  - `src/main/resources/mappings.json` - Eine Zuordnung für die Bereitstellung des Zugriffs auf die Methode [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) für den Zugriff auf Ihre Umgebungsvariablen aus dem Code.
-  - `manifest.yml` - Diese Datei bindet Ihren Service an Ihre Cloud Foundry-Anwendung.
+   - `chart/{appName}/bindings.yaml` - Generiert eine Umgebungsvariable in Ihrem Kubernetes-Cluster, die auf Ihren geheimen Schlüssel verweist.
+   - `src/main/resources/localdev-config.json` - Auf Berechtigungsnachweise während der lokalen Ausführung Ihrer App zugreifen.
+   - `src/main/resources/mappings.json` - Eine Zuordnung für die Bereitstellung des Zugriffs auf die Methode [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) für den Zugriff auf Ihre Umgebungsvariablen aus dem Code.
+   - `manifest.yml` - Diese Datei bindet Ihren Service an Ihre Cloud Foundry-Anwendung.
 
-Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit einer Resource Controller-Ressource entscheiden (die sich in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet), müssen Sie eine weitere Datei kopieren.
-{: note}
+  Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit einer Resource Controller-Ressource entscheiden (die sich in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet), müssen Sie eine weitere Datei kopieren.
+  {: note}
 
-5. [Zeigen Sie](https://cloud.ibm.com/containers-kubernetes/clusters) Ihren Kubernetes-Cluster mit der entsprechenden Region an (Vereinigte Staaten (Süden), wenn er kostenfrei war).
+5. [Zeigen Sie Ihren Kubernetes-Cluster an](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") mit der entsprechenden Region (Vereinigte Staaten (Süden), wenn er kostenfrei war).
+
 6. Klicken Sie in Ihren Cluster und wählen Sie **Kubernetes-Dashboard** oben rechts aus, um Ihr Cluster-Dashboard anzuzeigen.
+
 7. Blättern Sie nach unten, bis Sie einen Abschnitt mit der Bezeichnung **Geheime Schlüssel** sehen. Sie können einen geheimen Schlüssel für Ihre {{site.data.keyword.cloudant_short_notm}}-Serviceinstanz mit der folgenden Konvention sehen: `binding-{appName}-{serviceName}-{zeitmarke}`. In der Datei `chart/{appName}/bindings.yaml` können Sie den entsprechenden geheimen {{site.data.keyword.cloudant_short_notm}}-Schlüssel finden.
+
 8. Sie können jetzt einen entsprechenden geheimen Schlüssel für Ihre Cloud Object Storage-Instanz mit dem Namen erstellen, der bereits in der Datei `chart/{appName}/bindings.yaml` generiert wurde und etwa wie folgt aussieht: `binding-create-app-ktibr-cloudobjectstor-1538170732311`.
-9. Rufen Sie die Seite mit den **App-Details** im Dashboard auf und kopieren Sie die Berechtigungsnachweise für die Cloud Object Storage-Instanz. Es folgt ein Beispiel für eine Berechtigungsnachweisausgabe:
-```yaml
-{
-  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+
+9. Rufen Sie die Seite **App-Details** im Dashboard auf und kopieren Sie die Berechtigungsnachweise für die Cloud Object Storage-Instanz. Es folgt ein Beispiel für eine Berechtigungsnachweisausgabe:
+  ```yaml
+  {
+    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
-}    
-```
-{: codeblock}
+  }    
+  ```
+  {: codeblock}
 
 10. Stellen Sie sicher, dass Ihr Cluster unter Verwendung von `ibmcloud cs cluster-config {ihr_cluster_name}` konfiguriert und der Befehl in den nachfolgenden Anweisungen exportiert wird.
+
 11. Verwenden Sie den Befehl `echo`, um die Berechtigungsnachweise in eine Bindungsdatei (`binding`) zu stellen.
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -148,8 +160,8 @@ Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit
 
 12. Erstellen Sie den geheimen Schlüssel mit `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Wenn Sie in Ihr Kubernetes-Cluster-Dashboard zurückkehren, können Sie den von Ihnen erstellten geheimen Schlüssel sehen.
 
-Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet).
-{: note}
+  Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie einen vom Benutzer zur Verfügung gestellten Service erstellen, wenn Sie eine Resource Controller-Instanz verwenden (wenn sich die Ressource in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet). 
+  {: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -162,7 +174,7 @@ Wenn die Bereitstellung in eine Cloud Foundry-Anwendung erfolgt, müssen Sie ein
 
 ### Vorbereitung des Kubernetes-Clusters
 
-Verwenden Sie die Funktion **In Cloud bereitstellen**, um Ihre App in Ihrem IBM Containers-Kubernetes-Cluster bereitzustellen. Die Funktion bereitet Ihren Kubernetes-Cluster mit geheimen Schlüsseln für die Berechtigungsnachweise der Ressourcen vor, die Ihrer App zugeordnet sind. Sie können die Ergebnisse der Clustervorbereitung anzeigen, indem Sie die folgenden Schritte ausführen:
+Verwenden Sie die Funktion **Continuous Delivery konfigurieren**, um Ihre App in Ihrem IBM Kubernetes-Cluster bereitzustellen. Die Funktion bereitet Ihren Kubernetes-Cluster mit geheimen Schlüsseln für die Berechtigungsnachweise der Ressourcen vor, die Ihrer App zugeordnet sind. Sie können die Ergebnisse der Clustervorbereitung anzeigen, indem Sie die folgenden Schritte ausführen:
 
 1. Führen Sie den folgenden Befehl aus, um die Ergebnisse anzuzeigen: `kubectl get secrets`:
   ```
@@ -200,7 +212,7 @@ Verwenden Sie die Funktion **In Cloud bereitstellen**, um Ihre App in Ihrem IBM 
   ```
   {: screen}
 
-  Hinter `binding` steht der Base64-codierte Wert des geheimen Schlüssels. Das Dekodieren zeigt, dass es sich nur um das unformatierte JSON aus den Berechtigungsnachweisen (`credentials`) der Ressourceninstanz handelt, plus einige `iam_...` -Werte:
+  Hinter `binding` steht der Base64-codierte Wert des geheimen Schlüssels. Das Dekodieren zeigt, dass es sich nur um das unformatierte JSON aus den Berechtigungsnachweisen (`credentials`) der Serviceinstanz handelt, plus einige `iam_...` -Werte:
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -222,7 +234,7 @@ Der geheime Kubernetes-Schlüssel kann von Ihrem Anwendungscode nicht abgerufen 
 ### Vom Starter-Kit generierter Code
 {: #credentials-starterkit-kube-gencode}
 
-In diesem Fall haben Sie diese Anwendung aus einem Starter-Kit erstellt. Der Code, der aus einem Starter-Kit generiert wird, ist portierbar, um lokal, in Cloud Foundry oder in Kubernetes ausgeführt werden zu können. Die Bibliothek `IBMCloudEnv` wird verwendet, um eine Abstraktionsebene zwischen dem Anwendungscode und dem Abrufen der Umgebungsvariablen bereitzustellen, die die Berechtigungsnachweise für die Ressourcen (Serviceinstanzen) enthalten.
+In diesem Fall haben Sie diese Anwendung aus einem Starter-Kit erstellt. Der Code, der aus einem Starter-Kit generiert wird, ist portierbar, um lokal, in Cloud Foundry oder in Kubernetes ausgeführt werden zu können. Die Bibliothek `IBMCloudEnv` wird verwendet, um eine Abstraktionsebene zwischen dem Anwendungscode und dem Abrufen der Umgebungsvariablen bereitzustellen, die die Berechtigungsnachweise für die Serviceinstanzen enthalten.
 
 Der Code, der aus dem Starter-Kit erstellt wird, weist eine Abhängigkeit für die Bibliothek `IBMCloudEnv` auf und erzeugt die folgende Ausgabe:
 
@@ -263,9 +275,4 @@ Der Code, der aus dem Starter-Kit erstellt wird, weist eine Abhängigkeit für d
 
 Die Bibliothek `IBMCloudEnv` erkennt automatisch, ob Ihre Anwendung in Kubernetes, Cloud Foundry oder einer virtuellen Serverinstanz (wird wie eine lokale Docker-Instanz behandelt) ausgeführt wird, und wendet das richtige Suchmuster (`searchPattern`) an, um den zurückzugebenden Wert zu finden.
 
-Daher ist die Datei `mappings.json` als _die verbindliche Liste_ vorkonfigurierter und sofort verfügbarer Werte aus der Umgebung zu betrachten, in der Ihre App ausgeführt werden soll. Die Werte werden in der Umgebung für den Cluster gefüllt, den Sie zum Zeitpunkt der Verwendung der Funktion **In Cloud bereitstellen** als Ziel verwendet haben.
-
-**Vorsicht**: Zum Zeitpunkt der Erstellung dieser Dokumentation wird die Umgebungsvorbereitung _immer_ für alle Berechtigungsnachweise für alle Ressourcen ausgeführt, die einer App zugeordnet sind, aber _nicht alle `env`-Referenzen_ werden in die Datei `bindings.yml` oder `mappings.json` gestellt. In diesen Fällen müssen Sie solche Referenzen selbst angeben. Wenn Sie sich bereits für eine Zielbereitstellung entschieden haben und die Abstraktion der Bibliothek `IBMCloudEnv` nicht benötigen, lesen Sie den Abschnitt "Ihr Code + (Zielbereitstellung)", der mit Ihrer Entscheidung übereinstimmt.
-
-Einige Starter-Kits enthalten gar keine Referenz auf die `IBMCloudEnv`-Abhängigkeit oder die Dateien `manifest.yml` und `mappings.json`.
-{: note}
+Daher ist die Datei `mappings.json` als _die verbindliche Liste_ vorkonfigurierter und sofort verfügbarer Werte aus der Umgebung zu betrachten, in der Ihre App ausgeführt werden soll. Die Werte werden in der Umgebung für den Cluster gefüllt, den Sie zum Zeitpunkt der Verwendung der Funktion **Continuous Delivery konfigurieren** als Ziel verwendet haben.

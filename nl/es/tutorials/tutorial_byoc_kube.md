@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-13"
 # Despliegue de su propio código en un clúster de Kubernetes
 {: #tutorial-byoc-kube}
 
-Obtenga información sobre cómo crear una app en {{site.data.keyword.cloud}} utilizando el repositorio de apps existente. Puede conectar su cadena de herramientas DevOps existente o crear una, y entregar de forma continua una app a un contenedor seguro en un clúster de Kubernetes. Esta guía de aprendizaje le ayuda a configurar un conducto de DevOps de integración continua de modo que el cambio se compile y se propague automáticamente a la app desplegada en el clúster de Kubernetes.
+Obtenga información sobre cómo crear una aplicación en {{site.data.keyword.cloud}} utilizando el repositorio de apps existente. Puede conectar su cadena de herramientas DevOps existente o crear una, y entregar de forma continua una app a un contenedor seguro en un clúster de Kubernetes. Esta guía de aprendizaje le ayuda a configurar un conducto de DevOps de integración continua de modo que el cambio se compile y se propague automáticamente a la app desplegada en el clúster de Kubernetes.
 {: shortdesc}
 
 Si ya tiene un repositorio de código fuente con un código base para una aplicación de fondo en funcionamiento, {{site.data.keyword.cloud_notm}} le ayuda a organizar este activo en una vista agregada de todos los activos que componen el producto completo. {{site.data.keyword.cloud_notm}} le ayuda a crear y ejecutar un flujo de trabajo DevOps escalable cuando utilice la característica de cadena de herramientas de DevOps. Esta guía de aprendizaje ayuda a que el desarrollador experimentado o el ingeniero de DevOps adquiera y configure un clúster de Kubernetes de {{site.data.keyword.cloud_notm}} de destino y configure y ejecute una cadena de herramientas DevOps, todo bajo la guía de las mejores prácticas de la nube.
@@ -27,8 +31,9 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
 ## Antes de empezar
 {: #prereqs-byoc-kube}
 
-* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc) para obtener más información.
-* En la consola de [{{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Contenedores** para [configurar un clúster de Kubernetes](/docs/containers/container_index.html#container_index).
+* Cree una app. Consulte [Creación de apps a partir de su propio repositorio de código](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) para obtener más información.
+* En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"), pulse sobre el icono
+**Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Contenedores** para [configurar un clúster de Kubernetes](/docs/containers?topic=containers-getting-started).
 * Para confirmar que la app se ejecuta en Docker, ejecute los mandatos siguientes:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -38,14 +43,14 @@ Un _clúster_ es un conjunto de recursos, nodos, redes y dispositivos de almacen
   
 * A continuación, vaya al URL, como por ejemplo `http://localhost/springboothelloworld/sayhello`. Pulse Control+C para detener la ejecución de Docker.
 
-## Adición de recursos a la app (opcional)
+## Adición de servicios a la app (opcional)
 {: #resources-byoc-kube}
 
-Añada un recurso de servicio a la aplicación e {{site.data.keyword.cloud_notm}} crea el servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
+Añada un servicio a la aplicación e {{site.data.keyword.cloud_notm}} creará la instancia de servicio automáticamente. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración. {{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
 
-El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Cómo añadir un recurso a la app](/docs/apps/reqnsi.html#).
+El proceso suministra una instancia de servicio, crea una clave de recurso (credenciales) y la enlaza a la app. Para obtener más información, consulte [Adición de un servicio a la app](/docs/apps?topic=creating-apps-add-resource).
 
-Después de añadir un recurso de servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps/creds_kube.html).
+Después de añadir un servicio a la app, debe copiar las credenciales del servicio en el entorno de despliegue. Para obtener más información, consulte [Adición de credenciales al entorno de Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube).
 
 ## Preparación de la app para el despliegue
 {: #deploy-byoc-kube}
@@ -74,9 +79,9 @@ Si tiene una o varias cadenas de herramientas DevOps que están asociadas a la c
 
 Para obtener más información sobre cómo añadir el repositorio a la cadena de herramientas, consulte:
 
- * [Configuración de repositorio Git y seguimiento de problemas](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [Configuración de GitHub](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [Configuración de GitLab](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [Configuración de repositorio Git y seguimiento de problemas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configuración de GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [Configuración de GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### Conectar la app a una nueva cadena de herramientas
@@ -86,12 +91,10 @@ Si desea controlar por completo la creación de la cadena de herramientas DevOps
 
 1. En la página Crear una cadena de herramientas, pulse la plantilla **Crear su propia cadena de herramientas**.
 2. Escriba un nombre para la cadena de herramientas, seleccione una región y un grupo de recursos (predeterminado) y pulse **Crear**.
+3. Tras crear la cadena de herramientas, utilice el rastro de navegación de su navegador para volver a la página **Detalles de la app**, que indica que se ha configurado la entrega continua.
 
-Cuando elija crear una cadena de herramientas a partir de su nueva app, se abre la página [Crear una cadena de herramientas](https://{DomainName}/devops/create) en el panel de control de DevOps en un nuevo separador del navegador. Después de crear y configurar la cadena de herramientas en dicho separador, debe volver a la página Conectar una cadena de herramientas en la app y renovar la página.
-{:tip}
-
-Si no desea crear una cadena de herramientas DevOps desde cero, puede habilitar para la nube su código existente utilizando el mandato [`ibmcloud dev enable`](/docs/cli/idt/commands.html#enable). El mandato genera una plantilla de cadena de herramientas DevOps que se incorpora al repositorio. A continuación, utilice dicha plantilla como conjunto de instrucciones para lo que crea la cadena de herramientas DevOps. Para obtener más información, consulte la
-[documentación de CLI](/docs/apps/create-deploy-cli.html#byoc-cli).
+Si no desea crear una cadena de herramientas DevOps desde cero, puede habilitar para la nube su código existente utilizando el mandato [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). El mandato genera una plantilla de cadena de herramientas DevOps que se incorpora al repositorio. A continuación, utilice dicha plantilla como conjunto de instrucciones para lo que crea la cadena de herramientas DevOps. Para obtener más información, consulte la
+[documentación de CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
 
 ## Adición de una integración de GitHub
 {: #github-byoc-kube}
@@ -119,7 +122,7 @@ Puede ver el nuevo webhook de los valores del repositorio.
 ## Configuración de las etapas del conducto
 {: #pipelineconfig-byoc-kube}
 
-Configure las etapas del conducto para dirigir la entrada (el contenido del repositorio GitHub) al destino correcto. Puesto que en esta guía de aprendizaje se presupone que tiene un repositorio GitHub que genera una imagen de Docker de trabajo y que está dirigido a un clúster de IBM Containers Kubernetes, creará etapas del conducto con entradas, scripts de shell y salidas destinadas a alcanzar este objetivo.
+Configure las etapas del conducto para dirigir la entrada (el contenido del repositorio GitHub) al destino correcto. Puesto que en esta guía de aprendizaje se presupone que tiene un repositorio GitHub que genera una imagen de Docker funcional y que está dirigido a un clúster de IBM Containers Kubernetes, creará etapas del conducto con entradas, scripts de shell y salidas destinadas a alcanzar este objetivo.
 
 1. Configure la etapa de conducto `compilar y publicar`.
   1. Seleccione el conducto de entrega que ha creado y pulse **Añadir una etapa**.
@@ -133,7 +136,7 @@ Configure las etapas del conducto para dirigir la entrada (el contenido del repo
     * Especifique `compilar y publicar` como nombre.
     * Seleccione **Registro de contenedor** como tipo de compilador.
     * Seleccione la región en la que se encuentra el clúster de Kubernetes.
-    * Seleccione **Especificar una clave de API existente**. Si no tiene ninguna clave de API, consulte [Creación de una clave de API](/docs/iam/userid_keys.html#creating-an-api-key). 
+    * Seleccione **Especificar una clave de API existente**. Si no tiene ninguna clave de API, consulte [Creación de una clave de API](/docs/iam?topic=iam-userapikey#create_user_key). 
     * Especifique el espacio de nombres del registro de contenedor, que encontrará pulsando el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccionando **Contenedores** > **Registro** > **Espacios de nombres**.
     * Para el nombre de la imagen de Docker, especifique `continuo` porque la etapa de compilación del conducto correspondiente a la compilación continua de la rama de integración continua del repositorio.
     * Edite el script de compilación para añadir una o varias líneas después de la primera línea `#!/bin/bash`. Por ejemplo, para un repositorio que se crea utilizando maven, puede añadir algunas líneas similares a las del ejemplo siguiente:
@@ -177,4 +180,4 @@ Después de desplegar la app, el conducto de entrega o la línea de mandatos le 
 
 4. Vaya al URL en el navegador. Si la app se está ejecutando, se muestra un mensaje que incluye `Enhorabuena` o `{"status":"UP"}`.
 
-Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para ver el URL de la app. Luego vaya al URL en el navegador.
+Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para ver el URL de la app. Luego vaya al URL en el navegador.

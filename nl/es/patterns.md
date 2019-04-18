@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2016, 2017, 2018
-lastupdated: "2018-07-22"
+  years: 2016, 2019
+lastupdated: "2019-03-15"
+
+keywords: web app, backend-for-frontend, microservices, mobile, programming languages
+
+subcollection: creating-apps
 
 ---
 {:new_window: target="_blank"}
@@ -26,39 +30,42 @@ El patrón de app web crea apps que sirven contenido web como, por ejemplo, HTML
 * Basic - sirve un archivo `index.html` estático, y un archivo JavaScript y de hoja de estilos vacíos.
 * React - una infraestructura rica para crear interfaces de usuario. Los archivos de origen se encuentran en `src/client/app`, se compilan con WebPack y se sirven en el directorio público.
 
-Encontrará los kits de inicio para el patrón de app web en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
+Encontrará los kits de inicio para el patrón de app web en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App
+Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Programa de fondo para programa de usuario (BFF)
 {: #bff}
 
-El patrón de Programa de fondo para programa de usuario (BFF) ayuda a crear código de fondo que expone servicios y datos empresariales de forma que satisfaga las necesidades de los usuarios para un canal de app específico como, por ejemplo, un canal móvil o web. Por ejemplo, los usuarios de un dispositivo móvil podrían utilizar el control de voz, mientras que los usuarios de navegador podrían preferir el sistema de apuntar y pulsar. Puede compilar dos programas BFF, uno para móvil que incluye servicios como [{{site.data.keyword.conversationfull}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/watson/ai-assistant/) y uno para web con una interfaz de usuario más sofisticada.
+El patrón de Programa de fondo para programa de usuario (BFF) ayuda a crear código de fondo que expone servicios y datos empresariales de forma que satisfaga las necesidades de los usuarios para un canal de app específico como, por ejemplo, un canal móvil o web. Por ejemplo, los usuarios de un dispositivo móvil podrían utilizar el control de voz, mientras que los usuarios de navegador podrían preferir el sistema de apuntar y pulsar. Puede compilar dos programas BFF, uno para móvil que incluye servicios como [{{site.data.keyword.conversationfull}}](https://www.ibm.com/watson/ai-assistant/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y uno para web con una interfaz de usuario más sofisticada.
 
 En {{site.data.keyword.cloud_notm}}, puede compilar un programa BFF con enfoque de programación para varios lenguajes. Puede utilizar Node.js, Swift, Java o Python y ejecutarlos en un patrón con servicios de contenedor o que utilicen funciones sin servidor.
 
 BFF gestiona la persistencia, la colocación en memoria caché y la integración de los datos con los siguientes servicios de gran valor.
 
-* [{{site.data.keyword.ibmwatson}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson)
-* [{{site.data.keyword.iot_short_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot)
-* [{{site.data.keyword.weather_short}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps)
-* [{{site.data.keyword.sparks}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps).
+* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 Los programas BFF habitualmente en la mayoría de las ocasiones exponen una API utilizando un patrón REST. No obstante, puede diseñar su programa BFF para que funcione desde una arquitectura de mensajería que utilice {{site.data.keyword.messagehub}}.
 
-Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará los kits de inicio para el patrón BFF en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
+Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará los kits de inicio para el patrón BFF en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App
+Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Microservicio
 {: #microservice}
 
 Las apps de los microservicios proporcionan la base para la creación de microservicios de fondo, incluidos los puntos finales de salud básicos y las API REST. Las apps generadas incluyen todas las dependencias necesarias, tanto para el propio microservicio como para los servicios de nube asociados.
 
-Elija un kit de inicio de microservicio para los requisitos de idioma y de infraestructura. Encontrará los kits de inicio para el patrón Microservice en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard).
+Elija un kit de inicio de microservicio para los requisitos de idioma y de infraestructura. Encontrará los kits de inicio para el patrón Microservice en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App
+Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Móvil
 {: #mobile}
 
-Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un [programa de fondo para programa de usuario](/docs/apps/patterns.html#bff) dedicado.
+Las apps móviles son diferentes de los otros patrones porque tienen un componente del lado del cliente significativo. El patrón puede incluir conexiones directas a servicios móviles como notificaciones push, autenticación o analíticas de datos móviles. Los servicios móviles reciben el nombre de programa de fondo como servicio o patrón MBaaS. También pueden tener un programa de fondo para programa de usuario dedicado.
 
-{{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Encontrará los kits de inicio para el patrón Mobile en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard).
+{{site.data.keyword.cloud_notm}} ofrece varios kits de inicio móvil para iOS Swift, Android y Cordova. Encontrará los kits de inicio para el patrón Mobile en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} Mobile](https://{DomainName}/developer/mobile/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Lenguajes
 {: #languages}
@@ -67,10 +74,10 @@ Los kits de inicio que {{site.data.keyword.cloud_notm}} proporciona están dispo
 
 |Lenguaje de programación | Descripción | Infraestructuras de desarrollo |
 |-----|-----|-----|
-|Java | [Java](../runtimes/liberty/getting-started.html) constituye una excelente solución para crear aplicaciones empresariales. Pero las nuevas prestaciones de Java 8, combinadas con tiempos de ejecución más ligeros como Liberty e infraestructuras como Spring Boot, también convierten Java en la solución perfecta para crear microservicios. Java es un lenguaje de programación extendido para apps de Android. | Spring, Liberty, Android |
-|Swift | [Swift](../runtimes/swift/getting-started.html) es un moderno lenguaje de programación creado en 2014, diseñado para sustituir Objective C y disponible como código abierto desde diciembre de 2015. Hoy en día, se utiliza para crear iOS, macOS, servicios web y software de sistema en sistemas operativos Linux y macos que utilicen una arquitectura x86, ARM o z. Escribe como un lenguaje de script pero se compila para obtener el alto rendimiento de C con un bajo uso de procesador. Resulta ideal para tiempos de ejecución de la nube. Utiliza un sistema de tipos estático y sólido que ve en Java, pero el estilo funcional y las rutinas asíncronas que ve en JavaScript. Ofrece un alto rendimiento y el origen se compila en código nativo utilizando la cadena de herramientas del compilador LLVM. Puede utilizar fácilmente bibliotecas del sistema de otros lenguajes escritos en C. Puesto que Swift se puede utilizar para codificar apps del lado del cliente como del lado del servidor, los desarrolladores utilizan Swift cuando necesitan migrar fácilmente las funciones del cliente al servidor y viceversa. | Kitura, iOS|
-|Node.js | [Node.js](../runtimes/nodejs/getting-started.html) es un tiempo de ejecución de JavaScript que utiliza un modelo de E/S sin bloqueo y dirigido por sucesos, que lo hace ligero y eficiente. Proporciona un alto nivel de rendimiento y escalabilidad para aplicaciones web, patrones de programa de fondo para programa de usuario y microservicios. El registro de paquetes de Node.js, npm, proporciona acceso a una gran colección de módulos de código abierto. Ofrece una amplia gama de características que le ayudan a acelerar el desarrollo de aplicaciones. | Express|
+|Java | [Java](/docs/runtimes/liberty?topic=liberty-getting-started) constituye una excelente solución para crear aplicaciones empresariales. Pero las nuevas prestaciones de Java 8, combinadas con tiempos de ejecución más ligeros como Liberty e infraestructuras como Spring Boot, también convierten Java en la solución perfecta para crear microservicios. Java es un lenguaje de programación extendido para apps de Android. | Spring, Liberty, Android |
+|Swift | [Swift](/docs/runtimes/swift?topic=Swift-getting-started) es un moderno lenguaje de programación creado en 2014, diseñado para sustituir Objective C y disponible como código abierto desde diciembre de 2015. Hoy en día, se utiliza para crear iOS, macOS, servicios web y software de sistema en sistemas operativos Linux y macos que utilicen una arquitectura x86, ARM o z. Escribe como un lenguaje de script pero se compila para obtener el alto rendimiento de C con un bajo uso de procesador. Resulta ideal para tiempos de ejecución de la nube. Utiliza un sistema de tipos estático y sólido que ve en Java, pero el estilo funcional y las rutinas asíncronas que ve en JavaScript. Ofrece un alto rendimiento y el origen se compila en código nativo utilizando la cadena de herramientas del compilador LLVM. Puede utilizar fácilmente bibliotecas del sistema de otros lenguajes escritos en C. Puesto que Swift se puede utilizar para codificar apps del lado del cliente como del lado del servidor, los desarrolladores utilizan Swift cuando necesitan migrar fácilmente las funciones del cliente al servidor y viceversa. | Kitura, iOS|
+|Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) es un tiempo de ejecución de JavaScript que utiliza un modelo de E/S sin bloqueo y dirigido por sucesos, que lo hace ligero y eficiente. Proporciona un alto nivel de rendimiento y escalabilidad para aplicaciones web, patrones de programa de fondo para programa de usuario y microservicios. El registro de paquetes de Node.js, npm, proporciona acceso a una gran colección de módulos de código abierto. Ofrece una amplia gama de características que le ayudan a acelerar el desarrollo de aplicaciones. | Express|
 |JavaScript|JavaScript sirve para crear efectos interactivos en páginas web. JavaScript junto con HTML y CSS son la base de la mayoría de las páginas web. Cuando envuelve en un plugin de Cordova, el código JavaScript puede sacar partido de la funcionalidad de las funciones nativas del dispositivo. Los desarrolladores con conocimientos web pueden crear fácilmente apps móviles y, donde sea apropiado, el código web se puede reutilizar a través de entornos móviles y web.|Cordova|
-|Python | [Python](../runtimes/python/getting-started.html) es un lenguaje de programación interpretado de propósito general en el que se da importancia a la legibilidad. Python permite a los programadores implementar funciones utilizando menos líneas de código con relación a otros lenguajes. Las características del lenguaje permite escribir código imperativo, funcional y orientado a objetos. Python es utilizado habitualmente para procesar tareas de lenguaje natural. | Flask, Django|
+|Python | [Python](/docs/runtimes/python?topic=Python-getting-started) es un lenguaje de programación interpretado de propósito general en el que se da importancia a la legibilidad. Python permite a los programadores implementar funciones utilizando menos líneas de código con relación a otros lenguajes. Las características del lenguaje permite escribir código imperativo, funcional y orientado a objetos. Python es utilizado habitualmente para procesar tareas de lenguaje natural. | Flask, Django|
 
 

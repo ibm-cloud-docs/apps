@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -27,8 +31,8 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 ## 开始之前
 {: #prereqs-byoc-kube}
 
-* 创建应用程序。有关更多信息，请参阅[通过您自己的代码存储库创建应用程序](/docs/apps/tutorials/tutorial_byoc.html#tutorial-byoc)。
-* 在 [{{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window} 中，单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器**以[配置 Kubernetes 集群](/docs/containers/container_index.html#container_index)。
+* 创建应用程序。有关更多信息，请参阅[通过您自己的代码存储库创建应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)。
+* 在 [{{site.data.keyword.cloud_notm}} 控制台 ](https://{DomainName}){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 中，单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器**以[配置 Kubernetes 集群](/docs/containers?topic=containers-getting-started)。
 * 要确认应用程序是否在 Docker 中运行，请运行以下命令：
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
@@ -38,14 +42,14 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
   
 * 然后，转至您的 URL，例如 `http://localhost/springboothelloworld/sayhello`。按 Ctrl+C 键可停止 Docker 运行。
 
-## 向应用程序添加资源（可选）
+## 向应用程序添加服务（可选）
 {: #resources-byoc-kube}
 
-将服务资源添加到应用程序，然后 {{site.data.keyword.cloud_notm}} 会为您创建服务。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。{{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
+将服务添加到应用程序，然后 {{site.data.keyword.cloud_notm}} 会为您创建服务实例。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。{{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
 
-此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加资源](/docs/apps/reqnsi.html#)。
+此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加服务](/docs/apps?topic=creating-apps-add-resource)。
 
-将服务资源添加到应用程序后，您必须将服务的凭证复制到部署环境。有关更多信息，请参阅[向 Kubernetes 环境添加凭证](/docs/apps/creds_kube.html)。
+将服务添加到应用程序后，您必须将服务的凭证复制到部署环境。有关更多信息，请参阅[向 Kubernetes 环境添加凭证](/docs/apps?topic=creating-apps-add-credentials-kube)。
 
 ## 准备应用程序以进行部署
 {: #deploy-byoc-kube}
@@ -74,9 +78,9 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 
 有关将存储库添加到工具链的更多信息，请参阅：
 
- * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitbluemix)
- * [配置 GitHub](/docs/services/ContinuousDelivery/toolchains_integrations.html#github)
- * [配置 GitLab](/docs/services/ContinuousDelivery/toolchains_integrations.html#gitlab)
+ * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
 
 
 ### 将应用程序连接到新的工具链
@@ -86,11 +90,9 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 
 1. 在“创建工具链”页面上，单击**构建您自己的工具链**模板。
 2. 输入工具链的名称，选择区域和资源组（缺省值），然后单击**创建**。
+3. 创建工具链后，使用浏览器中的面包屑返回到**应用程序详细信息**页面，该操作表示已配置持续交付。
 
-选择通过新应用程序创建工具链时，会在浏览器的新选项卡中打开 DevOps 仪表板中的[创建工具链](https://{DomainName}/devops/create)页面。在该选项卡中创建并配置工具链后，必须返回到应用程序中的“连接工具链”页面，然后刷新该页面。
-{:tip}
-
-如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt/commands.html#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps/create-deploy-cli.html#byoc-cli)。
+如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
 
 ## 添加 GitHub 集成
 {: #github-byoc-kube}
@@ -132,7 +134,7 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
     * 针对名称输入 `build and publish`。
     * 针对构建器类型选择 **Container Registry**。
     * 选择 Kubernetes 集群所在的区域。
-    * 选择**输入现有 API 密钥**。如果您没有 API 密钥，请参阅[创建 API 密钥](/docs/iam/userid_keys.html#creating-an-api-key)。 
+    * 选择**输入现有 API 密钥**。如果您没有 API 密钥，请参阅[创建 API 密钥](/docs/iam?topic=iam-userapikey#create_user_key)。 
     * 输入容器注册表名称空间，可通过单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器** > **注册表** > **名称空间**找到该值。
     * 针对 Docker 映像名称，输入 `continuous`，因为此管道构建阶段用于存储库持续集成分支的持续构建。
     * 通过在第一个 `#!/bin/bash` 行之后添加一行或多行来编辑构建脚本。例如，对于使用 Maven 构建的存储库，可添加类似于以下示例的若干行：
@@ -176,4 +178,4 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 
 4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
 
-如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。

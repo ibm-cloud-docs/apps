@@ -18,7 +18,7 @@ lastupdated: "2018-11-29"
 <!--I can't see how a customer needs to be walked through the experience without performing a specific task.-->
 
 
-La Experiencia de desarrollador de {{site.data.keyword.cloud}} permite a los desarrolladores de aplicaciones nativas de la nube crear una app a partir de diversos kits de inicio, crear y conectar servicios clave optimizados para {{site.data.keyword.Bluemix_notm}} y luego descargar rápidamente código en funcionamiento o configurar para la entrega continua. La Experiencia de desarrollador proporciona un conjunto de consolas del desarrollador de {{site.data.keyword.Bluemix_notm}} que le permiten crear, ver, configurar y gestionar su app, así como desplegarla en un conducto de devops o descargarla para el entorno local.
+La Experiencia de desarrollador de {{site.data.keyword.cloud}} permite a los desarrolladores de aplicaciones nativas de la nube crear una app a partir de diversos kits de inicio, crear y conectar servicios clave optimizados para {{site.data.keyword.Bluemix_notm}} y luego descargar rápidamente código funcional o configurar para la entrega continua. La Experiencia de desarrollador proporciona un conjunto de consolas del desarrollador de {{site.data.keyword.Bluemix_notm}} que le permiten crear, ver, configurar y gestionar su app, así como desplegarla en un conducto de devops o descargarla para el entorno local.
 
 Si se crea una app mediante una consola del desarrollador de {{site.data.keyword.cloud_notm}}, todas las piezas necesarias de la app se mantienen bajo su cuenta en el servidor de {{site.data.keyword.cloud_notm}}.  Por lo tanto, puede moverse entre la GUI de la consola del desarrollador y la [{{site.data.keyword.dev_cli_notm}}](/docs/cli/idt/index.html) que elija para hacerlo.
 

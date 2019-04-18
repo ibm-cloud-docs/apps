@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # Despliegue de apps con la interfaz de línea de mandatos
 
@@ -49,7 +50,7 @@ Tras instalar la interfaz de línea de mandatos, ya puede empezar:
 
   <pre class="pre"><code class="hljs">cd <var class="keyword varname">su_nuevo_directorio</var></code></pre>
 
-  3.  Realice los cambios al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.Bluemix}} y su app contiene el archivo `src/main/webapp/index.html`, puede modificarlo y editar "Thanks for creating ..." para que indique otra cosa. Asegúrese de que la app se ejecuta localmente
+  3.  Realice los cambios al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.Bluemix}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarlo y editar "Thanks for creating ..." para que indique otra cosa. Asegúrese de que la app se ejecuta localmente
 antes de volver a desplegarla en {{site.data.keyword.Bluemix_notm}}.
 
     Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
@@ -58,7 +59,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
     Preste también atención al archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede.
 
-    Nota: si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.
+    Si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.
+    {: note}
 
   4. Conecte e inicie una sesión en {{site.data.keyword.Bluemix_notm}}.
 
@@ -70,7 +72,8 @@ asignación de memoria, el número de instancias y otros parámetros cruciales.
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">nombre_organización</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</code></pre>
 
-  **Nota**: Debe añadir comillas simples o dobles alrededor de `nombre de usuario`, `nombre_org` y `nombre_espacio` si el valor contiene un espacio, por ejemplo, `-o "my org"`.
+  Debe añadir comillas simples o dobles alrededor de `nombre de usuario`, `nombre_org` y `nombre_espacio` si el valor contiene un espacio, por ejemplo, `-o "my org"`.
+  {: note}
 
   5. Desde <var class="keyword varname">nuevo_directorio</var>, vuelva a desplegar la app en {{site.data.keyword.Bluemix_notm}} mediante el mandato `ibmcloud app push`. Para obtener más información sobre el mandato `ibmcloud app push`, consulte [Carga de una aplicación](/docs/starters/upload_app.html).
 

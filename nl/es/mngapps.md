@@ -1,8 +1,10 @@
 ---
 
 copyright:
-  years: 2015, 2017, 2018
-lastupdated: "2018-11-06"
+  years: 2015, 2018
+lastupdated: "2019-03-15"
+
+subcollection: creating-apps
 
 ---
 
@@ -12,7 +14,7 @@ lastupdated: "2018-11-06"
 # Comprobación del estado de su app
 {: #manageapps}
 
-Su lista de recursos en la consola de {{site.data.keyword.Bluemix}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app.
+Su lista de recursos en la consola de {{site.data.keyword.cloud}} proporciona información de resumen de la aplicación que ha creado. La información de resumen incluye el nombre, el icono, el URL, el tiempo de ejecución, el estado de ejecución y las instancias de servicios vinculadas a la app.
 {:shortdesc}
 
 ## Estado de su app
@@ -60,7 +62,7 @@ La app no se está ejecutando. El icono rojo indica que la app se ha iniciado, p
 
 Puede ver más información sobre una app pulsando el nombre en su lista de recursos. A continuación, puede ver la página de Visión general de la app.
 
-En la página Visión general de apps, cuando se despliega una app, puede iniciar, detener, reiniciar o en el caso de aplicaciones web, modificar el número de instancias y la cantidad de memoria utilizada por la app. Para las aplicaciones web, {{site.data.keyword.Bluemix_notm}} no escala automáticamente su app en función de su carga, por lo que deberá gestionarlo usted mismo.
+En la página Visión general de apps, cuando se despliega una app, puede iniciar, detener, reiniciar o en el caso de aplicaciones web, modificar el número de instancias y la cantidad de memoria utilizada por la app. Para las aplicaciones web, {{site.data.keyword.cloud_notm}} no escala automáticamente su app en función de su carga, por lo que deberá gestionarlo usted mismo.
 
-Si se realiza una actualización, las apps se pueden volver a desplegar. El mecanismo por el que se actualiza la app es el mismo que se utiliza cuando se despliega originalmente. {{site.data.keyword.Bluemix_notm}} detiene
+Si se realiza una actualización, las apps se pueden volver a desplegar. El mecanismo por el que se actualiza la app es el mismo que se utiliza cuando se despliega originalmente. {{site.data.keyword.cloud_notm}} detiene
 todas las instancias en ejecución y las reemplaza por instancias nuevas de forma automática.

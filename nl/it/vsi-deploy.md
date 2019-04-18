@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
+
+subcollection: creating-apps
 
 ---
 
@@ -19,7 +23,7 @@ lastupdated: "2019-02-28"
 # Distribuzione a un server virtuale
 {: #vsi-deploy}
 
-Se hai un account Pagamento a consumo, puoi utilizzare l'{{site.data.keyword.cloud}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} per distribuire le tue applicazioni a molti tipi di ambienti, comprese le istanze del server virtuale (o VSI, Virtual Server Instance). Un'istanza del server virtuale (o VSI, Virtual Server Instance) emula una macchina bare metal ed è una scelta di distribuzione comune quando si spostano sul cloud i carichi di lavoro .
+Se hai un account Pagamento a consumo, puoi utilizzare {{site.data.keyword.cloud}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per distribuire le tue applicazioni a molti tipi di ambienti, comprese le istanze del server virtuale (o VSI, Virtual Server Instance). Un'istanza del server virtuale (o VSI, Virtual Server Instance) emula una macchina bare metal ed è una scelta di distribuzione comune quando si spostano sul cloud i carichi di lavoro .
 {: shortdesc}
 
 Un'istanza del server virtuale (o VSI, Virtual Server Instance) offre trasparenza, prevedibilità e automazione migliori per tutti i tipi di carico di lavoro quando confrontata con altre configurazioni. Combinala con un server bare metal per creare combinazioni di carico di lavoro uniche. Ad esempio, puoi creare la logica di database ad alte prestazioni o machine learning con configurazioni bare metal e GPU che eseguono un sistema operativo basato su Linux Debian.
@@ -35,7 +39,7 @@ Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, V
 L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
 1. [Crea un'applicazione](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Fai clic su **Deploy to Cloud** dalla pagina dei dettagli dell'applicazione.
+2. Fai clic su **Configure continuous delivery** dalla pagina **App details**.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 
 ## Modalità di funzionamento del processo di distribuzione
@@ -44,11 +48,11 @@ Il processo di distribuzione del server virtuale consiste in diverse tecnologie 
 
 ### Distribuzione tramite Terraform
 
-Tutti i kit starter del servizio dell'applicazione possono essere distribuiti in un'istanza virtuale creata dinamicamente tramite [Terraform ![Icona link esterno](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}, un'infrastruttura open source come framework del codice. 
+Tutti i kit starter App Service possono essere distribuiti in un'istanza virtuale creata dinamicamente tramite [Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), un'infrastruttura open source come framework del codice. 
 
 ### Abilitazione della tua distribuzione della pipeline
 
-Quando crei un kit starter che utilizza {{site.data.keyword.cloud_notm}} [App Service ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, viene abilitata l'istanza del server virtuale (o VSI, Virtual Server Instance). Dopo aver creato l'applicazione, puoi scegliere dove vuoi distribuirla. I kit starter sono abilitati per supportare la distribuzione utilizzando una toolchain di Continuous Delivery. I kit starter possono avere come destinazione istanze di Virtual Server, Kubernetes e Cloud Foundry. La toolchain include un repository del codice di origine e una delivery pipeline.
+Quando crei un kit starter che utilizza {{site.data.keyword.cloud_notm}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), viene abilitata l'istanza del server virtuale (o VSI, Virtual Server Instance). Dopo aver creato l'applicazione, puoi scegliere dove vuoi distribuirla. I kit starter sono abilitati per supportare la distribuzione utilizzando una toolchain di Continuous Delivery. I kit starter possono avere come destinazione istanze di Virtual Server, Kubernetes e Cloud Foundry. La toolchain include un repository del codice di origine e una delivery pipeline.
 
 L'opzione del server virtuale funziona a fasi. Per prima cosa, il codice dell'applicazione viene preparato e memorizzato in un repository GitLab Git e il codice di origine crea una toolchain con una pipeline. La pipeline viene definita per creare il codice e impacchettarlo in un formato del gestore pacchetti Debian. Quindi, Terraform fornisce un'istanza virtuale. Infine, l'applicazione viene distribuita, installata e avviata all'interno dell'immagine virtuale in esecuzione e il relativo stato di integrità viene convalidato.
 
@@ -63,14 +67,14 @@ Per visualizzare queste proprietà di ambiente, completa la seguente procedura.
 
 | Proprietà  | Descrizione  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](/docs/apps/vsi-deploy.html#iaas-key) viene dalla console dell'infrastruttura classica. |
-| `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](/docs/apps/vsi-deploy.html#user-key) che identifica l'account dell'infrastruttura classica |
-| `TF_VAR_ibm_cloud_api_key` | La [chiave API](/docs/apps/vsi-deploy.html#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
-| `PUBLIC_KEY` | La [chiave pubblica](/docs/apps/vsi-deploy.html#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). |
-| `PRIVATE_KEY` | La [chiave privata](/docs/apps/vsi-deploy.html#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). Devi utilizzare la formattazione di stile nuova riga `\n`. |
+| `TF_VAR_ibm_sl_api_key` | La [chiave API dell'infrastruttura](/docs/apps?topic=creating-apps-vsi-deploy#iaas-key) viene dalla console dell'infrastruttura classica. |
+| `TF_VAR_ibm_sl_username` | Il [nome utente dell'infrastruttura](/docs/apps?topic=creating-apps-vsi-deploy#user-key) che identifica l'account dell'infrastruttura classica |
+| `TF_VAR_ibm_cloud_api_key` | La [chiave API](/docs/apps?topic=creating-apps-vsi-deploy#platform-key) {{site.data.keyword.cloud_notm}} viene utilizzata per abilitare la creazione del servizio. |
+| `PUBLIC_KEY` | La [chiave pubblica](/docs/apps?topic=creating-apps-vsi-deploy#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). |
+| `PRIVATE_KEY` | La [chiave privata](/docs/apps?topic=creating-apps-vsi-deploy#public-key) definita per abilitare l'accesso all'istanza del server virtuale (o VSI, Virtual Server Instance). Devi utilizzare la formattazione di stile nuova riga `\n`. |
 | `VI_INSTANCE_NAME` | Il nome generato automaticamente per l'istanza del server virtuale (o VSI, Virtual Server Instance). |
-| `GIT_USER` | Se imposti lo [stato Terraform](/docs/apps/vsi-deploy.html#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
-| `GIT_PASSWORD` | Se imposti lo [stato Terraform](/docs/apps/vsi-deploy.html#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
+| `GIT_USER` | Se imposti lo [stato Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatorio il nome utente GitLab. |
+| `GIT_PASSWORD` | Se imposti lo [stato Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) per memorizzare lo stato del comando di applicazione, è obbligatoria la password GitLab. |
 {: caption="Tabella 1. Variabili di ambiente da modificare per l'abilitazione" caption-side="top"}
 
 
@@ -79,20 +83,20 @@ Per visualizzare queste proprietà di ambiente, completa la seguente procedura.
 
 Terraform richiede una chiave API dell'infrastruttura classica per creare le risorse dell'infrastruttura. La chiave API viene ottenuta automaticamente durante la distribuzione. Per richiamare manualmente una chiave, completa la seguente procedura.
 
-1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+1. Vai all'[elenco utenti](https://{DomainName}/iam#/users){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
 3. Fai clic su **Aggiungi chiave infrastruttura classica** nella sezione Chiavi API.
 4. Copia o scarica la chiave API `TF_VAR_ibm_sl_api_key` e salvala in un luogo sicuro. Puoi richiamare i dettagli della chiave API in un secondo momento utilizzando l'opzione **Visualizza dettagli** dal menu **Azioni** ![Icona di elenco di azioni](../icons/action-menu-icon.svg).
 5. Incolla il valore di chiave API copiato nella configurazione della toolchain per sostituire il valore `TF_VAR_ibm_sl_api_key`.
 
-Per ulteriori informazioni, vedi i documenti relativi alla [gestione delle chiavi API dell'infrastruttura classica](/docs/iam/classic_infra_keys.html#classic_keys) e alle [autorizzazioni dell'infrastruttura classica](/docs/iam/infrastructureaccess.html#infrapermission).
+Per ulteriori informazioni, vedi i documenti relativi alla [gestione delle chiavi API dell'infrastruttura classica](/docs/iam?topic=iam-classic_keys#classic_keys) e alle [autorizzazioni dell'infrastruttura classica](/docs/iam?topic=iam-infrapermission#infrapermission).
 
 #### Nome utente dell'infrastruttura classica
 {: #user-key}
 
 Anche il nome utente dell'infrastruttura classica viene ottenuto automaticamente e utilizzato durante la distribuzione. Per ottenere manualmente il nome utente, completa la seguente procedura.
 
-1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+1. Vai all'[elenco utenti](https://{DomainName}/iam#/users){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
 3. Individua la proprietà **Nome utente VPN**.
 4. Taglia e incolla questo valore e sostituisci il valore `TF_VAR_ibm_sl_username` della configurazione della toolchain.
@@ -102,7 +106,7 @@ Anche il nome utente dell'infrastruttura classica viene ottenuto automaticamente
 
 Per creare servizi a livello di piattaforma in Terraform, come i database e i servizi Compose, la chiave API {{site.data.keyword.cloud_notm}} viene automaticamente ottenuta e memorizzata come una variabile di ambiente nella tua pipeline. Per richiamare manualmente una chiave API {{site.data.keyword.cloud_notm}}, completa la seguente procedura.
 
-1. Vai all'[elenco utenti ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
+1. Vai all'[elenco utenti](https://{DomainName}/iam#/users){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Puoi anche fare clic su **Gestisci** > **Accesso (IAM)** e selezionare **Utenti**.
 2. Fai clic su un nome utente e fai quindi clic su **Dettagli utente**.
 3. Individua la sezione Chiavi API e fai clic su **Crea una chiave API IBM Cloud**.
 4. Immetti un nome e una descrizione e fai clic su **Crea**.
@@ -116,8 +120,8 @@ Per creare servizi a livello di piattaforma in Terraform, come i database e i se
 Perché la toolchain installi il pacchetto Debian nell'istanza del server virtuale (o VSI, Virtual Server Instance), l'infrastruttura di distribuzione genera automaticamente una coppia di chiavi SSH privata e pubblica per trasferire i contenuti Git all'istanza.
 
 Per effettuare questa operazione manualmente:
-1. Nel tuo client, utilizza le seguenti istruzioni per creare una [coppia di chiavi pubblica e privata ![Icona link esterno](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Vai alla [vista delle chiavi SSH dell'infrastruttura ![Icona link esterno](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
+1. Nel tuo client, utilizza le seguenti istruzioni per creare una [coppia di chiavi pubblica e privata](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+2. Vai alla [vista delle chiavi SSH dell'infrastruttura](https://{DomainName}/iam/#/users){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Puoi anche fare clic su **Menu** > **Infrastruttura classica** > **Dispositivi** > **Gestisci** > **Chiavi SSH**.
 3. Fai clic su **Aggiungi**.
 4. Copia il contenuto della chiave pubblica che hai precedentemente creato e incollalo nel contenuto della chiave.
 5. Assegna un nome alla chiave e fai clic su **Aggiungi**.
@@ -154,7 +158,7 @@ Quando l'applicazione viene distribuita a {{site.data.keyword.cloud_notm}}, vien
 #### Cartella Debian
 {: #debian-folder}
 
-La cartella `debian` contiene la configurazione richiesta per abilitare l'impacchettamento dell'applicazione in un [pacchetto Debian. ![Icona link esterno](../icons/launch-glyph.svg)](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window}
+La cartella `debian` contiene la configurazione richiesta per abilitare l'impacchettamento dell'applicazione in un [pacchetto Debian](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 #### Cartella Terraform
 {: #terraform-folder}
@@ -180,9 +184,9 @@ resource "ibm_compute_vm_instance" "vm1" {
 }
 ```
 
-Puoi anche eseguire il provisioning di server bare metal con Terraform. Per ulteriori informazioni, consulta [IBM Terraform Provider Documentation ![Icona link esterno](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} e [IBM Terraform Provider GIT Repo ![Icona link esterno](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}.
+Puoi anche eseguire il provisioning di server bare metal con Terraform. Per ulteriori informazioni, consulta la [documentazione di IBM Terraform Provider](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e il [repository GIT IBM Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
-`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers ![Icona link esterno](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}.
+`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 Per impostazione predefinita, il file Terraform è configurato per Washington e `wdc04`.
 ```json

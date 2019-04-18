@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="service" href="/docs/apps/index.html" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
 Creazione di applicazioni
 
     {: .navgroup id="learn"}
@@ -10,11 +10,11 @@ Creazione di applicazioni
     development_process.md
     best-practice.md
     patterns.md
- 
+
     {: .topicgroup}
     Link correlati
-        [Strategies for resilient applications](https://cloud.ibm.com/docs/tutorials/strategies-for-resilient-applications.html){: new_window}
-        [Continuous Deployment to Kubernetes](https://cloud.ibm.com/docs/tutorials/continuous-deployment-to-kubernetes.html){: new_window}
+        [Strategies for resilient applications](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Continuous Deployment to Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -43,7 +43,7 @@ Creazione di applicazioni
         tutorials/tutorial_mendix_kubernetes.md
 
     reqnsi.md
-    
+
     {: .topicgroup}
     Aggiunta di credenziali al tuo ambiente
         creds_overview.md
@@ -51,14 +51,16 @@ Creazione di applicazioni
         creds_cf.md
         creds_vsi.md
 
-    mngapps.md
+    mngdomains.md
     updapps.md
     secapps.md
     hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools command line reference](https://cloud.ibm.com/docs/cli/idt/commands.html)
+    [Riferimenti alla riga di comando IBM Cloud Developer Tools](/cli/idt/cloud-cli-idt-cli)
+    [Riferimento API Cloud Functions](https://cloud.ibm.com/apidocs/functions)
+    [SDK Mobile](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
 
     {: .topicgroup}
     Dashboard dello sviluppatore IBM Cloud
@@ -71,10 +73,10 @@ Creazione di applicazioni
 
     {: .topicgroup}
     Guide alla programmazione di IBM Cloud
-        [Go](https://cloud.ibm.com/docs/go)
-        [Spring](https://cloud.ibm.com/docs/java-spring)
-        [Swift](https://cloud.ibm.com/docs/swift)
-        [Node](https://cloud.ibm.com/docs/node)
+        [Go](/go/go-getting-started)
+        [Spring](/java/java-overview)
+        [Swift](/swift/swift-getting_started_swift)
+        [Node](/node/nodejs-create_project)
 
     at_events_devx.md
     {: .navgroup-end}
@@ -83,6 +85,4 @@ Creazione di applicazioni
     ts_apps.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
-    [Riferimento API Cloud Functions](https://cloud.ibm.com/apidocs/functions)
-    [SDK mobile](https://cloud.ibm.com/docs/openwhisk/openwhisk_mobile_sdk.html#mobile-sdk)
     {: .navgroup-end}

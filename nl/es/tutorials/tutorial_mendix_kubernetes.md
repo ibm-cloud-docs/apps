@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-13"
+lastupdated: "2019-03-18"
+
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+
+subcollection: creating-apps
 
 ---
 
@@ -22,20 +26,20 @@ De forma predeterminada, las aplicaciones Mendix que se despliegan en {{site.dat
 ## Antes de empezar
 {: #prereqs-mendix-kube}
 
-- Ejecute la app Mendix. Consulte [Creación de apps Mendix](/docs/apps/tutorials/tutorial_mendix_getting_started.html#create-mendix) para obtener más información.
-- Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html), que incluye la CLI de {{site.data.keyword.containershort_notm}}.
-- Inicie una sesión en la CLI de `ibmcloud` y configure `kubectl` para el [acceso al clúster de Kubernetes](/docs/containers/cs_tutorials.html#cs_cluster_tutorial_lesson3).
+* Ejecute la app Mendix. Consulte [Creación de apps Mendix](/docs/apps/tutorials?topic=creating-apps-create-mendix) para obtener más información.
+* Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), que incluye la CLI de {{site.data.keyword.containershort_notm}}.
+* Inicie una sesión en la CLI de `ibmcloud` y configure `kubectl` para el [acceso al clúster de Kubernetes](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3).
 
 ## Creación de una instancia del servicio Cloud Object Storage
 {: #cos-mendix-kube}
 
-Empiece desde la página de detalles de la aplicación y siga los pasos siguientes:
-1. Pulse **Añadir recurso**.
+Empiece desde la página **Detalles de la app** y utilice los pasos siguientes:
+1. Pulse **Añadir servicio**.
 2. Seleccione **Almacenamiento** y pulse **Siguiente**.
 3. A continuación, seleccione la opción **Cloud Object Storage** y pulse **Siguiente**.
 4. Aparecerán los planes de precios para la instancia de {{site.data.keyword.cos_full_notm}}. Seleccione el plan de precios que mejor se adapte a sus necesidades y luego pulse **Crear** para crear una instancia del servicio {{site.data.keyword.cos_full_notm}} para utilizarla con la aplicación Mendix.
 
-  Si prefiere utilizar una instancia existente del servicio {{site.data.keyword.cos_full_notm}}, pulse **Añadir recurso** y seleccione la instancia existente para que la utilice la aplicación.
+  Si prefiere utilizar una instancia existente del servicio {{site.data.keyword.cos_full_notm}}, pulse **Añadir servicio** y seleccione la instancia existente para que la utilice la aplicación.
   {: tip}
 
 ## Creación de un grupo de almacenamiento
@@ -48,12 +52,12 @@ Se abre el panel de control del servicio {{site.data.keyword.cos_full_notm}} en 
 ## Configuración del almacenamiento persistente
 {: #kube-storage-mendix}
 
-A continuación, siga la documentación correspondiente a [Almacenamiento de datos en {{site.data.keyword.cos_full_notm}}](/docs/containers/cs_storage_cos.html#object_storage). Se crea `PersistentVolumeClaim` y `PersistentVolume` en el clúster de Kubernetes, que puede utilizar la instancia de la base de datos PostGres que se ejecuta en el clúster como parte de la aplicación Mendix. Asegúrese de crear `PersistentVolumeClaim` utilizando el contenedor `my-mendix-bucket`, tal como se describe en el paso anterior y revise el nombre `PersistentVolumeClaim` para utilizarlo en el paso siguiente.
+A continuación, siga la documentación correspondiente a [Almacenamiento de datos en {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage). Se crea `PersistentVolumeClaim` y `PersistentVolume` en el clúster de Kubernetes, que puede utilizar la instancia de la base de datos PostGres que se ejecuta en el clúster como parte de la aplicación Mendix. Asegúrese de crear `PersistentVolumeClaim` utilizando el contenedor `my-mendix-bucket`, tal como se describe en el paso anterior y revise el nombre `PersistentVolumeClaim` para utilizarlo en el paso siguiente.
 
 ## Edición del archivo `postgres-deployment.yaml`
 {: #postgres-deploy-mendix}
 
-Una vez que se ha configurado un volumen persistente para el clúster de Kubernetes, el paso siguiente consiste en modificar el despliegue de la base de datos PostGres que se está ejecutando en el clúster. En primer lugar, debe editar los archivos del repositorio Git que se han creado como parte del paso de integración de la cadena de herramientas de IBM DevOps. Para encontrar el repositorio Git, vuelva a la página de detalles de la app y pulse el enlace URL de Git desde el mosaico **Detalles de despliegue**.  
+Una vez que se haya configurado un volumen persistente para el clúster de Kubernetes, el paso siguiente consiste en modificar el despliegue de la base de datos PostGres que se está ejecutando en el clúster. En primer lugar, debe editar los archivos del repositorio Git que se han creado como parte del paso de integración de la cadena de herramientas de IBM DevOps. Para encontrar el repositorio Git, vuelva a la página **Detalles de la app** y pulse el enlace URL de Git desde el mosaico **Detalles de despliegue**.
 
 Puede clonar el repositorio Git en la máquina local o realizar los cambios siguientes en el editor en línea. Abra el archivo `chart/{app name}/templates/postgres-deployment.yaml` (sustituya `{app name}` por el nombre de su app Mendix). El archivo no tiene entradas `volumeMount` ni `volumes` de forma predeterminada, de modo que todos los datos se almacenan en la memoria dentro del pod de despliegue en ejecución. Debe añadir las entradas `volumeMount` y `volumes` al archivo `deployment.yaml` de Kubernetes para que los datos se guarden en el grupo {{site.data.keyword.cos_full_notm}} y no se pierdan si se reinicia el pod. 
 
@@ -96,9 +100,10 @@ Asegúrese de sustituir `{pvc-name}` por el nombre de su `PersistentVolumeClaim`
 ## Cómo volver a desplegar
 {: #redeploy-mendix-kube}
 
-Cuando los cambios en el archivo `postgres-deployment.yaml` se hayan configurado en el repositorio, se desencadena automáticamente una nueva ejecución de la interconexión DevOps. Sin embargo, vuelve a desplegar la aplicación predeterminada. Debe volver a desplegar la versión más reciente de la aplicación Mendix para que se despliegue la última versión de la aplicación con los últimos cambios de volumen persistente.
+Cuando los cambios en el archivo `postgres-deployment.yaml` se hayan confirmado en el repositorio, se desencadena automáticamente una nueva ejecución de la interconexión DevOps. Sin embargo, vuelve a desplegar la aplicación predeterminada. Debe volver a desplegar la versión más reciente de la aplicación Mendix para que se despliegue la última versión de la aplicación con los últimos cambios de volumen persistente.
 
-Para volver a desplegar, vaya a la página de detalles de la aplicación y pulse **Desplegar aplicación** en el mosaico **Detalles de despliegue**. Si el despliegue falla dentro de la cadena de herramientas de DevOps con un error que indica que no se puede encontrar el archivo `.mda` de la aplicación, debe volver a exportarlo desde Mendix. Para ello, exporte desde la aplicación de escritorio de Mendix Modeler o bien pulse **Editar en Mendix**. A continuación, dentro de la interfaz web de Mendix, vaya a la sección **Entornos** y siga los pasos que se indican después de pulsar **Crear paquete desde el servidor de equipo**. Una vez que la aplicación se haya exportado desde Mendix, vuelva a la página de detalles de la aplicación y pulse **Desplegar aplicación** de nuevo. La última aplicación exportada se despliega en el clúster de Kubernetes utilizando la cadena de herramientas DevOps de {{site.data.keyword.cloud}}. Una vez el despliegue finaliza correctamente, la aplicación está activa y lista para su uso en producción.
+Para volver a realizar el despliegue, vaya a la página **Detalles de la app** y pulse
+**Configurar entrega continua** dentro del mosaico **Desplegar la app**. Si el despliegue falla dentro de la cadena de herramientas de DevOps con un error que indica que no se puede encontrar el archivo `.mda` de la aplicación, debe volver a exportarlo desde Mendix. Para ello, exporte desde la aplicación de escritorio de Mendix Modeler o bien pulse **Editar en Mendix**. A continuación, dentro de la interfaz web de Mendix, vaya a la sección **Entornos** y siga los pasos que se indican después de pulsar **Crear paquete desde el servidor de equipo**. Una vez que la aplicación se haya exportado de Mendix, vuelva a la página **Detalles de la app** y pulse **Configurar entrega continua** de nuevo. La última aplicación exportada se despliega en el clúster de Kubernetes utilizando la cadena de herramientas DevOps de {{site.data.keyword.cloud}}. Una vez el despliegue finaliza correctamente, la aplicación está activa y lista para su uso en producción.
 
 ## Verificación de que la app se está ejecutando
 {: #verify-mendix-kube}
@@ -109,13 +114,14 @@ Después de desplegar la app, el conducto de entrega o la línea de mandatos le 
 2. Pulse **Ver registros e historial**.
 3. En el archivo de registro, busque el URL de la aplicación:
 
-    Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.cloud.ibm.com` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
+    Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.mybluemix.net` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
 
 4. Vaya al URL en el navegador. Si la app se está ejecutando, se muestra un mensaje que incluye `Enhorabuena` o `{"status":"UP"}`.
 
-Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt/commands.html#view) para ver el URL de la app. Luego vaya al URL en el navegador.
+Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para ver el URL de la app. Luego vaya al URL en el navegador.
 
 ## Información adicional
 {: #more-info-mendix-kube}
 
-Para obtener más información sobre la ejecución de aplicaciones Mendix en entornos de Kubernetes, revise la sección [Ejecutar Mendix en Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes) de la documentación de usuario de Mendix.
+Para obtener más información sobre la ejecución de aplicaciones Mendix en entornos de Kubernetes, revise la sección
+[Ejecutar Mendix en Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la documentación de usuario de Mendix.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, applications, troubleshooting 
+
+subcollection: creating-apps
 
 ---
 
@@ -122,7 +126,7 @@ Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erste
 * Klicken Sie in der Menüleiste auf **Verwalten > Konto** und wählen Sie **Cloud Foundry-Organisationen** aus. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie auf **Bereich erstellen**.
 * Geben Sie in der Cloud Foundry-Befehlszeilenschnittstelle Folgendes ein: `cf create-space <space_name> -o <organization_name>`.
 
-Wiederholen Sie den Vorgang. Wenn diese Nachricht erneut angezeigt wird, rufen Sie die Seite für den [{{site.data.keyword.cloud_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window} auf, um zu prüfen, ob ein Problem für einen Service oder eine Komponente vorliegt.
+Wiederholen Sie den Vorgang. Wenn diese Nachricht erneut angezeigt wird, rufen Sie die Seite für den [{{site.data.keyword.cloud_notm}}-Status ](http://ibm.biz/bluemixstatus){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") auf, um zu prüfen, ob ein Problem für einen Service oder eine Komponente vorliegt.
 
 ## Angeforderte Aktionen konnten nicht ausgeführt werden
 {: #ts_authority}
@@ -144,7 +148,7 @@ Verwenden Sie zum Abrufen der erforderlichen Berechtigungsebene eine der nachfol
 {: tsResolve}
 
 * Wählen Sie eine andere Organisation und einen anderen Bereich aus, für die bzw. den Sie die Rolle des Entwicklers ausfüllen.
-* Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/admin/orgs_spaces.html#orgsspacesusers).
+* Bitten Sie den Manager der Organisation, Ihre Rolle in die eines Entwicklers zu ändern oder einen Bereich zu erstellen und Ihnen dann eine Entwicklerrolle zuzuweisen. Informationen hierzu finden Sie unter [Organisationen und Bereiche verwalten](/docs/iam?topic=iam-cfaccess#cfaccess).
 
 ## Auf {{site.data.keyword.cloud_notm}}-Services kann aufgrund von Berechtigungsfehlern nicht zugegriffen werden
 {: #ts_vcap}
@@ -165,7 +169,7 @@ Statt die Berechtigungsnachweise in Ihrer App fest zu codieren, verwenden Sie Ve
 process.env.VCAP_SERVICES
 ```
 
-Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie in den Tipps für [Java ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} und für [Ruby ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window}.
+Weitere Informationen zu den Befehlen, die Sie in anderen Programmsprachen verwenden können, finden Sie in den Tipps für [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und für [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Fehler des Typs '502 Bad Gateway' empfangen
 {: #ts_502_error}
@@ -181,7 +185,7 @@ Zu einem Fehler des Typs 'Bad Gateway' kommt es in der Regel, wenn Sie eine Webs
 
 Andere, weniger häufige Ursachen eines Fehlers vom Typ 'Bad Gateway' sind Ausfälle des Internet-Service-Providers, falsche Firewallkonfigurationen und Fehler des Browser-Cache.
 
-Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist, überprüfen Sie zunächst die Seite für den [{{site.data.keyword.cloud_notm}}-Status ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://ibm.biz/bluemixstatus){: new_window}. Als Ausweichlösung können Sie [den Service in einer anderen {{site.data.keyword.cloud_notm}}-Region verwenden](/docs/resources/connect_external_app#externalapp){: new_window}. Wenn der Status des Service als normal angegeben ist, versuchen Sie anhand der folgenden Schritte, das Problem zu beheben:
+Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist, überprüfen Sie zunächst die Seite für den [{{site.data.keyword.cloud_notm}}-Status ](http://ibm.biz/bluemixstatus){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Als Ausweichlösung können Sie [den Service in einer anderen {{site.data.keyword.cloud_notm}}-Region verwenden](/docs/resources/connect_external_app#externalapp){: new_window}. Wenn der Status des Service als normal angegeben ist, versuchen Sie anhand der folgenden Schritte, das Problem zu beheben:
 {: tsResolve}
 
   * Wiederholen Sie die Aktion.
@@ -189,7 +193,7 @@ Wenn Sie vermuten, dass ein {{site.data.keyword.cloud_notm}}-Service inaktiv ist
     * Verwenden Sie einen anderen Browser.
     * Starten Sie Router, Modem und Computer erneut. Durch einen Warmstart dieser Geräte können verschiedene Fehler bereinigt werden, die zu dem Fehler 502 führen.
   * Warten Sie und wiederholen Sie den Vorgang zu einem späteren Zeitpunkt. In Bezug auf den Internet-Service-Provider oder die {{site.data.keyword.cloud_notm}}-Services kann es zu vorübergehenden Problemen kommen. Warten Sie, bis die vorübergehenden Probleme gelöst wurden.
-  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.cloud_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.cloud_notm}}-Support ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](/docs/support/index.html#contacting-bluemix-support){: new_window}.
+  * Wenn das Problem dennoch bestehen bleibt, wenden Sie sich an den {{site.data.keyword.cloud_notm}}-Support. Weitere Informationen finden Sie unter [Kontaktaufnahme mit dem {{site.data.keyword.cloud_notm}}-Support ](/docs/support/index.html#contacting-bluemix-support){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Überschrittenes Plattenkontingent
 {: #ts_disk_quota}
@@ -203,10 +207,10 @@ Wenn der Plattenspeicher knapp wird, wird möglicherweise eine Nachricht angezei
 Das Standardplattenkontingent, das für eine App zugeordnet wird, beträgt 1 GB. Wenn Sie mehr Plattenspeicher benötigen, müssen Sie das Plattenkontingent manuell angeben.
 {: tsCauses}
 
-Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/ObjectStorage/index.html).
+Verwenden Sie eine der folgenden Methoden, um Ihr Plattenkontingent anzugeben. Sie können ein maximales Plattenkontingent von 2 GB angeben. Falls 2 GB dennoch nicht genug sein sollten, setzen Sie versuchsweise einen externen Service ein, z. B. [Object Store](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers).
 {: tsResolve}
 
-  * Fügen Sie in der Datei 'manifest.yml' das folgende Element hinzu:
+  * Fügen Sie in der Datei `manifest.yml` das folgende Element hinzu:
   ```yaml
 	disk_quota: <disk_quota>
 	```
@@ -229,7 +233,7 @@ Sie können einen {{site.data.keyword.mobilepushshort}}-Service für Ihre {{site
 Der IBM {{site.data.keyword.mobilepushshort}}-Service nutzt den GCM-Service (Google Cloud Messaging), um Benachrichtigungen an mobile Apps zu versenden, die unter Android entwickelt wurden. Zur Aktivierung der Android-Apps für den Empfang von Benachrichtigungen muss der GCM-Service für die mobilen Apps zugänglich sein. In Regionen, in denen der GCM-Service nicht von den Android-Apps erreicht werden kann, können die Android-Apps keine {{site.data.keyword.mobilepushshort}} empfangen.
 {: tsCauses}
 
-Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM-Service abhängig sind, z. B. [Pushy ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://pushy.me){: new_window}, [getui ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://www.getui.com/){: new_window} oder [jpush ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.jpush.cn/){: new_window}.
+Verwenden Sie als Ausweichlösung Services von Drittanbietern, die nicht vom GCM-Service abhängig sind, z. B. [Pushy ](https://pushy.me){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"), [getui ](http://www.getui.com/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") oder [jpush ](https://www.jpush.cn/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 {: tsResolve}
 
 ## Für Organisation geltender Grenzwert für Services wurde überschritten
@@ -260,7 +264,7 @@ Löschen Sie alle nicht benötigten Serviceinstanzen oder entfernen Sie den Gren
 	  4. Löschen Sie die Serviceinstanz. Geben Sie `cf delete-service <service_instance_name>` ein.
 	  5. Nach dem Löschen der Serviceinstanz möchten Sie möglicherweise ein erneutes Staging für Ihre App durchführen, an die die Serviceinstanz gebunden war. Geben Sie `cf restage <appname>` ein.
 
-  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie in [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
+  * Wenn der Grenzwert für die Anzahl von Serviceinstanzen, über die Sie verfügen können, entfernt werden soll, müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie in [Upgrade für Konto durchführen](/docs/account?topic=account-accounts#upgrade-to-paygo).
 
 ## Ausführbare Dateien können in {{site.data.keyword.cloud_notm}} nicht ausgeführt werden
 {: #ts_executable}
@@ -305,7 +309,7 @@ Dieser Fehler tritt auf, wenn die für Ihre Organisation verbleibende Speicherme
 Sie können entweder das Speicherkontingent für Ihr Konto erhöhen oder den von Ihren Apps verwendeten Speicherplatz verringern.
 {: tsResolve}
 
-  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie in [Upgrade für Konto durchführen](/docs/account/index.html#upgrade-to-paygo).
+  * Zum Erhöhen des Speicherkontingents für Ihr Konto müssen Sie für Ihr Lite-Konto ein Upgrade auf ein gebührenpflichtiges Konto durchführen. Weitere Informationen finden Sie in [Upgrade für Konto durchführen](/docs/account?topic=account-accounts#upgrade-to-paygo).
   * Zum Verringern des Speicherplatzes, den Ihre Apps belegen, verwenden Sie entweder die {{site.data.keyword.cloud_notm}} -Konsole oder die Befehlszeilenschnittstelle von Cloud Foundry'.
 
     Wenn Sie die {{site.data.keyword.cloud_notm}}-Konsole verwenden, führen Sie die folgenden Schritte aus:
@@ -343,11 +347,11 @@ Bei Absturz eines Service, den Sie an eine App binden, können in der App Proble
 Dieses Verhalten gehört zum Design von Cloud Foundry.
 {: tsCauses}
 
-Sie können die App manuell erneut starten, indem Sie den folgenden Befehl in die Befehlszeilenschnittstelle eingeben:
+Sie können eine App, die bereits bereitgestellt wurde, erneut starten, indem Sie den folgenden Befehl in der Befehlszeilenschnittstelle eingeben:
 {: tsResolve}
 
 ```
-ibmcloud cf push appname -p app_path
+ibmcloud cf restart <APPNAME>
 ```
 {: codeblock}
 
@@ -373,7 +377,7 @@ Das Debug-Feature kann in folgenden Situationen nicht aktiviert werden:
 Verwenden Sie eine der folgenden Optionen, um das Problem zu lösen:
 {: tsResolve}
 
-  * Das empfohlene Verfahren ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen enthält der Abschnitt zum Startbefehl im Thema [Node.js-Anwendung in {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs/index.html#nodejs_runtime) bereitstellen.
+  * Das empfohlene Verfahren ist die Verwendung des IBM Node.js-Buildpacks zum Starten der App. Weitere Informationen enthält der Abschnitt zum Startbefehl im Thema [Node.js-Anwendung in {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) bereitstellen.
   * Inaktivieren Sie den Befehl für Ihre bestehende App, indem Sie entweder das Befehlsattribut in Ihrer Datei `manifest.yml` auf "null" setzen oder indem Sie Ihren Push-Befehl so ändern, dass er `-c null` enthält.
   * Entfernen Sie das Befehlsattribut (**command**) aus der Datei `manifest.yml`. Löschen Sie dann die aktuelle App aus {{site.data.keyword.cloud_notm}} und führen Sie für die App erneut eine Push-Operation durch.
 
@@ -520,7 +524,7 @@ Verwenden Sie je nach Ursache des Problems eine der folgenden Methoden:
 		  ```
       {: codeblock}
 
-    * Mithilfe der Datei [package.json ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://www.npmjs.com/package/jsonfile){: new_window}. Beispiel:
+    * Mithilfe der Datei [package.json ](https://www.npmjs.com/package/jsonfile){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Beispiel:
 	    ```json
 		  {
         ...
@@ -559,7 +563,7 @@ Verwenden Sie je nach Ursache des Problems eine der folgenden Methoden:
  }
     ```
 
-Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window}.
+Weitere Tipps zu Node.js-Apps finden Sie unter [Tipps für Node.js-Anwendungen ](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Konfigurationsfehler in Datei `server.xml` nach Import einer {{site.data.keyword.cloud_notm}} Liberty-App in Eclipse
 {: #ts_eclipse}
@@ -573,7 +577,7 @@ Nach dem Import einer {{site.data.keyword.cloud_notm}} Liberty-App in Eclipse we
 Das Liberty-Buildpack verwendet die Datei `server.xml` zum Konfigurieren der App und generiert die Datei `runtime-vars.xml`, wenn die Liberty-App per Push-Operation an {{site.data.keyword.cloud_notm}} übertragen wird. Wenn Sie die App in Eclipse importieren, ist die Datei `runtime-vars.xml` in der lokalen Umgebung nicht vorhanden.
 {: tsCauses}
 
-Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty/index.html).
+Sie können dieses Problem durch Entfernen der Datei server.xml aus dem Projekt beheben. Vom Buildpack wird die Datei `server.xml` dynamisch erstellt, wenn Sie die App mit einer Push-Operation als WAR-App übertragen. Weitere Informationen finden Sie unter [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime).
 {: tsResolve}
 
 ## Staging für Apps mit angepassten Buildpacks nicht möglich
@@ -588,7 +592,7 @@ Wenn Sie eine App unter {{site.data.keyword.cloud_notm}} unter Verwendung eines 
 Dieses Problem kann auftreten, wenn Scripts, wie zum Beispiel die Scripts zum Identifizieren, Kompilieren und Freigeben, nicht ausgeführt werden können.
 {: tsCauses}
 
-Mit dem Befehl [Git update ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](http://git-scm.com/docs/git-update-index){: new_window} können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
+Mit dem Befehl [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") können Sie die Berechtigung für jedes einzelne Script in 'ausführbar' ändern. Sie können zum Beispiel `git update --chmod=+x script.sh` eingeben.
 {: tsResolve}
 
 ## Bereitstellen einer App über die Delivery Pipeline in IBM {{site.data.keyword.cloud_notm}} Continuous Delivery nicht möglich
@@ -603,7 +607,7 @@ Mit dem Befehl [Git update ![Symbol für externen Link](../icons/launch-glyph.sv
  Dieses Problem kann auftreten, weil für die Pipeline die Datei `manifest.yml` zum Bereitstellen einer App in {{site.data.keyword.cloud_notm}} erforderlich ist.
  {: tsCauses}
 
- Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im [Abschnitt zum Anwendungsmanifest](/docs/manageapps/depapps.html#appmanifest).
+ Zum Beheben dieses Problems müssen Sie die Datei `manifest.yml` erstellen. Weitere Informationen zum Erstellen der Datei `manifest.yml` finden Sie im [Abschnitt zum Anwendungsmanifest](/docs/cloud-foundry/deploy-apps.html#appmanifest).
  {: tsResolve}
 
 ## Push-Operation für Meteor-Anwendungen nicht möglich
@@ -637,7 +641,7 @@ Verwenden Sie eine der folgenden Methoden, um ein angepasstes Buildpack für Met
 
 Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht angezeigt wird, können Sie Ihre Images mit den folgenden Befehlszeilenschnittstellenbefehlen löschen. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
+* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
 * Listen Sie Ihre Images mit `ibmcloud cr images` auf.
 * Löschen Sie alle nicht verwendeten Images mit dem Befehl `ibmcloud cr image-rm <respository>:<tag>`.
@@ -647,12 +651,12 @@ Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht
 {: #access_kube_logs}
 
 Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt zugreifen können, versuchen Sie, die Protokolle im Cluster anzuschauen.
-* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html).
+* Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
 * Listen Sie Ihre Cluster mit `ibmcloud cs clusters` auf.
 * Verweisen Sie mit `ibmcloud cs cluster-config <clustername>` auf Ihren entsprechenden Cluster.
 * Exportieren Sie die aufgelistete Umgebungsvariable.
-* Zeigen Sie Ihre Pods mit `kubectl get pods` an. Wenn Sie `kubectl` installieren müssen, finden Sie weitere Informationen unter [kubectl installieren und einrichten](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+* Zeigen Sie Ihre Pods mit `kubectl get pods` an. Wenn Sie `kubectl` installieren müssen, finden Sie weitere Informationen unter [kubectl installieren und einrichten](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 * Sie können die Protokolle in Ihrer App anzeigen, indem Sie `kubectl logs <pod-name> verwenden.`
 
 
@@ -671,7 +675,7 @@ Beim Erstellen des Docker-Images ist der Fehler 'Exec: Ausführbare Datei "docke
 Der Docker-Client ist nicht installiert oder er ist installiert, aber nicht gestartet.
 {: tsCauses}
 
-Stellen Sie sicher, dass [Docker](https://docs.docker.com/install/) installiert ist, und starten Sie das Programm.
+Stellen Sie sicher, dass [Docker](https://docs.docker.com/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") installiert ist, und starten Sie das Programm.
 {: tsResolve}
 
 

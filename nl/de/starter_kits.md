@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ Beim Erstellen einer App aus einem Starter-Kit wird automatisch Code für Sie er
 
 Das Projekt umfasst eine `README`-Datei, die technische Details des Projekts enthält und in der erläutert wird, welche Schritte ausgeführt werden müssen, um Ihre App sofort einsatzbereit zu machen.
 
-Weitere Informationen finden Sie in der [{{site.data.keyword.cloud_notm}}-Entwicklerkonsole für die Apple-Ausbildungsressourcen](https://console.bluemix.net/developer/appledevelopment/learning-resources).
+Weitere Informationen finden Sie in der [{{site.data.keyword.cloud_notm}}-Entwicklerkonsole für die Apple-Ausbildungsressourcen](https://cloud.ibm.com/developer/appledevelopment/learning-resources).
 {: tip}
 
 ### Welcher App-Inhalt wird erstellt?

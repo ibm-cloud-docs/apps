@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -51,7 +51,7 @@ La creazione di un'applicazione da un kit starter produce automaticamente il cod
 
 Il progetto include un file `README` che dispone dei dettagli tecnici del progetto e spiega cosa devi fare per avere la tua applicazione pronta per l'esecuzione.
 
-Per ulteriori informazioni, vedi la [documentazione {{site.data.keyword.cloud_notm}} developer console per le risorse di apprendimento Apple](https://console.bluemix.net/developer/appledevelopment/learning-resources).
+Per ulteriori informazioni, vedi la [documentazione {{site.data.keyword.cloud_notm}} developer console per le risorse di apprendimento Apple](https://cloud.ibm.com/developer/appledevelopment/learning-resources).
 {: tip}
 
 ### Quale contenuto dell'applicazione viene prodotto?

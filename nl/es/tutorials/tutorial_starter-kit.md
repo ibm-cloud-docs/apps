@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, starter kit
+
+subcollection: creating-apps
 
 ---
 
@@ -21,42 +25,43 @@ Utilice un kit de inicio para empezar rápidamente su app y prepárela para el f
 Puede crear una app desde una selección de kits de inicio, incluido uno en blanco si desea personalizar las opciones de compilación usted mismo. En cualquiera de los casos, se crea automáticamente una cadena de herramientas DevOps para desplegar la app. También puede descargar el código para una inspección inmediata.
 
 Los kits de inicio están disponibles para muchas categoría, entre otras:
-* [Watson ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/watson/dashboard){:new_window}
-* [Apple ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appledevelopment/dashboard){:new_window}
-* [Móvil ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/mobile/dashboard){:new_window}
-* [App Web ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/dashboard){:new_window}
-* [Seguridad ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/security/dashboard){:new_window}
-* [Finanzas ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/finance/dashboard){:new_window}
+* [Watson](https://{DomainName}/developer/watson/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* [Apple](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* [Móvil](https://{DomainName}/developer/mobile/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* [App Web](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* [Seguridad](https://{DomainName}/developer/security/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
+* [Finanzas](https://{DomainName}/developer/finance/dashboard){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")
 
 ## Paso 1. Crear una app
 {: #create-starterkit}
 
-1. En el [panel de control de {{site.data.keyword.cloud}}](https://{DomainName}), pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) > **Apps web**.
+1. En el [panel de control de {{site.data.keyword.cloud}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), pulse el icono
+**Menú** ![Icono Menú](../../icons/icon_hamburger.svg) > **Apps web**.
 
 2. Pulse **Iniciación** en la sección **Empezar desde web**.
 
 3. Seleccione el kit de inicio que desee, lea los detalles y pulse **Crear**.
     
-    Para ver lo que se incluye en el kit de inicio, expanda el mosaico del panel de control [Kits de inicio de servicio de app ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits){:new_window}. La opción del kit de inicio "Crear app" se puede utilizar como app de inicio en blanco y se puede personalizar para que se ajuste a sus necesidades.
+    Para ver lo que se incluye en el kit de inicio, expanda el mosaico del panel de control [Kits de inicio de servicio de app](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo"). La opción del kit de inicio "Crear app" se puede utilizar como app de inicio en blanco y se puede personalizar para que se ajuste a sus necesidades.
     {: tip}
 
 4. Proporcione un nombre para la app, seleccione un grupo de recursos, si lo desea proporcione etiquetas, seleccione el idioma y pulse **Crear**.
     
     Acaba de crear una app.
 
-Para inspeccionar el código, pulse **Descargar código** en la página de detalles de la app. Consulte el archivo `README.md` del archivo comprimido descargado para averiguar si es necesario realizar algo más para ejecutar su app de inicio.
+Para inspeccionar el código, pulse **Descargar código** en la página **Detalles de la app**. Consulte el archivo `README.md` del archivo comprimido descargado para averiguar si es necesario realizar algo más para ejecutar su app de inicio.
 {: tip}
 
 Para obtener más información, consulte los siguientes temas:
- * [Creación de una app web básica con un kit de inicio](/docs/apps/tutorials/tutorial_web.html#tutorial-webapp)
- * [Cómo trabajar con etiquetas](/docs/resources/tagging_resources.html#tag)
+ * [Creación de una app web básica con un kit de inicio](/docs/apps/tutorials?topic=creating-apps-tutorial-webapp)
+ * [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag)
 
-## Paso 2. Añadir recursos
+## Paso 2. Adición de servicios
 {: #resources-starterkit}
 
-Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, para añadir servicios móviles o servicios de seguridad. Para esta guía de aprendizaje, añada un lugar para gestionar los datos.
+Puede añadir servicios para mejorar la app con la potencia cognitiva de Watson, para añadir servicios móviles o servicios de seguridad. Para esta guía de aprendizaje, añada un lugar para gestionar los datos.
 
-1. En la ventana de servicio de la app, pulse **Añadir recurso**.
+1. En la página **Detalles de la app**, pulse **Añadir servicio**.
 2. Seleccione el tipo de servicio que desee. Por ejemplo, seleccione **Datos** > **Siguiente** > **Cloudant** > **Siguiente**.
 3. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 4. Pulse **Crear**.
@@ -64,13 +69,14 @@ Puede añadir recursos para mejorar la app con la potencia cognitiva de Watson, 
 ## Paso 3. Desplegar en {{site.data.keyword.cloud_notm}}
 {: #deploy-starterkit}
 
-Pulse **Desplegar en la nube** en la página de detalles de la app, seleccione un entorno de despliegue y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua.
+Pulse **Configurar entrega continua** en la página **Detalles de la app**, seleccione un destino de
+despliegue y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua.
 
-La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el entorno de desarrollo que elija, que puede ser [Kubernetes](/docs/containers/container_index.html#container_index), [Cloud Foundry](/docs/cloud-foundry-public/about-cf.html#about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html#about) o [Servidor virtual (VSI)](/docs/vsi/vsi_index.html).
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el entorno de desarrollo que elija, que puede ser [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Después de seleccionar el entorno de despliegue, abra el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos su nueva app.
 
 Todas las cadenas de herramientas creadas a partir de un panel de control de desarrollador de {{site.data.keyword.cloud_notm}} se configuran para un despliegue automático.
 {: note}
 
-Para desplegar la app con la línea de mandatos, utilice `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps/create-deploy-cli.html#create-deploy-app-cli) para obtener más información.
+Para desplegar la app con la línea de mandatos, utilice `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli) para obtener más información.

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-24"
+lastupdated: "2019-03-15"
+
+keywords: apps, application, SSL certificates, access, restrict access
+
+subcollection: creating-apps
 
 ---
 
@@ -25,7 +29,7 @@ vengono accettate solo con una lunghezza di chiave CSR pari a 2048 bit.
 
 ## Creazione di un CSR
 
-I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://www.openssl.org/){:new_window}:
+I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ](http://www.openssl.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -47,7 +51,7 @@ Affinché il CSR sia valido, quando lo crei è necessario immettere le seguenti 
 
 <dl>
 <dt>Nome paese</dt>
-<dd>Un codice a due cifre per il paese o la regione. Ad esempio, `US` è il codice paese per gli Stati Uniti. Per altri paesi o regioni, prima di creare il CSR, controlla l'[elenco di codici paese ISO ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://www.iso.org/obp/ui/#search).
+<dd>Un codice a due cifre per il paese o la regione. Ad esempio, `US` è il codice paese per gli Stati Uniti. Per altri paesi o regioni, prima di creare il CSR, controlla l'[elenco di codici paese ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 </dd>
 <dt>Stato o provincia</dt>
 <dd>Il nome completo senza abbreviazioni dello stato o provincia.</dd>
@@ -104,7 +108,7 @@ di un certificato intermedio durante il test della tua applicazione prima che ne
   * Abilita la richiesta del certificato client: se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
 il browser web gli richiede di fornire un certificato client per il dominio. 
 
-    La funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.cloud_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Il codice client che accede alle applicazioni {{site.data.keyword.cloud_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](http://tools.ietf.org/html/rfc4346#section-7.4.2){:new_window} e [Securing data with TLS](/docs/get-support/appsectls.html#tlssupportwithdraw).
+    La funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.cloud_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Il codice client che accede alle applicazioni {{site.data.keyword.cloud_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [Securing data with TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
     {: note}
   
   * Truststore certificato client (facoltativo): include i certificati client per gli utenti a cui vuoi consentire l'accesso alla tua applicazione. Carica un file truststore certificato client per abilitare l'opzione per richiedere un certificato client.
@@ -112,6 +116,6 @@ il browser web gli richiede di fornire un certificato client per il dominio.
     Puoi configurare l'autenticazione reciproca caricando un truststore certificato client che includa una chiave pubblica nei suoi metadati.
     {: tip}
 
-Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/ssl-certificates/import-ssl-certificate.html).
+Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
 
 

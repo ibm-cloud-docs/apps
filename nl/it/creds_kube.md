@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -86,7 +90,7 @@ Configura il cluster in modo che la _secretKeyRef_ con il nome `name-secret` e l
 
 Utilizza un terminale sulla tua workstation per installare i seguenti strumenti:
 
-1. Installa la CLI [{{site.data.keyword.dev_cli_long}}](/docs/cli/index.html).
+1. Installa la [CLI {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 2. Esegui l'accesso utilizzando il comando `ibmcloud login`.
 3. Stabilisci una connessione al tuo cluster eseguendo `ibmcloud cs cluster-config {your_cluster_name}`.
 4. Copia e incolla il comando `export` per eseguirlo da un terminale.
@@ -108,37 +112,45 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggiornare la tua applicazione per utilizzare le variabili di ambiente che sono definite nel file `deployment.yml`.
 
-## Applicazione kit starter + Kubernetes
+## Applicazione kit starter e Kubernetes
 {: #credentials-starterkit-kube}
 
-1. Vai alla pagina **App Details** della tua applicazione.
-2. Per creare un'istanza di Cloud Object Storage, seleziona **Add Resource** > **Storage** > **Cloud Object Storage** > **Lite plan (Free)** > **Create**.
-3. Fai clic su `Download code` per rigenerare il tuo progetto con i frammenti di codice inseriti.
+1. Vai alla pagina **App details** della tua applicazione.
+
+2. Per creare un'istanza di Cloud Object Storage, seleziona **Add service** > **Storage** > **Cloud Object Storage** > **Lite plan (Free)** > **Create**.
+
+3. Fai clic su **Download code** per rigenerare il tuo progetto con i frammenti di codice inseriti.
+
 4. Per accedere alle credenziali localmente, copia e sostituisci i seguenti file dal file `.zip` appena generato al tuo clone Git locale per accedere alle credenziali. Devi ancora creare un segreto Kubernetes nel tuo cluster per ospitare le credenziali.
 
-	- `chart/{appName}/bindings.yaml` - genera una variabile di ambiente nel tuo cluster Kubernetes che punta al tuo segreto.
-	- `src/main/resources/localdev-config.json` - Accedi alle credenziali mentre esegui la tua applicazione in locale.
-  - `src/main/resources/mappings.json` - un'associazione per fornire l'accesso al metodo [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) per accedere alle tue variabili di ambiente dal codice.
-  - `manifest.yml` - questo file esegue il bind del tuo servizio alla tua applicazione Cloud Foundry.
+   - `chart/{appName}/bindings.yaml` - genera una variabile di ambiente nel tuo cluster Kubernetes che punta al tuo segreto.
+   - `src/main/resources/localdev-config.json` - Accedi alle credenziali mentre esegui la tua applicazione in locale.
+   - `src/main/resources/mappings.json` - un'associazione per fornire l'accesso al metodo [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) per accedere alle tue variabili di ambiente dal codice.
+   - `manifest.yml` - questo file esegue il bind del tuo servizio alla tua applicazione Cloud Foundry.
 
-Se in un secondo momento scegli di eseguire una distribuzione a un'applicazione Cloud Foundry con una risorsa Resource Controller (che si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio), devi copiare un altro file.
-{: note}
+  Se in un secondo momento scegli di eseguire una distribuzione a un'applicazione Cloud Foundry con una risorsa Resource Controller (che si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio), devi copiare un altro file.
+  {: note}
 
-5. [Visualizza](https://cloud.ibm.com/containers-kubernetes/clusters) il tuo cluster Kubernetes con la regione corrispondente (Stati Uniti Sud se era gratuito).
+5. [Visualizza il tuo cluster Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") con la regione corrispondente (Stati Uniti Sud se era gratuito).
+
 6. Fai clic nel tuo cluster e seleziona **Kubernetes Dashboard** nell'angolo superiore destro per visualizzare il tuo dashboard del cluster.
+
 7. Scorri verso il basso fino a visualizzare una sezione denominata **Secrets**. Puoi vedere un segreto per la tua istanza del servizio {{site.data.keyword.cloudant_short_notm}} che utilizza la seguente convenzione `binding-{appName}-{serviceName}-{timestamp}`. Nel file `chart/{appName}/bindings.yaml`, puoi trovare il segreto {{site.data.keyword.cloudant_short_notm}} corrispondente.
+
 8. Ora puoi crearne uno corrispondente per la tua istanza Cloud Object Storage con il nome di segreto che è già generato in `chart/{appName}/bindings.yaml`, che è qualcosa simile a `binding-create-app-ktibr-cloudobjectstor-1538170732311`.
-9. Vai alla pagina **App Details** nel dashboard e copia le credenziali per l'istanza Cloud Object Storage. Vedi il seguente output di credenziali di esempio:
-```yaml
-{
-  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+
+9. Vai alla pagina **App details** nel dashboard e copia le credenziali per l'istanza Cloud Object Storage. Vedi il seguente output di credenziali di esempio:
+  ```yaml
+  {
+    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
-}    
-```
-{: codeblock}
+  }    
+  ```
+  {: codeblock}
 
 10. Assicurati che il tuo cluster sia configurato utilizzando `ibmcloud cs cluster-config {your_cluster_name}` ed esportando il comando nelle istruzioni che seguono:
+
 11. Utilizza il comando `echo` per posizionare le credenziali in un file `binding`.
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -148,8 +160,8 @@ Se in un secondo momento scegli di eseguire una distribuzione a un'applicazione 
 
 12. Crea il segreto con `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding`. Se torni al tuo dashboard cluster Kubernetes, puoi vedere il segreto che hai creato.
 
-Se stai eseguendo la distribuzione a un'applicazione Cloud Foundry, devi creare un servizio fornito dall'utente se stai utilizzando un'istanza Resource Controller (se la risorsa si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio). 
-{: note}
+  Se stai eseguendo la distribuzione a un'applicazione Cloud Foundry, devi creare un servizio fornito dall'utente se stai utilizzando un'istanza Resource Controller (se la risorsa si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio). 
+  {: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -162,7 +174,7 @@ Se stai eseguendo la distribuzione a un'applicazione Cloud Foundry, devi creare 
 
 ### Come viene preparato il cluster Kubernetes
 
-Utilizza la funzione **Deploy to cloud** per distribuire la tua applicazione al cluster Kubernetes di IBM Containers. La funzione prepara il tuo cluster Kubernetes con i segreti per le credenziali delle risorse associate alla tua applicazione. Puoi osservare i risultati della preparazione del cluster completando i seguenti passi:
+Utilizza la funzione **Configure continuous delivery** per distribuire la tua applicazione al tuo cluster IBM Kubernetes. La funzione prepara il tuo cluster Kubernetes con i segreti per le credenziali delle risorse associate alla tua applicazione. Puoi osservare i risultati della preparazione del cluster completando i seguenti passi:
 
 1. Esegui questo comando per visualizzare i risultati: `kubectl get secrets`:
   ```
@@ -200,7 +212,7 @@ Utilizza la funzione **Deploy to cloud** per distribuire la tua applicazione al 
   ```
   {: screen}
 
-  `binding` è il valore con codifica base64 del segreto. La sua decodifica rivela che è semplicemente il JSON non elaborato dalle credenziali (`credentials`) dell'istanza della risorsa, più alcuni valori `iam_...`:
+  `binding` è il valore con codifica base64 del segreto. La sua decodifica rivela che è semplicemente il JSON non elaborato dalle credenziali (`credentials`) dell'istanza del servizio, più alcuni valori `iam_...`:
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -222,7 +234,7 @@ Il segreto Kubernetes non è richiamabile dal codice dell'applicazione a meno ch
 ### Il codice generato dal kit starter
 {: #credentials-starterkit-kube-gencode}
 
-In questo caso, hai creato questa applicazione da un kit starter. Il codice generato da un kit starter è fatto per essere portatile per un'esecuzione in locale, in Cloud Foundry o in Kubernetes. La libreria `IBMCloudEnv` viene utilizzata per fornire un livello di astrazione tra il codice dell'applicazione e il richiamo delle variabili di ambiente che detengono le credenziali per le risorse (istanze del servizio).
+In questo caso, hai creato questa applicazione da un kit starter. Il codice generato da un kit starter è fatto per essere portatile per un'esecuzione in locale, in Cloud Foundry o in Kubernetes. La libreria `IBMCloudEnv` viene utilizzata per fornire un livello di astrazione tra il codice dell'applicazione e il richiamo delle variabili di ambiente che detengono le credenziali per le istanze del servizio.
 
 Il codice creato dal kit starter ha una dipendenza per la libreria `IBMCloudEnv` e produce il seguente output:
 
@@ -263,9 +275,4 @@ Il codice creato dal kit starter ha una dipendenza per la libreria `IBMCloudEnv`
 
 La libreria `IBMCloudEnv` rileva automaticamente se la tua applicazione è in esecuzione in Kubernetes, Cloud Foundry o una VSI (Virtual Server Instance) (trattata in modo uguale a un docker locale) e applica il `searchPattern` corretto per trovare il valore da restituire.
 
-Pertanto, il file `mappings.json` deve essere considerato _l'elenco definitivo_ di valori immediatamente disponibili e preconfigurati provenienti dall'ambiente in cui deve essere eseguita la tua applicazione. I valori vengono compilati nell'ambiente per il cluster da te selezionato quando hai utilizzato la funzione **Deploy to cloud**.
-
-**Attenzione**:  al momento della stesura della presente documentazione, la preparazione dell'ambiente viene _sempre_ eseguita per tutte le credenziali per tutte le risorse associate a un'applicazione, ma _non tutti i riferimenti `env`_ vengono inseriti nel file `bindings.yml` o nel file `mappings.json`. In questi casi, devi inserire tali riferimenti personalmente. Se già hai deciso una distribuzione di destinazione e non hai bisogno dell'astrazione della libreria `IBMCloudEnv`, consulta la sezione "Il tuo codice + (distribuzione di destinazione)" adatta alla tua decisione.
-
-Alcuni kit starter non includono per niente il riferimento alla dipendenza `IBMCloudEnv` e ai file `manifest.yml` o `mappings.json`.
-{: note}
+Pertanto, il file `mappings.json` deve essere considerato _l'elenco definitivo_ di valori immediatamente disponibili e preconfigurati provenienti dall'ambiente in cui deve essere eseguita la tua applicazione. I valori vengono compilati nell'ambiente per il cluster da te selezionato quando hai utilizzato la funzione **Configure continuous delivery**.

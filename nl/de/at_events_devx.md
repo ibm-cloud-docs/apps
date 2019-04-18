@@ -2,7 +2,11 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, applications, activity tracking events
+
+subcollection: creating-apps
 
 ---
 
@@ -21,14 +25,14 @@ lastupdated: "2019-02-01"
 Als Sicherheitsbeauftragter, Prüfer oder Manager eines bestimmten Bereichs können Sie mit dem Service {{site.data.keyword.cloudaccesstrailfull}} die Interaktion von Benutzern und Anwendungen mit dem {{site.data.keyword.dev_console}} in {{site.data.keyword.cloud}} verfolgen.
 {: shortdesc}
 
-Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet die von Benutzern gestarteten Aktivitäten auf, durch die sich der Status eines Service in {{site.data.keyword.cloud_notm}} ändert. Weitere Informationen hierzu finden Sie im Abschnitt mit [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/activity_tracker_ov.html#activity_tracker_ov).
+Der Service {{site.data.keyword.cloudaccesstrailfull_notm}} zeichnet die von Benutzern gestarteten Aktivitäten auf, durch die sich der Status eines Service in {{site.data.keyword.cloud_notm}} ändert. Weitere Informationen hierzu finden Sie im Abschnitt mit [Informationen zu {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 
 ## Wo werden Ereignisse angezeigt?
 {: #view-events-ui}
 
 {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse sind in der {{site.data.keyword.cloudaccesstrailshort}}-Kontodomäne verfügbar, die zu der {{site.data.keyword.cloud_notm}}-Region gehört, in der {{site.data.keyword.dev_console}}-Ereignisse generiert werden.
 
-Weitere Informationen zum Einstieg in die Überwachung der Benutzeraktionen finden Sie im [Lernprogramm 'Einführung'](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+Weitere Informationen zum Einstieg in die Überwachung der Benutzeraktionen finden Sie im [Lernprogramm 'Einführung'](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started).
 
 ## Ereignisliste
 {: #events}

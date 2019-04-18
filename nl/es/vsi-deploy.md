@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-28"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
+
+subcollection: creating-apps
 
 ---
 
@@ -19,7 +23,7 @@ lastupdated: "2019-02-28"
 # Despliegue en un servidor virtual
 {: #vsi-deploy}
 
-Si tiene una cuenta de pago según uso, puede utilizar el servicio {{site.data.keyword.cloud}} [App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window} para desplegar sus apps en distintos tipos de entornos, incluidas instancias de servidor virtual. Una instancia de servidor virtual emula una máquina nativa y es una opción de despliegue común cuando se mueven cargas de trabajo locales a la nube.
+Si tiene una cuenta de pago según uso, puede utilizar el servicio {{site.data.keyword.cloud}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") para desplegar sus apps en distintos tipos de entornos, incluidas instancias de servidor virtual. Una instancia de servidor virtual emula una máquina nativa y es una opción de despliegue común cuando se mueven cargas de trabajo locales a la nube.
 {: shortdesc}
 
 Una instancia de servidor virtual ofrece una mejor transparencia, previsibilidad y automatización para todos los tipos de carga de trabajo en comparación con otras configuraciones. Combínela con un servidor nativo para crear combinaciones de carga de trabajo exclusivas. Por ejemplo, puede crear lógica de base de datos de alto rendimiento o aprendizaje automático con configuraciones nativas y GPU que se ejecuten en un sistema operativo Debian basado en Linux.
@@ -35,7 +39,7 @@ Los servicios no están vinculados a la instancia de servidor virtual. No puede 
 El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue.
 
 1. [Cree una app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Pulse **Desplegar en la nube** en la página de detalles de la app.
+2. Pulse **Configurar entrega continua** en la página **Detalles de la app**.
 3. Seleccione **Desplegar en un servidor virtual** junto con la región en la que se va a ejecutar el servidor.
 
 ## Cómo funciona el proceso de despliegue
@@ -44,11 +48,11 @@ El proceso de despliegue de servidor virtual consta de varias tecnologías clave
 
 ### Despliegue a través de Terraform
 
-Cualquiera de los kits de inicio de App Service se puede desplegar en una instancia virtual creada de forma dinámica a través de [Terraform ![Icono de enlace externo](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}, una infraestructura de código abierto como infraestructura de código. 
+Cualquiera de los kits de inicio de App Service se puede desplegar en una instancia virtual creada de forma dinámica a través de [Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), una infraestructura de código abierto como infraestructura de código. 
 
 ### Habilitación del despliegue de conducto
 
-Al crear un kit de inicio que utiliza {{site.data.keyword.cloud_notm}} [App Service ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/developer/appservice/starter-kits){: new_window}, se habilita la instancia de servidor virtual. Una vez creada la app, podrá elegir dónde desea desplegarla. Los kits de inicio están habilitados para dar soporte al despliegue utilizando una cadena de herramientas de Continuous Delivery. Los kits de inicio pueden destinarse a Kubernetes, Cloud Foundry e Instancias de servidor virtual. La cadena de herramientas incluye un repositorio de código fuente y un conducto de despliegue.
+Al crear un kit de inicio que utiliza {{site.data.keyword.cloud_notm}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), se habilita la instancia de servidor virtual. Una vez creada la app, podrá elegir dónde desea desplegarla. Los kits de inicio están habilitados para dar soporte al despliegue utilizando una cadena de herramientas de Continuous Delivery. Los kits de inicio pueden destinarse a Kubernetes, Cloud Foundry e Instancias de servidor virtual. La cadena de herramientas incluye un repositorio de código fuente y un conducto de despliegue.
 
 La opción del servidor virtual funciona en fases. En primer lugar, el código de la app está preparado y almacenado en un repositorio Git de GitLab y el código fuente crea una cadena de herramientas con un conducto. El conducto está definido para crear el código y empaquetarlo en un formato de gestor de paquetes de Debian. A continuación, Terraform proporciona una instancia virtual. Finalmente, la app se despliega, se instala y se inicia dentro de la imagen virtual en ejecución y su estado se valida.
 
@@ -63,14 +67,14 @@ Para ver estas propiedades de entorno, siga estos pasos.
 
 | Propiedad  | Descripción  |
 |-----------|--------------|
-| `TF_VAR_ibm_sl_api_key` | La [clave de API de la infraestructura](/docs/apps/vsi-deploy.html#iaas-key) proviene de la consola de infraestructura clásica. |
-| `TF_VAR_ibm_sl_username` | El [nombre de usuario de la infraestructura](/docs/apps/vsi-deploy.html#user-key) que identifica la cuenta de infraestructura clásica. |
-| `TF_VAR_ibm_cloud_api_key` | La {{site.data.keyword.cloud_notm}} [clave de API](/docs/apps/vsi-deploy.html#platform-key) se utiliza para permitir la creación del servicio. |
-| `PUBLIC_KEY` | [Clave pública](/docs/apps/vsi-deploy.html#public-key) definida para permitir el acceso a la instancia de servidor virtual. |
-| `PRIVATE_KEY` | [Clave privada](/docs/apps/vsi-deploy.html#public-key) definida para permitir el acceso a la instancia de servidor virtual. Debe utilizar el formato de estilo de nueva línea `\n`. |
+| `TF_VAR_ibm_sl_api_key` | La [clave de API de la infraestructura](/docs/apps?topic=creating-apps-vsi-deploy#iaas-key) proviene de la consola de infraestructura clásica. |
+| `TF_VAR_ibm_sl_username` | El [nombre de usuario de la infraestructura](/docs/apps?topic=creating-apps-vsi-deploy#user-key) que identifica la cuenta de infraestructura clásica. |
+| `TF_VAR_ibm_cloud_api_key` | La {{site.data.keyword.cloud_notm}} [clave de API](/docs/apps?topic=creating-apps-vsi-deploy#platform-key) se utiliza para permitir la creación del servicio. |
+| `PUBLIC_KEY` | [Clave pública](/docs/apps?topic=creating-apps-vsi-deploy#public-key) definida para permitir el acceso a la instancia de servidor virtual. |
+| `PRIVATE_KEY` | [Clave privada](/docs/apps?topic=creating-apps-vsi-deploy#public-key) definida para permitir el acceso a la instancia de servidor virtual. Debe utilizar el formato de estilo de nueva línea `\n`. |
 | `VI_INSTANCE_NAME` | Nombre generado automáticamente para la instancia de servidor virtual. |
-| `GIT_USER` | Si establece el [estado de Terraform](/docs/apps/vsi-deploy.html#tform-state) para almacenar el estado del mandato apply, se necesitará el nombre de usuario de GitLab. |
-| `GIT_PASSWORD` | Si establece el [estado de Terraform](/docs/apps/vsi-deploy.html#tform-state) para almacenar el estado del mandato apply, se necesitará la contraseña de GitLab. |
+| `GIT_USER` | Si establece el [estado de Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) para almacenar el estado del mandato apply, se necesitará el nombre de usuario de GitLab. |
+| `GIT_PASSWORD` | Si establece el [estado de Terraform](/docs/apps?topic=creating-apps-vsi-deploy#tform-state) para almacenar el estado del mandato apply, se necesitará la contraseña de GitLab. |
 {: caption="Tabla 1. Variables de entorno a cambiar para la habilitación" caption-side="top"}
 
 
@@ -79,20 +83,20 @@ Para ver estas propiedades de entorno, siga estos pasos.
 
 Terraform requiere una clave de API de la infraestructura clásica para crear recursos de la infraestructura. La clave de API se obtiene automáticamente durante el despliegue. Para recuperar manualmente una clave, siga los pasos siguientes.
 
-1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+1. Vaya a la [lista de usuarios](https://{DomainName}/iam#/users){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
 2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
 3. Pulse **Añadir una clave de infraestructura clásica** en la sección de claves de API.
 4. Copie y descargue la clave de API `TF_VAR_ibm_sl_api_key` y guárdela en un lugar seguro. Puede recuperar los detalles de la clave de API posteriormente mediante la opción **Ver detalles** del menú **Acciones** ![Lista de iconos de acción](../icons/action-menu-icon.svg).
 5. Pegue el valor de clave de API que ha copiado en la configuración de la cadena de herramientas para sustituir el valor de `TF_VAR_ibm_sl_api_key`.
 
-Para obtener más información, consulte [Gestión de claves de API de la infraestructura clásica](/docs/iam/classic_infra_keys.html#classic_keys) y [Permisos de la infraestructura clásica](/docs/iam/infrastructureaccess.html#infrapermission).
+Para obtener más información, consulte [Gestión de claves de API de la infraestructura clásica](/docs/iam?topic=iam-classic_keys#classic_keys) y [Permisos de la infraestructura clásica](/docs/iam?topic=iam-infrapermission#infrapermission).
 
 #### Nombre de usuario de la infraestructura clásica
 {: #user-key}
 
 El nombre de usuario de la infraestructura clásica también se obtiene automáticamente y se utiliza durante el despliegue. Para obtener manualmente el nombre de usuario, siga los pasos siguientes.
 
-1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+1. Vaya a la [lista de usuarios](https://{DomainName}/iam#/users){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
 2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
 3. Localice la propiedad **Nombre de usuario de VPN**.
 4. Corte y pegue este valor y sustituya la configuración de la cadena de herramientas `TF_VAR_ibm_sl_username`.
@@ -102,7 +106,7 @@ El nombre de usuario de la infraestructura clásica también se obtiene automát
 
 Para crear servicios a nivel de plataforma en Terraform, como bases de datos y servicios de Compose, la clave de API de {{site.data.keyword.cloud_notm}} se obtiene automáticamente y se almacena como una variable de entorno en su conducto. Para recuperar manualmente una clave de API de {{site.data.keyword.cloud_notm}}, siga los pasos siguientes.
 
-1. Vaya a la [lista de usuarios ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam#/users){: new_window}. También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
+1. Vaya a la [lista de usuarios](https://{DomainName}/iam#/users){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). También puede pulsar **Gestionar** > **Acceso (IAM)** y seleccionar **Usuarios**.
 2. Pulse un nombre de usuario y luego pulse **Detalles de usuario**.
 3. Localice la sección de claves de API y pulse **Crear una clave de API de IBM Cloud**.
 4. Especifique un nombre y una descripción y pulse **Crear**.
@@ -116,8 +120,8 @@ Para crear servicios a nivel de plataforma en Terraform, como bases de datos y s
 Para que la cadena de herramientas instale el empaquetado de Debian en la instancia del servidor virtual, la infraestructura de despliegue genera automáticamente un par de claves SSH pública y privada para transferir el contenido de Git a la instancia.
 
 Para hacerlo manualmente:
-1. En el cliente, utilice las siguientes instrucciones para crear un [par de claves públicas y privadas ![Icono de enlace externo](../icons/launch-glyph.svg)](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window}.
-2. Vaya a la [vista de claves SSH de la infraestructura ![Icono de enlace externo](../icons/launch-glyph.svg)](https://{DomainName}/iam/#/users){: new_window}. También puede pulsar **Menú** > **Infraestructura clásica** > **Dispositivos** > **Gestionar** > **Claves de SSH**.
+1. En el cliente, utilice las siguientes instrucciones para crear un [par de claves públicas y privadas](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+2. Vaya a la [vista de claves SSH de la infraestructura](https://{DomainName}/iam/#/users){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). También puede pulsar **Menú** > **Infraestructura clásica** > **Dispositivos** > **Gestionar** > **Claves de SSH**.
 3. Pulse **Añadir**.
 4. Copie el contenido de la clave pública que ha creado anteriormente y péguelo en el contenido de la clave.
 5. Asigne un nombre a la clave y pulse **Añadir**.
@@ -154,7 +158,7 @@ Cuando la app se despliega en {{site.data.keyword.cloud_notm}}, se creará un re
 #### Carpeta Debian
 {: #debian-folder}
 
-La carpeta `debian` contiene la configuración necesaria para permitir el empaquetado de la app en un [paquete Debian. ![Icono de enlace externo](../icons/launch-glyph.svg)](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window}
+La carpeta `debian` contiene la configuración necesaria para permitir el empaquetado de la app en un [paquete Debian](https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 #### Carpeta Terraform
 {: #terraform-folder}
@@ -180,9 +184,9 @@ resource "ibm_compute_vm_instance" "vm1" {
 }
 ```
 
-También puede suministrar servidores nativos con Terraform. Para obtener más información, consulte [Documentación del proveedor de IBM Terraform ![Icono de enlace externo](../icons/launch-glyph.svg)](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} y [Repositorio GIT del proveedor de IBM Terraform ![Icono de enlace externo](../icons/launch-glyph.svg)](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}.
+También puede suministrar servidores nativos con Terraform. Para obtener más información, consulte [Documentación del proveedor de IBM Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [Repositorio GIT del proveedor de IBM Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
-`variables.tf` se puede utilizar para cambiar el centro de datos de destino para crear la instancia virtual. Para ver la lista de centros de datos definidos en la plataforma, consulte [Centros de datos ![Icono de enlace externo](../icons/launch-glyph.svg)](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}.
+`variables.tf` se puede utilizar para cambiar el centro de datos de destino para crear la instancia virtual. Para ver la lista de centros de datos definidos en la plataforma, consulte [Centros de datos](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 De forma predeterminada, el archivo de Terraform está configurado para Washington y `wdc04`.
 ```json

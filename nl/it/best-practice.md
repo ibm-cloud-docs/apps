@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-02-19"
+  years: 2017, 2019
+lastupdated: "2019-03-15"
+
+keywords: apps, best practices
+
+subcollection: creating-apps
 
 ---
 
@@ -55,19 +59,19 @@ al bus di un servizio o a un programma di bilanciamento dei carichi con un nome 
 
 Puoi eseguire più di una singola istanza per evitare tempi di inattività in una singola regione. Per fornire un'applicazione ancora più solida, prendi in considerazione un'architettura a più regioni.
 
-Per informazioni sulla riduzione al minimo del tempo di inattività e la creazione di architetture resilienti che raggiungono una massima disponibilità, vedi l'[esercitazione Strategies for resilient applications](/docs/tutorials/strategies-for-resilient-applications.html).
+Per informazioni sulla riduzione al minimo del tempo di inattività e la creazione di architetture resilienti che raggiungono una massima disponibilità, vedi l'[esercitazione Strategies for resilient applications](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Assicurati di stare monitorando le tue applicazioni
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic ![Icona link esterno](../icons/launch-glyph.svg)](http://newrelic.com/){: new_window}.
+{{site.data.keyword.cloud_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic](http://newrelic.com/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Approfitta delle opzioni di supporto
 {: #support}
 
 Il piano prezzi a pagamento di {{site.data.keyword.cloud_notm}} offre una serie di diversi tipi di account con supporto a pagamento facoltativo. Indipendentemente dal tuo tipo di account, se prevedi di portare un'applicazione in produzione su {{site.data.keyword.cloud_notm}}, considera questa opzione.
 
-Con o senza il supporto a pagamento, puoi ottenere assistenza come descritto in [Supporto](/docs/get-support/howtogetsupport.html#getting-customer-support), che offre un'assicurazione contro problemi imprevisti.
+Con o senza il supporto a pagamento, puoi ottenere assistenza come descritto in [Supporto](/docs/get-support?topic=get-support-getting-customer-support), che offre un'assicurazione contro problemi imprevisti.
 
 ## Evita API di infrastruttura nella tua applicazione
 
@@ -100,6 +104,6 @@ devono essere esternalizzati dagli script.
 
 Acquisisci l'istallazione della tua applicazione come una serie uniforme di script indipendenti dal sistema operativo. Fa in modo che le dimensioni dell'installazione della tua applicazione restino contenute e preservane la portabilità, in modo che si adegui a differenti tecniche di automazione. Inoltre, riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
 
-Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor app ![Icona link esterno](../icons/launch-glyph.svg)](http://12factor.net/){: new_window}.
+Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor app](http://12factor.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 

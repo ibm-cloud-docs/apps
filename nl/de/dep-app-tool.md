@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ Sie können auf folgenden Wegen eine Toolchain erstellen:
 * Sie können eine Toolchain mithilfe einer Vorlage erstellen.
 * Sie können eine Toolchain aus einer App heraus erstellen.
 
-Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started).
+Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 ## Apps über die Befehlszeilenschnittstelle (CLI) bereitstellen
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} bietet eine leistungsfähige Befehlszeilenschnittstelle (Command Line Interface, CLI) sowie Plug-ins und Entwicklertoolerweiterungen, die in die CLI integriert werden.
 
-Bevor Sie beginnen, müssen Sie die {{site.data.keyword.cloud_notm}}-CLI [herunterladen und installieren](/docs/cli/index.html).
+Bevor Sie beginnen, müssen Sie die {{site.data.keyword.cloud_notm}}-CLI [herunterladen und installieren](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 
 Die Befehlszeilenschnittstelle wird von Cygwin nicht unterstützt. Verwenden Sie das Tool in einem anderen Fenster als dem Cygwin-Befehlszeilenfenster.
 {: important}
 
   1. {: download} Laden Sie den Code für Ihre App in ein neues Verzeichnis herunter, um Ihre Entwicklungsumgebung einzurichten.
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Wird in einer neuen Registerkarte oder in einem neuen Fenster geöffnet)"></a>
 
   2. Wechseln Sie in das Verzeichnis, in dem sich Ihr Code befindet.
 
@@ -72,7 +76,7 @@ Die Befehlszeilenschnittstelle wird von Cygwin nicht unterstützt. Verwenden Sie
   Wenn der Wert ein Leerzeichen enthält, müssen `username`, `org_name` und `space_name` in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel: `-o "my org"`.
   {: note}
 
-  5. Führen Sie in Ihrem neuen Verzeichnis mit dem Befehl `ibmcloud dev deploy` die Bereitstellung Ihrer App in {{site.data.keyword.cloud_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/cli/idt/commands.html#deploy).
+  5. Führen Sie in Ihrem neuen Verzeichnis mit dem Befehl `ibmcloud dev deploy` die Bereitstellung Ihrer App in {{site.data.keyword.cloud_notm}} durch. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">App-Name</var></code></pre>
 

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-14"
+
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
+
+subcollection: creating-apps
 
 ---
 
@@ -52,7 +56,7 @@ Die Umgebung ist vollständig unter Ihrer Kontrolle, so als ob Sie die Anwendung
 ### Vom Starter-Kit generierter Code
 {: #starterkit-generated-code-vsi}
 
-Code, der von einem Starter-Kit generiert wird, verfügt über die native Bibliothek `IBMCloudEnv`, die den Abruf von Umgebungswerten abstrahiert, sodass der Anwendungscode portierbar ist und auf mehreren Zielbereitstellungen ausgeführt werden kann. Bei virtueller oder lokaler Docker-Instanz muss diese Umgebung mit Werten vorbereitet werden, die der Bibliothek `IBMCloudEnv` gerecht werden und _nicht unbedingt_ aus tatsächlichen Umgebungsvariablen stammen.
+Code, der von einem Starter-Kit generiert wird, verfügt über die native Bibliothek `IBMCloudEnv`, die den Abruf von Umgebungswerten abstrahiert, sodass der Anwendungscode portierbar ist und auf mehreren Bereitstellungszielen ausgeführt werden kann. Bei virtueller oder lokaler Docker-Instanz muss diese Umgebung mit Werten vorbereitet werden, die der Bibliothek `IBMCloudEnv` gerecht werden und _nicht unbedingt_ aus tatsächlichen Umgebungsvariablen stammen.
 
 Die `mappings.json`-Anweisungen, die in der Starter-Kit-generierten Ausgabe enthalten sind, enthalten Verweise auf eine lokale Datei, aus der die Bibliothek `IBMCloudEnv` die Werte beschafft, die die Anwendung verwenden kann.
 
@@ -70,18 +74,18 @@ Beachten Sie z. B. die letzte Zeile im folgenden Abschnitt aus der Datei `mappin
 ```
 {: codeblock}
 
-Wenn Sie die Funktion "In Cloud bereitstellen" verwenden, wenn Sie eine App erstellen, wird die Datei `/server/localdev-config.json` aus dem GitLab-Repository entfernt. Aus Sicherheitsgründen möchten Sie Ihre Berechtigungsnachweise nicht in ein Quellcode-Repository stellen.
+Wenn Sie die Funktion "Continuous Delivery konfigurieren" verwenden, wenn Sie eine App erstellen, wird die Datei `/server/localdev-config.json` aus dem GitLab-Repository entfernt. Aus Sicherheitsgründen möchten Sie Ihre Berechtigungsnachweise nicht in ein Quellcode-Repository stellen.
 
 Wenn Sie `git clone` für das erstellte GitLab-Repository verwenden, um die aktive Entwicklung zu starten, beachten Sie, dass die Datei `.gitignore` ausdrücklich die Datei `server/localdev-config.json` ignoriert, um ein versehentliches Einchecken einer Datei mit sensiblen Berechtigungsnachweisen zu verhindern. VSI _benötigt_ jedoch diese Datei, ebenso wie der Entwickler, der auf einem Notebook arbeitet.
 
 Sie können die Datei `server/localdev-config.json` abrufen, indem Sie die folgenden Schritte ausführen:
 
-1. Verwenden Sie `git clone` für das GitLab-Repository, das automatisch erstellt wurde, als Sie die Funktion "In Cloud bereitstellen" verwendet haben.
-2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli/index.html), die das Plug-in `dev` enthält.
+1. Verwenden Sie `git clone` für das GitLab-Repository, das automatisch erstellt wurde, als Sie die Funktion "Continuous Delivery konfigurieren" verwendet haben.
+2. Installieren Sie die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli), die das Plug-in `dev` enthält.
 3. Verwenden Sie die `ibmcloud`-Befehlszeile, um sich bei {{site.data.keyword.cloud_notm}} anzumelden.
 4. Führen Sie den Befehl `ibmcloud dev get-credentials` aus, der auf die Datei `cli-config.yml` verweist. Die Datei `cli-config.yml` enthält Informationen darüber, welcher Anwendungs- und Generierungsjob über die Berechtigungsnachweise verfügt.
 
-Wenn eine Ressource zwischen der Verwendung der Funktion "In Cloud bereitstellen" und der Ausführung des Befehls `ibmcloud dev get-credentials` aus der Anwendung entfernt wird, würde die heruntergeladene Datei `/server/localdev-config.json` nicht alle Berechtigungsnachweise enthalten, die Ihre ursprüngliche `git clone`-Codebasis möglicherweise benötigt.
+Wenn ein Service zwischen der Verwendung der Funktion "Continuous Delivery konfigurieren" und der Ausführung des Befehls `ibmcloud dev get-credentials` aus der Anwendung entfernt wird, würde die heruntergeladene Datei `/server/localdev-config.json` nicht alle Berechtigungsnachweise enthalten, die Ihre ursprüngliche `git clone`-Codebasis möglicherweise benötigt.
 {: tip}
 
 Wenn Sie Ihre Anwendung in einem Docker-Container ausführen, können Sie die Datei `/server/localdev-config.json` vollständig entfernen und die Umgebungsvariablen in der Docker-Befehlszeile übergeben.
@@ -89,7 +93,7 @@ Wenn Sie Ihre Anwendung in einem Docker-Container ausführen, können Sie die Da
 Beachten Sie im Abschnitt "cloudant_apikey" in der Datei `mappings.json` die Zeile `env:cloudant_apikey` vor der Zeile `file...`. Sie bedeutet, dass eine Umgebungsvariable mit dem Namen `cloudant_apikey` Vorrang vor dem Inhalt der Datei hat. Selbst wenn die Datei in dem von Ihnen erstellten Docker-Image vorhanden ist (was nicht erforderlich ist), können Sie Werte überschreiben, indem Sie sie in der Docker-Befehlszeile übergeben.
 
 Beispiel:
-```console
+```
 docker run -p 80:8080 -e cloudant_apikey="someKeyValue"
 ```
 {: codeblock}

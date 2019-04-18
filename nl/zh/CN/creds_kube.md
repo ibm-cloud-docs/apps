@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-18"
+
+keywords: apps, credentials, Kubernetes
+
+subcollection: creating-apps
 
 ---
 
@@ -86,7 +90,7 @@ env:
 
 使用工作站上的终端来安装以下工具：
 
-1. 安装 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli/index.html)。
+1. 安装 [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 2. 使用 `ibmcloud login` 命令登录。
 3. 通过运行 `ibmcloud cs cluster-config {your_cluster_name}` 来连接到集群。
 4. 复制并粘贴 `export` 命令以从终端运行此命令。
@@ -108,37 +112,45 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 既然 Kubernetes 集群已准备好可解析的私钥，那么可以更新应用程序以使用在 `deployment.yml` 文件中定义的环境变量。
 
-## 入门模板工具包应用程序 + Kubernetes
+## 入门模板工具包应用程序和 Kubernetes
 {: #credentials-starterkit-kube}
 
 1. 转至应用程序的**应用程序详细信息**页面。
-2. 要创建 Cloud Object Storage 的实例，请选择**添加资源** > **存储器** > **Cloud Object Storage** > **轻量套餐（免费）** > **创建**。
-3. 单击`下载代码`以使用注入的代码片段重新生成项目。
+
+2. 要创建 Cloud Object Storage 的实例，请选择**添加服务** > **存储器** > **Cloud Object Storage** > **轻量套餐（免费）** > **创建**。
+
+3. 单击**下载代码**以使用注入的代码片段重新生成项目。
+
 4. 要在本地访问凭证，请将新生成的 `.zip` 文件中的以下文件复制到本地 Git 克隆以进行替换，从而访问凭证。您仍必须在集群中创建 Kubernetes 私钥以托管凭证。
 
-	- `chart/{appName}/bindings.yaml` - 在 Kubernetes 集群中生成指向私钥的环境变量。
-	- `src/main/resources/localdev-config.json` - 在本地运行应用程序时访问凭证。
-  - `src/main/resources/mappings.json` - 一种映射，用于提供对 [`env.getProperty()`](/docs/java-spring/configuration.html#accessing-credentials) 方法的访问，以通过代码访问环境变量。
-  - `manifest.yml` - 此文件将服务绑定到 Cloud Foundry 应用程序。
+   - `chart/{appName}/bindings.yaml` - 在 Kubernetes 集群中生成指向私钥的环境变量。
+   - `src/main/resources/localdev-config.json` - 在本地运行应用程序时访问凭证。
+   - `src/main/resources/mappings.json` - 一种映射，用于提供对 [`env.getProperty()`](/docs/java-spring?topic=java-spring-configuration#accessing-credentials) 方法的访问，以通过代码访问环境变量。
+   - `manifest.yml` - 此文件将服务绑定到 Cloud Foundry 应用程序。
 
-如果您日后选择使用资源控制器资源（位于资源组中，而不是位于组织或空间中）部署到 Cloud Foundry 应用程序，那么必须复制上述一个或多个文件。
-{: note}
+  如果您日后选择使用资源控制器资源（位于资源组中，而不是位于组织或空间中）部署到 Cloud Foundry 应用程序，那么必须复制上述一个或多个文件。
+  {: note}
 
-5. [查看](https://cloud.ibm.com/containers-kubernetes/clusters) Kubernetes 集群和相应的区域（US-South，如果是免费的）。
+5. [查看 Kubernetes 集群](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和相应的区域（US-South，如果是免费的）。
+
 6. 单击集群，然后选择右上角的 **Kubernetes 仪表板**以查看集群仪表板。
+
 7. 向下滚动，直至看到标记为**私钥**的部分。您会看到使用约定 `binding-{appName}-{serviceName}-{timestamp}` 的 {{site.data.keyword.cloudant_short_notm}} 服务实例的私钥。在 `chart/{appName}/bindings.yaml` 文件中，您可以找到相应的 {{site.data.keyword.cloudant_short_notm}} 私钥。
+
 8. 现在，可以使用 `chart/{appName}/bindings.yaml` 中已生成的私钥名称，为 Cloud Object Storage 实例创建相应的私钥，类似于 `binding-create-app-ktibr-cloudobjectstor-1538170732311`。
+
 9. 转至仪表板中的**应用程序详细信息**页面，然后复制 Cloud Object Storage 实例的凭证。请参阅以下示例凭证输出：
-```yaml
-{
-  "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
+  ```yaml
+  {
+    "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
   "endpoints": "https://cos-service.bluemix.net/endpoints",
   "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
 }    
-```
-{: codeblock}
+  ```
+  {: codeblock}
 
 10. 确保使用 `ibmcloud cs cluster-config {your_cluster_name}` 配置了集群，并在随后的指令中导出此命令。
+
 11. 使用 `echo` 命令将凭证放入 `binding` 文件中。
   ```console
   echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
@@ -148,8 +160,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 12. 使用 `kubectl create secret generic binding-create-app-ktibr-cloudobjectstor-15381707323113 --from-file=./binding` 创建私钥。如果返回到 Kubernetes 集群仪表板，那么可以看到您创建的私钥。
 
-如果要部署到 Cloud Foundry 应用程序并且使用的是资源控制器实例（如果资源位于资源组中，而不位于组织或空间中），那么您需要创建用户提供的服务。
-{: note}
+  如果要部署到 Cloud Foundry 应用程序并且使用的是资源控制器实例（如果资源位于资源组中，而不位于组织或空间中），那么您需要创建用户提供的服务。
+  {: note}
   
   ```console
   ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
@@ -162,7 +174,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 ### 如何准备 Kubernetes 集群
 
-使用**部署到云**功能将应用程序部署到 IBM Containers Kubernetes 集群。该功能会为 Kubernetes 集群准备与应用程序关联的资源的凭证。您可以通过完成以下步骤来观察集群准备的结果：
+使用**配置持续交付**功能将应用程序部署到 IBM Kubernetes 集群。该功能会为 Kubernetes 集群准备与应用程序关联的资源的凭证。您可以通过完成以下步骤来观察集群准备的结果：
 
 1. 运行以下命令以查看结果：`kubectl get secrets`：
   ```
@@ -200,7 +212,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```
   {: screen}
 
-  `binding` 是私钥的 Base64 编码值。对其解码后会发现，这只是资源实例的 `credentials` 中的原始 JSON 以及一些 `iam_...` 值：
+  `binding` 是私钥的 Base64 编码值。对其解码后会发现，这只是服务实例的 `credentials` 中的原始 JSON 以及一些 `iam_...` 值：
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",
@@ -222,7 +234,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 ### 入门模板工具包生成的代码
 {: #credentials-starterkit-kube-gencode}
 
-在本例中，您是通过入门模板工具包创建的此应用程序。对于通过入门模板工具包生成的代码，可使其具有可移植性，能在本地、Cloud Foundry 或 Kubernetes 中运行。`IBMCloudEnv` 库用于在应用程序代码与检索环境变量之间提供抽象层；环境变量用于保存资源（服务实例）的凭证。
+在本例中，您是通过入门模板工具包创建的此应用程序。对于通过入门模板工具包生成的代码，可使其具有可移植性，能在本地、Cloud Foundry 或 Kubernetes 中运行。`IBMCloudEnv` 库用于在应用程序代码与检索到的环境变量之间提供抽象层；环境变量用于保存服务实例的凭证。
 
 通过入门模板工具包创建的代码具有 `IBMCloudEnv` 库的依赖关系，并会生成以下输出：
 
@@ -263,9 +275,4 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 `IBMCloudEnv` 库会自动检测应用程序是在 Kubernetes 中、Cloud Foundry 中还是在虚拟服务器实例（视为与本地 Docker 相同）中运行，并应用正确的 `searchPattern` 来查找要返回的值。
 
-因此，`mappings.json` 文件将被视为包含预配置值和立即可用值的_最终列表_，这些值来自应用程序要在其中运行的环境。使用**部署到云**功能时，会在您设定为目标的集群的环境中填充这些值。
-
-**注意**：截至编写本文档时，对于与应用程序关联的所有资源的所有凭证，会_始终_执行环境准备，但_并非所有 `env` 引用_都会放在 `bindings.yml` 文件或 `mappings.json` 文件中。在这些情况下，您必须自行放入此类引用。如果您已经决定了目标部署，并且不需要 `IBMCloudEnv` 库的抽象化处理，请参阅与您的决策相适应的“代码 +（目标部署）”部分。
-
-某些入门模板工具包根本不包含对 `IBMCloudEnv` 依赖关系、`manifest.yml` 或 `mappings.json` 文件的引用。
-{: note}
+因此，`mappings.json` 文件将被视为包含预配置值和立即可用值的_最终列表_，这些值来自应用程序要在其中运行的环境。使用**配置持续交付**功能时，会在您设定为目标的集群的环境中填充这些值。

@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, credentials, Cloud Foundry
+
+subcollection: creating-apps
 
 ---
 
@@ -16,7 +20,7 @@ lastupdated: "2019-02-01"
 # Adición de credenciales al entorno de Cloud Foundry
 {: #add-credentials-cf}
 
-Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry. Estas instrucciones se aplican tanto a [Cloud Foundry Public](/docs/cloud-foundry-public/about-cf.html) como a [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public/cfee.html).
+Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry. Estas instrucciones se aplican tanto a [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) como a [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
 
 ## Su código + Cloud Foundry
@@ -68,18 +72,18 @@ En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qu
 
 ### Cómo se prepara el espacio de Cloud Foundry
 
-Utilice la característica **Desplegar en la nube** para desplegar la app en su espacio de Cloud Foundry.
+Utilice la característica **Configurar entrega continua** para desplegar la app en su espacio de Cloud Foundry.
 
-Si la instancia de recurso basada en Cloud Foundry está en el mismo espacio de Cloud Foundry que la aplicación de Cloud Foundry desplegada, consulte la [siguiente sección](/docs/apps/creds_cf.html#cf_resource_same).
+Si la instancia de servicio basada en Cloud Foundry está en el mismo espacio de Cloud Foundry que la aplicación de Cloud Foundry desplegada, consulte la [siguiente sección](/docs/apps?topic=creating-apps-add-credentials-cf).
 
-Si la instancia de recurso basada en Cloud Foundry está en un espacio distinto del espacio de destino para la aplicación de Cloud Foundry, consulte la [sección siguiente](/docs/apps/creds_cf.html#cf_resource_different).
+Si la instancia de servicio basada en Cloud Foundry está en un espacio distinto del espacio de destino para la aplicación de Cloud Foundry, consulte la [sección siguiente](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_different).
 
-Si el recurso que ha asociado con la aplicación está basado en Controlador de recursos, consulte [Controlador de recursos](/docs/apps/creds_cf.html#cf_resource_controller).
+Si el servicio que ha asociado con la aplicación está basado en Controlador de recursos, consulte [Controlador de recursos](/docs/apps?topic=creating-apps-add-credentials-cf#cf_resource_controller).
 
-#### El recurso basado en Cloud Foundry está en el mismo espacio que la app desplegada
+#### El servicio basado en Cloud Foundry está en el mismo espacio que la app desplegada
 {: #cf_resource_same}
 
-Si el recurso que ha asociado con la aplicación está basado en Cloud Foundry, el recurso es "enlazable" en Cloud Foundry. Puede ver el servicio en el espacio de Cloud Foundry conectando la línea de mandatos `cf` con la región, la organización y el espacio correctos. Puede saber si el recurso está basado en Cloud Foundry en el momento de la creación del recurso, si se le ha solicitado en qué organización y espacio de Cloud desea crear el recurso.
+Si el servicio que ha asociado con la aplicación está basado en Cloud Foundry, el servicio es "enlazable" en Cloud Foundry. Puede ver el servicio en el espacio de Cloud Foundry conectando la línea de mandatos `cf` con la región, la organización y el espacio correctos. Puede saber si el servicio recurso está basado en Cloud Foundry en el momento de la creación del servicio, si se le ha solicitado en qué organización y espacio de Cloud desea crear el servicio.
 
 Puede ver las aplicaciones enlazadas ejecutando el mandato siguiente:
 ```console
@@ -96,15 +100,16 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 ```
 {: screen}
 
-#### El recurso basado en Cloud Foundry se encuentra en un espacio diferente de la app desplegada
+#### El servicio basado en Cloud Foundry se encuentra en un espacio diferente de la app desplegada
 {: #cf_resource_different}
 
 Cloud Foundry no da soporte al "enlace" de una aplicación de Cloud Foundry con un servicio de Cloud Foundry cuando la aplicación y el servicio no están en el mismo espacio de Cloud Foundry. El espacio de Cloud Foundry debe estar preparado con servicios "proporcionados por el usuario", y se aplica la siguiente sección.
 
-#### El recurso basado en Controlador de recursos está asociado a la app
+#### El servicio recurso basado en el controlador de recursos está asociado a la app
 {: #cf_resource_controller}
 
-Si el recurso que ha asociado con la aplicación está basado en Controlador de recursos (puede saber que se basa en `Controlador de recursos` si en el momento de la creación del recurso se le preguntó en qué grupo de recursos deseaba crear el recurso), el recurso _no_ es "enlazable" a Cloud Foundry. El espacio de Cloud Foundry debe estar preparado con las credenciales del recurso para que la aplicación pueda hacer referencia a las mismas en el código. La preparación se realiza automáticamente, y puede observar los resultados de la preparación del espacio conectando la línea de mandatos `cf` al espacio con el mandato siguiente:
+Si el servicio que ha asociado a la aplicación está basado en el controlador de recursos, el servicio
+_no_ será "enlazable" en Cloud Foundry. Puede saber si el servicio está basado en el controlador de recursos en el momento de la creación del servicio si se le ha preguntado en qué grupo de recursos quería crear el servicio. El espacio de Cloud Foundry debe estar preparado con las credenciales del servicio para que la aplicación pueda hacer referencia a las mismas en el código. La preparación se realiza automáticamente, y puede observar los resultados de la preparación del espacio conectando la línea de mandatos `cf` al espacio con el mandato siguiente:
 ```console
 cf services
 ```
@@ -126,7 +131,7 @@ Afortunadamente, el código generado a partir de un kit de inicio se llena autom
 ### El código generado por el kit de inicio
 {: #starterkit-generated-code-cf}
 
-Antes de continuar, consulte [App de kit de inicio + kube](/docs/apps/creds_kube.html#credentials-starterkit-kube-gencode). A continuación, aplique el cambio siguiente:
+Antes de continuar, consulte [App de kit de inicio + kube](/docs/apps?topic=creating-apps-add-credentials-kube#credentials-starterkit-kube-gencode). A continuación, aplique el cambio siguiente:
 
 * Aunque el código generado proporciona el archivo `deployment.yml`, no se puede aplicar para una aplicación que se despliegue en Cloud Foundry. En su lugar _se_ aplica el archivo `manifest.yml` y su contenido se muestra en _bind_ para los dos servicios que se crean en el espacio de Cloud Foundry:
   ```yaml
@@ -151,8 +156,3 @@ Se vuelve a aplicar el resto de la documentación correspondiente a la subsecci�
 La biblioteca abstrae cierta complejidad en la recuperación de valores de entorno de Cloud Foundry. En Cloud Foundry, se proporciona una aplicación en ejecución con una variable de entorno denominada `VCAP_SERVICES` cuyo valor es un JSON binario y que contiene los valores de las credenciales de servicio enlazadas, independientemente de si el servicio es una instancia de servicio que está _en_ el espacio de Cloud Foundry o un valor de servicio definido por el usuario. Las claves de nivel superior de la variable de entorno JSON de `VCAP_SERVICES` son
 la `etiqueta` de Cloud Foundry asociada a los servicios basados en Cloud Foundry y la clave `proporcionada por el usuario`
 cuyo valor contiene una matriz de credenciales para todos los servicios "proporcionados por el usuario".
-
-**Atención**: de forma similar al aviso de atención de la sección a la que se hace referencia, la preparación del entorno  _siempre_ se realiza para todas las credenciales de todos los recursos asociados con una app, y todos los `servicios`
-se listan en el archivo `manifest.yml`, pero _no todas las referencias de credenciales_ se colocan en el archivo `mappings.json`. En estos casos, tiene que colocar usted mismo dichas referencias. Cuando decida el despliegue de destino y no necesite la abstracción de la biblioteca de `IBMCloudEnv`, consulte la sección "Su código + (despliegue de destino)" que se ajuste a su decisión.
-
-**Doble atención**: algunos kits de inicio no incluyen la referencia a la dependencia `IBMCloudEnv` o a los archivos `manifest.yml` o `mappings.json`.

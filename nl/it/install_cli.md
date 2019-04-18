@@ -4,7 +4,7 @@ copyright:
 
   years: 2015，2017, 2018
 
-lastupdated: "2018-05-22"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -24,6 +24,7 @@ lastupdated: "2018-05-22"
 {:service_name: data-hd-keyref="service_name"}
 {:service_instance_name: data-hd-keyref="service_instance_name"}
 {:user_ID: data-hd-keyref="user_ID"}
+{:note: .note}
 
 # Distribuzione di applicazioni con l'interfaccia riga di comando
 
@@ -55,7 +56,8 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
     Presta inoltre attenzione al file `README.md`, che contiene dettagli come le istruzioni di creazione se applicabili.
 
-    Nota: se la tua applicazione è un'applicazione Liberty, devi crearla prima di ridistribuirla.
+    Se la tua applicazione è un'applicazione Liberty, devi crearla prima di ridistribuirla.
+    {: note}
 
   4. Collegati ed accedi a {{site.data.keyword.Bluemix_notm}}.
 
@@ -67,7 +69,8 @@ Dopo aver installato l'interfaccia riga di comando, puoi iniziare:
 
   <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">nome_org</var> -s <var class="keyword varname" data-hd-keyref="space_name">nome_spazio</var> -sso</code></pre>
 
-  **Nota**: devi aggiungere singoli o doppi apostrofi intorno a `nomeutente`, `nome_org` e  `nome_spazio` se il valore contiene uno spazio, ad esempio, `-o "my org"`.
+  Devi aggiungere singoli o doppi apostrofi intorno a `username`, `org_name` e `space_name` se il valore contiene uno spazio, ad esempio, `-o "my org"`.
+  {: note}
 
   5. Da <var class="keyword varname">la_tua_nuova_directory</var>, ridistribuisci la tua applicazione a {{site.data.keyword.Bluemix_notm}} utilizzando il comando `ibmcloud app push`. Per ulteriori informazioni sul comando `ibmcloud app push`, vedi [Caricamento della tua applicazione](/docs/starters/upload_app.html).
 

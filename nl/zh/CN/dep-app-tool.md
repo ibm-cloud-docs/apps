@@ -2,7 +2,11 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-01"
+lastupdated: "2019-03-15"
+
+keywords: apps, deploy, deploying apps, toolchains, cli
+
+subcollection: creating-apps
 
 ---
 
@@ -30,21 +34,21 @@ lastupdated: "2019-03-01"
 * 使用模板来创建工具链。
 * 通过应用程序创建工具链。
 
-要了解有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery/toolchains_working.html#toolchains_getting_started)。
+要了解有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
 
 ## 使用 CLI 部署应用程序
 {: #cli-deploy-apps}
 
 {{site.data.keyword.cloud_notm}} 提供了稳健的 CLI 以及与该 CLI 集成的插件和开发者工具扩展。
 
-开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli/index.html)。
+开始之前，请[下载并安装 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 
 Cygwin 不支持 CLI。请在非 Cygwin 命令行窗口中使用该工具。
 {: important}
 
   1. {: download}将应用程序的编码下载到新目录，以设置开发环境。
 
-    <a class="xref" href="https://cloud.ibm.com" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新选项卡或窗口中打开）"></a>
+    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="（在新选项卡或窗口中打开）"></a>
 
   2. 切换到代码所在的目录。
 
@@ -72,7 +76,7 @@ Cygwin 不支持 CLI。请在非 Cygwin 命令行窗口中使用该工具。
   如果该值包含空格，那么必须用单引号或双引号将 `username`、`org_name` 和 `space_name` 括起，例如 `-o "my org"`。
   {: note}
 
-  5. 在新的目录中，使用 `ibmcloud dev deploy` 命令将应用程序部署到 {{site.data.keyword.cloud_notm}}。有关更多信息，请参阅 [CLI 文档](/docs/cli/idt/commands.html#deploy)。
+  5. 在新的目录中，使用 `ibmcloud dev deploy` 命令将应用程序部署到 {{site.data.keyword.cloud_notm}}。有关更多信息，请参阅 [CLI 文档](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy)。
 
   <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
 
