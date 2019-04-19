@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-15"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creating an app with a starter kit
 {: #tutorial-starterkit}
 
-You can use a starter kit to quickly get your app started and prepare it for future development. Choose a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app. You can also download the code for immediate inspection.
+You can use a starter kit to quickly get your application started and prepare it for future development. Choose a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app. You can also download the code for immediate inspection.
 {: shortdesc}
 
 You can create an app from a selection of starter kits, including a blank one if you would like to customize build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
@@ -35,6 +35,8 @@ Starter kits are available in many categories, including:
 * [Web App](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 * [Security](https://{DomainName}/developer/security/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 * [Finance](https://{DomainName}/developer/finance/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+
+[Learn more](/docs/apps?topic=creating-apps-starter-kits) about starter kits.
 
 ## Step 1. Create an app
 {: #create-starterkit}
