@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-19"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -33,14 +33,14 @@ A _cluster_ is a set of resources, worker nodes, networks, and storage devices t
 
 * [Create an app from your own code repository](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
 * From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg), and select **Containers** to [configure a Kubernetes cluster](/docs/containers?topic=containers-getting-started).
-* To confirm that your app runs in Docker, run the following commands:
+* Confirm that your app runs in Docker. The following commands are examples, not necessarily steps that exist in your app:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install`
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Then, go to your URL, such as `http://localhost/springboothelloworld/sayhello`. Press the Ctrl+C keys to stop the Docker run.
+* Then, go to your URL, such as `http://localhost/springboothelloworld/sayhello`. Press Ctrl+C to stop the Docker run.
 
 ## Adding services to your app (optional)
 {: #resources-byoc-kube}
