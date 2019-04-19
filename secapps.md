@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-19"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -43,21 +43,12 @@ A certificate is issued by a certificate authority and is digitally signed by th
 
 For the CSR to be valid, the following information must be entered when you create the CSR:
 
-<dl>
-<dt>Country name</dt>
-<dd>A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, before you create the CSR, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
-</dd>
-<dt>State or province</dt>
-<dd>The full, unabbreviated name of the state or province.</dd>
-<dt>Locality</dt>
-<dd>The full name of the city or town.</dd>
-<dt>Organization</dt>
-<dd>The full name of the business or company, as legally registered in your locality, or personal name. For companies, be sure to include the registration suffix, such as Ltd., Inc., or NV.</dd>
-<dt>Organization unit</dt>
-<dd>The branch name of your company that is ordering the certificate, such as accounting or marketing.</dd>
-<dt>Common name</dt>
-<dd>The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.</dd>
-</dl>
+ * **Country name**. A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, before you create the CSR, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+ * **State or province**. The full, unabbreviated name of the state or province.
+ * **Locality**. The full name of the city or town.
+ * **Organization**. The full name of the business or company, as legally registered in your locality, or personal name. For companies, be sure to include the registration suffix, such as Ltd., Inc., or NV.
+ * **Organization unit**. The branch name of your company that is ordering the certificate, such as accounting or marketing.
+ * **Common name**. The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.
 
 You can use Subject Alternative Names (SAN), but the provided host names must not be issued in other deployed certificates to prevent CN collisions.
 {: note}
@@ -75,17 +66,15 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-To upload a certificate for your application, complete the following steps:
+To upload a certificate for your Cloud Foundry application, complete the following steps:
 
-1. Go to your resource list in the {{site.data.keyword.cloud_notm}} console.
-
-2. Select your app to view the app details.
-
-3. Click **Routes** > **Manage domains**.
-
-4. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg) > **Domains**.
-
-5. Click **Upload** in the SSL Certificate column, and select your custom domain:
+1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
+2. On the **Resource List** page, click **Cloud Foundry Apps**.
+3. Click the application that you want to change the domain for. The app's **Overview** page is displayed.
+4. Select the **Routes** menu, and click **Manage domains**.
+5. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg), and select **Domains**.
+6. Click **Upload** in the **SSL Certificate column** for your custom domain.
+7. Select an option, upload the file, and click **Add**.
   
   * Certificate: A digital document that binds a public key to the identity of the certificate owner, which enables the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority. A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes, you might use a self-signed certificate.
   * Private key: An algorithmic pattern that is used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
@@ -100,6 +89,6 @@ To upload a certificate for your application, complete the following steps:
     You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
     {: tip}
 
-For more information, see [Importing SSL certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
+For more information, see [Importing SSL certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
 
 
