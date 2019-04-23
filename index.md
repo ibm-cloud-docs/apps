@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need, or use your existing repository and bring your own code.
 {: shortdesc}
 
-Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
+Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
 
 Do you need help with deciding where to start? See this diagram for ideas!
 
@@ -49,9 +49,11 @@ Create an app by selecting one of the following entry points:
 ## Step 2. Add services
 {: #resources-getting-started}
 
-When you use a starter kit to create your app, your services are automatically created for you. You can associate more services with your app by clicking **Create service** on the **App details** page in the console.
+When you use a starter kit to create your app, the mandatory services are automatically created for you. You can connect more services to your app in the console from the **App details** page, which is displayed as soon as you create the app.
 
-Run the following command to add a service to your app by using the CLI. You can select an existing service from one that's already enabled on your account, or add a service. 
+If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), locate your app, and then click your app's name. The **App details** page is displayed, and you can create a service instance or connect existing services.
+
+Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service from one that's already enabled on your account, or add a service.
 ```
 ibmcloud dev edit
 ```
