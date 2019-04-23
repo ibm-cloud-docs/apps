@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Get started with {{site.data.keyword.containershort}} by deploying highly availa
 
 Containers are a standard way to package apps and all their dependencies so that you can seamlessly move the apps between environments. Unlike virtual machines, containers don't bundle the operating system. Only the app code, runtime, system tools, libraries, and settings are packaged inside containers. Containers are more lightweight, portable, and efficient than virtual machines.
 
-See [Getting started with {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) to learn more about the service.
+See [Getting started with {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) to learn more about the service.
 
 ## Configuring deployments
 {: #config-deploy}
@@ -62,7 +62,7 @@ The toolchain contains the building stage and the deployment stage.
 {: #build-stage}
 The building stage is triggered when a `git push` is run on your Git repository. The stage in the pipeline triggers a docker image build and places the image in the container registry.
 
-For more information, see [Getting started with IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+For more information, see [Getting started with IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Deployment stage
 {: #deploy-stage}

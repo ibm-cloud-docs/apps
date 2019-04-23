@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-04-23"
 
-keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain, development stages, development phases
 
 subcollection: creating-apps
 
@@ -33,11 +33,11 @@ Let's take a closer look at the best way to use {{site.data.keyword.cloud}} in y
 ## Get started
 {: #get_started}
 
-Build your app from the {{site.data.keyword.cloud_notm}} Developer dashboards, where you can select a starter kit that is related to your use case and choose a programming language. {{site.data.keyword.cloud_notm}} uses instructions from the starter kit to automatically create the resources you need and to create a language-specific, runtime-independent app that is the basis for your production app. To complete the getting started phase, click **Deploy to Cloud** from the Developer dashboard. One click creates a DevOps toolchain complete with a code repository that is populated with your app source code and deployment pipeline.
+Build your app from the {{site.data.keyword.cloud_notm}} Developer dashboards, where you can select a starter kit that is related to your use case and choose a programming language. {{site.data.keyword.cloud_notm}} uses instructions from the starter kit to automatically create the resources you need and to create a language-specific, runtime-independent app that is the basis for your production app. To complete the getting started phase, click **Configure continuous delivery** from the **App details**. One click creates a DevOps toolchain complete with a code repository that is populated with your app source code and deployment pipeline.
 
 ![Get started](images/dev_get_started.png "Get started") Figure 2. Getting started flow
 
-When you use the **Deploy to Cloud** button to set up your DevOps toolchain, select your runtime platform, such as Kubernetes or Cloud Foundry. The starter kit app that is produced from {{site.data.keyword.cloud_notm}} is runtime independent and doesn’t need to be modified.
+When you use the **Configure continuous delivery** button to set up your DevOps toolchain, select your runtime platform, such as Kubernetes or Cloud Foundry. The starter kit app that is produced from {{site.data.keyword.cloud_notm}} is runtime independent and doesn’t need to be modified.
 {: tip}
 
 ## Develop locally
@@ -47,7 +47,7 @@ After you create your starter kit app and toolchain, you start your development 
 
 ![Develop locally](images/dev_code_locally.png "Develop locally") Figure 3. Developing locally flow
 
-The basic functions for {{site.data.keyword.dev_cli_notm}} are `ibmcloud dev build` and `ibmcloud dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) for more details.
+The basic functions for {{site.data.keyword.dev_cli_notm}} are `ibmcloud dev build` and `ibmcloud dev run`, but the CLI offers much more. See [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) for more details.
 {: tip}
 
 ## Deliver and manage in {{site.data.keyword.cloud_notm}}
@@ -62,7 +62,7 @@ The toolchain that is produced by your getting started experience has the basic 
 
 ![Deliver and manage](images/dev_deliver_and_manage.png "Deliver and manage") Figure 4. Delivering and managing flow
 
-Learn more about [continuous development on {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery/index.html#cd_getting_started).
+Learn more about [continuous development on {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Putting it all together
 

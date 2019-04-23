@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-23"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -84,7 +84,7 @@ Each service might require a different mechanism for communicating with applicat
 * To interact with mobile back-end services, use the information that {{site.data.keyword.cloud_notm}} provides such as the application identity (app ID), security information that is specific to the client, and the access URI for the application. The mobile services often work in context with each other so that context information, such as the name of the application developer and the user that uses the application, can be shared across the set of services.
 * To interact with web applications or server-side cloud code for mobile applications, use the information that {{site.data.keyword.cloud_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the application. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the application is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
-If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures. For more information, see [Apps won't be automatically restarted](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+If a service that you bind to an application crashes, the application might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the application to recover from these problems. Consider coding your application to identify and recover from outages, exceptions, and connection failures.
 
 ## Accessing services across {{site.data.keyword.cloud_notm}} deployment environments
 {: #migrate_instance}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Credentials overview
+# Adding service credentials to your deployment environment
 {: #credentials_overview}
 
 Learn how to manually add service credentials to your deployment environment.

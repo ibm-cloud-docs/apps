@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Adding credentials to your virtual instance or local docker environment
+# Adding service credentials to your virtual instance or local docker environment
 {: #add-credentials-vsi}
 
 Learn how to add service credentials to your virtual server instance or local docker deployment environment.
