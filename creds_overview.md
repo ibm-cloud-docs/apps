@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -29,9 +29,10 @@ Learn how to manually add service credentials to your deployment environment.
 In general, you want your application logic to acquire sensitive service credentials, such as database API keys or passwords, from the environment in which your application runs. That way, you don't keep credentials in your source code repository. Databases in your continuous integration, pre-production, and production environments are quarantined from each other.
 
 If you create an app by using a starter kit template, the environment is prepared for you automatically. No matter if your deployment target is:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public or Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Virtual Server Instance (also local docker)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry Public or Cloud Foundry Enterprise Environment
+  * Virtual Server Instance (also local docker)
   
 The steps are provided for how to configure the environment. Starter kits generate code that uses a dependent library to make the code portable to run on any of the deployment targets. Lastly, no branch logic is used to detect in which deployment target the application is running.
 

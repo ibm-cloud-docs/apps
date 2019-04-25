@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?
 * Access the service configuration in your code:
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Add new credentials to your Kubernetes environment:
-	- When you add another service to your application after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed application and GitLab repository. You must [manually add the credentials](/docs/apps?topic=creating-apps-add-credentials-kube) to the deployment environment.
+* Add new service credentials to your Kubernetes environment:
+	- When you add another service to your application after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed application and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).

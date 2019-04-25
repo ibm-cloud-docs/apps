@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -79,16 +79,10 @@ To upload a certificate for your Cloud Foundry application, complete the followi
   * Certificate: A digital document that binds a public key to the identity of the certificate owner, which enables the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority. A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes, you might use a self-signed certificate.
   * Private key: An algorithmic pattern that is used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
   * Intermediate certificate (optional): A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization. Use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before you deploy it to production.
-  * Enable request of client certificate: When you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain. 
-
-    The custom certificate feature in {{site.data.keyword.cloud_notm}} domain management depends on the Server Name Indication (SNI) extension of the Transport Layer Security (TLS) protocol. The client code that accesses {{site.data.keyword.cloud_notm}} applications that are protected by custom certificates must support the SNI extension in the TLS implementation. For more information, see [section 7.4.2 of RFC 4346](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and [Securing data with TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
-    {: note}
-  
+  * Enable request of client certificate: When you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain.   
   * Client certificate truststore (optional): Includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
   
     You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
     {: tip}
 
 For more information, see [Importing SSL certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
-
-

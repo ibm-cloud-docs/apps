@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Starter kits
+# What are starter kits?
 {: #starter-kits}
 
-Starter kits are great for dynamically assembling a skeleton production application in the language of your choice that's ready for cloud deployment. Each starter kit includes a language, a framework, and a pattern for a specific use case. You can reuse code rather than reinvent it.
+A starter kit is a production-ready pattern that can be integrated with a set of services to generate a production-ready asset that can be deployed directly into a DevOps pipeline and a Kubernetes cluster.
 {:shortdesc}
 
-If a starter kit requires specific services, no problem. With auto-provisioned services, {{site.data.keyword.cloud_notm}} automatically creates instances for those services when you create your app. You can access starter kits from the {{site.data.keyword.cloud_notm}} dashboard or command-line interface.
+## What can you do with a starter kit?
+{: #starter-overview}
 
-## What is a starter kit?
-{: #starter_kits}
+Starter kits are great for dynamically assembling a skeleton production application in the language of your choice that's ready for cloud deployment. 
 
-A starter kit is a production-ready pattern that can be integrated with a set of services to generate a production-ready asset that can be deployed directly into a DevOps pipeline and a Kubernetes cluster. A starter kit contains descriptive metadata that provides the user with enough information to know what the kit is and does. It also contains instructions that tell {{site.data.keyword.cloud_notm}} what to produce. The output is production-ready out of the box, and can be iterated on for further enhancements, based on {{site.data.keyword.cloud_notm}} best practices. Starter kit content isn’t as complex as a demonstration and not as trivial as a snippet or sample. They are dynamically created based on the developer’s requirements.
+A starter kit contains descriptive metadata that provides the user with enough information to know what the kit is and does. It also contains instructions that tell {{site.data.keyword.cloud_notm}} what to produce. The output is production-ready out of the box, and can be iterated on for further enhancements, based on {{site.data.keyword.cloud_notm}} best practices. Starter kit content isn’t as complex as a demonstration and not as trivial as a snippet or sample. Apps are dynamically created based on the developer’s requirements.
+
+Each starter kit includes a language, a framework, and a pattern for a specific use case. You can reuse code rather than reinvent it. If a starter kit requires specific services, no problem. With auto-provisioned services, {{site.data.keyword.cloud_notm}} automatically creates instances for those services when you create your app. You can access starter kits from the {{site.data.keyword.cloud_notm}} dashboard or command-line interface.
 
 Check out the instructions for [creating an app with a starter kit](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

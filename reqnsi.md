@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -100,7 +100,7 @@ Service credentials that are stored in a Kubernetes secret are base64 encoded an
 
 **Important**: Do not reference or expose your service credentials directly in your deployment YAML file. Deployment YAML files are not designed to hold sensitive data and do not encrypt your service credentials by default. To properly store and access this information, you must use a Kubernetes secret. 
 
-1. [Bind the service to your cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [Bind the service to your cluster](/docs/containers?topic=containers-service-binding#bind-services). 
 2. To access your service credentials from your app pod, choose between the following options. 
    - Mount the secret as a volume to your pod
    - Reference the secret in environment variables

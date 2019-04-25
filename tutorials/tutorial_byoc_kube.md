@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -49,7 +49,7 @@ After you create your app, you can add a service to your app from the **App deta
 
 This process provisions a service instance, creates a resource key (credentials), and binds it to your app. For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-resource).
 
-After you add a service to your app, you must copy the credentials for the service to your deployment environment. For more information, see [Adding credentials to your Kubernetes environment](/docs/apps?topic=creating-apps-add-credentials-kube).
+After you add a service to your app, you must [copy the credentials for the service to your deployment environment](/docs/apps?topic=creating-apps-credentials_overview).
 
 ## Preparing your app for deployment
 {: #deploy-byoc-kube}
