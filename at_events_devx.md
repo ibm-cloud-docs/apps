@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-25"
 
 keywords: apps, applications, activity tracking events
 
@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:deprecated: .deprecated}
 {:table: .aria-labeledby="caption"}
 
 # {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}} events
@@ -24,6 +25,9 @@ subcollection: creating-apps
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.dev_console}} in the {{site.data.keyword.cloud}}.
 {: shortdesc}
+
+{{site.data.keyword.cloudaccesstrailfull}} is deprecated. As of 9 May 2019, you cannot provision new {{site.data.keyword.cloudaccesstrailshort}} instances, and access to *Lite* plan instances will be removed. Existing premium plan instances are supported until 30 September 2019. To continue monitoring the activity of your {{site.data.keyword.cloud_notm}} account, provision an instance of the [{{site.data.keyword.at_full}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+{: deprecated}
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-started activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For more information, see [About {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 
