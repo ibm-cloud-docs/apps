@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-25"
 
 keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
 
@@ -37,14 +37,10 @@ Create an app in the {{site.data.keyword.cloud}} {{site.data.keyword.dev_console
 
 1. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit for your language. For example, for a Node.js application, go to **Express.js Backend** and click **Select Starter Kit**.
 2. Enter your app name. For this tutorial, use `ExpressBackend`.
-3. Enter a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`.
-4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-5. Select your language and framework. Some starter kits might be available only in one language.
-6. Select your pricing plan. There is a free option that you can use for this tutorial.
-7. Click **Create**.
-
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+4. Select your language and framework. Some starter kits might be available only in one language.
+5. Select your pricing plan. There is a free option that you can use for this tutorial.
+6. Click **Create**.
 
 ## Step 3. Add services (Optional)
 {: #resources-bff}

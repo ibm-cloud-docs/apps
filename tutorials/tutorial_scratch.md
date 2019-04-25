@@ -40,14 +40,10 @@ You can create a custom application from scratch by using services and a runtime
   {: tip}
 
 2. Enter a name for your app. For this tutorial, type `CustomProject`.
-3. Enter a unique host name, for example, `abc-devhost`. The host name is used for your app's route, for example, `abc-devhost.mybluemix.net`.
-4. You can optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-5. Select your language and framework. Some starter kits might be available in only one language.
-6. Select your pricing plan. You can use the free option for this tutorial.
-7. Click **Create**.
-
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+3. You can optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+4. Select your language and framework. Some starter kits might be available in only one language.
+5. Select your pricing plan. You can use the free option for this tutorial.
+6. Click **Create**.
 
 ## Adding services (optional)
 {: #resources-scratch}
@@ -164,8 +160,9 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 2. Click **View logs and history**.
 3. In the log file, find the application URL:
 
-    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
+   At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
 If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+

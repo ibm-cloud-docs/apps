@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-04-25"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -35,14 +35,10 @@ Docker is installed as part of the developer tools. Docker must be running for t
 Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Select the language that's best for your project to get started.
 
 1. From the [starter kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit for your language.
-2. Enter your app name and a unique host name, for example, `abc-devhost`. This host name is your app's route, `abc-devhost.mybluemix.net`.
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-4. Select your language and framework. Some starter kits might be available only in one language.
-5. Select your pricing plan. There is a free option that you can use for this tutorial.
-6. Click **Create**.
-
-The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use. For more information about migrating to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+2. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+3. Select your language and framework. Some starter kits might be available only in one language.
+4. Select your pricing plan. There is a free option that you can use for this tutorial.
+5. Click **Create**.
 
 ## Step 3. Add services (Optional)
 {: #resources-webapp}
