@@ -44,9 +44,10 @@ Creating an app from scratch is useful if you don't already have existing code t
 6. Select the **IBM DevOps, deploy to Cloud Foundry buildpacks** option to create a DevOps toolchain. You might need to set up SSH keys to complete this step.
   If you set a passphrase for your SSH key, you are required to enter this code.
   {: note}
-7. Select a region for your toolchain.
-8. The DevOps toolchain name is the same name that you provided in step 4. Press **Return** to accept this, or enter a new value now.
-9. The host name for this app is the same name that you provided in step 4. Press **Return** to accept this, or enter a new value now.
+7. Follow the remaining prompts to:
+  * Select a region for your toolchain.
+  * Enter a name for the DevOps toolchain name.
+  * Enter a name for the hostname.
 
 Creating the app and toolchain takes a few seconds to complete.
 
