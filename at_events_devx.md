@@ -55,11 +55,11 @@ The following table lists the actions that generate an event:
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.read</td>
-	  <td>An event is generated when any of the following situations happen: </br><ul><li>A user downloads the application code.</li> <li>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.</li> <li>The developer experience infrastructure reads credentials for resources that are associated with an application.</li> <li>A user views the list of applications, for example, when the user views the list of applications in the {{site.data.keyword.dev_console}} console or through the {{site.data.keyword.dev_cli_short}} CLI.</li></ul></td>
+	  <td>An event is generated when any of the following situations happen: </br><ul><li>A user downloads the application code.</li> <li>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.</li> <li>The developer experience infrastructure reads credentials for services that are associated with an application.</li> <li>A user views the list of applications, for example, when the user views the list of applications in the {{site.data.keyword.dev_console}} console or through the {{site.data.keyword.dev_cli_short}} CLI.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>An event is generated when any of the following situations happen: </br><ul><li>Something about the application changes, for example, when a user modifies the name of the application. </li><li>A new resource is created and added to an application.</li><li>An existing resource is added to an application.</li><li>A service is removed from an application.</li><li>Code is generated for an application.</li><li>A DevOps toolchain is added through the developer experience, for example, by selecting *Deploy to Cloud*.</li></ul></td>
+	  <td>An event is generated when any of the following situations happen: </br><ul><li>Something about the application changes, for example, when a user modifies the name of the application. </li><li>A new service is created and added to an application.</li><li>An existing service is added to an application.</li><li>A service is removed from an application.</li><li>Code is generated for an application.</li><li>A DevOps toolchain is added through the developer experience, for example, by selecting *Configure continuous delivery*.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>
