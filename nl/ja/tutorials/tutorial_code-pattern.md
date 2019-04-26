@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, code pattern, DevOps, toolchain, service credentials
+keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
 
 subcollection: creating-apps
 

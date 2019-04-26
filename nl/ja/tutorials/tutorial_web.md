@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
+keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
 subcollection: creating-apps
 
@@ -41,7 +41,7 @@ Docker は開発者ツールの一部としてインストールされます。 
 5. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
 6. **「作成」**をクリックします。
 
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
 {: tip}
 
 ## ステップ 3. サービスの追加 (オプション)
@@ -61,7 +61,7 @@ Watson のコグニティブ機能でアプリを拡張するサービスを追�
 
 一部のアプリケーションでは継続的デリバリーは有効になっています。 継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
 
-**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**を選択し、デプロイメント・ターゲットを選択してから**「作成」**をクリックします。{{site.data.keyword.cloud_notm}} は、Git リポジトリーと継続的デリバリー・パイプラインを備えたオープン・ツールチェーンを自動的に作成します。
+**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**を選択し、デプロイメント・ターゲットを選択してから**「作成」**をクリックします。 {{site.data.keyword.cloud_notm}} は、Git リポジトリーと継続的デリバリー・パイプラインを備えたオープン・ツールチェーンを自動的に作成します。
 
 デプロイメント・ターゲットを選択した後、新しいツールチェーンのパイプライン・コンポーネントを開いて、最初のビルドとデプロイメントのプロセスを開始すると、数分後には新しいアプリを確認できます。
 

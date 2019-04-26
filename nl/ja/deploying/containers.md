@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
+keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
 subcollection: creating-apps
 
@@ -33,7 +33,7 @@ Kubernetes クラスターで実行される Docker コンテナーに高可用�
 
 1. 自動化されたクラウド・パイプラインをセットアップして、アプリをクラウドにデプロイします。
 2. **「継続的デリバリーの構成 (Configure continous delivery)」**をクリックします。
-3. ターゲットとして **IBM Kubernetes Service** を選択します。 まだクラスターがない場合は、[クラスターを作成 ](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") する必要があります。
+3. ターゲットとして **IBM Kubernetes Service** を選択します。 まだクラスターがない場合は、[クラスターを作成 ](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") する必要があります。
 4. デプロイメントが完了したら、Delivery Pipeline のデプロイ・ステージからのログで URL を取得して、クラウドのライブ・アプリを確認します。 ポートを含む最後の IP アドレスが、アプリの新しいホーム (例えば、169.60.133.124:32355) です。
 
 ## サービスのバインド
@@ -71,11 +71,11 @@ Kubernetes クラスターで実行される Docker コンテナーに高可用�
 
 詳しくは、[Charts ](https://docs.helm.sh/developing_charts/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-{{site.data.keyword.cloud_notm}} では、多数の[事前構成済みの Helm チャート ](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") がサポートされます。
+{{site.data.keyword.cloud_notm}} では、多数の[事前構成済みの Helm チャート ](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") がサポートされます。
 
 ## アプリのセキュリティーの確認
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} では、パッケージされたコンテナー・イメージにセキュリティーの脆弱性がないかどうかのスキャンがサポートされます。 エンタープライズ・レベルのアプリケーションをサポートするためには、セキュリティー・スキャンが必須です。
 
-潜在的なセキュリティーの脆弱性を確認するには、コンテナーの[イメージ・リポジトリー ](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+潜在的なセキュリティーの脆弱性を確認するには、コンテナーの[イメージ・リポジトリー ](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
