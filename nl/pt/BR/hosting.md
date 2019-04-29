@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, application, migrating apps, hosting apps, migrating, hosting
+keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
 subcollection: creating-apps
 

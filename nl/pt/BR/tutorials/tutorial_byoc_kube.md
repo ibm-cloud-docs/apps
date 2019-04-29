@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-19"
 
-keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
 subcollection: creating-apps
 
@@ -39,9 +39,9 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
 ## Antes de começar
 {: #prereqs-byoc-kube}
 
-* Crie um app. Consulte [Criando apps por meio de seu próprio repositório de código](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) para obter mais informações.
+* [Crie um app por meio de seu próprio repositório de código](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
 * No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![ícone Menu](../../icons/icon_hamburger.svg) e selecione **Contêineres** para [configurar um cluster Kubernetes](/docs/containers?topic=containers-getting-started).
-* Para confirmar se o app é executado no Docker, execute os comandos a seguir:
+* Confirme se seu app é executado no Docker. Os comandos a seguir são exemplos, não necessariamente etapas que existem em seu app:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install  
@@ -49,12 +49,12 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* Em seguida, acesse sua URL, como `http://localhost/springboothelloworld/sayhello`. Pressione as teclas Ctrl + C para parar a execução do Docker.
+* Em seguida, acesse sua URL, como `http://localhost/springboothelloworld/sayhello`. Pressione Ctrl + C para parar a execução do Docker.
 
 ## Incluindo serviços em seu app (opcional)
 {: #resources-byoc-kube}
 
-Inclua um serviço em seu aplicativo, e o {{site.data.keyword.cloud_notm}} cria a instância de serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
+Depois de criar seu app, é possível incluir um serviço em seu app por meio da página **Detalhes do app**. O {{site.data.keyword.cloud_notm}} cria a instância de serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
 e um serviço de notificação push para aplicativos móveis gera
 informações de configuração. O {{site.data.keyword.cloud_notm}} fornece os recursos de um
 serviço para o aplicativo usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre os aplicativos da web.
@@ -67,8 +67,7 @@ Depois de incluir um serviço em seu app, deve-se copiar as credenciais para o s
 ## Preparando seu app para implementação
 {: #deploy-byoc-kube}
 
-Nessa etapa, você anexa uma cadeia de ferramentas do DevOps ao aplicativo e a configura para que seja implementada
-em um cluster do Kubernetes hospedado no serviço {{site.data.keyword.cloud_notm}} Kubernetes.
+Nesta etapa, você conecta uma cadeia de ferramentas do DevOps ao aplicativo e a configura para que seja implementada em um cluster do Kubernetes que é hospedado no {{site.data.keyword.containershort_notm}}.
 
 A cadeia de ferramentas do DevOps é flexível o suficiente para permitir a execução gerenciada de estágios
 arbitrários de execução de shell script. Em outras palavras, é possível fazer quase tudo com uma cadeia de
@@ -79,56 +78,38 @@ Estabelecer um link entre o app, a cadeia de ferramentas e o repositório é uma
 ativos do produto. Isso também ajuda a agregar uma visualização do repositório de origem com o fluxo de trabalho do
 DevOps, com as instâncias de app em execução e com os serviços dependentes em todos os destinos de implementação.
 
-Na página Conectar cadeia de ferramentas, você tem algumas opções:
+### Conectando uma cadeia de ferramentas do DevOps existente
 
-* Conecte o app a uma cadeia de ferramentas existente.
-* Conecte o app a uma cadeia de ferramentas existente que não contenha o seu repositório. Então, conecte
-a cadeia de ferramentas ao seu repositório posteriormente.
-* Conecte o app a uma nova cadeia de ferramentas.
+Se você já tiver uma cadeia de ferramentas do DevOps, conclua estas etapas:
 
-### Conectar o app a uma cadeia de ferramentas existente
-{: #connect_toolchain_repo}
+1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**. A página **Implementar meu app** é exibida.
+2. Selecione a cadeia de ferramentas que você deseja conectar a seu app e clique em **Ativar implementação**. A página **Detalhes do app** é exibida, indicando que a entrega contínua está configurada.
 
-Se você tiver uma ou mais cadeias de ferramentas do DevOps já conectadas ao repositório Git
-especificado durante a criação do app, essas cadeias de ferramentas serão exibidas na tabela **Com repositório**. A cadeia de ferramentas deve ser configurada para recuperar a origem por meio do mesmo repositório que você
-definiu no app. É mais provável que você queira selecionar uma dessas cadeias de ferramentas para conectar ao app.
+Se você não desejar criar uma cadeia de ferramentas do DevOps do zero, será possível ativar o código existente para a nuvem usando o comando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). O comando gera um modelo de cadeia de ferramentas do DevOps que você verifica no repositório. Em seguida, use esse
+modelo como o conjunto de instrução para o que a cadeia de ferramentas do DevOps cria. Para obter mais informações,
+consulte a [documentação da CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+{: tip}
 
-### Conecte o app a uma cadeia de ferramentas existente que não contenha o seu repositório
-{: #connect_toolchain_notrepo}
-
-Se você tiver uma ou mais cadeias de ferramentas do DevOps associadas à sua conta, mas não estiverem conectadas ao repositório Git especificado durante a criação do app, essas cadeias de ferramentas serão exibidas na tabela **Sem o seu repositório**. É possível selecionar uma dessas cadeias de ferramentas e
-conectá-la ao app, mas deve-se também incluir manualmente o seu repositório nessa cadeia de ferramentas.
-
-Para obter mais informações sobre como incluir o repositório na cadeia de ferramentas, consulte:
-
- * [Configurando os
-repositórios Git e o rastreamento de problema](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
- * [Configurando GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
- * [Configurando o GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
-
-
-### Conectar o app a uma nova cadeia de ferramentas
-{: #toolchain-byoc-kube-create}
+### Criando uma cadeia de ferramentas do DevOps
 
 Se você deseja controlar totalmente a
 criação da cadeia de ferramentas do DevOps sem nenhuma mudança no repositório de código, crie a cadeia de
 ferramentas do zero. Crie também
 todas as integrações para construir o app e implementá-lo no cluster do Kubernetes. 
 
-1. Na página Criar uma cadeia de ferramentas, clique no modelo **Construir sua própria cadeia de ferramentas**.
-2. Insira um nome para a sua cadeia de ferramentas, selecione uma região e um grupo de recursos (padrão) e clique em **Criar**.
-3. Depois de criar a cadeia de ferramentas, use as trilhas de navegação em seu navegador para retornar à página **Detalhes do app**, o que indica que a entrega contínua está configurada.
+1. Na página **Detalhes do app**, clique em **Criar cadeia de ferramentas do DevOps.** A página **Criar uma cadeia de ferramentas** será exibida.
+2. Selecione o modelo **Construir sua própria cadeia de ferramentas**.
+3. Na página **Construir sua própria cadeia de ferramentas**, insira um nome para a
+cadeia de ferramentas, selecione uma região e um grupo de recursos (padrão) e clique em **Criar**.
+4. Use as trilhas de navegação na janela do navegador para retornar para a página **Detalhes do app**, que indica que a entrega contínua está configurada.
+5. Na página **Detalhes do app**, clique em **Visualizar cadeia de ferramentas** para configurar sua nova cadeia de ferramentas do DevOps.
 
-Se você não desejar criar uma cadeia de ferramentas do DevOps do zero, será possível ativar o código existente para a nuvem usando o comando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). O comando gera um modelo de cadeia de ferramentas do DevOps que você verifica no repositório. Em seguida, use esse
-modelo como o conjunto de instrução para o que a cadeia de ferramentas do DevOps cria. Para obter mais informações,
-consulte a [documentação da CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
-
-## Incluindo uma integração do GitHub
+### Incluindo uma integração do GitHub
 {: #github-byoc-kube}
 
-Configure a cadeia de ferramentas do DevOps com uma integração do seu repositório GitHub para que a cadeia de ferramentas configure um webhook no repositório a fim de que as solicitações pull e os pushes de código nesse repositório enviem um POST para a cadeia de ferramentas. 
+Configure a cadeia de ferramentas do DevOps com uma integração para o seu repositório GitHub para a cadeia de ferramentas. Isso configura um webhook em seu repositório para que as solicitações pull e pushes de código nesse repositório enviem um POST para a cadeia de ferramentas.
 
-1. No modelo de cadeia de ferramentas do DevOps, clique em **Incluir uma ferramenta**.
+1. Em seu modelo de cadeia de ferramentas do DevOps vazio, clique em **Incluir uma ferramenta**.
 2. Selecione **GitHub** se o repositório estiver no GitHub público ou no GitHub corporativo.
 3. Selecione ou insira a URL do servidor GitHub.
 4. Uma mensagem `Unauthorized on GitHub` pode ser exibida. Nesse caso, clique em **Autorizar**. Em seguida, na página Autorizar cadeias de ferramentas do IBM Cloud, clique em **Autorizar o IBM Cloud** e insira sua senha do GitHub.
@@ -140,14 +121,14 @@ Configure a cadeia de ferramentas do DevOps com uma integração do seu reposit�
 
 É possível visualizar o novo webhook nas configurações do repositório.
 
-## Incluindo um pipeline de entrega
+### Incluindo um pipeline de entrega
 {: #pipeline-byoc-kube}
 
 1. Clique em **Incluir uma ferramenta**.
 2. Selecione **Pipeline de entrega**.
 3. Insira `Continuous Integration` para o nome do pipeline e clique em **Criar integração**.
 
-## Configurando os estágios do pipeline
+### Configurando os estágios do pipeline
 {: #pipelineconfig-byoc-kube}
 
 Configure os estágios do pipeline para direcionarem sua entrada (os conteúdos do repositório GitHub) para o destino correto. Como esse tutorial supõe que você tem um repositório GitHub que
@@ -201,14 +182,19 @@ a seguir:
 ## Verificando se o seu app está em execução
 {: #verify-byoc-kube}
 
-Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos apontará a você a URL para o seu app.
+O Delivery Pipeline ou a linha de comandos aponta você para a URL para seu app.
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo:
-
-    No término do arquivo de log, procure `View the application health at: http://<ipaddress>:<port>/health`.
-
+3. No arquivo de log, localize a URL do aplicativo. No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 
-Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para visualizar a URL de seu app. Em seguida, acesse a URL em seu navegador.
+Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para abrir a página de um app implementado manualmente em seu navegador padrão.
+
+## Informações relacionadas
+
+ * [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+ * [Configurando os
+repositórios Git e o rastreamento de problema](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configurando GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [Configurando o GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

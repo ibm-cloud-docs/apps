@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
+keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
 subcollection: creating-apps
 
@@ -33,7 +33,7 @@ Ao criar apps de backend ou de serviço da web, é possível implementá-los no 
 
 1. Implemente seu app na nuvem configurando um pipeline de nuvem automatizado.
 2. Clique em **Configurar entrega contínua**.
-3. Selecione **IBM Kubernetes Service** como o destino. Será necessário [criar um cluster ](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") se você ainda não tiver um.
+3. Selecione **IBM Kubernetes Service** como o destino. Será necessário [criar um cluster ](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") se você ainda não tiver um.
 4. Após a conclusão da implementação, efetue check-out do app em tempo real na nuvem, obtendo a URL nos logs do estágio de implementação do pipeline de entrega. O último endereço IP com uma porta é o novo início de seu app, por exemplo, 169.60.133.124:32355.
 
 ## Ligando serviços
@@ -71,7 +71,7 @@ O estágio de implementação recupera a imagem mais recente do {{site.data.keyw
 
 Para obter mais informações, consulte [Gráficos ](https://docs.helm.sh/developing_charts/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
-O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Verificando a segurança do app
 {: #sec}
@@ -79,4 +79,4 @@ O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-confi
 O {{site.data.keyword.containershort_notm}} suporta varrer as imagens de contêiner compactadas para vulnerabilidades de segurança. A varredura de segurança é essencial para o suporte de aplicativos de nível corporativo.
 
 Visualize o [repositório de imagem de
-contêineres ](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") para verificar potenciais vulnerabilidades de segurança.
+contêineres ](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") para verificar potenciais vulnerabilidades de segurança.
