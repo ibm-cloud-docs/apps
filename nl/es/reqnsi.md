@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -22,6 +22,11 @@ Cuando se crea una app con {{site.data.keyword.cloud}} {{site.data.keyword.dev_c
 {: shortdesc}
 
 Puede solicitar una instancia de servicio y utilizarla independientemente de la app, o puede añadir la instancia de servicio a la app desde la página Detalles de la app. Puede suministrar un determinado tipo de servicio directamente desde el catálogo de {{site.data.keyword.cloud_notm}}.
+
+## Servicios de suministro automático
+{: #auto-provision}
+
+Si un kit de inicio especifica servicios que son necesarios, {{site.data.keyword.cloud_notm}} crea automáticamente las instancias de estos servicios al crear la app. También puede crear recursos de forma manual o seleccionar instancias de servicios existentes para añadirlos a su app después de haberla creado. Puede ver una lista de instancias de servicio asociadas a la app en la página **Detalles de la app**, junto con las credenciales de servicio en caso de que las necesite más adelante.
 
 ## Descubrimiento de servicios
 {: #discover-resources}

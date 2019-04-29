@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, domain, Kubernetes, Cloud Foundry, cli
+keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
 subcollection: creating-apps
 
@@ -16,53 +16,40 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Actualización del dominio
+# Gestión de los dominios
 {: #update-domain}
 
-Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.cloud}}. Para apps de Cloud Foundry, puede migrar el dominio de `mybluemix.net` a `appdomain.cloud` utilizando la interfaz de línea de mandatos o la consola de
-{{site.data.keyword.cloud_notm}}.
+Los dominios proporcionan la ruta al URL asignado a la organización en {{site.data.keyword.cloud}}. Los dominios personalizados dirigen las solicitudes para las aplicaciones a un URL propio. Un dominio personalizado puede ser un dominio compartido, un subdominio compartido o un dominio compartido y un host. A menos
+que se especifique un dominio personalizado, {{site.data.keyword.cloud_notm}} utiliza un dominio compartido por defecto en la ruta de la aplicación. El proceso para gestionar sus dominios depende del destino de despliegue, como
+{{site.data.keyword.containershort}}, Cloud Foundry y otros.
 {:shortdesc}
 
-## Actualización de dominios desde la consola de {{site.data.keyword.cloud_notm}}
-{: #update-domain-console}
+Para utilizar un dominio personalizado, debe registrar el dominio personalizado en un servidor DNS público y, a continuación, configurar el dominio personalizado en {{site.data.keyword.cloud_notm}}. Tras ello, debe correlacionar el dominio correlacionado con el dominio del sistema de
+{{site.data.keyword.cloud_notm}} en el servidor DNS público. Después de correlacionar el dominio personalizado con el dominio del sistema, las solicitudes correspondientes al dominio personalizado se direccionan a la aplicación en {{site.data.keyword.cloud_notm}}.
+
+## Cambio del dominio para apps de Kubernetes
+{: #update-domain-kube}
+
+El subdominio para los nombres de host de {{site.data.keyword.containershort_notm}} es `containers.appdomain.cloud`. El comodín de subdominio Ingress proporcionado por IBM, `*.<cluster_name>.<region>.containers.appdomain.cloud`, está registrado de forma predeterminada para el clúster. El certificado TLS proporcionado por IBM es un certificado comodín, y se puede utilizar para el subdominio comodín. Para obtener más información, consulte [Varios dominios dentro del mismo espacio de nombres](/docs/containers?topic=containers-ingress#multi-domains).
+
+## Utilización de un dominio personalizado para apps de Kubernetes
+{: #custom-domain-kube}
+
+Si desea utilizar un dominio personalizado, debe registrar el dominio personalizado como un dominio comodín, como `*.custom_domain.net`. Para utilizar TLS, debe obtener un certificado comodín. Para obtener más información, consulte [Varios dominios dentro del mismo espacio de nombres](/docs/containers?topic=containers-ingress#multi-domains).
+
+Consulte [esta guía de aprendizaje](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes), que le ofrece instrucciones sobre el desarrollo de una aplicación web, su ejecución en local en un contenedor y su posterior despliegue en un clúster de Kubernetes que se ha creado con el servicio IBM Kubernetes. Además, la guía de aprendizaje le mostrará cómo enlazar un dominio personalizado, supervisar el estado del entorno y escalar la aplicación.
+
+## Cambio del dominio para apps de Cloud Foundry
+{: #update-domain-cf}
+
+Para apps de Cloud Foundry, puede cambiar el dominio de `mybluemix.net` a `appdomain.cloud` utilizando la interfaz de línea de mandatos o la consola de
+{{site.data.keyword.cloud_notm}}. Para obtener más información sobre cómo cambiar el dominio a `appdomain.cloud`, consulte
+[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 
 El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar.
 {: tip}
 
-Siga estos pasos para actualizar el dominio para su organización de Cloud Foundry utilizando la consola:
+## Utilización de un dominio personalizado para apps de Cloud Foundry
+{: #custom-domain-cf}
 
-1. Desde la [consola de {{site.data.keyword.cloud_notm}}
-![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono Menú ![Icono Menú](../icons/icon_hamburger.svg) y seleccione Lista de recursos.
-2. En la página **Lista de recursos**, pulse **Apps de Cloud Foundry**.
-3. Pulse sobre la aplicación para la cual desee cambiar el dominio. Aparecerá la página **Visión general** de la app.
-4. Seleccione el menú **Rutas**, observe cuál es el dominio actual, como `<myapp.mybluemix.net>` y pulse
-**Editar rutas**.
-5. Seleccione la lista de dominios y, a continuación, pulse sobre el dominio que desee utilizar, como `us-south.cf.appdomain.cloud`.
-6. Confirme sus actualizaciones pulsando **Guardar**.
-7. Confirme que desea sustituir el dominio anterior y pulse **Eliminar**.
-8. Para comprobar que la nueva ruta está funcionando, pulse **Visitar URL de app**.
-
-## Actualización de dominios desde la interfaz de línea de mandatos de {{site.data.keyword.cloud_notm}}
-{: #update-domain-cli}
-
-1. Para apps de Cloud Foundry, conéctese al punto final de API de Cloud Foundry de destino escribiendo el mandato siguiente:
-   ```
-   ibmcloud target --cf-api <CF_ENDPOINT>
-   ```
-   
-   **Puntos finales de API de Cloud Foundry:**
-   * US-SOUTH - `api.us-south.cf.cloud.ibm.com`
-   * US-EAST - `api.us-east.cf.cloud.ibm.com`
-   * EU-DE - `api.eu-de.cf.cloud.ibm.com`
-   * EU-GB - `api.eu-gb.cf.cloud.ibm.com`
-   * AU-SYD - `api.au-syd.cf.cloud.ibm.com`
-
-2. Añada la ruta con el nuevo dominio a una aplicación escribiendo el mandato siguiente:
-   ```
-   ibmcloud app route-map APP_NAME DOMAIN -n HOSTNAME
-   ```
-
-## Actualización del dominio para apps de Kubernetes
-{: #update-domain-kube}
-
-El subdominio para los nombres de host de {{site.data.keyword.containerlong}} es `containers.appdomain.cloud`. El comodín de subdominio Ingress proporcionado por IBM, `*.<cluster_name>.<region>.containers.appdomain.cloud`, está registrado de forma predeterminada para el clúster. El certificado TLS proporcionado por IBM es un certificado comodín, y se puede utilizar para el subdominio comodín. Para obtener más información, consulte [Varios dominios dentro del mismo espacio de nombres](/docs/containers?topic=containers-ingress#multi-domains).
+Para las apps de Cloud Foundry, puede crear y utilizar un dominio personalizado utilizando la consola o la interfaz de línea de mandatos de {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Adición y utilización de un dominio personalizado](/docs/cloud-foundry-public?topic=cloud-foundry-public-custom-domains).
