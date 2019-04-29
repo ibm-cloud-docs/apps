@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, cli
+keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
 subcollection: creating-apps
 
@@ -120,7 +120,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 서비스를 추�
     1. CocoaPods 저장소를 설정해야 하는 경우 `pod setup`을 실행하십시오.
     2. 기존 팟(Pod)을 업데이트해야 하는 경우 `pod update`를 실행하십시오.
     3. 앱에 대한 팟(Pod)을 설치하려면 `pod install`을 실행하십시오.
-3. `<appname>.xcworkspace` Xcode 작업공간을 여십시오.
+3. `<appname>.xcworkspace` Xcode 작업공간을 여십시오. 
 4. 앱을 실행하십시오.
 
 ### Xcode에서 Cordova 앱 실행

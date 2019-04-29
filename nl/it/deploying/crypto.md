@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, key protection, ACSP client, data protection
+keywords: apps, key protection, ACSP client, data protection, protect keys, data, protect, ascp, crypto, keys, cryptography
 
 subcollection: creating-apps
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: web app, backend-for-frontend, microservices, mobile, programming languages
+keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -27,7 +27,7 @@ subcollection: creating-apps
 
 웹 앱 패턴은 HTML, JavaScript 및 스타일시트와 같은 웹 컨텐츠를 웹 서버에 제공하는 앱을 작성합니다. {{site.data.keyword.cloud_notm}}는 여러 웹 앱 스타터 킷을 제공합니다.
 
-* Basic - 정적 `index.html` 파일, 비어 있는 기본 스타일시트 및 JavaScript 파일을 제공합니다.
+* Basic - 정적 `index.html` 파일, 빈 기본 스타일시트 및 JavaScript 파일을 제공합니다.
 * React - 사용자 인터페이스 빌드를 위한 세련된 프레임워크입니다. 소스 파일은 `src/client/app`에 있으며, webpack으로 컴파일되고 공용 디렉토리에서 제공됩니다.
 
 웹 앱 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 찾을 수 있습니다.

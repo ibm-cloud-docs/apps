@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
 subcollection: creating-apps
 
@@ -35,7 +35,7 @@ subcollection: creating-apps
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}에서 앱을 작성하십시오.
 
-1. {{site.data.keyword.dev_console}}의 [스타터 킷 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 페이지에서 언어에 맞는 스타터 킷을 선택하십시오. 예를 들어, Node.js 애플리케이션의 경우에는 **Express.js 마이크로서비스**로 이동하여 **스타터 킷 선택**을 클릭하십시오.
+1. {{site.data.keyword.dev_console}}의 [스타터 킷 ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 페이지에서 언어에 맞는 스타터 킷을 선택하십시오. 예를 들어, Node.js 애플리케이션의 경우에는 **Express.js 마이크로서비스**로 이동하여 **스타터 킷 선택**을 클릭하십시오.
 2. 앱 이름을 입력하십시오. 이 튜토리얼의 경우에는 `MicroserviceProject`를 사용하십시오.
 3. 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트인 `abc-devhost.mybluemix.net`입니다.
 4. 선택사항. 앱을 분류하기 위한 태그를 제공하십시오. 자세한 정보는 [태그에 대한 작업](/docs/resources?topic=resources-tag)을 참조하십시오.
@@ -43,7 +43,7 @@ subcollection: creating-apps
 6. 가격 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
 7. **작성**을 클릭하십시오.
 
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/apps/tutorials?topic=creating-apps-update-domain)를 참조하십시오.
+기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
 {: tip}
 
 ## 3단계. 서비스 추가(선택사항)

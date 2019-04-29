@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-19"
 
-keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
+keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
 subcollection: creating-apps
 
@@ -31,21 +31,21 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 ## 开始之前
 {: #prereqs-byoc-kube}
 
-* 创建应用程序。有关更多信息，请参阅[通过您自己的代码存储库创建应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)。
+* [从自己的代码存储库创建应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)。
 * 在 [{{site.data.keyword.cloud_notm}} 控制台 ](https://{DomainName}){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 中，单击**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg)，然后选择**容器**以[配置 Kubernetes 集群](/docs/containers?topic=containers-getting-started)。
-* 要确认应用程序是否在 Docker 中运行，请运行以下命令：
+* 确认应用程序是否在 Docker 中运行。以下命令是示例，不一定是应用程序中存在的步骤：
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install`
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
-* 然后，转至您的 URL，例如 `http://localhost/springboothelloworld/sayhello`。按 Ctrl+C 键可停止 Docker 运行。
+* 然后，转至您的 URL，例如 `http://localhost/springboothelloworld/sayhello`。按 Ctrl+C 可使 Docker 停止运行。
 
 ## 向应用程序添加服务（可选）
 {: #resources-byoc-kube}
 
-将服务添加到应用程序，然后 {{site.data.keyword.cloud_notm}} 会为您创建服务实例。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。{{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
+创建应用程序后，可以从**应用程序详细信息**页面向应用程序添加服务。{{site.data.keyword.cloud_notm}} 为您创建服务实例。对于不同类型的服务，供应过程可能会不同。例如，数据库服务会创建数据库，移动应用程序的推送通知服务会生成配置信息。{{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
 
 此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加服务](/docs/apps?topic=creating-apps-add-resource)。
 
@@ -54,52 +54,38 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 ## 准备应用程序以进行部署
 {: #deploy-byoc-kube}
 
-在此步骤中，您将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.cloud_notm}} Kubernetes 服务中托管的 Kubernetes 集群。
+在此步骤中，您将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.containershort_notm}} 中托管的 Kubernetes 集群。
 
 DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行受管执行。换言之，您可以使用 DevOps 工具链执行几乎任何操作。本部分的范围侧重于在 Kubernetes 集群上部署应用程序，但同时应记住未来针对扩展的 DevOps 和云最佳实践将需要执行哪些措施。
 
 在应用程序、工具链和存储库之间建立链接是迈向组织产品资产的一步。此步骤还可帮助集中了解源存储库与 DevOps 工作流程、运行中应用程序实例以及所有部署目标上的相依服务。
 
-在“连接工具链”页面上，您有以下若干选项：
+### 连接现有 DevOps 工具链
 
-* 将应用程序连接到现有工具链。
-* 将应用程序连接到不包含存储库的现有工具链。然后，日后将该工具链连接到存储库。
-* 将应用程序连接到新的工具链。
+如果您已经具有 DevOps 工具链，请完成以下步骤：
 
-### 将应用程序连接到现有工具链
-{: #connect_toolchain_repo}
+1. 在**应用程序详细信息**页面上，单击**配置持续交付**。这将显示**部署应用程序**页面。
+2. 选择要连接到应用程序的工具链，然后单击**启用部署**。这将显示**应用程序详细信息**页面，该操作表示已配置持续交付。
 
-如果您有一个或多个 DevOps 工具链已连接到您在应用程序创建期间指定的 Git 存储库，那么这些工具链会显示在**包含存储库**表中。工具链必须配置为从您在应用程序中定义的同一个存储库中检索源。您很可能希望选择其中一个工具链来连接到应用程序。
+如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
+{: tip}
 
-### 将应用程序连接到不包含存储库的现有工具链
-{: #connect_toolchain_notrepo}
-
-如果您有一个或多个 DevOps 工具链已与您的帐户相关联，但未连接到您在应用程序创建期间指定的 Git 存储库，那么这些工具链会显示在**不包含您的存储库**表中。您可以选择其中一个工具链并将其连接到应用程序，但还必须手动将存储库添加到该工具链。
-
-有关将存储库添加到工具链的更多信息，请参阅：
-
- * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
- * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
- * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
-
-
-### 将应用程序连接到新的工具链
-{: #toolchain-byoc-kube-create}
+### 创建 DevOps 工具链
 
 如果要对 DevOps 工具链创建有完全控制权，而不更改代码存储库，请从头开始创建工具链。您还可以创建所有集成来构建应用程序，并将其部署到 Kubernetes 集群。 
 
-1. 在“创建工具链”页面上，单击**构建您自己的工具链**模板。
-2. 输入工具链的名称，选择区域和资源组（缺省值），然后单击**创建**。
-3. 创建工具链后，使用浏览器中的面包屑返回到**应用程序详细信息**页面，该操作表示已配置持续交付。
+1. 在**应用程序详细信息**页面上，单击**创建 DevOps 工具链**。这将显示**创建工具链**页面。
+2. 选择**构建自己的工具链**模板。
+3. 在**构建您自己的工具链**页面上，输入工具链的名称，选择区域和资源组（缺省值），然后单击**创建**。
+4. 使用浏览器窗口中的面包屑返回到**应用程序详细信息**页面，该操作表示已配置持续交付。
+5. 在**应用程序详细信息**页面上，单击**查看工具链**以配置新的 DevOps 工具链。
 
-如果您不希望从头开始创建 DevOps 工具链，可以使用 [`ibmcloud dev enable` 命令](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)对现有代码进行云启用。此命令会生成一个 DevOps 工具链模板，您可以将其检入存储库中。然后，将该模板用作 DevOps 工具链创建的内容的指令集。有关更多信息，请参阅 [CLI 文档](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)。
-
-## 添加 GitHub 集成
+### 添加 GitHub 集成
 {: #github-byoc-kube}
 
-将 DevOps 工具链配置为集成 GitHub 存储库以允许工具链在存储库中设置 Webhook，以便该存储库中的拉取请求和代码推送操作向工具链发送 POST 操作。 
+配置 DevOps 工具链，其中包含工具链的 GitHub 存储库的集成。这会在存储库中设置 Webhook，以便该存储库中的拉取请求和代码推送操作会发送对工具链的 POST 操作。
 
-1. 在 DevOps 工具链模板中，单击**添加工具**。
+1. 在空的 DevOps 工具链模板中，单击**添加工具**。
 2. 如果存储库位于公共 GitHub 或企业 GitHub 上，那么选择 **GitHub**。
 3. 选择或输入 GitHub 服务器 URL。
 4. 可能会显示`在 GitHub 上未授权`消息。如果显示了该消息，请单击**授权**。接下来，在“授权 IBM Cloud 工具链”页面上，单击**授权 IBM Cloud**，然后输入 GitHub 密码。
@@ -110,14 +96,14 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 
 您可以从存储库设置查看新的 Webhook。
 
-## 添加 Delivery Pipeline
+### 添加 Delivery Pipeline
 {: #pipeline-byoc-kube}
 
 1. 单击**添加工具**。
 2. 选择 **Delivery Pipeline**。
 3. 针对管道名称输入 `Continuous Integration`，然后单击**创建集成**。
 
-## 配置管道阶段
+### 配置管道阶段
 {: #pipelineconfig-byoc-kube}
 
 将管道阶段配置为将输入（GitHub 存储库内容）定向到正确的目标。本教程假定您具有的 GitHub 存储库可生成正常工作的 Docker 映像，并且正在使用 IBM Containers Kubernetes 集群，因此您可创建包含输入、shell 脚本和输出的管道阶段以实现此目标。
@@ -168,14 +154,18 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 ## 验证应用程序是否正在运行
 {: #verify-byoc-kube}
 
-应用程序部署完成后，Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
+Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
-
-    在日志文件末尾，搜索 `View the application health at: http://<ipaddress>:<port>/health`。
-
+3. 在日志文件中，查找应用程序 URL。在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
 
-如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令，在缺省浏览器中打开手动部署的应用程序的页面。
+
+## 相关信息
+
+ * [创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+ * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

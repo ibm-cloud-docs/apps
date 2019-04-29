@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,10 +18,15 @@ subcollection: creating-apps
 # 向应用程序添加服务
 {: #add-resource}
 
-使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 创建应用程序时，可以在“应用程序详细信息”页面中添加服务。但是，您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.cloud_notm}}“目录”供应资源。
+使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 创建应用程序时，可以在“应用程序详细信息”页面中添加服务。您也可以在应用程序上下文的外部，直接从 {{site.data.keyword.cloud_notm}} 目录供应服务。
 {: shortdesc}
 
 您可以请求一个服务实例，然后独立于应用程序使用该实例，也可以在“应用程序详细信息”页面中将该服务实例添加到应用程序中。您可以直接在 {{site.data.keyword.cloud_notm}}“目录”中供应特定类型的服务。
+
+## 自动供应的服务
+{: #auto-provision}
+
+如果入门模板工具包指定了所需服务，那么当您创建应用程序时，{{site.data.keyword.cloud_notm}} 会自动创建这些服务的实例。请注意，在创建应用程序后，您也可以手动创建服务或选择现有服务实例以添加到应用程序中。您可以在**应用程序详细信息**页面中查看与应用程序关联的服务实例的列表，还可在之后需要时在其中查看服务凭证。
 
 ## 发现服务
 {: #discover-resources}
@@ -109,7 +114,7 @@ ibmcloud dev edit
 
 1. 使用 `ibmcloud service user-provided-create` 命令创建用户提供的服务实例：
     * 要创建用户提供的一般服务实例，请使用 **-p** 选项，并用逗号分隔参数名称。随后，`ibmcloud` 命令行界面会依次提示您提供每个参数的值。例如：
-```
+        ```
         ibmcloud service user-provided-create testups1 -p "host, port, dbname, username, password"
         host> pubsub01.example.com
         port> 1234
