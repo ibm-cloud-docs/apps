@@ -84,7 +84,7 @@ If you manually launch a toolchain and experience a failure, you can restore you
 ## Optional: Configuring {{site.data.keyword.cos_full_notm}} 
 {: #mendix-cos}
 
-Some users might want to configure their deployed Mendix application to use {{site.data.keyword.cos_full}} for persistent storage and file uploads. {{site.data.keyword.cos_full_notm}} is an S3-compatible object storage service. To take advantage of S3-compatible file storage, Mendix applications must define the following environment variables to access a {{site.data.keyword.cos_full_notm}} instance:
+Some users might want to configure their deployed Mendix application to use {{site.data.keyword.cos_full}} for persistent storage and file uploads. {{site.data.keyword.cos_full_notm}} is an S3-compatible object storage service. To take advantage of S3-compatible file storage, Mendix applications must define the following environment variables to access a {{site.data.keyword.cos_full_notm}} instance, after they have configured continuous delivery:
 
 * `S3_ACCESS_KEY_ID` - the S3 Key, which is part of {{site.data.keyword.cos_full_notm}} credentials
 * `S3_SECRET_ACCESS_KEY` - the S3 secret key, which is part of {{site.data.keyword.cos_full_notm}} credentials
@@ -142,13 +142,7 @@ Complete these steps for Kubernetes deployments:
         value: "true"
   ```
 
-3. After the Kubernetes changes are applied, redeploy your application by navigating to the **App details** page and clicking `Configure continuous delivery`. 
-
-4. On the **Select a deployment target** page, select Cloud Foundry or one of your Kubernetes clusters that is running on {{site.data.keyword.cloud_notm}}. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a Cloud Foundry deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** or **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
-
-5. Optional. If you don't have a Kubernetes cluster, create one now.
-
-6. On the **Configure toolchain** page, select your region and resource group, and then click **Create**.
+3. After the Kubernetes changes are applied, redeploy your application by navigating to the **App details** page and clicking `Deploy`. 
 
 ## Next steps 
 {: #next-steps-mendix}
