@@ -142,7 +142,7 @@ Complete these steps for Kubernetes deployments:
         value: "true"
   ```
 
-3. After the Kubernetes changes are applied, redeploy your application by navigating to the **App details** page and clicking `Deploy`. 
+3. After the Kubernetes changes are applied, redeploy your application by navigating to the **App details** page and clicking **Deploy**. 
 
 ## Next steps 
 {: #next-steps-mendix}
