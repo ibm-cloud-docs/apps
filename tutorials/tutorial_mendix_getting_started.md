@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-02"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note .note}
 
 # Creating apps with Mendix
 {: #create-mendix}
@@ -34,7 +35,6 @@ Mendix is a low-code development environment and toolset that helps you deliver 
 3. Click **Create app**.
 4. On the **App details** page, name your app and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 5. Click **Create**.
-
 
 ## Authorizing IBM to create your project on Mendix and link accounts
 {: #link-mendix-account}
@@ -62,7 +62,6 @@ Mendix Cloud Foundry deployments require the PostGRES database service, which do
 
 If you selected a Kubernetes cluster for deployment, see the [Mendix Kubernetes tutorial](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube) to learn how to configure your cluster for production use.
 
-
 ## Continuing the Mendix development and deployment lifecycle
 {: #dev-lifecycle-mendix}
 
@@ -77,70 +76,79 @@ Mendix is a low-code authoring environment. The development lifecycle requires y
 5. To deploy your Mendix application, go back to your **App details** page on {{site.data.keyword.cloud_notm}}, and click **Deploy**.
   This action starts your application's DevOps toolchain, which pulls the latest deployment from Mendix and deploys it to your target environment. After the deployment is complete, the latest version of your application automatically starts and becomes available.
 
-All Mendix applications are to be deployed to {{site.data.keyword.cloud_notm}} by clicking **Configure continuous delivery** in the **App details** page on {{site.data.keyword.cloud_notm}}. Don't manually invoke Mendix toolchains through the IBM DevOps interface. Launching toolchains manually through the DevOps interface might result in a failed deployment due to a lack of required metadata that is critical for Mendix deployments. Depending on the state of your application, either a failure during the DevOps toolchain launch, or an error in the deployed application, might occur. If you manually launch a toolchain and experience a failure, you can restore your application deployment by clicking **Configure continuous delivery** in the **App details** page on {{site.data.keyword.cloud_notm}}. This action triggers a complete DevOps flow for the Mendix application, which includes the required metadata.
+All Mendix applications are to be deployed to {{site.data.keyword.cloud_notm}} by clicking **Configure continuous delivery** in the **App details** page on {{site.data.keyword.cloud_notm}}. Don't manually invoke Mendix toolchains through the IBM DevOps interface. Launching toolchains manually through the DevOps interface might result in a failed deployment due to a lack of required metadata that is critical for Mendix deployments. Depending on the state of your application, either a failure during the DevOps toolchain launch, or an error in the deployed application, might occur.
+
+If you manually launch a toolchain and experience a failure, you can restore your application deployment by clicking **Configure continuous delivery** in the **App details** page on {{site.data.keyword.cloud_notm}}. This action triggers a complete DevOps flow for the Mendix application, which includes the required metadata.
 {: tip}
 
-## Optional: Configure IBM Cloud Object Storage
-{: #object-storage}
-Some users may want to configure their deployed Mendix application to use IBM Cloud Object Storage for persistent storage and file uploads.  IBM Cloud Object storage is an S3 compatible object storage service.  To take advantage of S3-compatible file storage Mendix applications need to define the following environment variables to access a Cloud OBject storage instance:
+## Optional: Configuring {{site.data.keyword.cos_full_notm}} 
+{: #mendix-cos}
 
-- `S3_ACCESS_KEY_ID` - the S3 Key, part of Object Storage credentials
-- `S3_SECRET_ACCESS_KEY` - the S3 secret key, part of of Object Storage credentials
-- `S3_BUCKET_NAME` - the S3 storage bucket
-- `S3_ENDPOINT` - the S3 storage endpoint.  
-- `S3_USE_V2_AUTH` - should have value `true`
+Some users might want to configure their deployed Mendix application to use {{site.data.keyword.cos_full}} for persistent storage and file uploads. {{site.data.keyword.cos_full_notm}} is an S3-compatible object storage service. To take advantage of S3-compatible file storage, Mendix applications must define the following environment variables to access a {{site.data.keyword.cos_full_notm}} instance:
 
-Details on Cloud Object Storage buckets and keys can be found in the [Cloud Object Storage API documentation](https://cloud.ibm.com/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev).  Regional and cross-regional endpoint values are avilable in [Cloud Object Storage docs](https://cloud.ibm.com/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints).  Details on Mendix support for S3 compatible storage can be found in the [Mendix buildpack documentation](https://github.com/mendix/cf-mendix-buildpack#s3-settings).
+* `S3_ACCESS_KEY_ID` - the S3 Key, which is part of {{site.data.keyword.cos_full_notm}} credentials
+* `S3_SECRET_ACCESS_KEY` - the S3 secret key, which is part of {{site.data.keyword.cos_full_notm}} credentials
+* `S3_BUCKET_NAME` - the S3 storage bucket
+* `S3_ENDPOINT` - the S3 storage endpoint
+* `S3_USE_V2_AUTH` - the value is `true`
 
-### Object Storage settings for Cloud Foundry applications
-These environment variables can be set on Cloud Foundry deployments using the `cf set-env` command:
+For more information about {{site.data.keyword.cos_full_notm}} buckets and keys, see the [{{site.data.keyword.cos_full_notm}} API documentation](/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev). For more information about regional and cross-regional endpoint values, see the [{{site.data.keyword.cos_full_notm}} docs](/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints). For more information about Mendix support for S3-compatible storage, see the [Mendix buildpack documentation](https://github.com/mendix/cf-mendix-buildpack#s3-settings){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
-```
-ibmcloud cf set-env <YOUR_APP> S3_ACCESS_KEY_ID <YOUR_KEY>
-ibmcloud cf set-env <YOUR_APP> S3_SECRET_ACCESS_KEY <YOUR_SECRET_KEY>
-ibmcloud cf set-env <YOUR_APP> S3_BUCKET_NAME <YOUR_BUCKET>
-ibmcloud cf set-env <YOUR_APP> S3_ENDPOINT s3.us-south.cloud-object-storage.appdomain.cloud
-ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
-```
+### {{site.data.keyword.cos_full_notm}} settings for Cloud Foundry applications
+{: cos-cfapps}
 
-Once all of these values have been specified, restage your Cloud Foundry application for the new values to be applied. 
+Complete these steps for Cloud Foundry deployments:
 
-```
-ibmcloud cf restage <YOUR_APP>
-```
+1. Set these environment variables on Cloud Foundry deployments by using the `cf set-env` command:
 
-### Object Storage settings for Kubernetes applications
-For Kubernetes deployment this is a multi-step process.  First, set the `S3_ACCESS_KEY_ID` and `S3_SECRET_ACCESS_KEY` environment variables as Kubernetes secret values in the cluster.  You can see steps for creating Kubernetes secrets in the [IBM Kubernetes Service documentation](https://cloud.ibm.com/docs/apps?topic=creating-apps-add-credentials-kube#define-the-secret-in-the-cluster). 
+  ```
+    ibmcloud cf set-env <YOUR_APP> S3_ACCESS_KEY_ID <YOUR_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_SECRET_ACCESS_KEY <YOUR_SECRET_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_BUCKET_NAME <YOUR_BUCKET>
+    ibmcloud cf set-env <YOUR_APP> S3_ENDPOINT s3.us-south.cloud-object-storage.appdomain.cloud
+    ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
+  ```
 
-These environment variables then must specified as additional environment variables in the `mendix-app.yaml` file inside of the Git repo's `chart/<appname>/templates` folder in addition to any existing values:
+2. After you specify all of these values, restage your Cloud Foundry application for the new values to be applied.
 
-```
-          env:
-            - name: S3_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  name: "mendix-s3-key"
-                  key: db-endpoint
-            - name: S3_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: "mendix-s3-secret-key"
-                  key: db-endpoint
-            - name: S3_ENDPOINT
-              value: "s3.us-south.cloud-object-storage.appdomain.cloud"
-            - name: S3_USE_V2_AUTH
-              value: "true"
-```
+  ```
+    ibmcloud cf restage <YOUR_APP>
+  ```
 
-_Note: The secret names must match those created in the previous step._
+### {{site.data.keyword.cos_full_notm}} settings for Kubernetes applications
+{: #cos-kubeapps}
 
-After the Kubernetes changes have been applied, you will need to redeploy your application by navigating to the app details screen and clicking on the `Deploy` button. 
+Complete these steps for Kubernetes deployments:
 
+1. Set the `S3_ACCESS_KEY_ID` and `S3_SECRET_ACCESS_KEY` environment variables as Kubernetes secret values in the cluster. For more information about creating Kubernetes secrets, see the [{{site.data.keyword.containershort_notm}} documentation](/docs/containers?topic=containers-service-binding#adding_app).
 
-1. On the **Select a deployment target** page, select Cloud Foundry or one of your Kubernetes clusters that is running on {{site.data.keyword.cloud_notm}}. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a Cloud Foundry deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** or **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
-2. Optional. If you don't have a Kubernetes cluster, you can create one now.
-3. On the **Configure toolchain** page, select your region and resource group, and then click **Create**.
+2. In addition to any existing values, specify the environment variables as additional environment variables in the `mendix-app.yaml` file inside of the Git repo's `chart/<appname>/templates` folder. The secret names must match the names that were created in the previous step.
 
+  ```
+    env:
+      - name: S3_ACCESS_KEY_ID
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-key"
+            key: db-endpoint
+      - name: S3_SECRET_ACCESS_KEY
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-secret-key"
+            key: db-endpoint
+      - name: S3_ENDPOINT
+        value: "s3.us-south.cloud-object-storage.appdomain.cloud"
+      - name: S3_USE_V2_AUTH
+        value: "true"
+  ```
+
+3. After the Kubernetes changes are applied, redeploy your application by navigating to the **App details** page and clicking `Configure continuous delivery`. 
+
+4. On the **Select a deployment target** page, select Cloud Foundry or one of your Kubernetes clusters that is running on {{site.data.keyword.cloud_notm}}. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a Cloud Foundry deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** or **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
+
+5. Optional. If you don't have a Kubernetes cluster, create one now.
+
+6. On the **Configure toolchain** page, select your region and resource group, and then click **Create**.
 
 ## Next steps 
 {: #next-steps-mendix}
