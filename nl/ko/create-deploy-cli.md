@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-15"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ subcollection: creating-apps
   {: note}
 7. 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트입니다. 예를 들면, `abc-devhost.mybluemix.net`입니다.
 
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
+기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/apps/tutorials?topic=creating-apps-update-domain)를 참조하십시오.
 {: tip}
 
 앱 및 도구 체인 작성을 완료하는 데 몇 초가 걸립니다.
@@ -124,7 +124,7 @@ subcollection: creating-apps
 
 [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 명령을 사용하여 수동으로 앱을 배치할 수 있습니다. 예를 들어, 다음 단계를 사용하여 수동으로 앱을 Kubernetes에 배치하십시오.
 
-1. [Kubernetes 클러스터를 작성](https://{DomainName}/kubernetes/overview){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")했는지 확인하십시오.
+1. [Kubernetes 클러스터를 작성](https://{DomainName}/containers-kubernetes/overview){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")했는지 확인하십시오.
 2. [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 명령을 실행하십시오.
 3. 프롬프트가 표시되면 사용할 클러스터 및 컨테이너 이미지 이름을 확인하십시오.
 4. 배치가 완료될 때까지 몇 분 동안 기다리십시오.
@@ -135,4 +135,4 @@ subcollection: creating-apps
 1. {{site.data.keyword.cloud_notm}}에서 실행 중인 앱의 URL을 보려면 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하십시오.
 2. {{site.data.keyword.cloud_notm}} 콘솔에서 앱의 인증 정보, 서비스 및 도구 체인에 대한 세부사항을 보려면 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 명령을 실행하십시오. 
 
-**문제를 보고하거나 피드백을 제공하려면 [{{site.data.keyword.cloud_notm}} Tech의 Slack(#developer-tools 채널)](https://ibm-cloud-tech.slack.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 사용할 수 있습니다. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 팀 액세스를 요청하십시오.**
+**문제를 보고하거나 피드백을 제공하려면 [{{site.data.keyword.cloud_notm}} Tech의 Slack(#developer-tools 채널)](https://ibm-cloud-tech.slack.com){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 사용할 수 있습니다. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 팀 액세스를 요청하십시오.**

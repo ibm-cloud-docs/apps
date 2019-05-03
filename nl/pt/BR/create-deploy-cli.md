@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-15"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ A criação de um app do zero é útil se você ainda não tem o código existen
   {: note}
 7. Insira um nome de host exclusivo; por exemplo, `abc-devhost`. Esse nome do host é a rota do app; por exemplo, `abc-devhost.mybluemix.net`.
 
-O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/apps/tutorials?topic=creating-apps-update-domain).
 {: tip}
 
 A criação do app e da cadeia de ferramentas leva alguns segundos para ser concluída.
@@ -126,7 +126,7 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 
 É possível implementar manualmente o app usando o comando [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy). Por exemplo, use as etapas a seguir para implementar manualmente o app no Kubernetes.
 
-1. Assegure-se de que você [tenha criado um cluster Kubernetes](https://{DomainName}/kubernetes/overview){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+1. Assegure-se de que você [tenha criado um cluster Kubernetes](https://{DomainName}/containers-kubernetes/overview){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 2. Execute o comando [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 3. Quando solicitado, confirme o cluster e o nome da imagem do contêiner a serem usados.
 4. Espere alguns minutos para que a implementação seja concluída.
@@ -137,4 +137,4 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 1. Para visualizar a URL do app que está em execução no {{site.data.keyword.cloud_notm}}, execute o comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view).
 2. Para visualizar detalhes sobre as credenciais, os serviços e a cadeia de ferramentas do app por meio do console do {{site.data.keyword.cloud_notm}}, execute o comando [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console). 
 
-**Para relatar problemas ou fornecer feedback, é possível usar o [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Solicite acesso de equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").**
+**Para relatar problemas ou fornecer feedback, é possível usar o [canal {{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Solicite acesso de equipe [aqui](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").**

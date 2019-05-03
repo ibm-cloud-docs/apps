@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -22,9 +22,6 @@ subcollection: creating-apps
 
 Cloud Foundry 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다. 이러한 지시사항은 [Cloud Foundry 퍼블릭](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) 및 [Cloud Foundry 엔터프라이즈 환경](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee) 모두에 적용됩니다.
 {: shortdesc}
-
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
-{: tip}
 
 ## 사용자 코드 + Cloud Foundry
 {: #credentials-byoc-cf}
@@ -75,7 +72,7 @@ Cloud Foundry 배치 환경에 서비스 인증 정보를 추가하는 방법에
 
 ### Cloud Foundry 영역의 준비 방법
 
-**지속적 딜리버리 구성** 기능을 사용하여 앱을 Cloud Foundry 영역에 배치할 수 있습니다.
+**지속적 딜리버리 구성** 기능을 사용하여 앱을 Cloud Foundry 영역에 배치할 수 있습니다. 
 
 Cloud Foundry 기반 서비스 인스턴스가 배치된 Cloud Foundry 애플리케이션과 동일한 Cloud Foundry 영역에 있으면 [다음 절](/docs/apps?topic=creating-apps-add-credentials-cf)을 참조하십시오.
 

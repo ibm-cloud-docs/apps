@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -22,9 +22,6 @@ subcollection: creating-apps
 
 Cloud Foundry デプロイメント環境にサービス資格情報を追加する方法について説明します。 これらの説明は、[Cloud Foundry パブリック](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)と [Cloud Foundry エンタープライズ環境](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)の両方に当てはまります。
 {: shortdesc}
-
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
-{: tip}
 
 ## ユーザー作成コード + Cloud Foundry
 {: #credentials-byoc-cf}
@@ -111,7 +108,7 @@ blarg3-alertnotificati-1538417831070   alertnotification   authorizedusers      
 #### リソース・コントローラー・ベースのサービスがアプリに関連付けられている場合
 {: #cf_resource_controller}
 
-アプリケーションに関連付けたサービスがリソース・コントローラー・ベースの場合、サービスは Cloud Foundry 内で「バインド可能」では_ありません_。 サービスがリソース・コントローラー・ベースかどうかは、サービス作成時にどのリソース・グループ内にサービスを作成するか尋ねられたかどうかで分かります。 アプリケーションがコード内でサービス資格情報を参照できるように、Cloud Foundry スペースにその資格情報を準備する必要があります。 準備は自動的に行われ、`cf` コマンド・ラインをスペースに接続し、以下を実行することにより、スペースの準備の結果を監視できます。
+アプリケーションに関連付けたサービスがリソース・コントローラー・ベースの場合、サービスは Cloud Foundry 内で「バインド可能」では_ありません_。サービスがリソース・コントローラー・ベースかどうかは、サービス作成時にどのリソース・グループ内にサービスを作成するか尋ねられたかどうかで分かります。アプリケーションがコード内でサービス資格情報を参照できるように、Cloud Foundry スペースにその資格情報を準備する必要があります。 準備は自動的に行われ、`cf` コマンド・ラインをスペースに接続し、以下を実行することにより、スペースの準備の結果を監視できます。
 ```console
 cf services
 ```

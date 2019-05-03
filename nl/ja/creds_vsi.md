@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-14"
 
-keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
 
 subcollection: creating-apps
 
@@ -74,7 +74,7 @@ docker run -p 80:8080 -e password="someThingSensitive"
 ```
 {: codeblock}
 
-アプリの作成時に「継続的デリバリーの構成 (Configure continous delivery)」フィーチャーを使用すると、`/server/localdev-config.json` ファイルは GitLab リポジトリーから削除されます。 セキュリティー上の理由から、資格情報はソース・コード・リポジトリー内に入れないでください。
+アプリの作成時に「継続的デリバリーの構成 (Configure continous delivery)」フィーチャーを使用すると、`/server/localdev-config.json` ファイルは GitLab リポジトリーから削除されます。セキュリティー上の理由から、資格情報はソース・コード・リポジトリー内に入れないでください。
 
 作成された GitLab リポジトリーに対し `git clone` を使用してアクティブな開発を開始した場合、機密性の高い資格情報を含んだファイルが誤ってチェックインされないように、`.gitignore` ファイルが `server/localdev-config.json` を具体的に無視する点に注意してください。 ただし、ノートブックで作業する開発者と同じように、VSI はこのファイルを_必要とします_。
 

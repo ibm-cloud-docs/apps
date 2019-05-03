@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## 无法复用已删除应用程序的名称
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,8 +123,8 @@ nslookup cloud.ibm.com
 请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
 {: tsResolve}
 
-* 在菜单栏中，单击**管理 > 帐户**，然后选择 **Cloud Foundry 组织**。单击要在其中创建空间的组织的名称，然后单击**添加空间**。
-* 在 Cloud Foundry 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`。
+* 在菜单栏中，单击**管理 > 帐户**，然后选择 **Cloud Foundry 组织**。选择要在其中创建空间的组织，然后单击**创建空间**。
+* 在 Cloud Foundry 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`.
 
 请重试。如果再次出现此消息，请转至 [{{site.data.keyword.cloud_notm}} 状态 ](http://ibm.biz/bluemixstatus){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面，检查服务或组件是否存在问题。
 
@@ -262,9 +263,9 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 	  2. 单击**删除服务**。系统会提示您重新编译打包服务实例所绑定到的应用程序。
 
     要使用命令行界面删除服务实例，请完成以下步骤：
-	  3. 取消服务实例与应用程序的绑定。输入 `cf unbind-service <appname> <service_instance_name>`。
-	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`。
-	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`。
+	  3. 取消服务实例与应用程序的绑定。输入 `cf unbind-service <appname> <service_instance_name>`.
+	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`.
+	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`.
 
   * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account?topic=account-accounts#upgrade-to-paygo)。
 
@@ -686,7 +687,8 @@ Docker 客户机未安装，或者已安装但未启动。
 确保 [Docker](https://docs.docker.com/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "External link icon") 已安装并启动。
 {: tsResolve}
 
-  ## 构建应用程序失败，并返回 Docker 错误
+  
+## 构建应用程序失败，并返回 Docker 错误
 {: #build_error}
 {: troubleshoot}
 

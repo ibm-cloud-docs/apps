@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -22,9 +22,6 @@ subcollection: creating-apps
 
 Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Cloud Foundry-Bereitstellungsumgebung hinzufügen. Diese Anweisungen gelten sowohl für [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) als auch für [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
-
-Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können. Weitere Informationen zur Migration auf `appdomain.cloud` finden Sie im Abschnitt zum [Aktualisieren Ihrer Domäne](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
 
 ## Ihr Code + Cloud Foundry
 {: #credentials-byoc-cf}

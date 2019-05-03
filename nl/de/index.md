@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-03-15"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: apps, create apps, add resources, deploy apps
 
 subcollection: creating-apps
 
@@ -23,12 +23,6 @@ subcollection: creating-apps
 Sie können auf Unternehmen abgestimmte mobile und Webanwendungen in {{site.data.keyword.cloud}} erstellen und die Vorteile von Cloud-Erweiterungen nutzen, die von {{site.data.keyword.cloud_notm}} gehostet werden. Es stehen verschiedene Optionen für den Einstieg zur Auswahl. Erstellen Sie eine App mit einem Starter-Kit, das den Prozess für Sie verwaltet, oder wenn Ihre Pläne bereits festliegen, erstellen Sie eine völlig neue App mit den benötigten Ressourcen, oder verwenden Sie Ihr vorhandenes Repository und bringen Sie Ihren eigenen Code mit.
 {: shortdesc}
 
-Unabhängig davon, ob Sie [vorhandenen Code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) haben, den Sie modernisieren und in die Cloud bringen möchten, oder ob Sie eine [von Grund auf neue Anwendung](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) entwickeln, können Sie das schnell wachsende Ökosystem verfügbarer Services und Laufzeitframeworks in {{site.data.keyword.cloud_notm}} nutzen.
-
-Benötigen Sie Hilfe bei der Entscheidung, wo Sie anfangen sollen? Dieses Diagramm bietet Ihnen Ideen!
-
-![Übersicht über Entwickler-Erfahrungen](images/dev-journey.png "Übersicht über Entwickler-Erfahrungen")
-
 ## Vorbereitende Schritte
 {: #prereqs-getting-started}
 
@@ -38,20 +32,19 @@ Sie können Ihre App mithilfe der {{site.data.keyword.cloud_notm}}-Konsole oder 
 {: #create-getting-started}
 
 Erstellen Sie eine App, indem Sie einen der folgenden Eingangspunkte auswählen:
+* [Starter-Kit:](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) Erstellen Sie eine App aus einer Auswahl von Starter-Kits für den App-Service, die den Prozess für Sie verwalten.
+* [Angepasst:](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) Wenn Ihre Pläne bereits festliegen, erstellen Sie eine völlig neue angepasste App mit den benötigten Ressourcen, indem Sie ein leeres Starter-Kit verwenden.
+* [Eigenen Code integrieren:](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) Sie können Ihren eigenen Code einbringen, indem Sie eine Verknüpfung zu einem eigenen vorhandenen Content-Repository herstellen. Ihre App und das Docker-Image müssen sich im selben Repository befinden.
+* [CLI:](/docs/apps?topic=creating-apps-create-deploy-app-cli) Erstellen Sie eine angepasste oder eine Starter-Kit-App und stellen Sie sie bereit, indem Sie die CLI sowie Entwicklertools verwenden.
+* [Codemuster:](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern) Verwenden Sie ein IBM Entwickler-Codemuster als Basis für die Erstellung Ihrer App.
+* [{{site.data.keyword.cloud_notm}}-Katalog ](https://cloud.ibm.com/catalog){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"): Sie können den Katalog nach Apps und Services durchsuchen, die Sie erstellen und noch am selben Tag nutzen können.
 
-* [Starter-Kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) sind Anwendungsfall-spezifisch und erzeugen einsatzbereite Apps in unterschiedlichen Programmiersprachen und Architekturmustern.
-* [IBM Developer-Codemuster ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/patterns/){:new_window} helfen Ihnen, Ihre App schnell zu erstellen und in {{site.data.keyword.cloud_notm}} bereitzustellen. Weitere Informationen finden Sie unter [Codemuster](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
-* [Integrieren Sie eigenen Code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc), indem Sie Ihr eigenes vorhandenes Content-Repository verlinken. Ihre App und das Docker-Image müssen sich im selben Repository befinden.
-* Wenn Ihre Pläne bereits feststehen, erstellen Sie eine von Grund auf neue [angepasste App](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) mit den benötigten Services, indem Sie ein leeres Starter-Kit verwenden.
-* Erstellen Sie eine angepasste oder Starter-Kit-App und stellen Sie sie bereit, indem Sie die [CLI und Entwicklertools](/docs/apps?topic=creating-apps-create-deploy-app-cli) verwenden.
-* Durchblättern oder durchsuchen Sie den [{{site.data.keyword.cloud_notm}}-Katalog](https://{DomainName}/catalog){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") nach Apps und Services, die Sie erstellen und noch am selben Tag verwenden können.
-
-## Schritt 2. Services hinzufügen
+## Schritt 2. Ressourcen hinzufügen
 {: #resources-getting-started}
 
-Wenn Sie zur Erstellung Ihrer App ein Starter-Kit verwenden, werden Ihre Services automatisch für Sie erstellt. Sie können Ihrer App weitere Services zuordnen, indem Sie auf der Seite **App-Details** in der Konsole auf **Service erstellen** klicken.
+Wenn Sie zur Erstellung Ihrer App ein Starter-Kit verwenden, werden Ihre Services automatisch für Sie erstellt. Sie können Ihrer App weitere Services zuordnen, indem Sie auf der Seite **App-Details** in der Konsole auf **Service hinzufügen** klicken.
 
-Führen Sie den folgenden Befehl aus, um über die CLI einen Service zu Ihrer App hinzuzufügen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen Service hinzufügen. 
+Um Services unter Verwendung der Befehlzeilenschnittstelle hinzuzufügen, führen Sie den folgenden Befehl aus, um Ihrer App einen Service hinzuzufügen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen neuen Service hinzufügen. 
 ```
 ibmcloud dev edit
 ```
@@ -62,7 +55,7 @@ Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/app
 ## Schritt 3. App bereitstellen
 {: #deploy-getting-started}
 
-Sie können Ihre App über die Konsole oder über die CLI bereitstellen.
+Sie können Ihre App über die Konsole oder über die Befehlszeile bereitstellen.
 
 ### Verwendung der Konsole
 {: #console-getting-started}
@@ -75,14 +68,9 @@ Führen Sie die folgenden Schritte aus, um die App über die Konsole zu verwende
 
 Weitere Informationen finden Sie im Inhaltsverzeichnis für verschiedene Bereitstellungsthemen im Abschnitt "App bereitstellen und integrieren".
 
-### Verwendung der Befehlszeilenschnittstelle
+### Verwendung der Befehlszeile
 {: #cli-getting-started}
 
-Führen Sie den Befehl `ibmcloud dev deploy` aus, um Ihre App über die CLI bereitzustellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+Führen Sie den Befehl `ibmcloud dev deploy` aus, um Ihre App über die Befehlszeile bereitzustellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Jetzt sind Sie bereit für die iterative Entwicklung und Continuous Delivery.
-
-## Zugehörige Informationen
-{: #related-getting-started}
-
-[Programmierhandbücher](https://{DomainName}/docs/home/build){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") sind in verschiedenen Sprachen verfügbar, um Ihnen den Start zu erleichtern. Es besteht eine Vielzahl von Optionen für das Hosten Ihrer Apps mit der {{site.data.keyword.cloud_notm}}-Infrastruktur, von {{site.data.keyword.baremetal_short}} bis hin zur Ausführung als serverunabhängige Funktion.

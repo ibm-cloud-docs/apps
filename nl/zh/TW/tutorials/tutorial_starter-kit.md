@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, create app starter kit, basic app, simple app
+keywords: apps, starter kit
 
 subcollection: creating-apps
 
@@ -24,10 +24,6 @@ subcollection: creating-apps
 
 您可以從一群精選的入門範本套件建立應用程式，這其中包括空白的入門範本套件（如果您想要自己自訂建置選項的話）。無論哪一種方法，都會自動建立 DevOps 工具鏈來部署應用程式。您也可以下載程式碼以便立即進行檢驗。
 
-{{site.data.keyword.cloud_notm}} 有多種不同領域的開發人員入口網站（例如，Watson、「安全」或「財務」）或數位通路（例如，「行動裝置」或「Web 應用程式」）。您可以從**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) 存取這些入口網站。
-
-每個開發者入口網站都提供與該入口網站焦點區域相關的入門範本套件。入口網站提供一致的直覺式工作流程，以在幾分鐘內建立一個工作中的可正式作業應用程式。
-
 入門範本套件有許多種類，其中包括：
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 * [Apple ](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
@@ -36,12 +32,10 @@ subcollection: creating-apps
 * [安全 ](https://{DomainName}/developer/security/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 * [財務 ](https://{DomainName}/developer/finance/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-[進一步瞭解](/docs/apps?topic=creating-apps-starter-kits)入門範本套件。
-
 ## 步驟 1. 建立應用程式
 {: #create-starterkit}
 
-1. 從 [{{site.data.keyword.cloud}} 儀表板](https://{DomainName}){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")，按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > **Web 應用程式**。
+1. 從 [{{site.data.keyword.cloud}} 儀表板](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > **Web 應用程式**。
 
 2. 按一下**從 Web 開始**區段中的**開始使用**。
 
@@ -78,7 +72,7 @@ subcollection: creating-apps
 
 啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們針對您所選擇的部署環境（[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）經過自訂。
 
-在選取部署目標之後，請開啟新工具鏈的管線元件，以開始起始建置和部署處理程序，讓您可以在幾分鐘內看到新的應用程式。
+在您選取部署環境之後，請開啟新工具鏈的管線元件，以開始起始建置及部署處理程序，以便您可以在數分鐘內看到新的應用程式。
 
 從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 {: note}

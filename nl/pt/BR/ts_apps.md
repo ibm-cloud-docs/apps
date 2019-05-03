@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## Não é possível reutilizar nomes de apps excluídos
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,7 +123,7 @@ Esse erro geralmente ocorre na primeira vez que você tenta criar um app ou um s
 Certifique-se de que você criou um espaço em sua organização atual. Para criar um espaço, use um dos métodos a seguir:
 {: tsResolve}
 
-* Na barra de menus, clique em **Gerenciar > Conta** e selecione **Organizações do Cloud Foundry**. Clique no nome da organização em que você deseja criar o espaço e clique em **Incluir um espaço**.
+* Na barra de menus, clique em **Gerenciar > Conta** e selecione **Organizações do Cloud Foundry**. Selecione a organização em que você deseja criar o espaço e clique em **Criar um espaço**.
 * Na interface da linha de comandos do Cloud Foundry, digite `cf create-space <space_name> -o <organization_name>`.
 
 Tente novamente. Se essa mensagem ocorrer novamente, acesse a página [{{site.data.keyword.cloud_notm}} status ](http://ibm.biz/bluemixstatus){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para verificar se um serviço ou um componente tem algum problema.
@@ -247,7 +248,7 @@ Se você é um usuário da conta Lite, talvez não seja possível criar um app n
 Quando você tenta criar um app no {{site.data.keyword.cloud_notm}}, a mensagem de erro a seguir é exibida:
 {: tsSymptoms}
 
-`BXNUI2032E: O recurso <service_instances> não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
+`BXNUI2032E: O <service_instances> recurso não foi criado. Ocorreu um erro enquanto o Cloud Foundry estava sendo contatado para criar o recurso. Mensagem do Cloud Foundry: "Você excedeu seu limite de serviços da organização."`
 
 Esse erro ocorre quando você excede o limite no número de instâncias de serviço que pode ter para sua conta.
 {: tsCauses}

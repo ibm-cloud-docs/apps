@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-03-15"
 
-keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
+keywords: apps, application, SSL certificates, access, restrict access
 
 subcollection: creating-apps
 
@@ -44,12 +44,20 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 
 在建立 CSR 時必須輸入下列資訊，CSR 才會有效。
 
- * **國家名稱**。國家或地區的兩碼代碼。例如，`US` 是美國的國碼。若為其他國家或地區，請先檢查 [ISO 國碼清單 ](https://www.iso.org/obp/ui/#search){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，然後再建立 CSR。
- * **州/省（縣/市）**。州/省（縣/市）的完整未縮寫名稱。
- * **地區**。城市或城鎮的完整名稱。
- * **組織**。企業或公司在您的地區合法登錄的完整名稱，或是人名。若為公司，請務必包含登錄字尾，例如 Ltd.、Inc. 或 NV。
- * **組織單位**。貴公司訂購憑證的分支名稱，例如會計或行銷。
- * **通用名稱**。您要求 SSL 憑證的完整網域名稱 (FQDN)。
+<dl>
+<dt>國家或地區名稱</dt>
+<dd>國家或地區的兩碼代碼。例如，`US` 是美國的國碼。若為其他國家或地區，請先檢查 [ISO 國碼清單 ](https://www.iso.org/obp/ui/#search){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，然後再建立 CSR。</dd>
+<dt>州/省（縣/市）</dt>
+<dd>州/省（縣/市）的完整未縮寫名稱。</dd>
+<dt>地區</dt>
+<dd>城市或城鎮的完整名稱。</dd>
+<dt>組織</dt>
+<dd>企業或公司在您的地區合法登錄的完整名稱，或是人名。若為公司，請務必包含登錄字尾，例如 Ltd.、Inc. 或 NV。</dd>
+<dt>組織單位</dt>
+<dd>貴公司訂購憑證的分支名稱，例如會計或行銷。</dd>
+<dt>通用名稱</dt>
+<dd>您要求 SSL 憑證的完整網域名稱 (FQDN)。</dd>
+</dl>
 
 您可以使用「主體替代名稱 (SAN)」，但所提供的主機名稱不得發出於其他已部署的憑證，以避免 CN 衝突。
 {: note}
@@ -67,15 +75,17 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-若要上傳 Cloud Foundry 應用程式的憑證，請完成下列步驟：
+若要上傳應用程式的憑證，請完成下列步驟：
 
-1. 從 [{{site.data.keyword.cloud_notm}} 主控台 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}){: new_window}，按一下**功能表**圖示 ![「功能表」圖示](../icons/icon_hamburger.svg)，然後選取**資源清單**。
-2. 在**資源清單**頁面上，按一下 **Cloud Foundry 應用程式**。
-3. 按一下您要變更其網域的應用程式。即會顯示應用程式的**概觀**頁面。
-4. 選取**路徑**功能表，然後按一下**管理網域**。
-5. 從「動作」直欄中，按一下「動作」圖示 ![「其他動作」圖示](../icons/action-menu-icon.svg)，然後選取**網域**。
-6. 在您自訂網域的 **SSL 憑證直欄**中，按一下**上傳**。
-7. 選取一個選項，上傳檔案，然後按一下**新增**。
+1. 在 {{site.data.keyword.cloud_notm}} 主控台中移至您的資源清單。
+
+2. 選取應用程式，以檢視應用程式詳細資料。
+
+3. 按一下**路徑** > **管理網域**。
+
+4. 從「動作」直欄，按一下「動作」圖示 ![「其他動作」圖示](../icons/action-menu-icon.svg) > **網域**。
+
+5. 按一下「SSL 憑證」直欄中的**上傳**，然後選取您的自訂網域：
   
   * 憑證：一種數位文件，用來將公開金鑰連結到憑證擁有人的身分，使憑證擁有人能夠接受鑑別。憑證由憑證管理中心發行，並由該憑證管理中心執行數位簽署。一般是由憑證管理中心發出及簽署憑證。不過，您可能會使用自簽憑證進行測試及開發用途。
   * 私密金鑰：一種用來加密訊息的演算型樣，只有對應的公開金鑰可以解密。另外，私密金鑰也用來將相對應公開金鑰所加密的訊息解密。私密金鑰保存在使用者系統上，受到密碼保護。
@@ -91,6 +101,6 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
     您可以藉由上傳 meta 資料中包含公開金鑰的用戶端憑證信任儲存庫，來設定交互鑑別。
   {: tip}
 
-如需相關資訊，請參閱[匯入 SSL 憑證](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates)。
+如需相關資訊，請參閱[匯入 SSL 憑證](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates)。
 
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-03-15"
 
-keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
+keywords: apps, application, SSL certificates, access, restrict access
 
 subcollection: creating-apps
 
@@ -50,15 +50,24 @@ essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL e
 
 Para que a CSR seja válida, as informações a seguir devem ser inseridas ao criar a CSR:
 
- * **Nome do país**. Um código com dois dígitos para o país ou a região. Por exemplo, `US` é o código do país para os Estados Unidos. Para
+<dl>
+<dt>Nome do país</dt>
+<dd>Um código com dois dígitos para o país ou a região. Por exemplo, `US` é o código do país para os Estados Unidos. Para
 outros países ou regiões, antes de criar a CSR, verifique a [lista
 de códigos de país ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
- * **Estado ou município**. O nome completo sem abreviação do estado ou do município.
- * **Localidade**. O nome completo da cidade.
- * **Organização**. O nome completo dos negócios ou da empresa, conforme registrado legalmente em sua localidade ou nome pessoal. Para
-empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.
- * **Unidade organizacional**. O nome da filial da sua empresa que está pedindo o certificado, tal como contabilidade ou marketing.
- * **Nome comum**. O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.
+</dd>
+<dt>Estado ou território</dt>
+<dd>O nome completo sem abreviação do estado ou do município.</dd>
+<dt>Localidade</dt>
+<dd>O nome completo da cidade.</dd>
+<dt>Organização</dt>
+<dd>O nome completo dos negócios ou da empresa, conforme registrado legalmente em sua localidade ou nome pessoal. Para
+empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.</dd>
+<dt>Unidade de Organização</dt>
+<dd>O nome da filial da sua empresa que está pedindo o certificado, tal como contabilidade ou marketing.</dd>
+<dt>Nome comum</dt>
+<dd>O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.</dd>
+</dl>
 
 É possível usar Subject Alternnative Names (SAN), mas os nomes de host fornecidos não devem ser emitidos em outros certificados implementados para evitar colisões de CN.
 {: note}
@@ -78,15 +87,18 @@ Ao usar um domínio customizado para entregar o certificado SSL, use os terminai
 * EU-GB: `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD: `custom-domain.au-syd.cf.cloud.ibm.com`
 
-Para fazer upload de um certificado para seu aplicativo Cloud Foundry, conclua as etapas a seguir:
+Para fazer upload de um certificado para seu aplicativo, conclua as etapas a seguir:
 
-1. No [console do {{site.data.keyword.cloud_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
-2. Na página **Lista de recursos**, clique em **Apps Cloud Foundry**.
-3. Clique no aplicativo para o qual você deseja mudar o domínio. A página **Visão geral** do app é exibida.
-4. Selecione o menu **Rotas** e clique em **Gerenciar domínios**.
-5. Na coluna Ações, clique no ícone Ações ![Ícone Mais ações](../icons/action-menu-icon.svg) e selecione **Domínios**.
-6. Clique em **Fazer upload** na **coluna Certificado SSL** para seu domínio customizado.
-7. Selecione uma opção, faça upload do arquivo e clique em **Incluir**.
+1. Acesse a sua lista de recursos no console do {{site.data.keyword.cloud_notm}}.
+
+2. Selecione seu aplicativo para visualizar os detalhes do aplicativo.
+
+3. Clique em **Rotas** > **Gerenciar domínios**.
+
+4. Por meio da coluna Ações, clique no ícone de Ações ![ícone de Maisações](../icons/action-menu-icon.svg) > **Domínios**.
+
+
+5. Clique em **Fazer upload** na coluna Certificado SSL e selecione seu domínio customizado:
   
   * Certificado: um documento digital que liga uma chave pública à identidade do proprietário do certificado, o que permite
 que o proprietário do certificado seja autenticado. Um
@@ -114,6 +126,6 @@ Segurança da Camada de Transporte (TLS). O código do cliente que acessa os apl
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}
 
-Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
+Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
 
 

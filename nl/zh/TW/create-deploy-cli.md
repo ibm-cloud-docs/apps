@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-15"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice
 
 subcollection: creating-apps
 
@@ -45,7 +45,7 @@ subcollection: creating-apps
   {: note}
 7. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，例如 `abc-devhost.mybluemix.net`。
 
-預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
 {: tip}
 
 建立應用程式及工具鏈需要幾秒鐘才能完成。
@@ -123,7 +123,7 @@ subcollection: creating-apps
 
 您可以使用 [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令，以手動部署應用程式。例如，使用下列步驟，將應用程式手動部署至 Kubernetes。
 
-1. 確定您已[建立 Kubernetes 叢集](https://{DomainName}/kubernetes/overview){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+1. 確定您已[建立 Kubernetes 叢集](https://{DomainName}/containers-kubernetes/overview){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 2. 執行 [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令。
 3. 收到提示時，確認要使用的叢集和容器映像檔名稱。
 4. 等待幾分鐘讓部署完成。
@@ -134,4 +134,4 @@ subcollection: creating-apps
 1. 若要檢視在 {{site.data.keyword.cloud_notm}} 上執行之應用程式的 URL，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令。
 2. 若要從 {{site.data.keyword.cloud_notm}} 主控台檢視應用程式的認證、服務和工具鏈詳細資料，請執行 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 指令。 
 
-**若要報告問題或提供意見，您可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 要求團隊存取。**
+**若要報告問題或提供意見，您可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 要求團隊存取。**

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-18"
 
-keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
+keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -33,7 +33,7 @@ Al crear apps de fondo o de servicio web, puede desplegarlas en el servicio de {
 
 1. Despliegue la app en la nube configurando un conducto de nube automatizado.
 2. Pulse **Configurar entrega continua**.
-3. Seleccione **Servicio de IBM Kubernetes** como destino. Debe [crear un clúster](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") si aún no tiene ninguno.
+3. Seleccione **Servicio de IBM Kubernetes** como destino. Debe [crear un clúster](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") si aún no tiene ninguno.
 4. Una vez que se haya completado el despliegue, compruebe la app activa en la nube obteniendo el URL en los registros de la etapa de despliegue del conducto de entrega. La última dirección IP con un puerto es la nueva página de inicio de la app, por ejemplo, 169.60.133.124:32355.
 
 ## Enlace de servicios
@@ -71,11 +71,11 @@ La etapa de despliegue recupera la imagen más reciente del {{site.data.keyword.
 
 Para obtener más información, consulte [Diagramas](https://docs.helm.sh/developing_charts/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 
-{{site.data.keyword.cloud_notm}} da soporte a un número de [diagramas de Helm preconfigurados](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
+{{site.data.keyword.cloud_notm}} da soporte a un número de [diagramas de Helm preconfigurados](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Comprobación de la seguridad de la app
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} da soporte al escaneo de las imágenes de contenedor empaquetadas para las vulnerabilidades de seguridad. El escaneo de seguridad es esencial para dar soporte a las aplicaciones de nivel empresarial.
 
-Vea el [repositorio de imágenes](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de los contenedores para comprobar si hay vulnerabilidades de seguridad potenciales.
+Vea el [repositorio de imágenes](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de los contenedores para comprobar si hay vulnerabilidades de seguridad potenciales.

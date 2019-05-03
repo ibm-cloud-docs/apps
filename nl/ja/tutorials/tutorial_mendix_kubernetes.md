@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-18"
 
-keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -102,7 +102,7 @@ spec:
 
 `postgres-deployment.yaml` ファイルの変更がリポジトリーにコミットして戻されたら、DevOps パイプラインの新しい実行が自動的にトリガーされます。 ただし、それによってデフォルト・アプリケーションが再デプロイされます。 最新の永続ボリューム変更と共に最新バージョンのアプリケーションがデプロイされるようにするには、最新バージョンの Mendix アプリケーションを再デプロイする必要があります。
 
-再デプロイするには、**「アプリの詳細」**ページに移動し、**「アプリのデプロイ (Deploy your app)」**タイルで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 DevOps ツールチェーン内部でデプロイメントが失敗し、アプリケーションの `.mda` ファイルが見つからないというエラーが示される場合は、それを Mendix から再度エクスポートする必要があります。 エクスポートするには、Mendix Modeler デスクトップ・アプリケーションからエクスポートするか、または、**「Mendix での編集 (Edit on Mendix)」**をクリックします。 その後、Mendix Web インターフェース内で、**「環境」**セクションに移動し、**「teamserver からパッケージを作成 (Create package from teamserver)」**をクリックした後、示される手順に従います。 アプリケーションが Mendix からエクスポートされた後、**「アプリの詳細」**ページに戻り、再び **「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 最後にエクスポートされたアプリケーションが、{{site.data.keyword.cloud}} DevOps ツールチェーンを使用して Kubernetes クラスターにデプロイされます。 デプロイメントが正常に完了すると、アプリケーションは稼働中になり、実動で使用できるようになります。
+再デプロイするには、**「アプリの詳細」**ページに移動し、**「アプリのデプロイ (Deploy your app)」**タイルで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。DevOps ツールチェーン内部でデプロイメントが失敗し、アプリケーションの `.mda` ファイルが見つからないというエラーが示される場合は、それを Mendix から再度エクスポートする必要があります。 エクスポートするには、Mendix Modeler デスクトップ・アプリケーションからエクスポートするか、または、**「Mendix での編集 (Edit on Mendix)」**をクリックします。 その後、Mendix Web インターフェース内で、**「環境」**セクションに移動し、**「teamserver からパッケージを作成 (Create package from teamserver)」**をクリックした後、示される手順に従います。 アプリケーションが Mendix からエクスポートされた後、**「アプリの詳細」**ページに戻り、再び **「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。最後にエクスポートされたアプリケーションが、{{site.data.keyword.cloud}} DevOps ツールチェーンを使用して Kubernetes クラスターにデプロイされます。 デプロイメントが正常に完了すると、アプリケーションは稼働中になり、実動で使用できるようになります。
 
 ## アプリが実行中であることの確認
 {: #verify-mendix-kube}

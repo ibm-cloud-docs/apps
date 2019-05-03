@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -22,9 +22,6 @@ subcollection: creating-apps
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Cloud Foundry. Ces instructions s'appliquent à [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) et à [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
-
-Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
 
 ## Votre code + Cloud Foundry
 {: #credentials-byoc-cf}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## Impossibile riutilizzare i nomi di applicazioni eliminate
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,8 +123,8 @@ Questo errore si verifica spesso la prima volta che si tenta di creare un'applic
 Assicurati di aver creato uno spazio nella tua organizzazione corrente. Per creare uno spazio, utilizza uno dei seguenti metodi:
 {: tsResolve}
 
-* Dalla barra dei menu, fai clic su **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**. Fai clic sul nome dell'organizzazione in cui vuoi creare lo spazio e seleziona **Aggiungi uno spazio**.
-* Nell'interfaccia della riga di comando Cloud Foundry, immetti `cf create-space <space_name> -o <organization_name>`.
+* Dalla barra dei menu, fai clic su **Gestisci > Account** e seleziona **Organizzazioni Cloud Foundry**. Seleziona l'organizzazione in cui vuoi creare lo spazio e fai clic su **Crea uno spazio**.
+* Nell'interfaccia riga di comando Cloud Foundry, immetti `cf create-space <space_name> -o <organization_name>`.
 
 Riprova. Se questo messaggio si verifica nuovamente, vai alla pagina [Stato {{site.data.keyword.cloud_notm}}](http://ibm.biz/bluemixstatus){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per controllare se un servizio o un componente ha un problema.
 
@@ -677,7 +678,7 @@ Per utilizzare un pacchetto di build personalizzato per le applicazioni Meteor, 
 
 Se i lavori di build o di distribuzione non riescono, e vedi il seguente messaggio, puoi eliminare le tue immagini con i seguenti comandi CLI. `Stato: non autorizzato: È stata superata la quota di archiviazione. Eliminare una o più immagini o rivedere la quota di archiviazione e il piano dei prezzi.`
 
-* Installa la [CLI {{site.data.keyword.cloud_notm}} ](/docs/cli?topic=cloud-cli-ibmcloud-cli), se non lo hai già fatto.
+* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), se non lo hai già fatto.
 * Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
 * Elenca le tue immagini utilizzando `ibmcloud cr images`.
 * Elimina le eventuali immagini inutilizzate servendoti di `ibmcloud cr image-rm <respository>:<tag>`.
@@ -692,7 +693,7 @@ Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di 
 * Elenca i tuoi cluster utilizzando `ibmcloud cs clusters`,
 * Indica come destinazione il tuo cluster corrispondente utilizzando `ibmcloud cs cluster-config <cluster-name>`.
 * Esporta la variabile di ambiente che è elencata.
-* Visualizza i tuoi pod utilizzando `kubectl get pods`. Se devi installare `kubectl`, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+* Visualizza i tuoi pod utilizzando `kubectl get pods`. Se devi installare `kubectl`, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 * Puoi visualizzare i log nella tua applicazione utilizzando `kubectl logs <pod-name>.`
 
 
@@ -711,7 +712,7 @@ Quando provi ad avviare Docker, viene visualizzato il seguente messaggio di erro
 Il client Docker non è installato oppure è installato ma non è stato avviato.
 {: tsCauses}
 
-Assicurati che [Docker](https://docs.docker.com/install/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") sia installato e avvialo.
+Assicurati che [Docker](https://docs.docker.com/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") sia installato e avvialo.
 {: tsResolve}
 
 

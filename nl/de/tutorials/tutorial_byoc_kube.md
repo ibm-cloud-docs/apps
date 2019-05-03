@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-03-18"
 
-keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
+keywords: apps, deploy, deploy to Kubernetes, cluster, delivery pipeline, toolchain
 
 subcollection: creating-apps
 
@@ -31,9 +31,9 @@ Ein _Cluster_ ist eine Gruppe von Ressourcen, Workerknoten, Netzen und Speichere
 ## Vorbereitende Schritte
 {: #prereqs-byoc-kube}
 
-* [Erstellen Sie eine App aus Ihrem eigenen Code-Repository](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
+* Erstellen Sie eine App. Weitere Informationen hierzu enthält [Apps aus Ihrem eigenen Code-Repository erstellen](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
 * Klicken Sie in der [{{site.data.keyword.cloud_notm}}-Konsole](https://{DomainName}){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") auf das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) und wählen Sie **Container** aus, um [einen Kubernetes-Cluster zu konfigurieren](/docs/containers?topic=containers-getting-started).
-* Überprüfen Sie, ob Ihre App in Docker ausgeführt wird. Bei den folgenden Befehlen handelt es sich um Beispiele, nicht notwendigerweise um Schritte, die in Ihrer App vorhanden sind:
+* Führen Sie die folgenden Befehle aus, um zu bestätigen, dass Ihre App in Docker ausgeführt wird:
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install`
@@ -45,7 +45,7 @@ Ein _Cluster_ ist eine Gruppe von Ressourcen, Workerknoten, Netzen und Speichere
 ## Services Ihrer App hinzufügen (optional)
 {: #resources-byoc-kube}
 
-Nach dem Erstellen Ihrer App können Sie der App über die Seite **App-Details** einen Service hinzufügen. {{site.data.keyword.cloud_notm}} erstellt die Serviceinstanz für Sie. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt. {{site.data.keyword.cloud_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
+Fügen Sie Ihrer Anwendung einen Service hinzu und {{site.data.keyword.cloud_notm}} erstellt die Serviceinstanz für Sie. Dieser Bereitstellungsprozess kann für die verschiedenen Servicetypen unterschiedlich ablaufen. Ein Datenbankservice richtet beispielsweise eine Datenbank ein, während ein Push-Benachrichtigungsservice für mobile Anwendungen Konfigurationsinformationen erstellt. {{site.data.keyword.cloud_notm}} stellt Ihrer Anwendung mittels einer Serviceinstanz die Ressourcen eines Service zur Verfügung. Eine Serviceinstanz kann von mehreren Webanwendungen gemeinsam
 genutzt werden.
 
 Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps?topic=creating-apps-add-resource).
@@ -55,38 +55,52 @@ Nachdem Sie Ihrer App einen Service hinzugefügt haben, müssen Sie die Berechti
 ## App für die Bereitstellung vorbereiten
 {: #deploy-byoc-kube}
 
-In diesem Schritt verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren sie so, dass sie in einem Kubernetes-Cluster bereitgestellt wird, der in {{site.data.keyword.containershort_notm}} gehostet wird.
+In diesem Schritt verbinden Sie eine DevOps-Toolchain mit der Anwendung und konfigurieren sie so, dass sie in einem Kubernetes-Cluster bereitgestellt wird, der im {{site.data.keyword.cloud_notm}}-Kubernetes-Service gehostet wird.
 
 Die DevOps-Toolchain ist so flexibel, dass sie die gesteuerte Ausführung beliebiger Stages der Shell-Script-Ausführung erlaubt. Mit anderen Worten: Sie können fast alles mit einer DevOps-Toolchain machen. Hauptthema dieses Abschnitts ist die Bereitstellung Ihrer App in einem Kubernetes-Cluster. Er beschäftigt sich aber auch damit, sie für skalierte DevOps und bewährte Cloud-Verfahren zukunftssicher zu machen.
 
 Die Erstellung einer Verknüpfung zwischen App, Toolchain und Repository ist ein Schritt zur Organisation Ihrer Produktassets. Außerdem hilft sie bei der Zusammenstellung einer Ansicht Ihres Quellenrepositorys mit Ihrem DevOps-Workflow, Ihren aktiven App-Instanzen und abhängigen Services über alle Ihre Bereitstellungsziele hinweg.
 
-### Vorhandene DevOps-Toolchain verbinden
+Auf der Seite zum Verbinden der Toolchain stehen mehrere Optionen zur Auswahl:
 
-Wenn Sie bereits über eine DevOps-Toolchain verfügen, führen Sie die folgenden Schritte aus:
+* Sie können Ihre App mit einer vorhandenen Toolchain verbinden.
+* Sie können Ihre App mit einer vorhandenen Toolchain verbinden, die nicht Ihr Repository enthält. Sie verbinden die Toolchain dann zu einem späteren Zeitpunkt mit Ihrem Repository.
+* Sie können Ihre App mit einer neuen Toolchain verbinden.
 
-1. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**. Die Seite **App bereitstellen** wird angezeigt.
-2. Wählen Sie die Toolchain aus, die an Ihre App angeschlossen werden soll, und klicken Sie auf **Bereitstellung aktivieren**. Die Seite **App-Details** wird angezeigt und zeigt an, dass Continuous Delivery konfiguriert ist.
+### Ihre App mit einer vorhandenen Toolchain verbinden
+{: #connect_toolchain_repo}
 
-Wenn Sie keine DevOps-Toolchain völlig neu erstellen möchten, können Sie Ihren vorhandenen Code mit dem Befehl [`ibmcloud dev enable` cloudfähig machen.](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Der Befehl generiert eine DevOps-Toolchain-Vorlage, die Sie in Ihrem Repository einchecken. Dann verwenden Sie diese Vorlage als Instruktionssatz für das, was die DevOps-Toolchain erstellen soll. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
-{: tip}
+Wenn Sie über eine oder mehrere DevOps-Toolchains verfügen, die bereits mit dem Git-Repository verbunden sind, das Sie während der App-Erstellung angegeben haben, werden diese Toolchains in der Tabelle **Mit Repository** angezeigt. Die Toolchain muss so konfiguriert sein, dass sie die Quelle aus dem Repository abruft, das Sie in der App definiert haben. Sehr wahrscheinlich möchten Sie eine dieser Toolchains für die Verbindung mit Ihrer App auswählen.
 
-### DevOps-Toolchain erstellen
+### Ihre App mit einer vorhandenen Toolchain verbinden, die nicht Ihr Repository enthält
+{: #connect_toolchain_notrepo}
+
+Wenn Sie über eine oder mehrere DevOps-Toolchains verfügen, die Ihrem Konto zugeordnet, aber nicht mit dem Git-Repository verbunden sind, das Sie während der App-Erstellung angegeben haben, werden diese Toolchains in der Tabelle **Ohne Ihr Repository** angezeigt. Sie können eine dieser Toolchains auswählen und mit Ihrer App verbinden, aber Sie müssen außerdem auch Ihr Repository manuell zu dieser Toolchain hinzufügen.
+
+Weitere Informationen zum Hinzufügen Ihres Repositorys zu Ihrer Toolchain finden Sie unter:
+
+ * [Git-Repositorys und Issue Tracking konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [GitHub konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
+ * [GitLab konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
+
+
+### Ihre App mit einer neuen Toolchain verbinden
+{: #toolchain-byoc-kube-create}
 
 Wenn Sie die Erstellung der DevOps-Toolchain vollständig unter Kontrolle haben möchten, ohne dass Änderungen in Ihrem Code-Repository vorgenommen werden, erstellen Sie die Toolchain von Grund auf völlig neu. Außerdem müssen Sie auch alle Integrationen zum Erstellen Ihrer App erstellen und stellen diese im Kubernetes-Cluster bereit. 
 
-1. Klicken Sie auf der Seite **App-Details** auf **DevOps-Toolchain erstellen**. Die Seite **Toolchain erstellen** wird angezeigt.
-2. Wählen Sie die Vorlage **Eigene Toolchain erstellen** aus.
-3. Geben Sie auf der Seite **Eigene Toolchain erstellen** einen Namen für Ihre Toolchain ein, wählen Sie eine Region und eine Ressourcengruppe (Standard) aus und klicken Sie auf **Erstellen**.
-4. Verwenden Sie den Breadcrumb-Pfad im Browserfenster, um zur Seite **App-Details** zurückzukehren. Dort wird angezeigt, dass Continuous Delivery konfiguriert wurde.
-5. Klicken Sie auf der Seite **App-Details** auf **Toolchain anzeigen**, um Ihre neue DevOps-Toolchain zu konfigurieren.
+1. Klicken Sie auf der Seite 'Toolchain erstellen' auf die Vorlage **Eigene Toolchain erstellen**.
+2. Geben Sie einen Namen für Ihre Toolchain ein, wählen Sie eine Region und eine Ressourcengruppe (Standard) aus und klicken Sie auf **Erstellen**.
+3. Verwenden Sie, nachdem Sie die Toolchain erstellt haben, den Breadcrumb-Pfad in Ihrem Browser, um zur Seite **App-Details** zurückzukehren, wo angezeigt wird, dass Continuous Delivery konfiguriert ist.
 
-### GitHub-Integration hinzufügen
+Wenn Sie keine DevOps-Toolchain völlig neu erstellen möchten, können Sie Ihren vorhandenen Code mit dem Befehl [`ibmcloud dev enable` cloudfähig machen.](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Der Befehl generiert eine DevOps-Toolchain-Vorlage, die Sie in Ihrem Repository einchecken. Dann verwenden Sie diese Vorlage als Instruktionssatz für das, was die DevOps-Toolchain erstellen soll. Weitere Informationen finden Sie in der [Dokumentation zur Befehlszeilenschnittstelle](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+
+## GitHub-Integration hinzufügen
 {: #github-byoc-kube}
 
-Konfigurieren Sie die DevOps-Toolchain mit einer Integration für Ihr GitHub-Repository für die Toolchain. Dabei wird ein Webhook in Ihrem Repository festgelegt, sodass Pull-Anforderungen und Push-Operationen in diesem Repository einen POST an die Toolchain senden.
+Konfigurieren Sie die DevOps-Toolchain mit einer Integration für Ihr GitHub-Repository für die Toolchain, um einen Webhook in Ihrem Repository zu setzen, sodass Pull-Anforderungen und Code-Push-Operationen in diesem Repository eine POST-Anforderung an die Toolchain senden. 
 
-1. Klicken Sie in Ihrer leeren DevOps-Toolchain-Vorlage auf **Tool hinzufügen**.
+1. Klicken Sie in Ihrer DevOps-Toolchain-Vorlage auf **Tool hinzufügen**.
 2. Wählen Sie **GitHub** aus, wenn sich Ihr Repository auf öffentlichem GitHub oder auf Enterprise-GitHub befindet.
 3. Wählen Sie die GitHub-Server-URL aus oder geben Sie sie ein.
 4. Möglicherweise wird eine Nachricht mit dem Inhalt angezeigt, dass diese URL auf GitHub nicht autorisiert ist. Falls dies der Fall ist, klicken Sie auf **Berechtigen**. Klicken Sie dann auf der Seite 'IBM Cloud-Toolchains berechtigen' auf **IBM Cloud berechtigen** und geben Sie Ihr GitHub-Kennwort ein.
@@ -97,14 +111,14 @@ Konfigurieren Sie die DevOps-Toolchain mit einer Integration für Ihr GitHub-Rep
 
 Sie können den neuen Webhook in den Repositoryeinstellungen anzeigen.
 
-### Delivery Pipeline hinzufügen
+## Delivery Pipeline hinzufügen
 {: #pipeline-byoc-kube}
 
 1. Klicken Sie auf **Tool hinzufügen**.
 2. Wählen Sie **Delivery Pipeline** aus.
 3. Geben Sie `Continuous Integration` als Namen für die Pipeline ein und klicken Sie auf **Integration erstellen**.
 
-### Pipeline-Stages konfigurieren
+## Pipeline-Stages konfigurieren
 {: #pipelineconfig-byoc-kube}
 
 Konfigurieren Sie die Pipeline-Stages, um Ihre Eingaben (d. h. den Inhalt des GitHub-Repositorys) an das richtige Ziel zu übertragen. Da in diesem Lernprogramm davon ausgegangen wird, dass Sie ein GitHub-Repository haben, das ein funktionierendes Docker-Image erstellt und einen IBM Containers-Kubernetes-Cluster verwendet, erstellen Sie Pipeline-Stages mit Eingaben, Shell-Scripts und Ausgaben, mit denen dieser Zweck erreicht wird.
@@ -155,18 +169,14 @@ Konfigurieren Sie die Pipeline-Stages, um Ihre Eingaben (d. h. den Inhalt des Gi
 ## Ausführung der App verifizieren
 {: #verify-byoc-kube}
 
-Die Delivery Pipeline oder Befehlszeile verweist auf die URL für Ihre App.
+Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befehlszeile auf die URL für Ihre App.
 
 1. Klicken Sie in der Toolchain von DevOps auf **Delivery Pipeline** und wählen Sie **Bereitstellungsstage** aus.
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
-3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL. Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
+
+    Suchen Sie am Ende der Protokolldatei nach `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 
-Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) aus, um die Seite einer manuell bereitgestellten App in Ihrem Standardbrowser anzuzeigen.
-
-## Zugehörige Informationen
-
- * [Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Git-Repositorys und Issue Tracking konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
- * [GitHub konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
- * [GitLab konfigurieren](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
+Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.

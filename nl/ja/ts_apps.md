@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## 削除したアプリの名前を再使用できない
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,7 +123,7 @@ nslookup cloud.ibm.com
 現行組織にスペースを作成したことを確認してください。 スペースを作成するには、次のいずれかの方法を使用します。
 {: tsResolve}
 
-* メニュー・バーで、**「管理」>「アカウント」**をクリックし、**「Cloud Foundry の組織」**を選択します。 スペースを作成する組織の名前をクリックし、**「スペースの追加」**をクリックします。
+* メニュー・バーで、**「管理」>「アカウント」**をクリックし、**「Cloud Foundry の組織」**を選択します。 スペースを作成する組織を選択してから、**「スペースの作成」**をクリックします。
 * Cloud Foundry コマンド・ライン・インターフェースに `cf create-space <space_name> -o <organization_name>` と入力します。
 
 やり直してください。 このメッセージが再び発生する場合、[{{site.data.keyword.cloud_notm}} 状況 ](http://ibm.biz/bluemixstatus){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") ページにアクセスして、サービスまたはコンポーネントに問題がないか確認してください。
