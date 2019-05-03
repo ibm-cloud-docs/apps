@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## 삭제된 앱의 이름을 재사용할 수 없음
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,8 +123,8 @@ nslookup cloud.ibm.com
 현재 조직에서 영역을 작성했는지 확인하십시오. 영역을 작성하려면 다음 방법 중 하나를 사용하십시오.
 {: tsResolve}
 
-* 메뉴 표시줄에서 **관리 > 계정**을 클릭하고 **Cloud Foundry 조직**을 선택하십시오. 영역을 작성할 조직의 이름을 클릭하고 **영역 추가**를 클릭하십시오.
-* Cloud Foundry 명령행 인터페이스에서 `cf create-space <space_name> -o <organization_name>`을 입력하십시오. 
+* 메뉴 표시줄에서 **관리 > 계정**을 클릭하고 **Cloud Foundry 조직**을 선택하십시오. 영역을 작성할 조직을 선택하고 **영역 작성**을 클릭하십시오.
+* Cloud Foundry 명령행 인터페이스에서 다음을 입력하십시오. `cf create-space <space_name> -o <organization_name>`.
 
 다시 시도하십시오. 이 메시지가 다시 나타나면 [{{site.data.keyword.cloud_notm}} 상태 ](http://ibm.biz/bluemixstatus){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 페이지로 이동하여 서비스 또는 컴포넌트에 문제가 있는지 확인하십시오.
 

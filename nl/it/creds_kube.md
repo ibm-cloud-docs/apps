@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-18"
 
-keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
+keywords: apps, credentials, Kubernetes
 
 subcollection: creating-apps
 
@@ -119,7 +119,7 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
 
 2. Per creare un'istanza di Cloud Object Storage, seleziona **Add service** > **Storage** > **Cloud Object Storage** > **Lite plan (Free)** > **Create**.
 
-3. Fai clic su **Download code** per rigenerare la tua applicazione con i frammenti di codice inseriti.
+3. Fai clic su **Download code** per rigenerare il tuo progetto con i frammenti di codice inseriti.
 
 4. Per accedere alle credenziali localmente, copia e sostituisci i seguenti file dal file `.zip` appena generato al tuo clone Git locale per accedere alle credenziali. Devi ancora creare un segreto Kubernetes nel tuo cluster per ospitare le credenziali.
 
@@ -131,7 +131,7 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
   Se in un secondo momento scegli di eseguire una distribuzione a un'applicazione Cloud Foundry con una risorsa Resource Controller (che si trova in un gruppo di risorse invece che in un'organizzazione o uno spazio), devi copiare un altro file.
   {: note}
 
-5. [Visualizza il tuo cluster Kubernetes](https://{DomainName}/kubernetes/clusters){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") con la regione corrispondente (Stati Uniti Sud se era gratuito).
+5. [Visualizza il tuo cluster Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") con la regione corrispondente (Stati Uniti Sud se era gratuito).
 
 6. Fai clic nel tuo cluster e seleziona **Kubernetes Dashboard** nell'angolo superiore destro per visualizzare il tuo dashboard del cluster.
 
@@ -143,8 +143,8 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
-    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -153,7 +153,7 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
 
 11. Utilizza il comando `echo` per posizionare le credenziali in un file `binding`.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -164,7 +164,7 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 

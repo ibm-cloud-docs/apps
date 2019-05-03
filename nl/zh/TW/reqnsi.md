@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-03-15"
 
-keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
+keywords: apps, services, add service, application
 
 subcollection: creating-apps
 
@@ -18,15 +18,10 @@ subcollection: creating-apps
 # 將服務新增至應用程式
 {: #add-resource}
 
-使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增服務。您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
+使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增服務。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
 {: shortdesc}
 
 您可以要求服務的實例，並單獨於應用程式之外使用，也可以從「應用程式詳細資料」頁面，將服務實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的服務。
-
-## 自動佈建的服務
-{: #auto-provision}
-
-如果入門範本套件指定需要的服務，則 {{site.data.keyword.cloud_notm}} 會在您建立應用程式時自動建立那些服務的實例。您也可以在建立應用程式之後，手動建立服務或選取現有服務實例，以新增至該應用程式。您可以在**應用程式詳細資料**頁面中，查看與您的應用程式相關聯的服務實例清單，以及服務認證（如果您稍後需要它們的話）。
 
 ## 探索服務
 {: #discover-resources}

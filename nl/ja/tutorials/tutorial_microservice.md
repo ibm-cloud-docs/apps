@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-18"
 
-keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
 
 subcollection: creating-apps
 
@@ -35,7 +35,7 @@ Microservice 基本スターターからアプリケーションを作成でき�
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}でアプリを作成します。
 
-1. {{site.data.keyword.dev_console}}の[「スターター・キット」](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリケーションの場合は、**「Express.js マイクロサービス (Express.js Microservice)」**に移動し、**「スターター・キットの選択」**をクリックします。
+1. {{site.data.keyword.dev_console}}の[「スターター・キット」](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリケーションの場合は、**「Express.js マイクロサービス (Express.js Microservice)」**に移動し、**「スターター・キットの選択」**をクリックします。
 2. アプリ名を入力します。 このチュートリアルでは、`MicroserviceProject` を使用します。
 3. 固有のホスト名 (例えば、`abc-devhost`) を入力します。このホスト名は、アプリの経路 `abc-devhost.mybluemix.net` です。
 4. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
@@ -43,7 +43,7 @@ Microservice 基本スターターからアプリケーションを作成でき�
 6. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
 7. **「作成」**をクリックします。
 
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
 {: tip}
 
 ## ステップ 3. サービスの追加 (オプション)

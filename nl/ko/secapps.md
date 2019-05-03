@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-03-15"
 
-keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
+keywords: apps, application, SSL certificates, access, restrict access
 
 subcollection: creating-apps
 
@@ -43,12 +43,21 @@ OpenSSL SHA-512 구현은 64비트 정수 유형에 대한 컴파일러 지원�
 
 CSR이 유효하려면 CSR을 작성할 때 다음 정보를 입력해야 합니다.
 
- * **국가 이름**. 국가 또는 지역의 두 자릿수 코드입니다. 예를 들어, `US`는 미국의 국가 코드입니다. 기타 국가 또는 지역의 경우에는 CSR을 작성하기 전에 [ISO 국가 코드의 목록](https://www.iso.org/obp/ui/#search){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 확인하십시오.
- * **시 또는 도**. 시/도의 축약되지 않은 전체 이름입니다.
- * **지역**. 구/군/시의 전체 이름입니다.
- * **조직**. 해당 지역에 법적으로 등록된 비즈니스 또는 회사의 전체 이름 또는 개인 이름입니다. 회사의 경우 Ltd., Inc., NV 등의 등록 접미부를 포함시켜야 합니다.
- * **조직 단위**. 인증서를 주문하는 회사의 지점 이름입니다(예: 회계 또는 마케팅).
- * **공통 이름**. SSL 인증서 요청의 대상인 완전한 도메인 이름(FQDN)입니다.
+<dl>
+<dt>국가 이름</dt>
+<dd>국가 또는 지역의 두 자릿수 코드입니다. 예를 들어, `US`는 미국의 국가 코드입니다. 기타 국가 또는 지역의 경우에는 CSR을 작성하기 전에 [ISO 국가 코드의 목록](https://www.iso.org/obp/ui/#search){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 확인하십시오.
+</dd>
+<dt>시/도</dt>
+<dd>시/도 또는 주/지방의 축약되지 않은 전체 이름입니다.</dd>
+<dt>지역</dt>
+<dd>구/군/시의 전체 이름입니다.</dd>
+<dt>조직</dt>
+<dd>해당 지역에 법적으로 등록된 비즈니스 또는 회사의 전체 이름 또는 개인 이름입니다. 회사의 경우 Ltd., Inc., NV 등의 등록 접미부를 포함시켜야 합니다.</dd>
+<dt>조직 단위</dt>
+<dd>인증서를 주문하는 회사의 지점 이름입니다(예: 회계 또는 마케팅).</dd>
+<dt>공통 이름</dt>
+<dd>SSL 인증서 요청의 대상인 완전한 도메인 이름(FQDN)입니다.</dd>
+</dl>
 
 SAN(Subject Alternative Names)을 사용할 수 있지만 CN 충돌을 방지하기 위해 제공된 호스트 이름을 배치된 다른 인증서에 발행하면 안 됩니다.
 {: note}
@@ -66,15 +75,17 @@ SAN(Subject Alternative Names)을 사용할 수 있지만 CN 충돌을 방지하
 * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-Cloud Foundry 애플리케이션의 인증서를 업로드하려면 다음 단계를 완료하십시오.
+애플리케이션의 인증서를 업로드하려면 다음 단계를 완료하십시오.
 
-1. [{{site.data.keyword.cloud_notm}} 콘솔![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName}){: new_window}에서 **메뉴** 아이콘 ![메뉴 아이콘](../icons/icon_hamburger.svg)을 클릭하고 **리소스 목록**을 선택하십시오.
-2. **리소스 목록** 페이지에서 **Cloud Foundry 앱**을 클릭하십시오.
-3. 도메인을 변경할 애플리케이션을 클릭하십시오. 해당 앱의 **개요** 페이지가 표시됩니다.
-4. **라우트** 메뉴를 선택하고 **도메인 관리**를 클릭하십시오.
-5. 조치 열에서 조치 아이콘 ![추가 조치 아이콘](../icons/action-menu-icon.svg)을 클릭하고 **도메인**을 선택하십시오. 
-6. 사용자 정의 도메인에 대해 **SSL 인증서 열**에서 **업로드**를 클릭하십시오. 
-7. 옵션을 선택하고 파일을 업로드한 다음 **추가**를 클릭하십시오. 
+1. {{site.data.keyword.cloud_notm}} 콘솔의 리소스 목록으로 이동합니다.
+
+2. 앱을 선택하여 앱 세부사항을 봅니다.
+
+3. **라우트** > **도메인 관리**를 클릭합니다.
+
+4. 조치 열에서 조치 아이콘 ![추가 조치 아이콘](../icons/action-menu-icon.svg) > **도메인**을 클릭합니다.
+
+5. SSL 인증서 열에서 **업로드**를 클릭하고 사용자 정의 도메인을 선택합니다.
   
   * 인증서: 공개 키를 인증서 소유자의 ID에 바인드하여 인증서 소유자를 인증하는 디지털 문서입니다. 인증서는 인증 기관에서 발행하며 인증 기관의 디지털 서명이 있습니다. 인증서는 일반적으로 인증 기관에서 발행하고 서명합니다. 그러나 테스트 및 개발 목적으로 자체 서명된 인증서를 사용할 수도 있습니다.
   * 개인 키: 메시지를 암호화하는 데 사용되는 알고리즘 패턴으로, 해당 공개 키로만 메시지를 복호화할 수 있습니다. 개인 키는 또한 해당 공개 키로 암호화된 메시지를 복호화하는 데도 사용됩니다. 개인 키는 사용자 시스템에 보존되며 비밀번호로 보호됩니다.
@@ -91,6 +102,6 @@ SNI(Server Name Indication) 확장에 따라 달라집니다. 사용자 정의 �
     메타데이터에 공개 키가 포함된 클라이언트 인증서 신뢰 저장소를 업로드하여 상호 인증을 설정할 수 있습니다.
     {: tip}
 
-자세한 정보는 [SSL 인증서 가져오기](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates)를 참조하십시오.
+자세한 정보는 [SSL 인증서 가져오기](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates)를 참조하십시오.
 
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-18"
 
-keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
 
 subcollection: creating-apps
 
@@ -35,7 +35,7 @@ subcollection: creating-apps
 
 在 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 中创建应用程序：
 
-1. 在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面中，选择适用于您语言的入门模板工具包。例如，对于 Node.js 应用程序，请转至 **Express.js 微服务**，然后单击**选择入门模板工具包**。
+1. 在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面中，选择适用于您语言的入门模板工具包。例如，对于 Node.js 应用程序，请转至 **Express.js 微服务**，然后单击**选择入门模板工具包**。
 2. 输入应用程序名称。对于本教程，请使用 `MicroserviceProject`。
 3. 输入唯一的主机名，例如 `abc-devhost`。此主机名是应用程序的路径 `abc-devhost.mybluemix.net`。
 4. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
@@ -43,7 +43,7 @@ subcollection: creating-apps
 6. 选择价格套餐。对于本教程，可以使用免费选项。
 7. 单击**创建**。
 
-缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
 {: tip}
 
 ## 步骤 3. 添加服务（可选）

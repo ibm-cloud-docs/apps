@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, create app starter kit, basic app, simple app
+keywords: apps, starter kit
 
 subcollection: creating-apps
 
@@ -19,16 +19,12 @@ subcollection: creating-apps
 # Criando um app com um kit do iniciador
 {: #tutorial-starterkit}
 
-É possível usar um kit do iniciador para fazer com que seu aplicativo seja iniciado rapidamente e prepará-lo para desenvolvimento futuro. Escolha um kit do iniciador e uma linguagem de programação, crie um app e, em seguida, configure uma cadeia de ferramentas do DevOps para implementar automaticamente seu app. Também é possível fazer download do código para inspeção imediata.
+É possível usar um kit do iniciador para iniciar rapidamente o seu app e prepará-lo para desenvolvimento futuro. Escolha um kit do iniciador e uma linguagem de programação, crie um app e, em seguida, configure uma cadeia de ferramentas do DevOps para implementar automaticamente seu app. Também é possível fazer download do código para inspeção imediata.
 {: shortdesc}
 
 É possível criar um app de uma seleção de kits do iniciador, incluindo um espaço em branco, se você
 mesmo deseja customizar as opções de construção. De qualquer maneira, uma cadeia de ferramentas do DevOps é criada
 automaticamente para a implementação do app. Também é possível fazer download do código para inspeção imediata.
-
-O {{site.data.keyword.cloud_notm}} tem portais do desenvolvedor em diferentes áreas de interesse (como Watson, Segurança ou Finanças) ou um canal digital (como Móvel ou Apps da web). É possível acessar esses portais por meio do ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg).
-
-Cada Portal do Desenvolvedor fornece kits do iniciador relevantes à área de foco dos portais. Os portais oferecem fluxos de trabalho consistentes e intuitivos para criar um app de trabalho pronto para produção em minutos.
 
 Os kits do iniciador estão disponíveis em várias categorias, incluindo:
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
@@ -38,12 +34,10 @@ Os kits do iniciador estão disponíveis em várias categorias, incluindo:
 * [Segurança ](https://{DomainName}/developer/security/dashboard){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 * [Finanças ](https://{DomainName}/developer/finance/dashboard){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")
 
-[Saiba mais](/docs/apps?topic=creating-apps-starter-kits) sobre kits do iniciador.
-
 ## Etapa 1. Criar um app
 {: #create-starterkit}
 
-1. No [painel do {{site.data.keyword.cloud}}](https://{DomainName}){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg) > **Apps da web**.
+1. No [painel do {{site.data.keyword.cloud}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![ícone Menu](../../icons/icon_hamburger.svg) > **Apps da web**.
 
 2. Clique em **Introdução** na seção **Iniciar na web**.
 
@@ -65,7 +59,7 @@ Para obter mais informações, consulte os seguintes tópicos:
  * [Criando um app básico da web com um kit do iniciador](/docs/apps/tutorials?topic=creating-apps-tutorial-webapp)
  * [Trabalhando com tags](/docs/resources?topic=resources-tag)
 
-## Etapa 2. Incluir serviços
+## Etapa 2. Incluindo Serviços
 {: #resources-starterkit}
 
 É possível incluir serviços que aprimoram seu app com o poder cognitivo do Watson, incluir serviços remotos ou serviços de segurança. Para este tutorial, inclua um local para gerenciar seus dados.
@@ -82,7 +76,7 @@ Clique em **Configurar entrega contínua** na página **Detalhes do app**, selec
 
 A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles serão customizados para o ambiente de implementação que você escolher, quer ele seja [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
-Depois de selecionar seu destino de implementação, abra o componente de pipeline de sua nova cadeia de ferramentas para iniciar o processo de construção e implementação inicial para que você possa ver o seu novo app em minutos.
+Após você selecionar o seu ambiente de implementação, abra o componente de pipeline de sua nova cadeia de ferramentas para iniciar o processo de construção e implementação inicial para que você possa ver o seu novo app em minutos.
 
 Todas as cadeias de ferramentas criadas por meio de um Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
 {: note}

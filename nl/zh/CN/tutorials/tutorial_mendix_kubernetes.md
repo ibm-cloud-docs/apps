@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-18"
 
-keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
 
 subcollection: creating-apps
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -22,9 +22,6 @@ subcollection: creating-apps
 
 Aprenda a incluir as credenciais de serviço no ambiente de implementação do Cloud Foundry. Estas instruções se aplicam a ambos, [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) e [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
-
-O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
 
 ## Seu código + Cloud Foundry
 {: #credentials-byoc-cf}
@@ -112,7 +109,7 @@ O Cloud Foundry não suporta a "ligação" de um aplicativo Cloud Foundry a um s
 #### O serviço baseado no Resource Controller está associado ao seu app
 {: #cf_resource_controller}
 
-Se o serviço que você associou ao seu aplicativo for baseado no Resource Controller, o serviço _não_ será "ligável" ao Cloud Foundry. É possível dizer se o serviço é baseado no Resource Controller no momento da criação dele, se foi perguntado a você em qual grupo de recursos criar o serviço. O espaço do Cloud Foundry deve ser preparado com credenciais de serviço para que o aplicativo possa referenciá-las no código. A preparação é feita automaticamente e é possível observar os resultados da preparação do espaço conectando a linha de comandos `cf` ao espaço executando:
+Se o serviço que você associou ao seu aplicativo for baseado no Resource Controller, o serviço _não_ será "ligável" ao Cloud Foundry. É possível dizer se o serviço é baseado no Resource Controller no momento da criação dele, se foi perguntado a você em qual grupo de recursos criar o serviço.O espaço do Cloud Foundry deve ser preparado com credenciais de serviço para que o aplicativo possa referenciá-las no código. A preparação é feita automaticamente e é possível observar os resultados da preparação do espaço conectando a linha de comandos `cf` ao espaço executando:
 ```console
 cf services
 ```

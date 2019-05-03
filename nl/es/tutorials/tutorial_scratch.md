@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-03-15"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: apps, scratch, developer tools
 
 subcollection: creating-apps
 
@@ -47,7 +47,7 @@ Puede crear una aplicación personalizada desde cero mediante servicios y un tie
 7. Pulse **Crear**.
 
 El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
-[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+[Actualización del dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
 {: tip}
 
 ## Adición de servicios (opcional)

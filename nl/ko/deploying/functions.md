@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-18"
 
-keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
+keywords: apps, serverless, serverless app, functions, cli, api, sdk
 
 subcollection: creating-apps
 

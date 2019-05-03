@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-03-18"
 
-keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
+keywords: apps, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -43,7 +43,7 @@ Crea un'applicazione in {{site.data.keyword.cloud}} {{site.data.keyword.dev_cons
 6. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
 7. Fai clic su **Crea**.
 
-Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
 {: tip}
 
 ## Passo 3. Aggiungi servizi (facoltativo)
@@ -128,7 +128,7 @@ Con una toolchain correttamente configurata, un ciclo di creazione-distribuzione
 
 Puoi anche distribuire manualmente la tua applicazione dalla tua toolchain DevOps:
 
-1. Nella pagina **App details**, fai clic su **View toolchain**.
+1. Nella pagina **App details**, fai clic su **View toolchain**. 
 
 2. Fai clic su **Delivery Pipeline** dove puoi iniziare le creazioni, gestire la distribuzione e visualizzare i log e la cronologia.
 
@@ -158,7 +158,7 @@ Dopo che hai distribuito la tua applicazione, la Delivery Pipeline o la riga di 
 2. Fai clic su **View logs and history**.
 3. Nel file di log, trova l'URL dell'applicazione:
 
-    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, nel file di log potresti vedere una riga simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
+    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, potresti vedere una riga nel file di log simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Vai all'URL nel tuo browser. Se l'applicazione è in esecuzione, viene visualizzato un messaggio che include `Congratulations` o `{"status":"UP"}`.
 

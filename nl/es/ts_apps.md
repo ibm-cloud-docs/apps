@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## No se pueden reutilizar los nombres de apps suprimidas
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,7 +123,7 @@ Este error se suele producir la primera vez que se intenta crear una app o un se
 Asegúrese de haber creado un espacio en la organización actual. Para crear un espacio, utilice uno de estos métodos:
 {: tsResolve}
 
-* En la barra de menús, pulse **Gestionar > Cuenta** y seleccione **Organizaciones de Cloud Foundry**. Pulse sobre el nombre de la organización en la que desee crear el espacio y pulse **Añadir un espacio**.
+* En la barra de menús, pulse **Gestionar > Cuenta** y seleccione **Organizaciones de Cloud Foundry**. Seleccione la organización en la que desea crear el espacio y pulse **Crear un espacio**.
 * En la interfaz de línea de mandatos de Cloud Foundry, escriba `cf create-space <space_name> -o <organization_name>`.
 
 Inténtelo de nuevo. Si vuelve a aparecer este mensaje, vaya a la página [Estado de {{site.data.keyword.cloud_notm}}](http://ibm.biz/bluemixstatus){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") para comprobar si existe un problema con un servicio o componente.
@@ -261,9 +262,9 @@ Suprima las instancias del servicio que no sean necesarias o elimine el límite 
 	  2. Pulse **Suprimir servicio**. Se le solicitará que cambie las etapas de la app a la que está vinculada la instancia de servicio.
 
     Para utilizar la interfaz de línea de mandatos para suprimir una instancia de servicio, siga los pasos siguientes:
-	  3. Desenlace la instancia de servicio de una app. Especifique `cf unbind-service <appname> <service_instance_name>`.
-	  4. Suprima la instancia de servicio. Especifique `cf delete-service <service_instance_name>`.
-	  5. Después de suprimir la instancia de servicio, quizás desee volver a transferir la app a la que estaba enlazada la instancia de servicio. Especifique `cf restage <appname>`.
+	  3. Desenlace la instancia de servicio de una app. Escriba `cf unbind-service <appname> <service_instance_name>`.
+	  4. Suprima la instancia de servicio. Escriba `cf delete-service <service_instance_name>`.
+	  5. Después de suprimir la instancia de servicio, quizás desee volver a transferir la app a la que estaba enlazada la instancia de servicio. Escriba `cf restage <appname>`.
 
   * Para eliminar el límite del número de instancias de servicios que puede tener, convierta su cuenta Lite en una cuenta de pago. Para obtener más información, consulte [Actualización de la cuenta](/docs/account?topic=account-accounts#upgrade-to-paygo).
 

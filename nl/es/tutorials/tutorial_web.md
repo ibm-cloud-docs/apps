@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -42,7 +42,7 @@ Los kits de inicio están disponibles en muchos idiomas e infraestructuras en la
 6. Pulse **Crear**.
 
 El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
-[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+[Actualización del dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
 {: tip}
 
 ## Paso 3. Añadir servicios (opcional)

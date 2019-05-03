@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-03-18"
 
-keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
+keywords: apps, applications, troubleshooting 
 
 subcollection: creating-apps
 
@@ -64,6 +64,7 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
+
 ## Impossible de réutiliser le nom des applications supprimées
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -122,7 +123,7 @@ Cette erreur se produit souvent la première fois que vous tentez de créer une 
 Vérifiez que vous avez créé un espace dans votre organisation actuelle. Pour créer un espace, appliquez l'une des méthodes suivantes :
 {: tsResolve}
 
-* Dans la barre de menus, cliquez sur **Gérer > Compte** et sélectionnez **Organisations Cloud Foundry**. Cliquez sur le nom de l'organisation dans laquelle vous souhaitez créer l'espace puis cliquez sur **Ajouter un espace**.
+* Dans la barre de menus, cliquez sur **Gérer > Compte** et sélectionnez **Organisations Cloud Foundry**. Sélectionnez l'organisation dans laquelle vous désirez créer le compte et cliquez sur **Créer un espace**.
 * Dans l'interface de ligne de commande Cloud Foundry, entrez `cf create-space <space_name> -o <organization_name>`.
 
 Essayez à nouveau. Si ce message se reproduit, accédez à la page [{{site.data.keyword.cloud_notm}} Statut ](http://ibm.biz/bluemixstatus){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour vérifier si un service ou un composant présente un problème.
@@ -244,7 +245,7 @@ Si vous utilisez un compte Lite, il se peut que vous ne puissiez pas créer d'ap
 Lorsque vous tentez de créer une application dans {{site.data.keyword.cloud_notm}}, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
-`BXNUI2032E: La ressource <service_instances> n'a pas été créée. Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Message Cloud Foundry : "You have exceeded your organization's services limit."`
+`BXNUI2032E: The <service_instances> resource wasn't created. Une erreur est survenue lors du contact de Cloud Foundry pour la création d'une ressource. Message Cloud Foundry : "You have exceeded your organization's services limit."`
 
 Cette erreur survient lorsque le nombre maximal d'instances de service dont vous pouvez disposer pour votre compte est dépassé.
 {: tsCauses}

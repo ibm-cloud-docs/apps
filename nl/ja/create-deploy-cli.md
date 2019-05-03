@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-03-15"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ subcollection: creating-apps
   {: note}
 7. 固有のホスト名 (例えば、`abc-devhost`) を入力します。このホスト名はアプリの経路 (例えば `abc-devhost.mybluemix.net`) です。
 
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
 {: tip}
 
 アプリとツールチェーンを作成するのに数秒かかります。
@@ -71,7 +71,7 @@ subcollection: creating-apps
 7. この Git リポジトリーにリンクされる新規 {{site.data.keyword.cloud_notm}} アプリを作成するオプションを選択します。 詳しくは、**重要事項**を参照してください。
 8. 今はサービスを追加しないでください。
 9. 操作が完了するまで数秒待ちます。 
-10. 操作が完了したら、アプリ・ディレクトリーに保存されたデプロイメント・ファイルおよびクラウド対応ファイルを手動でマージします。 `.merge` とマークされた新規ファイルを `git diff` または類似ツールを使用してマージしてください。
+10. 操作が完了したら、アプリ・ディレクトリーに保存されたデプロイメント・ファイルおよびクラウド対応ファイルを手動でマージします。`.merge` とマークされた新規ファイルを `git diff` または類似ツールを使用してマージしてください。
 
 ### 重要事項
  - {{site.data.keyword.cloud_notm}} コンソールを使用して既に {{site.data.keyword.cloud_notm}} アプリを作成済みであった場合は、アプリ・ディレクトリー内で、前のセクションのステップ 2 から 5 を続行します。 ステップ 6 については、ローカル・コードを既存のアプリに接続するオプションを選択できます。
@@ -124,7 +124,7 @@ subcollection: creating-apps
 
 [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) コマンドを使用して、アプリを手動でデプロイできます。 例えば、アプリを Kubernetes に手動でデプロイするには、以下の手順を実行します。
 
-1. [Kubernetes クラスターを作成](https://{DomainName}/kubernetes/overview){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") したことを確認します。
+1. [Kubernetes クラスターを作成](https://{DomainName}/containers-kubernetes/overview){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") したことを確認します。
 2. [`ibmcloud dev deploy-t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) コマンドを実行します。
 3. プロンプトが出されたら、使用するクラスターおよびコンテナーのイメージ名を確認します。
 4. デプロイメントが終了するまで数分待ちます。
@@ -135,5 +135,5 @@ subcollection: creating-apps
 1. {{site.data.keyword.cloud_notm}}で実行されているアプリの URL を表示するには、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行します。
 2. {{site.data.keyword.cloud_notm}} コンソールからアプリの資格情報、サービス、およびツールチェーンに関する詳細を表示するには、[`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) コマンドを実行します。 
 
-**問題を報告したり、フィードバックを提供したりするには、[{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com/){: new_window}
-![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用できます。 [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要請します。**
+**問題を報告したり、フィードバックを提供したりするには、[{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com){: new_window}
+![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用できます。[ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要請します。**
