@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, cli
+keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
 subcollection: creating-apps
 
@@ -120,7 +120,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
     1. Führen Sie `pod setup` aus, wenn Sie Ihr CocoaPods-Repository einrichten müssen.
     2. Führen Sie `pod update` aus, wenn Sie Ihre vorhandenen Pods aktualisieren müssen.
     3. Führen Sie `pod install` aus, um die Pods für Ihre App zu installieren.
-3. Öffnen Sie Ihren Xcode-Arbeitsbereich `<appname>.xcworkspace`.
+3. Öffnen Sie Ihren `<appname>.xcworkspace` Xcode-Arbeitsbereich.
 4. Führen Sie Ihre App aus.
 
 ### Cordova-App in Xcode ausführen
@@ -193,7 +193,7 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
 3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
 
-    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile angezeigt, die ähnlich aussieht wie `urls: my-app-devhost.mybluemix.net` oder `View the application health at: (Status der Anwendung ansehen unter:) http://<ipaddress>:<port>/health`.
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 

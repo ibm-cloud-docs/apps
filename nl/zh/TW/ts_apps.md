@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-03"
 
-keywords: apps, applications, troubleshooting 
+keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
 subcollection: creating-apps
 
@@ -64,7 +64,6 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
-
 ## 無法重複使用已刪除應用程式的名稱
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -123,8 +122,8 @@ nslookup cloud.ibm.com
 確定已在現行組織中建立空間。若要建立空間，請使用下列其中一種方法：
 {: tsResolve}
 
-* 從功能表列按一下**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。選取要在其中建立空間的組織，然後按一下**建立空間**。
-* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o<organization_name>`.
+* 從功能表列按一下**管理 > 帳戶**，然後選取 **Cloud Foundry 組織**。按一下要在其中建立空間的組織名稱，然後按一下**新增空間**。
+* 在 Cloud Foundry 指令行介面中，鍵入 `cf create-space <space_name> -o <organization_name>`。
 
 請重試。如果此訊息再次出現，請前往 [{{site.data.keyword.cloud_notm}} 狀態 ](http://ibm.biz/bluemixstatus){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 頁面，以檢查服務或元件是否有問題。
 

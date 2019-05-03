@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, starter kit, Kubernetes, cluster
+keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
 subcollection: creating-apps
 

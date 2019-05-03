@@ -2,9 +2,9 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, domain, Kubernetes, Cloud Foundry, cli
+keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
 subcollection: creating-apps
 
@@ -16,49 +16,35 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Domäne aktualisieren
+# Eigene Domänen verwalten
 {: #update-domain}
 
-Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in {{site.data.keyword.cloud}} zugeordnet ist. Bei Cloud Foundry-Apps können Sie Ihre Domäne von `mybluemix.net` nach `appdomain.cloud` migrieren, indem Sie entweder die {{site.data.keyword.cloud_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden.{:shortdesc}
+Mithilfe von Domänen wird die URL-Route angegeben, die Ihrer Organisation in {{site.data.keyword.cloud}} zugeordnet ist. Angepasste Domänen leiten Anforderungen für Ihre Anwendungen an eine Ihnen gehörende URL. Eine angepasste Domäne kann eine gemeinsame Domäne, eine gemeinsame Unterdomäne oder eine gemeinsame Domäne und ein gemeinsamer Host sein. Wenn keine angepasste Domäne angegeben ist, verwendet {{site.data.keyword.cloud_notm}} eine gemeinsam genutzte Standarddomäne in der Route für Ihre Anwendung. Der Prozess zur Verwaltung Ihrer Domänen ist von Ihrem Bereitstellungsziel abhängig, z. B. {{site.data.keyword.containershort}}, Cloud Foundry oder andere.
+{:shortdesc}
 
-## Domänen über die {{site.data.keyword.cloud_notm}}-Konsole aktualisieren
-{: #update-domain-console}
+Um eine angepasste Domäne zu verwenden, müssen Sie die angepasste Domäne auf einem öffentlichen DNS-Server registrieren und dann die angepasste Domäne in {{site.data.keyword.cloud_notm}} konfigurieren. Dann müssen Sie die angepasste Domäne der {{site.data.keyword.cloud_notm}}-Systemdomäne auf dem öffentlichen DNS-Server zuordnen. Nachdem Ihre angepasste Domäne der Systemdomäne zugeordnet wurde, werden Anforderungen für Ihre angepasste Domäne an Ihre Anwendung in {{site.data.keyword.cloud_notm}} weitergeleitet.
+
+## Domäne für Kubernetes-Apps ändern
+{: #update-domain-kube}
+
+Die Unterdomäne für {{site.data.keyword.containershort_notm}}-Hostnamen ist `containers.appdomain.cloud`. Der von IBM bereitgestellte Ingress-Unterdomänenplatzhalter `*.<cluster_name>.<region>.containers.appdomain.cloud` ist standardmäßig für Ihren Cluster registriert. Das von IBM bereitgestellte TLS-Zertifikat ist ein Platzhalterzertifikat und kann für die Platzhalterunterdomäne verwendet werden. Weitere Informationen finden Sie unter [Mehrere Domänen in einem Namensbereich](/docs/containers?topic=containers-ingress#multi-domains).
+
+## Angepasste Domäne für Kubernetes-Apps verwenden
+{: #custom-domain-kube}
+
+Zur Verwendung einer angepassten Domäne müssen Sie diese als Platzhalter-Domäne, z. B. `*.custom_domain.net`, registrieren. Um TLS verwenden zu können, müssen Sie ein Platzhalterzertifikat abrufen. Weitere Informationen finden Sie unter [Mehrere Domänen in einem Namensbereich](/docs/containers?topic=containers-ingress#multi-domains).
+
+Beschäftigen Sie sich mit [diesem Lernprogramm](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes), das Sie begleitet beim Erstellen eines Gerüsts für eine Webanwendung, beim lokalen Ausführen der Anwendung in einem Container und beim anschließenden Bereitstellen in einem Kubernetes-Cluster, der mit IBM Kubernetes Service erstellt wurde. Darüber hinaus zeigt Ihnen das Lernprogramm, wie Sie eine angepasste Domäne binden, den Zustand der Umgebung überwachen und die Anwendung skalieren.
+
+## Domäne für Cloud Foundry-Apps ändern
+{: #update-domain-cf}
+
+Bei Cloud Foundry-Apps können Sie Ihre Domäne von `mybluemix.net` in `appdomain.cloud` ändern, indem Sie entweder die {{site.data.keyword.cloud_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden. Weitere Informationen zum Ändern Ihrer Domäne in `appdomain.cloud` finden Sie unter [Aktualisieren Ihrer Domäne](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 
 Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können.
 {: tip}
 
-Führen Sie die folgenden Schritte aus, um die Domäne für Ihre Cloud Foundry-Organisation über die Konsole zu aktualisieren:
+## Angepasste Domäne für Cloud Foundry-Apps verwenden
+{: #custom-domain-cf}
 
-1. Klicken Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) und wählen Sie **Ressourcenliste** aus.
-2. Klicken Sie auf der Seite **Ressourcenliste** auf **Cloud Foundry-Apps**.
-3. Klicken Sie auf die Anwendung, für die Sie die Domäne ändern möchten. Die Seite **Übersicht** der App wird angezeigt.
-4. Wählen Sie das Menü **Routen** aus, suchen Sie die aktuelle Domäne, z. B. `.<myapp.mybluemix.net>`, und klicken Sie auf **Routen bearbeiten**.
-5. Wählen Sie die Liste der Domänen aus und klicken Sie anschließend auf die Domäne, die Sie verwenden möchten, z. B. `us-south.cf.appdomain.cloud`.
-6. Bestätigen Sie Ihre Aktualisierungen, indem Sie auf **Speichern** klicken.
-7. Bestätigen Sie, dass Sie die alte Domäne ersetzen möchten, und klicken Sie auf **Entfernen**.
-8. Klicken Sie auf **App-URL aufrufen**, um zu prüfen, ob die neue Route funktioniert.
-
-## Domänen über die {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle aktualisieren
-{: #update-domain-cli}
-
-1. Stellen Sie für Cloud Foundry-Apps eine Verbindung zu Ihrem Ziel-Cloud Foundry-API-Endpunkt her, indem Sie den folgenden Befehl eingeben:
-   ```
-   ibmcloud target --cf-api <CF-ENDPUNKT>
-   ```
-   
-   **Cloud Foundry-API-Endpunkte:**
-   * US-SOUTH - `api.us-south.cf.cloud.ibm.com`
-   * US-EAST - `api.us-east.cf.cloud.ibm.com`
-   * EU-DE - `api.eu-de.cf.cloud.ibm.com`
-   * EU-GB - `api.eu-gb.cf.cloud.ibm.com`
-   * AU-SYD - `api.au-syd.cf.cloud.ibm.com`
-
-2. Fügen Sie die Route mit der neuen Domäne einer Anwendung hinzu, indem Sie den folgenden Befehl eingeben:
-   ```
-   ibmcloud app route-map APP-NAME DOMÄNE -n HOSTNAME
-   ```
-
-## Domäne für Kubernetes-Apps aktualisieren
-{: #update-domain-kube}
-
-Die Unterdomäne für {{site.data.keyword.containerlong}}-Hostnamen ist `containers.appdomain.cloud`. Der von IBM bereitgestellte Ingress-Unterdomänenplatzhalter `*.<cluster_name>.<region>.containers.appdomain.cloud` ist standardmäßig für Ihren Cluster registriert. Das von IBM bereitgestellte TLS-Zertifikat ist ein Platzhalterzertifikat und kann für die Platzhalterunterdomäne verwendet werden. Weitere Informationen finden Sie unter [Mehrere Domänen in einem Namensbereich](/docs/containers?topic=containers-ingress#multi-domains).
+Bei Cloud Foundry-Apps können Sie eine angepasste Domäne erstellen und verwenden, indem Sie entweder die {{site.data.keyword.cloud_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden. Weitere Informationen finden Sie unter [Angepasste Domäne hinzufügen und verwenden](/docs/cloud-foundry-public?topic=cloud-foundry-public-custom-domains).

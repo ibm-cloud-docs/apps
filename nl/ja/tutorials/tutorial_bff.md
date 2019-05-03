@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-02"
 
-keywords: apps, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain
+keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
 
 subcollection: creating-apps
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # backend-for-frontend アプリ の作成
 {: #tutorial-bff}
 
-backend-for-frontend スターターからアプリケーションを作成できます。これらのスターターを使用して、Express.js、MicroProfile/ Java&reg EE、Kitura、Spring などのさまざまなフレームワークによって、Node.js、Java&reg、または Swift で backend-for-frontend アプリをビルドできます。 必要なツールをインストールして、アプリをビルドしてローカルで実行し、クラウドにデプロイする方法を確認できます。
+backend-for-frontend スターターからアプリケーションを作成できます。 これらのスターターを使用して、Express.js、MicroProfile/ Java&reg EE、Kitura、Spring などのさまざまなフレームワークによって、Node.js、Java&reg、または Swift で backend-for-frontend アプリをビルドできます。 必要なツールをインストールして、アプリをビルドしてローカルで実行し、クラウドにデプロイする方法を確認できます。
 {: shortdesc}
 
 ## ステップ 1. 始める前に
@@ -43,7 +43,7 @@ backend-for-frontend スターターからアプリケーションを作成で�
 6. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
 7. **「作成」**をクリックします。
 
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
 {: tip}
 
 ## ステップ 3. サービスの追加 (オプション)

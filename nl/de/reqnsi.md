@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,12 +18,17 @@ subcollection: creating-apps
 # Service zur App hinzufügen
 {: #add-resource}
 
-Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Services von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Services von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
 Sie können eine Instanz des Service anfordern und unabhängig von Ihrer App verwenden oder Sie können die Serviceinstanz von der Seite mit den App-Details Ihrer App hinzufügen. Sie können einen bestimmten Servicetyp direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog bereitstellen.
 
-## Service finden
+## Automatisch bereitgestellte Services
+{: #auto-provision}
+
+Wenn ein Starter-Kit erforderliche Services angibt, erstellt {{site.data.keyword.cloud_notm}} automatisch Instanzen dieser Services, wenn Sie Ihre App erstellen. Sie können Services auch manuell erstellen oder vorhandene Serviceinstanzen auswählen, die Sie Ihrer App nach ihrer Erstellung hinzufügen. Auf der Seite mit **App-Details** können Sie eine Liste mit Serviceinstanzen anzeigen, die Ihrer App zugeordnet sind. Außerdem sind dort die Berechtigungsnachweise aufgeführt, für den Fall, dass Sie sie später noch benötigen.
+
+## Services erkennen
 {: #discover-resources}
 
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.cloud_notm}} verfügbaren Services anzuzeigen:

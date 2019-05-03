@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-19"
 
-keywords: apps, application, SSL certificates, access, restrict access
+keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
 subcollection: creating-apps
 
@@ -43,21 +43,12 @@ Un certificat est émis par un organisme de certification et il est signé numé
 
 Pour que la demande de signature de certificat soit valide, les informations suivantes doivent être indiquées lors de sa création :
 
-<dl>
-<dt>Nom du pays</dt>
-<dd>Code à deux chiffres du pays ou de la région. Par exemple, `US` est le code pays des Etats-Unis d'Amérique. Pour les autres pays ou régions, reportez-vous à la [liste des codes de pays ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avant de créer la demande de signature de certificat.
-</dd>
-<dt>Département ou région</dt>
-<dd>Nom entier non abrégé du département ou de la région.</dd>
-<dt>Localité</dt>
-<dd>Nom entier de la ville.</dd>
-<dt>Organisation</dt>
-<dd>Nom entier de l'entreprise ou de la société tel qu'enregistré juridiquement auprès de votre localité, ou votre nom. Pour les sociétés, veillez à inclure le suffixe d'enregistrement, par exemple SARL, EURL ou SCI.</dd>
-<dt>Unité organisationnelle</dt>
-<dd>Nom du service de votre société qui commande le certificat, par exemple Comptabilité ou Marketing.</dd>
-<dt>Nom usuel</dt>
-<dd>Nom de domaine complet pour lequel vous demandez le certificat SSL.</dd>
-</dl>
+ * **Nom du pays**. Code à deux chiffres du pays ou de la région. Par exemple, `US` est le code pays des Etats-Unis d'Amérique. Pour les autres pays ou régions, reportez-vous à la [liste des codes de pays ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avant de créer la demande de signature de certificat.
+ * **Département ou région**. Nom entier non abrégé du département ou de la région.
+ * **Localité**. Nom entier de la ville.
+ * **Organisation**. Nom entier de l'entreprise ou de la société tel qu'enregistré juridiquement auprès de votre localité, ou votre nom. Pour les sociétés, veillez à inclure le suffixe d'enregistrement, par exemple SARL, EURL ou SCI.
+ * **Unité organisationnelle**. Nom du service de votre société qui commande le certificat, par exemple Comptabilité ou Marketing.
+ * **Nom usuel**. Nom de domaine complet pour lequel vous demandez le certificat SSL.
 
 Vous pouvez utiliser des noms alternatifs (SAN) mais les noms d'hôte fournis ne doivent pas être émis dans d'autres certificats déployés et ce afin d'éviter des collisions de nom commun.
 {: note}
@@ -75,17 +66,15 @@ Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, ut
 * EUROPE-ROYAUME-UNI- `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AUSTRALIE-SYDNEY - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-Pour télécharger un certificat pour votre application, procédez comme suit :
+Pour télécharger un certificat pour votre application Cloud Foundry, procédez comme suit :
 
-1. Accédez à la liste de vos ressources dans la console {{site.data.keyword.cloud_notm}}.
-
-2. Sélectionnez votre application pour consulter les détails concernant cette dernière.
-
-3. Cliquez sur **Routes** > **Gestion des domaines**.
-
-4. Dans la colonne Actions, cliquez sur l'icône Actions ![Icône Plus d'actions](../icons/action-menu-icon.svg) > **Domaines**.
-
-5. Cliquez sur **Télécharger** dans la colonne Certificat SSL puis sélectionnez votre domaine personnalisé :
+1. Depuis la console [{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}){: new_window}, cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) et sélectionnez **Liste de ressources**.
+2. Sur la page **Liste de ressources**, cliquez sur **Applications Cloud Foundry**.
+3. Cliquez sur l'application pour laquelle vous voulez changer le domaine. La page **Présentation** de l'application s'affiche.
+4. Sélectionnez le menu **Routes** puis cliquez sur **Gestion des domaines**.
+5. Dans la colonne Actions, cliquez sur l'icône Actions ![Icône Plus d'actions](../icons/action-menu-icon.svg) puis sélectionnez **Domaines**.
+6. Cliquez sur **Télécharger** dans la **colonne Certificat SSL** pour votre domaine personnalisé.
+7. Sélectionnez une option puis cliquez sur **Ajouter**.
   
   * Certificat - Document numérique qui associe une clé publique à l'identité du propriétaire du certificat, permettant ainsi l'authentification de ce dernier. Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme. En général, un certificat est émis et signé par une autorité de certification. Toutefois, pour le test et le développement, vous pouvez utiliser un certificat autosigné.
   * Clé privée - Modèle algorithmique utilisé pour chiffrer des messages que seule la clé publique correspondante peut déchiffrer. La clé privée sert également à déchiffrer les messages encodés par la clé publique correspondante. Elle est conservée sur le système de l'utilisateur et protégée par un mot de passe.
@@ -100,6 +89,6 @@ Pour télécharger un certificat pour votre application, procédez comme suit :
     Vous pouvez configurer l'authentification mutuelle en téléchargeant un fichier de clés certifiées de certificat client incluant une clé publique dans ses métadonnées.
     {: tip}
 
-Pour plus d'informations, voir [Importation de certificats SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
+Pour plus d'informations, voir [Importation de certificats SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
 
 

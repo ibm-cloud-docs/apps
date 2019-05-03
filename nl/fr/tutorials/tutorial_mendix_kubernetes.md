@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
 subcollection: creating-apps
 
@@ -39,7 +39,8 @@ Démarrez à partir de votre page **Détails de l'application** et procédez com
 3. Ensuite, sélectionnez l'option **Cloud Object Storage**, puis cliquez sur **Suivant**.
 4. Des plans de tarification pour votre instance {{site.data.keyword.cos_full_notm}} s'affichent. Sélectionnez le plan de tarification qui répond le mieux à vos besoins, puis cliquez sur **Créer** pour créer une instance du service {{site.data.keyword.cos_full_notm}} à utiliser avec votre application de Mendix.
 
-  Si vous préférez utiliser une instance existante du service {{site.data.keyword.cos_full_notm}}, cliquez sur **Ajouter un service** puis sélectionnez l'instance existante qui sera utilisée par votre application.{: tip}
+  Si vous préférez utiliser une instance existante du service {{site.data.keyword.cos_full_notm}}, cliquez sur **Ajouter un service** puis sélectionnez l'instance existante qui sera utilisée par votre application.
+  {: tip}
 
 ## Création d'un compartiment de stockage
 {: #storage-bucket-mendix-kube}
@@ -112,7 +113,7 @@ Une fois votre application déployée, Delivery Pipeline ou la ligne de commande
 2. Cliquez sur **Afficher les journaux et l'historique**.
 3. Dans le fichier journal, recherchez l'URL de l'application :
 
-    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Ainsi, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health`.
+    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Par exemple, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health` peut être incluse dans le fichier journal.
 
 4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
 

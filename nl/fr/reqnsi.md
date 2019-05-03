@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,12 +18,17 @@ subcollection: creating-apps
 # Ajout d'un service à votre application
 {: #add-resource}
 
-Quand vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des services à partir de la page Détails de l'application. Toutefois, vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
+Quand vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des services à partir de la page Détails de l'application. Vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
 {: shortdesc}
 
 Vous pouvez demander une instance du service et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de service à votre application  à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de service directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
 
-## Reconnaissance d'un service
+## Services mis à disposition automatiquement
+{: #auto-provision}
+
+Si un kit de démarrage spécifie les services requis, {{site.data.keyword.cloud_notm}} crée automatiquement des instances de ces services lorsque vous créez votre application. Vous pouvez également créer manuellement des services ou sélectionner des instances de service existantes à ajouter à votre application une fois cette dernière créée. Une liste des instances de service associées à votre application est visible sur la page **Détails de l'application** ainsi que les données d'identification de service dont vous pouvez avoir besoin ultérieurement.
+
+## Reconnaissance de services
 {: #discover-resources}
 
 Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.keyword.cloud_notm}} en procédant comme suit :

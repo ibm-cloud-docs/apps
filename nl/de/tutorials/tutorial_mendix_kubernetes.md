@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
 subcollection: creating-apps
 
@@ -39,7 +39,8 @@ Beginnen Sie auf Ihrer Seite **App-Details** und verwenden Sie die folgenden Sch
 3. Wählen Sie anschließend die Option **Cloudobjektspeicher** aus und klicken Sie auf **Weiter**.
 4. Ihnen werden die Preistarife für Ihre {{site.data.keyword.cos_full_notm}}-Instanz angezeigt. Wählen Sie den Preistarif aus, der Ihren Anforderungen am besten entspricht, und klicken Sie dann auf **Erstellen**, um eine Instanz des {{site.data.keyword.cos_full_notm}}-Service zur Verwendung mit Ihrer Mendix-Anwendung zu erstellen.
 
-  Wenn Sie lieber eine vorhandene Instanz des {{site.data.keyword.cos_full_notm}}-Service verwenden, klicken Sie auf **Service hinzufügen** und wählen die vorhandene Instanz für die Verwendung in Ihrer Anwendung aus. {: tip}
+  Wenn Sie lieber eine vorhandene Instanz des {{site.data.keyword.cos_full_notm}}-Service verwenden, klicken Sie auf **Service hinzufügen** und wählen die vorhandene Instanz für die Verwendung in Ihrer Anwendung aus.
+  {: tip}
 
 ## Speicherbucket erstellen
 {: #storage-bucket-mendix-kube}
@@ -112,7 +113,7 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
 3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
 
-    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile angezeigt, die ähnlich aussieht wie `urls: my-app-devhost.mybluemix.net` oder `View the application health at: (Status der Anwendung ansehen unter:) http://<ipaddress>:<port>/health`.
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 

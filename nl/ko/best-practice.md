@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, best practices
+keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
 subcollection: creating-apps
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-19"
 
-keywords: apps, application, SSL certificates, access, restrict access
+keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
 subcollection: creating-apps
 
@@ -44,21 +44,12 @@ Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Ze
 
 Damit die CSR gültig ist, müssen bei ihrer Erstellung die folgenden Angaben gemacht werden:
 
-<dl>
-<dt>Landesname</dt>
-<dd>Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ](https://www.iso.org/obp/ui/#search){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") zurate.
-</dd>
-<dt>Bundesland oder Kanton</dt>
-<dd>Der vollständige und ungekürzte Name des Bundeslands oder des Kantons.</dd>
-<dt>Standort</dt>
-<dd>Der vollständige Name der Stadt.</dd>
-<dt>Organisation</dt>
-<dd>Der vollständige Name des Geschäfts oder des Unternehmens, das an Ihrem Standort rechtsgültig registriert ist, oder ein persönlicher Name. Bei Unternehmen müssen Sie sicherstellen, dass das Registrierungssuffix mit angegeben wird, z. B. Ltd., Inc. oder NV.</dd>
-<dt>Organisationseinheit</dt>
-<dd>Der Name der Abteilung Ihres Unternehmens, die das Zertifikat anfordert, z. B. Buchhaltung oder Marketing.</dd>
-<dt>Allgemeiner Name</dt>
-<dd>Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.</dd>
-</dl>
+ * **Landesname**. Ein zweistelliger Code für das Land oder die Region. Beispielsweise ist: `US` der Landescode für die Vereinigten Staaten. Ziehen Sie für weitere Länder oder Regionen vor der Erstellung der CSR die [Liste der ISO-Landescodes ](https://www.iso.org/obp/ui/#search){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") zurate.
+ * **Bezirk oder Bundesland**. Der vollständige und ungekürzte Name des Bundeslands oder des Kantons.
+ * **Ort**. Der vollständige Name der Stadt.
+ * **Organisation**. Der vollständige Name des Geschäfts oder des Unternehmens, das an Ihrem Standort rechtsgültig registriert ist, oder ein persönlicher Name. Bei Unternehmen müssen Sie sicherstellen, dass das Registrierungssuffix mit angegeben wird, z. B. Ltd., Inc. oder NV.
+ * **Organisationseinheit**. Der Name der Abteilung Ihres Unternehmens, die das Zertifikat anfordert, z. B. Buchhaltung oder Marketing.
+ * **Allgemeiner Name**. Der vollständig qualifizierte Domänenname (FQDN), für den Sie das SSL-Zertifikat anfordern.
 
 Sie können SANs (Subject Alternative Names) verwenden, die angegebenen Hostnamen dürfen jedoch nicht in anderen bereitgestellten Zertifikaten verwendet werden, um CN-Konflikte zu vermeiden.
 {: note}
@@ -76,17 +67,15 @@ Wenn Sie eine angepasste Domäne verwenden, um das SSL-Zertifikat ordnungsgemä�
 * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Anwendung hochzuladen:
+Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Cloud Foundry-Anwendung hochzuladen:
 
-1. Rufen Sie Ihre Ressourcenliste in der {{site.data.keyword.cloud_notm}}-Konsole auf.
-
-2. Wählen Sie Ihre App aus, um die App-Details anzuzeigen.
-
-3. Klicken Sie auf **Routen** > **Domänen verwalten**.
-
-4. Klicken Sie in der Spalte 'Aktionen' auf das Symbol für Aktionen: ![Symbol 'Weitere Aktionen'](../icons/action-menu-icon.svg) > **Domänen**.
-
-5. Klicken Sie auf **Hochladen** in der Spalte für das SSL-Zertifikat und wählen Sie die angepasste Domäne aus:
+1. Klicken Sie in der [{{site.data.keyword.cloud_notm}}-Konsole ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}){: new_window} auf das Symbol **Menü** ![Menüsymbol](../icons/icon_hamburger.svg) und wählen Sie **Ressourcenliste** aus.
+2. Klicken Sie auf der Seite **Ressourcenliste** auf **Cloud Foundry-Apps**.
+3. Klicken Sie auf die Anwendung, für die Sie die Domäne ändern möchten. Die Seite **Übersicht** der App wird angezeigt.
+4. Klicken Sie auf das Menü **Routen** und auf **Domänen verwalten**.
+5. Klicken Sie in der Spalte 'Aktionen' auf das Symbol für Aktionen: ![Symbol 'Weitere Aktionen'](../icons/action-menu-icon.svg) und wählen Sie **Domänen** aus.
+6. Klicken Sie in der Spalte **SSL-Zertifikat** für Ihre angepasste Domäne auf **Hochladen**.
+7. Wählen Sie eine Option aus, laden Sie die Datei hoch und klicken Sie auf **Hinzufügen**.
   
   * Zertifikat: Ein digitales Dokument, das einen öffentlichen Schlüssel an die Identität des Zertifikatsinhabers bindet, sodass der Zertifikatsinhaber authentifiziert werden kann. Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert. Ein Zertifikat wird in der Regel ausgegeben und von einer Zertifizierungsstelle signiert. Für Test- und Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden.
   * Privater Schlüssel: Ein algorithmisches Muster, das verwendet wird, um Nachrichten zu verschlüsseln, die nur der zugehörige öffentliche Schlüssel entschlüsseln kann. Mit dem privaten Schlüssel werden auch Nachrichten entschlüsselt, die vom entsprechenden öffentlichen Schlüssel verschlüsselt wurden. Der private Schlüssel wird im System des Benutzers gespeichert und durch ein Kennwort geschützt.
@@ -101,6 +90,6 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Anwendung ho
     Sie können die gegenseitige Authentifizierung konfigurieren, indem Sie einen Truststore mit Clientzertifikaten hochladen, der in den zugehörigen Metadaten einen öffentlichen Schlüssel enthält.
     {: tip}
 
-Weitere Informationen finden Sie in [SSL-Zertifikate importieren](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
+Weitere Informationen finden Sie in [SSL-Zertifikate importieren](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
 
 

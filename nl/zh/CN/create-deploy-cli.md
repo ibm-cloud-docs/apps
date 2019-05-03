@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, create, build, deploy, cli, web app, microservice
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
@@ -45,7 +45,7 @@ subcollection: creating-apps
   {: note}
 7. 输入唯一的主机名；例如 `abc-devhost`。此主机名是应用程序的路径，例如 `abc-devhost.mybluemix.net`。
 
-缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
 {: tip}
 
 创建应用程序和工具链需要几秒钟时间来完成。
@@ -123,7 +123,7 @@ subcollection: creating-apps
 
 您可以使用 [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 命令手动部署应用程序。例如，使用以下步骤将应用程序手动部署到 Kubernetes。
 
-1. 确保已[创建 Kubernetes 集群](https://{DomainName}/containers-kubernetes/overview){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+1. 确保已[创建 Kubernetes 集群](https://{DomainName}/kubernetes/overview){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 2. 运行 [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 命令。
 3. 系统提示时，请确认要使用的集群和容器映像名称。
 4. 稍候几分钟以等待部署完成。
@@ -134,4 +134,4 @@ subcollection: creating-apps
 1. 要查看在 {{site.data.keyword.cloud_notm}} 上运行的应用程序的 URL，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令。
 2. 要在 {{site.data.keyword.cloud_notm}} 控制台中查看有关应用程序凭证、服务和工具链的详细信息，请运行 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 命令。 
 
-**要报告问题或提供反馈，可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。**
+**要报告问题或提供反馈，可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。**

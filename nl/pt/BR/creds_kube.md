@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, credentials, Kubernetes
+keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
 subcollection: creating-apps
 
@@ -126,8 +126,7 @@ usar as variáveis de ambiente definidas no arquivo `deployment.yml`.
 
 2. Para criar uma instância do Cloud Object Storage, selecione **Incluir serviço** > **Armazenamento** > **Cloud Object Storage** > **Plano Lite (grátis)** > **Criar**.
 
-3. Clique em **Fazer download do código** para gerar novamente o projeto com os fragmentos do
-código injetado.
+3. Clique em **Fazer download de código** para gerar novamente seu app com os fragmentos de código injetados.
 
 4. Para acessar as credenciais localmente, copie e substitua os arquivos a seguir por meio do arquivo
 `.zip` recém-gerado, para que o clone Git local acesse as credenciais. Deve-se ainda criar um segredo do Kubernetes no cluster para hospedar as credenciais.
@@ -144,7 +143,7 @@ para acessar as variáveis de ambiente por meio do código..
 arquivo.
   {: note}
 
-5. [Visualize seu cluster Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com a região correspondente (Sul dos EUA se era grátis).
+5. [Visualize seu cluster Kubernetes](https://{DomainName}/kubernetes/clusters){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com a região correspondente (Sul dos EUA se era grátis).
 
 6. Clique no cluster e selecione **Painel do Kubernetes** na parte superior direito
 para visualizar o painel do cluster.
@@ -160,8 +159,8 @@ secreto que já foi gerado no `chart/{appName}/bindings.yaml` e que se parece co
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-  "endpoints": "https://cos-service.bluemix.net/endpoints",
-  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
+    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -171,7 +170,7 @@ secreto que já foi gerado no `chart/{appName}/bindings.yaml` e que se parece co
 
 11. Use o comando `echo` para colocar as credenciais em um arquivo `binding`.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -186,7 +185,7 @@ de em uma organização ou espaço).
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 

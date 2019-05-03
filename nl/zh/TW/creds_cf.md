@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-04"
 
-keywords: apps, credentials, Cloud Foundry
+keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
 
 subcollection: creating-apps
 
@@ -23,6 +23,9 @@ subcollection: creating-apps
 了解如何將服務認證新增至 Cloud Foundry 部署環境。
 這些指示適用於 [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) 及 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)。
 {: shortdesc}
+
+預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+{: tip}
 
 ## 您的程式碼 + Cloud Foundry
 {: #credentials-byoc-cf}

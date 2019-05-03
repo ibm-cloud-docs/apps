@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: web app, backend-for-frontend, microservices, mobile, programming languages
+keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 

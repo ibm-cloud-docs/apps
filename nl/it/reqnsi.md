@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,12 +18,17 @@ subcollection: creating-apps
 # Aggiunta di un servizio alla tua applicazione
 {: #add-resource}
 
-Quando crei un'applicazione con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puoi aggiungere i servizi dalla pagina App details. Tuttavia, puoi anche fornirle direttamente dal catalogo {{site.data.keyword.cloud_notm}}, fuori dal contesto della tua applicazione.
+Quando crei un'applicazione con {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, puoi aggiungere i servizi dalla pagina App details. Puoi anche eseguirne il provisioning direttamente dal catalogo {{site.data.keyword.cloud_notm}}, al di fuori del contesto della tua applicazione.
 {: shortdesc}
 
 Puoi richiedere un'istanza del servizio e utilizzarla indipendentemente dalla tua applicazione o puoi aggiungere l'istanza del servizio alla tua applicazione dalla pagina App details. Puoi eseguire il provisioning di uno specifico tipo di servizio direttamente dal catalogo {{site.data.keyword.cloud_notm}}.
 
-## Rilevamento del servizio 
+## Servizi con provisioning automatico
+{: #auto-provision}
+
+Se un kit starter specifica i servizi richiesti, {{site.data.keyword.cloud_notm}} crea automaticamente le istanze di quei servizi quando crei la tua applicazione. Puoi anche creare manualmente i servizi o selezionare istanze del servizio esistenti da aggiungere alla tua applicazione dopo la sua creazione. Puoi vedere un elenco di istanze del servizio associate alla tua applicazione nella pagina **App details**, insieme alle credenziali del servizio nel caso dovessero servirti in seguito.
+
+## Rilevamento servizi
 {: #discover-resources}
 
 Puoi visualizzare tutti i servizi disponibili in {{site.data.keyword.cloud_notm}}

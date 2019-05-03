@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, cli
+keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
 subcollection: creating-apps
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # スターター・キットを使用したモバイル・アプリケーションの作成
 {: #tutorial-mobile}
 
-{{site.data.keyword.cloud}} は、モバイル・アプリケーションを素早く作成するために役立つモバイル・スターター・キットを提供します。事前構成されたカスタム・アプリの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイする方法を確認できます。
+{{site.data.keyword.cloud}} は、モバイル・アプリケーションを素早く作成するために役立つモバイル・スターター・キットを提供します。 事前構成されたカスタム・アプリの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイする方法を確認できます。
 {: shortdesc}
 
 ## ステップ 1. 始める前に

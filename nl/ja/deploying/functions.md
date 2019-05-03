@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, serverless, serverless app, functions, cli, api, sdk
+keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
 subcollection: creating-apps
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
 
-ご使用の[ブラウザー ](https://{DomainName}/openwhisk/actions){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") で {{site.data.keyword.openwhisk_short}} を試してください。{{site.data.keyword.openwhisk_short}} ユーザー・インターフェースのクイック・ツアーについては、[概念 (Concepts) ](https://{DomainName}/openwhisk/learn){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") のページに移動します。
+ご使用の[ブラウザー ](https://{DomainName}/openwhisk/actions){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") で {{site.data.keyword.openwhisk_short}} を試してください。 {{site.data.keyword.openwhisk_short}} ユーザー・インターフェースのクイック・ツアーについては、[概念 (Concepts) ](https://{DomainName}/openwhisk/learn){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") のページに移動します。
 
 ## CLI を使用した開発
 {: #openwhisk_start_configure_cli}

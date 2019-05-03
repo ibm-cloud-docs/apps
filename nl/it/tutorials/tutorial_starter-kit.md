@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-15"
 
-keywords: apps, starter kit
+keywords: apps, starter kit, create app starter kit, basic app, simple app
 
 subcollection: creating-apps
 
@@ -19,10 +19,14 @@ subcollection: creating-apps
 # Creazione di un'applicazione con il kit starter
 {: #tutorial-starterkit}
 
-Puoi utilizzare un kit starter per iniziare ad utilizzare rapidamente la tua applicazione e a prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
+Puoi utilizzare un kit starter per avviare rapidamente la tua applicazione e prepararla per lo sviluppo futuro. Scegli un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
 {: shortdesc}
 
 Puoi creare un'applicazione da una selezione di kit starter, compreso uno vuoto se vuoi personalizzare tu stesso le opzioni di build. In entrambi i casi, una toolchain DevOps viene creata automaticamente per la distribuzione della tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
+
+{{site.data.keyword.cloud_notm}} ha portali per gli sviluppatori in diverse aree di interesse (come Watson, Security o Finance) o un canale digitale (come Mobile o Applicazioni Web). Puoi accedere a questi portali dall'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg).
+
+Ogni portale sviluppatori fornisce i kit starter rilevanti per l'area specifica dei portali. I portali offrono flussi di lavoro coerenti e intuitivi per la creazione di un'applicazione funzionante pronta per la produzione in pochi minuti.
 
 I kit starter sono disponibili in molte categorie, tra cui:
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
@@ -32,10 +36,12 @@ I kit starter sono disponibili in molte categorie, tra cui:
 * [Security ](https://{DomainName}/developer/security/dashboard){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 * [Finance ](https://{DomainName}/developer/finance/dashboard){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")
 
+[Ulteriori informazioni ](/docs/apps?topic=creating-apps-starter-kits) sui kit starter.
+
 ## Passo 1. Crea un'applicazione
 {: #create-starterkit}
 
-1. Dal [dashboard {{site.data.keyword.cloud}}](https://{DomainName}){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), fai clic sull'icona **Menu** ![icona Menu](../../icons/icon_hamburger.svg) > **Web Apps**.
+1. Dal [dashboard {{site.data.keyword.cloud}}](https://{DomainName}){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno"), fai clic sull'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg) > **Web Apps**.
 
 2. Fai clic su **Get Started** nella sezione **Start from the Web**.
 
@@ -55,7 +61,7 @@ Per ulteriori informazioni, vedi i seguenti argomenti:
  * [Creazione di un'applicazione web di base con un kit starter](/docs/apps/tutorials?topic=creating-apps-tutorial-webapp)
  * [Gestione delle tag](/docs/resources?topic=resources-tag)
 
-## Passo 2. Aggiunta di servizi
+## Passo 2. Aggiungi i servizi
 {: #resources-starterkit}
 
 Puoi aggiungere servizi che migliorano la tua applicazione con la potenza cognitiva di Watson, aggiungere servizi mobili o servizi per la sicurezza. Per questa esercitazione, aggiungi una posizione per gestire i tuoi dati.
@@ -63,7 +69,7 @@ Puoi aggiungere servizi che migliorano la tua applicazione con la potenza cognit
 1. Nella pagina **App details**, fai clic su **Add service**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-4. Fai clic su **Create**.
+4. Fai clic su **Crea**.
 
 ## Passo 3. Distribuisci a {{site.data.keyword.cloud_notm}}
 {: #deploy-starterkit}
@@ -72,7 +78,7 @@ Fai clic su **Configure continuous delivery** nella pagina **App details**, sele
 
 L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per l'ambiente di distribuzione che scegli, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
-Dopo che hai selezionato il tuo ambiente di distribuzione, apri il componente pipeline della tua nuova toolchain per iniziare il processo iniziale di creazione e distribuzione in modo da poter vedere la tua nuova applicazione nel giro di qualche minuto.
+Dopo che hai selezionato la tua destinazione di distribuzione, apri il componente pipeline della tua nuova toolchain per iniziare il processo iniziale di creazione e distribuzione in modo da poter vedere la tua nuova applicazione nel giro di qualche minuto.
 
 Tutte le toolchain che vengono create da un dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
 {: note}

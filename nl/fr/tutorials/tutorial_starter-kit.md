@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-15"
 
-keywords: apps, starter kit
+keywords: apps, starter kit, create app starter kit, basic app, simple app
 
 subcollection: creating-apps
 
@@ -24,6 +24,10 @@ Vous pouvez utiliser un kit de démarrage pour que votre application démarre ra
 
 Vous pouvez créer une application en utilisant des kits de démarrage, notamment un kit vide si vous voulez personnaliser vous-même les options de génération. Quoi qu'il en soit, une chaîne d'outils est automatiquement créée pour le déploiement de votre application. Vous pouvez également télécharger le code pour un examen immédiat.
 
+{{site.data.keyword.cloud_notm}} propose des portails de développeur s'appliquant à différents domaines d'intérêt (par exemple, Watson, la sécurité ou la finance) ou un canal de vente numérique (par exemple, les applications mobiles ou Web). Vous pouvez accéder à ces portails à partir de l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg).
+
+Chaque portail de développeur fournit des kits de démarrage adaptés au domaine d'intérêt du portail. Les portails incluent des flux de travaux cohérents et intuitifs pour la création d'une application fonctionnelle prête pour la production en quelques minutes.
+
 Les kits de démarrage sont disponibles dans de nombreuses catégories, telles que les suivantes :
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 * [Apple ](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
@@ -32,10 +36,12 @@ Les kits de démarrage sont disponibles dans de nombreuses catégories, telles q
 * [Sécurité ](https://{DomainName}/developer/security/dashboard){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 * [Finance ](https://{DomainName}/developer/finance/dashboard){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")
 
+[En savoir plus](/docs/apps?topic=creating-apps-starter-kits) sur les kits de démarrage.
+
 ## Etape 1. Créer une application
 {: #create-starterkit}
 
-1. A partir du tableau de bord [{{site.data.keyword.cloud}} ](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), cliquez sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) > **Applications Web**.
+1. A partir du tableau de bord [{{site.data.keyword.cloud}} ](https://{DomainName}){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe"), cliquez sur l'icône **Menu** ![Icône Menu](../../icons/icon_hamburger.svg) > **Applications Web**.
 
 2. Cliquez sur **Initiation** dans la section **Démarrer à partir du Web**.
 
@@ -72,7 +78,7 @@ Cliquez sur **Configurer la distribution continue** sur la page **Détails de l'
 
 L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de l'environnement de déploiement choisi, [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
-Une fois que vous avez sélectionné votre environnement de déploiement, ouvrez le composant Pipeline de votre nouvelle chaîne d'outils pour démarrer le processus de génération et de déploiement initial afin que vous puissiez voir votre application après quelques minutes.
+Une fois que vous avez sélectionné votre cible de déploiement, ouvrez le composant Pipeline de votre nouvelle chaîne d'outils pour démarrer le processus de génération et de déploiement initial afin que vous puissiez voir votre application après quelques minutes.
 
 Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
 {: note}

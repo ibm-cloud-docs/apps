@@ -10,6 +10,7 @@ Apps erstellen
     development_process.md
     best-practice.md
     patterns.md
+    starter-kits.md
 
     {: .topicgroup}
     Zugehörige Links
@@ -33,7 +34,7 @@ Apps erstellen
         tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    Apps bereitstellen und integrieren
+    Apps bereitstellen
         dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
@@ -42,7 +43,11 @@ Apps erstellen
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
-    reqnsi.md
+    {: .topicgroup}
+    Konfiguration
+        reqnsi.md
+        mngdomains.md
+        secapps.md
 
     {: .topicgroup}
     Berechtigungsnachweise Ihrer Umgebung hinzufügen
@@ -51,10 +56,13 @@ Apps erstellen
         creds_cf.md
         creds_vsi.md
 
-    mngdomains.md
-    updapps.md
-    secapps.md
-    hosting.md
+    {: .topicgroup}
+    Apps migrieren
+        hosting.md
+
+    {: .topicgroup}
+    Apps mit DevOps integrieren
+        toolchains.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -72,17 +80,18 @@ Apps erstellen
         [Web-Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    IBM Cloud - Leitfäden zur Programmierung
+    IBM Cloud-Programmierhandbücher
         [Go](/go/go-getting-started)
-        [Spring](/java/java-overview)
+        [Java](/java/java-overview)
         [Swift](/swift/swift-getting_started_swift)
-        [Node](/node/nodejs-create_project)
+        [Node](/node/nodejs-node-getting-started)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    faqs.md
     ts_apps.md
-    [Kanal für Slack-Entwicklertools von IBM Cloud](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack-Kanal für Entwicklertools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
