@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, cli
+keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
 subcollection: creating-apps
 
@@ -193,7 +193,7 @@ Une fois votre application déployée, Delivery Pipeline ou la ligne de commande
 2. Cliquez sur **Afficher les journaux et l'historique**.
 3. Dans le fichier journal, recherchez l'URL de l'application :
 
-    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Ainsi, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health`.
+    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Par exemple, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health` peut être incluse dans le fichier journal.
 
 4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,12 +18,17 @@ subcollection: creating-apps
 # Incluindo um serviço em seu app
 {: #add-resource}
 
-Ao criar um app com o {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, é possível incluir serviços da página de detalhes do app. No entanto, também é possível provisioná-los diretamente no catálogo do {{site.data.keyword.cloud_notm}}, fora do contexto de seu app.
+Ao criar um app com o {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, é possível incluir serviços da página de detalhes do app. Também é possível provisioná-los diretamente por meio do catálogo do {{site.data.keyword.cloud_notm}}, fora do contexto de seu app.
 {: shortdesc}
 
 É possível solicitar uma instância do serviço e usá-la independentemente de seu app ou é possível incluir a instância de serviço em seu app na página de detalhes do app. É possível provisionar um tipo específico de serviço diretamente do catálogo do {{site.data.keyword.cloud_notm}}.
 
-## Descobrindo serviço
+## Serviços autoprovisionados
+{: #auto-provision}
+
+Se um kit do iniciador especificar os serviços necessários, o {{site.data.keyword.cloud_notm}} criará automaticamente instâncias desses serviços quando você criar seu app. Também é possível criar manualmente serviços ou selecionar instâncias de serviço existentes para incluir em seu app após ele ter sido criado. É possível ver uma lista de instâncias de serviço que estão associadas a seu app na página **Detalhes do app**, junto com as credenciais de serviço no caso de precisar delas posteriormente.
+
+## Descobrindo serviços
 {: #discover-resources}
 
 É possível ver todos os serviços que estão disponíveis no {{site.data.keyword.cloud_notm}} das maneiras a seguir:

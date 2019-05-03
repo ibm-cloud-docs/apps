@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
+keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
 subcollection: creating-apps
 
@@ -41,7 +41,7 @@ Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.
 5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 6. Clique em **Criar**.
 
-O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Etapa 3. Incluir serviços (opcional)
@@ -154,7 +154,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 2. Clique em **Visualizar logs e histórico**.
 3. No arquivo de log, localize a URL do aplicativo:
 
-    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, é possível que você veja uma linha no arquivo de log que seja semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 

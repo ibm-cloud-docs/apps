@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, credentials, Kubernetes
+keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
 subcollection: creating-apps
 
@@ -119,7 +119,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 2. 若要建立 Cloud Object Storage 的實例，請選取**新增服務** > **儲存空間** > **Cloud Object Storage** > **精簡方案（免費）** > **建立**。
 
-3. 按一下**下載程式碼**，使用注入的程式碼 Snippet 來重新產生專案。
+3. 按一下**下載程式碼**，使用注入的程式碼 Snippet 來重新產生應用程式。
 
 4. 若要在本端存取認證，請複製來自新產生之 `.zip` 檔案的下列檔案，並取代到本端 Git 複本，以存取認證。您仍須在叢集裡建立 Kubernetes 密碼才能管理認證。
 
@@ -131,7 +131,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   如果您稍後選擇部署至具有「資源控制器」資源（位於資源群組而非組織或空間）的 Cloud Foundry 應用程式，則必須再複製一個檔案。
   {: note}
 
-5. [檢視 Kubernetes 叢集](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 與對應地區（美國南部，如果它是免費的）。
+5. [檢視 Kubernetes 叢集](https://{DomainName}/kubernetes/clusters){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 與對應地區（美國南部，如果它是免費的）。
 
 6. 按一下您的叢集，然後選取右上角的 **Kubernetes 儀表板**，以檢視您的叢集儀表板。
 
@@ -143,8 +143,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-    "endpoints": "https://cos-service.bluemix.net/endpoints",
-    "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
+    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -153,7 +153,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 11. 使用 `echo` 指令，將認證放入 `binding` 檔案。
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+
   ```
   {: codeblock}
 
@@ -163,7 +164,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 

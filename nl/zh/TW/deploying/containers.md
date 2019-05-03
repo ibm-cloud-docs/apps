@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
+keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
 subcollection: creating-apps
 
@@ -34,7 +34,7 @@ subcollection: creating-apps
 
 1. 設定自動化雲端管線來將應用程式部署至雲端。
 2. 按一下**配置持續交付**。
-3. 選取 **IBM Kubernetes Service** 作為目標。您需要[建立叢集 ](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")，如果還沒有的話。
+3. 選取 **IBM Kubernetes Service** 作為目標。您需要[建立叢集 ](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")，如果還沒有的話。
 4. 部署完成之後，請從交付管線的部署階段日誌取得 URL，查看雲端中的即時應用程式。最後一個具有埠的 IP 位址是您應用程式的新首頁，例如 169.60.133.124:32355。
 
 ## 連結服務
@@ -72,11 +72,11 @@ subcollection: creating-apps
 
 如需相關資訊，請參閱 [Charts ](https://docs.helm.sh/developing_charts/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
-{{site.data.keyword.cloud_notm}} 支援許多[預先配置的 Helm 圖表 ](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
+{{site.data.keyword.cloud_notm}} 支援許多[預先配置的 Helm 圖表 ](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## 檢查應用程式安全
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} 支援掃描已包裝的容器映像檔是否有安全漏洞。安全掃描對於支援企業應用程式而言相當重要。
 
-檢視容器[映像檔儲存庫 ](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 以檢查可能的安全漏洞。
+檢視容器[映像檔儲存庫 ](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 以檢查可能的安全漏洞。

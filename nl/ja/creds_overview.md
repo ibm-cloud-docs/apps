@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, credentials
+keywords: apps, credentials, service, add service credentials, environment, deployment
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ subcollection: creating-apps
  * ブランクのスターター・キット・テンプレートから開始する。
  * デプロイされた後のスターター・キット・ベースのアプリにサービスを追加する。
 
-環境の準備は、アプリに関連付けられたすべてのサービスのすべての資格情報を対象に常に実行され、すべての `services` が `manifest.yml` 内にリストされますが、`mappings.json` ファイル内には、必ずしもすべての資格情報参照が配置されるわけではありません。その場合、そのような参照はユーザー自身が配置する必要があります。 デプロイメント・ターゲットを決定した後、`IBMCloudEnv` ライブラリーの抽象化が不要であれば、決定したデプロイメントに適した『ユーザー作成コード + (デプロイメント・ターゲット)』のセクションを参照してください。
+環境の準備は、アプリに関連付けられたすべてのサービスのすべての資格情報を対象に常に実行され、すべての `services` が `manifest.yml` 内にリストされますが、`mappings.json` ファイル内には、必ずしもすべての資格情報参照が配置されるわけではありません。 その場合、そのような参照はユーザー自身が配置する必要があります。 デプロイメント・ターゲットを決定した後、`IBMCloudEnv` ライブラリーの抽象化が不要であれば、決定したデプロイメントに適した『ユーザー作成コード + (デプロイメント・ターゲット)』のセクションを参照してください。
 {: important}
 
 一部のスターター・キットは、`IBMCloudEnv` 依存関係、`manifest.yml` ファイル、および `mappings.json` ファイルへの参照をいっさい組み込みません。

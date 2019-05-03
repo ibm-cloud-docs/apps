@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, scratch, developer tools
+keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ subcollection: creating-apps
 6. 価格プランを選択します。 このチュートリアルでは、無料オプションを使用できます。
 7. **「作成」**をクリックします。
 
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
+デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
 {: tip}
 
 ## サービスの追加 (オプション)

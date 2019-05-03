@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
 subcollection: creating-apps
 
@@ -69,7 +69,7 @@ Pour afficher ces propriétés d'environnement, procédez comme suit :
 |-----------|--------------|
 | `TF_VAR_ibm_sl_api_key` | La [clé d'API de l'infrastructure](/docs/apps?topic=creating-apps-vsi-deploy#iaas-key) provient de la console d'infrastructure classique. |
 | `TF_VAR_ibm_sl_username` | [Nom d'utilisateur de l'infrastructure](/docs/apps?topic=creating-apps-vsi-deploy#user-key) identifiant le compte d'infrastructure classique. |
-| `TF_VAR_ibm_cloud_api_key` |La clé d'API {{site.data.keyword.cloud_notm}} [](/docs/apps?topic=creating-apps-vsi-deploy#platform-key) permet d'activer la création de service. |
+| `TF_VAR_ibm_cloud_api_key` | La clé d'API {{site.data.keyword.cloud_notm}} [](/docs/apps?topic=creating-apps-vsi-deploy#platform-key) permet d'activer la création de service. |
 | `PUBLIC_KEY` | [Clé publique](/docs/apps?topic=creating-apps-vsi-deploy#public-key) définie pour activer l'accès à l'instance de serveur virtuel. |
 | `PRIVATE_KEY` | [Clé privée](/docs/apps?topic=creating-apps-vsi-deploy#public-key) définie pour activer l'accès à l'instance de serveur virtuel. Vous devez utiliser le formatage de style de nouvelle ligne `\n`. |
 | `VI_INSTANCE_NAME` | Nom généré automatiquement pour l'instance de serveur virtuel |

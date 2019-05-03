@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
 subcollection: creating-apps
 
@@ -35,7 +35,7 @@ Puede crear una aplicación a partir del iniciador básico de microservicios (Mi
 
 Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 
-1. En la página [Kits de inicio](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje. Por ejemplo, para una aplicación Node.js, vaya a **Express.js Microservice** y pulse **Seleccionar kit de inicio**.
+1. En la página [Kits de inicio](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje. Por ejemplo, para una aplicación Node.js, vaya a **Express.js Microservice** y pulse **Seleccionar kit de inicio**.
 2. Especifique el nombre de la app. En esta guía de aprendizaje, utilice `MicroserviceProject`.
 3. Especifique un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`.
 4. Opcional. Proporcione etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
@@ -44,7 +44,7 @@ Cree una app en {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}:
 7. Pulse **Crear**.
 
 El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
-[Actualización del dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Paso 3. Añadir servicios (opcional)

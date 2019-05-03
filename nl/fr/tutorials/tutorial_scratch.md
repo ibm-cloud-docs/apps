@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-02"
 
-keywords: apps, scratch, developer tools
+keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
 subcollection: creating-apps
 
@@ -46,7 +46,7 @@ Vous pouvez créer une toute nouvelle application personnalisée en utilisant de
 6. Sélectionnez votre plan de tarification. Vous pouvez utiliser l'option gratuite pour ce tutoriel.
 7. Cliquez sur **Créer**.
 
-Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/apps/tutorials?topic=creating-apps-update-domain).
+Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Ajout de services (facultatif)
@@ -164,7 +164,7 @@ Une fois votre application déployée, Delivery Pipeline ou la ligne de commande
 2. Cliquez sur **Afficher les journaux et l'historique**.
 3. Dans le fichier journal, recherchez l'URL de l'application :
 
-    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Ainsi, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health`.
+    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Par exemple, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health` peut être incluse dans le fichier journal.
 
 4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
 

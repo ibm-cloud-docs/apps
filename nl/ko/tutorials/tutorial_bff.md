@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-02"
 
-keywords: apps, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain
+keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
 
 subcollection: creating-apps
 
@@ -43,7 +43,7 @@ subcollection: creating-apps
 6. 가격 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
 7. **작성**을 클릭하십시오.
 
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/apps/tutorials?topic=creating-apps-update-domain)를 참조하십시오.
+기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
 {: tip}
 
 ## 3단계. 서비스 추가(선택사항)

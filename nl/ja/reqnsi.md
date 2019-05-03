@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-08"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,10 +18,15 @@ subcollection: creating-apps
 # アプリへのサービスの追加
 {: #add-resource}
 
-{{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、アプリの詳細ページからサービスを追加することができます。 しかし、アプリのコンテキスト外部で、{{site.data.keyword.cloud_notm}} カタログからリソースを直接プロビジョンすることもできます。
+{{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} を使用してアプリを作成した場合、アプリの詳細ページからサービスを追加することができます。 アプリのコンテキスト外部で、{{site.data.keyword.cloud_notm}} カタログからリソースを直接プロビジョンすることもできます。
 {: shortdesc}
 
 サービスのインスタンスを要求して、これをアプリとは無関係に使用することも、アプリの詳細ページからサービス・インスタンスをアプリに追加することもできます。 特定のタイプのサービスを {{site.data.keyword.cloud_notm}} カタログから直接プロビジョンできます。
+
+## 自動プロビジョンされたサービス
+{: #auto-provision}
+
+スターター・キットで必要なサービスが指定されている場合、{{site.data.keyword.cloud_notm}} は、アプリの作成時にそれらのサービスのインスタンスを自動的に作成します。 手動でサービスを作成したり、アプリの作成後に既存のサービス・インスタンスを選択してプロジェクトに追加したりすることもできます。 **「アプリの詳細」**ページで、アプリに関連するサービス・インスタンスのリストと、あとで必要な場合はサービス資格情報を表示できます。
 
 ## サービスの検出
 {: #discover-resources}

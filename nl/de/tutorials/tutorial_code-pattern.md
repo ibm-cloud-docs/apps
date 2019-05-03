@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-03-29"
 
-keywords: apps, code pattern, DevOps, toolchain, service credentials
+keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
 
 subcollection: creating-apps
 
@@ -44,7 +44,7 @@ Sie können ein Codemuster verwenden, um Ihre Anwendung rasch zu erstellen und i
 Sie können Services, die Ihre App mit der kognitiven Leistung von Watson funktional erweitern, mobile Services oder Sicherheitsservices hinzufügen. Dieser Prozess erstellt eine Serviceinstanz, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Im Rahmen dieses Lernprogramms fügen Sie eine Position für die Verwaltung Ihrer Daten hinzu.
 
 1. Klicken Sie auf der Seite **App-Details** auf **Service hinzufügen**.
-2. Wählen Sie den Typ des gewünschten Service aus.  
+2. Wählen Sie den Typ des gewünschten Service aus. 
 3. Wählen Sie Ihren Preisstrukturplan aus. Eine Lite-Option ist verfügbar.
 4. Klicken Sie auf **Erstellen**.
 

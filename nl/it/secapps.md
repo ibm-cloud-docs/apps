@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-19"
 
-keywords: apps, application, SSL certificates, access, restrict access
+keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
 subcollection: creating-apps
 
@@ -49,22 +49,13 @@ certificazione e viene firmato in maniera digitale da tale autorità. Dopo aver 
 
 Affinché il CSR sia valido, quando lo crei è necessario immettere le seguenti informazioni:
 
-<dl>
-<dt>Nome paese</dt>
-<dd>Un codice a due cifre per il paese o la regione. Ad esempio, `US` è il codice paese per gli Stati Uniti. Per altri paesi o regioni, prima di creare il CSR, controlla l'[elenco di codici paese ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
-</dd>
-<dt>Stato o provincia</dt>
-<dd>Il nome completo senza abbreviazioni dello stato o provincia.</dd>
-<dt>Località</dt>
-<dd>Il nome completo della città.</dd>
-<dt>Organizzazione</dt>
-<dd>Il nome completo dell'azienda o società, come legalmente registrata nella tua località, o il nome
-personale. Per le società, assicurati di includere il suffisso di registrazione, ad esempio Ltd., Inc. o NV.</dd>
-<dt>Unità organizzativa</dt>
-<dd>Il nome della sezione della tua società che ordina il certificato, ad esempio contabilità o marketing.</dd>
-<dt>Nome comune</dt>
-<dd>Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.</dd>
-</dl>
+ * **Nome paese**. Un codice a due cifre per il paese o la regione. Ad esempio, `US` è il codice paese per gli Stati Uniti. Per altri paesi o regioni, prima di creare il CSR, controlla l'[elenco di codici paese ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+ * **Stato o provincia**. Il nome completo senza abbreviazioni dello stato o provincia.
+ * **Località**. Il nome completo della città.
+ * **Organizzazione**. Il nome completo dell'azienda o società, come legalmente registrata nella tua località, o il nome
+personale. Per le società, assicurati di includere il suffisso di registrazione, ad esempio Ltd., Inc. o NV.
+ * **Unità organizzativa**. Il nome della sezione della tua società che ordina il certificato, ad esempio contabilità o marketing.
+ * **Nome comune**. Il nome di dominio completo (FQDN) per il quale stai richiedendo il certificato SSL.
 
 Puoi utilizzare i SAN (Subject Alternative Name), ma i nomi host forniti non devono essere emessi in altri certificati distribuiti per evitare conflitti di CN.
 {: note}
@@ -84,17 +75,15 @@ Quando utilizzi un dominio personalizzato per servire il certificato SSL, utiliz
 * EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
 * AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
 
-Per caricare un certificato per la tua applicazione, completa la seguente procedura:
+Per caricare un certificato per la tua applicazione Cloud Foundry, completa la seguente procedura:
 
-1. Vai al tuo elenco di risorse nella console {{site.data.keyword.cloud_notm}}.
-
-2. Seleziona la tua applicazione per visualizzare i dettagli dell'applicazione.
-
-3. Fai clic su **Rotte** > **Gestisci domini**.
-
-4. Dalla colonna Azioni, fai clic sull'icona Azioni ![Icona Altre azioni](../icons/action-menu-icon.svg) > **Domini**.
-
-5. Fai clic su **Carica** nella colonna Certificato SSL e seleziona il tuo dominio personalizzato:
+1. Dalla [console {{site.data.keyword.cloud_notm}} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}){: new_window}, fai clic sull'icona **Menu** ![icona Menu](../icons/icon_hamburger.svg) e seleziona **Elenco risorse**.
+2. Sulla pagina **Elenco risorse**, fai clic su **Applicazioni Cloud Foundry**.
+3. Fai clic sull'applicazione di cui vuoi modificare il dominio. Viene visualizzata la pagina **Panoramica** dell'applicazione.
+4. Seleziona il menu **Rotte** e fai clic su **Gestisci domini**.
+5. Dalla colonna Azioni, fai clic sull'icona Azioni ![Icona Ulteriori azioni](../icons/action-menu-icon.svg) e seleziona **Domini**.
+6. Fai clic su **Carica** nella **colonna Certificato SSL** per il tuo dominio personalizzato.
+7. Seleziona un'opzione, carica il file e fai clic su **Aggiungi**.
   
   * Certificato: un documento digitale che esegue il bind di una chiave pubblica all'identità del proprietario del certificato,
 che abilita il proprietario del certificato a essere autenticato. Un certificato viene emesso da un'autorità di
@@ -116,6 +105,6 @@ il browser web gli richiede di fornire un certificato client per il dominio.
     Puoi configurare l'autenticazione reciproca caricando un truststore certificato client che includa una chiave pubblica nei suoi metadati.
     {: tip}
 
-Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates#importing-ssl-certificates).
+Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
 
 

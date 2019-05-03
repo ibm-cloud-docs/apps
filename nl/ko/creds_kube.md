@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, credentials, Kubernetes
+keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
 subcollection: creating-apps
 
@@ -119,7 +119,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 2. Cloud Object Storage의 인스턴스를 작성하려면 **서비스 추가** > **스토리지** > **Cloud Object Storage** > **Lite 플랜(무료)** > **작성**을 선택하십시오.
 
-3. **코드 다운로드**를 클릭하여 삽입된 코드 스니펫으로 프로젝트를 다시 생성하십시오.
+3. **코드 다운로드**를 클릭하여 삽입된 코드 스니펫으로 앱을 다시 생성하십시오.
 
 4. 로컬로 인증 정보에 액세스하려면 새로 생성된 `.zip` 파일에서 인증 정보에 액세스하기 위한 로컬 Git 복제본으로 다음 파일을 복사하여 대체하십시오. 인증 정보를 호스팅할 수 있도록 클러스터에서 여전히 Kubernetes 시크릿을 작성해야 합니다.
 
@@ -131,7 +131,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   나중에 리소스 제어기 리소스(조직 또는 영역이 아닌 리소스 그룹에 있는)로 Cloud Foundry 애플리케이션에 배치하도록 선택하는 경우에는 1개의 추가 파일을 복사해야 합니다.
   {: note}
 
-5. 해당 지역(무료인 경우 미국 남부)의 [Kubernetes 클러스터 보기](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.
+5. 해당 지역(무료인 경우 미국 남부)의 [Kubernetes 클러스터 보기](https://{DomainName}/kubernetes/clusters){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 확인하십시오.
 
 6. 클러스터를 클릭하고 오른쪽 상단에서 **Kubernetes 대시보드**를 선택하여 클러스터 대시보드를 보십시오.
 
@@ -143,8 +143,8 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-  "endpoints": "https://cos-service.bluemix.net/endpoints",
-  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
+    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -153,7 +153,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 11. `echo` 명령을 사용하여 인증 정보를 `binding` 파일에 두십시오.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -164,7 +164,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 

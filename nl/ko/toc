@@ -10,6 +10,7 @@
     development_process.md
     best-practice.md
     patterns.md
+    starter-kits.md
 
     {: .topicgroup}
     관련 링크
@@ -33,7 +34,7 @@
         tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    앱 배치 및 통합
+    앱 배치
         dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
@@ -42,7 +43,11 @@
         deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
-    reqnsi.md
+    {: .topicgroup}
+    구성
+        reqnsi.md
+        mngdomains.md
+        secapps.md
 
     {: .topicgroup}
     환경에 인증 정보 추가
@@ -51,10 +56,13 @@
         creds_cf.md
         creds_vsi.md
 
-    mngdomains.md
-    updapps.md
-    secapps.md
-    hosting.md
+    {: .topicgroup}
+    앱 마이그레이션
+        hosting.md
+
+    {: .topicgroup}
+    앱을 DevOps와 통합
+        toolchains.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -74,14 +82,15 @@
     {: .topicgroup}
     IBM Cloud 프로그래밍 안내서
         [Go](/go/go-getting-started)
-        [Spring](/java/java-overview)
+        [Java](/java/java-overview)
         [Swift](/swift/swift-getting_started_swift)
-        [Node](/node/nodejs-create_project)
+        [Node](/node/nodejs-node-getting-started)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    faqs.md
     ts_apps.md
     [IBM Cloud Slack developer-tools 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-03-29"
 
-keywords: apps, create, build, deploy, cli, web app, microservice
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
@@ -48,7 +48,7 @@ Crear una app desde cero resulta útil si aún no dispone de código existente c
 `abc-devhost.mybluemix.net`.
 
 El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
-[Actualización del dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 La creación de la app y de la cadena de herramientas puede tardar unos segundos para completarse.
@@ -126,7 +126,7 @@ Después de crear una cadena de herramientas de DevOps para su app, el despliegu
 
 Puede desplegar manualmente su app utilizando el mandato [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy). Por ejemplo, siga los pasos siguientes para desplegar manualmente su app en Kubernetes.
 
-1. Asegúrese de haber [creado un clúster de Kubernetes](https://{DomainName}/containers-kubernetes/overview){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+1. Asegúrese de haber [creado un clúster de Kubernetes](https://{DomainName}/kubernetes/overview){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 2. Ejecute el mandato [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 3. Cuando se le solicite, confirme el nombre de la imagen del contenedor y del clúster que va a utilizar.
 4. Espere unos minutos a que el despliegue se haya completado.
@@ -139,4 +139,4 @@ Puede desplegar manualmente su app utilizando el mandato [`deploy`](/docs/cli/id
 
 **Para notificar problemas o proporcionar comentarios, puede utilizar el
 [canal #developer-tools de Slack de {{site.data.keyword.cloud_notm}}
-Tech](https://ibm-cloud-tech.slack.com){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Solicite acceso de equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+Tech](https://ibm-cloud-tech.slack.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Solicite acceso de equipo [aquí](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").

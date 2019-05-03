@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-15"
 
-keywords: apps, starter kit
+keywords: apps, starter kit, create app starter kit, basic app, simple app
 
 subcollection: creating-apps
 
@@ -19,10 +19,14 @@ subcollection: creating-apps
 # App mit einem Starter-Kit erstellen
 {: #tutorial-starterkit}
 
-Mit einem Starter-Kit können Sie Ihre App schnell zum Einsatz bringen und auf zukünftige Entwicklungen vorbereiten. Wählen Sie ein Starter-Kit und eine Programmiersprache aus, erstellen Sie eine App und richten Sie dann eine DevOps-Toolchain ein, um Ihre App automatisch bereitzustellen. Sie können den Code auch für eine sofortige Überprüfung herunterladen.
+Mit einem Starter-Kit können Sie Ihre Anwendung schnell zum Einsatz bringen und auf zukünftige Entwicklungen vorbereiten. Wählen Sie ein Starter-Kit und eine Programmiersprache aus, erstellen Sie eine App und richten Sie dann eine DevOps-Toolchain ein, um Ihre App automatisch bereitzustellen. Sie können den Code auch für eine sofortige Überprüfung herunterladen.
 {: shortdesc}
 
 Sie können eine App aus einer Reihe von Starter-Kits erstellen, einschließlich eines leeren Starter-Kits, wenn Sie die Buildoptionen selbst anpassen möchten. In jedem Fall wird automatisch eine DevOps-Toolchain für die Bereitstellung Ihrer App erstellt. Sie können den Code auch für eine sofortige Überprüfung herunterladen.
+
+{{site.data.keyword.cloud_notm}} verfügt über Entwicklerportale in verschiedenen Interessengebieten (wie Watson, Sicherheit oder Finanzen) oder einem digitalen Vertriebskanal (z. B. mobile oder Web-Apps). Über das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) können Sie auf diese Portale zugreifen.
+
+Jedes Entwicklerportal stellt Starter-Kits zur Verfügung, die für den Schwerpunktbereich des jeweiligen Portals relevant sind. Die Portale bieten konsistente, intuitive Workflows zur minutenschnellen Erstellung einer funktionierenden, produktionsbereiten App.
 
 Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
@@ -32,10 +36,12 @@ Starter-Kits sind in vielen Kategorien verfügbar, darunter die folgenden:
 * [Sicherheit ](https://{DomainName}/developer/security/dashboard){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 * [Finanzen ](https://{DomainName}/developer/finance/dashboard){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")
 
+[Lesen Sie mehr](/docs/apps?topic=creating-apps-starter-kits) zu den Starter-Kits.
+
 ## Schritt 1. App erstellen
 {: #create-starterkit}
 
-1. Klicken Sie im [{{site.data.keyword.cloud}}-Dashboard](https://{DomainName}){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") auf das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) > **Web-Apps**.
+1. Klicken Sie im [{{site.data.keyword.cloud}}-Dashboard](https://{DomainName}){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") auf das Symbol **Menü** ![Menüsymbol](../../icons/icon_hamburger.svg) > **Web-Apps**.
 
 2. Klicken Sie im Abschnitt **Im Web beginnen** auf **Einstieg**.
 
@@ -66,14 +72,13 @@ Sie können Services, die Ihre App mit der kognitiven Leistung von Watson funkti
 4. Klicken Sie auf **Erstellen**.
 
 ## Schritt 3. In {{site.data.keyword.cloud_notm}} bereitstellen
-
 {: #deploy-starterkit}
 
 Klicken Sie auf **Continuous Delivery konfigurieren** auf der Seite **App-Details**, wählen Sie ein Bereitstellungsziel aus und klicken Sie auf **Erstellen**. {{site.data.keyword.cloud_notm}} erstellt automatisch eine offene Toolchain mit einem Git-Repository und einer Continuous Delivery-Pipeline.
 
 Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die Bereitstellungsumgebung angepasst, die Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
-Nachdem Sie Ihre Bereitstellungsumgebung ausgewählt haben, öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App innerhalb weniger Minuten anzeigen können.
+Nachdem Sie Ihr Bereitstellungsziel ausgewählt haben, öffnen Sie die Pipelinekomponente Ihrer neuen Toolchain, um den anfänglichen Erstellungs- und Bereitstellungsprozess zu starten, damit Sie Ihre neue App innerhalb weniger Minuten anzeigen können.
 
 Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
 {: note}

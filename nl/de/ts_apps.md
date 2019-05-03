@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-03"
 
-keywords: apps, applications, troubleshooting 
+keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
 subcollection: creating-apps
 
@@ -64,7 +64,6 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
-
 ## Wiederverwendung von Namen gelöschter Apps nicht möglich
 {: #ts_reuse_appname}
 {: troubleshoot}
@@ -123,7 +122,7 @@ Dieser Fehler tritt oft auf, wenn Sie zum ersten Mal versuchen, im Katalog eine 
 Stellen Sie sicher, dass Sie in der derzeitigen Organisation einen Bereich erstellt haben. Verwenden Sie eine der folgenden Methoden, um einen Bereich zu erstellen:
 {: tsResolve}
 
-* Klicken Sie in der Menüleiste auf **Verwalten > Konto** und wählen Sie **Cloud Foundry-Organisationen** aus. Wählen Sie die Organisation aus, in der der Bereich erstellt werden soll, und klicken Sie auf **Bereich erstellen**.
+* Klicken Sie in der Menüleiste auf **Verwalten > Konto** und wählen Sie **Cloud Foundry-Organisationen** aus. Klicken Sie auf den Namen der Organisation, in der Sie den Bereich erstellen möchten, und klicken Sie auf **Bereich hinzufügen**.
 * Geben Sie in der Cloud Foundry-Befehlszeilenschnittstelle Folgendes ein: `cf create-space <space_name> -o <organization_name>`.
 
 Wiederholen Sie den Vorgang. Wenn diese Nachricht erneut angezeigt wird, rufen Sie die Seite für den [{{site.data.keyword.cloud_notm}}-Status ](http://ibm.biz/bluemixstatus){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") auf, um zu prüfen, ob ein Problem für einen Service oder eine Komponente vorliegt.

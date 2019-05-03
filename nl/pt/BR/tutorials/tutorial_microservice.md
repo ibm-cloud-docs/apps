@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-04"
 
-keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli
+keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
 subcollection: creating-apps
 
@@ -35,7 +35,7 @@ subcollection: creating-apps
 
 Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}:
 
-1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
+1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
 2. Insira o nome de seu app. Para este tutorial, use `MicroserviceProject`.
 3. Insira um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota do app, `abc-devhost.mybluemix.net`.
 4. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
@@ -43,7 +43,7 @@ Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}:
 6. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 7. Clique em **Criar**.
 
-O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
 {: tip}
 
 ## Etapa 3. Incluir serviços (opcional)
@@ -158,7 +158,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 2. Clique em **Visualizar logs e histórico**.
 3. No arquivo de log, localize a URL do aplicativo:
 
-    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, é possível que você veja uma linha no arquivo de log que seja semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 
