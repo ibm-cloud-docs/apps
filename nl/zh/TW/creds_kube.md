@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# 將認證新增至 Kubernetes 環境
+# 將服務認證新增至 Kubernetes 環境
 {: #add-credentials-kube}
 
 了解如何將服務認證新增至 Kubernetes 部署環境。
@@ -176,16 +176,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 使用**配置持續交付**特性，將您的應用程式部署至 IBM Kubernetes 叢集。此特性會以與您應用程式相關聯之資源認證的密碼，來準備您的 Kubernetes 叢集。您可以完成下列步驟來觀察叢集準備的結果：
 
-1. 執行這個指令來檢視結果：`kibectl get secrets`：
+1. 若要檢視結果，請執行下列指令：
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   您可以檢視[其他關於密碼的文件](https://kubernetes.io/docs/concepts/configuration/secret/)。
   {: tip}

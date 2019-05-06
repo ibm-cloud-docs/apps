@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Ajout de données d'identification à votre environnement Cloud Foundry
+# Ajout de données d'identification de service à votre environnement Cloud Foundry
 {: #add-credentials-cf}
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Cloud Foundry. Ces instructions s'appliquent à [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) et à [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).

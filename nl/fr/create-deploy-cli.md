@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
@@ -41,13 +41,13 @@ La création d'une toute nouvelle application est utile si vous ne disposez pas 
 3. Sélectionnez **Node** comme type de langage.
 4. Sélectionnez **Node.js Web App with Express.js (Web App)** comme kit de démarrage à utiliser.
 5. Entrez un nom pour votre application et sélectionnez le groupe de ressources à utiliser (si nécessaire). N'ajoutez pas de service pour l'instant.
-6. Sélectionnez l'option **IBM DevOps, en utilisant des packs de construction Cloud Foundry** pour créer une chaîne d'outils DevOps. Vous devrez peut-être configurer des clés SSH pour finaliser cette étape.
+6. Sélectionnez l'option **IBM DevOps, déployer dans les packs de construction Cloud Foundry** pour créer une chaîne d'outils DevOps. Vous devrez peut-être configurer des clés SSH pour finaliser cette étape.
   Si vous définissez une phrase passe pour votre clé SSH, vous devez entrer ce code.
   {: note}
-7. Entrez un nom d'hôte unique, `abc-devhost`, par exemple. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`, par exemple.
-
-Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+7. Suivez les invites restantes pour :
+  * Sélectionner une région pour votre chaîne d'outils
+  * Entrer un nom pour le nom de chaîne d'outils DevOps
+  * Entrer un nom pour le nom d'hôte
 
 La création de l'application et de la chaîne d'outils dure quelques secondes.
 

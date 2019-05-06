@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 您也可以使用 Terraform 佈建裸機伺服器。如需相關資訊，請參閱 [IBM Terraform Provider 文件](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 和 [IBM Terraform Provider GIT 儲存庫](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
-`variables.tf` 可以用來變更您要設為目標以建立虛擬實例的資料中心。若要查看平台上已定義的資料中心清單，請參閱[資料中心](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+`variables.tf` 可以用來變更您要設為目標以建立虛擬實例的資料中心。若要查看平台上已定義的資料中心清單，請參閱[資料中心](https://www.ibm.com/cloud/data-centers/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 依預設，Terraform 檔案是針對 Washington 和 `wdc04` 配置。
 ```json

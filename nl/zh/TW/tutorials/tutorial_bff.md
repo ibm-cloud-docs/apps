@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-04-25"
 
 keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
 
@@ -37,14 +37,10 @@ subcollection: creating-apps
 
 1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 頁面，選取您語言的入門範本套件。例如，若為 Node.js 應用程式，請移至 **Express.js 後端**，然後按一下**選取入門範本套件**。
 2. 輸入應用程式名稱。針對本指導教學，請使用 `ExpressBackend`。
-3. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，也就是 `abc-devhost.mybluemix.net`。
-4. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
-5. 選取語言及架構。部分入門範本套件可能只提供一種語言。
-6. 選取定價方案。有免費選項，您可以用於本指導教學。
-7. 按一下**建立**。
-
-預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
-{: tip}
+3. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
+4. 選取語言及架構。部分入門範本套件可能只提供一種語言。
+5. 選取定價方案。有免費選項，您可以用於本指導教學。
+6. 按一下**建立**。
 
 ## 步驟 3. 新增服務（選用）
 {: #resources-bff}
@@ -59,14 +55,14 @@ subcollection: creating-apps
 ## 步驟 4. 建立 DevOps 工具鏈
 {: #toolchain-bff}
 
-啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選擇的部署目標（[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
+啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選擇的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
 
 從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 {: note}
 
 1. 在**應用程式詳細資料**頁面上，按一下**配置持續交付**。
 2. 選取一個部署目標。根據您所選方法的指示設定部署目標：
-  * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-container_index)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
+  * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-getting-started)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
   * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)**或**[企業環境](/docs/cloud-foundry?topic=cloud-foundry-about)**的部署人員類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
   * **部署至[虛擬伺服器](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
@@ -124,7 +120,7 @@ subcollection: creating-apps
 
 您有數種方式可以將應用程式部署至 {{site.data.keyword.cloud_notm}}，但 DevOps 工具鏈是部署正式作業應用程式的最佳方法。使用 DevOps 工具鏈，您可以輕鬆地自動部署到許多環境，並快速新增監視、記載和警示服務，以協助您在應用程式成長時進行管理。
 
-使用適當配置的工具鏈，會自動開始建置並部署的循環，並且全都合併到您儲存庫的主要分支。從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈，都會針對自動部署進行配置。
+使用適當配置的工具鏈，建置-部署的循環會自動開始，並且全都合併到您儲存庫的主要分支。從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 
 
 您也可以從 DevOps 工具鏈手動部署應用程式：

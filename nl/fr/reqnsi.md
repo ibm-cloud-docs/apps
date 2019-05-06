@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 Quand vous créez une application avec {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, vous pouvez ajouter des services à partir de la page Détails de l'application. Vous pouvez également les mettre à disposition directement à partir du catalogue {{site.data.keyword.cloud_notm}} en dehors du contexte de votre application.
 {: shortdesc}
 
-Vous pouvez demander une instance du service et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de service à votre application  à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de service directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
+Vous pouvez demander une instance du service et l'utiliser indépendamment de votre application, ou vous pouvez ajouter l'instance de service à votre application à partir de la page Détails de l'application. Vous pouvez mettre à disposition un type spécifique de service directement à partir du catalogue {{site.data.keyword.cloud_notm}}.
 
 ## Services mis à disposition automatiquement
 {: #auto-provision}
@@ -89,7 +89,7 @@ Chaque service peut nécessiter un mécanisme différent pour communiquer avec l
 * Pour interagir avec des services de back end mobile, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme l'identité de l'application, les informations de sécurité propres au client et l'URI d'accès pour l'application. En général, les services mobiles fonctionnent en contexte les uns avec les autres de sorte que les informations de contexte, comme le nom du développeur de l'application et l'utilisateur qui utilise l'application, puissent être partagées entre les services.
 * Pour interagir avec des applications Web ou le code de cloud côté client pour les applications mobiles, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme les données d'identification d'exécution dans la variable d'environnement *VCAP_SERVICES* de l'application. La valeur de la variable d'environnement *VCAP_SERVICES* est la sérialisation d'un objet JSON. La variable contient les données d'exécution requises pour interagir avec les services auxquels l'application est liée. Le format des données varie selon les services. Reportez-vous à la documentation du service pour plus de détails sur la manière d'interpréter chaque élément d'information.
 
-Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion. Pour plus d'informations, voir [Les applications ne sont pas redémarrées automatiquement](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion.
 
 ## Accès à des services via des environnements de déploiement {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -105,7 +105,7 @@ Les données d'identification pour le service qui sont stockées dans une valeur
 
 **Important** : Ne référencez ou n'exposez pas vos données d'identification pour le service directement dans votre fichier YAML de déploiement. Les fichiers YAML de déploiement ne sont pas conçus pour contenir des données sensibles et ne chiffrent pas vos données d'identification pour le service par défaut. Pour stocker ces informations et y accéder correctement, vous devez utiliser une valeur confidentielle de Kubernetes. 
 
-1. [Liez le service à votre cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [Liez le service à votre cluster](/docs/containers?topic=containers-service-binding#bind-services). 
 2. Pour accéder aux données d'identification de votre service à partir du pod de votre application, choisissez l'une des options suivantes : 
    - Monter la valeur confidentielle sous forme de volume sur votre pod
    - Référencer la valeur confidentielle dans les variables d'environnement

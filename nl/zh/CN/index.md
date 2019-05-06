@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 在 {{site.data.keyword.cloud}} 中，可以构建企业就绪型移动和 Web 应用程序，并可利用由 {{site.data.keyword.cloud_notm}} 托管的云扩展。您有多个选项可开始此操作。使用用于管理过程的入门模板工具包来创建应用程序；使用所需的资源从头开始构建应用程序（如果您知道自己需要什么）；或者使用现有存储库并自带代码。
 {: shortdesc}
 
-无论您是有要进行现代化并移至云的[现有代码](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc)，还是要开发[全新应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)，都可以利用 {{site.data.keyword.cloud_notm}} 中快速发展的可用服务和运行时框架生态系统。
+无论您是有要进行现代化并移至云的[现有代码](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)，还是要开发[全新应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)，都可以利用 {{site.data.keyword.cloud_notm}} 中快速发展的可用服务和运行时框架生态系统。
 
 是否需要帮助决定从何处开始？请参阅此图以获取构想！
 
@@ -49,9 +49,11 @@ subcollection: creating-apps
 ## 步骤 2. 添加服务
 {: #resources-getting-started}
 
-使用入门模板工具包创建应用程序时，会自动为您创建服务。您可以通过在控制台的**应用程序详细信息**页面上单击**创建服务**，将更多服务与应用程序进行关联。
+使用入门模板工具包创建应用程序时，会自动为您创建必需服务。可以在控制台的**应用程序详细信息**页面中将更多服务连接到应用程序，该页面在您创建应用程序时会立即显示。
 
-使用 CLI，运行以下命令将服务添加到应用程序。您可以从已在帐户上启用的服务中选择现有服务，或添加服务。 
+如果要在创建应用程序后添加服务，请转至 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName})，找到您的应用程序，然后单击应用程序的名称。这将显示**应用程序详细信息**页面，并且您可以创建服务实例或连接现有服务。
+
+或者，使用 CLI 运行以下命令将服务添加到应用程序。您可以从已在帐户上启用的服务中选择现有服务，或添加服务。
 ```
 ibmcloud dev edit
 ```

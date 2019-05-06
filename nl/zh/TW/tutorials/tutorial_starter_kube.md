@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ subcollection: creating-apps
 * 在程式碼中存取服務配置：
 	- 您可以使用 _@Value_ 註釋，或使用 Spring 架構環境類別 _getProperty()_ 方法。如需相關資訊，請參閱[存取認證](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
 
-* 將新認證新增至 Kubernetes 環境：
-	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動新增認證](/docs/apps?topic=creating-apps-add-credentials-kube)至部署環境。
+* 將新的服務認證新增至 Kubernetes 環境：
+	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動將認證新增至部署環境](/docs/apps?topic=creating-apps-credentials_overview)。

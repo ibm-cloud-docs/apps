@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Commencez à utiliser {{site.data.keyword.containershort}} en déployant des app
 
 Les conteneurs constituent un moyen standard de conditionner des applications et toutes leurs dépendances. Ainsi, vous pouvez déplacer en toute transparence des applications entre divers environnements. Contrairement aux machines virtuelles, les conteneurs ne sont pas intégrés au système d'exploitation. Seuls le code d'application, l'environnement d'exécution, les outils système, les bibliothèques et les paramètres sont inclus dans les conteneurs. Les conteneurs sont plus légers, plus portables et plus efficaces que les machines virtuelles.
 
-Pour plus d'informations sur le service, voir [Initiation à {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index).
+Pour plus d'informations sur le service, voir [Initiation à {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started).
 
 ## Configuration de déploiements
 {: #config-deploy}
@@ -62,7 +62,7 @@ La chaîne d'outils contient l'étape de génération et l'étape de déploiemen
 {: #build-stage}
 L'étape de génération se déclenche lorsqu'une commande `git push` s'exécute dans votre référentiel Git. L'étape du pipeline déclenche une génération d'image de docker et place cette dernière dans le registre de conteneurs.
 
-Pour plus d'informations, voir [Initiation à IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+Pour plus d'informations, voir [Initiation à IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Etape de déploiement
 {: #deploy-stage}

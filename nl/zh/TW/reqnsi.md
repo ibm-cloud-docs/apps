@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -94,7 +94,7 @@ subcollection: creating-apps
 您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
 
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted)。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。
 
 ## 跨 {{site.data.keyword.cloud_notm}} 部署環境存取服務
 {: #migrate_instance}
@@ -110,7 +110,7 @@ subcollection: creating-apps
 
 **重要事項**：請不要直接在部署 YAML 檔案中參照或公開您的服務認證。部署 YAML 檔案的設計並不是為了保留機密資料，且依預設不會加密您的服務認證。若要適當地儲存及存取此資訊，您必須使用 Kubernetes 密碼。 
 
-1. [將服務連結至您的叢集](/docs/containers?topic=containers-integrations#adding_cluster)。 
+1. [將服務連結至您的叢集](/docs/containers?topic=containers-service-binding#bind-services)。 
 2. 若要從應用程式 Pod 存取服務認證，請在下列選項之間進行選擇。 
    - 將密碼以磁區形式裝載至 Pod
    - 在環境變數中參照密碼

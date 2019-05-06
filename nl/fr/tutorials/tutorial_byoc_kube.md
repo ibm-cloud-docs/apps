@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -36,8 +36,7 @@ Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de
 * Confirmez que votre application s'exécute dans Docker. Les commandes suivantes sont des exemples, pas nécessairement des étapes à appliquer dans votre application :
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
-  - `mvn clean install  
-  `
+  - `mvn clean install`
   - `docker build`
   - `docker run -e "SECRET=no" -e "NOT_SECRET=yes" -p 80:8080 {docker_image_name}`
   
@@ -51,7 +50,7 @@ instance de service. Une instance de service peut être partagée entre plusieur
 
 Ce processus met à disposition une instance de service, crée une clé de ressource (données d'identification) et l'associe à votre application. Pour plus d'informations, voir [Ajout d'un service à votre application](/docs/apps?topic=creating-apps-add-resource).
 
-Une fois que vous avez ajouté un service à votre application, vous devez copier les données d'identification du service dans votre environnement de déploiement. Pour plus d'informations, voir [Ajout de données d'identification à votre environnement Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube).
+Une fois que vous avez ajouté un service à votre application, vous devez [copier les données d'identification du service dans votre environnement de déploiement](/docs/apps?topic=creating-apps-credentials_overview).
 
 ## Préparation de votre application pour le déploiement
 {: #deploy-byoc-kube}

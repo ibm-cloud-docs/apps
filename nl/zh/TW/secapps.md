@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -81,16 +81,10 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
   * 私密金鑰：一種用來加密訊息的演算型樣，只有對應的公開金鑰可以解密。另外，私密金鑰也用來將相對應公開金鑰所加密的訊息解密。私密金鑰保存在使用者系統上，受到密碼保護。
   * 中繼憑證（選用）：由授信主要憑證管理中心 (CA) 發出的子層憑證，專門用於發出持卡實體伺服器憑證。結果會形成一條憑證鏈，從授信主要憑證管理中心開始、通過中繼憑證，最後以發給組織的 SSL 憑證結束。請使用中繼憑證來驗證主要憑證的確實性。中繼憑證通常是從信任的協力廠商處取得。在將應用程式部署至正式作業之前，測試應用程式時不一定需要中繼憑證。
   * 啟用用戶端憑證的要求：當您啟用此選項時，嘗試存取 SSL 保護網域的使用者會被要求提供用戶端憑證。例如，在 Web 瀏覽器中，當使用者嘗試存取 SSL 保護的網域時，Web 瀏覽器會提示使用者提供網域的用戶端憑證。
- 
-
-    {{site.data.keyword.cloud_notm}} 網域管理中的自訂憑證特性取決於「傳輸層安全 (TLS)」通訊協定的「伺服器名稱指示 (SNI)」延伸。存取自訂憑證所保護之 {{site.data.keyword.cloud_notm}} 應用程式的用戶端程式碼必須支援 TLS 實作中的 SNI 延伸。如需相關資訊，請參閱 [RFC 4346 的第 7.4.2 節 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及[使用傳輸層安全 (TLS) 保護資料](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw)。
-  {: note}
-  
+   
   * 用戶端憑證信任儲存庫（選用）：包含要容許存取您應用程式之使用者的用戶端憑證。請上傳用戶端憑證信任儲存庫檔案，以啟用要求用戶端憑證的選項。
   
     您可以藉由上傳 meta 資料中包含公開金鑰的用戶端憑證信任儲存庫，來設定交互鑑別。
   {: tip}
 
 如需相關資訊，請參閱[匯入 SSL 憑證](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates)。
-
-

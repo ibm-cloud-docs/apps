@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -84,7 +84,7 @@ ibmcloud dev edit
 * 要与移动后端服务交互，请使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者的姓名和使用应用程序的用户。
 * 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
-如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.cloud_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。有关更多信息，请参阅[应用程序不会自动重新启动](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted)。
+如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.cloud_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。
 
 ## 访问 {{site.data.keyword.cloud_notm}} 部署环境中的服务
 {: #migrate_instance}
@@ -100,7 +100,7 @@ ibmcloud dev edit
 
 **重要信息**：请勿直接在部署 YAML 文件中引用或公开服务凭证。部署 YAML 文件并非设计为保存敏感数据，并且缺省情况下不会加密服务凭证。要正确地存储和访问此信息，必须使用 Kubernetes 私钥。 
 
-1. [将服务绑定到集群](/docs/containers?topic=containers-integrations#adding_cluster)。 
+1. [将服务绑定到集群](/docs/containers?topic=containers-service-binding#bind-services)。 
 2. 要从应用程序 pod 访问服务凭证，请在以下选项中进行选择。 
    - 将私钥作为卷安装到 pod
    - 在环境变量中引用私钥

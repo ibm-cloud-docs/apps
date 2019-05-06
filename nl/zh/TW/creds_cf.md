@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# 將認證新增至 Cloud Foundry 環境
+# 將服務認證新增至 Cloud Foundry 環境
 {: #add-credentials-cf}
 
 了解如何將服務認證新增至 Cloud Foundry 部署環境。

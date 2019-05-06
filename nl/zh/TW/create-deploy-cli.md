@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
@@ -41,12 +41,12 @@ subcollection: creating-apps
 3. 選取 **Node** 作為語言類型。
 4. 選取**搭配 Express.js 的 Node.js Web 應用程式（Web 應用程式）**作為要使用的入門範本套件。
 5. 輸入應用程式的名稱，然後選取您要使用的資源群組（必要的話）。目前請不要新增服務。
-6. 選取 **IBM DevOps，使用 Cloud Foundry** 選項來建立 DevOps 工具鏈。您可能需要設定 SSH 金鑰，才能完成此步驟。如果您設定 SSH 金鑰的通行詞組，則需要輸入此代碼。
+6. 選取 **IBM DevOps，部署至 Cloud Foundry 建置套件**選項來建立 DevOps 工具鏈。您可能需要設定 SSH 金鑰，才能完成此步驟。如果您設定 SSH 金鑰的通行詞組，則需要輸入此代碼。
   {: note}
-7. 輸入唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，例如 `abc-devhost.mybluemix.net`。
-
-預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
-{: tip}
+7. 遵循其餘提示來執行下列動作：
+  * 選取工具鏈的地區。
+  * 輸入 DevOps 工具鏈名稱。
+  * 輸入主機名稱。
 
 建立應用程式及工具鏈需要幾秒鐘才能完成。
 

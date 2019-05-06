@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # Déploiement sur un serveur virtuel
 {: #vsi-deploy}
 
-Si vous avez un compte Paiement à la carte, vous pouvez utiliser {{site.data.keyword.cloud}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")  pour déployer vos applications dans un grand nombre d'environnements, notamment des instances de serveur virtuel. Une instance de serveur virtuel émule une machine bare metal et est une option de déploiement couramment choisie lors du déplacement de charges de travail locales vers le cloud.
+Si vous avez un compte Paiement à la carte, vous pouvez utiliser {{site.data.keyword.cloud}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour déployer vos applications dans un grand nombre d'environnements, notamment des instances de serveur virtuel. Une instance de serveur virtuel émule une machine bare metal et est une option de déploiement couramment choisie lors du déplacement de charges de travail locales vers le cloud.
 {: shortdesc}
 
 Par rapport aux autres configurations, une instance de serveur virtuel offre une meilleure transparence, un meilleur caractère prévisionnel et une meilleure automatisation pour tous les types de charge de travail. Associez-la à un serveur Bare metal pour créer des combinaisons de charge de travail uniques. Par exemple, vous pouvez créer une logique de base de données à hautes performances ou un système d'apprentissage automatique avec des configurations Bare metal ou GPU exécutant un système d'exploitation de type Debian Linux.
@@ -52,7 +52,7 @@ Les kits de démarrage de service d'application peuvent être déployés dans un
 
 ### Activation de votre déploiement de pipeline
 
-Quand vous créez un kit de démarrage qui utilise {{site.data.keyword.cloud_notm}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"),  l'instance de serveur virtuel est activée. Une fois l'application créée, vous pouvez alors choisir l'emplacement de déploiement de l'application. Les kits de démarrage permettent de prendre en charge le déploiement en utilisant une chaîne d'outils Continuous Delivery. Les kits de démarrage peuvent cibler les instances Kubernetes, Cloud Foundry et de serveur virtuel. La chaîne d'outils inclut un référentiel de code source et un pipeline de déploiement.
+Quand vous créez un kit de démarrage qui utilise {{site.data.keyword.cloud_notm}} [App Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), l'instance de serveur virtuel est activée. Une fois l'application créée, vous pouvez alors choisir l'emplacement de déploiement de l'application. Les kits de démarrage permettent de prendre en charge le déploiement en utilisant une chaîne d'outils Continuous Delivery. Les kits de démarrage peuvent cibler les instances Kubernetes, Cloud Foundry et de serveur virtuel. La chaîne d'outils inclut un référentiel de code source et un pipeline de déploiement.
 
 L'option de serveur virtuel inclut plusieurs phases. Tout d'abord, le code d'application est préparé et stocké dans un référentiel Git GitLab et le code source crée une chaîne d'outils avec un pipeline. Ce dernier est conçu pour générer le code et regrouper ce dernier en utilisant le format du gestionnaire de package Debian. Terraform met ensuite à disposition une instance virtuelle. Pour finir, l'application est déployée, installée et démarrée dans l'image virtuelle en cours d'exécution et son intégrité est validée.
 
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Vous pouvez également mettre à disposition des serveurs Bare Metal avec Terraform. Pour plus d'informations, voir la [documentation sur le fournisseur IBM Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et [IBM Terraform Provider GIT Repo](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
-Vous pouvez utiliser le fichier `variables.tf` afin de changer de centre de données à cibler pour la création de l'instance virtuelle. Pour accéder à la liste des centres de données définis sur la plateforme, voir [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Vous pouvez utiliser le fichier `variables.tf` afin de changer de centre de données à cibler pour la création de l'instance virtuelle. Pour accéder à la liste des centres de données définis sur la plateforme, voir [Data Centers](https://www.ibm.com/cloud/data-centers/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 Par défaut, le fichier Terraform est configuré pour Washington et `wdc04`.
 ```json

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ subcollection: creating-apps
 * 访问代码中的服务配置：
 	- 可以使用 _@Value_ 注释，也可以使用 Spring 框架环境类 _getProperty()_ 方法。有关更多信息，请参阅[访问凭证](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
 
-* 向 Kubernetes 环境添加新凭证：
-	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须向部署环境[手动添加凭证](/docs/apps?topic=creating-apps-add-credentials-kube)。
+* 向 Kubernetes 环境添加新的服务凭证：
+	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须[向部署环境手动添加凭证](/docs/apps?topic=creating-apps-credentials_overview)。

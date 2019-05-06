@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -79,16 +79,10 @@ Pour télécharger un certificat pour votre application Cloud Foundry, procédez
   * Certificat - Document numérique qui associe une clé publique à l'identité du propriétaire du certificat, permettant ainsi l'authentification de ce dernier. Un certificat est émis par un organisme de certification et il est signé numériquement par cet organisme. En général, un certificat est émis et signé par une autorité de certification. Toutefois, pour le test et le développement, vous pouvez utiliser un certificat autosigné.
   * Clé privée - Modèle algorithmique utilisé pour chiffrer des messages que seule la clé publique correspondante peut déchiffrer. La clé privée sert également à déchiffrer les messages encodés par la clé publique correspondante. Elle est conservée sur le système de l'utilisateur et protégée par un mot de passe.
   * Certificat intermédiaire (facultatif) - Certificat subordonné émis par l'autorité de certification racine accréditée spécifiquement pour émettre des certificats serveur d'entité de fin. Le résultat est une chaîne de certificats qui débute à l'autorité de certification racine accréditée, continue avec le certificat intermédiaire et se finit par le certificat SSL émis pour l'organisation. Utilisez un certificat intermédiaire pour vérifier l'authenticité du certificat principal. Les certificats intermédiaires sont généralement obtenus auprès d'un tiers digne de confiance. Vous n'aurez peut-être pas besoin de certificat intermédiaire si vous testez votre application avant de la déployer en production.
-  * Activer la demande de certificat client - Lorsque vous activez cette option, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir un certificat client pour le domaine. 
-
-    La fonction de certificat personnalisé dans la gestion des domaines {{site.data.keyword.cloud_notm}} dépend de l'extension SNI (Server Name Indication) du protocole TLS (Transport Layer Security). Le code client qui accède aux applications {{site.data.keyword.cloud_notm}} protégées par des certificats personnalisés doit prendre en charge l'extension SNI dans l'implémentation TLS. Pour plus d'informations, voir la [section 7.4.2 du RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et [Sécurisation des données avec TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
-    {: note}
-  
+  * Activer la demande de certificat client - Lorsque vous activez cette option, un utilisateur qui tente d'accéder à un domaine protégé par SSL doit fournir un certificat côté client. Par exemple, dans un navigateur Web, lorsqu'un utilisateur tente d'accéder à un domaine protégé par SSL, le navigateur Web invite l'utilisateur à fournir un certificat client pour le domaine.   
   * Fichier de clés certifiées de certificat client (facultatif) - Inclut les certificats client pour les utilisateurs que vous désirez autoriser à accéder à votre application. Téléchargez un fichier de ce type pour pouvoir demander un certificat client.
   
     Vous pouvez configurer l'authentification mutuelle en téléchargeant un fichier de clés certifiées de certificat client incluant une clé publique dans ses métadonnées.
     {: tip}
 
 Pour plus d'informations, voir [Importation de certificats SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
-
-

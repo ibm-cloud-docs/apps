@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Kits de démarrage
+# Qu'est-ce qu'un kit de démarrage ?
 {: #starter-kits}
 
-Les kits de démarrage constituent la solution idéale pour assembler de manière dynamique dans le langage de votre choix une application de production de squelette prête pour le déploiement en cloud. Chaque kit de démarrage comprend un langage, une infrastructure et un modèle pour un scénario d'utilisation spécifique. Vous pouvez réutiliser le code au lieu de le réinventer.
+Un kit de démarrage est un modèle prêt pour la production qui peut être intégré à un ensemble de services afin de générer un élément prêt pour la production pouvant être déployé directement dans un pipeline DevOps et un cluster Kubernetes.
 {:shortdesc}
 
-Si un kit de démarrage requiert des services spécifiques, cela ne constitue nullement un problème. Avec des services mis à disposition automatiquement, {{site.data.keyword.cloud_notm}} crée des instances de ces services lorsque vous créez votre application. Vous pouvez accéder aux kits de démarrage à partir du tableau de bord {{site.data.keyword.cloud_notm}} ou de l'interface de ligne de commande.
+## Que pouvez-vous faire avec un kit de démarrage ?
+{: #starter-overview}
 
-## Qu'est-ce qu'un kit de démarrage ?
-{: #starter_kits}
+Les kits de démarrage constituent la solution idéale pour assembler de manière dynamique dans le langage de votre choix une application de production de squelette prête pour le déploiement en cloud. 
 
-Un kit de démarrage est un modèle prêt pour la production qui peut être intégré à un ensemble de services afin de générer un élément prêt pour la production pouvant être déployé directement dans un pipeline DevOps et un cluster Kubernetes. Un kit de démarrage contient des métadonnées descriptives qui fournissent suffisamment d'informations à l'utilisateur pour lui permettre de déterminer la nature et les fonctions de ce kit. Il contient également des instructions indiquant à {{site.data.keyword.cloud_notm}} ce qu'il doit produire. Le résultat est prêt pour la production et peut être utilisé pour des améliorations futures en fonction des meilleures pratiques d'{{site.data.keyword.cloud_notm}}. Le contenu du kit de démarrage n'est pas aussi complexe qu'une démonstration et pas aussi simple qu'un fragment ou un exemple. Il est créé dynamiquement selon les exigences du développeur.
+Un kit de démarrage contient des métadonnées descriptives qui fournissent suffisamment d'informations à l'utilisateur pour lui permettre de déterminer la nature et les fonctions de ce kit. Il contient également des instructions indiquant à {{site.data.keyword.cloud_notm}} ce qu'il doit produire. Le résultat est prêt pour la production et peut être utilisé pour des améliorations futures en fonction des meilleures pratiques d'{{site.data.keyword.cloud_notm}}. Le contenu du kit de démarrage n'est pas aussi complexe qu'une démonstration et pas aussi simple qu'un fragment ou un exemple. Les applications sont créées dynamiquement selon les exigences du développeur.
+
+Chaque kit de démarrage comprend un langage, une infrastructure et un modèle pour un scénario d'utilisation spécifique. Vous pouvez réutiliser le code au lieu de le réinventer. Si un kit de démarrage requiert des services spécifiques, cela ne constitue nullement un problème. Avec des services mis à disposition automatiquement, {{site.data.keyword.cloud_notm}} crée des instances de ces services lorsque vous créez votre application. Vous pouvez accéder aux kits de démarrage à partir du tableau de bord {{site.data.keyword.cloud_notm}} ou de l'interface de ligne de commande.
 
 Consultez les instructions indiquant comment [créer une application avec un kit de démarrage](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

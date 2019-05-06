@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# 向 Kubernetes 环境添加凭证
+# 向 Kubernetes 环境添加服务凭证
 {: #add-credentials-kube}
 
 了解如何向 Kubernetes 部署环境添加服务凭证。
@@ -176,16 +176,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 使用**配置持续交付**功能将应用程序部署到 IBM Kubernetes 集群。该功能会为 Kubernetes 集群准备与应用程序关联的资源的凭证。您可以通过完成以下步骤来观察集群准备的结果：
 
-1. 运行以下命令以查看结果：`kubectl get secrets`：
+1. 要查看结果，请运行以下命令：
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   您可以查看[关于私钥的更多文档](https://kubernetes.io/docs/concepts/configuration/secret/)。
   {: tip}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -49,7 +49,7 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 
 此过程会供应服务实例，创建资源密钥（凭证），并将其绑定到应用程序。有关更多信息，请参阅[向应用程序添加服务](/docs/apps?topic=creating-apps-add-resource)。
 
-将服务添加到应用程序后，您必须将服务的凭证复制到部署环境。有关更多信息，请参阅[向 Kubernetes 环境添加凭证](/docs/apps?topic=creating-apps-add-credentials-kube)。
+将服务添加到应用程序后，您必须[将服务的凭证复制到部署环境](/docs/apps?topic=creating-apps-credentials_overview)。
 
 ## 准备应用程序以进行部署
 {: #deploy-byoc-kube}

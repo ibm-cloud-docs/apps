@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 您可以在 {{site.data.keyword.cloud}} 中建置企業已可使用的行動及 Web 應用程式，以及充分運用 {{site.data.keyword.cloud_notm}} 所管理的雲端延伸規格。您有數個開始使用選項。使用為您管理處理程序的入門範本套件來建立應用程式，或者，如果您知道想要的項目，則請從頭開始並使用所需的資源來建置應用程式，或使用現有儲存庫並自帶程式碼。
 {: shortdesc}
 
-不論您是有想要現代化且進入雲端的[現有程式碼](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc)，或是您正在開發[全新的應用程式](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)，您都可以利用 {{site.data.keyword.cloud_notm}} 可用服務和運行環境架構中，快速成長的生態系統。
+不論您是有想要現代化且進入雲端的[現有程式碼](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)，或是您正在開發[全新的應用程式](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)，您都可以利用 {{site.data.keyword.cloud_notm}} 可用服務和運行環境架構中，快速成長的生態系統。
 
 您需要協助來決定要從何處開始嗎？請參閱此圖表以瞭解構想！
 
@@ -49,9 +49,11 @@ subcollection: creating-apps
 ## 步驟 2. 新增服務
 {: #resources-getting-started}
 
-當您使用入門範本套件建立應用程式時，會自動為您建立服務。您可以在主控台的**應用程式詳細資料**頁面上，按一下**建立服務**，來建立其他服務與應用程式的關聯。
+當您使用入門範本套件建立應用程式時，會自動為您建立必要服務。您可以在主控台中從**應用程式詳細資料**頁面，將其他服務連接至您的應用程式，而此頁面是您一旦建立應用程式後即會顯示。
 
-執行下列指令，以使用 CLI 將服務新增至應用程式。您可以從帳戶上已啟用的服務中選取現有服務，或是新增一個服務。 
+如果您想要在建立應用程式之後新增服務，請移至 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName})、找出您的應用程式，然後按一下應用程式的名稱。即會顯示**應用程式詳細資料**頁面，而且您可以建立服務實例或連接現有服務。
+
+或者，您可以使用 CLI 執行下列指令，以將服務新增至應用程式。您可以從帳戶上已啟用的服務中選取現有服務，或是新增一個服務。
 ```
 ibmcloud dev edit
 ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ subcollection: creating-apps
 
 容器是打包应用程序及其所有依赖项的标准方法，您可以使用容器在环境之间无缝地移动应用程序。与虚拟机不同的是，容器并不捆绑操作系统。容器仅会打包应用程序代码、运行时、系统工具、库和设置。容器相比虚拟机更轻巧、可移植性更强、更高效。
 
-要了解有关该服务的更多信息，请参阅 [{{site.data.keyword.containershort_notm}} 入门](/docs/containers?topic=containers-container_index)。
+要了解有关该服务的更多信息，请参阅 [{{site.data.keyword.containershort_notm}} 入门](/docs/containers?topic=containers-getting-started)。
 
 ## 配置部署
 {: #config-deploy}
@@ -62,7 +62,7 @@ subcollection: creating-apps
 {: #build-stage}
 在 Git 存储库上运行 `git push` 时，会触发构建阶段。管道中的该阶段会触发 Docker 映像构建，并将该映像放入 Container Registry 中。
 
-有关更多信息，请参阅 [IBM Cloud Container Registry 入门](/docs/services/Registry?topic=registry-index)。
+有关更多信息，请参阅 [IBM Cloud Container Registry 入门](/docs/services/Registry?topic=registry-getting-started)。
 
 ### 部署阶段
 {: #deploy-stage}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-04-25"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -35,14 +35,10 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 Les kits de démarrage sont disponibles dans de nombreux langages et infrastructures de la console {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Sélectionnez le langage le plus adapté à votre projet pour commencer.
 
 1. Sur la page des [kits de démarrage ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") de la console {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage.
-2. Entrez votre nom d'application et un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`.
-3. Facultatif. Créez des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources?topic=resources-tag).
-4. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
-5. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
-6. Cliquez sur **Créer**.
-
-Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+2. Facultatif. Créez des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources?topic=resources-tag).
+3. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
+4. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
+5. Cliquez sur **Créer**.
 
 ## Etape 3. Ajouter des services (facultatif)
 {: #resources-webapp}

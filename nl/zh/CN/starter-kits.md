@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,21 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# 入门模板工具包
+# 什么是入门模板工具包？
 {: #starter-kits}
 
-入门模板工具包非常适合按您选择的语言来动态组合框架生产应用程序，以准备好进行云部署。每个入门模板工具包中都具有针对特定用例的语言、框架和模式。您可以复用代码，而不用重新创建代码。
+入门模板工具包是一种生产就绪型模式，可与一组服务集成，用于生成可直接部署到 DevOps 管道和 Kubernetes 集群的生产就绪型资产。
 {:shortdesc}
 
+## 使用入门模板工具包可以执行哪些操作？
+{: #starter-overview}
+
+入门模板工具包非常适合按您选择的语言来动态组合框架生产应用程序，以准备好进行云部署。 
+
+入门模板工具包中包含描述性元数据，这些元数据信息可帮助用户充分了解工具包的功能和用途。此外，还包含用于指示 {{site.data.keyword.cloud_notm}} 要生成哪些内容的相关说明。输出是现成的生产就绪型内容，可基于 {{site.data.keyword.cloud_notm}} 最佳实践，通过反复迭代而得到进一步的增强。入门模板工具包的内容不像演示那么复杂，但也不像片段或样本那么简单。应用程序是根据开发者的需求动态创建的。
+
+每个入门模板工具包中都具有针对特定用例的语言、框架和模式。您可以复用代码，而不用重新创建代码。
 如果入门模板工具包需要特定服务，没问题。通过自动供应的服务，当您创建应用程序时，{{site.data.keyword.cloud_notm}} 会自动创建这些服务的实例。您可以从 {{site.data.keyword.cloud_notm}} 仪表板或命令行界面访问入门模板工具包。
-
-## 什么是入门模板工具包？
-{: #starter_kits}
-
-入门模板工具包是一种生产就绪型模式，可与一组服务集成，用于生成可直接部署到 DevOps 管道和 Kubernetes 集群的生产就绪型资产。入门模板工具包中包含描述性元数据，这些元数据信息可帮助用户充分了解工具包的功能和用途。此外，还包含用于指示 {{site.data.keyword.cloud_notm}} 要生成哪些内容的相关说明。输出是现成的生产就绪型内容，可基于 {{site.data.keyword.cloud_notm}} 最佳实践，通过反复迭代而得到进一步的增强。入门模板工具包的内容不像演示那么复杂，但也不像片段或样本那么简单。这些内容是根据开发者的需求动态创建的。
 
 查看[使用入门模板工具包创建应用程序](/docs/apps?topic=creating-apps-tutorial-starterkit)的指示信息。
 

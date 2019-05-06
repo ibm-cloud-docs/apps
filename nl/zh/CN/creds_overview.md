@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# 凭证概述
+# 向部署环境添加服务凭证
 {: #credentials_overview}
 
 了解如何向部署环境手动添加服务凭证。
@@ -29,9 +29,10 @@ subcollection: creating-apps
 通常，您希望应用程序逻辑可从运行应用程序的环境中获取敏感服务凭证，例如数据库 API 密钥或密码。这样，您就不用将凭证保存在源代码存储库中。持续集成环境、预生产环境和生产环境中的数据库彼此隔离。
 
 如果使用入门模板工具包模板创建应用程序，那么将自动为您准备环境，无论您的部署目标是下列哪一项：
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public 或 Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [虚拟服务器实例（也是本地 Docker）](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry Public 或 Cloud Foundry Enterprise Environment
+  * 虚拟服务器实例（也是本地 Docker）
   
 提供了有关如何配置环境的步骤。入门模板工具包会生成使用依赖库的代码，以使代码具有可移植性，能在任何部署目标上运行。最后，没有任何分支逻辑用于检测应用程序正在哪个部署目标中运行。
 

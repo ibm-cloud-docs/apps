@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# 向 Cloud Foundry 环境添加凭证
+# 向 Cloud Foundry 环境添加服务凭证
 {: #add-credentials-cf}
 
 了解如何向 Cloud Foundry 部署环境添加服务凭证。

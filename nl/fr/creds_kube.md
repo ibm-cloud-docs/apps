@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Ajout de données d'identification à votre environnement Kubernetes
+# Ajout de données d'identification de service à votre environnement Kubernetes
 {: #add-credentials-kube}
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Kubernetes.
@@ -176,16 +176,12 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
 
 Utilisez la fonction **Configurer la distribution continue** pour déployer votre application dans votre espace IBM Kubernetes. La fonction prépare votre cluster Kubernetes avec des secrets pour les données d'identification des ressources associées à votre application. Vous pouvez observer les résultats de la préparation du cluster en procédant comme suit :
 
-1. Exécutez la commande `kubectl get secrets` pour afficher les résultats :
+1. Pour afficher les résultats, exécutez la commande suivante :
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   Vous pouvez afficher [plus d'informations sur les secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
   {: tip}

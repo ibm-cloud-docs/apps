@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# 認證概觀
+# 將服務認證新增至部署環境
 {: #credentials_overview}
 
 了解如何手動將服務認證新增至部署環境。
@@ -29,9 +29,10 @@ subcollection: creating-apps
 一般而言，您想要應用程式邏輯從執行應用程式的環境中，獲得機密服務認證，例如資料庫 API 金鑰或密碼。如此一來，您就不會將認證保存在原始碼儲存庫中。Continuous Integration、正式作業前及正式作業環境中的資料庫會彼此隔離。
 
 如果您使用入門範本套件範本來建立應用程式，則會自動為您準備環境。不論您的部署目標是：
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public 或 Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [虛擬伺服器實例（亦即本端 Docker）](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry Public 或 Cloud Foundry Enterprise Environment
+  * 虛擬伺服器實例（以及本端 Docker）
   
 這些步驟是針對如何配置環境而提供。入門範本套件會產生程式碼來使用相依程式庫，讓程式碼成為可攜式，以在任何部署目標上執行。最後，不會使用任何分支邏輯來偵測執行應用程式的部署目標。
 

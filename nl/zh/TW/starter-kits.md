@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,17 +16,19 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# 入門範本套件
+# 何謂入門範本套件？
 {: #starter-kits}
 
-入門範本套件很適合以您選擇的語言來動態組合架構正式作業應用程式，以進行雲端部署。每個入門範本套件都包含特定使用案例的語言、架構及型樣。您可以重複使用程式碼，而非重複發明程式碼。{:shortdesc}
+入門範本套件是一個已經準備好正式作業的型樣，可與一組服務整合以產生已經準備好正式作業的資產，其可直接部署至 DevOps 管線及 Kubernetes 叢集。{:shortdesc}
 
-如果入門範本套件需要特定的服務，沒問題。使用自動佈建的服務，{{site.data.keyword.cloud_notm}} 會在您建立應用程式時自動建立那些服務的實例。您可以從 {{site.data.keyword.cloud_notm}} 儀表板或指令行介面，存取入門範本套件。
+## 可以使用入門範本套件做什麼？
+{: #starter-overview}
 
-## 何謂入門範本套件？
-{: #starter_kits}
+入門範本套件很適合以您選擇的語言來動態組合架構正式作業應用程式，以進行雲端部署。 
 
-入門範本套件是一個已經準備好正式作業的型樣，可與一組服務整合以產生已經準備好正式作業的資產，其可直接部署至 DevOps 管線及 Kubernetes 叢集。入門範本套件包含敘述性 meta 資料，為使用者提供足夠的資訊以瞭解套件為何及用途。它也包含一些指示，告訴 {{site.data.keyword.cloud_notm}} 要產生什麼。輸出是已經準備好正式作業的現成可用值，可根據 {{site.data.keyword.cloud_notm}} 最佳作法反覆運算以進一步加強。入門範本套件內容不像示範這麼複雜，也不像 Snippet 或範例那麼簡單。它們是根據開發人員的需求而動態建立的。
+入門範本套件包含敘述性 meta 資料，為使用者提供足夠的資訊以瞭解套件為何及用途。它也包含一些指示，告訴 {{site.data.keyword.cloud_notm}} 要產生什麼。輸出是已經準備好正式作業的現成可用值，可根據 {{site.data.keyword.cloud_notm}} 最佳作法反覆運算以進一步加強。入門範本套件內容不像示範這麼複雜，也不像 Snippet 或範例那麼簡單。應用程式是根據開發人員的需求而動態建立的。
+
+每個入門範本套件都包含特定使用案例的語言、架構及型樣。您可以重複使用程式碼，而非重複發明程式碼。如果入門範本套件需要特定的服務，沒問題。使用自動佈建的服務，{{site.data.keyword.cloud_notm}} 會在您建立應用程式時自動建立那些服務的實例。您可以從 {{site.data.keyword.cloud_notm}} 儀表板或指令行介面，存取入門範本套件。
 
 請查看[使用入門範本套件建立應用程式](/docs/apps?topic=creating-apps-tutorial-starterkit)的指示。
 

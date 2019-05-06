@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 对于无服务器开发，您可以使用 IBM 的函数即服务 (FaaS) 产品 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 运行应用程序逻辑以响应事件，或通过 HTTP 从 Web 或移动应用程序直接进行调用，而无需供应或管理服务器。{{site.data.keyword.openwhisk_short}} 可执行系统管理，如自动扩展、可用性管理和维护，以便您作为开发者可以专注于编写应用程序逻辑。
 {:shortdesc}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 用户界面 (UI) 或 命令行界面 (CLI) 来开发应用程序。这两个界面具有类似的应用程序开发功能。CLI 提供了对部署和操作的更多控制权。有关 {{site.data.keyword.openwhisk_short}} 的更详细信息，请查看[文档](/docs/openwhisk?topic=cloud-functions-index)。
+您可以使用 {{site.data.keyword.openwhisk_short}} 用户界面 (UI) 或 命令行界面 (CLI) 来开发应用程序。这两个界面具有类似的应用程序开发功能。CLI 提供了对部署和操作的更多控制权。有关 {{site.data.keyword.openwhisk_short}} 的更详细信息，请查看[文档](/docs/openwhisk?topic=cloud-functions-getting_started)。
 
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
@@ -59,5 +59,4 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} 为 iOS 和 watchOS 设备提供[移动 SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk)，支持移动应用程序轻松发送远程触发器和调用远程操作。它还提供支持无服务器应用程序的[无服务器框架 SDK ](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
-
+{{site.data.keyword.openwhisk_short}} 为 iOS 和 watchOS 设备提供[移动 SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk)，支持移动应用程序轻松发送远程触发器和调用远程操作。

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-04-23"
 
-keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain, development stages, development phases
 
 subcollection: creating-apps
 
@@ -33,11 +33,11 @@ subcollection: creating-apps
 ## 開始使用
 {: #get_started}
 
-請從 {{site.data.keyword.cloud_notm}}「開發人員」儀表板建置您的應用程式，您可以在這裡選取與使用案例相關的入門範本套件，並選擇程式設計語言。{{site.data.keyword.cloud_notm}} 會使用入門範本套件中的指示來自動建立所需的資源，以及建立語言特有且與運行環境無關的應用程式，以作為正式作業應用程式的基礎。若要完成開始使用階段，請從「開發人員」儀表板中按一下**部署至雲端**。按一下即可建立 DevOps 工具鏈，並具有完整的程式碼儲存庫，當中移入您的應用程式原始碼及部署管線。
+請從 {{site.data.keyword.cloud_notm}}「開發人員」儀表板建置您的應用程式，您可以在這裡選取與使用案例相關的入門範本套件，並選擇程式設計語言。{{site.data.keyword.cloud_notm}} 會使用入門範本套件中的指示來自動建立所需的資源，以及建立語言特有且與運行環境無關的應用程式，以作為正式作業應用程式的基礎。若要完成開始使用階段，請從**應用程式詳細資料**中按一下**配置持續交付**。按一下即可建立 DevOps 工具鏈，並具有完整的程式碼儲存庫，當中移入您的應用程式原始碼及部署管線。
 
 ![開始使用](images/dev_get_started.png "開始使用") 圖 2. 開始使用流程
 
-當您使用**部署至雲端**按鈕來設定 DevOps 工具鏈時，請選取您的運行環境平台，例如 Kubernetes 或 Cloud Foundry。從 {{site.data.keyword.cloud_notm}} 產生的入門範本套件應用程式與運行環境無關，且不需要進行修改。
+當您使用**配置持續交付**按鈕來設定 DevOps 工具鏈時，請選取您的運行環境平台，例如 Kubernetes 或 Cloud Foundry。從 {{site.data.keyword.cloud_notm}} 產生的入門範本套件應用程式與運行環境無關，且不需要進行修改。
 {: tip}
 
 ## 在本端開發
@@ -47,7 +47,7 @@ subcollection: creating-apps
 
 ![在本端開發](images/dev_code_locally.png "在本端開發") 圖 3. 在本端開發流程
 
-{{site.data.keyword.dev_cli_notm}} 的基本函數是 `ibmcloud dev build` 和 `ibmcloud dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html)。
+{{site.data.keyword.dev_cli_notm}} 的基本函數是 `ibmcloud dev build` 和 `ibmcloud dev run`，但 CLI 提供了更多函數。如需詳細資料，請參閱 [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 {: tip}
 
 ## 在 {{site.data.keyword.cloud_notm}} 中交付和管理
@@ -62,7 +62,7 @@ subcollection: creating-apps
 
 ![交付和管理](images/dev_deliver_and_manage.png "交付和管理") 圖 4. 交付和管理流程
 
-進一步瞭解 [{{site.data.keyword.cloud_notm}} 上的持續開發](/docs/services/ContinuousDelivery/index.html#cd_getting_started)。
+進一步瞭解 [{{site.data.keyword.cloud_notm}} 上的持續開發](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started)。
 
 ## 組合在一起
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-23"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -64,91 +64,6 @@ nslookup cloud.ibm.com
 ```
 {: codeblock}
 
-## 无法复用已删除应用程序的名称
-{: #ts_reuse_appname}
-{: troubleshoot}
-
-删除应用程序之后，您仅可以在删除应用程序路径之后复用应用程序名称。
-
-尝试复用应用程序名称时，您会收到以下消息：
-{: tsSymptoms}
-
-`名称已经由其他应用程序使用。`
-
-删除应用程序时，不会自动删除其作为应用程序 URL 的路径，并且此路径不可复用。您必须转至创建应用程序的空间，删除路径，以便可以对其进行复用。
-{: tsCauses}
-
-完成以下步骤以删除未用的路径：
-{: tsResolve}
-
-  1. 通过输入以下命令，检查路径是否属于当前空间：
-     ```
-    ibmcloud cf routes
-    ```
-    {: codeblock}
-
-  2. 如果路径不属于当前空间，请通过输入以下命令，切换到其所属的空间或组织：
-     ```
-    ibmcloud cf target -o org_name -s space_name
-    ```
-    {: codeblock}
-
-  3. 通过输入以下命令，删除应用程序路径：
-     ```
-    ibmcloud cf delete-route domain_name -n host_name
-    ```
-    {: codeblock}
-
-  例如：
-  ```
-  ibmcloud cf delete-route cf.cloud.ibm.com -n app001
-  ```
-  {: codeblock}
-
-## 无法在组织中检索空间
-{: #ts_retrieve_space}
-{: troubleshoot}
-
-如果当前组织没有与其相关联的空间，那么无法创建应用程序或服务。
-
-尝试在 {{site.data.keyword.cloud_notm}} 中创建应用程序时，您会看到以下错误消息：
-{: tsSymptoms}
-
-`BXNUI0515E: 未检索到组织中的空间。发生了网络连接问题，或者当前组织没有与其相关联的空间。`
-
-在尚未创建空间的情况下，第一次尝试通过目录创建应用程序或服务时，通常会发生此错误。
-{: tsCauses}
-
-请确保在当前组织中已创建空间。要创建空间，请使用以下某种方法： 
-{: tsResolve}
-
-* 在菜单栏中，单击**管理 > 帐户**，然后选择 **Cloud Foundry 组织**。单击要在其中创建空间的组织的名称，然后单击**添加空间**。
-* 在 Cloud Foundry 命令行界面中，输入 `cf create-space <space_name> -o <organization_name>`。
-
-请重试。如果再次出现此消息，请转至 [{{site.data.keyword.cloud_notm}} 状态 ](http://ibm.biz/bluemixstatus){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面，检查服务或组件是否存在问题。
-
-## 无法执行请求的操作
-{: #ts_authority}
-{: troubleshoot}
-
-如果没有相应的访问权限，那么无法完成操作。
-
-尝试对服务实例或应用程序实例执行操作时，无法完成请求的操作，并看到以下其中一条错误消息：
-{: tsSymptoms}
-
-`BXNUI0514E: 您不是 <orgName> 组织中任何空间的开发者。`
-
-`服务器错误，状态码：403，错误代码：10003，消息：您无权执行请求的操作。`
-
-您没有执行操作所需的相应级别的权限。
-{: tsCauses}
-
-要获取相应级别的权限，请使用以下其中一种方法。
-{: tsResolve}
-
-* 选择您具有其开发者角色的另一个组织和空间。
-* 请求组织管理者将您的角色更改为开发者，或者创建空间，然后为您分配开发者角色。有关详细信息，请参阅[管理组织和空间](/docs/iam?topic=iam-cfaccess#cfaccess)。
-
 ## 由于授权错误而无法访问 {{site.data.keyword.cloud_notm}} 服务
 {: #ts_vcap}
 {: troubleshoot}
@@ -185,7 +100,7 @@ process.env.VCAP_SERVICES
 
 其他导致“无效网关”错误的不太常见的原因包括：因特网服务提供商 (ISP) 信息遗失、防火墙配置错误以及浏览器高速缓存错误。
 
-如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ](http://ibm.biz/bluemixstatus){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面。变通方法可能是[在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务](/docs/resources/connect_external_app#externalapp){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
+如果您怀疑 {{site.data.keyword.cloud_notm}} 服务已关闭，请先检查 [{{site.data.keyword.cloud_notm}} 状态 ](https://cloud.ibm.com/status){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 页面。变通方法可能是[在其他 {{site.data.keyword.cloud_notm}} 区域中使用该服务](/docs/resources/connect_external_app?topic=resources-externalapp){: new_window}。如果服务状态正常，请尝试执行以下步骤来解决问题： 
 {: tsResolve}
 
   * 重试操作：
@@ -196,32 +111,7 @@ process.env.VCAP_SERVICES
 
   * 稍等，然后重试。您的因特网服务提供商或 {{site.data.keyword.cloud_notm}} 服务可能发生了临时问题。您可以一直等到临时问题得到解决为止。
 
-  * 如果问题持续存在，请联系 {{site.data.keyword.cloud_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.cloud_notm}} 支持 ](/docs/support/index.html#contacting-bluemix-support){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
-
-## 超出磁盘配额
-{: #ts_disk_quota}
-{: troubleshoot}
-
-如果磁盘空间不足，可以手动修改磁盘配额来获取更多的磁盘空间。
-
-磁盘空间不足时，可能会看到一条消息，指示超过磁盘配额。为了解决该问题，您可能尝试了通过扩展应用程序实例来获取更多的磁盘空间。例如，您可能更改了应用程序详细信息页面上的内存配额，将大小从 256 MB 扩展到 1256 MB。但是，由于磁盘配额依然未变，所以您并没有获得更多的磁盘空间。
-{: tsSymptoms}
-
-为应用程序分配的缺省磁盘配额为 1 GB。如果您需要更多的磁盘空间，必须手动指定磁盘配额。 
-{: tsCauses}
-
-使用以下某个方法可指定磁盘配额。可指定的最大磁盘配额为 2 GB。如果 2 GB 仍不够，请尝试外部服务，例如[对象存储](/docs/services/cloud-object-storage?topic=cloud-object-storage-for-developers#for-developers)。
-{: tsResolve}
-
-  * 在 `manifest.yml` 文件中，添加以下项：
-  ```yaml
-	disk_quota: <disk_quota>
-	```
-  * 在用于将应用程序推送到 {{site.data.keyword.cloud_notm}} 的 `ibmcloud cf push` 命令中使用 **-k** 选项：
-    ```
-	ibmcloud cf push appname -p app_path -k <disk_quota>
-	```
-  {: codeblock}
+  * 如果问题持续存在，请联系 {{site.data.keyword.cloud_notm}} 支持。有关更多信息，请参阅[联系 {{site.data.keyword.cloud_notm}} 支持 ](/docs/get-support?topic=get-support-getting-customer-support){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -237,241 +127,6 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 
 作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ](https://pushy.me){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")、[getui ](http://www.getui.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [jpush ](https://www.jpush.cn/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 {: tsResolve}
-
-## 超过组织的服务限制
-{: #ts_servicelimit}
-{: troubleshoot}
-
-如果您是轻量帐户用户，那么可能无法在超过组织服务限制的情况下在 {{site.data.keyword.cloud_notm}} 中创建应用程序。
-
-尝试在 {{site.data.keyword.cloud_notm}} 中创建应用程序时，显示了以下错误消息：
-{: tsSymptoms}
-
-`BXNUI2032E: 未创建 <service_instances> 资源。联系 Cloud Foundry 来创建资源时，发生了错误。Cloud Foundry 消息：“已超过组织的服务限制。”`
-
-在已超过您帐户可拥有的服务实例数的限制时，会发生此错误。
-{: tsCauses}
-
-删除不需要的任何服务实例，或者除去您可拥有的服务实例数的限制。
-{: tsResolve}
-
-  * 要删除服务实例，可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面。
-
-    要使用 {{site.data.keyword.cloud_notm}} 控制台来删除服务实例，请完成以下步骤：
-	  1. 在资源列表中，单击要删除的服务的**操作**菜单。
-	  2. 单击**删除服务**。系统会提示您重新编译打包服务实例所绑定到的应用程序。
-
-    要使用命令行界面删除服务实例，请完成以下步骤：
-	  3. 取消服务实例与应用程序的绑定。输入 `cf unbind-service <appname> <service_instance_name>`。
-	  4. 删除该服务实例。输入 `cf delete-service <service_instance_name>`。
-	  5. 删除服务实例后，可能需要重新编译打包该服务实例所绑定到的应用程序。输入 `cf restage <appname>`。
-
-  * 要除去您可拥有的服务实例数的限制，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account?topic=account-accounts#upgrade-to-paygo)。
-
-## 无法在 {{site.data.keyword.cloud_notm}} 上运行可执行文件
-{: #ts_executable}
-{: troubleshoot}
-
-如果可执行文件是在不同环境中开发和构建的，那么可能无法在 {{site.data.keyword.cloud_notm}} 上运行这些可执行文件。
-
-如果可执行文件是在不同环境中开发和构建的，那么无法在 {{site.data.keyword.cloud_notm}} 上运行这些可执行文件。
-{: tsSymptoms}
-
-如果要推送到 {{site.data.keyword.cloud_notm}} 的内容已经是可执行文件，那么该内容是先前构建的，不需要在 {{site.data.keyword.cloud_notm}} 上进行构建。在此情况下，无需任何 buildpack，可执行文件就可以在 {{site.data.keyword.cloud_notm}} 上运行。您必须向 {{site.data.keyword.cloud_notm}} 明确指示不需要 buildpack。
-{: tsCauses}
-
-在将可执行文件推送到 {{site.data.keyword.cloud_notm}} 时，必须指定 `null-buildpack`，它指示不需要 buildpack。指定 `null-buildpack` 的方法是使用带 **-b** 选项的 `ibmcloud cf push` 命令：
-{: tsResolve}
-
-```
-ibmcloud cf push appname -p app_path -c <start_command> -b <null-buildpack>
-```
-{: codeblock}
-
-例如：
-```
-ibmcloud cf push appname -p app_path -c ./RunMeNow -b https://github.com/ryandotsmith/null-buildpack
-```
-{: codeblock}
-
-## 超过组织的内存限制
-{: #ts_outofmemory}
-{: troubleshoot}
-
-如果您是轻量帐户用户，那么可能无法在超过组织内存限制的情况下将应用程序部署到 {{site.data.keyword.cloud_notm}}。您可以减少应用程序使用的内存，或者增加您帐户的内存配额。轻量帐户的最大内存配额为 256 MB，要增大内存配额，只能升级到计费帐户。
-
-将应用程序部署到 {{site.data.keyword.cloud_notm}} 时，显示了以下错误消息：
-{: tsSymptoms}
-
-`失败 服务器错误，状态码：400，错误代码：100005，消息：您已超过组织的内存限制。`
-
-当组织的剩余内存量低于您要部署的应用程序所需的内存量时，会发生此错误。轻量帐户的最大内存配额为 256 MB。
-{: tsCauses}
-
-您可以增加帐户的内存配额，或者减少应用程序使用的内存。
-{: tsResolve}
-
-  * 要增加帐户的内存配额，请将轻量帐户升级到计费帐户。有关更多信息，请参阅[升级帐户](/docs/account?topic=account-accounts#upgrade-to-paygo)。
-  * 要减少应用程序使用的内存，请使用 {{site.data.keyword.cloud_notm}} 控制台或 Cloud Foundry 命令行界面。
-
-    如果使用 {{site.data.keyword.cloud_notm}} 控制台，请完成以下步骤：
-
-    1. 在资源列表中选择您的应用程序。这将打开应用程序详细信息页面。
-
-    2. 在运行时窗格中，可以减少应用程序的最大内存限制和/或应用程序实例数。 
-	
-
-    如果使用命令行界面，请完成以下步骤：
-
-    1. 检查应用程序使用了多少内存：
-  	  ```
-	    ibmcloud cf list
-	  ```
-      {: codeblock}
-
-	    `ibmcloud cf list` 命令会列出当前空间中部署的所有应用程序。还会显示每个应用程序的状态。
-
-
-    2. 要减少应用程序使用的内存量，请减少应用程序实例数和/或最大内存限制：
-	    ```
-	    ibmcloud cf push appname -p app_path -i instance_number -m memory_limit
-      ```
-      {: codeblock}
-
-    3. 重新启动应用程序以使更改生效。
-
-## 应用程序不会自动重新启动
-{: #ts_apps_not_auto_restarted}
-{: troubleshoot}
-
-当绑定到应用程序的服务停止工作时，该应用程序不会自动重新启动。
-
-当绑定到应用程序的服务崩溃时，应用程序可能会发生如中断、异常和连接失败等问题。 {{site.data.keyword.cloud_notm}} 不会自动重新启动应用程序以从这些问题中恢复。
-{: tsSymptoms}
-
-此行为是 Cloud Foundry 故意为之。
-{: tsCauses}
-
-您可以通过在命令行界面中输入以下命令来手动重新启动已经部署的应用程序：
-{: tsResolve}
-
-```
-ibmcloud cf restart <APPNAME>
-```
-{: codeblock}
-
-此外，还可以对应用程序进行编码，以识别如中断、异常和连接失败等问题，并从这些问题中进行恢复。
-
-
-
-<!-- begin STAGING ONLY -->
-
-## {{site.data.keyword.cloud_notm}} Live Sync“调试”功能无法通过命令行启动
-{: #ts_no_debug}
-{: troubleshoot}
-
-您使用命令行为应用程序启用了 {{site.data.keyword.cloud_notm}} Live Sync“调试”功能，但是您无法访问“调试”界面。
-
-您通过设置 **BLUEMIX_APP_MGMT_ENABLE** 环境变量启用了应用程序的“调试”功能。但是，您无法在 `app_url/bluemix-debug/manage` 处访问“调试”用户界面。
-{: tsSymptoms}
-
-在以下几种情况下，无法启用“调试”功能：
-{: tsCauses}
-
-  * `manifest.yml` 包含命令属性时
-  * 使用 **-c** 选项将应用程序推送至 {{site.data.keyword.cloud_notm}} 时
-
-使用以下其中一个选项可解决该问题：
-{: tsResolve}
-
-  * 建议的做法是使用 IBM Node.js buildpack 启动应用程序。有关更多信息，请参阅[将 Node.js 应用程序部署至 {{site.data.keyword.cloud_notm}}](/docs/runtimes/nodejs?topic=Nodejs-startup_commmand#startup_commmand) 主题的“启动命令”部分。
-  * 通过将 `manifest.yml` 中的 command 属性修改为 command: null，或通过编辑 push 命令以包含 `-c null`，禁用现有应用程序的命令。
-  * 从 `manifest.yml` 中除去 **command** 属性。然后，从 {{site.data.keyword.cloud_notm}} 中删除当前应用程序，并重新推送应用程序。
-
-<!-- end STAGING ONLY -->
-
-## 在 {{site.data.keyword.cloud_notm}} 上找不到组织
-{: #ts_orgs}
-{: troubleshoot}
-
-在 {{site.data.keyword.cloud_notm}} 区域上工作时，可能在 {{site.data.keyword.cloud_notm}} 上找不到组织。
-
-您可以成功登录到 {{site.data.keyword.cloud_notm}} 控制台，但不能使用 Cloud Foundry 命令行界面来推送应用程序。
-{: tsSymptoms}
-
-尝试使用 Cloud Foundry 命令行界面将应用程序推送到 {{site.data.keyword.cloud_notm}} 时，您会看到以下某条错误消息（消息中指定了组织名称）：
-
-`查找组织时出错`
-
-`找不到组织`
-
-发生此问题的原因是您要使用的区域的 API 端点未指定，并且您要查找的组织可能位于其他区域中。
-{: tsCauses}
-
-如果要使用 Cloud Foundry 命令行界面将应用程序推送到 {{site.data.keyword.cloud_notm}}，请输入 `cf api` 命令并指定区域的 API 端点。例如，输入以下命令以连接到 {{site.data.keyword.cloud_notm}} 欧洲英国区域：
-{: tsResolve}
-
-```
-cf api https://api.eu-gb.cf.cloud.ibm.com
-```
-{: codeblock}
-
-
-## 无法创建应用程序路径
-{: #ts_hostistaken}
-{: troubleshoot}
-
-将应用程序部署到 {{site.data.keyword.cloud_notm}} 时，如果您所指定的主机名已在使用，那么无法创建该应用程序的路径。
-
-将应用程序部署到 {{site.data.keyword.cloud_notm}} 时，您会看到以下错误消息：
-{: tsSymptoms}
-
-`正在创建路径 hostname.domainname ... 失败 服务器错误，状态码：400，错误代码：210003，消息：所采用的主机为：hostname`
-
-如果您所指定的主机名已在使用，那么会发生此问题。
-{: tsCauses}
-
-您所指定的主机名在您所使用的域中必须是唯一的。要指定不同的主机名，请使用以下某个方法：
-{: tsResolve}
-
-  * 如果使用 `manifest.yml` 文件来部署应用程序，请在 host 选项中指定主机名。
-    ```yaml
-    host: host_name
-	  ```
-
-  * 如果从命令提示符部署应用程序，请使用带有 **-n** 选项的 `ibmcloud cf push` 命令。
-    ```
-    ibmcloud cf push appname -p app_path -n host_name
-    ```
-    {: codeblock}
-
-## 无法使用 ibmcloud cf push 命令推送 WAR 应用程序
-{: #ts_cf_war}
-{: troubleshoot}
-
-如果未正确指定应用程序位置，那么可能无法使用 `ibmcloud cf push` 命令将归档的 Web 应用程序部署到 {{site.data.keyword.cloud_notm}}。
-
-使用 `ibmcloud cf push` 命令将 WAR 应用程序上传到 {{site.data.keyword.cloud_notm}} 时，您会看到以下错误消息：
-{: tsSymptoms}
-`编译打包错误：由于编译打包失败，无法获取实例。`
-
-如果未指定 WAR 文件，或者未指定 WAR 文件的路径，那么可能会发生此问题。
-{: tsCauses}
-
-使用 **-p** 选项来指定 WAR 文件或将路径添加到 WAR 文件。例如：
-{: tsResolve}
-
-```
-ibmcloud cf push MyUniqueAppName01 -p app.war
-```
-{: codeblock}
-
-```
-ibmcloud cf push MyUniqueAppName02 -p "./app.war"
-```
-{: codeblock}
-
-有关 `ibmcloud cf push` 命令的更多信息，请输入 `ibmcloud cf push -h`。
 
 ## 将应用程序推送到 {{site.data.keyword.cloud_notm}} 时未正确显示双字节字符
 {: #ts_doublebytes}
@@ -615,34 +270,8 @@ ibmcloud cf push MyUniqueAppName02 -p "./app.war"
  发生此问题的原因可能是管道需要使用 `manifest.yml` 文件将应用程序部署到 {{site.data.keyword.cloud_notm}}。
  {: tsCauses}
 
- 要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅 [应用程序清单](/docs/cloud-foundry/deploy-apps.html#appmanifest)。
+ 要解决此问题，您必须创建 `manifest.yml` 文件。有关如何创建 `manifest.yml` 文件的更多信息，请参阅 [应用程序清单](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest)。
  {: tsResolve}
-
-## 无法推送 Meteor 应用程序
-{: #ts_meteor}
-{: troubleshoot}
-
-如果未正确指定 buildpack，那么可能无法将 Meteor 应用程序推送到 {{site.data.keyword.cloud_notm}}。
-
-将 Meteor 应用程序部署到 {{site.data.keyword.cloud_notm}} 时，您可能会看到错误消息：`应用程序未能编译打包，因此没有要显示的实例。`
-{: tsSymptoms}
-
-发生此问题的原因是没有可用于 Meteor 应用程序的内置 buildpack。必须使用定制 buildpack。
-{: tsCauses}
-
-要对 Meteor 应用程序使用定制 buildpack，请使用以下其中一种方法：
-{: tsResolve}
-
-  * 如果使用 `manifest.yml` 文件来部署应用程序，请使用 buildpack 选项来指定定制 buildpack 的 URL 或名称。例如：
-  ```yaml
-buildpack: https://github.com/Sing-Li/bluemix-bp-meteor 
-  ```
-
-  * 如果从命令提示符部署应用程序，请使用 `ibmcloud cf push` 命令并通过 **-b** 选项来指定定制 buildpack。例如：
-  ```
-	ibmcloud cf push appname -p app_path -b https://github.com/Sing-Li/bluemix-bp-meteor
-	```
-  {: codeblock}
 
 ## 超过了存储配额
 {: #exceed_quota}
@@ -658,15 +287,14 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 ## 访问 Kubernetes 日志
 {: #access_kube_logs}
 
-如果应用程序未在运行，并且您无法访问该运行状况端点，请尝试查看集群中的日志。
+如果应用程序未在运行，并且您无法访问运行状况端点，请尝试查看集群中的日志。
 * 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cs clusters` 列出集群。
-* 使用 `ibmcloud cs cluster-config <cluster-name>` 指向相应的集群。
+* 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的相应集群。
 * 导出所列出的环境变量。
-* 使用 `kubectl get pods` 查看 pod。如果需要安装 `kubectl`，请参阅[安装和设置 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "External linkicon")。
-* 可以使用 `kubectl logs <pod-name>` 来查看应用程序中的日志。`
-
+* 使用 `kubectl get pods` 查看 pod。如果需要安装 `kubectl`，请参阅 [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+* 可以使用 `kubectl logs <pod-name>` 来查看应用程序中的日志。
 
 ## 启动 `docker` 失败，并返回“找不到文件”消息
 {: #docker_not_found}
@@ -683,10 +311,10 @@ buildpack: https://github.com/Sing-Li/bluemix-bp-meteor
 Docker 客户机未安装，或者已安装但未启动。
 {: tsCauses}
 
-确保 [Docker](https://docs.docker.com/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "External link icon") 已安装并启动。
+确保 [Docker](https://docs.docker.com/install/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 已安装并将其启动。
 {: tsResolve}
 
-  ## 构建应用程序失败，并返回 Docker 错误
+## 构建应用程序失败，并返回 Docker 错误
 {: #build_error}
 {: troubleshoot}
 
@@ -698,7 +326,5 @@ Docker 客户机未安装，或者已安装但未启动。
 
 请在 Docker 客户机中从 Docker Hub 注销。
 {: tsResolve}
-
-  
 
 

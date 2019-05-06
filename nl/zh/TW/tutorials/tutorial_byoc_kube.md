@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -50,7 +50,7 @@ _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓�
 
 此處理程序會佈建服務實例、建立資源金鑰（認證），並將它連結至應用程式。如需相關資訊，請參閱[將服務新增至應用程式](/docs/apps?topic=creating-apps-add-resource)。
 
-將服務新增至應用程式之後，您必須將服務的認證複製到部署環境。如需相關資訊，請參閱[將認證新增至 Kubernetes 環境](/docs/apps?topic=creating-apps-add-credentials-kube)。
+將服務新增至應用程式之後，您必須[將服務的認證複製到部署環境](/docs/apps?topic=creating-apps-credentials_overview)。
 
 ## 準備應用程式以進行部署
 {: #deploy-byoc-kube}
