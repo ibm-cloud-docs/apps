@@ -38,7 +38,7 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} Develo
 ### Before you begin
 {: deploy-console-before}
 
-Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) and [add services](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
+Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) and [add services](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
 
 ### Automatically deploying your app
 {: deploy-console-auto}
