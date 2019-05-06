@@ -34,5 +34,5 @@ On a virtual deployment, most of your app's operations are managed by {{site.dat
 
 You also have many options for:
 * Selecting the type of [storage](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") that's right for you from block storage, file storage, or Object Storage.
-* Selecting the type of [network](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")} you need.
+* Selecting the type of [network](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") you need.
 * Selecting a [containerization](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") service to take advantage of {{site.data.keyword.cloud_notm}} Kubernetes technology.
