@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,52 +104,18 @@ You can also build the app locally for testing before you deploy it to the cloud
 ## Deploying your app
 {: #deploy-scratch}
 
-You can deploy your app to {{site.data.keyword.cloud_notm}} several ways, but a DevOps toolchain is the best way to deploy production apps. With a DevOps toolchain, you can easily automate deployments to lots of environments and quickly add monitoring, logging, and alert services to help manage your app as it grows.
+Click **Configure continuous delivery** on the **App details** page, select a deployment target, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment environment you choose, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+
+After you select your deployment target, open the pipeline component of your new toolchain to start the initial build and deployment process so that you can see your new app in minutes.
 
 All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
 {: note}
 
-### Manual deployment with a DevOps toolchain
+To deploy your app with the command line, use `ibmcloud dev deploy`. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
-With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the Master branch in your repo. 
-
-You can also manually deploy your app from your DevOps toolchain:
-
-1. On the App details page, click **View toolchain**.
-2. Click **Delivery Pipeline** where you can start builds, manage deployment, and view logs and history.
-
-Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
-
-For more information, see:
-* [Building and deploying with Continuous Delivery](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
-* [Creating toolchains from a template](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
-
-### Automatic deployment with a DevOps toolchain
-
-1. On the **App details** page, click **Configure continuous delivery**.
-2. Select a deployment target. Set up your deployment target according to the instructions for the target you choose:
-  * **Deploy to IBM Kubernetes Service**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
-  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
-  * **Deploy to a Virtual Server**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you.
-
-Deploying your app to the cloud in the last step creates a toolchain automatically. The toolchain creates a Git repository for your app where you can find the code. 
-
-### Deploy by using the {{site.data.keyword.dev_cli_short}}
-{: #deploy-scratch-cli}
-
-To deploy your app to Cloud Foundry, enter the following command:
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-To deploy your app to a Kubernetes cluster, enter the following command:
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verifying that your app is running
 {: #verify-scratch}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creating a basic web app with a starter kit
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} offers many starter kits to help you get coding quickly. Choose a language, framework, and tools from the App Service starter kits to start working with a preconfigured custom application. In this tutorial, you walk through the steps to install the tools you need, and then build and run the app locally and deploy it to the cloud.
+{{site.data.keyword.cloud}} offers many starter kits to help you get coding quickly. Select a language, framework, and tools from the App Service starter kits to start working with a preconfigured custom application. In this tutorial, you walk through the steps to install the tools you need, and then build and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Step 1. Install the tools
@@ -53,7 +53,7 @@ You can add services that enhance your app with the cognitive power of Watson, a
 ## Step 4. Create a DevOps toolchain
 {: #toolchain-webapp}
 
-Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment target you choose, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
@@ -140,6 +140,8 @@ To deploy your app to a Kubernetes cluster, enter the following command:
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Step 7. Verify that your app is running
 {: #verify-webapp}

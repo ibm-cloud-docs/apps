@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-30"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -84,7 +84,7 @@ You can use the `ibmcloud dev enable` command to generate a DevOps toolchain tem
     ```
    {: codeblock}
 
-For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verifying that your app is running
 {: #verify-byoc-app}
