@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Cloud Foundry 환경에 인증 정보 추가
+# Cloud Foundry 환경에 서비스 인증 정보 추가
 {: #add-credentials-cf}
 
 Cloud Foundry 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다. 이러한 지시사항은 [Cloud Foundry 퍼블릭](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) 및 [Cloud Foundry 엔터프라이즈 환경](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee) 모두에 적용됩니다.

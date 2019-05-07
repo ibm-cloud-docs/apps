@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-04-25"
 
 keywords: apps, applications, activity tracking events
 
@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:deprecated: .deprecated}
 {:table: .aria-labeledby="caption"}
 
 # Sucesos de {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}}
@@ -24,6 +25,9 @@ subcollection: creating-apps
 
 Como responsable de seguridad, auditor o gestor, puede utilizar el servicio {{site.data.keyword.cloudaccesstrailfull}} para realizar el seguimiento de cómo interactúan los usuarios y las aplicaciones con la {{site.data.keyword.dev_console}} en {{site.data.keyword.cloud}}.
 {: shortdesc}
+
+{{site.data.keyword.cloudaccesstrailfull}} está en desuso. A partir del 9 de mayo de 2019, no puede suministrar nuevas instancias de {{site.data.keyword.cloudaccesstrailshort}} y se eliminará el acceso a las instancias del plan *Lite*. Se da soporte a las instancias existentes del plan premium hasta el 30 de septiembre de 2019. Para seguir supervisando la actividad de la cuenta de {{site.data.keyword.cloud_notm}}, suministre una instancia de [{{site.data.keyword.at_full}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+{: deprecated}
 
 El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} registra actividades iniciadas por el usuario que cambian el estado de un servicio en {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Acerca de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-activity_tracker_ov).
 
@@ -51,11 +55,11 @@ La tabla siguiente lista las acciones que generan un suceso:
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.read</td>
-	  <td>Un suceso se genera cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Un usuario descarga el código de aplicación.</li> <li>Un usuario descarga el archivo de credenciales utilizando la CLI de {{site.data.keyword.dev_console}}.</li> <li>La infraestructura de la experiencia del desarrollador lee credenciales para recursos asociados con una aplicación.</li> <li>Un usuario ve la lista de aplicaciones, por ejemplo, cuando el usuario ve la lista de aplicaciones en la consola de {{site.data.keyword.dev_console}} o mediante la CLI de {{site.data.keyword.dev_cli_short}}.</li></ul></td>
+	  <td>Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Un usuario descarga el código de aplicación.</li> <li>Un usuario descarga el archivo de credenciales utilizando la CLI de {{site.data.keyword.dev_console}}.</li> <li>La infraestructura de la experiencia del desarrollador lee credenciales correspondientes a servicios asociados a una aplicación.</li> <li>Un usuario ve la lista de aplicaciones, por ejemplo, cuando el usuario ve la lista de aplicaciones en la consola de {{site.data.keyword.dev_console}} o mediante la CLI de {{site.data.keyword.dev_cli_short}}.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>Un suceso se genera cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Cambia algo de la aplicación, por ejemplo, cuando un usuario modifica el nombre de la aplicación. </li><li>Se crea y se añade un recurso nuevo a una aplicación.</li><li>Se añade un recurso existente a una aplicación.</li><li>Se elimina un servicio de una aplicación.</li><li>Se genera código para una aplicación.</li><li>Se añade una cadena de herramientas de DevOps mediante la experiencia del desarrollador, por ejemplo, seleccionando *Desplegar en la nube*.</li></ul></td>
+	  <td>Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Cambia algo de la aplicación, por ejemplo, cuando un usuario modifica el nombre de la aplicación. </li><li>Se crea y se añade un servicio nuevo a una aplicación.</li><li>Se añade un servicio existente a una aplicación.</li><li>Se elimina un servicio de una aplicación.</li><li>Se genera código para una aplicación.</li><li>Se añade una cadena de herramientas de DevOps mediante la experiencia del desarrollador, por ejemplo, seleccionando *Configurar entrega continua*.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>

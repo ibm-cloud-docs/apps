@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Empiece con {{site.data.keyword.containershort}} desplegando apps de alta dispon
 
 Los contenedores son una forma estándar de empaquetar apps y todas sus dependencias para poder moverlas entre entornos sin complicaciones. A diferencia de las máquinas virtuales, los contenedores no empaquetan el sistema operativo. Solo el código de app, el tiempo de ejecución, las herramientas del sistema, las bibliotecas y los valores se empaquetan dentro de los contenedores. Los contenedores son más ligeros, portátiles y eficientes que una máquina virtual.
 
-Consulte [Iniciación a {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) para obtener más información sobre el servicio.
+Consulte [Iniciación a {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) para obtener más información sobre el servicio.
 
 ## Configuración de despliegues
 {: #config-deploy}
@@ -62,7 +62,7 @@ La cadena de herramientas contiene la etapa de creación y la etapa de despliegu
 {: #build-stage}
 La etapa de creación se desencadena cuando se ejecuta un `git push` en el repositorio Git. La etapa del conducto desencadena una compilación de imágenes de docker y coloca la imagen en el registro del contenedor.
 
-Para obtener más información, consulte [Iniciación a IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+Para obtener más información, consulte [Iniciación a IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Etapa de despliegue
 {: #deploy-stage}

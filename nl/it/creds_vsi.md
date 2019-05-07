@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Aggiunta di credenziali al tuo ambiente docker locale o di istanza virtuale
+# Aggiunta di credenziali del servizio al tuo ambiente docker locale o di istanza virtuale
 {: #add-credentials-vsi}
 
 Acquisisci informazioni su come aggiungere delle credenziali di servizio al tuo ambiente di distribuzione docker locale o di VSI (Virtual Server Instance).

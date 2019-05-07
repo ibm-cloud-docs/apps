@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Inicie o {{site.data.keyword.containershort}} implementando apps altamente dispo
 
 Os contêineres são uma maneira padrão de empacotar apps e todas as suas dependências para que seja possível mover perfeitamente os apps entre ambientes. Ao contrário de máquinas virtuais, os contêineres não empacotam o sistema operacional. Apenas o código do app, o tempo de execução, as ferramentas do sistema, as bibliotecas e as configurações são compactados dentro dos contêineres. Os contêineres são mais leves, móveis e eficientes do que máquinas virtuais.
 
-Consulte [Introdução ao {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) para saber mais sobre o serviço.
+Consulte [Introdução ao {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) para saber mais sobre o serviço.
 
 ## Configurando implementações
 {: #config-deploy}
@@ -62,7 +62,7 @@ A cadeia de ferramentas contém o estágio de construção e o estágio de imple
 {: #build-stage}
 O estágio de construção é acionado quando um `git push` é executado no repositório Git. O estágio no pipeline aciona uma construção de imagem do docker e coloca a imagem no registro de contêiner.
 
-Para obter mais informações, consulte [Introdução ao IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+Para obter mais informações, consulte [Introdução ao IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Estágio de implementação
 {: #deploy-stage}

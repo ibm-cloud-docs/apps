@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -84,7 +84,7 @@ Cada servicio puede requerir un mecanismo diferente para comunicarse con las apl
 * Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
 * Para interactuar con aplicaciones web o código en la nube del servidor para aplicaciones móviles, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
 
-Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.cloud_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte [Las apps no se reiniciarán automáticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.cloud_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión.
 
 ## Acceso a servicios en los entornos de despliegue de {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -100,7 +100,7 @@ Las credenciales de servicio que se almacenan en un secreto de Kubernetes están
 
 **Importante**: No haga referencia ni exponga las credenciales de servicio directamente en el archivo YAML de despliegue. Los archivos YAML de despliegue no están diseñados para contener datos confidenciales y no cifran las credenciales de servicio de forma predeterminada. Para almacenar correctamente esta información y acceder a ella, debe utilizar un secreto de Kubernetes. 
 
-1. [Enlace el servicio al clúster](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [Enlace el servicio al clúster](/docs/containers?topic=containers-service-binding#bind-services). 
 2. Para acceder a las credenciales de servicio desde su pod de app, elija una de las siguientes opciones. 
    - Monte el secreto como un volumen en el pod
    - Haga referencia al secreto en variables de entorno

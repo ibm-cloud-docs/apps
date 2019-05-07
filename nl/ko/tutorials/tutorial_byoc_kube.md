@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -33,7 +33,7 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
 
 * [자체 코드 저장소에서 앱 작성](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc).
 * [{{site.data.keyword.cloud_notm}} 콘솔 ](https://{DomainName}){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")에서 **메뉴** 아이콘 ![메뉴 아이콘](../../icons/icon_hamburger.svg)을 클릭하고 [Kubernetes 클러스터 구성](/docs/containers?topic=containers-getting-started)을 위한 **컨테이너**를 선택하십시오.
-* 앱이 Docker에서 실행되는지 확인하십시오. 다음 명령은 예제로서 사용자의 앱에 필요한 단계가 아닐 수도 있습니다. 
+* 앱이 Docker에서 실행되는지 확인하십시오. 다음 명령은 예제로서 사용자의 앱에 필요한 단계가 아닐 수도 있습니다.
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install`
@@ -49,7 +49,7 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
 
 이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 서비스 추가](/docs/apps?topic=creating-apps-add-resource)를 참조하십시오.
 
-앱에 서비스를 추가한 후에는 서비스에 대한 인증 정보를 배치 환경에 복사해야 합니다. 자세한 정보는 [Kubernetes 환경에 인증 정보 추가](/docs/apps?topic=creating-apps-add-credentials-kube)를 참조하십시오.
+앱에 서비스를 추가한 후에는 [서비스에 대한 인증 정보를 배치 환경에 복사](/docs/apps?topic=creating-apps-credentials_overview)해야 합니다.
 
 ## 배치를 위한 앱 준비
 {: #deploy-byoc-kube}
@@ -62,7 +62,7 @@ DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 �
 
 ### 기존 DevOps 도구 체인 연결
 
-DevOps 도구 체인이 이미 있는 경우 다음 단계를 완료하십시오. 
+DevOps 도구 체인이 이미 있는 경우 다음 단계를 완료하십시오.
 
 1. **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하십시오. **내 앱 배치** 페이지가 표시됩니다.
 2. 앱에 연결할 도구 체인을 선택하고 **배치 사용**을 클릭하십시오. 지속적 딜리버리가 구성되었음을 표시하는 **앱 세부사항** 페이지가 표시됩니다.
@@ -75,17 +75,17 @@ DevOps 도구 체인이 이미 있는 경우 다음 단계를 완료하십시오
 코드 저장소의 변경 없이 DevOps 도구 체인의 작성을 완전히 제어하려면 처음부터 도구 체인을 작성하십시오. 또한 앱을 빌드하고 이를 Kubernetes 클러스터에 배치할 수 있도록 모든 통합을 작성하십시오. 
 
 1. **앱 세부사항** 페이지에서 **DevOps 도구 체인 작성**을 클릭하십시오. **도구 체인 작성** 페이지가 표시됩니다.
-2. **자체 도구 체인 빌드** 템플리트를 선택하십시오. 
-3. **자체 도구 체인 빌드** 페이지에서 도구 체인의 이름을 입력하고 지역 및 리소스 그룹(기본값)을 선택한 후에 **작성**을 클릭하십시오. 
+2. **자체 도구 체인 빌드** 템플리트를 선택하십시오.
+3. **자체 도구 체인 빌드** 페이지에서 도구 체인의 이름을 입력하고 지역 및 리소스 그룹(기본값)을 선택한 후에 **작성**을 클릭하십시오.
 4. 브라우저 창의 이동 경로를 사용하여 **앱 세부사항** 페이지로 돌아가십시오. 이 페이지에 지속적 딜리버리가 구성되었음이 표시됩니다.
-5. **앱 세부사항** 페이지에서 **도구 체인 보기**를 클릭하여 새 DevOps 도구 체인을 구성하십시오. 
+5. **앱 세부사항** 페이지에서 **도구 체인 보기**를 클릭하여 새 DevOps 도구 체인을 구성하십시오.
 
 ### GitHub 통합 추가
 {: #github-byoc-kube}
 
-도구 체인에 대한 GitHub 저장소의 통합으로 DevOps 도구 체인을 구성하십시오. 해당 저장소의 가져오기(pull) 요청과 코드 푸시가 도구 체인에 POST를 전송할 수 있게, 저장소의 웹훅을 설정합니다. 
+도구 체인에 대한 GitHub 저장소의 통합으로 DevOps 도구 체인을 구성하십시오. 해당 저장소의 가져오기(pull) 요청과 코드 푸시가 도구 체인에 POST를 전송할 수 있게, 저장소의 웹훅을 설정합니다.
 
-1. 빈 DevOps 도구 체인 템플리트에서 **도구 추가**를 클릭하십시오. 
+1. 빈 DevOps 도구 체인 템플리트에서 **도구 추가**를 클릭하십시오.
 2. 저장소가 공용 GitHub 또는 Enterprise GitHub에 있는 경우에는 **GitHub**를 선택하십시오.
 3. GitHub 서버 URL을 선택하거나 입력하십시오.
 4. `Unauthorized on GitHub` 메시지가 표시될 수 있습니다. 이 경우에는 **권한 부여**를 클릭하십시오. 그리고 IBM Cloud 도구 체인 권한 부여 페이지에서 **IBM Cloud 권한 부여**를 클릭하고 GitHub 비밀번호를 입력하십시오.
@@ -161,10 +161,9 @@ Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니
 3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
 4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
-명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하여 기본 브라우저에서 수동으로 배치된 앱의 페이지를 여십시오. 
+명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하여 기본 브라우저에서 수동으로 배치된 앱의 페이지를 여십시오.
 
 ## 관련 정보
-
 
  * [도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
  * [Git 저장소 및 문제 추적 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)

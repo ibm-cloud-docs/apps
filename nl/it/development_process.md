@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-04-23"
 
-keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain, development stages, development phases
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Le fasi consigliate di sviluppo cloud
 {: #development_process}
 
-Gli sviluppatori dell'applicazione cloud passano attraverso quattro fasi fondamentali nel processo di sviluppo: inizio, codice, fornitura e gestione. L'obiettivo è produrre rapidamente un'applicazione di lavoro e di utilizzare quindi il feedback dall'applicazione di produzione per eseguire l'iterazione in modo continuo del codice o del ciclo di fornitura finché la tua applicazione non incontra il favore degli utenti.
+Gli sviluppatori dell'applicazione cloud passano attraverso quattro fasi fondamentali nel processo di sviluppo: inizio, codice, fornitura e gestione. L'obiettivo è di produrre velocemente un'applicazione di lavoro e di utilizzare il feedback dall'applicazione di produzione per eseguire l'iterazione in modo continuo del codice o del ciclo di fornitura finché la tua applicazione trova il favore degli utenti.
 {: shortdesc}
 
 ![Flusso di sviluppo](images/dev_flow_overview.png "Flusso di sviluppo") Figura 1. Fasi del processo di sviluppo
@@ -33,21 +33,21 @@ Diamo un'occhiata da vicino al modo migliore di utilizzare {{site.data.keyword.c
 ## Inizia subito
 {: #get_started}
 
-Crea la tua applicazione dai dashboard degli sviluppatori {{site.data.keyword.cloud_notm}}, dove puoi selezionare un kit starter correlato al tuo caso d'uso e scegliere un linguaggio di programmazione. {{site.data.keyword.cloud_notm}} utilizza le istruzioni dal kit starter per creare automaticamente le risorse di cui hai bisogno e per creare un'applicazione, indipendente dal runtime e specifica per il linguaggio, che è la base per la tua applicazione di produzione. Per completare la fase introduttiva, fai clic su **Deploy to Cloud** dal dashboard degli sviluppatori. Un clic crea una toolchain DevOps completa di un repository di codice che viene popolato con il codice sorgente e la pipeline di distribuzione della tua applicazione.
+Crea la tua applicazione dai dashboard di sviluppo {{site.data.keyword.cloud_notm}}, dove puoi selezionare un kit starter correlato al tuo caso di utilizzo e scegliere un linguaggio di programmazione. {{site.data.keyword.cloud_notm}} utilizza le istruzioni fornite dal kit starter per creare automaticamente delle risorse necessarie e per creare un'applicazione specifica del linguaggio e indipendente dal runtime che costituisce la base per la tua applicazione di produzione. Per completare la fase iniziale, fai clic su **Configure continuous delivery** da **App details**. Un clic crea una toolchain DevOps completa di un repository di codice che viene popolato con il codice sorgente e la pipeline di distribuzione della tua applicazione.
 
 ![Introduzione](images/dev_get_started.png "Introduzione") Figura 2. Flusso iniziale
 
-Quando utilizzi il pulsante **Deploy to Cloud** per configurare la tua toolchain DevOps, seleziona la tua piattaforma di runtime, come ad esempio Kubernetes o Cloud Foundry. L'applicazione kit starter prodotta da {{site.data.keyword.cloud_notm}} è indipendente dal runtime e non ha bisogno di essere modificata.
+Quando utilizzi il pulsante **Configure continuous delivery** per configurare la tua toolchain DevOps, seleziona la tua piattaforma di runtime, ad esempio Kubernetes o Cloud Foundry. L'applicazione kit starter prodotta da {{site.data.keyword.cloud_notm}} è indipendente dal runtime e non è necessario modificarla.
 {: tip}
 
 ## Sviluppa localmente
 {: #develop_locally}
 
-Dopo che hai creato la tua toolchain e la tua applicazione kit starter, inizi il tuo sviluppo localmente. Clona il codice dal tuo repository in una workstation locale e importalo nella tua IDE. Utilizza {{site.data.keyword.dev_cli_long}} per creare, eseguire e verificare la tua applicazione cloud sulla tua macchina locale. La {{site.data.keyword.dev_cli_notm}} crea e gestisce i contenitori locali per tuo conto. Quando sei pronto a vedere che la tua applicazione è in esecuzione sul cloud, esegui il push al tuo repository cloud e unisci le tue modifiche.
+Dopo aver creato l'applicazione kit starter e la toolchain, inizi il tuo sviluppo localmente. Clona il codice dal tuo repository in una workstation locale e importalo nella tua IDE. Utilizza {{site.data.keyword.dev_cli_long}} per creare, eseguire e verificare la tua applicazione cloud sulla tua macchina locale. La {{site.data.keyword.dev_cli_notm}} crea e gestisce i contenitori locali per tuo conto. Quando sei pronto a vedere che la tua applicazione è in esecuzione sul cloud, esegui il push al tuo repository cloud e unisci le tue modifiche. 
 
 ![Sviluppa localmente](images/dev_code_locally.png "Sviluppa localmente") Figura 3. Sviluppa localmente il flusso
 
-Le funzioni di base per {{site.data.keyword.dev_cli_notm}} sono `ibmcloud dev build` e `ibmcloud dev run`, ma la CLI offre molto di più. Consulta [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html) per ulteriori dettagli.
+Le funzioni di base per {{site.data.keyword.dev_cli_notm}} sono `ibmcloud dev build` e `ibmcloud dev run`, ma la CLI offre molto di più. Consulta [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) per ulteriori dettagli.
 {: tip}
 
 ## Fornisci e gestisci in {{site.data.keyword.cloud_notm}}
@@ -62,7 +62,7 @@ La toolchain prodotta dalla tua esperienza introduttiva presenta i componenti di
 
 ![Fornisci e gestisci](images/dev_deliver_and_manage.png "Fornisci e gestisci") Figura 4. Fornitura e gestione del flusso
 
-Ulteriori informazioni sullo [sviluppo continuo su {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery/index.html#cd_getting_started).
+Ulteriori informazioni sullo [sviluppo continuo su {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Conclusioni finali
 

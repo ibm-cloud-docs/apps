@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 ## 자동 프로비저닝된 서비스
 {: #auto-provision}
 
-스타터 킷이 필수 서비스를 지정하는 경우 사용자가 앱을 작성할 때 {{site.data.keyword.cloud_notm}}에서 이러한 서비스의 인스턴스를 자동으로 작성합니다. 서비스를 수동으로 작성하거나 앱이 작성된 후에 앱에 추가할 기존 서비스 인스턴스를 선택할 수도 있습니다. 나중에 필요한 경우 **앱 세부사항** 페이지에서 앱과 연결된 서비스 인스턴스 목록을 서비스 인증 정보와 함께 볼 수 있습니다. 
+스타터 킷이 필수 서비스를 지정하는 경우 사용자가 앱을 작성할 때 {{site.data.keyword.cloud_notm}}에서 이러한 서비스의 인스턴스를 자동으로 작성합니다. 서비스를 수동으로 작성하거나 앱이 작성된 후에 앱에 추가할 기존 서비스 인스턴스를 선택할 수도 있습니다. 나중에 필요한 경우 **앱 세부사항** 페이지에서 앱과 연결된 서비스 인스턴스 목록을 서비스 인증 정보와 함께 볼 수 있습니다.
 
 ## 서비스 검색
 {: #discover-resources}
@@ -84,7 +84,7 @@ ibmcloud dev edit
 * 모바일 백엔드 서비스와 상호작용하려면 애플리케이션 ID(앱 ID), 클라이언트에 고유한 보안 정보, 애플리케이션에 대한 액세스 URI 등 {{site.data.keyword.cloud_notm}}에서 제공하는 정보를 사용하십시오. 모바일 서비스는 종종 애플리케이션 개발자의 이름, 애플리케이션 사용자 등의 컨텍스트 정보를 서비스 세트에서 공유할 수 있도록 서로 함께 작동합니다.
 * 웹 애플리케이션 또는 모바일 애플리케이션의 서버 측 클라우드 코드와 상호작용하려면 애플리케이션의 *VCAP_SERVICES* 환경 변수에 있는 런타임 인증 정보 등 {{site.data.keyword.cloud_notm}}에서 제공하는 정보를 사용하십시오. *VCAP_SERVICES* 환경 변수의 값은 직렬화된 JSON 오브젝트입니다. 이 변수에는 애플리케이션이 바인딩된 서비스와 상호작용하는 데 필요한 런타임 데이터가 포함되어 있습니다. 데이터 형식은 서비스마다 다릅니다. 예상 내용 및 각 정보를 해석하는 방법에 대한 서비스 문서를 읽어야 할 수 있습니다.
 
-애플리케이션에 바인딩한 서비스가 충돌할 경우 애플리케이션 실행이 중단되거나 애플리케이션에서 오류가 발생할 수 있습니다. {{site.data.keyword.cloud_notm}}에서는 이러한 문제점에서 복구하기 위해 애플리케이션을 자동으로 다시 시작하지 않습니다. 가동 중단, 예외, 연결 오류를 식별하고 이러한 오류에서 복구할 수 있도록 애플리케이션 코딩을 고려하십시오. 자세한 정보는 [앱이 자동으로 다시 시작되지 않음](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted)을 참조하십시오.
+애플리케이션에 바인딩한 서비스가 충돌할 경우 애플리케이션 실행이 중단되거나 애플리케이션에서 오류가 발생할 수 있습니다. {{site.data.keyword.cloud_notm}}에서는 이러한 문제점에서 복구하기 위해 애플리케이션을 자동으로 다시 시작하지 않습니다. 가동 중단, 예외, 연결 오류를 식별하고 이러한 오류에서 복구할 수 있도록 애플리케이션 코딩을 고려하십시오.
 
 ## {{site.data.keyword.cloud_notm}} 개발 환경의 서비스에 액세스
 {: #migrate_instance}
@@ -100,7 +100,7 @@ Kubernetes 시크릿에 저장된 서비스 인증 정보는 기본적으로 bas
 
 **중요**: 배치 YAML 파일에 직접 서비스 인증 정보를 노출하거나 참조하지 마십시오. 배치 YAML 파일은 민감한 데이터를 보관하도록 디자인되지 않았으며 기본적으로 서비스 인증 정보를 암호화하지 않습니다. 이 정보를 제대로 저장하고 액세스하려면 Kubernetes 시크릿을 사용해야 합니다. 
 
-1. [서비스를 클러스터에 바인딩](/docs/containers?topic=containers-integrations#adding_cluster)하십시오. 
+1. [서비스를 클러스터에 바인딩](/docs/containers?topic=containers-service-binding#bind-services)하십시오. 
 2. 앱 팟(Pod)에서 서비스 인증 정보에 액세스하려면 다음 옵션 중에서 선택하십시오. 
    - 시크릿을 볼륨으로 팟(Pod)에 마운트
    - 환경 변수의 시크릿 참조

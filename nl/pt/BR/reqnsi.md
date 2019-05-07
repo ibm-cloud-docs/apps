@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -98,7 +98,7 @@ informações que o {{site.data.keyword.cloud_notm}} fornece como
 as credenciais de tempo de execução no ambiente *VCAP_SERVICES* do
 aplicativo. O valor da variável de ambiente *VCAP_SERVICES* é a serialização de um objeto JSON. A variável contém os dados de tempo de execução que são necessários para interagir com os serviços aos quais o aplicativo está ligado. O formato dos dados é diferente para serviços diferentes. Talvez seja necessário ler a documentação do serviço sobre o que deve-se esperar e como interpretar cada parte de informação.
 
-Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.cloud_notm}} não reinicia automaticamente o aplicativo para se recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades, exceções e falhas de conexão. Para obter mais informações, consulte [Os aplicativos não serão reinicializados automaticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+Se um serviço ligado a um aplicativo ficar paralisado, o aplicativo pode ter parado de executar ou conter erros. O {{site.data.keyword.cloud_notm}} não reinicia automaticamente o aplicativo para se recuperar desses problemas. Considere codificar o aplicativo para identificar e recuperar de indisponibilidades, exceções e falhas de conexão.
 
 ## Acessando serviços em ambientes de implementação do {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -118,7 +118,7 @@ etcd.
 **Importante**: não faça referência nem exponha as credenciais de serviço diretamente no arquivo YAML de implementação. Por padrão, os arquivos YAML de implementação não são projetados para reter os dados sensíveis e não
 criptografam as credenciais de serviço. Para armazenar e acessar adequadamente essas informações, deve-se usar um segredo do Kubernetes. 
 
-1. [ Ligar o serviço ao seu cluster ](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [ Ligar o serviço ao seu cluster ](/docs/containers?topic=containers-service-binding#bind-services). 
 2. Para acessar as credenciais de serviço por meio do pod do app, escolha entre as opções a seguir. 
    - Monte o segredo como um volume em seu pod
    - Referencie o segredo em variáveis de ambiente

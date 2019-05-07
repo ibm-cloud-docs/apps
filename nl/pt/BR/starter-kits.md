@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Kits iniciadores
+# O que são kits do iniciador?
 {: #starter-kits}
 
-Os Kits do iniciador são ótimos para montar dinamicamente um aplicativo de produção de estrutura básica no idioma de sua escolha que está pronto para implementação na nuvem. Cada kit do iniciador inclui um idioma, uma estrutura e um padrão para um caso de uso específico. É possível reutilizar o código em vez de reinventá-lo.
+Um kit do iniciador é um padrão pronto para produção que pode ser integrado a um conjunto de serviços para gerar um ativo pronto para produção que pode ser implementado diretamente em um pipeline do DevOps e em um cluster Kubernetes.
 {:shortdesc}
 
-Se um kit do iniciador requerer serviços específicos, nenhum problema. Com os serviços autoprovisionados, o {{site.data.keyword.cloud_notm}} cria automaticamente instâncias para esses serviços quando você cria seu app. É possível acessar kits do iniciador por meio do painel do {{site.data.keyword.cloud_notm}} ou da interface da linha de comandos.
+## O que é possível fazer com um kit do iniciador?
+{: #starter-overview}
 
-## O que é um kit do iniciador?
-{: #starter_kits}
+Os Kits do iniciador são ótimos para montar dinamicamente um aplicativo de produção de estrutura básica no idioma de sua escolha que está pronto para implementação na nuvem. 
 
-Um kit do iniciador é um padrão pronto para produção que pode ser integrado a um conjunto de serviços para gerar um ativo pronto para produção que pode ser implementado diretamente em um pipeline do DevOps e em um cluster Kubernetes. Um kit do iniciador contém metadados descritivos que fornecem ao usuário informações suficientes para saber o que o kit é e faz. Ele também contém instruções que indicam ao {{site.data.keyword.cloud_notm}} o que produzir. A saída está pronta para uso de produção e pode ser iterada para aprimoramentos adicionais, com base nas melhores práticas do {{site.data.keyword.cloud_notm}}. O conteúdo do kit do iniciador não é tão complexo como uma demonstração e não tão trivial como um fragmento ou amostra. Ele é criado dinamicamente com base nos requisitos do desenvolvedor.
+Um kit do iniciador contém metadados descritivos que fornecem ao usuário informações suficientes para saber o que o kit é e faz. Ele também contém instruções que indicam ao {{site.data.keyword.cloud_notm}} o que produzir. A saída está pronta para uso de produção e pode ser iterada para aprimoramentos adicionais, com base nas melhores práticas do {{site.data.keyword.cloud_notm}}. O conteúdo do kit do iniciador não é tão complexo como uma demonstração e não tão trivial como um fragmento ou amostra. Os apps são criados dinamicamente com base nos requisitos do desenvolvedor.
+
+Cada kit do iniciador inclui um idioma, uma estrutura e um padrão para um caso de uso específico. É possível reutilizar o código em vez de reinventá-lo. Se um kit do iniciador requerer serviços específicos, nenhum problema. Com os serviços autoprovisionados, o {{site.data.keyword.cloud_notm}} cria automaticamente instâncias para esses serviços quando você cria seu app. É possível acessar kits do iniciador por meio do painel do {{site.data.keyword.cloud_notm}} ou da interface da linha de comandos.
 
 Confira as instruções para [criar um app com um kit do iniciador](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

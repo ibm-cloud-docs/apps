@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Visão geral de credenciais
+# Incluindo credenciais de serviço em seu ambiente de implementação
 {: #credentials_overview}
 
 Saiba como incluir manualmente as credenciais de serviço no ambiente de implementação.
@@ -32,9 +32,10 @@ credenciais no repositório de código-fonte. Os bancos de dados nos ambientes d
 de pré-produção e de produção ficam em quarentena uns dos outros.
 
 Se você criar um app usando um modelo de kit do iniciador, o ambiente será preparado automaticamente. Não importa se o destino de implementação é:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public ou Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Instância de servidor virtual (também docker local)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry Public ou Cloud Foundry Enterprise Environment
+  * Instância de servidor virtual (também o Docker local)
   
 As etapas são fornecidas para como configurar o ambiente. Os kits do iniciador geram o código que usa uma
 biblioteca dependente para tornar o código móvel para execução em qualquer um dos destinos de implementação. Por último, nenhuma

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ subcollection: creating-apps
 * 코드에서 서비스 구성에 액세스:
 	- _@Value_ 어노테이션을 사용하거나 Spring 프레임워크 환경 클래스 _getProperty()_ 메소드를 사용할 수 있습니다. 자세한 정보는 [인증 정보에 액세스](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)를 참조하십시오.
 
-* Kubernetes 환경에 인증 정보 새로 추가:
-	- DevOps 도구 체인이 작성된 후에 다른 서비스를 애플리케이션에 추가하는 경우, 해당 서비스 인증 정보는 배치된 애플리케이션 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 직접 배치 환경에 [인증 정보를 수동으로 추가](/docs/apps?topic=creating-apps-add-credentials-kube)해야 합니다.
+* Kubernetes 환경에 서비스 인증 정보 새로 추가:
+	- DevOps 도구 체인이 작성된 후에 다른 서비스를 애플리케이션에 추가하는 경우, 해당 서비스 인증 정보는 배치된 애플리케이션 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 [배치 환경에 인증 정보를 수동으로 추가](/docs/apps?topic=creating-apps-credentials_overview)해야 합니다.

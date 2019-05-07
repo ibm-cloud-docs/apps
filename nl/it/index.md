@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 Puoi creare delle applicazioni web e mobili pronte per l'azienda in {{site.data.keyword.cloud}} e avvalerti delle estensioni cloud ospitate da {{site.data.keyword.cloud_notm}}. Hai diverse opzioni per iniziare a lavorare. Crea un'applicazione con un kit starter che gestisce il processo per tuo conto oppure, se sai cosa desideri, inizia da zero e crea la tua applicazione con le risorse di cui hai bisogno oppure utilizza il tuo repository esistente e porta il tuo codice.
 {: shortdesc}
 
-Sia che tu abbia del [codice esistente](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) che vuoi modernizzare e portare nel cloud o che stia sviluppando una [nuova applicazione](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), puoi attingere all'ecosistema in rapida crescita dei servizi disponibili e dei framework runtime in {{site.data.keyword.cloud_notm}}.
+Sia che tu abbia del [codice esistente](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) che vuoi modernizzare e portare nel cloud o che stia sviluppando una [nuova applicazione](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), puoi attingere all'ecosistema in rapida crescita dei servizi disponibili e dei framework runtime in {{site.data.keyword.cloud_notm}}.
 
 Hai bisogno di aiuto per decidere da dove iniziare? Vedi questo diagramma per alcune idee!
 
@@ -49,9 +49,11 @@ Crea un'applicazione selezionando uno dei seguenti punti di ingresso:
 ## Passo 2. Aggiungi i servizi
 {: #resources-getting-started}
 
-Quando utilizzi un kit starter per creare la tua applicazione, i tuoi servizi vengono creati automaticamente per tuo conto. Puoi associare più servizi alla tua applicazione facendo clic su **Create service** nella pagina **App details** della console.
+Quando utilizzi un kit starter per creare la tua applicazione, i servizi obbligatori vengono creati automaticamente per tuo conto. Puoi connettere più servizi alla tua applicazione nella console dalla pagina **App details**, che viene visualizzata appena crei l'applicazione.
 
-Immetti il seguente comando per aggiungere un servizio alla tua applicazione utilizzando la CLI. Puoi selezionare un servizio esistente da uno già abilitato sul tuo account o aggiungere un servizio. 
+Se vuoi aggiungere dei servizi dopo aver creato la tua applicazione, vai al [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}), individua la tua applicazione e fai quindi clic sul suo nome. Viene visualizzata la pagina **App details** dove puoi creare un'istanza del servizio o connettere dei servizi esistenti.
+
+Oppure puoi eseguire il seguente comando per aggiungere un servizio alla tua applicazione utilizzando la CLI. Puoi selezionare un servizio esistente da uno già abilitato sul tuo account o aggiungere un servizio.
 ```
 ibmcloud dev edit
 ```

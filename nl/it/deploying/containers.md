@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Inizia a utilizzare {{site.data.keyword.containershort}} distribuendo applicazio
 
 I contenitori rappresentano un modo standard per assemblare le applicazioni e tutte le relative dipendenze in modo da poter spostare facilmente le applicazioni tra gli ambienti. A differenza delle macchine virtuali, i contenitori non includono il sistema operativo. Nei contenitori vengono riuniti solo il codice dell'applicazione, il runtime, gli strumenti di sistema, le librerie e le impostazioni. I contenitori sono più leggeri, portatili ed efficienti rispetto alle macchine virtuali.
 
-Vedi [Introduzione a {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) per ulteriori informazioni sul servizio.
+Vedi [Introduzione a {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) per ulteriori informazioni sul servizio.
 
 ## Configurazione delle distribuzioni
 {: #config-deploy}
@@ -62,7 +62,7 @@ La toolchain contiene la fase di creazione e la fase di distribuzione.
 {: #build-stage}
 La fase di creazione viene attivata quando si esegue un `git push` sul repository Git. La fase nella pipeline attiva la creazione dell'immagine docker e inserisce l'immagine nel registro del contenitore.
 
-Per ulteriori informazioni, vedi [Introduzione a IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+Per ulteriori informazioni, vedi [Introduzione a IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Fase di distribuzione
 {: #deploy-stage}

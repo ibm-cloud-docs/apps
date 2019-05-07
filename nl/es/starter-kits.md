@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Kits de inicio
+# ¿Qué son los kits de inicio?
 {: #starter-kits}
 
-Los kits de inicio son la solución perfecta para ensamblar dinámicamente el esqueleto de una aplicación de producción en el lenguaje que elija que esté listo para el despliegue de la nube. Cada kit de inicio incluye un lenguaje, una infraestructura y un patrón para un caso de uso específico. Puede reutilizar código en lugar de reinventarlo.
+Un kit de inicio es un patrón listo para el entorno de producción que se puede integrar con un conjunto de servicios para generar un activo listo para producción y que se puede desplegar directamente en un conducto de DevOps y en un clúster de Kubernetes.
 {:shortdesc}
 
-Si un kit de inicio requiere servicios específicos, no hay ningún problema. Con los servicios de suministro automático, {{site.data.keyword.cloud_notm}} crea automáticamente instancias para dichos servicios al crear la app. Puede acceder a los kits de inicio desde el panel de control de {{site.data.keyword.cloud_notm}} o la interfaz de línea de mandatos.
+## ¿Qué puede hacer con un kit de inicio?
+{: #starter-overview}
 
-## ¿Qué es un kit de inicio?
-{: #starter_kits}
+Los kits de inicio son la solución perfecta para ensamblar dinámicamente el esqueleto de una aplicación de producción en el lenguaje que elija que esté listo para el despliegue de la nube. 
 
-Un kit de inicio es un patrón listo para el entorno de producción que se puede integrar con un conjunto de servicios para generar un activo listo para producción y que se puede desplegar directamente en un conducto de DevOps y en un clúster de Kubernetes. Un kit de inicio contiene metadatos descriptivos que proporcionan al usuario suficiente información para saber qué es y que hace el kit. También contiene instrucciones que indican a {{site.data.keyword.cloud_notm}} lo que debe producir. La salida está lista para producción desde un principio. Luego, de forma iterativa, puede añadir más mejoras con base a las prácticas recomendadas de {{site.data.keyword.cloud_notm}}. El contenido del kit de inicio no es tan complejo como una demostración ni tan trivial como un ejemplo o fragmento de código. Se crean de forma dinámica en función de los requisitos del desarrollador.
+Un kit de inicio contiene metadatos descriptivos que proporcionan al usuario suficiente información para saber qué es y que hace el kit. También contiene instrucciones que indican a {{site.data.keyword.cloud_notm}} lo que debe producir. La salida está lista para producción desde un principio. Luego, de forma iterativa, puede añadir más mejoras con base a las prácticas recomendadas de {{site.data.keyword.cloud_notm}}. El contenido del kit de inicio no es tan complejo como una demostración ni tan trivial como un ejemplo o fragmento de código. Las apps se crean de forma dinámica en función de los requisitos del desarrollador.
+
+Cada kit de inicio incluye un lenguaje, una infraestructura y un patrón para un caso de uso específico. Puede reutilizar código en lugar de reinventarlo. Si un kit de inicio requiere servicios específicos, no hay ningún problema. Con los servicios de suministro automático, {{site.data.keyword.cloud_notm}} crea automáticamente instancias para dichos servicios al crear la app. Puede acceder a los kits de inicio desde el panel de control de {{site.data.keyword.cloud_notm}} o la interfaz de línea de mandatos.
 
 Consulte las instrucciones para la [creación de una app con un kit de inicio](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

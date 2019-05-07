@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-25"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -37,14 +37,10 @@ Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}:
 
 1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
 2. Insira o nome de seu app. Para este tutorial, use `MicroserviceProject`.
-3. Insira um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota do app, `abc-devhost.mybluemix.net`.
-4. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
-5. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
-6. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
-7. Clique em **Criar**.
-
-O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+3. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
+4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+6. Clique em **Criar**.
 
 ## Etapa 3. Incluir serviços (opcional)
 {: #resources-microservice}

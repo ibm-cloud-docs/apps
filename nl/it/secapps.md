@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -95,16 +95,10 @@ specificamente per emettere certificati server per l'entità finale. Il risultat
 attendibile, passa per quello intermedio e termina con il certificato SSL emesso per l'organizzazione. Utilizza un certificato intermedio per verificare l'autenticità del certificato principale. I certificati intermedi vengono di norma ottenuti da una terza parte attendibile. Potresti non aver bisogno
 di un certificato intermedio durante il test della tua applicazione prima che ne esegui la distribuzione in produzione.
   * Abilita la richiesta del certificato client: se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
-il browser web gli richiede di fornire un certificato client per il dominio. 
-
-    La funzione relativa al certificato personalizzato nella gestione del dominio di {{site.data.keyword.cloud_notm}} dipende dall'estensione SNI (Server Name Indication) del protocollo TLS (Transport Layer Security). Il codice client che accede alle applicazioni {{site.data.keyword.cloud_notm}} protette da certificati personalizzati deve supportare l'estensione SNI nell'implementazione TLS. Per ulteriori informazioni, vedi la [sezione 7.4.2 di RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [Securing data with TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
-    {: note}
-  
+il browser web gli richiede di fornire un certificato client per il dominio.   
   * Truststore certificato client (facoltativo): include i certificati client per gli utenti a cui vuoi consentire l'accesso alla tua applicazione. Carica un file truststore certificato client per abilitare l'opzione per richiedere un certificato client.
   
     Puoi configurare l'autenticazione reciproca caricando un truststore certificato client che includa una chiave pubblica nei suoi metadati.
     {: tip}
 
 Per ulteriori informazioni, vedi [Importazione di certificati SSL](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
-
-

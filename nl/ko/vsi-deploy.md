@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Terraform으로 베어메탈 서버를 프로비저닝할 수도 있습니다. 자세한 정보는 [IBM Terraform 제공자 문서](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [IBM Terraform 제공자 GIT 저장소](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
-`variables.tf`를 사용하여 가상 인스턴스를 작성하기 위한 대상으로 지정할 데이터 센터를 변경할 수 있습니다. 플랫폼에 대해 정의된 데이터 센터의 목록을 보려면 [데이터 센터](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
+`variables.tf`를 사용하여 가상 인스턴스를 작성하기 위한 대상으로 지정할 데이터 센터를 변경할 수 있습니다. 플랫폼에 대해 정의된 데이터 센터의 목록을 보려면 [데이터 센터](https://www.ibm.com/cloud/data-centers/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 기본적으로 워싱턴 및 `wdc04`에 대한 Terraform 파일이 구성됩니다.
 ```json

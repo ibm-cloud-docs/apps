@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -62,7 +62,7 @@ serviço para o aplicativo usando uma instância de serviço. Uma instância de 
 Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para
 obter mais informações, consulte [Incluindo um serviço no app](/docs/apps?topic=creating-apps-add-resource).
 
-Depois de incluir um serviço em seu app, deve-se copiar as credenciais para o serviço para o seu ambiente de implementação. Para obter mais informações, consulte [Incluindo credenciais em seu ambiente do Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube).
+Depois de incluir um serviço em seu app, deve-se [copiar as credenciais para o serviço em seu ambiente de implementação](/docs/apps?topic=creating-apps-credentials_overview).
 
 ## Preparando seu app para implementação
 {: #deploy-byoc-kube}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Kubernetes 환경에 인증 정보 추가
+# Kubernetes 환경에 서비스 인증 정보 추가
 {: #add-credentials-kube}
 
 Kubernetes 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다.
@@ -176,16 +176,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 **지속적 딜리버리 구성** 기능을 사용하여 앱을 IBM Kubernetes 클러스터에 배치할 수 있습니다. 이 기능은 앱과 연관된 리소스의 인증 정보에 대한 시크릿으로 Kubernetes 클러스터를 준비합니다. 다음 단계를 완료하여 클러스터 준비의 결과를 관찰할 수 있습니다.
 
-1. `kubectl get secrets` 명령을 실행하여 결과를 보십시오.
+1. 결과를 보려면 다음 명령을 실행하십시오.
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   [시크릿에 대한 추가 문서](https://kubernetes.io/docs/concepts/configuration/secret/)를 볼 수 있습니다.
   {: tip}

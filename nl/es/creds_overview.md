@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Visión general de las credenciales
+# Adición de credenciales de servicio al entorno de despliegue
 {: #credentials_overview}
 
 Aprenda a añadir manualmente credenciales de servicio al entorno de despliegue.
@@ -29,9 +29,10 @@ Aprenda a añadir manualmente credenciales de servicio al entorno de despliegue.
 En general, desea que la lógica de la aplicación adquiera credenciales de servicio confidenciales, como claves de API o contraseñas de base de datos, del entorno en el que se ejecuta la aplicación. De esta forma, no tiene que guardar las credenciales en el repositorio de código fuente. Las bases de datos de los entornos de integración continua, preproducción y producción están en cuarentena entre sí.
 
 Si crea una app utilizando una plantilla de kit de inicio, el entorno se prepara automáticamente. No importa si el destino de despliegue es:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public o Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Instancia de servidor virtual (también docker local)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Entorno Cloud Foundry Public o Cloud Foundry Enterprise
+  * Instancia de servidor virtual (también docker local)
   
 Se proporcionan pasos sobre cómo configurar el entorno. Los kits de inicio generan código que utiliza una biblioteca dependiente para hacer que el código sea portátil y se pueda ejecutar en cualquiera de los destinos de despliegue. Por último, no se utiliza ninguna lógica de rama para detectar el destino de despliegue en el que se ejecuta la aplicación.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
 
@@ -36,14 +36,14 @@ Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Ic
 ## Programa de fondo para programa de usuario (BFF)
 {: #bff}
 
-El patrón de Programa de fondo para programa de usuario (BFF) ayuda a crear código de fondo que expone servicios y datos empresariales de forma que satisfaga las necesidades de los usuarios para un canal de app específico como, por ejemplo, un canal móvil o web. Por ejemplo, los usuarios de un dispositivo móvil podrían utilizar el control de voz, mientras que los usuarios de navegador podrían preferir el sistema de apuntar y pulsar. Puede compilar dos programas BFF, uno para móvil que incluye servicios como [{{site.data.keyword.conversationfull}}](https://www.ibm.com/watson/ai-assistant/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y uno para web con una interfaz de usuario más sofisticada.
+El patrón de Programa de fondo para programa de usuario (BFF) ayuda a crear código de fondo que expone servicios y datos empresariales de forma que satisfaga las necesidades de los usuarios para un canal de app específico como, por ejemplo, un canal móvil o web. Por ejemplo, los usuarios de un dispositivo móvil podrían utilizar el control de voz, mientras que los usuarios de navegador podrían preferir el sistema de apuntar y pulsar. Puede compilar dos programas BFF, uno para móvil que incluye servicios como [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y uno para web con una interfaz de usuario más sofisticada.
 
 En {{site.data.keyword.cloud_notm}}, puede compilar un programa BFF con enfoque de programación para varios lenguajes. Puede utilizar Node.js, Swift, Java o Python y ejecutarlos en un patrón con servicios de contenedor o que utilicen funciones sin servidor.
 
 BFF gestiona la persistencia, la colocación en memoria caché y la integración de los datos con los siguientes servicios de gran valor.
 
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 * [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 * [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
@@ -78,6 +78,6 @@ Los kits de inicio que {{site.data.keyword.cloud_notm}} proporciona están dispo
 |Swift | [Swift](/docs/runtimes/swift?topic=Swift-getting-started) es un moderno lenguaje de programación creado en 2014, diseñado para sustituir Objective C y disponible como código abierto desde diciembre de 2015. Hoy en día, se utiliza para crear iOS, macOS, servicios web y software de sistema en sistemas operativos Linux y macos que utilicen una arquitectura x86, ARM o z. Escribe como un lenguaje de script pero se compila para obtener el alto rendimiento de C con un bajo uso de procesador. Resulta ideal para tiempos de ejecución de la nube. Utiliza un sistema de tipos estático y sólido que ve en Java, pero el estilo funcional y las rutinas asíncronas que ve en JavaScript. Ofrece un alto rendimiento y el origen se compila en código nativo utilizando la cadena de herramientas del compilador LLVM. Puede utilizar fácilmente bibliotecas del sistema de otros lenguajes escritos en C. Puesto que Swift se puede utilizar para codificar apps del lado del cliente como del lado del servidor, los desarrolladores utilizan Swift cuando necesitan migrar fácilmente las funciones del cliente al servidor y viceversa. | Kitura, iOS|
 |Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) es un tiempo de ejecución de JavaScript que utiliza un modelo de E/S sin bloqueo y dirigido por sucesos, que lo hace ligero y eficiente. Proporciona un alto nivel de rendimiento y escalabilidad para aplicaciones web, patrones de programa de fondo para programa de usuario y microservicios. El registro de paquetes de Node.js, npm, proporciona acceso a una gran colección de módulos de código abierto. Ofrece una amplia gama de características que le ayudan a acelerar el desarrollo de aplicaciones. | Express|
 |JavaScript|JavaScript sirve para crear efectos interactivos en páginas web. JavaScript junto con HTML y CSS son la base de la mayoría de las páginas web. Cuando envuelve en un plugin de Cordova, el código JavaScript puede sacar partido de la funcionalidad de las funciones nativas del dispositivo. Los desarrolladores con conocimientos web pueden crear fácilmente apps móviles y, donde sea apropiado, el código web se puede reutilizar a través de entornos móviles y web.|Cordova|
-|Python | [Python](/docs/runtimes/python?topic=Python-getting-started) es un lenguaje de programación interpretado de propósito general en el que se da importancia a la legibilidad. Python permite a los programadores implementar funciones utilizando menos líneas de código con relación a otros lenguajes. Las características del lenguaje permite escribir código imperativo, funcional y orientado a objetos. Python es utilizado habitualmente para procesar tareas de lenguaje natural. | Flask, Django|
+|Python | [Python](/docs/runtimes/python?topic=Python-getting_started) es un lenguaje de programación interpretado de propósito general en el que se da importancia a la legibilidad. Python permite a los programadores implementar funciones utilizando menos líneas de código con relación a otros lenguajes. Las características del lenguaje permite escribir código imperativo, funcional y orientado a objetos. Python es utilizado habitualmente para procesar tareas de lenguaje natural. | Flask, Django|
 
 

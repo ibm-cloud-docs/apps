@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-25"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -106,7 +106,7 @@ diversi servizi. Potresti dover leggere la documentazione del servizio in merito
 e come interpretare ogni elemento di informazione.
 
 Se si verifica un arresto anomalo di un servizio di cui esegui il bind a un'applicazione,
-l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.cloud_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni. Per ulteriori informazioni, vedi [Le applicazioni non si riavviano automaticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+l'esecuzione dell'applicazione potrebbe essere arrestata oppure potrebbero verificarsi per essa delle condizioni di errore. {{site.data.keyword.cloud_notm}} non riavvia automaticamente l'applicazione per eseguire un ripristino da tali problemi. Valuta una codifica della tua applicazione per identificare interruzioni, eccezioni ed errori di connessione e per eseguire il ripristino da tali condizioni.
 
 ## Accesso ai servizi negli ambienti di distribuzione di {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -122,7 +122,7 @@ Le credenziali del servizio memorizzate in un segreto Kubernetes sono codificate
 
 **Importante**: non indicare o esporre le credenziali del servizio direttamente nel tuo file YAML di distribuzione. I file YAML di distribuzione non sono progettati per contenere dati sensibili e non crittografano le credenziali del servizio per impostazione predefinita. Per memorizzare e accedere correttamente a queste informazioni, devi utilizzare un segreto Kubernetes. 
 
-1. [Esegui il bind del servizio al tuo cluster](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [Esegui il bind del servizio al tuo cluster](/docs/containers?topic=containers-service-binding#bind-services). 
 2. Per accedere alle credenziali del servizio dal tuo pod dell'applicazione, scegli tra le seguenti opzioni. 
    - Monta il segreto come un volume al tuo pod
    - Fai riferimento al segreto nelle variabili di ambiente

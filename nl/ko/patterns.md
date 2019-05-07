@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
 
@@ -35,14 +35,14 @@ subcollection: creating-apps
 ## 프론트 엔드를 위한 백엔드
 {: #bff}
 
-프론트 엔드를 위한 백엔드(BFF) 패턴은 모바일 또는 웹과 같은 특정 앱 채널에 대한 사용자 기대를 만족시키는 방식으로 비즈니스 데이터 및 서비스를 노출하는 백엔드 코드를 작성합니다. 예를 들면, 모바일 디바이스의 사용자는 음성 제어를 사용하려고 하고 웹 브라우저 사용자는 이동 및 클릭을 선호합니다. 사용자는 [{{site.data.keyword.conversationfull}}](https://www.ibm.com/watson/ai-assistant/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 등의 서비스를 포함하는 모바일용 BFF와 더 정교한 사용자 인터페이스를 갖춘 웹용 BFF의 두 BFF를 빌드할 수 있습니다.
+프론트 엔드를 위한 백엔드(BFF) 패턴은 모바일 또는 웹과 같은 특정 앱 채널에 대한 사용자 기대를 만족시키는 방식으로 비즈니스 데이터 및 서비스를 노출하는 백엔드 코드를 작성합니다. 예를 들면, 모바일 디바이스의 사용자는 음성 제어를 사용하려고 하고 웹 브라우저 사용자는 이동 및 클릭을 선호합니다. 사용자는 [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 등의 서비스를 포함하는 모바일용 BFF와 더 정교한 사용자 인터페이스를 갖춘 웹용 BFF의 두 BFF를 빌드할 수 있습니다.
 
 {{site.data.keyword.cloud_notm}}에서는 폴리글롯 프로그래밍 접근법을 사용하여 BFF를 빌드할 수 있습니다. 사용자는 Node.js, Swift, Java 또는 Python을 사용하고 이를 컨테이너 서비스를 사용하거나 서버리스 기능을 사용하는 패턴에서 실행할 수 있습니다.
 
 BFF는 데이터 지속성, 캐싱 및 다음 고가치 서비스와의 통합을 관리합니다.
 
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
+* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
+* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
 * [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
 * [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
@@ -75,6 +75,6 @@ BFF는 가장 일반적으로 REST 패턴을 사용하여 API를 노출하지만
 |Swift |[Swift](/docs/runtimes/swift?topic=Swift-getting-started)는 Objective C를 대체하도록 디자인된 2014년에 제작된 신규 프로그래밍 언어이며 2015년 12월에 오픈 소스로 전환되었습니다. 현재는 iOS, macOS, 웹 서비스의 빌드와 x86, ARM 또는 z/Architecture를 사용하는 Linux 및 macOS 운영 체제의 시스템 소프트웨어 빌드에 사용됩니다. 이는 스크립팅 언어와 유사하게 작성되지만 낮은 프로세서 사용량으로 C와 유사한 고성능을 얻을 수 있도록 컴파일되며 클라우드 런타임에 적합합니다. 이 언어는 Java에서 볼 수 있는 강한 정적 유형 시스템을 사용하지만 JavaScript에서 볼 수 있는 함수 스타일 및 비동기 루틴을 사용합니다. 성능 면에서 매우 뛰어난 언어로, 소스는 LLVM 컴파일러 도구 체인을 사용하는 네이티브 코드로 컴파일됩니다. 또한 C로 작성된 다른 언어의 시스템 라이브러리를 쉽게 사용할 수 있습니다. Swift는 클라이언트 측 앱과 서버 측 앱을 코딩하는 데 모두 사용할 수 있으므로, 개발자들은 보통 클라이언트에서 서버 또는 그 반대로 함수를 쉽게 마이그레이션해야 하는 경우 Swift를 사용합니다. |Kitura, iOS|
 |Node.js |[Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started)는 이벤트 중심의 비차단 I/O 모델을 사용하는 JavaScript 런타임으로, 경량이고 효율적입니다. 이는 웹 애플리케이션, 프론트 엔드를 위한 백엔드 패턴 및 마이크로서비스의 처리량 및 확장성 면에서 뛰어납니다. Node.js의 패키지 레지스트리(npm)는 대규모 오픈 소스 모듈 콜렉션에 대한 액세스를 제공하며 애플리케이션 개발을 가속화할 수 있는 광범위한 기능을 제공합니다. |Express|
 |JavaScript|JavaScript는 웹 페이지에서 대화식 효과를 작성합니다. JavaScript, HTML 및 CSS는 대부분의 웹 페이지의 기초입니다. JavaScript 코드는 Cordova 플러그인으로 랩핑되면 기본 디바이스 함수를 최대한 활용할 수 있습니다. 웹 기술을 가진 개발자는 모바일 앱을 쉽게 작성할 수 있으며, 해당 앱 코드를 웹 및 모바일에서 재사용할 수 있습니다.| Cordova|
-|Python |[Python](/docs/runtimes/python?topic=Python-getting-started)은 가독성에 중점을 둔 범용의 인터프리트(interpreted) 프로그래밍 언어입니다. Python을 사용하면 프로그래머가 다른 언어보다 적은 코드 행으로 함수를 구현할 수 있습니다. 이러한 언어 특성으로 인해 객체 지향형, 함수형 또는 명령형 코드를 작성할 수 있습니다. Python은 일반적으로 자연어 태스크의 처리에 사용됩니다. |Flask, Django|
+|Python |[Python](/docs/runtimes/python?topic=Python-getting_started)은 가독성에 중점을 둔 범용의 인터프리트(interpreted) 프로그래밍 언어입니다. Python을 사용하면 프로그래머가 다른 언어보다 적은 코드 행으로 함수를 구현할 수 있습니다. 이러한 언어 특성으로 인해 객체 지향형, 함수형 또는 명령형 코드를 작성할 수 있습니다. Python은 일반적으로 자연어 태스크의 처리에 사용됩니다. |Flask, Django|
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
@@ -41,13 +41,13 @@ subcollection: creating-apps
 3. **Node**를 언어 유형으로 선택하십시오.
 4. **Express.js의 Node.js 웹 앱(웹 앱)**을 사용할 스타터 킷으로 선택하십시오.
 5. 앱의 이름을 입력하고 사용할 리소스 그룹을 선택하십시오(필요한 경우). 지금은 서비스를 추가하지 마십시오.
-6. DevOps 도구 체인을 작성하려면 **IBM DevOps, Cloud Foundry 사용** 옵션을 선택하십시오. 이 단계를 완료하기 위해 SSH 키를 설정해야 할 수 있습니다.
+6. DevOps 도구 체인을 작성하려면 **IBM DevOps, Cloud Foundry 빌드팩에 배치** 옵션을 선택하십시오. 이 단계를 완료하기 위해 SSH 키를 설정해야 할 수 있습니다.
   SSH 키에 대해 비밀번호 문구를 설정하는 경우에는 이 코드를 입력해야 합니다.
   {: note}
-7. 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트입니다. 예를 들면, `abc-devhost.mybluemix.net`입니다.
-
-기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)를 참조하십시오.
-{: tip}
+7. 나머지 프롬프트에 따라 다음을 수행하십시오.
+  * 도구 체인의 지역을 선택하십시오.
+  * DevOps 도구 체인 이름에 이름을 입력하십시오.
+  * 호스트 이름에 이름을 입력하십시오.
 
 앱 및 도구 체인 작성을 완료하는 데 몇 초가 걸립니다.
 

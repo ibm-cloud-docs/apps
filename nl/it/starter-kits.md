@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Kit starter
+# Cosa sono i kit starter?
 {: #starter-kits}
 
-I kit starter sono ideali per assemblare in modo dinamico un'applicazione di produzione di base nel linguaggio desiderato pronta per la distribuzione cloud. Ogni kit starter include un linguaggio, un framework e un modello per uno specifico caso di utilizzo. Puoi riutilizzare il codice piuttosto che reinventarlo.
+Un kit starter è un modello pronto per la produzione che è possibile integrare con una serie di servizi per generare un asset pronto per la produzione che può essere distribuito direttamente in una pipeline DevOps e in un cluster Kubernetes.
 {:shortdesc}
 
-Se un kit starter richiede servici specifici, non c'è alcun problema. Con i servizi con provisioning automatico, {{site.data.keyword.cloud_notm}} crea automaticamente le istanze per quei servizi quando crei la tua applicazione. Puoi accedere ai kit starter dal dashboard o dalla CLI (command-line interface) {{site.data.keyword.cloud_notm}}.
+## Cosa puoi fare con un kit starter?
+{: #starter-overview}
 
-## Cos'è un kit starter?
-{: #starter_kits}
+I kit starter sono ideali per assemblare in modo dinamico un'applicazione di produzione di base nel linguaggio desiderato pronta per la distribuzione cloud. 
 
-Un kit starter è un modello pronto per la produzione che è possibile integrare con una serie di servizi per generare un asset pronto per la produzione che può essere distribuito direttamente in una pipeline DevOps e in un cluster Kubernetes. Un kit starter contiene metadati descrittivi che forniscono all'utente informazioni sufficienti per conoscere le funzionalità del kit. Contiene inoltre le istruzioni che indicano a {{site.data.keyword.cloud_notm}} cosa produrre. L'output è subito pronto per la produzione e può essere iterato per ulteriori miglioramenti, in base alle procedure consigliate da {{site.data.keyword.cloud_notm}}. Il contenuto del kit starter non è così complesso come una dimostrazione e non è banale come un frammento o un esempio. Sono creati dinamicamente in base ai requisiti dello sviluppatore.
+Un kit starter contiene metadati descrittivi che forniscono all'utente informazioni sufficienti per conoscere le funzionalità del kit. Contiene inoltre le istruzioni che indicano a {{site.data.keyword.cloud_notm}} cosa produrre. L'output è subito pronto per la produzione e può essere iterato per ulteriori miglioramenti, in base alle procedure consigliate da {{site.data.keyword.cloud_notm}}. Il contenuto del kit starter non è così complesso come una dimostrazione e non è banale come un frammento o un esempio. Le applicazioni sono create dinamicamente in base ai requisiti dello sviluppatore.
+
+Ogni kit starter include un linguaggio, un framework e un modello per uno specifico caso di utilizzo. Puoi riutilizzare il codice piuttosto che reinventarlo. Se un kit starter richiede servici specifici, non c'è alcun problema. Con i servizi con provisioning automatico, {{site.data.keyword.cloud_notm}} crea automaticamente le istanze per quei servizi quando crei la tua applicazione. Puoi accedere ai kit starter dal dashboard o dalla CLI (command-line interface) {{site.data.keyword.cloud_notm}}.
 
 Consulta le istruzioni per la [creazione di un'applicazione con un kit starter](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

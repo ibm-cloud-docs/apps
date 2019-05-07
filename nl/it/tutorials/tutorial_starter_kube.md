@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](
 * Accedi alla configurazione del servizio nel tuo codice:
 	- Puoi utilizzare l'annotazione _@Value_ oppure utilizzare il metodo _getProperty()_ della classe dell'ambiente framework Spring. Per ulteriori informazioni, vedi [Accesso alle credenziali](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Aggiungi nuove credenziali al tuo ambiente Kubernetes:
-	- Quando aggiungi un altro servizio alla tua applicazione dopo che è stata creata la toolchain DevOps, queste credenziali di servizio non vengono aggiornate automaticamente alla tua applicazione distribuita e al tuo repository GitLab. Devi [aggiungere manualmente le credenziali](/docs/apps?topic=creating-apps-add-credentials-kube) all'ambiente di distribuzione.
+* Aggiungi nuove credenziali del servizio al tuo ambiente Kubernetes:
+	- Quando aggiungi un altro servizio alla tua applicazione dopo che è stata creata la toolchain DevOps, queste credenziali di servizio non vengono aggiornate automaticamente alla tua applicazione distribuita e al tuo repository GitLab. Devi [aggiungere manualmente le credenziali all'ambiente di distribuzione](/docs/apps?topic=creating-apps-credentials_overview).

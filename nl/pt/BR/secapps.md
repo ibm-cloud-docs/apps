@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -101,19 +101,10 @@ confiável especificamente para emitir certificados de servidor de entidade fina
 confiável, passa pelo certificado intermediário e termina com o
 certificado SSL emitido para a organização. Use um certificado intermediário para verificar a autenticidade do certificado principal. Os certificados intermédios geralmente são obtidos de um terceiro confiável. Você pode não precisar de um certificado intermediário ao testar seu aplicativo antes de implementá-lo em produção.
   * Ativar solicitação de certificado de cliente: ao ativar essa opção, quando um usuário tentar acessar um domínio
-protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por exemplo, em um navegador da web, quando um usuário tentar acessar um domínio protegido por SSL, o navegador da web solicitará ao usuário que forneça um certificado de cliente para o domínio. 
-
-    O recurso de certificado customizado no gerenciamento de domínio do
-{{site.data.keyword.cloud_notm}} depende da
-extensão de Indicação de Nome do Servidor (SNI) do protocolo de
-Segurança da Camada de Transporte (TLS). O código do cliente que acessa os aplicativos {{site.data.keyword.cloud_notm}} que são protegidos pelos certificados customizados deve suportar a extensão SNI na implementação do TLS. Para obter mais informações, consulte [seção 7.4.2 do RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Assegurando dados com TLS](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
-    {: note}
-  
+protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por exemplo, em um navegador da web, quando um usuário tentar acessar um domínio protegido por SSL, o navegador da web solicitará ao usuário que forneça um certificado de cliente para o domínio.   
   * Armazenamento confiável de certificado de cliente (opcional): inclui os certificados de cliente para os usuários aos quais você deseja permitir acesso ao seu aplicativo. Faça upload de um arquivo de armazenamento confiável de certificado de cliente para ativar a opção para solicitar um certificado de cliente.
   
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}
 
 Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
-
-

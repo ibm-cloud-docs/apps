@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -51,7 +51,7 @@ applicazioni Web.
 
 Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps?topic=creating-apps-add-resource).
 
-Dopo aver aggiunto un servizio alla tua applicazione, devi copiare le credenziali per il servizio nel tuo ambiente di distribuzione. Per ulteriori informazioni, vedi [Aggiunta di credenziali al tuo ambiente Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube).
+Dopo aver aggiunto un servizio alla tua applicazione, devi [copiare le credenziali per il servizio nel tuo ambiente di distribuzione](/docs/apps?topic=creating-apps-credentials_overview).
 
 ## Preparazione della tua applicazione per la distribuzione
 {: #deploy-byoc-kube}

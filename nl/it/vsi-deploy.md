@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Puoi anche eseguire il provisioning di server bare metal con Terraform. Per ulteriori informazioni, consulta la [documentazione di IBM Terraform Provider](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e il [repository GIT IBM Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
-`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers](https://www.ibm.com/cloud/data-centers/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 Per impostazione predefinita, il file Terraform è configurato per Washington e `wdc04`.
 ```json

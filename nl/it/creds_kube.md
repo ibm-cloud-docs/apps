@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Aggiunta di credenziali al tuo ambiente Kubernetes
+# Aggiunta di credenziali del servizio al tuo ambiente Kubernetes
 {: #add-credentials-kube}
 
 Acquisisci informazioni su come aggiungere credenziali del servizio al tuo ambiente di distribuzione Kubernetes.
@@ -176,16 +176,12 @@ Ora che il cluster Kubernetes è preparato con un segreto risolvibile, puoi aggi
 
 Utilizza la funzione **Configure continuous delivery** per distribuire la tua applicazione al tuo cluster IBM Kubernetes. La funzione prepara il tuo cluster Kubernetes con i segreti per le credenziali delle risorse associate alla tua applicazione. Puoi osservare i risultati della preparazione del cluster completando i seguenti passi:
 
-1. Esegui questo comando per visualizzare i risultati: `kubectl get secrets`:
+1. Per visualizzare i risultati, esegui questo comando:
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   Puoi visualizzare [ulteriore documentazione sui segreti](https://kubernetes.io/docs/concepts/configuration/secret/).
   {: tip}

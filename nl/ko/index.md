@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 {{site.data.keyword.cloud}}에서 엔터프라이즈 레벨 모바일 및 웹 애플리케이션을 빌드하고 {{site.data.keyword.cloud_notm}}에서 호스팅하는 클라우드 확장을 활용할 수 있습니다. 시작하는 데 대해서는 몇 가지 선택사항이 있습니다. 사용자 대신 프로세스를 관리하는 스타터 킷을 사용하여 앱을 작성할 수 있으며, 필요한 것이 무엇인지 아는 경우에는 처음부터 시작하여 필요한 리소스로 앱을 빌드하거나 기존 저장소를 사용하며 자체 코드를 여기로 가져올 수 있습니다.
 {: shortdesc}
 
-현대화하여 클라우드로 가져오려는 [기존 코드](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc)가 있거나 [새로운 애플리케이션](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)을 개발 중인지에 관계없이 사용자는 {{site.data.keyword.cloud_notm}}에서 사용 가능한 서비스 및 런타임 프레임워크의 빠르게 성장하는 에코시스템을 활용할 수 있습니다.
+현대화하여 클라우드로 가져오려는 [기존 코드](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)가 있거나 [새로운 애플리케이션](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)을 개발 중인지에 관계없이 사용자는 {{site.data.keyword.cloud_notm}}에서 사용 가능한 서비스 및 런타임 프레임워크의 빠르게 성장하는 에코시스템을 활용할 수 있습니다.
 
 어디서 시작할지 결정하는 데 도움이 필요합니까? 이 다이어그램에서 아이디어를 얻으세요!
 
@@ -39,19 +39,21 @@ subcollection: creating-apps
 
 다음 시작점 중 하나를 선택하여 앱을 작성하십시오.
 
-* [스타터 킷](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)은 유스 케이스에 특정하며 다양한 프로그래밍 언어와 아키텍처 패턴으로 프로덕션에 사용할 준비가 된 앱을 생성합니다. 
+* [스타터 킷](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)은 유스 케이스에 특정하며 다양한 프로그래밍 언어와 아키텍처 패턴으로 프로덕션에 사용할 준비가 된 앱을 생성합니다.
 * [IBM Developer 코드 패턴 ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")](https://developer.ibm.com/patterns/){:new_window}을 사용하여 앱을 신속하게 작성하고 이를 {{site.data.keyword.cloud_notm}}에 배치합니다. 자세한 정보는 [코드 패턴](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern)을 참조하십시오.
 * 기존 컨텐츠 저장소에 링크하여 [자체 코드를 가져오십시오](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc). 앱 및 Docker 이미지는 동일한 저장소에 있어야 합니다.
-* 필요한 것이 무엇인지 아는 경우에는 빈 스타터 킷을 사용하여 필요한 서비스로 [사용자 정의 앱](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch)을 처음부터 빌드하십시오. 
-* [CLI 및 개발자 도구](/docs/apps?topic=creating-apps-create-deploy-app-cli)를 사용하여 사용자 정의 또는 스타터 킷 애플리케이션을 작성하고 배치하십시오. 
+* 필요한 것이 무엇인지 아는 경우에는 비어 있는 스타터 킷을 사용하여 필요한 서비스로 [사용자 정의 앱](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch)을 처음부터 빌드하십시오.
+* [CLI 및 개발자 도구](/docs/apps?topic=creating-apps-create-deploy-app-cli)를 사용하여 사용자 정의 또는 스타터 킷 애플리케이션을 작성하고 배치하십시오.
 * 작성 가능한 앱 및 서비스에 대한 [{{site.data.keyword.cloud_notm}} 카탈로그 ](https://{DomainName}/catalog){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 찾아보거나 검색한 후에 당장 사용을 시작합니다.
 
 ## 2단계. 서비스 추가
 {: #resources-getting-started}
 
-앱을 작성하는 데 스타터 킷을 사용하는 경우에는 서비스가 자동으로 작성됩니다. 콘솔의 **앱 세부사항** 페이지에서 **서비스 작성**을 클릭하여 추가 서비스를 앱과 연관시킬 수 있습니다.
+스타터 킷을 사용하여 앱을 작성하는 경우에는 필수 서비스가 자동으로 작성됩니다. 앱을 작성하는 즉시 표시되는 **앱 세부사항** 페이지에서 콘솔의 앱에 추가 서비스를 연결할 수 있습니다.
 
-CLI를 사용하여 앱에 서비스를 추가하려면 다음 명령을 실행하십시오. 계정에서 이미 사용되고 있는 기존 서비스 중 하나를 선택하거나 서비스를 추가할 수 있습니다. 
+앱이 작성된 후에 서비스를 추가하려면 [{{site.data.keyword.cloud_notm}} 대시보드 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://{DomainName})로 이동하고 앱을 찾은 다음 앱의 이름을 클릭하십시오. **앱 세부사항** 페이지가 표시되면 서비스 인스턴스를 작성하거나 기존 서비스에 연결할 수 있습니다.
+
+또는 CLI를 사용하여 앱에 서비스를 추가하려면 다음 명령을 실행할 수 있습니다. 계정에서 이미 사용되고 있는 기존 서비스 중 하나를 선택하거나 서비스를 추가할 수 있습니다.
 ```
 ibmcloud dev edit
 ```
@@ -83,7 +85,6 @@ CLI를 사용하여 앱을 배치하려면 `ibmcloud dev deploy` 명령을 실�
 이제 반복 배치 및 지속적 딜리버리를 수행할 준비가 되었습니다.
 
 ## 관련 정보
-
 {: #related-getting-started}
 
 시작하고 실행하는 데 도움이 되도록 언어별 [프로그래밍 안내서](https://{DomainName}/docs/home/build){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")가 제공됩니다. {{site.data.keyword.baremetal_short}}에서 서버리스 기능으로 실행하는 경우에 이르기까지 {{site.data.keyword.cloud_notm}} 인프라를 사용하여 앱을 호스팅하는 여러 옵션이 있습니다.

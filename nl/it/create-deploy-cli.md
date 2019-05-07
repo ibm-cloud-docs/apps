@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
 
@@ -41,13 +41,13 @@ La creazione di un'applicazione da zero è utile se, per iniziare, non hai già 
 3. Seleziona **Node** come tipo di linguaggio.
 4. Seleziona **Node.js Web App with Express.js (Web App)** come kit starter da utilizzare.
 5. Immetti un nome per la tua applicazione e seleziona il gruppo di risorse che vuoi utilizzare (se necessario). Non aggiungere servizi, per ora.
-6. Seleziona l'opzione **IBM DevOps, using Cloud Foundry** per creare una toolchain DevOps. Potrebbe essere necessario impostare le chiavi SSH per completare questo passo.
+6. Seleziona l'opzione **IBM DevOps, deploy to Cloud Foundry buildpacks** per creare una toolchain DevOps. Potrebbe essere necessario impostare le chiavi SSH per completare questo passo.
   Se imposti una passphrase per la tua chiave SSH, ti viene richiesto di immettere questo codice.
   {: note}
-7. Immetti un nome host univoco, ad esempio `abc-devhost`. Questo nome host è la rotta della tua applicazione, ad esempio, `abc-devhost.mybluemix.net`.
-
-Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
+7. Attieniti alle istruzioni rimanenti per:
+  * Selezionare una regione per la tua toolchain.
+  * Immettere un nome per il nome toolchain DevOps.
+  * Immettere un nome per il nome host.
 
 La creazione dell'applicazione e della toolchain richiede alcuni secondi.
 

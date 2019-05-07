@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Panoramica delle credenziali
+# Aggiunta di credenziali del servizio al tuo ambiente di distribuzione
 {: #credentials_overview}
 
 Acquisisci informazioni su come aggiungere manualmente delle credenziali di servizio al tuo ambiente di distribuzione.
@@ -29,9 +29,10 @@ Acquisisci informazioni su come aggiungere manualmente delle credenziali di serv
 In generale, vuoi che la tua logica dell'applicazione acquisisca le credenziali di servizio sensibili, quali le password o le chiavi API del database, dall'ambiente in cui la tua applicazione viene eseguita. In questo modo, non conservi le credenziali nel tuo repository del codice sorgente. I database nei tuoi ambienti di integrazione, pre-produzione e produzione continue sono isolati l'uno dall'altro.
 
 Se crei un'applicazione utilizzando un modello di kit starter, l'ambiente viene preparato per tuo conto automaticamente. Non importa se la tua destinazione di distribuzione è:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Ambiente Cloud Foundry pubblico o Cloud Foundry Enterprise](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [VSI (Virtual Server Instance) (anche docker locale)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry pubblico o Cloud Foundry Enterprise Environment 
+  * VSI (Virtual Server Instance) (anche docker locale) 
   
 Viene fornita la procedura per come configurare l'ambiente. I kit starter generano del codice che utilizza una libreria dipendente per rendere il codice portatile per l'esecuzione su qualsiasi destinazione della distribuzione. Infine, non viene utilizzata alcuna logica di ramo per rilevare in quale destinazione di distribuzione è in esecuzione l'applicazione.
 

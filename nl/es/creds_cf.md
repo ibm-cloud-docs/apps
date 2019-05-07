@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Adición de credenciales al entorno de Cloud Foundry
+# Adición de credenciales de servicio al entorno de Cloud Foundry
 {: #add-credentials-cf}
 
 Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry. Estas instrucciones se aplican tanto a [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) como a [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).

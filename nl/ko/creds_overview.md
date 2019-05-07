@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# 인증 정보 개요
+# 배치 환경에 서비스 인증 정보 추가
 {: #credentials_overview}
 
 배치 환경에 서비스 인증 정보를 수동으로 추가하는 방법에 대해 알아봅니다.
@@ -29,9 +29,10 @@ subcollection: creating-apps
 일반적으로, 사용자는 애플리케이션이 실행되는 환경에서 애플리케이션 로직이 민감한 서비스 인증 정보(예: 데이터베이스 API 키 또는 비밀번호)를 가져오기를 원합니다. 이러한 방식으로, 사용자는 소스 코드 저장소에 인증 정보를 보관하지 않습니다. 지속적 통합, 사전 프로덕션 및 프로덕션 환경의 데이터베이스는 서로 간에 격리되어 있습니다.
 
 스타터 킷 템플리트를 사용하여 앱을 작성하는 경우에는 환경이 자동으로 준비됩니다. 배치 대상이 아래와 같은지 여부는 문제가 되지 않습니다.
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry 퍼블릭 또는 Cloud Foundry 엔터프라이즈 환경](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [가상 서버 인스턴스(또한 로컬 Docker)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry 퍼블릭 또는 Cloud Foundry 엔터프라이즈 환경
+  * Virtual Server 인스턴스(또한 로컬 Docker)
   
 환경 구성 방법에 대한 단계가 제공됩니다. 스타터 킷은 배치 대상에서 실행될 수 있는 이식 가능한 코드의 작성을 위해 종속자 라이브러리를 사용하는 코드를 생성합니다. 마지막으로, 분기 로직은 애플리케이션이 실행되는 배치 대상을 찾는 데 사용되지 않습니다.
 

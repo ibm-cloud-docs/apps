@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-23"
 
-keywords: getting started apps, create app tutorial, add resources, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 É possível construir aplicativos móveis e da web prontos para a empresa no {{site.data.keyword.cloud}} e aproveitar as extensões de nuvem que são hospedadas pelo {{site.data.keyword.cloud_notm}}. Você tem várias opções para iniciar. Crie um app com um kit do iniciador que gerencia o processo para você ou, se você souber o que deseja, comece do zero e construa o seu app com os recursos necessários ou use o seu repositório existente e traga o seu próprio código.
 {: shortdesc}
 
-Se você tiver [código existente](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc#tutorial-byoc) que deseje modernizar e trazer para a nuvem ou estiver desenvolvendo um [aplicativo novo](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), será possível acessar o ecossistema em rápido crescimento dos serviços disponíveis e estruturas de tempo de execução no {{site.data.keyword.cloud_notm}}.
+Se você tiver [código existente](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) que deseje modernizar e trazer para a nuvem ou estiver desenvolvendo um [aplicativo novo](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), será possível acessar o ecossistema em rápido crescimento dos serviços disponíveis e estruturas de tempo de execução no {{site.data.keyword.cloud_notm}}.
 
 Você precisa de ajuda com a decisão de onde começar? Veja este diagrama para ter ideias.
 
@@ -50,9 +50,13 @@ app e a imagem do Docker devem estar localizados no mesmo repositório.
 ## Etapa 2. Incluir serviços
 {: #resources-getting-started}
 
-Quando você usa um kit do iniciador para criar seu app, seus serviços são criados automaticamente para você. É possível associar mais serviços a seu app clicando em **Criar serviço** na página **Detalhes do app** no console.
+Ao usar um kit do iniciador para criar seu app, os serviços obrigatórios são criados automaticamente para você. É possível conectar mais serviços ao seu app no console na página **Detalhes do app**, que é exibida assim que você cria o app.
 
-Execute o comando a seguir para incluir um serviço em seu app usando a CLI. É possível selecionar um serviço existente de um já ativado na conta ou incluir um novo serviço. 
+Se você desejar incluir serviços após seu app ser criado, acesse o painel do [{{site.data.keyword.cloud_notm}} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}), localize seu app e, então, clique no nome do seu app. A página
+**Detalhes do app** é exibida e é possível criar uma instância de serviço ou
+conectar serviços existentes.
+
+Ou é possível executar o comando a seguir para incluir um serviço em seu app usando a CLI. É possível selecionar um serviço existente de um já ativado na conta ou incluir um novo serviço.
 ```
 ibmcloud dev edit
 ```

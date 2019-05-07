@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -134,7 +134,6 @@ como [acessar os logs do Kubernetes](/docs/apps?topic=creating-apps-managingapps
 ambiente Spring Framework. Para obter mais informações, consulte
 [Acessando as credenciais](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Inclua novas credenciais no ambiente do Kubernetes:
+* Inclua novas credenciais de serviço em seu ambiente do Kubernetes:
 	- Ao incluir outro serviço no aplicativo depois que a cadeia de ferramentas do DevOps é criada, essas
-credenciais de serviço não serão automaticamente atualizadas para o aplicativo implementado e o repositório GitLab. Deve-se [incluir manualmente as credenciais](/docs/apps?topic=creating-apps-add-credentials-kube) no ambiente de
-implementação.
+credenciais de serviço não serão automaticamente atualizadas para o aplicativo implementado e o repositório GitLab. Deve-se [incluir manualmente as credenciais no ambiente de implementação](/docs/apps?topic=creating-apps-credentials_overview).
