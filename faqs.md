@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-04-30"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,16 @@ subcollection: creating-apps
 
 # FAQs
 {: #apps-faq}
+
+## What happened to mybluemix.net?
+{: #domain-change-faq}
+{: faq}
+
+Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Existing apps with that domain still work. However, new apps are hosted in the `appdomain.cloud` domain.
+
+The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
+
+For more information, see [Managing your domains](/docs/apps?topic=creating-apps-update-domain).
 
 ## Where can I find a list of my apps?
 {: #cf-app}
@@ -53,3 +63,11 @@ To delete an app that you created, complete these steps:
 {: faq}
 
 A toolchain is a set of tool integrations that support development, deployment, and operations tasks. You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. A toolchain can be configured so that changes to the toolchain automatically build and deploy the app. For more information about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## How do I change the domain for my Cloud Foundry apps?
+{: #cf-domains-faq}
+{: faq}
+
+For Cloud Foundry apps, you can change your domain from `mybluemix.net` to `appdomain.cloud` by using either the {{site.data.keyword.cloud_notm}} console or the command-line interface. For more information about changing your domain to `appdomain.cloud`, see [Updating your domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+
+When you create new apps, the default shared domain is `mybluemix.net`, but `appdomain.cloud` is another domain option that you can use.

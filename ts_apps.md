@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,27 @@ subcollection: creating-apps
 General problems with creating apps might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
+## My apps are hosted in different domains
+{: #domains-ts}
+{: troubleshoot}
+
+Some of my apps are hosted in the `mybluemix.net` domain, but others are hosted in the `appdomain.cloud` domain.
+
+My existing apps are hosted in the `mybluemix.net` domain, but my newer apps are hosted in the `appdomain.cloud` domain.
+{: tsSymptoms}
+
+Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Existing apps with that domain still work. However, new apps are hosted in the `appdomain.cloud` domain.
+{: tsCauses}
+
+The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
+
+For more information, see [Managing your domains](/docs/apps?topic=creating-apps-update-domain).
+
 ## You have unsaved changes
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-When you click items on the app details page, you might be unable to take any actions. You also might be prompted to save changes before you can continue.
+When you click items on the app details page, you might not be able to perform any actions. You also might be prompted to save changes before you can continue.
 
 When you try to check your app or services on the app details page, the following error message is displayed:
 {: tsSymptoms}
@@ -40,7 +56,7 @@ When you try to check your app or services on the app details page, the followin
 When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** fields on the runtime pane, the values change. This behavior is by design. However, you're prompted to save the memory or instance settings before you go to another page.
 {: tsCauses}
 
-Close the message dialog, and click **RESET** in your runtime pane.
+Close the message window, and click **RESET** in your runtime pane.
 {: tsResolve}
 
 ## Automatic failover between {{site.data.keyword.cloud_notm}} regions isn't available
@@ -58,7 +74,7 @@ When an {{site.data.keyword.cloud_notm}} region becomes unavailable, the apps th
 You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.cloud_notm}} regions. DNS providers with this feature include NSONE, Akamai, and Dyn.
 {: tsResolve}
 
-When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.cloud_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.cloud_notm}} region, use the `nslookup` command. For example, you can type the following command in a command line window.
+When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.cloud_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.cloud_notm}} region, use the `nslookup` command. For example, you can type the following command in a command-line window.
 ```
 nslookup cloud.ibm.com
 ```
@@ -299,7 +315,7 @@ When you try to start Docker, the following error message is displayed:
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -321,5 +337,3 @@ Incorrect Docker Hub credentials are being used to authenticate.
 
 Log out of Docker Hub in the Docker client.
 {: tsResolve}
-
-
