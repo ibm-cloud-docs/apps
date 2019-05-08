@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -35,8 +35,9 @@ Some of my apps are hosted in the `mybluemix.net` domain, but others are hosted 
 My existing apps are hosted in the `mybluemix.net` domain, but my newer apps are hosted in the `appdomain.cloud` domain.
 {: tsSymptoms}
 
-Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Existing apps with that domain still work. However, new apps are hosted in the `appdomain.cloud` domain.
-{: tsCauses}
+A new host name option `*.appdomain.cloud` is available on cloud.ibm.com.
+
+Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that you have hosted on `mybluemix.net` are not impacted.
 
 The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
 
