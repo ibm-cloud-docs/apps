@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-25"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -16,18 +16,20 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Starter-Kits
+# Was sind Starterkits?
 {: #starter-kits}
 
-Starter-Kits eignen sich hervorragend für die dynamische Zusammenstellung eines Gerüsts für eine Produktionsanwendung in der Sprache Ihrer Wahl, das in der Cloud bereitgestellt werden kann. Jedes Starter-Kit umfasst eine Sprache, ein Framework und ein Muster für einen bestimmten Anwendungsfall. Der Code muss nicht neu entwickelt werden, sondern kann wiederverwendet werden.
+Ein Starter-Kit ist ein einsatzbereites Muster, das in ein Servicepaket integriert werden kann, um ein einsatzbereites Asset zu generieren, das direkt in einer DevOps-Pipeline und einem Kubernetes-Cluster bereitgestellt werden kann.
 {:shortdesc}
 
-Wenn für ein Starter-Kit bestimmte Services erforderlich sind, ist kein Problem aufgetreten. Bei automatisch bereitgestellten Services erstellt {{site.data.keyword.cloud_notm}} automatisch Instanzen für diese Services, wenn Sie Ihre App erstellen. Auf die Starter-Kits können Sie über das {{site.data.keyword.cloud_notm}}-Dashboard oder die Befehlszeilenschnittstelle zugreifen.
+## Was können Sie mit einem Starter Kit machen?
+{: #starter-overview}
 
-## Was ist ein Starter-Kit?
-{: #starter_kits}
+Starter-Kits eignen sich hervorragend für die dynamische Zusammenstellung eines Gerüsts für eine Produktionsanwendung in der Sprache Ihrer Wahl, das in der Cloud bereitgestellt werden kann. 
 
-Ein Starter-Kit ist ein einsatzbereites Muster, das in ein Servicepaket integriert werden kann, um ein einsatzbereites Asset zu generieren, das direkt in einer DevOps-Pipeline und einem Kubernetes-Cluster bereitgestellt werden kann. Ein Starter-Kit enthält beschreibende Metadaten, die dem Benutzer genügend Informationen über den Aufbau und die Funktionalität des Kits liefern. Es enthält außerdem Anweisungen, was mit {{site.data.keyword.cloud_notm}} erzeugt werden soll. Die Ausgabe ist ohne Vorbereitungs- oder Anpassungsaufwand einsatzbereit und kann für weitere Erweiterungen auf der Basis von {{site.data.keyword.cloud_notm}} Best Practices iteriert werden. Der Inhalt eines Starter-Kits ist weniger komplex als eine Demonstration, jedoch nicht so einfach strukturiert wie ein Snippet oder ein Beispiel. Sie werden abhängig von den Anforderungen des Entwicklers dynamisch erstellt.
+Ein Starter-Kit enthält beschreibende Metadaten, die dem Benutzer genügend Informationen über den Aufbau und die Funktionalität des Kits liefern. Es enthält außerdem Anweisungen, was mit {{site.data.keyword.cloud_notm}} erzeugt werden soll. Die Ausgabe ist ohne Vorbereitungs- oder Anpassungsaufwand einsatzbereit und kann für weitere Erweiterungen auf der Basis von {{site.data.keyword.cloud_notm}} Best Practices iteriert werden. Der Inhalt eines Starter-Kits ist weniger komplex als eine Demonstration, jedoch nicht so einfach strukturiert wie ein Snippet oder ein Beispiel. Apps werden basierend auf den Anforderungen des Entwicklers dynamisch erstellt.
+
+Jedes Starter-Kit umfasst eine Sprache, ein Framework und ein Muster für einen bestimmten Anwendungsfall. Der Code muss nicht neu entwickelt werden, sondern kann wiederverwendet werden. Wenn für ein Starter-Kit bestimmte Services erforderlich sind, ist kein Problem aufgetreten. Bei automatisch bereitgestellten Services erstellt {{site.data.keyword.cloud_notm}} automatisch Instanzen für diese Services, wenn Sie Ihre App erstellen. Auf die Starter-Kits können Sie über das {{site.data.keyword.cloud_notm}}-Dashboard oder die Befehlszeilenschnittstelle zugreifen.
 
 Lesen Sie die Anweisungen zum [Erstellen einer App mit einem Starter-Kit](/docs/apps?topic=creating-apps-tutorial-starterkit).
 

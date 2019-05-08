@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-14"
+lastupdated: "2019-04-23"
 
-keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain, development stages, development phases
 
 subcollection: creating-apps
 
@@ -33,11 +33,11 @@ Werfen wir einen genaueren Blick auf die beste Möglichkeit, {{site.data.keyword
 ## Einstieg
 {: #get_started}
 
-Entwickeln Sie Ihre App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen zu erstellen und um eine sprachspezifische, laufzeitunabhängige App zu erstellen, die als Grundlage für Ihre Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase im Entwicklerdashboard auf **In Cloud bereitstellen**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
+Entwickeln Sie Ihre App in den {{site.data.keyword.cloud_notm}}-Entwicklerdashboards, in denen Sie ein Starter-Kit für Ihren Anwendungsfall und eine Programmiersprache auswählen können. {{site.data.keyword.cloud_notm}} verwendet Anweisungen aus dem Starter-Kit, um automatisch die erforderlichen Ressourcen zu erstellen und um eine sprachspezifische, laufzeitunabhängige App zu erstellen, die als Grundlage für Ihre Produktions-App dient. Klicken Sie zum Abschluss der Einstiegsphase unter **App-Details** auf **Continuous Delivery konfigurieren**. Mit einem Klick wird eine vollständige DevOps-Toolchain mit einem Code-Repository, das mit Ihrem App-Quellcode gefüllt ist, und einer Bereitstellungspipeline erstellt.
 
 ![Einstieg](images/dev_get_started.png "Einstieg") Abbildung 2. Einstieg
 
-Wenn Sie die Schaltfläche **In Cloud bereitstellen** verwenden, um Ihre DevOps-Toolchain einzurichten, wählen Sie Ihre Laufzeitplattform aus, z. B. Kubernetes oder Cloud Foundry. Die aus {{site.data.keyword.cloud_notm}} erzeugte Starter-Kit-App ist laufzeitunabhängig und muss nicht modifiziert werden.
+Wenn Sie die Schaltfläche **Continuous Delivery konfigurieren** verwenden, um Ihre DevOps-Toolchain einzurichten, wählen Sie Ihre Laufzeitplattform aus, z. B. Kubernetes oder Cloud Foundry. Die aus {{site.data.keyword.cloud_notm}} erzeugte Starter-Kit-App ist laufzeitunabhängig und muss nicht modifiziert werden.
 {: tip}
 
 ## Lokal entwickeln
@@ -47,7 +47,7 @@ Nachdem Sie Ihre Starter-Kit-App und Ihre Toolchain erstellt haben, starten Sie 
 
 ![Lokal entwickeln](images/dev_code_locally.png "Lokal entwickeln") Abbildung 3. Lokal entwickeln
 
-Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `ibmcloud dev build` und `ibmcloud dev run`, doch die Befehlszeilenschnittstelle (CLI) hat noch sehr viel mehr zu bieten. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html).
+Die grundlegenden Funktionen für {{site.data.keyword.dev_cli_notm}} sind `ibmcloud dev build` und `ibmcloud dev run`, doch die Befehlszeilenschnittstelle (CLI) hat noch sehr viel mehr zu bieten. Weitere Details finden Sie unter [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 {: tip}
 
 ## In {{site.data.keyword.cloud_notm}} bereitstellen und verwalten
@@ -62,7 +62,7 @@ Die Toolchain, die in Ihrer Einstiegsphase erzeugt wird, verfügt über die grun
 
 ![Bereitstellen und verwalten](images/dev_deliver_and_manage.png "Bereitstellen und verwalten") Abbildung 4. Bereitstellen und verwalten
 
-Weitere Informationen zur [kontinuierlichen Entwicklung unter {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery/index.html#cd_getting_started).
+Weitere Informationen zur [kontinuierlichen Entwicklung unter {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
 ## Alles zusammenführen
 

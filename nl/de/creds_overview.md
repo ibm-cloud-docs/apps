@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Übersicht über Berechtigungsnachweise
+# Serviceberechtigungsnachweise Ihrer Bereitstellungsumgebung hinzufügen
 {: #credentials_overview}
 
 Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Bereitstellungsumgebung manuell hinzufügen.
@@ -29,9 +29,10 @@ Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Bereitstellungsum
 Im Allgemeinen möchten Sie, dass Ihre Anwendungslogik sensible Serviceberechtigungsnachweise (z. B. Datenbank-API-Schlüssel oder Kennwörter) aus der Umgebung, in der Ihre Anwendung ausgeführt wird, übernimmt. Auf diese Weise haben Sie keine Berechtigungsnachweise in Ihrem Quellcode-Repository. Die Datenbanken in Ihren Umgebungen für kontinuierliche Integration, Vorproduktion und Produktion sind voneinander getrennt.
 
 Wenn Sie eine App erstellen, indem Sie eine Starter-Kit-Vorlage verwenden, wird die Umgebung automatisch für Sie vorbereitet. Unabhängig davon, welches Ihr Bereitstellungsziel ist:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public oder Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Virtual Server-Instanz (auch lokale Docker-Instanz)](/docs/apps?topic=creating-apps-add-credentials-vsi)
+<!-- Add links to the new topics in the /docs/resources repo when available-->
+  * Kubernetes
+  * Cloud Foundry Public oder Cloud Foundry Enterprise Environment
+  * Virtuelle Serverinstanz (auch lokale Docker-Instanz)
   
 Die Schritte für die Konfiguration der Umgebung werden bereitgestellt. Starter-Kits generieren Code, der eine abhängige Bibliothek verwendet, um den Code portierbar zu machen, damit er auf jedem der Bereitstellungsziele ausgeführt werden kann. Schließlich wird keine Verzweigungslogik verwendet, um festzustellen, in welchem Bereitstellungsziel die Anwendung ausgeführt wird.
 

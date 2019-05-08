@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -80,16 +80,10 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat für Ihre Cloud Foundr
   * Zertifikat: Ein digitales Dokument, das einen öffentlichen Schlüssel an die Identität des Zertifikatsinhabers bindet, sodass der Zertifikatsinhaber authentifiziert werden kann. Ein Zertifikat wird von einer Zertifizierungsstelle ausgegeben und von dieser Zertifizierungsstelle digital signiert. Ein Zertifikat wird in der Regel ausgegeben und von einer Zertifizierungsstelle signiert. Für Test- und Entwicklungszwecke können Sie ein selbst signiertes Zertifikat verwenden.
   * Privater Schlüssel: Ein algorithmisches Muster, das verwendet wird, um Nachrichten zu verschlüsseln, die nur der zugehörige öffentliche Schlüssel entschlüsseln kann. Mit dem privaten Schlüssel werden auch Nachrichten entschlüsselt, die vom entsprechenden öffentlichen Schlüssel verschlüsselt wurden. Der private Schlüssel wird im System des Benutzers gespeichert und durch ein Kennwort geschützt.
   * Zwischenzertifikat (optional): Ein untergeordnetes Zertifikat, das von der Zertifizierungsstelle für Trusted Roots speziell dafür ausgegeben wird, Serverzertifikate für End-Entitäten auszugeben. Im Ergebnis erhält man eine Zertifikatskette, die mit der Zertifizierungsstelle für Trusted Roots beginnt und über das Zwischenzertifikat zum SSL-Zertifikat gelangt, das für die Organisation ausgegeben wird. Verwenden Sie ein Zwischenzertifikat, um die Authentizität des Hauptzertifikats zu prüfen. Zwischenzertifikate werden normalerweise von einem vertrauenswürdigen Dritten angefordert. Möglicherweise benötigen Sie kein Zwischenzertifikat, wenn Sie Ihre Anwendung vor der Bereitstellung für die Produktion testen.
-  * Anforderung eines Clientzertifikats aktivieren: Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen. 
-
-    Die Funktion für angepasste Zertifikate in der {{site.data.keyword.cloud_notm}}-Domänenverwaltung hängt von der SNI-Erweiterung (Server Name Indication) des TLS-Protokolls (Transport Layer Security) ab. Der Client-Code, der auf {{site.data.keyword.cloud_notm}}-Anwendungen zugreift, die durch angepasste Zertifikate geschützt sind, muss die SNI-Erweiterung in der TLS-Implementierung unterstützen. Weitere Informationen finden Sie in [Abschnitt 7.4.2 von RFC 4346 ](http://tools.ietf.org/html/rfc4346#section-7.4.2){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") sowie unter [Daten mit TLS schützen](/docs/get-support?topic=get-support-tlssupportwithdraw#tlssupportwithdraw).
-    {: note}
-  
+  * Anforderung eines Clientzertifikats aktivieren: Wenn Sie diese Option aktivieren, wird ein Benutzer bei dem Versuch, auf eine durch SSL geschützte Domäne zuzugreifen, aufgefordert, ein clientseitiges Zertifikat anzugeben. Beispiel: Wenn in einem Web-Browser ein Benutzer versucht, auf eine SSL-geschützte Domäne zuzugreifen, wird der Benutzer im Web-Browser dazu aufgefordert, für die Domäne ein Clientzertifikat bereitzustellen.   
   * Truststore für Clientzertifikate (optional): Dieser enthält die Clientzertifikate für die Benutzer, denen Sie Zugriff auf Ihre Anwendung erteilen möchten. Laden Sie eine Truststore-Datei für Clientzertifikate hoch, um die Option zum Anfordern eines Clientzertifikats zu aktivieren.
   
     Sie können die gegenseitige Authentifizierung konfigurieren, indem Sie einen Truststore mit Clientzertifikaten hochladen, der in den zugehörigen Metadaten einen öffentlichen Schlüssel enthält.
     {: tip}
 
 Weitere Informationen finden Sie in [SSL-Zertifikate importieren](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
-
-

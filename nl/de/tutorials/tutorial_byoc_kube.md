@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-04-25"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -50,7 +50,7 @@ genutzt werden.
 
 Dieser Prozess stellt eine Serviceinstanz bereit, erstellt einen Ressourcenschlüssel (Berechtigungsnachweise) und stellt die Bindung an Ihre App her. Weitere Informationen finden Sie unter [Service Ihrer App hinzufügen](/docs/apps?topic=creating-apps-add-resource).
 
-Nachdem Sie Ihrer App einen Service hinzugefügt haben, müssen Sie die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren. Weitere Informationen hierzu enthält [Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen](/docs/apps?topic=creating-apps-add-credentials-kube).
+Nachdem Sie Ihrer App einen Service hinzugefügt haben, müssen Sie [die Berechtigungsnachweise für den Service in Ihre Bereitstellungsumgebung kopieren](/docs/apps?topic=creating-apps-credentials_overview).
 
 ## App für die Bereitstellung vorbereiten
 {: #deploy-byoc-kube}

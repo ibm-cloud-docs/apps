@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-22"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # Apps in einem virtuellen Server bereitstellen
 {: #vsi-deploy}
 
-Wenn Sie über ein nutzungsabhängiges Konto verfügen, können Sie den {{site.data.keyword.cloud}} [App-Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verwenden, um Ihre Apps in zahlreichen Umgebungstypen, einschließlich virtueller Serverinstanzen, bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Implementierungsoption, wenn lokale Workloads in die Cloud verschoben werden.
+Wenn Sie über ein nutzungsabhängiges Konto verfügen, können Sie den {{site.data.keyword.cloud}} [App-Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verwenden, um Ihre Apps in zahlreichen Umgebungstypen, einschließlich virtueller Serverinstanzen, bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Bereitstellungsoption, wenn lokale Workloads in die Cloud verschoben werden.
 {: shortdesc}
 
 Eine virtuelle Serverinstanz bietet im Vergleich zu anderen Konfigurationen mehr Transparenz, Vorhersagbarkeit und Automatisierungsmöglichkeiten für alle Workloadtypen. Kombinieren Sie die virtuelle Instanz mit einer Bare-Metal-Server-Instanz, um eindeutige Workloadkombinationen zu bilden. Sie können z. B. eine leistungsfähige Datenbanklogik oder effizientes maschinelles Lernen mit Bare-Metal- und GPU-Konfigurationen (GPU = Graphics Processing Unit, Grafik-Verarbeitungseinheit) erstellen, die unter einem auf Linux basierenden Debian-Betriebssystem ausgeführt werden.
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Sie können auch Bare-Metal-Server-Instanzen mit Terraform bereitstellen. Weitere Informationen hierzu finden Sie unter [IBM Terraform-Providerdokumentation](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und [IBM Terraform-Provider-GIT-Repository](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
-Mithilfe der Datei `variables.tf` können Sie das Rechenzentrum ändern, das beim Erstellen der virtuellen Instanz als Ziel dienen soll. Die Liste der für die Plattform definierten Rechenzentren finden Sie unter [Rechenzentren](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+Mithilfe der Datei `variables.tf` können Sie das Rechenzentrum ändern, das beim Erstellen der virtuellen Instanz als Ziel dienen soll. Die Liste der für die Plattform definierten Rechenzentren finden Sie unter [Rechenzentren](https://www.ibm.com/cloud/data-centers/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 Standardmäßig ist die Terraform-Datei für Washington und `wdc04` konfiguriert.
 ```json

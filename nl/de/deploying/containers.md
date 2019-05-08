@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
 
@@ -24,7 +24,7 @@ Als Einstieg in {{site.data.keyword.containershort}} können Sie hoch verfügbar
 
 Bei Containern handelt es sich um eine Standardmethode zum Packen von Apps und allen zugehörigen Abhängigkeiten, die ein nahtloses Verschieben der Apps zwischen Umgebungen ermöglicht. Im Gegensatz zu virtuellen Maschinen wird bei Containern das Betriebssystem nicht in das Paket einbezogen. In Containern werden nur der App-Code, die Laufzeit, die Systemtools, die Bibliotheken und die Einstellungen gepackt. Container sind einfacher, portierbarer und effizienter als virtuelle Maschinen.
 
-[Einführung in {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) enthält weitere Informationen zum Service.
+[Einführung in {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) enthält weitere Informationen zum Service.
 
 ## Bereitstellungen konfigurieren
 {: #config-deploy}
@@ -62,7 +62,7 @@ Die Toolchain enthält die Build-Stage und die Bereitstellungsstage.
 {: #build-stage}
 Die Build-Stage wird ausgelöst, wenn der Befehl `git push` für das Git-Repository ausgeführt wird. Die Stage in der Pipeline löst den Build eines Docker-Image aus und stellt das Image in die Container-Registry.
 
-Weitere Informationen finden Sie in [Einführung in IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
+Weitere Informationen finden Sie in [Einführung in IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
 
 ### Bereitstellungsstage
 {: #deploy-stage}

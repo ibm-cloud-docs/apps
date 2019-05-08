@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-23"
 
 keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
 
@@ -35,14 +35,14 @@ Sie finden Starter-Kits für das Web-App-Muster im [{{site.data.keyword.cloud_no
 ## Back-End for Front-End (BFF)
 {: #bff}
 
-Ein Back-End-for-Front-End-Muster (BFF) vereinfacht das Erstellen von Back-End-Code, der Geschäftsdaten und -Services auf eine Weise verfügbar macht, die den Benutzererwartungen für einen bestimmten App-Kanal entspricht, z. B. mobil oder im Web. Benutzer eines mobilen Geräts verwenden möglicherweise die Sprachsteuerung, während Benutzer eines Web-Browsers eher mit der Maus arbeiten. Sie können zwei Back-End-for-Front-End-Muster erstellen, eines für Mobilgeräte, das Services wie [{{site.data.keyword.conversationfull}}](https://www.ibm.com/watson/ai-assistant/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") umfasst, und eines für Webanwendungen, das eine ausgereiftere Benutzerschnittstelle aufweist.
+Ein Back-End-for-Front-End-Muster (BFF) vereinfacht das Erstellen von Back-End-Code, der Geschäftsdaten und -Services auf eine Weise verfügbar macht, die den Benutzererwartungen für einen bestimmten App-Kanal entspricht, z. B. mobil oder im Web. Benutzer eines mobilen Geräts verwenden möglicherweise die Sprachsteuerung, während Benutzer eines Web-Browsers eher mit der Maus arbeiten. Sie können zwei Back-End-for-Front-End-Muster erstellen, eines für Mobilgeräte, das Services wie [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") umfasst, und eines für Webanwendungen, das eine ausgereiftere Benutzerschnittstelle aufweist.
 
 In {{site.data.keyword.cloud_notm}} können Sie ein Back-End-for-Front-End-Muster mit einem mehrsprachigen Programmieransatz erstellen. Sie können Node.js, Swift, Java oder Python verwenden und sie mit Container-Services oder mithilfe serverloser Funktionen in einem Muster ausführen.
 
 BFF verwaltet Datenpersistenz, Caching und Integration mit den folgenden hochwertigen Services.
 
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=watson){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=iot){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
 * [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
 * [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
 
@@ -75,6 +75,6 @@ Die Starter-Kits in {{site.data.keyword.cloud_notm}} sind in verschiedenen Sprac
 |Swift | [Swift](/docs/runtimes/swift?topic=Swift-getting-started) ist eine moderne Programmiersprache, die 2014 entwickelt wurde und Objective C sowie Open-Source-Sprachen im Dezember 2015 ersetzen sollte. Heute wird sie zum Entwickeln von iOS, macOS, Web-Services und Systemsoftware unter Linux- und macOS-Betriebssystemen eingesetzt, die x86, ARM oder z/Architecture verwenden. Sie wird wie eine Scripting-Sprache geschrieben, wird jedoch kompiliert, um eine ähnlich hohe Leistung wie C mit geringer Prozessorauslastung zu erzielen. Sie ist sehr gut für Cloud-Laufzeiten geeignet. Sie verwendet ein starkes und statisches Typsystem, das Sie von Java kennen, aber gleichzeitig den funktionalen Stil und die asynchronen Routinen aus JavaScript. Sie ist in höchst leistungsfähig und die Quelle wird in nativen Code kompiliert, der die LLVM-Compiler-Toolchain verwendet. Sie kann Systembibliotheken anderer Sprachen, die in C geschrieben sind, problemlos nutzen. Da Swift zum Codieren von clientseitigen und serverseitigen Apps verwendet werden kann, setzen Entwickler diese Sprache ein, wenn sie ohne großen Aufwand Funktionen vom Client zum Server und umgekehrt migrieren müssen. | Kitura, iOS|
 |Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) ist eine JavaScript-Laufzeit, die ein ereignisgesteuertes, nicht blockierendes Ein-/Ausgabe-Modell verwendet, wodurch sie schlank und effizient bleibt. Sie bietet einen hervorragenden Durchsatz sowie eine hervorragende Skalierbarkeit für Web-Anwendungen, Back-End-for-Front-End-Muster und Mikroservices. Das Node.js-Registry, npm, bietet Zugriff auf eine umfassende Sammlung von Open-Source-Modulen. Es stellt eine breite Palette von Features für eine schnellere Anwendungsentwicklung bereit. | Express|
 |JavaScript|JavaScript erzeugt interaktive Effekte in Webseiten. JavaScript bildet zusammen mit HTML und CSS die Grundlage der meisten Webseiten. Eingeschlossen in ein Cordova-Plug-in kann JavaScript-Code native Gerätefunktionen optimal nutzen. Entwickler mit Web-Know-how können mobile Apps ohne großen Aufwand erstellen und App-Code kann bei Bedarf für Webabwendungen und mobile Anwendungen wiederverwendet werden.|Cordova|
-|Python | [Python](/docs/runtimes/python?topic=Python-getting-started) ist eine vielseitig einsetzbare, interpretierte Programmiersprache, die besonderen Wert auf Lesbarkeit legt. In Python können Programmierer Funktionen mit weniger Codezeilen implementieren als dies in anderen Sprachen möglich wäre. Bestimmte Features der Sprache machen es möglich, objektorientierten, funktionalen oder imperativen Code zu schreiben. Python wird gängigerweise zum Verarbeiten von natürlichen Sprachtasks eingesetzt. | Flask, Django|
+|Python | [Python](/docs/runtimes/python?topic=Python-getting_started) ist eine vielseitig einsetzbare, interpretierte Programmiersprache, die besonderen Wert auf Lesbarkeit legt. In Python können Programmierer Funktionen mit weniger Codezeilen implementieren als dies in anderen Sprachen möglich wäre. Bestimmte Features der Sprache machen es möglich, objektorientierten, funktionalen oder imperativen Code zu schreiben. Python wird gängigerweise zum Verarbeiten von natürlichen Sprachtasks eingesetzt. | Flask, Django|
 
 

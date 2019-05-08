@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-04-22"
 
 keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen
+# Serviceberechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen
 {: #add-credentials-kube}
 
 Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Kubernetes-Bereitstellungsumgebung hinzufügen.
@@ -176,16 +176,12 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
 
 Verwenden Sie die Funktion **Continuous Delivery konfigurieren**, um Ihre App in Ihrem IBM Kubernetes-Cluster bereitzustellen. Die Funktion bereitet Ihren Kubernetes-Cluster mit geheimen Schlüsseln für die Berechtigungsnachweise der Ressourcen vor, die Ihrer App zugeordnet sind. Sie können die Ergebnisse der Clustervorbereitung anzeigen, indem Sie die folgenden Schritte ausführen:
 
-1. Führen Sie den folgenden Befehl aus, um die Ergebnisse anzuzeigen: `kubectl get secrets`:
+1. Führen Sie den folgenden Befehl aus, um die Ergebnisse anzuzeigen:
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   Sie können [weitere Informationen zu geheimen Schlüsseln](https://kubernetes.io/docs/concepts/configuration/secret/) anzeigen.
   {: tip}

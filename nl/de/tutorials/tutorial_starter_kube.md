@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-25"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -113,5 +113,5 @@ Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`
 * Greifen Sie auf die Servicekonfiguration in Ihrem Code zu:
 	- Sie können die Anmerkung _@Value_ oder die Methode _getProperty()_ der Klasse 'Environment' des Spring-Frameworks verwenden. Weitere Informationen finden Sie unter [Auf Berechtigungsnachweise zugreifen](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Fügen Sie Ihrer Kubernetes-Umgebung neue Berechtigungsnachweise hinzu:
-	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen der Bereitstellungsumgebung [die Berechtigungsnachweise manuell hinzufügen](/docs/apps?topic=creating-apps-add-credentials-kube).
+* Fügen Sie Ihrer Kubernetes-Umgebung neue Serviceberechtigungsnachweise hinzu: 
+	- Wenn Sie Ihrer Anwendung nach der Erstellung der DevOps-Toolchain einen weiteren Service hinzufügen, werden Ihre bereitgestellte Anwendung und Ihr GitLab-Repository nicht automatisch mit dessen Serviceberechtigungsnachweisen aktualisiert. Sie müssen [der Bereitstellungsumgebung die Berechtigungsnachweise manuell hinzufügen](/docs/apps?topic=creating-apps-credentials_overview).
