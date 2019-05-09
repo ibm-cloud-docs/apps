@@ -83,6 +83,6 @@ After you select your deployment target, open the pipeline component of your new
 All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
 {: note}
 
-You can deploy your app from the command line by running the **`ibmcloud dev deploy`** command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+You can deploy your app from the command line by running the **`ibmcloud dev deploy`** command. For more information, see [Creating apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-09"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
