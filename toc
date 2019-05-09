@@ -61,6 +61,8 @@ Creating apps
     {: .topicgroup}
     Integrating apps with DevOps
         toolchains.md
+        insights.md
+        monitor.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ Provisioning a virtual server instance and deploying it can be a complex and tim
 Services don't bind to the virtual server instance. You cannot add services to an application in a virtual server.
 {: important}
 
-## Creating and deploying apps
+## Deploying apps
 {: #create-deploy-vsi}
 
 The App Service provisions a virtual server instance for you, loads an image that includes your app, creates a Devops toolchain, and initiates the first deployment cycle for you.
 
 1. [Create an app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Click **Configure continuous delivery** from the **App details** page.
+2. Click **Configure continuous delivery** from the App details page.
 3. Select **Deploy to a Virtual Server**, along with the region in which to run your server.
 
 ## How the deployment process works
@@ -60,7 +60,7 @@ The pipeline uses a set of user account properties and a fresh SSH key pair to d
 
 To view these environment properties, complete the following steps. 
 
-1. From the App Details page, click **View Toolchain**.
+1. From the App details page, click **View toolchain**.
 2. Click the **Delivery Pipeline** tile.
 3. Click the **Stage Configure** icon, then click **Configure Stage** on the build stage.
 4. Click **Environment Properties** tab to view the properties. Use the following table to learn about the properties that are available.
