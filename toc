@@ -7,10 +7,9 @@ Creating apps
 
     {: .navgroup id="learn"}
     index.md
-    development_process.md
     best-practice.md
     patterns.md
-    starter-kits.md
+    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     Related links
@@ -22,6 +21,7 @@ Creating apps
     {: .topicgroup}
     Creating apps
         tutorials/tutorial_starter-kit.md
+        starter-kits.md
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
@@ -37,7 +37,6 @@ Creating apps
     Deploying apps
         dep-app-tool.md
         vsi-deploy.md
-        deploying/containers.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -65,9 +64,7 @@ Creating apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools command-line reference](/cli/idt/cloud-cli-idt-cli)
-    [Cloud Functions API Reference](https://cloud.ibm.com/apidocs/functions)
-    [Mobile SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
+    [IBM Cloud Developer Tools command-line plug-in](/docs/cli/idt?topic=cloud-cli-idt-cli)
 
     {: .topicgroup}
     IBM Cloud developer dashboards
@@ -92,5 +89,4 @@ Creating apps
     faqs.md
     ts_apps.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
