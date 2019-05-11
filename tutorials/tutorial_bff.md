@@ -52,7 +52,7 @@ You can add services that enhance your app with the cognitive power of Watson, a
 3. Select your pricing plan. There is a free option that you can use for this tutorial.
 4. Click **Create**.
 
-## Step 4. Select a deployment target and configure continuous delivery
+## Step 4. Deploying your app
 {: #toolchain-bff}
 
 When you select a deployment target, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app that is generated is pushed to a GitLab repo that is part of the toolchain.

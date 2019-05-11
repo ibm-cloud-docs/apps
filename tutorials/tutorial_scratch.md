@@ -101,7 +101,7 @@ You can also build the app locally for testing before you deploy it to the cloud
 
 10. Go to `http://localhost:3000` in your browser. Your port number might be different depending on your chosen runtime.
 
-## Select a deployment target and configure continuous delivery
+## Deploying your app
 {: #deploy-scratch}
 
 When you select a deployment target, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app that is generated is pushed to a GitLab repo that is part of the toolchain.
