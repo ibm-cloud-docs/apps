@@ -37,6 +37,10 @@ Creating apps
     Deploying apps
         hosting.md
         dep-app-tool.md
+        tutorials/tutorial_starter_kube.md
+        tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_mendix_kubernetes.md
+        vsi-deploy.md
 
     {: .topicgroup}
     Configuring
