@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-10"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -13,26 +13,32 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Migrating and hosting apps
+# Choosing your hosting environment
 {: #hosting}
 
-If you have an existing app, you can host it on {{site.data.keyword.cloud}} with all the infrastructure or platform services you need. You can also migrate your app to {{site.data.keyword.cloud_notm}} incrementally instead of shifting your app to the cloud environment all at once.
+If you have an existing app, you can host it on {{site.data.keyword.cloud}} with all the infrastructure or platform services you need.
+{:shortdesc}
 
-## Migrating apps
-{: #migrating}
+With {{site.data.keyword.Bluemix_notm}}, you no longer need to make large investments in hardware to test out or run a new app. Instead, we manage it all for you and only charge for what you use. Your cloud server environment is the base of your infrastructure layer. You can choose a single option or a combination for more complex environments. 
 
-If you need your app to access your on-premises data or services, you can use [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg) to establish a secured tunnel between an {{site.data.keyword.cloud_notm}} organization and your enterprise backend network. For details, see [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+You have various options for hosting your apps, giving you as much control over the infrastructure as you want or need. You can run your app in any of the following ways:
 
-If you need help with your migration, [{{site.data.keyword.cloud_notm}} Migration Services](https://www.ibm.com/cloud/migration-services){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available.
+  * As a Docker container on a Kubernetes cluster
+  * As a Cloud Foundry app
+  * As a serverless function
+  * As VMware
+  * As a virtual machine
+  * On high-performance {{site.data.keyword.baremetal_short}} 
 
-## Hosting apps
-{: #ht_hostapp}
+Check out the following table for a summary of your compute options.
 
-In the {{site.data.keyword.cloud_notm}} [catalog](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), you can choose a managed environment like Kubernetes or Cloud Foundry, or can you host your app directly on a bare metal or virtual server.
+| Option | Description | 
+|--------|---------------|
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) | Combines Docker containers, the Kubernetes technology, an intuitive user experience, and built-in security and isolation to automate the deployment, operation, scaling, and monitoring of containerized apps in a cluster of compute hosts. |
+| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) | Instantiate multiple, isolated, enterprise-grade Cloud Foundry platforms on demand. |
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) | A Functions-as-a-Service (FaaS) programming platform based on Apache OpenWhisk. |
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | Quickly and seamlessly integrate or migrate on-premises VMware workloads by using scalable, secure, and high-performance infrastructure and the industry-leading VMware hybrid virtualization technology. |
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | Scalable virtual servers that are purchased with dedicated cores and memory allocations. |
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-bm-getting-started)  | Hourly or monthly, single-tenant servers that are dedicated to you and not shared in any part, including server resources, with other customers. |
+{: caption="Table 1. Compute options" caption-side="top"}
 
-On a virtual deployment, most of your app's operations are managed by {{site.data.keyword.cloud_notm}}. A [virtual](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers) deployment is best if your workload is spread out across geographic regions and you want to use an {{site.data.keyword.cloud_notm}} hypervisor to manage your deployments. A [bare metal](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started) deployment is best if you need direct access to a dedicated physical server for higher performance.
-
-You also have many options for:
-* Selecting the type of [storage](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") that's right for you from block storage, file storage, or Object Storage.
-* Selecting the type of [network](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") you need.
-* Selecting a [containerization](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") service to take advantage of {{site.data.keyword.cloud_notm}} Kubernetes technology.

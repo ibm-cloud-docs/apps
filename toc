@@ -13,8 +13,8 @@ Creating apps
 
     {: .topicgroup}
     Related links
-        [Strategies for resilient applications](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Continuous deployment to Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -31,31 +31,19 @@ Creating apps
         tutorials/tutorial_mobile.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
+        [Looking to use a language?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     Deploying apps
+        hosting.md
         dep-app-tool.md
-        vsi-deploy.md
-        tutorials/tutorial_byoc_kube.md
-        tutorials/tutorial_starter_kube.md
-        tutorials/tutorial_mendix_kubernetes.md
 
     {: .topicgroup}
     Configuring
         reqnsi.md
+        creds_overview.md
         mngdomains.md
         secapps.md
-
-    {: .topicgroup}
-    Adding credentials to your environment
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    {: .topicgroup}
-    Migrating apps
-        hosting.md
 
     {: .topicgroup}
     Integrating apps with DevOps
@@ -87,7 +75,7 @@ Creating apps
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    faqs.md
     ts_apps.md
+    faqs.md
     [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     {: .navgroup-end}
