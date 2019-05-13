@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -140,6 +140,8 @@ Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bere
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+Weitere Informationen zum Bereitstellen Ihrer App finden Sie unter [Apps bereitstellen](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Schritt 7. Ausführung der App verifizieren
 {: #verify-webapp}

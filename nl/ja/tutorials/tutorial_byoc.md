@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-30"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -63,11 +63,11 @@ subcollection: creating-apps
 #### アプリに接続する DevOps ツールチェーンがすでにある場合は、以下の手順を実行します。
 
 1. **「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 **「マイ・アプリのデプロイ (Deploy my app)」**ページが表示されます。
-2. アプリに接続するツールチェーンを選択し、**「デプロイメントの有効化 (Enable deployment)」**をクリックします。**「アプリの詳細」**ページが表示され、継続的デリバリーが構成されたことが示されます。
+2. アプリに接続するツールチェーンを選択し、**「デプロイメントの有効化 (Enable deployment)」**をクリックします。 **「アプリの詳細」**ページが表示され、継続的デリバリーが構成されたことが示されます。
 
 #### このアプリ用の DevOps ツールチェーンがない場合は、以下の手順を実行してください。
 
-1. **「アプリの詳細」**ページで、**「DevOps ツールチェーンの作成 (Create DevOps toolchain)」**をクリックします。**「ツールチェーンの作成」**ページが表示されます。
+1. **「アプリの詳細」**ページで、**「DevOps ツールチェーンの作成 (Create DevOps toolchain)」**をクリックします。 **「ツールチェーンの作成」**ページが表示されます。
 2. [ツールチェーンを作成します](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
 3. ブラウザー・ウィンドウの階層リンクを使用して**「アプリの詳細」**ページに戻ると、継続的デリバリーが構成されたことが表示されています。
 
@@ -84,7 +84,7 @@ subcollection: creating-apps
     ```
    {: codeblock}
 
-詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps?topic=creating-apps-create-deploy-app-cli)を参照してください。
+アプリのデプロイについて詳しくは、[アプリのデプロイ](/docs/apps?topic=creating-apps-deploying-apps)を参照してください。
 
 ## アプリが実行中であることの確認
 {: #verify-byoc-app}

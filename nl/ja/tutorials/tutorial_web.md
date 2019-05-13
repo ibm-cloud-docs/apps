@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # スターター・キットを使用した基本 Web アプリの作成
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} は、素早くコーディングするために役立つ多数のスターター・キットを提供します。 事前構成されたカスタム・アプリケーションの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイするためのステップを実行します。
+{{site.data.keyword.cloud}} は、素早くコーディングするために役立つ多数のスターター・キットを提供します。 事前構成されたカスタム・アプリケーションの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイするためのステップを実行します。
 {: shortdesc}
 
 ## ステップ 1. ツールのインストール
@@ -35,14 +35,10 @@ Docker は開発者ツールの一部としてインストールされます。 
 スターター・キットは、{{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}で多数の言語とフレームワークで使用可能です。 ご使用のプロジェクトを開始するのに最適な言語を選択してください。
 
 1. {{site.data.keyword.dev_console}}の[「スターター・キット」](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページから、ご使用の言語に対応するスターター・キットを選択します。
-2. アプリ名と固有のホスト名 (例えば、`abc-devhost`) を入力します。このホスト名は、アプリの経路 `abc-devhost.mybluemix.net` です。
-3. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
-4. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
-5. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
-6. **「作成」**をクリックします。
-
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。 `appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
-{: tip}
+2. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
+3. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
+4. 価格プランを選択します。 このチュートリアルでは無料オプションを使用できます。
+5. **「作成」**をクリックします。
 
 ## ステップ 3. サービスの追加 (オプション)
 {: #resources-webapp}
@@ -144,6 +140,8 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+アプリのデプロイについて詳しくは、[アプリのデプロイ](/docs/apps?topic=creating-apps-deploying-apps)を参照してください。
 
 ## ステップ 7. アプリが実行中であることの確認
 {: #verify-webapp}

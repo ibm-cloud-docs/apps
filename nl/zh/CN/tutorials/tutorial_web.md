@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -140,6 +140,8 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 步骤 7. 验证应用程序是否正在运行
 {: #verify-webapp}

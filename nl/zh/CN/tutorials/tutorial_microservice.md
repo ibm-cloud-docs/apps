@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -61,7 +61,7 @@ subcollection: creating-apps
 {: note}
 
 1. 在**应用程序详细信息**页面上，单击**配置持续交付**。
-2. 选择部署目标。根据您所选方法的指示信息来设置部署目标：
+2. 选择部署目标。根据您所选目标的指示信息来设置部署目标：
   * **部署到 [IBM Kubernetes Service](/docs/apps/deploying?topic=creating-apps-containers-kube)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
   * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)**或**[企业环境](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
   * **部署到[虚拟服务器](/docs/apps?topic=creating-apps-vsi-deploy)**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
@@ -144,6 +144,8 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 步骤 7. 验证应用程序是否正在运行
 {: #verify-microservice}

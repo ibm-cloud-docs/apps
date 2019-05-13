@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -83,6 +83,8 @@ ibmcloud dev edit
 CLI를 사용하여 앱을 배치하려면 `ibmcloud dev deploy` 명령을 실행하십시오. 자세한 정보는 [CLI를 사용하여 앱 작성 및 배치](/docs/apps?topic=creating-apps-create-deploy-app-cli)를 참조하십시오.
 
 이제 반복 배치 및 지속적 딜리버리를 수행할 준비가 되었습니다.
+
+앱 배치에 관한 자세한 정보는 [앱 배치](/docs/apps?topic=creating-apps-deploying-apps)를 참조하십시오.
 
 ## 관련 정보
 {: #related-getting-started}

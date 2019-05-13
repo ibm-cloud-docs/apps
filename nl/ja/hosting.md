@@ -34,5 +34,5 @@ subcollection: creating-apps
 
 また、以下に対する多くのオプションがあります。
 * ブロック・ストレージ、ファイル・ストレージ、またはオブジェクト・ストレージから、適切な[ストレージ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")のタイプの選択。
-* 必要な[ネットワーク ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のタイプの選択。
+* 必要な[ネットワーク](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")のタイプの選択。
 * {{site.data.keyword.cloud_notm}} Kubernetes テクノロジーを活用するための、[コンテナリゼーション ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") サービスの選択。

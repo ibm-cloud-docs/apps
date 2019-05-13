@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,6 +26,23 @@ subcollection: creating-apps
 앱을 작성할 때 앱을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 일반적인 문제가 생길 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
+## 내 앱이 다른 도메인에서 호스팅됨
+{: #domains-ts}
+{: troubleshoot}
+
+내 앱 중 일부는 `mybluemix.net` 도메인에서 호스팅되지만 다른 앱은 `appdomain.cloud` 도메인에서 호스팅됨
+
+기존 앱은 `mybluemix.net` 도메인에서 호스팅되지만 새 앱은 `appdomain.cloud` 도메인에서 호스팅됨
+{: tsSymptoms}
+
+새 호스트 이름 옵션 `*.appdomain.cloud`는 cloud.ibm.com에서 사용할 수 있습니다.
+
+이전에는 {{site.data.keyword.containerlong_notm}} 또는 Cloud Foundry와 같은 다양한 배치 대상에서 앱을 호스팅하는 데 `mybluemix.net` 도메인이 사용되었습니다. `mybluemix.net`에서 호스팅한 앱에는 영향을 미치지 않습니다.
+
+Cloud Foundry 앱의 하위 도메인은 `cf.appdomain.cloud`입니다. {{site.data.keyword.containerlong_notm}}에 배치하는 앱의 하위 도메인은 `containers.appdomain.cloud`입니다.
+
+자세한 정보는 [도메인 관리](/docs/apps?topic=creating-apps-update-domain)를 참조하십시오.
+
 ## 저장되지 않은 변경사항이 있음
 {: #ts_unsaved_changes}
 {: troubleshoot}
@@ -40,7 +57,7 @@ subcollection: creating-apps
 런타임 분할창의 **인스턴스** 또는 **메모리 할당량** 필드 위로 마우스를 스크롤하면 값이 변경됩니다. 이 동작은 의도된 동작입니다. 그러나 다른 페이지로 이동하기 전에 메모리 또는 인스턴스 설정을 저장하도록 프롬프트가 표시됩니다.
 {: tsCauses}
 
-메시지 대화 상자를 닫고 런타임 분할창에서 **재설정**을 클릭하십시오.
+메시지 창을 닫고 런타임 분할창에서 **재설정**을 클릭하십시오.
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} 지역 간 자동 장애 복구를 사용할 수 없음
@@ -299,7 +316,7 @@ Docker를 시작하려고 시도하면 다음 오류 메시지가 표시됩니�
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -313,13 +330,11 @@ Docker 클라이언트가 설치되지 않았거나 설치되었지만 시작되
 {: #build_error}
 {: troubleshoot}
 
-`ibmcloud dev build` 명령을 사용하여 앱을 빌드하려고 시도하면 Docker 사용자 이름/비밀번호 오류가 표시되며 빌드에 실패합니다.
+`ibmcloud dev build` 명령을 사용하여 앱을 빌드하려고 시도하면 Docker 사용자 이름/비밀번호 오류가 표시되며 빌드에 실패합니다. 
 {: tsSymptoms}
 
-올바르지 않은 Docker 허브 인증 정보가 인증에 사용되고 있습니다.
+올바르지 않은 Docker 허브 인증 정보가 인증에 사용되고 있습니다. 
 {: tsCauses}
 
 Docker 클라이언트의 Docker 허브에서 로그아웃하십시오.
 {: tsResolve}
-
-

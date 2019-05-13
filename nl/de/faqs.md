@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # Häufig gestellte Fragen
 {: #apps-faq}
+
+## Was ist mit 'mybluemix.net' passiert?
+{: #domain-change-faq}
+{: faq}
+
+Unter 'cloud.ibm.com' ist eine neue Option `*.appdomain.cloud` für den Hostnamen verfügbar.
+
+Zuvor wurde die Domäne `mybluemix.net` für das Hosting von Apps in unterschiedlichen Bereitstellungszielen wie beispielsweise {{site.data.keyword.containerlong_notm}} oder Cloud Foundry verwendet. Bereits unter `mybluemix.net` gehostete Apps sind nicht betroffen.
+
+Die Unterdomäne für Cloud Foundry-Apps heißt `cf.appdomain.cloud`. Die Unterdomäne für Apps, die Sie in {{site.data.keyword.containerlong_notm}} bereitstellen, heißt `containers.appdomain.cloud`.
+
+Weitere Informationen enthält der Abschnitt [Eigene Domänen verwalten](/docs/apps?topic=creating-apps-update-domain).
 
 ## Wo finde ich eine Liste meiner Apps?
 {: #cf-app}
@@ -53,3 +65,11 @@ Führen Sie die folgenden Schritte aus, um eine App zu löschen, die Sie erstell
 {: faq}
 
 Eine Toolchain ist ein Satz von Toolintegrationen, die die Entwicklung, Bereitstellung sowie Operationstasks unterstützen. Sie können eine Toolchain aus Ihrer App heraus erstellen. Die Toolchain kann u.a. eine kontinuierliche Entwicklung, Bereitstellung oder Überwachung unterstützen und wird Ihrer App zugeordnet. Jede App kann einer Toolchain zugeordnet werden. Eine Toolchain kann so konfiguriert werden, dass Änderungen an der Toolchain automatisch die App erstellen und bereitstellen. Weitere Informationen zu Toolchains finden Sie unter [Toolchains erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## Wie kann ich die Domäne für meine Cloud Foundry-Apps ändern?
+{: #cf-domains-faq}
+{: faq}
+
+Bei Cloud Foundry-Apps können Sie Ihre Domäne von `mybluemix.net` in `appdomain.cloud` ändern, indem Sie entweder die {{site.data.keyword.cloud_notm}}-Konsole oder die Befehlszeilenschnittstelle verwenden. Weitere Informationen zum Ändern Ihrer Domäne in `appdomain.cloud` finden Sie unter [Aktualisieren Ihrer Domäne](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+
+Wenn Sie neue Apps erstellen, heißt die gemeinsam genutzte Standarddomäne `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können.

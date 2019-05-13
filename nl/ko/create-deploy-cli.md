@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# CLI를 사용하여 앱 작성 및 배치
+# CLI를 사용하여 앱 작성
 {: #create-deploy-app-cli}
 
 {{site.data.keyword.cloud}} 명령행 인터페이스(CLI)를 사용하여 애플리케이션을 작성하고 배치할 수 있습니다. 
@@ -47,7 +47,7 @@ subcollection: creating-apps
 7. 나머지 프롬프트에 따라 다음을 수행하십시오.
   * 도구 체인의 지역을 선택하십시오.
   * DevOps 도구 체인 이름에 이름을 입력하십시오.
-  * 호스트 이름에 이름을 입력하십시오.
+  * 호스트 이름의 이름을 입력하십시오.
 
 앱 및 도구 체인 작성을 완료하는 데 몇 초가 걸립니다.
 
@@ -76,7 +76,7 @@ subcollection: creating-apps
 ### 중요 참고사항
  - {{site.data.keyword.cloud_notm}} 콘솔을 사용하여 {{site.data.keyword.cloud_notm}} 앱을 이미 작성한 경우에는 앱 디렉토리에서 이전 절의 2 - 5단계를 수행하십시오. 6단계의 경우, 로컬 코드를 기존 앱에 연결하는 옵션을 선택할 수 있습니다.
  - [`ibmcloud dev enable --no-create`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)를 실행하여 {{site.data.keyword.cloud_notm}} 앱에 연결하지 않고 배치 및 클라우드 인에이블먼트 파일 생성을 수행하도록 선택할 수도 있습니다.
- - 도구 체인 및 배치 파일을 수동으로 구성하려는 경우에는 [이 튜토리얼](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube)을 따르십시오. 이는 둘 이상의 상호 연관된 웹 앱이나 마이크로서비스에 대해 Continuous Delivery 도구 체인을 구성하고자 할 때 유용할 수 있습니다.
+ - 도구 체인 및 배치 파일을 수동으로 구성하려는 경우에는 [이 튜토리얼](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube)을 따르십시오. 이 튜토리얼은 둘 이상의 상호 연관된 웹 앱이나 마이크로서비스에 대해 Continuous Delivery 도구 체인을 구성하고자 할 때 유용할 수 있습니다.
  - 기존 코드 베이스가 아직 Git 저장소에 없는 경우에는 앱 디렉토리에서 이전 절의 2 - 5단계를 수행하십시오. 6단계의 경우, 새 {{site.data.keyword.cloud_notm}} 앱을 작성하고 이를 DevOps 도구 체인(이에는 새로 작성된 GitLab 저장소가 있음)에 배치하는 옵션을 선택할 수 있습니다.
 
 ## 앱 빌드 및 로컬로 실행
@@ -88,7 +88,7 @@ subcollection: creating-apps
 2. [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) 명령을 실행하여 앱을 빌드하십시오.
 3. [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 명령을 실행하여 앱을 로컬로 실행하십시오.
 4. `http://localhost:3000` 또는 이와 유사한 URL에서 로컬로 실행 중인 앱을 보십시오.
-5. 앱을 중지하려면 **Ctrl+C** 키를 누르십시오.
+5. Ctrl+C를 눌러서 앱을 중지하십시오.
 
 `ibmcloud dev build/run`과 같은 [복합 명령](/docs/cli/idt?topic=cloud-cli-idt-cli#compound)을 사용하여 순차적으로 빌드 다음에 실행을 발행할 수도 있습니다.
 {: tip}
@@ -104,35 +104,18 @@ subcollection: creating-apps
 4. 코드를 업데이트하십시오. 예를 들어, `/public/index.html` 파일 또는 유사한 파일을 수정하십시오. 샘플 `ExpressJS` 애플리케이션을 사용 중인 경우 `Congratulations!` 문자열을 `Hello World!`와 같이 변경할 수 있습니다.
 5. 수정한 파일을 저장하십시오.
 
-## {{site.data.keyword.cloud_notm}}에 배치
+## 앱 배치
 {: #deploy-app-cli}
 
-앱이 구성된 방법에 따라 두 가지 방법 중 하나로 {{site.data.keyword.cloud_notm}} 앱을 배치할 수 있습니다. 
+앱이 구성된 방법에 따라 두 가지 방법 중 하나로 {{site.data.keyword.cloud_notm}}에 앱을 배치할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 
-### DevOps 도구 체인을 사용하여 앱 배치
-앱의 DevOps 도구 체인을 아직 작성하지 않았으며 앱이 아직 Git 저장소에 없는 경우에는 [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) 명령을 실행할 수 있습니다. "DevOps 구성"에 대한 프롬프트에 따라 새 도구 체인에 배치(하고 새 GitLab 저장소를 작성)하십시오.
-
-앱에 대한 DevOps 도구 체인을 작성하고 나면 새 빌드 배치는 코드를 커미트하고 이를 도구 체인의 저장소에 푸시하는 것처럼 단순합니다. 
-
-1. `git add .` 명령을 실행하십시오.
-2. `git commit -m "made changes"` 명령을 실행하여 변경사항을 커미트하십시오.
-3. `git push origin master` 명령을 실행하여 마스터 분기에 푸시하십시오.
-4. {{site.data.keyword.cloud_notm}} 콘솔에서 앱에 대한 DevOps 도구 체인을 보십시오. 앱 디렉토리에서 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 명령을 실행하여 {{site.data.keyword.cloud_notm}} 콘솔의 **앱 세부사항** 페이지에서 도구 체인 세부사항을 볼 수 있습니다.
-5. 도구 체인 내의 파이프라인을 보고 새 빌드가 시작되었는지 확인하십시오.
-
-### 수동으로 앱 배치
-
-[`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 명령을 사용하여 수동으로 앱을 배치할 수 있습니다. 예를 들어, 다음 단계를 사용하여 수동으로 앱을 Kubernetes에 배치하십시오.
-
-1. [Kubernetes 클러스터를 작성](https://{DomainName}/kubernetes/overview){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")했는지 확인하십시오.
-2. [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 명령을 실행하십시오.
-3. 프롬프트가 표시되면 사용할 클러스터 및 컨테이너 이미지 이름을 확인하십시오.
-4. 배치가 완료될 때까지 몇 분 동안 기다리십시오.
+* [자동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-auto)
+* [수동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-manual)
 
 ## 앱 보기
 {: #view-app-cli}
 
-1. {{site.data.keyword.cloud_notm}}에서 실행 중인 앱의 URL을 보려면 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하십시오.
+1. {{site.data.keyword.cloud_notm}}에서 실행 중인 앱의 URL을 보려면 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
 2. {{site.data.keyword.cloud_notm}} 콘솔에서 앱의 인증 정보, 서비스 및 도구 체인에 대한 세부사항을 보려면 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 명령을 실행하십시오. 
 
 **문제를 보고하거나 피드백을 제공하려면 [{{site.data.keyword.cloud_notm}} Tech의 Slack(#developer-tools 채널)](https://ibm-cloud-tech.slack.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 사용할 수 있습니다. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 팀 액세스를 요청하십시오.**

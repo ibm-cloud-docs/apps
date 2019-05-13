@@ -15,7 +15,7 @@
     {: .topicgroup}
     관련 링크
         [복원성 애플리케이션에 대한 전략](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Kubernetes에 대한 지속적인 배치](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Kubernetes에 대한 지속적 배치](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -40,7 +40,6 @@
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     {: .topicgroup}

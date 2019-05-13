@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,6 +26,23 @@ subcollection: creating-apps
 Allgemeine Probleme im Zusammenhang mit der Erstellung von Apps können sein, dass Apps nicht aktualisiert werden können oder Doppelbytezeichen nicht angezeigt werden. In vielen Fällen können Sie diese Probleme durch Ausführen weniger einfacher Schritte beheben.
 {:shortdesc}
 
+## Eigene Apps werden in unterschiedlichen Domänen gehostet
+{: #domains-ts}
+{: troubleshoot}
+
+Einige Apps werden in der Domäne `mybluemix.net` gehostet, andere jedoch in der Domäne `appdomain.cloud`.
+
+Ihre eigenen vorhandenen Apps werden in der Domäne `mybluemix.net` gehostet, aber Ihre neueren Apps werden in der Domäne `appdomain.cloud` gehostet.
+{: tsSymptoms}
+
+Unter 'cloud.ibm.com' ist eine neue Option `*.appdomain.cloud` für den Hostnamen verfügbar.
+
+Zuvor wurde die Domäne `mybluemix.net` für das Hosting von Apps in unterschiedlichen Bereitstellungszielen wie beispielsweise {{site.data.keyword.containerlong_notm}} oder Cloud Foundry verwendet. Bereits unter `mybluemix.net` gehostete Apps sind nicht betroffen.
+
+Die Unterdomäne für Cloud Foundry-Apps heißt `cf.appdomain.cloud`. Die Unterdomäne für Apps, die Sie in {{site.data.keyword.containerlong_notm}} bereitstellen, heißt `containers.appdomain.cloud`.
+
+Weitere Informationen enthält der Abschnitt [Eigene Domänen verwalten](/docs/apps?topic=creating-apps-update-domain).
+
 ## Es sind nicht gespeicherte Änderungen vorhanden
 {: #ts_unsaved_changes}
 {: troubleshoot}
@@ -40,7 +57,7 @@ Wenn Sie versuchen, Ihre App oder Services auf der Detailseite der App zu prüfe
 Wenn Sie Ihre Maus über das Feld **INSTANCES** (Instanzen) oder **MEMORY QUOTA** (Speicherkontingent) im Teilfenster für die Laufzeit bewegen, ändern sich die Werte. Hierbei handelt es sich um ein vorgesehenes Verhalten. Sie werden jedoch dazu aufgefordert, die Speicher- oder Instanzeinstellungen zu speichern, bevor Sie eine andere Seite aufrufen.
 {: tsCauses}
 
-Schließen Sie den Nachrichtendialog und klicken Sie im Teilfenster für Ihre Laufzeitumgebung auf **ZURÜCKSETZEN**.
+Schließen Sie das Nachrichtenfenster und klicken Sie im Teilfenster für Ihre Laufzeitumgebung auf **ZURÜCKSETZEN**.
 {: tsResolve}
 
 ## Automatische Funktionsübernahme zwischen {{site.data.keyword.cloud_notm}}-Regionen nicht verfügbar
@@ -271,7 +288,7 @@ Mit dem Befehl [Git update ](http://git-scm.com/docs/git-update-index){: new_win
 ## Speicherkontingent überschritten
 {: #exceed_quota}
 
-Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht angezeigt wird, können Sie Ihre Images mit den folgenden Befehlszeilenschnittstellenbefehlen löschen. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.` (Status: unberechtigt: Sie haben das Speicherkontingent überschritten. Löschen Sie ein oder mehrere Images oder überprüfen Sie Ihr Speicherkontingent und den Preistarif.) 
+Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht angezeigt wird, können Sie Ihre Images mit den folgenden Befehlszeilenschnittstellenbefehlen löschen. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.` (Status: unberechtigt: Sie haben das Speicherkontingent überschritten. Löschen Sie ein oder mehrere Images oder überprüfen Sie Ihr Speicherkontingent und den Preistarif.)
 
 * Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
@@ -279,10 +296,10 @@ Wenn die Build- oder Bereitstellungsjobs fehlschlagen und die folgende Nachricht
 * Löschen Sie alle nicht verwendeten Images mit dem Befehl `ibmcloud cr image-rm <respository>:<tag>`.
 * Führen Sie den fehlgeschlagenen Build- oder Bereitstellungsjob erneut aus.
 
-##  Zugriff auf Kubernetes-Protokolle
+## Zugriff auf Kubernetes-Protokolle
 {: #access_kube_logs}
 
-Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt zugreifen können, versuchen Sie, die Protokolle im Cluster anzuschauen. 
+Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt zugreifen können, versuchen Sie, die Protokolle im Cluster anzuschauen.
 * Installieren Sie, falls nicht bereits geschehen, die [{{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 * Melden Sie sich bei {{site.data.keyword.cloud_notm}} mit `ibmcloud login` an und verweisen Sie auf den Bereich, in dem Sie sich befinden.
 * Listen Sie Ihre Cluster mit `ibmcloud cs clusters` auf.
@@ -291,32 +308,33 @@ Wenn die Anwendung nicht ausgeführt wird und Sie nicht auf den Statusendpunkt z
 * Zeigen Sie Ihre Pods mit `kubectl get pods` an. Wenn Sie `kubectl` installieren müssen, finden Sie weitere Informationen in [kubectl installieren und einrichten](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 * Sie können die Protokolle in Ihrer App anzeigen, indem Sie `kubectl logs <pod-name> verwenden.`
 
-## Starten von `Docker` schlägt mit der Nachricht "Datei nicht gefunden" fehl. 
+## Starten von `Docker` schlägt mit der Nachricht "Datei nicht gefunden" fehl.
 {: #docker_not_found}
 {: troubleshoot}
 
-Wenn Sie versuchen, Docker zu starten, wird die folgende Fehlernachricht angezeigt:{: tsSymptoms}
+Wenn Sie versuchen, Docker zu starten, wird die folgende Fehlernachricht angezeigt:
+{: tsSymptoms}
 
 ```
 Beim Erstellen des Docker-Images ist der Fehler 'Exec: Ausführbare Datei "docker" nicht in $PATH gefunden' aufgetreten.
 ```
 {: screen}
 
-Der Docker-Client ist nicht installiert oder er ist installiert, aber nicht gestartet.{: tsCauses}
+Der Docker-Client ist nicht installiert oder er ist installiert, aber nicht gestartet.
+{: tsCauses}
 
-Stellen Sie sicher, dass [Docker](https://docs.docker.com/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") installiert ist, und starten Sie Docker.{: tsResolve}
+Stellen Sie sicher, dass [Docker](https://docs.docker.com/install/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") installiert ist, und starten Sie Docker.
+{: tsResolve}
 
-## Erstellen einer App schlägt mit einem Docker-Fehler fehl. 
+## Erstellen einer App schlägt mit einem Docker-Fehler fehl.
 {: #build_error}
 {: troubleshoot}
 
-Beim Erstellen einer App mit dem Befehl `ibmcloud dev build` schlägt dieser mit einem Docker-Fehler in Bezug auf den Benutzernamen/das Kennwort fehl.
+Beim Erstellen einer App mit dem Befehl `ibmcloud dev build` schlägt dieser mit einem Docker-Fehler in Bezug auf den Benutzernamen/das Kennwort fehl. 
 {: tsSymptoms}
 
-Die für die Authentifizierung verwendeten Docker Hub-Berechtigungsnachweise sind nicht korrekt.
+Die für die Authentifizierung verwendeten Docker Hub-Berechtigungsnachweise sind nicht korrekt. 
 {: tsCauses}
 
 Melden Sie sich im Docker-Client von Docker Hub ab.
 {: tsResolve}
-
-

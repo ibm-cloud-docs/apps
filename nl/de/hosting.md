@@ -34,5 +34,5 @@ In einer virtuellen Bereitstellung werden die meisten Operationen Ihrer App von 
 
 Folgende Optionen stehen unter Umständen ebenfalls zur Verfügung:
 * Auswahl des geeigneten Typs von [Speicher](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") (Blockspeicher, Dateispeicher oder Objektspeicher).
-* Auswahl des erforderlichen Typs von [Netz](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")}.
+* Auswahl des erforderlichen Typs von [Netz](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 * Auswahl eines [Containerisierungsservice](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"), um die Kubernetes-Technologie von {{site.data.keyword.cloud_notm}} zu nutzen.

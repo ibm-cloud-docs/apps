@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-02"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note .note}
 
 # Mendix を使用したアプリの作成
 {: #create-mendix}
@@ -34,7 +35,6 @@ Mendix は、{{site.data.keyword.cloud}} で稼働するマルチデバイス・
 3. **「アプリの作成」**をクリックします。
 4. **「アプリの詳細」**ページで、アプリに名前を付け、オプションで、アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
 5. **「作成」**をクリックします。
-
 
 ## Mendix でのプロジェクト作成およびアカウントのリンクを行うための IBM への許可
 {: #link-mendix-account}
@@ -62,7 +62,6 @@ Mendix Cloud Foundry デプロイメントには PostGRES データベース・�
 
 デプロイメントに Kubernetes クラスターを選択した場合は、[Mendix Kubernetes チュートリアル](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube)を参照して、実動用にクラスターを構成する方法を確認してください。
 
-
 ## Mendix の開発とデプロイメントのライフサイクルの継続
 {: #dev-lifecycle-mendix}
 
@@ -77,8 +76,73 @@ Mendix は、ローコードのオーサリング環境です。 開発ライフ
 5. Mendix アプリケーションをデプロイするため、{{site.data.keyword.cloud_notm}} の**アプリの詳細**ページに戻り、**「デプロイ」**をクリックします。
   この操作によってアプリケーションの DevOps ツールチェーンが開始されます。このツールチェーンは、Mendix から最新のデプロイメントをプルし、それをターゲット環境にデプロイします。 デプロイメントが完了した後、最新版のアプリケーションが自動的に開始され、使用可能になります。
 
-すべての Mendix アプリケーションは、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、{{site.data.keyword.cloud_notm}} にデプロイされます。 IBM DevOps インターフェースを介して Mendix ツールチェーンを手動で起動しないでください。 DevOps インターフェースを介してツールチェーンを手動で起動すると、Mendix デプロイメントに不可欠な必須メタデータの不足が原因でデプロイメントが失敗する可能性があります。 アプリケーションの状態によっては、DevOps ツールチェーンの起動中に失敗したり、デプロイされたアプリケーションでエラーが発生したりする可能性があります。 ツールチェーンを手動で起動して障害が発生した場合は、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、アプリケーション・デプロイメントをリストアできます。 この操作によって、必須メタデータを含む Mendix アプリケーションの完全な DevOps フローがトリガーされます。
+すべての Mendix アプリケーションは、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、{{site.data.keyword.cloud_notm}} にデプロイされます。 IBM DevOps インターフェースを介して Mendix ツールチェーンを手動で起動しないでください。 DevOps インターフェースを介してツールチェーンを手動で起動すると、Mendix デプロイメントに不可欠な必須メタデータの不足が原因でデプロイメントが失敗する可能性があります。 アプリケーションの状態によっては、DevOps ツールチェーンの起動中に失敗したり、デプロイされたアプリケーションでエラーが発生したりする可能性があります。
+
+ツールチェーンを手動で起動して障害が発生した場合は、{{site.data.keyword.cloud_notm}} の**「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックすることによって、アプリケーション・デプロイメントをリストアできます。 この操作によって、必須メタデータを含む Mendix アプリケーションの完全な DevOps フローがトリガーされます。
 {: tip}
+
+## オプション: {{site.data.keyword.cos_full_notm}} の構成 
+{: #mendix-cos}
+
+一部のユーザーは、永続的な保存とファイルのアップロードのために {{site.data.keyword.cos_full}} を使用するようデプロイ済み Mendix アプリケーションを構成することを望むかもしれません。{{site.data.keyword.cos_full_notm}} は、S3 と互換性のあるオブジェクト・ストレージ・サービスです。S3 互換のファイル・ストレージを利用するには、Mendix アプリケーションで継続的デリバリーを構成した後、{{site.data.keyword.cos_full_notm}} インスタンスにアクセスするために以下の環境変数を定義する必要があります。
+
+* `S3_ACCESS_KEY_ID` - S3 鍵 ({{site.data.keyword.cos_full_notm}} 資格情報の一部)
+* `S3_SECRET_ACCESS_KEY` - S3 秘密鍵 ({{site.data.keyword.cos_full_notm}} 資格情報の一部)
+* `S3_BUCKET_NAME` - S3 ストレージ・バケット
+* `S3_ENDPOINT` - S3 ストレージ・エンドポイント
+* `S3_USE_V2_AUTH` - 値は `true`
+
+{{site.data.keyword.cos_full_notm}} バケットおよび鍵について詳しくは、[{{site.data.keyword.cos_full_notm}} API の資料](/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev)を参照してください。地域のエンドポイント値および地域を超えたエンドポイント値の詳細については、[{{site.data.keyword.cos_full_notm}} の資料](/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints)を参照してください。S3 互換ストレージの Mendix サポートについて詳しくは、[Mendix ビルドパックの資料](https://github.com/mendix/cf-mendix-buildpack#s3-settings){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")を参照してください。
+
+### Cloud Foundry アプリケーションの {{site.data.keyword.cos_full_notm}} 設定
+{: cos-cfapps}
+
+Cloud Foundry のデプロイメントでは、次のステップを実行します。
+
+1. 次の `cf set-env` コマンドを使用して、Cloud Foundry のデプロイメントに上記の環境変数を設定します。
+
+  ```
+    ibmcloud cf set-env <YOUR_APP> S3_ACCESS_KEY_ID <YOUR_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_SECRET_ACCESS_KEY <YOUR_SECRET_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_BUCKET_NAME <YOUR_BUCKET>
+    ibmcloud cf set-env <YOUR_APP> S3_ENDPOINT s3.us-south.cloud-object-storage.appdomain.cloud
+    ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
+  ```
+
+2. これらの値をすべて指定した後、新しい値が適用されるように Cloud Foundry アプリケーションを再ステージします。
+
+  ```
+    ibmcloud cf restage <YOUR_APP>
+  ```
+
+### Kubernetes アプリケーションの {{site.data.keyword.cos_full_notm}} 設定
+{: #cos-kubeapps}
+
+Kubernetes のデプロイメントでは、次のステップを実行します。
+
+1. `S3_ACCESS_KEY_ID` と `S3_SECRET_ACCESS_KEY` の各環境変数を Kubernetes 秘密値としてクラスターで設定します。Kubernetes の秘密の作成について詳しくは、[{{site.data.keyword.containershort_notm}} の資料](/docs/containers?topic=containers-service-binding#adding_app)を参照してください。
+
+2. 既存の値に加えて、Git リポジトリーの `chart/<appname>/templates` フォルダーの `mendix-app.yaml` ファイル内の追加の環境変数としてこれらの環境変数を指定します。秘密名は、前のステップで作成した名前と一致しなければなりません。
+
+  ```
+    env:
+      - name: S3_ACCESS_KEY_ID
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-key"
+            key: db-endpoint
+      - name: S3_SECRET_ACCESS_KEY
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-secret-key"
+            key: db-endpoint
+      - name: S3_ENDPOINT
+        value: "s3.us-south.cloud-object-storage.appdomain.cloud"
+      - name: S3_USE_V2_AUTH
+        value: "true"
+  ```
+
+3. Kubernetes の変更が適用されたら、**「アプリの詳細」**ページに移動し、**「デプロイ」**をクリックしてアプリケーションを再デプロイします。 
 
 ## 次のステップ 
 {: #next-steps-mendix}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -49,9 +49,9 @@ Erstellen Sie eine App, indem Sie einen der folgenden Eingangspunkte auswählen:
 ## Schritt 2. Services hinzufügen
 {: #resources-getting-started}
 
-Wenn Sie zur Erstellung Ihrer App ein Starter-Kit verwenden, werden die obligatorischen Services automatisch für Sie erstellt. Auf der Seite **App-Details** der Konsole können Sie weitere Services mit Ihrer App verbinden. Diese werden angezeigt, sobald Sie die App erstellen. 
+Wenn Sie zur Erstellung Ihrer App ein Starter-Kit verwenden, werden die obligatorischen Services automatisch für Sie erstellt. Auf der Seite **App-Details** der Konsole können Sie weitere Services mit Ihrer App verbinden. Diese werden angezeigt, sobald Sie die App erstellen.
 
-Wenn Sie Services hinzufügen möchten, nachdem Sie Ihre App erstellt haben, wechseln Sie in das [{{site.data.keyword.cloud_notm}}-Dashboard, ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{) suchen Sie Ihre App und klicken Sie dann auf den Namen Ihrer App. Die Seite **App-Details** wird angezeigt und Sie können eine Serviceinstanz erstellen oder vorhandene Services verbinden. 
+Wenn Sie Services hinzufügen möchten, nachdem Sie Ihre App erstellt haben, wechseln Sie in das [{{site.data.keyword.cloud_notm}}-Dashboard, ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName}) suchen Sie Ihre App und klicken Sie dann auf den Namen Ihrer App. Die Seite **App-Details** wird angezeigt und Sie können eine Serviceinstanz erstellen oder vorhandene Services verbinden.
 
 Oder Sie können den folgenden Befehl ausführen, um über die CLI einen Service zu Ihrer App hinzuzufügen. Sie können einen vorhandenen Service aus den Services auswählen, die bereits für Ihr Konto aktiviert sind, oder einen Service hinzufügen.
 ```
@@ -83,6 +83,8 @@ Weitere Informationen finden Sie im Inhaltsverzeichnis für verschiedene Bereits
 Führen Sie den Befehl `ibmcloud dev deploy` aus, um Ihre App über die CLI bereitzustellen. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Jetzt sind Sie bereit für die iterative Entwicklung und Continuous Delivery.
+
+Weitere Informationen zum Bereitstellen Ihrer App finden Sie unter [Apps bereitstellen](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Zugehörige Informationen
 {: #related-getting-started}

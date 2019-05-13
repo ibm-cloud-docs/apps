@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,6 +26,23 @@ subcollection: creating-apps
 有关创建应用程序的一般问题可能包括：无法更新应用程序或未显示双字节字符。在许多情况下，只需执行几个简单的步骤即可解决这些问题。
 {:shortdesc}
 
+## 我的应用程序在不同域中托管
+{: #domains-ts}
+{: troubleshoot}
+
+我的某些应用程序在 `mybluemix.net` 域中托管，其他应用程序在 `appdomain.cloud` 域中托管。
+
+我的现有应用程序在 `mybluemix.net` 域中托管，而较新的应用程序在 `appdomain.cloud` 域中托管。
+{: tsSymptoms}
+
+在 cloud.ibm.com 上提供了新的主机名选项 `*.appdomain.cloud`。
+
+先前，`mybluemix.net` 域用于在多个部署目标（例如，{{site.data.keyword.containerlong_notm}} 或 Cloud Foundry）中托管应用程序。在 `mybluemix.net` 上托管的任何应用程序不会受影响。
+
+Cloud Foundry 应用程序的子域为 `cf.appdomain.cloud`。部署到 {{site.data.keyword.containerlong_notm}} 的应用程序的子域为 `containers.appdomain.cloud`。
+
+有关更多信息，请参阅[管理域](/docs/apps?topic=creating-apps-update-domain)。
+
 ## 您有未保存的更改
 {: #ts_unsaved_changes}
 {: troubleshoot}
@@ -40,7 +57,7 @@ subcollection: creating-apps
 在运行时窗格中的**实例**或**内存配额**字段上滚动鼠标时，值会更改。这是故意设计的行为。但是，当您要转至其他页面时，系统会提示您保存内存或实例设置。
 {: tsCauses}
 
-关闭消息对话框，然后单击运行时窗格中的**重置**。
+关闭消息窗口，然后单击运行时窗格中的**重置**。
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} 区域之间的自动故障转移不可用
@@ -193,8 +210,8 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
         ...
   	    "scripts": {
 	 		 "start": "node app.js"
- 	   }
-	}
+        }
+ }
 	    ```
 
     * 使用 `manifest.yml` 文件。例如：
@@ -326,5 +343,3 @@ Docker 客户机未安装，或者已安装但未启动。
 
 请在 Docker 客户机中从 Docker Hub 注销。
 {: tsResolve}
-
-

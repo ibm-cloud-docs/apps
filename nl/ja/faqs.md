@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -23,17 +23,29 @@ subcollection: creating-apps
 # FAQ
 {: #apps-faq}
 
+## mybluemix.net はどうなりましたか?
+{: #domain-change-faq}
+{: faq}
+
+新しいホスト名オプション `*.appdomain.cloud` を cloud.ibm.com で使用することができます。
+
+以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。`mybluemix.net` でホストされているアプリは影響を受けません。
+
+Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
+
+詳しくは、[ドメインの管理](/docs/apps?topic=creating-apps-update-domain)を参照してください。
+
 ## アプリのリストはどこで見ることができますか?
 {: #cf-app}
 {: faq}
 
-[{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のリソース・リストに、作成したアプリケーションの要約情報があります。リソース・リストの**「アプリ」**セクションには、作成したが Cloud Foundry にデプロイ*していない*すべてのアプリが含まれています。**「Cloud Foundry アプリ」**セクションには、作成して Cloud Foundry にデプロイしたアプリのすべてが含まれています。
+[{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のリソース・リストに、作成したアプリケーションの要約情報があります。 リソース・リストの**「アプリ」**セクションには、作成したが Cloud Foundry にデプロイ*していない*すべてのアプリが含まれています。 **「Cloud Foundry アプリ」**セクションには、作成して Cloud Foundry にデプロイしたアプリのすべてが含まれています。
 
 ## アプリをデプロイしようとするときに、Cloud Foundry スペースを選べないのはなぜですか?
 {: #cf-space}
 {: faq}
 
-最初に Cloud Foundry スペースを作成する必要があることが最も考えられる原因です。Cloud Foundry コマンド・ライン・インターフェースを使用している場合は、`cf create-space <space_name> -o <organization_name>` と入力します。それ以外の場合は、コンソールから以下の手順を実行します。
+最初に Cloud Foundry スペースを作成する必要があることが最も考えられる原因です。 Cloud Foundry コマンド・ライン・インターフェースを使用している場合は、`cf create-space <space_name> -o <organization_name>` と入力します。 それ以外の場合は、コンソールから以下の手順を実行します。
 
 1. [{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のメニュー・バーで、**「管理」** > **「アカウント」**を選択します。
 2. **「Cloud Foundry の組織」**を選択します。
@@ -52,4 +64,12 @@ subcollection: creating-apps
 {: #toolchains}
 {: faq}
 
-ツールチェーンは、開発、デプロイメント、および運用の作業をサポートするツール統合の集合です。 ツールチェーンをアプリから作成することができます。 ツールチェーンは、継続的な開発、デプロイ、モニタリングなどをサポートでき、アプリと関連付けられます。 各アプリをツールチェーンと関連付けることができます。 ツールチェーンは、ツールチェーンに変更を加えると自動的にアプリをビルドしてデプロイするように構成することができます。ツールチェーンについて詳しくは、[ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)を参照してください。
+ツールチェーンは、開発、デプロイメント、および運用の作業をサポートするツール統合の集合です。 ツールチェーンをアプリから作成することができます。 ツールチェーンは、継続的な開発、デプロイ、モニタリングなどをサポートでき、アプリと関連付けられます。 各アプリをツールチェーンと関連付けることができます。 ツールチェーンは、ツールチェーンに変更を加えると自動的にアプリをビルドしてデプロイするように構成することができます。 ツールチェーンについて詳しくは、[ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)を参照してください。
+
+## 自分の Cloud Foundry アプリのドメインを変更するにはどうすればよいですか?
+{: #cf-domains-faq}
+{: faq}
+
+Cloud Foundry アプリの場合は、{{site.data.keyword.cloud_notm}} コンソールまたはコマンド・ライン・インターフェースを使用して、ドメインを `mybluemix.net` から `appdomain.cloud` に変更できます。 `appdomain.cloud` への変更について詳しくは、[ドメインの更新](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)を参照してください。
+
+新規アプリ作成時のデフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメイン・オプションも使用できます。

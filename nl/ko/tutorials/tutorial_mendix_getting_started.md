@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-02"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note .note}
 
 # Mendix를 사용하여 앱 작성
 {: #create-mendix}
@@ -34,7 +35,6 @@ Mendix는 {{site.data.keyword.cloud}}에서 실행되는 로우 코드(low-code)
 3. **앱 작성**을 클릭하십시오.
 4. **앱 세부사항** 페이지에서 앱의 이름을 지정하고 앱을 분류하기 위한 태그를 선택적으로 제공하십시오. 자세한 정보는 [태그에 대한 작업](/docs/resources?topic=resources-tag)을 참조하십시오.
 5. **작성**을 클릭하십시오.
-
 
 ## IBM에 Mendix 및 링크 계정에서 프로젝트를 작성할 권한 부여
 {: #link-mendix-account}
@@ -62,7 +62,6 @@ Mendix Cloud Foundry 배치에는 Lite 티어 없는 PostGRES 데이터베이스
 
 배치에 Kubernetes 클러스터를 선택한 경우, [Mendix Kubernetes 튜토리얼](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube)을 참조하여 프로덕션 사용을 위해 클러스터를 구성하는 방법을 알아보십시오.
 
-
 ## Mendix 배치 및 배치 라이프사이클 계속 수행
 {: #dev-lifecycle-mendix}
 
@@ -77,8 +76,73 @@ Mendix는 로우 코드 작성 환경입니다. 개발 라이프사이클을 수
 5. Mendix 애플리케이션을 배치하려면 {{site.data.keyword.cloud_notm}}의 **앱 세부사항** 페이지로 돌아가 **배치**를 클릭하십시오.
   이 조치는 애플리케이션의 DevOps 도구 체인을 시작하며, 이를 통해 Mendix에서 최근 배치를 가져와서 대상 환경에서 배치합니다. 배치가 완료되면 최신 버전의 애플리케이션이 자동으로 시작되고 사용 가능하게 됩니다.
 
-{{site.data.keyword.cloud_notm}}의 **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하면 모든 Mendix 애플리케이션이 {{site.data.keyword.cloud_notm}}에 배치됩니다. IBM DevOps 인터페이스를 통해 Mendix 도구 체인을 수동으로 호출하지 마십시오. DevOps 인터페이스를 통해 도구 체인을 수동으로 실행하면 Mendix 배치에 중요한 필수 메타데이터 부족으로 인해 배치가 실패할 수 있습니다. 애플리케이션 상태에 따라 DevOps 도구 체인 실행 중에 실패하거나 배포된 애플리케이션에서 오류가 발생할 수 있습니다. 도구 체인을 수동으로 실행하여 실패하는 경우 {{site.data.keyword.cloud_notm}}의 **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하여 애플리케이션 배치를 복원할 수 있습니다. 이 조치는 Mendix 애플리케이션을 위한 완전한 DevOps 플로우를 트리거하며, 여기에는 필수 메타데이터가 포함되어 있습니다.
+{{site.data.keyword.cloud_notm}}의 **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하면 모든 Mendix 애플리케이션이 {{site.data.keyword.cloud_notm}}에 배치됩니다. IBM DevOps 인터페이스를 통해 Mendix 도구 체인을 수동으로 호출하지 마십시오. DevOps 인터페이스를 통해 도구 체인을 수동으로 실행하면 Mendix 배치에 중요한 필수 메타데이터 부족으로 인해 배치가 실패할 수 있습니다. 애플리케이션 상태에 따라 DevOps 도구 체인 실행 중에 실패하거나 배포된 애플리케이션에서 오류가 발생할 수 있습니다.
+
+도구 체인을 수동으로 실행하여 실패하는 경우 {{site.data.keyword.cloud_notm}}의 **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하여 애플리케이션 배치를 복원할 수 있습니다. 이 조치는 Mendix 애플리케이션을 위한 완전한 DevOps 플로우를 트리거하며, 여기에는 필수 메타데이터가 포함되어 있습니다.
 {: tip}
+
+## 선택사항: {{site.data.keyword.cos_full_notm}} 구성 
+{: #mendix-cos}
+
+일부 사용자는 지속적 스토리지와 파일 업로드에 {{site.data.keyword.cos_full}}을 사용하도록 배치된 Mendix 애플리케이션을 구성하고자 할 수 있습니다. {{site.data.keyword.cos_full_notm}}은 S3 호환 Object Storage 서비스입니다. S3 호환 파일 스토리지를 이용하려면 Mendix 애플리케이션에서 지속적 딜리버리를 구성한 후에 {{site.data.keyword.cos_full_notm}} 인스턴스에 액세스하기 위한 다음과 같은 환경 변수를 정의해야 합니다.
+
+* `S3_ACCESS_KEY_ID` - {{site.data.keyword.cos_full_notm}} 인증 정보의 일부인 S3 키
+* `S3_SECRET_ACCESS_KEY` - {{site.data.keyword.cos_full_notm}} 인증 정보의 일부인 S3 비밀 키
+* `S3_BUCKET_NAME` - S3 스토리지 버킷
+* `S3_ENDPOINT` - S3 스토리지 엔드포인트
+* `S3_USE_V2_AUTH` - 값은 `true`임
+
+{{site.data.keyword.cos_full_notm}} 버킷 및 키에 관한 자세한 정보는 [{{site.data.keyword.cos_full_notm}} API 문서](/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev)를 참조하십시오. 지역 및 교차 지역 엔드포인트 값에 관한 자세한 정보는 [{{site.data.keyword.cos_full_notm}} 문서](/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints)를 참조하십시오. S3 호환 스토리지의 Mendix 지원에 관한 자세한 정보는 [Mendix 빌드팩 문서](https://github.com/mendix/cf-mendix-buildpack#s3-settings){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
+
+### Cloud Foundry 애플리케이션의 {{site.data.keyword.cos_full_notm}} 설정
+{: cos-cfapps}
+
+Cloud Foundry 배치에 대해 다음 단계를 완료하십시오.
+
+1. `cf set-env` 명령을 사용하여 Cloud Foundry 배치에서 다음 환경 변수를 설정하십시오.
+
+  ```
+    ibmcloud cf set-env <YOUR_APP> S3_ACCESS_KEY_ID <YOUR_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_SECRET_ACCESS_KEY <YOUR_SECRET_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_BUCKET_NAME <YOUR_BUCKET>
+    ibmcloud cf set-env <YOUR_APP> S3_ENDPOINT s3.us-south.cloud-object-storage.appdomain.cloud
+    ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
+  ```
+
+2. 이 값을 모두 지정한 다음 새 값을 적용하도록 Cloud Foundry 애플리케이션을 다시 스테이징하십시오.
+
+  ```
+    ibmcloud cf restage <YOUR_APP>
+  ```
+
+### Kubernetes 애플리케이션의 {{site.data.keyword.cos_full_notm}} 설정
+{: #cos-kubeapps}
+
+Kubernetes 배치에 대해 다음 단계를 완료하십시오.
+
+1. `S3_ACCESS_KEY_ID` 및 `S3_SECRET_ACCESS_KEY` 환경 변수를 클러스터의 Kubernetes 시크릿 값으로 설정하십시오. Kubernetes 시크릿 작성에 관한 자세한 정보는 [{{site.data.keyword.containershort_notm}} 문서](/docs/containers?topic=containers-service-binding#adding_app)를 참조하십시오.
+
+2. 기존 값 외에도, 환경 변수를 Git 저장소의 `chart/<appname>/templates` 폴더의 `mendix-app.yaml` 파일에 추가 환경 변수로 지정하십시오. 시크릿 이름은 이전 단계에서 작성한 이름과 일치해야 합니다.
+
+  ```
+    env:
+      - name: S3_ACCESS_KEY_ID
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-key"
+            key: db-endpoint
+      - name: S3_SECRET_ACCESS_KEY
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-secret-key"
+            key: db-endpoint
+      - name: S3_ENDPOINT
+        value: "s3.us-south.cloud-object-storage.appdomain.cloud"
+      - name: S3_USE_V2_AUTH
+        value: "true"
+  ```
+
+3. Kubernetes 변경사항을 적용하고 나면 **앱 세부사항** 페이지로 이동하고 **배치**를 클릭하여 애플리케이션을 다시 배치하십시오. 
 
 ## 다음 단계 
 {: #next-steps-mendix}

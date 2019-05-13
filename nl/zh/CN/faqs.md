@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # 常见问题
 {: #apps-faq}
+
+## mybluemix.net 发生了什么？
+{: #domain-change-faq}
+{: faq}
+
+在 cloud.ibm.com 上提供了新的主机名选项 `*.appdomain.cloud`。
+
+先前，`mybluemix.net` 域用于在多个部署目标（例如，{{site.data.keyword.containerlong_notm}} 或 Cloud Foundry）中托管应用程序。在 `mybluemix.net` 上托管的任何应用程序不会受影响。
+
+Cloud Foundry 应用程序的子域为 `cf.appdomain.cloud`。部署到 {{site.data.keyword.containerlong_notm}} 的应用程序的子域为 `containers.appdomain.cloud`。
+
+有关更多信息，请参阅[管理域](/docs/apps?topic=creating-apps-update-domain)。
 
 ## 在哪里可以找到我的应用程序的列表？
 {: #cf-app}
@@ -53,3 +65,14 @@ subcollection: creating-apps
 {: faq}
 
 工具链是一组工具集成，用于支持开发、部署和操作任务。可以通过应用程序来创建工具链。工具链可以支持持续开发、部署、监视等操作，并且与应用程序相关联。每个应用程序可以与一个工具链相关联。可以配置工具链，以便对工具链进行的更改可自动构建和部署应用程序。有关工具链的更多信息，请参阅[创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
+
+## 如何更改我的 Cloud Foundry 应用程序的域？
+{: #cf-domains-faq}
+{: faq}
+
+对于 Cloud Foundry 应用程序，可以通过使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面将域从 `mybluemix.net` 更改为 `appdomain.cloud`。
+有关将域更改为 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+
+
+创建新的应用程序时，缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。
+
