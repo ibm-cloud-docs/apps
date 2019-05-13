@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Création d'une application Web basique avec un kit de démarrage
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} inclut plusieurs kits de démarrage vous permettant d'effectuer les opérations de codage rapidement. Choisissez une langue, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez installer les outils dont vous avez besoin puis vous allez générer et exécuter l'application localement et la déployer dans le cloud.
+{{site.data.keyword.cloud}} inclut plusieurs kits de démarrage vous permettant d'effectuer les opérations de codage rapidement. Sélectionnez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez installer les outils dont vous avez besoin puis vous allez générer et exécuter l'application localement et la déployer dans le cloud.
 {: shortdesc}
 
 ## Etape 1. Installer les outils
@@ -140,6 +140,8 @@ Pour déployer votre application sur un cluster Kubernetes, entrez la commande s
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Etape 7. Vérifier que votre application est en cours d'exécution
 {: #verify-webapp}

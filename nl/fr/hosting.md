@@ -28,11 +28,11 @@ Des [services de migration {{site.data.keyword.cloud_notm}} ](https://www.ibm.co
 ## Hébergement d'applications
 {: #ht_hostapp}
 
-Dans {{site.data.keyword.cloud_notm}} [catalog](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), vous pouvez choisir un environnement géré, tel que Kubernetes ou Cloud Foundry, ou vous pouvez héberger votre application directement sur un serveur bare metal ou un serveur virtuel.
+Dans le [catalogue](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} {{site.data.keyword.cloud_notm}}![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), vous pouvez choisir un environnement géré, tel que Kubernetes ou Cloud Foundry, ou vous pouvez héberger votre application directement sur un serveur bare metal ou un serveur virtuel.
 
 Sur un déploiement virtuel, la majeure partie des opérations de votre application est gérée par {{site.data.keyword.cloud_notm}}. Un déploiement [virtuel](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers) est préférable si votre charge de travail est répartie sur plusieurs régions géographiques et que vous souhaitez utiliser un hyperviseur {{site.data.keyword.cloud_notm}} pour gérer vos déploiements. Un déploiement [bare metal](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started) est optimal si vous avez besoin d'un accès direct à un serveur physique dédié pour de meilleures performances.
 
 Vous disposez également de nombreuses options pour :
 * Sélectionner le type de [stockage](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") qui vous convient : stockage par blocs, stockage de fichiers ou stockage d'objets.
-* Sélectionner le type de [réseau](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")} dont vous avez besoin.
+* Sélectionner le type de [réseau](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") dont vous avez besoin. 
 * Sélectionner un service de [conteneurisation](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour bénéficier de la technologie Kubernetes {{site.data.keyword.cloud_notm}}.

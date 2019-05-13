@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-07"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
@@ -48,7 +48,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ```
 {: codeblock}
 
-**Sortie :**
+Sortie :
 ```json
 {
     message: "Hello aaron!"

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-04-30"
 
 keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
 
@@ -64,5 +64,7 @@ L'activation d'une chaîne d'outils permet de créer un environnement de dévelo
 1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
 2. Sélectionnez une cible de déploiement et cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue.
 3. Ouvrez l'étape de pipeline de votre nouvelle chaîne d'outils pour afficher le processus de génération et de déploiement de sorte que vous puissiez voir votre nouvelle application après quelques minutes.
+
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 Pour plus d'informations sur les cibles de déploiement, les générations et les pipelines, voir [Génération et déploiement](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,52 +104,18 @@ Vous pouvez également générer l'application localement à des fins de test av
 ## Déploiement de votre application
 {: #deploy-scratch}
 
-Vous pouvez déployer votre application dans {{site.data.keyword.cloud_notm}} de différentes manières. Mais l'utilisation d'une chaîne d'outils DevOps reste le meilleur moyen de déployer des applications de production. A l'aide d'une chaîne d'outils DevOps, vous pouvez facilement automatiser un grand nombre de déploiements et ajouter rapidement des services de surveillance, de journalisation et d'alerte afin de gérer plus facilement votre application à mesure de sa croissance.
+Cliquez sur **Configurer la distribution continue** sur la page **Détails de l'application**, sélectionnez une cible de déploiement et cliquez sur **Créer**. {{site.data.keyword.cloud_notm}} crée automatiquement une chaîne d'outils ouverte complétée par un référentiel Git et un pipeline de distribution continue.
 
-L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de l'environnement de déploiement choisi, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+
+Une fois que vous avez sélectionné votre cible de déploiement, ouvrez le composant Pipeline de votre nouvelle chaîne d'outils pour démarrer le processus de génération et de déploiement initial afin que vous puissiez voir votre application après quelques minutes.
 
 Toutes les chaînes d'outils créées à partir d'un tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
 {: note}
 
-### Déploiement manuel avec une chaîne d'outils DevOps
+Pour déployer votre application avec la ligne de commande, utilisez `ibmcloud dev deploy`. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
-Avec une chaîne d'outils correctement configurée, un cycle de génération-déploiement démarre automatiquement avec chaque fusion vers la branche principale de votre référentiel. 
-
-Vous pouvez également déployer manuellement votre application depuis votre chaîne d'outils DevOps :
-
-1. Sur la page Détails de l'application, cliquez sur **Afficher la chaîne d'outils**.
-2. Cliquez sur **Delivery Pipeline**. Vous pouvez alors démarrer des générations, gérer le déploiement et afficher les journaux et l'historique.
-
-La distribution continue est activée pour certaines applications. Vous pouvez activer la distribution continue pour automatiser les générations, les tests et les déploiements via Delivery Pipeline et GitHub.
-
-Pour plus d'informations, voir :
-* [Génération et déploiement avec la distribution continue](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
-* [Création de chaînes d'outils à partir d'un modèle](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
-
-### Déploiement automatique avec une chaîne d'outils DevOps
-
-1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
-2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions qui s'appliquent à la cible que vous choisissez :
-  * **Déployer dans IBM Kubernetes Service**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
-  * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **Public Cloud** ou **Enterprise Environment**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise.
-  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel qui inclut votre application, créer une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
-
-Le déploiement de votre application dans le cloud lors de la dernière étape crée automatiquement une chaîne d'outils. La chaîne d'outils crée un référentiel Git pour votre application dans lequel vous pouvez trouver le code. 
-
-### Déploiement en utilisant {{site.data.keyword.dev_cli_short}}
-{: #deploy-scratch-cli}
-
-Pour déployer votre application sur Cloud Foundry, entrez la commande suivante :
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-Pour déployer votre application sur un cluster Kubernetes, entrez la commande suivante :
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Vérification que votre application est en cours d'exécution
 {: #verify-scratch}

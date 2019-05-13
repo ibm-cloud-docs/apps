@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,28 @@ subcollection: creating-apps
 Des problèmes d'ordre général liés à la création d'applications peuvent survenir, par exemple, les applications ne peuvent pas être mises à jour ou les caractères codés sur deux octets ne sont pas affichés. Dans de nombreux cas, ces problèmes peuvent être résolus en quelques opérations simples.
 {:shortdesc}
 
+## Mes applications sont hébergées dans différents domaines
+{: #domains-ts}
+{: troubleshoot}
+
+Certaines de mes applications sont hébergées dans le domaine `mybluemix.net` mais d'autres sont hébergées dans le domaine `appdomain.cloud`.
+
+Mes applications existantes sont hébergées dans le domaine `mybluemix.net` mais mes applications plus récentes sont hébergées dans le domaine `appdomain.cloud`.
+{: tsSymptoms}
+
+Une nouvelle option de nom d'hôte `*.appdomain.cloud` est disponible sur cloud.ibm.com.
+
+Auparavant, le domaine `mybluemix.net` était utilisé pour l'hébergement des applications dans différentes cibles de déploiement, comme {{site.data.keyword.containerlong_notm}} ou Cloud Foundry. Les applications hébergées sur `mybluemix.net` ne sont pas concernées.
+
+Le sous-domaine des applications Cloud Foundry est `cf.appdomain.cloud`. Le sous-domaine des applications que vous déployez dans {{site.data.keyword.containerlong_notm}} est `containers.appdomain.cloud`.
+
+Pour plus d'informations, voir [Gestion de vos domaines](/docs/apps?topic=creating-apps-update-domain).
+
 ## Des modifications n'ont pas été sauvegardées
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Lorsque vous cliquez sur des éléments de la page des détails de l'application, il est possible que vous ne puissiez pas effectuer d'action. Vous pouvez également être invité à sauvegarder vos modifications avant de pouvoir continuer.
+Lorsque vous cliquez sur des éléments sur la page des détails de l'application, il est possible que vous ne puissiez pas d'effectuer d'actions. Vous pouvez également être invité à sauvegarder vos modifications avant de pouvoir continuer.
 
 Lorsque vous essayez de vérifier votre application ou vos services sur la page des détails de l'application, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
@@ -68,7 +85,7 @@ nslookup cloud.ibm.com
 {: #ts_vcap}
 {: troubleshoot}
 
-Des erreurs d'autorisation peuvent se produite lorsque votre application accède à un service {{site.data.keyword.cloud_notm}} si les données d'identification du service sont codées en dur dans votre application.
+Des erreurs d'autorisation peuvent se produire lorsque votre application accède à un service {{site.data.keyword.cloud_notm}} si les données d'identification du service sont codées en dur dans votre application.
 
 Une fois que vous avez configuré votre application pour qu'elle communique avec un service {{site.data.keyword.cloud_notm}}, vous la déployez dans {{site.data.keyword.cloud_notm}}. Toutefois, vous ne pouvez pas utiliser l'application pour accéder au service {{site.data.keyword.cloud_notm}} et recevez une erreur d'autorisation.
 {: tsSymptoms}
@@ -107,7 +124,7 @@ Si vous suspectez l'arrêt d'un service {{site.data.keyword.cloud_notm}}, consul
     * Utilisez un navigateur différent.
     * Redémarrez votre routeur, votre modem et votre ordinateur. Le réamorçage de ces unités peut éliminer diverses erreurs à l'origine de l'erreur 502.
   * Patientez et essayez à nouveau ultérieurement. Des problèmes temporaires peuvent se produire avec votre fournisseur d'accès Internet ou les services {{site.data.keyword.cloud_notm}}. Vous pouvez attendre jusqu'à ce que les problèmes temporaires soient résolus.
-  * Si le problème persiste, contactez le support {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.cloud_notm}}](/docs/get-support?topic=get-support-getting-customer-support){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). 
+  * Si le problème persiste, contactez le support {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Contacter le support {{site.data.keyword.cloud_notm}}](/docs/get-support?topic=get-support-getting-customer-support){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Les applications Android ne peuvent pas recevoir de {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -271,11 +288,10 @@ Vous pouvez utiliser la commande [Git update ](http://git-scm.com/docs/git-updat
 ## Dépassement de votre quota de stockage
 {: #exceed_quota}
 
-Si les travaux de génération ou de déploiement échouent et que le message suivant est généré, vous pouvez supprimer vos images en utilisant les commandes CLI suivantes.
-`Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
+Si les travaux de génération ou de déploiement échouent et que le message suivant est généré, vous pouvez supprimer vos images en utilisant les commandes CLI suivantes. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est aps déjà fait. 
-* Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez. 
+* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est pas déjà fait.
+* Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez.
 * Répertoriez vos images en utilisant `ibmcloud cr images`.
 * Supprimez toute image non utilisée en utilisant `ibmcloud cr image-rm <respository>:<tag>`.
 * Exécutez à nouveau le travail de génération ou de déploiement ayant échoué.
@@ -283,12 +299,12 @@ Si les travaux de génération ou de déploiement échouent et que le message su
 ## Accès aux journaux Kubernetes
 {: #access_kube_logs}
 
-Si l'application n'est pas en cours d'exécution et que vous ne pouvez pas accéder au noeud final de santé, consultez les journaux du cluster. 
-* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est aps déjà fait. 
-* Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez. 
-* Répertoriez vos clusters en utilisant `ibmcloud cs clusters`. 
+Si l'application n'est pas en cours d'exécution et que vous ne pouvez pas accéder au noeud final de santé, consultez les journaux du cluster.
+* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est pas déjà fait.
+* Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez.
+* Répertoriez vos clusters en utilisant `ibmcloud cs clusters`.
 * Désignez votre cluster correspondant en utilisant `ibmcloud cs cluster-config <cluster-name>`.
-* Exportez la variable d'environnement qui est répertoriée. 
+* Exportez la variable d'environnement qui est répertoriée.
 * Affichez vos pods en utilisant `kubectl get pods`. Si vous devez installer `kubectl`, voir [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 * Vous pouvez afficher les journaux dans votre application en utilisant `kubectl logs <pod-name>.`
 
@@ -300,7 +316,7 @@ Si vous tentez de démarrer Docker, le message d'erreur suivant s'affiche :
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -314,13 +330,11 @@ Assurez-vous que [Docker](https://docs.docker.com/install/){: new_window} ![Icô
 {: #build_error}
 {: troubleshoot}
 
-Lorsque vous tentez de générer une application à l'aide de la commande `ibmcloud dev build`, cette opération échoue uite à une erreur de nom d'utilisateur/mot de passe.
+Lorsque vous tentez de générer une application à l'aide de la commande `ibmcloud dev build`, cette opération échoue suite à une erreur de nom d'utilisateur/mot de passe.
 {: tsSymptoms}
 
-Des données d'identification Docker Hub incorrectes ont été utilisées pour l'authentification.
+Des données d'identification Docker Hub incorrectes ont été utilisées pour l'authentification. 
 {: tsCauses}
 
 Déconnectez Docker Hub dans le client Docker.
 {: tsResolve}
-
-

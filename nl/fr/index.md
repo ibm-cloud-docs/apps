@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -49,7 +49,7 @@ Créez une application en sélectionnant un des points d'entrée suivants :
 ## Etape 2. Ajout de services
 {: #resources-getting-started}
 
-Lorsque vous utilisez un kit de démarrage pour créer votre application, les services obligatoires sont automatiquement créés pour vous. Vous pouvez connecter d'autres services à votre application dans la console à partir de la page **Détails de l'application**, qui s'affiche dès que vous créez l'application. 
+Lorsque vous utilisez un kit de démarrage pour créer votre application, les services obligatoires sont automatiquement créés pour vous. Vous pouvez connecter d'autres services à votre application dans la console à partir de la page **Détails de l'application**, qui s'affiche dès que vous créez l'application.
 
 Si vous souhaitez ajouter des services une fois l'application créée, accédez au tableau de bord [{{site.data.keyword.cloud_notm}}![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}), localisez votre application, puis cliquez sur le nom de votre application. La page **Détails de l'application** s'affiche, et vous pouvez créer une instance de service ou connecter des services existants.
 
@@ -83,6 +83,8 @@ Pour plus d'informations, consultez la table des matières présentant les diff�
 Pour déployer votre application en utilisant l'interface de ligne de commande, exécutez la commande `ibmcloud dev deploy`. Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Vous êtes maintenant prêt pour des tâches de développement itératif et de distribution continue.
+
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Informations connexes
 {: #related-getting-started}

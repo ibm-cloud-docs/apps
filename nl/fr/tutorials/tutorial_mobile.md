@@ -61,10 +61,12 @@ Toutes les chaînes d'outils créées à partir d'un tableau de bord de dévelop
 {: note}
 
 1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
-2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions qui s'appliquent à la cible que vous sélectionnez :
+2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions s'appliquant à la cible que vous sélectionnez :
   * **Déployer dans [IBM Kubernetes Service](/docs/apps/deploying?topic=creating-apps-containers-kube)**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
   * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** ou **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise.
-  * **Déployer sur un [serveur virtuel](/docs/apps?topic=creating-apps-vsi-deploy)**. Cette option met à disposition une instance de serveur virtuel qui inclut votre application, créer une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
+  * **Déployer sur un [serveur virtuel](/docs/apps?topic=creating-apps-vsi-deploy)**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
+
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Etape 5. Générer et exécuter l'application localement
 {: #build-run-mobile}

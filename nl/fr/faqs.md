@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # Foire aux questions
 {: #apps-faq}
+
+## Qu'est-il arrivé à mybluemix.net ?
+{: #domain-change-faq}
+{: faq}
+
+Une nouvelle option de nom d'hôte `*.appdomain.cloud` est disponible sur cloud.ibm.com.
+
+Auparavant, le domaine `mybluemix.net` était utilisé pour l'hébergement des applications dans différentes cibles de déploiement, comme {{site.data.keyword.containerlong_notm}} ou Cloud Foundry. Les applications hébergées sur `mybluemix.net` ne sont pas concernées.
+
+Le sous-domaine des applications Cloud Foundry est `cf.appdomain.cloud`. Le sous-domaine des applications que vous déployez dans {{site.data.keyword.containerlong_notm}} est `containers.appdomain.cloud`.
+
+Pour plus d'informations, voir [Gestion de vos domaines](/docs/apps?topic=creating-apps-update-domain).
 
 ## Où puis-je trouver la liste de mes applications ?
 {: #cf-app}
@@ -54,3 +66,11 @@ Pour supprimer une application que vous avez créée, procédez comme suit :
 
 Une chaîne d'outils est un ensemble d'intégrations d'outils prenant en charge les tâches de développement, de déploiement et d'opérations. Vous pouvez créer une chaîne d'outils à partir de votre application. La chaîne d'outils peut prendre en charge le développement, le déploiement et la
 surveillance en continu, entre autres, et est associée à votre application. Chaque application peut être associée à une chaîne d'outils. Une chaîne d'outils peut être configurée afin que les modifications apportées à la chaîne d'outils génèrent et déploient automatiquement l'application. Pour plus d'informations sur les chaînes d'outils, voir [Création de chaînes d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## Comment changer de domaine pour mes applications Cloud Foundry ?
+{: #cf-domains-faq}
+{: faq}
+
+Pour les applications Cloud Foundry, vous pouvez changer de domaine et utiliser `appdomain.cloud` et non plus `mybluemix.net` via la console {{site.data.keyword.cloud_notm}} ou l'interface de ligne de commande. Pour plus d'informations sur le passage au domaine `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+
+Lorsque vous créez de nouvelles applications, le domaine partagé par défaut est `mybluemix.net` mais vous pouvez également utiliser le domaine `appdomain.cloud`.

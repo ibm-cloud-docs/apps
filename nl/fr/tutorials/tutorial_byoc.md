@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-30"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -84,7 +84,7 @@ Vous pouvez utiliser la commande `ibmcloud dev enable` pour générer un modèle
     ```
    {: codeblock}
 
-Pour plus d'informations, voir [Création et déploiement d'applications à l'aide de l'interface de ligne de commande](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Vérification que votre application est en cours d'exécution
 {: #verify-byoc-app}
