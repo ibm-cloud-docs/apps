@@ -63,7 +63,7 @@ La generación de estos componentes ahorra un tiempo valioso y asegura la utiliz
 * La habilitación del servicio es el código que permite que su app se conecte y utilice los servicios que añade. La gestión de credenciales, el código de inicialización y SDK específicos de servicio son ejemplos de elementos de habilitación del servicio.
 * La habilitación en la nube se corresponde con el código que permite ejecutar la app en {{site.data.keyword.cloud_notm}}. Por ejemplo, diagramas de Helm que permiten la ejecución de una app en un clúster Kubernetes de {{site.data.keyword.cloud_notm}}.
 
-Cuando se crea una app an partir de un kit de inicio de {{site.data.keyword.cloud_notm}}, la app se inicia con la arquitectura probada que también refleja las mejores prácticas para el idioma seleccionado.
+Cuando se crea una app a partir de un kit de inicio de {{site.data.keyword.cloud_notm}}, la app se inicia con la arquitectura probada que también refleja las mejores prácticas para el idioma seleccionado.
 
 Cada app incluye un archivo readme que contiene detalles técnicos de la app y explica lo que se necesita para ejecutar la app si no se ejecuta desde un principio.
 {: tip}

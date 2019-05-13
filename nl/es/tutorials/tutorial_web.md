@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creación de una app web básica con un kit de inicio
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a codificar rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
+{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a codificar rápidamente. Seleccione un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -53,7 +53,7 @@ Puede añadir servicios para mejorar la app con la potencia cognitiva de Watson,
 ## Paso 4. Crear una cadena de herramientas de DevOps
 {: #toolchain-webapp}
 
-La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que elija, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que seleccione, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 La entrega continua está habilitada para algunas aplicaciones. Puede habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues a través de Delivery Pipeline y GitHub.
 
@@ -141,6 +141,9 @@ Para desplegar la app en un clúster de Kubernetes, especifique el mandato sigui
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+Para obtener más información sobre cómo desplegar la app, consulte
+[Despliegue de apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Paso 7. Verificar que la app se está ejecutando
 {: #verify-webapp}

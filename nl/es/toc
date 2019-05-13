@@ -40,7 +40,6 @@ Creación de apps
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     {: .topicgroup}

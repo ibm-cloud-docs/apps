@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # Preguntas más frecuentes
 {: #apps-faq}
+
+## ¿Qué ha ocurrido con mybluemix.net?
+{: #domain-change-faq}
+{: faq}
+
+Hay una nueva opción de nombre de host `*.appdomain.cloud` disponible en cloud.ibm.com.
+
+Anteriormente, se utilizaba el dominio `mybluemix.net` para alojar apps en diversos destinos de despliegue, como {{site.data.keyword.containerlong_notm}} o Cloud Foundry. Las apps que tenga alojadas en `mybluemix.net` no se verán afectadas.
+
+El subdominio para las apps de Cloud Foundry es `cf.appdomain.cloud`. El subdominio para las apps que despliegue en {{site.data.keyword.containerlong_notm}} es `containers.appdomain.cloud`.
+
+Para obtener más información, consulte [Gestión de los dominios](/docs/apps?topic=creating-apps-update-domain).
 
 ## ¿Dónde puedo encontrar una lista de mis apps?
 {: #cf-app}
@@ -54,3 +66,13 @@ Para suprimir una app que haya creado, siga estos pasos:
 {: faq}
 
 Una cadena de herramientas es un conjunto de integraciones de herramientas que dan soporte a tareas de desarrollo, despliegue, y operaciones. Puede crear una cadena de herramientas desde su app. La cadena de herramientas puede soportar tareas continuas de desarrollo, despliegue, supervisión, etc. y está asociada con su app. Cada app se puede asociar con una cadena de herramientas. Se puede configurar una cadena de herramientas de manera que los cambios realizados en la cadena de herramientas creen y desplieguen la app automáticamente. Para obtener más información sobre las cadenas de herramientas, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## ¿Cómo cambio el dominio para mis apps de Cloud Foundry?
+{: #cf-domains-faq}
+{: faq}
+
+Para apps de Cloud Foundry, puede cambiar el dominio de `mybluemix.net` a `appdomain.cloud` utilizando la interfaz de línea de mandatos o la consola de
+{{site.data.keyword.cloud_notm}}. Para obtener más información sobre cómo cambiar el dominio a `appdomain.cloud`, consulte
+[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+
+Al crear nuevas apps, el dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar.

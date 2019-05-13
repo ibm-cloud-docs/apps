@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-30"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -85,7 +85,8 @@ Puede utilizar el mandato `ibmcloud dev enable` para generar una plantilla de ca
     ```
    {: codeblock}
 
-Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli) para obtener más información.
+Para obtener más información sobre cómo desplegar la app, consulte
+[Despliegue de apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verificación de que la app se está ejecutando
 {: #verify-byoc-app}

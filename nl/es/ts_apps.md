@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,30 @@ subcollection: creating-apps
 Entre los problemas generales relacionados con la creación de apps se pueden incluir las apps que no se pueden actualizar y los caracteres de doble byte que no se visualizan. En muchos de los casos, puede solucionar estos problemas siguiendo unos sencillos pasos.
 {:shortdesc}
 
+## Mis apps están alojadas en dominios distintos
+{: #domains-ts}
+{: troubleshoot}
+
+Algunas de mis apps se alojan en el dominio `mybluemix.net`, pero otras se alojan en el dominio
+`appdomain.cloud`.
+
+Mis apps existentes se alojan en el dominio `mybluemix.net`, pero mis apps más nuevas se alojan en el dominio
+`appdomain.cloud`.
+{: tsSymptoms}
+
+Hay una nueva opción de nombre de host `*.appdomain.cloud` disponible en cloud.ibm.com.
+
+Anteriormente, se utilizaba el dominio `mybluemix.net` para alojar apps en diversos destinos de despliegue, como {{site.data.keyword.containerlong_notm}} o Cloud Foundry. Las apps que tenga alojadas en `mybluemix.net` no se verán afectadas.
+
+El subdominio para las apps de Cloud Foundry es `cf.appdomain.cloud`. El subdominio para las apps que despliegue en {{site.data.keyword.containerlong_notm}} es `containers.appdomain.cloud`.
+
+Para obtener más información, consulte [Gestión de los dominios](/docs/apps?topic=creating-apps-update-domain).
+
 ## Hay cambios sin guardar
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Cuando pulse sobre elementos en la página de detalles de apps, es posible que no pueda realizar las acciones. También es posible que se le solicite que guarde los cambios para poder continuar.
+Al pulsar elementos de la página de detalles de la app, es posible que no pueda realizar ninguna acción. También es posible que se le solicite que guarde los cambios para poder continuar.
 
 Cuando intenta comprobar la app o los servicios en la página de detalles de la app, se muestra el siguiente mensaje de error:
 {: tsSymptoms}
@@ -40,7 +59,7 @@ Cuando intenta comprobar la app o los servicios en la página de detalles de la 
 Cuando desplace el ratón sobre los campos **INSTANCIAS** o **CUOTA DE MEMORIA** del panel de tiempo de ejecución, los valores cambiarán. Este comportamiento es así por diseño. Sin embargo, se le solicitará que guarde los valores de instancia o de memoria para poder ir a otra página.
 {: tsCauses}
 
-Cierre el diálogo de mensaje y pulse **RESTABLECER** en el panel de tiempo de ejecución.
+Cierre la ventana de mensaje y pulse **RESTABLECER** en el panel de tiempo de ejecución.
 {: tsResolve}
 
 ## La migración tras error automática entre regiones de {{site.data.keyword.cloud_notm}} no está disponible
@@ -299,7 +318,7 @@ Cuando intenta iniciar Docker, aparece el mensaje de error siguiente:
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -321,5 +340,3 @@ Se están utilizando credenciales de Docker Hub incorrectas para la autenticaci�
 
 Finalice la sesión de Docker Hub en el cliente de Docker.
 {: tsResolve}
-
-

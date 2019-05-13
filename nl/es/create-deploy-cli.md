@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Creación y despliegue de apps utilizando la CLI
+# Creación de apps utilizando la CLI
 {: #create-deploy-app-cli}
 
 Puede utilizar la interfaz de línea de mandatos (CLI) de {{site.data.keyword.cloud}} para crear y desplegar su aplicación. 
@@ -54,7 +54,7 @@ La creación de la app y de la cadena de herramientas puede tardar unos segundos
 ## Generación de activos de despliegue y de habilitación de nube
 {: #byoc-cli}
 
-Puede utilizar esta opción si ya dispone de un código base existente y desea generar activos de despliegue y de habilitación de nube para un solo microservicio o una app web mediante [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Tenga en cuenta que este mandato está en versión Beta y no se da soporte a todos los lenguajes ni a todas las estructuras de app. En las siguientes instrucciones se describe cómo utilizar esta funcionalidad con un repositorio de ejemplo, pero los pasos son más o menos los mismos para su propio código base.
+Puede utilizar esta opción si ya dispone de un código base existente y desea generar activos de despliegue y de habilitación de nube para un solo microservicio o una app web mediante [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Este mandato está en versión Beta y no se da soporte a todos los lenguajes ni a todas las estructuras de app. En las siguientes instrucciones se describe cómo utilizar esta función con un repositorio de ejemplo, pero los pasos son más o menos los mismos para su propio código base.
 
 1. Inicie una sesión en {{site.data.keyword.cloud_notm}} con el mandato `ibmcloud login` y seleccione como destino una organización y un espacio.
 2. Clone la [app de muestra Hello World](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") ejecutando el mandato siguiente en el directorio que prefiera.
@@ -76,7 +76,7 @@ Puede utilizar esta opción si ya dispone de un código base existente y desea g
 ### Notas importantes
  - Si ya ha creado una app {{site.data.keyword.cloud_notm}} mediante la consola de {{site.data.keyword.cloud_notm}}, siga los pasos 2-5 de la sección anterior en el directorio de la app. Para el paso 6, puede seleccionar la opción para conectar el código local a una app existente.
  - También puede optar por generar archivos de despliegue y de habilitación de nube sin conectarse a una app {{site.data.keyword.cloud_notm}} ejecutando [`ibmcloud dev enable --no-create`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable).
- - Para configurar manualmente una cadena de herramientas y archivos de despliegue, siga [la guía de aprendizaje](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube). Esto puede ser útil si está intentando configurar una cadena de herramientas de Continuous Delivery para más de un microservicio o app web interrelacionados.
+ - Para configurar manualmente una cadena de herramientas y archivos de despliegue, siga [la guía de aprendizaje](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube). Esta guía de aprendizaje puede ser útil si está intentando configurar una cadena de herramientas de Continuous Delivery para más de un microservicio o app web interrelacionados.
  - Si el código base existente aún no está en un repositorio Git, siga los pasos 2-5 de la sección anterior en el directorio de la app. Para el paso 6, puede seleccionar la opción para crear una nueva app de {{site.data.keyword.cloud_notm}} y desplegarla en una cadena de herramientas DevOps (que tiene un repositorio GitLab recién creado).
 
 ## Cree una app y ejecútela localmente
@@ -88,7 +88,7 @@ Independientemente de la opción que ha utilizado para crear la app, ahora puede
 2. Ejecute el mandato [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) para crear una app.
 3. Ejecute el mandato [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) para empezar a ejecutar la app localmente.
 4. Vea su app ejecutándose localmente en `http://localhost:3000` o en un URL similar.
-5. Pulse las teclas **Ctrl+C** para detener la app.
+5. Pulse Ctrl+C para detener la app.
 
 También puede utilizar [mandatos compuestos](/docs/cli/idt?topic=cloud-cli-idt-cli#compound) como `ibmcloud dev build/run` para generar secuencialmente una compilación seguida de una ejecución.
 {: tip}
@@ -104,35 +104,18 @@ Ahora que su app se puede ejecutar localmente, puede añadir un servicio y modif
 4. Actualice el código. Por ejemplo, modifique el archivo `/public/index.html` o un archivo similar. Si utiliza la aplicación `ExpressJS` de ejemplo, puede cambiar la cadena `Congratulations!` por algo como `Hello World!`.
 5. Guarde los archivos que haya modificado.
 
-## Despliegue en {{site.data.keyword.cloud_notm}}
+## Despliegue de la app
 {: #deploy-app-cli}
 
-Puede desplegar su app {{site.data.keyword.cloud_notm}} de una de estas dos maneras, en función de cómo haya configurado su app. 
+Puede desplegar su app en {{site.data.keyword.cloud_notm}} de una de estas dos maneras, en función de cómo haya configurado su app. Para obtener más información, consulte estos temas:
 
-### Despliegue la app utilizando la cadena de herramientas de DevOps
-Si aún no ha creado una cadena de herramientas de DevOps para la app y la app aún no está en un repositorio Git, puede ejecutar el mandato [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit). Siga las indicaciones para "Configurar DevOps" y despliegue en una nueva cadena de herramientas (y cree un nuevo repositorio GitLab).
-
-Después de crear una cadena de herramientas de DevOps para su app, el despliegue de una nueva compilación será tan simple como confirmar y enviar su código al repositorio de la cadena de herramientas. 
-
-1. Ejecute el mandato `git add .`.
-2. Ejecute el mandato `git commit -m "made changes"` para confirmar los cambios.
-3. Ejecute el mandato `git push origin master` para enviar por push a la rama maestra.
-4. Vea la cadena de herramientas de DevOps para su app desde la consola de {{site.data.keyword.cloud_notm}}. Puede ver detalles de la cadena de herramientas desde la página **Detalles de la app** en la consola de {{site.data.keyword.cloud_notm}} ejecutando el mandato [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) desde el directorio de la app.
-5. Ver el conducto dentro de la cadena de herramientas para verificar que se ha iniciado la nueva compilación.
-
-### Despliegue manual de su app
-
-Puede desplegar manualmente su app utilizando el mandato [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy). Por ejemplo, siga los pasos siguientes para desplegar manualmente su app en Kubernetes.
-
-1. Asegúrese de haber [creado un clúster de Kubernetes](https://{DomainName}/kubernetes/overview){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
-2. Ejecute el mandato [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
-3. Cuando se le solicite, confirme el nombre de la imagen del contenedor y del clúster que va a utilizar.
-4. Espere unos minutos a que el despliegue se haya completado.
+* [Despliegue automático de la app](/docs/apps?topic=creating-apps-deploy-cli-auto)
+* [Despliegue manual de su app](/docs/apps?topic=creating-apps-deploy-cli-manual)
 
 ## Visualización de la app
 {: #view-app-cli}
 
-1. Para ver el URL de su app que está ejecutándose en {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view).
+1. Para ver el URL de su app que está ejecutándose en {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). Luego vaya al URL en el navegador.
 2. Para ver los detalles sobre la cadena de herramientas, servicios y credenciales de su app desde la consola de {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console). 
 
 **Para notificar problemas o proporcionar comentarios, puede utilizar el

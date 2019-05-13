@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,52 +104,20 @@ También puede compilar la app localmente para probarla antes de desplegarla en 
 ## Despliegue de la app
 {: #deploy-scratch}
 
-Puede desplegar la app en {{site.data.keyword.cloud_notm}} de varias formas, pero una cadena de herramientas de DevOps es la mejor forma de desplegar apps de producción. Con una cadena de herramientas de DevOps, puede automatizar fácilmente despliegues en muchos entornos y añadir rápidamente servicios de supervisión, de registro y de alertas para ayudar a gestionar su app a medida que crece.
+Pulse **Configurar entrega continua** en la página **Detalles de la app**, seleccione un destino de
+despliegue y pulse **Crear**. {{site.data.keyword.cloud_notm}} crea de forma automática una cadena de herramientas abierta que se completa con un repositorio de Git y un conducto de entrega continua.
 
-La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el entorno de desarrollo que elija, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que seleccione, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+
+Después de seleccionar el destino de despliegue, abra el componente del conducto de la nueva cadena de herramientas para iniciar el proceso de compilación y despliegue inicial de forma que pueda visualizar en unos minutos su nueva app.
 
 Todas las cadenas de herramientas creadas a partir de un panel de control de desarrollador de {{site.data.keyword.cloud_notm}} se configuran para un despliegue automático.
 {: note}
 
-### Despliegue manual con una cadena de herramientas de DevOps
+Para desplegar la app con la línea de mandatos, utilice `ibmcloud dev deploy`. Consulte [Creación y despliegue de apps utilizando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli) para obtener más información.
 
-Con una cadena de herramientas correctamente configurada, un ciclo de despliegue de compilación empieza automáticamente después de cada fusión en la rama maestra en su repositorio. 
-
-También puede desplegar manualmente su app desde su cadena de herramientas de DevOps:
-
-1. En la página Detalles de la app, pulse **Ver cadena de herramientas**.
-2. Pulse sobre **Conducto de entrega**, donde puede iniciar compilaciones, gestionar el despliegue y ver los registros y el historial.
-
-La entrega continua está habilitada para algunas aplicaciones. Puede habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues a través de Delivery Pipeline y GitHub.
-
-Para obtener más información, consulte:
-* [Creación y despliegue con entrega continua](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
-* [Creación de cadenas de herramientas a partir de una plantilla](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
-
-### Despliegue automático con una cadena de herramientas de DevOps
-
-1. En la página **Detalles de la app**, pulse **Configurar entrega continua**.
-2. Seleccione un destino de despliegue. Configure el destino de despliegue de acuerdo con las instrucciones correspondientes al destino que elija:
-  * **Desplegar en el servicio IBM Kubernetes**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
-  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **nube pública** o de **entorno de empresa**, que puede utilizar para crear y gestionar entornos aislados para alojar aplicaciones de Cloud Foundry exclusivamente para su empresa.
-  * **Desplegar en un servidor virtual**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue.
-
-El despliegue de la app en la nube en el último paso crea automáticamente una cadena de herramientas. La cadena de herramientas crea un repositorio Git para la app en el que puede encontrar el código. 
-
-### Desplegar utilizando el {{site.data.keyword.dev_cli_short}}
-{: #deploy-scratch-cli}
-
-Para desplegar la app en Cloud Foundry, especifique el mandato siguiente:
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-Para desplegar la app en un clúster de Kubernetes, especifique el mandato siguiente:
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+Para obtener más información sobre cómo desplegar la app, consulte
+[Despliegue de apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verificación de que la app se está ejecutando
 {: #verify-scratch}
