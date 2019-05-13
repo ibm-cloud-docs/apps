@@ -34,5 +34,5 @@ Em uma implementação virtual, a maioria das operações do seu app é gerencia
 
 Você também tem muitas opções para:
 * Selecionar o tipo de [armazenamento](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") que é o certo para você por meio de armazenamento de bloco, armazenamento de arquivo ou Object Storage.
-* Selecionar o tipo de [rede](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")} que é necessário.
+* Selecionar o tipo de [rede](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") de que você precisa.
 * Selecionar um serviço de [conteinerização](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para aproveitar a tecnologia Kubernetes do {{site.data.keyword.cloud_notm}}.

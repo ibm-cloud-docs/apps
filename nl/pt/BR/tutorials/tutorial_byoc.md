@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-05"
+lastupdated: "2019-04-30"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -91,7 +91,7 @@ instâncias do app em execução e os serviços dependentes em todos os destinos
     ```
    {: codeblock}
 
-Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verificando se o seu app está em execução
 {: #verify-byoc-app}

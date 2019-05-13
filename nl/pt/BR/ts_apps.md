@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,28 @@ subcollection: creating-apps
 Problemas gerais com a criação de apps podem incluir apps que não podem ser atualizados ou caracteres de byte duplo que não são exibidos. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {:shortdesc}
 
+## Meus apps estão hospedados em domínios diferentes
+{: #domains-ts}
+{: troubleshoot}
+
+Alguns de meus apps estão hospedados no domínio `mybluemix.net`, mas outros estão hospedados no domínio `appdomain.cloud`.
+
+Meus apps existentes estão hospedados no domínio `mybluemix.net`, mas meus apps mais novos estão hospedados no domínio `appdomain.cloud`.
+{: tsSymptoms}
+
+Uma nova opção de nome do host `*.appdomain.cloud` está disponível em cloud.ibm.com.
+
+Anteriormente, o domínio `mybluemix.net` foi usado para hospedar apps em vários destinos de implementação, como o {{site.data.keyword.containerlong_notm}} ou o Cloud Foundry. Qualquer app que você hospedou em `mybluemix.net` não será impactado.
+
+O subdomínio para apps do Cloud Foundry é `cf.appdomain.cloud`. O subdomínio para apps que você implementa no {{site.data.keyword.containerlong_notm}} é `containers.appdomain.cloud`.
+
+Para obter mais informações, consulte [Gerenciando seus domínios](/docs/apps?topic=creating-apps-update-domain).
+
 ## Você possui mudanças não salvas
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Ao clicar em itens na página de detalhes do app, talvez não seja possível executar nenhuma ação. Você também pode ser solicitado a salvar as mudanças antes de poder continuar.
+Ao clicar em itens na página de detalhes do app, talvez você não consiga executar nenhuma ação. Você também pode ser solicitado a salvar as mudanças antes de poder continuar.
 
 Ao tentar verificar seu app ou serviços na página de detalhes do app, a mensagem de erro a seguir será exibida:
 {: tsSymptoms}
@@ -40,7 +57,7 @@ Ao tentar verificar seu app ou serviços na página de detalhes do app, a mensag
 Ao rolar o mouse sobre os campos **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na área de janela de tempo de execução, os valores mudam. Esse comportamento é definido pelo design. No entanto, você será solicitado a salvar as configurações de memória ou de instância antes de ir para outra página.
 {: tsCauses}
 
-Feche a caixa de diálogo de mensagem e clique em **RECONFIGURAR** em sua área de janela de tempo de execução.
+Feche a janela de mensagem e clique em **RECONFIGURAR** em sua área de janela de tempo de execução.
 {: tsResolve}
 
 ## O failover automático entre regiões do {{site.data.keyword.cloud_notm}} não está disponível
@@ -99,7 +116,7 @@ Um erro de Gateway inválido geralmente acontece quando você acessa um website 
 
 Outras causas menos comuns de um erro de Gateway inválido são os dropouts do provedor de serviços da Internet (ISP), configurações de firewall inválidas e erros de cache do navegador.
 
-Se você suspeitar que um serviço do {{site.data.keyword.cloud_notm}} está inativo, primeiro, verifique a página [{{site.data.keyword.cloud_notm}} status ](https://cloud.ibm.com/status){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Uma solução alternativa pode ser[usar o serviço em outra região do {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app?topic=resources-externalapp){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
+Se você suspeitar que um serviço do {{site.data.keyword.cloud_notm}} está inativo, primeiro, verifique a página [{{site.data.keyword.cloud_notm}} status ](https://cloud.ibm.com/status){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Uma solução alternativa pode ser [usar o serviço em outra região do {{site.data.keyword.cloud_notm}}](/docs/resources/connect_external_app?topic=resources-externalapp){: new_window}. Se o status de serviço for normal, tente as etapas a seguir para resolver o problema:
 {: tsResolve}
 
   * Tente novamente a ação:
@@ -306,7 +323,7 @@ Ao tentar iniciar o Docker, a mensagem de erro a seguir será exibida:
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -321,13 +338,11 @@ Assegure-se de que o [Docker](https://docs.docker.com/install/){: new_window}![�
 {: troubleshoot}
 
 Ao tentar construir um app com o comando `ibmcloud dev build`, ele falha
-com um erro de nome de usuário/senha do Docker.
+com um erro de nome de usuário/senha do Docker. 
 {: tsSymptoms}
 
-As credenciais incorretas do Docker Hub estão sendo usadas para autenticar.
+As credenciais incorretas do Docker Hub estão sendo usadas para autenticar. 
 {: tsCauses}
 
 Efetue logout do Docker Hub no cliente do Docker.
 {: tsResolve}
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,53 +104,18 @@ Também é possível construir o app localmente para teste antes de implementá-
 ## Implementando seu app
 {: #deploy-scratch}
 
-É possível implementar seu app no {{site.data.keyword.cloud_notm}} de várias maneiras, mas uma cadeia de ferramentas do DevOps é a melhor maneira de implementar apps de produção. Com uma cadeia de ferramentas do DevOps, é possível automatizar facilmente implementações para muitos ambientes e incluir rapidamente serviços de monitoramento, criação de log e alerta para ajudar a gerenciar seu app à medida que ele cresce.
+Clique em **Configurar entrega contínua** na página **Detalhes do app**, selecione um destino de implementação e clique em **Criar**. O {{site.data.keyword.cloud_notm}} automaticamente cria uma cadeia de ferramentas aberta e completa com um repositório Git e um pipeline de entrega contínua.
 
-A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles serão customizados para o ambiente de implementação que você escolher, quer ele seja [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+
+Depois de selecionar seu destino de implementação, abra o componente de pipeline de sua nova cadeia de ferramentas para iniciar o processo de construção e implementação inicial para que você possa ver o seu novo app em minutos.
 
 Todas as cadeias de ferramentas criadas por meio de um Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
 {: note}
 
-### Implementação manual com uma cadeia de ferramentas do DevOps
+Para implementar o app com a linha de comandos, use `ibmcloud dev deploy`. Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
-Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção-implementação se inicia automaticamente com cada mesclagem na ramificação Principal em seu repositório. 
-
-Também é possível implementar seu app manualmente por meio de sua cadeia de ferramentas DevOps:
-
-1. Na página Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
-2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e histórico.
-
-A entrega contínua é ativada para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
-
-Para obter informações
-adicionais, consulte:
-* [Construindo e implementando com o Continuous Delivery](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
-* [Criando cadeias de ferramentas por meio de um modelo](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
-
-### Implementação automática com uma cadeia de ferramentas do DevOps
-
-1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
-2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino que você escolher:
-  * **Implementar no IBM Kubernetes Service**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **Public Cloud** ou do **Enterprise Environment**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você.
-
-A implementação do app na nuvem realizada na última etapa cria automaticamente uma cadeia de ferramentas. A cadeia de ferramentas cria um repositório Git para o app no qual é possível localizar o código. 
-
-### Implementar usando o {{site.data.keyword.dev_cli_short}}
-{: #deploy-scratch-cli}
-
-Para implementar seu app para o Cloud Foundry, insira o comando a seguir:
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-Para implementar seu app em um cluster do Kubernetes, insira o comando a seguir:
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Verificando se o seu app está em execução
 {: #verify-scratch}

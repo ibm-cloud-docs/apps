@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-02"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note .note}
 
 # Criando os aplicativos com o Mendix
 {: #create-mendix}
@@ -34,7 +35,6 @@ Mendix é um ambiente de desenvolvimento de pouco código e um conjunto de ferra
 3. Clique em  ** Criar app **.
 4. Na página **Detalhes do app**, nomeie o seu app e, opcionalmente, forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
 5. Clique em **Criar**.
-
 
 ## Autorizando a IBM a criar o projeto em Mendix e vincular as contas
 {: #link-mendix-account}
@@ -62,7 +62,6 @@ As implementações do Mendix Cloud Foundry requerem o serviço de banco de dado
 
 Se você selecionou um cluster do Kubernetes para implementação, consulte o [Tutorial do Kubernetes do Mendix](/docs/apps/tutorials?topic=creating-apps-deploy-mendix-kube) para saber como configurar o cluster para o uso de produção.
 
-
 ## Continuando o desenvolvimento do Mendix e o ciclo de vida de implementação
 {: #dev-lifecycle-mendix}
 
@@ -78,8 +77,73 @@ Mendix é um ambiente de criação de pouco código. O ciclo de vida de desenvol
   Essa ação inicia a cadeia de ferramentas do DevOps do aplicativo, que puxa a implementação mais recente do Mendix e a implementa no ambiente de destino. Após a conclusão da implementação, a versão mais recente do aplicativo
 inicia automaticamente e se torna disponível.
 
-Todos os aplicativos Mendix devem ser implementados no {{site.data.keyword.cloud_notm}} clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Não chame manualmente as cadeias de ferramentas do Mendix por meio da interface do IBM DevOps. A ativação manual das cadeias de ferramentas por meio da interface do DevOps pode resultar em uma implementação com falha devido à falta de metadados necessários que são críticos para as implementações do Mendix. Dependendo do estado do aplicativo, uma falha durante a ativação da cadeia de ferramentas do DevOps ou um erro no aplicativo implementado pode ocorrer. Se você ativar manualmente uma cadeia de ferramentas e tiver uma falha, será possível restaurar a implementação do aplicativo clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Essa ação aciona um fluxo do DevOps completo para o aplicativo Mendix, que inclui os metadados necessários.
+Todos os aplicativos Mendix devem ser implementados no {{site.data.keyword.cloud_notm}} clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Não chame manualmente as cadeias de ferramentas do Mendix por meio da interface do IBM DevOps. A ativação manual das cadeias de ferramentas por meio da interface do DevOps pode resultar em uma implementação com falha devido à falta de metadados necessários que são críticos para as implementações do Mendix. Dependendo do estado do aplicativo, uma falha durante a ativação da cadeia de ferramentas do DevOps ou um erro no aplicativo implementado pode ocorrer.
+
+Se você ativar manualmente uma cadeia de ferramentas e tiver uma falha, será possível restaurar a implementação do aplicativo clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Essa ação aciona um fluxo do DevOps completo para o aplicativo Mendix, que inclui os metadados necessários.
 {: tip}
+
+## Opcional: configurando o {{site.data.keyword.cos_full_notm}} 
+{: #mendix-cos}
+
+Alguns usuários podem desejar configurar o aplicativo Mendix implementado para usar o {{site.data.keyword.cos_full}} para armazenamento persistente e uploads de arquivo. O {{site.data.keyword.cos_full_notm}} é um serviço de armazenamento de objeto compatível com S3. Para que os aplicativos Mendix aproveitem o armazenamento de arquivo compatível com S3, eles devem definir as variáveis de ambiente a seguir para acessar uma instância do {{site.data.keyword.cos_full_notm}}, depois de terem configurado a entrega contínua:
+
+* `S3_ACCESS_KEY_ID` - a chave S3, que faz parte das credenciais do {{site.data.keyword.cos_full_notm}}
+* `S3_SECRET_ACCESS_KEY` - a chave secreta S3, que faz parte das credenciais do {{site.data.keyword.cos_full_notm}}
+* `S3_BUCKET_NAME` - o depósito de armazenamento S3
+* `S3_ENDPOINT` - o terminal de armazenamento S3
+* `S3_USE_V2_AUTH` - o valor é `true`
+
+Para obter mais informações sobre os depósitos e as chaves do {{site.data.keyword.cos_full_notm}}, consulte a [Documentação da API do {{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev). Para obter mais informações sobre os valores de terminais regionais e inter-regionais, consulte os [docs do {{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints). Para obter mais informações sobre o suporte ao Mendix para armazenamento compatível com S3, consulte a [documentação do buildpack do Mendix](https://github.com/mendix/cf-mendix-buildpack#s3-settings){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+
+### Configurações do {{site.data.keyword.cos_full_notm}} para aplicativos do Cloud Foundry
+{: cos-cfapps}
+
+Conclua estas etapas para implementações do Cloud Foundry:
+
+1. Configure estas variáveis de ambiente em implementações do Cloud Foundry usando o comando `cf set-env`:
+
+  ```
+    ibmcloud cf set-env <YOUR_APP> S3_ACCESS_KEY_ID <YOUR_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_SECRET_ACCESS_KEY <YOUR_SECRET_KEY>
+    ibmcloud cf set-env <YOUR_APP> S3_BUCKET_NAME <YOUR_BUCKET>
+    ibmcloud cf set-env <YOUR_APP> S3_ENDPOINT s3.us-south.cloud-object-storage.appdomain.cloud
+    ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
+  ```
+
+2. Depois de especificar todos esses valores, remonte o aplicativo do Cloud Foundry para que os novos valores sejam aplicados.
+
+  ```
+    ibmcloud cf restage <YOUR_APP>
+  ```
+
+### Configurações do {{site.data.keyword.cos_full_notm}} para aplicativos do Kubernetes
+{: #cos-kubeapps}
+
+Conclua estas etapas para implementações do Kubernetes:
+
+1. Configure as variáveis de ambiente `S3_ACCESS_KEY_ID` e `S3_SECRET_ACCESS_KEY` como valores de segredo do Kubernetes no cluster. Para obter mais informações sobre como criar segredos do Kubernetes, consulte a [documentação do {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-service-binding#adding_app).
+
+2. Além de qualquer valor existente, especifique as variáveis de ambiente como variáveis de ambiente adicionais no arquivo `mendix-app.yaml` dentro da pasta `chart/<appname>/templates` do repositório Git. Os nomes dos segredos devem corresponder aos nomes que foram criados na etapa anterior.
+
+  ```
+    env:
+      - name: S3_ACCESS_KEY_ID
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-key"
+            key: db-endpoint
+      - name: S3_SECRET_ACCESS_KEY
+        valueFrom:
+          secretKeyRef:
+            name: "mendix-s3-secret-key"
+            key: db-endpoint
+      - name: S3_ENDPOINT
+        value: "s3.us-south.cloud-object-storage.appdomain.cloud"
+      - name: S3_USE_V2_AUTH
+        value: "true"
+  ```
+
+3. Após as mudanças do Kubernetes serem aplicadas, reimplemente seu aplicativo navegando para a página **Detalhes do app** e clicando em **Implementar**. 
 
 ## Próximas Etapas 
 {: #next-steps-mendix}

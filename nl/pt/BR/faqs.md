@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # FAQ
 {: #apps-faq}
+
+## O que aconteceu com mybluemix.net?
+{: #domain-change-faq}
+{: faq}
+
+Uma nova opção de nome do host `*.appdomain.cloud` está disponível em cloud.ibm.com.
+
+Anteriormente, o domínio `mybluemix.net` foi usado para hospedar apps em vários destinos de implementação, como o {{site.data.keyword.containerlong_notm}} ou o Cloud Foundry. Qualquer app que você hospedou em `mybluemix.net` não será impactado.
+
+O subdomínio para apps do Cloud Foundry é `cf.appdomain.cloud`. O subdomínio para apps que você implementa no {{site.data.keyword.containerlong_notm}} é `containers.appdomain.cloud`.
+
+Para obter mais informações, consulte [Gerenciando seus domínios](/docs/apps?topic=creating-apps-update-domain).
 
 ## Onde posso encontrar uma lista de meus apps?
 {: #cf-app}
@@ -45,7 +57,7 @@ Sua lista de recursos no [console do {{site.data.keyword.cloud_notm}}](https://{
 
 Para excluir um app que você criou, conclua estas etapas:
 
-1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
+1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone de **Menu** ![Ícone de menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
 2. Clique no ícone **Ações** ![Ícone Ações](../icons/action-menu-icon.svg) para o app que você deseja excluir e clique em **Excluir**.
 
 ## O que são cadeias de ferramentas e como elas se relacionam com meu app?
@@ -55,3 +67,11 @@ Para excluir um app que você criou, conclua estas etapas:
 Uma cadeia de ferramentas é um conjunto de integrações de ferramenta que suporta as tarefas de desenvolvimento, implementação e operações. É possível criar uma cadeia de ferramentas a partir de seu aplicativo. A cadeia de
 ferramentas pode suportar desenvolvimento, implementação e monitoramento contínuos e mais, e é associada ao seu app. Cada app pode ser
 associado a uma cadeia de ferramentas. Uma cadeia de ferramentas pode ser configurada para que as mudanças na cadeia de ferramentas construam e implementem automaticamente o app. Para obter mais informações sobre as cadeias de ferramentas, consulte [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## Como mudo o domínio para meus apps do Cloud Foundry?
+{: #cf-domains-faq}
+{: faq}
+
+Para apps Cloud Foundry, é possível mudar seu domínio de `mybluemix.net` para `appdomain.cloud` usando o console do {{site.data.keyword.cloud_notm}} ou a interface da linha de comandos. Para obter mais informações sobre como mudar seu domínio para `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
+
+Quando você cria novos apps, o domínio compartilhado padrão é `mybluemix.net`, mas `appdomain.cloud` é outra opção de domínio que pode ser usada.

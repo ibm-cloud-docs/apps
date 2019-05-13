@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -87,6 +87,8 @@ Para obter mais informações, consulte o índice para vários tópicos de imple
 Para implementar seu app usando a CLI, execute o comando `ibmcloud dev deploy`. Para obter mais informações, consulte [Criando e implementando aplicativos usando a CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Agora você está configurado para desenvolvimento iterativo e entrega contínua.
+
+Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Informações relacionadas
 {: #related-getting-started}
