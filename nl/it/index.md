@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -83,6 +83,8 @@ Per ulteriori informazioni, consulta la tabella dei contenuti per diversi argome
 Per distribuire la tua applicazione utilizzando la CLI, esegui il comando `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Ora sei pronto per lo sviluppo iterativo e la fornitura continua.
+
+Per ulteriori informazioni sulla distribuzione della tua applicazione, vedi [Distribuzione delle applicazioni](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Informazioni correlate
 {: #related-getting-started}

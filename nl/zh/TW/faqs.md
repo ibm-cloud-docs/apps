@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-04-03"
+lastupdated: "2019-05-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -22,6 +22,18 @@ subcollection: creating-apps
 
 # 常見問題
 {: #apps-faq}
+
+## mybluemix.net 發生什麼情況？
+{: #domain-change-faq}
+{: faq}
+
+cloud.ibm.com 上提供新的主機名稱選項 `*.appdomain.cloud`。
+
+先前，`mybluemix.net` 網域用於管理各種部署目標中的應用程式，例如 {{site.data.keyword.containerlong_notm}} 或 Cloud Foundry。您已在 `mybluemix.net` 上管理的任何應用程式都不會受到影響。
+
+Cloud Foundry 應用程式的子網域是 `cf.appdomain.cloud`。您部署至 {{site.data.keyword.containerlong_notm}} 之應用程式的子網域是 `containers.appdomain.cloud`。
+
+如需相關資訊，請參閱[管理網域](/docs/apps?topic=creating-apps-update-domain)。
 
 ## 我可以在何處找到應用程式清單？
 {: #cf-app}
@@ -53,3 +65,11 @@ subcollection: creating-apps
 {: faq}
 
 工具鏈是一組整合的工具，支援開發、部署及操作作業。您可以從應用程式建立工具鏈。工具鏈可以支援連續開發、部署、監視及其他作業，且與您的應用程式相關聯。每個應用程式都可以與工具鏈相關聯。工具鏈可以配置為使工具鏈的變更自動建置及部署應用程式。如需工具鏈的相關資訊，請參閱[建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
+
+## 如何變更 Cloud Foundry 應用程式的網域？
+{: #cf-domains-faq}
+{: faq}
+
+對於 Cloud Foundry 應用程式，您可以使用 {{site.data.keyword.cloud_notm}} 主控台或指令行介面，將您的網域從 `mybluemix.net` 變更為 `appdomain.cloud`。如需將網域變更為 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
+
+當您建立新的應用程式時，預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。

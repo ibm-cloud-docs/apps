@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-06"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, deploy command line, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# 使用 CLI 建立及部署應用程式
+# 使用 CLI 來建立應用程式
 {: #create-deploy-app-cli}
 
 您可以使用 {{site.data.keyword.cloud}} 指令行介面 (CLI) 來建立及部署應用程式。 
@@ -53,7 +53,7 @@ subcollection: creating-apps
 ## 產生部署及雲端啟用資產
 {: #byoc-cli}
 
-如果您已有現有的程式碼庫，且想要使用 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)，為單一微服務或 Web 應用程式產生部署及雲端啟用資產，則可以使用此選項。請注意，這個指令目前為測試版，而且並未支援所有語言及/或應用程式結構。下列指示說明如何使用此功能與範例儲存庫搭配，但是對於您自己的程式碼庫，步驟大致相同。
+如果您已有現有的程式碼庫，且想要使用 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)，為單一微服務或 Web 應用程式產生部署及雲端啟用資產，則可以使用此選項。這個指令目前為測試版，而且並未支援所有語言及/或應用程式結構。下列指示說明如何使用此功能與範例儲存庫搭配，但是對於您自己的程式碼庫，步驟大致相同。
 
 1. 執行 `ibmcloud login` 來登入 {{site.data.keyword.cloud_notm}}，然後將組織與空間設為目標。
 2. 在您選擇的目錄中執行下列指令，以複製 [Hello World 範例應用程式](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
@@ -75,7 +75,7 @@ subcollection: creating-apps
 ### 重要注意事項
  - 如果您已使用 {{site.data.keyword.cloud_notm}} 主控台建立 {{site.data.keyword.cloud_notm}} 應用程式，請在應用程式目錄中遵循前一節的步驟 2 - 5。對於步驟 6，您可以選取將本端程式碼連接至現有應用程式的選項。
  - 您也可以選擇執行 [`ibmcloud dev enable --no-create`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)，產生部署和雲端啟用檔案，而不連接至 {{site.data.keyword.cloud_notm}} 應用程式。
- - 若要手動配置工具鏈和部署檔案，請遵循[本指導教學](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube)。如果您嘗試針對多個相互關聯的 Web 應用程式或微服務配置 Continuous Delivery 工具鏈，這可能很有用。
+ - 若要手動配置工具鏈和部署檔案，請遵循[本指導教學](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube)。如果您嘗試針對多個相互關聯的 Web 應用程式或微服務配置 Continuous Delivery 工具鏈，則本指導教學可能很有用。
  - 如果現有的程式碼庫尚不在 Git 儲存庫中，請在應用程式目錄中遵循前一節的步驟 2 - 5。對於步驟 6，您可以選取建立新 {{site.data.keyword.cloud_notm}} 應用程式，並將它部署至 DevOps 工具鏈（具有新建立之 GitLab 儲存庫）的選項。
 
 ## 建置應用程式並在本端執行它
@@ -87,7 +87,7 @@ subcollection: creating-apps
 2. 執行 [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) 指令，以建置應用程式。
 3. 執行 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 指令，以開始在本端執行應用程式。
 4. 在 `http://localhost:3000` 或類似的 URL 檢視在本端執行的應用程式。
-5. 按 **Ctrl+C** 鍵可停止應用程式。
+5. 按 Ctrl+C 來停止您的應用程式。
 
 您也可以使用[複合指令](/docs/cli/idt?topic=cloud-cli-idt-cli#compound)，例如 `ibmcloud dev build/run`，循序地發出建置，然後執行。
 {: tip}
@@ -103,35 +103,18 @@ subcollection: creating-apps
 4. 更新程式碼。例如，修改 `/public/index.html` 檔或類似檔案。如果您使用範例 `ExpressJS` 應用程式，可以變更 `Congratulations!` 字串，成為像是 `Hello World!` 的字串。
 5. 儲存您已修改的任何檔案。
 
-## 部署至 {{site.data.keyword.cloud_notm}}
+## 部署應用程式
 {: #deploy-app-cli}
 
-您可以用兩種方式之一來部署 {{site.data.keyword.cloud_notm}} 應用程式，視應用程式的配置方式而定。 
+您可以用兩種方式之一，從 CLI 將應用程式部署至 {{site.data.keyword.cloud_notm}}，視應用程式的配置方式而定。如需相關資訊，請參閱下列主題：
 
-### 使用 DevOps 工具鏈來部署應用程式
-如果您尚未建立應用程式的 DevOps 工具鏈，且您的應用程式尚不在 Git 儲存庫中，則可以執行 [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) 指令。請遵循「配置 DevOps」的提示，然後部署至新的工具鏈（並建立新的 GitLab 儲存庫）。
-
-您為應用程式建立 DevOps 工具鏈之後，部署新的建置就很簡單，只需要確定並推送程式碼至工具鏈中的儲存庫。 
-
-1. 執行 `git add .` 指令。
-2. 執行 `git commit -m "made changes"` 指令來確定變更。
-3. 執行 `git push origin master` 指令來推送至主節點分支。
-4. 從 {{site.data.keyword.cloud_notm}} 主控台，檢視應用程式的 DevOps 工具鏈。您可以從 {{site.data.keyword.cloud_notm}} 主控台中的**應用程式詳細資料**頁面檢視工具鏈詳細資料，方法是從應用程式目錄執行 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 指令。
-5. 檢視工具鏈內的管線，以驗證已啟動新的建置。
-
-### 手動部署應用程式
-
-您可以使用 [`deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令，以手動部署應用程式。例如，使用下列步驟，將應用程式手動部署至 Kubernetes。
-
-1. 確定您已[建立 Kubernetes 叢集](https://{DomainName}/kubernetes/overview){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
-2. 執行 [`ibmcloud dev deploy -t container`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令。
-3. 收到提示時，確認要使用的叢集和容器映像檔名稱。
-4. 等待幾分鐘讓部署完成。
+* [自動部署應用程式](/docs/apps?topic=creating-apps-deploy-cli-auto)
+* [手動部署應用程式](/docs/apps?topic=creating-apps-deploy-cli-manual)
 
 ## 檢視應用程式
 {: #view-app-cli}
 
-1. 若要檢視在 {{site.data.keyword.cloud_notm}} 上執行之應用程式的 URL，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令。
+1. 若要檢視在 {{site.data.keyword.cloud_notm}} 上執行之應用程式的 URL，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令。然後，在瀏覽器中移至 URL。
 2. 若要從 {{site.data.keyword.cloud_notm}} 主控台檢視應用程式的認證、服務和工具鏈詳細資料，請執行 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 指令。 
 
 **若要報告問題或提供意見，您可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 頻道](https://ibm-cloud-tech.slack.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。在[這裡](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 要求團隊存取。**

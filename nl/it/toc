@@ -15,7 +15,7 @@ Creazione di applicazioni
     {: .topicgroup}
     Link correlati
         [Strategies for resilient applications](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Continuous Deployment to Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Continuous deployment to Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -34,13 +34,12 @@ Creazione di applicazioni
         tutorials/tutorial_mendix_getting_started.md
 
     {: .topicgroup}
-    Distribuzione di applicazioni
+    Distribuzione delle applicazioni
         dep-app-tool.md
         vsi-deploy.md
         deploying/containers.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
     {: .topicgroup}
@@ -92,6 +91,6 @@ Creazione di applicazioni
     {: .navgroup id="help"}
     faqs.md
     ts_apps.md
-    [Canale IBM Cloud Slack developer-tools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
     [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

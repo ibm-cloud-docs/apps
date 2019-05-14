@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -83,6 +83,8 @@ ibmcloud dev edit
 若要使用 CLI 來部署應用程式，請執行 `ibmcloud dev deploy` 指令。如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps?topic=creating-apps-create-deploy-app-cli)。
 
 現在，您已準備好進行反覆運算式開發及持續交付。
+
+如需部署應用程式的相關資訊，請參閱[部署應用程式](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 相關資訊
 {: #related-getting-started}

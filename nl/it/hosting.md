@@ -34,5 +34,5 @@ In una distribuzione virtuale, la maggior parte delle operazioni della tua appli
 
 Hai anche molte opzioni per:
 * Selezionare il tipo di [archiviazione](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") più adattato a te tra archiviazione blocchi, archiviazione file e Object Storage.
-* Selezionare il tipo di [rete](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")} di cui hai bisogno.
+* Selezionare il tipo di [rete](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") di cui hai bisogno.
 * Selezionare un servizio di [containerizzazione](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per sfruttare la tecnologia di {{site.data.keyword.cloud_notm}} Kubernetes.

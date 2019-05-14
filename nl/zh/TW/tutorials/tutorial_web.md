@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # 使用入門範本套件來建立基本 Web 應用程式
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} 提供許多入門範本套件來協助您快速撰寫程式碼。請從「應用程式服務入門範本套件」中選擇語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您會逐步了解安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端的步驟。
+{{site.data.keyword.cloud}} 提供許多入門範本套件來協助您快速撰寫程式碼。請從「應用程式服務入門範本套件」中選取語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您會逐步了解安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端的步驟。
 {: shortdesc}
 
 ## 步驟 1. 安裝工具
@@ -53,7 +53,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 ## 步驟 4. 建立 DevOps 工具鏈
 {: #toolchain-webapp}
 
-啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選擇的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
+啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
 
 已針對部分應用程式啟用持續交付。您可以啟用持續交付，以透過 Delivery Pipeline 及 GitHub 自動建置、測試及部署。
 
@@ -141,6 +141,8 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+如需部署應用程式的相關資訊，請參閱[部署應用程式](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 步驟 7. 驗證應用程式在執行中
 {: #verify-webapp}

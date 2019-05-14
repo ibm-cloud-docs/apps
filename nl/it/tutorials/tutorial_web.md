@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-04-30"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creazione di un'applicazione web di base con un kit starter
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} offre molti kit starter per aiutarti a codificare rapidamente. Scegli un linguaggio, un framework e gli strumenti dai kit starter App Service per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, vengono illustrati i passi per installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
+{{site.data.keyword.cloud}} offre molti kit starter per aiutarti a codificare rapidamente. Seleziona un linguaggio, un framework e gli strumenti dai kit starter App Service per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, vengono illustrati i passi per installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
 {: shortdesc}
 
 ## Passo 1. Installa gli strumenti
@@ -53,7 +53,7 @@ Puoi aggiungere servizi che migliorano la tua applicazione con la potenza cognit
 ## Passo 4. Crea una toolchain DevOps
 {: #toolchain-webapp}
 
-L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che scegli, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 La fornitura continua è abilitata per alcune applicazioni. Puoi abilitare la fornitura continua per automatizzare le creazioni, i test e le distribuzioni tramite Delivery Pipeline e GitHub.
 
@@ -140,6 +140,8 @@ Per distribuire la tua applicazione a un cluster Kubernetes, immetti il seguente
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
+
+Per ulteriori informazioni sulla distribuzione della tua applicazione, vedi [Distribuzione delle applicazioni](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Passo 7. Verifica che la tua applicazione sia in esecuzione
 {: #verify-webapp}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,28 @@ subcollection: creating-apps
 建立應用程式的一般問題，可能包括無法更新應用程式，或是未顯示雙位元組字元。在許多情況下，您可以遵照一些簡單的步驟，從這些問題回復。
 {:shortdesc}
 
+## 我的應用程式是在不同網域中進行管理
+{: #domains-ts}
+{: troubleshoot}
+
+我的部分應用程式是在 `mybluemix.net` 網域中進行管理，但其他應用程式是在 `appdomain.cloud` 網域中進行管理。
+
+我的現有應用程式是在 `mybluemix.net` 網域中進行管理，但我的更新應用程式是在 `appdomain.cloud` 網域中進行管理。
+{: tsSymptoms}
+
+cloud.ibm.com 上提供新的主機名稱選項 `*.appdomain.cloud`。
+
+先前，`mybluemix.net` 網域用於管理各種部署目標中的應用程式，例如 {{site.data.keyword.containerlong_notm}} 或 Cloud Foundry。您已在 `mybluemix.net` 上管理的任何應用程式都不會受到影響。
+
+Cloud Foundry 應用程式的子網域是 `cf.appdomain.cloud`。您部署至 {{site.data.keyword.containerlong_notm}} 之應用程式的子網域是 `containers.appdomain.cloud`。
+
+如需相關資訊，請參閱[管理網域](/docs/apps?topic=creating-apps-update-domain)。
+
 ## 您有未儲存的變更
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-當您按一下應用程式詳細資料頁面上的項目時，可能無法採取任何動作。您也可能會收到要先儲存變更才能繼續的提示。
+當您按一下應用程式詳細資料頁面上的項目時，可能無法執行任何動作。您也可能會收到要先儲存變更才能繼續的提示。
 
 在應用程式詳細資料頁面上嘗試檢查應用程式或服務時，會顯示下列錯誤訊息：
 {: tsSymptoms}
@@ -40,7 +57,7 @@ subcollection: creating-apps
 在運行環境窗格的**實例**或**記憶體配額**欄位上捲動滑鼠時，值就會變更。此行為是按照設計而來。不過，您會收到提示，提醒您在移至另一個頁面之前，要先儲存記憶體或實例設定。
 {: tsCauses}
 
-關閉訊息對話框，然後按一下運行環境窗格中的**重設**。
+關閉訊息視窗，然後按一下運行環境窗格中的**重設**。
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} 地區之間的自動失效接手無法使用
@@ -302,7 +319,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: tsSymptoms}
 
 ```
-An error exec: "docker": executable file not found in $PATH was encountered while building the Docker image.
+An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}
 
@@ -324,5 +341,3 @@ Docker 用戶端未安裝，或是它已安裝但未啟動。
 
 請在 Docker 用戶端中登出 Docker Hub。
 {: tsResolve}
-
-

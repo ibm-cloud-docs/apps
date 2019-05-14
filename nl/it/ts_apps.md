@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -26,11 +26,28 @@ subcollection: creating-apps
 I problemi generali con la creazione delle applicazioni potrebbero includere applicazioni che non possono essere aggiornate o caratteri a doppio byte che non vengono visualizzati. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {:shortdesc}
 
+## Le mie applicazioni sono ospitate in domini diversi 
+{: #domains-ts}
+{: troubleshoot}
+
+Alcune delle mie applicazioni sono ospitate nel dominio `mybluemix.net`, ma altre nel dominio `appdomain.cloud`.
+
+Le mie applicazioni esistenti sono ospitate nel dominio `mybluemix.net`, ma le applicazioni più recenti sono ospitate nel dominio `appdomain.cloud`.
+{: tsSymptoms}
+
+È disponibile una nuova opzione di nome host `*.appdomain.cloud` su cloud.ibm.com.
+
+In precedenza, il dominio `mybluemix.net` veniva utilizzato per ospitare le applicazioni in varie destinazioni di distribuzione, ad esempio {{site.data.keyword.containerlong_notm}} o Cloud Foundry. Tutte le applicazioni che hai ospitato su `mybluemix.net` non sono interessate.
+
+Il dominio secondario per le applicazioni Cloud Foundry è `cf.appdomain.cloud`. Il dominio secondario per le applicazioni che distribuisci a {{site.data.keyword.containerlong_notm}} è `containers.appdomain.cloud`.
+
+Per ulteriori informazioni, vedi [Gestione dei tuoi domini](/docs/apps?topic=creating-apps-update-domain).
+
 ## Non hai salvato delle modifiche
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potesti non essere in grado di eseguire alcuna azione. Ti potrebbe anche essere richiesto di salvare le modifiche prima di poter continuare.
+Quando fai clic sugli elementi nella pagina dei dettagli dell'applicazione, potresti non essere in grado di eseguire alcuna azione. Ti potrebbe anche essere richiesto di salvare le modifiche prima di poter continuare.
 
 Quando provi a controllare la tua applicazione o i tuoi servizi nella pagina dei dettagli dell'applicazione, viene visualizzato il seguente messaggio di errore:
 {: tsSymptoms}
@@ -40,7 +57,7 @@ Quando provi a controllare la tua applicazione o i tuoi servizi nella pagina dei
 Quando passi il puntatore del tuo mouse sui campi **ISTANZE** o **QUOTA DI MEMORIA** nel riquadro di runtime, i valori cambiano. Questa è la modalità di funzionamento prevista. Tuttavia, ti viene richiesto di salvare le impostazioni di memoria o istanza prima di andare a un'altra pagina.
 {: tsCauses}
 
-Chiudi la finestra di dialogo del messaggio e fai clic su **REIMPOSTA** nel tuo riquadro di runtime.
+Chiudi la finestra del messaggio e fai clic su **REIMPOSTA** nel tuo riquadro di runtime.
 {: tsResolve}
 
 ## Il failover automatico tra le regioni {{site.data.keyword.cloud_notm}} non è disponibile
@@ -294,7 +311,7 @@ Se i lavori di build o di distribuzione non riescono, e vedi il seguente messagg
 ## Accesso ai log Kubernetes
 {: #access_kube_logs}
 
-Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di integrità, prova a guardare i log nel cluster. 
+Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di integrità, prova a guardare i log nel cluster.
 * Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) se non lo hai ancora fatto.
 * Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
 * Elenca i tuoi cluster utilizzando `ibmcloud cs clusters`,
@@ -303,7 +320,7 @@ Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di 
 * Visualizza i tuoi pod utilizzando `kubectl get pods`. Se devi installare `kubectl`, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 * Puoi visualizzare i log nella tua applicazione utilizzando `kubectl logs <pod-name>.`
 
-## L'avvio di `docker` ha esito negativo e viene restituito il messaggio "file not found" 
+## L'avvio di `docker` ha esito negativo e viene restituito il messaggio "file not found"
 {: #docker_not_found}
 {: troubleshoot}
 
@@ -321,17 +338,15 @@ Il client Docker non è installato oppure è installato ma non è stato avviato.
 Assicurati che [Docker](https://docs.docker.com/install/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") sia installato e avvialo.
 {: tsResolve}
 
-## La creazione di un'applicazione non riesce con l'errore Docker 
+## La creazione di un'applicazione non riesce con l'errore Docker
 {: #build_error}
 {: troubleshoot}
 
-Quando provi a creare un'applicazione con il comando `ibmcloud dev build`, l'operazione non riesce con un errore nomeutente/password Docker.
+Quando provi a creare un'applicazione con il comando `ibmcloud dev build`, l'operazione non riesce con un errore nomeutente/password Docker. 
 {: tsSymptoms}
 
-Si stanno utilizzando delle credenziali Docker Hub non corrette per l'autenticazione.
+Si stanno utilizzando delle credenziali Docker Hub non corrette per l'autenticazione. 
 {: tsCauses}
 
 Disconnettiti da Docker Hub nel client Docker.
 {: tsResolve}
-
-
