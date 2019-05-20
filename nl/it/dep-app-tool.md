@@ -25,7 +25,7 @@ subcollection: creating-apps
 Puoi distribuire la tua applicazione a {{site.data.keyword.cloud}} utilizzando una toolchain DevOps. Con una toolchain DevOps, puoi automatizzare le distribuzioni in molti ambienti e aggiungere rapidamente servizi di monitoraggio, registrazione, informazioni approfondite e avvisi per aiutare a gestire la tua applicazione man mano che cresce. Puoi configurare la fornitura continua e la distribuzione della tua applicazione utilizzando l'interfaccia di riga di comando (o CLI, command-line interface) o la console web {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-Una toolchain DevOps fornisce un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di GitLab dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Una toolchain DevOps fornisce un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di GitLab dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 Tutte le toolchain che vengono create dal dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
 {: note}
@@ -92,7 +92,7 @@ La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra divers
     {: note}
 
   4. Accedi alla CLI {{site.data.keyword.cloud_notm}} con il tuo ID IBM. Se hai più account, ti viene richiesto di selezionare quale account utilizzare. Se non specifichi una regione con l'indicatore `-r`, devi selezionare anche una regione.
-```
+    ```
     ibmcloud login
     ```
     {: codeblock}
@@ -125,7 +125,7 @@ Dopo che hai creato una toolchain DevOps per la tua applicazione, distribuire un
 ### Distribuzione manuale della tua applicazione
 {: #deploy-cli-manual}
 
-Puoi distribuire manualmente la tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando il comando [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy). 
+Puoi distribuire manualmente la tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando il comando [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   ```
   ibmcloud dev deploy <APP_NAME>

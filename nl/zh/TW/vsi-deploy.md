@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ subcollection: creating-apps
 服務不會連結至虛擬伺服器實例。您無法新增服務至虛擬伺服器中的應用程式。
 {: important}
 
-## 建立及部署應用程式
+## 部署應用程式
 {: #create-deploy-vsi}
 
 App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
 1. [建立應用程式](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)。 
-2. 按一下**應用程式詳細資料**頁面中的**配置持續交付**。
+2. 按一下「應用程式詳細資料」頁面中的**配置持續交付**。
 3. 選取**部署至虛擬伺服器**，以及要在其中執行伺服器的地區。
 
 ## 部署處理程序運作方式
@@ -60,7 +60,7 @@ App Service 會為您佈建虛擬伺服器實例、載入包含您的應用程�
 
 若要檢視這些環境內容，請完成下列步驟。 
 
-1. 從「應用程式詳細資料」頁面，按一下**檢視工具鏈**。
+1. 從「應用程式詳細資料」頁面中，按一下**檢視工具鏈**。
 2. 按一下 **Delivery Pipeline** 磚。
 3. 按一下**階段配置**圖示，然後在建置階段上按一下**配置階段**。
 4. 按一下**環境內容**標籤，以檢視內容。請使用下表以瞭解可用的內容。

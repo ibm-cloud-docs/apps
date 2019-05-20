@@ -25,7 +25,7 @@ subcollection: creating-apps
 您可以使用 DevOps 工具链将应用程序部署到 {{site.data.keyword.cloud}}。通过 DevOps 工具链，您可以将应用程序自动部署到多个环境中，还可以快速地添加监视、日志记录、洞察和警报服务，从而更好地管理应用程序的日常发展。您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来配置持续交付和部署应用程序。
 {: shortdesc}
 
-DevOp 工具链会为应用程序提供基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）对它们进行定制。
+DevOp 工具链会为应用程序提供基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）对它们进行定制。
 
 在 {{site.data.keyword.cloud_notm}} 开发者仪表板中创建的所有工具链都会配置为自动部署。
 {: note}

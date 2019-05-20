@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ subcollection: creating-apps
 서비스는 가상 서버 인스턴스에 바인드되지 않습니다. 가상 서버의 애플리케이션에는 서비스를 추가할 수 없습니다.
 {: important}
 
-## 앱 작성 및 배치
+## 앱 배치
 {: #create-deploy-vsi}
 
 앱 서비스는 가상 서버를 사용자에 맞게 프로비저닝하고 앱이 포함된 이미지를 로드하며 Devops 도구 체인을 작성하고 첫 번째 배치 사이클을 시작합니다.
 
 1. [앱을 작성](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)하십시오. 
-2. **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하십시오.
+2. 앱 세부사항 페이지에서 **지속적 딜리버리 구성**을 클릭하십시오. 
 3. 서버를 실행할 지역과 함께 **가상 서버에 배치**를 선택하십시오.
 
 ## 배치 프로세스 작동 방식
@@ -60,7 +60,7 @@ subcollection: creating-apps
 
 이러한 환경 특성을 보려면 다음 단계를 완료하십시오. 
 
-1. 앱 세부사항 페이지에서 **도구 체인 보기**를 클릭하십시오.
+1. 앱 세부사항 페이지에서 **도구 체인 보기**를 클릭하십시오. 
 2. **Delivery Pipeline** 타일을 클릭하십시오.
 3. **단계 구성** 아이콘을 클릭한 다음 빌드 단계에서 **단계 구성**을 클릭하십시오.
 4. **환경 특성** 탭을 클릭하여 특성을 확인하십시오. 사용 가능한 특성에 대해 알아보려면 다음 표를 참조하십시오.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-10"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,14 +104,22 @@ Puoi anche creare l'applicazione localmente per la verifica prima di distribuirl
 ## Distribuzione della tua applicazione
 {: #deploy-scratch}
 
-Fai clic su **Configure continuous delivery** nella pagina **App details**, seleziona una destinazione di distribuzione e fai clic su **Create**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta completa di un repository Git e della pipeline di fornitura continua.
+Quando selezioni una destinazione di distribuzione, una toolchain DevOps viene creata automaticamente per la tua applicazione. La toolchain include una pipeline di fornitura che indica lo stato di distribuzione della tua applicazione. La nuova applicazione generata viene trasmessa a un repository GitLab che fa parte della toolchain.
 
-L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
-
-Dopo che hai selezionato la tua destinazione di distribuzione, apri il componente pipeline della tua nuova toolchain per iniziare il processo iniziale di creazione e distribuzione in modo da poter vedere la tua nuova applicazione nel giro di qualche minuto.
+L'abilitazione di una toolchain DevOps crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di GitLab dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 Tutte le toolchain che vengono create da un dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
 {: note}
+
+Per selezionare la tua destinazione di distribuzione e per configurare la fornitura continua, completa questa procedura:
+
+1. Nella pagina App details, fai clic su **Configure continuous delivery**.
+2. Seleziona un destinazione per la distribuzione. Configura la tua destinazione di distribuzione in base alle istruzioni per la destinazione che selezioni:
+  * **Deploy to [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Questa opzione crea un cluster di host, denominati nodi di lavoro, per distribuire e gestire contenitori delle applicazioni ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
+  * **Deploy to Cloud Foundry**. Questa opzione distribuisce la tua applicazione nativa del cloud senza che tu debba gestire l'infrastruttura sottostante. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda.
+  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
+
+Dopo aver selezionato e configurato la destinazione di distribuzione, la pagina App details indica che la fornitura continua è stata configurata. Puoi visualizzare il repository che contiene il codice di origine per la tua applicazione facendo clic su **View repo**.
 
 Per distribuire la tua applicazione con la riga di comando, utilizza `ibmcloud dev deploy`. Per ulteriori informazioni, vedi [Creazione e distribuzione delle applicazioni utilizzando la CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 

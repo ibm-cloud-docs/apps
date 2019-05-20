@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ Il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instanc
 Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, Virtual Server Instance). Non puoi aggiungere servizi a un'applicazione in un server virtuale.
 {: important}
 
-## Creazione e distribuzione di applicazioni
+## Distribuzione delle applicazioni
 {: #create-deploy-vsi}
 
 L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
 1. [Crea un'applicazione](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Fai clic su **Configure continuous delivery** dalla pagina **App details**.
+2. Fai clic su **Configure continuous delivery** dalla pagina App details.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 
 ## Modalità di funzionamento del processo di distribuzione
@@ -60,7 +60,7 @@ La pipeline utilizza una serie di proprietà account utente e una nuova coppia d
 
 Per visualizzare queste proprietà di ambiente, completa la seguente procedura. 
 
-1. Dalla pagina dei dettagli dell'applicazione, fai clic su **Visualizza toolchain**.
+1. Dalla pagina App details, fai clic su **View toolchain**.
 2. Fai clic sul tile **Delivery Pipeline**.
 3. Fai clic sull'icona **Stage Configure** e quindi su **Configure Stage** nella fase di build.
 4. Fai clic sulla scheda **Environment Properties** per visualizzare le proprietà. Utilizza la seguente tabella per ulteriori informazioni sulle proprietà disponibili.

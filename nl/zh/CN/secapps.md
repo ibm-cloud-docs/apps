@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-10"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,12 +20,12 @@ subcollection: creating-apps
 # 创建证书签名请求
 {: #ssl_csr}
 
-您可以通过创建和上传 SSL 证书，并限制对应用程序的访问来保护应用程序。
+您可以通过上传 SSL 证书并限制对应用程序的访问来保护应用程序。
 {:shortdesc}
 
-必须在服务器上创建证书签名请求 (CSR)，然后才能通过 {{site.data.keyword.cloud}} 上传您有权使用的 SSL 证书。CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签名的消息。CSR 最常使用的是 PKCS #10 格式。CSR 包含公用密钥以及公共名称、组织、城市、省/直辖市/自治区、国家或地区和电子邮件。仅接受 CSR 密钥长度为 2048 位的 SSL 证书请求。
-
 ## 创建 CSR
+
+必须在服务器上创建证书签名请求 (CSR)，然后才能通过 {{site.data.keyword.cloud}} 上传您有权使用的 SSL 证书。CSR 是发送到认证中心以请求对公用密钥及其关联信息进行签名的消息。CSR 最常使用的是 PKCS #10 格式。CSR 包含公用密钥以及公共名称、组织、城市、省/直辖市/自治区、国家或地区和电子邮件。仅接受 CSR 密钥长度为 2048 位的 SSL 证书请求。
 
 根据操作系统，创建 CSR 的方法也有所不同。以下示例显示如何使用 [OpenSSL 命令行工具 ](http://www.openssl.org/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 创建 CSR：
 
@@ -37,44 +37,46 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可以将 SHA-1 选项用于与 SHA-256 证书具有兼容性问题的应用程序。
 {: tip}
 
-证书由认证中心发放并由该认证中心进行数字签名。创建 CSR 后，可以在公共认证中心生成 SSL 证书。
-
 ### 必需的 CSR 内容
 
 要使 CSR 有效，在创建 CSR 时必须输入以下信息：
 
- * **国家或地区名称**。表示国家或地区的两位数代码。例如，`US` 是表示美国的国家或地区代码。对于其他国家或区域，请在创建 CSR 前查看 [ISO 国家或地区代码列表 ](https://www.iso.org/obp/ui/#search){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+ * **国家或地区名称**：表示国家或地区的两位数代码。例如，`US` 是表示美国的国家或地区代码。对于其他国家或区域，请在创建 CSR 前查看 [ISO 国家或地区代码列表 ](https://www.iso.org/obp/ui/#search){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
- * **省/直辖市/自治区**。省/自治区/直辖市的完整非缩写名称。
- * **区域**。城市或城镇的全名。
- * **组织**。在您的区域合法注册的企业或公司的全名或个人姓名。对于公司，请确保包含注册后缀，例如，Ltd.、Inc. 或 NV。
- * **组织单元**。您公司中订购证书的分支的名称，例如，会计或市场营销。
- * **公共名称**。为其请求 SSL 证书的标准域名 (FQDN)。
+ * **省/自治区/直辖市**：省/自治区/直辖市的完整非缩写名称。
+ * **区域**：城市或城镇的全名。
+ * **组织**：在您所在区域合法注册的企业或公司的全名，或个人姓名。对于公司，请确保包含注册后缀，例如，Ltd.、Inc. 或 NV。
+ * **组织单元**：您公司中订购证书的分支的名称，例如，会计或市场营销。
+ * **公共名称**：为其请求 SSL 证书的标准域名 (FQDN)。
 
 您可以使用主体备用名称 (SAN)，但提供的主机名不能在其他部署的证书中发布，以防止 CN 冲突。
 {: note}
 
+证书由认证中心发放并由该认证中心进行数字签名。创建 CSR 后，可以在公共认证中心生成 SSL 证书。
+
 ## 上传 SSL 证书
 {: #ssl_certificate}
 
-您可以应用安全协议来为应用程序提供通信隐私，以防止窃听、篡改和消息伪造。如果帐户所有者具有免费轻量帐户，那么必须升级帐户后才能上传证书。
+您可以应用安全协议来为应用程序提供通信隐私，以防止窃听、篡改和消息伪造。如果您具有轻量帐户，那么必须升级帐户后才能上传证书。
 
 使用定制域来提供 SSL 证书时，请使用以下区域端点来提供 {{site.data.keyword.cloud_notm}} 中您组织的 URL 路径：
 
-* US-South - `custom-domain.us-south.cf.cloud.ibm.com`
-* US-East - `custom-domain.us-east.cf.cloud.ibm.com`
-* EU-DE - `custom-domain.eu-de.cf.cloud.ibm.com`
-* EU-GB - `custom-domain.eu-gb.cf.cloud.ibm.com`
-* AU-SYD - `custom-domain.au-syd.cf.cloud.ibm.com`
+| 区域|端点|
+| ------ | -------- |
+| US-South | `custom-domain.us-south.cf.cloud.ibm.com` |
+| US-East | `custom-domain.us-east.cf.cloud.ibm.com` |
+| EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
+| EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
+| AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
 
 要上传 Cloud Foundry 应用程序的证书，请完成以下步骤：
 
 1. 在 [{{site.data.keyword.cloud_notm}} 控制台 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}){: new_window} 中，单击**菜单**图标 ![“菜单”图标](../icons/icon_hamburger.svg)，然后选择**资源列表**。
-2. 在**资源列表**页面，单击 **Cloud Foundry 应用程序**。
-3. 单击要为其更改域的应用程序。这将显示应用程序的**概述**页面。
-4. 选择**路径**菜单，并单击**管理域**。
+2. 单击 **Cloud Foundry 应用程序**。
+3. 单击要为其更改域的应用程序。 
+4. 在应用程序的“概述”页面上，单击**路径**，然后选择**管理域**。
 5. 在“操作”列中，单击“操作”图标 ![“更多操作”图标](../icons/action-menu-icon.svg)，并选择**域**。
-6. 单击定制域的 **SSL 证书**列中的**上传**。
+6. 针对定制域单击**上传**。
 7. 选择选项，上传文件，然后单击**添加**。
   
   * 证书：一种数字文档，用于将公用密钥绑定到证书所有者的身份，从而使证书所有者得到认证。证书由认证中心发放并由该认证中心进行数字签名。证书通常由认证中心发放并签名。但是，对于测试和开发用途，您可以使用自签名证书。
@@ -86,4 +88,4 @@ OpenSSL SHA-512 实施取决于编译器是否支持 64 位整数类型。您可
     可以通过上传其元数据中包含公用密钥的客户机证书信任库来设置相互认证。
   {: tip}
 
-有关更多信息，请参阅[导入 SSL 证书](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates)。
+

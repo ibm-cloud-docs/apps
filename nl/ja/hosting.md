@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-10"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -13,26 +13,31 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# アプリのマイグレーションおよびホスティング
+# ホスティング環境の選択
 {: #hosting}
 
-既存のアプリがある場合は、必要なすべてのインフラストラクチャーまたはプラットフォームのサービスを含めて {{site.data.keyword.cloud}} でホストすることができます。 アプリを一度にすべてクラウド環境にシフトするのではなく、インクリメンタルに {{site.data.keyword.cloud_notm}} にマイグレーションすることもできます。
+既存のアプリがある場合は、必要なすべてのインフラストラクチャーまたはプラットフォームのサービスを含めて {{site.data.keyword.cloud}} でホストすることができます。{:shortdesc}
 
-## アプリのマイグレーション
-{: #migrating}
+{{site.data.keyword.Bluemix_notm}} を使用すれば、新規のアプリのテストや実行のためにハードウェアに多額の投資を行う必要がなくなります。 代わりに、IBM がすべてを管理し、使用した分だけ課金されるようになります。 クラウド・サーバー環境は、インフラストラクチャー・レイヤーの基本です。 単一のオプションを選択することも、より複雑な環境に対してオプションの組み合わせを選択することもできます。 
 
-アプリがオンプレミスのデータやサービスにアクセスする必要がある場合は、[{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg) を使用して、{{site.data.keyword.cloud_notm}} 組織とエンタープライズ・バックエンド・ネットワークの間にセキュア・トンネルを確立できます。 詳細については、[Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+アプリをホストするためのさまざまなオプションがあり、必要に応じてインフラストラクチャーを自由に制御できます。 アプリは以下のどの方法でも実行できます。
 
-マイグレーションについて支援が必要な場合は、[{{site.data.keyword.cloud_notm}} Migration Services](https://www.ibm.com/cloud/migration-services){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")を使用できます。
+  * Kubernetes クラスター上の Docker コンテナーとして実行
+  * Cloud Foundry アプリとして実行
+  * サーバーレス機能として実行
+  * VMware として実行
+  * 仮想マシンとして実行
+  * 高性能な{{site.data.keyword.baremetal_short}}上で実行 
 
-## アプリのホスティング
-{: #ht_hostapp}
+コンピュート・オプションの要約については、以下の表を確認してください。
 
-{{site.data.keyword.cloud_notm}} [カタログ](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")で、Kubernetes や Cloud Foundry などの管理対象環境を選択したり、ベア・メタル・サーバーや仮想サーバー上で直接アプリをホストしたりすることができます。
+| オプション | 説明 | 
+|--------|---------------|
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) | Docker コンテナー、Kubernetes テクノロジー、直観的なユーザー・エクスペリエンス、標準装備のセキュリティーと分離機能を結合させることにより、コンピュート・ホストのクラスター内でコンテナー化アプリのデプロイメント、操作、スケーリング、モニタリングを自動化します。 |
+| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) | 複数の分離したエンタープライズ・グレードの Cloud Foundry プラットフォームをオンデマンドでインスタンス化します。 |
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) | Apache OpenWhisk に基づく Functions-as-a-Service (FaaS) プログラミング・プラットフォーム。 |
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | スケーラブルでセキュアでハイパフォーマンスのインフラストラクチャー、および業界最先端の VMware ハイブリッド仮想化テクノロジーを使用して、オンプレミスの VMware ワークロードを迅速かつシームレスに統合またはマイグレーションします。 |
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | 専用のコアおよびメモリー割り振りと共に購入される拡張が容易な仮想サーバー。 |
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-bm-getting-started)  | お客様専用で、サーバー・リソースを含むどの部分でも他のお客様と共有されない、時間単位または月単位のシングル・テナント・サーバー。 |
+{: caption="表 1. コンピュート・オプション" caption-side="top"}
 
-仮想デプロイメントの場合、ほとんどのアプリの操作は {{site.data.keyword.cloud_notm}} によって管理されます。 ワークロードが複数の地理的地域に広がっており、{{site.data.keyword.cloud_notm}} ハイパーバイザーを使用してデプロイメントを管理したい場合は、[仮想](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers)デプロイメントが最適です。 より高いパフォーマンスを求めて専用物理サーバーに直接アクセスする必要がある場合は、[ベア・メタル](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started)・デプロイメントが最適です。
-
-また、以下に対する多くのオプションがあります。
-* ブロック・ストレージ、ファイル・ストレージ、またはオブジェクト・ストレージから、適切な[ストレージ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")のタイプの選択。
-* 必要な[ネットワーク](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")のタイプの選択。
-* {{site.data.keyword.cloud_notm}} Kubernetes テクノロジーを活用するための、[コンテナリゼーション ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") サービスの選択。

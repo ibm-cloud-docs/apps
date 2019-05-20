@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-05-10"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -13,26 +13,32 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 앱 마이그레이션 및 호스팅
+# 호스팅 환경 선택
 {: #hosting}
 
-기존 앱이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 {{site.data.keyword.cloud}}에 기존 앱을 호스팅할 수 있습니다. 앱을 클라우드 환경으로 한 번에 전환하는 대신 {{site.data.keyword.cloud_notm}}에 증분식으로 마이그레이션할 수도 있습니다.
+기존 앱이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 {{site.data.keyword.cloud}}에 기존 앱을 호스팅할 수 있습니다.
+{:shortdesc}
 
-## 앱 마이그레이션
-{: #migrating}
+{{site.data.keyword.Bluemix_notm}}를 사용하면 더 이상 하드웨어에 막대한 금액을 투자하여 새로운 앱을 테스트하거나 실행할 필요가 없습니다. 대신 IBM에서 모든 것을 관리하며 실제 사용량에 대한 금액만 청구합니다. 클라우드 서버 환경은 인프라 계층의 기반입니다. 단일 옵션을 선택하거나 더 복잡한 환경의 경우 옵션의 조합을 선택할 수 있습니다. 
 
-앱에서 온프레미스 데이터 또는 서비스에 액세스해야 하는 경우에는 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg)를 사용하여 {{site.data.keyword.cloud_notm}} 조직과 엔터프라이즈 백엔드 네트워크 간에 보안 터널을 설정할 수 있습니다. 세부사항은 [콘솔을 통해 {{site.data.keyword.cloud_notm}} Secure Gateway의 엔터프라이즈 백엔드에 접속 ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+원하거나 필요한 만큼 인프라에 대한 제어를 제공하여 앱을 호스팅하기 위한 다양한 옵션이 있습니다. 다음 방법 중 하나로 앱을 실행할 수 있습니다.
 
-마이그레이션에 대해 도움이 필요한 경우에는 [{{site.data.keyword.cloud_notm}} Migration Services ](https://www.ibm.com/cloud/migration-services){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 사용할 수 있습니다.
+  * Kubernetes 클러스터의 Docker 컨테이너로
+  * Cloud Foundry 앱으로
+  * 서버리스 기능으로
+  * VMware로
+  * 가상 머신으로
+  * 고성능 {{site.data.keyword.baremetal_short}}로 
 
-## 앱 호스팅
-{: #ht_hostapp}
+컴퓨팅 옵션에 대한 요약은 다음 표를 확인하십시오.
 
-{{site.data.keyword.cloud_notm}} [카탈로그](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서는 Kubernetes 또는 Cloud Foundry와 같은 관리 환경을 선택하거나, 베어메탈 또는 가상 서버에서 직접 앱을 호스팅할 수 있습니다.
+|옵션 |설명 | 
+|--------|---------------|
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) |Docker 컨테이너, Kubernetes 기술, 직관적인 사용자 경험, 기본 제공 보안 및 격리를 결합하여 컴퓨팅 호스트의 클러스터에서 컨테이너화된 앱의 배치, 오퍼레이션, 스케일링 및 모니터링을 자동화합니다. |
+| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) |격리된 여러 엔터프라이즈급 Cloud Foundry 플랫폼을 요청 시 인스턴스화합니다. |
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) |Apache OpenWhisk 기반의 FaaS(Function-as-a-Service) 프로그래밍 플랫폼입니다. |
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) |확장 가능하고 안전한 고성능 인프라 및 업계 최고의 VMware 하이브리드 가상화 기술을 사용하여 온프레미스 VMware 워크로드를 빠르고 원활하게 통합하거나 마이그레이션합니다. |
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) |전용 코어와 메모리 할당을 포함하여 구매하는 확장 가능한 서버입니다. |
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-bm-getting-started)  |사용자 전용이며 서버 리소스를 포함한 모든 파트에서 다른 고객과 공유되지 않는 시간별 또는 월별 싱글 테넌트 서버입니다. |
+{: caption="표 1. 컴퓨팅 옵션" caption-side="top"}
 
-가상 배치에서는 앱의 오퍼레이션 대부분이 {{site.data.keyword.cloud_notm}}에 의해 관리됩니다. 지리적 지역 간에 워크로드가 분산되어 있으며 {{site.data.keyword.cloud_notm}} 하이퍼바이저를 사용하여 배치를 관리하려는 경우에는 [가상](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers) 배치가 최상입니다. 고성능을 위해 전용 실제 서버에 대한 직접 액세스가 필요한 경우에는 [베어메탈](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started) 배치가 가장 좋습니다.
-
-다음과 같이 다양한 옵션이 제공됩니다.
-* 블록 스토리지, 파일 스토리지 또는 Object Storage 중 필요한 [스토리지](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 유형을 선택합니다.
-* 필요한 [네트워크](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 유형을 선택합니다.
-* {{site.data.keyword.cloud_notm}} Kubernetes 기술을 활용하는 데 필요한 [컨테이너화](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 서비스를 선택합니다.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-10"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -104,14 +104,22 @@ subcollection: creating-apps
 ## 部署應用程式
 {: #deploy-scratch}
 
-按一下**應用程式詳細資料**頁面上的**配置持續交付**，選取部署目標，然後按一下**建立**。{{site.data.keyword.cloud_notm}} 會自動建立開放式工具鏈，此工具鏈會完整地具備 Git 儲存庫及持續交付管線。
+當您選取部署目標時，會為應用程式自動建立 DevOps 工具鏈。此工具鏈包括可指出應用程式部署狀態的 Delivery Pipeline。所產生的新應用程式會推送至為此工具鏈一部分的 GitLab 儲存庫。
 
-啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
-
-在選取部署目標之後，請開啟新工具鏈的管線元件，以開始起始建置和部署處理程序，讓您可以在幾分鐘內看到新的應用程式。
+啟用 DevOps 工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）進行自訂。
 
 從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 {: note}
+
+若要選取部署目標以及配置持續交付，請完成這些步驟：
+
+1. 在「應用程式詳細資料」頁面上，按一下**配置持續交付**。
+2. 選取一個部署目標。根據您所選目標的指示設定部署目標：
+  * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
+  * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企業環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**的部署者類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
+  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
+
+在您選取及配置部署目標之後，「應用程式詳細資料」頁面會指出已配置持續交付。您可以按一下**檢視儲存庫**，以檢視包含應用程式原始碼的儲存庫。
 
 若要使用指令行來部署應用程式，請使用 `ibmcloud dev deploy`。如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps?topic=creating-apps-create-deploy-app-cli)。
 

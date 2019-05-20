@@ -22,10 +22,10 @@ subcollection: creating-apps
 # アプリのデプロイ
 {: #deploying-apps}
 
-DevOps ツールチェーンを使用して、アプリケーションを {{site.data.keyword.cloud}} にデプロイできます。DevOps ツールチェーンを使用すると、多数の環境へのデプロイメントを自動化して、成長するアプリの管理に役立つモニタリング、ロギング、洞察、およびアラートの各サービスを素早く追加することができます。継続的デリバリーの構成とアプリのデプロイは、{{site.data.keyword.cloud_notm}} Web コンソールかコマンド・ライン・インターフェース (CLI) のいずれかを使用して行うことができます。
+DevOps ツールチェーンを使用して、アプリケーションを {{site.data.keyword.cloud}} にデプロイできます。 DevOps ツールチェーンを使用すると、多数の環境へのデプロイメントを自動化して、成長するアプリの管理に役立つモニタリング、ロギング、洞察、およびアラートの各サービスを素早く追加することができます。 継続的デリバリーの構成とアプリのデプロイは、{{site.data.keyword.cloud_notm}} Web コンソールかコマンド・ライン・インターフェース (CLI) のいずれかを使用して行うことができます。
 {: shortdesc}
 
-DevOps ツールチェーンは、アプリ用のチーム・ベースの開発環境を提供します。ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。また、専用の GitLab 環境と、継続的デリバリー・パイプラインにアクセスすることもできます。選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers) のどれであっても、それに合わせてこれらはカスタマイズされています。
+DevOps ツールチェーンは、アプリ用のチーム・ベースの開発環境を提供します。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的デリバリー・パイプラインにアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial) のどれであっても、それに合わせてこれらはカスタマイズされています。
 
 {{site.data.keyword.cloud_notm}} 開発者ダッシュボードから作成されたツールチェーンはすべて、自動デプロイメント用に構成されています。
 {: note}
@@ -45,9 +45,9 @@ DevOps ツールチェーンは、アプリ用のチーム・ベースの開発�
 
 1. **「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 2. デプロイメント・ターゲットを選択します。 選択したターゲットの説明に従って、デプロイメント・ターゲットをセットアップします。
-  * **IBM Kubernetes Service にデプロイします**。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。詳しくは、[Kubernetes クラスターへのアプリのデプロイ](/docs/containers?topic=containers-app)を参照してください。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 アカウントに {{site.data.keyword.cfee_full_notm}} に対するアクセス権限がある場合は、エンタープライズ専用の Cloud Foundry アプリケーションをホストするための分離環境を作成および管理するために使用できる、**パブリック・クラウド**または**エンタープライズ環境**のデプロイヤー・タイプを選択できます。詳しくは、[Cloud Foundry パブリックへのアプリのデプロイ](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)と[{{site.data.keyword.cfee_full_notm}} へのアプリのデプロイ](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)を参照してください。
-  * **仮想サーバーにデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。詳しくは、[仮想サーバーへのアプリのデプロイ](/docs/apps?topic=creating-apps-vsi-deploy)を参照してください。
+  * **IBM Kubernetes Service にデプロイします**。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。 詳しくは、[Kubernetes クラスターへのアプリのデプロイ](/docs/containers?topic=containers-app)を参照してください。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 アカウントに {{site.data.keyword.cfee_full_notm}} に対するアクセス権限がある場合は、エンタープライズ専用の Cloud Foundry アプリケーションをホストするための分離環境を作成および管理するために使用できる、**パブリック・クラウド**または**エンタープライズ環境**のデプロイヤー・タイプを選択できます。 詳しくは、[Cloud Foundry パブリックへのアプリのデプロイ](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)と[{{site.data.keyword.cfee_full_notm}} へのアプリのデプロイ](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)を参照してください。
+  * **仮想サーバーにデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。 詳しくは、[仮想サーバーへのアプリのデプロイ](/docs/apps?topic=creating-apps-vsi-deploy)を参照してください。
 
 ### 手動によるアプリのデプロイ
 {: deploy-console-manual}
@@ -59,7 +59,7 @@ DevOps ツールチェーンからアプリを手動でデプロイすること�
 1. **「アプリの詳細」**ページで**「ツールチェーンの表示」**をクリックします。
 2. **「Delivery Pipeline」**をクリックします。ここで、ビルドの開始、デプロイメントの管理、およびログと履歴の表示を行うことができます。
 
-一部のアプリケーションでは継続的デリバリーは自動で有効になります。継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
+一部のアプリケーションでは継続的デリバリーは自動で有効になります。 継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
 
 詳しくは、以下を参照してください。
 * [ビルドとデプロイ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
@@ -68,7 +68,7 @@ DevOps ツールチェーンからアプリを手動でデプロイすること�
 ## {{site.data.keyword.dev_cli_short}} CLI の使用
 {: #deploy-cli}
 
-{{site.data.keyword.cloud_notm}} は、開発者のワークフローを簡素化するのに役立つ堅固な CLI とプラグインを提供します。アプリの構成方法に応じて、{{site.data.keyword.cloud_notm}} アプリを 2 つの方法のいずれかでデプロイできます。
+{{site.data.keyword.cloud_notm}} は、開発者のワークフローを簡素化するのに役立つ堅固な CLI とプラグインを提供します。 アプリの構成方法に応じて、{{site.data.keyword.cloud_notm}} アプリを 2 つの方法のいずれかでデプロイできます。
 
 ### 始める前に
 {: #deploy-cli-before}
@@ -103,7 +103,7 @@ CLI は、Cygwin によってサポートされていません。 このツー�
 ### アプリの自動デプロイ
 {: #deploy-cli-auto}
 
-アプリ用の DevOps ツールチェーンをまだ作成しておらず、アプリがまだ Git リポジトリー内にない場合、[`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) コマンドを実行できます。「DevOps の構成」のプロンプトに従い、新しいツールチェーンにデプロイします (また、新規 GitLab リポジトリーも作成します)。
+アプリ用の DevOps ツールチェーンをまだ作成しておらず、アプリがまだ Git リポジトリー内にない場合、[`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) コマンドを実行できます。 「DevOps の構成」のプロンプトに従い、新しいツールチェーンにデプロイします (また、新規 GitLab リポジトリーも作成します)。
 
 アプリ用の DevOps ツールチェーンが作成されると、新規ビルドのデプロイは、ツールチェーン内のリポジトリーにコードをコミットしてプッシュするだけの単純なものになります。 
 

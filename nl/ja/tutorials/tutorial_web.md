@@ -19,7 +19,7 @@ subcollection: creating-apps
 # スターター・キットを使用した基本 Web アプリの作成
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} は、素早くコーディングするために役立つ多数のスターター・キットを提供します。 事前構成されたカスタム・アプリケーションの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイするためのステップを実行します。
+{{site.data.keyword.cloud}} は、素早くコーディングするために役立つ多数のスターター・キットを提供します。 事前構成されたカスタム・アプリケーションの操作を開始するには、アプリ・サービスの「スターター・キット」から言語、フレームワーク、およびツールを選択します。 このチュートリアルでは、必要なツールをインストールしてから、アプリをローカルでビルドして実行し、クラウドにデプロイするためのステップを実行します。
 {: shortdesc}
 
 ## ステップ 1. ツールのインストール
@@ -53,7 +53,7 @@ Watson のコグニティブ機能でアプリを拡張するサービスを追�
 ## ステップ 4. DevOps ツールチェーンの作成
 {: #toolchain-webapp}
 
-ツールチェーンを有効にすると、アプリ用のチーム・ベースの開発環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的 Delivery Pipeline にアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers) のどれであっても、それに合わせてこれらはカスタマイズされています。
+ツールチェーンを有効にすると、アプリ用のチーム・ベースの開発環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的 Delivery Pipeline にアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial) のどれであっても、それに合わせてこれらはカスタマイズされています。
 
 一部のアプリケーションでは継続的デリバリーは有効になっています。 継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
 

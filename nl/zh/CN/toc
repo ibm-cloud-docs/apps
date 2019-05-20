@@ -7,67 +7,57 @@
 
     {: .navgroup id="learn"}
     index.md
-    development_process.md
     best-practice.md
     patterns.md
-    starter-kits.md
+    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     相关链接
-        [Strategies for resilient applications](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Continuous deployment to Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     创建应用程序
         tutorials/tutorial_starter-kit.md
+        starter-kits.md
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
+        [Looking to use a language?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     部署应用程序
+        hosting.md
         dep-app-tool.md
-        vsi-deploy.md
-        deploying/containers.md
-        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
+        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
+        vsi-deploy.md
 
     {: .topicgroup}
     配置
         reqnsi.md
+        creds_overview.md
         mngdomains.md
         secapps.md
 
     {: .topicgroup}
-    向环境添加凭证
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    {: .topicgroup}
-    迁移应用程序
-        hosting.md
-
-    {: .topicgroup}
     将应用程序与 DevOps 集成
         toolchains.md
+        insights.md
+        monitor.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 命令行参考](/cli/idt/cloud-cli-idt-cli)
-    [Cloud Functions API 参考](https://cloud.ibm.com/apidocs/functions)
-    [移动 SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
+    [IBM Cloud Developer Tools 命令行插件](/docs/cli/idt?topic=cloud-cli-idt-cli)
 
     {: .topicgroup}
     IBM Cloud 开发者仪表板
@@ -89,8 +79,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    faqs.md
     ts_apps.md
+    faqs.md
     [IBM Cloud Slack developer-tools 通道](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

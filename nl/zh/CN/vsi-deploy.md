@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ subcollection: creating-apps
 服务未绑定到虚拟服务器实例。您无法向虚拟服务器中的应用程序添加服务。
 {: important}
 
-## 创建和部署应用程序
+## 部署应用程序
 {: #create-deploy-vsi}
 
 App Service 会为您供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
 1. [创建应用程序](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)。 
-2. 在**应用程序详细信息**页面中，单击**配置持续交付**。
+2. 在“应用程序详细信息”页面中，单击**配置持续交付**。
 3. 选择**部署到虚拟服务器**以及运行服务器的区域。
 
 ## 部署过程的运作方式
