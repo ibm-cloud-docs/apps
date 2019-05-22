@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -59,6 +59,17 @@ To delete an app that you created, complete these steps:
 
 1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
 2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg) for the app that you want to delete, and click **Delete**.
+
+## How do I stop a Cloud Foundry app in my account?
+{: #app-stop}
+{: faq}
+
+If you want to stop a Cloud Foundry app, complete the following steps:
+
+
+1. From the Dashboard, click **View resources** within the Resources summary section.
+1. On the Resource list, expand the  sections and locate the service instance that you want to stop.
+1. Select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and then click **Stop**.
 
 ## What are toolchains and how do they relate to my app?
 {: #toolchains}
