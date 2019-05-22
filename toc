@@ -9,7 +9,6 @@ Creating apps
     index.md
     best-practice.md
     patterns.md
-    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     Related links
@@ -26,7 +25,6 @@ Creating apps
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
@@ -48,6 +46,10 @@ Creating apps
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    Migrating apps
+        migrating.md
 
     {: .topicgroup}
     Integrating apps with DevOps

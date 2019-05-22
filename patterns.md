@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ The web app pattern produces apps that serve web content such as HTML, JavaScrip
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
 
 You can find starter kits for web app pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
-
-## Backend-for-frontend
-{: #bff}
-
-Backendf-for-frontend pattern (BFF) helps create backend code that exposes business data and services in a way that matches user expectations for a specific app channel, such as mobile or web. For example, users on a mobile device might use voice control, while web browser users prefer point and click. You can build two BFFs, one for mobile that includes services like [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and one for web that has a more sophisticated user interface.
-
-In {{site.data.keyword.cloud_notm}}, you can build a BFF with polyglot programming approach. You can use Node.js, Swift, Java, or Python and running them in a pattern with container services or that use serverless functions.
-
-The BFF manages data persistence, caching, and integration with the following high-value services.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
-
-The BFF exposes an API most commonly by using a REST pattern, but you can design your BFF to work from a messaging architecture that uses {{site.data.keyword.messagehub}}.
-
-Choose a BFF starter kit for your language and framework requirements. You can find starter kits for BFF pattern on the [{{site.data.keyword.cloud_notm}} App Service developer dashboard](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Microservice
 {: #microservice}
