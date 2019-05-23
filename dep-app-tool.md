@@ -137,4 +137,4 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using th
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
