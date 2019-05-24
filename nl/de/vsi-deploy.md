@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ Die Einrichtung einer virtuellen Serverinstanz und ihre Bereitstellung kann ein 
 Services werden nicht an die virtuelle Serverinstanz gebunden. Sie können Services nicht zu einer Anwendung in einem virtuellen Server hinzufügen.
 {: important}
 
-## Apps erstellen und implementieren
+## Apps bereitstellen
 {: #create-deploy-vsi}
 
 Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
 1. [Erstellen Sie eine App](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**.
+2. Klicken Sie auf der Detailseite der App auf **Continuous Delivery konfigurieren**.
 3. Wählen Sie **Auf virtuellem Server bereitstellen** gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll.
 
 ## Funktionsweise des Bereitstellungsprozesses
@@ -60,7 +60,7 @@ Die Pipeline verwendet eine Reihe von Benutzerkontoeigenschaften und ein neues S
 
 Führen Sie die folgenden Schritte aus, um diese Umgebungseigenschaften anzuzeigen. 
 
-1. Klicken Sie auf der Seite "App-Details" auf **Toolchain anzeigen**.
+1. Klicken Sie auf der Detailseite der App auf **Toolchain anzeigen**.
 2. Klicken Sie auf die Kachel **Delivery Pipeline**.
 3. Klicken Sie auf das Symbol für die **Konfiguration der Stage** und dann für die Build-Stage auf **Stage konfigurieren**.
 4. Klicken Sie auf die Registerkarte **Umgebungseigenschaften**, um die Eigenschaften anzuzeigen. Die folgende Tabelle enthält Informationen zu den verfügbaren Eigenschaften.

@@ -25,7 +25,7 @@ subcollection: creating-apps
 É possível implementar seu aplicativo no {{site.data.keyword.cloud}} usando uma cadeia de ferramentas do DevOps. Com uma cadeia de ferramentas do DevOps, é possível automatizar implementações para muitos ambientes e incluir rapidamente os serviços de monitoramento, de criação de log, de insights e de alerta para ajudar a gerenciar o app à medida que ele cresce. É possível configurar a entrega contínua e implementar seu app usando o console da web ou a interface da linha de comandos (CLI) do {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-Uma cadeia de ferramentas do DevOps fornece um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente GitLab dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Uma cadeia de ferramentas do DevOps fornece um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente GitLab dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 Todas as cadeias de ferramentas criadas por meio do painel do Desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
 {: note}
@@ -40,7 +40,7 @@ O {{site.data.keyword.cloud_notm}} fornece um console da web no qual é possíve
 
 Antes de iniciar, use o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para [criar seu app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) e [incluir serviços](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
 
-### Implementando automaticamente seu app
+### Implementando automaticamente seu aplicativo
 {: deploy-console-auto}
 
 1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
@@ -101,7 +101,7 @@ A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da
     Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Para efetuar login com uma identidade federada, use a sinalização `--sso`. Para obter mais informações, consulte [Efetuando login com um ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
     {: tip}
 
-### Implementando automaticamente seu app
+### Implementando automaticamente seu aplicativo
 {: #deploy-cli-auto}
 
 Se você não criou uma cadeia de ferramentas do DevOps para o app e ele ainda não está em um repositório Git, será possível executar o comando [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit). Siga os prompts para "Configurar o DevOps" e implemente em uma nova cadeia de ferramentas (e crie um novo repositório GitLab).

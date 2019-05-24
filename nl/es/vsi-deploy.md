@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ El suministro de una instancia de servidor virtual y su despliegue puede ser un 
 Los servicios no están vinculados a la instancia de servidor virtual. No puede añadir servicios a una aplicación de un servidor virtual.
 {: important}
 
-## Creación y despliegue de apps
+## Despliegue de apps
 {: #create-deploy-vsi}
 
 El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue.
 
 1. [Cree una app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Pulse **Configurar entrega continua** en la página **Detalles de la app**.
+2. Pulse **Configurar entrega continua** en la página Detalles de la app.
 3. Seleccione **Desplegar en un servidor virtual** junto con la región en la que se va a ejecutar el servidor.
 
 ## Cómo funciona el proceso de despliegue

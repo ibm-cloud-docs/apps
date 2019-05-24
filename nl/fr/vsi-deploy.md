@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -33,13 +33,13 @@ La mise à disposition et le déploiement d'une instance de serveur virtuel peut
 Les services ne sont pas liés à l'instance de serveur virtuel. Vous ne pouvez pas ajouter de services dans un serveur virtuel.
 {: important}
 
-## Création et déploiement d'applications
+## Déploiement d'applications
 {: #create-deploy-vsi}
 
 Le service d'application met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils Devops et initie le premier cycle de déploiement pour vous.
 
 1. [Créez une application](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Cliquez sur **Configurer la distribution continue** depuis la page **Détails de l'application**.
+2. Cliquez sur **Configurer la distribution continue** sur la page Détails de l'application.
 3. Sélectionnez **Déployer sur un serveur virtuel** en même temps que la région dans laquelle votre serveur doit s'exécuter.
 
 ## Fonctionnement du processus de déploiement

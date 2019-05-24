@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-09"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -19,14 +19,11 @@ subcollection: creating-apps
 # DevOps-Toolchains
 {: #devops-toolchains}
 
-Die DevOps-Toolchain umfasst Verfahren und Tools für den Zugriff, die Entwicklung, Bereitstellung und den Betrieb Ihrer App. Eine DevOps-Toolchain ist eine Gruppe von verlinkten Services, mit denen Ihre DevOps-Tasks automatisiert werden. Es ist möglich, DevOps manuell mit einfachen Apps durchzuführen, jedoch steigt der Bedarf an Automatisierung mit zunehmender Komplexität der App. Für Continuous Delivery ist die Toolchain-Automatisierung ein Muss.
+Eine DevOps-Toolchain ist eine Gruppe von Tools, die die Tasks der Entwicklung und Bereitstellung Ihrer App automatisieren. Mit einfachen Anwendungen können Sie DevOps manuell ausführen, doch die Notwendigkeit zur Automatisierung nimmt mit steigender Komplexität der Anwendungen zu und die Automatisierung der Toolchain ist für Continuous Delivery einfach unverzichtbar.
+{:shortdesc}
 
-Die Kernkomponente einer DevOps-Toolchain ist ein Repository zur Kontrolle der Codeversion wie z. B. GitHub. Weitere Tools können Rückstandsüberwachung, Delivery Pipeline, IDE und Überwachungsservices wie [{{site.data.keyword.cloud_notm}} {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started) sein.
+Die Kernkomponente einer DevOps-Toolchain ist ein Versionssteuerungsrepository wie GitHub. Es können weitere Tools für Rückstandtracking, Delivery Pipelines, eine integrierte Entwicklungsumgebung (IDE) und Überwachung wie {{site.data.keyword.DRA_full}} einbezogen werden.
 
-Wenn Sie eine App mithilfe eines Starter-Kits erstellen, so erstellen Sie eine Toolchain und stellen Ihre App einfach bereit, indem Sie auf der Seite **App-Details** auf **In Cloud bereitstellen** klicken. Es wird eine Toolchain mit einem Code-Repository, einem Problem-Repository, einer Delivery Pipeline und einer Web-IDE erstellt.
+Wenn Sie unter Verwendung eines Starter-Kits eine [App erstellen](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) und dann auf der Detailseite der App auf **Continuous Delivery konfigurieren** klicken, wird eine DevOps-Toolchain erstellt. Die Toolchain umfasst ein Code-Repository, eine Delivery Pipeline und eine Web-IDE. Auf dieser Toolchain können Sie dann aufbauen, um Ihre App gemeinsam zu verwalten und in getrennten Umgebungen für Entwicklung, Test und Produktion bereitzustellen.
 
-Anschließend können Sie auf dieser Toolchain aufbauen, mehrere Teams darin unterbringen und die Toolchain in unterschiedlichen Umgebungen für Entwicklung, Tests und Produktion bereitstellen. Sie richten ein auf Unternehmen abgestimmtes bereichsübergreifendes Modell für das Continuous Delivery Ihrer App ein.
-
-Weitere Informationen zur kontinuierlichen Bereitstellung erhalten Sie im [Lernprogramm 'Einführung'](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
-
-Weitere Informationen zu DevOps-Toolchains finden Sie unter [Toolchain aus einer App erstellen](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+Weitere Informationen finden Sie im [Lernprogramm zur Einführung in {{site.data.keyword.contdelivery_full}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).

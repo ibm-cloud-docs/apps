@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-10"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,15 +20,14 @@ subcollection: creating-apps
 # Criando solicitações de assinatura de certificado
 {: #ssl_csr}
 
-É possível proteger seus aplicativos criando e fazendo upload de certificados SSL e restringindo acesso aos
-aplicativos.
+É possível assegurar seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
 {:shortdesc}
+
+## Criando uma CSR
 
 Antes que seja possível fazer upload dos certificados SSL aos quais você está autorizado com o {{site.data.keyword.cloud}}, deve-se criar uma solicitação de assinatura de certificado (CSR) no servidor. Uma CSR é uma mensagem que é enviada a uma autoridade de certificado para solicitar
 a assinatura de uma chave pública e as informações associadas. O mais comum é que as CSRs estejam no formato PKCS #10. A CSR inclui uma chave pública e um nome comum, uma organização, uma cidade, um estado, um país e um e-mail. As
 solicitações de certificado SSL são aceitas somente com um comprimento da chave CSR de 2048 bits.
-
-## Criando uma CSR
 
 Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando a [ferramenta de linha de comandos OpenSSL ](http://www.openssl.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"):
 
@@ -42,50 +41,53 @@ do compilador para o tipo de número inteiro de 64 bits. É possível usar a op�
 que possuem problemas de compatibilidade com o certificado SHA-256.
 {: tip}
 
-Um
-certificado é emitido por uma autoridade de certificação e é assinado digitalmente por
-essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL em uma autoridade de certificado público.
-
 ### Conteúdos CSR obrigatórios
 
 Para que a CSR seja válida, as informações a seguir devem ser inseridas ao criar a CSR:
 
- * **Nome do país**. Um código com dois dígitos para o país ou a região. Por exemplo, `US` é o código do país para os Estados Unidos. Para
+ * **Nome do país**: um código de dois dígitos para o país ou a região. Por exemplo, `US` é o código do país para os Estados Unidos. Para
 outros países ou regiões, antes de criar a CSR, verifique a [lista
 de códigos de país ISO ](https://www.iso.org/obp/ui/#search){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
- * **Estado ou município**. O nome completo sem abreviação do estado ou do município.
- * **Localidade**. O nome completo da cidade.
- * **Organização**. O nome completo dos negócios ou da empresa, conforme registrado legalmente em sua localidade ou nome pessoal. Para
+ * **Estado ou município**: o nome completo, sem abreviação, do estado ou da província.
+ * **Localidade**: o nome completo da cidade.
+ * **Organização**: o nome completo do negócio ou da empresa, como legalmente registrado em sua localidade, ou o nome pessoal. Para
 empresas, certifique-se de incluir o sufixo de registro, como Ltd., Inc. ou NV.
- * **Unidade organizacional**. O nome da filial da sua empresa que está pedindo o certificado, tal como contabilidade ou marketing.
- * **Nome comum**. O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.
+ * **Unidade da organização**: o nome da ramificação de sua empresa que está pedindo o certificado, como contabilidade ou marketing.
+ * **Nome comum**: O nome completo do domínio (FQDN) para o qual você está solicitando o certificado SSL.
 
 É possível usar Subject Alternnative Names (SAN), mas os nomes de host fornecidos não devem ser emitidos em outros certificados implementados para evitar colisões de CN.
 {: note}
+
+Um
+certificado é emitido por uma autoridade de certificação e é assinado digitalmente por
+essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL em uma autoridade de certificado público.
 
 ## Fazendo upload de certificados SSL
 {: #ssl_certificate}
 
 É possível aplicar um protocolo de segurança para fornecer privacidade de
 comunicação a seu aplicativo a fim de evitar espionagem, violação e falsificação de
-mensagens. Se o proprietário da conta tem uma conta Lite grátis, deve-se fazer upgrade da conta para fazer upload de um certificado.
+mensagens. Se você tiver uma conta Lite, deverá fazer upgrade de sua conta para fazer upload de um certificado.
 
 Ao usar um domínio customizado para entregar o certificado SSL, use os terminais de região a seguir para fornecer a rota de URL para sua organização no {{site.data.keyword.cloud_notm}}:
 
-* Sul dos EUA: `custom-domain.us-south.cf.cloud.ibm.com`
-* Leste dos EUA: `custom-domain.us-east.cf.cloud.ibm.com`
-* EU-DE: `custom-domain.eu-de.cf.cloud.ibm.com`
-* EU-GB: `custom-domain.eu-gb.cf.cloud.ibm.com`
-* AU-SYD: `custom-domain.au-syd.cf.cloud.ibm.com`
+| Região | Nó de
+extremidade |
+| ------ | -------- |
+| Sul dos EUA | `custom-domain.us-south.cf.cloud.ibm.com` |
+| Leste dos EUA | `custom-domain.us-east.cf.cloud.ibm.com` |
+| EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
+| EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
+| AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
 
 Para fazer upload de um certificado para seu aplicativo Cloud Foundry, conclua as etapas a seguir:
 
 1. No [console do {{site.data.keyword.cloud_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
-2. Na página **Lista de recursos**, clique em **Apps Cloud Foundry**.
-3. Clique no aplicativo para o qual você deseja mudar o domínio. A página **Visão geral** do app é exibida.
-4. Selecione o menu **Rotas** e clique em **Gerenciar domínios**.
+2. Clique em **Apps Cloud Foundry**.
+3. Clique no aplicativo para o qual você deseja mudar o domínio. 
+4. Na página Visão geral do app, clique em **Rotas**e selecione **Gerenciar domínios**.
 5. Na coluna Ações, clique no ícone Ações ![Ícone Mais ações](../icons/action-menu-icon.svg) e selecione **Domínios**.
-6. Clique em **Fazer upload** na **coluna Certificado SSL** para seu domínio customizado.
+6. Clique em **Upload** para seu domínio customizado.
 7. Selecione uma opção, faça upload do arquivo e clique em **Incluir**.
   
   * Certificado: um documento digital que liga uma chave pública à identidade do proprietário do certificado, o que permite
@@ -107,4 +109,4 @@ protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}
 
-Para obter mais informações, veja [Importando SSL Certificates](/docs/ssl-certificates?topic=ssl-certificates-importing-ssl-certificates).
+

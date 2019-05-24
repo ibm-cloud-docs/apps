@@ -52,7 +52,7 @@ Se abre el panel de control del servicio {{site.data.keyword.cos_full_notm}} en 
 ## Configuración del almacenamiento persistente
 {: #kube-storage-mendix}
 
-A continuación, siga la documentación correspondiente a [Almacenamiento de datos en {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage). Se crea `PersistentVolumeClaim` y `PersistentVolume` en el clúster de Kubernetes, que puede utilizar la instancia de la base de datos PostGres que se ejecuta en el clúster como parte de la aplicación Mendix. Asegúrese de crear `PersistentVolumeClaim` utilizando el contenedor `my-mendix-bucket`, tal como se describe en el paso anterior y revise el nombre `PersistentVolumeClaim` para utilizarlo en el paso siguiente.
+A continuación, siga la documentación correspondiente a [Almacenamiento de datos en {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage). Se crea `PersistentVolumeClaim` y `PersistentVolume` en el clúster de Kubernetes, que puede utilizar la instancia de la base de datos PostGres que se ejecuta en el clúster como parte de la aplicación Mendix. Asegúrese de crear `PersistentVolumeClaim` utilizando el grupo `my-mendix-bucket`, tal como se describe en el paso anterior y revise el nombre `PersistentVolumeClaim` para utilizarlo en el paso siguiente.
 
 ## Edición del archivo `postgres-deployment.yaml`
 {: #postgres-deploy-mendix}

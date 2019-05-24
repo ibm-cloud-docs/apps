@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-05-10"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -18,37 +18,30 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Serviceberechtigungsnachweise Ihrer Bereitstellungsumgebung hinzufügen
+# Serviceberechtigungsnachweise Ihrer Bereitstellungsumgebung manuell hinzufügen
 {: #credentials_overview}
 
-Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Bereitstellungsumgebung manuell hinzufügen.
+Es ist wünschenswert, dass Ihre Anwendungslogik sensible Serviceberechtigungsnachweise (z. B. Datenbank-API-Schlüssel oder Kennwörter) aus der Umgebung, in der Ihre Anwendung ausgeführt wird, übernimmt. Auf diese Weise Berechtigungsnachweise nicht in Ihrem Quellcode-Repository aufbewahrt werden.
 {: shortdesc}
 
-<!-- After PUP: Maybe provide links to the credentials section of the programming guides, such as https://cloud.ibm.com/docs/swift/cloudnative/configuration.html#configuration-->
+Wenn Sie eine App erstellen, indem Sie ein Starter-Kit verwenden, wird die Umgebung automatisch für Sie vorbereitet. Wenn Sie einen Service mit Ihrem Starter-Kit verbinden, bevor Sie Ihre App bereitstellen, werden Ihrer Umgebung die Serviceberechtigungsnachweise automatisch hinzugefügt.
+{ :tip}
 
-Im Allgemeinen möchten Sie, dass Ihre Anwendungslogik sensible Serviceberechtigungsnachweise (z. B. Datenbank-API-Schlüssel oder Kennwörter) aus der Umgebung, in der Ihre Anwendung ausgeführt wird, übernimmt. Auf diese Weise haben Sie keine Berechtigungsnachweise in Ihrem Quellcode-Repository. Die Datenbanken in Ihren Umgebungen für kontinuierliche Integration, Vorproduktion und Produktion sind voneinander getrennt.
+In jedem der folgenden Szenarios müssen Sie Ihrer Bereitstellungsumgebung die Serviceberechtigungsnachweise manuell hinzufügen:
 
-Wenn Sie eine App erstellen, indem Sie eine Starter-Kit-Vorlage verwenden, wird die Umgebung automatisch für Sie vorbereitet. Unabhängig davon, welches Ihr Bereitstellungsziel ist:
-<!-- Add links to the new topics in the /docs/resources repo when available-->
-  * Kubernetes
-  * Cloud Foundry Public oder Cloud Foundry Enterprise Environment
-  * Virtuelle Serverinstanz (auch lokale Docker-Instanz)
-  
-Die Schritte für die Konfiguration der Umgebung werden bereitgestellt. Starter-Kits generieren Code, der eine abhängige Bibliothek verwendet, um den Code portierbar zu machen, damit er auf jedem der Bereitstellungsziele ausgeführt werden kann. Schließlich wird keine Verzweigungslogik verwendet, um festzustellen, in welchem Bereitstellungsziel die Anwendung ausgeführt wird.
-
-Der Administrator oder DevOps-Entwickler ist dann für die Vorbereitung der Umgebungen mit den entsprechenden Zugriffssteuerungen und Konfigurationen zuständig, damit Ihrer Anwendung die erforderlichen Werte zur Verfügung stehen.
-
-"Continuous Delivery konfigurieren" ist ein einmaliger Schritt, der die folgenden Hauptaufgaben durchführt:
- * Vorbereitung Ihres Bereitstellungsziels mit Services, Ressourcen und Berechtigungsnachweisen.
- * Erstellung einer DevOps-Toolchain zum Erstellen und Bereitstellen Ihrer App in dieser Umgebung, indem Code verwendet wird, der die Berechtigungsnachweise in der Umgebung korrekt referenziert.
-
-Sie müssen das Bereitstellungsziel jedoch in den folgenden Szenarios vorbereiten:
  * Sie integrieren Ihren eigenen Code.
- * Sie beginnen mit einer leeren Starter-Kit-Vorlage.
- * Sie fügen einen Service einer Starter-Kit-basierten App hinzu, nachdem sie bereitgestellt wurde.
+ * Sie fügen einer Starter-Kit-basierten App einen Service hinzu, nachdem die App bereitgestellt worden ist.
 
-Die Umgebungsvorbereitung wird immer für alle Berechtigungsnachweise für alle Services durchgeführt, die einer App zugeordnet sind, und alle `Services` werden in der Datei `manifest.yml` aufgelistet, aber nicht alle Berechtigungsnachweisreferenzen werden in die Datei `mappings.json` gestellt. In diesen Fällen müssen Sie solche Referenzen selbst angeben. Nachdem Sie sich für ein Bereitstellungsziel entschieden haben und die Abstraktion der Bibliothek `IBMCloudEnv` nicht benötigen, lesen Sie den Abschnitt "Ihr Code + (Bereitstellungsziel)", der mit Ihrer Entscheidung übereinstimmt.
-{: important}
+Der Prozess zum Hinzufügen der Serviceberechtigungsnachweise ist von Ihrem Bereitstellungsziel und von Ihrer Programmiersprache abhängig. Weitere Informationen zum Konfigurieren von Serviceberechtigungsnachweisen für Ihr Bereitstellungsziel enthält die Dokumentation für Ihre jeweilige Hosting-Umgebung:
 
-Einige Starter-Kits enthalten gar keine Referenz auf die `IBMCloudEnv`-Abhängigkeit oder die Dateien `manifest.yml` und `mappings.json`.
-{: important}
+  * [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * Cloud Foundry Public oder {{site.data.keyword.cfee_full}}
+  * Virtuelle Serverinstanz (lokaler Docker-Container)
+
+Viele Sprachen und Frameworks bieten Standardbibliotheken für anwendungs- wie auch für umgebungsspezifische Konfigurationen. Weitere Informationen enthalten die folgenden Leitfäden zur Programmierung:
+
+* [Java: Mit Serviceberechtigungsnachweisen arbeiten](/docs/java?topic=cloud-native-configuration)
+* [Node.js-Umgebung konfigurieren](/docs/node?topic=nodejs-configure-nodejs)
+* [Spring-Umgebung konfigurieren](/docs/java?topic=java-spring-configuration)
+* [Swift-Umgebung konfigurieren](/docs/swift?topic=swift-configuration)
+* [Go-Umgebung konfigurieren](/docs/go?topic=go-configure-go-env)

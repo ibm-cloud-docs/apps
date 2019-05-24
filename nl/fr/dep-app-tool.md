@@ -25,7 +25,7 @@ subcollection: creating-apps
 Vous pouvez déployer votre application dans {{site.data.keyword.cloud}} en utilisant une chaîne d'outils DevOps. Avec une telle chaîne, vous pouvez automatiser les déploiements dans un grand nombre d'environnements et ajouter rapidement des services de surveillance, de journalisation, d'analyse et d'alerte afin de gérer plus facilement votre application à mesure de sa croissance. Vous pouvez configurer la distribution continue et déployer votre application en utilisant l'interface de ligne de commande ou la console Web {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-Une chaîne d'outils DevOps inclut un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement GitLab dédié et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Une chaîne d'outils DevOps inclut un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement GitLab dédié et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 Toutes les chaînes d'outils créées à partir du tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
 {: note}
@@ -65,7 +65,7 @@ Pour plus d'informations, voir :
 * [Génération et déploiement](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
 * [Création de chaînes d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
 
-## Utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}} 
+## Utilisation de l'interface de ligne de commande {{site.data.keyword.dev_cli_short}}
 {: #deploy-cli}
 
 {{site.data.keyword.cloud_notm}} inclut une interface de ligne de commande robuste ainsi que des plug-in permettant de simplifier le flux de travaux du développeur. Vous pouvez déployer votre application {{site.data.keyword.cloud_notm}} en utilisant une des méthodes ci-dessous, en fonction de la manière dont votre application est configurée.

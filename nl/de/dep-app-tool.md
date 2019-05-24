@@ -25,7 +25,7 @@ subcollection: creating-apps
 Sie können Ihre App mithilfe einer DevOps-Toolchain in {{site.data.keyword.cloud}} bereitstellen. Mit einer DevOps-Toolchain können Sie Bereitstellungen in vielen Umgebungen automatisieren und schnell Überwachungs-, Protokollierungs-, Insights- und Alert-Services hinzufügen, die Sie bei der Verwaltung Ihrer ständig weiterentwickelten App unterstützen. Sie können Continuous Delivery für Ihre App konfigurieren und Ihre App bereitstellen, indem Sie entweder die {{site.data.keyword.cloud_notm}}-Webkonsole oder die Befehlszeilenschnittstelle verwenden.
 {: shortdesc}
 
-Eine DevOps-Toolchain stellt eine teambasierte Entwicklungsumgebung für Ihre App zur Verfügung. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte GitLab-Umgebung  und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
+Eine DevOps-Toolchain stellt eine teambasierte Entwicklungsumgebung für Ihre App zur Verfügung. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte GitLab-Umgebung  und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 Alle über das {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
 {: note}
@@ -52,7 +52,7 @@ Zur Vorbereitung müssen Sie mit dem [{{site.data.keyword.cloud_notm}}-Dashboard
 ### App manuell bereitstellen
 {: deploy-console-manual}
 
-Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus.  
+Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus. 
 
 Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
 

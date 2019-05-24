@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-09"
 
 keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
 
@@ -36,14 +36,14 @@ demorado, mas é possível estar funcional rapidamente usando o {{site.data.keyw
 Os serviços não se ligam à instância de servidor virtual. Não é possível incluir serviços em um aplicativo em um servidor virtual.
 {: important}
 
-## Criando e implementando os aplicativos
+## Implementando apps
 {: #create-deploy-vsi}
 
 O App Service fornece uma instância de servidor virtual, carrega uma imagem que inclui o aplicativo,
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
 1. [Crie um aplicativo](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Clique em **Configurar entrega contínua** por meio da página **Detalhes do app**.
+2. Clique em **Configurar entrega contínua** na página Detalhes do app.
 3. Selecione **Implementar em um Servidor virtual**, juntamente com a região na qual executar o servidor.
 
 ## Como o processo de implementação funciona
@@ -65,7 +65,7 @@ O pipeline usa um conjunto de propriedades da conta do usuário e um novo par de
 
 Para visualizar essas propriedades do ambiente, conclua as etapas a seguir. 
 
-1. Na página Detalhes do aplicativo, clique em **Visualizar a cadeia de ferramentas**.
+1. Na página Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
 2. Clique no ladrilho **Delivery Pipeline**.
 3. Clique no ícone **Configuração de estágio** e, em seguida, clique em **Configurar estágio** no estágio de construção.
 4. Clique na guia **Propriedades do ambiente** para visualizar as propriedades. Use a tabela a

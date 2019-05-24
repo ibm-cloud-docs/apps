@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-09"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -19,14 +19,10 @@ subcollection: creating-apps
 # Chaînes d'outils DevOps
 {: #devops-toolchains}
 
-La chaîne d'outils DevOps comprend des procédures et des outils permettant d'accéder à votre application, de la développer, de la déployer et de l'utiliser. Une chaîne d'outils DevOps est un ensemble de services liés qui automatisent vos tâches DevOps. Il est possible d'exécuter manuellement DevOps avec des applications simples, mais les besoins en automatisation augmentant rapidement à mesure que la complexité s'accroît, l'automatisation de chaîne d'outils devient indispensable pour la distribution continue.
+Une chaîne d'outils DevOps est un ensemble d'outils qui automatise les tâches de développement et de déploiement de votre application. Vous pouvez effectuer des opérations DevOps manuellement avec des applications simples, mais le besoin d'automatisation augmente rapidement à mesure que la complexité des applications augmente et l'automatisation de la chaîne d'outils est essentielle pour assurer une distribution continue.{:shortdesc}
 
-Le composant de base d'une chaîne d'outils DevOps est un référentiel de contrôle de version de code, tel que GitHub. D'autres outils peuvent inclure le suivi des éléments en attente, un pipeline de distribution, un environnement IDE et un service de surveillance ([{{site.data.keyword.cloud_notm}} {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started), par exemple).
+Le composant central d'une chaîne d'outils DevOps est un référentiel de contrôle de version comme GitHub. Parmi les autres outils, on peut citer le suivi des éléments en attente, les pipelines de distribution, un environnement de développement intégré (IDE) et la surveillance (par exemple, {{site.data.keyword.DRA_full}}).
 
-Si vous créez une application en utilisant un kit de démarrage, vous pouvez créer une chaîne d'outils et déployer votre application simplement en cliquant sur **Déployer dans le cloud** sur la page **Détails de l'application**. Une chaîne d'outils avec un référentiel de code, un référentiel d'anomalies, un pipeline de distribution et une interface IDE Web est créée.
+Lorsque vous [créez une application](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) à l'aide d'un kit de démarrage et que vous cliquez sur **Configurer la distribution continue** sur la page Détails de l'application, une chaîne d'outils DevOps est créée. La chaîne d'outils a un référentiel de code, un pipeline de distribution et une interface IDE Web. Vous pouvez ensuite vous appuyer sur cette chaîne d'outils pour gérer et déployer votre application de manière collaborative dans des environnements distincts pour le développement, les tests et la production.
 
-Vous pouvez ensuite effectuer l'opération de génération sur cette chaîne d'outils afin de satisfaire plusieurs équipes et effectuer le déploiement sur des environnements distincts à des fins de développement, de test et de production. Vous établissez un modèle de distribution continue collaboratif pour votre application.
-
-Pour plus d'informations sur la distribution continue, voir le [tutoriel d'initiation](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
-
-Pour plus d'informations sur les chaînes d'outils, voir [Création d'une chaîne d'outils à partir d'une application](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+Pour plus d'informations, voir le [Tutoriel d'initiation à {{site.data.keyword.contdelivery_full}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-09"
+lastupdated: "2019-05-09"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -19,16 +19,11 @@ subcollection: creating-apps
 # Cadeias de ferramentas do DevOps
 {: #devops-toolchains}
 
-A cadeia de ferramentas do DevOps inclui procedimentos e ferramentas para acessar, desenvolver, implementar e operar o app. Uma cadeia de ferramentas do DevOps é um conjunto de serviços vinculados que automatizam as tarefas do DevOps. É possível
-executar o DevOps manualmente com apps simples, mas a necessidade de automação aumenta rapidamente à medida que a
-complexidade do app aumenta e a automação da cadeia de ferramentas é uma necessidade para a entrega contínua.
+Uma cadeia de ferramentas do DevOps é um conjunto de ferramentas que automatiza as tarefas de desenvolvimento e implementação de seu app. É possível executar o DevOps manualmente com apps simples, mas a necessidade de automação aumenta rapidamente à medida que a complexidade do app aumenta e a automação da cadeia de ferramentas é uma necessidade para a entrega contínua.
+{:shortdesc}
 
-O componente principal de uma cadeia de ferramentas do DevOps é um repositório de controle de versão do código como o GitHub. Mais ferramentas podem incluir rastreamento de lista não processada, pipeline de entrega, IDE e serviço de monitoramento, como o [{{site.data.keyword.cloud_notm}} {{site.data.keyword.DRA_short}}](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).
+O componente principal de uma cadeia de ferramentas do DevOps é um repositório de controle de versão como o GitHub. Mais ferramentas podem incluir rastreamento de lista não processada, pipelines de entrega, um ambiente de desenvolvimento integrado (IDE) e monitoramento como o {{site.data.keyword.DRA_full}}.
 
-Se você criar um app usando um kit do iniciador, será possível criar uma cadeia de ferramentas e implementar seu app simplesmente clicando em **Implementar na nuvem** na página **Detalhes do app**. Uma cadeia de ferramentas que tem um repositório de código, repositório de problemas, pipeline de entrega e IDE da web é criada.
+Quando você [cria um app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) usando um kit do iniciador e, em seguida, clica em **Configurar entrega contínua** na página Detalhes do app, uma cadeia de ferramentas do DevOps é criada. A cadeia de ferramentas tem um repositório de código, um pipeline de entrega e um IDE da web. Assim, é possível construir nessa cadeia de ferramentas para gerenciar e implementar de forma colaborativa o seu app para separar ambientes para desenvolvimento, teste e produção.
 
-É possível, então, construir nessa cadeia de ferramentas para acomodar múltiplas equipes e implementar em ambientes separados para desenvolvimento, teste e produção. Estabeleça um modelo de entrega contínua colaborativa de classificação corporativa para o app.
-
-Para obter mais informações sobre a entrega contínua, consulte o [Tutorial de introdução](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-cd_getting_started).
-
-Para obter mais informações sobre as cadeias de ferramentas do DevOps, consulte [Criando uma cadeia de ferramentas por meio de um app](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+Para obter mais informações, consulte o [{{site.data.keyword.contdelivery_full}}Tutorial de introdução](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).

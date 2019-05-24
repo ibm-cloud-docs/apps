@@ -7,67 +7,57 @@ Apps erstellen
 
     {: .navgroup id="learn"}
     index.md
-    development_process.md
     best-practice.md
     patterns.md
-    starter-kits.md
+    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     Zugehörige Links
-        [Strategien für ausfallsichere Anwendungen](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Kontinuierliche Bereitstellung in Kubernetes](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Strategien für ausfallsichere Anwendungen](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Kontinuierliche Bereitstellung in Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     Apps erstellen
         tutorials/tutorial_starter-kit.md
+        starter-kits.md
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_web.md
         tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
+        [Möchten Sie eine Sprache verwenden?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     Apps bereitstellen
+        hosting.md
         dep-app-tool.md
-        vsi-deploy.md
-        deploying/containers.md
-        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
+        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
+        vsi-deploy.md
 
     {: .topicgroup}
-    Konfiguration
+    Konfigurieren
         reqnsi.md
+        creds_overview.md
         mngdomains.md
         secapps.md
 
     {: .topicgroup}
-    Berechtigungsnachweise Ihrer Umgebung hinzufügen
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    {: .topicgroup}
-    Apps migrieren
-        hosting.md
-
-    {: .topicgroup}
     Apps mit DevOps integrieren
         toolchains.md
+        insights.md
+        monitor.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools-Befehlszeilenreferenz](/cli/idt/cloud-cli-idt-cli)
-    [API-Referenz für Cloud Functions](https://cloud.ibm.com/apidocs/functions)
-    [Mobile SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
+    [Plug-in der IBM Cloud Developer Tools-CLI](/docs/cli/idt?topic=cloud-cli-idt-cli)
 
     {: .topicgroup}
     IBM Cloud-Entwicklerdashboards
@@ -89,8 +79,7 @@ Apps erstellen
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    faqs.md
     ts_apps.md
+    faqs.md
     [IBM Cloud Slack-Kanal für Entwicklertools](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}
