@@ -26,12 +26,12 @@ You can use the {{site.data.keyword.openwhisk_short}} user interface (UI) or the
 ## {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
 
-Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/openwhisk/actions){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")}. Go to the [Concepts](https://{DomainName}/openwhisk/learn){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page for a quick tour of the {{site.data.keyword.openwhisk_short}} user interface.
+Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/openwhisk/actions){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")}. Go to the [Concepts](https://{DomainName}/openwhisk/learn){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page for a quick tour of the {{site.data.keyword.openwhisk_short}} user interface.
 
 ## Developing with the CLI
 {: #openwhisk_start_configure_cli}
 
-To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/openwhisk/cli){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
+To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/openwhisk/cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Exposing APIs and data sets as web actions
 {: #expose-actions}

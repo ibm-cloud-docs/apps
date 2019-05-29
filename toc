@@ -27,7 +27,7 @@ Creating apps
         tutorials/tutorial_code-pattern.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        deploying/functions.md
+        functions.md
         tutorials/tutorial_mendix_getting_started.md
         [Looking to use a language?](https://{DomainName}/docs/home/build)
 
