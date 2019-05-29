@@ -38,7 +38,6 @@ Creating apps
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
-        vsi-deploy.md
 
     {: .topicgroup}
     Configuring
