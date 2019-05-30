@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-05-30"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -25,9 +25,11 @@ You can build enterprise-ready mobile and web applications in {{site.data.keywor
 
 Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
 
-Do you need help with deciding where to start? See this diagram for ideas!
+Do you need help with deciding where to start? The following diagram provides an overview for creating apps, whether you use a starter kit or bring your own code to {{site.data.keyword.cloud_notm}}.
 
-![Developer experience overview](images/dev-journey.png "Developer experience overview")
+![Developer experience overview](images/dev-journey.png "Overview of creating apps in {{site.data.keyword.cloud_notm}}")
+
+Figure 1. Overview of creating apps in {{site.data.keyword.cloud_notm}}
 
 ## Before you begin
 {: #prereqs-getting-started}
@@ -53,7 +55,7 @@ When you use a starter kit to create your app, the mandatory services are automa
 
 If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), locate your app, and then click your app's name. The **App details** page is displayed, and you can create a service instance or connect existing services.
 
-Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service from one that's already enabled on your account, or add a service.
+Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service that is already enabled on your account, or you can add a service.
 ```
 ibmcloud dev edit
 ```
