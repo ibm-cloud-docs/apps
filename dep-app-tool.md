@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-31"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -84,9 +84,7 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
 
   3.  Update your app code. For example, if you're using an {{site.data.keyword.cloud_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
 
-    Take note of the `manifest.yml` file. When you deploy your app to {{site.data.keyword.cloud_notm}}, this file is used to determine your application’s URL, memory allocation, number of instances, and other crucial parameters.
-
-    Also review the `README.md` file, which contains details, such as build instructions.
+    Review the `README.md` file, which contains details, such as build instructions.
 
     If your application is a Liberty app, you must build it before you deploy it again.
     {: note}
