@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-31"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -59,27 +59,6 @@ When you scroll your mouse over the **INSTANCES** or **MEMORY QUOTA** fields on 
 
 Close the message window, and click **RESET** in your runtime pane.
 {: tsResolve}
-
-## Automatic failover between {{site.data.keyword.cloud_notm}} regions isn't available
-{: #ts_failover}
-{: troubleshoot}
-
-You can't use automatic failover between {{site.data.keyword.cloud}} regions. However, you can use a DNS provider that supports failover among many IP addresses as a workaround.
-
-When an {{site.data.keyword.cloud_notm}} region becomes unavailable, the apps that are running in that region are also unavailable, even if the same apps are running in another {{site.data.keyword.cloud_notm}} region.
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} doesn't yet provide automatic failover from one region to another.
-{: tsCauses}
-
-You can use a DNS provider that supports intelligent failover among many ID addresses, and manually configure your DNS settings to enable the automatic failover between {{site.data.keyword.cloud_notm}} regions. DNS providers with this feature include NSONE, Akamai, and Dyn.
-{: tsResolve}
-
-When you configure your DNS settings, you must specify the public IP addresses of the {{site.data.keyword.cloud_notm}} regions that your apps are running in. To get the public IP address of an {{site.data.keyword.cloud_notm}} region, use the `nslookup` command. For example, you can type the following command in a command-line window.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
 
 ## Can't access {{site.data.keyword.cloud_notm}} services because of authorization errors
 {: #ts_vcap}
