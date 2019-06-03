@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ Le modèle d'application Web génère des applications qui transmettent du conte
 * React - Canevas riche permettant de générer des interfaces utilisateur. Les fichiers source se trouvent dans le répertoire `src/client/app`, sont compilés avec WebPack et sont servis dans le répertoire public.
 
 Vous trouverez des kits de démarrage pour le modèle d'application Web dans le [tableau de bord de développeur d'{{site.data.keyword.cloud_notm}}](https://{DomainName}/developer/appservice/dashboard){: new_window} App Service ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
-
-## Backend-for-frontend
-{: #bff}
-
-BFF (Backend-for-frontend) permet de créer un code de back end qui expose des données métier et des services d'une manière qui répond aux attentes des utilisateurs pour un canal d'application spécifique, par exemple, mobile ou Web. Les utilisateurs d'un appareil mobile peuvent ainsi utiliser le contrôle vocal, tandis que les utilisateurs de navigateur Web préfèrent cliquer et pointer. Vous pouvez générer deux architectures BFF, l'une pour un appareil mobile incluant des services, tels que [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), et l'autre pour le Web comportant une interface utilisateur plus sophistiquée.
-
-Dans {{site.data.keyword.cloud_notm}}, vous pouvez générer une architecture BFF avec une approche de programmation polyglotte. Vous pouvez utiliser Node.js, Swift, Java ou Python et les exécuter dans un modèle avec des services de conteneur ou utiliser des fonctions sans serveur.
-
-BFF gère l'intégration, la mise en cache et la persistance des données avec les services à forte valeur ajoutée suivants.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
-
-L'architecture BFF expose une API en utilisant le plus souvent un modèle REST, mais vous pouvez concevoir votre propre architecture BFF pour qu'elle fonctionne à partir d'une architecture de messagerie utilisant {{site.data.keyword.messagehub}}.
-
-Choisissez un kit de démarrage BFF en fonction de vos exigences d'infrastructure et de langage. Vous trouverez des kits de démarrage pour le modèle BFF dans le tableau de bord de développeur d'[{{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Microservice
 {: #microservice}

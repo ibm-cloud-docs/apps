@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -60,6 +60,17 @@ Para suprimir una app que haya creado, siga estos pasos:
 
 1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) y seleccione **Lista de recursos**.
 2. Pulse el icono **Acciones** ![Icono Acciones](../icons/action-menu-icon.svg) de la app que desee suprimir y pulse **Suprimir**.
+
+## ¿Cómo puedo detener una app de Cloud Foundry en mi cuenta?
+{: #app-stop}
+{: faq}
+
+Si desea detener una app de Cloud Foundry, siga los siguientes pasos:
+
+
+1. En el panel de control, pulse **Ver recursos** dentro de la sección de resumen de recursos.
+1. En la Lista de recursos, amplíe las secciones y busque la instancia de servicio que desee detener.
+1. Seleccione el menú **Acciones** ![Icono Lista de acciones](../icons/action-menu-icon.svg) y pulse **Detener**.
 
 ## ¿Qué son las cadenas de herramientas y qué relación tienen con mi app?
 {: #toolchains}

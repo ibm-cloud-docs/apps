@@ -137,4 +137,4 @@ Puoi distribuire manualmente la tua applicazione a {{site.data.keyword.cloud_not
 
 Per ulteriori informazioni sulla distribuzione della tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando la CLI, vedi:
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
+* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")

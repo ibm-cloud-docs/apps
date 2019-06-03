@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ subcollection: creating-apps
 * 反应 - 用于构建用户界面的丰富框架。源文件位于 `src/client/app` 中，这些文件使用 WebPack 进行编译并在公共目录中提供。
 
 您可以在 [{{site.data.keyword.cloud_notm}} App Service 开发者仪表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 上查找“Web 应用程序”模式的入门模板工具包。
-
-## 服务于前端的后端
-{: #bff}
-
-“服务于前端的后端”(BFF) 模式用于帮助创建后端代码，以通过符合用户对特定应用程序通道（如移动或 Web）的期望的方式来公开业务数据和服务。例如，移动设备上的用户可能会使用语音控件，而 Web 浏览器用户更偏好即点即选。您可以构建两个 BFF，一个用于包含服务（如 [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")）的移动，一个用于具有更复杂用户界面的 Web。
-
-在 {{site.data.keyword.cloud_notm}} 中，可以使用多语言编程方法来构建 BFF。您可以使用 Node.js、Swift、Java 或 Python，并以使用容器服务的模式或使用无服务器功能来运行。
-
-BFF 可管理数据持久性、高速缓存以及与以下高价值服务的集成。
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
-
-BFF 最常使用 REST 模式来公开 API，但您也可以将 BFF 设计为通过使用 {{site.data.keyword.messagehub}} 的消息传递体系结构来运行。
-
-根据您的语言和框架需求选择 BFF 入门模板工具包。您可以在 [{{site.data.keyword.cloud_notm}} App Service 开发者仪表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 上查找 BFF 模式的入门模板工具包。
 
 ## 微服务
 {: #microservice}

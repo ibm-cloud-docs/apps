@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,25 +31,6 @@ El patrón de app web crea apps que sirven contenido web como, por ejemplo, HTML
 * React - una infraestructura rica para crear interfaces de usuario. Los archivos de origen se encuentran en `src/client/app`, se compilan con WebPack y se sirven en el directorio público.
 
 Encontrará los kits de inicio para el patrón de app web en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App
-Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
-
-## Programa de fondo para programa de usuario (BFF)
-{: #bff}
-
-El patrón de Programa de fondo para programa de usuario (BFF) ayuda a crear código de fondo que expone servicios y datos empresariales de forma que satisfaga las necesidades de los usuarios para un canal de app específico como, por ejemplo, un canal móvil o web. Por ejemplo, los usuarios de un dispositivo móvil podrían utilizar el control de voz, mientras que los usuarios de navegador podrían preferir el sistema de apuntar y pulsar. Puede compilar dos programas BFF, uno para móvil que incluye servicios como [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y uno para web con una interfaz de usuario más sofisticada.
-
-En {{site.data.keyword.cloud_notm}}, puede compilar un programa BFF con enfoque de programación para varios lenguajes. Puede utilizar Node.js, Swift, Java o Python y ejecutarlos en un patrón con servicios de contenedor o que utilicen funciones sin servidor.
-
-BFF gestiona la persistencia, la colocación en memoria caché y la integración de los datos con los siguientes servicios de gran valor.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
-
-Los programas BFF habitualmente en la mayoría de las ocasiones exponen una API utilizando un patrón REST. No obstante, puede diseñar su programa BFF para que funcione desde una arquitectura de mensajería que utilice {{site.data.keyword.messagehub}}.
-
-Elija el kit de inicio de BFF correspondiente a su lenguaje y a los requisitos de su infraestructura. Encontrará los kits de inicio para el patrón BFF en el [panel de control del desarrollador de {{site.data.keyword.cloud_notm}} App
 Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Microservicio

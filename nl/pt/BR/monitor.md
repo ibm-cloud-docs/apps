@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-05-20"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 será criado automaticamente para monitorar a URL do app principal por padrão.
 
 O {{site.data.keyword.prf_hublong}} está
-disponível como um serviço no domínio DevOps no catálogo do {{site.data.keyword.cloud_notm}}. Ele também está disponível no painel do aplicativo Cloud Foundry na guia **Monitoramento**.
+disponível como um serviço no domínio DevOps no catálogo do {{site.data.keyword.cloud_notm}}. Ele também está disponível no painel do aplicativo do Cloud Foundry na guia **Monitoramento**.
 {: shortdesc}
 
 É possível testar, monitorar e melhorar o funcionamento de seu aplicativo à medida que você o constrói incluindo o {{site.data.keyword.prf_hubshort}} em sua cadeia de ferramentas do DevOps.

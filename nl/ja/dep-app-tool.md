@@ -137,4 +137,4 @@ CLI は、Cygwin によってサポートされていません。 このツー�
 
 CLI を使用した {{site.data.keyword.cloud_notm}} へのアプリのデプロイについて詳しくは、以下を参照してください。
 
-* [{{site.data.keyword.dev_cli_short}} CLI を使用した IBM Cloud Environments へのデプロイ](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")
+* [{{site.data.keyword.dev_cli_short}} CLI を使用した IBM Cloud Environments へのデプロイ](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")

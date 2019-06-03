@@ -9,12 +9,11 @@
     index.md
     best-practice.md
     patterns.md
-    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
-相關鏈結
+    相關鏈結
         [回復型應用程式的策略](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [連續部署至 Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [持續部署至 Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -26,12 +25,11 @@
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
-        [尋找如何使用語言嗎？](https://{DomainName}/docs/home/build)
+        [要使用某種語言嗎？](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     部署應用程式
@@ -48,6 +46,10 @@
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    移轉應用程式
+        migrating.md
 
     {: .topicgroup}
     整合應用程式與 DevOps

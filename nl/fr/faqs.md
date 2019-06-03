@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -59,6 +59,17 @@ Pour supprimer une application que vous avez créée, procédez comme suit :
 
 1. Dans la console [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), cliquez sur l'icône **Menu** ![Icône Menu](../icons/icon_hamburger.svg) puis sélectionnez **Liste de ressources**.
 2. Cliquez sur l'icône **Actions** ![Icône Actions](../icons/action-menu-icon.svg) pour l'application que vous souhaitez supprimer puis cliquez sur **Supprimer**.
+
+## Comment puis-je arrêter une application Cloud Foundry dans mon compte ?
+{: #app-stop}
+{: faq}
+
+Si vous souhaitez arrêter une application Cloud Foundry, procédez comme suit :
+
+
+1. A partir du tableau de bord, cliquez sur **Afficher les ressources** dans la section récapitulant les ressources. 
+1. Dans liste des ressources, développez les sections et localisez l'instance de service que vous souhaitez arrêter. 
+1. Sélectionnez l'icône **Actions** ![icône Liste d'actions](../icons/action-menu-icon.svg), puis cliquez sur **Arrêter**.
 
 ## Que sont les chaînes d'outils et comment sont-elles liées à mon application ?
 {: #toolchains}

@@ -9,7 +9,6 @@
     index.md
     best-practice.md
     patterns.md
-    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     관련 링크
@@ -26,7 +25,6 @@
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
@@ -48,6 +46,10 @@
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    앱 마이그레이션
+        migrating.md
 
     {: .topicgroup}
     앱을 DevOps와 통합

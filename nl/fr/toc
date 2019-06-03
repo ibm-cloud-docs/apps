@@ -9,7 +9,6 @@ Création d'applications
     index.md
     best-practice.md
     patterns.md
-    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     Liens connexes
@@ -26,7 +25,6 @@ Création d'applications
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
@@ -48,6 +46,10 @@ Création d'applications
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    Migration d'applications
+        migrating.md
 
     {: .topicgroup}
     Intégration d'applications à DevOps

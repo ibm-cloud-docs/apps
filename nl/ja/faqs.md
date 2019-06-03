@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,9 +29,9 @@ subcollection: creating-apps
 
 新しいホスト名オプション `*.appdomain.cloud` を cloud.ibm.com で使用することができます。
 
-以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。`mybluemix.net` でホストされているアプリは影響を受けません。
+以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。 `mybluemix.net` でホストされているアプリは影響を受けません。
 
-Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
+Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。 {{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
 
 詳しくは、[ドメインの管理](/docs/apps?topic=creating-apps-update-domain)を参照してください。
 
@@ -59,6 +59,17 @@ Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{
 
 1. [{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")から**「メニュー」**アイコン![「メニュー」アイコン](../icons/icon_hamburger.svg)をクリックして**「リソース・リスト」**を選択します。
 2. 削除するアプリの**「アクション」**アイコン ![「アクション」アイコン](../icons/action-menu-icon.svg) をクリックし、**「削除」**をクリックします。
+
+## 自分のアカウントで Cloud Foundry アプリを停止するには、どうすればよいですか?
+{: #app-stop}
+{: faq}
+
+Cloud Foundry アプリを停止する場合は、以下の手順を実行します。
+
+
+1. ダッシュボードで、「リソースの要約」セクション内の**「リソースの表示」**をクリックします。
+1. 「リソース」リストで、セクションを展開し、停止するサービス・インスタンスを見つけます。
+1. **「アクション」** ![「アクションのリスト」アイコン](../icons/action-menu-icon.svg) メニューを選択し、**「停止」**をクリックします。
 
 ## ツールチェーンとは何ですか? また自分のアプリとどのような関係がありますか?
 {: #toolchains}

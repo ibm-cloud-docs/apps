@@ -9,7 +9,6 @@ Creación de apps
     index.md
     best-practice.md
     patterns.md
-    /cloud-native/cloud-native-overview
 
     {: .topicgroup}
     Enlaces relacionados
@@ -26,12 +25,11 @@ Creación de apps
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
-        [¿Busca algún lenguaje específico?](https://{DomainName}/docs/home/build)
+        [¿Busca un lenguaje específico?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     Despliegue de apps
@@ -48,6 +46,10 @@ Creación de apps
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    Migración de apps
+        migrating.md
 
     {: .topicgroup}
     Integración de apps con DevOps

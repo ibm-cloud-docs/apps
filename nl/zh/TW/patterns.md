@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ Web 應用程式模式會產生應用程式，以提供 web 內容（例如 HTML
 * React - Rich 架構，用來建置使用者介面。原始檔位於 `src/client/app`，並使用 WebPack 進行編譯，且在公用目錄中提供。
 
 您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於 Web 應用程式模式的入門範本套件。
-
-## Backend for Frontend
-{: #bff}
-
-Backendf for Frontend 模式 (BFF) 可協助建立後端程式碼，以符合特定應用程式通道（例如行動或 Web）之使用者預期的方式來公開商業資料及服務。例如，行動裝置上的使用者可能會使用語音控制，而 Web 瀏覽器使用者則偏好點按方式。您可以建置兩個 BFF：一個適用於包含 [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 這類服務的行動，一個則適用於具有更準確使用者介面的 Web。
-
-在 {{site.data.keyword.cloud_notm}} 中，您可以使用多國語言程式設計方式來建置 BFF。您可以使用 Node.js、Swift、Java 或 Python，並以具有容器服務的模式或使用無伺服器功能的模式來執行它們。
-
-BFF 會使用下列高價值的服務管理資料持續性、快取及整合。
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
-
-BFF 會公開最常使用 REST 模式的 API，但您可以設計 BFF，從使用 {{site.data.keyword.messagehub}} 的傳訊架構工作。
-
-請針對您的語言及架構需求選擇 BFF 入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於 BFF 模式的入門範本套件。
 
 ## 微服務
 {: #microservice}

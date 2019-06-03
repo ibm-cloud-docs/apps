@@ -39,6 +39,6 @@ subcollection: creating-apps
 | [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) | 以 Apache OpenWhisk 為基礎的「函數即服務 (FaaS)」程式設計平台。|
 | [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | 藉由使用可擴充、安全和高效能基礎架構以及領先業界的 VMware 混合式虛擬化技術，快速且無縫地整合或移轉內部部署 VMware 工作負載。|
 | [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | 與專用核心及記憶體配置一起購買的可擴充虛擬伺服器。|
-| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-bm-getting-started)  | 由您專用且未與其他客戶共用任何部分（包括伺服器資源）的每小時或每月單一伺服器伺服器。|
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm)  | 由您專用且未與其他客戶共用任何部分（包括伺服器資源）的每小時或每月單一伺服器伺服器。|
 {: caption="表 1. 運算選項" caption-side="top"}
 

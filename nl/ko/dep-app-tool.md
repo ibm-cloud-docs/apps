@@ -137,4 +137,4 @@ ibmcloud login
 
 CLI를 사용하여 {{site.data.keyword.cloud_notm}}에 앱을 배치하는 데 관한 자세한 정보는 다음을 참조하십시오.
 
-* [{{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")로 IBM Cloud Environment에 배치
+* [{{site.data.keyword.dev_cli_short}} CLI로 IBM Cloud Environment에 배치](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")

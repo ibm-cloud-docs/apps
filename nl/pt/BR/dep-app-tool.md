@@ -40,7 +40,7 @@ O {{site.data.keyword.cloud_notm}} fornece um console da web no qual é possíve
 
 Antes de iniciar, use o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para [criar seu app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) e [incluir serviços](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
 
-### Implementando automaticamente seu aplicativo
+### Implementando seu app automaticamente
 {: deploy-console-auto}
 
 1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
@@ -49,7 +49,7 @@ Antes de iniciar, use o [painel do {{site.data.keyword.cloud_notm}}](https://{Do
   * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **Public Cloud** ou do **Enterprise Environment**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa. Para obter mais informações, consulte [Implementando apps no Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) e [Implementando apps no {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
   * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/apps?topic=creating-apps-vsi-deploy).
 
-### Implementando Manualmente seu Aplicativo
+### Implementando seu app manualmente
 {: deploy-console-manual}
 
 Com uma cadeia de ferramentas configurada corretamente, um ciclo de construção/implementação é iniciado automaticamente com cada mesclagem à ramificação principal em seu repositório. 
@@ -101,7 +101,7 @@ A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da
     Se as suas credenciais forem rejeitadas, talvez você esteja usando um ID federado. Para efetuar login com uma identidade federada, use a sinalização `--sso`. Para obter mais informações, consulte [Efetuando login com um ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
     {: tip}
 
-### Implementando automaticamente seu aplicativo
+### Implementando seu app automaticamente
 {: #deploy-cli-auto}
 
 Se você não criou uma cadeia de ferramentas do DevOps para o app e ele ainda não está em um repositório Git, será possível executar o comando [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit). Siga os prompts para "Configurar o DevOps" e implemente em uma nova cadeia de ferramentas (e crie um novo repositório GitLab).
@@ -123,7 +123,7 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 4. Visualize a cadeia de ferramentas do DevOps para o app por meio do console do {{site.data.keyword.cloud_notm}}. É possível visualizar os detalhes da cadeia de ferramentas na página **Detalhes do app** no console do {{site.data.keyword.cloud_notm}} executando o comando [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) no diretório do app.
 5. Visualize o pipeline dentro da cadeia de ferramentas para verificar se uma nova compilação foi iniciada.
 
-### Implementando Manualmente seu Aplicativo
+### Implementando seu app manualmente
 {: #deploy-cli-manual}
 
 É possível implementar manualmente seu app no {{site.data.keyword.cloud_notm}} usando o comando [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
@@ -138,4 +138,4 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 
 Para obter mais informações sobre como implementar seu app no {{site.data.keyword.cloud_notm}} usando a CLI, consulte:
 
-* [Implementando em ambientes do IBM Cloud com a CLI do {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+* [Implementando em ambientes do IBM Cloud com a CLI do {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")

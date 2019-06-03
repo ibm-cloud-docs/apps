@@ -137,4 +137,4 @@ Cygwin 不支持 CLI。请在非 Cygwin 命令行窗口中使用该工具。
 
 有关使用 CLI 将应用程序部署到 {{site.data.keyword.cloud_notm}} 的更多信息，请参阅：
 
-* [使用 {{site.data.keyword.dev_cli_short}} CLI 部署到 IBM Cloud Environments](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
+* [使用 {{site.data.keyword.dev_cli_short}} CLI 部署到 IBM Cloud Environments](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")

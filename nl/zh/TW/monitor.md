@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-05-20"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 
 您可以立即開始監視應用程式可用性及效能。當您將 {{site.data.keyword.prf_hubshort}} 連結至應用程式時，依預設會自動建立綜合測試來監視主要應用程式 URL。
 
-{{site.data.keyword.prf_hublong}} 提供作為 {{site.data.keyword.cloud_notm}} 型錄中 DevOps 領域的服務。它在 Cloud Foundry 應用程式儀表板的**監視**標籤上也會提供。
+{{site.data.keyword.prf_hublong}} 提供作為 {{site.data.keyword.cloud_notm}} 型錄中 DevOps 領域的服務。它也可以在 Cloud Foundry 應用程式儀表板的**監視**標籤上取得。
 {: shortdesc}
 
 您可以將 {{site.data.keyword.prf_hubshort}} 新增至 DevOps 工具鏈，以測試、監視及改善應用程式的建置性能。

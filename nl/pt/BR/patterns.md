@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ O padrão do app da web produz apps que entregam conteúdo da web, como HTML, Ja
 * React - uma rica estrutura para construir interfaces com o usuário. Os arquivos de origem estão em `src/client/app` e são compilados com o WebPack e entregues no diretório público.
 
 É possível localizar kits do iniciador para o padrão de app da web no [painel do desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
-
-## Backend-for-frontend
-{: #bff}
-
-O padrão Backend-for-frontend (BFF) ajuda a criar o código de backend que expõe dados de negócios e serviços de uma maneira que corresponda às expectativas do usuário para um canal de app específico, como para dispositivos móveis ou para a web. Por exemplo, os usuários em um dispositivo móvel podem usar controle de voz, enquanto os usuários do navegador da web preferem apontar e clicar. É possível construir dois BFFs, uma para o dispositivo móvel que inclui serviços como o [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e um para a web que tem uma interface com o usuário mais sofisticada.
-
-No {{site.data.keyword.cloud_notm}}, é possível construir um BFF com abordagem de programação poliglota. É possível usar Node.js, Swift, Java ou Python e executá-los em um padrão com serviços de contêiner ou que usam funções sem servidor.
-
-O BFF gerencia a persistência de dados, o armazenamento em cache e a integração com os serviços de alto valor a seguir.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
-
-O BFF expõe uma API mais comumente usando um padrão de REST, mas é possível projetar o BFF para trabalhar por meio de uma arquitetura de sistema de mensagens que usa o {{site.data.keyword.messagehub}}.
-
-Escolha um kit do iniciador do BFF para seus requisitos de linguagem e estrutura. É possível localizar os kits do iniciador para o padrão BFF no [painel do desenvolvedor do {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Microsserviço
 {: #microservice}

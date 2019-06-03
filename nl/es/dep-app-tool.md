@@ -147,4 +147,4 @@ Puede desplegar manualmente la app en {{site.data.keyword.cloud_notm}} utilizand
 
 Para obtener más información sobre cómo desplegar la app en {{site.data.keyword.cloud_notm}} utilizando la CLI, consulte:
 
-* [Despliegue en entornos de IBM Cloud con la CLI de {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+* [Despliegue en entornos de IBM Cloud con la CLI de {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")

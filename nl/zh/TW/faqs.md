@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -59,6 +59,17 @@ Cloud Foundry 應用程式的子網域是 `cf.appdomain.cloud`。您部署至 {{
 
 1. 從 [{{site.data.keyword.cloud_notm}} 主控台 ](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，按一下**功能表**圖示 ![「功能表」圖示](../icons/icon_hamburger.svg)，然後選取**資源清單**。
 2. 按一下您要刪除之應用程式的**動作**圖示 ![動作圖示](../icons/action-menu-icon.svg)，然後按一下**刪除**。
+
+## 如何在我的帳戶中停止 Cloud Foundry 應用程式？
+{: #app-stop}
+{: faq}
+
+如果您要停止 Cloud Foundry 應用程式，請完成下列步驟：
+
+
+1. 從「儀表板」中，按一下「資源摘要」區段內的**檢視資源**。
+1. 在「資源」清單上，展開區段並尋找您要停止的服務實例。
+1. 選取**動作** ![動作清單圖示](../icons/action-menu-icon.svg) 功能表，然後按一下**停止**。
 
 ## 何謂工具鏈，以及它們與我的應用程式的關係？
 {: #toolchains}

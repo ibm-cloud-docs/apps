@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ Il modello dell'applicazione web produce applicazioni che forniscono il contenut
 * React - un framework avanzato per creare le interfacce utente. I file di origine si trovano in `src/client/app` e vengono compilati con WebPack e forniti nella directory pubblica.
 
 Puoi trovare i kit starter per il modello dell'applicazione web nel [dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
-
-## BFF (backend-for-frontend)
-{: #bff}
-
-Il BFF (backend-for-frontend) ti aiuta a creare il codice di backend che espone i dati e i servizi di business in un modo che corrisponde alle aspettative dell'utente per un canale dell'applicazione specifico, come ad esempio mobile o web. Ad esempio, gli utenti su un dispositivo mobile possono utilizzare il controllo vocale, mentre gli utenti del browser web preferiscono puntare e fare clic. Puoi creare due BFF, uno per il dispositivo mobile che include servizi come [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e uno per il dispositivo web che ha un'interfaccia utente più sofisticata.
-
-In {{site.data.keyword.cloud_notm}}, puoi creare un BFF con l'approccio di programmazione poliglotta. Puoi utilizzare Node.js, Swift, Java o Python ed eseguirli in un modello con servizi contenitore o che utilizzano funzioni senza server.
-
-Il BFF gestisce la persistenza dei dati, la memorizzazione nella cache e l'integrazione con i seguenti servizi ad alto valore.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
-
-Il BFF espone un'API utilizzando più comunemente un modello REST, ma puoi progettare il tuo BFF per lavorare da un'architettura di messaggistica che utilizza {{site.data.keyword.messagehub}}.
-
-Scegli un kit starter BFF per i tuoi requisiti di linguaggio e framework. Puoi trovare i kit starter per il modello BFF nel [dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} App Service](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Microservizio
 {: #microservice}

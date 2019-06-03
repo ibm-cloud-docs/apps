@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ subcollection: creating-apps
 * React - 사용자 인터페이스 빌드를 위한 세련된 프레임워크입니다. 소스 파일은 `src/client/app`에 있으며, webpack으로 컴파일되고 공용 디렉토리에서 제공됩니다.
 
 웹 앱 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 찾을 수 있습니다.
-
-## 프론트 엔드를 위한 백엔드
-{: #bff}
-
-프론트 엔드를 위한 백엔드(BFF) 패턴은 모바일 또는 웹과 같은 특정 앱 채널에 대한 사용자 기대를 만족시키는 방식으로 비즈니스 데이터 및 서비스를 노출하는 백엔드 코드를 작성합니다. 예를 들면, 모바일 디바이스의 사용자는 음성 제어를 사용하려고 하고 웹 브라우저 사용자는 이동 및 클릭을 선호합니다. 사용자는 [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 등의 서비스를 포함하는 모바일용 BFF와 더 정교한 사용자 인터페이스를 갖춘 웹용 BFF의 두 BFF를 빌드할 수 있습니다.
-
-{{site.data.keyword.cloud_notm}}에서는 폴리글롯 프로그래밍 접근법을 사용하여 BFF를 빌드할 수 있습니다. 사용자는 Node.js, Swift, Java 또는 Python을 사용하고 이를 컨테이너 서비스를 사용하거나 서버리스 기능을 사용하는 패턴에서 실행할 수 있습니다.
-
-BFF는 데이터 지속성, 캐싱 및 다음 고가치 서비스와의 통합을 관리합니다.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
-
-BFF는 가장 일반적으로 REST 패턴을 사용하여 API를 노출하지만, {{site.data.keyword.messagehub}}를 사용하는 메시징 아키텍처로부터 작동하도록 BFF를 디자인할 수도 있습니다.
-
-언어 및 프레임워크 요구사항에 맞는 BFF 스타터 킷을 선택하십시오. BFF 패턴의 스타터 킷은 [{{site.data.keyword.cloud_notm}} 앱 서비스 개발자 대시보드](https://{DomainName}/developer/appservice/dashboard){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 찾을 수 있습니다.
 
 ## 마이크로서비스
 {: #microservice}

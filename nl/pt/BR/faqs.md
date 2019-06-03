@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -57,8 +57,19 @@ Sua lista de recursos no [console do {{site.data.keyword.cloud_notm}}](https://{
 
 Para excluir um app que você criou, conclua estas etapas:
 
-1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone de **Menu** ![Ícone de menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
+1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
 2. Clique no ícone **Ações** ![Ícone Ações](../icons/action-menu-icon.svg) para o app que você deseja excluir e clique em **Excluir**.
+
+## Como parar um app do Cloud Foundry em minha conta?
+{: #app-stop}
+{: faq}
+
+Se desejar parar um app do Cloud Foundry, conclua as etapas a seguir:
+
+
+1. No Painel, clique em **Visualizar recursos** dentro da seção Resumo de recursos.
+1. Na Lista de recursos, expanda as seções e localize a instância de serviço que deseja parar.
+1. Selecione o menu **Ações**![Ícone Lista de ações](../icons/action-menu-icon.svg) e, em seguida, clique em **Parar**.
 
 ## O que são cadeias de ferramentas e como elas se relacionam com meu app?
 {: #toolchains}

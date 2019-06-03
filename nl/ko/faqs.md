@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-08"
+lastupdated: "2019-05-22"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -59,6 +59,17 @@ Cloud Foundry 앱의 하위 도메인은 `cf.appdomain.cloud`입니다. {{site.d
 
 1. [{{site.data.keyword.cloud_notm}} 콘솔](https://{DomainName}){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 **메뉴** 아이콘 ![메뉴 아이콘](../icons/icon_hamburger.svg)을 클릭하고 **리소스 목록**을 선택하십시오.
 2. 삭제하려는 앱에 대해 **조치** 아이콘 ![조치 아이콘](../icons/action-menu-icon.svg)을 클릭하고 **삭제**를 클릭하십시오.
+
+## 내 계정에서 Cloud Foundry 앱을 어떻게 중지합니까?
+{: #app-stop}
+{: faq}
+
+Cloud Foundry 앱을 중지하려면 다음 단계를 완료하십시오.
+
+
+1. 대시보드의 리소스 요약 섹션 내에서 **리소스 보기**를 클릭하십시오.
+1. 리소스 목록에서 해당 섹션을 펼치고 중지할 서비스 인스턴스를 찾으십시오.
+1. **조치** ![조치 목록 아이콘](../icons/action-menu-icon.svg) 메뉴를 선택한 후 **중지**를 클릭하십시오.
 
 ## 도구 체인은 무엇이고 내 앱과 어떻게 관련되어 있습니까?
 {: #toolchains}

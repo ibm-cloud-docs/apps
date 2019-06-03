@@ -137,4 +137,4 @@ Vous pouvez déployer manuellement votre application dans {{site.data.keyword.cl
 
 Pour plus d'informations sur le déploiement de votre application dans {{site.data.keyword.cloud_notm}} en utilisant l'interface de ligne de commande, voir :
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
+* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
