@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-03"
 
 keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
 
@@ -55,7 +55,7 @@ You can add services that enhance your app with the cognitive power of Watson, a
 
 Enabling a toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated Git lab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-Continuous delivery is enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
+Continuous delivery is enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
 Click **Configure continuous delivery** on the **App details** page, select a deployment target, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 
@@ -150,7 +150,7 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
 2. Click **View logs and history**.
-3. In the log file, find the application URL:
+3. In the log file, find the app's URL:
 
     At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 

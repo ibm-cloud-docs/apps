@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -31,7 +31,7 @@ Each starter kit includes a language, a framework, and a pattern for a specific 
 
 Starter kits are production-ready and focus on demonstrating a key pattern implementation by using a runtime (for example, Node.js and Express). In some cases, starter kits offer a simple user experience to highlight the integration of the service. In other cases, starter kits represent a customizable implementation of a sophisticated use case.
 
-A snippet is a few lines of code that is often presented in an IDE. Snippets help a developer integrate with a programming language syntax or support integration with a defined API. A demonstration is usually high in quality and fidelity and uses a range of services and integration points. It often requires setup time and is used to prove a business problem or demonstrate a platform feature. You can use it for evaluating stages of cloud adoption. Sometimes it's code that is included in production code. A sample is a small example of a specific feature, function, service, or user journey. You can reuse a sample or include it in a production application. It's typically used to show technical capabilities and a possible approach to solving a technical problem.
+A snippet is a few lines of code that is often presented in an IDE. Snippets help a developer integrate with a programming language syntax or support integration with a defined API. A demonstration is usually high in quality and fidelity and uses a range of services and integration points. It often requires setup time and is used to prove a business problem or demonstrate a platform feature. You can use it for evaluating stages of cloud adoption. Sometimes it's code that is included in production code. A sample is a small example of a specific feature, function, service, or user journey. You can reuse a sample or include it in a production app. It's typically used to show technical capabilities and a possible approach to solving a technical problem.
 
 ## Portable code
 {: #portable-code}

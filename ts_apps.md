@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-03"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # Troubleshooting for creating apps
 {: #managingapps}
 
-General problems with creating apps might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
+General problems with creating applications might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
 ## My apps are hosted in different domains
@@ -126,7 +126,7 @@ As a workaround, use third-party services that don't rely on the GCM service, fo
 
 Double-byte characters might not be displayed properly if Unicode support isn't configured properly for the servlet or JSP files.
 
-When an application is pushed to the {{site.data.keyword.cloud_notm}}, the double-byte characters that are specified within the app aren't displayed properly.
+When an app is pushed to the {{site.data.keyword.cloud_notm}}, the double-byte characters that are specified within the app aren't displayed properly.
 {: tsSymptoms}
 
 The problem might occur if Unicode support isn't configured properly for the servlet or JSP files.
@@ -278,7 +278,7 @@ If the build or deploy jobs fail, and you see the following message, you can del
 ## Accessing Kubernetes logs
 {: #access_kube_logs}
 
-If the application isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
+If the app isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,

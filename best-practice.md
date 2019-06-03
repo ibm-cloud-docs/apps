@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-03"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # What makes a good app?
 {: #best-practice}
 
-Build your app in {{site.data.keyword.cloud}} to take advantage of all the things cloud offers. These best practices can help you ensure that your apps are cloud-ready.
+Build your application in {{site.data.keyword.cloud}} to take advantage of all the things cloud offers. These best practices can help you ensure that your apps are cloud-ready.
 {: shortdesc}
 
 ## Build your app to be independent of topology
@@ -51,19 +51,19 @@ Extracting environment-specific dependencies into a set of property files is an 
 ## Build your app by using a multi-region architecture
 {: #multiregion}
 
-You can run more than one instance to avoid downtime in a single region. To deliver an even more robust application, consider a multi-region architecture.
+You can run more than one instance to avoid downtime in a single region. To deliver an even more robust app, consider a multi-region architecture.
 
 For information about minimizing downtime and creating resilient architectures that achieve maximum availability, see the [Strategies for resilient applications tutorial](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Ensure you're monitoring your apps
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} makes it easy to monitor your application with services like [New Relic](http://newrelic.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.cloud_notm}} makes it easy to monitor your app with services like [New Relic](http://newrelic.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Take advantage of support options
 {: #support}
 
-{{site.data.keyword.cloud_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an application to production on {{site.data.keyword.cloud_notm}}, consider enrolling in this option.
+{{site.data.keyword.cloud_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an app to production on {{site.data.keyword.cloud_notm}}, consider enrolling in this option.
 
 With or without paid support, you can get help as described at [support](/docs/get-support?topic=get-support-getting-customer-support), which offers insurance against unforeseen issues.
 

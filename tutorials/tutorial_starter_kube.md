@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-03"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -20,12 +20,12 @@ subcollection: creating-apps
 # Deploying a starter kit app to a Kubernetes cluster
 {: #tutorial-starterkit-kube}
 
-Learn how to create an application in {{site.data.keyword.cloud}} by using a blank starter kit and a Kubernetes toolchain, and continuously deliver the app to a secure container in a Kubernetes cluster. Your continuous integration DevOps pipeline can be configured so that your code changes are automatically built and propagated to the app that’s in the Kube cluster. If you already have a pipeline, you can connect it to your app.
+Learn how to create an application in {{site.data.keyword.cloud}} by using a blank starter kit and a Kubernetes toolchain, and continuously deliver the app to a secure container in {{site.data.keyword.containerlong}}. Your continuous integration DevOps pipeline can be configured so that your code changes are automatically built and propagated to the app that’s in the Kubernetes cluster. If you already have a pipeline, you can connect it to your app.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} offers starter kits that help you build the foundation of an app that runs on Kubernetes. When you use a starter kit, it's easy to follow a cloud native programming model that uses {{site.data.keyword.cloud_notm}} best practices for app development. Starter kits generate apps that follow the cloud native programming model, and they include test cases, health check, and metrics in each programming language. You can also provision cloud services that are then initialized in your generated application.
+{{site.data.keyword.cloud_notm}} offers starter kits that help you build the foundation of an app that runs on Kubernetes. When you use a starter kit, it's easy to follow a cloud native programming model that uses {{site.data.keyword.cloud_notm}} best practices for app development. Starter kits generate apps that follow the cloud native programming model, and they include test cases, health check, and metrics in each programming language. You can also provision cloud services that are then initialized in your generated app.
 
-This tutorial uses the Kubernetes deployment target. In this tutorial, we're creating an application from a basic starter kit by using Java + Spring, adding a Cloudant service instance to it, and deploying it to {{site.data.keyword.cloud_notm}} by using IBM Kubernetes Service.
+This tutorial uses the {{site.data.keyword.containerlong}} deployment target. In this tutorial, we're creating an app from a basic starter kit by using Java + Spring, adding a Cloudant service instance to it, and deploying it to {{site.data.keyword.containerlong}}.
 
 First, see the following starter kit flow diagram and its corresponding overview steps.
 
@@ -41,7 +41,7 @@ First, see the following starter kit flow diagram and its corresponding overview
 ## Adding services to your app
 {: #resources-starterkit-kube}
 
-Add an {{site.data.keyword.cloud_notm}} service to your application. The following steps provision a Cloudant instance, create a resource key (credentials), and bind it to your app.
+Add an {{site.data.keyword.cloud_notm}} service to your app. The following steps provision a Cloudant instance, create a resource key (credentials), and bind it to your app.
 
 1. On the **App details** page, click **Add service**.
 2. Select **Data** and click **Next**..
@@ -53,7 +53,7 @@ Add an {{site.data.keyword.cloud_notm}} service to your application. The followi
 ## Deploying your app by using a DevOps toolchain
 {: #deploy-starterkit-kube}
 
-Attach a DevOps toolchain to the application, and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
+Connect a DevOps toolchain to the app, and configure it to be deployed to a Kubernetes cluster that is hosted in the {{site.data.keyword.cloud_notm}} Kubernetes service.
 
 1. On the **App details** page, click **Configure continuous delivery**.
 2. On the **Select a deployment target** page, select **Deploy to IBM Kubernetes Service**.
@@ -78,8 +78,8 @@ Attach a DevOps toolchain to the application, and configure it to be deployed to
 1. When the deployment stage is finished, the **App details** page is displayed, along with deployment information about your toolchain.
 2. Access the toolchain by clicking **View toolchain**. The **Overview** tab of the toolchain page is displayed, which shows the tools that are included with the toolchain. This example includes the following tools that were preselected in the starter kit when the toolchain was created:
   * An issues tracker to track project updates and changes.
-  * A Git repo that contains the source code of your application.
-  * An Eclipse Orion instance, which is a web-based IDE to edit your application.
+  * A Git repo that contains the source code of your app.
+  * An Eclipse Orion instance, which is a web-based IDE to edit your app.
   * A Delivery Pipeline that consists of a customizable build and deploy stage.
 	 * The BUILD stage containerizes the app. More specifically, the build stage:
 	   * Clones your GitLab repository.
@@ -97,7 +97,7 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
 2. Click **View logs and history**.
-3. In the log file, find the application URL:
+3. In the log file, find the app's URL:
 
     At the end of the log file, search for `View the application health at: http://<ipaddress>:<port>/health`.
 
@@ -114,4 +114,4 @@ FIf you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Add new service credentials to your Kubernetes environment:
-	- When you add another service to your application after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed application and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).
+	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).

@@ -16,7 +16,7 @@ subcollection: creating-apps
 # Choosing your hosting environment
 {: #hosting}
 
-If you have an existing app, you can host it on {{site.data.keyword.cloud}} with all the infrastructure or platform services you need.
+If you have an existing application, you can host it on {{site.data.keyword.cloud}} with all the infrastructure or platform services you need.
 {:shortdesc}
 
 With {{site.data.keyword.Bluemix_notm}}, you no longer need to make large investments in hardware to test out or run a new app. Instead, we manage it all for you and only charge for what you use. Your cloud server environment is the base of your infrastructure layer. You can choose a single option or a combination for more complex environments. 
@@ -29,6 +29,12 @@ You have various options for hosting your apps, giving you as much control over 
   * As VMware
   * As a virtual machine
   * On high-performance {{site.data.keyword.baremetal_short}} 
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months. 
+<!-- Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.-->
+<!--
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/blogs/bluemix/2018/06/bare-metal-virtual-servers-works/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
 Check out the following table for a summary of your compute options.
 

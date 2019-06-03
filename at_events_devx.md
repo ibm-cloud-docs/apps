@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-03"
 
 keywords: apps, applications, activity tracking events
 
@@ -51,18 +51,18 @@ The following table lists the actions that generate an event:
   <tr>
   <tr>
     <td>bluemix-developer-experience.app.create</td>
-	  <td>An event is generated when a user creates an application.</td>
+	  <td>An event is generated when a user creates an app.</td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.read</td>
-	  <td>An event is generated when any of the following situations happen: </br><ul><li>A user downloads the application code.</li> <li>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.</li> <li>The {{site.data.keyword.cloud_notm}} infrastructure reads credentials for services that are associated with an application.</li> <li>A user views the list of applications, for example, when the user views the list of applications in the {{site.data.keyword.dev_console}} developer console or through the {{site.data.keyword.dev_cli_short}} CLI.</li></ul></td>
+	  <td>An event is generated when any of the following situations happen: </br><ul><li>A user downloads the app code.</li> <li>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.</li> <li>The {{site.data.keyword.cloud_notm}} infrastructure reads credentials for services that are associated with an app.</li> <li>A user views the list of app, for example, when the user views the list of apps in the {{site.data.keyword.dev_console}} developer console or through the {{site.data.keyword.dev_cli_short}} CLI.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.update</td>
-	  <td>An event is generated when any of the following situations happen: </br><ul><li>Something about the application changes, for example, when a user modifies the name of the application. </li><li>A new service is created and added to an application.</li><li>An existing service is added to an application.</li><li>A service is removed from an application.</li><li>Code is generated for an application.</li><li>A DevOps toolchain is added through the {{site.data.keyword.cloud_notm}} console, for example, by selecting **Configure continuous delivery**.</li></ul></td>
+	  <td>An event is generated when any of the following situations happen: </br><ul><li>Something about the app changes, for example, when a user modifies the name of the app. </li><li>A new service is created and added to an app.</li><li>An existing service is added to an app.</li><li>A service is removed from an app.</li><li>Code is generated for an app.</li><li>A DevOps toolchain is added through the {{site.data.keyword.cloud_notm}} console, for example, by selecting **Configure continuous delivery**.</li></ul></td>
   </tr>
   <tr>
     <td>bluemix-developer-experience.app.delete</td>
-	  <td>An event is generated when a user deletes an application.</td>
+	  <td>An event is generated when a user deletes an app.</td>
   </tr>
 </table>

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-03"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
+keywords: apps, mobile, mobile app, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
 subcollection: creating-apps
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Creating a mobile application with a starter kit
+# Creating a mobile app with a starter kit
 {: #tutorial-mobile}
 
 {{site.data.keyword.cloud}} offers mobile starter kits to help you create a mobile application quickly. Select a language, framework, and tools from the App Service Starter Kits to start working with a preconfigured custom app. In this tutorial, you can learn how to install the tools you need, build, and run the app locally and deploy it to the cloud.
@@ -34,7 +34,7 @@ subcollection: creating-apps
 {: #create-mobile}
 
 1. Create a {{site.data.keyword.dev_console}} app in {{site.data.keyword.cloud_notm}}.
-2. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language application, select **Swift Kitura**.
+2. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language app, select **Swift Kitura**.
 3. Enter your app name. For this tutorial, use `WatsonApp`.
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 5. Select your language platform. For this tutorial, use `Swift`.
@@ -64,8 +64,8 @@ To select your deployment target and configure continuous delivery, complete the
 
 1. On the App details page, click **Configure continuous delivery**.
 2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **Deploy to [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster.
-  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** or **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise.
+  * **Deploy to [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available app containers. You can create a cluster or deploy to an existing cluster.
+  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** or **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise.
   * **Deploy to a [Virtual Server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you.
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
@@ -195,7 +195,7 @@ After you deploy your app, the Delivery Pipeline or command line points you to t
 
 1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
 2. Click **View logs and history**.
-3. In the log file, find the application URL:
+3. In the log file, find the app's URL:
 
     At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
 

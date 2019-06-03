@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 A new host name option `*.appdomain.cloud` is available on cloud.ibm.com.
 
-Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that you have hosted on `mybluemix.net` are not impacted.
+Previously, the `mybluemix.net` domain was used for hosting applications in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that you have hosted on `mybluemix.net` are not impacted.
 
 The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
 
@@ -39,7 +39,7 @@ For more information, see [Managing your domains](/docs/apps?topic=creating-apps
 {: #cf-app}
 {: faq}
 
-Your resource list in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") provides summary information for the applications that you created. In the resource list, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
+Your resource list in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") provides summary information for the apps that you created. In the resource list, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
 
 ## Why can’t I select a Cloud Foundry space when I try to deploy my app?
 {: #cf-space}

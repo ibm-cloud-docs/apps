@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-03"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Creating certificate signing requests
 {: #ssl_csr}
 
-You can secure your applications by uploading SSL certificates and restricting access to the applications.
+You can secure your applications by uploading SSL certificates and restricting access to the apps.
 {:shortdesc}
 
 ## Creating a CSR
@@ -34,7 +34,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 ```
 {: codeblock}
 
-OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for applications that have compatibility issues with the SHA-256 certificate.
+OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for apps that have compatibility issues with the SHA-256 certificate.
 {: tip}
 
 ### Required CSR contents
@@ -56,7 +56,7 @@ A certificate is issued by a certificate authority and is digitally signed by th
 ## Uploading SSL certificates
 {: #ssl_certificate}
 
-You can apply a security protocol to provide communication privacy for your application to prevent eavesdropping, tampering, and message forgery. If you have a Lite account, you must upgrade your account to upload a certificate.
+You can apply a security protocol to provide communication privacy for your app to prevent eavesdropping, tampering, and message forgery. If you have a Lite account, you must upgrade your account to upload a certificate.
 
 When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.cloud_notm}}:
 
@@ -68,11 +68,11 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
 
-To upload a certificate for your Cloud Foundry application, complete the following steps:
+To upload a certificate for your Cloud Foundry app, complete the following steps:
 
 1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
 2. Click **Cloud Foundry Apps**.
-3. Click the application that you want to change the domain for. 
+3. Click the app that you want to change the domain for. 
 4. On the app's Overview page, click **Routes**, and select **Manage domains**.
 5. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg), and select **Domains**.
 6. Click **Upload** for your custom domain.
@@ -80,9 +80,9 @@ To upload a certificate for your Cloud Foundry application, complete the followi
   
   * Certificate: A digital document that binds a public key to the identity of the certificate owner, which enables the certificate owner to be authenticated. A certificate is issued by a certificate authority and is digitally signed by that authority. A certificate is generally issued and signed by a certificate authority. However, for testing and development purposes, you might use a self-signed certificate.
   * Private key: An algorithmic pattern that is used to encrypt messages that only the corresponding public key can decrypt. The private key is also used to decrypt messages that were encrypted by the corresponding public key. The private key is kept on the user system and is protected by a password.
-  * Intermediate certificate (optional): A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization. Use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your application before you deploy it to production.
+  * Intermediate certificate (optional): A subordinate certificate that is issued by the trusted root certificate authority (CA) specifically to issue end-entity server certificates. The result is a certificate chain that begins at the trusted root CA, passes through the intermediate certificate, and ends with the SSL certificate issued to the organization. Use an intermediate certificate to verify the authenticity of the main certificate. Intermediate certificates are typically obtained from a trusted third party. You might not require an intermediate certificate when you test your app before you deploy it to production.
   * Enable request of client certificate: When you enable this option, a user who tries to access an SSL protected domain is requested to provide a client-side certificate. For example, in a web browser, when a user tries to access an SSL protected domain, the web browser prompts the user to provide a client certificate for the domain.   
-  * Client certificate truststore (optional): Includes the client certificates for the users who you want to allow access to your application. Upload a client certificate truststore file to enable the option to request a client certificate.
+  * Client certificate truststore (optional): Includes the client certificates for the users who you want to allow access to your app. Upload a client certificate truststore file to enable the option to request a client certificate.
   
     You can set up mutual authentication by uploading a client certificate truststore that includes a public key in its metadata.
     {: tip}

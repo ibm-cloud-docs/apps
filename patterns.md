@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-29"
+lastupdated: "2019-06-03"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
@@ -55,7 +55,7 @@ The starter kits {{site.data.keyword.cloud_notm}} provides are available in vari
 |-----|-----|-----|
 |Java | [Java](/docs/runtimes/liberty?topic=liberty-getting-started) is great for building enterprise-grade applications. But new features in Java 8, combined with lighter weight runtimes like Liberty and frameworks like Spring Boot, mean that Java is great for building microservices too. Java is a popular programming language for Android apps. | Spring, Liberty, Android |
 |Swift | [Swift](/docs/runtimes/swift?topic=Swift-getting-started) is a modern programming language that was created in 2014 that was designed to replace Objective C and open-sourced in December of 2015. Today, it’s used to build iOS, macOS, web services, and systems software on Linux and macOS operating systems that use the x86, ARM, or z/Architecture. It writes like a scripting language but is compiled to gain C-like high performance with low processor usage. It's ideal for cloud runtimes. It uses a strong and static type system that you see in Java but the functional style and asynchronous routines that you see in JavaScript. It performs well, and the source compiles to native code that uses the LLVM compiler toolchain. It can use system libraries from other languages that are written in C easily. Since Swift can be used to code both client-side and server-side apps, developers use Swift when they need to easily migrate functions from the client to the server and back. | Kitura, iOS|
-|Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) is a JavaScript runtime that uses an event-driven, non-blocking I/O model, making it lightweight and efficient. It excels in throughput and scalability for web applications, backend-for-front-end patterns, and microservices. Node.js' package registry, npm, provides access to a large collection of open source modules. It provides a wide range of features to accelerate your application development. | Express|
+|Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) is a JavaScript runtime that uses an event-driven, non-blocking I/O model, making it lightweight and efficient. It excels in throughput and scalability for web apps, backend-for-front-end patterns, and microservices. Node.js' package registry, npm, provides access to a large collection of open source modules. It provides a wide range of features to accelerate your app development. | Express|
 |JavaScript|JavaScript creates interactive effects in web pages. JavaScript along with HTML and CSS is the basis of most web pages. When wrapped with a Cordova plug-in, JavaScript code can take full advantage of native device functions. Developers with web skills can easily create mobile apps, and where appropriate app code can be reused across web and mobile.|Cordova|
 |Python | [Python](/docs/runtimes/python?topic=Python-getting_started) is a general-purpose, interpreted programming language that emphasizes readability. Python allows programmers to implement functions with fewer lines of code than might be required in other languages. Features in the language make it possible to write object-oriented, functional, or imperative code. Python is commonly used for processing of natural language tasks. | Flask, Django|
 

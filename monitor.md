@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,10 +21,10 @@ subcollection: creating-apps
 
 You can start monitoring your application availability and performance immediately. When you bind {{site.data.keyword.prf_hubshort}} to your app, a synthetic test is automatically created to monitor the main app URL by default.
 
-{{site.data.keyword.prf_hublong}} is available as a service in the DevOps domain in the {{site.data.keyword.cloud_notm}} catalog. It is also available on the Cloud Foundry application dashboard on the **Monitoring** tab. 
+{{site.data.keyword.prf_hublong}} is available as a service in the DevOps domain in the {{site.data.keyword.cloud_notm}} catalog. It is also available on the Cloud Foundry app dashboard on the **Monitoring** tab. 
 {: shortdesc}
 
-You can test, monitor, and improve your application’s health as you build it by adding the {{site.data.keyword.prf_hubshort}} to your DevOps toolchain.
+You can test, monitor, and improve your app's health as you build it by adding the {{site.data.keyword.prf_hubshort}} to your DevOps toolchain.
 
 This tool integration is available only for Cloud Foundry apps. It is preconfigured and does not require any configuration parameters. You cannot reconfigure this tool integration.
 {: tip}

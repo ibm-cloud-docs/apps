@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-31"
+lastupdated: "2019-06-03"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -45,8 +45,8 @@ Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{
 
 1. On the **App details** page, click **Configure continuous delivery**.
 2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **Deploy to IBM Kubernetes Service**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available application containers. You can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app).
-  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry applications exclusively for your enterprise. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) and [Deploying apps to {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
+  * **Deploy to IBM Kubernetes Service**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available app containers. You can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app).
+  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) and [Deploying apps to {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
   * **Deploy to a Virtual Server**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you. For more information, see [Deploying apps to a virtual server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
 
 ### Manually deploying your app
@@ -59,7 +59,7 @@ You can also manually deploy your app from your DevOps toolchain:
 1. On the **App details** page, click **View toolchain**.
 2. Click **Delivery Pipeline** where you can start builds, manage deployment, and view logs and history.
 
-Continuous delivery is automatically enabled for some applications. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
+Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
 For more information, see:
 * [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
@@ -82,11 +82,11 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
 
   2. Change to the directory where your code is located.
 
-  3.  Update your app code. For example, if you're using an {{site.data.keyword.cloud_notm}} sample application and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
+  3.  Update your app code. For example, if you're using an {{site.data.keyword.cloud_notm}} sample app and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
 
     Review the `README.md` file, which contains details, such as build instructions.
 
-    If your application is a Liberty app, you must build it before you deploy it again.
+    If your app is a Liberty app, you must build it before you deploy it again.
     {: note}
 
   4. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
