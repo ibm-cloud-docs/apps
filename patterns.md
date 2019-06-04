@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-04"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Common architectures for cloud apps
 {: #patterns}
 
-Starter kits on {{site.data.keyword.cloud_notm}} help you produce apps with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components, like a runtime, to populate the pattern.
+Starter kits on {{site.data.keyword.cloud_notm}} help you produce applications with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components, like a runtime, to populate the pattern.
 {:shortdesc}
 
 ## Web App
@@ -49,13 +49,13 @@ Mobile apps are different from the other patterns because they have a significan
 ## Languages
 {: #languages}
 
-The starter kits {{site.data.keyword.cloud_notm}} provides are available in various languages and frameworks. For example, cloud microservice starter kits offer a Node.js option, while starter kits closely related to data analysis might include Python or Go. Some common languages that are used in {{site.data.keyword.cloud_notm}} starter kits are discussed.
+The starter kits that {{site.data.keyword.cloud_notm}} provides are available in various languages and frameworks. For example, cloud microservice starter kits offer a Node.js option, while starter kits that are closely related to data analysis might include Python or Go. Some common languages that are used in {{site.data.keyword.cloud_notm}} starter kits are discussed.
 
 |Programming language | Description | Development frameworks |
 |-----|-----|-----|
-|Java | [Java](/docs/runtimes/liberty?topic=liberty-getting-started) is great for building enterprise-grade applications. But new features in Java 8, combined with lighter weight runtimes like Liberty and frameworks like Spring Boot, mean that Java is great for building microservices too. Java is a popular programming language for Android apps. | Spring, Liberty, Android |
+|Java | [Java](/docs/runtimes/liberty?topic=liberty-getting-started) is great for building enterprise-grade apps. But new features in Java 8, combined with lighter weight runtimes like Liberty and frameworks like Spring Boot, mean that Java is great for building microservices too. Java is a popular programming language for Android apps. | Spring, Liberty, Android |
 |Swift | [Swift](/docs/runtimes/swift?topic=Swift-getting-started) is a modern programming language that was created in 2014 that was designed to replace Objective C and open-sourced in December of 2015. Today, it’s used to build iOS, macOS, web services, and systems software on Linux and macOS operating systems that use the x86, ARM, or z/Architecture. It writes like a scripting language but is compiled to gain C-like high performance with low processor usage. It's ideal for cloud runtimes. It uses a strong and static type system that you see in Java but the functional style and asynchronous routines that you see in JavaScript. It performs well, and the source compiles to native code that uses the LLVM compiler toolchain. It can use system libraries from other languages that are written in C easily. Since Swift can be used to code both client-side and server-side apps, developers use Swift when they need to easily migrate functions from the client to the server and back. | Kitura, iOS|
 |Node.js | [Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) is a JavaScript runtime that uses an event-driven, non-blocking I/O model, making it lightweight and efficient. It excels in throughput and scalability for web apps, backend-for-front-end patterns, and microservices. Node.js' package registry, npm, provides access to a large collection of open source modules. It provides a wide range of features to accelerate your app development. | Express|
 |JavaScript|JavaScript creates interactive effects in web pages. JavaScript along with HTML and CSS is the basis of most web pages. When wrapped with a Cordova plug-in, JavaScript code can take full advantage of native device functions. Developers with web skills can easily create mobile apps, and where appropriate app code can be reused across web and mobile.|Cordova|
-|Python | [Python](/docs/runtimes/python?topic=Python-getting_started) is a general-purpose, interpreted programming language that emphasizes readability. Python allows programmers to implement functions with fewer lines of code than might be required in other languages. Features in the language make it possible to write object-oriented, functional, or imperative code. Python is commonly used for processing of natural language tasks. | Flask, Django|
-
+|Python | [Python](/docs/runtimes/python?topic=Python-getting_started) is a general-purpose, interpreted programming language that emphasizes readability. Python allows programmers to implement functions with fewer lines of code than might be required in other languages. Features in the language make it possible to write object-oriented, functional, or imperative code. Python is commonly used for processing of natural language tasks. | Flask, Django |
+{: caption="Table 1. Languages that are used in starter kits" caption-side="top"}
