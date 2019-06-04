@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-04"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -79,7 +79,7 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 process.env.VCAP_SERVICES
 ```
 
-For more information about the commands that you can use in other program languages, see [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For more information about the commands that you can use in other program languages, see [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
@@ -117,7 +117,7 @@ You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.ke
 IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on Android. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy](https://pushy.me){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), [getui](http://www.getui.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and [jpush](https://www.jpush.cn/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy](https://pushy.me){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and [jpush](https://www.jiguang.cn/en/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 {: tsResolve}
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.cloud_notm}}
@@ -246,7 +246,7 @@ When you deploy an app to {{site.data.keyword.cloud_notm}} with a custom buildpa
 This problem might happen if scripts, such as the detect script, the compile script, and the release script, aren't executable.
 {: tsCauses}
 
-You can use the [Git update](http://git-scm.com/docs/git-update-index){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [Git update](https://git-scm.com/docs/git-update-index){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -287,7 +287,7 @@ If the app isn't running and you can't access the health endpoint, try looking a
 * View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 * You can view the logs in your app by using `kubectl logs <pod-name>.`
 
-## Starting `docker` fails with "file not found" message
+## Starting `docker` fails with file not found message
 {: #docker_not_found}
 {: troubleshoot}
 

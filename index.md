@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-30"
+lastupdated: "2019-06-04"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -77,7 +77,7 @@ To deploy your app by using the console, complete the following steps:
 2. Select a deployment target, select the toolchain settings, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
 
-For more information, see the table of contents for various deployment topics in the "Deploying and integrating apps" section.
+For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ### Using the CLI
 {: #cli-getting-started}

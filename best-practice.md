@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-04"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -58,7 +58,7 @@ For information about minimizing downtime and creating resilient architectures t
 ## Ensure you're monitoring your apps
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} makes it easy to monitor your app with services like [New Relic](http://newrelic.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.cloud_notm}} makes it easy to monitor your app with services like [New Relic](https://newrelic.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Take advantage of support options
 {: #support}
@@ -91,6 +91,6 @@ Your app might be installed frequently on-demand on the dynamic cloud environmen
 
 Capture your app installation as a uniform set of scripts that is independent of the operating system. Keep your app installation small and portable to adapt to different automation techniques. Also, minimize the dependencies that are required by the app installation.
 
-For more information about cloud-ready apps, see [The 12-factor app](http://12factor.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For more information about cloud-ready apps, see [The 12-factor app](https://12factor.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 

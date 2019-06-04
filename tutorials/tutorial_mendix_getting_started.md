@@ -41,7 +41,12 @@ Mendix is a low-code development environment and toolset that helps you deliver 
 
 If you're not using Mendix with {{site.data.keyword.cloud_notm}} yet, you are guided to the Mendix Platform to sign up and authorize {{site.data.keyword.cloud_notm}} to create a new project on Mendix Platform in your behalf. This project is linked to {{site.data.keyword.cloud_notm}}, so deployments are automatically directed to {{site.data.keyword.cloud_notm}}.
 
-1. If you see this message: "To complete app creation, a Mendix user account is required. Would you like to link your account now?", click **Link Account**.
+1. If you see this message, click **Link Account**.
+  ```
+  "To complete app creation, a Mendix user account is required. Would you like to link your account now?"
+  ```
+  {: screen}
+
 2. On the Mendix confirmation page, select **I agree to the Mendix Privacy Policy and Terms**, and click **Confirm**.
 3. When prompted, provide your email address, password, and country, and then click **Create**.
 4. On the **Authorize access to your Mendix account** page, click **Authorize**.
