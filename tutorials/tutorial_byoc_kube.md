@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-04"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -166,6 +166,6 @@ If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?t
 ## Related information
 
  * [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Configuring Git repos and issue tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configuring Git repos and issue tracking](docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [Configuring GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [Configuring GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)
