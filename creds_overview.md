@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -25,7 +25,6 @@ You want your application logic to acquire sensitive service credentials, such a
 {: shortdesc}
 
 If you create an app by using a starter kit, the environment is prepared for you automatically. When you connect a service to your starter kit before you deploy your app, the service credentials are automatically added to your environment.
-{ :tip}
 
 You must manually add the service credentials to your deployment environment in either of the following scenarios:
 
