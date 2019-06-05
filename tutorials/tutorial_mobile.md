@@ -34,7 +34,7 @@ subcollection: creating-apps
 {: #create-mobile}
 
 1. Create a {{site.data.keyword.dev_console}} app in {{site.data.keyword.cloud_notm}}.
-2. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language app, select **Swift Kitura**.
+2. From the [Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, for a Watson Language app, select **Swift Kitura**.
 3. Enter your app name. For this tutorial, use `WatsonApp`.
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 5. Select your language platform. For this tutorial, use `Swift`.

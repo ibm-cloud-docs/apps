@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-05"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -51,7 +51,7 @@ See [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits) for mo
 
 Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. You can use the category filters, such as language and type, to narrow the selection.
 
-1. From the [starter kits](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console, select a starter kit, and click **Create app**. 
+1. From the [starter kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console, select a starter kit, and click **Create app**. 
 
     To see what is included in the starter kit, select the tile and read the details. If you want to use a blank starter kit and customize it, select the **Create App** tile.
     {: tip}
