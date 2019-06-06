@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}
@@ -45,6 +45,10 @@ Creating apps
         creds_overview.md
         mngdomains.md
         secapps.md
+
+    {: .topicgroup}
+    Migrating apps
+        migrating.md
 
     {: .topicgroup}
     Integrating apps with DevOps

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-06"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 
 # Getting started tutorial
-{: #tutorial-getting-started}
+{: #getting-started}
 
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need, or use your existing repository and bring your own code.
 {: shortdesc}
