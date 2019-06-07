@@ -48,10 +48,6 @@ Criando aplicativos
         secapps.md
 
     {: .topicgroup}
-    Migrando apps
-        migrating.md
-
-    {: .topicgroup}
     Integrando apps com o DevOps
         toolchains.md
         insights.md

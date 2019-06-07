@@ -48,10 +48,6 @@
         secapps.md
 
     {: .topicgroup}
-    迁移应用程序
-        migrating.md
-
-    {: .topicgroup}
     将应用程序与 DevOps 集成
         toolchains.md
         insights.md

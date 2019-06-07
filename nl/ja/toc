@@ -48,10 +48,6 @@
         secapps.md
 
     {: .topicgroup}
-    アプリのマイグレーション
-        migrating.md
-
-    {: .topicgroup}
     アプリと DevOps の統合
         toolchains.md
         insights.md
