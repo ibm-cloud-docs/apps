@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-07"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -27,7 +27,7 @@ You can secure your applications by uploading SSL certificates and restricting a
 
 Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.cloud}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command-line tool](http://www.openssl.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"):
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command-line tool](https://www.openssl.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
