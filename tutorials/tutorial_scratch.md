@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-05"
+lastupdated: "2019-06-07"
 
 keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
 
@@ -27,7 +27,7 @@ You can create a custom application from scratch by using services and a runtime
 ## Before you begin
 {: #prereqs-scratch}
 
-* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), which include Docker. 
+* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started), which include Docker. 
 * Create a Docker account, run the Docker app, and sign in. Docker must be running for the build commands to work.
 * If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 

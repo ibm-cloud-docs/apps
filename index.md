@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-06"
+lastupdated: "2019-06-07"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -34,7 +34,7 @@ Figure 1. Overview of creating apps in {{site.data.keyword.cloud_notm}}
 ## Before you begin
 {: #prereqs-getting-started}
 
-You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see the [installing steps](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see the [installing steps](/docs/cli?topic=cloud-cli-getting-started).
 
 ## Step 1. Create your app
 {: #create-getting-started}

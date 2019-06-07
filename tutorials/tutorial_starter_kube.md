@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-07"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -35,7 +35,7 @@ First, see the following starter kit flow diagram and its corresponding overview
 {: #prereqs-starterkit-kube}
 
 * Create a **Java + Spring** app by using a [starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 * Set up [Docker](https://www.docker.com/get-started){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon").
 
 ## Adding services to your app

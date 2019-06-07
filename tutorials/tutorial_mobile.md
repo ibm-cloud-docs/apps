@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-07"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 ## Step 1. Before you begin
 {: #prereqs-mobile}
 
-* Install the [{{site.data.keyword.dev_cli_short}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Install the [{{site.data.keyword.dev_cli_short}}](/docs/cli?topic=cloud-cli-getting-started).
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
