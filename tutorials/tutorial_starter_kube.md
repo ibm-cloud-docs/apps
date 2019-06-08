@@ -27,10 +27,6 @@ Learn how to create an application in {{site.data.keyword.cloud}} by using a bla
 
 This tutorial uses the {{site.data.keyword.containerlong}} deployment target. In this tutorial, we're creating an app from a basic starter kit by using Java + Spring, adding a Cloudant service instance to it, and deploying it to {{site.data.keyword.containerlong}}.
 
-First, see the following starter kit flow diagram and its corresponding overview steps.
-
-![Starter kit flow diagram](../images/starterkit-flow.png) 
-
 ## Before you begin
 {: #prereqs-starterkit-kube}
 
