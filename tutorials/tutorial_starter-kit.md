@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-10"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Creating an app with a starter kit
 {: #tutorial-starterkit}
 
-You can use a starter kit to quickly get your application started and prepare it for future development. Select a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app. You can also download the code for immediate inspection.
+You can use a starter kit to quickly get your application started and prepare it for future development. Select a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app.
 {: shortdesc}
 
 You can create an app from a selection of starter kits, including a blank one if you would like to customize build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
