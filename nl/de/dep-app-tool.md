@@ -137,4 +137,4 @@ Sie können Ihre App manuell in {{site.data.keyword.cloud_notm}} bereitstellen, 
 
 Weitere Informationen zum Bereitstellen Ihrer App in {{site.data.keyword.cloud_notm}} mithilfe der Befehlszeilenschnittstelle finden Sie im folgenden Blogbeitrag:
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/blogs/bluemix/2019/01/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
+* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")

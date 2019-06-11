@@ -48,6 +48,10 @@ Creazione di applicazioni
         secapps.md
 
     {: .topicgroup}
+    Migrazione di applicazioni
+        migrating.md
+
+    {: .topicgroup}
     Integrazione di applicazioni con DevOps
         toolchains.md
         insights.md

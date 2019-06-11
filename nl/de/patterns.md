@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-05-22"
 
-keywords: supported architecture, supported languages cloud, web app, backend-for-frontend, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
 
 subcollection: creating-apps
 
@@ -31,24 +31,6 @@ Das Web-App-Muster generiert Apps, die Webinhalte wie HTML, JavaScript und Style
 * React - ein umfangreiches Framework zum Erstellen von Benutzerschnittstellen. Die Quellendateien befinden sich im Verzeichnis `src/client/app`, werden mit WebPack kompiliert und im öffentlichen Verzeichnis bereitgestellt.
 
 Sie finden Starter-Kits für das Web-App-Muster im [{{site.data.keyword.cloud_notm}} App-Service-Entwicklerdashboard](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
-
-## Back-End for Front-End (BFF)
-{: #bff}
-
-Ein Back-End-for-Front-End-Muster (BFF) vereinfacht das Erstellen von Back-End-Code, der Geschäftsdaten und -Services auf eine Weise verfügbar macht, die den Benutzererwartungen für einen bestimmten App-Kanal entspricht, z. B. mobil oder im Web. Benutzer eines mobilen Geräts verwenden möglicherweise die Sprachsteuerung, während Benutzer eines Web-Browsers eher mit der Maus arbeiten. Sie können zwei Back-End-for-Front-End-Muster erstellen, eines für Mobilgeräte, das Services wie [{{site.data.keyword.conversationfull}}](https://www.ibm.com/cloud/watson-assistant/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") umfasst, und eines für Webanwendungen, das eine ausgereiftere Benutzerschnittstelle aufweist.
-
-In {{site.data.keyword.cloud_notm}} können Sie ein Back-End-for-Front-End-Muster mit einem mehrsprachigen Programmieransatz erstellen. Sie können Node.js, Swift, Java oder Python verwenden und sie mit Container-Services oder mithilfe serverloser Funktionen in einem Muster ausführen.
-
-BFF verwaltet Datenpersistenz, Caching und Integration mit den folgenden hochwertigen Services.
-
-* [{{site.data.keyword.ibmwatson}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=ai){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
-* [{{site.data.keyword.iot_short_notm}}](https://{DomainName}/catalog?taxonomyNavigation=apps&category=iot){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
-* [{{site.data.keyword.weather_short}}](https://{DomainName}/catalog/services/weather-company-data?taxonomyNavigation=apps){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
-* [{{site.data.keyword.sparks}}](https://{DomainName}/catalog/services/apache-spark?taxonomyNavigation=apps){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
-
-Das Back-End-for-Front-End-Muster macht eine API in den meisten Fällen mithilfe eines REST-Musters verfügbar, aber Sie können Ihr eigenes Back-End-for-Front-End-Muster so konzipieren, dass es aus einer Messaging-Architektur heraus mit {{site.data.keyword.messagehub}} arbeitet.
-
-Wählen Sie ein BFF-Starter-Kit für die jeweiligen Sprach- und Frameworkanforderungen aus. Sie finden Starter-Kits für das BFF-Muster im [{{site.data.keyword.cloud_notm}} App-Service-Entwicklerdashboard](https://{DomainName}/developer/appservice/dashboard){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Mikroservice
 {: #microservice}
