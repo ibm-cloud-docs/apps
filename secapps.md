@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -67,6 +67,7 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 | EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="Table 1. Cloud Foundry custom domain region endpoints" caption-side="top"}
 
 To upload a certificate for your Cloud Foundry app, complete the following steps:
 
