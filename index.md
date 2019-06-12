@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-12"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -27,9 +27,7 @@ Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutori
 
 Do you need help with deciding where to start? The following diagram provides an overview for creating apps, whether you use a starter kit or bring your own code to {{site.data.keyword.cloud_notm}}.
 
-![Developer experience overview](images/dev-journey.png "Overview of creating apps in {{site.data.keyword.cloud_notm}}")
-
-Figure 1. Overview of creating apps in {{site.data.keyword.cloud_notm}}
+![Developer experience overview](images/dev-journey.png "Overview of creating apps in {{site.data.keyword.cloud_notm}}"){: caption="Figure 1. Overview of creating apps in {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Before you begin
 {: #prereqs-getting-started}
