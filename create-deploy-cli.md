@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-10"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Creating apps by using the CLI
 {: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to create and deploy your application. 
+You can use the {{site.data.keyword.cloud}} command line interface (CLI) to create and deploy your application. 
 
 You can either create a starter app from scratch or cloud-enable your existing app code. 
 {: note}
@@ -54,7 +54,7 @@ Creating the app and toolchain takes a few seconds to complete.
 ## Generating deployment and cloud enablement assets
 {: #byoc-cli}
 
-This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). This command is in Beta, and not all languages and/or app structures are supported. The following instructions illustrate how to use this function with a sample repository, but the steps are roughly the same for your own codebase.
+This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). This command is in Beta, and not all languages or app structures are supported. The following instructions illustrate how to use this function with a sample repository, but the steps are roughly the same for your own codebase.
 
 1. Log in to {{site.data.keyword.cloud_notm}} by running `ibmcloud login`, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") by running the following command in the directory of your choice.
@@ -107,7 +107,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ## Deploying your app
 {: #deploy-app-cli}
 
-You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in one of two ways, depending on how your app is configured. For more information, see these topics:
+You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of two ways, depending on how your app is configured. For more information, see the following topics:
 
 * [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto)
 * [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual)
@@ -115,7 +115,7 @@ You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in one 
 ## Viewing your app
 {: #view-app-cli}
 
-1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command. Then, go to the URL in your browser.
+1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command. The app URL is opened in your default browser.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command. 
 
 **To report issues or provide feedback, you can use the [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Request team access [here](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").**
