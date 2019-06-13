@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-13"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -27,9 +27,6 @@ You can deploy your application to {{site.data.keyword.cloud}} by using a DevOps
 
 A DevOps toolchain provides a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-All toolchains that are created from the {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
-{: note}
-
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: deploy-console}
 
@@ -38,16 +35,22 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} Develo
 ### Before you begin
 {: deploy-console-before}
 
-Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) and [add services](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
+Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-getting-started) and [add services](docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
 ### Automatically deploying your app
 {: deploy-console-auto}
+
+All toolchains that are created from the {{site.data.keyword.cloud_notm}} developer dashboard are configured for automatic deployment.
+{: note}
 
 1. On the **App details** page, click **Configure continuous delivery**.
 2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
   * **Deploy to IBM Kubernetes Service**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available app containers. You can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app).
   * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) and [Deploying apps to {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
   * **Deploy to a Virtual Server**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you. For more information, see [Deploying apps to a virtual server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    VSI deployment is available for some starter kits. To use this feature, go to the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}), and click **Create an app** in the **Apps** tile.
+    {: note}
 
 ### Manually deploying your app
 {: deploy-console-manual}
