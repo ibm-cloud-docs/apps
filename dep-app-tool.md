@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-17"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -35,7 +35,7 @@ A DevOps toolchain provides a team-based development environment for your app. W
 ### Before you begin
 {: deploy-console-before}
 
-Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-getting-started) and [add services](docs/apps?topic=creating-apps-getting-started#resources-getting-started).
+Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-getting-started) and [add services](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
 ### Automatically deploying your app
 {: deploy-console-auto}
