@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-06-18"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -109,8 +109,8 @@ Now that your app can run locally, you can add a service and modify some code.
 
 You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of two ways, depending on how your app is configured. For more information, see the following topics:
 
-* [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## Viewing your app
 {: #view-app-cli}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-06-18"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -129,7 +129,7 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
 You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using the [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
 
   ```
-  ibmcloud dev deploy <APP_NAME>
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
@@ -138,4 +138,4 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using th
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
