@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # Creating apps from your own code repository
 {: #tutorial-byoc}
 
-If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud_notm}} and connect the app to your source repository and your DevOps toolchain.
+If you have an application in an existing repository, you can use a basic starter kit to create an app record in {{site.data.keyword.cloud_notm}} and connect the app to your source repository and your DevOps toolchain.
 {: shortdesc}
 
-You can start from the {{site.data.keyword.cloud_notm}} dashboard or from any blank starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
+You can start from the {{site.data.keyword.cloud_notm}} dashboard or from any basic starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
 
 You can connect your existing DevOps toolchain or create one, and continuously deliver your app to the deployment target of your choice, such as Kubernetes or Cloud Foundry.
 

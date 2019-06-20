@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Creating apps by using the CLI
 {: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.cloud}} command line interface (CLI) to create and deploy your application. 
+You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to create and deploy your application. 
 
 You can either create a starter app from scratch or cloud-enable your existing app code. 
 {: note}
@@ -107,7 +107,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ## Deploying your app
 {: #deploy-app-cli}
 
-You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of two ways, depending on how your app is configured. For more information, see the following topics:
+You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in one of two ways, depending on how your app is configured. For more information, see the following topics:
 
 * [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
 * [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)

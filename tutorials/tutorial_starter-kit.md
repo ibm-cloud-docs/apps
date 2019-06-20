@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 You can use a starter kit to quickly get your application started and prepare it for future development. Select a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app.
 {: shortdesc}
 
-You can create an app from a selection of starter kits, including a blank one if you would like to customize build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
+You can create an app from a selection of starter kits, including a basic one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
 
 {{site.data.keyword.cloud_notm}} has developer portals in different areas of interest (like Watson, Security, or Finance) or a digital channel (like Mobile or Web Apps). You can access these portals from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
 
@@ -53,7 +53,7 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 
 1. From the [starter kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console, select a starter kit, and click **Create app**. 
 
-    To see what is included in the starter kit, select the tile and read the details. If you want to use a blank starter kit and customize it, select the **Create App** tile.
+    To see what is included in the starter kit, select the tile and read the details. If you want to use a basic starter kit and customize your app, select the **Create App** tile.
     {: tip}
 
 2. Name your app, and select a resource group.

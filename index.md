@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-12"
+lastupdated: "2019-06-20"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -39,12 +39,12 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 
 Create an app by selecting one of the following entry points:
 
-* [Starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific and produce production-ready apps in various programming languages and architectural patterns.
-* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}. For more information, see [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
+* [Preconfigured starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
+* [Basic starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) let you build your app by selecting the type of app (mobile or backend), language and framework, services, and deployment target.
 * [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
-* If you know what you want, build a [custom app](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) from scratch with the services that you need by using a blank starter kit.
-* Create and deploy a custom or starter kit app by using the [CLI and developer tools](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+* [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) lets you create and deploy your app by using the CLI.
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and start using today.
+* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}. For more information, see [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
 
 ## Step 2. Add services
 {: #resources-getting-started}

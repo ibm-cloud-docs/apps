@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-06-20"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,11 +18,13 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Creating an app from scratch
+# Creating a custom app from a basic starter kit
 {: #tutorial-scratch}
 
-You can create a custom application from scratch by using services and a runtime. 
+You can create a custom application by using a basic starter kit and selecting the app type (mobile or backend), language and framework. adding services, and selecting your deployment target. 
 {: shortdesc}
+
+The basic starter kit is a versatile tool that you can use to create custom apps that you define by language, app type, framework, and services. Then, you set up continuous delivery and select the deployment target of your choice.
 
 ## Before you begin
 {: #prereqs-scratch}
