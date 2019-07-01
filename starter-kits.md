@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ A starter kit is a production-ready pattern that can be integrated with a set of
 
 A starter kit contains metadata that describes what the kit is and does. It also contains information that informs {{site.data.keyword.cloud_notm}} what to produce. The output is production-ready out of the box, and can be iterated on for further enhancements based on {{site.data.keyword.cloud_notm}} best practices. Starter kit content isn’t as complex as a demonstration and not as trivial as a snippet or sample. Apps are dynamically created based on the developer’s requirements.
 
-Each starter kit includes a language, a framework, and a pattern for a specific use case. You can reuse code rather than reinvent it. If a starter kit requires specific services, auto-provisioned services are available so that instances for those services are automatically created when you create your app.
+Each starter kit includes a language, a framework, and a pattern for a specific use case. You can reuse code rather than reinvent it. If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app.
 
 ## How are starter kits different from samples?
 {: #compare}
