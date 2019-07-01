@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-07-01"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -72,7 +72,7 @@ To inspect your code before you add services or set up continuous delivery, clic
 ## Step 3. Add services (optional)
 {: #resources-starterkit}
 
-If a starter kit requires specific services, auto-provisioned services are available so that instances for those services are automatically created when you create your app.
+If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app.
 
 You can also add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
 
