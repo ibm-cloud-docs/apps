@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-07-01"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -28,10 +28,10 @@ subcollection: creating-apps
 
 Install the [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started).
 
-## Creating a mobile app with a preconfigured starter kit
+## Creating a mobile app with a starter kit
 {: #create-mobile}
 
-To create a mobile app by using a preconfigured starter kit, complete these steps:
+To create a mobile app by using a starter kit, complete these steps:
 
 1. From the [Mobile Starter Kits](https://{DomainName}/developer/mobile/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, select **Watson Visual Recognition**.
 2. Enter your app name. For this tutorial, use `WatsonApp`.
@@ -40,10 +40,10 @@ To create a mobile app by using a preconfigured starter kit, complete these step
 5. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
 6. Click **Create**.
 
-## Creating a custom mobile app with a basic starter kit
+## Creating a custom mobile app
 {: #create-mobile-basic}
 
-To create a mobile app by using a basic starter kit, complete these steps:
+To create a custom mobile app, complete these steps:
 
 1. From the [Mobile Starter Kits](https://{DomainName}/developer/mobile/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select the **Create App** tile.
 2. Enter a name for your app. For this tutorial, type `CustomMobile`.
@@ -53,6 +53,21 @@ To create a mobile app by using a basic starter kit, complete these steps:
 6. Select your language and framework. Some starter kits might be available in only one language.
 7. Select your pricing plan. You can use the free option for this tutorial.
 8. Click **Create**.
+
+## Creating a mobile app with the CLI
+{: #create-mobile-cli}
+
+To create a mobile app with the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-getting-started), complete these steps:
+
+1. Open a terminal and navigate to a directory where you would like to create your app.
+2. Run the `ibmcloud dev create` command.
+3. Select the **Mobile App** option from the list of app types.
+4. Select a mobile platform from the list: Android, Cordova, or Swift.
+5. Select a starter kit.
+6. Enter a name for your app.
+7. If services are added, you are prompted to select a region and pricing plan for each service.
+
+The app is created in your current working directory.
 
 ## Adding services (Optional)
 {: #resources-mobile}
