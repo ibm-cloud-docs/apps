@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-04"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -64,7 +64,7 @@ Per informazioni sulla riduzione al minimo del tempo di inattività e la creazio
 ## Assicurati di stare monitorando le tue applicazioni
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic](http://newrelic.com/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+{{site.data.keyword.cloud_notm}} semplifica il monitoraggio della tua applicazione con servizi come [New Relic](https://newrelic.com/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Approfitta delle opzioni di supporto
 {: #support}
@@ -104,6 +104,6 @@ devono essere esternalizzati dagli script.
 
 Acquisisci l'istallazione della tua applicazione come una serie uniforme di script indipendenti dal sistema operativo. Fa in modo che le dimensioni dell'installazione della tua applicazione restino contenute e preservane la portabilità, in modo che si adegui a differenti tecniche di automazione. Inoltre, riduci al minimo le dipendenze richieste dall'installazione dell'applicazione.
 
-Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor app](http://12factor.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+Per ulteriori informazioni sulle applicazioni pronte per il cloud, vedi [The 12-factor app](https://12factor.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 

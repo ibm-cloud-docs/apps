@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-03"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -41,7 +41,7 @@ subcollection: creating-apps
 
 {{site.data.keyword.cloud_notm}} 通过使用服务实例来为您的应用程序提供服务的资源。一个服务实例可在多个 Web 应用程序之间共享。
 
-您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照与编码外部应用程序或第三方工具以使用 {{site.data.keyword.cloud_notm}} 服务相同的方式来手动编码应用程序以使用这些服务。有关更多信息，请参阅[将服务连接到外部应用程序](/docs/resources?topic=resources-externalapp)。
+您还可使用在其他区域中托管的服务（如果这些服务在这些区域中可用）。这些服务必须可从因特网访问并且具有 API 端点。必须按照对外部应用程序或第三方工具进行编码以使用 {{site.data.keyword.cloud_notm}} 服务的相同方式来对应用程序手动编码以使用这些服务。有关更多信息，请参阅[将服务连接到外部应用程序](/docs/resources?topic=resources-externalapp)。
 
 ## 请求新的服务实例
 {: #request-instance}
@@ -78,13 +78,13 @@ ibmcloud dev edit
 
 将服务实例绑定到应用程序后，必须将应用程序配置为与服务交互。
 
-每个服务可能需要采用不同的机制与应用程序进行通信。在开发应用程序时，会记录这些机制作为服务定义的一部分以供您参阅。为了实现一致性，您的应用程序需要通过这些机制与服务进行交互。
+每个服务可能需要采用不同的机制与应用程序进行通信。在开发应用程序时，会记录这些机制作为服务定义的一部分以供您参考。为了实现一致性，您的应用程序需要通过这些机制与服务进行交互。
 
 * 要与数据库服务交互，请使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，用户标识、密码和应用程序的访问 URI。
-* 要与移动后端服务交互，请使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，应用程序标识、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者的姓名和使用应用程序的用户。
-* 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与绑定应用程序的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
+* 要与移动后端服务交互，请使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，应用程序身份（应用程序标识）、特定于客户机的安全性信息以及应用程序的访问 URI。移动服务通常彼此配合工作，以便能够在一组服务之间共享上下文信息，例如，应用程序开发者的姓名和使用应用程序的用户。
+* 要与 Web 应用程序或移动应用程序的服务器端云代码交互，请在应用程序的 *VCAP_SERVICES* 环境变量中使用 {{site.data.keyword.cloud_notm}} 提供的信息，例如，运行时凭证。*VCAP_SERVICES* 环境变量的值是序列化 JSON 对象。该变量包含与应用程序所绑定到的服务进行交互所需要的运行时数据。不同服务的数据格式不同。您可能需要阅读服务文档以了解预期的结果以及如何解读每条信息。
 
-如果绑定到应用程序的服务崩溃，那么应用程序可能会停止运行或发生错误。{{site.data.keyword.cloud_notm}} 不会自动重新启动应用程序，以便从这些问题中进行恢复。在进行应用程序编码时，应考虑到识别中断、异常和连接失败以及进行恢复的问题。
+如果绑定到应用程序的服务崩溃，那么该应用程序可能会停止运行或发生错误。{{site.data.keyword.cloud_notm}} 不会自动重新启动应用程序以从这些问题中恢复。请考虑对应用程序进行编码，使其能够识别中断、异常和连接失败状况并从中进行恢复。
 
 ## 访问 {{site.data.keyword.cloud_notm}} 部署环境中的服务
 {: #migrate_instance}
@@ -159,4 +159,4 @@ ibmcloud service user-provided-create testups2 -l syslog://example2.com
 	OK
 	```
 
-现在，您可以将应用程序配置为使用外部服务。有关如何将应用程序配置为与服务进行交互的信息，请参阅[将应用程序配置为与服务进行交互](/docs/apps?topic=creating-apps-add-resource#configure-app)。
+现在，您可以将应用程序配置为使用外部服务。有关配置应用程序以与服务交互的信息，请参阅[配置应用程序](/docs/apps?topic=creating-apps-add-resource#configure-app)。

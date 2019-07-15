@@ -30,7 +30,6 @@ Questa integrazione dello strumento è disponibile solo su {{site.data.keyword.c
 
 Per aggiungere l'integrazione dello strumento {{site.data.keyword.DRA_short}} alla tua toolchain DevOps, completa questa procedura:
 
-
 1. [Crea la tua applicazione](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started).
 2. Nella pagina App details, fai clic su **Configure continuous delivery** e segui le istruzioni per la configurazione di una toolchain DevOps. I passi variano a seconda di quale destinazione di distribuzione scegli.
 3. Quando vedi il messaggio "Configured" sulla pagina App details, fai clic su **View toolchain**.

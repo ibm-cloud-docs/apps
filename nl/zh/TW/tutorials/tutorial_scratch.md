@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# 從頭開始建立應用程式
+# 從基本入門範本套件建立自訂應用程式
 {: #tutorial-scratch}
 
-您可以使用服務及運行環境，來從頭開始建立自訂應用程式。
+您可以使用基本入門範本套件並選取應用程式類型（行動或後端）、語言及架構、新增服務，以及選取部署目標，來建立自訂應用程式。
 {: shortdesc}
+
+基本入門範本套件是一種多用途工具，可用來建立您依語言、應用程式類型、架構及服務定義的自訂應用程式。然後，您可以設定持續交付，並選取您選擇的部署目標。
 
 ## 開始之前
 {: #prereqs-scratch}
 
-* 安裝 [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli)，其中包括 Docker。 
+* 安裝 [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started)，其中包括 Docker。 
 * 建立 Docker 帳戶，並執行 Docker 應用程式，然後登入。Docker 必須在執行中，建置指令才能運作。
 * 如果您計劃將應用程式部署至 {{site.data.keyword.cfee_full}}，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
 
@@ -36,7 +38,7 @@ subcollection: creating-apps
 
 1. 從 [{{site.data.keyword.cloud_notm}} 儀表板 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}) 中，按一下「應用程式」小組件中的**建立應用程式**。
 
-  您也可以從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits/) 頁面中，建立自訂應用程式。
+  您也可以從 {{site.data.keyword.dev_console}} 的[入門範本套件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://{DomainName}/developer/appservice/starter-kits) 頁面中，建立自訂應用程式。
   {: tip}
 
 2. 輸入應用程式的名稱。針對本指導教學，請鍵入 `CustomProject`。
@@ -117,7 +119,7 @@ subcollection: creating-apps
 2. 選取一個部署目標。根據您所選目標的指示設定部署目標：
   * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
   * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企業環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**的部署者類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
-  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
+  * **部署至[虛擬伺服器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
 
 在您選取及配置部署目標之後，「應用程式詳細資料」頁面會指出已配置持續交付。您可以按一下**檢視儲存庫**，以檢視包含應用程式原始碼的儲存庫。
 

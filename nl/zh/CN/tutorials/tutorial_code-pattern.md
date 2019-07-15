@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-13"
 
 keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
 
@@ -15,6 +15,7 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # 使用代码模式创建应用程序
 {: #tutorial-codepattern}
@@ -70,7 +71,10 @@ subcollection: creating-apps
 2. 选择部署目标。根据您所选目标的指示信息来设置部署目标：
   * **部署到 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
   * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企业环境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
-  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
+  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。有关更多信息，请参阅[将应用程序部署到虚拟服务器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)。
+
+    VSI 部署可用于某些入门模板工具包。要使用此功能，请转至 [{{site.data.keyword.cloud_notm}} 仪表板](https://{DomainName})，然后单击**应用程序**磁贴中的**创建应用程序**。
+    {: note}
 
 选择并配置部署目标后，“应用程序详细信息”页面将指示已配置持续交付。您可以通过单击**查看存储库**来查看包含应用程序的源代码的存储库。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -27,9 +27,6 @@ subcollection: creating-apps
 
 DevOps 工具鏈為您的應用程式提供以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）進行自訂。
 
-從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
-{: note}
-
 ## 使用 {{site.data.keyword.cloud_notm}} 主控台
 {: deploy-console}
 
@@ -38,16 +35,22 @@ DevOps 工具鏈為您的應用程式提供以團隊為基礎的開發環境。�
 ### 開始之前
 {: deploy-console-before}
 
-開始之前，請使用 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，來[建立應用程式](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started)及[新增服務](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started)。
+開始之前，請使用 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，來[建立應用程式](/docs/apps?topic=creating-apps-getting-started)及[新增服務](/docs/apps?topic=creating-apps-getting-started#resources-getting-started)。
 
 ### 自動部署應用程式
 {: deploy-console-auto}
+
+從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的所有工具鏈，都會針對自動部署進行配置。
+{: note}
 
 1. 在**應用程式詳細資料**頁面上，按一下**配置持續交付**。
 2. 選取一個部署目標。根據您所選目標的指示設定部署目標：
   * **部署至 IBM Kubernetes Service**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。如需相關資訊，請參閱[將應用程式部署至 Kubernetes 叢集](/docs/containers?topic=containers-app)。
   * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**公用雲端**或**企業環境**的部署者類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。如需相關資訊，請參閱[將應用程式部署至 Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) 及[將應用程式部署至 {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)。
-  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。如需相關資訊，請參閱[將應用程式部署至虛擬伺服器](/docs/apps?topic=creating-apps-vsi-deploy)。
+  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。如需相關資訊，請參閱[將應用程式部署至虛擬伺服器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)。
+
+    部分入門範本套件可以進行 VSI 部署。若要使用此特性，請移至 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName})，然後在**應用程式**磚按一下**建立應用程式**。
+    {: note}
 
 ### 手動部署應用程式
 {: deploy-console-manual}
@@ -73,7 +76,7 @@ DevOps 工具鏈為您的應用程式提供以團隊為基礎的開發環境。�
 ### 開始之前
 {: #deploy-cli-before}
 
-開始之前，[請下載並安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+開始之前，[請下載並安裝 {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
 
 Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工具。
 {: important}
@@ -84,12 +87,10 @@ Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工�
 
   3.  更新您的應用程式碼。例如，若您使用 {{site.data.keyword.cloud_notm}} 範例應用程式，而且您的應用程式包含 `src/main/webapp/index.html` 檔，則可以修改它，並編輯 `Thanks for creating ...` 這行。請先確定應用程式在本端執行，再將它部署至 {{site.data.keyword.cloud_notm}}。
 
-    記下 `manifest.yml` 檔案。將應用程式部署至 {{site.data.keyword.cloud_notm}} 時，此檔案用來決定您應用程式的 URL、記憶體配置、實例數以及其他重要參數。
-
     也請檢閱 `README.md` 檔，其中包含建置指示這類詳細資料。
 
     如果您的應用程式是 Liberty 應用程式，則必須先建置它，再重新部署。
-  {: note}
+    {: note}
 
   4. 使用您的 IBM ID 登入 {{site.data.keyword.cloud_notm}} CLI。如果您有多個帳戶，則系統會提示您選取要使用的帳戶。如果您未使用 `-r` 旗標來指定地區，則必須同時選取地區。
     ```
@@ -128,8 +129,8 @@ Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工�
 您可以使用 [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令，將應用程式手動部署至 {{site.data.keyword.cloud_notm}}。
 
   ```
-    ibmcloud dev deploy <APP_NAME>
-    ```
+ibmcloud dev deploy
+```
   {: codeblock}
 
 ### 相關資訊
@@ -137,4 +138,4 @@ Cygwin 不支援 CLI。請在非 Cygwin 指令行視窗的視窗中使用此工�
 
 如需使用 CLI 將應用程式部署至 {{site.data.keyword.cloud_notm}} 的相關資訊，請參閱：
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")

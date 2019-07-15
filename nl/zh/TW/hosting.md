@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-25"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 如果您具有現有應用程式，則可以在具有所有必要基礎架構或平台服務的 {{site.data.keyword.cloud}} 上進行管理。
 {:shortdesc}
 
-使用 {{site.data.keyword.Bluemix_notm}}，您不需要再對硬體進行大型投資，即可測試或執行新的應用程式。相反地，我們會為您管理它，而且只會對您使用的部分進行收費。您的雲端伺服器環境是基礎架構層的基礎。您可以針對更複雜的環境選擇單一選項或一個組合。 
+使用 {{site.data.keyword.cloud_notm}}，您不需要再對硬體進行大型投資，即可測試或執行新的應用程式。相反地，我們會為您管理它，而且只會對您使用的部分進行收費。您的雲端伺服器環境是基礎架構層的基礎。您可以針對更複雜的環境選擇單一選項或一個組合。 
 
 您有各種選項可以管理應用程式，並讓您依想要的方式或需要更深入地控制基礎架構。您可以使用下列任何方式來執行應用程式：
 
@@ -29,6 +29,13 @@ subcollection: creating-apps
   * 作為 VMware
   * 作為虛擬機器
   * 在高效能 {{site.data.keyword.baremetal_short}} 上 
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
+
+Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
+
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
 如需運算選項的摘要，請查看下表。
 

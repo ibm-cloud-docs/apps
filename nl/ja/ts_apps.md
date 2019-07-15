@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # アプリの作成に関するトラブルシューティング
 {: #managingapps}
 
-アプリの作成に関する一般的な問題には、アプリを更新できない、2 バイト文字が表示されないなどがあります。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
+アプリケーションの作成に関する一般的な問題には、アプリを更新できない、2 バイト文字が表示されないなどがあります。 多くの場合、いくつかの簡単なステップを実行することで、これらの問題から復旧することが可能です。
 {:shortdesc}
 
 ## マイ・アプリがさまざまなドメインでホストされている
@@ -37,9 +37,9 @@ subcollection: creating-apps
 
 新しいホスト名オプション `*.appdomain.cloud` を cloud.ibm.com で使用することができます。
 
-以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。`mybluemix.net` でホストされているアプリは影響を受けません。
+以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。 `mybluemix.net` でホストされているアプリは影響を受けません。
 
-Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
+Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。 {{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
 
 詳しくは、[ドメインの管理](/docs/apps?topic=creating-apps-update-domain)を参照してください。
 
@@ -47,7 +47,7 @@ Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{
 {: #ts_unsaved_changes}
 {: troubleshoot}
 
-アプリの詳細ページで項目をクリックしたときに、アクションを実行できない場合があります。続行する前に、変更を保存するように求めるプロンプトが出される場合もあります。
+アプリの詳細ページで項目をクリックしたときに、アクションを実行できない場合があります。 続行する前に、変更を保存するように求めるプロンプトが出される場合もあります。
 
 アプリの詳細ページでアプリまたはサービスを確認しようとすると、次のエラー・メッセージが表示されます。
 {: tsSymptoms}
@@ -59,27 +59,6 @@ Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。{{
 
 メッセージ・ウィンドウを閉じ、ランタイム・ペインの**「リセット」**をクリックします。
 {: tsResolve}
-
-## {{site.data.keyword.cloud_notm}} 領域間の自動フェイルオーバーを使用できない
-{: #ts_failover}
-{: troubleshoot}
-
-{{site.data.keyword.cloud}} 領域間の自動フェイルオーバーは使用できません。 ただし、回避策として、多くの IP アドレス間のフェイルオーバーをサポートする DNS プロバイダーを使用できます。
-
-ある {{site.data.keyword.cloud_notm}} 領域が使用不可になると、その領域で実行されているアプリは、たとえそれと同じアプリが別の {{site.data.keyword.cloud_notm}} 領域で実行されていても、使用不可になります。
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} では、ある領域から別の領域への自動フェイルオーバーはまだ提供されていません。
-{: tsCauses}
-
-多数の ID アドレス間のインテリジェント・フェイルオーバーをサポートする DNS プロバイダーを使用し、{{site.data.keyword.cloud_notm}} 領域間の自動フェイルオーバーを使用可能にするように、DNS 設定を手動で構成することができます。 この機能を備えた DNS プロバイダーとしては、NSONE、Akamai、および Dyn があります。
-{: tsResolve}
-
-DNS 設定を構成する場合、アプリが実行されている {{site.data.keyword.cloud_notm}} 領域のパブリック IP アドレスを指定する必要があります。 {{site.data.keyword.cloud_notm}} 領域のパブリック IP アドレスを取得するには、`nslookup` コマンドを使用します。 例えば、次のコマンドをコマンド・ライン・ウィンドウに入力できます。
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
 
 ## 許可エラーのため、{{site.data.keyword.cloud_notm}} サービスにアクセスできない
 {: #ts_vcap}
@@ -100,7 +79,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") および [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+他のプログラミング言語で使用できるコマンドについて詳しくは、[Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") および [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 ## 502 Bad Gateway エラーを受信した
 {: #ts_502_error}
@@ -138,7 +117,7 @@ Google にアクセス不能な特定地域の Android アプリは、IBM {{site
 IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messaging (GCM) サービスを使用して、Android で開発されたモバイル・アプリに通知をディスパッチします。 Android アプリが通知を受信できるようにするには、Google Cloud Messaging (GCM) サービスがモバイル・アプリからアクセス可能でなければなりません。 Android アプリが GCM サービスに到達できない地域では、Android アプリは {{site.data.keyword.mobilepushshort}} を受信できません。
 {: tsCauses}
 
-回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy ](https://pushy.me){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")、[getui ](http://www.getui.com/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")、および [jpush ](https://www.jpush.cn/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")) を使用してください。
+回避策として、GCM サービスに依存しないサード・パーティーのサービス (例えば、[Pushy](https://pushy.me/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")、および [jpush](https://www.jiguang.cn/en/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")) を使用してください。
 {: tsResolve}
 
 ## アプリが {{site.data.keyword.cloud_notm}} にプッシュされる際、2 バイト文字が適切に表示されない
@@ -147,7 +126,7 @@ IBM {{site.data.keyword.mobilepushshort}} サービスは、Google Cloud Messagi
 
 サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合、2 バイト文字が適切に表示されない可能性があります。
 
-アプリケーションが {{site.data.keyword.cloud_notm}} にプッシュされたときは、アプリ内に指定されている 2 バイト文字は正しく表示されません。
+アプリが {{site.data.keyword.cloud_notm}} にプッシュされたときは、アプリ内に指定されている 2 バイト文字は正しく表示されません。
 {: tsSymptoms}
 
 この問題は、サーブレットまたは JSP ファイルに対して Unicode サポートが適切に構成されていない場合に発生する可能性があります。
@@ -267,7 +246,7 @@ server.xml ファイルをプロジェクトから削除することで、この
 この問題は、検出スクリプト、コンパイル・スクリプト、リリース・スクリプトなどのスクリプトが実行可能でない場合は発生する可能性があります。
 {: tsCauses}
 
-[Git update](http://git-scm.com/docs/git-update-index){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。 例えば、`git update --chmod=+x script.sh` と入力できます。
+[Git update](https://git-scm.com/docs/git-update-index){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") コマンドを使用して、各スクリプトのアクセス権を実行可能に変更できます。 例えば、`git update --chmod=+x script.sh` と入力できます。
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} Continuous Delivery の Delivery Pipeline からアプリをデプロイできない
@@ -290,7 +269,7 @@ server.xml ファイルをプロジェクトから削除することで、この
 
 ビルド・ジョブまたはデプロイ・ジョブが失敗し、次のメッセージが表示された場合、以下の CLI コマンドを使用してイメージを削除できます。 `状況: 無許可: ストレージ割り当て量を超過しています。 1 つ以上のイメージを削除するか、ストレージ割り当て量と価格設定プランを確認してください。`
 
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) がまだない場合には、インストールします。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) がまだない場合には、インストールします。
 * `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
 * `ibmcloud cr images` を使用して、イメージをリストします。
 * 未使用のイメージがある場合、`ibmcloud cr image-rm <respository>:<tag>` を使用して削除します。
@@ -299,8 +278,8 @@ server.xml ファイルをプロジェクトから削除することで、この
 ## Kubernetes ログのアクセス
 {: #access_kube_logs}
 
-アプリケーションが実行されておらず、ヘルス・エンドポイントにアクセスできない場合、クラスター内のログを調べてください。
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) がまだない場合には、インストールします。
+アプリが実行されておらず、ヘルス・エンドポイントにアクセスできない場合、クラスター内のログを調べてください。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) がまだない場合には、インストールします。
 * `ibmcloud login` を使用して {{site.data.keyword.cloud_notm}} にログインし、現在のスペースを指すようにします。
 * `ibmcloud cs clusters` を使用して、クラスターをリストします。
 * `ibmcloud cs cluster-config <cluster-name>` を使用して、該当するクラスターを指します。
@@ -308,7 +287,7 @@ server.xml ファイルをプロジェクトから削除することで、この
 * `kubectl get pods` を使用して、ポッドを表示します。 `kubectl` をインストールする必要がある場合には、[Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部リンクのアイコン](../icons/launch-glyph.svg "外部リンクのアイコン") を参照してください。
 * `kubectl logs <pod-name>.` を使用して、アプリのログを表示できます。
 
-## 「ファイルが見つかりません」というメッセージが表示され、`docker` の起動に失敗する
+## ファイルが見つかりませんというメッセージが表示され、`docker` の起動に失敗する
 {: #docker_not_found}
 {: troubleshoot}
 

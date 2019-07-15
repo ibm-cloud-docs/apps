@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Création d'une toute nouvelle application
+# Création d'une application personnalisée à l'aide d'un kit de démarrage de base
 {: #tutorial-scratch}
 
-Vous pouvez créer une toute nouvelle application personnalisée en utilisant des services et un environnement d'exécution. 
+Vous pouvez créer une application personnalisée en utilisant un kit de démarrage de base et en sélectionnant le type d'application (mobile ou de back end), le langage et l'infrastructure, en ajoutant des services et en sélectionnant votre cible de déploiement.
 {: shortdesc}
+
+Le kit de démarrage de base est un outil polyvalent que vous pouvez utiliser pour créer des applications personnalisées que vous définissez par le langage et le type, l'infrastructure et les services. Vous configurez ensuite la distribution continue et sélectionnez la cible de déploiement de votre choix. 
 
 ## Avant de commencer
 {: #prereqs-scratch}
 
-* Installez [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), qui inclut Docker. 
+* Installez [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started), qui inclut Docker. 
 * Créez un compte Docker, exécutez l'application Docker puis connectez-vous. Pour que les commandes de génération fonctionnent, Docker doit être en cours d'exécution.
 * Si vous envisagez de déployer votre application dans {{site.data.keyword.cfee_full}}, vous devez [préparer votre compte {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -36,7 +38,7 @@ Vous pouvez créer une toute nouvelle application personnalisée en utilisant de
 
 1. Depuis votre [tableau de bord{{site.data.keyword.cloud_notm}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}), cliquez sur **Créer une application** dans le widget Applications.
 
-  Vous pouvez également créer une application personnalisée à partir de la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits/) dans {{site.data.keyword.dev_console}}.
+  Vous pouvez également créer une application personnalisée à partir de la page [Kits de démarrage ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/developer/appservice/starter-kits) dans {{site.data.keyword.dev_console}}.
   {: tip}
 
 2. Entrez un nom pour votre application. Pour ce tutoriel, entrez `CustomProject`.
@@ -115,9 +117,9 @@ Pour sélectionner votre cible de déploiement et configurer la distribution con
 
 1. Sur la page Détails de l'application, cliquez sur **Configurer la distribution continue**.
 2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions s'appliquant à la cible que vous sélectionnez :
-  * **Déployer dans [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
-  * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise.
-  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
+  * **Déployer dans [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
+  * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise. 
+  * **Déployer sur un [serveur virtuel](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
 
 Après avoir sélectionné et configuré la cible de déploiement, la page Détails de l'application indique que la distribution continue est configurée. Vous pouvez afficher le référentiel qui contient le code source de votre application en cliquant sur **Afficher le référentiel**.
 

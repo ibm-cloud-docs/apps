@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-13"
 
 keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
 
@@ -15,6 +15,7 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
+{:note: .note}
 
 # Création d'une application à l'aide d'un modèle de code
 {: #tutorial-codepattern}
@@ -68,9 +69,12 @@ Pour sélectionner votre cible de déploiement et configurer la distribution con
 
 1. Sur la page Détails de l'application, cliquez sur **Configurer la distribution continue**.
 2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions s'appliquant à la cible que vous sélectionnez :
-  * **Déployer dans [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
-  * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise.
-  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement.
+  * **Déployer dans [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant.
+  * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise. 
+  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement. Pour plus d'informations, voir [Déploiement d'applications dans un serveur virtuel](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    Le déploiement de VSI est disponible pour certains kits de démarrage. Pour utiliser cette fonctionnalité, accédez au [tableau de bord {{site.data.keyword.cloud_notm}}](https://{DomainName}) et cliquez sur **Créer une application** dans la vignette **Applications**.
+    {: note}
 
 Après avoir sélectionné et configuré la cible de déploiement, la page Détails de l'application indique que la distribution continue est configurée. Vous pouvez afficher le référentiel qui contient le code source de votre application en cliquant sur **Afficher le référentiel**.
 

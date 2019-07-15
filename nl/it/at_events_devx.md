@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-04"
 
 keywords: apps, applications, activity tracking events
 
@@ -43,26 +43,10 @@ Per iniziare a monitorare le azioni del tuo utente, consulta l'[Esercitazione in
 
 La seguente tabella elenca le azioni che generano un evento:
 
-<table>
-  <caption>Azioni che generano eventi</caption>
-  <tr>
-    <th>Azioni</th>
-	  <th>Descrizione</th>
-  <tr>
-  <tr>
-    <td>bluemix-developer-experience.app.create</td>
-	  <td>Viene generato un evento quando un utente crea un'applicazione.</td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.read</td>
-	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Un utente scarica il codice dell'applicazione.</li> <li>Un utente scarica il file delle credenziali utilizzando la CLI {{site.data.keyword.dev_console}}.</li> <li>L'infrastruttura dell'esperienza di sviluppo legge le credenziali dei servizi associati a un'applicazione.</li> <li>Un utente visualizza l'elenco delle applicazioni, ad esempio, quando l'utente visualizza l'elenco delle applicazioni nella console {{site.data.keyword.dev_console}} o tramite la CLI {{site.data.keyword.dev_cli_short}}.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.update</td>
-	  <td>Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni: </br><ul><li>Viene modificato qualcosa riguardo l'applicazione, ad esempio, quando un utente modifica il nome dell'applicazione. </li><li>Viene creato e aggiunto un nuovo servizio a un'applicazione.</li><li>Un servizio esistente viene aggiunto a un'applicazione.</li><li>Un servizio viene rimosso da un'applicazione.</li><li>Viene generato il codice per un'applicazione.</li><li>Una toolchain DevOps viene aggiunta tramite l'esperienza di sviluppo, ad esempio, selezionando *Configure continuous delivery*.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.delete</td>
-	  <td>Viene generato un evento quando un utente elimina un'applicazione.</td>
-  </tr>
-</table>
+|Azioni	|Descrizione	|
+|-----|-------------|
+|bluemix-developer-experience.app.create |Viene generato un evento quando un utente crea un'applicazione.|
+|bluemix-developer-experience.app.read |Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni:<br><br>Un utente scarica il codice dell'applicazione.<br><br>Un utente scarica il file delle credenziali utilizzando la CLI {{site.data.keyword.dev_console}}.<br><br>L'infrastruttura {{site.data.keyword.cloud_notm}} legge le credenziali dei servizi associati a un'applicazione.<br><br>Un utente visualizza l'elenco di applicazioni. Ad esempio, un utente visualizza l'elenco di applicazioni nella console {{site.data.keyword.dev_console}} o tramite la CLI {{site.data.keyword.dev_cli_short}}.|
+|bluemix-developer-experience.app.update |Viene generato un evento quando si verifica una qualsiasi delle seguenti situazioni:<br><br>Qualcosa che riguarda le modifiche dell'applicazione. Ad esempio, un utente modifica il nome dell'applicazione.<br><br>Viene creato e aggiunto un nuovo servizio a un'applicazione.<br><br>Un servizio esistente viene aggiunto a un'applicazione.<br><br>Un servizio viene rimosso da un'applicazione.<br><br>Viene generato il codice per un'applicazione.<br><br>Una toolchain DevOps viene aggiunta tramite la console {{site.data.keyword.cloud_notm}}. Ad esempio un utente seleziona **Configure continuous delivery** dalla pagina App details.|
+|bluemix-developer-experience.app.delete |Viene generato un evento quando un utente elimina un'applicazione.|
+{: caption="Tabella 1. Azioni che generano eventi " caption-side="top"}

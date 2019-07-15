@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 새 호스트 이름 옵션 `*.appdomain.cloud`는 cloud.ibm.com에서 사용할 수 있습니다.
 
-이전에는 {{site.data.keyword.containerlong_notm}} 또는 Cloud Foundry와 같은 다양한 배치 대상에서 앱을 호스팅하는 데 `mybluemix.net` 도메인이 사용되었습니다. `mybluemix.net`에서 호스팅한 앱에는 영향을 미치지 않습니다.
+이전에는 {{site.data.keyword.containerlong_notm}} 또는 Cloud Foundry와 같은 다양한 배치 대상에서 애플리케이션을 호스팅하는 데 `mybluemix.net` 도메인이 사용되었습니다. `mybluemix.net`에서 호스팅한 앱에는 영향을 미치지 않습니다.
 
 Cloud Foundry 앱의 하위 도메인은 `cf.appdomain.cloud`입니다. {{site.data.keyword.containerlong_notm}}에 배치하는 앱의 하위 도메인은 `containers.appdomain.cloud`입니다.
 
@@ -39,7 +39,7 @@ Cloud Foundry 앱의 하위 도메인은 `cf.appdomain.cloud`입니다. {{site.d
 {: #cf-app}
 {: faq}
 
-[{{site.data.keyword.cloud_notm}} 콘솔](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")의 리소스 목록은 작성된 애플리케이션에 대한 요약 정보를 제공합니다. 리소스 목록의 **앱** 섹션에는 사용자가 작성했지만 Cloud Foundry에 배치하지 *않은* 모든 앱이 포함되어 있습니다. **Cloud Foundry 앱** 섹션에는 사용자가 작성하여 Cloud Foundry에 배치한 모든 앱이 포함되어 있습니다.
+[{{site.data.keyword.cloud_notm}} 콘솔](https://{DomainName}){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")의 리소스 목록은 작성된 앱에 대한 요약 정보를 제공합니다. 리소스 목록의 **앱** 섹션에는 사용자가 작성했지만 Cloud Foundry에 배치하지 *않은* 모든 앱이 포함되어 있습니다. **Cloud Foundry 앱** 섹션에는 사용자가 작성하여 Cloud Foundry에 배치한 모든 앱이 포함되어 있습니다.
 
 ## 내 앱을 배치하려고 할 때 Cloud Foundry 영역을 선택할 수 없는 이유는 무엇입니까?
 {: #cf-space}

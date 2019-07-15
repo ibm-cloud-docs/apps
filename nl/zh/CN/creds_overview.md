@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -25,7 +25,7 @@ subcollection: creating-apps
 {: shortdesc}
 
 如果使用入门模板工具包创建应用程序，那么将自动为您准备环境，在部署应用程序之前将服务连接到入门模板工具包时，服务凭证会自动添加到您的环境。
-{ :tip}
+
 
 在以下任一场景中，必须以手动方式将服务凭证添加到部署环境：
 
@@ -34,7 +34,7 @@ subcollection: creating-apps
 
 添加服务凭证的过程取决于部署目标和编程语言。有关为部署目标配置服务凭证的更多信息，请参阅特定于您的托管环境的文档：
 
-  * [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
   * Cloud Foundry Public 或 {{site.data.keyword.cfee_full}}
   * 虚拟服务器实例（本地 Docker 容器）
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -15,15 +15,15 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{: note .note}
+{:note: .note}
 
 # 使用入门模板工具包创建应用程序
 {: #tutorial-starterkit}
 
-您可以使用入门模板工具包来快速开始使用应用程序，并为其未来开发做好准备。选择入门模板工具包和编程语言，创建应用程序，然后设置 DevOps 工具链以自动部署应用程序。此外，还可以下载代码来直接检查您的代码。
+您可以使用入门模板工具包来快速开始使用应用程序，并为其未来开发做好准备。选择入门模板工具包和编程语言，创建应用程序，然后设置 DevOps 工具链以自动部署应用程序。
 {: shortdesc}
 
-可以通过所选的入门模板工具包来创建应用程序，包括空白应用程序（如果您希望自己定制构建选项）。无论采用哪种方法，都会自动创建 DevOps 工具链以用于部署应用程序。此外，还可以下载代码来直接检查您的代码。
+可以通过所选的入门模板工具包来创建应用程序，包括基本入门模板工具包（如果您希望自己定制构建选项）。无论采用哪种方法，都会自动创建 DevOps 工具链以用于部署应用程序。此外，还可以下载代码来直接检查您的代码。
 
 {{site.data.keyword.cloud_notm}} 有适用于不同关注领域（如 Watson、安全性或财务）或数字渠道（如移动或 Web 应用程序）的开发者门户网站。可以通过**菜单**图标 ![“菜单”图标](../../icons/icon_hamburger.svg) 来访问这些门户网站。
 
@@ -43,7 +43,7 @@ subcollection: creating-apps
 ## 步骤 1. 安装工具
 {: #prereqs-starterkit}
 
-* 安装 [Developer Tools](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+* 安装 [Developer Tools](/docs/cli?topic=cloud-cli-getting-started)。
 * Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行中，构建命令才会有效。您必须创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。
 * 如果计划将应用程序部署到 {{site.data.keyword.cfee_full}}，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
 
@@ -52,9 +52,9 @@ subcollection: creating-apps
 
 在 {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} 中，入门模板工具包有许多语言和框架可用。您可以使用类别过滤器（例如，语言和类型）缩小选择范围。
 
-1. 从 {{site.data.keyword.dev_console}} 控制台上的[入门模板工具包](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面，选择入门模板工具包，并单击**创建应用程序**。 
+1. 从 {{site.data.keyword.dev_console}} 控制台上的[入门模板工具包](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面，选择入门模板工具包，并单击**创建应用程序**。 
 
-    要查看入门模板工具包中所包含的内容，请选择磁贴并阅读详细信息。如果希望使用空白入门模板工具包并对其进行定制，请选择**创建应用程序**磁贴。
+    要查看入门模板工具包中所包含的内容，请选择磁贴并阅读详细信息。如果希望使用基本入门模板工具包并定制应用程序，请选择**创建应用程序**磁贴。
     {: tip}
 
 2. 对应用程序命名并选择资源组。
@@ -98,7 +98,10 @@ subcollection: creating-apps
 2. 选择部署目标。根据您所选目标的指示信息来设置部署目标：
   * **部署到 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
   * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企业环境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
-  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
+  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。有关更多信息，请参阅[将应用程序部署到虚拟服务器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)。
+
+    VSI 部署可用于某些入门模板工具包。要使用此功能，请转至 [{{site.data.keyword.cloud_notm}} 仪表板](https://{DomainName})，然后单击**应用程序**磁贴中的**创建应用程序**。
+    {: note}
 
 选择并配置部署目标后，“应用程序详细信息”页面将指示已配置持续交付。您可以通过单击**查看存储库**来查看包含应用程序的源代码的存储库。
 
@@ -124,7 +127,7 @@ subcollection: creating-apps
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
+3. 在日志文件中，查找应用程序的 URL：
 
     在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 

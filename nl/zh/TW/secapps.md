@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,14 +20,14 @@ subcollection: creating-apps
 # 建立憑證簽署要求
 {: #ssl_csr}
 
-您可以上傳 SSL 憑證，以及限制應用程式存取，來保護您的應用程式。
+您可以上傳 SSL 憑證並限制應用程式存取，來保護您的應用程式。
 {:shortdesc}
 
 ## 建立 CSR
 
 您必須先在伺服器上建立憑證簽署要求 (CSR)，才能使用 {{site.data.keyword.cloud}} 上傳授與您的 SSL 憑證。CSR 是傳送給憑證管理中心的訊息，用來要求簽署公開金鑰及相關聯的資訊。最常見的 CSR 是 PKCS #10 格式。CSR 包含公開金鑰，以及通用名稱、組織、城市、州省、國家或地區，以及電子郵件。只接受 CSR 金鑰長度 2048 位元的 SSL 憑證要求。
 
-建立 CSR 的方法會視您的作業系統而改變。下列範例顯示如何使用 [OpenSSL 指令行工具 ](http://www.openssl.org/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 建立 CSR：
+建立 CSR 的方法會視您的作業系統而改變。下列範例顯示如何使用 [OpenSSL 指令行工具 ](https://www.openssl.org/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 建立 CSR：
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -68,6 +68,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
 | EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="表 1. Cloud Foundry 自訂網域地區端點" caption-side="top"}
 
 若要上傳 Cloud Foundry 應用程式的憑證，請完成下列步驟：
 
@@ -82,8 +83,7 @@ OpenSSL SHA-512 實作取決於 64 位元整數類型的編譯器支援。您可
   * 憑證：一種數位文件，用來將公開金鑰連結到憑證擁有人的身分，使憑證擁有人能夠接受鑑別。憑證由憑證管理中心發行，並由該憑證管理中心執行數位簽署。一般是由憑證管理中心發出及簽署憑證。不過，您可能會使用自簽憑證進行測試及開發用途。
   * 私密金鑰：一種用來加密訊息的演算型樣，只有對應的公開金鑰可以解密。另外，私密金鑰也用來將相對應公開金鑰所加密的訊息解密。私密金鑰保存在使用者系統上，受到密碼保護。
   * 中繼憑證（選用）：由授信主要憑證管理中心 (CA) 發出的子層憑證，專門用於發出持卡實體伺服器憑證。結果會形成一條憑證鏈，從授信主要憑證管理中心開始、通過中繼憑證，最後以發給組織的 SSL 憑證結束。請使用中繼憑證來驗證主要憑證的確實性。中繼憑證通常是從信任的協力廠商處取得。在將應用程式部署至正式作業之前，測試應用程式時不一定需要中繼憑證。
-  * 啟用用戶端憑證的要求：當您啟用此選項時，嘗試存取 SSL 保護網域的使用者會被要求提供用戶端憑證。例如，在 Web 瀏覽器中，當使用者嘗試存取 SSL 保護的網域時，Web 瀏覽器會提示使用者提供網域的用戶端憑證。
-   
+  * 啟用用戶端憑證的要求：當您啟用此選項時，嘗試存取 SSL 保護網域的使用者會被要求提供用戶端憑證。例如，在 Web 瀏覽器中，當使用者嘗試存取 SSL 保護的網域時，Web 瀏覽器會提示使用者提供網域的用戶端憑證。   
   * 用戶端憑證信任儲存庫（選用）：包含要容許存取您應用程式之使用者的用戶端憑證。請上傳用戶端憑證信任儲存庫檔案，以啟用要求用戶端憑證的選項。
   
     您可以藉由上傳 meta 資料中包含公開金鑰的用戶端憑證信任儲存庫，來設定交互鑑別。

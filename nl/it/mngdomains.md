@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
@@ -23,9 +23,7 @@ I domini forniscono la rotta dell'URL assegnata alla tua organizzazione in {{sit
 o un dominio e un host condivisi. A meno che non venga specificato un dominio personalizzato, nell'instradamento alla tua applicazione, {{site.data.keyword.cloud_notm}} utilizza un dominio condiviso predefinito. Il processo per la gestione dei domini dipende dalla tua destinazione di distribuzione, come ad esempio {{site.data.keyword.containershort}}, Cloud Foundry e altri.
 {:shortdesc}
 
-Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico e poi configurare tale dominio in {{site.data.keyword.cloud_notm}}. Successivamente, devi associare il dominio personalizzato al dominio di sistema {{site.data.keyword.cloud_notm}} sul server DNS pubblico. Dopo aver
-associato il tuo dominio personalizzato al dominio di sistema,
-le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.cloud_notm}}.
+Per utilizzare un dominio personalizzato, devi registrare il dominio personalizzato su un server DNS pubblico e poi configurare tale dominio in {{site.data.keyword.cloud_notm}}. Successivamente, devi associare il dominio personalizzato al dominio di sistema {{site.data.keyword.cloud_notm}} sul server DNS pubblico. Dopo aver associato il tuo dominio personalizzato al dominio di sistema, le richieste per il tuo dominio personalizzato vengono instradate alla tua applicazione in {{site.data.keyword.cloud_notm}}.
 
 ## Modifica del tuo dominio per le applicazioni Kubernetes
 {: #update-domain-kube}

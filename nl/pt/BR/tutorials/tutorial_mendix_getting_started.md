@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -41,7 +41,12 @@ Mendix é um ambiente de desenvolvimento de pouco código e um conjunto de ferra
 
 Se você ainda não estiver usando o Mendix com o {{site.data.keyword.cloud_notm}}, será guiado para a plataforma Mendix para se inscrever e autorizar o {{site.data.keyword.cloud_notm}} a criar um novo projeto na plataforma Mendix em seu nome. Esse projeto é vinculado ao {{site.data.keyword.cloud_notm}}, portanto, as implementações são direcionadas automaticamente para o {{site.data.keyword.cloud_notm}}.
 
-1. Se você vir esta mensagem: "Para concluir a criação do aplicativo, uma conta do usuário do Mendix é necessária. Gostaria de vincular a conta agora?", deverá clicar em **Vincular conta**.
+1. Se você vir esta mensagem, clique em **Vincular conta**.
+  ```
+  "To complete app creation, a Mendix user account is required. Would you like to link your account now?"
+  ```
+  {: screen}
+
 2. Na página de confirmação do Mendix, selecione **Eu concordo com a política de privacidade e os termos do Mendix** e clique em **Confirmar**.
 3. Quando solicitado, forneça o endereço de e-mail, a senha e o país e, em seguida, clique em **Criar**.
 4. Na página **Autorizar acesso à conta do Mendix**, clique em **Autorizar**.
@@ -51,11 +56,11 @@ Após a conclusão da autorização, o navegador retorna ao aplicativo Mendix qu
 ## Selecionando um destino de implementação para o app Mendix
 {: #select-deployment}
 
-1. Na página **Selecionar um destino de implementação**, selecione o Cloud Foundry ou um de seus clusters Kubernetes que esteja em execução no {{site.data.keyword.cloud_notm}}. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do Cloud Foundry do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** ou do **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
+1. Na página **Selecionar um destino de implementação**, selecione o Cloud Foundry ou um de seus clusters Kubernetes que esteja em execução no {{site.data.keyword.cloud_notm}}. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do Cloud Foundry de **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** ou **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, que poderá ser usado para criar e gerenciar ambientes isolados para hospedar apps do Cloud Foundry exclusivamente para a sua empresa.
 2. Opcional. Se você não tem um cluster do Kubernetes, é possível criar um agora.
 3. Na página **Configurar a cadeia de ferramentas**, selecione a região e o grupo de recursos e, em seguida, clique em **Criar**.
 
-Uma cadeia de ferramentas do DevOps é criada. A cadeia de ferramentas integra o projeto Mendix dentro da plataforma Mendix no ambiente do {{site.data.keyword.cloud_notm}}. Um aplicativo padrão é implementado em seu destino de implementação para que seja possível verificar se o aplicativo foi implementado com êxito na conclusão da cadeia de ferramentas do DevOps.
+Uma cadeia de ferramentas do DevOps é criada. A cadeia de ferramentas integra o projeto Mendix dentro da plataforma Mendix no ambiente do {{site.data.keyword.cloud_notm}}. Um app padrão é implementado em seu destino de implementação para que seja possível verificar se o app foi implementado com êxito na conclusão da cadeia de ferramentas do DevOps.
 
 As implementações do Mendix Cloud Foundry requerem o serviço de banco de dados PostGRES, que não tem uma camada Lite. Se desejar avaliar os kits do iniciador do Mendix usando uma conta Lite, será possível destinar um cluster do Kubernetes de teste.
 {: tip}
@@ -65,27 +70,26 @@ Se você selecionou um cluster do Kubernetes para implementação, consulte o [T
 ## Continuando o desenvolvimento do Mendix e o ciclo de vida de implementação
 {: #dev-lifecycle-mendix}
 
-Mendix é um ambiente de criação de pouco código. O ciclo de vida de desenvolvimento requer que o projeto seja aberto no aplicativo para desktop do Mendix Modeler.
+Mendix é um ambiente de criação de pouco código. O ciclo de vida de desenvolvimento requer que você abra seu projeto no app de área de trabalho Mendix Modeler.
 
-1. No aplicativo {{site.data.keyword.cloud_notm}}, clique em **Editar no Mendix**.
+1. Em seu app {{site.data.keyword.cloud_notm}}, clique em **Editar no Mendix**.
 2. No portal da web do Mendix, clique em **Editar no Desktop Modeler**.
-  O aplicativo Mendix é aberto no Desktop Modeler.
+  O app Mendix é aberto no modelador de área de trabalho.
 3. Edite o aplicativo Mendix e salve as mudanças.
-4. Use o menu **Executar** do aplicativo Mendix Desktop Modeler e selecione a opção **Executar**.
-  O pacote de implementação é criado e transferido por upload para o Mendix. Após a criação do pacote de implementação, é possível implementar o aplicativo no {{site.data.keyword.cloud_notm}}.
-5. Para implementar o aplicativo Mendix, volte para a página **Detalhes do app** no {{site.data.keyword.cloud_notm}} e clique em **Implementar**.
-  Essa ação inicia a cadeia de ferramentas do DevOps do aplicativo, que puxa a implementação mais recente do Mendix e a implementa no ambiente de destino. Após a conclusão da implementação, a versão mais recente do aplicativo
-inicia automaticamente e se torna disponível.
+4. Use o menu **Executar** do app Mendix Desktop Modeler e selecione a opção **Executar**.
+  O pacote de implementação é criado e transferido por upload para o Mendix. Depois que o pacote de implementação for criado, será possível implementar seu app no {{site.data.keyword.cloud_notm}}.
+5. Para implementar seu app Mendix, volte para a página **Detalhes do app** no {{site.data.keyword.cloud_notm}} e clique em **Implementar**.
+  Essa ação inicia a cadeia de ferramentas do DevOps do app, que puxa a implementação mais recente do Mendix e implementa-a em seu ambiente de destino. Após a implementação ser concluída, a versão mais recente de seu app é iniciada automaticamente e se torna disponível.
 
-Todos os aplicativos Mendix devem ser implementados no {{site.data.keyword.cloud_notm}} clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Não chame manualmente as cadeias de ferramentas do Mendix por meio da interface do IBM DevOps. A ativação manual das cadeias de ferramentas por meio da interface do DevOps pode resultar em uma implementação com falha devido à falta de metadados necessários que são críticos para as implementações do Mendix. Dependendo do estado do aplicativo, uma falha durante a ativação da cadeia de ferramentas do DevOps ou um erro no aplicativo implementado pode ocorrer.
+Todos os apps Mendix devem ser implementados no {{site.data.keyword.cloud_notm}} clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Não chame manualmente as cadeias de ferramentas do Mendix por meio da interface do IBM DevOps. A ativação manual das cadeias de ferramentas por meio da interface do DevOps pode resultar em uma implementação com falha devido à falta de metadados necessários que são críticos para as implementações do Mendix. Dependendo do estado de seu app, uma falha durante a ativação da cadeia de ferramentas do DevOps ou um erro no app implementado pode ocorrer.
 
-Se você ativar manualmente uma cadeia de ferramentas e tiver uma falha, será possível restaurar a implementação do aplicativo clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Essa ação aciona um fluxo do DevOps completo para o aplicativo Mendix, que inclui os metadados necessários.
+Se você ativar manualmente uma cadeia de ferramentas e experimentar uma falha, será possível restaurar a implementação do app clicando em **Configurar entrega contínua** na página **Detalhes do app** no {{site.data.keyword.cloud_notm}}. Essa ação aciona um fluxo completo do DevOps para o app Mendix, que inclui os metadados necessários.
 {: tip}
 
 ## Opcional: configurando o {{site.data.keyword.cos_full_notm}} 
 {: #mendix-cos}
 
-Alguns usuários podem desejar configurar o aplicativo Mendix implementado para usar o {{site.data.keyword.cos_full}} para armazenamento persistente e uploads de arquivo. O {{site.data.keyword.cos_full_notm}} é um serviço de armazenamento de objeto compatível com S3. Para que os aplicativos Mendix aproveitem o armazenamento de arquivo compatível com S3, eles devem definir as variáveis de ambiente a seguir para acessar uma instância do {{site.data.keyword.cos_full_notm}}, depois de terem configurado a entrega contínua:
+Alguns usuários podem desejar configurar seu app Mendix implementado para usar o {{site.data.keyword.cos_full}} para uploads de armazenamento persistente e de arquivo. O {{site.data.keyword.cos_full_notm}} é um serviço de armazenamento de objeto compatível com S3. Para tirar proveito do armazenamento de arquivo compatível com S3, os apps Mendix devem definir as variáveis de ambiente a seguir para acessar uma instância do {{site.data.keyword.cos_full_notm}}, depois de ter configurado a entrega contínua:
 
 * `S3_ACCESS_KEY_ID` - a chave S3, que faz parte das credenciais do {{site.data.keyword.cos_full_notm}}
 * `S3_SECRET_ACCESS_KEY` - a chave secreta S3, que faz parte das credenciais do {{site.data.keyword.cos_full_notm}}
@@ -95,7 +99,7 @@ Alguns usuários podem desejar configurar o aplicativo Mendix implementado para 
 
 Para obter mais informações sobre os depósitos e as chaves do {{site.data.keyword.cos_full_notm}}, consulte a [Documentação da API do {{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-gs-dev). Para obter mais informações sobre os valores de terminais regionais e inter-regionais, consulte os [docs do {{site.data.keyword.cos_full_notm}}](/docs/services/cloud-object-storage?topic=cloud-object-storage-endpoints). Para obter mais informações sobre o suporte ao Mendix para armazenamento compatível com S3, consulte a [documentação do buildpack do Mendix](https://github.com/mendix/cf-mendix-buildpack#s3-settings){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
-### Configurações do {{site.data.keyword.cos_full_notm}} para aplicativos do Cloud Foundry
+### Configurações do {{site.data.keyword.cos_full_notm}} para apps Cloud Foundry
 {: cos-cfapps}
 
 Conclua estas etapas para implementações do Cloud Foundry:
@@ -110,13 +114,13 @@ Conclua estas etapas para implementações do Cloud Foundry:
     ibmcloud cf set-env <YOUR_APP> S3_USE_V2_AUTH true
   ```
 
-2. Depois de especificar todos esses valores, remonte o aplicativo do Cloud Foundry para que os novos valores sejam aplicados.
+2. Depois de especificar todos esses valores, remonte seu app Cloud Foundry para que os novos valores sejam aplicados.
 
   ```
     ibmcloud cf restage <YOUR_APP>
   ```
 
-### Configurações do {{site.data.keyword.cos_full_notm}} para aplicativos do Kubernetes
+### Configurações do {{site.data.keyword.cos_full_notm}} para apps do Kubernetes
 {: #cos-kubeapps}
 
 Conclua estas etapas para implementações do Kubernetes:
@@ -143,7 +147,7 @@ Conclua estas etapas para implementações do Kubernetes:
         value: "true"
   ```
 
-3. Após as mudanças do Kubernetes serem aplicadas, reimplemente seu aplicativo navegando para a página **Detalhes do app** e clicando em **Implementar**. 
+3. Após as mudanças do Kubernetes serem aplicadas, reimplemente seu app navegando para a página **Detalhes do app** e clicando em **Implementar**. 
 
 ## Próximas Etapas 
 {: #next-steps-mendix}

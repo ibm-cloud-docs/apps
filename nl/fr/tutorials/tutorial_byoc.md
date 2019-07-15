@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # Création d'applications à partir de votre propre référentiel de codes
 {: #tutorial-byoc}
 
-Si vous avez une application dans un référentiel existant, vous pouvez utiliser un kit de démarrage vide pour créer un enregistrement d'application dans {{site.data.keyword.cloud_notm}} et connecter l'application à votre référentiel source et à votre chaîne d'outils DevOps.
+Si vous avez une application dans un référentiel existant, vous pouvez utiliser un kit de démarrage de base pour créer un enregistrement d'application dans {{site.data.keyword.cloud_notm}} et connecter l'application à votre référentiel source et à votre chaîne d'outils DevOps.
 {: shortdesc}
 
-Vous pouvez commencer à partir du tableau de bord {{site.data.keyword.cloud_notm}} ou d'un kit de démarrage vide. Une fois que vous avez nommé votre application et que vous avez sélectionné un groupe de ressources, sélectionnez le point de démarrage **Utilisation de votre propre code**, indiquez l'URL du référentiel Git qui contient votre code puis cliquez sur **Créer**.
+Vous pouvez commencer à partir du tableau de bord {{site.data.keyword.cloud_notm}} ou d'un kit de démarrage de base. Une fois que vous avez nommé votre application et que vous avez sélectionné un groupe de ressources, sélectionnez le point de démarrage **Utilisation de votre propre code**, indiquez l'URL du référentiel Git qui contient votre code puis cliquez sur **Créer**.
 
 Vous pouvez connecter votre chaîne d'outils DevOps existante ou en créer une et fournir en continu votre application à la cible de déploiement de votre choix (Kubernetes ou Cloud Foundry, par exemple).
 
@@ -32,7 +32,7 @@ Vous pouvez connecter votre chaîne d'outils DevOps existante ou en créer une e
 
 Assurez-vous que les éléments prérequis suivants sont disponibles et prêts à être utilisés :
 
- * Installez l'interface de ligne de commande [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+ * Installez l'[interface de ligne de commande {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started).
  * Voir [Qu'est-ce qui caractérise une bonne application ?](/docs/apps?topic=creating-apps-best-practice) pour connaître les meilleures pratiques en matière de création d'applications.
  * Vous devez avoir un référentiel de codes source Git d'un des fournisseurs suivants : GitHub, GitHub Enterprise, Git lab, BitBucket ou Rational.
  * Si vous envisagez de déployer votre application dans [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about), vous devez [préparer votre compte {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).

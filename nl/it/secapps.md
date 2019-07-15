@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -29,7 +29,7 @@ Prima di poter caricare i certificati SSL a cui hai diritto con {{site.data.keyw
 e le informazioni associate. Più comunemente, i CSR sono in formato PKCS #10. Il CSR include una chiave pubblica, un nome comune, un'organizzazione, una città, uno stato, un paese ed una e-mail. Le richieste di certificati SSL
 vengono accettate solo con una lunghezza di chiave CSR pari a 2048 bit.
 
-I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ](http://www.openssl.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"):
+I metodi per creare un CSR variano a seconda del tuo sistema operativo. Il seguente esempio mostra come creare un CSR utilizzando [lo strumento riga di comando OpenSSL ](https://www.openssl.org/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
@@ -37,9 +37,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout
 ```
 {: codeblock}
 
-L'implementazione OpenSSL SHA-512 dipende dal supporto del compilatore per il tipo intero a 64 bit. Puoi utilizzare
-l'opzione SHA-1 per le applicazioni che presentano problemi di compatibilità con il certificato
-SHA-256.
+L'implementazione OpenSSL SHA-512 dipende dal supporto del compilatore per il tipo intero a 64 bit. Puoi utilizzare l'opzione SHA-1 per le applicazioni che presentano problemi di compatibilità con il certificato SHA-256.
 {: tip}
 
 ### Contenuto CSR richiesto
@@ -62,9 +60,7 @@ certificazione e viene firmato in maniera digitale da tale autorità. Dopo aver 
 ## Caricamento di certificati SSL
 {: #ssl_certificate}
 
-Puoi applicare un protocollo di sicurezza per garantire la riservatezza
-delle comunicazioni della tua applicazione in modo da prevenire l'intercettazione delle comunicazioni,
-la manomissione e la falsificazione dei messaggi. Se hai un account Lite, devi eseguire l'upgrade del tuo account per caricare un certificato.
+Puoi applicare un protocollo di sicurezza per garantire la riservatezza delle comunicazioni della tua applicazione in modo da prevenire l'intercettazione delle comunicazioni, la manomissione e la falsificazione dei messaggi. Se hai un account Lite, devi eseguire l'upgrade del tuo account per caricare un certificato.
 
 Quando utilizzi un dominio personalizzato per servire il certificato SSL, utilizza i seguenti endpoint della regione per fornire la rotta URL per la tua organizzazione in {{site.data.keyword.cloud_notm}}:
 
@@ -75,6 +71,7 @@ Quando utilizzi un dominio personalizzato per servire il certificato SSL, utiliz
 | EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="Tabella 1. Endpoint della regione del dominio personalizzato Cloud Foundry" caption-side="top"}
 
 Per caricare un certificato per la tua applicazione Cloud Foundry, completa la seguente procedura:
 
@@ -93,8 +90,7 @@ certificazione e viene firmato in maniera digitale da tale autorità. Un certifi
 solo dalla chiave pubblica corrispondente. Inoltre, la chiave privata viene utilizzata per decrittografare i messaggi crittografati con la chiave pubblica corrispondente. La chiave privata è conservata sul sistema dell'utente e protetta da password.
   * Certificato intermedio (facoltativo): un certificato subordinato emesso dall'autorità di certificazione (CA) radice attendibile
 specificamente per emettere certificati server per l'entità finale. Il risultato è una catena di certificati che inizia dalla CA radice
-attendibile, passa per quello intermedio e termina con il certificato SSL emesso per l'organizzazione. Utilizza un certificato intermedio per verificare l'autenticità del certificato principale. I certificati intermedi vengono di norma ottenuti da una terza parte attendibile. Potresti non aver bisogno
-di un certificato intermedio durante il test della tua applicazione prima che ne esegui la distribuzione in produzione.
+attendibile, passa per quello intermedio e termina con il certificato SSL emesso per l'organizzazione. Utilizza un certificato intermedio per verificare l'autenticità del certificato principale. I certificati intermedi vengono di norma ottenuti da una terza parte attendibile. Potresti non aver bisogno di un certificato intermedio durante il test della tua applicazione prima che ne esegui la distribuzione in produzione.
   * Abilita la richiesta del certificato client: se abiliti questa opzione, a un utente che prova ad accedere a un dominio protetto da SSL viene richiesto di fornire un certificato lato client. Ad esempio, in un browser web, quando un utente prova ad accedere a un dominio protetto da SSL,
 il browser web gli richiede di fornire un certificato client per il dominio.   
   * Truststore certificato client (facoltativo): include i certificati client per gli utenti a cui vuoi consentire l'accesso alla tua applicazione. Carica un file truststore certificato client per abilitare l'opzione per richiedere un certificato client.

@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 在 cloud.ibm.com 上提供了新的主机名选项 `*.appdomain.cloud`。
 
-先前，`mybluemix.net` 域用于在多个部署目标（例如，{{site.data.keyword.containerlong_notm}} 或 Cloud Foundry）中托管应用程序。在 `mybluemix.net` 上托管的任何应用程序不会受影响。
+先前，`mybluemix.net` 域用于在各种部署目标（例如，{{site.data.keyword.containerlong_notm}} 或 Cloud Foundry）中托管应用程序。在 `mybluemix.net` 上托管的任何应用程序不会受影响。
 
 Cloud Foundry 应用程序的子域为 `cf.appdomain.cloud`。部署到 {{site.data.keyword.containerlong_notm}} 的应用程序的子域为 `containers.appdomain.cloud`。
 

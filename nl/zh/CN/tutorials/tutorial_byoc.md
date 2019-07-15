@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # 通过您自己的代码存储库创建应用程序
 {: #tutorial-byoc}
 
-如果在现有存储库中有应用程序，那么可以使用空白入门模板工具包在 {{site.data.keyword.cloud_notm}} 中创建应用程序记录，并将该应用程序连接到源存储库和 DevOps 工具链。
+如果在现有存储库中有应用程序，那么可以使用基本入门模板工具包在 {{site.data.keyword.cloud_notm}} 中创建应用程序记录，并将该应用程序连接到源存储库和 DevOps 工具链。
 {: shortdesc}
 
-您可以从 {{site.data.keyword.cloud_notm}}“仪表板”或空白入门模板工具包开始。在命名应用程序并选择资源组之后，选择**自带代码**起始点，提供包含代码的 Git 存储库 URL，然后单击**创建**。
+您可以从 {{site.data.keyword.cloud_notm}} 仪表板或任何基本入门模板工具包开始。在命名应用程序并选择资源组之后，选择**自带代码**起始点，提供包含代码的 Git 存储库 URL，然后单击**创建**。
 
 您可以连接现有 DevOps 工具链或创建 DevOps 工具链，然后持续将应用程序交付到所选的部署目标，例如 Kubernetes 或 Cloud Foundry。
 
@@ -32,7 +32,7 @@ subcollection: creating-apps
 
 确保以下先决条件已准备就绪：
 
- * 安装 [{{site.data.keyword.dev_cli_long}} 命令行界面 (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+ * 安装 [{{site.data.keyword.dev_cli_long}} 命令行界面 (CLI)](/docs/cli?topic=cloud-cli-getting-started)。
  * 请参阅[优秀应用程序的要素是什么？](/docs/apps?topic=creating-apps-best-practice)以获取创建应用程序的最佳实践。
  * 您必须具有来自以下任一提供者的 Git 源代码存储库：GitHub、GitHub Enterprise、GitLab、BitBucket 或 Rational。
  * 如果计划将应用程序部署到 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about)，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
@@ -93,7 +93,7 @@ Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL。在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
+3. 在日志文件中，查找应用程序的 URL。在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
 
 如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令，在缺省浏览器中打开手动部署的应用程序的页面。

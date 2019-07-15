@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-03"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -37,12 +37,11 @@ Vous pouvez afficher tous les services qui sont disponibles dans {{site.data.key
 * Depuis la ligne de commande. Utilisez la commande `ibmcloud service offerings`.
 * Depuis votre propre application. Utilisez l'API [GET /v2/services Services](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
-Vous pouvez sélectionner le service dont vous avez besoin pendant le développement des applications. Une fois le service sélectionné, {{site.data.keyword.cloud_notm}} met le service à disposition. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration.
+Vous pouvez sélectionner le service dont vous avez besoin pendant le développement d'applications. Une fois le service sélectionné, {{site.data.keyword.cloud_notm}} met le service à disposition. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration. 
 
-{{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une
-instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
+{{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
 
-Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation de ces services de la même façon que vous codez les applications externes ou les outils tiers pour l'utilisation des services {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Connexion de services à des applications externes](/docs/resources?topic=resources-externalapp).
+Vous pouvez aussi utiliser des services qui sont hébergés dans d'autres régions, si ces services sont disponibles dans ces régions. Ils doivent être accessibles depuis Internet et posséder des noeuds finaux d'API. Vous devez coder manuellement votre application pour l'utilisation de ces services de la même façon que vous codez des applications externes ou des outils tiers pour l'utilisation des services {{site.data.keyword.cloud_notm}}. Pour plus d'informations, voir [Connexion de services à des applications externes](/docs/resources?topic=resources-externalapp).
 
 ## Demande de nouvelle instance de service
 {: #request-instance}
@@ -80,16 +79,17 @@ services {{site.data.keyword.cloud_notm}} avec des applications externes](/docs/
 ## Configuration de votre application
 {: #configure-app}
 
-Une fois que vous avez lié une instance de service à votre application, vous devez configurer votre application pour
-qu'elle interagisse avec le service.
+Une fois que vous avez lié une instance de service à votre application, vous devez configurer celle-ci pour qu'elle interagisse avec le service.
 
 Chaque service peut nécessiter un mécanisme différent pour communiquer avec les applications. Ces mécanismes sont documentés dans la définition de service, dont vous disposez lorsque vous développez des applications. Pour assurer une cohérence, les mécanismes sont requis pour que votre application interagisse avec le service.
 
 * Pour interagir avec des services de base de données, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme l'ID utilisateur, le mot de passe et l'URI d'accès pour l'application.
-* Pour interagir avec des services de back end mobile, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme l'identité de l'application, les informations de sécurité propres au client et l'URI d'accès pour l'application. En général, les services mobiles fonctionnent en contexte les uns avec les autres de sorte que les informations de contexte, comme le nom du développeur de l'application et l'utilisateur qui utilise l'application, puissent être partagées entre les services.
+* Pour interagir avec des services de back end mobile, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme l'identité de l'application, les informations de sécurité propres au client et l'URI d'accès pour l'application. En règle générale, les services mobiles fonctionnent en contexte les uns avec les autres, de sorte que les informations de contexte, comme le nom du développeur de l'application et l'utilisateur de l'application, peuvent être partagées entre les services.
 * Pour interagir avec des applications Web ou le code de cloud côté client pour les applications mobiles, utilisez les informations fournies par {{site.data.keyword.cloud_notm}}, comme les données d'identification d'exécution dans la variable d'environnement *VCAP_SERVICES* de l'application. La valeur de la variable d'environnement *VCAP_SERVICES* est la sérialisation d'un objet JSON. La variable contient les données d'exécution requises pour interagir avec les services auxquels l'application est liée. Le format des données varie selon les services. Reportez-vous à la documentation du service pour plus de détails sur la manière d'interpréter chaque élément d'information.
 
-Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application afin d'identifier les pannes et d'assurer la reprise après une indisponibilité, une exception ou une panne de connexion.
+Si un service que vous liez à une application tombe en panne, il se peut que l'application s'arrête ou
+présente des erreurs. {{site.data.keyword.cloud_notm}} ne redémarre pas automatiquement l'application pour assurer la reprise à la suite de ces problèmes. Envisagez de coder votre application de sorte à identifier les indisponibilités, les exceptions et les pannes de connexion pour assurer
+la reprise.
 
 ## Accès à des services via des environnements de déploiement {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
@@ -156,7 +156,7 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
         OK
         ```
 
-2. Liez l'instance de service à votre application avec la commande `ibmcloud service bind`. Exemple :
+2. Liez l'instance de service à votre application via la commande `ibmcloud service bind`. Exemple :
 
 	```
 	ibmcloud service bind myapp testups1
@@ -164,4 +164,4 @@ Pour créer une instance de service fournie par l'utilisateur et la lier à une 
 	OK
 	```
 
-A présent, vous pouvez configurer votre application afin d'utiliser les services externes. Pour savoir comment configurer votre application pour l'interaction avec un service, voir [Configuration de votre application pour l'interaction avec un service](/docs/apps?topic=creating-apps-add-resource#configure-app).
+Vous pouvez à présent configurer votre application afin d'utiliser les services externes. Pour des informations sur la configuration de votre application pour une interaction avec un service, voir [Configuration de votre application](/docs/apps?topic=creating-apps-add-resource#configure-app).

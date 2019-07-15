@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 Uma nova opção de nome do host `*.appdomain.cloud` está disponível em cloud.ibm.com.
 
-Anteriormente, o domínio `mybluemix.net` foi usado para hospedar apps em vários destinos de implementação, como o {{site.data.keyword.containerlong_notm}} ou o Cloud Foundry. Qualquer app que você hospedou em `mybluemix.net` não será impactado.
+Anteriormente, o domínio `mybluemix.net` era usado para hospedar aplicativos em vários destinos de implementação, como o {{site.data.keyword.containerlong_notm}} ou Cloud Foundry. Qualquer app que você hospedou em `mybluemix.net` não será impactado.
 
 O subdomínio para apps do Cloud Foundry é `cf.appdomain.cloud`. O subdomínio para apps que você implementa no {{site.data.keyword.containerlong_notm}} é `containers.appdomain.cloud`.
 
@@ -39,7 +39,7 @@ Para obter mais informações, consulte [Gerenciando seus domínios](/docs/apps?
 {: #cf-app}
 {: faq}
 
-Sua lista de recursos no [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") fornece informações de resumo para os aplicativos que você criou. Na lista de recursos, a seção **Apps** contém todos os apps que você criou, mas *não* implementou no Cloud Foundry. A seção **Apps do Cloud Foundry** contém todos os apps que você criou e implementou no Cloud Foundry.
+Sua lista de recursos no [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") fornece informações de resumo para os apps criados. Na lista de recursos, a seção **Apps** contém todos os apps que você criou, mas *não* implementou no Cloud Foundry. A seção **Apps do Cloud Foundry** contém todos os apps que você criou e implementou no Cloud Foundry.
 
 ## Por que não posso selecionar um espaço do Cloud Foundry quando tento implementar meu app?
 {: #cf-space}

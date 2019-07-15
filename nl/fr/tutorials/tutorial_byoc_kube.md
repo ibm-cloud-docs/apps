@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 Découvrez comment créer une application dans {{site.data.keyword.cloud}} en utilisant votre référentiel d'applications existant. Vous pouvez connecter votre chaîne d'outils DevOps existante ou en créer une et fournir en continu une application à un conteneur sécurisé dans un cluster Kubernetes. Ce tutoriel présente comment configurer un pipeline DevOps d'intégration en continu afin que la modification soit automatiquement générée et propagée à votre application déployée dans le cluster Kubernetes.
 {: shortdesc}
 
-Lorsque vous avez déjà un référentiel de codes source avec un codebase pour une application d'arrière-plan opérationnelle, {{site.data.keyword.cloud_notm}} vous permet d'organiser cet actif dans une vue agrégée de tous les actifs constituant l'ensemble du produit. {{site.data.keyword.cloud_notm}} vous permet d'utiliser un flux de travaux DevOps évolutif lorsque vous avez recours à la fonction de chaîne d'outils DevOps. Ce tutoriel permet à l'ingénieur DevOps ou au développeur expérimenté d'acquérir et de configurer un cluster {{site.data.keyword.cloud_notm}} Kubernetes cible et de configurer et d'exécuter une chaîne d'outils DevOps, en suivant les meilleures pratiques en matière de cloud.
+Lorsque vous avez déjà un référentiel de codes source avec un codebase pour une application de back end opérationnelle, {{site.data.keyword.cloud_notm}} permet d'organiser cet actif dans une vue agrégée de tous les actifs constituant l'ensemble du produit. {{site.data.keyword.cloud_notm}} vous permet d'utiliser un flux de travaux DevOps évolutif lorsque vous avez recours à la fonction de chaîne d'outils DevOps. Ce tutoriel permet à l'ingénieur DevOps ou au développeur expérimenté d'acquérir et de configurer un {{site.data.keyword.containerlong}} cible et de configurer et d'exécuter une chaîne d'outils DevOps, en suivant les meilleures pratiques en matière de cloud.
 
 Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de périphériques de stockage permettant d'assurer une haute disponibilité des applications. Une fois que vous avez créé votre cluster, vous pouvez déployer vos applications dans des conteneurs.
 {: tip}
@@ -45,8 +45,7 @@ Un _cluster_ est un ensemble de ressources, de noeuds d'agent, de réseaux et de
 ## Ajout de services à votre application (facultatif)
 {: #resources-byoc-kube}
 
-Une fois que vous avez créé votre application, vous pouvez ajouter un service à votre application à partir de la page **Détails de l'application**. {{site.data.keyword.cloud_notm}} crée l'instance de service pour vous. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration. {{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une
-instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
+Une fois que vous avez créé votre application, vous pouvez ajouter un service à votre application à partir de la page **Détails de l'application**. {{site.data.keyword.cloud_notm}} crée l'instance de service pour vous. Le processus de mise à disposition peut varier en fonction des types de service. Par exemple, un service de base de données crée une base de données, un service de notification push pour des applications mobiles génère des informations de configuration. {{site.data.keyword.cloud_notm}} fournit les ressources d'un service à votre application par le biais d'une instance de service. Une instance de service peut être partagée entre plusieurs applications Web.
 
 Ce processus met à disposition une instance de service, crée une clé de ressource (données d'identification) et l'associe à votre application. Pour plus d'informations, voir [Ajout d'un service à votre application](/docs/apps?topic=creating-apps-add-resource).
 
@@ -55,7 +54,7 @@ Une fois que vous avez ajouté un service à votre application, vous devez [copi
 ## Préparation de votre application pour le déploiement
 {: #deploy-byoc-kube}
 
-Dans cette étape, vous allez connecter une chaîne d'outils DevOps à l'application et allez la configurer afin qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.containershort_notm}}.
+Dans cette étape, vous allez connecter une chaîne d'outils DevOps à l'application et allez la configurer afin qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.containerlong}}.
 
 La chaîne d'outils DevOps est suffisamment flexible pour permettre l'exécution gérée d'étapes arbitraires d'exécution de script shell. Autrement dit, vous pouvez effectuer quasiment toutes les actions avec une chaîne d'outils DevOps. La portée de cette section cible le déploiement de votre application sur un cluster Kubernetes, tout en gardant à l'esprit une vérification future de DevOps mis à l'échelle et des meilleures pratiques en matière de cloud.
 
@@ -107,7 +106,7 @@ Vous pouvez afficher le nouveau webhook à partir de vos paramètres de référe
 ### Configuration de vos étapes de pipeline
 {: #pipelineconfig-byoc-kube}
 
-Configurez les étapes de pipeline pour diriger votre entrée (contenu du référentiel GitHub) vers la destination appropriée. Etant donné que ce tutoriel suppose que vous avez un référentiel GitHub qui génère une image Docker fonctionnelle et qui cible un cluster IBM Containers Kubernetes, vous créez des étapes de pipeline avec des entrées, des scripts shell et des sorties permettant d'atteindre cet objectif.
+Configurez les étapes de pipeline pour diriger votre entrée (contenu du référentiel GitHub) vers la destination appropriée. Comme ce tutoriel suppose que vous disposez d'un référentiel GitHub qui génère une image Docker fonctionnelle et qui cible un {{site.data.keyword.containerlong}}, vous créez des étapes de pipeline avec des entrées, des scripts shell et des sorties permettant d'atteindre cet objectif.
 
 1. Configurez votre étape de pipeline de `génération et de publication`.
   1. Sélectionnez le pipeline de distribution que vous avez créé puis cliquez sur **Ajouter une étape**.
@@ -167,6 +166,6 @@ Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view
 ## Informations connexes
 
  * [Création de chaînes d'outils](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Configuration de Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configuration de Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [Configuration de GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [Configuration de GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

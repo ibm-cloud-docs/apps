@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,10 +21,10 @@ subcollection: creating-apps
 
 アプリケーションの可用性とパフォーマンスのモニタリングはすぐに開始できます。 {{site.data.keyword.prf_hubshort}} をアプリにバインドすると、デフォルトではメイン・アプリ URL をモニターする合成テストが自動的に作成されます。
 
-{{site.data.keyword.prf_hublong}} は、{{site.data.keyword.cloud_notm}} カタログの DevOps ドメイン内のサービスとして使用できます。 また、**「モニタリング」**タブの「Cloud Foundry アプリケーション」ダッシュボードでも利用できます。 
+{{site.data.keyword.prf_hublong}} は、{{site.data.keyword.cloud_notm}} カタログの DevOps ドメイン内のサービスとして使用できます。 また、**「モニタリング」**タブの「Cloud Foundry アプリ」ダッシュボードでも利用できます。 
 {: shortdesc}
 
-アプリケーションを作成する際に {{site.data.keyword.prf_hubshort}} を DevOps ツールチェーンに追加することによって、そのアプリケーションの正常性をテスト、モニター、改善することができます。
+アプリを作成する際に {{site.data.keyword.prf_hubshort}} を DevOps ツールチェーンに追加することによって、そのアプリの正常性をテスト、モニター、改善することができます。
 
 このツール統合は、Cloud Foundry アプリでのみ使用可能です。 これは事前構成されているため、構成パラメーターは必要ありません。 このツール統合を再構成することはできません。
 {: tip}

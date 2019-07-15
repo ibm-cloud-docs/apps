@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-19"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 既存のアプリ・リポジトリーを使用して、{{site.data.keyword.cloud}} でアプリケーションを作成する方法について説明します。 既存の DevOps ツールチェーンを接続するか、ツールチェーンを作成して、アプリを Kubernetes クラスター内のセキュアなコンテナーに継続的にデリバリーできます。 このチュートリアルでは、変更を自動的にビルドし、Kubernetes クラスター内のデプロイ済みアプリまで伝搬できるように、継続的統合 DevOps パイプラインのセットアップを支援します。
 {: shortdesc}
 
-作動中バックエンド・アプリケーションのコード・ベースを含んだソース・コード・リポジトリーが既に存在する場合、{{site.data.keyword.cloud_notm}} は、そのアセットを、製品全体を構成するすべてのアセットを集約したビューの一部として編成するのを支援します。 DevOps ツールチェーン・フィーチャーを使用すると、{{site.data.keyword.cloud_notm}} によって、スケーラブルな DevOps ワークフローを立ち上げ、稼働することが可能になります。 このチュートリアルは、経験を積んだ開発者または DevOps エンジニアがターゲットの {{site.data.keyword.cloud_notm}} Kubernetes クラスターを獲得および構成し、DevOps ツールチェーンを構成および実行するまでのすべてを、クラウドのベスト・プラクティスを指針として行えるように支援します。
+作動中バックエンド・アプリのコード・ベースを含んだソース・コード・リポジトリーが既に存在する場合、{{site.data.keyword.cloud_notm}} は、そのアセットを、製品全体を構成するすべてのアセットを集約したビューの一部として編成するのを支援します。 DevOps ツールチェーン・フィーチャーを使用すると、{{site.data.keyword.cloud_notm}} によって、スケーラブルな DevOps ワークフローを立ち上げ、稼働することが可能になります。 このチュートリアルは、経験を積んだ開発者または DevOps エンジニアがターゲットの {{site.data.keyword.containerlong}} を獲得および構成し、DevOps ツールチェーンを構成および実行するまでのすべてを、クラウドのベスト・プラクティスを指針として行えるように支援します。
 
 _クラスター_ とは、アプリの高可用性を維持する一連のリソース、ワーカー・ノード、ネットワーク、ストレージ・デバイスのことです。 クラスターを作成した後、アプリをコンテナーにデプロイできます。
 {: tip}
@@ -33,7 +33,7 @@ _クラスター_ とは、アプリの高可用性を維持する一連のリ�
 
 * [独自のコード・リポジトリーからアプリを作成](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)します。
 * [{{site.data.keyword.cloud_notm}} コンソール ](https://{DomainName}){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") で、**「メニュー」**アイコン ![「メニュー」アイコン](../../icons/icon_hamburger.svg) をクリックし、**「コンテナー」**を選択して、[Kubernetes クラスターを構成](/docs/containers?topic=containers-getting-started)します。
-* アプリが Docker で実行できることを確認します。以下のコマンドは例です。ご使用のアプリに存在する手順とは限りません。
+* アプリが Docker で実行できることを確認します。 以下のコマンドは例です。ご使用のアプリに存在する手順とは限りません。
   - `git clone git@github.com:yourrepo/spring-boot-hello-world.git`
   - `cd spring-boot-hello-world`
   - `mvn clean install`
@@ -45,17 +45,17 @@ _クラスター_ とは、アプリの高可用性を維持する一連のリ�
 ## アプリへのサービスの追加 (オプション)
 {: #resources-byoc-kube}
 
-アプリを作成したあと、**「アプリの詳細」**ページからアプリにサービスを追加できます。{{site.data.keyword.cloud_notm}} によってサービス・インスタンスが自動的に作成されます。 サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、
-モバイル・アプリケーションのプッシュ通知サービスは構成情報を生成します。 {{site.data.keyword.cloud_notm}} は、サービス・インスタンスを使用してサービスのリソースをアプリケーションに提供します。 サービス・インスタンスは Web アプリケーション間で共有できます。
+アプリを作成したあと、**「アプリの詳細」**ページからアプリにサービスを追加できます。 {{site.data.keyword.cloud_notm}} によってサービス・インスタンスが自動的に作成されます。 サービスのタイプによってプロビジョンのプロセスが異なる場合があります。 例えば、データベース・サービスはデータベースを作成し、
+モバイル・アプリのプッシュ通知サービスは構成情報を生成します。 {{site.data.keyword.cloud_notm}} は、サービス・インスタンスを使用してサービスのリソースをアプリに提供します。 サービス・インスタンスは Web アプリ間で共有できます。
 
 このプロセスでは、サービス・インスタンスをプロビジョンし、リソース・キー (資格情報) を作成し、それをアプリにバインドします。 詳しくは、[アプリへのサービスの追加](/docs/apps?topic=creating-apps-add-resource)を参照してください。
 
-サービスをアプリに追加した後、そのサービスの資格情報をデプロイメント環境にコピーする必要があります。 詳しくは、[Kubernetes 環境への資格情報の追加](/docs/apps?topic=creating-apps-add-credentials-kube)を参照してください。
+サービスをアプリに追加した後、[そのサービスの資格情報をデプロイメント環境にコピーする](/docs/apps?topic=creating-apps-credentials_overview)必要があります。
 
 ## デプロイメントに向けたアプリの準備
 {: #deploy-byoc-kube}
 
-このステップでは、DevOps ツールチェーンをアプリケーションに接続し、{{site.data.keyword.containershort_notm}} でホストされている Kubernetes クラスターにデプロイされるように構成します。
+このステップでは、DevOps ツールチェーンをアプリに接続し、{{site.data.keyword.containerlong}} でホストされている Kubernetes クラスターにデプロイされるように構成します。
 
 DevOps ツールチェーンは柔軟であり、シェル・スクリプト実行の任意のステージを管理下で実行できます。 つまり、DevOps ツールチェーンでは、ほとんどのことを行うことができます。 このセクションのスコープでは、拡大される DevOps に対応する「将来の保証」およびクラウドのベスト・プラクティスに留意しながら、Kubernetes クラスターへのアプリのデプロイメントに焦点を当てます。
 
@@ -66,7 +66,7 @@ DevOps ツールチェーンは柔軟であり、シェル・スクリプト実�
 すでに DevOps ツールチェーンがある場合は、以下の手順を実行します。
 
 1. **「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 **「マイ・アプリのデプロイ (Deploy my app)」**ページが表示されます。
-2. アプリに接続するツールチェーンを選択し、**「デプロイメントの有効化 (Enable deployment)」**をクリックします。**「アプリの詳細」**ページが表示され、継続的デリバリーが構成されたことが示されます。
+2. アプリに接続するツールチェーンを選択し、**「デプロイメントの有効化 (Enable deployment)」**をクリックします。 **「アプリの詳細」**ページが表示され、継続的デリバリーが構成されたことが示されます。
 
 DevOps ツールチェーンを最初から作成することを希望しない場合は、[`ibmcloud dev enable` コマンド](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)を使用して既存のコードをクラウド対応にすることができます。 このコマンドにより、リポジトリーにチェックインする DevOps ツールチェーン・テンプレートが生成されます。 次に、DevOps ツールチェーンが作成する命令セットとしてそのテンプレートを使用します。 詳しくは、[CLI の資料](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli)を参照してください。
 {: tip}
@@ -75,7 +75,7 @@ DevOps ツールチェーンを最初から作成することを希望しない�
 
 コード・リポジトリーはいっさい変更せずに、DevOps ツールチェーンの作成を完全に制御することを希望する場合は、ツールチェーンを最初から作成します。 また、アプリをビルドして Kubernetes クラスターにデプロイするためのすべての統合も作成します。 
 
-1. **「アプリの詳細」**ページで、**「DevOps ツールチェーンの作成 (Create DevOps toolchain)」**をクリックします。**「ツールチェーンの作成」**ページが表示されます。
+1. **「アプリの詳細」**ページで、**「DevOps ツールチェーンの作成 (Create DevOps toolchain)」**をクリックします。 **「ツールチェーンの作成」**ページが表示されます。
 2. **「Build your own ツールチェーン」**テンプレートを選択します。
 3. **「Build your own ツールチェーン」**ページで、ツールチェーンの名前を入力し、地域とリソース・グループ (デフォルト) を選択し、**「作成」**をクリックします。
 4. ブラウザー・ウィンドウの階層リンクを使用して**「アプリの詳細」**ページに戻ると、継続的デリバリーが構成されたことが表示されています。
@@ -84,7 +84,7 @@ DevOps ツールチェーンを最初から作成することを希望しない�
 ### GitHub 統合の追加
 {: #github-byoc-kube}
 
-ツールチェーンの GitHub リポジトリーの統合を使用して DevOps ツールチェーンを構成します。これにより、リポジトリー内に Web フックが設定され、そのリポジトリー内のプル要求およびコード・プッシュがツールチェーンに POST を送信するようになります。
+ツールチェーンの GitHub リポジトリーの統合を使用して DevOps ツールチェーンを構成します。 これにより、リポジトリー内に Web フックが設定され、そのリポジトリー内のプル要求およびコード・プッシュがツールチェーンに POST を送信するようになります。
 
 1. 空の DevOps ツールチェーン・テンプレートで、**「ツールの追加」**をクリックします。
 2. **「GitHub」**を選択します (ご使用のリポジトリーがパブリック GitHub または Enterprise GitHub 上にある場合)。
@@ -107,7 +107,7 @@ DevOps ツールチェーンを最初から作成することを希望しない�
 ### パイプライン・ステージの構成
 {: #pipelineconfig-byoc-kube}
 
-入力 (GitHub リポジトリーのコンテンツ) を正しい宛先に送信するためのパイプライン・ステージを構成します。 このチュートリアルでは、作業用 Docker イメージを生成する GitHub リポジトリーが存在し、ターゲットが IBM Containers Kubernetes クラスターであることを前提としているため、この目標を達成する入力、シェル・スクリプト、および出力を持つパイプライン・ステージを作成します。
+入力 (GitHub リポジトリーのコンテンツ) を正しい宛先に送信するためのパイプライン・ステージを構成します。 このチュートリアルでは、作業用 Docker イメージを生成する GitHub リポジトリーが存在し、ターゲットが {{site.data.keyword.containerlong}}であることを前提としているため、この目標を達成する入力、シェル・スクリプト、および出力を持つパイプライン・ステージを作成します。
 
 1. `「ビルドおよび公開 (build and publish)」`パイプライン・ステージを構成します。
   1. 作成した Delivery Pipeline を選択して、**「ステージを追加」**をクリックします。
@@ -159,7 +159,7 @@ Delivery Pipeline またはコマンド・ラインにアプリの URLが示さ�
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。 ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+3. ログ・ファイルで、アプリ URL を見つけます。 ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
 コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行して、手動でデプロイしたアプリのページをデフォルト・ブラウザーで開きます。
@@ -167,6 +167,6 @@ Delivery Pipeline またはコマンド・ラインにアプリの URLが示さ�
 ## 関連情報
 
  * [ツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Git Repos and Issue Tracking の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Git Repos and Issue Tracking の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [GitHub の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [GitLab の構成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

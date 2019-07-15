@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -27,7 +27,7 @@ Vous pouvez sécuriser vos applications en téléchargeant des certificats SSL e
 
 Pour pouvoir télécharger les certificats SSL pour lesquels vous disposez d'une habilitation dans {{site.data.keyword.cloud}}, vous devez créer une demande de signature de certificat sur votre serveur. Une demande de signature de certificat est un message qui est envoyé à une autorité de certification afin de demander la signature d'une clé publique et des informations associées. En général, les demandes de signature de certificat sont au format PKCS #10. Une demande de signature de certificat inclut une clé publique ainsi qu'un nom usuel, une organisation, une ville, un état, un pays et une adresse électronique. Les demandes de certificat SSL ne sont acceptées qu'avec une longueur de clé de demande de signature de certificat de 2048 bits.
 
-Les méthodes de création d'une demande de signature de certificat varient selon le système d'exploitation. L'exemple suivant présente comment créer une demande de signature de certificat à l'aide de l'[outil de ligne de commande OpenSSL](http://www.openssl.org/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") :
+Les méthodes de création d'une demande de signature de certificat varient selon le système d'exploitation. L'exemple suivant présente comment créer une demande de signature de certificat à l'aide de l'[outil de ligne de commande OpenSSL](https://www.openssl.org/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") :
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -56,7 +56,7 @@ Un certificat est émis par un organisme de certification et il est signé numé
 ## Téléchargement de certificats SSL
 {: #ssl_certificate}
 
-Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialité des communications avec votre application et empêcher les écoutes clandestines, les altérations et les falsifications de messages. Si vous disposez d'un compte Lite, vous devez mettre à niveau votre compte pour télécharger un certificat. 
+Vous pouvez appliquer un protocole de sécurité pour garantir la confidentialité des communications avec votre application et empêcher les écoutes clandestines, les altérations et les falsifications de messages. Si vous disposez d'un compte Lite, vous devez mettre à niveau votre compte pour télécharger un certificat.
 
 Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, utilisez les noeuds finals de région suivants afin de fournir la route d'URL de votre organisation dans {{site.data.keyword.cloud_notm}} :
 
@@ -67,6 +67,7 @@ Lorsque vous utilisez un domaine personnalisé pour servir le certificat SSL, ut
 | UE - Allemagne | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | UE - Royaume-Uni | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | Australie - Sydney | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="Tableau 1. Noeuds finaux de région de domaine personnalisé Cloud Foundry " caption-side="top"}
 
 Pour télécharger un certificat pour votre application Cloud Foundry, procédez comme suit :
 

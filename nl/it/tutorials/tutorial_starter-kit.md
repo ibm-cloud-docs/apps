@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -15,15 +15,15 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{: note .note}
+{:note: .note}
 
 # Creazione di un'applicazione con il kit starter
 {: #tutorial-starterkit}
 
-Puoi utilizzare un kit starter per avviare rapidamente la tua applicazione e prepararla per lo sviluppo futuro. Seleziona un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
+Puoi utilizzare un kit starter per avviare rapidamente la tua applicazione e prepararla per lo sviluppo futuro. Seleziona un kit starter e un linguaggio di programmazione, crea un'applicazione e configura quindi una toolchain DevOps per distribuire automaticamente la tua applicazione.
 {: shortdesc}
 
-Puoi creare un'applicazione da una selezione di kit starter, compreso uno vuoto se vuoi personalizzare tu stesso le opzioni di build. In entrambi i casi, una toolchain DevOps viene creata automaticamente per la distribuzione della tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
+Puoi creare un'applicazione da una selezione di kit starter, compreso uno di base se vuoi personalizzare tu stesso le opzioni di build. In entrambi i casi, una toolchain DevOps viene creata automaticamente per la distribuzione della tua applicazione. Puoi anche scaricare il codice per l'ispezione immediata.
 
 {{site.data.keyword.cloud_notm}} ha portali per gli sviluppatori in diverse aree di interesse (come Watson, Security o Finance) o un canale digitale (come Mobile o Applicazioni Web). Puoi accedere a questi portali dall'icona **Menu** ![Icona Menu](../../icons/icon_hamburger.svg).
 
@@ -42,7 +42,7 @@ Vedi [Cosa sono i kit starter?](/docs/apps?topic=creating-apps-starter-kits) per
 ## Passo 1. Installa gli strumenti
 {: #prereqs-starterkit}
 
-* Installa gli [strumenti sviluppatore](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Installa gli [strumenti sviluppatore](/docs/cli?topic=cloud-cli-getting-started).
 * Docker viene installato come parte degli strumenti per sviluppatori. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione. Devi creare un account Docker, eseguire l'applicazione Docker ed effettuare l'accesso.
 * Se intendi distribuire la tua applicazione a {{site.data.keyword.cfee_full}}, devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -51,9 +51,9 @@ Vedi [Cosa sono i kit starter?](/docs/apps?topic=creating-apps-starter-kits) per
 
 I kit starter sono disponibili in molti linguaggi e framework in {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Puoi utilizzare i filtri di categoria, ad esempio linguaggio e tipo, per restringere la selezione.
 
-1. Dalla pagina dei [kit starter](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") nella console {{site.data.keyword.dev_console}}, seleziona un kit starter e fai clic su **Create app**. 
+1. Dalla pagina dei [kit starter](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") nella console {{site.data.keyword.dev_console}}, seleziona un kit starter e fai clic su **Create app**. 
 
-    Per visualizzare ciò che è incluso nel kit starter, seleziona il tile e leggi i dettagli. Se vuoi utilizzare un kit starter vuoto e personalizzarlo, seleziona il tile **Create App**.
+    Per visualizzare ciò che è incluso nel kit starter, seleziona il tile e leggi i dettagli. Se vuoi utilizzare un kit starter di base e personalizzare la tua applicazione, seleziona il tile **Create App**.
     {: tip}
 
 2. Denomina la tua applicazione e seleziona un gruppo di risorse.
@@ -97,7 +97,10 @@ Per selezionare la tua destinazione di distribuzione e per configurare la fornit
 2. Seleziona un destinazione per la distribuzione. Configura la tua destinazione di distribuzione in base alle istruzioni per la destinazione che selezioni:
   * **Deploy to [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Questa opzione crea un cluster di host, denominati nodi di lavoro, per distribuire e gestire contenitori delle applicazioni ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
   * **Deploy to Cloud Foundry**. Questa opzione distribuisce la tua applicazione nativa del cloud senza che tu debba gestire l'infrastruttura sottostante. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda.
-  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
+  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni a un server virtuale](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    La distribuzione di VSI è disponibile per alcuni kit starter. Per utilizzare questa funzione, vai al [dashboard {{site.data.keyword.cloud_notm}}](https://{DomainName}) e fai clic su **Create an app** nel tile **Apps**.
+    {: note}
 
 Dopo aver selezionato e configurato la destinazione di distribuzione, la pagina App details indica che la fornitura continua è stata configurata. Puoi visualizzare il repository che contiene il codice di origine per la tua applicazione facendo clic su **View repo**.
 

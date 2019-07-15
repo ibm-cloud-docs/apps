@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -41,7 +41,12 @@ Mendix 是低程式碼開發環境及工具集，它能協助您更快速地遞�
 
 如果您尚未使用 Mendix 搭配 {{site.data.keyword.cloud_notm}}，則您會被引導至 Mendix Platform 註冊及授權 {{site.data.keyword.cloud_notm}} 代表您在 Mendix Platform 上建立新專案。這個專案會鏈結至 {{site.data.keyword.cloud_notm}}，因此部署會自動導向 {{site.data.keyword.cloud_notm}}。
 
-1. 如果您看到訊息：「若要完成應用程式建立，需要 Mendix 使用者帳戶。您要現在鏈結您的帳戶嗎？」，請按一下**鏈結帳戶**。
+1. 如果您看到此訊息，請按一下**鏈結帳戶**。
+  ```
+  「若要完成應用程式建立，需要 Mendix 使用者帳戶。您要現在鏈結您的帳戶嗎？」
+  ```
+  {: screen}
+
 2. 在 Mendix 確認頁面上，選取**我同意接受 Mendix 隱私權條款**，然後按一下**確認**。
 3. 看到提示時，提供您的電子郵件位址、密碼及國家/地區，然後按一下**建立**。
 4. 在**授權存取您的 Mendix 帳戶**頁面上，按一下**授權**。
@@ -68,13 +73,10 @@ Mendix Cloud Foundry 部署需要 PostGRES 資料庫服務，該服務沒有精�
 Mendix 是低程式碼的編寫環境。開發生命週期會需要您在 Mendix Modeler 桌面應用程式中開啟專案。
 
 1. 從您的 {{site.data.keyword.cloud_notm}} 應用程式，按一下**在 Mendix 上編輯**。
-2. 在 Mendix Web 入口網站中，按一下 **Edit in Desktop Modeler**。
-  Mendix 應用程式會在 Desktop Modeler 中開啟。
+2. 在 Mendix Web 入口網站中，按一下 **Edit in Desktop Modeler**。Mendix 應用程式會在 Desktop Modeler 中開啟。
 3. 編輯您的 Mendix 應用程式，然後儲存變更。
-4. 使用 Mendix Desktop Modeler 應用程式的 **Run** 功能表，選取 **Run** 選項。
-  即會建立部署套件並上傳到 Mendix。建立部署套件之後，您可以將應用程式部署至 {{site.data.keyword.cloud_notm}}。
-5. 若要部署 Mendix 應用程式，請回到 {{site.data.keyword.cloud_notm}} 上的**應用程式詳細資料**頁面，然後按一下**部署**。
-  這個動作會啟動您應用程式的 DevOps 工具鏈，它會從 Mendix 取回最新的部署，並將它部署至您的目標環境。部署完成之後，最新版的應用程式會自動啟動並變成可用。
+4. 使用 Mendix Desktop Modeler 應用程式的 **Run** 功能表，選取 **Run** 選項。即會建立部署套件並上傳到 Mendix。建立部署套件之後，您可以將應用程式部署至 {{site.data.keyword.cloud_notm}}。
+5. 若要部署 Mendix 應用程式，請回到 {{site.data.keyword.cloud_notm}} 上的**應用程式詳細資料**頁面，然後按一下**部署**。這個動作會啟動您應用程式的 DevOps 工具鏈，它會從 Mendix 取回最新的部署，並將它部署至您的目標環境。部署完成之後，最新版的應用程式會自動啟動並變成可用。
 
 在 {{site.data.keyword.cloud_notm}} 上的**應用程式詳細資料**頁面中按一下**配置持續交付**，所有 Mendix 應用程式即會部署至 {{site.data.keyword.cloud_notm}}。請不要透過 IBM DevOps 介面手動呼叫 Mendix 工具鏈。透過 DevOps 介面手動啟動工具鏈，可能會導致因為缺乏對 Mendix 部署很重要之必要 meta 資料，而使部署失敗。視您應用程式的狀態而定，可能會在 DevOps 工具鏈啟動期間失敗，或在已部署的應用程式中發生錯誤。
 
@@ -118,7 +120,7 @@ Mendix 是低程式碼的編寫環境。開發生命週期會需要您在 Mendix
 ### Kubernetes 應用程式的 {{site.data.keyword.cos_full_notm}} 設定
 {: #cos-kubeapps}
 
-請完成下列步驟，進行 Kubernetes 部署：
+請針對 Kubernetes 部署完成下列步驟：
 
 1. 將 `S3_ACCESS_KEY_ID` 及 `S3_SECRET_ACCESS_KEY` 環境變數設為叢集中的 Kubernetes 密碼值。如需建立 Kubernetes 密碼的相關資訊，請參閱 [{{site.data.keyword.containershort_notm}} 文件](/docs/containers?topic=containers-service-binding#adding_app)。
 

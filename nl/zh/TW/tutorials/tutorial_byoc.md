@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # 從您自己的程式碼儲存庫建立應用程式
 {: #tutorial-byoc}
 
-如果現有儲存庫中有一個應用程式，您可以使用空白的入門範本套件，在 {{site.data.keyword.cloud_notm}} 中建立應用程式記錄，並將應用程式連接至來源儲存庫及您的 DevOps 工具鏈。
+如果現有儲存庫中有一個應用程式，您可以使用基本入門範本套件，在 {{site.data.keyword.cloud_notm}} 中建立應用程式記錄，並將應用程式連接至來源儲存庫及您的 DevOps 工具鏈。
 {: shortdesc}
 
-您可以從 {{site.data.keyword.cloud_notm}} 儀表板或從任何空白的入門範本套件開始。在您命名應用程式並選取資源群組之後，請選取**自帶程式碼**起點，提供包含程式碼的 Git 儲存庫 URL，然後按一下**建立**。
+您可以從 {{site.data.keyword.cloud_notm}} 儀表板或從任何基本入門範本套件開始。在您命名應用程式並選取資源群組之後，請選取**自帶程式碼**起點，提供包含程式碼的 Git 儲存庫 URL，然後按一下**建立**。
 
 您可以連接現有的 DevOps 工具鏈或建立一個，並持續將應用程式遞送至您所選擇的部署目標，例如，Kubernetes 或 Cloud Foundry。
 
@@ -32,7 +32,7 @@ subcollection: creating-apps
 
 請確定已備妥下列必要條件：
 
- * 安裝 [{{site.data.keyword.dev_cli_long}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+ * 安裝 [{{site.data.keyword.dev_cli_long}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-getting-started)。
  * 參閱[構成良好應用程式的要點？](/docs/apps?topic=creating-apps-best-practice)，以取得建立應用程式的最佳作法。
  * 您必須具有來自下列任何提供者的 Git 原始碼儲存庫：GitHub、GitHub Enterprise、Git Lab、BitBucket 或 Rational。
  * 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry?topic=cloud-foundry-prepare)。

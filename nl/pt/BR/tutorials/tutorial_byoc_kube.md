@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -27,10 +27,8 @@ que a mudança seja construída e propagada automaticamente por todo o caminho a
 Kubernetes.
 {: shortdesc}
 
-Quando você já tem um repositório de código-fonte com um código base para um aplicativo de back-end ativo, o {{site.data.keyword.cloud_notm}} ajuda a organizar esse ativo em uma visualização agregada de
-todos os ativos que compõem a amplitude de seu produto inteiro. O {{site.data.keyword.cloud_notm}} ajuda você a começar a usar um fluxo de trabalho do DevOps escalável quando o recurso de cadeia de ferramentas do
-DevOps é usado. Esse tutorial ajuda o desenvolvedor experiente ou o engenheiro do DevOps a adquirir e configurar um cluster do {{site.data.keyword.cloud_notm}} Kubernetes de destino e configurar e executar uma cadeia de ferramentas do
-DevOps, tudo sob a orientação das melhores práticas de nuvem.
+Quando você já tiver um repositório de código-fonte com um código base para um app de back-end funcional, o {{site.data.keyword.cloud_notm}} ajudará a organizar esse ativo em uma visualização agregada de todos os ativos que compõem a amplitude de seu produto inteiro. O {{site.data.keyword.cloud_notm}} ajuda você a começar a usar um fluxo de trabalho do DevOps escalável quando o recurso de cadeia de ferramentas do
+DevOps é usado. Este tutorial ajuda o desenvolvedor experiente ou o engenheiro do DevOps a adquirir e configurar um {{site.data.keyword.containerlong}} de destino e configurar e executar uma cadeia de ferramentas do DevOps, tudo sob a orientação das melhores práticas de nuvem.
 
 Um _cluster_ é um conjunto de recursos, nós de trabalhador, redes e dispositivos de armazenamento
 que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possível implementar os apps em contêineres.
@@ -54,10 +52,7 @@ que mantêm os apps altamente disponíveis. Depois de criar o cluster, é possí
 ## Incluindo serviços em seu app (opcional)
 {: #resources-byoc-kube}
 
-Depois de criar seu app, é possível incluir um serviço em seu app por meio da página **Detalhes do app**. O {{site.data.keyword.cloud_notm}} cria a instância de serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados
-e um serviço de notificação push para aplicativos móveis gera
-informações de configuração. O {{site.data.keyword.cloud_notm}} fornece os recursos de um
-serviço para o aplicativo usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre os aplicativos da web.
+Depois de criar seu app, é possível incluir um serviço em seu app por meio da página **Detalhes do app**. O {{site.data.keyword.cloud_notm}} cria a instância de serviço para você. O processo de fornecimento pode ser diferente para tipos de serviços diferentes. Por exemplo, um serviço de banco de dados cria um banco de dados e um serviço de notificação de push para apps móveis gera informações de configuração. O {{site.data.keyword.cloud_notm}} fornece os recursos de um serviço para o seu app usando uma instância de serviço. Uma instância de serviço pode ser compartilhada entre aplicativos da web.
 
 Esse processo fornece uma instância de serviço, cria uma chave de recurso (credenciais) e liga-a ao app. Para
 obter mais informações, consulte [Incluindo um serviço no app](/docs/apps?topic=creating-apps-add-resource).
@@ -67,7 +62,7 @@ Depois de incluir um serviço em seu app, deve-se [copiar as credenciais para o 
 ## Preparando seu app para implementação
 {: #deploy-byoc-kube}
 
-Nesta etapa, você conecta uma cadeia de ferramentas do DevOps ao aplicativo e a configura para que seja implementada em um cluster do Kubernetes que é hospedado no {{site.data.keyword.containershort_notm}}.
+Nesta etapa, você conecta uma cadeia de ferramentas do DevOps ao app e configura-a para ser implementada em um cluster Kubernetes que está hospedado no {{site.data.keyword.containerlong}}.
 
 A cadeia de ferramentas do DevOps é flexível o suficiente para permitir a execução gerenciada de estágios
 arbitrários de execução de shell script. Em outras palavras, é possível fazer quase tudo com uma cadeia de
@@ -131,9 +126,7 @@ Configure a cadeia de ferramentas do DevOps com uma integração para o seu repo
 ### Configurando os estágios do pipeline
 {: #pipelineconfig-byoc-kube}
 
-Configure os estágios do pipeline para direcionarem sua entrada (os conteúdos do repositório GitHub) para o destino correto. Como esse tutorial supõe que você tem um repositório GitHub que
-produz uma imagem do Docker ativa e está destinando um cluster do IBM Containers Kubernetes, crie estágios de
-pipeline com entradas, shell scripts e saídas que atinjam esse objetivo.
+Configure os estágios do pipeline para direcionarem sua entrada (os conteúdos do repositório GitHub) para o destino correto. Como este tutorial supõe que existe um repositório GitHub que produz uma imagem do Docker funcional e está destinando um {{site.data.keyword.containerlong}}, você cria estágios de pipeline com entradas, shell scripts e saídas que atingem esse objetivo.
 
 1. Configure seu estágio de pipeline `build and publish`.
   1. Selecione o pipeline de entrega criado e clique em **Incluir um estágio**.
@@ -186,7 +179,7 @@ O Delivery Pipeline ou a linha de comandos aponta você para a URL para seu app.
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo. No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+3. No arquivo de log, localize a URL do app. No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 
 Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para abrir a página de um app implementado manualmente em seu navegador padrão.
@@ -195,6 +188,6 @@ Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev vi
 
  * [Criando cadeias de ferramentas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
  * [Configurando os
-repositórios Git e o rastreamento de problema](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+repositórios Git e o rastreamento de problema](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [Configurando GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [Configurando o GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # 独自のコード・リポジトリーからのアプリの作成
 {: #tutorial-byoc}
 
-既存のリポジトリーにアプリケーションがある場合、ブランクのスターター・キットを使用して {{site.data.keyword.cloud_notm}} にアプリ・レコードを作成し、そのアプリをソース・リポジトリーおよび DevOps ツールチェーンに接続できます。
+既存のリポジトリーにアプリケーションがある場合、基本スターター・キットを使用して {{site.data.keyword.cloud_notm}} にアプリ・レコードを作成し、そのアプリをソース・リポジトリーおよび DevOps ツールチェーンに接続できます。
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} ダッシュボードまたはブランクのスターター・キットから開始できます。 アプリに名前を付けてリソース・グループを選択したら、**独自のコードの持ち込み**開始点を選択し、コードを含む Git リポジトリー URL を指定し、**「作成」**をクリックします。
+{{site.data.keyword.cloud_notm}} ダッシュボードまたは基本スターター・キットから開始できます。 アプリに名前を付けてリソース・グループを選択したら、**独自のコードの持ち込み**開始点を選択し、コードを含む Git リポジトリー URL を指定し、**「作成」**をクリックします。
 
 既存の DevOps ツールチェーンを接続または作成し、Kubernetes や Cloud Foundry などの任意のデプロイメント・ターゲットにアプリを継続的にデリバリーできます。
 
@@ -32,7 +32,7 @@ subcollection: creating-apps
 
 以下の前提条件が整っていることを確認します。
 
- * [{{site.data.keyword.dev_cli_long}} コマンド・ライン・インターフェース (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。
+ * [{{site.data.keyword.dev_cli_long}} コマンド・ライン・インターフェース (CLI)](/docs/cli?topic=cloud-cli-getting-started) をインストールします。
  * アプリを作成するためのベスト・プラクティスについて、[良いアプリを作成するには](/docs/apps?topic=creating-apps-best-practice)を参照してください。
  * GitHub、GitHub Enterprise、GitLab、BitBucket、または Rational のいずれかのプロバイダーからの Git ソース・コード・リポジトリーが必要です。
  * アプリを [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about) にデプロイする計画の場合は、[{{site.data.keyword.cloud_notm}} アカウントを準備する](/docs/cloud-foundry?topic=cloud-foundry-prepare)必要があります。
@@ -93,7 +93,7 @@ Delivery Pipeline またはコマンド・ラインにアプリの URLが示さ�
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。 ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+3. ログ・ファイルで、アプリ URL を見つけます。 ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
 コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行して、手動でデプロイしたアプリのページをデフォルト・ブラウザーで開きます。

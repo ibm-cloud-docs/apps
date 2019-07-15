@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 Une nouvelle option de nom d'hôte `*.appdomain.cloud` est disponible sur cloud.ibm.com.
 
-Auparavant, le domaine `mybluemix.net` était utilisé pour l'hébergement des applications dans différentes cibles de déploiement, comme {{site.data.keyword.containerlong_notm}} ou Cloud Foundry. Les applications hébergées sur `mybluemix.net` ne sont pas concernées.
+Auparavant, le domaine `mybluemix.net` était utilisé pour l'hébergement d'applications dans différentes cibles de déploiement, telles {{site.data.keyword.containerlong_notm}} ou Cloud Foundry. Les applications hébergées sur `mybluemix.net` ne sont pas concernées.
 
 Le sous-domaine des applications Cloud Foundry est `cf.appdomain.cloud`. Le sous-domaine des applications que vous déployez dans {{site.data.keyword.containerlong_notm}} est `containers.appdomain.cloud`.
 
@@ -39,7 +39,7 @@ Pour plus d'informations, voir [Gestion de vos domaines](/docs/apps?topic=creati
 {: #cf-app}
 {: faq}
 
-La liste de vos ressources se trouvant dans la console [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") fournit des informations récapitulatives sur les applications que vous avez créées. Dans la liste des ressources, la section **Applications** contient toutes les applications que vous avez créées mais *non* celles déployées dans Cloud Foundry. La section **Applications Cloud Foundry** contient toutes les applications créées et déployées dans Cloud Foundry.
+La liste de vos ressources se trouvant dans la [console {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") fournit des informations récapitulatives sur les applications que vous avez créées. Dans la liste des ressources, la section **Applications** contient toutes les applications que vous avez créées mais *non* celles déployées dans Cloud Foundry. La section **Applications Cloud Foundry** contient toutes les applications créées et déployées dans Cloud Foundry.
 
 ## Pourquoi ne puis-je pas sélectionner d'espace Cloud Foundry lorsque je tente de déployer mon application ?
 {: #cf-space}
@@ -67,8 +67,8 @@ Pour supprimer une application que vous avez créée, procédez comme suit :
 Si vous souhaitez arrêter une application Cloud Foundry, procédez comme suit :
 
 
-1. A partir du tableau de bord, cliquez sur **Afficher les ressources** dans la section récapitulant les ressources. 
-1. Dans liste des ressources, développez les sections et localisez l'instance de service que vous souhaitez arrêter. 
+1. A partir du tableau de bord, cliquez sur **Afficher les ressources** dans la section récapitulant les ressources.
+1. Dans liste des ressources, développez les sections et localisez l'instance de service que vous souhaitez arrêter.
 1. Sélectionnez l'icône **Actions** ![icône Liste d'actions](../icons/action-menu-icon.svg), puis cliquez sur **Arrêter**.
 
 ## Que sont les chaînes d'outils et comment sont-elles liées à mon application ?

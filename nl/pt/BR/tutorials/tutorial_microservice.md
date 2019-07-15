@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # Criando um microsserviço
 {: #tutorial-microservice}
@@ -26,7 +27,7 @@ subcollection: creating-apps
 ## Etapa 1. Instale as ferramentas
 {: #prereqs-microservice}
 
-* Instale as [ferramentas do desenvolvedor](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Instale as [ferramentas do desenvolvedor](/docs/cli?topic=cloud-cli-getting-started).
 * O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 * Se você planeja implementar seu app no [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about), deve-se [preparar sua conta do {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -35,7 +36,7 @@ subcollection: creating-apps
 
 Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}:
 
-1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
+1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um Kit do iniciador para sua linguagem. Por exemplo, para um app Node.js, acesse **Microsserviço Express.js** e clique em **Selecionar kit do iniciador**.
 2. Insira o nome de seu app. Para este tutorial, use `MicroserviceProject`.
 3. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
 4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
@@ -66,9 +67,12 @@ Para selecionar o destino de implementação e configurar a entrega contínua, c
 
 1. Na página Detalhes do app, clique em **Configurar entrega contínua**.
 2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino selecionado:
-  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você.
+  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados nós do trabalhador, para implementar e gerenciar contêineres de app altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
+  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que poderá ser usado para criar e gerenciar ambientes isolados para hospedar apps do Cloud Foundry exclusivamente para a sua empresa.
+  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    A implementação de VSI está disponível para alguns kits do iniciador. Para usar esse recurso, acesse o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}) e clique em **Criar um app** no bloco **Apps**.
+    {: note}
 
 ## Etapa 5. Criar e executar o app localmente
 {: #build-run-microservice}
@@ -158,7 +162,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo:
+3. No arquivo de log, localize a URL do app:
 
     No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ Vous pouvez soit créer une toute nouvelle application, soit activer sur le clou
 ## Avant de commencer
 {: #prereqs-app-cli}
 
-Vous devez installer l'interface CLI {{site.data.keyword.cloud_notm}}, le plug-in d'interface CLI {{site.data.keyword.dev_cli_notm}} et d'autres plug-in et outils recommandés. Pour plus d'informations, voir [Initiation à l'interface de ligne de commande IBM Cloud](/docs/cli?topic=cloud-cli-ibmcloud-cli). 
+Vous devez installer l'interface CLI {{site.data.keyword.cloud_notm}}, le plug-in d'interface CLI {{site.data.keyword.dev_cli_notm}} et d'autres plug-in et outils recommandés. Pour plus d'informations, voir [Initiation à l'interface de ligne de commande IBM Cloud](/docs/cli?topic=cloud-cli-getting-started). 
 
 ## Création d'une toute nouvelle application de démarrage
 {: #create-app-cli}
@@ -37,7 +37,7 @@ Vous devez installer l'interface CLI {{site.data.keyword.cloud_notm}}, le plug-i
 La création d'une toute nouvelle application est utile si vous ne disposez pas déjà d'un code existant pour commencer et préférez utiliser un modèle de démarrage de langage ou de structure.
 
 1. Exécutez la commande [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) dans le répertoire de votre choix.
-2. Sélectionnez **Service de back-end / Appli Web** comme type d'application.
+2. Sélectionnez **Service de back-end/Appli Web** comme type d'application.
 3. Sélectionnez **Node** comme type de langage.
 4. Sélectionnez **Node.js Web App with Express.js (Web App)** comme kit de démarrage à utiliser.
 5. Entrez un nom pour votre application et sélectionnez le groupe de ressources à utiliser (si nécessaire). N'ajoutez pas de service pour l'instant.
@@ -54,7 +54,7 @@ La création de l'application et de la chaîne d'outils dure quelques secondes.
 ## Génération d'actifs de déploiement et d'activation de cloud
 {: #byoc-cli}
 
-Cette option peut être utilisée si vous disposez déjà d'un codebase et que vous souhaitez générer des actifs de déploiement et d'activation de cloud pour un microservice ou une application Web en utilisant [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Cette commande est à la version Bêta et tous les langages et/ou structures d'application ne sont pas pris en charge. Les instructions suivantes présentent comment utiliser cette fonction avec un référentiel exemple mais la procédure est quasiment identique pour votre propre codebase.
+Cette option peut être utilisée si vous disposez déjà d'un codebase et que vous souhaitez générer des actifs de déploiement et d'activation de cloud pour un microservice ou une application Web en utilisant [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Cette commande est à la version Bêta et tous les langages ou structures d'application ne sont pas pris en charge. Les instructions suivantes présentent comment utiliser cette fonction avec un référentiel exemple mais la procédure est quasiment identique pour votre propre codebase.
 
 1. Connectez-vous à {{site.data.keyword.cloud_notm}} en exécutant `ibmcloud login` puis ciblez une organisation et un espace.
 2. Clonez l'application [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") en exécutant la commande suivante dans le répertoire de votre choix.
@@ -107,15 +107,15 @@ Maintenant que votre application peut s'exécuter localement, vous pouvez ajoute
 ## Déploiement de votre application
 {: #deploy-app-cli}
 
-Vous pouvez déployer votre application dans {{site.data.keyword.cloud_notm}} à partir de l'interface de ligne de commande en utilisant une des méthodes ci-dessous, en fonction de la manière dont votre application est configurée. Pour plus d'informations, voir ces rubriques :
+Vous pouvez déployer votre application dans {{site.data.keyword.cloud_notm}} à partir de l'interface de ligne de commande en utilisant une des méthodes ci-dessous, en fonction de la manière dont votre application est configurée. Pour plus d'informations, voir les rubriques suivantes :
 
-* [Déploiement automatique de votre application](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [Déploiement manuel de votre application](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [Déploiement automatique de votre application](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [Déploiement manuel de votre application](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## Affichage de votre application
 {: #view-app-cli}
 
-1. Pour afficher l'URL de votre application qui s'exécute sur {{site.data.keyword.cloud_notm}}, exécutez la commande [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). Accédez ensuite à l'URL dans votre navigateur.
+1. Pour afficher l'URL de votre application qui s'exécute sur {{site.data.keyword.cloud_notm}}, exécutez la commande [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). L'URL de l'application est ouverte dans votre navigateur par défaut. 
 2. Pour afficher les détails relatifs aux données d'identification, aux services et à la chaîne d'outils de votre application à partir de la console {{site.data.keyword.cloud_notm}}, exécutez la commande [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console). 
 
 **Pour signaler des problèmes ou donner votre avis, vous pouvez utiliser le [canal {{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools](https://ibm-cloud-tech.slack.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Pour demander l'accès à l'équipe, cliquez [ici](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").**

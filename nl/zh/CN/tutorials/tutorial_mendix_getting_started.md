@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -41,7 +41,12 @@ Mendix 是一种低代码开发环境和工具集，可以帮助您使用较少�
 
 如果您尚未将 Mendix 与 {{site.data.keyword.cloud_notm}} 配合使用，系统会引导您前往 Mendix Platform 进行注册并授权 {{site.data.keyword.cloud_notm}} 代表您在 Mendix Platform 上创建新项目。此项目会链接到 {{site.data.keyword.cloud_notm}}，因此部署会自动定向到 {{site.data.keyword.cloud_notm}}。
 
-1. 如果您看到以下消息：“要完成应用程序的创建，需要使用 Mendix 用户帐户。要立即链接您的帐户吗？”，请单击**链接帐户**。
+1. 如果看到此消息，请单击**链接帐户**。
+  ```
+  “要完成应用程序的创建，需要使用 Mendix 用户帐户。要立即链接您的帐户吗？”
+  ```
+  {: screen}
+
 2. 在 Mendix 确认页面上，选择**我同意 Mendix 的隐私策略和条款**，然后单击**确认**。
 3. 出现提示时，提供您的电子邮件地址、密码和国家/地区，然后单击**创建**。
 4. 在**授权访问您的 Mendix 帐户**页面上，单击**授权**。
@@ -70,18 +75,18 @@ Mendix 是一个低代码编写环境。开发生命周期要求您在 Mendix Mo
 1. 在 {{site.data.keyword.cloud_notm}} 应用程序中，单击**在 Mendix 上编辑**。
 2. 在 Mendix Web 门户网站中，单击**在 Desktop Modeler 中编辑**。这会在 Desktop Modeler 中打开 Mendix 应用程序。
 3. 编辑 Mendix 应用程序，并保存更改。
-4. 使用 Mendix Desktop Modeler 应用程序的**运行**菜单，选择**运行**选项。这会创建部署软件包并将其上传到 Mendix。当部署软件包创建完成后，您可以将应用程序部署到 {{site.data.keyword.cloud_notm}}。
+4. 使用 Mendix Desktop Modeler 应用程序的**运行**菜单，选择**运行**选项。这会创建部署软件包并将其上传到 Mendix。创建部署软件包后，您可以将应用程序部署到 {{site.data.keyword.cloud_notm}}。
 5. 要部署 Mendix 应用程序，请返回到 {{site.data.keyword.cloud_notm}} 上的**应用程序详细信息**页面，然后单击**部署**。此操作会启动应用程序的 DevOps 工具链，该工具链会从 Mendix 中拉出最新部署并将其部署到目标环境。当部署完成后，最新版本的应用程序会自动启动并可供使用。
 
-单击 {{site.data.keyword.cloud_notm}} 上**应用程序详细信息**页面中的**配置持续交付**后，所有 Mendix 应用程序都将部署到 {{site.data.keyword.cloud_notm}} 上。不要通过 IBM DevOps 界面手动调用 Mendix 工具链。通过 DevOps 界面手动启动工具链可能会导致部署失败，因为缺少对 Mendix 部署至关重要的必需元数据。可能会在 DevOps 工具链启动期间发生问题，或在部署的应用程序中发生错误，具体取决于应用程序的状态。
+单击 {{site.data.keyword.cloud_notm}} 上**应用程序详细信息**页面中的**配置持续交付**后，所有 Mendix 应用程序都将部署到 {{site.data.keyword.cloud_notm}} 上。不要通过 IBM DevOps 界面手动调用 Mendix 工具链。通过 DevOps 界面手动启动工具链可能会导致部署失败，因为缺少对 Mendix 部署至关重要的必需元数据。可能会在 DevOps 工具链启动期间发生失败，或在部署的应用程序中发生错误，具体取决于应用程序的状态。
 
-如果在手动启动工具链时遇到问题，可以复原应用程序部署，方法是单击 {{site.data.keyword.cloud_notm}} 上**应用程序详细信息**页面中的**配置持续交付**。此操作会触发 Mendix 应用程序的完整 DevOps 流程，其中包含必需的元数据。
+如果在手动启动工具链时遇到失败，可以复原应用程序部署，方法是单击 {{site.data.keyword.cloud_notm}} 上**应用程序详细信息**页面中的**配置持续交付**。此操作会触发 Mendix 应用程序的完整 DevOps 流程，其中包含必需的元数据。
 {: tip}
 
 ## 可选：配置 {{site.data.keyword.cos_full_notm}} 
 {: #mendix-cos}
 
-有些用户可能需要对已部署的 Mendix 应用程序进行配置，以便使用 {{site.data.keyword.cos_full}} 来进行持久存储和文件上传。{{site.data.keyword.cos_full_notm}} 是与 S3 兼容的对象存储服务。要利用与 S3 兼容的文件存储，在配置持续交付后，Mendix 应用程序必须定义以下环境变量以访问 {{site.data.keyword.cos_full_notm}} 实例：
+有些用户可能希望将已部署的 Mendix 应用程序配置为使用 {{site.data.keyword.cos_full}} 进行持久存储和文件上传。{{site.data.keyword.cos_full_notm}} 是与 S3 兼容的对象存储服务。要利用与 S3 兼容的文件存储，在配置持续交付后，Mendix 应用程序必须定义以下环境变量以访问 {{site.data.keyword.cos_full_notm}} 实例：
 
 * `S3_ACCESS_KEY_ID` - S3 密钥，属于 {{site.data.keyword.cos_full_notm}} 凭证
 * `S3_SECRET_ACCESS_KEY` - S3 密钥，属于 {{site.data.keyword.cos_full_notm}} 凭证
@@ -139,7 +144,7 @@ Mendix 是一个低代码编写环境。开发生命周期要求您在 Mendix Mo
         value: "true"
   ```
 
-3. 应用 Kubernetes 更改后，通过浏览到**应用程序详细信息**页面并单击**部署**来重新部署应用程序。 
+3. 应用 Kubernetes 更改后，通过导航至**应用程序详细信息**页面并单击**部署**来重新部署应用程序。 
 
 ## 后续步骤 
 {: #next-steps-mendix}

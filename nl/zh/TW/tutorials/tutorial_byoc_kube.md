@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 瞭解如何使用現有應用程式儲存庫，在 {{site.data.keyword.cloud}} 中建立應用程式。您可以連接現有的 DevOps 工具鏈或建立一個，並持續將應用程式遞送至 Kubernetes 叢集裡的安全容器。本指導教學協助您設定 Continuous Integration DevOps 管線，以自動建置變更，並傳播直到您在 Kubernetes 叢集裡部署的應用程式。
 {: shortdesc}
 
-當您已有的原始碼儲存庫具有工作中後端應用程式的程式碼庫時，{{site.data.keyword.cloud_notm}} 會協助您將此資產組織成對於整個產品所涵蓋之所有資產的聚集視圖。當您使用 DevOps 工具鏈特性時，{{site.data.keyword.cloud_notm}} 能讓您開始可擴充的 DevOps 工作流程。本指導教學協助經驗豐富的開發人員或 DevOps 工程師獲得並配置目標 {{site.data.keyword.cloud_notm}} Kubernetes 叢集，以及配置並執行 DevOps 工具鏈，一切都在雲端最佳作法的指引下進行。
+當您已有的原始碼儲存庫具有工作中後端應用程式的程式碼庫時，{{site.data.keyword.cloud_notm}} 會協助您將此資產組織成對於整個產品所涵蓋之所有資產的聚集視圖。當您使用 DevOps 工具鏈特性時，{{site.data.keyword.cloud_notm}} 能讓您開始可擴充的 DevOps 工作流程。本指導教學協助經驗豐富的開發人員或 DevOps 工程師獲得並配置目標 {{site.data.keyword.containerlong}}，以及配置並執行 DevOps 工具鏈，一切都在雲端最佳作法的指引下進行。
 
 _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓應用程式保持高可用性。建立叢集之後，您可以在容器中部署應用程式。
 {: tip}
@@ -45,8 +45,7 @@ _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓�
 ## 將服務新增至應用程式（選用）
 {: #resources-byoc-kube}
 
-建立應用程式之後，您可以從**應用程式詳細資料**頁面，將服務新增至您的應用程式。{{site.data.keyword.cloud_notm}} 會為您建立服務實例。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
-{{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
+建立應用程式之後，您可以從**應用程式詳細資料**頁面，將服務新增至您的應用程式。{{site.data.keyword.cloud_notm}} 會為您建立服務實例。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。{{site.data.keyword.cloud_notm}} 會使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
 此處理程序會佈建服務實例、建立資源金鑰（認證），並將它連結至應用程式。如需相關資訊，請參閱[將服務新增至應用程式](/docs/apps?topic=creating-apps-add-resource)。
 
@@ -55,7 +54,7 @@ _叢集_ 是一組資源、工作者節點、網路及儲存裝置，這些讓�
 ## 準備應用程式以進行部署
 {: #deploy-byoc-kube}
 
-在此步驟中，您將 DevOps 工具鏈連接至應用程式，並將它配置為部署至 {{site.data.keyword.containershort_notm}} 中管理的 Kubernetes 叢集。
+在此步驟中，您將 DevOps 工具鏈連接至應用程式，並將它配置為部署至 {{site.data.keyword.containerlong}} 中管理的 Kubernetes 叢集。
 
 DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Script 執行的任意階段。換言之，您幾乎可以使用 DevOps 工具鏈執行任何動作。本節的範圍著重於在 Kubernetes 叢集部署應用程式，同時謹記使擴充的 DevOps 及雲端最佳作法「不過時」。
 
@@ -107,7 +106,7 @@ DevOps 工具鏈有足夠的彈性，容許以受管理的方式執行 Shell Scr
 ### 配置管線階段
 {: #pipelineconfig-byoc-kube}
 
-配置管線階段，將輸入（GitHub 儲存庫內容）引導至正確目的地。因為本指導教學假設您已有一個 GitHub 儲存庫，它會產生可運作的 Docker 映像檔，並將 IBM Containers Kubernetes 叢集設為目標，所以您會建立管線階段，其中具有達成此目標的輸入、Shell Script 及輸出。
+配置管線階段，將輸入（GitHub 儲存庫內容）引導至正確目的地。因為本指導教學假設您已有一個 GitHub 儲存庫，它會產生可運作的 Docker 映像檔，並將 {{site.data.keyword.containerlong}} 設為目標，所以您會建立管線階段，其中具有達成此目標的輸入、Shell Script 及輸出。
 
 1. 配置 `build and publish` 管線階段。
   1. 選取您您建立的交付管線，然後按一下**新增階段**。
@@ -167,6 +166,6 @@ Delivery Pipeline 或指令行會將您指向應用程式的 URL。
 ## 相關資訊
 
  * [建立工具鏈](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [配置 Git 儲存庫及問題追蹤](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [配置 Git 儲存庫及問題追蹤](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

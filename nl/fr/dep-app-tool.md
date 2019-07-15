@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -27,9 +27,6 @@ Vous pouvez déployer votre application dans {{site.data.keyword.cloud}} en util
 
 Une chaîne d'outils DevOps inclut un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement GitLab dédié et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-Toutes les chaînes d'outils créées à partir du tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
-{: note}
-
 ## Utilisation de la console {{site.data.keyword.cloud_notm}}
 {: deploy-console}
 
@@ -38,16 +35,22 @@ Toutes les chaînes d'outils créées à partir du tableau de bord de développe
 ### Avant de commencer
 {: deploy-console-before}
 
-Avant de commencer, utilisez le tableau de bord [{{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour [créer votre application](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) et [ajouter des services](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
+Avant de commencer, utilisez le [tableau de bord {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour [créer votre application](/docs/apps?topic=creating-apps-getting-started) et [ajouter des services](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
 ### Déploiement automatique de votre application
 {: deploy-console-auto}
 
+Toutes les chaînes d'outils créées à partir du tableau de bord de développeur {{site.data.keyword.cloud_notm}} sont configurées pour un déploiement automatique.
+{: note}
+
 1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
 2. Sélectionnez une cible de déploiement. Configurez votre cible de déploiement en fonction des instructions s'appliquant à la cible que vous sélectionnez :
-  * **Déployer dans IBM Kubernetes Service**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application à haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant. Pour plus d'informations, voir [Déploiement d'applications dans des clusters Kubernetes](/docs/containers?topic=containers-app).
+  * **Déployer dans IBM Kubernetes Service**. Cette option crée un cluster d'hôtes, appelé noeuds worker, afin de déployer et de gérer des conteneurs d'application haute disponibilité. Vous pouvez créer un cluster ou effectuer un déploiement sur un cluster existant. Pour plus d'informations, voir [Déploiement d'applications dans des clusters Kubernetes](/docs/containers?topic=containers-app).
   * **Déployer dans Cloud Foundry**. Cette option déploie votre application cloud native sans qu'il soit nécessaire de gérer l'infrastructure sous-jacente. Si votre compte a accès à {{site.data.keyword.cfee_full_notm}}, vous pouvez sélectionner un déployeur de type **Public Cloud** ou **Enterprise Environment**, que vous pouvez utiliser pour créer et gérer des environnements isolés pour l'hébergement de vos applications Cloud Foundry exclusivement pour votre entreprise. Pour plus d'informations, voir [Déploiement d'applications dans Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) et [Déploiement d'applications dans {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
-  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement. Pour plus d'informations, voir [Déploiement d'applications dans un serveur virtuel](/docs/apps?topic=creating-apps-vsi-deploy).
+  * **Déployer sur un serveur virtuel**. Cette option met à disposition une instance de serveur virtuel, charge une image qui inclut votre application, crée une chaîne d'outils DevOps et initie pour vous le premier cycle de déploiement. Pour plus d'informations, voir [Déploiement d'applications dans un serveur virtuel](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    Le déploiement de VSI est disponible pour certains kits de démarrage. Pour utiliser cette fonctionnalité, accédez au [tableau de bord {{site.data.keyword.cloud_notm}}](https://{DomainName}) et cliquez sur **Créer une application** dans la vignette **Applications**.
+    {: note}
 
 ### Déploiement manuel de votre application
 {: deploy-console-manual}
@@ -73,7 +76,7 @@ Pour plus d'informations, voir :
 ### Avant de commencer
 {: #deploy-cli-before}
 
-Avant de commencer, [ téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Avant de commencer, [ téléchargez et installez l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 
 L'interface de ligne de commande n'est pas prise en charge par Cygwin. Utilisez l'outil dans une fenêtre autre que la fenêtre de ligne de commande Cygwin.
 {: important}
@@ -84,9 +87,7 @@ L'interface de ligne de commande n'est pas prise en charge par Cygwin. Utilisez 
 
   3.  Mettez à jour votre code d'application. Si vous utilisez une application exemple {{site.data.keyword.cloud_notm}} et qu'elle contient le fichier `src/main/webapp/index.html`, vous pouvez le modifier et éditer la ligne `"Thanks for creating ..."`. Vérifiez que l'application s'exécute localement avant de la déployer dans {{site.data.keyword.cloud_notm}}.
 
-    Tenez compte du fichier `manifest.yml`. Lorsque vous déployez votre application dans {{site.data.keyword.cloud_notm}}, il est utilisé pour déterminer l'adresse URL de votre application, l'allocation de mémoire, le nombre d'instances et d'autres paramètres essentiels.
-
-    Consultez également le fichier `README.md`, qui contient des informations, telles que les instructions de génération.
+    Consultez le fichier `README.md`, qui contient des informations, telles que les instructions de génération.
 
     Si votre application est une application Liberty, vous devez la générer avant de la redéployer.
     {: note}
@@ -128,7 +129,7 @@ Une fois que vous avez créé une chaîne d'outils DevOps pour votre application
 Vous pouvez déployer manuellement votre application dans {{site.data.keyword.cloud_notm}} en utilisant la commande [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   ```
-  ibmcloud dev deploy <APP_NAME>
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
@@ -137,4 +138,4 @@ Vous pouvez déployer manuellement votre application dans {{site.data.keyword.cl
 
 Pour plus d'informations sur le déploiement de votre application dans {{site.data.keyword.cloud_notm}} en utilisant l'interface de ligne de commande, voir :
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")

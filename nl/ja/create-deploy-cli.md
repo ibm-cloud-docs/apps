@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 ## 始める前に
 {: #prereqs-app-cli}
 
-{{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI プラグイン、およびその他の推奨プラグインとツールをインストールする必要があります。 詳しくは、[IBM Cloud CLI の概要](/docs/cli?topic=cloud-cli-ibmcloud-cli)を参照してください。 
+{{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI プラグイン、およびその他の推奨プラグインとツールをインストールする必要があります。 詳しくは、[IBM Cloud CLI の概要](/docs/cli?topic=cloud-cli-getting-started)を参照してください。 
 
 ## スターター・アプリを最初から作成する
 {: #create-app-cli}
@@ -37,7 +37,7 @@ subcollection: creating-apps
 そもそも既存のコードが存在せず、言語またはフレームワーク・スターター・テンプレートから開始することを望む場合には、アプリを最初から作成する方法が適しています。
 
 1. 任意のディレクトリーで [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) コマンドを実行します。
-2. アプリケーション・タイプとして **「バックエンド・サービス/Web アプリ」** を選択します。
+2. アプリ・タイプとして **「バックエンド・サービス/Web アプリ」** を選択します。
 3. 言語タイプとして**「Node」**を選択します。
 4. 使用するスターター・キットとして**「Node.js Web App with Express.js (Web アプリ)」**を選択します。
 5. アプリの名前を入力し、使用するリソース・グループを選択します (必要な場合)。 今はサービスを追加しないでください。
@@ -54,7 +54,7 @@ subcollection: creating-apps
 ## デプロイメントおよびクラウド対応アセットの生成
 {: #byoc-cli}
 
-既存のコードベースが既にあり、[`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) を使用して単一のマイクロサービス用または Web アプリ用のデプロイメントおよびクラウド対応アセットを生成する場合、このオプションを使用できます。 このコマンドはベータ版であり、すべての言語またはアプリ構造、あるいはその両方がサポートされているわけではありません。以下の説明は、この機能をサンプル・リポジトリーで使用する方法を示していますが、ユーザー独自のコードベースの場合もステップはほぼ同じです。
+既存のコードベースが既にあり、[`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) を使用して単一のマイクロサービス用または Web アプリ用のデプロイメントおよびクラウド対応アセットを生成する場合、このオプションを使用できます。 このコマンドはベータ版であり、すべての言語またはアプリ構造がサポートされているわけではありません。 以下の説明は、この機能をサンプル・リポジトリーで使用する方法を示していますが、ユーザー独自のコードベースの場合もステップはほぼ同じです。
 
 1. `ibmcloud login` を実行して {{site.data.keyword.cloud_notm}} にログインし、組織とスペースをターゲットにします。
 2. 任意のディレクトリーで以下のコマンドを実行して、[Hello World サンプル・アプリ](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を複製します。
@@ -84,7 +84,7 @@ subcollection: creating-apps
 
 アプリの作成に使用したオプションに関係なく、この時点で、アプリをビルドしてローカルで実行できます。
 
-1. アプリケーション・ディレクトリーに移動し、Docker がシステムで実行されていることを確認します。
+1. アプリ・ディレクトリーに移動し、Docker がシステムで実行されていることを確認します。
 2. [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) コマンドを実行してアプリをビルドします。
 3. [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) コマンドを実行して、アプリのローカルでの実行を開始します。
 4. `http://localhost:3000` または類似の URL で、ローカルに実行されているアプリを表示します。
@@ -101,21 +101,21 @@ subcollection: creating-apps
 1. [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) コマンドを実行します。
 2. プロンプトに従って、新しいデータ関連サービスを作成し、{{site.data.keyword.cloudant_short_notm}} などのアプリに接続します。 サービスの地域とプランを選択する必要がある場合があります。
 3. サービスの作成時に、アプリ・ディレクトリーに保存された構成ファイルを手動でマージすることを選択できます。 または、今は、このステップをスキップすることができます。
-4. コードを更新します。 例えば、`/public/index.html` ファイルまたは同様のファイルを変更します。 サンプルの `ExpressJS` アプリケーションを使用している場合、`Congratulations!` ストリングを、`Hello World!` のようなものに変更できます。
+4. コードを更新します。 例えば、`/public/index.html` ファイルまたは同様のファイルを変更します。 サンプルの `ExpressJS` アプリを使用している場合、`Congratulations!` ストリングを、`Hello World!` のようなものに変更できます。
 5. 変更したファイルを保存します。
 
 ## アプリのデプロイ
 {: #deploy-app-cli}
 
-アプリの構成方法に応じて、CLI から {{site.data.keyword.cloud_notm}} にアプリを 2 つの方法のいずれかでデプロイできます。詳しくは、以下のトピックを参照してください。
+アプリの構成方法に応じて、CLI から {{site.data.keyword.cloud_notm}} にアプリを 2 つの方法のいずれかでデプロイできます。 詳しくは、以下のトピックを参照してください。
 
-* [アプリの自動デプロイ](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [手動によるアプリのデプロイ](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [アプリの自動デプロイ](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [手動によるアプリのデプロイ](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## アプリの表示
 {: #view-app-cli}
 
-1. {{site.data.keyword.cloud_notm}}で実行されているアプリの URL を表示するには、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行します。次に、ブラウザーでその URL にアクセスします。
+1. {{site.data.keyword.cloud_notm}}で実行されているアプリの URL を表示するには、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行します。 デフォルトのブラウザーで、アプリの URL が開きます。
 2. {{site.data.keyword.cloud_notm}} コンソールからアプリの資格情報、サービス、およびツールチェーンに関する詳細を表示するには、[`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) コマンドを実行します。 
 
-**問題を報告したり、フィードバックを提供したりするには、[{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com/){: new_window}![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用できます。[ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要請します。**
+**問題を報告したり、フィードバックを提供したりするには、[{{site.data.keyword.cloud_notm}} Tech の Slack - #developer-tools チャネル](https://ibm-cloud-tech.slack.com/){: new_window}![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用できます。 [ここ](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") でチーム・アクセスを要請します。**

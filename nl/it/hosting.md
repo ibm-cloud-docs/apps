@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-25"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 Se disponi di un'applicazione esistente, puoi ospitarla su {{site.data.keyword.cloud}} con tutti i servizi di infrastruttura o piattaforma di cui hai bisogno.
 {:shortdesc}
 
-Con {{site.data.keyword.Bluemix_notm}}, non devi più affrontare grandi investimenti in hardware per testare o eseguire una nuova applicazione. Saremo invece noi a gestire il tutto e pagherai solo per ciò che usi. Il tuo ambiente server cloud è la base del tuo livello dell'infrastruttura. Puoi scegliere una sola opzione o una combinazione per ambienti più complessi. 
+Con {{site.data.keyword.cloud_notm}}, non devi più affrontare grandi investimenti in hardware per testare o eseguire una nuova applicazione. Saremo invece noi a gestire il tutto e pagherai solo per ciò che usi. Il tuo ambiente server cloud è la base del tuo livello dell'infrastruttura. Puoi scegliere una sola opzione o una combinazione per ambienti più complessi. 
 
 Hai diverse opzioni per ospitare le tue applicazioni, fornendoti maggiore controllo sull'infrastruttura quando vuoi o ne hai bisogno. Puoi eseguire la tua applicazione in uno dei seguenti modi:
 
@@ -29,6 +29,13 @@ Hai diverse opzioni per ospitare le tue applicazioni, fornendoti maggiore contro
   * Come VMware
   * Come una macchina virtuale
   * Su {{site.data.keyword.baremetal_short}} ad elevate prestazioni 
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
+
+Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
+
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
 Consulta la seguente tabella per un riepilogo delle tue opzioni di calcolo.
 

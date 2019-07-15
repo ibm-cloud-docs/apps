@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 了解如何使用现有应用程序存储库在 {{site.data.keyword.cloud}} 中创建应用程序。您可以连接现有 DevOps 工具链或创建 DevOps 工具链，然后持续将应用程序交付到 Kubernetes 集群中的安全容器。本教程将帮助您设置持续集成 DevOps 管道，以便更改可自动构建并一路传播到 Kubernetes 集群中部署的应用程序。
 {: shortdesc}
 
-如果您已拥有源代码存储库，其中包含正常工作的后端应用程序的代码库，那么 {{site.data.keyword.cloud_notm}} 可帮助您将此资产组织到构成整个产品广度的所有资产的聚集视图中。使用 DevOps 工具链功能时，{{site.data.keyword.cloud_notm}} 可帮您快速入门并熟练运用可扩展的 DevOps 工作流程。本教程可帮助经验丰富的开发者或 DevOps 工程师获取和配置目标 {{site.data.keyword.cloud_notm}} Kubernetes 集群，以及配置和运行 DevOps 工具链，所有这一切都是在云最佳实践的指导下进行的。
+如果您已拥有源代码存储库，其中包含正常工作的后端应用程序的代码库，那么 {{site.data.keyword.cloud_notm}} 可帮助您将此资产组织到构成整个产品广度的所有资产的聚集视图中。使用 DevOps 工具链功能时，{{site.data.keyword.cloud_notm}} 可帮您快速入门并熟练运用可扩展的 DevOps 工作流程。本教程可帮助经验丰富的开发者或 DevOps 工程师获取和配置目标 {{site.data.keyword.containerlong}}，以及配置和运行 DevOps 工具链，所有这一切都是在云最佳实践的指导下进行的。
 
 _集群_是一组资源、工作程序节点、网络和存储设备，用于使应用程序保持高可用性。创建集群后，可以在容器中部署应用程序。
 {: tip}
@@ -54,7 +54,7 @@ _集群_是一组资源、工作程序节点、网络和存储设备，用于使
 ## 准备应用程序以进行部署
 {: #deploy-byoc-kube}
 
-在此步骤中，您将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.containershort_notm}} 中托管的 Kubernetes 集群。
+在此步骤中，您将 DevOps 工具链连接到应用程序，并将其配置为部署到 {{site.data.keyword.containerlong}} 中托管的 Kubernetes 集群。
 
 DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行受管执行。换言之，您可以使用 DevOps 工具链执行几乎任何操作。本部分的范围侧重于在 Kubernetes 集群上部署应用程序，但同时应记住未来针对扩展的 DevOps 和云最佳实践将需要执行哪些措施。
 
@@ -106,7 +106,7 @@ DevOps 工具链足够灵活，允许对 shell 脚本执行的任意阶段进行
 ### 配置管道阶段
 {: #pipelineconfig-byoc-kube}
 
-将管道阶段配置为将输入（GitHub 存储库内容）定向到正确的目标。本教程假定您具有的 GitHub 存储库可生成正常工作的 Docker 映像，并且正在使用 IBM Containers Kubernetes 集群，因此您可创建包含输入、shell 脚本和输出的管道阶段以实现此目标。
+将管道阶段配置为将输入（GitHub 存储库内容）定向到正确的目标。本教程假定您具有的 GitHub 存储库可生成正常工作的 Docker 映像，并以 {{site.data.keyword.containerlong}} 为目标，因此您可创建包含输入、shell 脚本和输出的管道阶段以实现此目标。
 
 1. 配置 `build and publish` 管道阶段。
   1. 选择已创建的 Delivery Pipeline，然后单击**添加阶段**。
@@ -158,7 +158,7 @@ Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL。在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
+3. 在日志文件中，查找应用程序的 URL。在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
 
 如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令，在缺省浏览器中打开手动部署的应用程序的页面。
@@ -166,6 +166,6 @@ Delivery Pipeline 或命令行会指示您前往应用程序的 URL。
 ## 相关信息
 
  * [创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [配置 Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [配置 GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [配置 GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

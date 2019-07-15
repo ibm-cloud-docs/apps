@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -60,27 +60,6 @@ Cloud Foundry 應用程式的子網域是 `cf.appdomain.cloud`。您部署至 {{
 關閉訊息視窗，然後按一下運行環境窗格中的**重設**。
 {: tsResolve}
 
-## {{site.data.keyword.cloud_notm}} 地區之間的自動失效接手無法使用
-{: #ts_failover}
-{: troubleshoot}
-
-您無法在 {{site.data.keyword.cloud}} 地區之間使用自動失效接手。不過，您可以使用支援在許多 IP 位址之間進行失效接手的 DNS 提供者，作為暫行解決方法。
-
-當 {{site.data.keyword.cloud_notm}} 地區變成無法使用時，在該地區中執行的應用程式也會無法使用，即使相同應用程式正在另一個 {{site.data.keyword.cloud_notm}} 地區中執行亦然。
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} 尚未提供從一個地區到另一個地區的自動失效接手。
-{: tsCauses}
-
-您可以使用支援在許多 IP 位址之間進行智慧型失效接手的 DNS 提供者，並且手動配置 DNS 設定，以啟用 {{site.data.keyword.cloud_notm}} 地區之間的自動失效接手。具有此特性的 DNS 提供者包括 NSONE、Akamai 和 Dyn。
-{: tsResolve}
-
-當您配置 DNS 設定時，必須指定應用程式執行所在之 {{site.data.keyword.cloud_notm}} 地區的公用 IP 位址。若要取得 {{site.data.keyword.cloud_notm}} 地區的公用 IP 位址，請使用 `nslookup` 指令。例如，您可以在指令行視窗鍵入下列指令。
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## 因為授權錯誤，所以無法存取 {{site.data.keyword.cloud_notm}} 服務
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 和 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+如需可在其他程式語言中使用之指令的相關資訊，請參閱 [Java ](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 和 [Ruby ](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 
 
@@ -142,7 +121,7 @@ process.env.VCAP_SERVICES
 IBM {{site.data.keyword.mobilepushshort}} 服務使用「Google 雲端通訊 (GCM)」服務，將通知分派至 Android 上開發的行動應用程式。若要讓 Android 應用程式收到通知，行動應用程式必須可存取「Google 雲端通訊 (GCM)」服務。在 Android 應用程式無法呼叫到 GCM 服務的地區，Android 應用程式即收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy ](https://pushy.me){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")、[getui ](http://www.getui.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及 [jpush ](https://www.jpush.cn/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+暫行解決方法是使用不依賴 GCM 服務的協力廠商服務，例如 [Pushy](https://pushy.me/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 及 [jpush](https://www.jiguang.cn/en/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 {: tsResolve}
 
 ## 將應用程式推送至 {{site.data.keyword.cloud_notm}} 後，未能適當地顯示雙位元組字元
@@ -270,7 +249,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 如果 Script（例如偵測 Script、編譯 Script 及釋放 Script）無法執行，就可能會發生此問題。
 {: tsCauses}
 
-您可以使用 [Git 更新 ](http://git-scm.com/docs/git-update-index){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
+您可以使用 [Git 更新 ](https://git-scm.com/docs/git-update-index){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 指令，將每一個 Script 的許可權變更為「可執行」。例如，您可以鍵入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 在 {{site.data.keyword.cloud_notm}} Continuous Delivery 中無法從 Delivery Pipeline 部署應用程式
@@ -293,7 +272,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 
 如果建置或部署工作失敗，且看到下列訊息，則您可以使用下列 CLI 指令來刪除映像檔。`狀態：未獲授權：您已超出儲存空間配額。請刪除一個以上的映像檔，或檢閱您的儲存空間配額及定價方案。`
 
-* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，請安裝它。
+* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)，請安裝它。
 * 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
 * 使用 `ibmcloud cr images` 列出您的映像檔。
 * 使用 `ibmcloud cr image-rm <respository>:<tag>` 來刪除任何未用的映像檔。
@@ -303,7 +282,7 @@ Liberty 建置套件會使用 `server.xml` 檔案來配置應用程式，並且�
 {: #access_kube_logs}
 
 如果應用程式不在執行中，且您無法存取性能端點，請嘗試查看叢集裡的日誌。
-* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，請安裝它。
+* 如果您還沒有 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)，請安裝它。
 * 使用 `ibmcloud login` 登入 {{site.data.keyword.cloud_notm}}，並將它指向您所在的空間。
 * 使用 `ibmcloud cs clusters` 列出您的叢集。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的對應叢集。

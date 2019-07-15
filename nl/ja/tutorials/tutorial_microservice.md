@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # マイクロサービスの作成
 {: #tutorial-microservice}
@@ -26,7 +27,7 @@ Microservice 基本スターターからアプリケーションを作成でき�
 ## ステップ 1. ツールのインストール
 {: #prereqs-microservice}
 
-* [開発者ツール](/docs/cli?topic=cloud-cli-ibmcloud-cli)をインストールします。
+* [開発者ツール](/docs/cli?topic=cloud-cli-getting-started)をインストールします。
 * Docker は開発者ツールの一部としてインストールされます。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。 Docker アカウントを作成して、Docker アプリを実行し、サインインする必要があります。
 * アプリを [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about) にデプロイする計画の場合は、[{{site.data.keyword.cloud_notm}} アカウントを準備する](/docs/cloud-foundry?topic=cloud-foundry-prepare)必要があります。
 
@@ -35,7 +36,7 @@ Microservice 基本スターターからアプリケーションを作成でき�
 
 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}でアプリを作成します。
 
-1. {{site.data.keyword.dev_console}}の[「スターター・キット」](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリケーションの場合は、**「Express.js マイクロサービス (Express.js Microservice)」**に移動し、**「スターター・キットの選択」**をクリックします。
+1. {{site.data.keyword.dev_console}}の[「スターター・キット」](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ページから、ご使用の言語に対応するスターター・キットを選択します。 例えば、Node.js アプリの場合は、**「Express.js マイクロサービス (Express.js Microservice)」**に移動し、**「スターター・キットの選択」**をクリックします。
 2. アプリ名を入力します。 このチュートリアルでは、`MicroserviceProject` を使用します。
 3. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
 4. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
@@ -55,9 +56,9 @@ Watson のコグニティブ機能でアプリを拡張するサービスを追�
 ## ステップ 4. アプリのデプロイ
 {: #toolchain-microservice}
 
-デプロイメント・ターゲットを選択すると、アプリ用の DevOps ツールチェーンが自動的に作成されます。このツールチェーンには、アプリのデプロイメント状況を示すデリバリー・パイプラインが含まれています。生成された新規アプリは、ツールチェーンの一部である GitLab リポジトリーにプッシュされます。
+デプロイメント・ターゲットを選択すると、アプリ用の DevOps ツールチェーンが自動的に作成されます。 このツールチェーンには、アプリのデプロイメント状況を示すデリバリー・パイプラインが含まれています。 生成された新規アプリは、ツールチェーンの一部である GitLab リポジトリーにプッシュされます。
 
-DevOps ツールチェーンを有効にすると、アプリ用のチーム・ベースの環境が作成されます。ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的デリバリー・パイプラインにアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial) のどれであっても、それに合わせてこれらはカスタマイズされています。
+DevOps ツールチェーンを有効にすると、アプリ用のチーム・ベースの環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的デリバリー・パイプラインにアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial) のどれであっても、それに合わせてこれらはカスタマイズされています。
 
 {{site.data.keyword.cloud_notm}} 開発者ダッシュボードから作成されたツールチェーンはすべて、自動デプロイメント用に構成されています。
 {: note}
@@ -66,9 +67,12 @@ DevOps ツールチェーンを有効にすると、アプリ用のチーム・�
 
 1. 「アプリの詳細」ページで、**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 2. デプロイメント・ターゲットを選択します。 選択したターゲットの説明に従って、デプロイメント・ターゲットをセットアップします。
-  * **[IBM Kubernetes Service](/docs/containers?topic=containers-app) にデプロイ**します。このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**[パブリック・クラウド](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**または**[エンタープライズ環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
-  * **仮想サーバーにデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
+  * **[IBM Kubernetes Service](/docs/containers?topic=containers-app) にデプロイ**します。 このオプションは、高可用性のアプリ・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 アカウントに {{site.data.keyword.cfee_full_notm}} に対するアクセス権限がある場合は、エンタープライズ専用の Cloud Foundry アプリをホストするための分離環境を作成および管理するために使用できる、**[パブリック・クラウド](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**または**[エンタープライズ環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**のデプロイヤー・タイプを選択できます。
+  * **仮想サーバーにデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。 詳しくは、[仮想サーバーへのアプリのデプロイ](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)を参照してください。
+
+    VSI デプロイメントは、一部のスターター・キットで使用できます。この機能を使用するには、[{{site.data.keyword.cloud_notm}} ダッシュボード](https://{DomainName})に移動し、**「アプリ」**タイルで**「アプリの作成」**をクリックします。
+    {: note}
 
 ## ステップ 5. アプリのビルドおよびローカルでの実行
 {: #build-run-microservice}
@@ -158,7 +162,7 @@ ibmcloud dev deploy --target <container>
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。
+3. ログ・ファイルで、アプリ URL を見つけます。
 
     ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 

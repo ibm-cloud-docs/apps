@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 

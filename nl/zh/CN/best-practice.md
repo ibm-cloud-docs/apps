@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-04"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -58,7 +58,7 @@ subcollection: creating-apps
 ## 确保在监视应用程序
 {: #monitoring}
 
-通过 {{site.data.keyword.cloud_notm}}，可轻松使用 [New Relic](http://newrelic.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 等服务来监视应用程序。
+通过 {{site.data.keyword.cloud_notm}}，可轻松使用 [New Relic](https://newrelic.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 等服务来监视应用程序。
 
 ## 利用支持选项
 {: #support}
@@ -91,6 +91,6 @@ subcollection: creating-apps
 
 将应用程序安装作为一组独立于操作系统的统一脚本进行捕获。使应用程序安装保持较小且可移植，以适应不同的自动化方法。此外，尽可能减少应用程序安装需要的依赖关系。
 
-有关云就绪型应用程序的更多信息，请参阅 [The Twelve-Factor App](http://12factor.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+有关云就绪型应用程序的更多信息，请参阅 [The Twelve-Factor App](https://12factor.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 

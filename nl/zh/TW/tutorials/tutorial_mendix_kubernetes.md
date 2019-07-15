@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-07"
 
 keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
@@ -27,7 +27,7 @@ subcollection: creating-apps
 {: #prereqs-mendix-kube}
 
 * 建立 Mendix 應用程式。如需相關資訊，請參閱[建立 Mendix 應用程式](/docs/apps/tutorials?topic=creating-apps-create-mendix)。
-* 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
+* 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-getting-started)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
 * 登入 `ibmcloud` CLI 並配置 `kubectl` 以便[存取 Kubernetes 叢集](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3)。
 
 ## 建立 Cloud Object Storage 服務實例

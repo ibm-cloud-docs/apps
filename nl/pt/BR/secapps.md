@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Criando solicitações de assinatura de certificado
 {: #ssl_csr}
 
-É possível assegurar seus aplicativos fazendo upload de certificados SSL e restringindo acesso aos aplicativos.
+É possível proteger seus aplicativos fazendo upload de certificados SSL e restringindo o acesso aos apps.
 {:shortdesc}
 
 ## Criando uma CSR
@@ -29,7 +29,7 @@ Antes que seja possível fazer upload dos certificados SSL aos quais você está
 a assinatura de uma chave pública e as informações associadas. O mais comum é que as CSRs estejam no formato PKCS #10. A CSR inclui uma chave pública e um nome comum, uma organização, uma cidade, um estado, um país e um e-mail. As
 solicitações de certificado SSL são aceitas somente com um comprimento da chave CSR de 2048 bits.
 
-Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando a [ferramenta de linha de comandos OpenSSL ](http://www.openssl.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"):
+Os métodos para criar uma CSR veriam dependendo de seu sistema operacional. O exemplo a seguir mostra como criar uma CSR usando a [ferramenta de linha de comandos OpenSSL ](https://www.openssl.org/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -37,8 +37,7 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 {: codeblock}
 
 A implementação OpenSSL SHA-512 depende do suporte
-do compilador para o tipo de número inteiro de 64 bits. É possível usar a opção SHA-1 para aplicativos
-que possuem problemas de compatibilidade com o certificado SHA-256.
+do compilador para o tipo de número inteiro de 64 bits. É possível usar a opção SHA-1 para apps que têm problemas de compatibilidade com o certificado SHA-256.
 {: tip}
 
 ### Conteúdos CSR obrigatórios
@@ -65,9 +64,7 @@ essa autoridade. Depois de criar o CSR, é possível gerar seu certificado SSL e
 ## Fazendo upload de certificados SSL
 {: #ssl_certificate}
 
-É possível aplicar um protocolo de segurança para fornecer privacidade de
-comunicação a seu aplicativo a fim de evitar espionagem, violação e falsificação de
-mensagens. Se você tiver uma conta Lite, deverá fazer upgrade de sua conta para fazer upload de um certificado.
+É possível aplicar um protocolo de segurança para fornecer privacidade de comunicação para seu app para evitar espionagem de tráfego de rede, violação e falsificação de mensagens. Se você tiver uma conta Lite, deverá fazer upgrade de sua conta para fazer upload de um certificado.
 
 Ao usar um domínio customizado para entregar o certificado SSL, use os terminais de região a seguir para fornecer a rota de URL para sua organização no {{site.data.keyword.cloud_notm}}:
 
@@ -79,12 +76,13 @@ extremidade |
 | EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="Tabela 1. Terminais de região de domínio customizado do Cloud Foundry" caption-side="top"}
 
-Para fazer upload de um certificado para seu aplicativo Cloud Foundry, conclua as etapas a seguir:
+Para fazer upload de um certificado para seu app Cloud Foundry, conclua as etapas a seguir:
 
 1. No [console do {{site.data.keyword.cloud_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
 2. Clique em **Apps Cloud Foundry**.
-3. Clique no aplicativo para o qual você deseja mudar o domínio. 
+3. Clique no app para o qual você deseja mudar o domínio. 
 4. Na página Visão geral do app, clique em **Rotas**e selecione **Gerenciar domínios**.
 5. Na coluna Ações, clique no ícone Ações ![Ícone Mais ações](../icons/action-menu-icon.svg) e selecione **Domínios**.
 6. Clique em **Upload** para seu domínio customizado.
@@ -101,10 +99,10 @@ mantida no sistema do usuário e é protegida por uma senha.
   * Certificado intermediário (opcional): um certificado subordinado emitido pela autoridade de certificação (CA) raiz
 confiável especificamente para emitir certificados de servidor de entidade final. O resultado é uma cadeia de certificados que inicia na autoridade de certificação raiz
 confiável, passa pelo certificado intermediário e termina com o
-certificado SSL emitido para a organização. Use um certificado intermediário para verificar a autenticidade do certificado principal. Os certificados intermédios geralmente são obtidos de um terceiro confiável. Você pode não precisar de um certificado intermediário ao testar seu aplicativo antes de implementá-lo em produção.
+certificado SSL emitido para a organização. Use um certificado intermediário para verificar a autenticidade do certificado principal. Os certificados intermédios geralmente são obtidos de um terceiro confiável. Você pode não requerer um certificado intermediário ao testar seu app antes de implementá-lo na produção.
   * Ativar solicitação de certificado de cliente: ao ativar essa opção, quando um usuário tentar acessar um domínio
 protegido por SSL, um certificado do lado do cliente será solicitado a ele. Por exemplo, em um navegador da web, quando um usuário tentar acessar um domínio protegido por SSL, o navegador da web solicitará ao usuário que forneça um certificado de cliente para o domínio.   
-  * Armazenamento confiável de certificado de cliente (opcional): inclui os certificados de cliente para os usuários aos quais você deseja permitir acesso ao seu aplicativo. Faça upload de um arquivo de armazenamento confiável de certificado de cliente para ativar a opção para solicitar um certificado de cliente.
+  * Armazenamento confiável de certificado de cliente (opcional): inclui os certificados de cliente para os usuários para os quais você deseja permitir acesso ao seu app. Faça upload de um arquivo de armazenamento confiável de certificado de cliente para ativar a opção para solicitar um certificado de cliente.
   
     É possível configurar a autenticação mútua fazendo upload de um armazenamento confiável de certificado de cliente que inclui uma chave pública em seus metadados.
     {: tip}

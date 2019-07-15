@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -20,22 +20,18 @@ subcollection: creating-apps
 # 將入門範本套件應用程式部署至 Kubernetes 叢集
 {: #tutorial-starterkit-kube}
 
-瞭解如何使用空白的入門範本套件和 Kubernetes 工具鏈在 {{site.data.keyword.cloud}} 中建立應用程式，並持續將應用程式遞送至 Kubernetes 叢集中的安全容器。您可以配置 Continuous Integration DevOps 管線，以自動建置程式碼變更，並將這些變更傳播到 Kubernetes 叢集裡的應用程式。如果您已有管線，則可以將它連接至應用程式。
+瞭解如何使用基本入門範本套件和 Kubernetes 工具鏈在 {{site.data.keyword.cloud}} 中建立應用程式，並持續將應用程式遞送至 {{site.data.keyword.containerlong}} 中的安全容器。您可以配置 Continuous Integration DevOps 管線，以自動建置程式碼變更，並將這些變更傳播到 Kubernetes 叢集裡的應用程式。如果您已有管線，則可以將它連接至應用程式。
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} 提供入門範本套件，可協助您建置在 Kubernetes 上執行之應用程式的基礎。當您使用入門範本套件時，可以輕鬆地遵循雲端原生程式設計模型，該模型會使用 {{site.data.keyword.cloud_notm}} 最佳作法來開發應用程式。入門範本套件產生的應用程式會遵循雲端原生程式設計模型，而且它們包含每種程式設計語言中的測試案例、性能檢查及度量值。您也可以佈建雲端服務，然後在產生的應用程式中加以起始設定。
 
-本指導教學使用 Kubernetes 部署目標。在本指導教學中，我們是從基本入門範本套件建立應用程式，方法為使用 Java + Spring、將 Cloudant 服務實例新增至其中，然後使用 IBM Kubernetes Service 將其部署至 {{site.data.keyword.cloud_notm}}。
-
-首先，請參閱下列入門範本套件流程圖及其對應的概觀步驟。
-
-![入門範本套件流程圖](../images/starterkit-flow.png) 
+本指導教學使用 {{site.data.keyword.containerlong}} 部署目標。在本指導教學中，我們是從基本入門範本套件建立應用程式，方法為使用 Java + Spring、將 Cloudant 服務實例新增至其中，然後將其部署至 {{site.data.keyword.containerlong}}。
 
 ## 開始之前
 {: #prereqs-starterkit-kube}
 
 * 使用[入門範本套件](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)來建立 **Java + Spring** 應用程式。
-* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
 * 設定 [Docker ](https://www.docker.com/get-started){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## 將服務新增至應用程式

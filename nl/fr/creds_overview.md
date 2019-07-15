@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -25,7 +25,6 @@ Vous voulez que votre logique applicative acquière des données d'identificatio
 {: shortdesc}
 
 Si vous créez une application en utilisant un kit de démarrage, l'environnement est automatiquement préparé pour vous. Lorsque vous connectez un service à votre kit de démarrage avant de déployer votre application, les données d'identification du service sont automatiquement ajoutées à votre environnement.
-{ :tip}
 
 Vous devez ajouter manuellement les données d'identification de service à votre environnement de déploiement dans les deux scénarios suivants :
 
@@ -34,7 +33,7 @@ Vous devez ajouter manuellement les données d'identification de service à votr
 
 Le processus d'ajout des données d'identification de service dépend de votre cible de déploiement et de votre langage de programmation. Pour plus d'informations sur la configuration des données d'identification de service pour votre cible de déploiement, consultez la documentation spécifique à votre environnement d'hébergement :
 
-  * [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
   * Cloud Foundry Public ou {{site.data.keyword.cfee_full}}
   * Instance de serveur virtuel (conteneur Docker local)
 

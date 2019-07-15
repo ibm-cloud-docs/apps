@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-13"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
 
 # 建立微服務
 {: #tutorial-microservice}
@@ -26,7 +27,7 @@ subcollection: creating-apps
 ## 步驟 1. 安裝工具
 {: #prereqs-microservice}
 
-* 安裝[開發人員工具](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+* 安裝[開發人員工具](/docs/cli?topic=cloud-cli-getting-started)。
 * Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
 * 如果您計劃將應用程式部署至 [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about)，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
 
@@ -68,7 +69,10 @@ subcollection: creating-apps
 2. 選取一個部署目標。根據您所選目標的指示設定部署目標：
   * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
   * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企業環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**的部署者類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
-  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。
+  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。如需相關資訊，請參閱[將應用程式部署至虛擬伺服器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)。
+
+    部分入門範本套件可以進行 VSI 部署。若要使用此特性，請移至 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName})，然後在**應用程式**磚按一下**建立應用程式**。
+    {: note}
 
 ## 步驟 5. 在本端建置及執行應用程式
 {: #build-run-microservice}

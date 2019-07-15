@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-04"
 
 keywords: apps, applications, activity tracking events
 
@@ -45,27 +45,10 @@ Para iniciar o monitoramento de suas ações do usuário, consulte o [Tutorial d
 
 A tabela a seguir lista as ações que geram um evento:
 
-<table>
-  <caption>Ações que geram eventos</caption>
-  <tr>
-    <th>Ações</th>
-	  <th>Descrição</th>
-  <tr>
-  <tr>
-    <td>bluemix-developer-experience.app.create</td>
-	  <td>Um evento é gerado quando um usuário cria um aplicativo.</td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.read</td>
-	  <td>Um evento é gerado quando qualquer uma das situações a seguir acontece: </br><ul><li>Um usuário faz download do código do aplicativo.</li> <li>Um usuário faz download do arquivo de credenciais usando a CLI do {{site.data.keyword.dev_console}}.</li> <li>A infraestrutura de experiência do desenvolvedor lê credenciais para serviços que estão associados a um aplicativo.</li> <li>Um usuário visualiza a lista de aplicativos, por exemplo, quando o usuário visualiza a lista de aplicativos no console do {{site.data.keyword.dev_console}} ou por meio da CLI do {{site.data.keyword.dev_cli_short}}.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.update</td>
-	  <td>Um evento é gerado quando qualquer uma das situações a seguir acontece: </br><ul><li>Algo sobre o aplicativo muda, por exemplo, quando um usuário modifica o nome do aplicativo. </li><li>Um novo serviço
-é criado e incluído em um aplicativo.</li><li>Um serviço existente é incluído em um aplicativo.</li><li>Um serviço é removido de um aplicativo.</li><li>O código é gerado para um aplicativo.</li><li>Uma cadeia de ferramentas do DevOps é incluída por meio da experiência do desenvolvedor, por exemplo, selecionando *Configurar entrega contínua*.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.delete</td>
-	  <td>Um evento é gerado quando um usuário exclui um aplicativo.</td>
-  </tr>
-</table>
+|Ações	|Descrição	|
+|-----|-------------|
+|bluemix-developer-experience.app.create |Um evento é gerado quando um usuário cria um app.|
+|bluemix-developer-experience.app.read |Um evento é gerado quando qualquer uma das situações a seguir acontece:<br><br>Um usuário faz download do código do app.<br><br>Um usuário faz download do arquivo de credenciais usando a CLI do {{site.data.keyword.dev_console}}.<br><br>A infraestrutura do {{site.data.keyword.cloud_notm}} lê credenciais para serviços que estão associados a um app.<br><br>Um usuário visualiza a lista de apps. Por exemplo, um usuário visualiza a lista de apps no console do {{site.data.keyword.dev_console}} ou por meio da CLI do {{site.data.keyword.dev_cli_short}}.|
+|bluemix-developer-experience.app.update |Um evento é gerado quando qualquer uma das situações a seguir acontece:<br><br>Algo sobre as mudanças de app. Por exemplo, um usuário modifica o nome do app.<br><br>Um novo serviço é criado e incluído em um app.<br><br>Um serviço existente é incluído em um app.<br><br>Um serviço é removido de um app.<br><br>O código é gerado para um app.<br><br>Uma cadeia de ferramentas do DevOps é incluída por meio do console do {{site.data.keyword.cloud_notm}}. Por exemplo, um usuário seleciona **Configurar entrega contínua** na página Detalhes do app.|
+|bluemix-developer-experience.app.delete |Um evento é gerado quando um usuário exclui um app. |
+{: caption="Tabela 1. Ações que geram eventos" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -31,7 +31,7 @@ Cada kit do iniciador inclui um idioma, uma estrutura e um padrão para um caso 
 
 Os kits do iniciador são prontos para produção e focam em demonstrar uma implementação padrão de chave usando um tempo de execução (por exemplo, Node.js e Express). Em alguns casos, os kits do iniciador oferecem uma experiência do usuário simples para destacar a integração do serviço. Em outros casos, os kits do iniciador representam uma implementação customizável de um caso de uso sofisticado.
 
-Um fragmento são algumas linhas de código frequentemente apresentadas em um IDE. Os fragmentos ajudam um desenvolvedor a integrar-se a uma sintaxe de linguagem de programação ou a suportar a integração com uma API definida. Uma demonstração é geralmente alta em qualidade e fidelidade e usa uma gama de serviços e pontos de integração. Ela geralmente requer tempo de configuração e é usada para provar um problema de negócios ou demonstrar um recurso de plataforma. É possível usá-la para avaliar os estágios de adoção de nuvem. Às vezes, esse é o código incluído no código de produção. Uma amostra é um pequeno exemplo de um recurso, uma função, um serviço ou uma jornada de usuário específicos. É possível reutilizar uma amostra ou incluí-la em um aplicativo de produção. Ela é usada geralmente para mostrar recursos técnicos e uma possível abordagem para solucionar um problema técnico.
+Um fragmento são algumas linhas de código frequentemente apresentadas em um IDE. Os fragmentos ajudam um desenvolvedor a integrar-se a uma sintaxe de linguagem de programação ou a suportar a integração com uma API definida. Uma demonstração é geralmente alta em qualidade e fidelidade e usa uma gama de serviços e pontos de integração. Ela geralmente requer tempo de configuração e é usada para provar um problema de negócios ou demonstrar um recurso de plataforma. É possível usá-la para avaliar os estágios de adoção de nuvem. Às vezes, esse é o código incluído no código de produção. Uma amostra é um pequeno exemplo de um recurso, uma função, um serviço ou uma jornada de usuário específicos. É possível reutilizar uma amostra ou incluí-la em um app de produção. Ela é usada geralmente para mostrar recursos técnicos e uma possível abordagem para solucionar um problema técnico.
 
 ## Código móvel
 {: #portable-code}

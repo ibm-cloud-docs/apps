@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # Criando apps por meio do seu próprio repositório de código
 {: #tutorial-byoc}
 
-Se você tiver um aplicativo em um repositório existente, será possível usar um kit do iniciador vazio para criar um registro de app no {{site.data.keyword.cloud_notm}} e conectar o app a seu repositório de origem e à sua cadeia de ferramentas do DevOps.
+Se você tiver um aplicativo em um repositório existente, será possível usar um kit do iniciador básico para criar um registro de app no {{site.data.keyword.cloud_notm}} e conectar o app ao seu repositório de origem e à sua cadeia de ferramentas do DevOps.
 {: shortdesc}
 
-É possível iniciar por meio do painel do {{site.data.keyword.cloud_notm}} ou de qualquer kit do iniciador em branco. Depois
+É possível iniciar por meio do painel do {{site.data.keyword.cloud_notm}} ou de qualquer kit do iniciador básico. Depois
 de nomear o app e selecionar um grupo de recursos, selecione o ponto de início
 **Trazer seu próprio código**, forneça a URL do repositório Git que contém o código e clique em **Criar**.
 
@@ -34,7 +34,7 @@ de nomear o app e selecionar um grupo de recursos, selecione o ponto de início
 
 Verifique se os pré-requisitos a seguir estão prontos:
 
- * Instale a [interface da linha de comandos (CLI) do {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+ * Instale a [interface da linha de comandos (CLI) do {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started).
  * Consulte [O que torna bom um app?](/docs/apps?topic=creating-apps-best-practice) para obter as melhores
 práticas para criar apps.
  * Deve-se ter um repositório de código-fonte Git de qualquer um dos seguintes provedores: GitHub,
@@ -46,7 +46,7 @@ GitHub Enterprise, GitLab, BitBucket ou Rational.
 
 Para criar um app e conectá-lo ao repositório de origem, conclua estas etapas:
 
-1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), clique em **Criar um app** no tile **Apps**.
+1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window}![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo"), clique em **Criar um app** no bloco **Apps**.
 2. Nomeie o seu app, selecione um grupo de recursos e, opcionalmente, forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
 3. Selecione **Trazer seu próprio código** e forneça a URL para o seu repositório Git. O
 app e a imagem do Docker devem estar localizados no mesmo repositório.
@@ -100,7 +100,7 @@ O Delivery Pipeline ou a linha de comandos aponta você para a URL para seu app.
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo. No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+3. No arquivo de log, localize a URL do app. No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 
 Se você estiver usando a linha de comandos, execute o comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para abrir a página de um app implementado manualmente em seu navegador padrão.

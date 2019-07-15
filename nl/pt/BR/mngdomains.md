@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
@@ -19,10 +19,10 @@ subcollection: creating-apps
 # Gerenciando seus domínios
 {: #update-domain}
 
-Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.cloud}}. Domínios customizados direcionam solicitações para seus aplicativos para uma URL que você possui. Um domínio customizado pode ser um domínio compartilhado, um subdomínio compartilhado ou um domínio compartilhado e host. A menos que um domínio customizado seja especificado, o {{site.data.keyword.cloud_notm}} usará um domínio compartilhado padrão na rota para seu aplicativo. O processo para gerenciar seus domínios depende de seu destino de implementação, como o {{site.data.keyword.containershort}}, o Cloud Foundry e outros.
+Os domínios fornecem a rota da URL que é alocada para sua organização no {{site.data.keyword.cloud}}. Domínios customizados direcionam solicitações para seus aplicativos para uma URL que você possui. Um domínio customizado pode ser um domínio compartilhado, um subdomínio compartilhado ou um domínio compartilhado e host. A menos que um domínio customizado seja especificado, o {{site.data.keyword.cloud_notm}} usa um domínio compartilhado padrão na rota para seu app. O processo para gerenciar seus domínios depende de seu destino de implementação, como o {{site.data.keyword.containershort}}, o Cloud Foundry e outros.
 {:shortdesc}
 
-Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público e, em seguida, configurar o domínio customizado no {{site.data.keyword.cloud_notm}}. Em seguida, deve-se mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.cloud_notm}} no servidor DNS público. Depois que seu domínio customizado estiver mapeado para o domínio do sistema, as solicitações para seu domínio customizado serão roteadas para seu aplicativo no {{site.data.keyword.cloud_notm}}.
+Para usar um domínio customizado, deve-se registrar o domínio customizado em um servidor DNS público e, em seguida, configurar o domínio customizado no {{site.data.keyword.cloud_notm}}. Em seguida, deve-se mapear o domínio customizado para o domínio do sistema do {{site.data.keyword.cloud_notm}} no servidor DNS público. Depois que seu domínio customizado é mapeado para o domínio do sistema, as solicitações para seu domínio customizado são roteadas para seu app no {{site.data.keyword.cloud_notm}}.
 
 ## Mudando seu domínio para apps do Kubernetes
 {: #update-domain-kube}
@@ -34,7 +34,7 @@ O subdomínio para os nomes de host do {{site.data.keyword.containershort_notm}}
 
 Se você desejar usar um domínio customizado, deverá registrá-lo como um domínio curinga, como `*.custom_domain.net`. Para usar o TLS, deve-se obter um certificado curinga. Para obter mais informações, consulte [Múltiplos domínios dentro de um namespace](/docs/containers?topic=containers-ingress#multi-domains).
 
-Confira [este tutorial](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes) que o conduz pelo processo de scaffolding de um aplicativo da web, executando-o localmente em um contêiner e, em seguida, implementando-o em um cluster do Kubernetes que foi criado com o IBM Kubernetes Service. Além disso, o tutorial mostra como ligar um domínio customizado, monitorar o funcionamento do ambiente e escalar o aplicativo.
+Consulte [este tutorial](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes) que explica a você o andaime de um app da web, executando-o localmente em um contêiner e, em seguida, implementando-o em um cluster Kubernetes que foi criado com o IBM Kubernetes Service. Além disso, o tutorial mostra como ligar um domínio customizado, monitorar o funcionamento do ambiente e escalar o app.
 
 ## Mudando seu domínio para apps Cloud Foundry
 {: #update-domain-cf}

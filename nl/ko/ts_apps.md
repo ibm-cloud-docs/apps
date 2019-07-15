@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # 앱 작성 문제점 해결
 {: #managingapps}
 
-앱을 작성할 때 앱을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 일반적인 문제가 생길 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
+앱 작성과 관련된 일반적인 문제에는 앱을 업데이트할 수 없거나 2바이트 문자가 표시되지 않는 등의 문제가 포함될 수 있습니다. 대부분 몇 가지 간단한 단계를 수행하여 이러한 문제점에서 복구할 수 있습니다.
 {:shortdesc}
 
 ## 내 앱이 다른 도메인에서 호스팅됨
@@ -60,27 +60,6 @@ Cloud Foundry 앱의 하위 도메인은 `cf.appdomain.cloud`입니다. {{site.d
 메시지 창을 닫고 런타임 분할창에서 **재설정**을 클릭하십시오.
 {: tsResolve}
 
-## {{site.data.keyword.cloud_notm}} 지역 간 자동 장애 복구를 사용할 수 없음
-{: #ts_failover}
-{: troubleshoot}
-
-{{site.data.keyword.cloud}} 지역 간에 자동 장애 복구를 사용할 수 없습니다. 하지만 여러 IP 주소 간의 장애 복구를 지원하는 DNS 제공자를 임시 해결책으로 사용할 수 있습니다.
-
-{{site.data.keyword.cloud_notm}} 지역을 사용할 수 없는 경우에는 동일한 앱이 다른 {{site.data.keyword.cloud_notm}} 지역에서 실행 중이어도 해당 지역에서 실행 중인 앱 역시 사용할 수 없습니다.
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}}는 하나의 지역에서 다른 지역으로의 자동 장애 복구를 아직 제공하지 않습니다.
-{: tsCauses}
-
-여러 IP 주소 간의 지능형 장애 복구를 지원하는 DNS 제공자를 사용하여 {{site.data.keyword.cloud_notm}} 지역 간의 자동 장애 복구를 지원하도록 DNS 설정을 수동으로 구성할 수 있습니다. 이 기능이 있는 DNS 제공자에는 NSONE, Akamai 및 Dyn이 포함됩니다.
-{: tsResolve}
-
-DNS 설정을 구성할 때 앱이 실행 중인 {{site.data.keyword.cloud_notm}} 지역의 공인 IP 주소를 지정해야 합니다. {{site.data.keyword.cloud_notm}} 지역의 공인 IP 주소를 가져오려면 `nslookup` 명령을 사용하십시오. 예를 들어, 명령행 창에 다음 명령을 입력할 수 있습니다.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## 권한 오류로 인해 {{site.data.keyword.cloud_notm}} 서비스에 액세스할 수 없음
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
+다른 프로그램 언어로 사용할 수 있는 명령에 대한 자세한 정보는 [Java ](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [Ruby ](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 ## 502 잘못된 게이트웨이 오류가 수신됨
 {: #ts_502_error}
@@ -132,13 +111,13 @@ process.env.VCAP_SERVICES
 
 Google이 액세스할 수 없는 특정 지역의 Android 앱은 IBM {{site.data.keyword.mobilepushshort}} 서비스를 통해 전송하는 알림을 받을 수 없습니다. 이 경우 임시 해결책으로 서드파티 서비스를 사용합니다.
 
- {{site.data.keyword.cloud_notm}} 앱에 대해 {{site.data.keyword.mobilepushshort}} 서비스를 바인드하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
+ {{site.data.keyword.cloud_notm}} 앱에 대해 {{site.data.keyword.mobilepushshort}} 서비스를 바인딩하고 등록된 디바이스에 메시지를 전송합니다. 하지만 Android에서 개발된 앱이 특정 지역에서 알림을 수신할 수 없습니다.
 {: tsSymptoms}
 
 IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Messaging) 서비스를 사용하여 Android에서 개발되는 모바일 앱에 알림을 디스패치합니다. Android 앱이 알림을 수신하도록 설정하려면 모바일 앱이 GCM(Google Cloud Messaging) 서비스에 액세스할 수 있어야 합니댜. Android 앱이 GCM 서비스에 도달할 수 없는 지역에서는 Android 앱이 {{site.data.keyword.mobilepushshort}}를 받을 수 없습니다.
 {: tsCauses}
 
-임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy ](https://pushy.me){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘"), [getui ](http://www.getui.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [jpush ](https://www.jpush.cn/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")).
+임시 해결책으로 GCM 서비스에 의존하지 않는 서드파티 서비스를 사용하십시오(예: [Pushy](https://pushy.me/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 및 [jpush](https://www.jiguang.cn/en/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")).
 {: tsResolve}
 
 ## 앱이 {{site.data.keyword.cloud_notm}}로 푸시될 때 2바이트 문자가 올바르게 표시되지 않음
@@ -147,7 +126,7 @@ IBM {{site.data.keyword.mobilepushshort}} 서비스에서는 GCM(Google Cloud Me
 
 서블릿 또는 JSP 파일에 대해 유니코드 지원이 제대로 구성되지 않은 경우 2바이트 문자가 올바르게 표시되지 않을 수 있습니다.
 
-애플리케이션이 {{site.data.keyword.cloud_notm}}로 푸시될 때 앱 내에 지정된 2바이트 문자가 올바르게 표시되지 않습니다.
+앱이 {{site.data.keyword.cloud_notm}}로 푸시될 때 앱 내에 지정된 2바이트 문자가 올바르게 표시되지 않습니다.
 {: tsSymptoms}
 
 이 문제점은 서블릿 또는 JSP 파일에 대해 유니코드 지원이 제대로 구성되지 않은 경우에 발생할 수 있습니다.
@@ -267,7 +246,7 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
 이 문제점은 발견 스크립트, 컴파일 스크립트, 릴리스 스크립트 등의 스크립트가 실행 가능하지 않을 경우에 발생합니다.
 {: tsCauses}
 
-[Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
+[Git update ](https://git-scm.com/docs/git-update-index){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘") 명령을 사용하여 각 스크립트의 권한을 실행 가능으로 변경할 수 있습니다. 예를 들어, `git update --chmod=+x script.sh`를 입력합니다.
 {: tsResolve}
 
 ## {{site.data.keyword.cloud_notm}} Continuous Delivery에서 Delivery Pipeline의 앱을 배치할 수 없음
@@ -290,7 +269,7 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
 
 빌드 또는 배치 작업에 실패하고 다음 메시지가 표시되는 경우에는 다음 CLI 명령을 사용하여 이미지를 삭제할 수 있습니다. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 아직 설치하지 않은 경우 설치하십시오.
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)를 아직 설치하지 않은 경우 설치하십시오.
 * `ibmcloud login`을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하고 현재 있는 영역을 가리키십시오.
 * `ibmcloud cr images`를 사용하여 이미지를 나열하십시오.
 * `ibmcloud cr image-rm <respository>:<tag>`를 사용하여 사용하지 않는 이미지를 삭제하십시오.
@@ -299,8 +278,8 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
 ## Kubernetes 로그 액세스
 {: #access_kube_logs}
 
-애플리케이션이 실행 중이 아니며 상태 엔드포인트에 액세스할 수 없는 경우에는 클러스터의 로그 보기를 시도하십시오.
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 아직 설치하지 않은 경우 설치하십시오.
+앱이 실행 중이 아니며 상태 엔드포인트에 액세스할 수 없는 경우에는 클러스터의 로그 보기를 시도하십시오.
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)를 아직 설치하지 않은 경우 설치하십시오.
 * `ibmcloud login`을 사용하여 {{site.data.keyword.cloud_notm}}에 로그인하고 현재 있는 영역을 가리키십시오.
 * `ibmcloud cs clusters`를 사용하여 클러스터를 나열하십시오.
 * `ibmcloud cs cluster-config <cluster-name>`를 사용하여 해당 클러스터를 가리키십시오.
@@ -308,7 +287,7 @@ Liberty 앱이 {{site.data.keyword.cloud_notm}}로 푸시되면 Liberty 빌드�
 * `kubectl get pods`을 사용하여 팟(Pod)을 보십시오. `kubectl`을 설치해야 하는 경우 [kubectl 설치 및 설정](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 * `kubectl logs <pod-name>`을 사용하여 앱에서 로그를 볼 수 있습니다.
 
-## `docker` 시작에 실패하며 "파일을 찾을 수 없음" 메시지가 표시됨
+## `docker` 시작에 실패하며 파일을 찾을 수 없음 메시지가 표시됨
 {: #docker_not_found}
 {: troubleshoot}
 

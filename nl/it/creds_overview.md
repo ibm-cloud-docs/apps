@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -25,7 +25,6 @@ Vuoi che la tua logica dell'applicazione acquisisca le credenziali di servizio s
 {: shortdesc}
 
 Se crei un'applicazione utilizzando un kit starter, l'ambiente viene preparato per tuo conto automaticamente. Quando connetti un servizio al tuo kit starter prima di distribuire la tua applicazione, le credenziali del servizio vengono automaticamente aggiunte al tuo ambiente.
-{ :tip}
 
 Devi aggiungere manualmente le credenziali del servizio al tuo ambiente di distribuzione nei seguenti scenari:
 
@@ -34,7 +33,7 @@ Devi aggiungere manualmente le credenziali del servizio al tuo ambiente di distr
 
 Il processo per l'aggiunta delle credenziali del servizio dipende dalla destinazione di distribuzione e dal tuo linguaggio di programmazione. Per ulteriori informazioni sulla configurazione delle credenziali del servizio per la tua destinazione di distribuzione, vedi la documentazione specifica per il tuo ambiente host:
 
-  * [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
   * Cloud Foundry Public o {{site.data.keyword.cfee_full}}
   * VSI (Virtual server instance) (contenitore Docker locale)
 

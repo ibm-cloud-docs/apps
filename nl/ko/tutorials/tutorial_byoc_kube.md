@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 기존 앱 저장소를 사용하여 {{site.data.keyword.cloud}}에서 애플리케이션을 작성하는 방법에 대해 알아봅니다. 기존 DevOps 도구 체인을 연결하거나 새로 하나를 작성하고 Kubernetes 클러스터의 보안 컨테이너에 앱을 지속적으로 전달할 수 있습니다. 이 튜토리얼은 변경사항이 자동으로 빌드되어 Kubernetes 클러스터의 배치된 앱에 항상 전파될 수 있도록 지속적 통합 DevOps 파이프라인을 설정하는 데 도움을 줍니다.
 {: shortdesc}
 
-작업 중인 백엔드 애플리케이션에 대한 코드 베이스의 소스 코드 저장소가 이미 있는 경우, {{site.data.keyword.cloud_notm}}에서는 전체 제품 범위를 구성하는 모든 자산의 집계 보기로 이 자산을 구성하는 데 도움을 줍니다. {{site.data.keyword.cloud_notm}}에서는 사용자가 DevOps 도구 체인 기능을 사용할 때 확장 가능한 DevOps 워크플로우에서 시작하고 실행할 수 있도록 합니다. 이 튜토리얼은 모두 클라우드 우수 사례의 안내에 따라 경험이 풍부한 개발자나 DevOps 엔지니어가 대상 {{site.data.keyword.cloud_notm}} Kubernetes 클러스터를 확보 및 구성하고 DevOps 도구 체인을 구성 및 실행하도록 도움을 줍니다.
+작업 중인 백엔드 앱에 대한 코드 베이스의 소스 코드 저장소가 이미 있는 경우, {{site.data.keyword.cloud_notm}}에서는 전체 제품 범위를 구성하는 모든 자산의 집계 보기로 이 자산을 구성하는 데 도움을 줍니다. {{site.data.keyword.cloud_notm}}에서는 사용자가 DevOps 도구 체인 기능을 사용할 때 확장 가능한 DevOps 워크플로우에서 시작하고 실행할 수 있도록 합니다. 이 튜토리얼은 모두 클라우드 우수 사례의 안내에 따라 경험이 풍부한 개발자나 DevOps 엔지니어가 대상 {{site.data.keyword.containerlong}}를 확보 및 구성하고 DevOps 도구 체인을 구성 및 실행하도록 도움을 줍니다.
 
 _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노드, 네트워크 및 스토리지 디바이스 세트입니다. 클러스터가 작성되면 컨테이너에 앱을 배치할 수 있습니다.
 {: tip}
@@ -45,16 +45,16 @@ _클러스터_는 앱의 고가용성을 유지하는 리소스, 작업자 노�
 ## 앱에 서비스 추가(선택사항)
 {: #resources-byoc-kube}
 
-앱을 작성한 후, **앱 세부사항** 페이지에서 앱에 서비스를 추가할 수 있습니다. {{site.data.keyword.cloud_notm}}에서 서비스 인스턴스를 작성합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 애플리케이션의 푸시 알림 서비스는 구성 정보를 생성합니다. {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 애플리케이션에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 애플리케이션 간에 공유할 수 있습니다.
+앱을 작성한 후, **앱 세부사항** 페이지에서 앱에 서비스를 추가할 수 있습니다. {{site.data.keyword.cloud_notm}}에서 서비스 인스턴스를 작성합니다. 프로비저닝 프로세스는 서로 다른 유형의 서비스마다 서로 다를 수 있습니다. 예를 들어, 데이터베이스 서비스는 데이터베이스를 작성하고, 모바일 앱의 푸시 알림 서비스는 구성 정보를 생성합니다. {{site.data.keyword.cloud_notm}}에서는 서비스 인스턴스를 사용하여 앱에 서비스 리소스를 제공합니다. 서비스 인스턴스는 웹 앱 간에 공유할 수 있습니다.
 
-이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다. 자세한 정보는 [앱에 서비스 추가](/docs/apps?topic=creating-apps-add-resource)를 참조하십시오.
+이 프로세스는 서비스 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인딩합니다. 자세한 정보는 [앱에 서비스 추가](/docs/apps?topic=creating-apps-add-resource)를 참조하십시오.
 
 앱에 서비스를 추가한 후에는 [서비스에 대한 인증 정보를 배치 환경에 복사](/docs/apps?topic=creating-apps-credentials_overview)해야 합니다.
 
 ## 배치를 위한 앱 준비
 {: #deploy-byoc-kube}
 
-이 단계에서는 애플리케이션에 DevOps 도구 체인을 연결하고 {{site.data.keyword.containershort_notm}}에서 호스팅된 Kubernetes 클러스터에 배치되도록 이를 구성합니다.
+이 단계에서는 앱에 DevOps 도구 체인을 연결하고 {{site.data.keyword.containerlong}}에서 호스팅된 Kubernetes 클러스터에 배치되도록 이를 구성합니다.
 
 DevOps 도구 체인은 쉘 스크립트 실행의 임의 단계의 관리적 실행을 허용할 만큼 충분히 탄력적입니다. 즉, 사용자는 DevOps 도구 체인으로 거의 모든 작업을 수행할 수 있습니다. 이 절의 범위는 스케일링된 DevOps 및 클라우드 우수 사례의 "미래 사용 보장(future-proofing)"을 염두에 두고 Kubernetes 클러스터의 앱 배치에 초점을 맞춥니다.
 
@@ -106,7 +106,7 @@ DevOps 도구 체인이 이미 있는 경우 다음 단계를 완료하십시오
 ### 파이프라인 단계 구성
 {: #pipelineconfig-byoc-kube}
 
-입력(GitHub 저장소 컨텐츠)이 올바른 대상을 지시하도록 파이프라인 단계를 구성하십시오. 작업 중인 Docker 이미지를 생성하고 IBM Containers Kubernetes 클러스터를 대상으로 지정하는 GitHub 저장소가 있다고 이 튜토리얼에서 가정하므로, 사용자는 이 목표를 달성하는 입력, 쉘 스크립트 및 출력의 파이프라인 단계를 작성합니다.
+입력(GitHub 저장소 컨텐츠)이 올바른 대상을 지시하도록 파이프라인 단계를 구성하십시오. 이 튜토리얼에서는 사용자에게 작업 중인 Docker 이미지를 생성하고 {{site.data.keyword.containerlong}}를 대상으로 지정하는 GitHub 저장소가 있다고 가정하므로, 사용자는 이 목표를 달성하는 입력, 쉘 스크립트 및 출력을 사용하여 파이프라인 단계를 작성합니다.
 
 1. `build and publish` 파이프라인 단계를 구성하십시오.
   1. 클릭한 Delivery Pipeline을 선택하고 **단계 추가**를 클릭하십시오.
@@ -158,7 +158,7 @@ Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니
 
 1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
 2. **로그 및 히스토리 보기**를 클릭하십시오.
-3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
+3. 로그 파일에서 앱의 URL을 찾으십시오. 로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
 4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
 명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하여 기본 브라우저에서 수동으로 배치된 앱의 페이지를 여십시오.
@@ -166,6 +166,6 @@ Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니
 ## 관련 정보
 
  * [도구 체인 작성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Git 저장소 및 문제 추적 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Git 저장소 및 문제 추적 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [GitHub 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [GitLab 구성](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

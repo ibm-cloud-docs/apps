@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 ## 开始之前
 {: #prereqs-app-cli}
 
-必须安装 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 插件以及其他建议的插件和工具。有关更多信息，请参阅 [IBM Cloud CLI 入门](/docs/cli?topic=cloud-cli-ibmcloud-cli)。 
+必须安装 {{site.data.keyword.cloud_notm}} CLI、{{site.data.keyword.dev_cli_notm}} CLI 插件以及其他建议的插件和工具。有关更多信息，请参阅 [IBM Cloud CLI 入门](/docs/cli?topic=cloud-cli-getting-started)。 
 
 ## 从头开始创建入门模板应用程序
 {: #create-app-cli}
@@ -53,7 +53,7 @@ subcollection: creating-apps
 ## 生成部署和云支持资产
 {: #byoc-cli}
 
-如果您已有现存的代码库，并且希望使用 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 为单个微服务或 Web 应用程序生成部署和云支持资产，那么可以使用此选项。此命令是测试版，无法支持所有语言和/或应用程序结构。以下指示信息说明如何将此功能与样本存储库配合使用；对于您自己的代码库，步骤大致相同。
+如果您已有现存的代码库，并且希望使用 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) 为单个微服务或 Web 应用程序生成部署和云支持资产，那么可以使用此选项。此命令处于 Beta 版，无法支持所有语言或应用程序结构。以下指示信息说明如何将此功能与样本存储库配合使用；对于您自己的代码库，步骤大致相同。
 
 1. 通过运行 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，然后将某个组织和空间设定为目标。
 2. 通过在所选目录中运行以下命令来克隆 [Hello World 样本应用程序](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
@@ -83,7 +83,7 @@ subcollection: creating-apps
 
 无论之前使用了哪个选项创建应用程序，现在都可以在本地构建和运行应用程序。
 
-1. 浏览至应用程序目录，并确保 Docker 正在系统上运行。
+1. 导航至应用程序目录，并确保 Docker 正在系统上运行。
 2. 运行 [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) 命令构建应用程序。
 3. 运行 [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 命令，开始在本地运行应用程序。
 4. 在 `http://localhost:3000` 或类似 URL 处查看本地运行的应用程序。
@@ -108,13 +108,13 @@ subcollection: creating-apps
 
 您可以使用以下两种方式之一从 CLI 将应用程序部署到 {{site.data.keyword.cloud_notm}}，具体取决于应用程序的配置方式。有关更多信息，请参阅以下主题：
 
-* [自动部署应用程序](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [手动部署应用程序](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [自动部署应用程序](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [手动部署应用程序](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## 查看应用程序
 {: #view-app-cli}
 
-1. 要查看在 {{site.data.keyword.cloud_notm}} 上运行的应用程序的 URL，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令。然后，在浏览器中转至该 URL。
+1. 要查看在 {{site.data.keyword.cloud_notm}} 上运行的应用程序的 URL，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令。这将在缺省浏览器中打开应用程序 URL。
 2. 要在 {{site.data.keyword.cloud_notm}} 控制台中查看有关应用程序凭证、服务和工具链的详细信息，请运行 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 命令。 
 
 **要报告问题或提供反馈，可以使用 [{{site.data.keyword.cloud_notm}} Tech 的 Slack - #developer-tools 通道](https://ibm-cloud-tech.slack.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。请求团队访问[此处](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。**

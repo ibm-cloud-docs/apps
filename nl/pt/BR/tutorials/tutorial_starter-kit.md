@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -15,16 +15,15 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{: note .note}
+{:note: .note}
 
 # Criando um app com um kit do iniciador
 {: #tutorial-starterkit}
 
-É possível usar um kit do iniciador para fazer com que seu aplicativo seja iniciado rapidamente e prepará-lo para desenvolvimento futuro. Selecione o kit do iniciador e a linguagem de programação, crie um app e, em seguida, configure uma cadeia de ferramentas do DevOps para implementar automaticamente seu app. Também é possível fazer download do código para inspeção imediata.
+É possível usar um kit do iniciador para fazer com que seu aplicativo seja iniciado rapidamente e prepará-lo para desenvolvimento futuro. Selecione o kit do iniciador e a linguagem de programação, crie um app e, em seguida, configure uma cadeia de ferramentas do DevOps para implementar automaticamente seu app.
 {: shortdesc}
 
-É possível criar um app de uma seleção de kits do iniciador, incluindo um espaço em branco, se você
-mesmo deseja customizar as opções de construção. De qualquer maneira, uma cadeia de ferramentas do DevOps é criada
+É possível criar um app por meio de uma seleção de kits do iniciador, incluindo um básico, se você mesmo deseja customizar as opções de construção. De qualquer maneira, uma cadeia de ferramentas do DevOps é criada
 automaticamente para a implementação do app. Também é possível fazer download do código para inspeção imediata.
 
 O {{site.data.keyword.cloud_notm}} tem portais do desenvolvedor em diferentes áreas de interesse (como Watson, Segurança ou Finanças) ou um canal digital (como Móvel ou Apps da web). É possível acessar esses portais por meio do ícone **Menu** ![Ícone Menu](../../icons/icon_hamburger.svg).
@@ -44,7 +43,7 @@ Consulte [O que são kits do iniciador?](/docs/apps?topic=creating-apps-starter-
 ## Etapa 1. Instale as ferramentas
 {: #prereqs-starterkit}
 
-* Instale as [ferramentas do desenvolvedor](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Instale as [ferramentas do desenvolvedor](/docs/cli?topic=cloud-cli-getting-started).
 * O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve estar em execução para que os comandos de construção funcionem. Deve-se criar uma conta do Docker, executar o app Docker e conectar-se.
 * Se você planeja implementar seu app no {{site.data.keyword.cfee_full}}, deve-se [preparar sua conta do {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -53,10 +52,9 @@ Consulte [O que são kits do iniciador?](/docs/apps?topic=creating-apps-starter-
 
 Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. É possível usar os filtros de categoria, como o idioma e o tipo, para limitar a seleção.
 
-1. Na página [kits do iniciador](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") no console do {{site.data.keyword.dev_console}}, selecione um kit do iniciador e clique em **Criar app**. 
+1. Na página [kits do iniciador](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") no console do {{site.data.keyword.dev_console}}, selecione um kit do iniciador e clique em **Criar app**. 
 
-    Para ver o que está incluído no kit do iniciador, selecione o bloco e leia os detalhes. Se você desejar usar um kit do iniciador em branco e customizá-lo, selecione o quadro **Criar app**.
-    {: tip}
+    Para ver o que está incluído no kit do iniciador, selecione o bloco e leia os detalhes. Se você deseja usar um kit do iniciador básico e customizar seu app, selecione o bloco **Criar app**.     {: tip}
 
 2. Nomeie o app e selecione um grupo de recursos.
 
@@ -97,9 +95,12 @@ Para selecionar o destino de implementação e configurar a entrega contínua, c
 
 1. Na página Detalhes do app, clique em **Configurar entrega contínua**.
 2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino selecionado:
-  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você.
+  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados nós do trabalhador, para implementar e gerenciar contêineres de app altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
+  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que poderá ser usado para criar e gerenciar ambientes isolados para hospedar apps do Cloud Foundry exclusivamente para a sua empresa.
+  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    A implementação de VSI está disponível para alguns kits do iniciador. Para usar esse recurso, acesse o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}) e clique em **Criar um app** no bloco **Apps**.
+    {: note}
 
 Após a seleção e a configuração do destino de implementação, a página Detalhes do app indica que a entrega contínua está configurada. É possível visualizar o repositório que contém o código-fonte para seu app clicando em **Visualizar repositório**.
 
@@ -125,7 +126,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo:
+3. No arquivo de log, localize a URL do app:
 
     No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 

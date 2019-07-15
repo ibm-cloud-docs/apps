@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -19,12 +19,12 @@ subcollection: creating-apps
 # {{site.data.keyword.prf_hubshort}}
 {: #monitor-overview}
 
-애플리케이션 가용성 및 성능 모니터링을 즉시 시작할 수 있습니다. {{site.data.keyword.prf_hubshort}}을 앱에 바인드하면 기본 앱 URL을 기본적으로 모니터하는 종합 테스트가 자동으로 작성됩니다.
+애플리케이션 가용성 및 성능 모니터링을 즉시 시작할 수 있습니다. {{site.data.keyword.prf_hubshort}}을 앱에 바인딩하면 기본 앱 URL을 기본적으로 모니터하는 종합 테스트가 자동으로 작성됩니다.
 
-{{site.data.keyword.prf_hublong}}은 {{site.data.keyword.cloud_notm}} 카탈로그의 DevOps 도메인에서 서비스로 사용 가능합니다. Cloud Foundry 애플리케이션 대시보드의 **모니터링** 탭에서도 사용 가능합니다.
+{{site.data.keyword.prf_hublong}}은 {{site.data.keyword.cloud_notm}} 카탈로그의 DevOps 도메인에서 서비스로 사용 가능합니다. Cloud Foundry 앱 대시보드의 **모니터링** 탭에서도 사용 가능합니다.
 {: shortdesc}
 
-{{site.data.keyword.prf_hubshort}}을 DevOps 도구 체인에 추가하면 애플리케이션을 빌드하면서 애플리케이션의 상태를 테스트, 모니터 및 개선할 수 있습니다.
+{{site.data.keyword.prf_hubshort}}을 DevOps 도구 체인에 추가하면 앱을 빌드하면서 앱의 상태를 테스트, 모니터 및 개선할 수 있습니다.
 
 이 도구 통합은 Cloud Foundry 앱에만 사용 가능합니다. 사전 구성되어 있으므로 구성 매개변수가 필요하지 않습니다. 이 도구 통합은 다시 구성할 수 없습니다.
 {: tip}

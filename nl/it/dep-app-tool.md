@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -27,9 +27,6 @@ Puoi distribuire la tua applicazione a {{site.data.keyword.cloud}} utilizzando u
 
 Una toolchain DevOps fornisce un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di GitLab dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-Tutte le toolchain che vengono create dal dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
-{: note}
-
 ## Utilizzo della console {{site.data.keyword.cloud_notm}}
 {: deploy-console}
 
@@ -38,16 +35,22 @@ Tutte le toolchain che vengono create dal dashboard dello sviluppatore {{site.da
 ### Prima di iniziare
 {: deploy-console-before}
 
-Prima di cominciare, utilizza il [Dashboard {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per [creare la tua applicazione](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) e [aggiungere i servizi](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
+Prima di cominciare, utilizza il [Dashboard {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per [creare la tua applicazione](/docs/apps?topic=creating-apps-getting-started) e [aggiungere i servizi](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
 ### Distribuzione automatica della tua applicazione
 {: deploy-console-auto}
+
+Tutte le toolchain che vengono create dal dashboard dello sviluppatore {{site.data.keyword.cloud_notm}} sono configurate per la distribuzione automatica.
+{: note}
 
 1. Nella pagina **App details**, fai clic su **Configure continuous delivery**.
 2. Seleziona un destinazione per la distribuzione. Configura la tua destinazione di distribuzione in base alle istruzioni per la destinazione che selezioni:
   * **Deploy to IBM Kubernetes Service**. Questa opzione crea un cluster di host, denominati nodi di lavoro, per distribuire e gestire contenitori delle applicazioni ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni ai cluster Kubernetes](/docs/containers?topic=containers-app).
   * **Deploy to Cloud Foundry**. Questa opzione distribuisce la tua applicazione nativa del cloud senza che tu debba gestire l'infrastruttura sottostante. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer **Public Cloud** o **Enterprise Environment**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni a Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) e [Distribuzione delle applicazioni a {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
-  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni a un server virtuale](/docs/apps?topic=creating-apps-vsi-deploy).
+  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto. Per ulteriori informazioni, vedi [Distribuzione delle applicazioni a un server virtuale](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    La distribuzione di VSI è disponibile per alcuni kit starter. Per utilizzare questa funzione, vai al [dashboard {{site.data.keyword.cloud_notm}}](https://{DomainName}) e fai clic su **Create an app** nel tile **Apps**.
+    {: note}
 
 ### Distribuzione manuale della tua applicazione
 {: deploy-console-manual}
@@ -73,7 +76,7 @@ Per ulteriori informazioni, vedi:
 ### Prima di iniziare
 {: #deploy-cli-before}
 
-Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Prima di iniziare, [scarica e installa la CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 
 La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra diversa da quella della riga di comando Cygwin.
 {: important}
@@ -84,9 +87,7 @@ La CLI non è supportata da Cygwin. Utilizza lo strumento in una finestra divers
 
   3.  Aggiorna il tuo codice applicazione. Ad esempio, se stai utilizzando un'applicazione di esempio {{site.data.keyword.cloud_notm}} che contiene il file `src/main/webapp/index.html`, puoi modificarlo con la riga `Thanks for creating ...`. Assicurati che l'applicazione venga eseguita localmente prima di distribuirla a {{site.data.keyword.cloud_notm}}.
 
-    Prendi nota del file `manifest.yml`. Quando distribuisci la tua applicazione a {{site.data.keyword.cloud_notm}}, questo file viene utilizzato per determinare l'URL, l'allocazione di memoria, il numero di istanze e altri parametri fondamentali della tua applicazione.
-
-    Controlla inoltre il file `README.md`, che contiene dettagli come le istruzioni di creazione.
+    Controlla il file `README.md`, che contiene dettagli come le istruzioni di creazione.
 
     Se la tua applicazione è un'applicazione Liberty, devi crearla prima di ridistribuirla.
     {: note}
@@ -128,7 +129,7 @@ Dopo che hai creato una toolchain DevOps per la tua applicazione, distribuire un
 Puoi distribuire manualmente la tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando il comando [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   ```
-  ibmcloud dev deploy <APP_NAME>
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
@@ -137,4 +138,4 @@ Puoi distribuire manualmente la tua applicazione a {{site.data.keyword.cloud_not
 
 Per ulteriori informazioni sulla distribuzione della tua applicazione a {{site.data.keyword.cloud_notm}} utilizzando la CLI, vedi:
 
-* [Deploying to IBM Cloud Environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")

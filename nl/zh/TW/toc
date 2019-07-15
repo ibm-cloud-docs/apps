@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
 建立應用程式
 
     {: .navgroup id="learn"}
@@ -27,9 +27,9 @@
         tutorials/tutorial_code-pattern.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        deploying/functions.md
+        functions.md
         tutorials/tutorial_mendix_getting_started.md
-        [要使用某種語言嗎？](https://{DomainName}/docs/home/build)
+        [Looking to use a language?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
     部署應用程式
@@ -38,7 +38,6 @@
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
-        vsi-deploy.md
 
     {: .topicgroup}
     配置
@@ -48,10 +47,6 @@
         secapps.md
 
     {: .topicgroup}
-    移轉應用程式
-        migrating.md
-
-    {: .topicgroup}
     整合應用程式與 DevOps
         toolchains.md
         insights.md
@@ -59,7 +54,7 @@
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 指令行外掛程式](/docs/cli/idt?topic=cloud-cli-idt-cli)
+    [IBM Cloud Developer Tools 指令行外掛程式](/docs/cli?topic=cloud-cli-idt-cli)
 
     {: .topicgroup}
     IBM Cloud 開發人員儀表板
@@ -73,8 +68,8 @@
     {: .topicgroup}
     IBM Cloud 程式設計手冊
         [Go](/go/go-getting-started)
-        [Java](/java/java-overview)
-        [Swift](/swift/swift-getting_started_swift)
+        [Java](/java/java-getting-started)
+        [Swift](/swift/swift-getting-started)
         [Node](/node/nodejs-node-getting-started)
 
     at_events_devx.md

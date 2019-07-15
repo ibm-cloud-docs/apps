@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Creazione di un'applicazione da zero
+# Creazione di un'applicazione personalizzata da un kit starter di base
 {: #tutorial-scratch}
 
-Puoi creare un'applicazione personalizzata da zero utilizzando i servizi e un runtime. 
+Puoi creare un'applicazione personalizzata utilizzando un kit starter di base e selezionando tipo di applicazione (mobile o backend), linguaggio e framework. Aggiungendo servizi e selezionando la tua destinazione di distribuzione.
 {: shortdesc}
+
+Il kit starter di base è uno strumento versatile che puoi utilizzare per creare delle applicazioni personalizzate che definisci per linguaggio, tipo di applicazione, framework e servizi. Successivamente, configura la fornitura continua e seleziona la destinazione di distribuzione di tua scelta.
 
 ## Prima di iniziare
 {: #prereqs-scratch}
 
-* Installa la [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), che include Docker. 
+* Installa la [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started), che include Docker. 
 * Crea un account Docker, esegui l'applicazione Docker ed esegui l'accesso. Affinché i comandi di build funzionino è necessario che Docker sia in esecuzione.
 * Se intendi distribuire la tua applicazione a {{site.data.keyword.cfee_full}}, devi [preparare il tuo account {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -36,7 +38,7 @@ Puoi creare un'applicazione personalizzata da zero utilizzando i servizi e un ru
 
 1. Dal tuo [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}), fai clic su **Crea un'applicazione** nel widget Apps.
 
-  Puoi anche creare un'applicazione personalizzata dalla pagina [Kit starter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits/) nella {{site.data.keyword.dev_console}}.
+  Puoi anche creare un'applicazione personalizzata dalla pagina [Kit starter ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}/developer/appservice/starter-kits) nella {{site.data.keyword.dev_console}}.
   {: tip}
 
 2. Immetti un nome per la tua applicazione. Per questa esercitazione, immetti `CustomProject`.
@@ -117,7 +119,7 @@ Per selezionare la tua destinazione di distribuzione e per configurare la fornit
 2. Seleziona un destinazione per la distribuzione. Configura la tua destinazione di distribuzione in base alle istruzioni per la destinazione che selezioni:
   * **Deploy to [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Questa opzione crea un cluster di host, denominati nodi di lavoro, per distribuire e gestire contenitori delle applicazioni ad elevata disponibilità. Puoi creare un cluster o distribuire un cluster esistente.
   * **Deploy to Cloud Foundry**. Questa opzione distribuisce la tua applicazione nativa del cloud senza che tu debba gestire l'infrastruttura sottostante. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda.
-  * **Deploy to a Virtual Server**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
+  * **Deploy to a [Virtual Server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**. Questa opzione esegue il provisioning di un'istanza del server virtuale, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
 Dopo aver selezionato e configurato la destinazione di distribuzione, la pagina App details indica che la fornitura continua è stata configurata. Puoi visualizzare il repository che contiene il codice di origine per la tua applicazione facendo clic su **View repo**.
 

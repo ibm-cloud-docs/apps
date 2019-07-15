@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -23,10 +23,10 @@ subcollection: creating-apps
 # Risoluzione dei problemi relativi alla creazione delle applicazioni
 {: #managingapps}
 
-I problemi generali con la creazione delle applicazioni potrebbero includere applicazioni che non possono essere aggiornate o caratteri a doppio byte che non vengono visualizzati. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
+I problemi generali con la creazione delle applicazioni potrebbero includere applicazioni che non possono essere aggiornate o caratteri double-byte che non vengono visualizzati. In molti casi, puoi risolvere questi problemi seguendo pochi semplici passi.
 {:shortdesc}
 
-## Le mie applicazioni sono ospitate in domini diversi 
+## Le mie applicazioni sono ospitate in domini diversi
 {: #domains-ts}
 {: troubleshoot}
 
@@ -60,27 +60,6 @@ Quando passi il puntatore del tuo mouse sui campi **ISTANZE** o **QUOTA DI MEMOR
 Chiudi la finestra del messaggio e fai clic su **REIMPOSTA** nel tuo riquadro di runtime.
 {: tsResolve}
 
-## Il failover automatico tra le regioni {{site.data.keyword.cloud_notm}} non è disponibile
-{: #ts_failover}
-{: troubleshoot}
-
-Non riesci a utilizzare il failover automatico tra le regioni {{site.data.keyword.cloud}}. Tuttavia, come soluzione alternativa, puoi utilizzare un provider DNS che supporti il failover tra molti indirizzi IP.
-
-Quando una regione {{site.data.keyword.cloud_notm}} non è più disponibile, anche le applicazioni in esecuzione in tale regione non saranno più disponibili, anche se le stesse applicazioni sono in esecuzione in un'altra regione {{site.data.keyword.cloud_notm}}.
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} non fornisce ancora il failover automatico da una regione all'altra.
-{: tsCauses}
-
-Puoi utilizzare un provider DNS che supporti il failover intelligente tra più indirizzi IP e configurare manualmente le tue impostazioni DNS per abilitare il failover automatico tra le regioni {{site.data.keyword.cloud_notm}}. I provider DNS con questa funzione comprendono NSONE, Akamai e Dyn.
-{: tsResolve}
-
-Quando configuri le tue impostazioni DNS, devi specificare gli indirizzi IP pubblici delle regioni {{site.data.keyword.cloud_notm}} in cui sono esecuzione le tue applicazioni. Per ottenere l'indirizzo IP pubblico di una regione {{site.data.keyword.cloud_notm}}, utilizza il comando `nslookup`. Ad esempio, puoi immettere il seguente comando in una finestra della riga di comando.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## Impossibile accedere ai servizi {{site.data.keyword.cloud_notm}} a causa di errori di autorizzazione
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ Invece di impostare come hardcoded le credenziali nella tua applicazione, utiliz
 process.env.VCAP_SERVICES
 ```
 
-Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+Per ulteriori informazioni sui comandi che puoi utilizzare in altri linguaggi di programmazione, vedi [Java ](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [Ruby ](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Ricezione di errori 502 Bad Gateway
 {: #ts_502_error}
@@ -143,7 +122,7 @@ Il servizio IBM {{site.data.keyword.mobilepushshort}} utilizza il servizio GCM (
 mobili. Nelle regioni in cui le applicazioni Android non possono raggiungere il servizio GCM, tali applicazioni non potranno ricevere {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio [Pushy ](https://pushy.me){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), [getui ](http://www.getui.com/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [jpush ](https://www.jpush.cn/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+Come soluzione temporanea, utilizza servizi di terze parti che non si basano sul servizio GCM, ad esempio, [Pushy](https://pushy.me/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e [jpush](https://www.jiguang.cn/en/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 {: tsResolve}
 
 ## I caratteri double-byte non vengono visualizzati correttamente quando si distribuiscono le applicazioni a {{site.data.keyword.cloud_notm}}
@@ -277,7 +256,7 @@ Quando distribuisci un'applicazione a {{site.data.keyword.cloud_notm}} con un pa
 Questo problema potrebbe verificarsi se gli script, ad esempio lo script di rilevamento, lo script di compilazione e lo script di rilascio, non sono eseguibili.
 {: tsCauses}
 
-Puoi utilizzare il comando [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
+Puoi utilizzare il comando [Git update ](https://git-scm.com/docs/git-update-index){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") per modificare l'autorizzazione di ciascuno script in eseguibile. Ad esempio, puoi immettere `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Impossibile distribuire un'applicazione da Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -302,7 +281,7 @@ dell'applicazione](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanife
 
 Se i lavori di build o di distribuzione non riescono, e vedi il seguente messaggio, puoi eliminare le tue immagini con i seguenti comandi CLI. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) se non lo hai ancora fatto.
+* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) se non lo hai ancora fatto.
 * Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
 * Elenca le tue immagini utilizzando `ibmcloud cr images`.
 * Elimina le eventuali immagini inutilizzate servendoti di `ibmcloud cr image-rm <respository>:<tag>`.
@@ -312,7 +291,7 @@ Se i lavori di build o di distribuzione non riescono, e vedi il seguente messagg
 {: #access_kube_logs}
 
 Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di integrità, prova a guardare i log nel cluster.
-* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) se non lo hai ancora fatto.
+* Installa la [CLI {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) se non lo hai ancora fatto.
 * Accedi a {{site.data.keyword.cloud_notm}} utilizzando `ibmcloud login` e indica come sua destinazione lo spazio in cui ti trovi.
 * Elenca i tuoi cluster utilizzando `ibmcloud cs clusters`,
 * Indica come destinazione il tuo cluster corrispondente utilizzando `ibmcloud cs cluster-config <cluster-name>`.
@@ -320,7 +299,7 @@ Se l'applicazione non è in esecuzione e non riesci ad accedere all'endpoint di 
 * Visualizza i tuoi pod utilizzando `kubectl get pods`. Se devi installare `kubectl`, vedi [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 * Puoi visualizzare i log nella tua applicazione utilizzando `kubectl logs <pod-name>.`
 
-## L'avvio di `docker` ha esito negativo e viene restituito il messaggio "file not found"
+## L'avvio di `docker` ha esito negativo e viene restituito il messaggio file not found
 {: #docker_not_found}
 {: troubleshoot}
 

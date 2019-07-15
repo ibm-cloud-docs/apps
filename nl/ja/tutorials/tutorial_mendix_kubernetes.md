@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-07"
 
 keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
@@ -20,14 +20,14 @@ subcollection: creating-apps
 # {{site.data.keyword.containerlong_notm}} への Mendix アプリのデプロイ
 {: #deploy-mendix-kube}
 
-デフォルトでは、{{site.data.keyword.containerlong}} へのデプロイメントをターゲットとする Mendix アプリケーションは評価モードでセットアップされます。 このモードでは、アプリケーション作成を迅速に開始してクラウドにデプロイできますが、データ・パーシスタンスや拡張 Kubernetes 構成は構成されません。 このチュートリアルでは、{{site.data.keyword.cos_full_notm}} サービスを使用して Kubernetes で永続ストレージ・ボリュームをセットアップすることによって実稼働環境を構成する手順について説明します。
+デフォルトでは、{{site.data.keyword.containerlong}} へのデプロイメントをターゲットとする Mendix アプリケーションは評価モードでセットアップされます。 このモードでは、アプリ作成を迅速に開始してクラウドにデプロイできますが、データ・パーシスタンスや拡張 Kubernetes 構成は構成されません。 このチュートリアルでは、{{site.data.keyword.cos_full_notm}} サービスを使用して Kubernetes で永続ストレージ・ボリュームをセットアップすることによって実稼働環境を構成する手順について説明します。
 {: shortdesc}
 
 ## 始める前に
 {: #prereqs-mendix-kube}
 
 * Mendix アプリを作成します。 詳しくは、『[Mendix アプリの作成](/docs/apps/tutorials?topic=creating-apps-create-mendix)』を参照してください。
-* [{{site.data.keyword.dev_cli_notm}} コマンド・ライン・インターフェース (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。これには {{site.data.keyword.containershort_notm}} CLI が含まれています。
+* [{{site.data.keyword.dev_cli_notm}} コマンド・ライン・インターフェース (CLI)](/docs/cli?topic=cloud-cli-getting-started) をインストールします。これには {{site.data.keyword.containershort_notm}} CLI が含まれています。
 * `ibmcloud` CLI にログインし、[Kubernetes クラスターへのアクセス](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3)のために `kubectl` を構成します。
 
 ## Cloud Object Storage サービス・インスタンスの作成
@@ -37,22 +37,22 @@ subcollection: creating-apps
 1. **「サービスの追加」**をクリックします。
 2. **「ストレージ」**を選択し、**「次へ」**をクリックします。
 3. 次に、**「クラウド・オブジェクト・ストレージ」**オプションを選択し、**「次へ」**をクリックします。
-4. {{site.data.keyword.cos_full_notm}} インスタンスの価格プランが提示されます。 自分のニーズに最も適した価格プランを選択し、Mendix アプリケーションで使用するための {{site.data.keyword.cos_full_notm}} サービスのインスタンスを作成するために**「作成」**をクリックします。
+4. {{site.data.keyword.cos_full_notm}} インスタンスの価格プランが提示されます。 自分のニーズに最も適した価格プランを選択し、Mendix アプリで使用するための {{site.data.keyword.cos_full_notm}} サービスのインスタンスを作成するために**「作成」**をクリックします。
 
-  {{site.data.keyword.cos_full_notm}} サービスの既存インスタンスを使用する場合は、**「サービスの追加」**をクリックし、アプリケーションで使用するための既存インスタンスを選択します。
+  {{site.data.keyword.cos_full_notm}} サービスの既存インスタンスを使用する場合は、**「サービスの追加」**をクリックし、アプリで使用するための既存インスタンスを選択します。
   {: tip}
 
 ## ストレージ・バケットの作成
 {: #storage-bucket-mendix-kube}
 
-{{site.data.keyword.cos_full_notm}} サービスのインスタンスが Mendix アプリケーションと関連付けられたら、データを保存できるストレージ・バケットを作成する必要があります。 バケットを作成するには、{{site.data.keyword.cos_full_notm}} インスタンスの**「...」**をクリックし、**「ダッシュボードを開く」**を選択します。  
+{{site.data.keyword.cos_full_notm}} サービスのインスタンスが Mendix アプリと関連付けられたら、データを保存できるストレージ・バケットを作成する必要があります。 バケットを作成するには、{{site.data.keyword.cos_full_notm}} インスタンスの**「...」**をクリックし、**「ダッシュボードを開く」**を選択します。  
 
 新しいウィンドウの**「バケット (Buckets)」**タブで {{site.data.keyword.cos_full_notm}} サービス・ダッシュボードが開きます。 **「バケットの作成 (Create Bucket)」**をクリックし、バケット作成手順に従います。その際、固有の名前を使用してください。 このチュートリアルの目的のため、`my-mendix-bucket` という名前のバケットを作成してください。
 
 ## 永続ストレージの構成
 {: #kube-storage-mendix}
 
-次に、『[Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage)』の文書に従ってください。 `PersistentVolumeClaim` および `PersistentVolume` が Kubernetes クラスター内に作成され、Mendix アプリケーションの一部としてクラスター内で稼働している PostGres データベース・インスタンスによって使用できるようになります。 前のステップで説明されているように `my-mendix-bucket` バケットを使用して `PersistentVolumeClaim` を作成し、次のステップでの使用のために `PersistentVolumeClaim` 名を確認してください。
+次に、『[Storing data on {{site.data.keyword.cos_full_notm}}](/docs/containers?topic=containers-object_storage)』の文書に従ってください。 `PersistentVolumeClaim` および `PersistentVolume` が Kubernetes クラスター内に作成され、Mendix アプリの一部としてクラスター内で稼働している PostGres データベース・インスタンスによって使用できるようになります。 前のステップで説明されているように `my-mendix-bucket` バケットを使用して `PersistentVolumeClaim` を作成し、次のステップでの使用のために `PersistentVolumeClaim` 名を確認してください。
 
 ## `postgres-deployment.yaml` ファイルの編集
 {: #postgres-deploy-mendix}
@@ -100,9 +100,9 @@ spec:
 ## 再デプロイ
 {: #redeploy-mendix-kube}
 
-`postgres-deployment.yaml` ファイルの変更がリポジトリーにコミットして戻されたら、DevOps パイプラインの新しい実行が自動的にトリガーされます。 ただし、それによってデフォルト・アプリケーションが再デプロイされます。 最新の永続ボリューム変更と共に最新バージョンのアプリケーションがデプロイされるようにするには、最新バージョンの Mendix アプリケーションを再デプロイする必要があります。
+`postgres-deployment.yaml` ファイルの変更がリポジトリーにコミットして戻されたら、DevOps パイプラインの新しい実行が自動的にトリガーされます。 ただし、それによってデフォルト・アプリが再デプロイされます。 最新の永続ボリューム変更と共に最新バージョンのアプリがデプロイされるようにするには、最新バージョンの Mendix アプリを再デプロイする必要があります。
 
-再デプロイするには、**「アプリの詳細」**ページに移動し、**「アプリのデプロイ (Deploy your app)」**タイルで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 DevOps ツールチェーン内部でデプロイメントが失敗し、アプリケーションの `.mda` ファイルが見つからないというエラーが示される場合は、それを Mendix から再度エクスポートする必要があります。 エクスポートするには、Mendix Modeler デスクトップ・アプリケーションからエクスポートするか、または、**「Mendix での編集 (Edit on Mendix)」**をクリックします。 その後、Mendix Web インターフェース内で、**「環境」**セクションに移動し、**「teamserver からパッケージを作成 (Create package from teamserver)」**をクリックした後、示される手順に従います。 アプリケーションが Mendix からエクスポートされた後、**「アプリの詳細」**ページに戻り、再び **「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 最後にエクスポートされたアプリケーションが、{{site.data.keyword.cloud}} DevOps ツールチェーンを使用して Kubernetes クラスターにデプロイされます。 デプロイメントが正常に完了すると、アプリケーションは稼働中になり、実動で使用できるようになります。
+再デプロイするには、**「アプリの詳細」**ページに移動し、**「アプリのデプロイ (Deploy your app)」**タイルで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 DevOps ツールチェーン内部でデプロイメントが失敗し、アプリの `.mda` ファイルが見つからないというエラーが示される場合は、それを Mendix から再度エクスポートする必要があります。 エクスポートするには、Mendix Modeler デスクトップ・アプリからエクスポートするか、または、**「Mendix での編集 (Edit on Mendix)」**をクリックします。 その後、Mendix Web インターフェース内で、**「環境」**セクションに移動し、**「teamserver からパッケージを作成 (Create package from teamserver)」**をクリックした後、示される手順に従います。 アプリが Mendix からエクスポートされた後、**「アプリの詳細」**ページに戻り、再び **「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。 最後にエクスポートされたアプリが、{{site.data.keyword.cloud}} DevOps ツールチェーンを使用して Kubernetes クラスターにデプロイされます。 デプロイメントが正常に完了すると、アプリは稼働中になり、実動で使用できるようになります。
 
 ## アプリが実行中であることの確認
 {: #verify-mendix-kube}
@@ -111,7 +111,7 @@ spec:
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。
+3. ログ・ファイルで、アプリ URL を見つけます。
 
     ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
@@ -122,5 +122,5 @@ spec:
 ## 追加情報
 {: #more-info-mendix-kube}
 
-Kubernetes 環境での Mendix アプリケーションの実行に関するアーキテクチャーの詳細については、Mendix ユーザー資料の [「Run Mendix on Kubernetes」](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window}
+Kubernetes 環境での Mendix アプリの実行に関するアーキテクチャーの詳細については、Mendix ユーザー資料の [「Run Mendix on Kubernetes」](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window}
 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") セクションを参照してください。

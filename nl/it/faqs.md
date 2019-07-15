@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -60,7 +60,7 @@ Per eliminare un'applicazione che hai creato, completa questa procedura:
 1. Dalla [console {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"), fai clic sull'icona **Menu** ![Icona Menu](../icons/icon_hamburger.svg) e seleziona **Elenco risorse**.
 2. Fai clic sull'icona **Azioni** ![Icona Azioni](../icons/action-menu-icon.svg) per l'applicazione che vuoi eliminare e fai clic su **Elimina**.
 
-## Come arresto un'applicazione Cloud Foundry nel mio account? 
+## Come arresto un'applicazione Cloud Foundry nel mio account?
 {: #app-stop}
 {: faq}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -60,27 +60,6 @@ Cloud Foundry 应用程序的子域为 `cf.appdomain.cloud`。部署到 {{site.d
 关闭消息窗口，然后单击运行时窗格中的**重置**。
 {: tsResolve}
 
-## {{site.data.keyword.cloud_notm}} 区域之间的自动故障转移不可用
-{: #ts_failover}
-{: troubleshoot}
-
-无法使用 {{site.data.keyword.cloud}} 区域之间的自动故障转移。但是，可以使用支持在多个 IP 地址之间故障转移的 DNS 提供程序来作为变通方法。
-
-当某个 {{site.data.keyword.cloud_notm}} 区域变为不可用时，在该区域中运行的应用程序也不可用，即使在另一个 {{site.data.keyword.cloud_notm}} 区域中有相同的应用程序正在运行，也是如此。
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} 尚不提供从一个区域到另一个区域的自动故障转移。
-{: tsCauses}
-
-您可以使用支持在多个 IP 地址间进行智能故障转移的 DNS 提供程序，然后手动配置 DNS 设置以启用 {{site.data.keyword.cloud_notm}} 区域间的自动故障转移。具有此功能的 DNS 提供程序包括 NSONE、Akamai 和 Dyn。
-{: tsResolve}
-
-配置 DNS 设置时，必须指定应用程序运行所在 {{site.data.keyword.cloud_notm}} 区域的公共 IP 地址。要获取 {{site.data.keyword.cloud_notm}} 区域的公共 IP 地址，请使用 `nslookup` 命令。例如，可以在命令行窗口中键入以下命令。
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## 由于授权错误而无法访问 {{site.data.keyword.cloud_notm}} 服务
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ nslookup cloud.ibm.com
 process.env.VCAP_SERVICES
 ```
 
-有关其他程序语言中可以使用的命令的更多信息，请参阅 [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+有关其他程序语言中可以使用的命令的更多信息，请参阅 [Java ](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [Ruby ](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 
 ## 收到 502 无效网关错误
@@ -142,7 +121,7 @@ process.env.VCAP_SERVICES
 IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (GCM) 服务将通知分派到在 Android 上开发的移动应用程序。要使 Android 应用程序能够接收通知，移动应用程序必须可以访问 Google 云消息传递 (GCM) 服务。在 Android 应用程序无法访问 GCM 服务的区域中，Android 应用程序收不到 {{site.data.keyword.mobilepushshort}}。
 {: tsCauses}
 
-作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy ](https://pushy.me){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")、[getui ](http://www.getui.com/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [jpush ](https://www.jpush.cn/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+作为变通方法，请使用不依赖于 GCM 服务的第三方服务，例如 [Pushy](https://pushy.me/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [jpush](https://www.jiguang.cn/en/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 {: tsResolve}
 
 ## 将应用程序推送到 {{site.data.keyword.cloud_notm}} 时未正确显示双字节字符
@@ -151,7 +130,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 
 如果没有为 servlet 或 JSP 文件正确配置 Unicode 支持，那么可能未正确显示双字节字符。
 
-将应用程序推送到 {{site.data.keyword.cloud_notm}} 时，未正确显示在应用程序内指定的双字节字符。
+将应用程序推送到 {{site.data.keyword.cloud_notm}} 时，未正确显示应用程序内指定的双字节字符。
 {: tsSymptoms}
 
 如果没有为 servlet 或 JSP 文件正确配置 Unicode 支持，那么可能发生该问题。
@@ -272,7 +251,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 如果脚本（如检测脚本、编译脚本和发布脚本）不可执行，那么可能发生此问题。
 {: tsCauses}
 
-您可以使用 [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
+您可以使用 [Git update ](https://git-scm.com/docs/git-update-index){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 命令将每个脚本的许可权更改为可执行。例如，可以输入 `git update --chmod=+x script.sh`。
 {: tsResolve}
 
 ## 无法通过 {{site.data.keyword.cloud_notm}} Continuous Delivery 中的 Delivery Pipeline 部署应用程序
@@ -295,7 +274,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 
 如果构建或部署作业失败，并且看到以下消息，那么可以使用以下 CLI 命令删除映像。`状态：未授权：您已超过了存储配额。请删除一个或多个映像，或者复查存储配额和价格套餐。`
 
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，请进行安装。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cr images` 列出映像。
 * 使用 `ibmcloud cr image-rm <respository>:<tag>` 删除任何未使用的映像。
@@ -304,8 +283,8 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 ## 访问 Kubernetes 日志
 {: #access_kube_logs}
 
-如果应用程序未在运行，并且您无法访问运行状况端点，请尝试查看集群中的日志。
-* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)，请进行安装。
+如果应用程序未在运行，并且您无法访问该运行状况端点，请尝试查看集群中的日志。
+* 如果尚未安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)，请进行安装。
 * 使用 `ibmcloud login` 登录到 {{site.data.keyword.cloud_notm}}，并将其指向您所在的空间。
 * 使用 `ibmcloud cs clusters` 列出集群。
 * 使用 `ibmcloud cs cluster-config <cluster-name>` 指向您的相应集群。
@@ -313,7 +292,7 @@ IBM {{site.data.keyword.mobilepushshort}} 服务使用 Google 云消息传递 (G
 * 使用 `kubectl get pods` 查看 pod。如果需要安装 `kubectl`，请参阅 [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 * 可以使用 `kubectl logs <pod-name>` 来查看应用程序中的日志。
 
-## 启动 `docker` 失败，并返回“找不到文件”消息
+## 启动 `docker` 失败，并返回找不到文件的消息
 {: #docker_not_found}
 {: troubleshoot}
 

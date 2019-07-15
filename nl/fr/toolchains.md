@@ -19,7 +19,8 @@ subcollection: creating-apps
 # Chaînes d'outils DevOps
 {: #devops-toolchains}
 
-Une chaîne d'outils DevOps est un ensemble d'outils qui automatise les tâches de développement et de déploiement de votre application. Vous pouvez effectuer des opérations DevOps manuellement avec des applications simples, mais le besoin d'automatisation augmente rapidement à mesure que la complexité des applications augmente et l'automatisation de la chaîne d'outils est essentielle pour assurer une distribution continue.{:shortdesc}
+Une chaîne d'outils DevOps est un ensemble d'outils qui automatise les tâches de développement et de déploiement de votre application. Vous pouvez effectuer des opérations DevOps manuellement avec des applications simples, mais le besoin d'automatisation augmente rapidement à mesure que la complexité des applications augmente et l'automatisation de la chaîne d'outils est essentielle pour assurer une distribution continue.
+{:shortdesc}
 
 Le composant central d'une chaîne d'outils DevOps est un référentiel de contrôle de version comme GitHub. Parmi les autres outils, on peut citer le suivi des éléments en attente, les pipelines de distribution, un environnement de développement intégré (IDE) et la surveillance (par exemple, {{site.data.keyword.DRA_full}}).
 

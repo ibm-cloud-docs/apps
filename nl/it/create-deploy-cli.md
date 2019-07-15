@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ Puoi creare un'applicazione starter da zero oppure abilitare al cloud il tuo cod
 ## Prima di iniziare
 {: #prereqs-app-cli}
 
-Devi installare la CLI {{site.data.keyword.cloud_notm}}, il plug-in CLI {{site.data.keyword.dev_cli_notm}} e gli altri plug-in e strumenti consigliati. Per ulteriori informazioni, vedi [Introduzione alla CLI IBM Cloud](/docs/cli?topic=cloud-cli-ibmcloud-cli). 
+Devi installare la CLI {{site.data.keyword.cloud_notm}}, il plug-in CLI {{site.data.keyword.dev_cli_notm}} e gli altri plug-in e strumenti consigliati. Per ulteriori informazioni, vedi [Introduzione alla CLI IBM Cloud](/docs/cli?topic=cloud-cli-getting-started). 
 
 ## Creazione di un'applicazione starter da zero
 {: #create-app-cli}
@@ -54,7 +54,7 @@ La creazione dell'applicazione e della toolchain richiede alcuni secondi.
 ## Generazione di asset di abilitazione di distribuzione e cloud
 {: #byoc-cli}
 
-Questa opzione può essere utilizzata se già hai una base di codice esistente e vuoi generare degli asset di abilitazione del cloud e di distribuzione per un singolo microservizio o una singola applicazione web utilizzando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Questo comando è in fase Beta e non tutte le lingue e/o strutture dell'applicazione sono supportate. Le seguenti istruzioni illustrano come utilizzare questa funzione con un repository di esempio, ma la procedura è più o meno la stessa per la tua base di codice.
+Questa opzione può essere utilizzata se già hai una base di codice esistente e vuoi generare degli asset di abilitazione del cloud e di distribuzione per un singolo microservizio o una singola applicazione web utilizzando [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable). Questo comando è in fase Beta e non tutte le lingue o strutture dell'applicazione sono supportate. Le seguenti istruzioni illustrano come utilizzare questa funzione con un repository di esempio, ma la procedura è più o meno la stessa per la tua base di codice.
 
 1. Accedi a {{site.data.keyword.cloud_notm}} eseguendo `ibmcloud login` e seleziona quindi un'organizzazione e uno spazio di destinazione.
 2. Clona l'[applicazione di esempio Hello World](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") immettendo il seguente comando nella directory di tua scelta.
@@ -107,15 +107,15 @@ Ora che la tua applicazione viene eseguita in locale, puoi aggiungere un servizi
 ## Distribuzione della tua applicazione
 {: #deploy-app-cli}
 
-Puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} dalla CLI in uno di questi due modi, a seconda di come è configurata. Per ulteriori informazioni, vedi questi argomenti:
+Puoi distribuire la tua applicazione a {{site.data.keyword.cloud_notm}} dalla CLI in uno di questi due modi, a seconda di come è configurata. Per ulteriori informazioni, vedi i seguenti argomenti:
 
-* [Distribuzione automatica della tua applicazione](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [Distribuzione manuale della tua applicazione](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [Distribuzione automatica della tua applicazione](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [Distribuzione manuale della tua applicazione](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## Visualizzazione della tua applicazione
 {: #view-app-cli}
 
-1. Per visualizzare l'URL della tua applicazione in esecuzione in {{site.data.keyword.cloud_notm}}, esegui il comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). Vai quindi all'URL nel tuo browser.
+1. Per visualizzare l'URL della tua applicazione in esecuzione in {{site.data.keyword.cloud_notm}}, esegui il comando [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). L'URL dell'applicazione viene aperto nel tuo browser predefinito.
 2. Per visualizzare i dettagli sulle credenziali della tua applicazione e la toolchain dalla console {{site.data.keyword.cloud_notm}}, esegui il comando [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console). 
 
 **Per segnalare problemi o fornire un feedback, puoi utilizzare [{{site.data.keyword.cloud_notm}} Tech's Slack - #developer-tools channel](https://ibm-cloud-tech.slack.com/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Richiedi l'accesso al team [qui](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").**

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -38,7 +38,7 @@ Un frammento è costituito da alcune righe di codice che vengono spesso presenta
 
 La creazione di un'applicazione da un kit starter crea automaticamente il codice al tuo posto che ha un formato coerente ed è indipendente dal runtime. Puoi distribuire il codice nella destinazione di tua scelta, come Kubernetes o Cloud Foundry, senza apportare modifiche.
 
-Il codice portatile contiene il codice di abilitazione cloud per più ambienti cloud. Puoi produrre il codice che segue le procedure consigliate per un linguaggio specifico e che è specifico per un caso di utilizzo. 
+Il codice portatile contiene il codice di abilitazione cloud per più ambienti cloud.Puoi produrre il codice che segue le procedure consigliate per un linguaggio specifico e che è specifico per un caso di utilizzo. 
 
 * La logica del caso di utilizzo fornisce funzioni per la funzione principale di un particolare caso di utilizzo. Gli esempi potrebbero essere il codice per un servizio chat di Watson Conversation o il codice per un'applicazione Visual recognition mobile.
 * I componenti del linguaggio sono componenti di codice e file specifici per il linguaggio di programmazione che selezioni per il tuo kit starter. Ad esempio, i programmatori node.js hanno bisogno di un file package.json per la gestione della dipendenza e questo file viene automaticamente creato per te.

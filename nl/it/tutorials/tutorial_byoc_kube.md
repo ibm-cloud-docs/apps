@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-05"
 
 keywords: apps, deploy, deploy to kubernetes, cluster, delivery pipeline, toolchain, kube, deployment, custom code, kubernetes
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 Acquisisci informazioni su come creare un'applicazione in {{site.data.keyword.cloud}} utilizzando il tuo repository di applicazioni esistente. Puoi connettere la tua toolchain DevOps esistente oppure crearne una e fornire in modo continuo un'applicazione a un contenitore protetto in un cluster Kubernetes. Questa esercitazione ti aiuta a configurare una pipeline DevOps di integrazione continua in modo che la modifica venga compilata e propagata automaticamente fino ad arrivare alla tua applicazione distribuita nel cluster Kubernetes.
 {: shortdesc}
 
-Quando già hai un repository di codice sorgente con una base di codice per un'applicazione di backend funzionante, {{site.data.keyword.cloud_notm}} ti aiuta a organizzare questo asset in una vista aggregata di tutti gli asset che costituiscono la portata del tuo intero prodotto. {{site.data.keyword.cloud_notm}} ti consente di essere operativo su un flusso di lavoro DevOps scalabile quando utilizzi la funzione di toolchain DevOps. Questa esercitazione aiuta lo sviluppatore esperto o l'ingegnere DevOps ad acquisire e configurare un cluster Kubernetes {{site.data.keyword.cloud_notm}} di destinazione e configurare ed eseguire una toolchain DevOps, tutto sotto la guida delle prassi ottimali cloud.
+Quando già hai un repository di codice sorgente con una base di codice per un'applicazione di backend funzionante, {{site.data.keyword.cloud_notm}} ti aiuta a organizzare questo asset in una vista aggregata di tutti gli asset che costituiscono la portata del tuo intero prodotto. {{site.data.keyword.cloud_notm}} ti consente di essere operativo su un flusso di lavoro DevOps scalabile quando utilizzi la funzione di toolchain DevOps. Questa esercitazione aiuta lo sviluppatore esperto o l'ingegnere DevOps ad acquisire e configurare un {{site.data.keyword.containerlong}} di destinazione e configurare ed eseguire una toolchain DevOps, tutto sotto la guida delle prassi ottimali cloud.
 
 Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di archiviazione che mantengono le applicazioni altamente disponibili. Dopo che hai creato il tuo cluster, puoi distribuire le tue applicazioni nei contenitori.
 {: tip}
@@ -45,9 +45,7 @@ Un _cluster_ è una serie di risorse, nodi di lavoro, reti e dispositivi di arch
 ## Aggiunta di servizi alla tua applicazione (facoltativo)
 {: #resources-byoc-kube}
 
-Dopo aver creato la tua applicazione, puoi aggiungere un servizio all'applicazione dalla pagina **App details**. {{site.data.keyword.cloud_notm}} crea automaticamente l'istanza del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un
-servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione. {{site.data.keyword.cloud_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le
-applicazioni Web.
+Dopo aver creato la tua applicazione, puoi aggiungere un servizio all'applicazione dalla pagina **App details**. {{site.data.keyword.cloud_notm}} crea automaticamente l'istanza del servizio. Il processo di provisioning può essere diverso per i diversi tipi di servizi. Ad esempio, un servizio database crea un database e un servizio di notifiche di push per le applicazioni mobili genera le informazioni di configurazione. {{site.data.keyword.cloud_notm}} fornisce le risorse di un servizio alla tua applicazione utilizzando un'istanza del servizio. Un'istanza del servizio può essere condivisa tra le applicazioni Web.
 
 Questo processo esegue il provisioning di un'istanza del servizio, crea una chiave di risorsa (credenziali) e ne esegue il bind alla tua applicazione. Per ulteriori informazioni, vedi [Aggiunta di un servizio alla tua applicazione](/docs/apps?topic=creating-apps-add-resource).
 
@@ -56,7 +54,7 @@ Dopo aver aggiunto un servizio alla tua applicazione, devi [copiare le credenzia
 ## Preparazione della tua applicazione per la distribuzione
 {: #deploy-byoc-kube}
 
-In questo passo, connetti una toolchain DevOps all'applicazione e la configuri in modo da essere distribuita a un cluster Kubernetes ospitato nel {{site.data.keyword.containershort_notm}}.
+In questo passo, connetti una toolchain DevOps all'applicazione e la configuri in modo da essere distribuita a un cluster Kubernetes ospitato nel {{site.data.keyword.containerlong}}.
 
 La toolchain DevOps è abbastanza flessibile da consentire l'esecuzione gestita di fasi arbitrarie di esecuzione dello script di shell. In altre parole, puoi fare quasi tutto con una toolchain DevOps. L'ambito di questa sezione si concentra sulla distribuzione della tua applicazione su un cluster Kubernetes, tenendo al tempo stesso in mente le misure che saranno necessarie in futuro per il DevOps ridimensionato e le migliori prassi del cloud.
 
@@ -108,7 +106,7 @@ Puoi visualizzare il nuovo webhook dalle impostazioni del tuo repository.
 ### Configurazione delle fasi della tua pipeline
 {: #pipelineconfig-byoc-kube}
 
-Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del repository GitHub) alla destinazione corretta. Poiché questa esercitazione presume che tu abbia un repository GitHub che produce un'immagine Docker funzionante e utilizza un cluster Kubernetes di IBM Containers, crei delle fasi della pipeline con input, script di shell e output che conseguono tale obiettivo.
+Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del repository GitHub) alla destinazione corretta. Poiché questa esercitazione presume che tu abbia un repository GitHub che produce un'immagine Docker funzionante e utilizza un {{site.data.keyword.containerlong}}, crei delle fasi della pipeline con input, script di shell e output che conseguono tale obiettivo.
 
 1. Configura la fase della pipeline `build and publish`.
   1. Seleziona la delivery pipeline che hai creato e fai clic su **Add a Stage**.
@@ -138,7 +136,7 @@ Configura le fasi della pipeline per indirizzare il tuo input (il contenuto del 
   4. Fai clic su **Salva**. 
 2. Verifica la fase della tua pipeline `build and publish` facendo clic sull'icona **Play** fino a che la build non riesce. Una fase di colore verde indica che la build è riuscita. 
 3. Configura la fase della pipeline `deploy to cluster` per distribuire l'immagine Docker al tuo cluster Kubernetes. 
-  1. Nella pagina della delivery pipeline, fai clic su **Add a Stage**.
+  1. Nella pagina Delivery Pipeline, fai clic su **Add a Stage**.
   2. Fai clic sulla scheda **Input** e completa i campi nel seguente modo:
     * Immetti `deploy to cluster` per il nome.
     * Seleziona **Build artifacts** per il tipo di input.
@@ -168,6 +166,6 @@ Se stai utilizzando la riga di comando, esegui il comando [`ibmcloud dev view`](
 ## Informazioni correlate
 
  * [Creazione delle toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
- * [Configurazione di Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitbluemix)
+ * [Configurazione di Git Repos and Issue Tracking](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#grit)
  * [Configurazione di GitHub](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#github)
  * [Configurazione di GitLab](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations#gitlab)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-18"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -27,9 +27,6 @@ subcollection: creating-apps
 
 Uma cadeia de ferramentas do DevOps fornece um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente GitLab dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-Todas as cadeias de ferramentas criadas por meio do painel do Desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
-{: note}
-
 ## Usando o console {{site.data.keyword.cloud_notm}}
 {: deploy-console}
 
@@ -38,16 +35,22 @@ O {{site.data.keyword.cloud_notm}} fornece um console da web no qual é possíve
 ### Antes de começar
 {: deploy-console-before}
 
-Antes de iniciar, use o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para [criar seu app](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) e [incluir serviços](/docs/apps?topic=creating-apps-tutorial-getting-started#resources-getting-started).
+Antes de iniciar, use o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para [criar seu app](/docs/apps?topic=creating-apps-getting-started) e [incluir serviços](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
 ### Implementando seu app automaticamente
 {: deploy-console-auto}
 
+Todas as cadeias de ferramentas que são criadas por meio do painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
+{: note}
+
 1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
 2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino selecionado:
-  * **Implementar no IBM Kubernetes Service**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente. Para obter mais informações, consulte [Implementando apps em clusters do Kubernetes](/docs/containers?topic=containers-app).
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **Public Cloud** ou do **Enterprise Environment**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa. Para obter mais informações, consulte [Implementando apps no Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) e [Implementando apps no {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/apps?topic=creating-apps-vsi-deploy).
+  * **Implementar no IBM Kubernetes Service**. Essa opção cria um cluster de hosts, chamados nós do trabalhador, para implementar e gerenciar contêineres de app altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente. Para obter mais informações, consulte [Implementando apps em clusters do Kubernetes](/docs/containers?topic=containers-app).
+  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **Public Cloud** ou do **Enterprise Environment**, que poderá ser usado para criar e gerenciar ambientes isolados para hospedar apps do Cloud Foundry exclusivamente para a sua empresa. Para obter mais informações, consulte [Implementando apps no Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) e [Implementando apps no {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
+  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    A implementação de VSI está disponível para alguns kits do iniciador. Para usar esse recurso, acesse o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}) e clique em **Criar um app** no bloco **Apps**.
+    {: note}
 
 ### Implementando seu app manualmente
 {: deploy-console-manual}
@@ -59,7 +62,7 @@ Também é possível implementar seu app manualmente por meio de sua cadeia de f
 1. Na página **Detalhes do app**, clique em **Visualizar cadeia de ferramentas**.
 2. Clique em **Delivery Pipeline**, no qual é possível iniciar construções, gerenciar a implementação e visualizar logs e histórico.
 
-A entrega contínua é ativada automaticamente para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
+A entrega contínua é ativada automaticamente para alguns apps. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
 
 Para obter informações
 adicionais, consulte:
@@ -74,7 +77,7 @@ O {{site.data.keyword.cloud_notm}} fornece uma CLI robusta e plug-ins para ajuda
 ### Antes de começar
 {: #deploy-cli-before}
 
-Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Antes de iniciar, [faça download e instale a CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 
 A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da janela de linha de comandos do Cygwin.
 {: important}
@@ -85,11 +88,9 @@ A CLI não é suportada pelo Cygwin. Use a ferramenta em uma janela diferente da
 
   3.  Atualize seu código de app. Por exemplo, se você estiver usando um aplicativo de amostra do {{site.data.keyword.cloud_notm}} e seu app contiver o arquivo `src/main/webapp/index.html`, será possível modificá-lo e editar a linha `Thanks for creating...`. Assegure-se de que o app seja executado localmente antes de implementá-lo no {{site.data.keyword.cloud_notm}}.
 
-    Anote o arquivo `manifest.yml`. Quando você implementa seu app no {{site.data.keyword.cloud_notm}}, esse arquivo é usado para determinar a URL de seu aplicativo, a alocação de memória, o número de instâncias e outros parâmetros cruciais.
+    Revise o arquivo `README.md`, que contém detalhes, tais como instruções de construção.
 
-    Revise também o arquivo `README.md`, que contém detalhes, tais como instruções de construção.
-
-    Caso seja um app Liberty, deve-se construí-lo antes que seja novamente implementado.
+    Se o seu app é um app Liberty, deve-se construí-lo antes de implementá-lo novamente.
     {: note}
 
   4. Efetue login na CLI do {{site.data.keyword.cloud_notm}} com seu IBMid. Se você tiver múltiplas contas, deverá selecionar qual conta usar. Se você não especificar uma região com o sinalizador `-r`, deverá também selecionar uma região.
@@ -129,7 +130,7 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 É possível implementar manualmente seu app no {{site.data.keyword.cloud_notm}} usando o comando [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
   ```
-  ibmcloud dev deploy <APP_NAME>
+  ibmcloud dev deploy
   ```
   {: codeblock}
 
@@ -138,4 +139,4 @@ Após você criar uma cadeia de ferramentas do DevOps para o seu app, a implemen
 
 Para obter mais informações sobre como implementar seu app no {{site.data.keyword.cloud_notm}} usando a CLI, consulte:
 
-* [Implementando em ambientes do IBM Cloud com a CLI do {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+* [Implementando em ambientes do {{site.data.keyword.cloud_notm}} com a CLI do {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")

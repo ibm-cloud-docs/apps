@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 新しいホスト名オプション `*.appdomain.cloud` を cloud.ibm.com で使用することができます。
 
-以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリをホストするために `mybluemix.net` ドメインが使用されていました。 `mybluemix.net` でホストされているアプリは影響を受けません。
+以前は、{{site.data.keyword.containerlong_notm}} や Cloud Foundry など、さまざまなデプロイメント・ターゲットでアプリケーションをホストするために `mybluemix.net` ドメインが使用されていました。 `mybluemix.net` でホストされているアプリは影響を受けません。
 
 Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。 {{site.data.keyword.containerlong_notm}} にデプロイするアプリのサブドメインは `containers.appdomain.cloud` です。
 
@@ -39,7 +39,7 @@ Cloud Foundry アプリのサブドメインは `cf.appdomain.cloud` です。 {
 {: #cf-app}
 {: faq}
 
-[{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のリソース・リストに、作成したアプリケーションの要約情報があります。 リソース・リストの**「アプリ」**セクションには、作成したが Cloud Foundry にデプロイ*していない*すべてのアプリが含まれています。 **「Cloud Foundry アプリ」**セクションには、作成して Cloud Foundry にデプロイしたアプリのすべてが含まれています。
+[{{site.data.keyword.cloud_notm}} コンソール](https://{DomainName}){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") のリソース・リストに、作成したアプリの要約情報があります。 リソース・リストの**「アプリ」**セクションには、作成したが Cloud Foundry にデプロイ*していない*すべてのアプリが含まれています。 **「Cloud Foundry アプリ」**セクションには、作成して Cloud Foundry にデプロイしたアプリのすべてが含まれています。
 
 ## アプリをデプロイしようとするときに、Cloud Foundry スペースを選べないのはなぜですか?
 {: #cf-space}

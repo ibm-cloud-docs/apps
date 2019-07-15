@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-03"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -40,10 +40,9 @@ subcollection: creating-apps
 
 在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
+{{site.data.keyword.cloud_notm}} 會使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-{{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
-
-如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
+如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用撰寫外部應用程式或協力廠商工具程式碼，以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動撰寫應用程式碼來使用這些服務。如需相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
 
 ## 要求新的服務實例
 {: #request-instance}
@@ -78,23 +77,15 @@ subcollection: creating-apps
 ## 配置應用程式
 {: #configure-app}
 
-將服務實例連結至應用程式之後，您必須配置應用程式以與服務互動。
+將服務實例連結至應用程式之後，您必須配置應用程式以便與服務互動。
 
-每一個服務可能需要不同的機制來和應用程式通訊。
-這些機制記載於服務定義的一部分，以在您開發應用程式時作為參考資訊。
-為了一致性，必須要有機制，您的應用程式才能與服務互動。
-
+每一個服務可能需要不同的機制來和應用程式通訊。這些機制記載於服務定義的一部分，以在您開發應用程式時作為參考資訊。為了一致性，必須要有機制，您的應用程式才能與服務互動。
 
 * 若要與資料庫服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，使用者 ID、密碼，以及應用程式的存取 URI）。
 * 若要與行動後端服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
-* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES*
-環境變數的值是 JSON 物件的序列化。
-變數包含與應用程式所連結之服務互動時所需要的運行環境資料。
-不同服務會有不同的資料格式。
-您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
+* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES* 環境變數的值是 JSON 物件的序列化。變數包含與應用程式所連結之服務互動時所需要的運行環境資料。不同服務會有不同的資料格式。您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
-
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式碼撰寫成可識別運作中斷、異常狀況和連線失敗並從其中回復。
 
 ## 跨 {{site.data.keyword.cloud_notm}} 部署環境存取服務
 {: #migrate_instance}
@@ -169,4 +160,4 @@ subcollection: creating-apps
 	OK
 	```
 
-您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](/docs/apps?topic=creating-apps-add-resource#configure-app)。
+您現在可以將應用程式配置成使用外部服務。如需配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式](/docs/apps?topic=creating-apps-add-resource#configure-app)。

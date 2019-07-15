@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -25,7 +25,7 @@ subcollection: creating-apps
 {: shortdesc}
 
 如果您使用入門範本套件來建立應用程式，則會自動為您準備環境。當您在部署應用程式之前將服務連接至入門範本套件時，會自動將服務認證新增至環境。
-{: tip}
+
 
 在下列一項情境中，您必須手動將服務認證新增至部署環境：
 
@@ -34,7 +34,7 @@ subcollection: creating-apps
 
 服務認證新增處理程序取決於部署目標及程式設計語言。如需配置部署目標服務認證的相關資訊，請參閱管理環境特有的文件：
 
-  * [{{site.data.keyword.containershort}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
   * Cloud Foundry Public 或 {{site.data.keyword.cfee_full}}
   * 虛擬伺服器實例（本端 Docker 容器）
 

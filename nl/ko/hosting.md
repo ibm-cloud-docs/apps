@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-25"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -16,10 +16,10 @@ subcollection: creating-apps
 # 호스팅 환경 선택
 {: #hosting}
 
-기존 앱이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 {{site.data.keyword.cloud}}에 기존 앱을 호스팅할 수 있습니다.
+기존 애플리케이션이 있는 경우 필요한 모든 인프라 또는 플랫폼 서비스를 사용하여 {{site.data.keyword.cloud}}에 기존 앱을 호스팅할 수 있습니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix_notm}}를 사용하면 더 이상 하드웨어에 막대한 금액을 투자하여 새로운 앱을 테스트하거나 실행할 필요가 없습니다. 대신 IBM에서 모든 것을 관리하며 실제 사용량에 대한 금액만 청구합니다. 클라우드 서버 환경은 인프라 계층의 기반입니다. 단일 옵션을 선택하거나 더 복잡한 환경의 경우 옵션의 조합을 선택할 수 있습니다. 
+{{site.data.keyword.cloud_notm}}를 사용하면 더 이상 하드웨어에 막대한 금액을 투자하여 새로운 앱을 테스트하거나 실행할 필요가 없습니다. 대신 IBM에서 모든 것을 관리하며 실제 사용량에 대한 금액만 청구합니다. 클라우드 서버 환경은 인프라 계층의 기반입니다. 단일 옵션을 선택하거나 더 복잡한 환경의 경우 옵션의 조합을 선택할 수 있습니다. 
 
 원하거나 필요한 만큼 인프라에 대한 제어를 제공하여 앱을 호스팅하기 위한 다양한 옵션이 있습니다. 다음 방법 중 하나로 앱을 실행할 수 있습니다.
 
@@ -29,6 +29,13 @@ subcollection: creating-apps
   * VMware로
   * 가상 머신으로
   * 고성능 {{site.data.keyword.baremetal_short}}로 
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
+
+Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
+
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
 컴퓨팅 옵션에 대한 요약은 다음 표를 확인하십시오.
 

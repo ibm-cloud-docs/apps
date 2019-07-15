@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, Mendix, starter kit, developer tools, Mendix app, create mendix app
 
@@ -41,14 +41,19 @@ Mendix è un insieme di strumenti e un ambiente di sviluppo a basso codice che t
 
 Se non stai ancora utilizzando Mendix con {{site.data.keyword.cloud_notm}}, vieni guidato alla piattaforma Mendix per eseguire la registrazione e autorizzare {{site.data.keyword.cloud_notm}} a creare un nuovo progetto sulla piattaforma Mendix per tuo conto. Questo progetto è collegato a {{site.data.keyword.cloud_notm}}, quindi le distribuzioni sono automaticamente indirizzate a {{site.data.keyword.cloud_notm}}.
 
-1. Se vedi questo messaggio: "To complete app creation, a Mendix user account is required. Would you like to link your account now?", fai clic su **Link Account**.
+1. Se vedi questo messaggio, fai clic su **Link Account**.
+  ```
+  "To complete app creation, a Mendix user account is required. Would you like to link your account now?"
+  ```
+  {: screen}
+
 2. Nella pagina di conferma di Mendix, seleziona **I agree to the Mendix Privacy Policy and Terms** e fai clic su **Confirm**.
 3. Quando ti viene richiesto, fornisci l'indirizzo email, la password e il paese, quindi fai clic su **Create**.
 4. Nella pagina **Authorize access to your Mendix account**, fai clic su **Authorize**.
 
-Una volta completata l'autorizzazione, il tuo browser ritorna all'applicazione Mendix che stai creando. Viene visualizzata la pagina **Select a deployment target**. 
+Una volta completata l'autorizzazione, il tuo browser ritorna all'applicazione Mendix che stai creando. Viene visualizzata la pagina **Select a deployment target**.
 
-## Selezione di una destinazione di distribuzione per la tua applicazione Mendix 
+## Selezione di una destinazione di distribuzione per la tua applicazione Mendix
 {: #select-deployment}
 
 1. Nella pagina **Select a deployment target**, seleziona Cloud Foundry o uno dei tuoi cluster Kubernetes in esecuzione su {{site.data.keyword.cloud_notm}}. Se il tuo account ha accesso a {{site.data.keyword.cfee_full_notm}}, puoi selezionare un tipo di deployer Cloud Foundry **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** o **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)**, che puoi utilizzare per creare e gestire ambienti isolati per ospitare applicazioni Cloud Foundry esclusivamente per la tua azienda. 
@@ -86,8 +91,8 @@ Se avvii manualmente una toolchain e riscontri un malfunzionamento, puoi riprist
 
 Alcuni utenti potrebbero voler configurare la propria applicazione Mendix distribuita in modo che utilizzi {{site.data.keyword.cos_full}} per l'archiviazione persistente e i caricamenti di file. {{site.data.keyword.cos_full_notm}} è un servizio di archiviazione oggetti compatibile con S3. Per avvalersi dell'archiviazione file compatibile con S3, le applicazioni Mendix devono definire le seguenti variabili di ambiente per accedere a un'istanza {{site.data.keyword.cos_full_notm}}, dopo aver configurato la fornitura continua.
 
-* `S3_ACCESS_KEY_ID` - La chiave S3, che fa parte delle credenziali {{site.data.keyword.cos_full_notm}} 
-* `S3_SECRET_ACCESS_KEY` - La chiave segreto S3, che fa parte delle credenziali {{site.data.keyword.cos_full_notm}} 
+* `S3_ACCESS_KEY_ID` - La chiave S3, che fa parte delle credenziali {{site.data.keyword.cos_full_notm}}
+* `S3_SECRET_ACCESS_KEY` - La chiave segreto S3, che fa parte delle credenziali {{site.data.keyword.cos_full_notm}}
 * `S3_BUCKET_NAME` - Il bucket di archiviazione S3
 * `S3_ENDPOINT` - L'endpoint di archiviazione S3
 * `S3_USE_V2_AUTH` - Il valore è `true`

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 
 La surveillance de la disponibilité et des performances de votre application peut être démarrée immédiatement. Quand vous liez {{site.data.keyword.prf_hubshort}} à votre application, un test synthétique est automatiquement créé pour surveiller l'URL principale de l'application par défaut.
 
-{{site.data.keyword.prf_hublong}} est disponible en tant que service dans le domaine DevOps du catalogue {{site.data.keyword.cloud_notm}}. Vous pouvez également y accéder sur le tableau de bord de l'application Cloud Foundry sur l'onglet **Surveillance**.
+{{site.data.keyword.prf_hublong}} est disponible en tant que service dans le domaine DevOps du catalogue {{site.data.keyword.cloud_notm}}. Vous pouvez également y accéder depuis le tableau de bord de l'application Cloud Foundry, onglet **Surveillance**.
 {: shortdesc}
 
 Vous pouvez tester, surveiller et améliorer la santé de votre application au fur et à mesure que vous la générez en ajoutant {{site.data.keyword.prf_hubshort}} à votre chaîne d'outils DevOps.

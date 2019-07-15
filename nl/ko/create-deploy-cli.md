@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 ## 시작하기 전에
 {: #prereqs-app-cli}
 
-{{site.data.keyword.cloud_notm}} CLI, {{site.data.keyword.dev_cli_notm}} CLI 플러그인 및 기타 권장 플러그인과 도구를 설치해야 합니다. 자세한 정보는 [IBM Cloud CLI 시작하기](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 참조하십시오. 
+{{site.data.keyword.cloud_notm}} CLI, {{site.data.keyword.dev_cli_notm}} CLI 플러그인 및 기타 권장 플러그인과 도구를 설치해야 합니다. 자세한 정보는 [IBM Cloud CLI 시작하기](/docs/cli?topic=cloud-cli-getting-started)를 참조하십시오. 
 
 ## 처음부터 스타터 앱 작성
 {: #create-app-cli}
@@ -37,7 +37,7 @@ subcollection: creating-apps
 처음부터 앱 작성은 아직 시작할 기존 코드가 없으며 언어 또는 프레임워크 스타터 템플리트에서 시작하고자 하는 경우에 유용합니다.
 
 1. 선택한 디렉토리에서 [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) 명령을 실행하십시오.
-2. **백엔드 서비스/웹 앱**을 애플리케이션 유형으로 선택하십시오.
+2. **백엔드 서비스/웹 앱**을 앱 유형으로 선택하십시오.
 3. **Node**를 언어 유형으로 선택하십시오.
 4. **Express.js의 Node.js 웹 앱(웹 앱)**을 사용할 스타터 킷으로 선택하십시오.
 5. 앱의 이름을 입력하고 사용할 리소스 그룹을 선택하십시오(필요한 경우). 지금은 서비스를 추가하지 마십시오.
@@ -54,7 +54,7 @@ subcollection: creating-apps
 ## 배치 및 클라우드 인에이블먼트 자산 생성
 {: #byoc-cli}
 
-이 옵션은 이미 기존 코드 베이스를 보유 중이며 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)을 사용하여 단일 마이크로서비스 또는 웹 앱의 배치 및 클라우드 인에이블먼트 자산을 생성하고자 하는 경우에 사용될 수 있습니다. 이 명령은 베타 상태이며 일부 언어 및/또는 앱 구조는 지원되지 않음을 유념하십시오. 다음 지시사항에서는 샘플 저장소에서 이 기능을 사용하는 방법을 보여주지만, 해당 단계는 자체 코드 베이스에 대해 거의 동일합니다.
+이 옵션은 이미 기존 코드 베이스를 보유 중이며 [`ibmcloud dev enable`](/docs/cli/idt?topic=cloud-cli-idt-cli#enable)을 사용하여 단일 마이크로서비스 또는 웹 앱의 배치 및 클라우드 인에이블먼트 자산을 생성하고자 하는 경우에 사용될 수 있습니다. 이 명령은 베타 상태이며 일부 언어 또는 앱 구조는 지원되지 않음을 유념하십시오. 다음 지시사항에서는 샘플 저장소에서 이 기능을 사용하는 방법을 보여주지만, 해당 단계는 자체 코드 베이스에 대해 거의 동일합니다.
 
 1. `ibmcloud login`을 실행하여 {{site.data.keyword.cloud_notm}}에 로그인한 후에 조직 및 영역을 대상으로 지정하십시오.
 2. 선택한 디렉토리에서 다음 명령을 실행하여 [Hello World 샘플 앱](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 복제하십시오.
@@ -84,7 +84,7 @@ subcollection: creating-apps
 
 앱을 작성하는 데 사용한 옵션에 관계없이 지금 앱을 빌드하고 로컬로 실행할 수 있습니다.
 
-1. 애플리케이션 디렉토리로 이동하여 Docker가 시스템에서 실행 중인지 확인하십시오.
+1. 앱 디렉토리로 이동하여 Docker가 시스템에서 실행 중인지 확인하십시오.
 2. [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) 명령을 실행하여 앱을 빌드하십시오.
 3. [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) 명령을 실행하여 앱을 로컬로 실행하십시오.
 4. `http://localhost:3000` 또는 이와 유사한 URL에서 로컬로 실행 중인 앱을 보십시오.
@@ -101,7 +101,7 @@ subcollection: creating-apps
 1. [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) 명령을 실행하십시오.
 2. 프롬프트에 따라 새 데이터 관련 서비스를 작성하고 {{site.data.keyword.cloudant_short_notm}}와 같은 앱에 연결하십시오. 서비스의 지역 및 플랜을 선택해야 합니다.
 3. 서비스를 작성할 때 앱 디렉토리에 저장된 구성 파일의 수동 병합을 선택할 수 있습니다. 또는 지금 이 단계를 건너뛸 수 있습니다.
-4. 코드를 업데이트하십시오. 예를 들어, `/public/index.html` 파일 또는 유사한 파일을 수정하십시오. 샘플 `ExpressJS` 애플리케이션을 사용 중인 경우 `Congratulations!` 문자열을 `Hello World!`와 같이 변경할 수 있습니다.
+4. 코드를 업데이트하십시오. 예를 들어, `/public/index.html` 파일 또는 유사한 파일을 수정하십시오. 샘플 `ExpressJS` 앱을 사용 중인 경우 `Congratulations!` 문자열을 `Hello World!`와 같이 변경할 수 있습니다.
 5. 수정한 파일을 저장하십시오.
 
 ## 앱 배치
@@ -109,13 +109,13 @@ subcollection: creating-apps
 
 앱이 구성된 방법에 따라 두 가지 방법 중 하나로 {{site.data.keyword.cloud_notm}}에 앱을 배치할 수 있습니다. 자세한 정보는 다음 주제를 참조하십시오.
 
-* [자동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [수동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [자동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [수동으로 앱 배치](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## 앱 보기
 {: #view-app-cli}
 
-1. {{site.data.keyword.cloud_notm}}에서 실행 중인 앱의 URL을 보려면 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하십시오. 그 후 브라우저에서 해당 URL로 이동하십시오.
+1. {{site.data.keyword.cloud_notm}}에서 실행 중인 앱의 URL을 보려면 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하십시오. 앱 URL가 기본 브라우저에서 열립니다.
 2. {{site.data.keyword.cloud_notm}} 콘솔에서 앱의 인증 정보, 서비스 및 도구 체인에 대한 세부사항을 보려면 [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) 명령을 실행하십시오. 
 
 **문제를 보고하거나 피드백을 제공하려면 [{{site.data.keyword.cloud_notm}} Tech의 Slack(#developer-tools 채널)](https://ibm-cloud-tech.slack.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 사용할 수 있습니다. [여기](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 팀 액세스를 요청하십시오.**

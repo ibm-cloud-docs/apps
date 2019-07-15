@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-29"
+lastupdated: "2019-06-04"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # 良いアプリを作成するには
 {: #best-practice}
 
-クラウドが提供するすべてのものを活用するように {{site.data.keyword.cloud}} でアプリをビルドします。 以下のベスト・プラクティスは、アプリが確実にクラウド対応となるようにするのに役立ちます。
+クラウドが提供するすべてのものを活用するように {{site.data.keyword.cloud}} でアプリケーションをビルドします。 以下のベスト・プラクティスは、アプリが確実にクラウド対応となるようにするのに役立ちます。
 {: shortdesc}
 
 ## トポロジーから独立したアプリケーションの作成
@@ -51,19 +51,19 @@ subcollection: creating-apps
 ## マルチリージョン・アーキテクチャーを使用したアプリのビルド
 {: #multiregion}
 
-単一地域でのダウン時間を回避するために、複数のインスタンスを実行できます。 より堅固なアプリケーションを提供するには、複数地域アーキテクチャーを検討してください。
+単一地域でのダウン時間を回避するために、複数のインスタンスを実行できます。 より堅固なアプリを提供するには、複数地域アーキテクチャーを検討してください。
 
 ダウン時間の最小化および最大限の可用性を実現する回復力のあるアーキテクチャーの作成について詳しくは、[回復力のあるアプリケーションのための戦略 (Strategies for resilient applications) のチュートリアル](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications)を参照してください。
 
 ## アプリのモニタリングの確実な実施
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} は、[New Relic ](http://newrelic.com/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") などのサービスを使用してアプリケーションのモニタリングを容易にします。
+{{site.data.keyword.cloud_notm}} は、[New Relic ](https://newrelic.com/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") などのサービスを使用してアプリのモニタリングを容易にします。
 
 ## サポート・オプションの利用
 {: #support}
 
-{{site.data.keyword.cloud_notm}} の有料プランでは、オプションの有料サポートを含むさまざまなアカウント・タイプが提供されています。 ご使用のアカウント・タイプに関係なく、{{site.data.keyword.cloud_notm}} でのアプリケーションの実稼働を予定している場合は、このオプションの登録を検討してください。
+{{site.data.keyword.cloud_notm}} の有料プランでは、オプションの有料サポートを含むさまざまなアカウント・タイプが提供されています。 ご使用のアカウント・タイプに関係なく、{{site.data.keyword.cloud_notm}} でのアプリの実稼働を予定している場合は、このオプションの登録を検討してください。
 
 有料サポートを契約しているかどうかに関係なく、[サポート](/docs/get-support?topic=get-support-getting-customer-support)に記載されている支援を受けることができます。サポートは予期しない問題に対する備えを提供します。
 
@@ -91,6 +91,6 @@ OS 固有の依存関係を避けて、代わりにミドルウェア・イン�
 
 アプリのインストール済み環境は、オペレーティング・システムから独立した、一様なスクリプトの一式と捉えてください。 さまざまな自動化技法に適応できるよう、アプリのインストールを小さくポータブルなものにしてください。 また、アプリのインストールに必要な依存関係を最小限にしてください。
 
-クラウド対応のアプリについて詳しくは、[The 12-factor app ](http://12factor.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+クラウド対応のアプリについて詳しくは、[The 12-factor app ](https://12factor.net/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 

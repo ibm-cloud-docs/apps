@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # 자체 코드 저장소에서 앱 작성
 {: #tutorial-byoc}
 
-기존 저장소에 애플리케이션이 있는 경우 비어 있는 스타터 킷을 사용하여 {{site.data.keyword.cloud_notm}}에서 앱 레코드를 작성하고 앱을 소스 저장소와 DevOps 도구 체인에 연결할 수 있습니다.
+기존 저장소에 애플리케이션이 있는 경우 기본 스타터 킷을 사용하여 {{site.data.keyword.cloud_notm}}에서 앱 레코드를 작성하고 앱을 소스 저장소와 DevOps 도구 체인에 연결할 수 있습니다.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} 대시보드 또는 비어 있는 스타터 킷에서 시작할 수 있습니다. 앱에 이름을 지정하고 리소스 그룹을 선택한 후 **고유 코드 가져오기** 시작점을 선택하고 코드가 포함된 Git 저장소 URL을 제공한 다음 **작성**을 클릭하십시오.
+{{site.data.keyword.cloud_notm}} 대시보드 또는 기본 스타터 킷에서 시작할 수 있습니다. 앱에 이름을 지정하고 리소스 그룹을 선택한 후 **고유 코드 가져오기** 시작점을 선택하고 코드가 포함된 Git 저장소 URL을 제공한 다음 **작성**을 클릭하십시오.
 
 기존 DevOps 도구 체인을 연결하거나 새로 작성하고 선택한 배치 대상(예: Kubernetes 또는 Cloud Foundry)에 앱을 지속적으로 제공할 수 있습니다.
 
@@ -32,7 +32,7 @@ subcollection: creating-apps
 
 진행하려면 다음의 전제조건이 준비되어 있는지 확인하십시오.
 
- * [{{site.data.keyword.dev_cli_long}} 명령행 인터페이스(CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
+ * [{{site.data.keyword.dev_cli_long}} 명령행 인터페이스(CLI)](/docs/cli?topic=cloud-cli-getting-started)를 설치하십시오.
  * [좋은 앱의 조건](/docs/apps?topic=creating-apps-best-practice)을 참조하여 앱 작성에 대한 우수 사례를 살펴보십시오.
  * GitHub, GitHub Enterprise, GitLab, BitBucket 또는 Rational 등 제공자의 Git 소스 코드 저장소가 있어야 합니다.
  * [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about)에 앱을 배치하려는 경우에는 [{{site.data.keyword.cloud_notm}} 계정을 준비](/docs/cloud-foundry?topic=cloud-foundry-prepare)해야 합니다.
@@ -93,7 +93,7 @@ Delivery Pipeline 또는 명령행이 사용자를 앱의 URL로 이동시킵니
 
 1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
 2. **로그 및 히스토리 보기**를 클릭하십시오.
-3. 로그 파일에서 애플리케이션 URL을 찾으십시오. 로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
+3. 로그 파일에서 앱의 URL을 찾으십시오. 로그 파일의 끝에서 단어 `urls` 또는 `view`를 찾으십시오. 예를 들면, 로그 파일에서 `urls: my-app-devhost.mybluemix.net` 또는 `View the application health at: http://<ipaddress>:<port>/health`와 같은 행을 볼 수 있습니다.
 4. 브라우저에서 해당 URL로 이동하십시오. 앱이 실행 중인 경우에는 `Congratulations` 또는 `{"status":"UP"}`와 같은 항목을 포함하는 메시지가 표시됩니다.
 
 명령행을 사용하는 경우에는 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 명령을 실행하여 기본 브라우저에서 수동으로 배치된 앱의 페이지를 여십시오.

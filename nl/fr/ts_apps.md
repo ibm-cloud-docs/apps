@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -60,27 +60,6 @@ Lorsque vous survolez avec la souris les zones **INSTANCES** ou **QUOTA DE MEMOI
 Fermez la fenêtre de message puis cliquez sur **REINITIALISER** dans votre panneau d'exécution.
 {: tsResolve}
 
-## Le basculement automatique entre les régions {{site.data.keyword.cloud_notm}} n'est pas disponible
-{: #ts_failover}
-{: troubleshoot}
-
-Vous ne pouvez pas utiliser le basculement automatique entre les régions {{site.data.keyword.cloud}}. Toutefois, vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement entre plusieurs adresses IP comme solution de contournement.
-
-Lorsqu'une région {{site.data.keyword.cloud_notm}} n'est plus disponible, les applications qui sont exécutées dans cette région ne sont plus disponibles non plus, même si les mêmes applications s'exécutent dans une autre région {{site.data.keyword.cloud_notm}}.
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} ne fournit pas encore le basculement automatique d'une région vers une autre.
-{: tsCauses}
-
-Vous pouvez utiliser un fournisseur DNS qui prend en charge le basculement intelligent entre plusieurs adresses IP et configurer manuellement vos paramètres DNS pour activer le basculement automatique entre les régions {{site.data.keyword.cloud_notm}}. Les fournisseurs DNS avec cette fonction incluent NSONE, Akamai et Dyn.
-{: tsResolve}
-
-Lorsque vous configurez vos paramètres DNS, vous devez spécifier les adresses IP publiques des régions {{site.data.keyword.cloud_notm}} dans lesquelles vos applications s'exécutent. Pour obtenir l'adresse IP publique d'une région {{site.data.keyword.cloud_notm}}, utilisez la commande `nslookup`. Vous pouvez, par exemple, entrer la commande suivante dans une fenêtre de ligne de commande.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## Impossible d'accéder aux services {{site.data.keyword.cloud_notm}} en raison d'erreurs d'autorisation
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ Au lieu de coder en dur les données d'identification dans votre application, ut
 process.env.VCAP_SERVICES
 ```
 
-Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et[Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Pour plus d'informations sur les commandes que vous pouvez utiliser dans d'autres langages de programmation, voir [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et[Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Erreurs 502 Bad Gateway (passerelle incorrecte)
 {: #ts_502_error}
@@ -138,7 +117,7 @@ Vous liez un service {{site.data.keyword.mobilepushshort}} pour votre applicatio
 Le service IBM {{site.data.keyword.mobilepushshort}} utilise le service GCM (Google Cloud Messaging) pour diffuser les notifications aux applications mobiles développées sur Android. Les applications mobiles doivent pouvoir accéder au service GCM pour que les applications Android puissent recevoir les notifications. Dans les régions où les applications Android ne peuvent pas accéder au service GCM, ces dernières ne peuvent pas recevoir de notifications {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Comme solution palliative, utilisez des services de tiers qui ne sont pas basés sur les services GCM, par exemple [Pushy ](https://pushy.me){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"), [getui ](http://www.getui.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et [jpush ](https://www.jpush.cn/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Comme solution palliative, utilisez des services de tiers qui ne sont pas basés sur les services GCM, par exemple [Pushy](https://pushy.me/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et [jpush](https://www.jiguang.cn/en/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 {: tsResolve}
 
 ## Les caractères codés sur deux octets ne s'affichent pas correctement lorsque des applications sont envoyées par commande push vers {{site.data.keyword.cloud_notm}}
@@ -267,7 +246,7 @@ Lorsque vous déployez une application dans {{site.data.keyword.cloud_notm}} à 
 Ce problème peut se produire si des scripts (tels que le script de détection, le script de compilation ou le script de publication) ne sont pas exécutables.
 {: tsCauses}
 
-Vous pouvez utiliser la commande [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour faire en sorte que chaque script soit exécutable. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
+Vous pouvez utiliser la commande [Git update ](https://git-scm.com/docs/git-update-index){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") pour faire en sorte que chaque script soit exécutable. Par exemple, vous pouvez entrer `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Impossible de déployer une application depuis Delivery Pipeline dans {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -290,7 +269,7 @@ Vous pouvez utiliser la commande [Git update ](http://git-scm.com/docs/git-updat
 
 Si les travaux de génération ou de déploiement échouent et que le message suivant est généré, vous pouvez supprimer vos images en utilisant les commandes CLI suivantes. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est pas déjà fait.
+* Installez l'[interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) si ce n'est pas déjà fait.
 * Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez.
 * Répertoriez vos images en utilisant `ibmcloud cr images`.
 * Supprimez toute image non utilisée en utilisant `ibmcloud cr image-rm <respository>:<tag>`.
@@ -300,7 +279,7 @@ Si les travaux de génération ou de déploiement échouent et que le message su
 {: #access_kube_logs}
 
 Si l'application n'est pas en cours d'exécution et que vous ne pouvez pas accéder au noeud final de santé, consultez les journaux du cluster.
-* Installez [l'interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si ce n'est pas déjà fait.
+* Installez l'[interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) si ce n'est pas déjà fait.
 * Connectez-vous à {{site.data.keyword.cloud_notm}} à l'aide de la commande `ibmcloud login` et faites en sorte qu'elle désigne l'espace dans lequel vous vous trouvez.
 * Répertoriez vos clusters en utilisant `ibmcloud cs clusters`.
 * Désignez votre cluster correspondant en utilisant `ibmcloud cs cluster-config <cluster-name>`.
@@ -330,7 +309,7 @@ Assurez-vous que [Docker](https://docs.docker.com/install/){: new_window} ![Icô
 {: #build_error}
 {: troubleshoot}
 
-Lorsque vous tentez de générer une application à l'aide de la commande `ibmcloud dev build`, cette opération échoue suite à une erreur de nom d'utilisateur/mot de passe.
+Lorsque vous tentez de générer une application à l'aide de la commande `ibmcloud dev build`, cette opération échoue suite à une erreur de nom d'utilisateur/mot de passe. 
 {: tsSymptoms}
 
 Des données d'identification Docker Hub incorrectes ont été utilisées pour l'authentification. 

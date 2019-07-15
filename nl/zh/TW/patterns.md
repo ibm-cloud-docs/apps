@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-20"
 
-keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app
+keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
 subcollection: creating-apps
 
@@ -30,26 +30,28 @@ Web 應用程式模式會產生應用程式，以提供 web 內容（例如 HTML
 * 基本 - 提供靜態 `index.html` 檔、預設和空的樣式表，以及 JavaScript 檔。
 * React - Rich 架構，用來建置使用者介面。原始檔位於 `src/client/app`，並使用 WebPack 進行編譯，且在公用目錄中提供。
 
-您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於 Web 應用程式模式的入門範本套件。
+您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員主控台](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於 Web 應用程式模式的入門範本套件。
 
-## 微服務
+## 微服務應用程式
 {: #microservice}
 
 「微服務」應用程式提供建置後端微服務的基礎（包括基本性能端點及 REST API）。產生的應用程式包含微服務本身及任何附加之雲端服務所需的所有相依關係。
 
 請針對您的語言及架構需求選擇微服務入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} 應用程式服務開發人員儀表板](https://{DomainName}/developer/appservice/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於「微服務」模式的入門範本套件。
 
-## 行動
+## 行動應用程式
 {: #mobile}
 
 行動應用程式與其他模式不同，因為它們具有重大用戶端元件。該模式可能包括與行動服務（例如推送通知、鑑別及行動分析）的直接連線。行動服務稱為「行動後端即服務」，或 MBaaS 模式。它們也有專用的 Backend-for-frontend。
 
-{{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員儀表板](https://{DomainName}/developer/mobile/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於「行動」模式的入門範本套件。
+{{site.data.keyword.cloud_notm}} 提供適用於 iOS Swift、Android 及 Cordova 的數個行動入門範本套件。您可以在 [{{site.data.keyword.cloud_notm}} Mobile 開發人員主控台](https://{DomainName}/developer/mobile/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 上找到適用於「行動」模式的入門範本套件。
 
-## 語言
+此外，您還可以使用基本入門範本套件並選取行動應用程式類型，來建立自訂行動應用程式。如需相關資訊，請參閱[建立行動應用程式](/docs/apps?topic=creating-apps-tutorial-mobile)。
+
+## 以語言為基礎的應用程式
 {: #languages}
 
-各種語言及架構都具有提供的入門範本套件 {{site.data.keyword.cloud_notm}}。例如，雲端微服務入門範本套件提供 Node.js 選項，而與資料分析緊密相關的入門範本套件可能包括 Python 或 Go。已討論 {{site.data.keyword.cloud_notm}} 入門範本套件中使用的部分常用語言。
+{{site.data.keyword.cloud_notm}} 提供的入門範本套件有各種語言及架構。例如，雲端微服務入門範本套件提供 Node.js 選項，而與資料分析緊密相關的入門範本套件可能包括 Python 或 Go。已討論 {{site.data.keyword.cloud_notm}} 入門範本套件中使用的部分常用語言。
 
 |程式設計語言 | 說明                                                  |開發架構 |
 |-----|-----|-----|
@@ -58,5 +60,4 @@ Web 應用程式模式會產生應用程式，以提供 web 內容（例如 HTML
 |Node.js |[Node.js](/docs/runtimes/nodejs?topicid=Nodejs-getting-started) 是一種 JavaScript 運行環境，使用事件驅動、非封鎖 I/O 模型讓它更為輕量且更具效率。它對於 Web 應用程式、Backend for Frontend 模式及微服務的產量及可擴充性最有幫助。Node.js 的套件登錄 npm 可存取大量的開放程式碼模組。它提供廣泛的特性來加速應用程式開發。| Express|
 |JavaScript|JavaScript 會在網頁中建立互動式效果。JavaScript 與 HTML 及 CSS 是大部分網頁的基礎。包裝 Cordova 外掛程式時，JavaScript 程式碼可以完整善用原生裝置功能。具有 Web 技能的開發人員可以輕鬆地建立行動應用程式，而且可在該處於 Web 及行動之間重複使用適當的應用程式碼。|Cordova|
 |Python| [Python](/docs/runtimes/python?topic=Python-getting_started) 是通用解譯程式設計語言，它強調可讀性。Python 容許程式設計師實作的功能程式碼行少於其他語言可能需要的程式碼行。語言中的特性可讓您寫入物件導向、功能或命令程式碼。Python 常用來處理自然語言作業。|Flask、Django|
-
-
+{: caption="表 1. 入門範本套件中使用的語言" caption-side="top"}

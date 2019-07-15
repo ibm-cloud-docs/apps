@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-04-02"
+lastupdated: "2019-06-03"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
@@ -35,7 +35,7 @@ subcollection: creating-apps
 
 如果要使用定制域，您必须将定制域注册为通配符域，例如 `*.custom_domain.net`。要使用 TLS，必须获取通配符证书。有关更多信息，请参阅[一个名称空间内多个域](/docs/containers?topic=containers-ingress#multi-domains)。
 
-请查看[本教程](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes)，该教程将引导您构建一个 Web 应用程序，并在本地容器中运行它，然后将其部署到使用 IBM Kubernetes Service 创建的 Kubernetes 集群中。此外，教程说明了如何绑定定制域、监视环境的运行状况和扩展应用程序。
+请查看[本教程](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes)，该教程将引导您搭建一个 Web 应用程序的脚手架，并在容器中本地运行该应用程序，然后将其部署到使用 IBM Kubernetes Service 创建的 Kubernetes 集群中。此外，该教程说明了如何绑定定制域、监视环境的运行状况以及缩放应用程序。
 
 ## 更改 Cloud Foundry 应用程序的域
 {: #update-domain-cf}

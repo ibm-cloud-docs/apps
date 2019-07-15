@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-04"
 
 keywords: apps, applications, activity tracking events
 
@@ -43,27 +43,10 @@ subcollection: creating-apps
 
 下表列出了生成事件的操作：
 
-<table>
-  <caption>生成事件的操作</caption>
-  <tr>
-    <th>操作</th>
-	  <th>描述
-</th>
-  <tr>
-  <tr>
-    <td>bluemix-developer-experience.app.create</td>
-	  <td>在用户创建应用程序时生成事件。</td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.read</td>
-	  <td>在发生以下任一情况时生成事件：</br><ul><li>用户下载应用程序代码。</li> <li>用户使用 {{site.data.keyword.dev_console}} CLI 下载凭证文件。</li> <li>开发者体验基础架构读取与应用程序相关联的服务的凭证。</li> <li>用户查看应用程序列表。例如，用户在 {{site.data.keyword.dev_console}} 控制台中或通过 {{site.data.keyword.dev_cli_short}} CLI 查看应用程序列表时。</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.update</td>
-	  <td>在发生以下任一情况时生成事件：</br><ul><li>应用程序的某个属性发生更改。例如，用户修改应用程序的名称时。</li><li>创建新服务并将其添加到应用程序中。</li><li>将现有服务添加到应用程序中。</li><li>从应用程序除去服务。</li><li>为应用程序生成代码。</li><li>通过开发者体验添加 DevOps 工具链，例如通过选择*配置持续交付*。</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.delete</td>
-	  <td>在用户删除应用程序时生成事件。</td>
-  </tr>
-</table>
+|操作|描述|
+|-----|-------------|
+|bluemix-developer-experience.app.create|在用户创建应用程序时生成事件。|
+|bluemix-developer-experience.app.read|在发生以下任一情况时生成事件：<br><br>用户下载应用程序代码。<br><br>用户使用 {{site.data.keyword.dev_console}} CLI 下载凭证文件。<br><br>{{site.data.keyword.cloud_notm}} 基础架构读取与应用程序相关联的服务的凭证。<br><br>用户查看应用程序列表。例如，用户在 {{site.data.keyword.dev_console}} 控制台中或通过 {{site.data.keyword.dev_cli_short}} CLI 查看应用程序列表。|
+|bluemix-developer-experience.app.update|在发生以下任一情况时生成事件：<br><br>有关应用程序更改的信息。例如，用户修改应用程序的名称。<br><br>创建新服务并将其添加到应用程序中。<br><br>将现有服务添加到应用程序中。<br><br>从应用程序除去服务。<br><br>为应用程序生成代码。<br><br>DevOps 工具链通过 {{site.data.keyword.cloud_notm}} 控制台添加。例如，用户从“应用程序详细信息”页面选择**配置持续交付**。|
+|bluemix-developer-experience.app.delete|在用户删除应用程序时生成事件。|
+{: caption="表 1. 生成事件的操作" caption-side="top"}

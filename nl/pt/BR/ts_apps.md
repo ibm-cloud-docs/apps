@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # Resolução de problemas para criar apps
 {: #managingapps}
 
-Problemas gerais com a criação de apps podem incluir apps que não podem ser atualizados ou caracteres de byte duplo que não são exibidos. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
+Os problemas gerais com a criação de aplicativos podem incluir apps que não podem ser atualizados ou caracteres de byte duplo que não são exibidos. Em muitos casos, é possível recuperar-se desses problemas seguindo algumas etapas simples.
 {:shortdesc}
 
 ## Meus apps estão hospedados em domínios diferentes
@@ -60,27 +60,6 @@ Ao rolar o mouse sobre os campos **INSTÂNCIAS** ou **COTA DE MEMÓRIA** na áre
 Feche a janela de mensagem e clique em **RECONFIGURAR** em sua área de janela de tempo de execução.
 {: tsResolve}
 
-## O failover automático entre regiões do {{site.data.keyword.cloud_notm}} não está disponível
-{: #ts_failover}
-{: troubleshoot}
-
-Não é possível usar failover automático entre regiões do {{site.data.keyword.cloud}}. No entanto, é possível usar um provedor DNS que suporte failover entre muitos endereços IP como uma solução alternativa.
-
-Quando uma região do {{site.data.keyword.cloud_notm}} se torna indisponível, os apps que estão em execução nessa região também ficam indisponíveis, ainda que os mesmos apps estejam em execução em outra região do {{site.data.keyword.cloud_notm}}.
-{: tsSymptoms}
-
-O {{site.data.keyword.cloud_notm}} ainda não fornece failover automático de uma região para outra.
-{: tsCauses}
-
-É possível usar um provedor DNS que suporte failover inteligente entre vários endereços de ID e configurar manualmente suas configurações de DNS para ativar o failover automático entre regiões do {{site.data.keyword.cloud_notm}}. Os provedores de DNS com esse recurso incluem NSONE, Akamai e Dyn.
-{: tsResolve}
-
-Ao configurar suas definições de DNS, deve-se especificar os endereços IP públicos das regiões do {{site.data.keyword.cloud_notm}} em que seu apps estão em execução. Para obter o endereço IP público de uma região do {{site.data.keyword.cloud_notm}}, use o comando `nslookup`. Por exemplo, é possível digitar o comando a seguir em uma janela de linha de comandos.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## Não é possível acessar serviços do {{site.data.keyword.cloud_notm}} devido a erros de autorização
 {: #ts_vcap}
 {: troubleshoot}
@@ -100,7 +79,7 @@ Em vez de codificar permanentemente as credenciais no app, use parâmetros de co
 process.env.VCAP_SERVICES
 ```
 
-Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Ruby ](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+Para obter mais informações sobre os comandos que podem ser usados em outras linguagens de programa, veja [Java ](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Ruby ](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Erros 502 Gateway inválido são recebidos
 {: #ts_502_error}
@@ -138,7 +117,7 @@ Você liga um serviço {{site.data.keyword.mobilepushshort}} para seu app do {{s
 O serviço IBM {{site.data.keyword.mobilepushshort}} usa o serviço Google Cloud Messaging (GCM) para despachar notificações para apps móveis que são desenvolvidos no Android. Para ativar o recebimento de notificações em apps Android, o serviço Google Cloud Messaging (GCM) deve estar acessível para apps móveis. Em regiões em que os apps Android não podem acessar o serviço GCM, os apps Android não podem receber o {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Como uma solução alternativa, use serviços de terceiros que não dependam do serviço GCM, por exemplo, [Pushy ](https://pushy.me){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), [getui ](http://www.getui.com/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [jpush ](https://www.jpush.cn/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+Como uma solução alternativa, use serviços de terceiros que não dependem do serviço GCM, por exemplo, [Pushy](https://pushy.me/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [jpush](https://www.jiguang.cn/en/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 {: tsResolve}
 
 ## Caracteres de byte duplo não são exibidos de forma adequada quando os apps são enviados por push para o {{site.data.keyword.cloud_notm}}
@@ -147,7 +126,7 @@ Como uma solução alternativa, use serviços de terceiros que não dependam do 
 
 Os caracteres de byte duplo poderão não ser exibidos corretamente se o suporte Unicode não estiver configurado corretamente para os arquivos servlet ou JSP.
 
-Quando um aplicativo é enviado por push para o {{site.data.keyword.cloud_notm}}, os caracteres de byte duplo especificados no app não são exibidos corretamente.
+Quando um app é enviado por push para o {{site.data.keyword.cloud_notm}}, os caracteres de byte duplo que são especificados no app não são exibidos de forma adequada.
 {: tsSymptoms}
 
 O problema poderá ocorrer se o suporte Unicode não estiver configurado corretamente para os arquivos servlet ou JSP.
@@ -271,7 +250,7 @@ Ao implementar um app no {{site.data.keyword.cloud_notm}} com um buildpack custo
 Esse problema poderá ocorrer se scripts, como o script de detecção, o script de compilação e o script de liberação não forem executáveis.
 {: tsCauses}
 
-É possível usar o comando [Git update ](http://git-scm.com/docs/git-update-index){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
+É possível usar o comando [Git update ](https://git-scm.com/docs/git-update-index){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para mudar a permissão de cada script para executável. Por exemplo, é possível digitar `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Não é possível implementar um app do Delivery Pipeline no {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -296,7 +275,7 @@ aplicativo](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
 
 Se as tarefas de compilação ou implementação falharem e você vir a mensagem a seguir, será possível excluir suas imagens com os comandos da CLI a seguir. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) se você ainda não a tiver.
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) se você ainda não a tiver.
 * Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no espaço em que você está.
 * Liste suas imagens usando `ibmcloud cr images`.
 * Exclua quaisquer imagens não utilizadas por meio do comando `ibmcloud cr image-rm <respository>:<tag>`.
@@ -305,8 +284,8 @@ Se as tarefas de compilação ou implementação falharem e você vir a mensagem
 ## Acessando logs do Kubernetes
 {: #access_kube_logs}
 
-Se o aplicativo não estiver em execução e não for possível acessar o terminal de funcionamento, tente verificar os logs no cluster.
-* Instale a CLI do [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) se você ainda não a tiver.
+Se o app não estiver em execução e não for possível acessar o terminal de funcionamento, tente examinar os logs no cluster.
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) se você ainda não a tiver.
 * Efetue login no {{site.data.keyword.cloud_notm}} usando `ibmcloud login` e aponte-o para o espaço no espaço em que você está.
 * Liste seus clusters usando `ibmcloud cs clusters`,
 * Aponte para seu cluster correspondente usando `ibmcloud cs cluster-config <cluster-name>`.
@@ -315,7 +294,7 @@ Se o aplicativo não estiver em execução e não for possível acessar o termin
 o `kubectl`, veja [Instalar e configurar o kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 * É possível visualizar os logs em seu app usando o `kubectl logs <pod-name>.`
 
-## Iniciar o `docker` falha com a mensagem "arquivo não localizado"
+## Iniciar o `docker` falha com a mensagem de arquivo não localizado
 {: #docker_not_found}
 {: troubleshoot}
 

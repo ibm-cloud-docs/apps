@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -18,33 +18,33 @@ subcollection: creating-apps
 {:tip: .tip}
 
 # Esercitazione introduttiva
-{: #tutorial-getting-started}
+{: #getting-started}
 
 Puoi creare delle applicazioni web e mobili pronte per l'azienda in {{site.data.keyword.cloud}} e avvalerti delle estensioni cloud ospitate da {{site.data.keyword.cloud_notm}}. Hai diverse opzioni per iniziare a lavorare. Crea un'applicazione con un kit starter che gestisce il processo per tuo conto oppure, se sai cosa desideri, inizia da zero e crea la tua applicazione con le risorse di cui hai bisogno oppure utilizza il tuo repository esistente e porta il tuo codice.
 {: shortdesc}
 
 Sia che tu abbia del [codice esistente](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) che vuoi modernizzare e portare nel cloud o che stia sviluppando una [nuova applicazione](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), puoi attingere all'ecosistema in rapida crescita dei servizi disponibili e dei framework runtime in {{site.data.keyword.cloud_notm}}.
 
-Hai bisogno di aiuto per decidere da dove iniziare? Vedi questo diagramma per alcune idee!
+Hai bisogno di aiuto per decidere da dove iniziare? Il seguente diagramma fornisce una panoramica per la creazione di applicazioni se utilizzi un kit starter o porti il tuo codice in {{site.data.keyword.cloud_notm}}.
 
-![Panoramica sull'esperienza degli sviluppatori](images/dev-journey.png "Panoramica sull'esperienza degli sviluppatori")
+![Panoramica sull'esperienza degli sviluppatori](images/dev-journey.png "Panoramica della creazione di applicazioni in {{site.data.keyword.cloud_notm}}")
 
 ## Prima di iniziare
 {: #prereqs-getting-started}
 
-Puoi creare la tua applicazione utilizzando l'interfaccia di riga di comando (o CLI, command-line interface) o la console {{site.data.keyword.cloud_notm}}. Se desideri utilizzare la CLI, vedi la [procedura di installazione](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Puoi creare la tua applicazione utilizzando l'interfaccia di riga di comando (o CLI, command-line interface) o la console {{site.data.keyword.cloud_notm}}. Se desideri utilizzare la CLI, vedi la [procedura di installazione](/docs/cli?topic=cloud-cli-getting-started).
 
 ## Passo 1. Crea la tua applicazione
 {: #create-getting-started}
 
 Crea un'applicazione selezionando uno dei seguenti punti di ingresso:
 
-* I [kit starter](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) sono specifici per il caso di utilizzo e producono applicazioni pronte per la produzione in vari linguaggi di programmazione e modelli architetturali.
-* I [modelli di codice IBM Developer ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/patterns/){:new_window} ti aiutano a creare rapidamente la tua applicazione e a distribuirla in {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Modelli di codice](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
+* I [kit starter preconfigurati](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) sono specifici per il caso di utilizzo e ti forniscono applicazioni pronte per la produzione in vari linguaggi di programmazione e modelli architetturali.
+* I [kit starter di base](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) ti consentono di creare la tua applicazione selezionando tipo di applicazione (mobile o di backend), linguaggio e framework, servizi e destinazione di distribuzione.
 * [Porta il tuo codice](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) collegandoti al tuo repository di contenuti esistente. La tua applicazione e l'immagine Docker si devono trovare nello stesso repository.
-* Se sai cosa desideri, crea da zero un'[applicazione personalizzata](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) con i servizi di cui hai bisogno utilizzando un kit starter vuoto.
-* Crea e distribuisci un'applicazione personalizzata o kit starter utilizzando la [CLI e gli strumenti per gli sviluppatori](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+* La [CLI (command-line interface) {{site.data.keyword.dev_cli_long}}](/docs/apps?topic=creating-apps-create-deploy-app-cli) ti consente di creare e distribuire la tua applicazione tramite la CLI.
 * Sfoglia o cerca nel [catalogo {{site.data.keyword.cloud_notm}}](https://{DomainName}/catalog){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") le applicazioni e i servizi che puoi creare e iniziare a utilizzare oggi stesso.
+* I [modelli di codice IBM Developer ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/patterns/){:new_window} ti aiutano a creare rapidamente la tua applicazione e a distribuirla in {{site.data.keyword.cloud_notm}}. Per ulteriori informazioni, vedi [Modelli di codice](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
 
 ## Passo 2. Aggiungi i servizi
 {: #resources-getting-started}
@@ -53,7 +53,7 @@ Quando utilizzi un kit starter per creare la tua applicazione, i servizi obbliga
 
 Se vuoi aggiungere dei servizi dopo aver creato la tua applicazione, vai al [dashboard {{site.data.keyword.cloud_notm}} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://{DomainName}), individua la tua applicazione e fai quindi clic sul suo nome. Viene visualizzata la pagina **App details** dove puoi creare un'istanza del servizio o connettere dei servizi esistenti.
 
-Oppure puoi eseguire il seguente comando per aggiungere un servizio alla tua applicazione utilizzando la CLI. Puoi selezionare un servizio esistente da uno già abilitato sul tuo account o aggiungere un servizio.
+Oppure puoi eseguire il seguente comando per aggiungere un servizio alla tua applicazione utilizzando la CLI. Puoi selezionare un servizio esistente già abilitato sul tuo account o aggiungere un servizio.
 ```
 ibmcloud dev edit
 ```
@@ -75,7 +75,7 @@ Per distribuire la tua applicazione utilizzando la console, completa la seguente
 2. Seleziona una destinazione di distribuzione, le impostazioni della toolchain e fai clic su **Create**. {{site.data.keyword.cloud_notm}} crea automaticamente una toolchain aperta completa di un repository Git e della pipeline di fornitura continua.
 3. Apri la fase pipeline della tua nuova toolchain per visualizzare il processo di creazione e sviluppo in modo da poter vedere la tua nuova applicazione nel giro di qualche minuto.
 
-Per ulteriori informazioni, consulta la tabella dei contenuti per diversi argomenti di distribuzione nella sezione "Distribuzione e integrazione delle applicazioni".
+Per ulteriori informazioni, vedi [Distribuzione delle applicazioni](/docs/apps?topic=creating-apps-deploying-apps).
 
 ### Utilizzo della CLI
 {: #cli-getting-started}
