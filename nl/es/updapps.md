@@ -43,8 +43,7 @@ Siga estos pasos para añadir un dominio personalizado para su organización uti
 
 ## Adición de la ruta con el dominio personalizado a una aplicación
 
-1. Desde la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), pulse el icono
-**Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Lista de recursos**.
+1. En la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), pulse el icono **Menú** ![Icono Menú](../../icons/icon_hamburger.svg) y seleccione **Lista de recursos**.
 2. En la página **Lista de recursos**, pulse **Apps de Cloud Foundry**.
 3. Pulse sobre la aplicación a la que desee añadir la ruta. Aparecerá la página **Visión general** de la app.
 4. Seleccione el menú **Rutas** y seleccione **Editar rutas**.
@@ -87,7 +86,7 @@ Como ejemplo, puede utilizar `*.mycompany.com` para asociar la ruta `www.mybluem
 Tras configurar su dominio personalizado en {{site.data.keyword.cloud_notm}}, correlaciónelo con el dominio del sistema {{site.data.keyword.cloud_notm}} en su servidor DNS registrado:
 
 1. Configure un registro 'CNAME' para el nombre de dominio personalizado en su servidor DNS. Los pasos para configurar el registro CNAME varían en función del proveedor de DNS. Por ejemplo, si utiliza GoDaddy, siga las directrices de la [Ayuda sobre dominios](https://www.godaddy.com/help/add-a-cname-record-19236){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") de GoDaddy.
-2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.cloud_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.cloud_notm}}. Por ejemplo, haga que CNAME apunte a `<custom-domain>.us-east.cf.cloud.ibm.com.`
+2. Correlacione el nombre de dominio personalizado con el punto final seguro para la región {{site.data.keyword.cloud_notm}} en la que se ejecuta su aplicación. Utilice los puntos finales de región siguientes para proporcionar la ruta al URL asignado a la organización en {{site.data.keyword.cloud_notm}}. Por ejemplo, puede apuntar el CNAME a `<custom-domain>.us-east.cf.cloud.ibm.com.`
 
   **Puntos finales de Cloud Foundry:**
   * US-SOUTH - `custom-domain.us-south.cf.cloud.ibm.com`

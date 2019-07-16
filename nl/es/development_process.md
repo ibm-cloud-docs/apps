@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Fases recomendadas para el desarrollo en la nube
 {: #development_process}
 
-Los desarrolladores de apps en la nube recorren cuatro fases fundamentales en el proceso de desarrollo: inicio, codificación, entrega y gestión. El objetivo es crear rápidamente una app que funcione y luego utilizar la información proveniente de la app de producción para iterar de forma continua el código o el ciclo de entrega hasta que su app se adecúe a los usuarios.
+Los desarrolladores de apps en la nube recorren cuatro fases fundamentales en el proceso de desarrollo: iniciación, programación, entrega y gestión. El objetivo es crear rápidamente una app que funcione y luego utilizar la información proveniente de la app de producción para iterar de forma continua el código o el ciclo de entrega hasta que su app se adecúe a los usuarios.
 {: shortdesc}
 
 ![Flujo de desarrollo](images/dev_flow_overview.png "Flujo de desarrollo") Figura 1. Fases del proceso de desarrollo.

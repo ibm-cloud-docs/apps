@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -29,7 +29,7 @@ subcollection: creating-apps
 
 Hay una nueva opción de nombre de host `*.appdomain.cloud` disponible en cloud.ibm.com.
 
-Anteriormente, se utilizaba el dominio `mybluemix.net` para alojar apps en diversos destinos de despliegue, como {{site.data.keyword.containerlong_notm}} o Cloud Foundry. Las apps que tenga alojadas en `mybluemix.net` no se verán afectadas.
+Anteriormente, se utilizaba el dominio `mybluemix.net` para alojar aplicaciones en diversos destinos de despliegue, como {{site.data.keyword.containerlong_notm}} o Cloud Foundry. Las apps que tenga alojadas en `mybluemix.net` no se verán afectadas.
 
 El subdominio para las apps de Cloud Foundry es `cf.appdomain.cloud`. El subdominio para las apps que despliegue en {{site.data.keyword.containerlong_notm}} es `containers.appdomain.cloud`.
 
@@ -39,7 +39,7 @@ Para obtener más información, consulte [Gestión de los dominios](/docs/apps?t
 {: #cf-app}
 {: faq}
 
-Su lista de recursos en la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") proporciona información de resumen de las aplicaciones que ha creado. En la lista de recursos, la sección **Apps** contiene todas las apps que ha creado pero que *no* se han desplegado en Cloud Foundry. La sección **Apps de Cloud Foundry** contiene todas las apps que ha creado y desplegado en Cloud Foundry.
+Su lista de recursos en la [consola de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") proporciona información de resumen de las apps que ha creado. En la lista de recursos, la sección **Apps** contiene todas las apps que ha creado pero que *no* se han desplegado en Cloud Foundry. La sección **Apps de Cloud Foundry** contiene todas las apps que ha creado y desplegado en Cloud Foundry.
 
 ## ¿Por qué no puedo seleccionar un espacio de Cloud Foundry cuando intento desplegar mi app?
 {: #cf-space}

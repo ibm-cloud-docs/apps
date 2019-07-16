@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -15,15 +15,15 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{: note .note}
+{:note: .note}
 
 # Creación de una app con un kit de inicio
 {: #tutorial-starterkit}
 
-Utilice un kit de inicio para empezar rápidamente su aplicación y prepárela para el futuro desarrollo. Seleccione un kit de inicio y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente. También puede descargar el código para una inspección inmediata.
+Utilice un kit de inicio para empezar rápidamente su aplicación y prepárela para el futuro desarrollo. Seleccione un kit de inicio y un lenguaje de programación, cree una app y configure una cadena de herramientas de DevOps para desplegar su app automáticamente.
 {: shortdesc}
 
-Puede crear una app desde una selección de kits de inicio, incluido uno en blanco si desea personalizar las opciones de compilación usted mismo. En cualquiera de los casos, se crea automáticamente una cadena de herramientas DevOps para desplegar la app. También puede descargar el código para una inspección inmediata.
+Puede crear una app desde una selección de kits de inicio, incluido uno básico si desea personalizar las opciones de compilación usted mismo. En cualquiera de los casos, se crea automáticamente una cadena de herramientas DevOps para desplegar la app. También puede descargar el código para una inspección inmediata.
 
 {{site.data.keyword.cloud_notm}} tiene portales de desarrollador en distintas áreas de interés (por ejemplo, Watson, Seguridad o Finanzas) o para un canal digital (como por ejemplo, apps móviles o web). Puede acceder a estos portales desde el icono **Menú**
 ![Icono Menú](../../icons/icon_hamburger.svg).
@@ -43,25 +43,25 @@ Consulte [¿Qué los kits de inicio?](/docs/apps?topic=creating-apps-starter-kit
 ## Paso 1. Instalar las herramientas
 {: #prereqs-starterkit}
 
-* Instale las [herramientas del desarrollador](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Instale las [herramientas del desarrollador](/docs/cli?topic=cloud-cli-getting-started).
 * Docker se instala como parte de las herramientas de desarrollador. Docker debe estar en ejecución para que funcionen los mandatos de compilación. Debe crear una cuenta de Docker, ejecutar la app de Docker e iniciar la sesión.
 * Si tiene intención de desplegar la app en {{site.data.keyword.cfee_full}}, debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
 ## Paso 2. Crear una app
 {: #create-starterkit}
 
-Los kits de inicio están disponibles en muchos idiomas e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Puede utilizar filtros de categorías, como idioma y tipo, para reducir la selección.
+Los kits de inicio están disponibles en muchos lenguajes e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Puede utilizar filtros de categorías, como lenguaje y tipo, para reducir la selección.
 
-1. En la página [kits de inicio](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la consola de {{site.data.keyword.dev_console}}, seleccione un kit de inicio y pulse **Crear app**. 
+1. En la página [kits de inicio](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la consola de {{site.data.keyword.dev_console}}, seleccione un kit de inicio y pulse **Crear app**. 
 
-    Para ver lo que se incluye en el kit de inicio, seleccione el mosaico y lea los detalles. Si desea utilizar un kit de inicio en blanco y personalizarlo, seleccione el mosaico **Crear app**.
+    Para ver lo que se incluye en el kit de inicio, seleccione el mosaico y lea los detalles. Si desea utilizar un kit de inicio básico y personalizar la app, seleccione el mosaico **Crear app**.
     {: tip}
 
 2. Asigne un nombre a la app y seleccione un grupo de recursos.
 
 3. Opcional. Proporcione etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
 
-4. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
+4. Seleccione el lenguaje y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un lenguaje.
 
 5. Pulse **Crear**.
 
@@ -96,9 +96,13 @@ Para seleccionar el destino del despliegue y configurar la entrega continua, sig
 
 1. En la página Detalles de la app, pulse **Configurar entrega continua**.
 2. Seleccione un destino de despliegue. Configure el destino de despliegue de acuerdo con las instrucciones correspondientes al destino que seleccione:
-  * **Desplegar en el [servicio IBM Kubernetes](/docs/containers?topic=containers-app)**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
-  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **[nube pública](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o de **[entorno de empresa](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que puede utilizar para crear y gestionar entornos aislados para alojar aplicaciones de Cloud Foundry exclusivamente para su empresa.
-  * **Desplegar en un servidor virtual**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue.
+  * **Desplegar en el [servicio IBM Kubernetes](/docs/containers?topic=containers-app)**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de apps de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
+  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **[nube pública](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o de **[entorno de empresa](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que puede utilizar para crear y gestionar entornos aislados para alojar apps de Cloud Foundry exclusivamente para su empresa.
+  * **Desplegar en un servidor virtual**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue. Para obtener más información, consulte
+[Despliegue de apps en un servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    El despliegue de VSI está disponible para algunos kits de inicio. Para utilizar esta característica, vaya al [panel de control de {{site.data.keyword.cloud_notm}}](https://{DomainName}) y pulse **Crear una app** en el mosaico **Apps**.
+    {: note}
 
 Después de seleccionar y configurar el destino del despliegue, la página Detalles de la app indica que se ha configurado la entrega continua. Para ver el repositorio que contiene el código fuente de la app, pulse **Ver repositorio**.
 
@@ -124,7 +128,7 @@ Después de desplegar la app, el conducto de entrega o la línea de mandatos le 
 
 1. Desde la cadena de herramientas de DevOps, pulse **Delivery Pipeline** y luego seleccione **Etapa de despliegue**.
 2. Pulse **Ver registros e historial**.
-3. En el archivo de registro, busque el URL de la aplicación:
+3. En el archivo de registro, busque el URL de la app:
 
     Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.mybluemix.net` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
 

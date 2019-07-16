@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-04"
 
 keywords: apps, applications, activity tracking events
 
@@ -43,26 +43,10 @@ Para empezar a supervisar las acciones del usuario, consulte la [Guía de aprend
 
 La tabla siguiente lista las acciones que generan un suceso:
 
-<table>
-  <caption>Acciones que generan sucesos</caption>
-  <tr>
-    <th>Acciones</th>
-	  <th>Descripción</th>
-  <tr>
-  <tr>
-    <td>bluemix-developer-experience.app.create</td>
-	  <td>Un suceso se genera cuando un usuario crea una aplicación.</td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.read</td>
-	  <td>Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Un usuario descarga el código de aplicación.</li> <li>Un usuario descarga el archivo de credenciales utilizando la CLI de {{site.data.keyword.dev_console}}.</li> <li>La infraestructura de la experiencia del desarrollador lee credenciales correspondientes a servicios asociados a una aplicación.</li> <li>Un usuario ve la lista de aplicaciones, por ejemplo, cuando el usuario ve la lista de aplicaciones en la consola de {{site.data.keyword.dev_console}} o mediante la CLI de {{site.data.keyword.dev_cli_short}}.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.update</td>
-	  <td>Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: </br><ul><li>Cambia algo de la aplicación, por ejemplo, cuando un usuario modifica el nombre de la aplicación. </li><li>Se crea y se añade un servicio nuevo a una aplicación.</li><li>Se añade un servicio existente a una aplicación.</li><li>Se elimina un servicio de una aplicación.</li><li>Se genera código para una aplicación.</li><li>Se añade una cadena de herramientas de DevOps mediante la experiencia del desarrollador, por ejemplo, seleccionando *Configurar entrega continua*.</li></ul></td>
-  </tr>
-  <tr>
-    <td>bluemix-developer-experience.app.delete</td>
-	  <td>Se genera un suceso cuando un usuario suprime una aplicación.</td>
-  </tr>
-</table>
+|Acciones	|Descripción	|
+|-----|-------------|
+|bluemix-developer-experience.app.create |Se genera un suceso cuando un usuario crea una app.|
+|bluemix-developer-experience.app.read |Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: <br><br>Un usuario descarga el código de app.<br><br>Un usuario descarga el archivo de credenciales utilizando la CLI de {{site.data.keyword.dev_console}}.<br><br>La infraestructura de {{site.data.keyword.cloud_notm}} lee credenciales correspondientes a servicios asociados a una app.<br><br>Un usuario visualiza la lista de apps. Por ejemplo, un usuario visualiza la lista de apps en la consola de {{site.data.keyword.dev_console}} o mediante la CLI de {{site.data.keyword.dev_cli_short}}.|
+|bluemix-developer-experience.app.update |Se genera un suceso cuando se produce cualquiera de las situaciones siguientes: <br><br>Cambia algo referente a la app. Por ejemplo, un usuario modifica el nombre de la app.<br><br>Se crea un nuevo servicio y se añade a una app.<br><br>Se añade un servicio existente a una app.<br><br>Se elimina un servicio de una app.<br><br>Se genera código para una app.<br><br>Se añade una cadena de herramientas DevOps mediante la consola de {{site.data.keyword.cloud_notm}}. Por ejemplo, un usuario selecciona **Configurar entrega continua** en la página de Detalles de la app.|
+|bluemix-developer-experience.app.delete |Se genera un suceso cuando un usuario suprime una app. |
+{: caption="Tabla 1. Acciones que generan sucesos" caption-side="top"}

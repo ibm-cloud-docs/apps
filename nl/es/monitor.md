@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,10 +21,10 @@ subcollection: creating-apps
 
 Puede empezar a supervisar la disponibilidad y el rendimiento de su aplicación de forma inmediata. Cuando enlace {{site.data.keyword.prf_hubshort}} a su app, se creará automáticamente una prueba sintética para supervisar el URL de la app principal de forma predeterminada.
 
-{{site.data.keyword.prf_hublong}} está disponible como servicio en el dominio DevOps del catálogo de {{site.data.keyword.cloud_notm}}. También está disponible en el panel de control de la aplicación Cloud Foundry, en el separador **Supervisión**. 
+{{site.data.keyword.prf_hublong}} está disponible como servicio en el dominio DevOps del catálogo de {{site.data.keyword.cloud_notm}}. También está disponible en el panel de control de la app Cloud Foundry, en el separador **Supervisión**. 
 {: shortdesc}
 
-Puede probar, supervisar y mejorar el estado de la aplicación a medida que lo crea añadiendo {{site.data.keyword.prf_hubshort}} a la cadena de herramientas de DevOps.
+Puede probar, supervisar y mejorar el estado de la app a medida que la crea añadiendo {{site.data.keyword.prf_hubshort}} a la cadena de herramientas de DevOps.
 
 Esta integración de herramientas solo está disponible para apps Cloud Foundry. Está preconfigurada y no requiere ningún parámetro de configuración. No puede volver a configurar esta integración de herramientas.
 {: tip}

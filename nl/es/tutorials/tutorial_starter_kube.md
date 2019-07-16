@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-06-20"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -20,28 +20,24 @@ subcollection: creating-apps
 # Despliegue de una app de kit de inicio en un clúster de Kubernetes
 {: #tutorial-starterkit-kube}
 
-Aprenda a crear una aplicación en {{site.data.keyword.cloud}} utilizando un kit de inicio en blanco y una cadena de herramientas Kubernetes y a suministrar la app de forma continuada a un contenedor seguro en un clúster de Kubernetes. El conducto de DevOps de integración continua se puede configurar de modo que los cambios en el código se compilen automáticamente y se propaguen a la app que está en el clúster de Kube. Si ya tiene un conducto, puede conectarlo a la app.
+Aprenda a crear una aplicación en {{site.data.keyword.cloud}} utilizando un kit de inicio básico y una cadena de herramientas Kubernetes y a suministrar la app de forma continuada a un contenedor seguro en {{site.data.keyword.containerlong}}. El conducto de DevOps de integración continua se puede configurar de modo que los cambios en el código se compilen automáticamente y se propaguen a la app que está en el clúster de Kubernetes. Si ya tiene un conducto, puede conectarlo a la app.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} ofrece kits de inicio que le ayudan a crear la base de una app que se ejecuta en Kubernetes. Cuando se utiliza un kit de inicio, es fácil seguir un modelo de programación nativo de la nube que utiliza las prácticas recomendadas de {{site.data.keyword.cloud_notm}} para el desarrollo de apps. Los kits de inicio generan apps que siguen el modelo de programación nativo de la nube e incluyen casos de uso, comprobación de estado y métricas en cada uno de los lenguajes de programación. También puede suministrar servicios de nube que se inicialicen en la aplicación generada.
+{{site.data.keyword.cloud_notm}} ofrece kits de inicio que le ayudan a crear la base de una app que se ejecuta en Kubernetes. Cuando se utiliza un kit de inicio, es fácil seguir un modelo de programación nativo de la nube que utiliza las prácticas recomendadas de {{site.data.keyword.cloud_notm}} para el desarrollo de apps. Los kits de inicio generan apps que siguen el modelo de programación nativo de la nube e incluyen casos de uso, comprobación de estado y métricas en cada uno de los lenguajes de programación. También puede suministrar servicios de nube que se inicialicen en la app generada.
 
-En esta guía de aprendizaje se utiliza el destino de despliegue de Kubernetes. En esta guía de aprendizaje, vamos a crear una aplicación a partir de un kit de inicio básico utilizando Java + Spring, a añadir a la misma una instancia de servicio Cloudant y a desplegarla en {{site.data.keyword.cloud_notm}} utilizando el servicio IBM Kubernetes.
-
-En primer lugar, consulte el siguiente diagrama de flujo del kit de inicio y sus correspondientes pasos de visión general.
-
-![Diagrama de flujo del kit de inicio](../images/starterkit-flow.png) 
+En esta guía de aprendizaje se utiliza el destino de despliegue de {{site.data.keyword.containerlong}}. En esta guía de aprendizaje, vamos a crear una app a partir de un kit de inicio básico utilizando Java + Spring, a añadir a la misma una instancia de servicio Cloudant y a desplegarla en {{site.data.keyword.containerlong}}.
 
 ## Antes de empezar
 {: #prereqs-starterkit-kube}
 
 * Cree una app **Java + Spring** utilizando un [kit de inicio](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
-* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 * Configure [Docker](https://www.docker.com/get-started){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Adición de servicios a la app
 {: #resources-starterkit-kube}
 
-Añada un servicio de {{site.data.keyword.cloud_notm}} a la aplicación. En los pasos siguientes se suministra una instancia de Cloudant, se crea una clave de recurso (credenciales) y se enlaza con la app.
+Añada un servicio de {{site.data.keyword.cloud_notm}} a la app. En los pasos siguientes se suministra una instancia de Cloudant, se crea una clave de recurso (credenciales) y se enlaza con la app.
 
 1. En la página **Detalles de la app**, pulse **Añadir servicio**.
 2. Seleccione **Datos** y pulse **Siguiente**.
@@ -53,7 +49,7 @@ Añada un servicio de {{site.data.keyword.cloud_notm}} a la aplicación. En los 
 ## Despliegue la app utilizando la cadena de herramientas de DevOps
 {: #deploy-starterkit-kube}
 
-Adjunte una cadena de herramientas DevOps a la aplicación y configúrela para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}.
+Conecte una cadena de herramientas DevOps a la app y configúrela para desplegarla en un clúster de Kubernetes alojado en el servicio de Kubernetes de {{site.data.keyword.cloud_notm}}.
 
 1. En la página **Detalles de la app**, pulse **Configurar entrega continua**.
 2. En la página **Seleccionar un destino de despliegue**, seleccione **Desplegar en el servicio IBM Kubernetes**.
@@ -78,8 +74,8 @@ Adjunte una cadena de herramientas DevOps a la aplicación y configúrela para d
 1. Cuando finaliza la etapa de despliegue, se visualiza la página **Detalles de la app** junto con la información de despliegue sobre la cadena de herramientas.
 2. Acceda a la cadena de herramientas pulsando **Ver cadena de herramientas**. Se visualiza el separador **Visión general** de la página de la cadena de herramientas, que muestra las herramientas incluidas en la cadena de herramientas. Este ejemplo incluye las herramientas siguientes que se han preseleccionado en el kit de inicio cuando se ha creado la cadena de herramientas:
   * Un programa de seguimiento de problemas para realizar un seguimiento de las actualizaciones y los cambios del proyecto.
-  * Un repositorio Git que contiene el código fuente de la aplicación.
-  * Una instancia de Eclipse Orion, que es un IDE basado en web para editar la aplicación.
+  * Un repositorio Git que contiene el código fuente de la app.
+  * Una instancia de Eclipse Orion, que es un IDE basado en web para editar la app.
   * Un conducto de entrega que consta de una etapa de compilación y despliegue personalizable.
 	 * La etapa de compilación (BUILD) conteneriza la app. En concreto, la etapa de compilación:
 	   * Clona el repositorio GitLab.
@@ -97,7 +93,7 @@ Después de desplegar la app, el conducto de entrega o la línea de mandatos le 
 
 1. Desde la cadena de herramientas de DevOps, pulse **Delivery Pipeline** y luego seleccione **Etapa de despliegue**.
 2. Pulse **Ver registros e historial**.
-3. En el archivo de registro, busque el URL de la aplicación:
+3. En el archivo de registro, busque el URL de la app:
 
     Al final del archivo de registro, busque `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
 
@@ -114,4 +110,4 @@ Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs
 	- Puede utilizar la anotación _@Value_ o bien puede utilizar el método _getProperty()_ de la clase de entorno Spring. Para obtener más información, consulte [Acceso a credenciales](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
 * Añada nuevas credenciales de servicio al entorno de Kubernetes:
-	- Cuando se añade otro servicio a la aplicación después de que se cree la cadena de herramientas de DevOps, dichas credenciales de servicio no se actualizan automáticamente en la aplicación desplegada y en el repositorio GitLab. Debe [añadir manualmente las credenciales al entorno de despliegue](/docs/apps?topic=creating-apps-credentials_overview).
+	- Cuando se añade otro servicio a la app después de que se cree la cadena de herramientas de DevOps, dichas credenciales de servicio no se actualizan automáticamente en la app desplegada y en el repositorio GitLab. Debe [añadir manualmente las credenciales al entorno de despliegue](/docs/apps?topic=creating-apps-credentials_overview).

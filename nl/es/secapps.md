@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-12"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Creación de solicitudes de firma de certificado
 {: #ssl_csr}
 
-Puede proteger las aplicaciones subiendo certificados SSL y limitando el acceso a las aplicaciones.
+Puede proteger las aplicaciones subiendo certificados SSL y limitando el acceso a las apps.
 {:shortdesc}
 
 ## Creación de una CSR
@@ -29,14 +29,14 @@ Para poder cargar los certificados SSL a los que esté autorizado con {{site.dat
 y de información asociada. De forma más común, las CSR se encuentran en el formato PKCS número 10. La CSR incluye una clave pública, así como un nombre común, una organización, una ciudad, un estado, un país y un correo electrónico. Las solicitudes de certificados SSL
 sólo están aceptadas con una longitud de claves CSR de 2048 bits.
 
-Los métodos para crear una CSR varían en función del sistema operativo. En el ejemplo siguiente se muestra cómo crear una CSR utilizando [la herramienta de línea de mandatos OpenSSL](http://www.openssl.org/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"):
+Los métodos para crear una CSR varían en función del sistema operativo. En el ejemplo siguiente se muestra cómo crear una CSR utilizando [la herramienta de línea de mandatos OpenSSL](https://www.openssl.org/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"):
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 ```
 {: codeblock}
 
-La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las aplicaciones que tienen problemas de compatibilidad con el certificado SHA-256.
+La implementación SHA-512 de OpenSSL depende del soporte de compilador para el tipo de entero de 64 bits. Puede utilizar la opción SHA-1 para las apps que tienen problemas de compatibilidad con el certificado SHA-256.
 {: tip}
 
 ### Contenido necesario de CSR
@@ -59,7 +59,7 @@ Un certificado lo emite una entidad emisora de certificados, que lo firma digita
 ## Carga de certificados SSL
 {: #ssl_certificate}
 
-Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la aplicación a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes. Si tiene una cuenta Lite, debe actualizar su cuenta para cargar un certificado.
+Puede aplicar un protocolo de seguridad para proporcionar privacidad de comunicación a la app a fin de impedir escuchas no autorizadas, manipulación indebida e interferencia de mensajes. Si tiene una cuenta Lite, debe actualizar su cuenta para cargar un certificado.
 
 Si utiliza un dominio personalizado para servir el certificado SSL, utilice los siguientes puntos finales de región para proporcionar la ruta de URL asignada a la organización en {{site.data.keyword.cloud_notm}}:
 
@@ -70,12 +70,13 @@ Si utiliza un dominio personalizado para servir el certificado SSL, utilice los 
 | EU-DE | `custom-domain.eu-de.cf.cloud.ibm.com` |
 | EU-GB | `custom-domain.eu-gb.cf.cloud.ibm.com` |
 | AU-SYD | `custom-domain.au-syd.cf.cloud.ibm.com` | 
+{: caption="Tabla 1. Puntos finales de regiones de dominios personalizados de Cloud Foundry" caption-side="top"}
 
-Para cargar un certificado para su aplicación de Cloud Foundry, complete los siguientes pasos:
+Para cargar un certificado para su app Cloud Foundry, complete los siguientes pasos:
 
 1. En la [consola de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}){: new_window}, pulse el icono **Menú** ![Icono Menú](../icons/icon_hamburger.svg) y seleccione **Lista de recursos**.
 2. Pulse **Apps de Cloud Foundry**.
-3. Pulse sobre la aplicación para la cual desee cambiar el dominio. 
+3. Pulse sobre la app para la cual desee cambiar el dominio. 
 4. En la página Visión general de la app, pulse **Rutas** y seleccione **Gestionar dominios**.
 5. En la columna Acciones, pulse el icono Acciones ![Icono Más acciones](../icons/action-menu-icon.svg) y seleccione
 **Dominios**.
@@ -86,9 +87,9 @@ Para cargar un certificado para su aplicación de Cloud Foundry, complete los si
 del certificado, permitiendo de este modo autenticar al propietario de este certificado. Un certificado lo emite una entidad emisora de certificados, que lo firma digitalmente. Por lo general un certificado lo emite y firma una entidad emisora de certificados. Sin embargo, para fines de prueba y desarrollo puede utilizar un certificado autofirmado.
   * Clave privada: patrón algorítmico utilizado para cifrar mensajes que solo se pueden descifrar con la clave pública correspondiente. La clave privada también se utiliza para descifrar mensajes que se han cifrado mediante la clave pública correspondiente. La clave privada se guarda en el sistema del usuario y se
 protege mediante una contraseña.
-  * Certificado intermedio (opcional): certificado subordinado emitido por la entidad emisora de certificados (CA) raíz de confianza específicamente para emitir certificados del servidor de la entidad final. El resultado es una cadena de certificados que empieza en la entidad emisora de certificados raíz de confianza, pasa por el certificado intermedio y termina con la emisión del certificado SSL a la organización. Utilice a un certificado intermedio para verificar la autenticidad del certificado principal. Los certificados intermedios normalmente se obtienen de un tercero de confianza. Es posible que no necesite un certificado intermedio para probar la aplicación antes de desplegarla en producción.
+  * Certificado intermedio (opcional): certificado subordinado emitido por la entidad emisora de certificados (CA) raíz de confianza específicamente para emitir certificados del servidor de la entidad final. El resultado es una cadena de certificados que empieza en la entidad emisora de certificados raíz de confianza, pasa por el certificado intermedio y termina con la emisión del certificado SSL a la organización. Utilice a un certificado intermedio para verificar la autenticidad del certificado principal. Los certificados intermedios normalmente se obtienen de un tercero de confianza. Es posible que no necesite un certificado intermedio para probar la app antes de desplegarla en producción.
   * Habilitar solicitud de certificado de cliente: si habilita esta opción, a los usuarios que intenten acceder a un dominio protegido por SSL se les solicitará que especifiquen un certificado del lado del cliente. Por ejemplo en un navegador web, cuando un usuario intenta acceder a un dominio protegido por SSL, el navegador web le solicita que especifique un certificado de cliente para el dominio.   
-  * Almacén de confianza de certificados de cliente (opcional): incluye los certificados de cliente para los usuarios a los que desea permitir el acceso a la aplicación. Cargue un archivo de almacén de confianza de certificado de cliente para habilitar la opción de solicitud de certificado de cliente.
+  * Almacén de confianza de certificados de cliente (opcional): incluye los certificados de cliente para los usuarios a los que desea permitir el acceso a la app. Cargue un archivo de almacén de confianza de certificado de cliente para habilitar la opción de solicitud de certificado de cliente.
   
     Puede configurar la autenticación mutua cargando un almacén de confianza de certificado de cliente que incluya una clave pública en sus metadatos.
     {: tip}

@@ -46,7 +46,7 @@ En algunos casos, la selección de un kit de inicio le lleva a conocer más deta
 ##Vista Crear nueva app
 {: #create_new_project_view}
 
-En la vista Crear nueva app, puede dar nombre a la app, proporcionar información de despliegue y de direccionamiento y seleccionar un idioma.  Observe a la derecha que también puede ver los servicios que se suministrarán automáticamente al crear la app, junto con los planes de precios y las condiciones de cada uno.  Pulse `Crear` para ir a la vista Detalles de la app.  Si todavía no ha iniciado sesión en {{site.data.keyword.cloud_notm}}, tiene que hacerlo en este punto.
+En la vista Crear nueva app, puede dar nombre a la app, proporcionar información de despliegue y de direccionamiento y seleccionar un lenguaje.  Observe a la derecha que también puede ver los servicios que se suministrarán automáticamente al crear la app, junto con los planes de precios y las condiciones de cada uno.  Pulse `Crear` para ir a la vista Detalles de la app.  Si todavía no ha iniciado sesión en {{site.data.keyword.cloud_notm}}, tiene que hacerlo en este punto.
 
 ![Vista Crear nueva app de la consola del desarrollador](images/create_new_project_view.png "Vista Crear nueva app") <br> *Vista Crear nueva app de la consola del desarrollador*
 

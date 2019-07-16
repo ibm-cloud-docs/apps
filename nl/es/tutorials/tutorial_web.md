@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creación de una app web básica con un kit de inicio
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a codificar rápidamente. Seleccione un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
+{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a empezar a programar rápidamente. Seleccione un lenguaje, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -32,11 +32,11 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 ## Paso 2. Seleccionar un kit de inicio
 {: #create-webapp}
 
-Los kits de inicio están disponibles en muchos idiomas e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
+Los kits de inicio están disponibles en muchos lenguajes e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Seleccione el lenguaje que se ajuste mejor a su proyecto para empezar.
 
 1. En la página [kits de inicio](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje.
 2. Opcional. Proporcione etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
-3. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
+3. Seleccione el lenguaje y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un lenguaje.
 4. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
 5. Pulse **Crear**.
 

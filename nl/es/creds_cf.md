@@ -54,7 +54,7 @@ En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qu
       - customcreds
   ```
 
-3. Codifique la aplicación de modo que lea el entorno para una variable de entorno `VCAP_SERVICES`, analícela en JSON y busque las credenciales que necesita (pseudocódigo de tipo node.js):
+3. Programe la aplicación de modo que lea el entorno para una variable de entorno `VCAP_SERVICES`, analícela en JSON y busque las credenciales que necesita (pseudocódigo de tipo node.js):
   ```
   // get the 'password' from "customcreds" user-provided service
   vcapServices = getEnvironment('VCAP_SERVICES');

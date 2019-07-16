@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-20"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -29,7 +29,7 @@ Puede crear una app de inicio desde cero o habilitar para la nube su código de 
 ## Antes de empezar
 {: #prereqs-app-cli}
 
-Debe instalar la CLI de {{site.data.keyword.cloud_notm}}, el plugin de la CLI de {{site.data.keyword.dev_cli_notm}} y otras herramientas y plugins recomendados. Para obtener más información, consulte [Iniciación a la CLI de IBM Cloud](/docs/cli?topic=cloud-cli-ibmcloud-cli). 
+Debe instalar la CLI de {{site.data.keyword.cloud_notm}}, el plugin de la CLI de {{site.data.keyword.dev_cli_notm}} y otras herramientas y plugins recomendados. Para obtener más información, consulte [Iniciación a la CLI de IBM Cloud](/docs/cli?topic=cloud-cli-getting-started). 
 
 ## Creación de una app de inicio desde cero
 {: #create-app-cli}
@@ -37,7 +37,7 @@ Debe instalar la CLI de {{site.data.keyword.cloud_notm}}, el plugin de la CLI de
 Crear una app desde cero resulta útil si aún no dispone de código existente con el que comenzar y prefiere empezar a partir de una plantilla de inicio de infraestructura o lenguaje.
 
 1. Ejecute el mandato [`ibmcloud dev create`](/docs/cli/idt?topic=cloud-cli-idt-cli#create) en el directorio que prefiera.
-2. Seleccione **Backend Service / Web App** como tipo de aplicación.
+2. Seleccione **Backend Service / Web App** como tipo de app.
 3. Seleccione **Nodo** como tipo de lenguaje.
 4. Seleccione **App Node.js con Express.js (app web)** como kit de inicio que va a utilizar.
 5. Especifique un nombre para su app y seleccione el grupo de recursos que quiere utilizar (si es necesario). No añada servicios por ahora.
@@ -84,7 +84,7 @@ Puede utilizar esta opción si ya dispone de un código base existente y desea g
 
 Independientemente de la opción que ha utilizado para crear la app, ahora puede crearla y ejecutarla localmente.
 
-1. Vaya al directorio de la aplicación, y asegúrese de que Docker está ejecutándose en el sistema.
+1. Vaya al directorio de la app, y asegúrese de que Docker está ejecutándose en el sistema.
 2. Ejecute el mandato [`ibmcloud dev build`](/docs/cli/idt?topic=cloud-cli-idt-cli#build) para crear una app.
 3. Ejecute el mandato [`ibmcloud dev run`](/docs/cli/idt?topic=cloud-cli-idt-cli#run) para empezar a ejecutar la app localmente.
 4. Vea su app ejecutándose localmente en `http://localhost:3000` o en un URL similar.
@@ -101,21 +101,21 @@ Ahora que su app se puede ejecutar localmente, puede añadir un servicio y modif
 1. Ejecute el mandato [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit).
 2. Siga las indicaciones para crear y conectar un nuevo servicio relacionado con datos a la app, como por ejemplo, {{site.data.keyword.cloudant_short_notm}}. Es posible que tenga que seleccionar una región y un plan para el servicio.
 3. Puede elegir fusionar manualmente los archivos de configuración que se han guardado en el directorio de la app cuando cree el servicio. O puede omitir este paso por ahora.
-4. Actualice el código. Por ejemplo, modifique el archivo `/public/index.html` o un archivo similar. Si utiliza la aplicación `ExpressJS` de ejemplo, puede cambiar la cadena `Congratulations!` por algo como `Hello World!`.
+4. Actualice el código. Por ejemplo, modifique el archivo `/public/index.html` o un archivo similar. Si utiliza la app `ExpressJS` de ejemplo, puede cambiar la cadena `Congratulations!` por algo como `Hello World!`.
 5. Guarde los archivos que haya modificado.
 
 ## Despliegue de la app
 {: #deploy-app-cli}
 
-Puede desplegar su app en {{site.data.keyword.cloud_notm}} de una de estas dos maneras, en función de cómo haya configurado su app. Para obtener más información, consulte estos temas:
+Puede desplegar su app en {{site.data.keyword.cloud_notm}} de una de estas dos maneras, en función de cómo haya configurado su app. Para obtener más información, consulte los siguientes temas:
 
-* [Despliegue automático de la app](/docs/apps?topic=creating-apps-deploy-cli-auto)
-* [Despliegue manual de su app](/docs/apps?topic=creating-apps-deploy-cli-manual)
+* [Despliegue automático de la app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
+* [Despliegue manual de su app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
 
 ## Visualización de la app
 {: #view-app-cli}
 
-1. Para ver el URL de su app que está ejecutándose en {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). Luego vaya al URL en el navegador.
+1. Para ver el URL de su app que está ejecutándose en {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view). El URL de la app se abre en el navegador predeterminado.
 2. Para ver los detalles sobre la cadena de herramientas, servicios y credenciales de su app desde la consola de {{site.data.keyword.cloud_notm}}, ejecute el mandato [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console). 
 
 **Para notificar problemas o proporcionar comentarios, puede utilizar el

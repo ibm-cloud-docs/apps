@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-06-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -20,10 +20,10 @@ subcollection: creating-apps
 # Creación de apps desde su propio repositorio de código
 {: #tutorial-byoc}
 
-Si dispone de una aplicación en un repositorio existente, puede utilizar un kit de inicio vacío para crear un registro de app en {{site.data.keyword.cloud_notm}} y conectarlo al repositorio de origen y una cadena de herramientas de DevOps.
+Si dispone de una aplicación en un repositorio existente, puede utilizar un kit de inicio básico para crear un registro de app en {{site.data.keyword.cloud_notm}} y conectarlo al repositorio de origen y una cadena de herramientas de DevOps.
 {: shortdesc}
 
-Puede empezar desde el panel de control de {{site.data.keyword.cloud_notm}} o desde cualquier kit de inicio vacío. Después de dar un nombre a la app y seleccionar un grupo de recursos, seleccione el punto de inicio **Traiga su propio código**, proporcione el URL de repositorio Git que contiene el código y pulse en **Crear**.
+Puede empezar desde el panel de control de {{site.data.keyword.cloud_notm}} o desde cualquier kit de inicio básico. Después de dar un nombre a la app y seleccionar un grupo de recursos, seleccione el punto de inicio **Traiga su propio código**, proporcione el URL de repositorio Git que contiene el código y pulse en **Crear**.
 
 Puede volver a conectar su cadena de herramientas DevOps existente o crear una y entregar de forma continua la app al destino de despliegue que elija, como Kubernetes o Cloud Foundry.
 
@@ -32,7 +32,7 @@ Puede volver a conectar su cadena de herramientas DevOps existente o crear una y
 
 Asegúrese de que cumple con los siguientes requisitos previos:
 
- * Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+ * Instale la [interfaz de línea de mandatos (CLI) de {{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started).
  * Consulte [¿Qué hace que una app sea buena?](/docs/apps?topic=creating-apps-best-practice) para ver las prácticas recomendadas para crear apps.
  * Debe tener un repositorio de código fuente Git de cualquiera de estos proveedores: GitHub, GitHub Enterprise, Git lab, BitBucket o Rational.
  * Si tiene intención de desplegar la app en [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-about), debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
@@ -95,7 +95,7 @@ Delivery Pipeline o la línea de mandatos le señalará el URL de la app.
 
 1. Desde la cadena de herramientas de DevOps, pulse **Delivery Pipeline** y luego seleccione **Etapa de despliegue**.
 2. Pulse **Ver registros e historial**.
-3. En el archivo de registro, busque el URL de la aplicación. Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.mybluemix.net` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
+3. En el archivo de registro, busque el URL de la app. Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.mybluemix.net` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
 4. Vaya al URL en el navegador. Si la app se está ejecutando, se muestra un mensaje que incluye `Enhorabuena` o `{"status":"UP"}`.
 
 Si utiliza la línea de mandatos, ejecute el mandato [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) para abrir la página de una app desplegada de forma manual en el navegador predeterminado.

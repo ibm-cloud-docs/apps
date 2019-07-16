@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-06-20"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Creación de una app desde cero
+# Creación de una app personalizada a partir de un kit de inicio básico
 {: #tutorial-scratch}
 
-Puede crear una aplicación personalizada desde cero mediante servicios y un tiempo de ejecución. 
+Puede crear una aplicación personalizada utilizando un kit de inicio básico y seleccionando el tipo de app (móvil o de fondo), el lenguaje y la infraestructura, añadiendo servicios y seleccionando el destino de despliegue. 
 {: shortdesc}
+
+El kit de inicio básico es una herramienta versátil que se puede utilizar para crear apps personalizadas que puede definir por lenguaje, tipo de app, infraestructura y servicios. A continuación, puede configurar entrega continua y seleccionar el destino de despliegue que prefiera.
 
 ## Antes de empezar
 {: #prereqs-scratch}
 
-* Instale la [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), que incluye Docker. 
+* Instale la [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started), que incluye Docker. 
 * Cree una cuenta de Docker, ejecute la app de Docker e inicie una sesión. Docker debe estar en ejecución para que funcionen los mandatos de compilación.
 * Si tiene intención de desplegar la app en {{site.data.keyword.cfee_full}}, debe [preparar la cuenta de {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-prepare).
 
@@ -36,12 +38,12 @@ Puede crear una aplicación personalizada desde cero mediante servicios y un tie
 
 1. En el [panel de control de {{site.data.keyword.cloud_notm}} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}), pulse **Crear una app** en el widget Apps.
 
-  También puede crear una app personalizada en la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits/) en {{site.data.keyword.dev_console}}.
+  También puede crear una app personalizada en la página [Kits de inicio ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://{DomainName}/developer/appservice/starter-kits) en {{site.data.keyword.dev_console}}.
   {: tip}
 
 2. Especifique un nombre para su app. En esta guía de aprendizaje, escriba `CustomProject`.
 3. Si lo desea, puede proporcionar etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
-4. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
+4. Seleccione el lenguaje y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un lenguaje.
 5. Seleccione el plan de precios. Puede utilizar la opción gratuita para esta guía de aprendizaje.
 6. Pulse **Crear**.
 
@@ -115,9 +117,9 @@ Para seleccionar el destino del despliegue y configurar la entrega continua, sig
 
 1. En la página Detalles de la app, pulse **Configurar entrega continua**.
 2. Seleccione un destino de despliegue. Configure el destino de despliegue de acuerdo con las instrucciones correspondientes al destino que seleccione:
-  * **Desplegar en el [servicio IBM Kubernetes](/docs/containers?topic=containers-app)**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de aplicaciones de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
-  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **[nube pública](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o de **[entorno de empresa](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que puede utilizar para crear y gestionar entornos aislados para alojar aplicaciones de Cloud Foundry exclusivamente para su empresa.
-  * **Desplegar en un servidor virtual**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue.
+  * **Desplegar en el [servicio IBM Kubernetes](/docs/containers?topic=containers-app)**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de apps de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente.
+  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **[nube pública](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** o de **[entorno de empresa](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que puede utilizar para crear y gestionar entornos aislados para alojar apps de Cloud Foundry exclusivamente para su empresa.
+  * **Desplegar en un [Servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue.
 
 Después de seleccionar y configurar el destino del despliegue, la página Detalles de la app indica que se ha configurado la entrega continua. Para ver el repositorio que contiene el código fuente de la app, pulse **Ver repositorio**.
 
@@ -133,7 +135,7 @@ Después de desplegar la app, el conducto de entrega o la línea de mandatos le 
 
 1. Desde la cadena de herramientas de DevOps, pulse **Delivery Pipeline** y luego seleccione **Etapa de despliegue**.
 2. Pulse **Ver registros e historial**.
-3. En el archivo de registro, busque el URL de la aplicación:
+3. En el archivo de registro, busque el URL de la app:
 
    Al final del archivo de registro, busque la palabra `urls` o `ver`. Por ejemplo, es posible que vea una línea en el archivo de registro parecida a `urls: my-app-devhost.mybluemix.net` o a `Ver el estado de la aplicación en: http://<ipaddress>:<port>/health`.
 

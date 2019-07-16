@@ -34,9 +34,9 @@ Debe añadir manualmente las credenciales de servicio al entorno de despliegue e
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
-### Codificación correcta
+### Programe correctamente
 
-Como medida de precaución, puede codificar la aplicación para confirmar que su entorno está completo en la base principal de la aplicación. No desea que el despliegue de una aplicación en un clúster cuyo entorno no está completo suponga una interrupción para el producto. Es posible que aplicación no se inicie y la configuración de Kubernetes puede impedir de forma automática tales interrupciones.
+Como medida de precaución, puede programar la aplicación para que confirme que su entorno está completo en el punto de entrada principal de la aplicación. No desea que el despliegue de una aplicación en un clúster cuyo entorno no está completo suponga una interrupción para el producto. Es posible que aplicación no se inicie y la configuración de Kubernetes puede impedir de forma automática tales interrupciones.
 
 Supongamos que tiene las dos variables de entorno siguientes:
 * `SECRET`

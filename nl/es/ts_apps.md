@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-05-08"
+lastupdated: "2019-06-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -62,27 +62,6 @@ Cuando desplace el ratón sobre los campos **INSTANCIAS** o **CUOTA DE MEMORIA**
 Cierre la ventana de mensaje y pulse **RESTABLECER** en el panel de tiempo de ejecución.
 {: tsResolve}
 
-## La migración tras error automática entre regiones de {{site.data.keyword.cloud_notm}} no está disponible
-{: #ts_failover}
-{: troubleshoot}
-
-No puede utilizar la migración tras error automática entre regiones de {{site.data.keyword.cloud}}. Sin embargo, puede utilizar un proveedor de DNS que dé soporte a la migración tras error entre varias direcciones IP como solución temporal.
-
-Cuando una región de {{site.data.keyword.cloud_notm}} deja de estar disponible, las apps que se ejecutan en dicha región tampoco están disponibles, aunque las mismas apps se estén ejecutando en otra región de {{site.data.keyword.cloud_notm}}.
-{: tsSymptoms}
-
-{{site.data.keyword.cloud_notm}} aún no proporciona migración tras error automática entre una región y otra.
-{: tsCauses}
-
-Puede utilizar un proveedor de DNS que dé soporte a la migración tras error inteligente entre muchas direcciones ID y configurar manualmente los valores de DNS para habilitar la migración tras error automática entre regiones de {{site.data.keyword.cloud_notm}}. Disponen de esta función los proveedores de DNS NSONE, Akamai y Dyn.
-{: tsResolve}
-
-Cuando configure los valores de DNS, debe especificar las direcciones IP públicas de las regiones de {{site.data.keyword.cloud_notm}} en la que se ejecutan sus apps. Para obtener la dirección IP pública de una región de {{site.data.keyword.cloud_notm}}, utilice el mandato `nslookup`. Por ejemplo, puede escribir el siguiente mandato en una ventana de línea de mandatos.
-```
-nslookup cloud.ibm.com
-```
-{: codeblock}
-
 ## No se puede acceder a los servicios de {{site.data.keyword.cloud_notm}} debido a errores de autorización
 {: #ts_vcap}
 {: troubleshoot}
@@ -102,7 +81,7 @@ En lugar de codificar las credenciales en la app, utilice parámetros de conexi�
 process.env.VCAP_SERVICES
 ```
 
-Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java](http://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [Ruby](http://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+Para obtener más información sobre los mandatos que puede utilizar en otros lenguajes de programación, consulte [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Se han recibido errores 502 de pasarela errónea
 {: #ts_502_error}
@@ -140,7 +119,7 @@ Enlaza un servicio {{site.data.keyword.mobilepushshort}} con la app de {{site.da
 El servicio IBM {{site.data.keyword.mobilepushshort}} utiliza Google Cloud Messaging (GCM) para enviar notificaciones a apps móviles desarrolladas en Android. Para permitir que las apps de Android reciban notificaciones, se debe poder acceder al servicio Google Cloud Messaging (GCM) en las apps móviles. En regiones en las que las apps Android no pueden acceder al servicio GCM, las apps Android no pueden recibir {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-Como método alternativo, utilice servicios de tercero que no se basen en el servicio GCM, como por ejemplo, [Pushy](https://pushy.me){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), [getui](http://www.getui.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [jpush](https://www.jpush.cn/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+Como método alternativo, utilice servicios de tercero que no se basen en el servicio GCM, como por ejemplo, [Pushy](https://pushy.me/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [jpush](https://www.jiguang.cn/en/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 {: tsResolve}
 
 ## Los caracteres de doble byte no se visualizan correctamente cuando se envían por push apps a {{site.data.keyword.cloud_notm}}
@@ -149,7 +128,7 @@ Como método alternativo, utilice servicios de tercero que no se basen en el ser
 
 Es posible que los caracteres de doble byte no se visualicen correctamente si el soporte de Unicode no está configurado correctamente para el servlet o los archivos JSP.
 
-Cuando se envía una aplicación a {{site.data.keyword.cloud_notm}}, los caracteres de doble byte especificados dentro de la app no se visualizan correctamente.
+Cuando se envía una app a {{site.data.keyword.cloud_notm}}, los caracteres de doble byte especificados dentro de la app no se visualizan correctamente.
 {: tsSymptoms}
 
 El problema puede ocurrir si el soporte de Unicode no está configurado correctamente para el servlet o los archivos JSP.
@@ -269,7 +248,7 @@ Si despliega una app en {{site.data.keyword.cloud_notm}} con un paquete de compi
 Este problema puede suceder si los scripts, como el script de detección, el script de compilación y el script de liberación, no son ejecutables.
 {: tsCauses}
 
-Puede utilizar el mandato [Git update](http://git-scm.com/docs/git-update-index){: new_window} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo") para cambiar el permiso de cada script por ejecutable. Por ejemplo, puede escribir `git update --chmod=+x script.sh`.
+Puede utilizar el mandato [Git update](https://git-scm.com/docs/git-update-index){: new_window} ![icono de enlace externo](../icons/launch-glyph.svg "icono de enlace externo") para cambiar el permiso de cada script por ejecutable. Por ejemplo, puede escribir `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## No puede desplegar una app desde Delivery Pipeline en {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -292,7 +271,7 @@ Puede utilizar el mandato [Git update](http://git-scm.com/docs/git-update-index)
 
 Si los trabajos de compilación o de despliegue fallan y ve el siguiente mensaje, puede suprimir las imágenes con los siguientes mandatos de la CLI. `Status: unauthorized: Ha superado su cuota de almacenamiento. Suprima una o varias imágenes, o bien revise su cuota de almacenamiento y su plan de precios.`
 
-* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si aún no la tiene.
+* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) si aún no la tiene.
 * Inicie una sesión en {{site.data.keyword.cloud_notm}} mediante el mandato `ibmcloud login` y haga que apunte al espacio en el que se encuentra.
 * Obtenga una lista de sus imágenes mediante `ibmcloud cr images`.
 * Suprima las imágenes que no utilice con el mandato `ibmcloud cr image-rm <respository>:<tag>`.
@@ -301,8 +280,8 @@ Si los trabajos de compilación o de despliegue fallan y ve el siguiente mensaje
 ## Acceso a los registros de Kubernetes
 {: #access_kube_logs}
 
-Si la aplicación no se está ejecutando y no puede acceder al punto final de estado, intente examinar los registros del clúster.
-* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) si aún no la tiene.
+Si la app no se está ejecutando y no puede acceder al punto final de estado, intente examinar los registros del clúster.
+* Instale la [CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started) si aún no la tiene.
 * Inicie una sesión en {{site.data.keyword.cloud_notm}} mediante el mandato `ibmcloud login` y haga que apunte al espacio en el que se encuentra.
 * Obtenga una lista de sus clústeres mediante `ibmcloud cs clusters`,
 * Apunte al clúster correspondiente mediante el mandato `ibmcloud cs cluster-config <cluster-name>`.
@@ -325,7 +304,7 @@ An error exec: "docker": executable file not found in $PATH was encountered whil
 El cliente de Docker no está instalado, o está instalado pero no se ha iniciado.
 {: tsCauses}
 
-Asegúrese de que [Docker](https://docs.docker.com/install/){: new_window}![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") está instalado e inícielo.
+Asegúrese de que [Docker](https://docs.docker.com/install/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") está instalado e inícielo.
 {: tsResolve}
 
 ## La compilación de una app falla con un error de Docker
