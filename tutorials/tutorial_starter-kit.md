@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-17"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -25,7 +25,7 @@ You can use a starter kit to quickly get your application started and prepare it
 
 You can create an app from a selection of starter kits, including a basic one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
 
-{{site.data.keyword.cloud_notm}} has developer portals in different areas of interest (like Watson, Security, or Finance) or a digital channel (like Mobile or Web Apps). You can access these portals from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
+{{site.data.keyword.cloud_notm}} has developer portals in different areas of interest (like Watson) or a digital channel (like Mobile or Web Apps). You can access these portals from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
 
 Each developer portal provides starter kits that are relevant to the portal's focus area. The portals offers consistent, intuitive workflows for creating a working production-ready app in minutes.
 
@@ -34,8 +34,6 @@ Starter kits are available in many categories, including:
 * [Apple](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 * [Mobile](https://{DomainName}/developer/mobile/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 * [Web App](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Security](https://{DomainName}/developer/security/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Finance](https://{DomainName}/developer/finance/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
 See [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits) for more information.
 
