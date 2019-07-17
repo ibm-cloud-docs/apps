@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-01"
+lastupdated: "2019-07-17"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -62,7 +62,7 @@ To create a mobile app with the [{{site.data.keyword.dev_cli_long}} CLI](/docs/c
 1. Open a terminal and navigate to a directory where you would like to create your app.
 2. Run the `ibmcloud dev create` command.
 3. Select the **Mobile App** option from the list of app types.
-4. Select a mobile platform from the list: Android, Cordova, or Swift.
+4. Select a mobile platform from the list: Android or Swift.
 5. Select a starter kit.
 6. Enter a name for your app.
 7. If services are added, you are prompted to select a region and pricing plan for each service.
@@ -114,25 +114,6 @@ If you are using Android as your mobile app's platform, complete these steps:
 1. Open the `README.md` file in a Markdown viewer to configure your app.
 2. Open your `BasicProject-Android` app in Android Studio.
 3. Run your app.
-
-### Running your Cordova app in Xcode
-{: #run_cordova_xcode}
-
-If you are using Cordova as your implementation language, complete these steps:
-
-1. Open the `README.md` file in a Markdown viewer to configure your app.
-2. Open your `platforms/ios` app in Xcode.
-3. Run your app.
-
-### Running your Cordova app in Android Studio
-{: #run_cordova_studio}
-
-If you are using Cordova as your mobile app's platform, complete these steps:
-
-1. Extract the `BasicProject-Cordova.zip` file.
-2. Open the `README.md` file in a Markdown viewer to configure your app.
-3. Open your `platforms/android` app in Android Studio.
-4. Run your app.
 
 ## Related information
 {: #related-mobile}
