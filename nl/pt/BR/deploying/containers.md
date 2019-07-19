@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-03-18"
 
-keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
+keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -24,7 +24,7 @@ Inicie o {{site.data.keyword.containershort}} implementando apps altamente dispo
 
 Os contêineres são uma maneira padrão de empacotar apps e todas as suas dependências para que seja possível mover perfeitamente os apps entre ambientes. Ao contrário de máquinas virtuais, os contêineres não empacotam o sistema operacional. Apenas o código do app, o tempo de execução, as ferramentas do sistema, as bibliotecas e as configurações são compactados dentro dos contêineres. Os contêineres são mais leves, móveis e eficientes do que máquinas virtuais.
 
-Consulte [Introdução ao {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-getting-started) para saber mais sobre o serviço.
+Consulte [Introdução ao {{site.data.keyword.containershort_notm}}](/docs/containers?topic=containers-container_index) para saber mais sobre o serviço.
 
 ## Configurando implementações
 {: #config-deploy}
@@ -33,7 +33,7 @@ Ao criar apps de backend ou de serviço da web, é possível implementá-los no 
 
 1. Implemente seu app na nuvem configurando um pipeline de nuvem automatizado.
 2. Clique em **Configurar entrega contínua**.
-3. Selecione **IBM Kubernetes Service** como o destino. Será necessário [criar um cluster ](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") se você ainda não tiver um.
+3. Selecione **IBM Kubernetes Service** como o destino. Será necessário [criar um cluster ](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") se você ainda não tiver um.
 4. Após a conclusão da implementação, efetue check-out do app em tempo real na nuvem, obtendo a URL nos logs do estágio de implementação do pipeline de entrega. O último endereço IP com uma porta é o novo início de seu app, por exemplo, 169.60.133.124:32355.
 
 ## Ligando serviços
@@ -62,7 +62,7 @@ A cadeia de ferramentas contém o estágio de construção e o estágio de imple
 {: #build-stage}
 O estágio de construção é acionado quando um `git push` é executado no repositório Git. O estágio no pipeline aciona uma construção de imagem do docker e coloca a imagem no registro de contêiner.
 
-Para obter mais informações, consulte [Introdução ao IBM Cloud Container Registry](/docs/services/Registry?topic=registry-getting-started).
+Para obter mais informações, consulte [Introdução ao IBM Cloud Container Registry](/docs/services/Registry?topic=registry-index).
 
 ### Estágio de implementação
 {: #deploy-stage}
@@ -71,7 +71,7 @@ O estágio de implementação recupera a imagem mais recente do {{site.data.keyw
 
 Para obter mais informações, consulte [Gráficos ](https://docs.helm.sh/developing_charts/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
-O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
+O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-configurados ](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Verificando a segurança do app
 {: #sec}
@@ -79,4 +79,4 @@ O {{site.data.keyword.cloud_notm}} suporta vários [Gráficos de Helm pré-confi
 O {{site.data.keyword.containershort_notm}} suporta varrer as imagens de contêiner compactadas para vulnerabilidades de segurança. A varredura de segurança é essencial para o suporte de aplicativos de nível corporativo.
 
 Visualize o [repositório de imagem de
-contêineres ](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") para verificar potenciais vulnerabilidades de segurança.
+contêineres ](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") para verificar potenciais vulnerabilidades de segurança.

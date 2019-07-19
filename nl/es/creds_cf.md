@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -17,15 +17,11 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Adición de credenciales de servicio al entorno de Cloud Foundry
+# Adición de credenciales al entorno de Cloud Foundry
 {: #add-credentials-cf}
 
 Aprenda a añadir credenciales de servicio al entorno de despliegue de Cloud Foundry. Estas instrucciones se aplican tanto a [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) como a [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee).
 {: shortdesc}
-
-El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
-[Actualización del dominio](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain).
-{: tip}
 
 ## Su código + Cloud Foundry
 {: #credentials-byoc-cf}
@@ -54,7 +50,7 @@ En el espacio de Cloud Foundry en el que reside la aplicación, puede definir qu
       - customcreds
   ```
 
-3. Programe la aplicación de modo que lea el entorno para una variable de entorno `VCAP_SERVICES`, analícela en JSON y busque las credenciales que necesita (pseudocódigo de tipo node.js):
+3. Codifique la aplicación de modo que lea el entorno para una variable de entorno `VCAP_SERVICES`, analícela en JSON y busque las credenciales que necesita (pseudocódigo de tipo node.js):
   ```
   // get the 'password' from "customcreds" user-provided service
   vcapServices = getEnvironment('VCAP_SERVICES');

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Création d'une application Web basique avec un kit de démarrage
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} inclut plusieurs kits de démarrage vous permettant d'effectuer les opérations de codage rapidement. Sélectionnez un langage, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez installer les outils dont vous avez besoin puis vous allez générer et exécuter l'application localement et la déployer dans le cloud.
+{{site.data.keyword.cloud}} inclut plusieurs kits de démarrage vous permettant d'effectuer les opérations de codage rapidement. Choisissez une langue, une infrastructure et des outils dans les kits de démarrage de service d'application afin de commencer à utiliser une application personnalisée préconfigurée. Dans ce tutoriel, vous allez installer les outils dont vous avez besoin puis vous allez générer et exécuter l'application localement et la déployer dans le cloud.
 {: shortdesc}
 
 ## Etape 1. Installer les outils
@@ -35,10 +35,14 @@ Docker est installé en tant qu'outil de développement. Pour que les commandes 
 Les kits de démarrage sont disponibles dans de nombreux langages et infrastructures de la console {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Sélectionnez le langage le plus adapté à votre projet pour commencer.
 
 1. Sur la page des [kits de démarrage ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe") de la console {{site.data.keyword.dev_console}}, sélectionnez un kit de démarrage pour votre langage.
-2. Facultatif. Créez des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources?topic=resources-tag).
-3. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
-4. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
-5. Cliquez sur **Créer**.
+2. Entrez votre nom d'application et un nom d'hôte unique, par exemple, `abc-devhost`. Ce nom d'hôte correspond à la route de votre application, `abc-devhost.mybluemix.net`.
+3. Facultatif. Créez des étiquettes pour classer votre application. Pour plus d'informations, voir [Utilisation d'étiquettes](/docs/resources?topic=resources-tag).
+4. Sélectionnez votre langage et votre infrastructure. Certains kits de démarrage peuvent être disponibles dans un seul langage.
+5. Sélectionnez votre plan de tarification. Il existe une option gratuite que vous pouvez utiliser pour ce tutoriel.
+6. Cliquez sur **Créer**.
+
+Le domaine partagé par défaut est `mybluemix.net` mais `appdomain.cloud` est une autre option de domaine que vous pouvez utiliser. Pour plus d'informations sur la migration vers `appdomain.cloud`, voir [Mise à jour de votre domaine](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Etape 3. Ajouter des services (facultatif)
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Vous pouvez ajouter des services qui améliorent votre application avec la puiss
 ## Etape 4. Créer une chaîne d'outils DevOps
 {: #toolchain-webapp}
 
-L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+L'activation d'une chaîne d'outils permet de créer un environnement de développement basé sur une équipe pour votre application. Lorsque vous créez une chaîne d'outils, le service d'application crée un référentiel Git dans lequel vous pouvez afficher le code source, cloner votre application, créer et gérer des problèmes. Vous avez également accès à un environnement de lab dédié Git et à un pipeline de distribution continue. Ces éléments sont personnalisés en fonction de la cible de déploiement choisie, [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 La distribution continue est activée pour certaines applications. Vous pouvez activer la distribution continue pour automatiser les générations, les tests et les déploiements via Delivery Pipeline et GitHub.
 
@@ -141,8 +145,6 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-Pour plus d'informations sur le déploiement de votre application, voir [Déploiement d'applications](/docs/apps?topic=creating-apps-deploying-apps).
-
 ## Etape 7. Vérifier que votre application est en cours d'exécution
 {: #verify-webapp}
 
@@ -152,7 +154,7 @@ Une fois votre application déployée, Delivery Pipeline ou la ligne de commande
 2. Cliquez sur **Afficher les journaux et l'historique**.
 3. Dans le fichier journal, recherchez l'URL de l'application :
 
-    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Par exemple, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health` peut être incluse dans le fichier journal.
+    A la fin du fichier journal, recherchez le mot `urls` ou `view`. Ainsi, une ligne similaire à `urls: my-app-devhost.mybluemix.net` ou à `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Accédez à l'URL dans votre navigateur. Si l'application est en cours d'exécution, un message qui inclut `Congratulations` ou `{"status":"UP"}` s'affiche.
 

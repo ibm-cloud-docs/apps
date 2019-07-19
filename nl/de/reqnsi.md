@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-25"
+lastupdated: "2019-03-15"
 
-keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
+keywords: apps, services, add service, application
 
 subcollection: creating-apps
 
@@ -18,17 +18,12 @@ subcollection: creating-apps
 # Service zur App hinzufügen
 {: #add-resource}
 
-Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Services von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
+Wenn Sie eine App mithilfe der {{site.data.keyword.cloud}}-{{site.data.keyword.dev_console}} erstellen, können Sie Services von der Seite mit den App-Details hinzufügen. Sie können die Ressourcen jedoch auch direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog hinzufügen, außerhalb des Kontexts Ihrer App.
 {: shortdesc}
 
 Sie können eine Instanz des Service anfordern und unabhängig von Ihrer App verwenden oder Sie können die Serviceinstanz von der Seite mit den App-Details Ihrer App hinzufügen. Sie können einen bestimmten Servicetyp direkt aus dem {{site.data.keyword.cloud_notm}}-Katalog bereitstellen.
 
-## Automatisch bereitgestellte Services
-{: #auto-provision}
-
-Wenn ein Starter-Kit erforderliche Services angibt, erstellt {{site.data.keyword.cloud_notm}} automatisch Instanzen dieser Services, wenn Sie Ihre App erstellen. Sie können Services auch manuell erstellen oder vorhandene Serviceinstanzen auswählen, die Sie Ihrer App nach ihrer Erstellung hinzufügen. Auf der Seite mit **App-Details** können Sie eine Liste mit Serviceinstanzen anzeigen, die Ihrer App zugeordnet sind. Außerdem sind dort die Berechtigungsnachweise aufgeführt, für den Fall, dass Sie sie später noch benötigen.
-
-## Services erkennen
+## Service finden
 {: #discover-resources}
 
 Sie haben die folgenden Möglichkeiten, alle in {{site.data.keyword.cloud_notm}} verfügbaren Services anzuzeigen:
@@ -90,7 +85,7 @@ Für die Kommunikation mit Anwendungen kann unter Umständen jeder Service einen
 * Um mit mobilen Back-End-Services zu interagieren, verwenden Sie die Informationen, die {{site.data.keyword.cloud_notm}} zur Verfügung stellt, z. B. die Anwendungskennung (app ID), die clientspezifischen Sicherheitsinformationen und den Zugriffs-URI für die Anwendung. Die mobilen Services arbeiten üblicherweise in Kontexten miteinander, sodass Kontextinformationen wie der Name des Anwendungsentwicklers oder des Benutzers, der die Anwendung verwendet, in der gesamten Servicegruppe genutzt werden können.
 * Für die Interaktion mit Webanwendungen oder serverseitigem Cloud-Code für mobile Anwendungen verwenden Sie die Informationen, die {{site.data.keyword.cloud_notm}} bereitstellt, wie z. B. die Laufzeitberechtigungsnachweise in der Umgebungsvariablen *VCAP_SERVICES* der Anwendung. Der Wert für die Umgebungsvariable *VCAP_SERVICES* ist die Serialisierung eines JSON-Objekts. Die Variable enthält die erforderlichen Laufzeitdaten für die Interaktion mit den Services, an die die Anwendung gebunden ist. Das Format der Daten ist für die verschiedenen Services unterschiedlich. Um zu erfahren, was Sie zu erwarten haben und wie die einzelnen Informationen einzuordnen sind, sollte möglicherweise die Servicedokumentation zu Rate gezogen werden.
 
-Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.cloud_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann.
+Wenn ein Service, den Sie an eine Anwendung binden, ausfällt, wird die Ausführung der Anwendung möglicherweise gestoppt oder die Anwendung weist Fehler auf. {{site.data.keyword.cloud_notm}} führt keinen automatischen Neustart für die Anwendung durch, um die Probleme zu beheben. Sie sollten in Erwägung ziehen, Ihre Anwendung zu codieren, damit eine Erkennung der Fehler möglich ist und der Systembetrieb nach einer Störung, nach Ausnahmebedingungen oder Verbindungsfehlern wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Apps werden nicht automatisch erneut gestartet](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
 
 ## Über {{site.data.keyword.cloud_notm}}-Bereitstellungsumgebungen hinweg auf Services zugreifen
 {: #migrate_instance}
@@ -106,7 +101,7 @@ Serviceberechtigungsnachweise, die in einem geheimen Kubernetes-Schlüssel gespe
 
 **Wichtig**: Die Serviceberechtigungsnachweise dürfen nicht direkt in der YAML-Datei der Bereitstellung referenziert oder zugänglich gemacht werden. YAML-Dateien für Bereitstellungen sind nicht dafür vorgesehen, sensible Daten zu enthalten, und bieten keine standardmäßige Verschlüsselung Ihrer Serviceberechtigungsnachweise. Für das korrekte Speichern dieser Informationen und den korrekten Zugriff darauf müssen Sie einen geheimen Kubernetes-Schlüssel verwenden. 
 
-1. [Service an den Cluster binden](/docs/containers?topic=containers-service-binding#bind-services). 
+1. [Service an den Cluster binden](/docs/containers?topic=containers-integrations#adding_cluster). 
 2. Wählen Sie für den Zugriff auf Ihre Serviceberechtigungsnachweise über den App-Pod eine der folgenden Optionen aus. 
    - Geheimen Schlüssel als Datenträger an den Pod anhängen
    - Geheimen Schlüssel in Umgebungsvariablen referenzieren

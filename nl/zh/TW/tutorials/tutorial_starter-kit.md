@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, create app starter kit, basic app, simple app
+keywords: apps, starter kit
 
 subcollection: creating-apps
 
@@ -15,19 +15,14 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:note: .note}
 
 # 使用入門範本套件建立應用程式
 {: #tutorial-starterkit}
 
-您可以使用入門範本套件，快速讓您的應用程式啟動，並準備它以便未來進行開發。選取入門範本套件和程式設計語言、建立應用程式，然後設定 DevOps 工具鏈，以自動部署應用程式。
+您可以使用入門範本套件，快速讓您的應用程式啟動，並準備它以便未來進行開發。選擇入門範本套件和程式設計語言、建立應用程式，然後設定 DevOps 工具鏈，以自動部署應用程式。您也可以下載程式碼以便立即進行檢驗。
 {: shortdesc}
 
-您可以從一群精選的入門範本套件建立應用程式，這其中包括基本入門範本套件（如果您想要自己自訂建置選項的話）。無論哪一種方法，都會自動建立 DevOps 工具鏈來部署應用程式。您也可以下載程式碼以便立即進行檢驗。
-
-{{site.data.keyword.cloud_notm}} 有多種不同領域的開發人員入口網站（例如，Watson、「安全」或「財務」）或數位通路（例如，「行動裝置」或「Web 應用程式」）。您可以從**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) 存取這些入口網站。
-
-每個開發人員入口網站都提供與該入口網站焦點區域相關的入門範本套件。入口網站提供一致的直覺式工作流程，以在幾分鐘內建立一個工作中的可正式作業應用程式。
+您可以從一群精選的入門範本套件建立應用程式，這其中包括空白的入門範本套件（如果您想要自己自訂建置選項的話）。無論哪一種方法，都會自動建立 DevOps 工具鏈來部署應用程式。您也可以下載程式碼以便立即進行檢驗。
 
 入門範本套件有許多種類，其中包括：
 * [Watson ](https://{DomainName}/developer/watson/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
@@ -37,99 +32,49 @@ subcollection: creating-apps
 * [安全 ](https://{DomainName}/developer/security/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 * [財務 ](https://{DomainName}/developer/finance/dashboard){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")
 
-如需相關資訊，請參閱[何謂入門範本套件？](/docs/apps?topic=creating-apps-starter-kits)。
-
-## 步驟 1. 安裝工具
-{: #prereqs-starterkit}
-
-* 安裝[開發人員工具](/docs/cli?topic=cloud-cli-getting-started)。
-* Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，建置指令才能運作。您必須建立 Docker 帳戶、執行 Docker 應用程式，然後登入。
-* 如果您計劃將應用程式部署至 {{site.data.keyword.cfee_full}}，則必須[準備 {{site.data.keyword.cloud_notm}} 帳戶](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
-
-## 步驟 2. 建立應用程式
+## 步驟 1. 建立應用程式
 {: #create-starterkit}
 
-{{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} 中的入門範本套件有許多語言及架構。您可以使用語言及類型這類種類過濾器，以縮小選取範圍。
+1. 從 [{{site.data.keyword.cloud}} 儀表板](https://{DomainName}){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，按一下**功能表**圖示 ![「功能表」圖示](../../icons/icon_hamburger.svg) > **Web 應用程式**。
 
-1. 從 {{site.data.keyword.dev_console}} 主控台的[入門範本套件](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 頁面中，選取入門範本套件，然後按一下**建立應用程式**。 
+2. 按一下**從 Web 開始**區段中的**開始使用**。
 
-    若要查看入門範本套件中所包含的內容，請選取磚，並閱讀詳細資料。如果您要使用基本入門範本套件，並自訂您的應用程式，請選取**建立應用程式**磚。
+3. 選取您選擇的入門範本套件、閱讀詳細資料，然後按一下**建立**。
+    
+    若要查看入門範本套件中所包含的內容，請展開[應用程式服務入門範本套件 ](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 儀表板上的磚。「建立應用程式」入門範本套件選項可以用來作為空白的入門範本應用程式，並可進一步自訂以符合您的需求。
     {: tip}
 
-2. 命名應用程式，並選取資源群組。
+4. 為您的應用程式命名、選取資源群組、選擇性地提供標記、選取語言，然後按一下**建立**。
+    
+    很棒的開始！您剛剛建立了應用程式。
 
-3. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
-
-4. 選取語言及架構。部分入門範本套件可能只提供一種語言。
-
-5. 按一下**建立**。
-
-很棒的開始！您剛剛已建立應用程式！
-
-若要在新增服務或設定持續交付之前檢查程式碼，請按一下「應用程式詳細資料」頁面上的**下載程式碼**。請檢查所下載壓縮檔中的 `README.md` 檔案，以找出您是否需要採取更多動作，以讓應用程式啟動並執行。
+若要檢查您的程式碼，請按一下**應用程式詳細資料**頁面上的**下載程式碼**。請檢查所下載壓縮檔中的 `README.md` 檔，以找出您是否需要採取更多動作，以讓入門範本應用程式啟動並執行。
 {: tip}
 
-## 步驟 3. 新增服務（選用）
+如需相關資訊，請參閱下列主題：
+ * [使用入門範本套件來建立基本 Web 應用程式](/docs/apps/tutorials?topic=creating-apps-tutorial-webapp)
+ * [使用標籤](/docs/resources?topic=resources-tag)
+
+## 步驟 2. 新增服務
 {: #resources-starterkit}
 
-如果入門範本套件需要特定的服務，則提供自動佈建的服務，以在建立應用程式時自動建立這些服務的實例。
+您可以新增服務，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
 
-您也可以新增服務，藉由 Watson 的認知能力加強您的應用程式，也可以新增行動服務或安全服務。針對本指導教學，請新增工作區以便管理您的資料。
+1. 在**應用程式詳細資料**頁面上，按一下**新增服務**。
+2. 選取您要的服務類型。例如，選取**資料** > **下一步** > **Cloudant** > **下一步**。
+3. 選取定價方案。有免費選項，您可以用於本指導教學。
+4. 按一下**建立**。
 
-1. 在「應用程式詳細資料」頁面上，按一下**建立服務**或**連接現有的服務**（視是否已有要連接至此應用程式的服務而定）。
-2. 選取您要的服務類型，並遵循將現有服務新增至應用程式或建立服務實例的提示。
+## 步驟 3. 部署至 {{site.data.keyword.cloud_notm}}
+{: #deploy-starterkit}
 
-您要的所有服務在新增之後，就會顯示在「應用程式詳細資料」頁面中。
+按一下**應用程式詳細資料**頁面上的**配置持續交付**，選取部署目標，然後按一下**建立**。{{site.data.keyword.cloud_notm}} 會自動建立開放式工具鏈，此工具鏈會完整地具備 Git 儲存庫及持續交付管線。
 
-## 步驟 4. 選取部署目標以及配置持續交付
-{: #target-starterkit}
+啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們針對您所選擇的部署環境（[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）經過自訂。
 
-當您選取部署目標時，會為應用程式自動建立 DevOps 工具鏈。此工具鏈包括可指出應用程式部署狀態的 Delivery Pipeline。所產生的新應用程式會推送至為此工具鏈一部分的 GitLab 儲存庫。
-
-啟用 DevOps 工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）進行自訂。
+在您選取部署環境之後，請開啟新工具鏈的管線元件，以開始起始建置及部署處理程序，以便您可以在數分鐘內看到新的應用程式。
 
 從「{{site.data.keyword.cloud_notm}} 開發人員」儀表板建立的所有工具鏈，都會針對自動部署進行配置。
 {: note}
 
-若要選取部署目標以及配置持續交付，請完成這些步驟：
-
-1. 在「應用程式詳細資料」頁面上，按一下**配置持續交付**。
-2. 選取一個部署目標。根據您所選目標的指示設定部署目標：
-  * **部署至 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此選項會建立主機（稱為工作者節點）的叢集，以部署及管理高可用性的應用程式容器。您可以建立叢集或部署至現有的叢集。
-  * **部署至 Cloud Foundry**。此選項會部署雲端原生應用程式，而您不需要管理基本基礎架構。如果您的帳戶可以存取 {{site.data.keyword.cfee_full_notm}}，則可以選取**[公用雲端](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企業環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**的部署者類型，用來建立及管理用於管理專供您企業使用的 Cloud Foundry 應用程式的隔離環境。
-  * **部署至虛擬伺服器**。此選項會佈建虛擬伺服器實例、載入包含您應用程式的映像檔、建立 DevOps 工具鏈，以及為您起始第一個部署週期。如需相關資訊，請參閱[將應用程式部署至虛擬伺服器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)。
-
-    部分入門範本套件可以進行 VSI 部署。若要使用此特性，請移至 [{{site.data.keyword.cloud_notm}} 儀表板](https://{DomainName})，然後在**應用程式**磚按一下**建立應用程式**。
-    {: note}
-
-在您選取及配置部署目標之後，「應用程式詳細資料」頁面會指出已配置持續交付。您可以按一下**檢視儲存庫**，以檢視包含應用程式原始碼的儲存庫。
-
-## 步驟 5. 部署應用程式
-{: #deploy-starterkit}
-
-從 {{site.data.keyword.cloud_notm}} 開發人員儀表板建立的 DevOps 工具鏈，都會針對自動部署進行配置。
-{: note}
-
-在選取部署目標之後，請開啟新工具鏈的管線元件，以開始起始建置和部署處理程序，讓您可以在幾分鐘內看到新的應用程式。
-
-1. 在「應用程式詳細資料」頁面上按一下**檢視工具鏈**。
-2. 按一下 **Delivery Pipeline**，您可以在其中啟動建置、管理部署，以及檢視日誌和歷程。
-
-使用適當配置的工具鏈，建置-部署的循環會自動開始，並且全都合併到您儲存庫的主要分支。如需相關資訊，請參閱[建置並部署](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)。
-
-您可以從指令行執行 [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) 指令，以部署應用程式。如需相關資訊，請參閱[使用 CLI 部署應用程式](/docs/apps?topic=creating-apps-deploying-apps#deploy-cli)。
-
-## 步驟 6. 驗證應用程式正在執行
-{: #verify-starterkit}
-
-部署應用程式之後，Delivery Pipeline 或指令行會將您指向應用程式的 URL。
-
-1. 從 DevOps 工具鏈中，按一下 **Delivery Pipeline**，然後選取**部署階段**。
-2. 按一下**檢視日誌和歷程**。
-3. 在日誌檔中，尋找應用程式 URL：
-
-    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net`，或 `View the application health at: http://<ipaddress>:<port>/health`。
-
-4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
-
-如果您要使用指令行，請執行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 指令來檢視應用程式的 URL。然後，在瀏覽器中移至 URL。
+若要使用指令行來部署應用程式，請使用 `ibmcloud dev deploy`。如需相關資訊，請參閱[使用 CLI 建立及部署應用程式](/docs/apps?topic=creating-apps-create-deploy-app-cli)。

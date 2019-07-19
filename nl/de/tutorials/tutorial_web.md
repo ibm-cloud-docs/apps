@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -35,10 +35,14 @@ Docker wird als Teil der Entwicklertools installiert. Docker muss ausgeführt we
 Starter-Kits sind in der {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} in vielen Sprachen und Frameworks verfügbar. Wählen Sie als Einstieg die Sprache aus, die für Ihr Projekt am besten geeignet ist.
 
 1. Wählen Sie auf der Seite [Starter-Kits ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") in der {{site.data.keyword.dev_console}} ein Starter-Kit für Ihre Sprache aus.
-2. Optional. Geben Sie Tags an, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources?topic=resources-tag).
-3. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
-4. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
-5. Klicken Sie auf **Erstellen**.
+2. Geben Sie den App-Namen und einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Dieser Hostname gibt die Route Ihrer App an: `abc-devhost.mybluemix.net`.
+3. Optional. Geben Sie Tags an, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources?topic=resources-tag).
+4. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kit sind möglicherweise nur ein einer Sprache verfügbar.
+5. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
+6. Klicken Sie auf **Erstellen**.
+
+Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können. Weitere Informationen zur Migration auf `appdomain.cloud` finden Sie im Abschnitt zum [Aktualisieren Ihrer Domäne](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Schritt 3. Services hinzufügen (optional)
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Sie können Services, die Ihre App mit der kognitiven Leistung von Watson funkti
 ## Schritt 4. DevOps-Toolchain erstellen
 {: #toolchain-webapp}
 
-Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuous Delivery aktivieren, um Builds, Tests und Bereitstellungen über die Delivery Pipeline und GitHub zu automatisieren.
 
@@ -141,8 +145,6 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-Weitere Informationen zum Bereitstellen Ihrer App finden Sie unter [Apps bereitstellen](/docs/apps?topic=creating-apps-deploying-apps).
-
 ## Schritt 7. Ausführung der App verifizieren
 {: #verify-webapp}
 
@@ -152,7 +154,7 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
 3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
 
-    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile angezeigt, die ähnlich aussieht wie `urls: my-app-devhost.mybluemix.net` oder `View the application health at: (Status der Anwendung ansehen unter:) http://<ipaddress>:<port>/health`.
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 

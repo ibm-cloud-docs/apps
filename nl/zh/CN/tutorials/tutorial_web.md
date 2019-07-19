@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -35,10 +35,14 @@ Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行�
 在 {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} 中，入门模板工具包有许多语言和框架可用。选择最适合开始使用项目的语言。
 
 1. 在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面中，选择适用于您语言的入门模板工具包。
-2. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
-3. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
-4. 选择价格套餐。对于本教程，可以使用免费选项。
-5. 单击**创建**。
+2. 输入应用程序名称和唯一的主机名，例如 `abc-devhost`。此主机名是应用程序的路径 `abc-devhost.mybluemix.net`。
+3. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
+4. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
+5. 选择价格套餐。对于本教程，可以使用免费选项。
+6. 单击**创建**。
+
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
+{: tip}
 
 ## 步骤 3. 添加服务（可选）
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Docker 会作为 Developer Tools 的一部分安装。Docker 必须处于运行�
 ## 步骤 4. 创建 DevOps 工具链
 {: #toolchain-webapp}
 
-启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）对它们进行定制。
+启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）对它们进行定制。
 
 某些应用程序已启用了持续交付。启用持续交付后，即可通过 Delivery Pipeline 和 GitHub 进行自动构建、测试和部署。
 
@@ -140,8 +144,6 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
-
-有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 步骤 7. 验证应用程序是否正在运行
 {: #verify-webapp}

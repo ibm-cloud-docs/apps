@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # 使用入門範本套件來建立基本 Web 應用程式
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} 提供許多入門範本套件來協助您快速撰寫程式碼。請從「應用程式服務入門範本套件」中選取語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您會逐步了解安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端的步驟。
+{{site.data.keyword.cloud}} 提供許多入門範本套件來協助您快速撰寫程式碼。請從「應用程式服務入門範本套件」中選擇語言、架構及工具，以開始使用預先配置的自訂應用程式。在本指導教學中，您會逐步了解安裝所需的工具、在本端建置並執行應用程式，然後將它部署至雲端的步驟。
 {: shortdesc}
 
 ## 步驟 1. 安裝工具
@@ -35,10 +35,14 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}} 中的入門範本套件有許多語言及架構。請選取最適合您專案的語言來著手。
 
 1. 從 {{site.data.keyword.dev_console}} 的[入門範本套件 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 頁面，選取您語言的入門範本套件。
-2. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
-3. 選取語言及架構。部分入門範本套件可能只提供一種語言。
-4. 選取定價方案。有免費選項，您可以用於本指導教學。
-5. 按一下**建立**。
+2. 輸入您的應用程式名稱及唯一的主機名稱，例如 `abc-devhost`。這個主機名稱是您應用程式的路徑，也就是 `abc-devhost.mybluemix.net`。
+3. 選用。提供標記以分類應用程式。如需相關資訊，請參閱[使用標籤](/docs/resources?topic=resources-tag)。
+4. 選取語言及架構。部分入門範本套件可能只提供一種語言。
+5. 選取定價方案。有免費選項，您可以用於本指導教學。
+6. 按一下**建立**。
+
+預設共用網域是 `mybluemix.net`，而 `appdomain.cloud` 是您可以使用的另一個網域選項。如需移轉至 `appdomain.cloud` 的相關資訊，請參閱[更新網域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
+{: tip}
 
 ## 步驟 3. 新增服務（選用）
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Docker 會安裝為開發人員工具的一部分。Docker 必須在執行中，
 ## 步驟 4. 建立 DevOps 工具鏈
 {: #toolchain-webapp}
 
-啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選取的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）進行自訂。
+啟用工具鏈會為您的應用程式建立一個以團隊為基礎的開發環境。建立工具鏈時，應用程式服務會建立 Git 儲存庫，您可以在其中檢視原始碼、複製應用程式以及建立和管理問題。您也可以存取專用的 GitLab 環境，以及持續交付管線。它們是根據您所選擇的部署目標（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虛擬伺服器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）進行自訂。
 
 已針對部分應用程式啟用持續交付。您可以啟用持續交付，以透過 Delivery Pipeline 及 GitHub 自動建置、測試及部署。
 
@@ -142,8 +146,6 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-如需部署應用程式的相關資訊，請參閱[部署應用程式](/docs/apps?topic=creating-apps-deploying-apps)。
-
 ## 步驟 7. 驗證應用程式在執行中
 {: #verify-webapp}
 
@@ -153,7 +155,7 @@ ibmcloud dev deploy --target <container>
 2. 按一下**檢視日誌和歷程**。
 3. 在日誌檔中，尋找應用程式 URL：
 
-    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net`，或 `View the application health at: http://<ipaddress>:<port>/health`。
+    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 
 4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-14"
 
-keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
 
 subcollection: creating-apps
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# 向虚拟实例或本地 Docker 环境添加服务凭证
+# 向虚拟实例或本地 Docker 环境添加凭证
 {: #add-credentials-vsi}
 
 了解如何向虚拟服务器实例或本地 Docker 部署环境添加服务凭证。

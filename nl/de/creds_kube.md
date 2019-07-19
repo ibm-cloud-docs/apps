@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-18"
 
-keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
+keywords: apps, credentials, Kubernetes
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Serviceberechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen
+# Berechtigungsnachweise Ihrer Kubernetes-Umgebung hinzufügen
 {: #add-credentials-kube}
 
 Hier erfahren Sie, wie Sie Serviceberechtigungsnachweise Ihrer Kubernetes-Bereitstellungsumgebung hinzufügen.
@@ -119,7 +119,7 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
 
 2. Wählen Sie zum Erstellen einer Instanz von Cloud Object Storage **Service hinzufügen** > **Speicher** > **Cloud Object Storage** > **Lite-Plan (kostenfrei)** > **Erstellen** aus.
 
-3. Klicken Sie auf **Code herunterladen**, um Ihre App mit den injizierten Code-Snippets neu zu generieren.
+3. Klicken Sie auf **Code herunterladen**, um Ihr Projekt mit den injizierten Code-Snippets neu zu generieren.
 
 4. Wenn Sie auf die Berechtigungsnachweise lokal zugreifen möchten, kopieren Sie die folgenden Dateien aus der neu generierten `.zip`-Datei auf Ihren lokalen Git-Klon (und ersetzen Sie dabei bereits vorhandene Versionen), um auf die Berechtigungsnachweise zuzugreifen. Sie müssen immer noch einen geheimen Kubernetes-Schlüssel in Ihrem Cluster erstellen, um die Berechtigungsnachweise zu hosten.
 
@@ -131,7 +131,7 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
   Wenn Sie sich später für eine Bereitstellung einer Cloud Foundry-Anwendung mit einer Resource Controller-Ressource entscheiden (die sich in einer Ressourcengruppe und nicht in einer Organisation oder einem Bereich befindet), müssen Sie eine weitere Datei kopieren.
   {: note}
 
-5. [Zeigen Sie Ihren Kubernetes-Cluster an](https://{DomainName}/kubernetes/clusters){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") mit der entsprechenden Region (Vereinigte Staaten (Süden), wenn er kostenfrei war).
+5. [Zeigen Sie Ihren Kubernetes-Cluster an](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") mit der entsprechenden Region (Vereinigte Staaten (Süden), wenn er kostenfrei war).
 
 6. Klicken Sie in Ihren Cluster und wählen Sie **Kubernetes-Dashboard** oben rechts aus, um Ihr Cluster-Dashboard anzuzeigen.
 
@@ -143,8 +143,8 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
-    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -153,7 +153,7 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
 
 11. Verwenden Sie den Befehl `echo`, um die Berechtigungsnachweise in eine Bindungsdatei (`binding`) zu stellen.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -164,7 +164,7 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 
@@ -176,12 +176,16 @@ Da der Kubernetes-Cluster jetzt mit einem auflösbaren geheimen Schlüssel vorbe
 
 Verwenden Sie die Funktion **Continuous Delivery konfigurieren**, um Ihre App in Ihrem IBM Kubernetes-Cluster bereitzustellen. Die Funktion bereitet Ihren Kubernetes-Cluster mit geheimen Schlüsseln für die Berechtigungsnachweise der Ressourcen vor, die Ihrer App zugeordnet sind. Sie können die Ergebnisse der Clustervorbereitung anzeigen, indem Sie die folgenden Schritte ausführen:
 
-1. Führen Sie den folgenden Befehl aus, um die Ergebnisse anzuzeigen:
-
+1. Führen Sie den folgenden Befehl aus, um die Ergebnisse anzuzeigen: `kubectl get secrets`:
   ```
-  kubectl get secrets
+  NAME                                   TYPE                                  DATA      AGE
+  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
+  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
+  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
   ```
-  {: codeblock}
+  {: screen}
 
   Sie können [weitere Informationen zu geheimen Schlüsseln](https://kubernetes.io/docs/concepts/configuration/secret/) anzeigen.
   {: tip}

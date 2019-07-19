@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creación de una app web básica con un kit de inicio
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a empezar a programar rápidamente. Seleccione un lenguaje, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
+{{site.data.keyword.cloud}} ofrece muchos kits de inicio para ayudarle a codificar rápidamente. Elija un idioma, una infraestructura y herramientas de kits de inicio de App Service para empezar a trabajar con una aplicación personalizada preconfigurada. En esta guía de aprendizaje, se le guiará por los pasos para instalar las herramientas que necesita y, a continuación, para crear y ejecutar la app localmente y desplegarla en la nube.
 {: shortdesc}
 
 ## Paso 1. Instalar las herramientas
@@ -32,13 +32,18 @@ Docker se instala como parte de las herramientas de desarrollador. Docker debe e
 ## Paso 2. Seleccionar un kit de inicio
 {: #create-webapp}
 
-Los kits de inicio están disponibles en muchos lenguajes e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Seleccione el lenguaje que se ajuste mejor a su proyecto para empezar.
+Los kits de inicio están disponibles en muchos idiomas e infraestructuras en la {{site.data.keyword.dev_console}} de {{site.data.keyword.cloud_notm}}. Seleccione el idioma que se ajuste mejor al inicio de su proyecto.
 
 1. En la página [kits de inicio](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") de la {{site.data.keyword.dev_console}}, seleccione un kit de inicio para su lenguaje.
-2. Opcional. Proporcione etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
-3. Seleccione el lenguaje y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un lenguaje.
-4. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
-5. Pulse **Crear**.
+2. Especifique el nombre de la app y un nombre de host exclusivo, por ejemplo, `abc-devhost`. Este nombre de host es la ruta de la app, `abc-devhost.mybluemix.net`.
+3. Opcional. Proporcione etiquetas para clasificar la app. Para obtener más información, consulte [Cómo trabajar con etiquetas](/docs/resources?topic=resources-tag).
+4. Seleccione el idioma y la infraestructura. Es posible que algunos kits de inicio solo estén disponibles en un idioma.
+5. Seleccione el plan de precios. Hay una opción gratuita que puede utilizar para esta guía de aprendizaje.
+6. Pulse **Crear**.
+
+El dominio compartido predeterminado es `mybluemix.net`, pero `appdomain.cloud` es otra opción de dominio que puede utilizar. Para obtener más información sobre cómo migrar a `appdomain.cloud`, consulte
+[Actualización del dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Paso 3. Añadir servicios (opcional)
 {: #resources-webapp}
@@ -53,7 +58,7 @@ Puede añadir servicios para mejorar la app con la potencia cognitiva de Watson,
 ## Paso 4. Crear una cadena de herramientas de DevOps
 {: #toolchain-webapp}
 
-La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que seleccione, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+La habilitación de una cadena de herramientas crea un entorno de desarrollo en equipo para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de laboratorio Git dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que elija, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 La entrega continua está habilitada para algunas aplicaciones. Puede habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues a través de Delivery Pipeline y GitHub.
 
@@ -141,9 +146,6 @@ Para desplegar la app en un clúster de Kubernetes, especifique el mandato sigui
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
-
-Para obtener más información sobre cómo desplegar la app, consulte
-[Despliegue de apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Paso 7. Verificar que la app se está ejecutando
 {: #verify-webapp}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-03-18"
 
-keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
+keywords: apps, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -37,10 +37,14 @@ subcollection: creating-apps
 
 1. 在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 页面中，选择适用于您语言的入门模板工具包。例如，对于 Node.js 应用程序，请转至 **Express.js 后端**，然后单击**选择入门模板工具包**。
 2. 输入应用程序名称。对于本教程，请使用 `ExpressBackend`。
-3. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
-4. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
-5. 选择价格套餐。对于本教程，可以使用免费选项。
-6. 单击**创建**。
+3. 输入唯一的主机名，例如 `abc-devhost`。此主机名是应用程序的路径 `abc-devhost.mybluemix.net`。
+4. 可选。提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
+5. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
+6. 选择价格套餐。对于本教程，可以使用免费选项。
+7. 单击**创建**。
+
+缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
+{: tip}
 
 ## 步骤 3. 添加服务（可选）
 {: #resources-bff}
@@ -52,27 +56,19 @@ subcollection: creating-apps
 3. 选择价格套餐。对于本教程，可以使用免费选项。
 4. 单击**创建**。
 
-## 步骤 4. 部署应用程序
+## 步骤 4. 创建 DevOps 工具链
 {: #toolchain-bff}
 
-选择部署目标时，会自动为您的应用程序创建 DevOps 工具链。工具链包含指示应用程序部署状态的 Delivery Pipeline。生成的新应用程序将推送到作为工具链一部分的 GitLab 存储库。
-
-启用 DevOp 工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）对它们进行定制。
+启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）对它们进行定制。
 
 在 {{site.data.keyword.cloud_notm}} 开发者仪表板中创建的所有工具链都会配置为自动部署。
 {: note}
 
-要选择部署目标并配置持续交付，请完成以下步骤：
-
-1. 在“应用程序详细信息”页面上，单击**配置持续交付**。
-2. 选择部署目标。根据您所选目标的指示信息来设置部署目标：
-  * **部署到 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
-  * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企业环境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
-  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
-
-选择并配置部署目标后，“应用程序详细信息”页面将指示已配置持续交付。您可以通过单击**查看存储库**来查看包含应用程序的源代码的存储库。
-
-有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
+1. 在**应用程序详细信息**页面上，单击**配置持续交付**。
+2. 选择部署目标。根据您所选方法的指示信息来设置部署目标：
+  * **部署到 [IBM Kubernetes Service](/docs/containers?topic=containers-container_index)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
+  * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)**或**[企业环境](/docs/cloud-foundry?topic=cloud-foundry-about)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
+  * **部署到[虚拟服务器](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
 ## 步骤 5. 在本地构建和运行应用程序
 {: #build-run-bff}

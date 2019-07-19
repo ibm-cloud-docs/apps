@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-03-15"
 
-keywords: scratch, developer tools, custom app, app tutorial, verify app running, run app local
+keywords: apps, scratch, developer tools
 
 subcollection: creating-apps
 
@@ -40,10 +40,14 @@ Sie können eine angepasste Anwendung mithilfe von Services und einer Laufzeit v
   {: tip}
 
 2. Geben Sie einen Namen für Ihre App ein. Für dieses Lernprogramm geben Sie `CustomProject` ein.
-3. Optional können Sie Tags angeben, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources?topic=resources-tag).
-4. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kits sind möglicherweise in nur einer Sprache verfügbar.
-5. Wählen Sie Ihren Preisstrukturplan aus. Sie können für dieses Lernprogramm die kostenfreie Option verwenden.
-6. Klicken Sie auf **Erstellen**.
+3. Geben Sie einen eindeutigen Hostnamen ein, z. B. `abc-devhost`. Der Hostname wird für die Route Ihrer App verwendet, z. B. `abc-devhost.mybluemix.net`.
+4. Optional können Sie Tags angeben, um Ihre App zu klassifizieren. Weitere Informationen finden Sie in [Mit Tags arbeiten](/docs/resources?topic=resources-tag).
+5. Wählen Sie Ihre Sprache und Ihr Framework aus. Einige Starter-Kits sind möglicherweise in nur einer Sprache verfügbar.
+6. Wählen Sie Ihren Preisstrukturplan aus. Sie können für dieses Lernprogramm die kostenfreie Option verwenden.
+7. Klicken Sie auf **Erstellen**.
+
+Die gemeinsam genutzte Standarddomäne ist `mybluemix.net`, aber `appdomain.cloud` ist eine weitere Domänenoption, die Sie verwenden können. Weitere Informationen zur Migration auf `appdomain.cloud` finden Sie im Abschnitt zum [Aktualisieren Ihrer Domäne](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Services hinzufügen (optional)
 {: #resources-scratch}
@@ -104,26 +108,52 @@ Sie können die App auch lokal für Tests erstellen, bevor Sie sie in der Cloud 
 ## App bereitstellen
 {: #deploy-scratch}
 
-Wenn Sie ein Bereitstellungsziel auswählen, wird automatisch eine DevOps-Toolchain für Ihre App erstellt. Die Toolchain enthält eine Delivery Pipeline, die den Bereitstellungsstatus Ihrer App anzeigt. Die neu generierte App wird in ein GitLab-Repository verschoben, das Teil der Toolchain ist.
+Für die Bereitstellung der App in {{site.data.keyword.cloud_notm}} stehen mehrere Möglichkeiten zur Verfügung, eine DevOps-Toolchain ist jedoch für die Bereitstellung von Produktions-Apps am besten geeignet. Mit einer DevOps-Toolchain können Sie ohne großen Aufwand Bereitstellungen in vielen Umgebungen automatisieren und schnell Überwachungs-, Protokollierungs- und Alert-Services hinzufügen, die Sie bei der Verwaltung Ihrer ständig weiterentwickelten App unterstützen.
 
-Durch das Aktivieren einer DevOps-Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte GitLab-Umgebung  und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an die Bereitstellungsumgebung angepasst, die Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
 {: note}
 
-Führen Sie die folgenden Schritte aus, um Ihr Bereitstellungsziel auszuwählen und Continuous Delivery zu konfigurieren:
+### Mit DevOps-Toolchain manuell bereitstellen
 
-1. Klicken Sie auf der Detailseite der App auf **Continuous Delivery konfigurieren**.
+Bei einer ordnungsgemäß konfigurierten Toolchain startet mit jedem Vorgang der Zusammenführung mit dem Masterzweig in Ihrem Repository ein Erstellungs-/Bereitstellungszyklus. 
+
+Sie können Ihre App auch manuell aus Ihrer DevOps-Toolchain heraus bereitstellen:
+
+1. Klicken Sie auf der Seite mit den App-Details auf **Toolchain anzeigen**.
+2. Klicken Sie auf **Delivery Pipeline**. Hier können Sie Builds starten, die Bereitstellung verwalten sowie Protokolle und den Verlauf anzeigen.
+
+Continuous Delivery ist für manche Anwendungen aktiviert. Sie können Continuous Delivery aktivieren, um Builds, Tests und Bereitstellungen über die Delivery Pipeline und GitHub zu automatisieren.
+
+Weitere Informationen finden Sie in den folgenden Abschnitten:
+* [Build und Bereitstellung mit Continuous Delivery](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
+* [Erstellen von Toolchains aus einer Vorlage](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+### Automatische Bereitstellung mit einer DevOps-Toolchain
+
+1. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**.
 2. Wählen Sie ein Bereitstellungsziel aus. Richten Sie Ihr Bereitstellungsziel entsprechend den Anweisungen für das ausgewählte Ziel ein:
-  * **Führen Sie die Bereitstellung im [IBM Kubernetes Service](/docs/containers?topic=containers-app)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster vornehmen.
-  * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** oder den Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
+  * **Führen Sie die Bereitstellung im IBM Kubernetes Service aus**. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster vornehmen.
+  * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **Public Cloud** oder den Bereitstellertyp **Enterprise Environment** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
   * **Führen Sie die Bereitstellung in einer virtuellen Serverinstanz aus**. Diese Option stellt eine virtuelle Serverinstanz bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
-Nachdem Sie das Bereitstellungsziel ausgewählt und konfiguriert haben, wird auf der Detailseite der App angezeigt, dass Continuous Delivery konfiguriert ist. Wenn Sie das Repository anzeigen möchten, das den Quellcode für Ihre App enthält, klicken Sie auf **Repository anzeigen**.
+Durch die Bereitstellung der App in der Cloud im letzten Schritt wird automatisch eine Toolchain erstellt. Die Toolchain erstellt ein Git-Repository für Ihre App, in dem Sie den Code finden können. 
 
-Wenn Sie Ihre App über die Befehlszeile bereitstellen möchten, verwenden Sie `ibmcloud dev deploy`. Weitere Informationen finden Sie in [Apps über die Befehlszeilenschnittstelle erstellen und bereitstellen](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+### Bereitstellung: {{site.data.keyword.dev_cli_short}} verwenden
+{: #deploy-scratch-cli}
 
-Weitere Informationen zum Bereitstellen Ihrer App finden Sie unter [Apps bereitstellen](/docs/apps?topic=creating-apps-deploying-apps).
+Geben Sie den folgenden Befehl ein, um Ihre App in Cloud Foundry bereitzustellen:
+```
+ibmcloud dev deploy
+```
+{: pre}
+
+Geben Sie den folgenden Befehl ein, um Ihre App in einem Kubernetes-Cluster bereitzustellen:
+```
+ibmcloud dev deploy --target <container>
+```
+{: pre}
 
 ## Ausführung der App verifizieren
 {: #verify-scratch}
@@ -134,9 +164,8 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
 3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
 
-   Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile angezeigt, die ähnlich aussieht wie `urls: my-app-devhost.mybluemix.net` oder `View the application health at: (Status der Anwendung ansehen unter:) http://<ipaddress>:<port>/health`.
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 
 Wenn Sie die Befehlszeile verwenden, führen Sie den Befehl [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) aus, um die URL der App anzuzeigen. Anschließend rufen Sie die URL in Ihrem Browser auf.
-

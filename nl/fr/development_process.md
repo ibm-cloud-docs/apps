@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-03-14"
 
-keywords: cloud development, develop apps, build apps, continuous delivery, toolchain, development stages, development phases
+keywords: cloud development, develop apps, build apps, continuous delivery, toolchain
 
 subcollection: creating-apps
 
@@ -33,11 +33,11 @@ Examinons de plus près le meilleur moyen d'utiliser {{site.data.keyword.cloud}}
 ## Mise en route
 {: #get_started}
 
-Générez votre application à partir des tableaux de bord {{site.data.keyword.cloud_notm}} Developer dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre scénario d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour créer automatiquement les ressources dont vous avez besoin et pour créer une application indépendante de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Configurer la distribution continue** à partir de **Détails de l'application**. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code alimenté avec votre code source d'application et votre pipeline de déploiement.
+Générez votre application à partir des tableaux de bord {{site.data.keyword.cloud_notm}} Developer dans lesquels vous pouvez sélectionner un kit de démarrage lié à votre scénario d'utilisation et choisir un langage de programmation. {{site.data.keyword.cloud_notm}} utilise les instructions du kit de démarrage pour créer automatiquement les ressources dont vous avez besoin et pour créer une application indépendante de l'environnement d'exécution et propre au langage qui constitue la base de votre application de production. Pour exécuter la phase de mise en route, cliquez sur **Déployer dans le cloud** à partir du tableau de bord Developer. Un clic permet de créer une chaîne d'outils DevOps complète avec un référentiel de code alimenté avec votre code source d'application et votre pipeline de déploiement.
 
 ![Mise en route](images/dev_get_started.png "Mise en route") Figure 2. Flux de mise en route
 
-Lorsque vous utilisez le bouton **Configurer la distribution continue** pour configurer votre chaîne d'outils DevOps, sélectionnez votre plateforme d'exécution, par exemple, Kubernetes ou Cloud Foundry. L'application de kit de démarrage générée à partir d'{{site.data.keyword.cloud_notm}} est indépendante de l'environnement d'exécution et n'a pas besoin d'être modifiée.
+Lorsque vous utilisez le bouton **Déployer dans le cloud** pour configurer votre chaîne d'outils DevOps, sélectionnez votre plateforme d'exécution, par exemple, Kubernetes ou Cloud Foundry. L'application de kit de démarrage générée à partir d'{{site.data.keyword.cloud_notm}} est indépendante de l'environnement d'exécution et n'a pas besoin d'être modifiée.
 {: tip}
 
 ## Développement en local
@@ -47,7 +47,7 @@ Après avoir créé votre application de kit de démarrage et votre chaîne d'ou
 
 ![Développement en local](images/dev_code_locally.png "Développement en local") Figure 3. Flux de développement en local
 
-Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `ibmcloud dev build` et `ibmcloud dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Les fonctions de base pour {{site.data.keyword.dev_cli_notm}} sont `ibmcloud dev build` et `ibmcloud dev run`, mais l'interface de ligne de commande offre bien d'autres fonctions. Pour plus d'informations, voir [{{site.data.keyword.dev_cli_notm}}](/docs/cli/index.html).
 {: tip}
 
 ## Distribution et gestion dans {{site.data.keyword.cloud_notm}}
@@ -62,7 +62,7 @@ La chaîne d'outils produite par votre démarche de mise en route comporte les c
 
 ![Distribution et gestion](images/dev_deliver_and_manage.png "Distribution et gestion") Figure 4. Flux de distribution et de gestion
 
-En savoir plus sur le [développement continu sur {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
+En savoir plus sur le [développement continu sur {{site.data.keyword.cloud_notm}}](/docs/services/ContinuousDelivery/index.html#cd_getting_started).
 
 ## Vue d'ensemble de toutes les phases
 

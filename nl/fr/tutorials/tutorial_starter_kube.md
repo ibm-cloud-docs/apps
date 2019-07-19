@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
+keywords: apps, starter kit, Kubernetes, cluster
 
 subcollection: creating-apps
 
@@ -20,18 +20,22 @@ subcollection: creating-apps
 # Déploiement d'une application de kit de démarrage dans un cluster Kubernetes
 {: #tutorial-starterkit-kube}
 
-Découvrez comment créer une application dans {{site.data.keyword.cloud}} en utilisant un kit de démarrage de base et une chaîne d'outils Kubernetes et en mettant à disposition en continu l'application dans un conteneur sécurisé {{site.data.keyword.containerlong}}. Votre pipeline DevOps d'intégration continue peut être configuré afin que vos modifications de code soient automatiquement générées et propagées dans l'application se trouvant dans le cluster Kubernetes. Si vous disposez déjà d'un pipeline, vous pouvez le connecter à votre application.
+Découvrez comment créer une application dans {{site.data.keyword.cloud}} en utilisant un kit de démarrage vide et une chaîne d'outils Kubernetes et en mettant à disposition en continu l'application dans un conteneur sécurisé d'un cluster Kubernetes. Votre pipeline DevOps d'intégration continue peut être configuré afin que vos modifications de code soient automatiquement générées et propagées dans l'application se trouvant dans le cluster Kube. Si vous disposez déjà d'un pipeline, vous pouvez le connecter à votre application.
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} inclut des kits de démarrage vous permettant de générer les bases d'une application s'exécutant sur Kubernetes. Lorsque vous utilisez un kit de démarrage, il est facile de suivre un modèle de programmation natif de cloud qui utilise les meilleures pratiques {{site.data.keyword.cloud_notm}} pour le développement d'application. Les kits de démarrage génèrent des applications qui suivent le modèle de programmation natif de cloud. Ils incluent des scénarios de test, le diagnostic d'intégrité et des métriques dans chaque langage de programmation. Vous pouvez également mettre à disposition des services cloud qui sont ensuite initialisés dans votre application générée.
 
-Ce tutoriel utilise la cible de déploiement {{site.data.keyword.containerlong}}. Dans ce tutoriel, vous allez créer une application à partir d'un kit de démarrage de base en utilisant Java + Spring, en y ajoutant une instance de service Cloudant et en la déployant dans {{site.data.keyword.containerlong}}. 
+Ce tutoriel utilise la cible de déploiement Kubernetes. Dans ce tutoriel, vous allez créer une application à partir d'un kit de démarrage de base en utilisant Java + Spring, en y ajoutant une instance de service Cloudant et en la déployant dans {{site.data.keyword.cloud_notm}} via IBM Kubernetes Service.
+
+Toute d'abord, consultez l'organigramme du kit de démarrage suivant et ses étapes de présentation correspondantes.
+
+![Organigramme du kit de démarrage](../images/starterkit-flow.png) 
 
 ## Avant de commencer
 {: #prereqs-starterkit-kube}
 
 * Créez une application **Java + Spring** en utilisant un [kit de démarrage](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
-* Installez l'[interface de ligne de commande {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
+* Installez l'interface de ligne de commande [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
 * Configurez [Docker ](https://www.docker.com/get-started){: new_window} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Ajout de services à votre application
@@ -49,7 +53,7 @@ Ajoutez un service {{site.data.keyword.cloud_notm}} à votre application. La pro
 ## Déploiement de votre application à l'aide d'une chaîne d'outils DevOps
 {: #deploy-starterkit-kube}
 
-Connectez une chaîne d'outils DevOps à l'application et configurez-la de telle sorte qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.cloud_notm}} Kubernetes.
+Associez une chaîne d'outils DevOps à l'application et configurez-la de telle sorte qu'elle soit déployée dans un cluster Kubernetes hébergé dans le service {{site.data.keyword.cloud_notm}} Kubernetes.
 
 1. Sur la page **Détails de l'application**, cliquez sur **Configurer la distribution continue**.
 2. Sur la page **Sélectionner une cible de déploiement** page, sélectionnez **Déployer dans IBM Kubernetes Service**.
@@ -109,5 +113,5 @@ Si vous utilisez la ligne de commande, exécutez la commande [`ibmcloud dev view
 * Accédez à la configuration de service dans votre code :
 	- Vous pouvez utiliser l'annotation _@Value_ ou utiliser la méthode _getProperty()_ de la classe d'environnement de structure Spring. Pour plus d'informations, voir [Accès aux données d'identification](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Ajoutez de nouvelles données d'identification de service à votre environnement Kubernetes :
-	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification à l'environnement de déploiement](/docs/apps?topic=creating-apps-credentials_overview).
+* Ajoutez de nouvelles données d'identification à votre environnement Kubernetes :
+	- Lorsque vous ajoutez un autre service à votre application une fois la chaîne d'outils DevOps créée, ces données d'identification de service ne sont pas automatiquement mises à jour dans votre application déployée et votre référentiel GitLab. Vous devez [ajouter manuellement les données d'identification](/docs/apps?topic=creating-apps-add-credentials-kube) dans l'environnement de déploiement.

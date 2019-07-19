@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-03-18"
 
-keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
+keywords: apps, serverless, serverless app, functions, cli, api, sdk
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 要進行無伺服器開發，您可以使用 IBM 的函數即服務 (FaaS) 供應項目 {{site.data.keyword.openwhisk}}。您可以使用 {{site.data.keyword.openwhisk_short}} 執行應用程式邏輯以回應事件，或透過 HTTP 導向來自 Web 或行動應用程式的呼叫，而不必佈建或管理伺服器。{{site.data.keyword.openwhisk_short}} 會執行系統管理，例如自動擴充、可用性管理及維護，以便身為開發人員的您可以專注於撰寫應用程式邏輯。
 {:shortdesc}
 
-您可以使用 {{site.data.keyword.openwhisk_short}} 使用者介面 (UI) 或指令行介面 (CLI) 來開發應用程式。兩者都具有類似的應用程式開發功能。CLI 提供部署與作業的更多控制。如需 {{site.data.keyword.openwhisk_short}} 的詳細資訊，請參閱[文件](/docs/openwhisk?topic=cloud-functions-getting_started)。
+您可以使用 {{site.data.keyword.openwhisk_short}} 使用者介面 (UI) 或指令行介面 (CLI) 來開發應用程式。兩者都具有類似的應用程式開發功能。CLI 提供部署與作業的更多控制。如需 {{site.data.keyword.openwhisk_short}} 的詳細資訊，請參閱[文件](/docs/openwhisk?topic=cloud-functions-index)。
 
 ## {{site.data.keyword.openwhisk_short}} 使用者介面
 {: #serverless-apps-ui}
@@ -48,7 +48,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ```
 {: codeblock}
 
-輸出：
+**輸出：**
 ```json
 {
     message: "Hello aaron!"
@@ -59,4 +59,5 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} 為 iOS 及 watchOS 裝置提供[行動 SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk)，讓行動應用程式能輕鬆地傳送遠端觸發程式及呼叫遠端動作。
+{{site.data.keyword.openwhisk_short}} 為 iOS 及 watchOS 裝置提供[行動 SDK](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk)，讓行動應用程式能輕鬆地傳送遠端觸發程式及呼叫遠端動作。它也提供[無伺服器架構 SDK ](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示") 以啟用無伺服器應用程式。
+

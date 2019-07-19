@@ -36,4 +36,4 @@ Swift es un lenguaje de programación moderno creado por Apple en 2014, diseñad
 * [Python ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")](/docs/runtimes/python/getting-started.html){: new_window}
 {: #python notoc}
 
-Python es un lenguaje de programación interpretado de propósito general que enfatiza la legibilidad. Debido a ello, Python permite a los programadores implementar funciones utilizando menos líneas de código en relación con otros lenguajes. Las características del lenguaje lo hacen accesible para escribir código orientado a objetos, funcional o imperativo. Python es utilizado habitualmente para procesar tareas de lenguaje natural.
+Python es un lenguaje de programación interpretado de propósito general que enfatiza la legibilidad. Debido a ello, Python permite a los programadores implementar funciones utilizando menos líneas de código en relación a otros lenguajes. Las características del lenguaje lo hacen accesible para escribir código orientado a objetos, funcional o imperativo. Python es utilizado habitualmente para procesar tareas de lenguaje natural.

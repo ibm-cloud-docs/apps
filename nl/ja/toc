@@ -2,59 +2,65 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
 アプリの作成
 
     {: .navgroup id="learn"}
     index.md
+    development_process.md
     best-practice.md
     patterns.md
 
     {: .topicgroup}
     関連リンク
-        [回復力のあるアプリケーションのための戦略](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Kubernetes への継続的デプロイメント](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [回復力のあるアプリケーションのための戦略 (Strategies for resilient applications)](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Kubernetes への継続的デプロイメント (Continuous deployment to Kubernetes)](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     アプリの作成
         tutorials/tutorial_starter-kit.md
-        starter-kits.md
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
+        tutorials/tutorial_web.md
+        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        functions.md
+        deploying/functions.md
         tutorials/tutorial_mendix_getting_started.md
-        [言語の使用を検討していますか?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
-    アプリのデプロイ
-        hosting.md
+    アプリのデプロイと統合
         dep-app-tool.md
-        tutorials/tutorial_starter_kube.md
+        vsi-deploy.md
+        deploying/containers.md
         tutorials/tutorial_byoc_kube.md
+        tutorials/tutorial_starter_kube.md
+        deploying/crypto.md
         tutorials/tutorial_mendix_kubernetes.md
 
-    {: .topicgroup}
-    構成
-        reqnsi.md
-        creds_overview.md
-        mngdomains.md
-        secapps.md
+    reqnsi.md
 
     {: .topicgroup}
-    アプリと DevOps の統合
-        toolchains.md
-        insights.md
-        monitor.md
+    環境への資格情報の追加
+        creds_overview.md
+        creds_kube.md
+        creds_cf.md
+        creds_vsi.md
+
+    mngdomains.md
+    updapps.md
+    secapps.md
+    hosting.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools コマンド・ライン・プラグイン](/docs/cli?topic=cloud-cli-idt-cli)
+    [IBM Cloud Developer Tools コマンド・ライン・リファレンス](/cli/idt/cloud-cli-idt-cli)
+    [Cloud Functions API リファレンス](https://cloud.ibm.com/apidocs/functions)
+    [モバイル SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
 
     {: .topicgroup}
     IBM Cloud 開発者ダッシュボード
@@ -68,15 +74,15 @@
     {: .topicgroup}
     IBM Cloud プログラミング・ガイド
         [進む](/go/go-getting-started)
-        [Java](/java/java-getting-started)
-        [Swift](/swift/swift-getting-started)
-        [ノード](/node/nodejs-node-getting-started)
+        [Spring](/java/java-overview)
+        [Swift](/swift/swift-getting_started_swift)
+        [ノード](/node/nodejs-create_project)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_apps.md
-    faqs.md
-    [IBM Cloud Slack developer-tools チャネル](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

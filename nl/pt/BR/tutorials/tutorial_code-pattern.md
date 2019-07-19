@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-03-18"
 
-keywords: apps, code pattern, DevOps, toolchain, service credentials, create app code pattern, app pattern
+keywords: apps, code pattern, DevOps, toolchain, service credentials
 
 subcollection: creating-apps
 
@@ -15,7 +15,6 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
-{:note: .note}
 
 # Criando um app com um padrão de código
 {: #tutorial-codepattern}
@@ -58,26 +57,12 @@ Para obter mais informações sobre como copiar credenciais para o seu ambiente,
 ## Etapa 4. Implementando no {{site.data.keyword.cloud_notm}}
 {: #deploy-codepattern}
 
-Quando você seleciona um destino de implementação, uma cadeia de ferramentas do DevOps é criada automaticamente para o seu app. A cadeia de ferramentas inclui um Delivery Pipeline que indica o status de implementação de seu app. O novo app gerado é enviado por push para um repositório GitLab que faz parte da cadeia de ferramentas.
+É possível implementar seu app no {{site.data.keyword.cloud_notm}} de várias maneiras, mas uma cadeia de ferramentas do DevOps é a melhor maneira de implementar apps de produção. Com uma cadeia de ferramentas do DevOps, é possível automatizar facilmente implementações para muitos ambientes e incluir rapidamente serviços de monitoramento, criação de log e alerta para ajudar a gerenciar seu app à medida que ele cresce.
 
-A ativação de uma cadeia de ferramentas do DevOps cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente GitLab dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação que você escolher, seja ele [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
-Todas as cadeias de ferramentas criadas por meio de um Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
-{: note}
-
-Para selecionar o destino de implementação e configurar a entrega contínua, conclua estas etapas:
-
-1. Na página Detalhes do app, clique em **Configurar entrega contínua**.
-2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino selecionado:
-  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados nós do trabalhador, para implementar e gerenciar contêineres de app altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que poderá ser usado para criar e gerenciar ambientes isolados para hospedar apps do Cloud Foundry exclusivamente para a sua empresa.
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você. Para obter mais informações, consulte [Implementando apps em um servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
-
-    A implementação de VSI está disponível para alguns kits do iniciador. Para usar esse recurso, acesse o [painel do {{site.data.keyword.cloud_notm}}](https://{DomainName}) e clique em **Criar um app** no bloco **Apps**.
-    {: note}
-
-Após a seleção e a configuração do destino de implementação, a página Detalhes do app indica que a entrega contínua está configurada. É possível visualizar o repositório que contém o código-fonte para seu app clicando em **Visualizar repositório**.
-
-Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
+1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
+2. Selecione um destino de implementação e clique em **Criar**. O {{site.data.keyword.cloud_notm}} automaticamente cria uma cadeia de ferramentas aberta e completa com um repositório Git e um pipeline de entrega contínua.
+3. Abra o estágio de pipeline de sua nova cadeia de ferramentas para visualizar o processo de construção e implementação para que seja possível visualizar o seu novo app em minutos.
 
 Para obter mais informações sobre destinos de implementação, construções e pipelines, consulte [Construindo e implementando](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-18"
 
-keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
+keywords: apps, credentials, Kubernetes
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Adición de credenciales de servicio al entorno de Kubernetes
+# Adición de credenciales al entorno de Kubernetes
 {: #add-credentials-kube}
 
 Aprenda a añadir credenciales de servicio al entorno de despliegue de Kubernetes.
@@ -34,9 +34,9 @@ Debe añadir manualmente las credenciales de servicio al entorno de despliegue e
 
 <!-- (Refer to the ["Code it Right"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#code-it-right) and ["Prepare the Environment"](https://github.ibm.com/arf/planning-codegen/wiki/TEMP:-BYOC-UX-Docs#prepare-the-environment) sections.  But translate a bit so we're only mentioning editing a `deployment.yml` file, not the "deployment.yml section of the script in the Deploy pipeline stage configuration".) -->
 
-### Programe correctamente
+### Codificación correcta
 
-Como medida de precaución, puede programar la aplicación para que confirme que su entorno está completo en el punto de entrada principal de la aplicación. No desea que el despliegue de una aplicación en un clúster cuyo entorno no está completo suponga una interrupción para el producto. Es posible que aplicación no se inicie y la configuración de Kubernetes puede impedir de forma automática tales interrupciones.
+Como medida de precaución, puede codificar la aplicación para confirmar que su entorno está completo en la base principal de la aplicación. No desea que el despliegue de una aplicación en un clúster cuyo entorno no está completo suponga una interrupción para el producto. Es posible que aplicación no se inicie y la configuración de Kubernetes puede impedir de forma automática tales interrupciones.
 
 Supongamos que tiene las dos variables de entorno siguientes:
 * `SECRET`
@@ -120,7 +120,7 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
 
 2. Para crear una instancia de Cloud Object Storage, seleccione **Añadir servicio** > **Almacenamiento** > **Cloud Object Storage** > **Plan Lite (gratuito)** > **Crear**.
 
-3. Pulse **Descargar código** para volver a generar la app con los fragmentos de código inyectados.
+3. Pulse **Descargar código** para volver a generar el proyecto con los fragmentos de código inyectados.
 
 4. Para acceder a las credenciales localmente, copie y sustituya los archivos siguientes del archivo `.zip` recién generado en el clon local de Git para acceder a las credenciales. Todavía tiene que crear un secreto de Kubernetes en el clúster para alojar las credenciales.
 
@@ -132,7 +132,7 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
   Si más adelante decide desplegar en una aplicación Cloud Foundry con un recurso de Controlador de recursos (ubicado en un grupo de recursos en lugar de en una organización o espacio), debe copiar un archivo más.
   {: note}
 
-5. [Visualice el clúster de Kubernetes](https://{DomainName}/kubernetes/clusters){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con la región correspondiente (EE.UU. sur si está libre).
+5. [Visualice el clúster de Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con la región correspondiente (EE.UU. sur si está libre).
 
 6. Pulse en el clúster y seleccione **Panel de control de Kubernetes** en la parte superior derecha para ver el panel de control del clúster.
 
@@ -144,8 +144,8 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
-    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -154,7 +154,7 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
 
 11. Utilice el mandato `echo` para colocar las credenciales en el archivo `binding`.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -165,7 +165,7 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 
@@ -177,12 +177,16 @@ Ahora que el clúster de Kubernetes está preparado con un secreto que se puede 
 
 Utilice la característica **Configurar entrega continua** para desplegar la app en su clúster de IBM Kubernetes. La característica prepara el clúster de Kubernetes con secretos para las credenciales de los recursos que están asociados a la app. Para ver los resultados de la preparación del clúster, siga estos pasos:
 
-1. Para ver los resultados, ejecute este mandato:
-
+1. Ejecute este mandato para ver los resultados: `kubectl get secrets`:
   ```
-  kubectl get secrets
+  NAME                                   TYPE                                  DATA      AGE
+  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
+  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
+  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
   ```
-  {: codeblock}
+  {: screen}
 
   Puede consultar [más documentación sobre secretos](https://kubernetes.io/docs/concepts/configuration/secret/).
   {: tip}

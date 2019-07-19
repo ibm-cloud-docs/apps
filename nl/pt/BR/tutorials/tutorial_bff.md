@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-03-18"
 
-keywords: create bff app, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain, bff app tutorial
+keywords: apps, backend-for-frontend app, bff, developer tools, Node.js, Java, Swift, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -37,10 +37,14 @@ Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}.
 
 1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem. Por exemplo, para um aplicativo Node.js, acesse **Backend do Express.js** e clique em **Selecionar kit do iniciador**.
 2. Insira o nome de seu app. Para este tutorial, use `ExpressBackend`.
-3. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
-4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
-5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
-6. Clique em **Criar**.
+3. Insira um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota do app, `abc-devhost.mybluemix.net`.
+4. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
+5. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+6. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+7. Clique em **Criar**.
+
+O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Etapa 3. Incluir serviços (opcional)
 {: #resources-bff}
@@ -52,27 +56,19 @@ Crie um app no  {{site.data.keyword.cloud}}  {{site.data.keyword.dev_console}}.
 3. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
 4. Clique em **Criar**.
 
-## Etapa 4. Implementando seu app
+## Etapa 4. Criar uma cadeia de ferramentas do DevOps
 {: #toolchain-bff}
 
-Quando você seleciona um destino de implementação, uma cadeia de ferramentas do DevOps é criada automaticamente para o seu app. A cadeia de ferramentas inclui um Delivery Pipeline que indica o status de implementação de seu app. O novo app gerado é enviado por push para um repositório GitLab que faz parte da cadeia de ferramentas.
-
-A ativação de uma cadeia de ferramentas do DevOps cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente GitLab dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação que você escolher, seja ele [Kubernetes](/docs/containers?topic=containers-container_index), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Todas as cadeias de ferramentas criadas por meio de um Painel do desenvolvedor do {{site.data.keyword.cloud_notm}} são configuradas para implementação automática.
 {: note}
 
-Para selecionar o destino de implementação e configurar a entrega contínua, conclua estas etapas:
-
-1. Na página Detalhes do app, clique em **Configurar entrega contínua**.
-2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o destino selecionado:
-  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-app)**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
-  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
-  * **Implementar em um Servidor virtual**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você.
-
-Após a seleção e a configuração do destino de implementação, a página Detalhes do app indica que a entrega contínua está configurada. É possível visualizar o repositório que contém o código-fonte para seu app clicando em **Visualizar repositório**.
-
-Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
+1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
+2. Selecione um destino de implementação. Configure o destino de implementação de acordo com as instruções para o método escolhido:
+  * **Implementar no [IBM Kubernetes Service](/docs/containers?topic=containers-container_index)**. Essa opção cria um cluster de hosts, chamados de nós do trabalhador, para implementar e gerenciar contêineres de aplicativo altamente disponíveis. É possível criar um cluster ou implementar em um cluster existente.
+  * **Implemente no Cloud Foundry**. Essa opção implementa o seu app nativo de nuvem sem você precisar gerenciar a infraestrutura subjacente. Se a sua conta tiver acesso ao {{site.data.keyword.cfee_full_notm}}, será possível selecionar um tipo de implementador do **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** ou do **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-about)**, que é possível usar para criar e gerenciar ambientes isolados para hospedar aplicativos do Cloud Foundry exclusivamente para a sua empresa.
+  * **Implemente em um [Servidor virtual](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)**. Essa opção provisiona uma instância de servidor virtual, carrega uma imagem que inclui o seu app, cria uma cadeia de ferramentas do DevOps e inicia o primeiro ciclo de implementação para você.
 
 ## Etapa 5. Criando e executando o app localmente
 {: #build-run-bff}
@@ -162,7 +158,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 2. Clique em **Visualizar logs e histórico**.
 3. No arquivo de log, localize a URL do aplicativo:
 
-    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, é possível que você veja uma linha no arquivo de log que seja semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 

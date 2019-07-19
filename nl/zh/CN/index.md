@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-03-15"
 
-keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
+keywords: apps, create apps, add resources, deploy apps
 
 subcollection: creating-apps
 
@@ -18,42 +18,33 @@ subcollection: creating-apps
 {:tip: .tip}
 
 # 入门教程
-{: #getting-started}
+{: #tutorial-getting-started}
 
 在 {{site.data.keyword.cloud}} 中，可以构建企业就绪型移动和 Web 应用程序，并可利用由 {{site.data.keyword.cloud_notm}} 托管的云扩展。您有多个选项可开始此操作。使用用于管理过程的入门模板工具包来创建应用程序；使用所需的资源从头开始构建应用程序（如果您知道自己需要什么）；或者使用现有存储库并自带代码。
 {: shortdesc}
 
-无论您是有要进行现代化并移至云的[现有代码](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)，还是要开发[全新应用程序](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)，都可以利用 {{site.data.keyword.cloud_notm}} 中快速发展的可用服务和运行时框架生态系统。
-
-是否需要帮助决定从何处开始？下图提供了有关创建应用程序的概述，无论您是使用入门模板工具包还是将自己的代码带入 {{site.data.keyword.cloud_notm}}。
-
-![开发者体验概述](images/dev-journey.png "在 {{site.data.keyword.cloud_notm}} 中创建应用程序的概述")
-
 ## 开始之前
 {: #prereqs-getting-started}
 
-您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来创建应用程序。如果要使用 CLI，请参阅[安装步骤](/docs/cli?topic=cloud-cli-getting-started)。
+您可以使用 {{site.data.keyword.cloud_notm}} 控制台或命令行界面 (CLI) 来创建应用程序。如果要使用 CLI，请参阅[安装步骤](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 
 ## 步骤 1. 创建应用程序
 {: #create-getting-started}
 
 通过选择以下其中一个入口点来创建应用程序：
+* [入门模板工具包](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)：通过选择的用于管理过程的 App Service 入门模板工具包来创建应用程序。
+* [定制](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch)：如果您知道自己需要什么，请通过空白入门模板工具包使用所需资源从头开始构建定制应用程序。
+* [自带代码](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)：通过链接到您自己的现有内容存储库来使用自己的代码。应用程序和 Docker 映像必须位于同一存储库中。
+* [CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli)：使用 CLI 和 Developer Tools 来创建和部署定制或入门模板工具包应用程序。
+* [代码模式](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern)：使用 IBM Developer 代码模式作为创建应用程序的基础。
+* [{{site.data.keyword.cloud_notm}} 目录 ](https://cloud.ibm.com/catalog){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")：可以在目录中浏览或搜索可以创建并立即开始使用的应用程序和服务。
 
-* [预配置入门模板工具包](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)特定于用例，为您提供采用各种编程语言和体系结构模式的生产就绪型应用程序。
-* [基本入门模板工具包](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch)可让您通过选择应用程序类型（移动或后端）、语言和框架、服务以及部署目标来构建应用程序。
-* [自带代码](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc)，方法是链接到您自己的现有内容存储库。应用程序和 Docker 映像必须位于同一存储库中。
-* [{{site.data.keyword.dev_cli_long}} 命令行界面 (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) 可让您使用 CLI 来创建和部署应用程序。
-* 浏览或搜索 [{{site.data.keyword.cloud_notm}} 目录 ](https://{DomainName}/catalog){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")，以查看现在您可以创建并开始使用的应用程序和服务。
-* [IBM Developer 代码模式 ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/patterns/){:new_window} 有助于快速创建应用程序，并将其部署到 {{site.data.keyword.cloud_notm}}。有关更多信息，请参阅[代码模式](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern)。
-
-## 步骤 2. 添加服务
+## 步骤 2. 添加资源
 {: #resources-getting-started}
 
-使用入门模板工具包创建应用程序时，会自动为您创建必需服务。可以在控制台的**应用程序详细信息**页面中将更多服务连接到应用程序，该页面在您创建应用程序时会立即显示。
+使用入门模板工具包创建应用程序时，会自动为您创建服务。您可以通过在控制台的**应用程序详细信息**页面上单击**添加服务**，将更多服务与应用程序进行关联。
 
-如果要在创建应用程序后添加服务，请转至 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName})，找到您的应用程序，然后单击应用程序的名称。这将显示**应用程序详细信息**页面，并且您可以创建服务实例或连接现有服务。
-
-或者，使用 CLI 运行以下命令将服务添加到应用程序。您可以选择帐户上已启用的现有服务，也可以添加服务。
+要使用 CLI 添加服务，请运行以下命令向应用程序添加服务。您可以从已在帐户上启用的服务中选择现有服务，或添加新服务。 
 ```
 ibmcloud dev edit
 ```
@@ -64,7 +55,7 @@ ibmcloud dev edit
 ## 步骤 3. 部署应用程序
 {: #deploy-getting-started}
 
-您可以使用控制台或 CLI 来部署应用程序。
+您可以使用控制台或命令行来部署应用程序。
 
 ### 使用控制台
 {: #console-getting-started}
@@ -75,18 +66,11 @@ ibmcloud dev edit
 2. 选择部署目标，选择工具链设置，然后单击**创建**。{{site.data.keyword.cloud_notm}} 会自动创建开放工具链，该工具链配套提供 Git 存储库和持续交付管道。
 3. 打开新工具链的管道阶段，以查看构建和部署过程，这样您在几分钟后就可以查看新应用程序。
 
-有关更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
+有关更多信息，请参阅目录以查看“部署和集成应用程序”部分中的各种部署主题。
 
-### 使用 CLI
+### 使用命令行
 {: #cli-getting-started}
 
-要使用 CLI 来部署应用程序，请运行 `ibmcloud dev deploy` 命令。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli)。
+要使用命令行来部署应用程序，请运行 `ibmcloud dev deploy` 命令。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli)。
 
 现在，您已准备就绪，可进行迭代开发和持续交付。
-
-有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
-
-## 相关信息
-{: #related-getting-started}
-
-按语言提供的[编程指南](https://{DomainName}/docs/home/build){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 可帮助您快速入门并熟练运用。通过 {{site.data.keyword.baremetal_short}}，您有多种选项用于通过 {{site.data.keyword.cloud_notm}} 基础架构来托管应用程序，以作为无服务器功能运行。

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
+keywords: apps, starter kit, Kubernetes, cluster
 
 subcollection: creating-apps
 
@@ -20,18 +20,22 @@ subcollection: creating-apps
 # 将入门模板工具包应用程序部署到 Kubernetes 集群
 {: #tutorial-starterkit-kube}
 
-了解如何使用基本入门模板工具包和 Kubernetes 工具链在 {{site.data.keyword.cloud}} 中创建应用程序，并持续将应用程序交付到 {{site.data.keyword.containerlong}} 中的安全容器。可配置持续集成 DevOps 管道，以便自动构建代码更改并将其传播到 Kubernetes 集群中的应用程序。如果您已有管道，那么可以将其连接到应用程序。
+了解如何使用空白入门模板工具包和 Kubernetes 工具链在 {{site.data.keyword.cloud}} 中创建应用程序，并持续将应用程序交付到 Kubernetes 集群中的安全容器。可配置持续集成 DevOps 管道，以便自动构建代码更改并将其传播到 Kube 集群中的应用程序。如果您已有管道，那么可以将其连接到应用程序。
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} 提供了入门模板工具包，可帮助您构建在 Kubernetes 上运行的应用程序的基础。使用入门模板工具包时，可以轻松遵循使用 {{site.data.keyword.cloud_notm}} 应用程序开发最佳实践的云本机编程模型。入门模板工具包会生成遵循云本机编程模型的应用程序，这些应用程序包含每种编程语言的测试用例、运行状况检查和度量值。您还可以供应云服务，然后在生成的应用程序中对这些服务进行初始化。
 
-本教程使用 {{site.data.keyword.containerlong}} 部署目标。在本教程中，我们将使用 Java + Spring 通过基本入门模板工具包来创建应用程序，向该应用程序添加 Cloudant 服务实例，然后将其部署到 {{site.data.keyword.containerlong}}。
+本教程使用 Kubernetes 部署目标。在本教程中，我们将使用 Java + Spring 通过基本入门模板工具包来创建应用程序，向该应用程序添加 Cloudant 服务实例，然后使用 IBM Kubernetes Service 将该应用程序部署到 {{site.data.keyword.cloud_notm}}。
+
+首先，请参阅以下入门模板工具包流程图及其相应的概述步骤。
+
+![入门模板工具包流程图](../images/starterkit-flow.png) 
 
 ## 开始之前
 {: #prereqs-starterkit-kube}
 
 * 使用[入门模板工具包](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)创建 **Java + Spring** 应用程序。
-* 安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
+* 安装 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
 * 设置 [Docker ](https://www.docker.com/get-started){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 
 ## 向应用程序添加服务
@@ -93,7 +97,7 @@ subcollection: creating-apps
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序的 URL：
+3. 在日志文件中，查找应用程序 URL：
 
     在日志文件末尾，搜索 `View the application health at: http://<ipaddress>:<port>/health`。
 
@@ -109,5 +113,5 @@ subcollection: creating-apps
 * 访问代码中的服务配置：
 	- 可以使用 _@Value_ 注释，也可以使用 Spring 框架环境类 _getProperty()_ 方法。有关更多信息，请参阅[访问凭证](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
 
-* 向 Kubernetes 环境添加新的服务凭证：
-	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须[向部署环境手动添加凭证](/docs/apps?topic=creating-apps-credentials_overview)。
+* 向 Kubernetes 环境添加新凭证：
+	- 创建 DevOps 工具链后，向应用程序添加其他服务时，这些服务凭证不会自动更新到已部署的应用程序和 GitLab 存储库。您必须向部署环境[手动添加凭证](/docs/apps?topic=creating-apps-add-credentials-kube)。

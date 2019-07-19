@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -33,13 +33,13 @@ subcollection: creating-apps
 サービスは、仮想サーバー・インスタンスにはバインドされません。 サービスを仮想サーバー内のアプリケーションに追加することはできません。
 {: important}
 
-## アプリのデプロイ
+## アプリの作成およびデプロイ
 {: #create-deploy-vsi}
 
 App Service によって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、Devops ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
 1. [アプリを作成](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)します。 
-2. 「アプリの詳細」ページから**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
+2. **「アプリの詳細」**ページから**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 3. **「仮想サーバーへのデプロイ (Deploy to a Virtual Server)」** を、サーバーを実行する地域と共に選択します。
 
 ## デプロイメント・プロセスの仕組み
@@ -60,7 +60,7 @@ App Service によって、仮想サーバー・インスタンスがプロビ�
 
 これらの環境プロパティーを表示するには、以下のステップを実行します。 
 
-1. 「アプリの詳細」ページから、**「ツールチェーンの表示」**をクリックします。
+1. アプリの詳細ページで、**「ツールチェーンの表示」**をクリックします。
 2. **「Delivery Pipeline」**タイルをクリックします。
 3. **「ステージの構成 (Stage Configure)」**アイコンをクリックし、次にビルド・ステージで**「ステージの構成」**をクリックします。
 4. **「環境プロパティー」**タブをクリックしてプロパティーを表示します。 使用可能なプロパティーについては、次の表を参照してください。
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 また、Terraform でベアメタル・サーバーをプロビジョンすることもできます。 詳しくは、[IBM Terraform Provider の資料](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") および [IBM Terraform Provider GIT Repo ](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
-仮想インスタンスの作成のターゲットとするデータ・センターを変更するには、`variables.tf` を使用できます。 プラットフォーム上の定義済みデータ・センターのリストを確認するには、[データ・センター](https://www.ibm.com/cloud/data-centers/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
+仮想インスタンスの作成のターゲットとするデータ・センターを変更するには、`variables.tf` を使用できます。 プラットフォーム上の定義済みデータ・センターのリストを確認するには、[データ・センター](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
 デフォルトで、Terraform ファイルは Washington および `wdc04` 向けに構成されています。
 ```json

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Criando um app básico da web com um kit do iniciador
 {: #tutorial-webapp}
 
-O {{site.data.keyword.cloud}} oferece vários kits do iniciador para ajudar você a obter a codificação rapidamente. Selecione uma linguagem, uma estrutura e as ferramentas dos kits do iniciador do App Service para começar a trabalhar com um aplicativo customizado pré-configurado. Neste tutorial, você percorrerá as etapas para instalar as ferramentas necessárias e, em seguida, construirá e executará o app localmente e o implementará na nuvem.
+O {{site.data.keyword.cloud}} oferece vários kits do iniciador para ajudar você a obter a codificação rapidamente. Escolha uma linguagem, estrutura e ferramentas dos kits do iniciador do App Service para começar a trabalhar com um aplicativo customizado pré-configurado. Neste tutorial, você percorrerá as etapas para instalar as ferramentas necessárias e, em seguida, construirá e executará o app localmente e o implementará na nuvem.
 {: shortdesc}
 
 ## Etapa 1. Instale as ferramentas
@@ -35,10 +35,14 @@ O Docker é instalado como parte das ferramentas do desenvolvedor. O Docker deve
 Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Selecione a linguagem que for melhor para seu projeto ser iniciado.
 
 1. Na página [Kits do iniciador ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo") no {{site.data.keyword.dev_console}}, selecione um kit do iniciador para sua linguagem.
-2. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
-3. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
-4. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
-5. Clique em **Criar**.
+2. Insira o nome do app e um nome de host exclusivo, por exemplo, `abc-devhost`. Esse nome do host é a rota do app, `abc-devhost.mybluemix.net`.
+3. Opcional. Forneça identificações para classificar o seu app. Para obter mais informações, consulte [Trabalhando com tags](/docs/resources?topic=resources-tag).
+4. Selecione a linguagem e a estrutura. Alguns kits do iniciador podem estar disponíveis apenas em uma linguagem.
+5. Selecione seu plano de precificação. Há uma opção grátis que pode ser usada para este tutorial.
+6. Clique em **Criar**.
+
+O domínio compartilhado padrão é `mybluemix.net`, mas o `appdomain.cloud` é outra opção de domínio que você pode usar. Para obter mais informações sobre como migrar para o `appdomain.cloud`, consulte [Atualizando seu domínio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Etapa 3. Incluir serviços (opcional)
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Há kits do iniciador disponíveis em várias linguagens e estruturas no {{site.
 ## Etapa 4. Criar uma cadeia de ferramentas do DevOps
 {: #toolchain-webapp}
 
-A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação selecionado, seja o [Kubernetes](/docs/containers?topic=containers-getting-started), o [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), o [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou o [servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+A ativação de uma cadeia de ferramentas cria um ambiente de desenvolvimento baseado em equipe para seu app. Quando você cria uma cadeia de ferramentas, o serviço de app cria um repositório Git, no qual é possível visualizar o código-fonte, clonar seu app e criar e gerenciar problemas. Você também tem acesso a um ambiente de laboratório Git dedicado e a um pipeline de entrega contínua. Eles são customizados para o destino de implementação que você escolher, seja ele [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) ou [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 A entrega contínua é ativada para alguns aplicativos. É possível ativar a entrega contínua para automatizar construções, testes e implementações por meio do Delivery Pipeline e do GitHub.
 
@@ -141,8 +145,6 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-Para obter mais informações sobre como implementar seu app, consulte [Implementando apps](/docs/apps?topic=creating-apps-deploying-apps).
-
 ## Etapa 7. Verificar se o app está em execução
 {: #verify-webapp}
 
@@ -152,7 +154,7 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 2. Clique em **Visualizar logs e histórico**.
 3. No arquivo de log, localize a URL do aplicativo:
 
-    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, você pode ver uma linha no arquivo de log que é semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
+    No término do arquivo de log, procure a palavra `urls` ou `view`. Por exemplo, é possível que você veja uma linha no arquivo de log que seja semelhante a `urls: my-app-devhost.mybluemix.net` ou `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 

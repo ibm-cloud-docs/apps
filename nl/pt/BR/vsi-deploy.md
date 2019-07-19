@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -36,14 +36,14 @@ demorado, mas é possível estar funcional rapidamente usando o {{site.data.keyw
 Os serviços não se ligam à instância de servidor virtual. Não é possível incluir serviços em um aplicativo em um servidor virtual.
 {: important}
 
-## Implementando apps
+## Criando e implementando os aplicativos
 {: #create-deploy-vsi}
 
 O App Service fornece uma instância de servidor virtual, carrega uma imagem que inclui o aplicativo,
 cria uma cadeia de ferramentas do Devops e inicia o primeiro ciclo de implementação.
 
 1. [Crie um aplicativo](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Clique em **Configurar entrega contínua** na página Detalhes do app.
+2. Clique em **Configurar entrega contínua** por meio da página **Detalhes do app**.
 3. Selecione **Implementar em um Servidor virtual**, juntamente com a região na qual executar o servidor.
 
 ## Como o processo de implementação funciona
@@ -65,7 +65,7 @@ O pipeline usa um conjunto de propriedades da conta do usuário e um novo par de
 
 Para visualizar essas propriedades do ambiente, conclua as etapas a seguir. 
 
-1. Na página Detalhes do app, clique em **Visualizar cadeia de ferramentas**.
+1. Na página Detalhes do aplicativo, clique em **Visualizar a cadeia de ferramentas**.
 2. Clique no ladrilho **Delivery Pipeline**.
 3. Clique no ícone **Configuração de estágio** e, em seguida, clique em **Configurar estágio** no estágio de construção.
 4. Clique na guia **Propriedades do ambiente** para visualizar as propriedades. Use a tabela a
@@ -199,7 +199,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Também é possível provisionar servidores bare metal com o Terraform. Para obter mais informações, consulte a [Documentação do IBM Terraform Provider ](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e [Repositório GIT do IBM Terraform Provider](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
-O `variables.tf` pode ser usado para mudar o data center que você deseja ter como destino para criar a instância virtual. Para ver a lista de data centers definidos na plataforma, consulte [Data Centers](https://www.ibm.com/cloud/data-centers/){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+O `variables.tf` pode ser usado para mudar o data center que você deseja ter como destino para criar a instância virtual. Para ver a lista de data centers definidos na plataforma, consulte [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
 Por padrão, o arquivo Terraform está configurado para Washington e `wdc04`.
 ```json

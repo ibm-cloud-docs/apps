@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-14"
 
-keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
 
 subcollection: creating-apps
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# 가상 인스턴스 또는 로컬 Docker 환경에 서비스 인증 정보 추가
+# 가상 인스턴스 또는 로컬 Docker 환경에 인증 정보 추가
 {: #add-credentials-vsi}
 
 가상 서버 인스턴스 또는 로컬 Docker 배치 환경에 서비스 인증 정보를 추가하는 방법에 대해 알아봅니다.

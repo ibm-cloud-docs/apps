@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-03-18"
 
-keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
+keywords: apps, serverless, serverless app, functions, cli, api, sdk
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 Für eine serverunabhängige Entwicklung können Sie das IBM FaaS-Angebot (Functions as a Service) {{site.data.keyword.openwhisk}} nutzen. Mit {{site.data.keyword.openwhisk_short}} können Sie Anwendungslogik als Reaktion auf Ereignisse oder direkte Aufrufe über Web-Apps oder mobile Apps über HTTP ausführen, ohne dass Server bereitgestellt oder verwaltet werden müssen. {{site.data.keyword.openwhisk_short}} führt Systemverwaltungsaufgaben wie automatische Skalierung, Verfügbarkeitsmanagement und Wartung aus, sodass Sie sich als Entwickler auf das Schreiben von Anwendungslogik konzentrieren können.
 {:shortdesc}
 
-Sie können die {{site.data.keyword.openwhisk_short}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle für die Anwendungsentwicklung verwenden. Beide enthalten ähnliche Anwendungsentwicklungsfunktionen. Die Befehlszeilenschnittstelle bietet weiterreichende Möglichkeiten zur Steuerung der Bereitstellung und der Operationen. Detailliertere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in der [-Dokumentation](/docs/openwhisk?topic=cloud-functions-getting_started).
+Sie können die {{site.data.keyword.openwhisk_short}}-Benutzerschnittstelle oder die Befehlszeilenschnittstelle für die Anwendungsentwicklung verwenden. Beide enthalten ähnliche Anwendungsentwicklungsfunktionen. Die Befehlszeilenschnittstelle bietet weiterreichende Möglichkeiten zur Steuerung der Bereitstellung und der Operationen. Detailliertere Informationen zu {{site.data.keyword.openwhisk_short}} finden Sie in der [-Dokumentation](/docs/openwhisk?topic=cloud-functions-index).
 
 ## {{site.data.keyword.openwhisk_short}}-Benutzerschnittstelle
 {: #serverless-apps-ui}
@@ -48,7 +48,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ```
 {: codeblock}
 
-Ausgabe:
+**Ausgabe:**
 ```json
 {
     message: "Hello aaron!"
@@ -59,4 +59,5 @@ Ausgabe:
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} stellt ein [SDK für Mobilgeräte](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) für iOS- und watchOS-Geräte bereit, mit dem mobile Apps ohne großen Aufwand ferne Auslöser senden und ferne Aktionen aufrufen können.
+{{site.data.keyword.openwhisk_short}} stellt ein [SDK für Mobilgeräte](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) für iOS- und watchOS-Geräte bereit, mit dem mobile Apps ohne großen Aufwand ferne Auslöser senden und ferne Aktionen aufrufen können. Darüber hinaus steht ein [SDK für serverunabhängige Frameworks ](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){: new_window} ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link") für serverunabhängige Anwendungen zur Verfügung.
+

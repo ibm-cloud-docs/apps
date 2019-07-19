@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -33,13 +33,13 @@ subcollection: creating-apps
 服务未绑定到虚拟服务器实例。您无法向虚拟服务器中的应用程序添加服务。
 {: important}
 
-## 部署应用程序
+## 创建和部署应用程序
 {: #create-deploy-vsi}
 
 App Service 会为您供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
 1. [创建应用程序](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch)。 
-2. 在“应用程序详细信息”页面中，单击**配置持续交付**。
+2. 在**应用程序详细信息**页面中，单击**配置持续交付**。
 3. 选择**部署到虚拟服务器**以及运行服务器的区域。
 
 ## 部署过程的运作方式
@@ -187,7 +187,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 此外，还可以使用 Terraform 供应裸机服务器。有关更多信息，请参阅 [IBM Terraform Provider 文档](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 和 [IBM Terraform Provider GIT 存储库](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
-`variables.tf` 可用于更改您想要用于创建虚拟实例的数据中心。要查看平台上已定义数据中心的列表，请参阅[数据中心](https://www.ibm.com/cloud/data-centers/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+`variables.tf` 可用于更改您想要用于创建虚拟实例的数据中心。要查看平台上已定义数据中心的列表，请参阅[数据中心](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 缺省情况下，会为 Washington 和 `wdc04` 配置 Terraform 文件。
 ```json

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -35,10 +35,14 @@ Docker는 개발자 도구의 일부로 설치됩니다. Docker는 작업할 빌
 스타터 킷은 {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}에서 다양한 언어 및 프레임워크로 사용 가능합니다. 프로젝트에 가장 적합한 언어를 선택하여 시작하십시오.
 
 1. {{site.data.keyword.dev_console}}의 [스타터 킷 ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘") 페이지에서 언어에 맞는 스타터 킷을 선택하십시오.
-2. 선택사항. 앱을 분류하기 위한 태그를 제공하십시오. 자세한 정보는 [태그에 대한 작업](/docs/resources?topic=resources-tag)을 참조하십시오.
-3. 언어 및 프레임워크를 선택하십시오. 일부 스타터 킷은 하나의 언어로만 사용 가능할 수 있습니다.
-4. 가격 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
-5. **작성**을 클릭하십시오.
+2. 앱 이름과 고유한 호스트 이름을 입력하십시오(예: `abc-devhost`). 이 호스트 이름은 앱의 라우트인 `abc-devhost.mybluemix.net`입니다.
+3. 선택사항. 앱을 분류하기 위한 태그를 제공하십시오. 자세한 정보는 [태그에 대한 작업](/docs/resources?topic=resources-tag)을 참조하십시오.
+4. 언어 및 프레임워크를 선택하십시오. 일부 스타터 킷은 하나의 언어로만 사용 가능할 수 있습니다.
+5. 가격 플랜을 선택하십시오. 이 튜토리얼에 사용할 수 있는 무료 옵션이 있습니다.
+6. **작성**을 클릭하십시오.
+
+기본 공유 도메인은 `mybluemix.net`이지만 `appdomain.cloud `는 사용할 수 있는 다른 도메인 옵션입니다. `appdomain.cloud`로 마이그레이션하는 방법에 대한 자세한 정보는 [도메인 업데이트](/docs/apps/tutorials?topic=creating-apps-update-domain)를 참조하십시오.
+{: tip}
 
 ## 3단계. 서비스 추가(선택사항)
 {: #resources-webapp}
@@ -53,7 +57,7 @@ Watson의 코그너티브 기능으로 앱을 향상시키는 서비스를 추�
 ## 4단계. DevOps 도구 체인 작성
 {: #toolchain-webapp}
 
-도구 체인을 사용으로 설정하면 앱에 대한 팀 기반 개발 환경을 작성할 수 있습니다. 도구 체인을 작성하는 경우 앱 서비스는 소스 코드를 보고, 앱을 복제하여 이슈를 작성하고 관리할 수 있는 Git 저장소를 작성합니다. 또한 전용 Git Lab 환경 및 지속적 Delivery Pipeline에 대한 액세스도 제공됩니다. 이는 사용자가 선택하는 배치 대상([Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 또는 [Virtual Server(VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial))에 맞게 사용자 정의됩니다.
+도구 체인을 사용으로 설정하면 앱에 대한 팀 기반 개발 환경을 작성할 수 있습니다. 도구 체인을 작성하는 경우 앱 서비스는 소스 코드를 보고, 앱을 복제하여 이슈를 작성하고 관리할 수 있는 Git 저장소를 작성합니다. 또한 전용 Git Lab 환경 및 지속적 Delivery Pipeline에 대한 액세스도 제공됩니다. 이들은 사용자가 선택하는 배치 대상([Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 또는 [Virtual Server(VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers))에 맞게 사용자 정의됩니다.
 
 지속적 딜리버리는 일부 애플리케이션에 대해 사용으로 설정됩니다. Delivery Pipeline 및 GitHub를 통해 빌드, 테스트 및 배치를 자동화하기 위해 지속적 딜리버리를 사용으로 설정할 수 있습니다.
 
@@ -140,8 +144,6 @@ ibmcloud dev deploy
 ibmcloud dev deploy --target <container>
 ```
 {: pre}
-
-앱 배치에 관한 자세한 정보는 [앱 배치](/docs/apps?topic=creating-apps-deploying-apps)를 참조하십시오.
 
 ## 7단계. 앱 실행 확인
 {: #verify-webapp}

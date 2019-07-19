@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-07"
+lastupdated: "2019-03-18"
 
-keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
+keywords: apps, serverless, serverless app, functions, cli, api, sdk
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 Para el desarrollo sin servidor, puede utilizar la oferta de funciones como servicio (FaaS) de IBM, {{site.data.keyword.openwhisk}}. Puede ejecutar la lógica de aplicación con {{site.data.keyword.openwhisk_short}} en respuesta a sucesos o invocaciones directas desde apps web o móviles a través de HTTP sin suministro ni gestión de servidores.{{site.data.keyword.openwhisk_short}} realiza la administración del sistema como escalado automático, gestión de disponibilidad y mantenimiento para que, como desarrollador, pueda centrarse en escribir la lógica de aplicación.
 {:shortdesc}
 
-Puede utilizar la interfaz de usuario (IU) o la interfaz de línea de mandatos (CLI) de {{site.data.keyword.openwhisk_short}} para desarrollar las aplicaciones. Ambas tienen prestaciones similares para desarrollar aplicaciones. La CLI proporciona más control sobre el despliegue y las operaciones. Para obtener más información sobre {{site.data.keyword.openwhisk_short}}, consulte la [documentación](/docs/openwhisk?topic=cloud-functions-getting_started).
+Puede utilizar la interfaz de usuario (IU) o la interfaz de línea de mandatos (CLI) de {{site.data.keyword.openwhisk_short}} para desarrollar las aplicaciones. Ambas tienen prestaciones similares para desarrollar aplicaciones. La CLI proporciona más control sobre el despliegue y las operaciones. Para obtener más información sobre {{site.data.keyword.openwhisk_short}}, consulte la [documentación](/docs/openwhisk?topic=cloud-functions-index).
 
 ## Interfaz de usuario de {{site.data.keyword.openwhisk_short}}
 {: #serverless-apps-ui}
@@ -48,7 +48,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ```
 {: codeblock}
 
-Salida:
+**Salida:**
 ```json
 {
     message: "Hello aaron!"
@@ -59,4 +59,5 @@ Salida:
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} proporciona un [SDK móvil](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) para dispositivos iOS y watchOS que permite a las apps móviles enviar fácilmente desencadenantes remotos e invocar acciones remotas.
+{{site.data.keyword.openwhisk_short}} proporciona un [SDK móvil](/docs/openwhisk?topic=cloud-functions-openwhisk_mobile_sdk) para dispositivos iOS y watchOS que permite a las apps móviles enviar fácilmente desencadenantes remotos e invocar acciones remotas. También proporciona un [SDK de infraestructura sin servidor](/docs/openwhisk?topic=cloud-functions-openwhisk_goserverless){: new_window} ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo") que habilita las aplicaciones sin servidor.
+

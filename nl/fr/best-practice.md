@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
+keywords: apps, best practices
 
 subcollection: creating-apps
 
@@ -58,7 +58,7 @@ Pour plus d'informations sur la réduction du temps d'indisponibilité et sur la
 ## Prenez soin de surveiller vos applications
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic](https://newrelic.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+{{site.data.keyword.cloud_notm}} simplifie la surveillance de votre application grâce à des services comme [New Relic](http://newrelic.com/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Bénéficiez des options de support
 {: #support}
@@ -93,6 +93,6 @@ Votre application doit être installée fréquemment à la demande dans l'enviro
 
 Capturez votre installation d'application sous la forme d'un ensemble uniforme de scripts indépendant du système d'exploitation. Veillez à ce que l'installation de votre application reste petite et portable pour qu'elle puisse s'adapter à différentes techniques d'automatisation. De plus, limitez les dépendances requises par l'installation d'application.
 
-Pour plus d'informations sur les applications prêtes pour le cloud, voir [The twelve-factor app](https://12factor.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Pour plus d'informations sur les applications prêtes pour le cloud, voir [The twelve-factor app](http://12factor.net/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 

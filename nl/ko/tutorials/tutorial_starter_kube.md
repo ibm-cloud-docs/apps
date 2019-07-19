@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-03-18"
 
-keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
+keywords: apps, starter kit, Kubernetes, cluster
 
 subcollection: creating-apps
 
@@ -20,24 +20,28 @@ subcollection: creating-apps
 # Kubernetes 클러스터에 스타터 킷 앱 배치
 {: #tutorial-starterkit-kube}
 
-기본 스타터 킷과 Kubernetes 도구 체인을 사용하여 {{site.data.keyword.cloud}}에서 애플리케이션을 작성하고 {{site.data.keyword.containerlong}}의 안전한 컨테이너로 앱을 지속적으로 전달하는 방법에 대해 알아봅니다. 코드 변경사항이 자동으로 빌드되고 Kubernetes 클러스터에 있는 앱에 전파되도록 지속적 통합 DevOps 파이프라인을 구성할 수 있습니다. 파이프라인이 이미 있으면 이를 앱에 연결할 수 있습니다.
+공백 스타터 킷과 Kubernetes 도구 체인을 사용하여 {{site.data.keyword.cloud}}에서 애플리케이션을 작성하고 Kubernetes 클러스터의 안전한 컨테이너로 앱을 지속적으로 전달하는 방법에 대해 알아봅니다. 코드 변경사항이 자동으로 빌드되고 Kube 클러스터에 있는 앱에 전파되도록 지속적 통합 DevOps 파이프라인을 구성할 수 있습니다. 파이프라인이 이미 있으면 이를 앱에 연결할 수 있습니다.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}}에서는 Kubernetes에서 실행되는 앱의 기초를 빌드하는 데 도움이 되는 스타터 킷을 제공합니다. 스타터 킷을 사용하면 앱 개발에 {{site.data.keyword.cloud_notm}} 우수 사례를 사용하는 클라우드 네이티브 프로그래밍 모델을 따르기가 쉽습니다. 스타터 킷은 클라우드 네이티브 프로그래밍 모델을 따르는 앱을 생성하며, 이에는 각 프로그래밍 언어의 메트릭 및 테스트 케이스, 상태 검사가 포함됩니다. 생성된 앱에서 다시 초기화되는 클라우드 서비스를 프로비저닝할 수도 있습니다.
+{{site.data.keyword.cloud_notm}}에서는 Kubernetes에서 실행되는 앱의 기초를 빌드하는 데 도움이 되는 스타터 킷을 제공합니다. 스타터 킷을 사용하면 앱 개발에 {{site.data.keyword.cloud_notm}} 우수 사례를 사용하는 클라우드 네이티브 프로그래밍 모델을 따르기가 쉽습니다. 스타터 킷은 클라우드 네이티브 프로그래밍 모델을 따르는 앱을 생성하며, 이에는 각 프로그래밍 언어의 메트릭 및 테스트 케이스, 상태 검사가 포함됩니다. 생성된 애플리케이션에서 다시 초기화되는 클라우드 서비스를 프로비저닝할 수도 있습니다.
 
-이 튜토리얼에서는 {{site.data.keyword.containerlong}} 배치 대상을 사용합니다. 이 튜토리얼에서는 Java + Spring을 사용하고 Cloudant 서비스 인스턴스를 이에 추가한 후에 이를 {{site.data.keyword.containerlong}}에 배치하여 기본 스타터 킷에서 앱을 작성합니다.
+이 튜토리얼에서는 Kubernetes 배치 대상을 사용합니다. 이 튜토리얼에서는 Java + Spring을 사용하고 Cloudant 서비스 인스턴스를 이에 추가한 후에 IBM Kubernetes Service를 사용하여 이를 {{site.data.keyword.cloud_notm}}에 배치하여 기본 스타터 킷에서 애플리케이션을 작성합니다.
+
+우선 다음의 스타터 킷 플로우 다이어그램과 해당되는 개요 단계를 보십시오.
+
+![스타터 킷 플로우 다이어그램](../images/starterkit-flow.png) 
 
 ## 시작하기 전에
 {: #prereqs-starterkit-kube}
 
 * [스타터 킷](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)을 사용하여 **Java + Spring** 앱을 작성하십시오.
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)를 설치하십시오.
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)를 설치하십시오.
 * [Docker ](https://www.docker.com/get-started){: new_window} ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")를 설정하십시오.
 
 ## 앱에 서비스 추가
 {: #resources-starterkit-kube}
 
-{{site.data.keyword.cloud_notm}} 서비스를 앱에 추가하십시오. 다음 단계는 Cloudant 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인딩합니다.
+{{site.data.keyword.cloud_notm}} 서비스를 애플리케이션에 추가하십시오. 다음 단계는 Cloudant 인스턴스를 프로비저닝하고 리소스 키(인증 정보)를 작성하며 이를 앱에 바인드합니다.
 
 1. **앱 세부사항** 페이지에서 **서비스 추가**를 클릭하십시오.
 2. **데이터**를 선택하고 **다음**을 클릭하십시오.
@@ -49,7 +53,7 @@ subcollection: creating-apps
 ## DevOps 도구 체인을 사용하여 앱 배치
 {: #deploy-starterkit-kube}
 
-앱에 DevOps 도구 체인을 연결하고 {{site.data.keyword.cloud_notm}} Kubernetes 서비스에서 호스팅된 Kubernetes 클러스터에 배치되도록 이를 구성하십시오.
+애플리케이션에 DevOps 도구 체인을 연결하고 {{site.data.keyword.cloud_notm}} Kubernetes 서비스에서 호스팅된 Kubernetes 클러스터에 배치되도록 이를 구성하십시오.
 
 1. **앱 세부사항** 페이지에서 **지속적 딜리버리 구성**을 클릭하십시오.
 2. **배치 대상 선택** 페이지에서 **BM Kubernetes Service에 배치**를 선택하십시오.
@@ -74,8 +78,8 @@ subcollection: creating-apps
 1. 배치 단계가 완료되면 도구 체인에 대한 배치 정보와 함께 **앱 세부사항** 페이지가 표시됩니다.
 2. **도구 체인 보기**를 클릭하여 도구 체인에 액세스하십시오. 도구 체인 페이지의 **개요** 탭이 표시되며, 이는 도구 체인에 포함된 도구를 표시합니다. 이 예에는 도구 체인이 작성되었을 때 스타터 킷에서 사전 선택된 다음 도구가 포함됩니다.
   * 프로젝트 업데이트와 변경사항을 추적하기 위한 문제 트래커.
-  * 앱의 소스 코드가 포함된 Git 저장소.
-  * 앱을 편집하기 위한 웹 기반 IDE인 Eclipse Orion 인스턴스.
+  * 애플리케이션의 소스 코드가 포함된 Git 저장소.
+  * 애플리케이션을 편집하기 위한 웹 기반 IDE인 Eclipse Orion 인스턴스.
   * 사용자 정의할 수 있는 빌드 및 배치 단계로 구성된 Delivery Pipeline.
 	 * 빌드 단계는 앱을 컨테이너화합니다. 보다 구체적으로 빌드 단계는 다음을 수행합니다.
 	   * GitLab 저장소를 복제합니다.
@@ -93,7 +97,7 @@ subcollection: creating-apps
 
 1. DevOps 도구 체인에서 **Delivery Pipeline**을 클릭한 후 **배치 단계**를 선택하십시오.
 2. **로그 및 히스토리 보기**를 클릭하십시오.
-3. 로그 파일에서 앱의 URL을 찾으십시오.
+3. 로그 파일에서 애플리케이션 URL을 찾으십시오.
 
     로그 파일의 끝에서 `View the application health at: http://<ipaddress>:<port>/health`를 찾으십시오.
 
@@ -109,5 +113,5 @@ subcollection: creating-apps
 * 코드에서 서비스 구성에 액세스:
 	- _@Value_ 어노테이션을 사용하거나 Spring 프레임워크 환경 클래스 _getProperty()_ 메소드를 사용할 수 있습니다. 자세한 정보는 [인증 정보에 액세스](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)를 참조하십시오.
 
-* Kubernetes 환경에 서비스 인증 정보 새로 추가:
-	- DevOps 도구 체인이 작성된 후에 다른 서비스를 앱에 추가하는 경우, 해당 서비스 인증 정보는 배치된 앱 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 [배치 환경에 인증 정보를 수동으로 추가](/docs/apps?topic=creating-apps-credentials_overview)해야 합니다.
+* Kubernetes 환경에 인증 정보 새로 추가:
+	- DevOps 도구 체인이 작성된 후에 다른 서비스를 애플리케이션에 추가하는 경우, 해당 서비스 인증 정보는 배치된 애플리케이션 및 GitLab 저장소로 자동으로 업데이트되지 않습니다. 사용자가 직접 배치 환경에 [인증 정보를 수동으로 추가](/docs/apps?topic=creating-apps-add-credentials-kube)해야 합니다.

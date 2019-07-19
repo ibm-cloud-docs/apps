@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-25"
+lastupdated: "2019-03-15"
 
-keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
+keywords: apps, application, migrating apps, hosting apps, migrating, hosting
 
 subcollection: creating-apps
 
@@ -13,40 +13,26 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 选择托管环境
+# 迁移和托管应用程序
 {: #hosting}
 
-如果您有现有应用程序，可将其托管在包含全部所需基础架构或平台服务的 {{site.data.keyword.cloud}} 上。
-{:shortdesc}
+如果您有现存的应用程序，可将其托管在包含全部所需基础架构或平台服务的 {{site.data.keyword.cloud}} 上。您还可以将应用程序以增量方式迁移到 {{site.data.keyword.cloud_notm}}，而不是一次性将应用程序整体转移到云环境。
 
-借助 {{site.data.keyword.cloud_notm}}，您无需再对硬件进行大笔投资来测试或运行新应用程序。我们会为您管理一切，并且只对您使用的内容收取费用。云服务器环境是基础架构层的基础。您可以为更复杂的环境选择单个选项或选项组合。 
+## 迁移应用程序
+{: #migrating}
 
-您有多种选项可用于托管应用程序，这使您可以拥有所需的基础架构掌控力。可以使用以下任何一种方法来运行应用程序：
+如果您需要应用程序访问内部部署数据或服务，那么可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg) 在 {{site.data.keyword.cloud_notm}} 组织和企业后端网络之间建立一条安全的隧道。有关详细信息，请参阅 [Reaching enterprise backend with {{site.data.keyword.cloud_notm}} Secure Gateway via console ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
-  * 作为 Kubernetes 集群上的 Docker 容器
-  * 作为 Cloud Foundry 应用程序
-  * 作为无服务器功能
-  * 作为 VMware
-  * 作为虚拟机
-  * 在高性能 {{site.data.keyword.baremetal_short}} 上运行 
-<!--
-{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
+如果您需要有关迁移的帮助，可以使用 [{{site.data.keyword.cloud_notm}} Migration Services ](https://www.ibm.com/cloud/migration-services){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
-Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
+## 托管应用程序
+{: #ht_hostapp}
 
-{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
--->
+在 {{site.data.keyword.cloud_notm}} [目录](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中，可以选择 Kubernetes 或 Cloud Foundry 等受管环境，也可以直接在裸机服务器或虚拟服务器上托管应用程序。
 
-请查看下表以获取计算选项的摘要。
+在虚拟部署上，应用程序的大部分操作由 {{site.data.keyword.cloud_notm}} 管理。如果工作负载在多个地理区域之间分布，并且您想要使用 {{site.data.keyword.cloud_notm}} 管理程序来管理部署，那么[虚拟](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers)部署是最佳选择。如果需要直接访问专用物理服务器以获得更高性能，那么[裸机](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started)部署是最佳选择。
 
-|选项|描述
-| 
-|--------|---------------|
-| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) |将 Docker 容器、Kubernetes 技术、直观的用户体验和内置安全性与隔离功能组合在一起，自动对计算主机集群中的容器化应用程序进行部署、操作、扩展和监视。|
-| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) |按需实例化多个隔离的企业级 Cloud Foundry 平台。|
-| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) |基于 Apache OpenWhisk 的函数即服务 (FaaaS) 编程平台。|
-| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) |使用安全、可扩展的高性能基础架构和行业领先的 VMware 混合虚拟化技术，快速无缝地集成或迁移内部部署 VMware 工作负载。|
-| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) |可扩展的虚拟服务器，随专用核心和内存分配一起购买。|
-| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm)  |专供您使用的按小时或按月计费的单租户服务器，任何部分（包括服务器资源）都不会与其他客户共享。|
-{: caption="表 1. 计算选项" caption-side="top"}
-
+您还有多个选项可用于：
+* 从块存储器、文件存储器或对象存储器中，选择适合您的[存储器](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 类型。
+* 选择所需的[网络](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 类型。
+* 选择[容器化 ](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 服务以利用 {{site.data.keyword.cloud_notm}} Kubernetes 技术。

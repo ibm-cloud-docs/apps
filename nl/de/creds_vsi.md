@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-14"
 
-keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm, environment, credential, virtual, docker, local, ibmcloudenv
+keywords: apps, credentials, virtual server instance, vsi, virtual machine, vm
 
 subcollection: creating-apps
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# Serviceberechtigungsnachweise Ihrer virtuellen Instanz oder lokalen Docker-Umgebung hinzufügen
+# Berechtigungsnachweise Ihrer virtuellen Instanz oder lokalen Docker-Umgebung hinzufügen
 {: #add-credentials-vsi}
 
 Hier erfahren Sie, wie Sie Ihrer virtuellen Serverinstanz oder lokalen Docker-Bereitstellungsumgebung Serviceberechtigungsnachweise hinzufügen.

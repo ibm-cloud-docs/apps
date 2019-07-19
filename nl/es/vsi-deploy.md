@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -33,13 +33,13 @@ El suministro de una instancia de servidor virtual y su despliegue puede ser un 
 Los servicios no están vinculados a la instancia de servidor virtual. No puede añadir servicios a una aplicación de un servidor virtual.
 {: important}
 
-## Despliegue de apps
+## Creación y despliegue de apps
 {: #create-deploy-vsi}
 
 El servicio App Service le proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas Devops e inicia el primer ciclo de despliegue.
 
 1. [Cree una app](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Pulse **Configurar entrega continua** en la página Detalles de la app.
+2. Pulse **Configurar entrega continua** en la página **Detalles de la app**.
 3. Seleccione **Desplegar en un servidor virtual** junto con la región en la que se va a ejecutar el servidor.
 
 ## Cómo funciona el proceso de despliegue
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 También puede suministrar servidores nativos con Terraform. Para obtener más información, consulte [Documentación del proveedor de IBM Terraform](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y [Repositorio GIT del proveedor de IBM Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
-`variables.tf` se puede utilizar para cambiar el centro de datos de destino para crear la instancia virtual. Para ver la lista de centros de datos definidos en la plataforma, consulte [Centros de datos](https://www.ibm.com/cloud/data-centers/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+`variables.tf` se puede utilizar para cambiar el centro de datos de destino para crear la instancia virtual. Para ver la lista de centros de datos definidos en la plataforma, consulte [Centros de datos](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 De forma predeterminada, el archivo de Terraform está configurado para Washington y `wdc04`.
 ```json

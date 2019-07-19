@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-10"
+lastupdated: "2019-03-18"
 
-keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, create mobile app, mobile starter kit
+keywords: apps, mobile, mobile application, starter kit, developer tools, DevOps toolchain, toolchain, cli
 
 subcollection: creating-apps
 
@@ -52,23 +52,19 @@ Sie können Services, die Ihre App mit der kognitiven Leistung von Watson funkti
 3. Wählen Sie Ihren Preisstrukturplan aus. Es steht eine kostenfreie Option zur Verfügung, die Sie für dieses Lernprogramm verwenden können.
 4. Klicken Sie auf **Erstellen**.
 
-## Schritt 4. App bereitstellen
+## Schritt 4. DevOps-Toolchain erstellen
 {: #toolchain-mobile}
 
-Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+Durch das Aktivieren einer Toolchain wird eine teambasierte Entwicklungsumgebung für Ihre App erstellt. Wenn Sie eine Toolchain erstellen, erstellt der App-Service ein Git-Repository, in dem Sie Quellcode anzeigen, die App klonen und Problemmeldungen erstellen und verwalten können. Darüber hinaus verfügen Sie über Zugriff auf eine dedizierte Git-Laborumgebung und eine Continuous-Delivery-Pipeline. Diese sind an das Bereitstellungsziel angepasst, das Sie auswählen, ob [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry/index.html) oder [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 Alle über ein {{site.data.keyword.cloud_notm}}-Entwicklerdashboard erstellten Toolchains sind für die automatische Bereitstellung konfiguriert.
 {: note}
 
-Führen Sie die folgenden Schritte aus, um Ihr Bereitstellungsziel auszuwählen und Continuous Delivery zu konfigurieren:
-
-1. Klicken Sie auf der Detailseite der App auf **Continuous Delivery konfigurieren**.
+1. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**.
 2. Wählen Sie ein Bereitstellungsziel aus. Richten Sie Ihr Bereitstellungsziel entsprechend den Anweisungen für das ausgewählte Ziel ein:
-  * **Führen Sie die Bereitstellung im [IBM Kubernetes Service](/docs/containers?topic=containers-app)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster vornehmen.
-  * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** oder den Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
-  * **Führen Sie die Bereitstellung in einer virtuellen Serverinstanz aus**. Diese Option stellt eine virtuelle Serverinstanz bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
-
-Weitere Informationen zum Bereitstellen Ihrer App finden Sie unter [Apps bereitstellen](/docs/apps?topic=creating-apps-deploying-apps).
+  * **Führen Sie die Bereitstellung im [IBM Kubernetes Service](/docs/apps/deploying?topic=creating-apps-containers-kube)** aus. Mit dieser Option wird ein Cluster mit Hosts erstellt, die als Workerknoten bezeichnet werden, um hoch verfügbare Anwendungscontainer bereitzustellen und zu verwalten. Sie können einen Cluster erstellen oder die Bereitstellung in einem vorhandenen Cluster vornehmen.
+  * **Führen Sie die Bereitstellung in Cloud Foundry aus**. Mit dieser Option wird Ihre Cloud-native App bereitgestellt, ohne dass Sie die zugrundeliegende Infrastruktur verwalten müssen. Wenn Ihr Konto über Zugriff auf {{site.data.keyword.cfee_full_notm}} verfügt, können Sie entweder den Bereitstellertyp **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)** oder den Bereitstellertyp **[Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)** auswählen, mit dem Sie isolierte Umgebungen für das Hosting von Cloud Foundry-Anwendungen exklusiv für Ihr Unternehmen erstellen und verwalten können.
+  * **Führen Sie die Bereitstellung in einem [virtuellen Server](/docs/apps?topic=creating-apps-vsi-deploy)** aus. Diese Option stellt eine virtuelle Serverinstanz bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
 ## Schritt 5. App erstellen und lokal ausführen
 {: #build-run-mobile}
@@ -124,7 +120,7 @@ Durch die Bereitstellung der App in der Cloud im letzten Schritt wurde eine Tool
     1. Führen Sie `pod setup` aus, wenn Sie Ihr CocoaPods-Repository einrichten müssen.
     2. Führen Sie `pod update` aus, wenn Sie Ihre vorhandenen Pods aktualisieren müssen.
     3. Führen Sie `pod install` aus, um die Pods für Ihre App zu installieren.
-3. Öffnen Sie Ihren `<appname>.xcworkspace` Xcode-Arbeitsbereich.
+3. Öffnen Sie Ihren Xcode-Arbeitsbereich `<appname>.xcworkspace`.
 4. Führen Sie Ihre App aus.
 
 ### Cordova-App in Xcode ausführen
@@ -197,7 +193,7 @@ Nach der Bereitstellung der App verweist Sie die Delivery Pipeline oder die Befe
 2. Klicken Sie auf **Protokolle und Verlauf anzeigen**.
 3. Suchen Sie in der Protokolldatei nach der Anwendungs-URL:
 
-    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile ähnlich der folgenden angezeigt: `urls: my-app-devhost.mybluemix.net` oder `Status der Anwendung ansehen unter: http://<ipaddress>:<port>/health`.
+    Suchen Sie am Ende der Protokolldatei nach dem Wort `urls` oder `view` (bzw. 'ansehen'). Zum Beispiel wird in der Protokolldatei möglicherweise eine Zeile angezeigt, die ähnlich aussieht wie `urls: my-app-devhost.mybluemix.net` oder `View the application health at: (Status der Anwendung ansehen unter:) http://<ipaddress>:<port>/health`.
 
 4. Rufen Sie die URL im Browser auf. Wenn die App ausgeführt wird, wird eine Nachricht anzeigt, die Folgendes enthält: `Congratulations` oder `{"status":"UP"}`.
 

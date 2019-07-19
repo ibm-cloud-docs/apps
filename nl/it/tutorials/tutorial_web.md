@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-30"
+lastupdated: "2019-03-15"
 
-keywords: basic web app tutorial, apps, web app, starter kit, App Service, developer tools, DevOps toolchain, basic app, create basic web app
+keywords: apps, web app, starter kit, App Service, developer tools, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Creazione di un'applicazione web di base con un kit starter
 {: #tutorial-webapp}
 
-{{site.data.keyword.cloud}} offre molti kit starter per aiutarti a codificare rapidamente. Seleziona un linguaggio, un framework e gli strumenti dai kit starter App Service per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, vengono illustrati i passi per installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
+{{site.data.keyword.cloud}} offre molti kit starter per aiutarti a codificare rapidamente. Scegli un linguaggio, un framework e gli strumenti dai kit starter App Service per iniziare a lavorare con un'applicazione personalizzata preconfigurata. In questa esercitazione, vengono illustrati i passi per installare gli strumenti di cui hai bisogno, creare ed eseguire l'applicazione localmente e distribuirla sul cloud.
 {: shortdesc}
 
 ## Passo 1. Installa gli strumenti
@@ -35,10 +35,14 @@ Docker viene installato come parte degli strumenti per sviluppatori. Affinché i
 I kit starter sono disponibili in molti linguaggi e framework in {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. Per iniziare, seleziona il linguaggio più adatto al tuo progetto.
 
 1. Dalla pagina dei [kit starter ](https://{DomainName}/developer/appservice/starter-kits/){: new_window} ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno") in {{site.data.keyword.dev_console}}, seleziona un kit starter per il tuo linguaggio.
-2. Facoltativo. Fornisci le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources?topic=resources-tag).
-3. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
-4. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-5. Fai clic su **Create**.
+2. Immetti il nome della tua applicazione e un nome host univoco, ad esempio `abc-devhost`. Questo nome host è la rotta della tua applicazione, `abc-devhost.mybluemix.net`.
+3. Facoltativo. Fornisci le tag per classificare la tua applicazione. Per ulteriori informazioni, consulta [Gestione delle tag](/docs/resources?topic=resources-tag).
+4. Seleziona il linguaggio e il framework. Alcuni kit starter potrebbero essere disponibili solo in un linguaggio.
+5. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
+6. Fai clic su **Create**.
+
+Il dominio condiviso predefinito è `mybluemix.net`, ma `appdomain.cloud` è un'altra opzione di dominio che puoi utilizzare. Per ulteriori informazioni sulla migrazione a `appdomain.cloud`, vedi [Aggiornamento del tuo dominio](/docs/apps/tutorials?topic=creating-apps-update-domain).
+{: tip}
 
 ## Passo 3. Aggiungi servizi (facoltativo)
 {: #resources-webapp}
@@ -48,12 +52,12 @@ Puoi aggiungere servizi che migliorano la tua applicazione con la potenza cognit
 1. Nella pagina **App details**, fai clic su **Add services**.
 2. Seleziona il tipo di servizio che desideri. Ad esempio, seleziona **Data** > **Next** > **Cloudant** > **Next**.
 3. Seleziona il tuo piano prezzi. È disponibile un'opzione gratuita che puoi utilizzare per questa esercitazione.
-4. Fai clic su **Create**.
+4. Fai clic su **Crea**.
 
 ## Passo 4. Crea una toolchain DevOps
 {: #toolchain-webapp}
 
-L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che selezioni, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+L'abilitazione di una toolchain crea un ambiente di sviluppo basato sul team per la tua applicazione. Quando crei una toolchain, il servizio dell'applicazione crea un repository Git, in cui puoi visualizzare il codice sorgente, clonare la tua applicazione e creare e gestire i problemi. Hai anche accesso a un ambiente di laboratorio Git dedicato e a una pipeline di fornitura continua. Sono personalizzati per la destinazione di distribuzione che scegli, sia che si tratti di [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers).
 
 La fornitura continua è abilitata per alcune applicazioni. Puoi abilitare la fornitura continua per automatizzare le creazioni, i test e le distribuzioni tramite Delivery Pipeline e GitHub.
 
@@ -141,8 +145,6 @@ ibmcloud dev deploy --target <container>
 ```
 {: pre}
 
-Per ulteriori informazioni sulla distribuzione della tua applicazione, vedi [Distribuzione delle applicazioni](/docs/apps?topic=creating-apps-deploying-apps).
-
 ## Passo 7. Verifica che la tua applicazione sia in esecuzione
 {: #verify-webapp}
 
@@ -152,7 +154,7 @@ Dopo che hai distribuito la tua applicazione, la Delivery Pipeline o la riga di 
 2. Fai clic su **View logs and history**.
 3. Nel file di log, trova l'URL dell'applicazione:
 
-    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, nel file di log potresti vedere una riga simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
+    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, potresti vedere una riga nel file di log simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Vai all'URL nel tuo browser. Se l'applicazione è in esecuzione, viene visualizzato un messaggio che include `Congratulations` o `{"status":"UP"}`.
 

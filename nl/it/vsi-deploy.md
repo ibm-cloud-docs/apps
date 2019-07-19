@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -33,13 +33,13 @@ Il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instanc
 Non viene eseguito il bind dei servizi all'istanza del server virtuale (o VSI, Virtual Server Instance). Non puoi aggiungere servizi a un'applicazione in un server virtuale.
 {: important}
 
-## Distribuzione delle applicazioni
+## Creazione e distribuzione di applicazioni
 {: #create-deploy-vsi}
 
 L'App Service esegue il provisioning di un'istanza del server virtuale (o VSI, Virtual Server Instance) per tuo conto, carica un'immagine che include la tua applicazione, crea una toolchain DevOps e avvia il primo ciclo di distribuzione per tuo conto.
 
 1. [Crea un'applicazione](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Fai clic su **Configure continuous delivery** dalla pagina App details.
+2. Fai clic su **Configure continuous delivery** dalla pagina **App details**.
 3. Seleziona **Deploy to a Virtual Server** insieme alla regione in cui eseguire il tuo server.
 
 ## Modalità di funzionamento del processo di distribuzione
@@ -60,7 +60,7 @@ La pipeline utilizza una serie di proprietà account utente e una nuova coppia d
 
 Per visualizzare queste proprietà di ambiente, completa la seguente procedura. 
 
-1. Dalla pagina App details, fai clic su **View toolchain**.
+1. Dalla pagina dei dettagli dell'applicazione, fai clic su **Visualizza toolchain**.
 2. Fai clic sul tile **Delivery Pipeline**.
 3. Fai clic sull'icona **Stage Configure** e quindi su **Configure Stage** nella fase di build.
 4. Fai clic sulla scheda **Environment Properties** per visualizzare le proprietà. Utilizza la seguente tabella per ulteriori informazioni sulle proprietà disponibili.
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Puoi anche eseguire il provisioning di server bare metal con Terraform. Per ulteriori informazioni, consulta la [documentazione di IBM Terraform Provider](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e il [repository GIT IBM Terraform](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
-`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers](https://www.ibm.com/cloud/data-centers/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+`variables.tf` può essere utilizzato per modificare il data center che vuoi destinare alla creazione dell'istanza virtuale. Per visualizzare l'elenco dei data center definiti sulla piattaforma, consulta [Data Centers](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 Per impostazione predefinita, il file Terraform è configurato per Washington e `wdc04`.
 ```json

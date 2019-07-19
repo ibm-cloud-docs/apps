@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-03-18"
 
-keywords: apps, deploying apps, containers, kubernetes, docker, clusters, devops toolchain, deployment, kube
+keywords: apps, deploying apps, containers, Kubernetes, Docker, clusters, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -24,7 +24,7 @@ subcollection: creating-apps
 
 容器是打包应用程序及其所有依赖项的标准方法，您可以使用容器在环境之间无缝地移动应用程序。与虚拟机不同的是，容器并不捆绑操作系统。容器仅会打包应用程序代码、运行时、系统工具、库和设置。容器相比虚拟机更轻巧、可移植性更强、更高效。
 
-要了解有关该服务的更多信息，请参阅 [{{site.data.keyword.containershort_notm}} 入门](/docs/containers?topic=containers-getting-started)。
+要了解有关该服务的更多信息，请参阅 [{{site.data.keyword.containershort_notm}} 入门](/docs/containers?topic=containers-container_index)。
 
 ## 配置部署
 {: #config-deploy}
@@ -33,7 +33,7 @@ subcollection: creating-apps
 
 1. 通过设置自动化云管道，将应用程序部署到云上。
 2. 单击**配置持续交付**。
-3. 选择 **IBM Kubernetes Service** 作为目标。如果您还没有集群，那么需要[创建集群 ](https://{DomainName}/kubernetes/catalog/cluster/create){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
+3. 选择 **IBM Kubernetes Service** 作为目标。如果您还没有集群，那么需要[创建集群 ](https://{DomainName}/containers-kubernetes/catalog/cluster/create){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 4. 部署完成后，通过从 Delivery Pipeline 的部署阶段的日志中获取 URL，检查您的应用程序是否已在云中。最后一个带端口的 IP 地址是应用程序的新主页，例如 169.60.133.124:32355。
 
 ## 绑定服务
@@ -62,7 +62,7 @@ subcollection: creating-apps
 {: #build-stage}
 在 Git 存储库上运行 `git push` 时，会触发构建阶段。管道中的该阶段会触发 Docker 映像构建，并将该映像放入 Container Registry 中。
 
-有关更多信息，请参阅 [IBM Cloud Container Registry 入门](/docs/services/Registry?topic=registry-getting-started)。
+有关更多信息，请参阅 [IBM Cloud Container Registry 入门](/docs/services/Registry?topic=registry-index)。
 
 ### 部署阶段
 {: #deploy-stage}
@@ -71,11 +71,11 @@ subcollection: creating-apps
 
 有关更多信息，请参阅 [Charts ](https://docs.helm.sh/developing_charts/){: new_window} ![外部链接图标](../../icons/launch-glyph.svg " 外部链接图标")。
 
-{{site.data.keyword.cloud_notm}} 支持若干[预配置的 Helm chart ](https://{DomainName}/kubernetes/solutions/helm-charts){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
+{{site.data.keyword.cloud_notm}} 支持若干[预配置的 Helm chart ](https://{DomainName}/containers-kubernetes/solutions/helm-charts){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")。
 
 ## 检查应用程序安全性
 {: #sec}
 
 {{site.data.keyword.containershort_notm}} 支持扫描打包的容器映像中是否存在安全漏洞。安全扫描对于支持企业级应用程序至关重要。
 
-查看容器[映像存储库 ](https://{DomainName}/kubernetes/registry/main/private){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")，以检查是否有潜在的安全漏洞。
+查看容器[映像存储库 ](https://{DomainName}/containers-kubernetes/registry/private){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")，以检查是否有潜在的安全漏洞。

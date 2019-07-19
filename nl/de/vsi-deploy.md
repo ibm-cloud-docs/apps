@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-03-15"
 
-keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline, virtual deployment
+keywords: apps, deploy, virtual server, App Service, vsi, virtual machine, delivery pipeline
 
 subcollection: creating-apps
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 # Apps in einem virtuellen Server bereitstellen
 {: #vsi-deploy}
 
-Wenn Sie über ein nutzungsabhängiges Konto verfügen, können Sie den {{site.data.keyword.cloud}} [App-Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verwenden, um Ihre Apps in zahlreichen Umgebungstypen, einschließlich virtueller Serverinstanzen, bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Bereitstellungsoption, wenn lokale Workloads in die Cloud verschoben werden.
+Wenn Sie über ein nutzungsabhängiges Konto verfügen, können Sie den {{site.data.keyword.cloud}} [App-Service](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verwenden, um Ihre Apps in zahlreichen Umgebungstypen, einschließlich virtueller Serverinstanzen, bereitzustellen. Eine virtuelle Serverinstanz emuliert eine Bare-Metal-Maschine und ist eine gängige Implementierungsoption, wenn lokale Workloads in die Cloud verschoben werden.
 {: shortdesc}
 
 Eine virtuelle Serverinstanz bietet im Vergleich zu anderen Konfigurationen mehr Transparenz, Vorhersagbarkeit und Automatisierungsmöglichkeiten für alle Workloadtypen. Kombinieren Sie die virtuelle Instanz mit einer Bare-Metal-Server-Instanz, um eindeutige Workloadkombinationen zu bilden. Sie können z. B. eine leistungsfähige Datenbanklogik oder effizientes maschinelles Lernen mit Bare-Metal- und GPU-Konfigurationen (GPU = Graphics Processing Unit, Grafik-Verarbeitungseinheit) erstellen, die unter einem auf Linux basierenden Debian-Betriebssystem ausgeführt werden.
@@ -33,13 +33,13 @@ Die Einrichtung einer virtuellen Serverinstanz und ihre Bereitstellung kann ein 
 Services werden nicht an die virtuelle Serverinstanz gebunden. Sie können Services nicht zu einer Anwendung in einem virtuellen Server hinzufügen.
 {: important}
 
-## Apps bereitstellen
+## Apps erstellen und implementieren
 {: #create-deploy-vsi}
 
 Der App-Service stellt eine virtuelle Serverinstanz für Sie bereit, lädt ein Image, das Ihre App enthält, erstellt eine DevOps-Toolchain und initiiert den ersten Bereitstellungszyklus für Sie.
 
 1. [Erstellen Sie eine App](/docs/apps?topic=creating-apps-tutorial-scratch#tutorial-scratch). 
-2. Klicken Sie auf der Detailseite der App auf **Continuous Delivery konfigurieren**.
+2. Klicken Sie auf der Seite **App-Details** auf **Continuous Delivery konfigurieren**.
 3. Wählen Sie **Auf virtuellem Server bereitstellen** gemeinsam mit der Region aus, in der Ihr Server ausgeführt werden soll.
 
 ## Funktionsweise des Bereitstellungsprozesses
@@ -60,7 +60,7 @@ Die Pipeline verwendet eine Reihe von Benutzerkontoeigenschaften und ein neues S
 
 Führen Sie die folgenden Schritte aus, um diese Umgebungseigenschaften anzuzeigen. 
 
-1. Klicken Sie auf der Detailseite der App auf **Toolchain anzeigen**.
+1. Klicken Sie auf der Seite "App-Details" auf **Toolchain anzeigen**.
 2. Klicken Sie auf die Kachel **Delivery Pipeline**.
 3. Klicken Sie auf das Symbol für die **Konfiguration der Stage** und dann für die Build-Stage auf **Stage konfigurieren**.
 4. Klicken Sie auf die Registerkarte **Umgebungseigenschaften**, um die Eigenschaften anzuzeigen. Die folgende Tabelle enthält Informationen zu den verfügbaren Eigenschaften.
@@ -186,7 +186,7 @@ resource "ibm_compute_vm_instance" "vm1" {
 
 Sie können auch Bare-Metal-Server-Instanzen mit Terraform bereitstellen. Weitere Informationen hierzu finden Sie unter [IBM Terraform-Providerdokumentation](https://ibm-cloud.github.io/tf-ibm-docs/v0.10.0/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und [IBM Terraform-Provider-GIT-Repository](https://github.com/IBM-Cloud/terraform-provider-ibm){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
-Mithilfe der Datei `variables.tf` können Sie das Rechenzentrum ändern, das beim Erstellen der virtuellen Instanz als Ziel dienen soll. Die Liste der für die Plattform definierten Rechenzentren finden Sie unter [Rechenzentren](https://www.ibm.com/cloud/data-centers/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+Mithilfe der Datei `variables.tf` können Sie das Rechenzentrum ändern, das beim Erstellen der virtuellen Instanz als Ziel dienen soll. Die Liste der für die Plattform definierten Rechenzentren finden Sie unter [Rechenzentren](https://www.ibm.com/cloud-computing/bluemix/data-centers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 Standardmäßig ist die Terraform-Datei für Washington und `wdc04` konfiguriert.
 ```json

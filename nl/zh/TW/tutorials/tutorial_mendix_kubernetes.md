@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-07"
+lastupdated: "2019-03-18"
 
-keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
+keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
 
 subcollection: creating-apps
 
@@ -27,7 +27,7 @@ subcollection: creating-apps
 {: #prereqs-mendix-kube}
 
 * 建立 Mendix 應用程式。如需相關資訊，請參閱[建立 Mendix 應用程式](/docs/apps/tutorials?topic=creating-apps-create-mendix)。
-* 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-getting-started)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
+* 安裝 [{{site.data.keyword.dev_cli_notm}} 指令行介面 (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)，這包含了 {{site.data.keyword.containershort_notm}} CLI。
 * 登入 `ibmcloud` CLI 並配置 `kubectl` 以便[存取 Kubernetes 叢集](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3)。
 
 ## 建立 Cloud Object Storage 服務實例
@@ -113,7 +113,7 @@ spec:
 2. 按一下**檢視日誌和歷程**。
 3. 在日誌檔中，尋找應用程式 URL：
 
-    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net`，或 `View the application health at: http://<ipaddress>:<port>/health`。
+    在日誌檔結尾，搜尋單字 `urls` 或 `view`。例如，您可能會看到日誌檔中有一行類似於 `urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 
 4. 在瀏覽器中移至 URL。如果應用程式正在執行，則會顯示包含 `Congratulations` 或 `{"status":"UP"}` 的訊息。
 

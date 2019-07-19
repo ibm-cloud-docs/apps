@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-03-18"
 
-keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
+keywords: apps, credentials, Kubernetes
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Ajout de données d'identification de service à votre environnement Kubernetes
+# Ajout de données d'identification à votre environnement Kubernetes
 {: #add-credentials-kube}
 
 Découvrez comment ajouter des données d'identification de service à votre environnement de déploiement Kubernetes.
@@ -119,7 +119,7 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
 
 2. Pour créer une instance de Cloud Object Storage, sélectionnez **Ajouter un service** > **Stockage** > **Cloud Object Storage** > **Lite plan (Free)** > **Créer**.
 
-3. Cliquez sur **Télécharger le code** pour regénérer votre application avec les fragments de code injectés.
+3. Cliquez sur **Télécharger le code** pour regénérer votre projet avec les fragments de code injectés.
 
 4. Pour accéder aux données d'identification localement, copiez et remplacez les fichiers suivants à partir du fichier `.zip` nouvellement généré dans votre clone Git local pour accéder aux données d'identification. Vous devez toujours créer un secret Kubernetes dans votre cluster afin d'héberger les données d'identification.
 
@@ -131,7 +131,7 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
   Si vous choisissez ultérieurement d'effectuer un déploiement dans une application Cloud Foundry avec une ressource de contrôleur de ressources (se trouvant dans un groupe de ressources et non dans une organisation ou un espace), vous devez alors copier un fichier supplémentaire.
   {: note}
 
-5. [Affichez votre cluster Kubernetes](https://{DomainName}/kubernetes/clusters){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec la région correspondante (US-South si cette région est disponible gratuitement).
+5. [Affichez votre cluster Kubernetes](https://{DomainName}/containers-kubernetes/clusters){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec la région correspondante (US-South si cette région est disponible gratuitement).
 
 6. Cliquez dans votre cluster et sélectionnez **Tableau de bord Kubernetes** dans la partie supérieure droite pour afficher votre tableau de bord de cluster.
 
@@ -143,8 +143,8 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
-    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -153,7 +153,7 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
 
 11. Utilisez la commande `echo` pour placer les données d'identification dans un fichier `binding`.
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -164,7 +164,7 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 
@@ -176,12 +176,16 @@ Maintenant que le cluster Kubernetes est préparé avec un secret pouvant être 
 
 Utilisez la fonction **Configurer la distribution continue** pour déployer votre application dans votre espace IBM Kubernetes. La fonction prépare votre cluster Kubernetes avec des secrets pour les données d'identification des ressources associées à votre application. Vous pouvez observer les résultats de la préparation du cluster en procédant comme suit :
 
-1. Pour afficher les résultats, exécutez la commande suivante :
-
+1. Exécutez la commande `kubectl get secrets` pour afficher les résultats :
   ```
-  kubectl get secrets
+  NAME                                   TYPE                                  DATA      AGE
+  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
+  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
+  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
+  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
   ```
-  {: codeblock}
+  {: screen}
 
   Vous pouvez afficher [plus d'informations sur les secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
   {: tip}
@@ -208,7 +212,7 @@ Utilisez la fonction **Configurer la distribution continue** pour déployer votr
   ```
   {: screen}
 
-  La `liaison` est la valeur codée en Base64 du secret. Son décodage permet de découvrir qu'il s'agit uniquement de l'élément JSON brut provenant des `données d'identification` de l'instance de service, plus certaines valeurs `iam_...` :
+  La `liaison` est la valeur codée en Base64 du secret. Son décodage permet de découvrir qu'il s'agit uniquement de l'élément JSON brut provenant des `données d'identification` de l'instance de service, plus certaines valeurs `iam_...`  :
   ```
   {
     "apikey": "8DZkOuLVwnVA1YmG81gk3P26Ny8e5aVn5ahZY-UD8t54",

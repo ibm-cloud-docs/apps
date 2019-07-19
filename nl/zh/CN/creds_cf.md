@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-03-15"
 
-keywords: apps, credentials, cloud foundry, environment, service, credential, vcap_services
+keywords: apps, credentials, Cloud Foundry
 
 subcollection: creating-apps
 
@@ -17,15 +17,12 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 
-# 向 Cloud Foundry 环境添加服务凭证
+# 向 Cloud Foundry 环境添加凭证
 {: #add-credentials-cf}
 
 了解如何向 Cloud Foundry 部署环境添加服务凭证。
 这些指示信息适用于 [Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf) 和 [Cloud Foundry Enterprise Environment](/docs/cloud-foundry-public?topic=cloud-foundry-public-cfee)。
 {: shortdesc}
-
-缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/cloud-foundry-public?topic=cloud-foundry-public-update-domain)。
-{: tip}
 
 ## 代码 + Cloud Foundry
 {: #credentials-byoc-cf}
