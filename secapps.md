@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-12"
+lastupdated: "2019-07-25"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -21,9 +21,10 @@ subcollection: creating-apps
 {: #ssl_csr}
 
 You can secure your applications by uploading SSL certificates and restricting access to the apps.
-{:shortdesc}
+{: shortdesc}
 
-## Creating a CSR
+## Creating a certificate signing request
+{: #create_csr}
 
 Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.cloud}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, and a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
@@ -57,6 +58,9 @@ A certificate is issued by a certificate authority and is digitally signed by th
 {: #ssl_certificate}
 
 You can apply a security protocol to provide communication privacy for your app to prevent eavesdropping, tampering, and message forgery. If you have a Lite account, you must upgrade your account to upload a certificate.
+
+When an expired or expiring certificate must be renewed, and after the new certificate is ready, delete the existing certificate and then add the new one.
+{: note}
 
 When you use a custom domain to serve the SSL certificate, use the following region endpoints to provide the URL route for your organization in {{site.data.keyword.cloud_notm}}:
 
