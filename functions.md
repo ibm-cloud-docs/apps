@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-25"
+lastupdated: "2019-07-29"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
@@ -77,7 +77,7 @@ You can use a starter kit to create a serverless app, such as Python Example Ser
 3. Select a serverless starter kit, such as Python Example Serverless App.
 4. Name your app, and select a resource group.
 5. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-6. If necessary, modify the service details for your needs.
+6. Create or select an existing Cloudant service instance.
 7. Optional. To inspect your code before you add more services or deploy your app, click **View source code**. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 8. Click **Create**.
 
