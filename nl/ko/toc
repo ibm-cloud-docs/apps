@@ -2,65 +2,59 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-tutorial-getting-started" path="apps"}
+{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
 앱 작성
 
     {: .navgroup id="learn"}
     index.md
-    development_process.md
     best-practice.md
     patterns.md
 
     {: .topicgroup}
     관련 링크
-        [복원성 애플리케이션에 대한 전략](/tutorials?topic=solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Kubernetes에 대한 지속적인 배치](/tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [복원성 애플리케이션에 대한 전략](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
+        [Kubernetes에 대한 지속적 배치](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     {: .topicgroup}
     앱 작성
         tutorials/tutorial_starter-kit.md
+        starter-kits.md
         tutorials/tutorial_scratch.md
         tutorials/tutorial_byoc.md
         create-deploy-cli.md
         tutorials/tutorial_code-pattern.md
-        tutorials/tutorial_web.md
-        tutorials/tutorial_bff.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        deploying/functions.md
+        functions.md
         tutorials/tutorial_mendix_getting_started.md
+        [언어 사용을 원하십니까?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
-    앱 배치 및 통합
+    앱 배치
+        hosting.md
         dep-app-tool.md
-        vsi-deploy.md
-        deploying/containers.md
-        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_starter_kube.md
-        deploying/crypto.md
+        tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
 
-    reqnsi.md
+    {: .topicgroup}
+    구성
+        reqnsi.md
+        creds_overview.md
+        mngdomains.md
+        secapps.md
 
     {: .topicgroup}
-    환경에 인증 정보 추가
-        creds_overview.md
-        creds_kube.md
-        creds_cf.md
-        creds_vsi.md
-
-    mngdomains.md
-    updapps.md
-    secapps.md
-    hosting.md
+    앱을 DevOps와 통합
+        toolchains.md
+        insights.md
+        monitor.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools 명령행 참조](/cli/idt/cloud-cli-idt-cli)
-    [Cloud Functions API 참조](https://cloud.ibm.com/apidocs/functions)
-    [모바일 SDK](/openwhisk/cloud-functions-openwhisk_mobile_sdk)
+    [IBM Cloud Developer Tools 명령행 플러그인](/docs/cli?topic=cloud-cli-getting-started)
 
     {: .topicgroup}
     IBM Cloud 개발자 대시보드
@@ -72,17 +66,17 @@
         [웹 앱](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
-    IBM Cloud 프로그래밍 안내서
+IBM Cloud 프로그래밍 안내서
         [Go](/go/go-getting-started)
-        [Spring](/java/java-overview)
-        [Swift](/swift/swift-getting_started_swift)
-        [Node](/node/nodejs-create_project)
+        [Java](/java/java-getting-started)
+        [Swift](/swift/swift-getting-started)
+        [Node](/node/nodejs-node-getting-started)
 
     at_events_devx.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     ts_apps.md
+    faqs.md
     [IBM Cloud Slack developer-tools 채널](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
-    [StackOverflow](http://stackoverflow.com/search?q=bluemix-dev-services+ibm-bluemix)
     {: .navgroup-end}

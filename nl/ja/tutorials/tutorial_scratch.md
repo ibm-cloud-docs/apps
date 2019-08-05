@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-20"
 
-keywords: apps, scratch, developer tools
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# アプリの最初からの作成
+# 基本スターター・キットからのカスタム・アプリの作成
 {: #tutorial-scratch}
 
-サービスとランタイムを使用してカスタム・アプリケーションを最初から作成できます。 
+基本スターター・キットを使用すれば、アプリ・タイプ (モバイルまたはバックエンド)、言語、フレームワークを選択し、サービスを追加し、デプロイメント・ターゲットを選択することで、カスタム・アプリケーションを作成できます。
 {: shortdesc}
+
+基本スターター・キットは汎用性のあるツールです。これを使用すると、言語、アプリ・タイプ、フレームワーク、およびサービスによって定義したカスタム・アプリを作成することができます。その後、継続的デリバリーをセットアップし、任意のデプロイメント・ターゲットを選択します。
 
 ## 始める前に
 {: #prereqs-scratch}
 
-* [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。これには Docker が含まれています。 
+* [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started) をインストールします。これには Docker が含まれています。 
 * Docker アカウントを作成して、Docker アプリを実行し、サインインします。 ビルド・コマンドが機能するためには、Docker が実行中でなければなりません。
 * アプリを {{site.data.keyword.cfee_full}} にデプロイする計画の場合は、[{{site.data.keyword.cloud_notm}} アカウントを準備する](/docs/cloud-foundry?topic=cloud-foundry-prepare)必要があります。
 
@@ -36,18 +38,14 @@ subcollection: creating-apps
 
 1. [{{site.data.keyword.cloud_notm}} ダッシュボード ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}) で、「アプリ」ウィジェットの**「アプリの作成」**をクリックします。
 
-  {{site.data.keyword.dev_console}}の[「スターター・キット」 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits/) ページから、カスタム・アプリケーションを作成することもできます。
+  {{site.data.keyword.dev_console}}の[「スターター・キット」 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName}/developer/appservice/starter-kits) ページから、カスタム・アプリケーションを作成することもできます。
   {: tip}
 
 2. アプリの名前を入力します。 このチュートリアルでは、`CustomProject` と入力します。
-3. 固有のホスト名 (例えば、`abc-devhost`) を入力します。ホスト名は、アプリの経路に使用されます。 例えば、`abc-devhost.mybluemix.net` です。
-4. オプションで、アプリを分類するためのタグを指定できます。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
-5. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
-6. 価格プランを選択します。 このチュートリアルでは、無料オプションを使用できます。
-7. **「作成」**をクリックします。
-
-デフォルトの共有ドメインは `mybluemix.net` ですが、`appdomain.cloud` という別のドメインも選択できます。`appdomain.cloud` への移行について詳しくは、[ドメインの更新](/docs/apps/tutorials?topic=creating-apps-update-domain)を参照してください。
-{: tip}
+3. オプションで、アプリを分類するためのタグを指定できます。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
+4. ご使用の言語とフレームワークを選択します。 一部のスターター・キットは、1 つの言語でしか使用できない場合があります。
+5. 価格プランを選択します。 このチュートリアルでは、無料オプションを使用できます。
+6. **「作成」**をクリックします。
 
 ## サービスの追加 (オプション)
 {: #resources-scratch}
@@ -108,52 +106,26 @@ Watson のコグニティブ機能でアプリを拡張するサービスを追�
 ## アプリのデプロイ
 {: #deploy-scratch}
 
-アプリはいくつかの方法で {{site.data.keyword.cloud_notm}} にデプロイできますが、DevOps ツールチェーンが、実動アプリをデプロイする場合に最適な方法です。 DevOps ツールチェーンを使用すると、多数の環境へのデプロイメントを簡単に自動化して、成長するアプリの管理に役立つモニタリング、ロギング、およびアラートの各サービスを素早く追加することができます。
+デプロイメント・ターゲットを選択すると、アプリ用の DevOps ツールチェーンが自動的に作成されます。 このツールチェーンには、アプリのデプロイメント状況を示すデリバリー・パイプラインが含まれています。 生成された新規アプリは、ツールチェーンの一部である GitLab リポジトリーにプッシュされます。
 
-ツールチェーンを有効にすると、アプリ用のチーム・ベースの開発環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的 Delivery Pipeline にアクセスすることもできます。 選択したデプロイメント環境が、[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers) のどれであっても、それに合わせてこれらはカスタマイズされています。
+DevOps ツールチェーンを有効にすると、アプリ用のチーム・ベースの環境が作成されます。 ツールチェーンの作成時に、アプリ・サービスによって Git リポジトリーが作成されます。このリポジトリーでは、ソース・コードの表示、アプリの複製、および問題の作成と管理を行うことができます。 また、専用の GitLab 環境と、継続的デリバリー・パイプラインにアクセスすることもできます。 選択したデプロイメント・ターゲットが、[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about)、または[仮想サーバー (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial) のどれであっても、それに合わせてこれらはカスタマイズされています。
 
 {{site.data.keyword.cloud_notm}} 開発者ダッシュボードから作成されたツールチェーンはすべて、自動デプロイメント用に構成されています。
 {: note}
 
-### DevOps ツールチェーンを使用した手動デプロイメント
+デプロイメント・ターゲットを選択して、継続的デリバリーを構成するには、以下の手順を実行します。
 
-正しく構成されたツールチェーンを使用すると、リポジトリー内のマスター・ブランチへのマージが行われるたびに、ビルドとデプロイのサイクルが自動的に開始されます。 
-
-DevOps ツールチェーンからアプリを手動でデプロイすることもできます。
-
-1. アプリの詳細ページで、**「ツールチェーンの表示」**をクリックします。
-2. **「Delivery Pipeline」**をクリックします。ここで、ビルドの開始、デプロイメントの管理、およびログと履歴の表示を行うことができます。
-
-一部のアプリケーションでは継続的デリバリーは有効になっています。 継続的デリバリーを有効にして、Delivery Pipeline と GitHub を使用したビルド、テスト、およびデプロイメントを自動化することができます。
-
-詳しくは、以下を参照してください。
-* [継続的デリバリーを使用したビルドおよびデプロイ](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)。
-* [テンプレートからのツールチェーンの作成](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
-
-### DevOps ツールチェーンを使用した自動デプロイメント
-
-1. **「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
+1. 「アプリの詳細」ページで、**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 2. デプロイメント・ターゲットを選択します。 選択したターゲットの説明に従って、デプロイメント・ターゲットをセットアップします。
-  * **IBM Kubernetes Service にデプロイします**。 このオプションは、高可用性のアプリケーション・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
-  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 ご使用のアカウントに {{site.data.keyword.cfee_full_notm}} へのアクセス権限がある場合、デプロイヤー・タイプとして、**パブリック・クラウド**または**エンタープライズ環境**のいずれかを選択できます。エンタープライズ環境を使用すると、自社専用に Cloud Foundry アプリケーションをホスティングする隔離された環境を作成して管理できます。
-  * **仮想サーバーにデプロイします**。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
+  * **[IBM Kubernetes Service](/docs/containers?topic=containers-app) にデプロイ**します。 このオプションは、高可用性のアプリ・コンテナーをデプロイして管理するためのワーカー・ノードというホスト・クラスターを作成します。 クラスターを作成したり、既存のクラスターにデプロイしたりすることができます。
+  * **Cloud Foundry にデプロイ**します。 このオプションはクラウド・ネイティブなアプリをデプロイします。基礎にあるインフラストラクチャーを管理する必要はありません。 アカウントに {{site.data.keyword.cfee_full_notm}} に対するアクセス権限がある場合は、エンタープライズ専用の Cloud Foundry アプリをホストするための分離環境を作成および管理するために使用できる、**[パブリック・クラウド](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**または**[エンタープライズ環境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**のデプロイヤー・タイプを選択できます。
+  * **[仮想サーバー](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)にデプロイ**します。 このオプションによって、仮想サーバー・インスタンスがプロビジョンされ、アプリを含むイメージがロードされ、DevOps ツールチェーンが作成され、最初のデプロイメント・サイクルが開始されます。
 
-最後のステップでアプリをクラウドにデプロイすることで、ツールチェーンが自動的に作成されます。 ツールチェーンによってアプリ用の Git リポジトリーが作成され、ユーザーはそこでコードを見つけることができます。 
+デプロイメント・ターゲットを選択して構成すると、「アプリの詳細」ページに、継続的デリバリーが構成されたことが表示されます。 **「リポジトリーの表示」**をクリックすると、アプリのソース・コードを含むリポジトリーを表示できます。
 
-### {{site.data.keyword.dev_cli_short}} を使用したデプロイ
-{: #deploy-scratch-cli}
+コマンド・ラインを使用してアプリをデプロイするには、`ibmcloud dev deploy` を使用します。 詳しくは、[CLI を使用したアプリの作成およびデプロイ](/docs/apps?topic=creating-apps-create-deploy-app-cli)を参照してください。
 
-アプリを Cloud Foundry にデプロイするには、以下のコマンドを入力します。
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-アプリを Kubernetes クラスターにデプロイするには、以下のコマンドを入力します。
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+アプリのデプロイについて詳しくは、[アプリのデプロイ](/docs/apps?topic=creating-apps-deploying-apps)を参照してください。
 
 ## アプリが実行中であることの確認
 {: #verify-scratch}
@@ -162,10 +134,11 @@ ibmcloud dev deploy --target <container>
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。
+3. ログ・ファイルで、アプリ URL を見つけます。
 
-    ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
+   ログ・ファイルの末尾で `urls` または `view` という語を探します。 例えば、`urls: my-app-devhost.mybluemix.net` または `View the application health at: http://<ipaddress>:<port>/health` のような行がログ・ファイル内で見つかります。
 
 4. ご使用のブラウザーでその URL にアクセスします。 アプリが実行されている場合は、`Congratulations` または `{"status":"UP"}` を含むメッセージが表示されます。
 
 コマンド・ラインを使用している場合は、[`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) コマンドを実行して、アプリの URL を表示します。 次に、ブラウザーでその URL にアクセスします。
+

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-04-22"
 
-keywords: apps, credentials, Kubernetes
+keywords: apps, credentials, kubernetes, kube, add, custom, deployment.yml, cluster, deployment, environment, kubectl, secret
 
 subcollection: creating-apps
 
@@ -18,7 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# Kubernetes 環境への資格情報の追加
+# Kubernetes 環境へのサービス資格情報の追加
 {: #add-credentials-kube}
 
 Kubernetes デプロイメント環境にサービス資格情報を追加する方法について説明します。
@@ -115,11 +115,11 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 ## スターター・キット・アプリと Kubernetes
 {: #credentials-starterkit-kube}
 
-1. **アプリの詳細**ページに移動します。
+1. **「アプリの詳細」**ページに移動します。
 
 2. Cloud Object Storage のインスタンスを作成するために、**「サービスの追加」**>**「ストレージ」**>**「Cloud Object Storage」**>**「ライト・プラン (無料)」**>**「作成」**を選択します。
 
-3. **「コードのダウンロード」**をクリックして、注入されたコード・スニペットでプロジェクトを再生成します。
+3. **「コードのダウンロード」**をクリックして、注入されたコード・スニペットでアプリを再生成します。
 
 4. 資格情報にローカルでアクセスするために、新しく生成された `.zip` ファイルにある以下のファイルをローカル Git クローンにコピーおよび置換して、資格情報にアクセスします。 この場合も、資格情報をホストするために、クラスター内に Kubernetes シークレットを作成する必要があります。
 
@@ -131,7 +131,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   後で、リソース・コントローラー・リソース (組織またはスペースでなくリソース・グループ内にあるリソース) を含んだ Cloud Foundry アプリケーションにデプロイする場合は、もう 1 つファイルをコピーする必要があります。
   {: note}
 
-5. [対応する地域 (無料の場合は米国南部) で Kubernetes クラスター](https://{DomainName}/containers-kubernetes/clusters){: new_window}
+5. [対応する地域 (無料の場合は米国南部) で Kubernetes クラスター](https://{DomainName}/kubernetes/clusters){: new_window}
 ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を表示します。
 
 6. クラスターをクリックし、右上にある**「Kubernetes ダッシュボード」**を選択してクラスター・ダッシュボードを表示します。
@@ -140,12 +140,12 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 8. これで、`chart/{appName}/bindings.yaml` に既に生成されているシークレット名を使用して、Cloud Object Storage インスタンス用の対応するシークレットを作成できます。このシークレットは、`binding-create-app-ktibr-cloudobjectstor-1538170732311` などのようになります。
 
-9. ダッシュボードの**アプリの詳細**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。 以下の資格情報の出力例を参照してください。
+9. ダッシュボードの**「アプリの詳細」**ページに移動し、Cloud Object Storage インスタンスの資格情報をコピーします。 以下の資格情報の出力例を参照してください。
   ```yaml
   {
     "apikey": "hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg",
-  "endpoints": "https://cos-service.bluemix.net/endpoints",
-  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
+    "endpoints": "https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints",
+    "resource_instance_id": "crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"
   }    
   ```
   {: codeblock}
@@ -154,7 +154,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 11. `echo` コマンドを使用して、資格情報を `binding` ファイルに入れます。
   ```console
-  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
+  echo -n '{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"crn:v1:staging:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}' > ./binding
 
   ```
   {: codeblock}
@@ -165,7 +165,7 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
   {: note}
   
   ```console
-  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://cos-service.bluemix.net/endpoints","resource_instance_id":"crn:v1:bluemix:public:cloud-object-storage:global:a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
+  ibmcloud cf create-user-provided-service create-app-ktibr-cloudobjectstor-1538170732311 -p `{"name":"create-app-ktibr-cloudobjectstor-1538170732311","credentials":{"apikey":"hVi9lXHeMwvDCv7k8mOcl8h0JgqBujv8h9qHGuNl9bNg","endpoints":"https://control.cloud-object-storage.cloud.ibm.com/v2/endpoints","resource_instance_id":"ccrn:v1:staging:public:cloud-object-storage:global::a/144a947078143141bf66d9e93a2c257e:36467673-5cf2-4299-81ee-fc22ec04743a::"}}`
   ```
   {: codeblock}
 
@@ -175,18 +175,14 @@ kubectl create secret generic name-secret --from-file=./KEY_SECRET
 
 ### Kubernetes クラスターの準備方法
 
-**「継続的デリバリーの構成 (Configure continuous delivery)」**フィーチャーを使用して、アプリを IBM Kubernetes クラスターにデプロイします。このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。 以下のステップを実行して、クラスター準備の結果を確認できます。
+**「継続的デリバリーの構成 (Configure continuous delivery)」**フィーチャーを使用して、アプリを IBM Kubernetes クラスターにデプロイします。 このフィーチャーによって、アプリに関連付けられたリソースの資格情報用のシークレットが Kubernetes クラスターに準備されます。 以下のステップを実行して、クラスター準備の結果を確認できます。
 
-1. 次のコマンドを実行して結果を表示します。`kubectl get secrets`:
+1. 結果を表示するには、以下のコマンドを実行します。
+
   ```
-  NAME                                   TYPE                                  DATA      AGE
-  binding-blarg-cloudant-1538408663553   Opaque                                1         13m
-  bluemix-default-secret                 kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-international   kubernetes.io/dockerconfigjson        1         17d
-  bluemix-default-secret-regional        kubernetes.io/dockerconfigjson        1         17d
-  default-token-xfd5n                    kubernetes.io/service-account-token   3         17d
+  kubectl get secrets
   ```
-  {: screen}
+  {: codeblock}
 
   [シークレットに関する詳細な資料](https://kubernetes.io/docs/concepts/configuration/secret/)を表示できます。
   {: tip}
