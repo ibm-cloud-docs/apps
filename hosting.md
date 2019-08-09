@@ -29,6 +29,7 @@ You have various options for hosting your apps, giving you as much control over 
   * As VMware
   * As a virtual machine
   * On high-performance {{site.data.keyword.baremetal_short}} 
+  
 <!--
 {{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
 
