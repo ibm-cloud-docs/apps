@@ -71,7 +71,7 @@ Creating apps
         [Swift](/swift/swift-getting-started)
         [Node](/node/nodejs-node-getting-started)
 
-    at_events_devx.md
+    at-events.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
