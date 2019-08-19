@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-19"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -97,3 +97,8 @@ The Delivery Pipeline or command line points you to the URL for your app.
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
 If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to open the page of a manually deployed app in your default browser.
+
+### Viewing your app's Kubernetes cluster
+{: #view-kube-cluster-starterkit}
+
+If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
