@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-18"
+lastupdated: "2019-08-19"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -64,9 +64,19 @@ You can also manually deploy your app from your DevOps toolchain:
 
 Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
 
+### Viewing your app's Kubernetes cluster
+{: #view-kube-cluster-starterkit}
+
+If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
+
+### Related information for continuous delivery by using the console
+{: deploy-related-info}
+
 For more information, see:
 * [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
 * [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+* [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
 ## Using the {{site.data.keyword.dev_cli_short}} CLI
 {: #deploy-cli}
@@ -133,9 +143,20 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using th
   ```
   {: codeblock}
 
-### Related information
+### Related information for continuous delivery by using the CLI
 {: #deploy-cli-related}
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
 * [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+
+## Next steps
+{: #next-steps-startkit}
+
+* If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=creating-apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) to look for errors.
+
+* Access the service configuration in your code:
+	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
+
+* Add new service credentials to your Kubernetes environment:
+	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).
