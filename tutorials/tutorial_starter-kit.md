@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-19"
+lastupdated: "2019-08-21"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -35,7 +35,7 @@ Starter kits are available in many categories, including:
 * [Mobile](https://{DomainName}/developer/mobile/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 * [Web App](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
 
-See [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits) for more information.
+For more information, see [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits).
 
 ## Installing the tools
 {: #prereqs-starterkit}
@@ -111,7 +111,12 @@ You can deploy your app from the command line by running the [`ibmcloud dev depl
 ## Verifying that your app is running
 {: #verify-starterkit}
 
-After your app is built and deployed, you can view the app's URL in either the Delivery Pipeline or the command line.
+After your app is built and deployed, you can view the app's URL to make sure that it's running.
+
+### Apps that are deployed to a Kubernetes cluster
+{: #view-kube-app-starterkit}
+
+For apps that are deployed to a Kubernetes cluster, you can view the app's URL in either the Delivery Pipeline or the command line.
 
 1. On the App details page, click **View toolchain**.
 1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
@@ -128,3 +133,10 @@ If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?t
 {: #view-kube-cluster-starterkit}
 
 If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
+
+### Apps that are deployed to Cloud Foundry
+{: #view-cf-app-starterkit}
+
+For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.

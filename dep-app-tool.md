@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-19"
+lastupdated: "2019-08-21"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -63,11 +63,6 @@ You can also manually deploy your app from your DevOps toolchain:
 2. Click **Delivery Pipeline** where you can start builds, manage deployment, and view logs and history.
 
 Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub.
-
-### Viewing your app's Kubernetes cluster
-{: #view-kube-cluster-starterkit}
-
-If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
 
 ### Related information for continuous delivery by using the console
 {: deploy-related-info}
@@ -150,8 +145,41 @@ For more information about deploying your app to {{site.data.keyword.cloud_notm}
 
 * [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
+## Verifying that your app is running
+{: #verify-runningapp}
+
+After your app is built and deployed, you can view the app's URL to make sure that it's running.
+
+### Apps that are deployed to a Kubernetes cluster
+{: #view-kube-runningapp}
+
+For apps that are deployed to a Kubernetes cluster, you can view the app's URL in either the Delivery Pipeline or the command line.
+
+1. On the App details page, click **View toolchain**.
+1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
+2. Click **View logs and history**.
+3. In the log file, find the app's URL:
+
+    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
+
+4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+
+### Viewing your app's Kubernetes cluster
+{: #view-kube-cluster-runningapp}
+
+If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
+
+### Apps that are deployed to Cloud Foundry
+{: #view-cf-runningapp}
+
+For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
+
+If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+
 ## Next steps
-{: #next-steps-startkit}
+{: #next-steps-deployapps}
 
 * If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=creating-apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) to look for errors.
 
