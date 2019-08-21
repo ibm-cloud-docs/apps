@@ -2,9 +2,9 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-20"
 
-keywords: apps, scratch, developer tools
+keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
 subcollection: creating-apps
 
@@ -18,16 +18,18 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 
-# 从头开始创建应用程序
+# 使用基本入门模板工具包创建定制应用程序
 {: #tutorial-scratch}
 
-您可以使用服务和运行时来从头开始创建定制应用程序。
+要创建定制应用程序，您可以使用基本入门模板工具包并选择应用程序类型（移动或后端）、语言和框架，添加服务以及选择部署目标。
 {: shortdesc}
+
+基本入门模板工具包是一种多功能工具，可用于创建定制应用程序，通过语言、应用程序类型、框架和服务对其进行定义。然后，设置持续交付并选择您需要的部署目标。
 
 ## 开始之前
 {: #prereqs-scratch}
 
-* 安装 [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-ibmcloud-cli)，其中包含 Docker。 
+* 安装 [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started)，其中包含 Docker。 
 * 创建 Docker 帐户，运行 Docker 应用程序，然后登录到该应用程序中。Docker 必须处于运行中，构建命令才会有效。
 * 如果计划将应用程序部署到 {{site.data.keyword.cfee_full}}，那么必须[准备 {{site.data.keyword.cloud_notm}} 帐户](/docs/cloud-foundry?topic=cloud-foundry-prepare)。
 
@@ -36,18 +38,14 @@ subcollection: creating-apps
 
 1. 在 [{{site.data.keyword.cloud_notm}} 仪表板 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}) 中，单击“应用程序”窗口小部件中的**创建应用程序**。
 
-  还可以在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/starter-kits/) 页面中创建定制应用程序。
+  还可以在 {{site.data.keyword.dev_console}} 中的[入门模板工具包 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://{DomainName}/developer/appservice/starter-kits) 页面中创建定制应用程序。
   {: tip}
 
 2. 输入应用程序的名称。对于本教程，请输入 `CustomProject`。
-3. 输入唯一的主机名，例如 `abc-devhost`。主机名用于应用程序的路径，例如 `abc-devhost.mybluemix.net`。
-4. 可以选择性提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
-5. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
-6. 选择价格套餐。对于本教程，您可以使用免费选项。
-7. 单击**创建**。
-
-缺省共享域为 `mybluemix.net`，但是，`appdomain.cloud` 是另一个可供您使用的域选项。有关迁移到 `appdomain.cloud` 的更多信息，请参阅[更新域](/docs/apps/tutorials?topic=creating-apps-update-domain)。
-{: tip}
+3. 可以选择性提供标记来对应用程序分类。有关更多信息，请参阅[使用标记](/docs/resources?topic=resources-tag)。
+4. 选择语言和框架。某些入门模板工具包可能只有一种语言版本。
+5. 选择价格套餐。对于本教程，您可以使用免费选项。
+6. 单击**创建**。
 
 ## 添加服务（可选）
 {: #resources-scratch}
@@ -108,52 +106,26 @@ ibmcloud dev run
 ## 部署应用程序
 {: #deploy-scratch}
 
-有多种方式可以将应用程序部署到 {{site.data.keyword.cloud_notm}}，但 DevOps 工具链是部署生产应用程序的最佳方式。通过 DevOps 工具链，您可以轻松地将应用程序自动部署到多个环境中，还可以快速地添加监视、日志记录和警报服务，从而更好地管理应用程序的日常发展。
+选择部署目标时，会自动为您的应用程序创建 DevOps 工具链。工具链包含指示应用程序部署状态的 Delivery Pipeline。生成的新应用程序将推送到作为工具链一部分的 GitLab 存储库。
 
-启用工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署环境（[Kubernetes](/docs/containers?topic=containers-container_index)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-with-virtual-servers)）对它们进行定制。
+启用 DevOp 工具链会为应用程序创建基于团队的开发环境。创建工具链时，App Service 会创建一个 Git 存储库，您可以在其中查看源代码，克隆应用程序以及创建和管理问题。您还有权访问专用的 GitLab 环境和持续交付管道。您可以根据所选的部署目标（[Kubernetes](/docs/containers?topic=containers-getting-started)、[Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf)、[{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) 或[虚拟服务器 (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)）对它们进行定制。
 
 在 {{site.data.keyword.cloud_notm}} 开发者仪表板中创建的所有工具链都会配置为自动部署。
 {: note}
 
-### 使用 DevOps 工具链手动进行部署
+要选择部署目标并配置持续交付，请完成以下步骤：
 
-使用正确配置的工具链时，每次合并到存储库中的主分支后，都会自动启动构建/部署周期。 
-
-您也可以通过 DevOps 工具链来手动部署应用程序：
-
-1. 在“应用程序详细信息”页面，单击**查看工具链**。
-2. 单击 **Delivery Pipeline**，在其中可以启动构建、管理部署以及查看日志和历史记录。
-
-某些应用程序已启用了持续交付。启用持续交付后，即可通过 Delivery Pipeline 和 GitHub 进行自动构建、测试和部署。
-
-有关更多信息，请参阅：
-* [使用 Continuous Delivery 进行构建和部署](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)。
-* [基于模板创建工具链](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)。
-
-### 使用 DevOps 工具链自动进行部署
-
-1. 在**应用程序详细信息**页面上，单击**配置持续交付**。
+1. 在“应用程序详细信息”页面上，单击**配置持续交付**。
 2. 选择部署目标。根据您所选目标的指示信息来设置部署目标：
-  * **部署到 IBM Kubernetes Service**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
-  * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**公共云**或**企业环境**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
-  * **部署到虚拟服务器**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
+  * **部署到 [IBM Kubernetes Service](/docs/containers?topic=containers-app)**。此选项将创建一个主机集群（称为工作程序节点）来部署和管理高可用性应用程序容器。您可以创建一个集群，也可以部署到现有集群。
+  * **部署到 Cloud Foundry**。此选项可部署云本机应用程序，而无需管理底层基础架构。如果您的帐户有权访问 {{site.data.keyword.cfee_full_notm}}，那么可以选择部署程序类型**[公共云](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)**或**[企业环境](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**，可使用这些类型来创建和管理隔离的环境，以用于专门为您的企业托管 Cloud Foundry 应用程序。
+  * **部署到[虚拟服务器](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server)**。此选项会供应虚拟服务器实例，装入包含您的应用程序的映像，创建 DevOps 工具链，并为您启动第一个部署周期。
 
-在最后一步中将应用程序部署到云后，即会自动创建工具链。工具链会为应用程序创建 Git 存储库，在其中可以查找代码。 
+选择并配置部署目标后，“应用程序详细信息”页面将指示已配置持续交付。您可以通过单击**查看存储库**来查看包含应用程序的源代码的存储库。
 
-### 使用 {{site.data.keyword.dev_cli_short}} 进行部署
-{: #deploy-scratch-cli}
+要使用命令行来部署应用程序，请使用 `ibmcloud dev deploy`。有关更多信息，请参阅[使用 CLI 创建和部署应用程序](/docs/apps?topic=creating-apps-create-deploy-app-cli)。
 
-要将应用程序部署到 Cloud Foundry，请输入以下命令：
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-要将应用程序部署到 Kubernetes 集群，请输入以下命令：
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+有关部署应用程序的更多信息，请参阅[部署应用程序](/docs/apps?topic=creating-apps-deploying-apps)。
 
 ## 验证应用程序是否正在运行
 {: #verify-scratch}
@@ -162,10 +134,11 @@ ibmcloud dev deploy --target <container>
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
+3. 在日志文件中，查找应用程序的 URL：
 
-    在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
+   在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 
 4. 在浏览器中转至该 URL。如果应用程序正在运行，那么将显示包含 `Congratulations` 或 `{"status":"UP"}` 的消息。
 
 如果使用的是命令行，请运行 [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) 命令来查看应用程序的 URL。然后，在浏览器中转至该 URL。
+

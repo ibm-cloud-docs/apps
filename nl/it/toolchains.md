@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-27"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -24,6 +24,8 @@ Una toolchain DevOps è una serie di strumenti che automatizza le attività di d
 
 Il componente principale di una toolchain DevOps è un repository di controllo della versione come GitHub. Ulteriori strumenti possono includere la traccia di backlog, le pipeline di fornitura, un IDE (integrated development environment) e il monitoraggio come {{site.data.keyword.DRA_full}}.
 
-Quando [crei un'applicazione](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) utilizzando un kit starter e poi fai clic su **Configure continuous delivery** sulla pagina App details, viene creata una toolchain DevOps. La toolchain dispone di un repository del codice, della pipeline di fornitura e dell'IDE web. Puoi quindi utilizzare questa toolchain per gestire e distribuire in modo collaborativo la tua applicazione ad ambienti separati per lo sviluppo, il test e la produzione.
+Quando [crei un'applicazione](/docs/apps?topic=creating-apps-getting-started) utilizzando un kit starter e poi fai clic su **Configure continuous delivery** sulla pagina App details, viene creata una toolchain DevOps. La toolchain dispone di un repository del codice, della pipeline di fornitura e dell'IDE web. Puoi quindi utilizzare questa toolchain per gestire e distribuire in modo collaborativo la tua applicazione ad ambienti separati per lo sviluppo, il test e la produzione.
 
 Per ulteriori informazioni, vedi l'[{{site.data.keyword.contdelivery_full}}Esercitazione introduttiva](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
+
+Per ulteriori informazioni sulla gestione delle toolchain DevOps e delle delivery pipeline utilizzando l'interfaccia riga di comando (CLI) {{site.data.keyword.cloud_notm}}, vedi [Gestione delle risorse DevOps con la CLI](/docs/cli?topic=cloud-cli-managing-devops-resources-cli).

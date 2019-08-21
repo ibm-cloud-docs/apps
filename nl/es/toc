@@ -35,6 +35,7 @@ Creación de apps
     Despliegue de apps
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -57,13 +58,11 @@ Creación de apps
     [Plugin de línea de mandatos de IBM Cloud Developer Tools](/docs/cli?topic=cloud-cli-getting-started)
 
     {: .topicgroup}
-    Paneles de control de desarrollador de IBM Cloud
+    Paneles de control del desarrollador de IBM Cloud
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Finance](https://cloud.ibm.com/developer/finance/dashboard)
         [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
-        [Security](https://cloud.ibm.com/developer/security/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
+        [Apps web](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     Guías de programación de IBM Cloud

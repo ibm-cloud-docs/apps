@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, best practices
+keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # 좋은 앱의 요건
 {: #best-practice}
 
-클라우드에서 제공하는 모든 것을 활용하려면 {{site.data.keyword.cloud}}에서 앱을 빌드하십시오. 이러한 우수 사례는 앱을 클라우드에서 사용할 수 있도록 준비하는 데 도움을 줍니다.
+클라우드에서 제공하는 모든 것을 활용하려면 {{site.data.keyword.cloud}}에서 애플리케이션을 빌드하십시오. 이러한 우수 사례는 앱을 클라우드에서 사용할 수 있도록 준비하는 데 도움을 줍니다.
 {: shortdesc}
 
 ## 토폴로지와 독립적인 앱 빌드
@@ -51,19 +51,19 @@ subcollection: creating-apps
 ## 다중 지역 아키텍처를 사용한 앱 빌드
 {: #multiregion}
 
-둘 이상의 인스턴스를 실행하여 단일 지역에서 가동 중단 시간을 피할 수 있습니다. 보다 강력한 애플리케이션을 제공하려면 다중 지역 아키텍처를 고려하십시오.
+둘 이상의 인스턴스를 실행하여 단일 지역에서 가동 중단 시간을 피할 수 있습니다. 보다 강력한 앱을 제공하려면 다중 지역 아키텍처를 고려하십시오.
 
 가동 중단 시간을 최소화하고 최대한의 가용성을 확보할 수 있는 복원성 아키텍처를 작성하는 방법에 대한 정보는 [복원성 애플리케이션에 대한 전략 튜토리얼](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications)을 참조하십시오.
 
 ## 앱 모니터링 상시 수행
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}}를 사용하면 [New Relic](http://newrelic.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")과 같은 서비스를 통해 애플리케이션을 쉽게 모니터할 수 있습니다.
+{{site.data.keyword.cloud_notm}}를 사용하면 [New Relic](https://newrelic.com/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")과 같은 서비스를 통해 앱을 쉽게 모니터할 수 있습니다.
 
 ## 지원 옵션 활용
 {: #support}
 
-{{site.data.keyword.cloud_notm}} 유료 가격 플랜은 선택적 유료 지원을 포함하는 다양한 계정 유형을 제공합니다. 계정 유형에 관계없이 {{site.data.keyword.cloud_notm}}에서 애플리케이션을 프로덕션으로 가져올 계획인 경우 이 옵션 등록을 고려하십시오.
+{{site.data.keyword.cloud_notm}} 유료 가격 플랜은 선택적 유료 지원을 포함하는 다양한 계정 유형을 제공합니다. 계정 유형에 관계없이 {{site.data.keyword.cloud_notm}}에서 앱을 프로덕션으로 가져올 계획인 경우 이 옵션 등록을 고려하십시오.
 
 유료 지원 여부와 관계없이 [지원](/docs/get-support?topic=get-support-getting-customer-support)에서 설명한 대로 도움을 받을 수 있으며, 이는 뜻밖의 문제에 대한 보호 수단을 제공합니다.
 
@@ -91,6 +91,6 @@ OS 특정 종속성을 피하십시오. 대신 미들웨어 인프라 또는 서
 
 앱 설치를 운영 체제와 무관한, 균일한 스크립트 세트로서 캡처하십시오. 상이한 자동화 기술에 적용될 수 있도록 앱 설치를 소형으로 휴대 가능하게 유지하십시오. 또한 앱 설치에 필요한 종속성을 최소화하십시오.
 
-클라우드 준비 앱에 대한 자세한 정보는 [The 12-factor app](http://12factor.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
+클라우드 준비 앱에 대한 자세한 정보는 [The 12-factor app](https://12factor.net/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 참조하십시오.
 
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-25"
 
-keywords: apps, application, migrating apps, hosting apps, migrating, hosting
+keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
 subcollection: creating-apps
 
@@ -13,26 +13,40 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# Migración y alojamiento de apps
+# Elección del entorno de alojamiento
 {: #hosting}
 
-Si tiene una app existente, puede alojarla en {{site.data.keyword.cloud}} con todos los servicios de infraestructura o de plataforma que necesite. También es posible migrar su app a {{site.data.keyword.cloud_notm}} de forma incremental en lugar de cambiar su app a un entorno de en la nube a la vez.
+Si tiene una aplicación existente, puede alojarla en {{site.data.keyword.cloud}} con todos los servicios de infraestructura o de plataforma que necesite.
+{:shortdesc}
 
-## Migración de apps
-{: #migrating}
+Con {{site.data.keyword.cloud_notm}}, ya no será necesario hacer grandes inversiones en hardware para probar o ejecutar apps nuevas. En su lugar, nosotros lo gestionamos todos y solo se le cobrará por lo que utilice. El entorno del servicio en la nube es la base de la capa de la infraestructura. Puede elegir una opción única o una combinación de opciones en entornos más complejos. 
 
-Si necesita que su app acceda a sus servicios o datos locales, utilice [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg) para establecer una conexión de túnel seguro entre una organización de {{site.data.keyword.cloud_notm}} y su red de fondo empresarial. Para obtener detalles, consulte [Alcanzar el elemento de fondo empresarial con {{site.data.keyword.cloud_notm}} Secure Gateway a través de la consola](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+Dispone de varias opciones de alojar apps, lo que le proporciona control sobre la infraestructura según sus deseos o necesidades. Puede ejecutar la app de cualquiera de las formas siguientes:
 
-Si necesita ayuda con la migración, dispone de [servicios de migración de {{site.data.keyword.cloud_notm}}](https://www.ibm.com/cloud/migration-services){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+  * Como contenedor Docker en un clúster de Kubernetes
+  * Como app de Cloud Foundry
+  * Como función sin servidor
+  * Como VMware
+  * Como máquina virtual
+  * En {{site.data.keyword.baremetal_short}} de alto rendimiento 
+  
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
 
-## Alojamiento de apps
-{: #ht_hostapp}
+Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
 
-En el {{site.data.keyword.cloud_notm}} [catálogo](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"), puede elegir un entorno gestionado como Kubernetes o Cloud Foundry o bien puede alojar su app directamente en un servidor nativo o virtual.
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
-En un despliegue virtual, la mayoría de las operaciones de la app las gestiona {{site.data.keyword.cloud_notm}}. Un despliegue [virtual](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers) es mejor opción si la carga de trabajo está distribuida entre regiones geográficas y desea utilizar un hipervisor de {{site.data.keyword.cloud_notm}} para gestionar los despliegues. Un despliegue [nativo](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started) es mejor opción si necesita un acceso directo a un servidor físico dedicado para un mayor rendimiento.
+Consulte la tabla siguiente para obtener un resumen de las opciones de cálculo.
 
-También tiene muchas opciones para:
-* Seleccionar el tipo de [almacenamiento](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") adecuado entre almacenamiento en bloque, almacenamiento de archivos o almacenamiento de objetos.
-* Seleccionar el tipo de [red](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") que necesite.
-* Seleccionar un servicio de [tipo de contenedor](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") para aprovecharse de la tecnología de Kubernetes de {{site.data.keyword.cloud_notm}}.
+| Opción | Descripción | 
+|--------|---------------|
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) | Combina contenedores de Docker, la tecnología de Kubernetes, una experiencia de usuario intuitiva y una seguridad y aislamiento integrados para automatizar el despliegue, la operación, el escalado y la supervisión de apps contenerizadas en un clúster de hosts de cálculo. |
+| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) | Crear instancias de varias plataformas de Cloud Foundry aisladas y de nivel empresarial a petición. |
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) | Una plataforma de programación de funciones como servicio (FaaS) basada en Apache OpenWhisk. |
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | Integrar o migrar de forma rápida y transparente las cargas de trabajo de VMware locales utilizando una infraestructura escalable, segura y de alto rendimiento y la tecnología de virtualización híbrida de VMware líder del sector. |
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | Servidores virtuales escalables que se adquieren con núcleos dedicados y asignaciones de memoria. |
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm)  | Servidores de un solo arrendatario mensuales o por hora, dedicados y no compartidos con otros clientes, incluidos los recursos del servidor. |
+{: caption="Tabla 1. Opciones de cálculo" caption-side="top"}
+

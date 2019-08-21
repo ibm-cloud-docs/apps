@@ -35,6 +35,7 @@
     アプリのデプロイ
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -59,9 +60,7 @@
     {: .topicgroup}
     IBM Cloud 開発者ダッシュボード
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [金融](https://cloud.ibm.com/developer/finance/dashboard)
         [モバイル](https://cloud.ibm.com/developer/mobile/dashboard)
-        [セキュリティー](https://cloud.ibm.com/developer/security/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
         [Web アプリ](https://cloud.ibm.com/developer/appservice/dashboard)
 

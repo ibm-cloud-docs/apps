@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ Um kit do iniciador é um padrão pronto para produção que pode ser integrado 
 
 Um kit do iniciador contém metadados que descrevem o que é o kit e o que ele faz. Ele também contém informações que indicam ao {{site.data.keyword.cloud_notm}} o que produzir. O resultado é pronto para produção e pode ser iterado para aprimoramentos adicionais com base nas melhores práticas do {{site.data.keyword.cloud_notm}}. O conteúdo do kit do iniciador não é tão complexo como uma demonstração e não tão trivial como um fragmento ou amostra. Os apps são criados dinamicamente com base nos requisitos do desenvolvedor.
 
-Cada kit do iniciador inclui um idioma, uma estrutura e um padrão para um caso de uso específico. É possível reutilizar o código em vez de reinventá-lo. Se um kit do iniciador requerer serviços específicos, os serviços fornecidos automaticamente estarão disponíveis para que as instâncias para esses serviços sejam criadas automaticamente quando você criar seu app.
+Cada kit do iniciador inclui um idioma, uma estrutura e um padrão para um caso de uso específico. É possível reutilizar o código em vez de reinventá-lo. Se um kit do iniciador exigir serviços específicos, as instâncias de serviço autoprovisionadas serão criadas e conectadas automaticamente ao seu aplicativo.
 
 ## O quanto os kits do iniciador são diferentes das amostras?
 {: #compare}

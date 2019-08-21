@@ -18,8 +18,8 @@ subcollection: creating-apps
 # サーバーレス・アプリの作成
 {: #serverless}
 
-サーバーレス開発では、IBM の Functions which is Service (FaaS) オファリングである {{site.data.keyword.openwhisk}} を使用できます。サーバーをプロビジョニングしたり管理したりすることなく、HTTP を介した Web アプリやモバイル・アプリからのイベントまたは直接呼び出しに応答して、{{site.data.keyword.openwhisk_short}} を使用してアプリ・ロジックを実行できます。
-{{site.data.keyword.openwhisk_short}} は、開発者がアプリケーション・ロジックの作成に集中できるように、自動スケーリング、可用性管理、保守などのシステム管理を実行します。{:shortdesc}
+サーバーレス開発では、IBM の Functions which is Service (FaaS) オファリングである {{site.data.keyword.openwhisk}} を使用できます。 サーバーをプロビジョニングしたり管理したりすることなく、HTTP を介した Web アプリやモバイル・アプリからのイベントまたは直接呼び出しに応答して、{{site.data.keyword.openwhisk_short}} を使用してアプリ・ロジックを実行できます。 {{site.data.keyword.openwhisk_short}} は、開発者がアプリケーション・ロジックの作成に集中できるように、自動スケーリング、可用性管理、保守などのシステム管理を実行します。
+{:shortdesc}
 
 以下のいずれかの方法を使用して、サーバーレス・アプリを開発することができます。
 * {{site.data.keyword.openwhisk_short}} ユーザー・インターフェース (UI)。
@@ -70,16 +70,15 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 ## スターター・キットを使用したサーバーレス・アプリの作成
 {: #serverless-starter}
 
-スターター・キットを使用して、Python Example Serverless App などのサーバーレス・アプリを作成することができます。スターター・キットを見つけるには、以下の手順を実行します。
+スターター・キットを使用して、Python Example Serverless App などのサーバーレス・アプリを作成することができます。 スターター・キットを見つけるには、以下の手順を実行します。
 
-1. {{site.data.keyword.dev_console}} コンソールの[「アプリ・サービス・スターター・キット」](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") ページに移動します。 
+1. {{site.data.keyword.dev_console}} コンソールの[「アプリ・サービス・スターター・キット」](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") ページに移動します。
 2. 検索バーに `serverless` と入力して、スターター・キットのリストにフィルターを掛けます。
 3. Python Example Serverless App などのサーバーレス・スターター・キットを選択します。
 4. アプリに名前を付け、リソース・グループを選択します。
 5. オプション。 アプリを分類するためのタグを指定します。 詳しくは、『[タグの処理](/docs/resources?topic=resources-tag)』を参照してください。
 6. Cloudant サービス・インスタンスを作成するか、既存のものを選択します。
-7. オプション。 サービスの追加やアプリのデプロイを行う前にコードを検査するには、**「ソース・コードの表示 (View source code)」**をクリックします。`README.md` ファイルを参照して、アプリを稼働状態にするためにさらに操作が必要かどうかを確認します。
-  
+7. オプション。 サービスの追加やアプリのデプロイを行う前にコードを検査するには、**「ソース・コードの表示 (View source code)」**をクリックします。 `README.md` ファイルを参照して、アプリを稼働状態にするためにさらに操作が必要かどうかを確認します。
 8. **「作成」**をクリックします。
 
 素晴らしいスタートです。 これでアプリが作成されました。
@@ -101,7 +100,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 
 1. 「アプリの詳細」ページで、**「デプロイ」**をクリックします。
 2. **「Cloud Functions にデプロイ」**を選択し、**「次へ」**をクリックします。
-3. 「ツールチェーンの構成」ページで、ツールチェーン名を入力し、地域を選択し、**「作成」**をクリックします。デプロイメント・ターゲットを選択して構成すると、「アプリの詳細」ページに、継続的デリバリーが構成されたことが表示されます。 
+3. 「ツールチェーンの構成」ページで、ツールチェーン名を入力し、地域を選択し、**「作成」**をクリックします。 デプロイメント・ターゲットを選択して構成すると、「アプリの詳細」ページに、継続的デリバリーが構成されたことが表示されます。
 4. オプション。 {{site.data.keyword.openwhisk_short}} コンソールでアクションを確認するには、「アクション」アイコン![「その他のアクション」アイコン](../icons/action-menu-icon.svg)をクリックして、**「Cloud Functions を開く (Open Cloud Functions)」**を選択します。
 5. オプション。 **「リポジトリーの表示」**をクリックすると、アプリ用に生成されたコードを含むリポジトリーを表示できます。
 

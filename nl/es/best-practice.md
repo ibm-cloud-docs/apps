@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, best practices
+keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
 subcollection: creating-apps
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # ¿Qué hace que una app sea buena?
 {: #best-practice}
 
-Cree su app en {{site.data.keyword.cloud}} para aprovechar todas las posibilidades que ofrece la nube. Estas mejores prácticas pueden ayudarle a asegurarse de que sus apps estén preparadas para la nube.
+Cree su aplicación en {{site.data.keyword.cloud}} para aprovechar todas las posibilidades que ofrece la nube. Estas mejores prácticas pueden ayudarle a asegurarse de que sus apps estén preparadas para la nube.
 {: shortdesc}
 
 ## Cree su app de forma que sea independiente de la topología
@@ -51,19 +51,19 @@ La extracción de las dependencias específicas del entorno a un conjunto de arc
 ## Cree la app mediante una arquitectura de varias regiones
 {: #multiregion}
 
-Puede ejecutar más de una instancia para evitar el tiempo de inactividad en una sola región. Para ofrecer una aplicación más sólida, tenga en cuenta la posibilidad de utilizar una arquitectura de varias regiones.
+Puede ejecutar más de una instancia para evitar el tiempo de inactividad en una sola región. Para ofrecer una app más sólida, tenga en cuenta la posibilidad de utilizar una arquitectura de varias regiones.
 
 Para obtener información sobre cómo minimizar el tiempo de inactividad y cómo crear arquitecturas resistentes que alcancen la máxima disponibilidad, consulte la [Guía de aprendizaje sobre estrategias para aplicaciones resistentes](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Asegúrese de supervisar sus apps
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} facilita la supervisión de su aplicación con servicios como, por ejemplo, [New Relic](http://newrelic.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+{{site.data.keyword.cloud_notm}} facilita la supervisión de su app con servicios como, por ejemplo, [New Relic](https://newrelic.com/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Saque partido a las opciones de soporte
 {: #support}
 
-El plan de precios de pago de {{site.data.keyword.cloud_notm}} ofrece un número de tipos de cuenta distintos con soporte de pago opcional. Sin importar el tipo de cuenta, si piensa en llevar una aplicación a producción en {{site.data.keyword.cloud_notm}}, considere la posibilidad de inscribirse en esta opción.
+El plan de precios de pago de {{site.data.keyword.cloud_notm}} ofrece un número de tipos de cuenta distintos con soporte de pago opcional. Sin importar el tipo de cuenta, si piensa en llevar una app a producción en {{site.data.keyword.cloud_notm}}, considere la posibilidad de inscribirse en esta opción.
 
 Con o sin soporte de pago, puede obtener ayuda como se describe en [soporte](/docs/get-support?topic=get-support-getting-customer-support), que ofrece seguro contra problemas imprevistos.
 
@@ -92,6 +92,6 @@ Su app se podría instalar con frecuencia a demanda en el entorno de nube dinám
 Capture la instalación de la app como un conjunto uniforme de scripts independientes del sistema operativo. Mantenga la instalación de su app en un tamaño reducido y portátil para adaptarse a distintas técnicas de automatización. Además, minimice las dependencias necesarias para la instalación de apps.
 
 Para obtener más información sobre las apps listas para nube, consulte
-[The 12-factor app](http://12factor.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+[The 12-factor app](https://12factor.net/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 

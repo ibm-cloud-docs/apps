@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, credentials
+keywords: apps, credentials, service, add service credentials, environment, deployment
 
 subcollection: creating-apps
 
@@ -18,36 +18,30 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# 凭证概述
+# 向部署环境手动添加服务凭证
 {: #credentials_overview}
 
-了解如何向部署环境手动添加服务凭证。
+您希望应用程序逻辑可从运行应用程序的环境中获取敏感服务凭证，例如数据库 API 密钥或密码。这样，您就不用将凭证保存在源代码存储库中。
 {: shortdesc}
 
-<!-- After PUP: Maybe provide links to the credentials section of the programming guides, such as https://cloud.ibm.com/docs/swift/cloudnative/configuration.html#configuration-->
+如果使用入门模板工具包创建应用程序，那么将自动为您准备环境，在部署应用程序之前将服务连接到入门模板工具包时，服务凭证会自动添加到您的环境。
 
-通常，您希望应用程序逻辑可从运行应用程序的环境中获取敏感服务凭证，例如数据库 API 密钥或密码。这样，您就不用将凭证保存在源代码存储库中。持续集成环境、预生产环境和生产环境中的数据库彼此隔离。
 
-如果使用入门模板工具包模板创建应用程序，那么将自动为您准备环境，无论您的部署目标是下列哪一项：
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public 或 Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [虚拟服务器实例（也是本地 Docker）](/docs/apps?topic=creating-apps-add-credentials-vsi)
-  
-提供了有关如何配置环境的步骤。入门模板工具包会生成使用依赖库的代码，以使代码具有可移植性，能在任何部署目标上运行。最后，没有任何分支逻辑用于检测应用程序正在哪个部署目标中运行。
+在以下任一场景中，必须以手动方式将服务凭证添加到部署环境：
 
-接下来，管理员或 DevOps 工程师负责为环境准备相应的访问控制和配置，使应用程序所需的值可用。
-
-“配置持续交付”是一个一次性步骤，可执行以下关键任务：
- * 为部署目标准备服务、资源和凭证。
- * 使用正确引用环境中凭证的代码，创建 DevOps 工具链以构建应用程序并将其部署到该环境中。
-
-但是，在以下任一场景中，必须准备部署目标：
  * 自带代码。
- * 从空白入门模板工具包模板开始。
- * 在部署了服务之后，将其添加到基于入门模板工具包的应用程序。
+ * 在部署了应用程序之后，将服务添加到基于入门模板工具包的应用程序。
 
-对于与应用程序关联的所有服务的所有凭证，会始终执行环境准备，并且所有 `services` 都会列在 `manifest.yml` 中，但并非所有凭证引用都会放在 `mappings.json` 文件中。在这些情况下，您需要自行放入此类引用。决定部署目标后，并且不需要 `IBMCloudEnv` 库的抽象化处理时，请参阅与您的决策相适应的“代码 +（部署目标）”部分。
-{: important}
+添加服务凭证的过程取决于部署目标和编程语言。有关为部署目标配置服务凭证的更多信息，请参阅特定于您的托管环境的文档：
 
-某些入门模板工具包根本不包含对 `IBMCloudEnv` 依赖关系、`manifest.yml` 或 `mappings.json` 文件的引用。
-{: important}
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * Cloud Foundry Public 或 {{site.data.keyword.cfee_full}}
+  * 虚拟服务器实例（本地 Docker 容器）
+
+许多语言和框架都为特定于应用程序和特定于环境的配置提供标准库。有关更多信息，请参阅以下编程指南：
+
+* [Java：使用服务凭证](/docs/java?topic=cloud-native-configuration)
+* [配置 Node.js 环境](/docs/node?topic=nodejs-configure-nodejs)
+* [配置 Spring 环境](/docs/java?topic=java-spring-configuration)
+* [配置 Swift 环境](/docs/swift?topic=swift-configuration)
+* [配置 Go 环境](/docs/go?topic=go-configure-go-env)

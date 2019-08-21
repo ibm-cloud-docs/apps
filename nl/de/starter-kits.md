@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,14 +24,14 @@ Ein Starter-Kit ist ein einsatzbereites Muster, das in ein Servicepaket integrie
 
 Ein Starter-Kit enthält Metadaten, die den Aufbau und die Funktionalität des Kits beschreiben. Es enthält außerdem Informationen, die {{site.data.keyword.cloud_notm}} unterrichten, was erzeugt werden soll. Die Ausgabe ist ohne Vorbereitungs- oder Anpassungsaufwand einsatzbereit und kann für weitere Erweiterungen auf der Basis von {{site.data.keyword.cloud_notm}} Best Practices iteriert werden. Der Inhalt eines Starter-Kits ist weniger komplex als eine Demonstration, jedoch nicht so einfach strukturiert wie ein Snippet oder ein Beispiel. Apps werden basierend auf den Anforderungen des Entwicklers dynamisch erstellt.
 
-Jedes Starter-Kit umfasst eine Sprache, ein Framework und ein Muster für einen bestimmten Anwendungsfall. Der Code muss nicht neu entwickelt werden, sondern kann wiederverwendet werden. Wenn für ein Starter-Kit bestimmte Services erforderlich sind, stehen automatisch bereitgestellte Services zur Verfügung, so dass bei der Erstellung Ihrer App automatisch Instanzen für diese Services erstellt werden.
+Jedes Starter-Kit umfasst eine Sprache, ein Framework und ein Muster für einen bestimmten Anwendungsfall. Der Code muss nicht neu entwickelt werden, sondern kann wiederverwendet werden. Wenn für ein Starter-Kit bestimmte Services erforderlich sind, werden die automatisch bereitgestellten Serviceinstanzen automatisch erstellt und mit Ihrer App verbunden.
 
 ## Inwiefern unterscheiden sich Starter-Kits von Beispielen?
 {: #compare}
 
 Starter-Kits sind einsatzfähig und legen einen Schwerpunkt auf der Veranschaulichung einer zentralen Musterimplementierung durch Verwendung einer Laufzeit (z.B. Node.js oder Express). In einigen Fällen können Starter-Kits eine einfache Benutzererfahrung enthalten, mit der die Integration des Service hervorgehoben wird. In anderen Fällen stellen die Starter-Kits eine anpassbare Implementierung eines hoch entwickelten Anwendungsfalls dar.
 
-Ein Snippet ist eine Reihe von Codezeilen, häufig in einer IDE dargestellt. Snippets unterstützen einen Entwickler bei der Integration einer Programmiersprachensyntax oder einer definierten API. Eine Demonstration ist meist von hoher Qualität und Inhaltstreue und verwendet eine Reihe von Services und Integrationspunkten. Häufig erfordert sie eine gewisse Rüstzeit; sie wird eingesetzt, um ein Geschäftsproblem zu veranschaulichen oder ein Plattformfeature vorzuführen. Sie können sie zur Bewertung von Phasen (Stages) der Cloudeinführung verwenden. In einigen Fällen handelt es sich um Code, der in den Produktionscode eingebunden wird. Ein Beispiel umfasst nur ein bestimmtes Merkmal, eine Funktion, einen Service oder eine User Journey. Ein Beispiel kann wiederverwendet oder in eine Produktionsanwendung aufgenommen werden. In der Regel wird es verwendet, um technische Funktionen und einen möglichen Ansatz zur Lösung eines technischen Problems aufzuzeigen.
+Ein Snippet ist eine Reihe von Codezeilen, häufig in einer IDE dargestellt. Snippets unterstützen einen Entwickler bei der Integration einer Programmiersprachensyntax oder einer definierten API. Eine Demonstration ist meist von hoher Qualität und Inhaltstreue und verwendet eine Reihe von Services und Integrationspunkten. Häufig erfordert sie eine gewisse Rüstzeit; sie wird eingesetzt, um ein Geschäftsproblem zu veranschaulichen oder ein Plattformfeature vorzuführen. Sie können sie zur Bewertung von Phasen (Stages) der Cloudeinführung verwenden. In einigen Fällen handelt es sich um Code, der in den Produktionscode eingebunden wird. Ein Beispiel umfasst nur ein bestimmtes Merkmal, eine Funktion, einen Service oder eine User Journey. Ein Beispiel kann wiederverwendet oder in eine Produktions-App aufgenommen werden. In der Regel wird es verwendet, um technische Funktionen und einen möglichen Ansatz zur Lösung eines technischen Problems aufzuzeigen.
 
 ## Portierbarer Code
 {: #portable-code}

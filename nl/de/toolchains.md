@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-06-27"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -24,6 +24,8 @@ Eine DevOps-Toolchain ist eine Gruppe von Tools, die die Tasks der Entwicklung u
 
 Die Kernkomponente einer DevOps-Toolchain ist ein Versionssteuerungsrepository wie GitHub. Es können weitere Tools für Rückstandtracking, Delivery Pipelines, eine integrierte Entwicklungsumgebung (IDE) und Überwachung wie {{site.data.keyword.DRA_full}} einbezogen werden.
 
-Wenn Sie unter Verwendung eines Starter-Kits eine [App erstellen](/docs/apps?topic=creating-apps-tutorial-getting-started#create-getting-started) und dann auf der Detailseite der App auf **Continuous Delivery konfigurieren** klicken, wird eine DevOps-Toolchain erstellt. Die Toolchain umfasst ein Code-Repository, eine Delivery Pipeline und eine Web-IDE. Auf dieser Toolchain können Sie dann aufbauen, um Ihre App gemeinsam zu verwalten und in getrennten Umgebungen für Entwicklung, Test und Produktion bereitzustellen.
+Wenn Sie unter Verwendung eines Starter-Kits eine [App erstellen](/docs/apps?topic=creating-apps-getting-started) und dann auf der Detailseite der App auf **Continuous Delivery konfigurieren** klicken, wird eine DevOps-Toolchain erstellt. Die Toolchain umfasst ein Code-Repository, eine Delivery Pipeline und eine Web-IDE. Auf dieser Toolchain können Sie dann aufbauen, um Ihre App gemeinsam zu verwalten und in getrennten Umgebungen für Entwicklung, Test und Produktion bereitzustellen.
 
 Weitere Informationen finden Sie im [Lernprogramm zur Einführung in {{site.data.keyword.contdelivery_full}}](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
+
+Weitere Informationen zur Verwaltung von DevOps-Toolchains und -Pipelines mithilfe der {{site.data.keyword.cloud_notm}}-Befehlszeilenschnittstelle (CLI) finden Sie unter [DevOps-Ressourcen mit der Befehlszeilenschnittstelle verwalten](/docs/cli?topic=cloud-cli-managing-devops-resources-cli).

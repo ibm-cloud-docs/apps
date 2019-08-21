@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-06-20"
 
-keywords: apps, starter kit, Kubernetes, cluster
+keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
 subcollection: creating-apps
 
@@ -20,34 +20,27 @@ subcollection: creating-apps
 # Implementando um app do kit do iniciador para um cluster do Kubernetes
 {: #tutorial-starterkit-kube}
 
-Saiba como criar um aplicativo no {{site.data.keyword.cloud}} usando um kit do iniciador vazio e uma cadeia de ferramentas do Kubernetes e entregue continuamente o app para um contêiner seguro em um cluster do Kubernetes. O
-pipeline do DevOps de integração contínua pode ser configurado para que suas mudanças de código sejam construídas
-automaticamente e propagadas para o app que está no cluster do Kube. Se você já tiver um pipeline, será possível
+Saiba como criar um aplicativo no {{site.data.keyword.cloud}} usando um kit do iniciador básico e uma cadeia de ferramentas do Kubernetes e entregar continuamente o app para um contêiner seguro no {{site.data.keyword.containerlong}}. O pipeline do DevOps de integração contínua pode ser configurado para que as mudanças de código sejam construídas e propagadas automaticamente para o app que está no cluster Kubernetes. Se você já tiver um pipeline, será possível
 conectá-lo ao app.
 {: shortdesc}
 
 O {{site.data.keyword.cloud_notm}} oferece kits do iniciador que ajudam a construir a base de um app
 que é executado no Kubernetes. Ao usar um kit do iniciador, será fácil seguir um modelo de programação nativo de nuvem que usa as {{site.data.keyword.cloud_notm}} melhores práticas para o desenvolvimento de app. Os kits do iniciador geram apps que seguem o modelo de programação nativo de nuvem e incluem casos de teste, verificação
-de funcionamento e métricas em cada linguagem de programação. Também é possível fornecer serviços de nuvem que são,
-então, inicializados no aplicativo gerado.
+de funcionamento e métricas em cada linguagem de programação. Também é possível provisionar os serviços de nuvem que são, então, inicializados em seu app gerado.
 
-Este tutorial usa o destino de implementação do Kubernetes. Neste tutorial, estamos criando um aplicativo por meio de um kit do iniciador básico usando Java + Spring, incluindo uma instância de serviço do Cloudant nele e implementando-o no {{site.data.keyword.cloud_notm}} usando o IBM Kubernetes Service.
-
-Primeiramente, consulte o diagrama de fluxo do iniciador a seguir e suas etapas de visão geral correspondentes.
-
-![Fluxograma do kit do iniciador](../images/starterkit-flow.png) 
+Este tutorial usa o destino de implementação do {{site.data.keyword.containerlong}}. Neste tutorial, estamos criando um app por meio de um kit do iniciador básico usando Java + Spring, incluindo uma instância de serviço do Cloudant nele e implementando-o no {{site.data.keyword.containerlong}}.
 
 ## Antes de começar
 {: #prereqs-starterkit-kube}
 
 * Crie um app **Java + Spring** usando um [kit do iniciador](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
-* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+* Instale a [CLI do {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 * Configure o [Docker](https://www.docker.com/get-started){: new_window} ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo").
 
 ## Incluindo serviços em seu app
 {: #resources-starterkit-kube}
 
-Inclua um serviço {{site.data.keyword.cloud_notm}} em seu aplicativo. As etapas a seguir
+Inclua um serviço {{site.data.keyword.cloud_notm}} em seu app. As etapas a seguir
 fornecem uma instância do Cloudant, criam uma chave de recurso (credenciais) e conecte-a ao app.
 
 1. Na página **Detalhes do app**, clique em **Incluir serviço**.
@@ -62,8 +55,7 @@ incluída no campo **Credenciais**.
 ## Implementando o app usando uma cadeia de ferramentas do DevOps
 {: #deploy-starterkit-kube}
 
-Conecte uma cadeia de ferramentas do DevOps ao aplicativo e configure-a para ser implementada em um cluster do
-Kubernetes hospedado no serviço {{site.data.keyword.cloud_notm}} Kubernetes.
+Conecte uma cadeia de ferramentas do DevOps ao app e configure-a para ser implementada em um cluster Kubernetes que esteja hospedado no serviço {{site.data.keyword.cloud_notm}} Kubernetes.
 
 1. Na página **Detalhes do app**, clique em **Configurar entrega contínua**.
 2. Na página **Selecionar um destino de implementação**, selecione **Implementar no IBM Kubernetes Service**.
@@ -94,8 +86,8 @@ repositório Git que o kit do iniciador gerou é exibido.
 incluídas com a cadeia de ferramentas. Esse exemplo inclui as seguintes ferramentas que foram pré-selecionadas no kit do
 iniciador quando a cadeia de ferramentas foi criada:
   * Um rastreador de problemas para rastrear as atualizações e as mudanças do projeto.
-  * Um repositório Git que contém o código-fonte do aplicativo.
-  * Uma instância do Eclipse Orion, que é um IDE baseado na web para editar o aplicativo.
+  * Um repositório Git que contém o código-fonte de seu app.
+  * Uma instância do Eclipse Orion, que é um IDE baseado na web para editar seu app.
   * Um Delivery Pipeline que consiste em uma construção customizável e um estágio de implementação.
 	 * O estágio CONSTRUÇÃO insere o app em contêiner. Mais especificamente, o estágio de construção:
 	   * Clona o repositório GitLab.
@@ -114,9 +106,9 @@ Após você implementar o seu app, o Delivery Pipeline ou a linha de comandos ap
 
 1. Na cadeia de ferramentas do seu DevOps, clique em **Delivery Pipeline** e, em seguida, selecione **Implementar estágio**.
 2. Clique em **Visualizar logs e histórico**.
-3. No arquivo de log, localize a URL do aplicativo:
+3. No arquivo de log, localize a URL do app:
 
-    No término do arquivo de log, procure `View the application health at: http://<ipaddress>:<port>/health`.
+    No término do arquivo de log, procure por `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Acesse a URL em seu navegador. Se o app estiver em execução, uma mensagem que incluirá `Parabéns` ou `{"status":"UP"}` será exibida.
 
@@ -134,7 +126,5 @@ como [acessar os logs do Kubernetes](/docs/apps?topic=creating-apps-managingapps
 ambiente Spring Framework. Para obter mais informações, consulte
 [Acessando as credenciais](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
 
-* Inclua novas credenciais no ambiente do Kubernetes:
-	- Ao incluir outro serviço no aplicativo depois que a cadeia de ferramentas do DevOps é criada, essas
-credenciais de serviço não serão automaticamente atualizadas para o aplicativo implementado e o repositório GitLab. Deve-se [incluir manualmente as credenciais](/docs/apps?topic=creating-apps-add-credentials-kube) no ambiente de
-implementação.
+* Inclua novas credenciais de serviço em seu ambiente do Kubernetes:
+	- Quando você inclui outro serviço em seu app após a cadeia de ferramentas do DevOps ser criada, essas credenciais de serviço não são atualizadas automaticamente em seu app implementado e no repositório GitLab. Deve-se [incluir manualmente as credenciais no ambiente de implementação](/docs/apps?topic=creating-apps-credentials_overview).

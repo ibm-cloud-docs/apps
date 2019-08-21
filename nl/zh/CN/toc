@@ -35,6 +35,7 @@
     部署应用程序
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -59,9 +60,7 @@
     {: .topicgroup}
     IBM Cloud 开发者仪表板
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [财务](https://cloud.ibm.com/developer/finance/dashboard)
         [移动](https://cloud.ibm.com/developer/mobile/dashboard)
-        [安全性](https://cloud.ibm.com/developer/security/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
         [Web 应用程序](https://cloud.ibm.com/developer/appservice/dashboard)
 

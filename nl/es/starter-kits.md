@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ Un kit de inicio es un patrón listo para el entorno de producción que se puede
 
 Un kit de inicio contiene metadatos que describen el kit y lo que hace. También contiene información que indica a {{site.data.keyword.cloud_notm}} lo que debe producir. La salida está lista para producción desde un principio. Luego, de forma iterativa, puede añadir más mejoras con base a las prácticas recomendadas de {{site.data.keyword.cloud_notm}}. El contenido del kit de inicio no es tan complejo como una demostración ni tan trivial como un ejemplo o fragmento de código. Las apps se crean de forma dinámica en función de los requisitos del desarrollador.
 
-Cada kit de inicio incluye un lenguaje, una infraestructura y un patrón para un caso de uso específico. Puede reutilizar código en lugar de reinventarlo. Si un kit de inicio requiere servicios específicos, dispone servicios de suministro automático, de modo que se crean automáticamente instancias para dichos servicios cuando crea la app.
+Cada kit de inicio incluye un lenguaje, una infraestructura y un patrón para un caso de uso específico. Puede reutilizar código en lugar de reinventarlo. Si un kit de inicio requiere servicios específicos, las instancias de servicio suministradas automáticamente se crean automáticamente y se conectan a la app.
 
 ## ¿En qué se diferencian los kits de inicio de los ejemplos?
 {: #compare}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ subcollection: creating-apps
 
 入門範本套件包含 meta 資料，以說明套件為何及其用途。它也包含可通知 {{site.data.keyword.cloud_notm}} 要產生什麼的資訊。輸出是已經準備好正式作業的現成可用值，可根據 {{site.data.keyword.cloud_notm}} 最佳作法反覆運算以進一步加強。入門範本套件內容不像示範這麼複雜，也不像 Snippet 或範例那麼簡單。應用程式是根據開發人員的需求而動態建立的。
 
-每個入門範本套件都包含特定使用案例的語言、架構及型樣。您可以重複使用程式碼，而非重複發明程式碼。如果入門範本套件需要特定的服務，則提供自動佈建的服務，以在建立應用程式時自動建立這些服務的實例。
+每個入門範本套件都包含特定使用案例的語言、架構及型樣。您可以重複使用程式碼，而非重複發明程式碼。如果入門範本套件需要特定的服務，則自動佈建的服務實例會自動建立並連接至應用程式。
 
 ## 入門範本套件與範例的差異為何？
 {: #compare}

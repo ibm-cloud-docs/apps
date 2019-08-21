@@ -21,7 +21,7 @@ subcollection: creating-apps
 對於無伺服器開發，您可以使用 {{site.data.keyword.openwhisk}}，這是 IBM 函數即服務 (FaaS) 供應項目。您可以使用 {{site.data.keyword.openwhisk_short}} 執行應用程式邏輯以回應事件，或透過 HTTP 導向來自 Web 或行動應用程式的呼叫，而不必佈建或管理伺服器。{{site.data.keyword.openwhisk_short}} 會執行系統管理，例如自動擴充、可用性管理及維護，以便身為開發人員的您可以專注於撰寫應用程式邏輯。
 {:shortdesc}
 
-可以使用下列兩種方法之一來開發無伺服器 APP：
+可以使用下列兩種方法之一來開發無伺服器應用程式：
 * {{site.data.keyword.openwhisk_short}} 使用者介面（使用者介面）。
 * {{site.data.keyword.openwhisk_short}} 指令行介面 (CLI)，用於提供對部署和作業的更多控制權。
 * {{site.data.keyword.openwhisk_short}} 入門範本套件，可在其中使用 DevOps 工具鏈和 Delivery Pipeline 配置持續交付。
@@ -67,7 +67,7 @@ curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage
 
 {{site.data.keyword.openwhisk_short}} 為 iOS 及 watchOS 裝置提供[行動 SDK](/docs/openwhisk?topic=cloud-functions-pkg_mobile_sdk)，讓行動應用程式能輕鬆地傳送遠端觸發程式及呼叫遠端動作。
 
-## 使用入門範本套件建立無伺服器 APP
+## 使用入門範本套件建立無伺服器應用程式
 {: #serverless-starter}
 
 您可以使用入門範本套件來建立無伺服器應用程式，如 Python 範例無伺服器應用程式。若要找到入門範本套件，請完成以下步驟：

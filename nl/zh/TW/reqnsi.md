@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-03"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -18,10 +18,15 @@ subcollection: creating-apps
 # 將服務新增至應用程式
 {: #add-resource}
 
-使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增服務。不過，您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
+使用 {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}} 建立應用程式時，您可以從「應用程式詳細資料」頁面新增服務。您也可以從應用程式的環境定義之外，直接從 {{site.data.keyword.cloud_notm}} 型錄佈建它們。
 {: shortdesc}
 
 您可以要求服務的實例，並單獨於應用程式之外使用，也可以從「應用程式詳細資料」頁面，將服務實例新增至應用程式。您可以直接從 {{site.data.keyword.cloud_notm}} 型錄佈建特定類型的服務。
+
+## 自動佈建的服務
+{: #auto-provision}
+
+如果入門範本套件指定需要的服務，則 {{site.data.keyword.cloud_notm}} 會在您建立應用程式時自動建立那些服務的實例。您也可以在建立應用程式之後，手動建立服務或選取現有服務實例，以新增至該應用程式。您可以在**應用程式詳細資料**頁面中，查看與您的應用程式相關聯的服務實例清單，以及服務認證（如果您稍後需要它們的話）。
 
 ## 探索服務
 {: #discover-resources}
@@ -35,10 +40,9 @@ subcollection: creating-apps
 
 在開發應用程式時，您可以選取需要的服務。選取它之後，{{site.data.keyword.cloud_notm}} 會佈建服務。不同類型的服務，佈建處理程序可能不同。例如，資料庫服務會建立資料庫，而行動應用程式的推送通知服務則會產生配置資訊。
 
+{{site.data.keyword.cloud_notm}} 會使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
 
-{{site.data.keyword.cloud_notm}} 會透過使用服務實例，將服務資源提供給應用程式。服務實例可以在 Web 應用程式之間共用。
-
-如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用您編碼外部應用程式或協力廠商工具以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動編碼應用程式來使用這些服務。如需相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
+如果在其他地區中管理的服務能用於那些地區，則您也可以使用那些服務。這些服務必須可從網際網路存取，並具有 API 端點。您必須用撰寫外部應用程式或協力廠商工具程式碼，以使用 {{site.data.keyword.cloud_notm}} 服務的相同方式，手動撰寫應用程式碼來使用這些服務。如需相關資訊，請參閱[將服務連接至外部應用程式](/docs/resources?topic=resources-externalapp)。
 
 ## 要求新的服務實例
 {: #request-instance}
@@ -73,23 +77,15 @@ subcollection: creating-apps
 ## 配置應用程式
 {: #configure-app}
 
-將服務實例連結至應用程式之後，您必須配置應用程式以與服務互動。
+將服務實例連結至應用程式之後，您必須配置應用程式以便與服務互動。
 
-每一個服務可能需要不同的機制來和應用程式通訊。
-這些機制記載於服務定義的一部分，以在您開發應用程式時作為參考資訊。
-為了一致性，必須要有機制，您的應用程式才能與服務互動。
-
+每一個服務可能需要不同的機制來和應用程式通訊。這些機制記載於服務定義的一部分，以在您開發應用程式時作為參考資訊。為了一致性，必須要有機制，您的應用程式才能與服務互動。
 
 * 若要與資料庫服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，使用者 ID、密碼，以及應用程式的存取 URI）。
 * 若要與行動後端服務互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式身分（應用程式 ID）、用戶端特有的安全資訊，以及應用程式的存取 URI）。行動服務通常會彼此合作，以便環境定義資訊（例如，應用程式開發人員的名稱，以及使用應用程式的使用者）能在服務集之間共用。
-* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES*
-環境變數的值是 JSON 物件的序列化。
-變數包含與應用程式所連結之服務互動時所需要的運行環境資料。
-不同服務會有不同的資料格式。
-您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
+* 若要與 Web 應用程式或是行動應用程式的伺服器端雲端程式碼互動，請使用 {{site.data.keyword.cloud_notm}} 所提供的資訊（例如，應用程式的 *VCAP_SERVICES* 環境變數中的運行環境認證）。*VCAP_SERVICES* 環境變數的值是 JSON 物件的序列化。變數包含與應用程式所連結之服務互動時所需要的運行環境資料。不同服務會有不同的資料格式。您可能需要閱讀服務文件，以瞭解預期的內容，以及如何解譯每一份資訊。
 
-
-如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式編碼成可識別運作中斷、異常狀況和連線失敗並從其中回復。如需相關資訊，請參閱[不會自動重新啟動應用程式](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted)。
+如果您連結至應用程式的服務當機，應用程式可能會停止執行或發生錯誤。{{site.data.keyword.cloud_notm}} 不會自動重新啟動應用程式，以從這些問題回復。請考慮將應用程式碼撰寫成可識別運作中斷、異常狀況和連線失敗並從其中回復。
 
 ## 跨 {{site.data.keyword.cloud_notm}} 部署環境存取服務
 {: #migrate_instance}
@@ -105,7 +101,7 @@ subcollection: creating-apps
 
 **重要事項**：請不要直接在部署 YAML 檔案中參照或公開您的服務認證。部署 YAML 檔案的設計並不是為了保留機密資料，且依預設不會加密您的服務認證。若要適當地儲存及存取此資訊，您必須使用 Kubernetes 密碼。 
 
-1. [將服務連結至您的叢集](/docs/containers?topic=containers-integrations#adding_cluster)。 
+1. [將服務連結至您的叢集](/docs/containers?topic=containers-service-binding#bind-services)。 
 2. 若要從應用程式 Pod 存取服務認證，請在下列選項之間進行選擇。 
    - 將密碼以磁區形式裝載至 Pod
    - 在環境變數中參照密碼
@@ -164,4 +160,4 @@ subcollection: creating-apps
 	OK
 	```
 
-您現在可以將應用程式配置成使用外部服務。如需如何配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式以與服務互動](/docs/apps?topic=creating-apps-add-resource#configure-app)。
+您現在可以將應用程式配置成使用外部服務。如需配置應用程式以與服務互動的相關資訊，請參閱[配置應用程式](/docs/apps?topic=creating-apps-add-resource#configure-app)。

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-06-20"
 
-keywords: apps, starter kit, Kubernetes, cluster
+keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
 subcollection: creating-apps
 
@@ -20,22 +20,18 @@ subcollection: creating-apps
 # 將入門範本套件應用程式部署至 Kubernetes 叢集
 {: #tutorial-starterkit-kube}
 
-瞭解如何使用空白的入門範本套件和 Kubernetes 工具鏈在 {{site.data.keyword.cloud}} 中建立應用程式，並持續將應用程式遞送至 Kubernetes 叢集中的安全容器。您可以配置 Continuous Integration DevOps 管線，以自動建置程式碼變更，並將這些變更傳播到 Kubernetes 叢集裡的應用程式。如果您已有管線，則可以將它連接至應用程式。
+瞭解如何使用基本入門範本套件和 Kubernetes 工具鏈在 {{site.data.keyword.cloud}} 中建立應用程式，並持續將應用程式遞送至 {{site.data.keyword.containerlong}} 中的安全容器。您可以配置 Continuous Integration DevOps 管線，以自動建置程式碼變更，並將這些變更傳播到 Kubernetes 叢集裡的應用程式。如果您已有管線，則可以將它連接至應用程式。
 {: shortdesc}
 
 {{site.data.keyword.cloud_notm}} 提供入門範本套件，可協助您建置在 Kubernetes 上執行之應用程式的基礎。當您使用入門範本套件時，可以輕鬆地遵循雲端原生程式設計模型，該模型會使用 {{site.data.keyword.cloud_notm}} 最佳作法來開發應用程式。入門範本套件產生的應用程式會遵循雲端原生程式設計模型，而且它們包含每種程式設計語言中的測試案例、性能檢查及度量值。您也可以佈建雲端服務，然後在產生的應用程式中加以起始設定。
 
-本指導教學使用 Kubernetes 部署目標。在本指導教學中，我們是從基本入門範本套件建立應用程式，方法為使用 Java + Spring、將 Cloudant 服務實例新增至其中，然後使用 IBM Kubernetes Service 將其部署至 {{site.data.keyword.cloud_notm}}。
-
-首先，請參閱下列入門範本套件流程圖及其對應的概觀步驟。
-
-![入門範本套件流程圖](../images/starterkit-flow.png) 
+本指導教學使用 {{site.data.keyword.containerlong}} 部署目標。在本指導教學中，我們是從基本入門範本套件建立應用程式，方法為使用 Java + Spring、將 Cloudant 服務實例新增至其中，然後將其部署至 {{site.data.keyword.containerlong}}。
 
 ## 開始之前
 {: #prereqs-starterkit-kube}
 
 * 使用[入門範本套件](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)來建立 **Java + Spring** 應用程式。
-* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli)。
+* 安裝 [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started)。
 * 設定 [Docker ](https://www.docker.com/get-started){: new_window} ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## 將服務新增至應用程式
@@ -113,5 +109,5 @@ subcollection: creating-apps
 * 在程式碼中存取服務配置：
 	- 您可以使用 _@Value_ 註釋，或使用 Spring 架構環境類別 _getProperty()_ 方法。如需相關資訊，請參閱[存取認證](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)。
 
-* 將新認證新增至 Kubernetes 環境：
-	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動新增認證](/docs/apps?topic=creating-apps-add-credentials-kube)至部署環境。
+* 將新的服務認證新增至 Kubernetes 環境：
+	- 當您在建立 DevOps 工具鏈之後將另一個服務新增至應用程式時，那些服務認證並不會自動更新至已部署的應用程式及 GitLab 儲存庫。您必須[手動將認證新增至部署環境](/docs/apps?topic=creating-apps-credentials_overview)。

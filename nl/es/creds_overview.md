@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, credentials
+keywords: apps, credentials, service, add service credentials, environment, deployment
 
 subcollection: creating-apps
 
@@ -18,37 +18,29 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Visión general de las credenciales
+# Adición manual de credenciales de servicio al entorno de despliegue
 {: #credentials_overview}
 
-Aprenda a añadir manualmente credenciales de servicio al entorno de despliegue.
+Desea que la lógica de la aplicación adquiera credenciales de servicio confidenciales, como claves de API o contraseñas de base de datos, del entorno en el que se ejecuta la app. De esta forma, no tiene que tiene que guardar las credenciales en el repositorio de código fuente.
 {: shortdesc}
 
-<!-- After PUP: Maybe provide links to the credentials section of the programming guides, such as https://cloud.ibm.com/docs/swift/cloudnative/configuration.html#configuration-->
+Si crea una app utilizando un kit de inicio, el entorno se prepara automáticamente. Cuando conecte un servicio al kit de inicio antes de desplegar la app, las credenciales del servicio se añadirán automáticamente al entorno.
 
-En general, desea que la lógica de la aplicación adquiera credenciales de servicio confidenciales, como claves de API o contraseñas de base de datos, del entorno en el que se ejecuta la aplicación. De esta forma, no tiene que guardar las credenciales en el repositorio de código fuente. Las bases de datos de los entornos de integración continua, preproducción y producción están en cuarentena entre sí.
+Debe añadir manualmente las credenciales de servicio al entorno de despliegue en los siguientes casos:
 
-Si crea una app utilizando una plantilla de kit de inicio, el entorno se prepara automáticamente. No importa si el destino de despliegue es:
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public o Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Instancia de servidor virtual (también docker local)](/docs/apps?topic=creating-apps-add-credentials-vsi)
-  
-Se proporcionan pasos sobre cómo configurar el entorno. Los kits de inicio generan código que utiliza una biblioteca dependiente para hacer que el código sea portátil y se pueda ejecutar en cualquiera de los destinos de despliegue. Por último, no se utiliza ninguna lógica de rama para detectar el destino de despliegue en el que se ejecuta la aplicación.
-
-El administrador o el ingeniero de DevOps es el responsable de preparar los entornos con los controles y las configuraciones de acceso adecuados para hacer que los valores que la aplicación necesite estén disponibles.
-
-"Configurar entrega continua" es un paso único que realiza las tareas clave siguientes:
- * Prepara el destino de despliegue con servicios, recursos y credenciales.
- * Crea una cadena de herramientas DevOps para crear y desplegar la app en dicho entorno, utilizando código que hace referencia correctamente a las credenciales en el entorno.
-
-No obstante, debe preparar el destino de despliegue en cualquiera de los casos siguientes:
  * Trae su propio código.
- * Comienza a partir de una plantilla de kit de inicio en blanco.
- * Añade un servicio a una app basada en un kit de inicio después de que se despliegue.
+ * Añade un servicio a una app basada en un kit de inicio después de que se despliegue la app.
 
-La preparación del entorno siempre se lleva a cabo para todas las credenciales de todos los servicios asociados a una app, y todos los servicios (`services`) se enumeran en `manifest.yml`, pero no todas las referencias de credenciales se incluyen en el archivo `mappings.json`. En estos casos, tiene que colocar usted mismo dichas referencias. Tras decidir un destino de despliegue, y si no necesita la abstracción de la biblioteca `IBMCloudEnv`, consulte la sección "Su código + (destino de despliegue)"
-que se ajuste a su decisión.
-{: important}
+El proceso de adición de credenciales de servicio depende del destino del despliegue y del lenguaje de programación. Para obtener más información sobre cómo configurar credenciales de servicio para el destino de despliegue, consulte la documentación específica del entorno de alojamiento:
 
-Algunos kits de inicio no incluyen la referencia a la dependencia `IBMCloudEnv` o a los archivos `manifest.yml` o `mappings.json`.
-{: important}
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * Cloud Foundry público o {{site.data.keyword.cfee_full}}
+  * Instancia de servidor virtual (contenedor docker local)
+
+Muchos lenguajes e infraestructuras proporcionan bibliotecas estándares para configuraciones específicas de la app y específicas del entorno. Para obtener más información, consulte las siguientes guías de programación:
+
+* [Java: Cómo trabajar con credenciales de servicio](/docs/java?topic=cloud-native-configuration)
+* [Configuración del entorno Node.js](/docs/node?topic=nodejs-configure-nodejs)
+* [Configuración del entorno Spring](/docs/java?topic=java-spring-configuration)
+* [Configuración del entorno Swift](/docs/swift?topic=swift-configuration)
+* [Configuración del entorno Go](/docs/go?topic=go-configure-go-env)

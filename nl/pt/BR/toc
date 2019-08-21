@@ -32,9 +32,10 @@ Criando aplicativos
         [Procurando usar uma linguagem?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
-    Implementando apps
+    Implementando aplicativos
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -59,11 +60,9 @@ Criando aplicativos
     {: .topicgroup}
     Painéis do desenvolvedor do IBM Cloud
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Finanças](https://cloud.ibm.com/developer/finance/dashboard)
-        [Dispositivo móvel](https://cloud.ibm.com/developer/mobile/dashboard)
-        [Segurança](https://cloud.ibm.com/developer/security/dashboard)
+        [Móvel](https://cloud.ibm.com/developer/mobile/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Apps da web](https://cloud.ibm.com/developer/appservice/dashboard)
+        [Aplicativos da web](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     Guias de Programação do IBM

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 入门模板工具包中包含描述工具包的功能和用途的元数据。此外，还包含用于告知 {{site.data.keyword.cloud_notm}} 要生成哪些内容的相关信息。输出是现成的生产就绪型内容，可基于 {{site.data.keyword.cloud_notm}} 最佳实践进行反复迭代以进一步加以改进。入门模板工具包的内容不像演示那么复杂，但也不像片段或样本那么简单。应用程序是根据开发者的需求动态创建的。
 
 每个入门模板工具包中都具有针对特定用例的语言、框架和模式。您可以复用代码，而不用重新创建代码。
-如果入门模板工具包需要特定服务，可以通过自动供应的服务，在创建应用程序时自动创建这些服务的实例。
+如果入门模板工具包需要特定服务，将自动创建自动供应的服务并将其连接到应用程序。
 
 ## 入门模板工具包与样本有何不同？
 {: #compare}

@@ -35,6 +35,7 @@ Creazione di applicazioni
     Distribuzione delle applicazioni
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -59,11 +60,9 @@ Creazione di applicazioni
     {: .topicgroup}
     Dashboard dello sviluppatore IBM Cloud
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Finance](https://cloud.ibm.com/developer/finance/dashboard)
         [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
-        [Security](https://cloud.ibm.com/developer/security/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Applicazioni web](https://cloud.ibm.com/developer/appservice/dashboard)
+        [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 
     {: .topicgroup}
     Guide alla programmazione di IBM Cloud

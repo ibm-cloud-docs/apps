@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ Un kit starter è un modello pronto per la produzione che è possibile integrare
 
 Un kit starter contiene metadati che descrivono cosa fa il kit starter. Contiene inoltre delle informazioni che indicano a {{site.data.keyword.cloud_notm}} cosa produrre. L'output è subito pronto per la produzione e può essere iterato per ulteriori miglioramenti in base alle procedure consigliate da {{site.data.keyword.cloud_notm}}. Il contenuto del kit starter non è così complesso come una dimostrazione e non è banale come un frammento o un esempio. Le applicazioni sono create dinamicamente in base ai requisiti dello sviluppatore.
 
-Ogni kit starter include un linguaggio, un framework e un modello per uno specifico caso di utilizzo. Puoi riutilizzare il codice piuttosto che reinventarlo. Se un kit starter richiede servizi specifici, sono disponibili dei servizi di cui viene eseguito il provisioning in automatico in modo che le istanze per tali servizi siano automaticamente create quando crei un'applicazione.
+Ogni kit starter include un linguaggio, un framework e un modello per uno specifico caso di utilizzo. Puoi riutilizzare il codice piuttosto che reinventarlo. Se un kit starter richiede servizi specifici, vengono automaticamente create e connesse alla tua applicazione delle istanze del servizio di cui viene eseguito il provisioning automaticamente.
 
 ## Come i kit starter si differenziano dagli esempi?
 {: #compare}

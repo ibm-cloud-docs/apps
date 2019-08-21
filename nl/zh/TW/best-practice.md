@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, best practices
+keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
 subcollection: creating-apps
 
@@ -58,7 +58,7 @@ subcollection: creating-apps
 ## 確定您正在監視應用程式
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} 讓您可以使用服務（例如 [New Relic](http://newrelic.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")）輕鬆地監視應用程式。
+{{site.data.keyword.cloud_notm}} 讓您可以使用服務（例如 [New Relic](https://newrelic.com/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")）輕鬆地監視應用程式。
 
 ## 利用支援選項
 {: #support}
@@ -91,6 +91,6 @@ subcollection: creating-apps
 
 請將應用程式安裝擷取為一組統一且與作業系統無關的 Script。請維持應用程式安裝短小精幹並且可攜，以適合不同的自動化技術。此外，也請將應用程式安裝所需的相依關係減到最少。
 
-如需具有雲端功能的相關資訊，請參閱 [The 12-factor app](http://12factor.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+如需具有雲端功能的相關資訊，請參閱 [The 12-factor app](https://12factor.net/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 

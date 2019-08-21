@@ -32,9 +32,10 @@ Apps erstellen
         [Möchten Sie eine Sprache verwenden?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
-    Bereitstellen von Apps
+    Apps bereitstellen
         hosting.md
         dep-app-tool.md
+        /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
         tutorials/tutorial_mendix_kubernetes.md
@@ -59,9 +60,7 @@ Apps erstellen
     {: .topicgroup}
     IBM Cloud-Entwicklerdashboards
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Finanzen](https://cloud.ibm.com/developer/finance/dashboard)
         [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
-        [Sicherheit](https://cloud.ibm.com/developer/security/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
         [Web-Apps](https://cloud.ibm.com/developer/appservice/dashboard)
 

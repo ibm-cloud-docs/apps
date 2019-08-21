@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-06-07"
 
-keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
 subcollection: creating-apps
 
@@ -20,14 +20,14 @@ subcollection: creating-apps
 # 在 {{site.data.keyword.containerlong_notm}} 上部署 Mendix 应用程序
 {: #deploy-mendix-kube}
 
-缺省情况下，会使用评估方式对部署目标为 {{site.data.keyword.containerlong}} 的 Mendix 应用程序进行设置。在评估方式下，您可以快速地开始构建应用程序并将其部署到云，但不能配置数据持久性或设置高级 Kubernetes 配置。本教程会介绍如何使用 {{site.data.keyword.cos_full_notm}} 服务在 Kubernetes 中设置持久存储卷，从而指导您完成生产环境的配置。
+缺省情况下，会使用评估方式对部署目标为 {{site.data.keyword.containerlong}} 的 Mendix 应用程序进行设置。在此方式下，您可以开始快速构建应用程序并将其部署到云，但不能配置数据持久性或高级 Kubernetes 配置。本教程会介绍如何使用 {{site.data.keyword.cos_full_notm}} 服务在 Kubernetes 中设置持久存储卷，从而指导您完成生产环境的配置。
 {: shortdesc}
 
 ## 开始之前
 {: #prereqs-mendix-kube}
 
 * 创建 Mendix 应用程序。有关更多信息，请参阅[创建 Mendix 应用程序](/docs/apps/tutorials?topic=creating-apps-create-mendix)。
-* 安装 [{{site.data.keyword.dev_cli_notm}} 命令行界面 (CLI)](/docs/cli?topic=cloud-cli-ibmcloud-cli)，其中包含 {{site.data.keyword.containershort_notm}} CLI。
+* 安装 [{{site.data.keyword.dev_cli_notm}} 命令行界面 (CLI)](/docs/cli?topic=cloud-cli-getting-started)，其中包含 {{site.data.keyword.containershort_notm}} CLI。
 * 登录到 `ibmcloud` CLI，然后配置 `kubectl` 以便[访问 Kubernetes 集群](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3)。
 
 ## 创建 Cloud Object Storage 服务实例
@@ -52,7 +52,7 @@ subcollection: creating-apps
 ## 配置持久存储
 {: #kube-storage-mendix}
 
-接下来，按照[在 {{site.data.keyword.cos_full_notm}} 上存储数据](/docs/containers?topic=containers-object_storage)文档中的说明来执行操作。在 Kubernetes 集群中创建 `PersistentVolumeClaim` 和 `PersistentVolume`，以供集群内作为 Mendix 应用程序一部分运行的 PostGres 数据库实例来使用。请确保使用上一步创建的 `my-mendix-bucket` 存储区来创建 `PersistentVolumeClaim`，然后查看 `PersistentVolumeClaim` 名称，以便在下一步中使用。
+接下来，按照[在 {{site.data.keyword.cos_full_notm}} 上存储数据](/docs/containers?topic=containers-object_storage)文档中的说明来执行操作。在 Kubernetes 集群中创建 `PersistentVolumeClaim` 和 `PersistentVolume`，以供集群内作为 Mendix 应用程序一部分运行的 PostGres 数据库实例进行使用。请确保使用上一步创建的 `my-mendix-bucket` 存储区来创建 `PersistentVolumeClaim`，然后查看 `PersistentVolumeClaim` 名称，以便在下一步中使用。
 
 ## 编辑 `postgres-deployment.yaml` 文件
 {: #postgres-deploy-mendix}
@@ -100,9 +100,9 @@ spec:
 ## 重新部署
 {: #redeploy-mendix-kube}
 
-将 `postgres-deployment.yaml` 文件更改提交回存储库后，会自动触发新的 DevOps 管道执行程序。不过，这样会重新部署缺省应用程序。您必须重新部署最新版 Mendix 应用程序，您要部署的最新版应用程序才能具有最新的持久卷更改。
+将 `postgres-deployment.yaml` 文件更改提交回存储库后，会自动触发新的 DevOps 管道执行程序。不过，这样会重新部署缺省应用程序。您必须重新部署最新版本的 Mendix 应用程序，以便使用最新的持久卷更改来部署最新版本的应用程序。
 
-要进行重新部署，请转至**应用程序详细信息**页面，然后单击**部署应用程序**磁贴内的**配置持续交付**。如果部署在 DevOps 工具链内部失败，并且错误指示找不到应用程序的 `.mda` 文件，那么必须重新从 Mendix 导出应用程序。您可以从 Mendix Modeler 桌面应用程序中导出，也可以单击**在 Mendix 上编辑**来导出。接下来，在 Mendix Web 界面内，转至**环境**部分，单击**从团队服务器创建包**，然后执行相应的步骤。从 Mendix 导出应用程序后，返回到**应用程序详细信息**页面，再次单击**配置持续交付**。最后导出的应用程序将通过 {{site.data.keyword.cloud}} DevOps 工具链部署到 Kubernetes 集群中。部署成功完成后，即可在生产环境中使用您的应用程序。
+要进行重新部署，请转至**应用程序详细信息**页面，然后单击**部署应用程序**磁贴内的**配置持续交付**。如果部署在 DevOps 工具链内部失败，并有错误指示找不到应用程序的 `.mda` 文件，那么必须重新从 Mendix 进行导出。您可以从 Mendix Modeler 桌面应用程序中导出，也可以单击**在 Mendix 上编辑**来导出。接下来，在 Mendix Web 界面内，转至**环境**部分，单击**从团队服务器创建包**，然后执行相应的步骤。从 Mendix 导出应用程序后，返回到**应用程序详细信息**页面，再次单击**配置持续交付**。最后导出的应用程序将通过 {{site.data.keyword.cloud}} DevOps 工具链部署到 Kubernetes 集群中。部署成功完成后，您的应用程序将处于活动状态并可供生产使用。
 
 ## 验证应用程序是否正在运行
 {: #verify-mendix-kube}
@@ -111,7 +111,7 @@ spec:
 
 1. 在 DevOps 工具链中，单击 **Delivery Pipeline**，然后选择 **Deploy 阶段**。
 2. 单击**查看日志和历史记录**。
-3. 在日志文件中，查找应用程序 URL：
+3. 在日志文件中，查找应用程序的 URL：
 
     在日志文件末尾，搜索 `urls` 或 `view`。例如，您可能会在日志文件中看到类似于以下内容的行：`urls: my-app-devhost.mybluemix.net` 或 `View the application health at: http://<ipaddress>:<port>/health`。
 
@@ -122,4 +122,4 @@ spec:
 ## 其他信息
 {: #more-info-mendix-kube}
 
-有关在 Kubernetes 环境中运行 Mendix 应用程序的更多架构详细信息，请查看 Mendix 用户文档的 [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 部分。
+有关在 Kubernetes 环境中运行 Mendix 应用程序的更多体系结构详细信息，请查看 Mendix 用户文档的 [Run Mendix on Kubernetes](https://docs.mendix.com/developerportal/deploy/run-mendix-on-kubernetes){: new_window} ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标") 部分。

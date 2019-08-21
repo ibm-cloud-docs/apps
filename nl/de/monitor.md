@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-20"
+lastupdated: "2019-06-03"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -21,10 +21,10 @@ subcollection: creating-apps
 
 Sie können sofort mit der Überwachung Ihrer Anwendungsverfügbarkeit und -leistung beginnen. Wenn Sie {{site.data.keyword.prf_hubshort}} an Ihre App binden, wird automatisch ein synthetischer Test erstellt, um standardmäßig die URL der Hauptapp zu überwachen.
 
-{{site.data.keyword.prf_hublong}} ist im {{site.data.keyword.cloud_notm}}-Katalog als Service in der DevOps-Domäne verfügbar. Das Tool ist außerdem über das Cloud Foundry-Anwendungsdashboard auf der Registerkarte **Überwachung** verfügbar.
+{{site.data.keyword.prf_hublong}} ist im {{site.data.keyword.cloud_notm}}-Katalog als Service in der DevOps-Domäne verfügbar. Das Tool ist außerdem über das Cloud Foundry-App-Dashboard auf der Registerkarte **Überwachung** verfügbar. 
 {: shortdesc}
 
-Sie können Zustand Ihrer Anwendung während ihrer Entstehung testen, überwachen und verbessern, wenn Sie {{site.data.keyword.prf_hubshort}} zu Ihrer DevOps-Toolchain hinzufügen.
+Sie können Zustand Ihrer App während ihrer Entstehung testen, überwachen und verbessern, wenn Sie {{site.data.keyword.prf_hubshort}} zu Ihrer DevOps-Toolchain hinzufügen.
 
 Diese Toolintegration ist nur für Cloud Foundry-Apps verfügbar. Sie ist vorkonfiguriert und erfordert keine Konfigurationsparameter. Es ist nicht möglich, diese Toolintegration neu zu konfigurieren.
 {: tip}

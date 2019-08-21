@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, best practices
+keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
 subcollection: creating-apps
 
@@ -51,21 +51,21 @@ Das Extrahieren von umgebungsspezifischen Abhängigkeiten in eine Reihe von Eige
 ## App unter Verwendung einer Architektur mit mehreren Regionen erstellen
 {: #multiregion}
 
-Sie können mehr als eine Instanz ausführen, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren Anwendung kann es sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen.
+Sie können mehr als eine Instanz ausführen, um Ausfallzeiten in einer einzelnen Region zu vermeiden. Zur Bereitstellung einer noch stabileren App kann es sinnvoll sein, eine Architektur mit mehreren Regionen zu nutzen.
 
 Informationen zum Minimieren der Ausfallzeit und zum Erstellen ausfallsicherer Architekturen, die eine maximale Verfügbarkeit aufweisen, finden Sie im Lernprogramm [Strategien für ausfallsichere Anwendungen](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Überwachung Ihrer Apps sicherstellen
 {: #monitoring}
 
-{{site.data.keyword.cloud_notm}} vereinfacht die Überwachung Ihrer Anwendung durch Services wie [New Relic](http://newrelic.com/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+{{site.data.keyword.cloud_notm}} vereinfacht die Überwachung Ihrer App durch Services wie [New Relic](https://newrelic.com/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Vorteile von Supportoptionen nutzen
 {: #support}
 
-Die gebührenpflichtigen {{site.data.keyword.cloud_notm}}-Preisstrukturpläne bieten eine Reihe unterschiedlicher Kontotypen mit optionalem gebührenpflichtigen Support. Eine Registrierung dieser Option sollten Sie ungeachtet Ihres Kontotyps auf jeden Fall in Erwägung ziehen, wenn Sie Ihre Anwendung in einer {{site.data.keyword.cloud_notm}}-Produktionsumgebung nutzen wollen.
+Die gebührenpflichtigen {{site.data.keyword.cloud_notm}}-Preisstrukturpläne bieten eine Reihe unterschiedlicher Kontotypen mit optionalem gebührenpflichtigen Support. Eine Registrierung dieser Option sollten Sie ungeachtet Ihres Kontotyps auf jeden Fall in Erwägung ziehen, wenn Sie Ihre App in einer {{site.data.keyword.cloud_notm}}-Produktionsumgebung nutzen wollen.
 
-Im Abschnitt zum Anfordern von [Unterstützung](/docs/get-support?topic=get-support-getting-customer-support) ist beschrieben, wie Sie - ob mit oder ohne gebührenpflichtigem Support - Unterstützung anfordern, die Sie bei unvorhergesehenen Problemen schützt.
+Im Abschnitt zum Anfordern von [Unterstützung](/docs/get-support?topic=get-support-getting-customer-support) ist beschrieben, wie Sie - ob mit gebührenpflichtigem oder ohne gebührenpflichtigen Support - Unterstützung anfordern, die Sie bei unvorhergesehenen Problemen schützt.
 
 ## Infrastruktur-APIs in der App vermeiden
 
@@ -91,6 +91,6 @@ Es kann vorkommen, dass die App in der dynamischen Cloudumgebung häufig bedarfs
 
 Erfassen Sie die App-Installation als einheitlichen Satz aus Scripts, der vom Betriebssystem unabhängig ist. Halten Sie die App-Installation klein und portierbar, damit sie an abweichende Automatisierungsverfahren angepasst werden kann. Minimieren Sie auch die Abhängigkeiten, die für die App-Installation erforderlich sind.
 
-Weitere Informationen zu für die Cloud geeigneten Apps finden Sie im Abschnitt zu [12-Faktor-Apps](http://12factor.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+Weitere Informationen zu für die Cloud geeigneten Apps finden Sie im Abschnitt zu [12-Faktor-Apps](https://12factor.net/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 

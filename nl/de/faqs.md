@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-05-22"
+lastupdated: "2019-06-03"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -39,7 +39,7 @@ Weitere Informationen enthält der Abschnitt [Eigene Domänen verwalten](/docs/a
 {: #cf-app}
 {: faq}
 
-Ihre Ressourcenliste in der [{{site.data.keyword.cloud_notm}}-Konsole](https://{DomainName}){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") enthält zusammengefasste Informationen zu den von Ihnen erstellten Anwendungen. Der Abschnitt **Apps** in der Ressourcenliste enthält alle Apps, die Sie erstellt, aber *nicht* in Cloud Foundry bereitgestellt haben. Der Abschnitt **Cloud Foundry-Apps** enthält alle Apps, die Sie erstellt und in Cloud Foundry bereitgestellt haben.
+Ihre Ressourcenliste in der [{{site.data.keyword.cloud_notm}}-Konsole](https://{DomainName}){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") enthält zusammengefasste Informationen zu den von Ihnen erstellten Apps. Der Abschnitt **Apps** in der Ressourcenliste enthält alle Apps, die Sie erstellt, aber *nicht* in Cloud Foundry bereitgestellt haben. Der Abschnitt **Cloud Foundry-Apps** enthält alle Apps, die Sie erstellt und in Cloud Foundry bereitgestellt haben.
 
 ## Warum kann ich keinen Cloud-Foundry-Bereich auswählen, wenn ich versuche, meine App bereitzustellen?
 {: #cf-space}

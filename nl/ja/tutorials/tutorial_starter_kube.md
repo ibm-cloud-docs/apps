@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-06-20"
 
-keywords: apps, starter kit, Kubernetes, cluster
+keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
 subcollection: creating-apps
 
@@ -20,28 +20,24 @@ subcollection: creating-apps
 # Kubernetes クラスターへのスターター・キット・アプリのデプロイ
 {: #tutorial-starterkit-kube}
 
-ブランクのスターター・キットと Kubernetes ツールチェーンを使用して {{site.data.keyword.cloud}} でアプリケーションを作成し、Kubernetes クラスター内のセキュアなコンテナーにアプリを継続的にデリバリーする方法について説明します。 コード変更が自動的にビルドされ、Kubernetes クラスター内にあるアプリに伝搬されるように、継続的統合 DevOps パイプラインを構成できます。 既にパイプラインがある場合は、それをアプリに接続できます。
+基本スターター・キットと Kubernetes ツールチェーンを使用して {{site.data.keyword.cloud}} でアプリケーションを作成し、{{site.data.keyword.containerlong}}内のセキュアなコンテナーにアプリを継続的にデリバリーする方法について説明します。 コード変更が自動的にビルドされ、Kubernetes クラスター内にあるアプリに伝搬されるように、継続的統合 DevOps パイプラインを構成できます。 既にパイプラインがある場合は、それをアプリに接続できます。
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} は、Kubernetes 上で実行されるアプリの基盤を構築するのに役立つスターター・キットを提供しています。 スターター・キットを使用すると、アプリ開発に関する {{site.data.keyword.cloud_notm}} ベスト・プラクティスを使用したクラウド・ネイティブ・プログラミング・モデルに容易に従うことができます。 スターター・キットは、クラウド・ネイティブ・プログラミング・モデルに従ったアプリを生成し、各プログラミング言語のテスト・ケース、ヘルス・チェック、およびメトリックを含んでいます。 また、生成されるアプリケーション内で初期化されることになるクラウド・サービスをプロビジョンすることもできます。
+{{site.data.keyword.cloud_notm}} は、Kubernetes 上で実行されるアプリの基盤を構築するのに役立つスターター・キットを提供しています。 スターター・キットを使用すると、アプリ開発に関する {{site.data.keyword.cloud_notm}} ベスト・プラクティスを使用したクラウド・ネイティブ・プログラミング・モデルに容易に従うことができます。 スターター・キットは、クラウド・ネイティブ・プログラミング・モデルに従ったアプリを生成し、各プログラミング言語のテスト・ケース、ヘルス・チェック、およびメトリックを含んでいます。 また、生成されるアプリ内で初期化されることになるクラウド・サービスをプロビジョンすることもできます。
 
-このチュートリアルでは、Kubernetes デプロイメント・ターゲットを使用します。 このチュートリアルでは、Java + Spring を使用して基本スターター・キットからアプリケーションを作成し、そこに Cloudant サービス・インスタンスを追加し、IBM Kubernetes Service を使用してそれを {{site.data.keyword.cloud_notm}} にデプロイします。
-
-まず、以下のスターター・キットのフロー・ダイアグラムと、それに対応する概要ステップを参照してください。
-
-![スターター・キットのフロー・ダイアグラム](../images/starterkit-flow.png) 
+このチュートリアルでは、{{site.data.keyword.containerlong}} デプロイメント・ターゲットを使用します。 このチュートリアルでは、Java + Spring を使用して基本スターター・キットからアプリを作成し、そこに Cloudant サービス・インスタンスを追加し、それを {{site.data.keyword.containerlong}} にデプロイします。
 
 ## 始める前に
 {: #prereqs-starterkit-kube}
 
 * [スターター・キット](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit)を使用して、**Java + Spring** のアプリを作成します。
-* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli) をインストールします。
+* [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) をインストールします。
 * [Docker ](https://www.docker.com/get-started){: new_window} ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") をセットアップします。
 
 ## アプリへのサービスの追加
 {: #resources-starterkit-kube}
 
-アプリケーションに {{site.data.keyword.cloud_notm}} サービスを追加します。 以下のステップで、Cloudant インスタンスをプロビジョンし、リソース・キー (資格情報) を作成し、それをアプリにバインドします。
+アプリに {{site.data.keyword.cloud_notm}} サービスを追加します。 以下のステップで、Cloudant インスタンスをプロビジョンし、リソース・キー (資格情報) を作成し、それをアプリにバインドします。
 
 1. **アプリの詳細**ページで、**「サービスの追加」**をクリックします。
 2. **「データ」**を選択し、**「次へ」**をクリックします。
@@ -53,7 +49,7 @@ subcollection: creating-apps
 ## DevOps ツールチェーンを使用したアプリのデプロイ
 {: #deploy-starterkit-kube}
 
-DevOps ツールチェーンをアプリケーションに接続し、{{site.data.keyword.cloud_notm}} Kubernetes サービスでホストされている Kubernetes クラスターにデプロイされるように構成します。
+DevOps ツールチェーンをアプリに接続し、{{site.data.keyword.cloud_notm}} Kubernetes サービスでホストされている Kubernetes クラスターにデプロイされるように構成します。
 
 1. **「アプリの詳細」**ページで**「継続的デリバリーの構成 (Configure continuous delivery)」**をクリックします。
 2. **「デプロイメント・ターゲットの選択 (Select a deployment target)」**ページで**「IBM Kubernetes Service にデプロイ (Deploy to IBM Kubernetes Service)」**を選択します。
@@ -78,8 +74,8 @@ DevOps ツールチェーンをアプリケーションに接続し、{{site.dat
 1. デプロイメント・ステージが終了すると、**アプリの詳細**ページが、ツールチェーンに関するデプロイメント情報と共に表示されます。
 2. **「ツールチェーンの表示」**をクリックして、ツールチェーンにアクセスします。 ツールチェーン・ページの**「概説」**タブが表示され、ツールチェーンに含まれているツールが示されます。 この例では、ツールチェーンの作成時にスターター・キットで事前選択された以下のツールが含まれています。
   * プロジェクトの更新および変更を追跡する問題トラッカー。
-  * アプリケーションのソース・コードを含んでいる Git リポジトリー。
-  * アプリケーションを編集するための Web ベースの IDE である、Eclipse Orion インスタンス。
+  * アプリのソース・コードを含んでいる Git リポジトリー。
+  * アプリを編集するための Web ベースの IDE である、Eclipse Orion インスタンス。
   * カスタマイズ可能なビルド・ステージとデプロイ・ステージで構成される Delivery Pipeline。
 	 * ビルド・ステージは、アプリをコンテナー化します。 より具体的にいうと、ビルド・ステージは以下を実行します。
 	   * GitLab リポジトリーを複製します。
@@ -97,7 +93,7 @@ DevOps ツールチェーンをアプリケーションに接続し、{{site.dat
 
 1. DevOps ツールチェーンから、**「Delivery Pipeline」**をクリックし、**「デプロイ・ステージ」**を選択します。
 2. **「ログおよび履歴の表示」**をクリックします。
-3. ログ・ファイルで、アプリケーション URL を見つけます。
+3. ログ・ファイルで、アプリ URL を見つけます。
 
     ログ・ファイルの末尾で `View the application health at: http://<ipaddress>:<port>/health` を探します。
 
@@ -113,5 +109,5 @@ DevOps ツールチェーンをアプリケーションに接続し、{{site.dat
 * コード内のサービス構成にアクセスします。
 	- _@Value_ アノテーションを使用するか、Spring フレームワーク環境クラス _getProperty()_ メソッドを使用できます。 詳しくは、[資格情報へのアクセス](/docs/java-spring?topic=java-spring-configuration#accessing-credentials)を参照してください。
 
-* 新しい資格情報を Kubernetes 環境に追加します。
-	- DevOps ツールチェーンが作成された後に別のサービスをアプリケーションに追加した場合、それらのサービス資格情報は、デプロイ済みアプリケーションおよび GitLab リポジトリーに自動的には更新されません。 デプロイメント環境に[資格情報を手動で追加](/docs/apps?topic=creating-apps-add-credentials-kube)する必要があります。
+* 新しいサービス資格情報を Kubernetes 環境に追加します。
+	- DevOps ツールチェーンが作成された後に別のサービスをアプリに追加した場合、それらのサービス資格情報は、デプロイ済みアプリおよび GitLab リポジトリーに自動的には更新されません。 [デプロイメント環境に資格情報を手動で追加する](/docs/apps?topic=creating-apps-credentials_overview)必要があります。

@@ -84,7 +84,7 @@ extremidade |
 
 Para fazer upload de um certificado para seu app Cloud Foundry, conclua as etapas a seguir:
 
-1. No [console do {{site.data.keyword.cloud_notm}}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone **Menu** ![ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
+1. No [console do {{site.data.keyword.cloud_notm}} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")](https://{DomainName}){: new_window}, clique no ícone de **Menu** ![Ícone de menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
 2. Clique em **Apps Cloud Foundry**.
 3. Clique no app para o qual você deseja mudar o domínio. 
 4. Na página Visão geral do app, clique em **Rotas**e selecione **Gerenciar domínios**.

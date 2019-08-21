@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-25"
 
-keywords: apps, application, migrating apps, hosting apps, migrating, hosting
+keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
 subcollection: creating-apps
 
@@ -13,26 +13,40 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 
-# 移轉及管理應用程式
+# 選擇管理環境
 {: #hosting}
 
-如果您具有現有應用程式，則可以在具有所有必要基礎架構或平台服務的 {{site.data.keyword.cloud}} 上進行管理。您也可以漸進式地將應用程式移轉至 {{site.data.keyword.cloud_notm}}，而不要一次將應用程式全都移轉至雲端環境。
+如果您具有現有應用程式，則可以在具有所有必要基礎架構或平台服務的 {{site.data.keyword.cloud}} 上進行管理。
+{:shortdesc}
 
-## 移轉應用程式
-{: #migrating}
+使用 {{site.data.keyword.cloud_notm}}，您不需要再對硬體進行大型投資，即可測試或執行新的應用程式。相反地，我們會為您管理它，而且只會對您使用的部分進行收費。您的雲端伺服器環境是基礎架構層的基礎。您可以針對更複雜的環境選擇單一選項或一個組合。 
 
-如果您的應用程式需要存取內部部署資料或服務，可以使用 [{{site.data.keyword.SecureGatewayfull}}](/docs/services/SecureGateway?topic=securegateway-getting-started-with-sg#getting-started-with-sg)，在 {{site.data.keyword.cloud_notm}} 組織與企業後端網路之間建立安全通道。如需詳細資料，請參閱[透過主控台使用 {{site.data.keyword.cloud_notm}} Secure Gateway 來連接企業後端 ](https://developer.ibm.com/bluemix/2015/04/01/reaching-enterprise-backend-bluemix-secure-gateway/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+您有各種選項可以管理應用程式，並讓您依想要的方式或需要更深入地控制基礎架構。您可以使用下列任何方式來執行應用程式：
 
-如果您在移轉時需要協助，則可以使用 [{{site.data.keyword.cloud_notm}} 移轉服務 ](https://www.ibm.com/cloud/migration-services){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+  * 作為 Kubernetes 叢集上的 Docker 容器
+  * 作為 Cloud Foundry 應用程式
+  * 作為無伺服器函數
+  * 作為 VMware
+  * 作為虛擬機器
+  * 在高效能 {{site.data.keyword.baremetal_short}} 上 
+  
+<!--
+{{site.data.keyword.baremetal_short}} are single-tenant, physical servers that are dedicated to a single customer. You control almost everything from the server host to the RAM and storage devices. These servers are used with workloads that require compute power over a sustained time, for example, several months.
 
-## 管理應用程式
-{: #ht_hostapp}
+Some example workloads include e-commerce, ERP, CRM, SCM, and financial services and regulatory applications.
 
-在 {{site.data.keyword.cloud_notm}} [型錄](https://{DomainName}/catalog/?taxonomyNavigation=apps){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中，您可以選擇受管理環境，例如 Kubernetes 或 Cloud Foundry，或者可以直接在裸機或虛擬伺服器上管理應用程式。
+{{site.data.keyword.BluVirtServers_short}} can be deployed as either as public or dedicated instances. With public instances, the resources of the server are shared with other customers, also known as a multi-tenant environment. Private instances dedicate the resources of the physical server to one customer who can have one or more virtual machines on the same server. These servers are ideal for workloads that run for a limited time, for example, a couple of weeks. Some workload examples are development and testing, backup and recovery, and disaster recovery. For more information about server options, see [Bare metal servers versus virtual servers: Choosing the best option for you](https://www.ibm.com/cloud/blog/bare-metal-virtual-servers-works){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+-->
 
-在虛擬部署上，大部分的應用程式作業是由 {{site.data.keyword.cloud_notm}} 進行管理。如果您的工作負載分布在各個地理區域，且想要使用 {{site.data.keyword.cloud_notm}} Hypervisor 來管理部署，則[虛擬](/docs/vsi?topic=virtual-servers-about-virtual-servers#about-virtual-servers)部署是最佳選擇。如果您需要直接存取專用實體伺服器以獲得較高效能，[裸機](/docs/bare-metal?topic=bare-metal-bm-getting-started#getting-started)部署是最佳選擇。
+如需運算選項的摘要，請查看下表。
 
-您也有許多選項可以：
-* 從 Block Storage、File Storage 或 Object Storage，選取適合您的[儲存空間](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slstorage){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 類型。
-* 選取您需要的[網路](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=slnetwork){: new_window}類型 ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
-* 選取[容器化](https://{DomainName}/catalog/?taxonomyNavigation=apps&category=containers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 服務，以充分運用 {{site.data.keyword.cloud_notm}} Kubernetes 技術。
+| 選項 | 說明                                                  | 
+|--------|---------------|
+| [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) | 結合 Docker 容器、Kubernetes 技術、直覺式使用者體驗以及內建安全和隔離，來自動化部署、操作、調整與監視運算主機叢集中的容器化應用程式。|
+| [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) | 隨需應變實例化多個隔離的企業級 Cloud Foundry 平台。|
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting_started) | 以 Apache OpenWhisk 為基礎的「函數即服務 (FaaS)」程式設計平台。|
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | 藉由使用可擴充、安全和高效能基礎架構以及領先業界的 VMware 混合式虛擬化技術，快速且無縫地整合或移轉內部部署 VMware 工作負載。|
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | 與專用核心及記憶體配置一起購買的可擴充虛擬伺服器。|
+| [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm)  | 由您專用且未與其他客戶共用任何部分（包括伺服器資源）的每小時或每月單一伺服器伺服器。|
+{: caption="表 1. 運算選項" caption-side="top"}
+

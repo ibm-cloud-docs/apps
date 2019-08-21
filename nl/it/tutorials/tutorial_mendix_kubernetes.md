@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-18"
+lastupdated: "2019-06-07"
 
-keywords: apps, Mendix, Mendix app, deploy, COS, storage bucket, DevOps toolchain
+keywords: apps, mendix, mendix app, deploy, cos, storage bucket, devops toolchain, deploy, kubernetes, kube
 
 subcollection: creating-apps
 
@@ -27,7 +27,7 @@ Per impostazione predefinita, le applicazioni Mendix che indirizzano la distribu
 {: #prereqs-mendix-kube}
 
 * Crea la tua applicazione Mendix. Per ulteriori informazioni, vedi [Creazione di applicazioni con Mendix](/docs/apps/tutorials?topic=creating-apps-create-mendix).
-* Installa la [CLI (command-line interface) {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli), che include la CLI {{site.data.keyword.containershort_notm}}.
+* Installa la [CLI (command-line interface) {{site.data.keyword.dev_cli_notm}}](/docs/cli?topic=cloud-cli-getting-started), che include la CLI {{site.data.keyword.containershort_notm}}.
 * Accedi alla CLI `ibmcloud` e configura `kubectl` per l'[accesso al cluster Kubernetes](/docs/containers?topic=containers-cs_cluster_tutorial#cs_cluster_tutorial_lesson3).
 
 ## Creazione di un'istanza del servizio Cloud Object Storage
@@ -37,7 +37,7 @@ Inizia dalla tua pagina **App details** e utilizza la seguente procedura:
 1. Fai clic su **Add service**.
 2. Seleziona **Storage** e fai clic su **Next**.
 3. Seleziona quindi l'opzione **Cloud Object Storage** e fai clic su **Next**.
-4. Ti vengono presentati i piani di prezzi per la tua istanza {{site.data.keyword.cos_full_notm}}. Seleziona il piano di prezzi più adatto alle tue esigenze e fai quindi clic su **Crea** per creare un'istanza del servizio {{site.data.keyword.cos_full_notm}} per l'utilizzo con la tua applicazione Mendix.
+4. Ti vengono presentati i piani di prezzi per la tua istanza {{site.data.keyword.cos_full_notm}}. Seleziona il piano di prezzi più adatto alle tue esigenze e fai quindi clic su **Create** per creare un'istanza del servizio {{site.data.keyword.cos_full_notm}} per l'utilizzo con la tua applicazione Mendix.
 
   Se preferisci utilizzare un'istanza esistente del servizio {{site.data.keyword.cos_full_notm}}, fai clic su **Add service** e seleziona l'istanza esistente per l'utilizzo da parte della tua applicazione.
   {: tip}
@@ -113,7 +113,7 @@ Dopo che hai distribuito la tua applicazione, la Delivery Pipeline o la riga di 
 2. Fai clic su **View logs and history**.
 3. Nel file di log, trova l'URL dell'applicazione:
 
-    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, potresti vedere una riga nel file di log simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
+    Alla fine del file di log, cerca la parola `urls` o `view`. Ad esempio, nel file di log potresti vedere una riga simile a `urls: my-app-devhost.mybluemix.net` o `View the application health at: http://<ipaddress>:<port>/health`.
 
 4. Vai all'URL nel tuo browser. Se l'applicazione è in esecuzione, viene visualizzato un messaggio che include `Congratulations` o `{"status":"UP"}`.
 

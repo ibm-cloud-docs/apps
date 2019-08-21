@@ -57,7 +57,7 @@ Sua lista de recursos no [console do {{site.data.keyword.cloud_notm}}](https://{
 
 Para excluir um app que você criou, conclua estas etapas:
 
-1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone **Menu** ![Ícone Menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
+1. No [console do {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"), clique no ícone de **Menu** ![Ícone de menu](../icons/icon_hamburger.svg) e selecione **Lista de recursos**.
 2. Clique no ícone **Ações** ![Ícone Ações](../icons/action-menu-icon.svg) para o app que você deseja excluir e clique em **Excluir**.
 
 ## Como parar um app do Cloud Foundry em minha conta?

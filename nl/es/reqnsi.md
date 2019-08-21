@@ -2,9 +2,9 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-03"
 
-keywords: apps, services, add service, application
+keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
 subcollection: creating-apps
 
@@ -23,6 +23,11 @@ Cuando se crea una app con {{site.data.keyword.cloud}} {{site.data.keyword.dev_c
 
 Puede solicitar una instancia de servicio y utilizarla independientemente de la app, o puede añadir la instancia de servicio a la app desde la página Detalles de la app. Puede suministrar un determinado tipo de servicio directamente desde el catálogo de {{site.data.keyword.cloud_notm}}.
 
+## Servicios de suministro automático
+{: #auto-provision}
+
+Si un kit de inicio especifica servicios que son necesarios, {{site.data.keyword.cloud_notm}} crea automáticamente las instancias de estos servicios al crear la app. También puede crear recursos de forma manual o seleccionar instancias de servicios existentes para añadirlos a su app después de haberla creado. Puede ver una lista de instancias de servicio asociadas a la app en la página **Detalles de la app**, junto con las credenciales de servicio en caso de que las necesite más adelante.
+
 ## Descubrimiento de servicios
 {: #discover-resources}
 
@@ -32,11 +37,11 @@ Puede ver todos los servicios disponibles en {{site.data.keyword.cloud_notm}} de
 * Desde la línea de mandatos. Utilice el mandato `ibmcloud service offerings`.
 * Desde la propia aplicación. Utilice [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
-Puede seleccionar el servicio que necesita cuando desarrolla aplicaciones. Cuando lo haya seleccionado, {{site.data.keyword.cloud_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos y un servicio de notificación push para aplicaciones móviles genera información de configuración.
+Puede seleccionar el servicio que necesita cuando desarrolla apps. Cuando lo haya seleccionado, {{site.data.keyword.cloud_notm}} proporcionará el servicio. El proceso de suministro puede ser diferente para distintos tipos de servicios. Por ejemplo, un servicio de base de datos crea una base de datos, y un servicio de notificación push para apps móviles genera información de configuración.
 
-{{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su aplicación mediante una instancia de servicio. Una instancia de servicio se puede compartir entre aplicaciones web.
+{{site.data.keyword.cloud_notm}} proporciona los recursos de un servicio a su app mediante una instancia de servicio. Una instancia de servicio se puede compartir entre apps web.
 
-También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe codificar manualmente la aplicación para que utilice estos servicios de la misma forma que codifica aplicaciones externas o herramientas de terceros para que utilicen servicios {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Conexión de servicios a apps externas](/docs/resources?topic=resources-externalapp).
+También puede utilizar servicios que estén alojados en otras regiones si estos servicios están disponibles en dichas regiones. Estos servicios deben estar accesibles en Internet y tener puntos finales API. Debe programar manualmente la app para que utilice estos servicios de la misma forma que programa apps externas o herramientas de terceros para que utilicen servicios de {{site.data.keyword.cloud_notm}}. Para obtener más información, consulte [Conexión de servicios a apps externas](/docs/resources?topic=resources-externalapp).
 
 ## Solicitud de una nueva instancia de servicio
 {: #request-instance}
@@ -63,28 +68,28 @@ Si utiliza la interfaz de línea de mandatos {{site.data.keyword.cloud_notm}} pa
   ```
   {: pre}
 
-2. Siga las indicaciones para seleccionar un grupo de recursos y para crear y conectar un nuevo servicio relacionado con datos a la aplicación, como por ejemplo Cloudant. Es posible que tenga que seleccionar una región y un plan para el servicio.
-3. Cuando se crea el servicio, se añaden varios archivos al directorio de la aplicación, incluidas las credenciales, para ayudarle a integrar el servicio en la aplicación. Puede fusionar manualmente los archivos o saltarse este paso por ahora.
+2. Siga las indicaciones para seleccionar un grupo de recursos y para crear y conectar un nuevo servicio relacionado con datos a la app, como por ejemplo Cloudant. Es posible que tenga que seleccionar una región y un plan para el servicio.
+3. Cuando se crea el servicio, se añaden varios archivos al directorio de la app, incluidas las credenciales, para ayudarle a integrar el servicio en la app. Puede fusionar manualmente los archivos o saltarse este paso por ahora.
 
 Se pueden enlazar una instancia de servicio únicamente a aquellas instancias de apps que se encuentran en el mismo espacio u organización. No obstante, puede utilizar instancias de servicio de otros espacios y organizaciones de la misma forma que lo hace una app externa. En lugar de crear un enlace, utilice las credenciales para configurar directamente su instancia de app. Para obtener más información sobre la manera en que las apps externas utilizan los servicios de {{site.data.keyword.cloud_notm}}, consulte [Habilitación de apps externas para utilizar servicios de {{site.data.keyword.cloud_notm}}](/docs/resources?topic=resources-externalapp#externalapp).
 
-## Configuración de la aplicación
+## Configuración de su app
 {: #configure-app}
 
-Después de enlazar una instancia de servicio a una aplicación, debe configurar la aplicación para que interactúe con el servicio.
+Después de enlazar una instancia de servicio a una app, debe configurar la app para que interactúe con el servicio.
 
-Cada servicio puede requerir un mecanismo diferente para comunicarse con las aplicaciones. Estos mecanismos están documentados como parte de la definición de servicio con fines informativos cuando desarrolle aplicaciones. Para una mayor coherencia, los mecanismos son necesarios para que la aplicación interactúe con el servicio.
+Cada servicio puede requerir un mecanismo diferente para comunicarse con las apps. Estos mecanismos están documentados como parte de la definición de servicio con fines informativos cuando desarrolle apps. Para una mayor coherencia, los mecanismos son necesarios para que la app interactúe con el servicio.
 
-* Para interactuar con servicios de base de datos, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como, por ejemplo, el ID de usuario, la contraseña y el URI de acceso para la aplicación.
-* Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como la identidad de la aplicación (ID de app), la información de seguridad que es específica del cliente y el URI de acceso para la aplicación. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la aplicación y el usuario que utilizan la aplicación, se pueden compartir entre el conjunto de servicios.
-* Para interactuar con aplicaciones web o código en la nube del servidor para aplicaciones móviles, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la aplicación. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que la aplicación se enlaza. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
+* Para interactuar con los servicios de base de datos, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como el ID de usuario, la contraseña y el URI de acceso para la app.
+* Para interactuar con los servicios de dispositivos móviles de fondo, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como la identidad de la app (ID de app), la información de seguridad que es específica del cliente y el URI de acceso de la app. Los servicios móviles suelen funcionar compartiendo el contexto entre sí, de forma que la información contextual como, por ejemplo, el nombre del desarrollador de la app y el usuario que utilizan la app, se pueden compartir entre el conjunto de servicios.
+* Para interactuar con apps web o código en la nube del servidor para apps móviles, utilice la información que {{site.data.keyword.cloud_notm}} proporciona como las credenciales de tiempo de ejecución de la variable de entorno *VCAP_SERVICES* de la app. El valor de la variable de entorno *VCAP_SERVICES* es la serialización del objeto JSON. La variable contiene los datos de tiempo de que son necesarios para interactuar con los servicios a los que está enlazada la app. El formato de los datos es diferente para diferentes servicios. Es posible que necesite leer la documentación del servicio para saber lo que puede esperar y cómo interpretar cada información.
 
-Si se bloquea un servicio enlazado con una aplicación, ésta podría dejar de funcionar o tener errores. {{site.data.keyword.cloud_notm}} no reinicia automáticamente la aplicación para solucionar los problemas. Escriba código en la aplicación para identificar y recuperarse de caídas, excepciones y fallos de conexión. Para obtener más información, consulte [Las apps no se reiniciarán automáticamente](/docs/apps/troubleshoot?topic=creating-apps-managingapps#ts_apps_not_auto_restarted).
+Si se bloquea un servicio enlazado con una app, esta puede dejar de ejecutarse o contener errores. {{site.data.keyword.cloud_notm}} no reinicia automáticamente la app para solucionar los problemas. Considere la posibilidad de programar su app para que identifique y se recupere de paradas, excepciones y fallos de conexión.
 
 ## Acceso a servicios en los entornos de despliegue de {{site.data.keyword.cloud_notm}}
 {: #migrate_instance}
 
-{{site.data.keyword.cloud_notm}} ofrece muchas opciones de despliegue y puede acceder a un servicio que se está ejecutando en un entorno desde un entorno diferente. Por ejemplo, si tiene un servicio que se está ejecutando en Cloud Foundry, puede acceder a dicho servicio desde una aplicación que se esté ejecutando en un clúster de Kubernetes.
+{{site.data.keyword.cloud_notm}} ofrece muchas opciones de despliegue y puede acceder a un servicio que se está ejecutando en un entorno desde un entorno diferente. Por ejemplo, si tiene un servicio que se está ejecutando en Cloud Foundry, puede acceder a dicho servicio desde una app que se esté ejecutando en un clúster de Kubernetes.
 
 ### Ejemplo: Acceda a un servicio de Cloud Foundry desde un pod de Kubernetes
 
@@ -95,7 +100,7 @@ Las credenciales de servicio que se almacenan en un secreto de Kubernetes están
 
 **Importante**: No haga referencia ni exponga las credenciales de servicio directamente en el archivo YAML de despliegue. Los archivos YAML de despliegue no están diseñados para contener datos confidenciales y no cifran las credenciales de servicio de forma predeterminada. Para almacenar correctamente esta información y acceder a ella, debe utilizar un secreto de Kubernetes. 
 
-1. [Enlace el servicio al clúster](/docs/containers?topic=containers-integrations#adding_cluster). 
+1. [Enlace el servicio al clúster](/docs/containers?topic=containers-service-binding#bind-services). 
 2. Para acceder a las credenciales de servicio desde su pod de app, elija una de las siguientes opciones. 
    - Monte el secreto como un volumen en el pod
    - Haga referencia al secreto en variables de entorno
@@ -105,7 +110,7 @@ Las credenciales de servicio que se almacenan en un secreto de Kubernetes están
 
 Es posible que tenga servicios gestionados fuera de {{site.data.keyword.cloud_notm}}. Si tiene credenciales para acceder a estos servicios externos desde Internet, puede crear instancias de servicio proporcionadas por el usuario de {{site.data.keyword.cloud_notm}} para representar y comunicarse con los servicios externos.
 
-Para crear una instancia de servicio proporcionada por el usuario y enlazarla a una aplicación, siga los pasos siguientes:
+Para crear una instancia de servicio proporcionada por el usuario y enlazarla a una app, siga los pasos siguientes:
 
 1. Cree una instancia de servicio proporcionada por el usuario mediante el mandato `ibmcloud service user-provided-create`:
     * Para crear una instancia de servicio general proporcionada por el usuario, utilice la opción **-p** y separe los nombres de los parámetros por comas. La interfaz de línea de mandatos `ibmcloud` le solicitará de uno en uno cada parámetro. Por ejemplo:
@@ -146,7 +151,7 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
         OK
         ```
 
-2. Enlace la instancia de servicio a la aplicación con el mandato `ibmcloud service bind`. Por ejemplo:
+2. Enlace la instancia de servicio a la app con el mandato `ibmcloud service bind`. Por ejemplo:
 
 	```
 	ibmcloud service bind myapp testups1
@@ -154,4 +159,4 @@ Para crear una instancia de servicio proporcionada por el usuario y enlazarla a 
 	OK
 	```
 
-Ahora puede configurar la aplicación para que utilice servicios externos. Para obtener información sobre cómo configurar la aplicación para que interactúe con un servicio, consulte [Configuración de la aplicación para que interactúe con un servicio](/docs/apps?topic=creating-apps-add-resource#configure-app).
+Ahora puede configurar la app para que utilice servicios externos. Para obtener información sobre cómo configurar la app para que interactúe con un servicio, consulte [Configuración de la app](/docs/apps?topic=creating-apps-add-resource#configure-app).

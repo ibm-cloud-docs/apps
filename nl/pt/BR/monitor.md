@@ -23,7 +23,7 @@ subcollection: creating-apps
 será criado automaticamente para monitorar a URL do app principal por padrão.
 
 O {{site.data.keyword.prf_hublong}} está
-disponível como um serviço no domínio DevOps no catálogo do {{site.data.keyword.cloud_notm}}. Ele também está disponível no painel do app Cloud Foundry na guia **Monitoramento**.
+disponível como um serviço no domínio DevOps no catálogo do {{site.data.keyword.cloud_notm}}. Ele também está disponível no painel do app Cloud Foundry na guia **Monitoramento**. 
 {: shortdesc}
 
 É possível testar, monitorar e melhorar o funcionamento de seu app à medida que você o constrói, incluindo o {{site.data.keyword.prf_hubshort}} na cadeia de ferramentas do DevOps.

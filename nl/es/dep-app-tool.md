@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-18"
 
-keywords: apps, deploy, deploying apps, toolchains, cli
+keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
 subcollection: creating-apps
 
@@ -22,65 +22,126 @@ subcollection: creating-apps
 # Despliegue de apps
 {: #deploying-apps}
 
-Puede desplegar sus apps con una cadena de herramientas o con una interfaz de línea de mandatos (CLI). Una cadena de herramientas es un conjunto de integraciones de herramientas. La CLI constituye una forma simple de desplegar sus apps e instancias de servicio.
+Puede desplegar la aplicación en {{site.data.keyword.cloud}} utilizando la cadena de herramientas de DevOps. Con una cadena de herramientas de DevOps, puede automatizar los despliegues en muchos entornos y añadir rápidamente servicios de supervisión, registro, información y alertas que le ayuden a gestionar la app a medida que crece. Puede configurar la entrega continua y desplegar la app utilizando la consola web o la interfaz de línea de mandatos (CLI) de {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-## Despliegue de apps mediante cadenas de herramientas
-{: #toolchain-deploy-apps}
+Una cadena de herramientas de DevOps proporciona un entorno de desarrollo basado en equipos para la app. Cuando se crea una cadena de herramientas, el servicio de app crea un repositorio Git, donde puede ver el código fuente, clonar la app y crear y gestionar problemas. También es posible acceder a un entorno de GitLab dedicado y a un conducto de entrega continua. Están personalizados para el destino de despliegue que seleccione, que puede ser [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about) o [Servidor virtual (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
-Las cadenas de herramientas abiertas están disponibles en los entornos Público y Dedicado en {{site.data.keyword.Bluemix}}. Con una cadena de herramientas correctamente configurada, el despliegue de una app resulta sencillo. Un ciclo de despliegue de compilación se inicia automáticamente después de cada fusión en la rama maestra en su repositorio.
+## Utilización de la consola {{site.data.keyword.cloud_notm}}
+{: deploy-console}
 
-Puede crear una cadena de herramientas de estas formas:
-* Utilice una plantilla para crear una cadena de herramientas nueva.
-* Cree una cadena de herramientas a partir de una app.
+{{site.data.keyword.cloud_notm}} proporciona una consola web donde puede configurar la entrega continua y desplegar la app utilizando una cadena de herramientas de DevOps.
 
-Para obtener más información sobre las cadenas de herramientas, consulte [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+### Antes de empezar
+{: deploy-console-before}
 
-## Despliegue de apps mediante la CLI
-{: #cli-deploy-apps}
+Antes de comenzar, utilice el [panel de control de {{site.data.keyword.cloud_notm}}](https://{DomainName}){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") para [crear su app](/docs/apps?topic=creating-apps-getting-started) y [añadir servicios](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
 
-{{site.data.keyword.cloud_notm}} proporciona una CLI sólida así como plugins y extensiones de herramientas de desarrollador que se integran con la CLI.
+### Despliegue automático de la app
+{: deploy-console-auto}
 
-Antes de empezar, [descargue e instale la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-ibmcloud-cli).
+Todas las cadenas de herramientas creadas en el panel de control de desarrollador de {{site.data.keyword.cloud_notm}} se configuran para un despliegue automático.
+{: note}
+
+1. En la página **Detalles de la app**, pulse **Configurar entrega continua**.
+2. Seleccione un destino de despliegue. Configure el destino de despliegue de acuerdo con las instrucciones correspondientes al destino que seleccione:
+  * **Desplegar en el servicio IBM Kubernetes**. Esta opción crea un clúster de hosts, denominado nodos trabajadores, para desplegar y gestionar contenedores de apps de alta disponibilidad. Puede crear un clúster o desplegar en un clúster existente. Para obtener más información, consulte [Despliegue de apps en clústeres de Kubernetes](/docs/containers?topic=containers-app).
+  * **Desplegar en Cloud Foundry**. Esta opción despliega la app nativa de la nube sin necesidad de gestionar la infraestructura subyacente. Si la cuenta tiene acceso a {{site.data.keyword.cfee_full_notm}}, puede seleccionar el tipo de desplegador de **nube pública** o de **entorno de empresa**, que puede utilizar para crear y gestionar entornos aislados para alojar apps de Cloud Foundry exclusivamente para su empresa. Para obtener más información, consulte
+[Despliegue de apps en Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) y
+[Despliegue de apps en {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
+  * **Desplegar en un servidor virtual**. Esta opción proporciona una instancia de servidor virtual, carga una imagen que incluye la app, crea una cadena de herramientas DevOps e inicia automáticamente el primer ciclo de despliegue. Para obtener más información, consulte
+[Despliegue de apps en un servidor virtual](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+
+    El despliegue de VSI está disponible para algunos kits de inicio. Para utilizar esta característica, vaya al [panel de control de {{site.data.keyword.cloud_notm}}](https://{DomainName}) y pulse **Crear una app** en el mosaico **Apps**.
+    {: note}
+
+### Despliegue manual de su app
+{: deploy-console-manual}
+
+Con una cadena de herramientas correctamente configurada, un ciclo de despliegue de compilación empieza automáticamente después de cada fusión en la rama maestra en su repositorio. 
+
+También puede desplegar manualmente su app desde su cadena de herramientas de DevOps:
+
+1. En la página **Detalles de la app**, pulse **Ver cadena de herramientas**.
+2. Pulse sobre **Conducto de entrega**, donde puede iniciar compilaciones, gestionar el despliegue y ver los registros y el historial.
+
+La entrega continua está habilitada de forma automática para algunas apps. Puede habilitar la entrega continua para automatizar compilaciones, pruebas y despliegues a través de Delivery Pipeline y GitHub.
+
+Para obtener más información, consulte:
+* [Compilación y despliegue](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
+* [Creación de cadenas de herramientas](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+
+## Uso de la CLI de {{site.data.keyword.dev_cli_short}}
+{: #deploy-cli}
+
+{{site.data.keyword.cloud_notm}} proporciona una CLI sólida y plugins para ayudarle a simplificar el flujo de trabajo del desarrollador. Puede desplegar su app {{site.data.keyword.cloud_notm}} de una de estas dos maneras, en función de cómo haya configurado su app.
+
+### Antes de empezar
+{: #deploy-cli-before}
+
+Antes de empezar, [descargue e instale la CLI de {{site.data.keyword.cloud_notm}}](/docs/cli?topic=cloud-cli-getting-started).
 
 La CLI no recibe soporte de Cygwin. Utilice la herramienta en una ventana que no sea la ventana de línea de mandatos de Cygwin.
 {: important}
 
-  1. {: download} Descargue el código de la app en un directorio nuevo para configurar su entorno de desarrollo.
-
-    <a class="xref" href="https://{DomainName}" target="_blank" img class=“image” src=“images/btn_starter-code.svg” alt=“Download application code” title="(Se abre en un nuevo separador o ventana)"></a>
+  1. Descargue el código de la app en un directorio nuevo para configurar su entorno de desarrollo.
 
   2. Cambie al directorio donde se encuentra el código.
 
-  <pre class="pre"><code class="hljs">cd <var class="keyword varname">su_nuevo_directorio</var></code></pre>
-
-  3.  Realice los cambios al código de su app. Por ejemplo, si utiliza una aplicación de ejemplo de {{site.data.keyword.cloud_notm}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarla y editar la línea `Thanks for creating ...`. Asegúrese de que la app se ejecuta localmente
+  3.  Actualice el código de la app. Por ejemplo, si utiliza una app de ejemplo de {{site.data.keyword.cloud_notm}} y la app contiene el archivo `src/main/webapp/index.html`, puede modificarla y editar la línea `Thanks for creating ...`. Asegúrese de que la app se ejecuta localmente
 antes de volver a desplegarla en {{site.data.keyword.cloud_notm}}.
 
-    Preste atención al archivo `manifest.yml`. Cuando despliegue su app nuevamente en
-{{site.data.keyword.cloud_notm}}, este archivo se utiliza para determinar el URL de la aplicación, la
-asignación de memoria, el número de instancias y otros parámetros cruciales.
+    Revise el archivo `README.md`, que contiene detalles como las instrucciones de compilación.
 
-    Revise también el archivo `README.md`, que contiene detalles como instrucciones de compilación, si procede.
+    Si la app es una app Liberty, debe compilarla antes de volverla a desplegar.
+    {: note}
 
-  Si la aplicación es una app Liberty, debe compilarla antes de volverla a desplegar.
-  {: note}
+  4. Inicie sesión en la CLI de {{site.data.keyword.cloud_notm}} con su IBMid. Si tiene varias cuentas, se le solicitará que seleccione qué cuenta desea utilizar. Si no especifica una región con el distintivo `-r`, también deberá seleccionar una región.
+    ```
+    ibmcloud login
+    ```
+    {: codeblock}
+  
+    Si se rechazan sus credenciales, puede que esté utilizando un ID federado. Para iniciar sesión con un ID federado, utilice el distintivo
+`--sso`. Para obtener más información, consulte el apartado [Inicio de sesión con un ID federado](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
+    {: tip}
 
-  4. Conecte e inicie una sesión en {{site.data.keyword.cloud_notm}}.
+### Despliegue automático de la app
+{: #deploy-cli-auto}
 
-  <pre class="pre"><code class="hljs">ibmcloud api https://api.<span class="keyword" data-hd-keyref="DomainName">NombreDominio</span></code></pre>
+Si no ha creado una cadena de herramientas de DevOps para la app y la app aún no está en un repositorio Git, puede ejecutar el mandato [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit). Siga las indicaciones para "Configurar DevOps" y despliegue en una nueva cadena de herramientas (y cree un nuevo repositorio GitLab).
 
-  <pre class="pre"><code class="hljs">ibmcloud login -u <var class="keyword varname" data-hd-keyref="user_ID">nombre_usuario</var> -o <var class="keyword varname" data-hd-keyref="org_name">nombre_organización</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var></code></pre>
+Después de crear una cadena de herramientas de DevOps para su app, el despliegue de una nueva compilación será tan simple como confirmar y enviar su código al repositorio de la cadena de herramientas. 
 
-  Si utiliza un ID federado, añada la opción `-sso`.
+1. Prepare los cambios que se deben confirmar.
+    ```
+    git add .
+    ```
+2. Confirme los cambios con un mensaje breve.
+    ```
+    git commit -m "made changes"
+    ```
+3. Envíe las confirmaciones en la rama maestra al repositorio remoto.
+    ```
+    git push origin master
+    ```
+4. Vea la cadena de herramientas de DevOps para su app desde la consola de {{site.data.keyword.cloud_notm}}. Puede ver detalles de la cadena de herramientas desde la página **Detalles de la app** en la consola de {{site.data.keyword.cloud_notm}} ejecutando el mandato [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) desde el directorio de la app.
+5. Ver el conducto dentro de la cadena de herramientas para verificar que se ha iniciado la nueva compilación.
 
-  <pre class="pre"><code class="hljs">ibmcloud login  -o <var class="keyword varname" data-hd-keyref="org_name">nombre_organización</var> -s <var class="keyword varname" data-hd-keyref="space_name">nombre_espacio</var> -sso</code></pre>
+### Despliegue manual de su app
+{: #deploy-cli-manual}
 
-  Si el valor contiene un espacio, debe especificar `nombre_usuario`, `nombre_organización` y `nombre_espacio` entre comillas simples o dobles, por ejemplo `-o "my org"`.
-  {: note}
+Puede desplegar manualmente la app en {{site.data.keyword.cloud_notm}} utilizando el mandato
+[`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
 
-  5. Desde el nuevo directorio, despliegue la app en {{site.data.keyword.cloud_notm}} con el mandato `ibmcloud dev deploy`. Para obtener más información, consulte [la documentación de CLI](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy).
+  ```
+  ibmcloud dev deploy
+  ```
+  {: codeblock}
 
-  <pre class="pre"><code class="hljs">ibmcloud dev deploy <var class="keyword varname" data-hd-keyref="app_name">app_name</var></code></pre>
+### Información relacionada
+{: #deploy-cli-related}
 
-  6. Para acceder a su app, vaya a https://<var class="keyword varname" data-hd-keyref="app_url">url_app</var>.<span class="keyword" data-hd-keyref="APPDomain">NombreDominioApp</span>.
+Para obtener más información sobre cómo desplegar la app en {{site.data.keyword.cloud_notm}} utilizando la CLI, consulte:
+
+* [Despliegue en entornos de {{site.data.keyword.cloud_notm}} con la CLI de {{site.data.keyword.dev_cli_short}}](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
