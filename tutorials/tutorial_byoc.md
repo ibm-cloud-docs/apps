@@ -86,6 +86,11 @@ You can use the `ibmcloud dev enable` command to generate a DevOps toolchain tem
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
+## Verifying that your app is running
+{: #verify-byoc}
+
+After your app is built and deployed, you can view the app's URL to make sure that it's running.
+
 ### Apps that are deployed to a Kubernetes cluster
 {: #view-kube-app-byoc}
 
