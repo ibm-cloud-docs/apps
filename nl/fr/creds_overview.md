@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-03-15"
+lastupdated: "2019-06-04"
 
-keywords: apps, credentials
+keywords: apps, credentials, service, add service credentials, environment, deployment
 
 subcollection: creating-apps
 
@@ -18,36 +18,29 @@ subcollection: creating-apps
 {:tip: .tip}
 {:important: .important}
 
-# Présentation des données d'identification
+# Ajout manuel des informations d'identification de service à votre environnement de déploiement
 {: #credentials_overview}
 
-Découvrez comment ajouter manuellement des données d'identification de service à votre environnement de déploiement.
+Vous voulez que votre logique applicative acquière des données d'identification de service sensibles, telles que des clés d'API de base de données ou des mots de passe, dans l'environnement dans lequel votre application s'exécute. De cette façon, vous n'avez pas besoin de conserver vos données d'identification dans votre référentiel de code source.
 {: shortdesc}
 
-<!-- After PUP: Maybe provide links to the credentials section of the programming guides, such as https://cloud.ibm.com/docs/swift/cloudnative/configuration.html#configuration-->
+Si vous créez une application en utilisant un kit de démarrage, l'environnement est automatiquement préparé pour vous. Lorsque vous connectez un service à votre kit de démarrage avant de déployer votre application, les données d'identification du service sont automatiquement ajoutées à votre environnement.
 
-En général, vous souhaitez que votre logique d'application se procure les données d'identification de service sensibles, comme les clés ou les mots de passe d'API de base de données, à partir de l'environnement où s'exécute votre application. Ainsi, vous ne conservez pas les données d'identification dans votre référentiel de codes source. Les bases de données de vos environnements d'intégration continue, de pré-production et de production sont mises en quarantaine ou isolées les unes des autres.
+Vous devez ajouter manuellement les données d'identification de service à votre environnement de déploiement dans les deux scénarios suivants :
 
-Si vous créez une application en utilisant un modèle de kit de démarrage, l'environnement est préparé pour vous automatiquement. Votre cible de déploiement peut être de type suivant :
-  * [Kubernetes](/docs/apps?topic=creating-apps-add-credentials-kube)
-  * [Cloud Foundry Public ou Cloud Foundry Enterprise Environment](/docs/apps?topic=creating-apps-add-credentials-cf)
-  * [Instance de serveur virtuel (également docker local)](/docs/apps?topic=creating-apps-add-credentials-vsi)
-  
-Cette procédure permet de configurer l'environnement. Les kits de démarrage génèrent du code qui utilise une bibliothèque dépendante afin de rendre le code portable pour qu'il s'exécute sur une des cibles de déploiement. Pour finir, aucune ramification n'est utilisée pour détecter dans quelle cible de déploiement l'application s'exécute.
-
-L'administrateur ou l'ingénieur DevOps a la charge de préparer les environnements avec les configurations et les contrôles d'accès appropriés pour rendre disponibles les valeurs requises par votre application.
-
-L'exécution de l'option "Configurer la distribution continue" est une étape unique qui effectue les tâches principales suivantes :
- * Prépare votre cible de déploiement avec des services, des ressources et des données d'identification.
- * Crée une chaîne d'outils DevOps pour générer et déployer votre application dans cet environnement, en utilisant le code qui référence correctement les données d'identification dans l'environnement.
-
-Cependant, vous devez préparer la cible de déploiement dans l'un des scénarios suivants :
  * Lorsque vous utilisez votre propre code.
- * Lorsque vous utilisez un modèle de kit de démarrage vide.
- * Lorsque vous ajoutez un service à une application reposant sur un kit de démarrage après son déploiement.
+ * Lorsque vous ajoutez un service à une application basée sur un kit de démarrage après le déploiement de l'application.
 
-La préparation d'environnement est toujours effectuée pour toutes les données d'identification de tous les services associés à une application et tous les `services` sont répertoriés dans le fichier `manifest.yml`, mais les références de données d'identification ne sont pas toutes placées dans le fichier `mappings.json`. Dans ce cas, vous devez vous-même placer ces références dans le fichier. Une fois que vous avez choisi un déploiement cible et que vous n'avez pas besoin de l'abstraction de la bibliothèque `IBMCloudEnv`, consultez la section "Votre code + (cible de déploiement)" correspondant à votre décision.
-{: important}
+Le processus d'ajout des données d'identification de service dépend de votre cible de déploiement et de votre langage de programmation. Pour plus d'informations sur la configuration des données d'identification de service pour votre cible de déploiement, consultez la documentation spécifique à votre environnement d'hébergement :
 
-Certains kits de démarrage n'incluent pas la référence à la dépendance `IBMCloudEnv`, au fichier `manifest.yml` ou au fichier `mappings.json`.
-{: important}
+  * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
+  * Cloud Foundry Public ou {{site.data.keyword.cfee_full}}
+  * Instance de serveur virtuel (conteneur Docker local)
+
+Un grand nombre de langages et d'infrastructures fournissent des bibliothèques standard pour les configurations spécifiques aux applications et à l'environnement. Pour plus d'informations, voir les guides de programmation suivants :
+
+* [Java: Working with service credentials](/docs/java?topic=cloud-native-configuration)
+* [Configuration de l'environnement Node.js](/docs/node?topic=nodejs-configure-nodejs)
+* [Configuration de l'environnement Spring](/docs/java?topic=java-spring-configuration)
+* [Configuration de l'environnement Swift](/docs/swift?topic=swift-configuration)
+* [Configuration de l'environnement Go](/docs/go?topic=go-configure-go-env)

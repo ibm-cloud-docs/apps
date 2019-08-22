@@ -100,7 +100,7 @@ Pour déployer votre application, procédez comme suit :
 
 1. Sur la page Détails de l'application, cliquez sur **Déployer**.
 2. Sélectionnez **Déployer dans Cloud Functions**, puis cliquez sur **Suivant**.
-3. Sur la page Configurer la chaîne d'outils, entrez un nom de chaîne d'outils, sélectionnez une région, puis cliquez sur **Créer**. Après avoir sélectionné et configuré la cible de déploiement, la page Détails de l'application indique que la distribution continue est configurée. 
+3. Sur la page Configurer la chaîne d'outils, entrez un nom de chaîne d'outils, sélectionnez une région, puis cliquez sur **Créer**. Après avoir sélectionné et configuré la cible de déploiement, la page Détails de l'application indique que la distribution continue est configurée.
 4. Facultatif. Passez les actions en revue dans la console {{site.data.keyword.openwhisk_short}} en cliquant sur l'icône Actions ![Icône Plus d'actions](../icons/action-menu-icon.svg) et en sélectionnant **Open Cloud Functions**.
 5. Facultatif. Affichez le référentiel contenant le code généré pour votre application et vos services en cliquant sur **Afficher le référentiel**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-07-01"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -24,7 +24,7 @@ Un kit de démarrage est un modèle prêt pour la production qui peut être int�
 
 Un kit de démarrage contient des métadonnées qui décrivent en quoi consiste le kit et ce qu'il fait. Il contient également des informations qui indiquent à {{site.data.keyword.cloud_notm}} ce qu'il doit produire. La sortie est prête à la production et peut être réutilisée pour d'autres améliorations conformes aux pratiques recommandées d'{{site.data.keyword.cloud_notm}}. Le contenu du kit de démarrage n'est pas aussi complexe qu'une démonstration et pas aussi simple qu'un fragment ou un exemple. Les applications sont créées dynamiquement selon les exigences du développeur.
 
-Chaque kit de démarrage comprend un langage, une infrastructure et un modèle pour un scénario d'utilisation spécifique. Vous pouvez réutiliser le code au lieu de le réinventer. Si un kit de démarrage nécessite des services spécifiques, des services fournis automatiquement sont disponibles pour que des instances de ces services soient automatiquement créées lorsque vous créez votre application.
+Chaque kit de démarrage comprend un langage, une infrastructure et un modèle pour un scénario d'utilisation spécifique. Vous pouvez réutiliser le code au lieu de le réinventer. Si un kit de démarrage nécessite des services spécifiques, les instances de service mises à disposition automatiquement sont automatiquement créées et connectées à votre application.
 
 ## Qu'est-ce qui distingue les kits de démarrage des exemples ?
 {: #compare}
@@ -43,7 +43,7 @@ Ce dernier contient du code d'activation de cloud pour plusieurs environnements 
 * Une logique de cas d'utilisation fournit des fonctions pour la fonction principale d'un cas d'utilisation donné. Par exemple, du code pour un agent conversationnel Watson Conversation ou du code pour une application de reconnaissance vocale mobile.
 * Les composants de langage sont des composants de code et des fichiers propres au langage de programmation que vous sélectionnez pour votre kit de démarrage Par exemple, les programmeurs node.js ont besoin d'un fichier package.json pour la gestion des dépendances, et il se trouve que ce fichier est automatiquement créé pour vous.
 * L'activation de service est un code qui permet à votre application de se connecter aux services que vous ajoutez et de les utiliser. La gestion des données d'identification, le code d'initialisation et les SDK propres aux services sont des exemples d'éléments d'activation de service.
-* L'activation du cloud est un code qui permet à votre application de s'exécuter sur {{site.data.keyword.cloud_notm}}. Par exemple, les graphiques Helm qui permettent à votre application de s'exécuter sur un cluster Kubernetes {{site.data.keyword.cloud_notm}}.
+* L'activation du cloud est un code qui permet à votre application de s'exécuter sur {{site.data.keyword.cloud_notm}}. Par exemple, les chartes Helm qui permettent à votre application de s'exécuter sur un cluster Kubernetes {{site.data.keyword.cloud_notm}}.
 
 Vous pouvez afficher votre code d'application en cliquant sur **Télécharger le code** sur la page Détails de l'application de votre application. Votre code est téléchargé en tant que fichier `.zip` contenant l'ensemble de la structure du code d'application. Vous pouvez extraire le fichier et exécuter le code localement à l'aide du plug-in {{site.data.keyword.dev_cli_notm}} ou l'ajouter à votre référentiel de gestion de code.
 
