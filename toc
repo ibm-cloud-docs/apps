@@ -55,7 +55,7 @@ Creating apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools command-line plug-in](/docs/cli?topic=cloud-cli-getting-started)
+    [IBM Cloud Developer Tools command-line plug-in](/cli/cloud-cli-getting-started)
 
     {: .topicgroup}
     IBM Cloud developer dashboards
