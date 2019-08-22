@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-17"
+lastupdated: "2019-08-22"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -264,16 +264,18 @@ You can use the [Git update](https://git-scm.com/docs/git-update-index){: new_wi
  To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
  {: tsResolve}
 
-## Exceeded your storage quota
+## Exceeded your storage quota for Kubernetes clusters
 {: #exceed_quota}
 
-If the build or deploy jobs fail, and you see the following message, you can delete your images with the following CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
+If the build or deploy jobs fail, and you see the following message, you can delete images from your Kubernetes clusters by using CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
 * Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your images by using `ibmcloud cr images`.
 * Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
 * Rerun the build or deploy job that failed.
+
+For more information, see [Freeing up used storage and changing service plans or quota limits to stay within given quota limits](docs/services/Registry?topic=registry-registry_quota#registry_quota_freeup).
 
 ## Accessing Kubernetes logs
 {: #access_kube_logs}
