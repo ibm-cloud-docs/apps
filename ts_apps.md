@@ -275,7 +275,7 @@ If the build or deploy jobs fail, and you see the following message, you can del
 * Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
 * Rerun the build or deploy job that failed.
 
-For more information, see [Freeing up used storage and changing service plans or quota limits to stay within given quota limits](docs/services/Registry?topic=registry-registry_quota#registry_quota_freeup).
+For more information, see [Freeing up used storage and changing service plans or quota limits to stay within given quota limits](/docs/services/Registry?topic=registry-registry_quota#registry_quota_freeup).
 
 ## Accessing Kubernetes logs
 {: #access_kube_logs}
