@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-23"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 {: #update-domain}
 
 Domains provide the URL route that is allocated to your organization in {{site.data.keyword.cloud}}. Custom domains direct requests for your applications to a URL that you own. A custom domain can be a shared domain, a shared subdomain, or a shared domain and host. Unless a custom domain is specified, {{site.data.keyword.cloud_notm}} uses a default shared domain in the route to your app. The process for managing your domains depends on your deployment target, such as {{site.data.keyword.containershort}}, Cloud Foundry, and others.
-{:shortdesc}
+{: shortdesc}
 
 To use a custom domain, you must register the custom domain on a public DNS server, and then configure the custom domain in {{site.data.keyword.cloud_notm}}. Next, you must map the custom domain to the {{site.data.keyword.cloud_notm}} system domain on the public DNS server. After your custom domain is mapped to the system domain, requests for your custom domain are routed to your app in {{site.data.keyword.cloud_notm}}.
 
@@ -47,4 +47,4 @@ The default shared domain is `mybluemix.net`, but `appdomain.cloud` is another d
 ## Using a custom domain for Cloud Foundry apps
 {: #custom-domain-cf}
 
-For Cloud Foundry apps, you can create and use a custom domain by using either the {{site.data.keyword.cloud_notm}} console or the command-line interface. For more information, see [Adding and using a custom domain](/docs/cloud-foundry-public?topic=cloud-foundry-public-custom-domains).
+For Cloud Foundry apps, you can create and use a custom domain by using either the {{site.data.keyword.cloud_notm}} console or the command-line interface. For more information, see [adding custom domains](/docs/cloud-foundry-public?topic=cloud-foundry-public-custom-domains).

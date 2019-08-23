@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-05-09"
+lastupdated: "2019-08-23"
 
 keywords: developer tools, building apps, developer entry point, DevOps, toolchain, insights
 
@@ -36,6 +36,6 @@ To add the {{site.data.keyword.DRA_short}} tool integration to your DevOps toolc
 4. On the toolchain's Overview page, click **Add a Tool**.
 5. In the Tool Integrations section, select **{{site.data.keyword.DRA_short}}**.
 6. Click **Create Integration**. {{site.data.keyword.DRA_short}} is added to your toolchain.
-7. Click the **{{site.data.keyword.DRA_short}}** tile to open the Overview page where you can start using **{{site.data.keyword.DRA_short}}**.
+7. Click the **{{site.data.keyword.DRA_short}}** tile to open the Overview page where you can start to use **{{site.data.keyword.DRA_short}}**.
 
 For more information, see the [{{site.data.keyword.DRA_short}} Getting started tutorial](/docs/services/DevOpsInsights?topic=DevOpsInsights-getting-started).

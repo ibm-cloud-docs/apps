@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-03"
+lastupdated: "2019-08-23"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, vcap_services, credentials
 
@@ -12,7 +12,7 @@ subcollection: creating-apps
 
 {: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
-{: codeblock: .codeblock}
+{:codeblock: .codeblock}
 {:note: .note}
 
 # Adding a service to your app
@@ -26,7 +26,7 @@ You can request an instance of the service and use it independently of your app,
 ## Auto-provisioned services
 {: #auto-provision}
 
-If a starter kit specifies required services, {{site.data.keyword.cloud_notm}} automatically creates instances of those services when you create your app. You can also manually create services or select existing service instances to add to your app after it's created. You can see a list of service instances that are associated with your app in the **App details** page, along with service credentials in case you need them later.
+If a starter kit specifies required services, {{site.data.keyword.cloud_notm}} automatically creates instances of those services when you create your app. You can also manually create services or select existing service instances to add to your app after creation. You can see a list of service instances that are associated with your app in the **App details** page, along with service credentials in case you need them later.
 
 ## Discovering services
 {: #discover-resources}
@@ -61,7 +61,7 @@ If you use the {{site.data.keyword.cloud_notm}} user interface to request a serv
 
 If you use the {{site.data.keyword.cloud_notm}} command line interface to request a service instance, download your app locally open the command line, and change to the app directory.
 
-1. Run the following command to add a service to your app. You can select an existing service from one already enabled on your account, or add a new service.
+1. Run the following command to add a service to your app. You can select an existing service from one already enabled on your account, or add a service.
 
   ```bash
   ibmcloud dev edit
@@ -71,7 +71,7 @@ If you use the {{site.data.keyword.cloud_notm}} command line interface to reques
 2. Follow the prompts to select a resource group, and to create and connect a new data-related service to your app, such as Cloudant. You might need to select a region and plan for the service.
 3. When the service is created, several files, including credentials, are added to your app directory to help you integrate the service into your app. You can manually merge any files or skip this step for now.
 
-You can bind a service instance to only those app instances that are in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services](/docs/resources?topic=resources-externalapp#externalapp).
+To bind a service instance to an app instance, they must be in the same space or org. However, you can use service instances from other spaces or orgs in the same way that an external app does. Instead of creating a binding, use the credentials to directly configure your app instance. For more information about how external apps use {{site.data.keyword.cloud_notm}} services, see [Enabling external apps to use {{site.data.keyword.cloud_notm}} services](/docs/resources?topic=resources-externalapp#externalapp).
 
 ## Configuring your app
 {: #configure-app}
@@ -81,7 +81,7 @@ After you bind a service instance to your app, you must configure your app to in
 Each service might require a different mechanism for communicating with apps. These mechanisms are documented as part of the service definition for your information when you develop apps. For consistency, the mechanisms are required for your app to interact with the service.
 
 * To interact with database services, use the information that {{site.data.keyword.cloud_notm}} provides such as the user ID, password, and the access URI for the app.
-* To interact with mobile back-end services, use the information that {{site.data.keyword.cloud_notm}} provides such as the app identity (app ID), security information that is specific to the client, and the access URI for the app. The mobile services often work in context with each other so that context information, such as the name of the app developer and the user that uses the app, can be shared across the set of services.
+* To interact with mobile back-end services, use the information that {{site.data.keyword.cloud_notm}} provides. Such as the app identity (app ID), security information that is specific to the client, and the access URI for the app. The mobile services often work in context with each other so that context information, such as the name of the app developer and the user that uses the app, can be shared across the set of services.
 * To interact with web apps or server-side cloud code for mobile apps, use the information that {{site.data.keyword.cloud_notm}} provides such as the runtime credentials in the *VCAP_SERVICES* environment variable of the app. The value of the *VCAP_SERVICES* environment variable is the serialization of a JSON object. The variable contains the runtime data that is required to interact with the services that the app is bound to. The format of the data is different for different services. You might need to read the service documentation about what to expect and how to interpret each piece of information.
 
 If a service that you bind to an app crashes, the app might stop running or have errors. {{site.data.keyword.cloud_notm}} doesn’t automatically restart the app to recover from these problems. Consider coding your app to identify and recover from outages, exceptions, and connection failures.
@@ -159,4 +159,4 @@ To create a user-provided service instance and bind it to an app, complete the f
 	OK
 	```
 
-You can now configure your app to use the external services. For information about configuring your app to interact with a service, see [Configuring your app](/docs/apps?topic=creating-apps-add-resource#configure-app).
+You can now configure your app to use the external services. For more information about configuring your app to use an external service, see [Configuring your app](/docs/apps?topic=creating-apps-add-resource#configure-app).

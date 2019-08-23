@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-06-27"
+lastupdated: "2019-08-23"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 {: #devops-toolchains}
 
 A DevOps toolchain is a set of tools that automates the tasks of developing and deploying your app. You can perform DevOps manually with simple apps, but the need for automation increases quickly as app complexity increases, and toolchain automation is a must-have for continuous delivery.
-{:shortdesc}
+{: shortdesc}
 
 The core component of a DevOps toolchain is a version control repository like GitHub. More tools might include backlog tracking, delivery pipelines, an integrated development environment (IDE), and monitoring like {{site.data.keyword.DRA_full}}.
 
