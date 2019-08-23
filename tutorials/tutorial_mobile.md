@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-17"
+lastupdated: "2019-08-23"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -17,7 +17,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 
-# Creating a mobile app
+# Creating mobile apps
 {: #tutorial-mobile}
 
 {{site.data.keyword.cloud}} offers mobile starter kits to help you create a mobile application quickly. Select a language, framework, and tools from the mobile starter kits to start working with a preconfigured app. Or, you can use a basic starter kit to create a custom mobile app.
@@ -69,24 +69,26 @@ To create a mobile app with the [{{site.data.keyword.dev_cli_long}} CLI](/docs/c
 
 The app is created in your current working directory.
 
-## Adding services (Optional)
+## Adding services (optional)
 {: #resources-mobile}
 
-Depending on the starter kit that you selected, some services might already be connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
 
-To add a service to your app, complete these steps:
+If you want to create a new service instance or connect any existing services to your app, complete these steps:
 
-1. On the **App details** page, click either **Create service**.
-2. Select the kind of service you want. For example, select **Databases** > **Next** > **Cloudant** > **Next**.
+1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
+2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance. For example, select **Databases** > **Next** > **Cloudant** > **Next**.
 3. Select your pricing plan. Use the **Lite** option for this tutorial.
 4. Click **Create**.
+
+After you add all the services that you want, the services are displayed in the App details page.
 
 ## Downloading the code
 {: #mobile-download-code}
 
 To download your app code and work with it locally, complete these steps:
 
-1. On the **App details** page, click **Download code**.
+1. On the App details page, click **Download code**.
 2. Import the app to your integrated development environment.
 3. Modify and save the code.
 

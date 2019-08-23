@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-23"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
@@ -36,7 +36,7 @@ The basic starter kit is a versatile tool that you can use to create custom apps
 ## Creating your app
 {: #create-scratch}
 
-1. From your [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), click **Create an app** in the Apps widget.
+1. From your [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), click **Create an app** in the Apps tile.
 
   You can also create a custom app from the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits) page in the {{site.data.keyword.dev_console}}.
   {: tip}
@@ -55,7 +55,9 @@ Great start! You just created an app!
 ## Adding services (optional)
 {: #resources-scratch}
 
-You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, you can add a place to manage your data.
+You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
+
+If you want to create a new service instance or connect any existing services to your app, complete these steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
 2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance. For example, select **Data** > **Next** > **Cloudant** > **Next**.

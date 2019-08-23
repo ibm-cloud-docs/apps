@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-23"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -42,13 +42,27 @@ Be sure that you have the following prerequisites ready to go:
 
 To create an app and connect it with your source repo, complete these steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click **Create an app** in the **Apps** tile.
+1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon"), click **Create an app** in the Apps tile.
 2. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 3. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
-4. Click **Create**. The **App details** page is displayed.
+4. Click **Create**. The App details page is displayed.
 5. Optional. [Add services](/docs/apps?topic=creating-apps-add-resource) to your app.
 6. Optional. You can add tags to this app by clicking **Add tags**, or you can edit tags by clicking the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) that's next to the displayed tags.
 7. Optional. View your repo by clicking **View repo.**
+
+## Adding services (optional)
+{: #services-byoc}
+
+You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
+
+If you want to create a new service instance or connect any existing services to your app, complete these steps:
+
+1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
+2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance. For example, select **Data** > **Next** > **Cloudant** > **Next**.
+3. Select your pricing plan. You can use the free option for this tutorial.
+4. Click **Create**.
+
+After you add all the services that you want, the services are displayed in the App details page.
 
 ## Deploying your app
 {: #toolchain-byoc}
@@ -62,21 +76,21 @@ You can configure continuous delivery for your app by using either the {{site.da
 
 #### If you already have a DevOps toolchain that you want to connect to your app, complete these steps:
 
-1. On the **App details** page, click **Configure continuous delivery**. The **Deploy my app** page is displayed.
-2. Select the toolchain that you want to connect to your app, and click **Enable deployment**. The **App details** page is displayed, indicating that continuous delivery is configured.
+1. On the App details page, click **Configure continuous delivery**. The Deploy my app page is displayed.
+2. Select the toolchain that you want to connect to your app, and click **Enable deployment**. The App details page is displayed, indicating that continuous delivery is configured.
 
 #### If you don't have a DevOps toolchain for this app, complete these steps:
 
-1. On the **App details** page, click **Create DevOps toolchain.** The **Create a toolchain** page is displayed.
+1. On the App details page, click **Create DevOps toolchain.** The Create a toolchain page is displayed.
 2. [Create the toolchain](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
-3. Use the breadcrumbs in the browser window to return to the **App details** page, which indicates that continuous delivery is configured.
+3. Use the breadcrumbs in the browser window to return to the App details page, which indicates that continuous delivery is configured.
 
 ### Using the CLI
 {: #cli-byoc-toolchain}
 
 You can use the `ibmcloud dev enable` command to generate a DevOps toolchain template that you check into your repository as the instruction set for what the DevOps toolchain is to create. 
 
-  1. On the **App details** page, click **View repo** to work with your code locally.
+  1. On the App details page, click **View repo** to work with your code locally.
   2. Run the following command:
     
     ```

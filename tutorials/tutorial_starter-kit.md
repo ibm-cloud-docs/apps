@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-08-23"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -61,9 +61,9 @@ Great start! You just created an app!
 ## Adding services (optional)
 {: #resources-starterkit}
 
-If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app.
+If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
 
-You can also add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+If you want to create a new service instance or connect any existing services to your app, complete these steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
 2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
