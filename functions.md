@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-07-29"
+lastupdated: "2019-08-23"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
@@ -26,7 +26,7 @@ You can develop your serverless apps by using one of the following methods:
 * {{site.data.keyword.openwhisk_short}} command-line interface (CLI), which provides more control over your deployment and operations.
 * {{site.data.keyword.openwhisk_short}} starter kit, in which you can configure continuous delivery by using a DevOps toolchain and a Delivery Pipeline.
 
-For more detailed information about {{site.data.keyword.openwhisk_short}}, check out the [documentation](/docs/openwhisk?topic=cloud-functions-getting_started).
+For more detailed information about {{site.data.keyword.openwhisk_short}}, check out the [documentation](/docs/openwhisk?topic=cloud-functions-getting-started).
 
 
 ## Developing with the {{site.data.keyword.openwhisk_short}} UI
