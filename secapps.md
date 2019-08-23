@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-07-25"
+lastupdated: "2019-08-23"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -75,11 +75,9 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 
 To upload a certificate for your Cloud Foundry app, complete the following steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
-2. Click **Cloud Foundry Apps**.
-3. Click the app that you want to change the domain for. 
-4. On the app's Overview page, click **Routes**, and select **Manage domains**.
-5. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg), and select **Domains**.
+1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage**, and select **Account**.
+2. Click **Cloud Foundry orgs**.
+3. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg), and select **Domains**.
 6. Click **Upload** for your custom domain.
 7. Select an option, upload the file, and click **Add**.
   
