@@ -70,30 +70,32 @@ Output:
 ## Creating serverless apps by using a starter kit
 {: #serverless-starter}
 
-You can use a starter kit to create a serverless app, such as Python Example Serverless App. To locate the starter kits, complete these steps:
+You can use a starter kit to create a serverless app, such as Python Example Serverless App. To locate the starter kits and create an app, complete these steps:
 
 1. Go to the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console.
 2. Type `serverless` in the search bar to filter the list of starter kits.
 3. Select a serverless starter kit, such as Python Example Serverless App.
-4. Name your app, and select a resource group.
+4. In the App details page for the starter kit, name your app, and select a resource group.
 5. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 6. Create or select an existing Cloudant service instance.
-7. Optional. To inspect your code before you add more services or deploy your app, click **View source code**. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
+7. Optional. To inspect your code before you add more services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 8. Click **Create**.
 
 Great start! You just created an app!
 
-## Add services (optional)
+## Adding services (optional)
 {: #serverless-services}
 
-If a starter kit requires specific services, auto-provisioned services are available so that instances for those services are automatically created when you create your app.
+If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app.
+
+If you want to create or connect more services, complete these steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
 2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
 After you add all the services that you want, the services are displayed in the App details page.
 
-## Deploy your app
+## Deploying your app
 {: #serverless-deploy}
 
 To deploy your app, complete these steps:
