@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-26"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Manually adding service credentials to your deployment environment
 {: #credentials_overview}
 
-You want your application logic to acquire sensitive service credentials, such as database API keys or passwords, from the environment in which your app runs. That way, you don't have to keep credentials in your source code repository.
+You want your application logic to acquire sensitive service credentials, such as database API keys or passwords, from the environment in which your app runs. That way, you don't keep credentials in your source code repository.
 {: shortdesc}
 
 If you create an app by using a starter kit, the environment is prepared for you automatically. When you connect a service to your starter kit before you deploy your app, the service credentials are automatically added to your environment.
@@ -39,7 +39,7 @@ The process for adding the service credentials depends on your deployment target
 
 Many languages and frameworks provide standard libraries for both app-specific and environment-specific configurations. For more information, see the following programming guides:
 
-* [Java: Working with service credentials](/docs/java?topic=cloud-native-configuration)
+* [Java&trade;: Working with service credentials](/docs/java?topic=cloud-native-configuration)
 * [Configuring the Node.js environment](/docs/node?topic=nodejs-configure-nodejs)
 * [Configuring the Spring environment](/docs/java?topic=java-spring-configuration)
 * [Configuring the Swift environment](/docs/swift?topic=swift-configuration)

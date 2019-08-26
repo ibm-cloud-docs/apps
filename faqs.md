@@ -1,10 +1,8 @@
 ---
 
 copyright:
-
   years: 2019
-
-lastupdated: "2019-06-03"
+lastupdated: "2019-06-26"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -19,7 +17,6 @@ subcollection: creating-apps
 {:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 
-
 # FAQs
 {: #apps-faq}
 
@@ -29,7 +26,7 @@ subcollection: creating-apps
 
 A new host name option `*.appdomain.cloud` is available on cloud.ibm.com.
 
-Previously, the `mybluemix.net` domain was used for hosting applications in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that you have hosted on `mybluemix.net` are not impacted.
+Previously, the `mybluemix.net` domain was used for hosting applications in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that are hosted on `mybluemix.net` are not impacted.
 
 The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
 
@@ -41,7 +38,7 @@ For more information, see [Managing your domains](/docs/apps?topic=creating-apps
 
 Your resource list in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") provides summary information for the apps that you created. In the resource list, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
 
-## Why can’t I select a Cloud Foundry space when I try to deploy my app?
+## Why can’t I select a Cloud Foundry space when I try to deploy an app?
 {: #cf-space}
 {: faq}
 
@@ -60,24 +57,23 @@ To delete an app that you created, complete these steps:
 1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
 2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg) for the app that you want to delete, and click **Delete**.
 
-## How do I stop a Cloud Foundry app in my account?
+## How do I stop a Cloud Foundry app?
 {: #app-stop}
 {: faq}
 
 If you want to stop a Cloud Foundry app, complete the following steps:
 
-
 1. From the Dashboard, click **View resources** within the Resources summary section.
-1. On the Resource list, expand the  sections and locate the service instance that you want to stop.
+1. On the Resource list, expand the sections and locate the service instance that you want to stop.
 1. Select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and then click **Stop**.
 
-## What are toolchains and how do they relate to my app?
+## What are toolchains?
 {: #toolchains}
 {: faq}
 
 A toolchain is a set of tool integrations that support development, deployment, and operations tasks. You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. A toolchain can be configured so that changes to the toolchain automatically build and deploy the app. For more information about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
-## How do I change the domain for my Cloud Foundry apps?
+## How do I change the domain for Cloud Foundry apps?
 {: #cf-domains-faq}
 {: faq}
 

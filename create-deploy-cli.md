@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-06-26"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
 
@@ -90,7 +90,7 @@ Regardless of which option you used to create your app, you can now build it and
 4. View your app that is running locally at `http://localhost:3000` or a similar URL.
 5. Press Ctrl+C to stop your app.
 
-You can also use [compound commands](/docs/cli/idt?topic=cloud-cli-idt-cli#compound) like `ibmcloud dev build/run` to sequentially issue a build followed by a run.
+You can also use [compound commands](/docs/cli/idt?topic=cloud-cli-idt-cli#compound) like `ibmcloud dev build/run` to sequentially start a build followed by a run.
 {: tip}
 
 ## Adding a service and modifying the code
@@ -107,7 +107,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ## Deploying your app
 {: #deploy-app-cli}
 
-You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in one of two ways, depending on how your app is configured. For more information, see the following topics:
+You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of two ways, depending on how your app is configured. For more information, see the following topics:
 
 * [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
 * [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-08-26"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 {: #serverless}
 
 For serverless development, you can use {{site.data.keyword.openwhisk}}, which is the IBM functions-as-a-service (FaaS) offering. You can run application logic with {{site.data.keyword.openwhisk_short}} in response to events or direct invocations from web or mobile apps over HTTP without provisioning or managing servers. {{site.data.keyword.openwhisk_short}} performs system administration, such as auto-scaling, availability management, and maintenance so that you, as a developer, can focus on writing app logic.
-{:shortdesc}
+{: shortdesc}
 
 You can develop your serverless apps by using one of the following methods:
 * {{site.data.keyword.openwhisk_short}} user interface (UI).

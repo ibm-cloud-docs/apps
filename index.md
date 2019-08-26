@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-08-26"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -40,18 +40,18 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 Create an app by selecting one of the following entry points:
 
 * [Preconfigured starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
-* [Basic starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) let you build your app by selecting the type of app (mobile or backend), language and framework, services, and deployment target.
+* [Basic starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
 * [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
-* [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) lets you create and deploy your app by using the CLI.
-* Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and start using today.
-* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}. For more information, see [Code patterns](/docs/apps/tutorials?topic=creating-apps-tutorial-codepattern).
+* [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) creates and deploys your apps by using the CLI.
+* Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and use today.
+* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
 
 ## Step 2. Add services
 {: #resources-getting-started}
 
-When you use a starter kit to create your app, the mandatory services are automatically created for you. You can connect more services to your app in the console from the **App details** page, which is displayed as soon as you create the app.
+When you use a starter kit to create your app, the mandatory services are automatically created for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
-If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), locate your app, and then click your app's name. The **App details** page is displayed, and you can create a service instance or connect existing services.
+If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), locate your app, and then click your app's name. The App details page is displayed, and you can create a service instance or connect existing services.
 
 Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service that is already enabled on your account, or you can add a service.
 ```
@@ -71,11 +71,11 @@ You can deploy your app by using the console or the CLI.
 
 To deploy your app by using the console, complete the following steps:
 
-1. On the **App details** page, click **Configure continuous delivery**.
+1. On the App details page, click **Configure continuous delivery**.
 2. Select a deployment target, select the toolchain settings, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
 
-For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information, see [Deploying apps by using the console](/docs/apps?topic=creating-apps-deploying-apps#using-the-ibm-cloud-console).
 
 ### Using the CLI
 {: #cli-getting-started}
@@ -84,7 +84,7 @@ To deploy your app by using the CLI, run the `ibmcloud dev deploy` command. For 
 
 Now you're set for iterative development and continuous delivery.
 
-For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information, see [Deploying apps by using the CLI](/docs/apps?topic=creating-apps-deploying-apps#deploy-cli).
 
 ## Related information
 {: #related-getting-started}

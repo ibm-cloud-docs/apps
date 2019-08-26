@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-26"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
@@ -53,7 +53,7 @@ Extracting environment-specific dependencies into a set of property files is an 
 
 You can run more than one instance to avoid downtime in a single region. To deliver an even more robust app, consider a multi-region architecture.
 
-For information about minimizing downtime and creating resilient architectures that achieve maximum availability, see the [Strategies for resilient applications tutorial](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
+For more information, see [Strategies for resilient applications tutorial](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Ensure you're monitoring your apps
 {: #monitoring}
@@ -81,7 +81,7 @@ Apps based on standard protocols are more resilient with the configuration items
 
 ## Use compatibility libraries instead of OS-specific features
 
-If you have already used OS-specific features, you can fix this issue by using compatibility libraries, for example, Cygwin and Mono. Cygwin is a compatibility library that provides a set of Linux tools in a Windows environment. Mono is a compatibility library that provides Windows .NET tools in Linux.
+If you are using OS-specific features, you can fix this issue by using compatibility libraries instead. For example, Cygwin and Mono. Cygwin is a compatibility library that provides a set of Linux&trade; tools in a Windows&trade; environment. Mono is a compatibility library that provides Microsoft&trade; .NET tools in Linux.
 
 Avoid the OS-specific dependencies; instead, use services that are provided by the middleware infrastructure or service providers.
 
