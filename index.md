@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-26"
+lastupdated: "2019-08-28"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
