@@ -27,7 +27,6 @@ Creating apps
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
         functions.md
-        tutorials/tutorial_mendix_getting_started.md
         [Looking to use a language?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
@@ -37,7 +36,6 @@ Creating apps
         /vsi/virtual-servers-deploying-to-a-virtual-server
         tutorials/tutorial_starter_kube.md
         tutorials/tutorial_byoc_kube.md
-        tutorials/tutorial_mendix_kubernetes.md
 
     {: .topicgroup}
     Configuring
