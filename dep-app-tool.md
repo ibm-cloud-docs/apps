@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-26"
+lastupdated: "2019-09-09"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -25,7 +25,7 @@ subcollection: creating-apps
 You can deploy your application to {{site.data.keyword.cloud}} by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows. You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the command-line interface (CLI).
 {: shortdesc}
 
-A DevOps toolchain provides a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-about-cf), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+A DevOps toolchain provides a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-what-is-cloud-foundry), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-about), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: deploy-console}
@@ -184,7 +184,7 @@ If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?t
 * If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=creating-apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
-	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java-spring?topic=java-spring-configuration#accessing-credentials).
+	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java?topic=java-spring-configuration).
 
 * Add new service credentials to your Kubernetes environment:
 	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).
