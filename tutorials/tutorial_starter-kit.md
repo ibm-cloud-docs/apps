@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-09-09"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -42,7 +42,7 @@ For more information, see [What are starter kits?](/docs/apps?topic=creating-app
 
 * Install the [developer tools](/docs/cli?topic=cloud-cli-getting-started).
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
-* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-prepare).
+* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
 
 ## Creating an app
 {: #create-starterkit}

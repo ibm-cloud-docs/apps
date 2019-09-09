@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-09-09"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
@@ -31,7 +31,7 @@ The basic starter kit is a versatile tool that you can use to create custom apps
 
 * Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started), which include Docker. 
 * Create a Docker account, run the Docker app, and sign in. Docker must be running for the build commands to work.
-* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-prepare).
+* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
 
 ## Creating your app
 {: #create-scratch}
