@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-08-28"
+lastupdated: "2019-09-10"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:script: data-hd-video='script'}
 
 # Getting started tutorial
 {: #getting-started}

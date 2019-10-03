@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-09-27"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
 subcollection: creating-apps
 
@@ -29,7 +29,12 @@ You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to crea
 ## Before you begin
 {: #prereqs-app-cli}
 
-You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started). 
+* You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started). 
+* Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
+* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
+* If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
+* If you plan to deploy your app with Knative, you must first ensure that Knative is installed, and you must create a cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+
 
 ## Creating an app from a starter kit
 {: #create-app-cli}
@@ -103,7 +108,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ## Deploying your app
 {: #deploy-app-cli}
 
-You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of 2 ways depending on how your app is configured. For more information, see the following topics:
+You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI. For more information, see the following topics:
 
 * [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
 * [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
@@ -111,5 +116,5 @@ You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI in 1 of
 ## Viewing your app
 {: #view-app-cli}
 
-1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`**ibmcloud dev view**`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command. The app URL is opened in your default browser.
+1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command. The app URL is opened in your default browser.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [**ibmcloud dev console**](/docs/cli?topic=cloud-cli-idt-cli#console) command. 

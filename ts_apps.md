@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-09-18"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -25,6 +25,9 @@ subcollection: creating-apps
 
 General problems with creating applications might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
+
+If you're unable to resolve your issue, you can use the [{{site.data.keyword.cloud_notm}} #developer-tools Slack channel](https://ibm-cloud-tech.slack.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more help. Join [{{site.data.keyword.cloud_notm}} Technology](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to request access. 
+{: tip}
 
 ## My apps are hosted in different domains
 {: #domains-ts}

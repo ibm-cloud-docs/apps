@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-09"
+lastupdated: "2019-09-27"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -25,17 +25,33 @@ subcollection: creating-apps
 You can deploy your application to {{site.data.keyword.cloud}} by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows. You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the command-line interface (CLI).
 {: shortdesc}
 
-A DevOps toolchain provides a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select, whether it's [Kubernetes](/docs/containers?topic=containers-getting-started), [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-what-is-cloud-foundry), [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-what-is-cloud-foundry), or [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial).
+When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app that is generated is pushed to a GitLab repo that is part of the toolchain.
+
+Enabling a DevOps toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select:
+* [Kubernetes](/docs/containers?topic=containers-getting-started)
+* [OpenShift](/docs/openshift?topic=openshift-getting-started)
+* [Knative](/docs/containers?topic=containers-serverless-apps-knative)
+* [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-what-is-cloud-foundry)
+* [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-what-is-cloud-foundry)
+* [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)
+
+With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo. For more information, see [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
+
+## Before you begin
+{: prereq-deploy-apps}
+
+* Install the [{{site.data.keyword.cloud_notm}} developer tools CLI](/docs/cli?topic=cloud-cli-getting-started).
+* Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
+* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
+* If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
+* If you plan to deploy your app with Knative, you must first ensure that Knative is installed, and you must create a cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: deploy-console}
 
 {{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your app by using a DevOps toolchain.
 
-### Before you begin
-{: deploy-console-before}
-
-Before you begin, use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-getting-started) and [add services](/docs/apps?topic=creating-apps-getting-started#resources-getting-started).
+Use the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to [create your app](/docs/apps?topic=creating-apps-getting-started).
 
 ### Automatically deploying your app
 {: deploy-console-auto}
@@ -45,7 +61,7 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} develo
 
 1. On the **App details** page, click **Configure continuous delivery**.
 2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **Deploy to IBM Kubernetes Service**. This option creates a cluster of hosts, called worker nodes, to deploy and manage highly available app containers. You can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app).
+  * **Deploy to IBM Kubernetes Service**. With this option, you can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps). Select a deployment type of **Helm**, **Knative**, or **OpenShift**. The **Knative** type is available only if Knative is installed. For more information, see [Deploying serverless apps with Knative](/docs/containers?topic=containers-serverless-apps-knative).
   * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) and [Deploying apps to {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
   * **Deploy to a Virtual Server**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you. For more information, see [Deploying apps to a virtual server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
 
@@ -78,9 +94,6 @@ For more information, see:
 
 {{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in 1 of two ways, depending on how your app is configured.
 
-### Before you begin
-{: #deploy-cli-before}
-
 Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
 
 The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cygwin command-line window.
@@ -109,7 +122,7 @@ The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cyg
 ### Automatically deploying your app
 {: #deploy-cli-auto}
 
-If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [`ibmcloud dev edit`](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) command. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
+If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [**ibmcloud dev edit**](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) command. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
 
 After you create a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
 
@@ -125,13 +138,13 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
     ```
     git push origin master
     ```
-4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [`ibmcloud dev console`](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command from the app directory.
+4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command from the app directory.
 5. View the pipeline within the toolchain to verify that a new build started.
 
 ### Manually deploying your app
 {: #deploy-cli-manual}
 
-You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using the [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
+You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
 
   ```
   ibmcloud dev deploy
@@ -164,7 +177,7 @@ For apps that are deployed to a Kubernetes cluster, you can view the app's URL i
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ### Viewing your app's Kubernetes cluster
 {: #view-kube-cluster-runningapp}
@@ -176,7 +189,7 @@ If you want to view the cluster where your app is deployed, click **View Kuberne
 
 For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #next-steps-deployapps}
