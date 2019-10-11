@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-10-11"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain
 
@@ -28,4 +28,4 @@ When you [create an app](/docs/apps?topic=creating-apps-getting-started) by usin
 
 For more information, see the [{{site.data.keyword.contdelivery_full}} Getting started tutorial](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
-For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} command-line interface (CLI), see [Managing DevOps resources with the CLI](/docs/cli?topic=cloud-cli-managing-devops-resources-cli).
+For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} command-line interface (CLI), see [Viewing a toolchain with the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing-toolchain-cli) and [Viewing a pipeline by using the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working#viewing-pipeline-cli).
