@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-20"
+lastupdated: "2019-10-22"
 
 keywords: apps, starter kit, kubernetes, cluster, kube, deploy, deployment
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 Learn how to create an application in {{site.data.keyword.cloud}} by using a basic starter kit and a Kubernetes toolchain, and continuously deliver the app to a secure container in {{site.data.keyword.containerlong}}. Your continuous integration DevOps pipeline can be configured so that your code changes are automatically built and propagated to the app that’s in the Kubernetes cluster. If you already have a pipeline, you can connect it to your app.
 {: shortdesc}
 
-{{site.data.keyword.cloud_notm}} offers starter kits that help you build the foundation of an app that runs on Kubernetes. When you use a starter kit, it's easy to follow a cloud native programming model that uses {{site.data.keyword.cloud_notm}} best practices for app development. Starter kits generate apps that follow the cloud native programming model, and they include test cases, health check, and metrics in each programming language. You can also provision cloud services that are then initialized in your generated app.
+{{site.data.keyword.cloud_notm}} offers starter kits that help you build the foundation of an app that runs on Kubernetes. When you use a starter kit, it's easy to follow a cloud native programming model that uses {{site.data.keyword.cloud_notm}} best practices for app development. Starter kits generate apps that follow the cloud native programming model, and they include test cases and a health check in each programming language. You can also provision cloud services that are then initialized in your generated app.
 
 This tutorial uses the {{site.data.keyword.containerlong}} deployment target. In this tutorial, we're creating an app from a basic starter kit by using Java + Spring, adding a Cloudant service instance to it, and deploying it to {{site.data.keyword.containerlong}}.
 
