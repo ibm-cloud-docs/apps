@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-27"
+lastupdated: "2019-11-06"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
@@ -78,7 +78,7 @@ This option can be used if you already have an existing codebase and want to gen
 
  - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
  - You can also choose to generate deployment and cloud enablement files without connecting to an {{site.data.keyword.cloud_notm}} app by running the [**ibmcloud dev enable --no-create**](/docs/cli/idt?topic=cloud-cli-idt-cli#enable) command.
- - To manually configure a toolchain and deployment files, see [Deploying your own code to a Kubernetes cluster](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc-kube). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
+ - To manually configure a toolchain and deployment files, see [Set up a DevOps pipeline for your app to deploy to a cluster](/docs/containers?topic=containers-tutorial-byoc-kube). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
  - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app, and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
 
 ## Building your app and running it locally
