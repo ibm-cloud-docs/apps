@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-09-27"
+lastupdated: "2019-11-07"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, language, backend, mobile
 
@@ -33,7 +33,9 @@ The basic starter kit is a versatile tool that you can use to create custom apps
 * Create a Docker account, run the Docker app, and sign in. Docker must be running for the build commands to work.
 * If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy your app with Knative, you must first ensure that Knative is installed, and you must create a cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+* If you plan to deploy your app by using Knative:
+  * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
+  * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
 
 ## Creating your app
 {: #create-scratch}
@@ -67,57 +69,6 @@ If you want to create a new service instance or connect any existing services to
 4. Click **Create**.
 
 After you add all the services that you want, the services are displayed in the App details page.
-
-## Building and running the app locally
-{: #build-run-scratch}
-
-You can view your app code by clicking **Download code** on the App details page of your app. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}}, or add it to your code management repository.
-
-The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
-{: tip}
-
-If you want to build the app locally for testing before you deploy it to the cloud, complete these steps:
-
-1. On the **App details** page, click **Download code** to work with your code locally.
-2. Import the app to your integrated development environment.
-3. Modify the code.
-4. Set up [Git authentication](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) by adding a personal access token.
-5. Log in to the {{site.data.keyword.cloud_notm}} command-line interface (CLI). If your organization uses federated logins, use the `-sso` option; for example:
-
-  ```bash
-  ibmcloud login -sso
-  ```
-  {: pre}
-
-6. Run the following command to set your org and space targets.
-
-  ```bash
-  ibmcloud target --cf
-  ```
-  {: pre}
-
-7. Run the following command to retrieve the credentials.
-
-  ```bash
-  ibmcloud dev get-credentials
-  ```
-  {: pre}
-
-8. Make sure that Docker is running, and run the following command to build your app in a local development container from the directory.
-
-  ```bash
-  ibmcloud dev build
-  ```
-  {: pre}
-
-9. Run the following command to run your app in a local development container.
-
-  ```bash
-  ibmcloud dev run
-  ```
-  {: pre}
-
-10. Go to `http://localhost:3000` in your browser. Your port number might be different depending on your chosen runtime.
 
 ## Deploying your app
 {: #deploy-scratch}
@@ -187,3 +138,8 @@ If you want to view the cluster where your app is deployed, click **View Kuberne
 For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
 
 If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+
+## Next steps
+{: #scratch-next-steps}
+
+* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-local-app-development).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-27"
+lastupdated: "2019-11-07"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app
 
@@ -44,7 +44,9 @@ For more information, see [What are starter kits?](/docs/apps?topic=creating-app
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy your app with Knative, you must first ensure that Knative is installed, and you must create a cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+* If you plan to deploy your app by using Knative:
+  * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
+  * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
 
 ## Creating an app
 {: #create-starterkit}
@@ -147,27 +149,8 @@ For apps that are deployed to Cloud Foundry, you can view the app's URL from the
 
 If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
-## Downloading your app for local development
-{: #download-starterkit}
+## Next steps
+{: #starter-next-steps}
 
-After you download your app, you can quickly have it up and running in a local development environment.
+* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-local-app-development).
 
-To download your app, complete the following steps:
-
-1. From the command line, run the [**ibmcloud dev code <APPNAME>**](/docs/cli?topic=cloud-cli-idt-cli#code) command to download your app code.
-2. If you are unsure of the app name or want to download another app, you can list all the {{site.data.keyword.cloud_notm}} apps that are in a space by running the [**ibmcloud dev list**](/docs/cli?topic=cloud-cli-idt-cli#list) command.
-
-## Building, running, and deploying your app locally
-{: #local-starterkit}
-
-You can build your app locally, modify it, and test it before you deploy it to the cloud.
-
-To build, run, and deploy your app locally, complete the following steps:
-
-1. Navigate to your app directory, and ensure that Docker is running on your system.
-2. Run the [**ibmcloud dev build**](/docs/cli?topic=cloud-cli-idt-cli#build) command to build your app.
-3. Run the [**ibmcloud dev run**](/docs/cli?topic=cloud-cli-idt-cli#run) command to start the app in the foreground. To stop the app and return the command prompt, press Ctrl+C.
-4. View your app that is running locally by navigating to `http://localhost:3000` or a similar URL.
-
-You can also use [compound commands](/docs/cli?topic=cloud-cli-idt-cli#compound), such as **ibmcloud dev build/run**, to sequentially start a build followed by a run.
-{: tip}
