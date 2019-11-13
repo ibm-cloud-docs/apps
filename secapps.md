@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-11-13"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -47,7 +47,7 @@ For the CSR to be valid, the following information must be entered when you crea
  * **Locality**: The full name of the city or town.
  * **Organization**: The full name of the business or company, as legally registered in your locality, or personal name. For companies, be sure to include the registration suffix, such as Ltd., Inc., or NV.
  * **Organization unit**: The branch name of your company that is ordering the certificate, such as accounting or marketing.
- * **Common name**: The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate.
+ * **Common name**: The fully qualified domain name (FQDN) for which you’re requesting the SSL certificate. Wildcards are not supported in the common name.
 
 You can use Subject Alternative Names (SAN), but the provided host names must not be issued in other deployed certificates to prevent CN collisions.
 {: note}

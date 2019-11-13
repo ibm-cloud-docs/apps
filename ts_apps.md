@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-09-18"
+lastupdated: "2019-11-13"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -120,7 +120,7 @@ You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.ke
 IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on Android. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-As a workaround, use third-party services that don't rely on the GCM service, for example, [Pushy](https://pushy.me/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and [jpush](https://www.jiguang.cn/en/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+As a workaround, use third-party services that don't rely on the GCM service; for example, [jpush](https://www.jiguang.cn/en/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 {: tsResolve}
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.cloud_notm}}
