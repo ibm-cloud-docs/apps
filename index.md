@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-11-27"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -90,4 +90,4 @@ For more information, see [Deploying apps by using the CLI](/docs/apps?topic=cre
 ## Related information
 {: #related-getting-started}
 
-[Programming guides](https://{DomainName}/docs/home/build){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure from {{site.data.keyword.baremetal_short}} to running as a serverless function.
+[Programming guides](https://{DomainName}/docs/home/build){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.

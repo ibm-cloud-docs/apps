@@ -26,7 +26,6 @@ Creating apps
         create-deploy-cli.md
         tutorials/tutorial_microservice.md
         tutorials/tutorial_mobile.md
-        functions.md
         [Looking to use a language?](https://{DomainName}/docs/home/build)
 
     {: .topicgroup}
