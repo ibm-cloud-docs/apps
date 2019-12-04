@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-07"
+lastupdated: "2019-12-04"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
 
@@ -25,28 +25,34 @@ subcollection: creating-apps
 You can deploy your application to {{site.data.keyword.cloud}} by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows. You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the command-line interface (CLI).
 {: shortdesc}
 
-When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app that is generated is pushed to a GitLab repo that is part of the toolchain.
+When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
 
 Enabling a DevOps toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select:
-* [Kubernetes](/docs/containers?topic=containers-getting-started)
-* [OpenShift](/docs/openshift?topic=openshift-getting-started)
-* [Knative](/docs/containers?topic=containers-serverless-apps-knative)
-* [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-what-is-cloud-foundry)
-* [{{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-what-is-cloud-foundry)
-* [Virtual Server (VSI)](/docs/vsi?topic=virtual-servers-getting-started-tutorial)
+* [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started), including Helm and [Knative](/docs/containers?topic=containers-serverless-apps-knative)
+* [Red Hat OpenShift](/docs/openshift?topic=openshift-getting-started)
+* [Cloud Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started)
 
 With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo. For more information, see [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
 
 ## Before you begin
 {: prereq-deploy-apps}
 
+### For all deployment targets
+{: prereq-deploy-all}
+
+* Depending on your [IBM Cloud account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities required by some toolchains might not be available.
 * Install the [{{site.data.keyword.cloud_notm}} developer tools CLI](/docs/cli?topic=cloud-cli-getting-started).
-* Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
-* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
-* If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy your app by using Knative:
-  * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
-  * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+* Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
+
+### For specific deployment targets
+{: prereq-deploy-specific}
+
+| Deployment target | Prerequisites | 
+|--------|---------------|
+| Cloud Foundry | Ensure that you have access to a [Cloud Foundry org and space](https://{DomainName}/account/cloud-foundry). For more information, see [Adding orgs and spaces](/docs/account?topic=account-orgsspacesusers). |
+| OpenShift cluster | Create a paid cluster. For more information, see [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps). |
+| Kubernetes cluster / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). |
+| Kubernetes / Knative | 1. Install the [IBM Cloud CLI, the IBM Cloud Kubernetes Service plug-in, and the Kubernetes CLI](/docs/containers?topic=containers-cs_cli_install).<br>2. Create a [standard Kubernetes cluster](https://{DomainName}/kubernetes/catalog/cluster) with 3 worker nodes that each have 4 cores and 16 GB memory (b3c.4x16) or more. For more information, see [Creating a standard classic cluster in the console](/docs/containers?topic=containers-clusters#clusters_ui). Ensure that you note the total monthly cost before you create the cluster.<br>3. Install the [Istio add-on](/docs/containers?topic=containers-istio).<br>4. Install the [Knative add-on](/docs/containers?topic=containers-serverless-apps-knative#knative-setup). For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup). |
 
 ## Using the {{site.data.keyword.cloud_notm}} console
 {: deploy-console}
@@ -63,12 +69,11 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} develo
 
 1. On the **App details** page, click **Configure continuous delivery**.
 2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **Deploy to IBM Kubernetes Service**. With this option, you can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps). Select a deployment type of **Helm**, **Knative**, or **OpenShift**. The **Knative** type is available only if Knative is installed. For more information, see [Deploying serverless apps with Knative](/docs/containers?topic=containers-serverless-apps-knative).
-  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **Public Cloud** or **Enterprise Environment**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps) and [Deploying apps to {{site.data.keyword.cfee_full_notm}}](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps).
-  * **Deploy to a Virtual Server**. This option provisions a virtual server instance, loads an image that includes your app, creates a DevOps toolchain, and initiates the first deployment cycle for you. For more information, see [Deploying apps to a virtual server](/docs/vsi?topic=virtual-servers-deploying-to-a-virtual-server).
+  * **Deploy to IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 - 20 minutes for the cluster to be provisioned. Select a deployment type of **Helm** or **Knative**, and then select the region and cluster name.
 
-    VSI deployment is available for some starter kits. To use this feature, go to the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}), and click **Create an app** in the **Apps** tile.
-    {: note}
+     The **Knative** deployment type and clusters are available if [Knative is installed](/docs/containers?topic=containers-serverless-apps-knative) on your free or paid cluster. If you have an available [paid OpenShift cluster](/docs/openshift?topic=openshift-openshift_apps), you can select it from the **Cluster name** list.
+     {: note}
+  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
 
 ### Manually deploying your app
 {: deploy-console-manual}
@@ -189,7 +194,7 @@ If you want to view the cluster where your app is deployed, click **View Kuberne
 ### Apps that are deployed to Cloud Foundry
 {: #view-cf-runningapp}
 
-For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
+You can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
 
 If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-06-26"
+lastupdated: "2019-12-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -35,7 +35,6 @@ The process for adding the service credentials depends on your deployment target
 
   * [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-service-binding#adding_app)
   * Cloud Foundry Public or {{site.data.keyword.cfee_full}}
-  * Virtual server instance (local docker container)
 
 Many languages and frameworks provide standard libraries for both app-specific and environment-specific configurations. For more information, see the following programming guides:
 

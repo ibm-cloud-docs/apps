@@ -33,7 +33,6 @@ Creating apps
     Deploying apps
         hosting.md
         dep-app-tool.md
-        /vsi/virtual-servers-deploying-to-a-virtual-server
         /containers/containers-tutorial-starterkit-kube
         /containers/containers-tutorial-byoc-kube
 
