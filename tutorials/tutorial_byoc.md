@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-12-19"
+lastupdated: "2019-12-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -63,6 +63,18 @@ To create an app and connect it with your source repo, complete these steps:
 3. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
 4. Click **Create**. The App details page is displayed.
 
+## Viewing your Git repo
+{: #repo-byoc}
+
+You can view your Git repo by clicking **View repo** on the App details page.
+
+## Editing your Git URL
+{: #repo-byoc-edit}
+
+You might want to edit the Git URL in your app if you manually renamed your Git repo and need to update the URL reference in your app so that it points to your renamed repo.
+
+To change your Git URL, click the Actions icon ![More Actions icon](../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
+
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
 
@@ -118,6 +130,7 @@ If you have a DevOps toolchain that you want to connect to your app, complete th
 3. On the Configure the Integration page, complete the required fields, and click **Create Integration**.
 4. On the toolchain page, configure your toolchain as you prefer, and select the **Delivery Pipeline** tile.
 5. Run the build stage to begin a new build and deploy your app.
+6. Use the breadcrumbs in your browser to return to the App details page.
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
@@ -129,13 +142,6 @@ The DevOps toolchain for your app includes a Delivery Pipeline tool where you ca
 On the App details page, you can view the deployment status in the **Delivery Pipeline** tile, or you can click the name of the Delivery Pipeline.
 
 The **Build Stage** and **Deploy Stage** tiles indicate the status.
-
-## Viewing your app's GitLab repo
-{: #repo-byoc}
-
-After your app is built and deployed, you can view its GitLab repo and URL.
-
-On the App details page, click **View repo** to view the GitLab repo for your app.
 
 ## Verifying that your app is running
 {: #verify-byoc}
