@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-12-19"
+lastupdated: "2019-12-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -23,7 +23,7 @@ subcollection: creating-apps
 You can use a starter kit to quickly get your application started and prepare it for future development. Select a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app.
 {: shortdesc}
 
-You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also download the code for immediate inspection.
+You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
 
 {{site.data.keyword.cloud_notm}} has developer portals in different areas of interest (like Watson) or a digital channel (like Mobile or Web Apps). You can access these portals from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
 
@@ -72,6 +72,8 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 5. Click **Create**.
 
 Great start! You just created an app!
+
+If you want to view the Git repo for the starter kit, click **View sample repo**.
 
 ## Adding services (optional)
 {: #resources-starterkit}
@@ -159,5 +161,8 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #starter-next-steps}
 
-* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud.
 
+To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
+
+For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).

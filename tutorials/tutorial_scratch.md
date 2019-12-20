@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-12-19"
+lastupdated: "2019-12-20"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -68,6 +68,11 @@ For information about requirements for specific deployment targets, see the foll
 7. Click **Create**.
 
 Great start! You just created an app!
+
+You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}}, or add it to your code management repository.
+
+The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
+{: tip}
 
 ## Adding services (optional)
 {: #resources-scratch}
@@ -157,4 +162,8 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #scratch-next-steps}
 
-* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud.
+
+To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
+
+For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
