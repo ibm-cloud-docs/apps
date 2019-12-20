@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-11-27"
+lastupdated: "2019-12-19"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -41,7 +41,7 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 Create an app by selecting one of the following entry points:
 
 * [Preconfigured starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
-* [Basic starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
+* [Blank starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
 * [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
 * [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) creates and deploys your apps by using the CLI.
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and use today.
@@ -72,7 +72,7 @@ You can deploy your app by using the console or the CLI.
 
 To deploy your app by using the console, complete the following steps:
 
-1. On the App details page, click **Configure continuous delivery**.
+1. On the App details page, click **Deploy your app**.
 2. Select a deployment target, select the toolchain settings, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2019
-lastupdated: "2019-12-04"
+lastupdated: "2019-12-19"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -24,25 +24,38 @@ subcollection: creating-apps
 You can create an application from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
-## Installing the tools
+## Before you begin
 {: #prereqs-microservice}
 
-* Install the [{{site.data.keyword.dev_cli_long}}](/docs/cli?topic=cloud-cli-getting-started).
-* Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
-* If you plan to deploy your app to [{{site.data.keyword.cfee_full}}](/docs/cloud-foundry?topic=cloud-foundry-what-is-cloud-foundry), you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
-* If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy your app by using Knative:
-  * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
-  * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
+### For all deployment targets
+{: prereq-deploy-all}
+
+For all deployment targets, ensure that you're aware of the following requirements:
+
+* Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available.
+* Install the [{{site.data.keyword.cloud_notm}} developer tools CLI](/docs/cli?topic=cloud-cli-getting-started).
+* Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
+
+### For specific deployment targets
+{: prereq-deploy-specific}
+
+For information about requirements for specific deployment targets, see the following table.
+
+| Deployment target | Prerequisites | 
+|--------|---------------|
+| {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](https://{DomainName}/account/cloud-foundry). [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](cloud.ibm.com/account/cloud-foundry). |
+| {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. With either paid or free account plans, select this option to experiment with your starter kit in a Kubernetes or OpenShift environment. |
+| {{site.data.keyword.cloud_notm}} Kubernetes Service / Knative | Knative is an extension of Kubernetes that hides many of the complex management tasks and adds serverless capabilities. The Knative deployment type is available only if Knative is installed on the cluster that you select.<br>1. Install the [IBM Cloud CLI, the IBM Cloud Kubernetes Service plug-in, and the Kubernetes CLI](/docs/containers?topic=containers-cs_cli_install).<br>2. Create a [standard Kubernetes cluster](https://{DomainName}/kubernetes/catalog/cluster) with 3 worker nodes that each have 4 cores and 16 GB memory (b3c.4x16) or more. For more information, see [Creating a standard classic cluster in the console](/docs/containers?topic=containers-clusters#clusters_ui). Ensure that you note the total monthly cost before you create the cluster.<br>3. Install the [Istio add-on](/docs/containers?topic=containers-istio).<br>4. Install the [Knative add-on](/docs/containers?topic=containers-serverless-apps-knative#knative-setup). |
+| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](cloud.ibm.com/kubernetes/overview).|
 
 ## Creating your app
 {: #create-microservice}
 
-You can use a starter kit to create a microservice app, such as Python Microservice with Flask. To locate the starter kits and create an app, complete these steps:
+You can use a starter kit to create a microservice app. To locate the starter kits and create an app, complete these steps:
 
-1. Go to the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console, and select a starter kit for your language. For example, for a Node.js app, go to **Express.js Microservice** and click **Select Starter Kit**.
+1. Go to the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console.
 2. Type `microservice` in the search bar to filter the list of starter kits.
-3. Select a microservice starter kit, such as Python Microservice with Flask.
+3. Select a microservice starter kit, such as Node.js Microservice with Express.js.
 4. In the App details page for the starter kit, name your app, and select a resource group.
 5. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 7. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
@@ -62,86 +75,78 @@ If you want to create a new service instance or connect any existing services to
 
 After you add all the services that you want, the services are displayed in the App details page.
 
-## Selecting a deployment target and configuring continuous delivery
+## Deploying your app
 {: #toolchain-microservice}
 
-When you select a deployment target, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app that is generated is pushed to a GitLab repo that is part of the toolchain.
+To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
-Enabling a DevOps toolchain creates a team-based development environment for your app. When you create a toolchain, the app service creates a Git repository, where you can view source code, clone your app, and create and manage issues. You also have access to a dedicated GitLab environment and a continuous delivery pipeline. They're customized to the deployment target that you select.
+To deploy your app, complete the following steps:
 
-All toolchains that are created from an {{site.data.keyword.cloud_notm}} Developer dashboard are configured for automatic deployment.
-{: note}
+1. On the App details page for your app, click **Deploy your app**.
+2. On the Deploy your app page, select a deployment target. Set up your deployment target according to the instructions for the target that you select:
+  * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 - 20 minutes for the cluster to be provisioned. Select a deployment type of **Helm** or **Knative**, and then select the region and cluster name.
+  * **Red Hat OpenShift on IBM Cloud**. If you have an available [OpenShift cluster](/docs/openshift?topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an available cluster, you must create one before you continue. Your cluster creation might take some time to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web console and other routes.
+  * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
+3. Provide a name for your toolchain.
+4. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
+5. Click **Create**.
 
-To select your deployment target and configure continuous delivery, complete these steps:
+The DevOps toolchain is created automatically, and the deployment process begins.
 
-1. On the App details page, click **Configure continuous delivery**.
-2. Select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **Deploy to IBM Kubernetes Service**. With this option, you can create a cluster or deploy to an existing cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps). Select a deployment type of **Helm**, **Knative**, or **OpenShift**. The **Knative** type is available only if Knative is installed. For more information, see [Deploying serverless apps with Knative](/docs/containers?topic=containers-serverless-apps-knative).
-  * **Deploy to Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. If your account has access to {{site.data.keyword.cfee_full_notm}}, you can select a deployer type of either **[Public Cloud](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps)** or **[Enterprise Environment](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps)**, which you can use to create and manage isolated environments for hosting Cloud Foundry apps exclusively for your enterprise.
-
-After you select and configure the deployment target, the App details page indicates that continuous delivery is configured. You can view the repo that contains the generated code for your app by clicking **View repo**.
-
-## Deploying your app
-{: #deploy-microservice}
-
-DevOps toolchains that are created from the {{site.data.keyword.cloud_notm}} developer dashboard are configured for automatic deployment.
-{: note}
-
-After you select your deployment target, open the pipeline component of your new toolchain to start the initial build and deployment process so that you can see your new app in minutes.
-
-1. On the App details page, click **View toolchain**.
-2. Click **Delivery Pipeline** where you can start builds, manage deployment, and view logs and history.
-
-With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo. For more information, see [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy).
-
-You can deploy your app from the command line by running the [`ibmcloud dev deploy`](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For more information, see [Deploying apps with the CLI](/docs/apps?topic=creating-apps-deploying-apps#deploy-cli).
-
-### Deploying by using a toolchain
-{: #deploy-microservice-toolchain}
-
-You can deploy your app to {{site.data.keyword.cloud_notm}} several ways, but a DevOps toolchain is the best way to deploy production apps. With a DevOps toolchain, you can easily automate deployments to lots of environments and quickly add monitoring, logging, and alert services to help manage your app as it grows.
-
-With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the Master branch in your repo. All toolchains that are created from an {{site.data.keyword.cloud_notm}} developer dashboard are configured for automatic deployment.
-
-You can also manually deploy your app from your DevOps toolchain:
-
-1. On the **App details** page, click **View toolchain**.
-
-2. Click **Delivery Pipeline** where you can start builds, manage deployment and view logs and history.
-
-### Deploying by using the {{site.data.keyword.dev_cli_short}}
-{: #deploy-microservice-cli}
-
-To deploy your app to Cloud Foundry, enter the following command:
-```
-ibmcloud dev deploy
-```
-{: pre}
-
-To deploy your app to a Kubernetes cluster, enter the following command:
-```
-ibmcloud dev deploy --target <container>
-```
-{: pre}
+  You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For more information, see [Deploying apps with the CLI](/docs/apps?topic=creating-apps-deploying-apps#deploy-cli).
+  {: note}
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+
+## Checking the deployment status
+{: #status-microservice}
+
+The DevOps toolchain for your app includes a Delivery Pipeline tool where you can check the deployment status, start builds, manage deployment, and view logs and history.
+
+On the App details page, you can view the deployment status in the **Delivery Pipeline** tile, or you can click the name of the Delivery Pipeline.
+
+The **Build Stage** and **Deploy Stage** tiles indicate the status.
+
+## Viewing your app's GitLab repo
+{: #repo-microservice}
+
+After your app is built and deployed, you can view its GitLab repo and URL.
+
+On the App details page, click **View repo** to view the GitLab repo for your app.
 
 ## Verifying that your app is running
 {: #verify-microservice}
 
-After you deploy your app, the Delivery Pipeline or command line points you to the URL for your app.
+After your app is built and deployed, you can view the app's URL to make sure that it's running.
 
-1. From your DevOps toolchain, click **Delivery Pipeline**, and then select **Deploy Stage**.
-2. Click **View logs and history**.
+### Apps that are deployed to a Kubernetes cluster
+{: #view-kube-app-microservice}
+
+For apps that are deployed to a Kubernetes cluster, you can view the app's URL in either the Delivery Pipeline or the command line.
+
+1. On the App details page, click the name of the Delivery Pipeline.
+2. On the Delivery Pipeline page, click **View logs and history** in the **Deploy Stage** tile.
 3. In the log file, find the app's URL:
 
-    At the end of the log file, search for the word `urls` or `view`. For example, you might see a line in the log file that's similar to `urls: my-app-devhost.mybluemix.net` or `View the application health at: http://<ipaddress>:<port>/health`.
+    At the end of the log file, search for the word `url` or `view`. For example, you might see a line in the log file that's similar to `urls: <my-app-devhost>.appdomain.cloud` or `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`.
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [`ibmcloud dev view`](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+
+### Viewing your app's Kubernetes cluster
+{: #view-kube-cluster-microservice}
+
+If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
+
+### Apps that are deployed to Cloud Foundry
+{: #view-cf-app-microservice}
+
+For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
+
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #micro-next-steps}
 
-* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-local-app-development).
+* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).

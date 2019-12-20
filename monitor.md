@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-08-23"
+lastupdated: "2019-12-19"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -31,8 +31,8 @@ This tool integration is available only for Cloud Foundry apps. It is preconfigu
 
 To add the {{site.data.keyword.prf_hubshort}} tool integration to your DevOps toolchain, complete the following steps:
 
-1. On the App details page, click **Configure continuous delivery** and follow the steps for configuring a DevOps toolchain. The steps can vary, depending on which deployment target you select.
-2. Click **View toolchain** after you see the message that confirms the configuration is displayed.
+1. On the App details page, click **Deploy my app** and follow the steps for configuring a DevOps toolchain. The steps can vary, depending on which deployment target you select.
+2. When you see the toolchain details appear on the App details page, click the toolchain name.
 3. On the toolchain's Overview page, click **Add a Tool**.
 4. Select **{{site.data.keyword.prf_hubshort}}**.
 5. Click **Create Integration**. {{site.data.keyword.prf_hubshort}} is added to your toolchain.
