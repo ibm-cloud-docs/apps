@@ -73,7 +73,7 @@ You can view your Git repo by clicking **View repo** on the App details page.
 
 You might want to edit the Git URL in your app if you manually renamed your Git repo and need to update the URL reference in your app so that it points to your renamed repo.
 
-To change your Git URL, click the Actions icon ![More Actions icon](../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
+To change your Git URL, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
 
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
