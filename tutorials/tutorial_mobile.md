@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-08-23"
+  years: 2018, 2020
+lastupdated: "2020-01-28"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:external: target="_blank" .external}
 
 # Creating mobile apps
 {: #tutorial-mobile}
@@ -33,24 +34,31 @@ Install the [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/d
 
 To create a mobile app by using a starter kit, complete these steps:
 
-1. From the [Mobile Starter Kits](https://{DomainName}/developer/mobile/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select a starter kit based on the features you want. For example, select **Watson Visual Recognition**.
-2. Enter your app name. For this tutorial, use `WatsonApp`.
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-4. Select your platform. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.
-5. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
-6. Click **Create**.
+1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Type `mobile` in the search bar to filter the list of starter kits.
+1. Select a mobile starter kit, such as `Mobile App with Push Notifications`.
+1. On the starter kit overview page, click **Create app**.
+1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+1. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.
+1. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
+1. Click **Create**.
 
 ## Creating a custom mobile app
 {: #create-mobile-basic}
 
 To create a custom mobile app, complete these steps:
 
-1. From the [Mobile Starter Kits](https://{DomainName}/developer/mobile/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}}, select the **Create App** tile.
-2. Enter a name for your app. For this tutorial, type `CustomMobile`.
-3. You can optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+1. From your [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
+
+  You can also create a custom mobile app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+  {: tip}
+
+2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 4. Select **Create a new app** as a starting point.
 5. Select **Mobile** as the app type.
-6. Select your language and framework. Some starter kits might be available in only one language.
+6. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.
 7. Select your pricing plan. You can use the free option for this tutorial.
 8. Click **Create**.
 

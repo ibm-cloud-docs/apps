@@ -14,6 +14,7 @@ subcollection: creating-apps
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Adding a service to your app
 {: #add-resource}
@@ -22,6 +23,10 @@ When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 {: shortdesc}
 
 You can request an instance of the service and use it independently of your app, or you can add the service instance to your app from the App details page. You can provision a particular type of service directly from the {{site.data.keyword.cloud_notm}} catalog.
+
+## New info
+Service enablement would stop injecting any code into the application. It will just add to deployment artifacts.
+Will also include the mechanism and flow in AppMan for direct service binding for CF as well as IKS clusters.
 
 ## Auto-provisioned services
 {: #auto-provision}
@@ -35,7 +40,7 @@ You can see all the services that are available in {{site.data.keyword.cloud_not
 
 * From the {{site.data.keyword.cloud_notm}} console. View the {{site.data.keyword.cloud_notm}} catalog.
 * From the command line. Use the `ibmcloud service offerings` command.
-* From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* From your own application. Use the [GET /v2/services Services API](http://apidocs.cloudfoundry.org/197/services/list_all_services.html){: external}.
 
 You can select the service that you need when you develop apps. Once you select it, {{site.data.keyword.cloud_notm}} provisions the service. The provisioning process can be different for different types of services. For example, a database service creates a database, and a push notification service for mobile apps generates configuration information.
 

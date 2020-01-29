@@ -14,6 +14,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:external: target="_blank" .external}
 
 # Creating serverless apps
 {: #serverless}
@@ -27,18 +28,18 @@ You can develop your serverless apps by using one of the following methods:
 
 For more detailed information about {{site.data.keyword.openwhisk_short}}, check out these resources:
 * [{{site.data.keyword.openwhisk_short}} documentation](/docs/openwhisk?topic=cloud-functions-getting-started)
-* [IBM Cloud Functions](https://www.ibm.com/cloud/functions){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [FaaS (Function-as-a-Service)](https://www.ibm.com/cloud/learn/faas){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+* [IBM Cloud Functions](https://www.ibm.com/cloud/functions){: external}
+* [FaaS (Function-as-a-Service)](https://www.ibm.com/cloud/learn/faas){: external}
 
 ## Developing with the {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
 
-Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/functions/actions){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Go to the [Concepts](https://{DomainName}/functions/learn){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page for a quick tour of the {{site.data.keyword.openwhisk_short}} UI.
+Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/functions/actions){: external}. Go to the [Concepts](https://{DomainName}/functions/learn){: external} page for a quick tour of the {{site.data.keyword.openwhisk_short}} UI.
 
 ## Developing with the CLI
 {: #openwhisk_start_configure_cli}
 
-To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/functions/cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/functions/cli){: external}.
 
 ## Exposing APIs and data sets as web actions
 {: #expose-actions}

@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:screen: .screen}
 {:tip: .tip}
 {:script: data-hd-video='script'}
+{:external: target="_blank" .external}
 
 # Getting started tutorial
 {: #getting-started}
@@ -44,15 +45,15 @@ Create an app by selecting one of the following entry points:
 * [Blank starter kits](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
 * [Bring your own code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
 * [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/apps?topic=creating-apps-create-deploy-app-cli) creates and deploys your apps by using the CLI.
-* Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for apps and services that you can create and use today.
-* [IBM Developer code patterns ![External link icon](../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/patterns/){:new_window} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
+* Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: external} for apps and services that you can create and use today.
+* [IBM Developer code patterns](https://developer.ibm.com/patterns/){: external} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
 
 ## Step 2. Add services
 {: #resources-getting-started}
 
 When you use a starter kit to create your app, the mandatory services are automatically created for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
-If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), locate your app, and then click your app's name. The App details page is displayed, and you can create a service instance or connect existing services.
+If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, locate your app, and then click your app's name. The App details page is displayed, and you can create a service instance or connect existing services.
 
 Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service that is already enabled on your account, or you can add a service.
 ```
@@ -90,4 +91,4 @@ For more information, see [Deploying apps by using the CLI](/docs/apps?topic=cre
 ## Related information
 {: #related-getting-started}
 
-[Programming guides](https://{DomainName}/docs/home/build){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.
+[Programming guides](https://{DomainName}/docs/home/build){: external} are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.

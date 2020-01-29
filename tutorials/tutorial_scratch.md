@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-12-20"
+  years: 2016, 2020
+lastupdated: "2020-01-28"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Creating a custom app from a blank starter kit
 {: #tutorial-scratch}
@@ -53,15 +54,15 @@ For information about requirements for specific deployment targets, see the foll
 ## Creating your app
 {: #create-scratch}
 
-1. From your [{{site.data.keyword.cloud_notm}} dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}), click **Create an app** in the Apps tile.
+1. From your [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
 
-  You can also create a custom app from the [Starter Kits ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/developer/appservice/starter-kits) page in the {{site.data.keyword.dev_console}}.
+  You can also create a custom app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
   {: tip}
 
-2. On the App details page, enter a name for your app. For this tutorial, type `CustomApp`.
-3. You can optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-4. Select the **Create a new app** tile.
-5. Select an app type of **Backend**.
+2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+4. Select **Create a new app** as a starting point.
+5. Select **Backend** as the app type.
   If you select **Mobile** as the app type, see [Creating a custom mobile app](docs/apps/tutorials?topic=creating-apps-tutorial-mobile#create-mobile-basic) for instructions.
   {: tip}
 6. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.

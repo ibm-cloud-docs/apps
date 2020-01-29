@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-09-26"
+  years: 2016, 2020
+lastupdated: "2020-01-28"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
@@ -15,6 +15,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:note: .deprecated}
+{:external: target="_blank" .external}
 
 # Common architectures for cloud apps
 {: #patterns}
@@ -25,12 +26,12 @@ Starter kits on {{site.data.keyword.cloud_notm}} help you produce applications w
 ## Web apps
 {: #web}
 
-The web app pattern produces backend apps that serve web content such as HTML, JavaScript, and stylesheets to the web server. {{site.data.keyword.cloud_notm}} offers several web app starter kits.
+The web app starter kits produce backend apps that serve web content such as HTML, JavaScript, and stylesheets to the web server. {{site.data.keyword.cloud_notm}} offers several web app starter kits.
 
 * Basic - serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
 
-You can find starter kits for web app pattern on the [{{site.data.keyword.cloud_notm}} App Service developer console](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
 For more information, see [Creating an app with a starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
 
@@ -41,7 +42,7 @@ If you want to create a web app that you can customize, see [Creating a custom a
 
 Microservice apps provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated apps include all the dependencies required both for the microservice itself, and for any attached cloud service.
 
-Select a microservice starter kit for your language and framework requirements. You can find starter kits for the Microservice pattern on the [{{site.data.keyword.cloud_notm}} App Service developer console](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+Select a microservice starter kit for your language and framework requirements. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
 For more information, see [Creating microservice apps](/docs/apps/tutorials?topic=creating-apps-tutorial-microservice).
 
@@ -50,7 +51,7 @@ For more information, see [Creating microservice apps](/docs/apps/tutorials?topi
 
 Mobile apps are different from the other patterns because they have a significant client-side component. The pattern might include direct connection to mobile services like push notifications, authentication, and mobile analytics. Mobile services are known as Mobile Backend as a Service or MBaaS pattern. They also might have a dedicated Backend-for-frontend.
 
-{{site.data.keyword.cloud_notm}} offers several mobile starter kits for iOS Swift and Android. You can find starter kits for the Mobile patterns on the [{{site.data.keyword.cloud_notm}} Mobile developer console](https://{DomainName}/developer/mobile/dashboard){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+{{site.data.keyword.cloud_notm}} offers mobile starter kits for iOS Swift and Android. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
 Additionally, you can create a custom mobile app by using a basic starter kit and selecting the mobile app type.
 

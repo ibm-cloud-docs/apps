@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-20"
+  years: 2018, 2020
+lastupdated: "2020-01-28"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Creating an app with a starter kit
 {: #tutorial-starterkit}
@@ -25,15 +26,12 @@ You can use a starter kit to quickly get your application started and prepare it
 
 You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
 
-{{site.data.keyword.cloud_notm}} has developer portals in different areas of interest (like Watson) or a digital channel (like Mobile or Web Apps). You can access these portals from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg).
+{{site.data.keyword.cloud_notm}} has developer dashboards in different areas of interest. You can access these dashboards from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg). Each developer dashboard provides starter kits that are relevant to the dashboard's focus area. The dashboards offer consistent, intuitive workflows for creating a working production-ready app in minutes.
 
-Each developer portal provides starter kits that are relevant to the portal's focus area. The portals offers consistent, intuitive workflows for creating a working production-ready app in minutes.
-
-Starter kits are available in many categories, including:
-* [Watson](https://{DomainName}/developer/watson/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Apple](https://{DomainName}/developer/appledevelopment/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Mobile](https://{DomainName}/developer/mobile/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
-* [Web App](https://{DomainName}/developer/appservice/dashboard){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon")
+You can find starter kits in the following developer dashboards:
+* [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}
+* [Watson](https://{DomainName}/developer/watson/starter-kits){: external}
+* [Apple](https://{DomainName}/developer/appledevelopment/starter-kits){: external}
 
 For more information, see [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits).
 
@@ -63,12 +61,13 @@ For information about requirements for specific deployment targets, see the foll
 ## Creating an app
 {: #create-starterkit}
 
-Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. You can use the category filters, such as language and type, to narrow the selection.
+Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. You can use the category filters, such as language and deployment target, to narrow the selection.
 
-1. Go to the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console, and select a starter kit.
-2. In the App details page for the starter kit, name your app, and select a resource group.
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-4. Optional. To inspect the source code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
+1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, and select a starter kit to view details about it. For example, select the **Node.js Express App** starter kit.
+2. On the starter kit details page, click **Create app**.
+3. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+5. Optional. To inspect the source code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 5. Click **Create**.
 
 Great start! You just created an app!

@@ -18,6 +18,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:external: target="_blank" .external}
 
 # Deploying apps
 {: #deploying-apps}
@@ -66,8 +67,8 @@ For information about requirements for specific deployment targets, see the foll
 ### Before you deploy
 
 Get started by [creating your app](/docs/apps?topic=creating-apps-getting-started) from the console in either of the following ways:
- * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to use a blank starter kit or to bring your own code.
- * Use a [starter kit](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+ * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
+ * Use a [starter kit](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
 ### Automatically deploying your app
 {: deploy-console-auto}
@@ -103,8 +104,8 @@ To manually deploy your app from your DevOps toolchain, complete these steps:
 For more information, see:
 * [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
 * [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
-* [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
-* [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: external}
+* [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: external}
 
 ## Using the {{site.data.keyword.dev_cli_short}} CLI
 {: #deploy-cli}
@@ -173,7 +174,7 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using th
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
-* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
 
 ## Verifying that your app is running
 {: #verify-runningapp}

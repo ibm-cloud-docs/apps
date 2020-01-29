@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Creating apps by using the CLI
 {: #create-deploy-app-cli}
@@ -62,7 +63,7 @@ Creating the app and toolchain takes a few seconds to complete.
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [**ibmcloud dev enable**](/docs/cli?topic=cloud-cli-idt-cli#enable) command. This command is in Beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
 
 1. Log in to {{site.data.keyword.cloud_notm}} by running the **ibmcloud login** command, and then target an org and space.
-2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") by running the following command in the directory of your choice.
+2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: external} by running the following command in the directory of your choice.
 
   ```
   git clone https://github.com/IBM-Cloud/node-helloworld.git

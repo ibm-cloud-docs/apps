@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Creating certificate signing requests
 {: #ssl_csr}
@@ -28,7 +29,7 @@ You can secure your applications by uploading SSL certificates and restricting a
 
 Before you can upload the SSL certificates to which you’re entitled with {{site.data.keyword.cloud}}, you must create a certificate signing request (CSR) on your server. A CSR is a message that is sent to a certificate authority to request the signing of a public key and associated information. Most commonly, CSRs are in PKCS #10 format. The CSR includes a public key, a common name, organization, city, state, country, and email. SSL certificate requests are accepted only with a CSR key length of 2048 bits.
 
-The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command-line tool](https://www.openssl.org/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"):
+The methods for creating a CSR vary depending on your operating system. The following example shows how to create a CSR by using [the OpenSSL command-line tool](https://www.openssl.org/){: external}:
 
 ```
 openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
@@ -42,7 +43,7 @@ OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer ty
 
 For the CSR to be valid, the following information must be entered when you create the CSR:
 
- * **Country name**: A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, before you create the CSR, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+ * **Country name**: A two-digit code for the country or region. For example, `US` is the country code for the United States. For other countries or regions, before you create the CSR, check the [list of ISO country codes](https://www.iso.org/obp/ui/#search){: external}.
  * **State or province**: The full, unabbreviated name of the state or province.
  * **Locality**: The full name of the city or town.
  * **Organization**: The full name of the business or company, as legally registered in your locality, or personal name. For companies, be sure to include the registration suffix, such as Ltd., Inc., or NV.
@@ -75,7 +76,7 @@ When you use a custom domain to serve the SSL certificate, use the following reg
 
 To upload a certificate for your Cloud Foundry app, complete the following steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console ![External link icon](../icons/launch-glyph.svg "External link icon")](https://{DomainName}){: new_window}, click **Manage**, and select **Account**.
+1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Manage**, and select **Account**.
 2. Click **Cloud Foundry orgs**.
 3. From the Actions column, click the Actions icon ![More Actions icon](../icons/action-menu-icon.svg), and select **Domains**.
 6. Click **Upload** for your custom domain.

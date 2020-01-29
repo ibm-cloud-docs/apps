@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-06-26"
+  years: 2019, 2020
+lastupdated: "2020-01-08"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -16,6 +16,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
+{:external: target="_blank" .external}
 
 # FAQs
 {: #apps-faq}
@@ -36,7 +37,7 @@ For more information, see [Managing your domains](/docs/apps?topic=creating-apps
 {: #cf-app}
 {: faq}
 
-Your resource list in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") provides summary information for the apps that you created. In the resource list, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
+The My resources page  in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} provides summary information for the apps that you created. From the [My resources](https://cloud.ibm.com/resources) page, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
 
 ## Why can’t I select a Cloud Foundry space when I try to deploy an app?
 {: #cf-space}
@@ -44,7 +45,7 @@ Your resource list in the [{{site.data.keyword.cloud_notm}} console](https://{Do
 
 You most likely need to create a Cloud Foundry space first. If you are using the Cloud Foundry command-line interface, type `cf create-space <space_name> -o <organization_name>`. Otherwise, complete these steps from the console:
 
-1. From the menu bar in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), select **Manage** > **Account**.
+1. From the menu bar in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, select **Manage** > **Account**.
 2. Select **Cloud Foundry orgs**.
 3. Click the name of the organization that you want to create a space in, and click **Add a space**.
 
@@ -54,7 +55,7 @@ You most likely need to create a Cloud Foundry space first. If you are using the
 
 To delete an app that you created, complete these steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource List**.
+1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **My resources**.
 2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg) for the app that you want to delete, and click **Delete**.
 
 ## How do I stop a Cloud Foundry app?
@@ -64,7 +65,7 @@ To delete an app that you created, complete these steps:
 If you want to stop a Cloud Foundry app, complete the following steps:
 
 1. From the Dashboard, click **View resources** within the Resources summary section.
-1. On the Resource list, expand the sections and locate the service instance that you want to stop.
+1. On the My resources page, expand the sections and locate the service instance that you want to stop.
 1. Select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and then click **Stop**.
 
 ## What are toolchains?

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-12-19"
+  years: 2016, 2020
+lastupdated: "2020-01-28"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -17,6 +17,7 @@ subcollection: creating-apps
 {:pre: .pre}
 {:tip: .tip}
 {:note: .note}
+{:external: target="_blank" .external}
 
 # Creating microservice apps
 {: #tutorial-microservice}
@@ -53,13 +54,14 @@ For information about requirements for specific deployment targets, see the foll
 
 You can use a starter kit to create a microservice app. To locate the starter kits and create an app, complete these steps:
 
-1. Go to the [App Service Starter Kits](https://{DomainName}/developer/appservice/starter-kits){: new_window} ![External link icon](../../icons/launch-glyph.svg "External link icon") page in the {{site.data.keyword.dev_console}} console.
-2. Type `microservice` in the search bar to filter the list of starter kits.
-3. Select a microservice starter kit, such as Node.js Microservice with Express.js.
-4. In the App details page for the starter kit, name your app, and select a resource group.
-5. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-7. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
-8. Click **Create**.
+1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Type `microservice` in the search bar to filter the list of starter kits.
+1. Select a microservice starter kit, such as `Node.js Microservice with Express.js`.
+1. On the starter kit overview page, click **Create app**.
+1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+1. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
+1. Click **Create**.
 
 Great start! You just created an app!
 

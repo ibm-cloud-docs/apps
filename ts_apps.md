@@ -19,6 +19,7 @@ subcollection: creating-apps
 {:tip: .tip}
 {:new_window: target="_blank"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
+{:external: target="_blank" .external}
 
 # Troubleshooting for creating apps
 {: #managingapps}
@@ -26,7 +27,7 @@ subcollection: creating-apps
 General problems with creating applications might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
 {:shortdesc}
 
-If you're unable to resolve your issue, you can use the [{{site.data.keyword.cloud_notm}} #developer-tools Slack channel](https://ibm-cloud-tech.slack.com/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more help. Join [{{site.data.keyword.cloud_notm}} Technology](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") to request access. 
+If you're unable to resolve your issue, you can use the [{{site.data.keyword.cloud_notm}} #developer-tools Slack channel](https://ibm-cloud-tech.slack.com/){: external} for more help. Join [{{site.data.keyword.cloud_notm}} Technology](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: external} to request access. 
 {: tip}
 
 ## My apps are hosted in different domains
@@ -82,7 +83,7 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 process.env.VCAP_SERVICES
 ```
 
-For more information about the commands that you can use in other program languages, see [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") and [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For more information about the commands that you can use in other program languages, see [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: external} and [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: external}.
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
@@ -98,7 +99,7 @@ A Bad Gateway error usually happens when you go to a website that uses a proxy s
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
 
-If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app?topic=resources-externalapp){: new_window}. If the service status is normal, try the following steps to solve the problem:
+If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status){: external} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app?topic=resources-externalapp). If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
 
   * Retry the action:
@@ -106,7 +107,7 @@ If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first c
     * Use a different browser.
     * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
   * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-getting-customer-support){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more information.
+  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-getting-customer-support){: external} for more information.
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -120,7 +121,7 @@ You bind a {{site.data.keyword.mobilepushshort}} service for your {{site.data.ke
 IBM {{site.data.keyword.mobilepushshort}} service uses the Google Cloud Messaging (GCM) service to dispatch notifications to mobile apps that are developed on Android. To enable the Android apps to receive notifications, Google Cloud Messaging (GCM) service must be accessible by the mobile apps. In regions where the Android apps can't reach the GCM service, the Android apps can't receive {{site.data.keyword.mobilepushshort}}.
 {: tsCauses}
 
-As a workaround, use third-party services that don't rely on the GCM service; for example, [jpush](https://www.jiguang.cn/en/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+As a workaround, use third-party services that don't rely on the GCM service; for example, [jpush](https://www.jiguang.cn/en/){: external}.
 {: tsResolve}
 
 ## Double-byte characters aren't displayed properly when apps are pushed to {{site.data.keyword.cloud_notm}}
@@ -181,7 +182,7 @@ Use one of the following methods, depending on the cause of the problem:
 		  ```
       {: codeblock}
 
-    * Use the [package.json](https://www.npmjs.com/package/jsonfile){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") file. For example:
+    * Use the [package.json](https://www.npmjs.com/package/jsonfile){: external} file. For example:
 	    ```json
 		  {
         ...
@@ -220,7 +221,7 @@ Use one of the following methods, depending on the cause of the problem:
  }
     ```
 
-For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: external}.
 
 ## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse
 {: #ts_eclipse}
@@ -249,7 +250,7 @@ When you deploy an app to {{site.data.keyword.cloud_notm}} with a custom buildpa
 This problem might happen if scripts, such as the detect script, the compile script, and the release script, aren't executable.
 {: tsCauses}
 
-You can use the [Git update](https://git-scm.com/docs/git-update-index){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
+You can use the [Git update](https://git-scm.com/docs/git-update-index){: external} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
 {: tsResolve}
 
 ## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
@@ -289,7 +290,7 @@ If the app isn't running and you can't access the health endpoint, try looking a
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.
 * Export the environment variable that is listed.
-* View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+* View your pods by using `kubectl get pods`. If you need to install `kubectl`, see [Install and set up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/){: external}.
 * You can view the logs in your app by using `kubectl logs <pod-name>.`
 
 ## Starting `docker` fails with file not found message
@@ -307,7 +308,7 @@ An error exec: "docker": executable file not found in $PATH was encountered whil
 The Docker client isn't installed, or it's installed but not started.
 {: tsCauses}
 
-Ensure [Docker](https://docs.docker.com/install/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") is installed, and start it.
+Ensure [Docker](https://docs.docker.com/install/){: external} is installed, and start it.
 {: tsResolve}
 
 ## Building an app fails with Docker error
