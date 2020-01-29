@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
+{: .toc subcollection="creating-apps" category="platform_services" audience="platform" href="docs/apps?topic=creating-apps-getting-started" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}
@@ -55,17 +55,17 @@ Creating apps
 
     {: .topicgroup}
     IBM Cloud developer dashboards
+        [App Development](https://cloud.ibm.com/developer/appservice/dashboard)
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
-        [Mobile](https://cloud.ibm.com/developer/mobile/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-        [Web Apps](https://cloud.ibm.com/developer/appservice/dashboard)
+
 
     {: .topicgroup}
     IBM Cloud Programming Guides
         [Go](/go/go-getting-started)
         [Java](/java/java-getting-started)
         [Swift](/swift/swift-getting-started)
-        [Node](/node/nodejs-node-getting-started)
+        [Node](/node/nodejs-getting-started)
 
     at-events.md
     {: .navgroup-end}
