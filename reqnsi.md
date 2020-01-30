@@ -24,10 +24,6 @@ When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_
 
 You can request an instance of the service and use it independently of your app, or you can add the service instance to your app from the App details page. You can provision a particular type of service directly from the {{site.data.keyword.cloud_notm}} catalog.
 
-## New info
-Service enablement would stop injecting any code into the application. It will just add to deployment artifacts.
-Will also include the mechanism and flow in AppMan for direct service binding for CF as well as IKS clusters.
-
 ## Auto-provisioned services
 {: #auto-provision}
 
