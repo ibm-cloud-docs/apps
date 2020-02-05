@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-08"
+lastupdated: "2020-02-05"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -72,7 +72,13 @@ If you want to stop a Cloud Foundry app, complete the following steps:
 {: #toolchains}
 {: faq}
 
-A toolchain is a set of tool integrations that support development, deployment, and operations tasks. You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. A toolchain can be configured so that changes to the toolchain automatically build and deploy the app. For more information about toolchains, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+A toolchain is a set of tool integrations that support development, deployment, and operations tasks. You can create a toolchain from your app. The toolchain can support continuous development, deployment, monitoring, and more, and it is associated with your app. Each app can be associated with a toolchain. A toolchain can be configured so that changes to the toolchain automatically build and deploy the app. For more information about toolchains, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+
+## How do I extract a toolchain template from an existing toolchain?
+{: #toolchain-template}
+{: faq}
+
+You can run the [toolchain-to-template script](https://github.com/open-toolchain/toolchain-to-template#setup) to extract a toolchain template from an existing toolchain. This script uses a toolchain URL and generates an open toolchain (OTC) template in the current folder. When the script runs, it creates a clone of your original toolchain.
 
 ## How do I change the domain for Cloud Foundry apps?
 {: #cf-domains-faq}
