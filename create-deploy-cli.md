@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-07"
+lastupdated: "2020-02-17"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
@@ -32,7 +32,6 @@ You can use the {{site.data.keyword.cloud}} command-line interface (CLI) to crea
 
 * You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started). 
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
-* If you plan to deploy your app to {{site.data.keyword.cfee_full}}, you must [prepare your {{site.data.keyword.cloud_notm}} account](/docs/cloud-foundry?topic=cloud-foundry-permissions).
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
 * If you plan to deploy your app by using Knative:
   * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
@@ -53,7 +52,7 @@ Creating an app from a starter kit is useful if you don't already have existing 
   
     If you set a passphrase for your SSH key, you are required to enter this code.
     {: note}
-7. Follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain name, and enter a name for the host name.
+7. Follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name.
 
 Creating the app and toolchain takes a few seconds to complete.
 
