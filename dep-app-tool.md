@@ -1,10 +1,10 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-19"
+  years: 2018, 2020
+lastupdated: "2020-02-20"
 
-keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push
+keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
 subcollection: creating-apps
 
@@ -23,8 +23,11 @@ subcollection: creating-apps
 # Deploying apps
 {: #deploying-apps}
 
-You can deploy your application to {{site.data.keyword.cloud}} by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows. You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the command-line interface (CLI).
+{{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
+
+  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the {{site.data.keyword.dev_cli_short}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+  {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
 
@@ -59,18 +62,14 @@ For information about requirements for specific deployment targets, see the foll
 | {{site.data.keyword.cloud_notm}} Kubernetes Service / Knative | Knative is an extension of Kubernetes that hides many of the complex management tasks and adds serverless capabilities. The Knative deployment type is available only if Knative is installed on the cluster that you select.<br>1. Install the [IBM Cloud CLI, the IBM Cloud Kubernetes Service plug-in, and the Kubernetes CLI](/docs/containers?topic=containers-cs_cli_install).<br>2. Create a [standard Kubernetes cluster](https://{DomainName}/kubernetes/catalog/cluster) with 3 worker nodes that each have 4 cores and 16 GB memory (b3c.4x16) or more. For more information, see [Creating a standard classic cluster in the console](/docs/containers?topic=containers-clusters#clusters_ui). Ensure that you note the total monthly cost before you create the cluster.<br>3. Install the [Istio add-on](/docs/containers?topic=containers-istio).<br>4. Install the [Knative add-on](/docs/containers?topic=containers-serverless-apps-knative#knative-setup). |
 | Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](cloud.ibm.com/kubernetes/overview).|
 
-## Using the {{site.data.keyword.cloud_notm}} console
-{: deploy-console}
 
-{{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your app by using a DevOps toolchain.
-
-### Before you deploy
+## Before you deploy
 
 Get started by [creating your app](/docs/apps?topic=creating-apps-getting-started) from the console in either of the following ways:
  * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
  * Use a [starter kit](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
-### Automatically deploying your app
+## Deploying your app automatically
 {: deploy-console-auto}
 
 All toolchains that are created from the {{site.data.keyword.cloud_notm}} developer dashboard are configured for automatic deployment.
@@ -87,7 +86,7 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} develo
 
 The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipeline** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
-### Manually deploying your app
+## Deploying your app manually
 {: deploy-console-manual}
 
 Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub. With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo. 
@@ -98,7 +97,7 @@ To manually deploy your app from your DevOps toolchain, complete these steps:
 2. On the toolchain page, click the **Delivery Pipeline** tile.
 3. On the Delivery Pipeline page, you can start builds, change the deployment configuration, and view logs and history.
 
-### Related information for continuous delivery by using the console
+## Related information
 {: deploy-related-info}
 
 For more information, see:
@@ -107,74 +106,6 @@ For more information, see:
 * [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: external}
 * [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: external}
 
-## Using the {{site.data.keyword.dev_cli_short}} CLI
-{: #deploy-cli}
-
-{{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in 1 of two ways, depending on how your app is configured.
-
-Before you begin, [download and install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started).
-
-The CLI isn’t supported by Cygwin. Use the tool in a window other than the Cygwin command-line window.
-{: important}
-
-  1. Download the code for your app to a new directory to set up your development environment.
-
-  2. Change to the directory where your code is located.
-
-  3.  Update your app code. For example, if you're using an {{site.data.keyword.cloud_notm}} sample app and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
-
-    Review the `README.md` file, which contains details, such as build instructions.
-
-    If your app is a Liberty app, you must build it before you deploy it again.
-    {: note}
-
-  4. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-    ```
-    ibmcloud login
-    ```
-    {: codeblock}
-  
-    If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. For more information, see [Logging in with a federated ID](/docs/iam/federated_id?topic=iam-federated_id#federated_id).
-    {: tip}
-
-### Automatically deploying your app
-{: #deploy-cli-auto}
-
-If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [**ibmcloud dev edit**](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) command. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
-
-After you create a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
-
-1. Prepare the changes to be committed.
-    ```
-    git add .
-    ```
-2. Commit the changes with a brief message.
-    ```
-    git commit -m "made changes"
-    ```
-3. Push the commits on the master branch to the remote repository.
-    ```
-    git push origin master
-    ```
-4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command from the app directory.
-5. View the pipeline within the toolchain to verify that a new build started.
-
-### Manually deploying your app
-{: #deploy-cli-manual}
-
-You can manually deploy your app to {{site.data.keyword.cloud_notm}} by using the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
-
-  ```
-  ibmcloud dev deploy
-  ```
-  {: codeblock}
-
-### Related information for continuous delivery by using the CLI
-{: #deploy-cli-related}
-
-For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
-
-* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
 
 ## Verifying that your app is running
 {: #verify-runningapp}
