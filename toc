@@ -48,6 +48,7 @@ Creating apps
         toolchains.md
         insights.md
         monitor.md
+     ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
