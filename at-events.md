@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2019
-lastupdated: "2019-12-19"
+  years: 2016, 2020
+lastupdated: "2020-03-19"
 
 keywords: apps, event, security, IBM, activity tracker, applications, activity tracking events
 
@@ -30,7 +30,7 @@ Activity Tracker records user-initiated activities that change the state of a se
 
 There are currently two Activity Tracker services that are available in the {{site.data.keyword.cloud_notm}} catalog. The {{site.data.keyword.dev_console}} sends events to both services, and you can use either service to monitor the activity of the {{site.data.keyword.dev_console}}. However, the {{site.data.keyword.cloudaccesstrailfull}} is deprecated. No new instances can be created, and support for existing service instances is available only through 30 September 2019.
 
-For more information, see [{{site.data.keyword.at_full}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) and [{{site.data.keyword.cloudaccesstrailfull}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started).
+For more information, see [{{site.data.keyword.at_full}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 ## List of events
 {: #at_actions}

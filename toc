@@ -9,6 +9,8 @@ Creating apps
     index.md
     best-practice.md
     patterns.md
+    [What are cloud native apps?](https://www.ibm.com/cloud/learn/cloud-native)
+    [What is DevOps?](https://www.ibm.com/cloud/learn/devops-a-complete-guide)
 
     {: .topicgroup}
     Related links

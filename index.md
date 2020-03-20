@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-19"
+  years: 2018, 2020
+lastupdated: "2020-03-19"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -77,7 +77,7 @@ To deploy your app by using the console, complete the following steps:
 2. Select a deployment target, select the toolchain settings, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
 3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
 
-For more information, see [Deploying apps by using the console](/docs/apps?topic=creating-apps-deploying-apps#using-the-ibm-cloud-console).
+For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ### Using the CLI
 {: #cli-getting-started}
@@ -86,7 +86,7 @@ To deploy your app by using the CLI, run the `ibmcloud dev deploy` command. For 
 
 Now you're set for iterative development and continuous delivery.
 
-For more information, see [Deploying apps by using the CLI](/docs/apps?topic=creating-apps-deploying-apps#deploy-cli).
+For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
 ## Related information
 {: #related-getting-started}

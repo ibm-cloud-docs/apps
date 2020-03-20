@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-11-13"
+  years: 2015, 2020
+lastupdated: "2020-03-19"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -235,7 +235,7 @@ After you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse, y
 Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.cloud_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
 {: tsCauses}
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime#liberty_runtime).
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime).
 {: tsResolve}
 
 ## Apps can't be staged by using custom buildpacks
