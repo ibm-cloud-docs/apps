@@ -50,18 +50,17 @@ Creating apps
         toolchains.md
         insights.md
         monitor.md
-     ha-dr.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools command-line plug-in](/cli/cloud-cli-getting-started)
+    [IBM Cloud Developer Tools commands](/cli/cloud-cli-getting-started)
 
     {: .topicgroup}
     IBM Cloud developer dashboards
         [App Development](https://cloud.ibm.com/developer/appservice/dashboard)
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-
 
     {: .topicgroup}
     IBM Cloud Programming Guides

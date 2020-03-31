@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-02-21"
+lastupdated: "2020-03-26"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
@@ -22,15 +22,12 @@ subcollection: creating-apps
 # Creating and deploying apps by using the CLI
 {: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.dev_cli_short}} command-line interface (CLI) to create and deploy your application.
-
-  You can create an app by using a starter kit or by cloud-enabling your existing app code.
-  {: tip}
+You can use the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} CLI to create and deploy your application. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
 
 ## Before you begin
 {: #prereqs-app-cli}
 
-* You must install the {{site.data.keyword.cloud_notm}} CLI, the {{site.data.keyword.dev_cli_notm}} CLI plug-in, and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI](/docs/cli?topic=cloud-cli-getting-started). 
+* You must install the {{site.data.keyword.cloud_notm}} CLI and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI and Developer Tools commands](/docs/cli?topic=cloud-cli-getting-started). 
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
 * If you plan to deploy your app by using Knative:
@@ -114,7 +111,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ## Deploying your app
 {: #deploy-app-cli}
 
-{{site.data.keyword.cloud_notm}} provides a robust CLI and plug-ins to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured.
+{{site.data.keyword.cloud_notm}} provides a robust CLI and {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured.
 
 1. Change to the directory where your app code is located.
 
@@ -187,7 +184,7 @@ If you want to deploy your app to a different manual deployment type, run [**ibm
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
-* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} CLI](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} commands](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
 
 ## Viewing your app
 {: #view-app-cli}

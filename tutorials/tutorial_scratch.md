@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-26"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -36,7 +36,7 @@ The blank starter kit is a versatile tool that you can use to create custom apps
 For all deployment targets, ensure that you're aware of the following requirements:
 
 * Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available.
-* Install the [{{site.data.keyword.cloud_notm}} developer tools CLI](/docs/cli?topic=cloud-cli-getting-started).
+* Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
@@ -70,7 +70,7 @@ For information about requirements for specific deployment targets, see the foll
 
 Great start! You just created an app!
 
-You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}}, or add it to your code management repository.
+You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) commands, or add it to your code management repository.
 
 The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 {: tip}

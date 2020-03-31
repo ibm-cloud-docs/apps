@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-01-28"
+lastupdated: "2020-03-26"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -27,7 +27,7 @@ subcollection: creating-apps
 ## Before you begin
 {: #prereqs-mobile}
 
-Install the [{{site.data.keyword.dev_cli_long}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started).
+Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 
 ## Creating a mobile app with a starter kit
 {: #create-mobile}
@@ -65,7 +65,7 @@ To create a custom mobile app, complete these steps:
 ## Creating a mobile app with the CLI
 {: #create-mobile-cli}
 
-To create a mobile app with the [{{site.data.keyword.dev_cli_long}} CLI](/docs/cli?topic=cloud-cli-getting-started), complete these steps:
+To create a mobile app with the [{{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands](/docs/cli?topic=cloud-cli-getting-started), complete these steps:
 
 1. Open a terminal and navigate to a directory where you would like to create your app.
 2. Run the `ibmcloud dev create` command.
