@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-13"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -22,7 +22,7 @@ subcollection: creating-apps
 # Getting started tutorial
 {: #getting-started}
 
-You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need, or use your existing repository and bring your own code.
+You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need. Or, use your existing repository and bring your own code.
 {: shortdesc}
 
 Whether you have [existing code](/docs/apps/tutorials?topic=creating-apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
@@ -51,17 +51,18 @@ Create an app by selecting one of the following entry points:
 ## Step 2. Add services
 {: #resources-getting-started}
 
-When you use a starter kit to create your app, the mandatory services are automatically created for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
+When you use a starter kit to create your app, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
-If you want to add services after your app is created, go to the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, locate your app, and then click your app's name. The App details page is displayed, and you can create a service instance or connect existing services.
+If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
-Or, you can run the following command to add a service to your app by using the CLI. You can select an existing service that is already enabled on your account, or you can add a service.
-```
-ibmcloud dev edit
-```
-{: codeblock}
+1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
+2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
-For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-resource).
+After you add all the services that you want, the services are displayed in the App details page.
+
+After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
+
+For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
 
 ## Step 3. Deploy your app
 {: #deploy-getting-started}
@@ -82,7 +83,7 @@ For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploy
 ### Using the CLI
 {: #cli-getting-started}
 
-To deploy your app by using the CLI, run the `ibmcloud dev deploy` command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
 
 Now you're set for iterative development and continuous delivery.
 

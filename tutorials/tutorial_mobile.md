@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-13"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -80,16 +80,18 @@ The app is created in your current working directory.
 ## Adding services (optional)
 {: #resources-mobile}
 
-If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services. For this tutorial, add a place to manage your data.
+If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
-If you want to create a new service instance or connect any existing services to your app, complete these steps:
+If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
-2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance. For example, select **Databases** > **Next** > **Cloudant** > **Next**.
-3. Select your pricing plan. Use the **Lite** option for this tutorial.
-4. Click **Create**.
+2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
 After you add all the services that you want, the services are displayed in the App details page.
+
+After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
+
+For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
 
 ## Downloading the code
 {: #mobile-download-code}

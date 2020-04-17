@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-13"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -21,7 +21,7 @@ subcollection: creating-apps
 # Creating apps from your own code repository
 {: #tutorial-byoc}
 
-If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud_notm}} and connect the app to your source repository and your DevOps toolchain.
+If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud_notm}}. Then, you can connect the app record to your source repository and your DevOps toolchain.
 {: shortdesc}
 
 You can start from the {{site.data.keyword.cloud_notm}} dashboard or from any blank starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
@@ -45,7 +45,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 ### For specific deployment targets
 {: prereq-byoc-deploy-specific}
 
-For information about requirements for specific deployment targets, see the following table.
+For more information about requirements for specific deployment targets, see the following table.
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
@@ -74,7 +74,7 @@ You can view your Git repo by clicking **View repo** on the App details page.
 
 You might want to edit the Git URL in your app if you manually renamed your Git repo and need to update the URL reference in your app so that it points to your renamed repo.
 
-To change your Git URL, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
+To change your Git URL, click the Actions icon ![Actions icon](../../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
 
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
@@ -92,14 +92,16 @@ To enable your app for deployment, complete these steps:
 
 You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
 
-If you want to create a new service instance or connect any existing services to your app, complete these steps:
+If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
-2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance. For example, select **Data** > **Next** > **Cloudant** > **Next**.
-3. Select your pricing plan. You can use the free option for this tutorial.
-4. Click **Create**.
+2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
 After you add all the services that you want, the services are displayed in the App details page.
+
+After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
+
+For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
 
 ## Deploying your app
 {: #toolchain-byoc}

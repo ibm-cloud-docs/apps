@@ -22,7 +22,7 @@ subcollection: creating-apps
 # Creating microservice apps
 {: #tutorial-microservice}
 
-You can create an application from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java, or Python with a choice of web frameworks. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
+You can create an application from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java&trade;, or Python with a choice of web frameworks. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
 
 ## Before you begin
@@ -40,7 +40,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 ### For specific deployment targets
 {: prereq-deploy-specific}
 
-For information about requirements for specific deployment targets, see the following table.
+For more information about requirements for specific deployment targets, see the following table.
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
@@ -68,14 +68,18 @@ Great start! You just created an app!
 ## Adding services (optional)
 {: #resources-microservice}
 
-If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
+If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
-If you want to create a new service instance or connect any existing services to your app, complete these steps:
+If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
 1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
 2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
 After you add all the services that you want, the services are displayed in the App details page.
+
+After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
+
+For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
 
 ## Deploying your app
 {: #toolchain-microservice}
@@ -151,4 +155,4 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #micro-next-steps}
 
-* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).

@@ -40,7 +40,8 @@ Creating apps
 
     {: .topicgroup}
     Configuring
-        reqnsi.md
+        service-add.md
+        service-remove.md
         creds_overview.md
         mngdomains.md
         secapps.md
@@ -61,6 +62,7 @@ Creating apps
         [App Development](https://cloud.ibm.com/developer/appservice/dashboard)
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
+
 
     {: .topicgroup}
     IBM Cloud Programming Guides

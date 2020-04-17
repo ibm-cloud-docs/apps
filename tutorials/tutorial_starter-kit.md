@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-13"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -49,7 +49,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 
 ### For specific deployment targets
 
-For information about requirements for specific deployment targets, see the following table.
+For more information about requirements for specific deployment targets, see the following table.
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
@@ -77,7 +77,7 @@ If you want to view the Git repo for the starter kit, click **View sample repo**
 ## Adding services (optional)
 {: #resources-starterkit}
 
-If a starter kit requires specific services, the auto-provisioned service instances are automatically created and connected to your app. You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
+If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
 
 If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
@@ -85,6 +85,10 @@ If you want to create a new service instance or connect any existing services to
 2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
 
 After you add all the services that you want, the services are displayed in the App details page.
+
+After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
+
+For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
 
 ## Deploying your app
 {: #deploy-starterkit}
@@ -160,7 +164,7 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #starter-next-steps}
 
-Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can re-deploy your app to the cloud.
+Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud.
 
 To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
 

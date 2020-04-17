@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-03-26"
+lastupdated: "2020-04-13"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
@@ -47,7 +47,10 @@ Creating an app from a starter kit is useful if you don't already have existing 
   ![Language](images/cli-select-lang.png "Select a language"){: caption="Figure 2. Languages in the CLI" caption-side="bottom"}
 4. Select a starter kit to use as the basis for your app.
 5. Enter a name for your app, and select the resource group that you want to use (if necessary).
-6. Optional. Select a service to add to your app.
+6. Optional. Select a service to add to your app. During the app creation process, you are prompted if you want to add a service to your app.
+  1. Enter **Y**.
+  2. Select **Create a new service and add it to this application**.
+  3. Follow the prompts to select a service group, service, region, and pricing plan.
 7. Select a deployment option. If you want to deploy the app automatically, select a DevOps option. Otherwise, select the manual deployment option.
   ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
 
@@ -61,7 +64,7 @@ Creating the app and toolchain takes a few seconds to complete. The app is creat
 ## Creating an app from your own code
 {: #byoc-cli}
 
-This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [**ibmcloud dev enable**](/docs/cli?topic=cloud-cli-idt-cli#enable) command. This command is in Beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
+This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [**ibmcloud dev enable**](/docs/cli?topic=cloud-cli-idt-cli#enable) command. This command is in beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
 
 1. Log in to {{site.data.keyword.cloud_notm}} by running the **ibmcloud login** command, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: external} by running the following command in the directory of your choice.
