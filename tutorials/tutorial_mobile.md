@@ -34,7 +34,7 @@ Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/doc
 
 To create a mobile app by using a starter kit, complete these steps:
 
-1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 1. Type `mobile` in the search bar to filter the list of starter kits.
 1. Select a mobile starter kit, such as `Mobile App with Push Notifications`.
 1. On the starter kit overview page, click **Create app**.

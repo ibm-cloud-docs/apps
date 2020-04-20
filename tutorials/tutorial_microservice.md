@@ -54,7 +54,7 @@ For more information about requirements for specific deployment targets, see the
 
 You can use a starter kit to create a microservice app. To locate the starter kits and create an app, complete these steps:
 
-1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 1. Type `microservice` in the search bar to filter the list of starter kits.
 1. Select a microservice starter kit, such as `Node.js Microservice with Express.js`.
 1. On the starter kit overview page, click **Create app**.
