@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -51,7 +51,7 @@ Create an app by selecting one of the following entry points:
 ## Step 2. Add services
 {: #resources-getting-started}
 
-When you use a starter kit to create your app, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
+When you use a starter kit to create your app, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
 If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
@@ -67,9 +67,9 @@ For more information, see [Adding a service to your app](/docs/apps?topic=creati
 ## Step 3. Deploy your app
 {: #deploy-getting-started}
 
-You can deploy your app by using the console or the CLI.
+You can deploy your app by using the {{site.data.keyword.cloud_notm}} console or the CLI.
 
-### Using the console
+### Using the {{site.data.keyword.cloud_notm}} console
 {: #console-getting-started}
 
 To deploy your app by using the console, complete the following steps:
@@ -80,7 +80,7 @@ To deploy your app by using the console, complete the following steps:
 
 For more information, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
 
-### Using the CLI
+### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #cli-getting-started}
 
 To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).

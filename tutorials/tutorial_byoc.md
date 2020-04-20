@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -21,10 +21,10 @@ subcollection: creating-apps
 # Creating apps from your own code repository
 {: #tutorial-byoc}
 
-If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud_notm}}. Then, you can connect the app record to your source repository and your DevOps toolchain.
+If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud}}. Then, you can connect the app record to your source repository and your DevOps toolchain.
 {: shortdesc}
 
-You can start from the {{site.data.keyword.cloud_notm}} dashboard or from any blank starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
+You can start from the {{site.data.keyword.cloud_notm}} console or from any blank starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
 
 You can connect your existing DevOps toolchain or create one, and continuously deliver your app to the deployment target of your choice, such as Kubernetes or Cloud Foundry.
 
@@ -85,7 +85,7 @@ To enable your app for deployment, complete these steps:
 
 1. On the App details page, click **View repo** to work with your code locally.
 2. Follow the instructions for [using the CLI to enable your app for deployment](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
-3. After your app is enabled, continue using the console for the remaining steps.
+3. After your app is enabled, continue using the {{site.data.keyword.cloud_notm}} console for the remaining steps.
 
 ## Adding services (optional)
 {: #services-byoc}

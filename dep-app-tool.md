@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-08"
+lastupdated: "2020-04-20"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 {{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
 
-  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud_notm}} web console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cloud-cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cloud-cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
   {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
@@ -65,14 +65,14 @@ For information about requirements for specific deployment targets, see the foll
 
 ## Before you deploy
 
-Get started by [creating your app](/docs/apps?topic=creating-apps-getting-started) from the console in either of the following ways:
- * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
+Get started by [creating your app](/docs/apps?topic=creating-apps-getting-started) from the {{site.data.keyword.cloud_notm}} console in either of the following ways:
+ * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
  * Use a [starter kit](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
 ## Deploying your app automatically
 {: deploy-console-auto}
 
-All toolchains that are created from the {{site.data.keyword.cloud_notm}} developer dashboard are configured for automatic deployment.
+All toolchains that are created from the {{site.data.keyword.cloud_notm}} console are configured for automatic deployment.
 {: note}
 
 1. On the App details page for your app, click **Deploy your app**.

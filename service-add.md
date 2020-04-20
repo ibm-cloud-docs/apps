@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, connect service, service instance, credentials, starter kit
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Adding a service to your app
 {: #add-service}
 
-When you create an app with {{site.data.keyword.cloud}} {{site.data.keyword.dev_console}}, you can add services from the App details page. You can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
+When you create an app from the {{site.data.keyword.cloud}} console, you can add services from the App details page. You can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
 {: shortdesc}
 
 When you add a service to an app, the action binds the service instance to the app and provisions the credentials.

@@ -58,7 +58,7 @@ Creating apps
     [IBM Cloud Developer Tools commands](/cli/cloud-cli-getting-started)
 
     {: .topicgroup}
-    IBM Cloud developer dashboards
+    IBM Cloud developer consoles
         [App Development](https://cloud.ibm.com/developer/appservice/dashboard)
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)

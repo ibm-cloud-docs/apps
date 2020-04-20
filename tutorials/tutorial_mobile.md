@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -49,7 +49,7 @@ To create a mobile app by using a starter kit, complete these steps:
 
 To create a custom mobile app, complete these steps:
 
-1. From your [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
+1. From your [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
 
   You can also create a custom mobile app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
   {: tip}
@@ -80,7 +80,7 @@ The app is created in your current working directory.
 ## Adding services (optional)
 {: #resources-mobile}
 
-If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
+If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
 If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 

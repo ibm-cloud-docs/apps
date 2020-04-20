@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -54,7 +54,7 @@ For more information about requirements for specific deployment targets, see the
 ## Creating your app
 {: #create-scratch}
 
-1. From your [{{site.data.keyword.cloud_notm}} dashboard](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
+1. From your [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
 
   You can also create a custom app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
   {: tip}

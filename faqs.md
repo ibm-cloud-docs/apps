@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-02-05"
+lastupdated: "2020-04-20"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -43,7 +43,7 @@ The My resources page  in the [{{site.data.keyword.cloud_notm}} console](https:/
 {: #cf-space}
 {: faq}
 
-You most likely need to create a Cloud Foundry space first. If you are using the Cloud Foundry command-line interface, type `cf create-space <space_name> -o <organization_name>`. Otherwise, complete these steps from the console:
+You most likely need to create a Cloud Foundry space first. If you are using the Cloud Foundry command-line interface, type `cf create-space <space_name> -o <organization_name>`. Otherwise, complete these steps:
 
 1. From the menu bar in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, select **Manage** > **Account**.
 2. Select **Cloud Foundry orgs**.
@@ -64,7 +64,7 @@ To delete an app that you created, complete these steps:
 
 If you want to stop a Cloud Foundry app, complete the following steps:
 
-1. From the Dashboard, click **View resources** within the Resources summary section.
+1. From the {{site.data.keyword.cloud_notm}} console, click **View resources** within the Resources summary section.
 1. On the My resources page, expand the sections and locate the service instance that you want to stop.
 1. Select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and then click **Stop**.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-04-20"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
@@ -20,7 +20,7 @@ subcollection: creating-apps
 # Common architectures for cloud apps
 {: #patterns}
 
-Starter kits on {{site.data.keyword.cloud_notm}} help you produce applications with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components to populate the pattern.
+Starter kits on {{site.data.keyword.cloud}} help you produce applications with a proven architecture. Apps are all different, but when you base your app on a known architectural pattern, it's easier to get a reliable result quickly. When you create an app from a starter kit, you’re choosing one of several different pattern types along with components to populate the pattern.
 {: shortdesc}
 
 ## Web apps

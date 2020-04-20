@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: apps, services, remove service, application, service, instance, ibmcloud dev edit, disconnect service, service instance, credentials
 
@@ -19,7 +19,7 @@ subcollection: creating-apps
 # Removing a service from your app
 {: #remove-service}
 
-When you create or modify your application, you can remove services from your app, or you can delete the service altogether.
+When you create or modify your application in the {{site.data.keyword.cloud}} console, you can remove services from your app, or you can delete the service altogether.
 {: shortdesc}
 
 ## Removing a service from your app without deleting it

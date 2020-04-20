@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-13"
+lastupdated: "2020-04-20"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -26,9 +26,9 @@ You can use a starter kit to quickly get your application started and prepare it
 
 You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
 
-{{site.data.keyword.cloud_notm}} has developer dashboards in different areas of interest. You can access these dashboards from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg). Each developer dashboard provides starter kits that are relevant to the dashboard's focus area. The dashboards offer consistent, intuitive workflows for creating a working production-ready app in minutes.
+{{site.data.keyword.cloud}} has developer consoles in different areas of interest. You can access these consoles from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg). Each developer console provides starter kits that are relevant to the console's focus area. The consoles offer consistent, intuitive workflows for creating a working production-ready app in minutes.
 
-You can find starter kits in the following developer dashboards:
+You can find starter kits in the following developer consoles:
 * [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}
 * [Watson](https://{DomainName}/developer/watson/starter-kits){: external}
 * [Apple](https://{DomainName}/developer/appledevelopment/starter-kits){: external}
@@ -61,7 +61,7 @@ For more information about requirements for specific deployment targets, see the
 ## Creating an app
 {: #create-starterkit}
 
-Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} {{site.data.keyword.dev_console}}. You can use the category filters, such as language and deployment target, to narrow the selection.
+Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} console. You can use the category filters, such as language and deployment target, to narrow the selection.
 
 1. Go to the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, and select a starter kit to view details about it. For example, select the **Node.js Express App** starter kit.
 2. On the starter kit details page, click **Create app**.
@@ -77,7 +77,7 @@ If you want to view the Git repo for the starter kit, click **View sample repo**
 ## Adding services (optional)
 {: #resources-starterkit}
 
-If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the console from the App details page, which is displayed as soon as you create the app.
+If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
 If you want to create a new service instance or connect any existing services to your app, complete the following steps:
 
