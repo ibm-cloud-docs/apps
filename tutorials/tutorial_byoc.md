@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-11"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -59,10 +59,11 @@ For more information about requirements for specific deployment targets, see the
 
 To create an app and connect it with your source repo, complete these steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
-2. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-3. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
-4. Click **Create**. The App details page is displayed.
+From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, click **Get a Starter Kit**.
+2. Click the **Create App** tile, and then select the **Create** tab.
+3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+4. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
+5. Click **Create**. The App details page is displayed.
 
 ## Viewing your Git repo
 {: #repo-byoc}

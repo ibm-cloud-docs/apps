@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-11"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -56,8 +56,8 @@ You can use a starter kit to create a microservice app. To locate the starter ki
 
 1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 1. Type `microservice` in the search bar to filter the list of starter kits.
-1. Select a microservice starter kit, such as `Node.js Microservice with Express.js`.
-1. On the starter kit overview page, click **Create app**.
+1. Select a microservice starter kit to view details about it.
+1. Select the **Create** tab.
 1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 1. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.

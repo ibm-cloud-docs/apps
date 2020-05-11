@@ -36,8 +36,8 @@ To create a mobile app by using a starter kit, complete these steps:
 
 1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 1. Type `mobile` in the search bar to filter the list of starter kits.
-1. Select a mobile starter kit, such as `Mobile App with Push Notifications`.
-1. On the starter kit overview page, click **Create app**.
+1. Select a mobile starter kit to view details about it.
+1. Select the **Create** tab.
 1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 1. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.

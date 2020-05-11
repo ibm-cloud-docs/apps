@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-11"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -54,19 +54,16 @@ For more information about requirements for specific deployment targets, see the
 ## Creating your app
 {: #create-scratch}
 
-1. From your [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
-
-  You can also create a custom app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
-  {: tip}
-
-2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
-4. Select **Create a new app** as a starting point.
-5. Select **Backend** as the app type.
+1. From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, click **Get a Starter Kit**.
+2. Click the **Create App** tile, and then select the **Create** tab.
+3. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+5. Select **Create a new app** as a starting point.
+6. Select **Backend** as the app type.
   If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps/tutorials?topic=creating-apps-tutorial-mobile#create-mobile-basic) for instructions.
   {: tip}
-6. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
-7. Click **Create**.
+7. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
+8. Click **Create**.
 
 Great start! You just created an app!
 
