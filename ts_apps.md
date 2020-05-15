@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-05-15"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -29,6 +29,23 @@ General problems with creating applications might include apps that can't be upd
 
 If you're unable to resolve your issue, you can use the [{{site.data.keyword.cloud_notm}} #developer-tools Slack channel](https://ibm-cloud-tech.slack.com/){: external} for more help. Join [{{site.data.keyword.cloud_notm}} Technology](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: external} to request access. 
 {: tip}
+
+## Cannot deploy my app from a starter kit that is deprecated
+{: #deprecated-starter-ts}
+{: troubleshoot}
+
+When I try to deploy an app that I created from a starter kit, the following message is displayed:
+{: tsSymptoms}
+```
+Starter Kit De-Registered The starter kit associated with this app has been de-registered. The ability to download code and deploy is disabled.
+```
+
+This message occurs if you previously created an app from a starter kit that has since been deprecated, and you haven’t deployed the app yet. Because the corresponding Git repo is archived, you cannot download or generate the code or deploy that app.
+{: tsCauses}
+
+* Delete the app, and create a new one from a starter kit that isn't deprecated.
+* Or, if you already deployed the app and want to keep it, you can only add services to it. Because your code is already deployed, then your repo for that app is already set up.
+{: tsResolve}
 
 ## My apps are hosted in different domains
 {: #domains-ts}
