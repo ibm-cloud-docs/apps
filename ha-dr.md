@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-03-25"
+lastupdated: "2020-05-16"
 
 keywords: high availability, disaster recovery, SLA
 
@@ -30,4 +30,4 @@ The services are available only on the public cloud, but the tools that are used
 
 Some starter kits automatically provision {{site.data.keyword.cloud_notm}} resources for you, and you can also add resources manually before you create your app. If the resource stores data, you must ensure that the resource meets all business continuity, disaster recovery, and regulatory compliance standards and policies for your organization. For more information, see [resource-specific documentation](/docs?tab=all-docs).
 
-See [ensure zero downtime](/docs/overview?topic=overview-zero-downtime#zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. For more information about high availability and disaster recovery for {{site.data.keyword.contdelivery_short}}, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr). You can also find information about [Service Level Agreements](/docs/overview?topic=overview-zero-downtime#SLAs).  
+See [ensure zero downtime](/docs/overview?topic=overview-zero-downtime) to learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}. For more information about high availability and disaster recovery for {{site.data.keyword.contdelivery_short}}, see [{{site.data.keyword.contdelivery_short}} high availability and disaster recovery](/docs/ContinuousDelivery?topic=ContinuousDelivery-ha-dr). You can also find information about [Service Level Agreements](/docs/overview?topic=overview-slas).  

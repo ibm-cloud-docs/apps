@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-04-20"
+lastupdated: "2020-05-16"
 
 keywords: apps, services, remove service, application, service, instance, ibmcloud dev edit, disconnect service, service instance, credentials
 
@@ -43,7 +43,7 @@ To delete a service, complete these steps:
 2. Click **Delete**. The service instance is deleted.
 
 ## Next steps
-{: #services-nextsteps}
+{: #services-remove-nextsteps}
 
 * From the App details page, you can navigate to service documentation and API references.
 * You can also click the Actions icon ![Actions icon](../../icons/actions-icon-vertical.svg) and either remove the service from the app, open the service dashboard, or delete the service.

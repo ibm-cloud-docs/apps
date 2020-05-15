@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-11"
+lastupdated: "2020-05-15"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -48,6 +48,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
+{: prereq-starterkit-deploy-specific}
 
 For more information about requirements for specific deployment targets, see the following table.
 
