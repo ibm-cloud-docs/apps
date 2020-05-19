@@ -6,7 +6,7 @@ lastupdated: "2019-12-04"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

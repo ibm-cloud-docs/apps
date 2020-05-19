@@ -6,7 +6,7 @@ lastupdated: "2020-03-26"
 
 keywords: apps, event, security, IBM, activity tracker, applications, activity tracking events
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

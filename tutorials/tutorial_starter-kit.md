@@ -6,7 +6,7 @@ lastupdated: "2020-05-15"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -33,7 +33,7 @@ You can find starter kits in the following developer consoles:
 * [Watson](https://{DomainName}/developer/watson/starter-kits){: external}
 * [Apple](https://{DomainName}/developer/appledevelopment/starter-kits){: external}
 
-For more information, see [What are starter kits?](/docs/apps?topic=creating-apps-starter-kits).
+For more information, see [What are starter kits?](/docs/apps?topic=apps-starter-kits).
 
 ## Before you begin
 {: #prereqs-starterkit}
@@ -89,7 +89,7 @@ After you add all the services that you want, the services are displayed in the 
 
 After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
 
-For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
+For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
 
 ## Deploying your app
 {: #deploy-starterkit}
@@ -112,7 +112,7 @@ The DevOps toolchain is created automatically, and the deployment process begins
   You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
   {: note}
 
-For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
 
 ## Checking the deployment status
 {: #status-starterkit}
@@ -169,4 +169,4 @@ Download your app for local development where you can easily build, test, and de
 
 To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
 
-For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+For more information, see [Developing apps locally](/docs/apps?topic=apps-create-deploy-app-cli#build-run-app-cli).

@@ -6,7 +6,7 @@ lastupdated: "2020-05-16"
 
 keywords: high availability, disaster recovery, SLA
 
-subcollection: creating-apps
+subcollection: apps
 
 
 ---

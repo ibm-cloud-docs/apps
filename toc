@@ -2,7 +2,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="creating-apps" category="platform_services" audience="platform" href="/docs/apps?topic=creating-apps-getting-started" path="apps"}
+{: .toc subcollection="apps" category="platform_services" audience="platform" href="/docs/apps?topic=apps-getting-started" path="apps"}
 Creating apps
 
     {: .navgroup id="learn"}

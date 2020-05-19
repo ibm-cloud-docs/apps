@@ -6,7 +6,7 @@ lastupdated: "2019-08-23"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 {:new_window: target="_blank"}

@@ -6,7 +6,7 @@ lastupdated: "2019-11-13"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

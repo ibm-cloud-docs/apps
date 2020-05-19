@@ -6,7 +6,7 @@ lastupdated: "2019-06-26"
 
 keywords: apps, best practices, best practice create app, good app, app general, common practice, cloud app help
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

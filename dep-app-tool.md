@@ -6,7 +6,7 @@ lastupdated: "2020-04-20"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -26,7 +26,7 @@ subcollection: creating-apps
 {{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
 
-  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cloud-cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=creating-apps-create-deploy-app-cli).
+  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cloud-cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
   {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
@@ -65,7 +65,7 @@ For information about requirements for specific deployment targets, see the foll
 
 ## Before you deploy
 
-Get started by [creating your app](/docs/apps?topic=creating-apps-getting-started) from the {{site.data.keyword.cloud_notm}} console in either of the following ways:
+Get started by [creating your app](/docs/apps?topic=apps-getting-started) from the {{site.data.keyword.cloud_notm}} console in either of the following ways:
  * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
  * Use a [starter kit](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
@@ -141,10 +141,10 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #next-steps-deployapps}
 
-* If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=creating-apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=creating-apps-managingapps#access_kube_logs) to look for errors.
+* If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=apps-managingapps#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
 	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java?topic=java-spring-configuration).
 
 * Add new service credentials to your Kubernetes environment:
-	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=creating-apps-credentials_overview).
+	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=apps-credentials_overview).

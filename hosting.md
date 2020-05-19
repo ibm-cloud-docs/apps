@@ -6,7 +6,7 @@ lastupdated: "2020-04-21"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

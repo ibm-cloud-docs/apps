@@ -6,7 +6,7 @@ lastupdated: "2019-08-23"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

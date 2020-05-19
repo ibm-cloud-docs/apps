@@ -6,7 +6,7 @@ lastupdated: "2020-01-14"
 
 keywords: developer tools, building apps, developer entry point, DevOps, toolchain, insights
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 {:new_window: target="_blank"}
@@ -30,7 +30,7 @@ This tool integration is available only on the public {{site.data.keyword.cloud_
 
 To add the {{site.data.keyword.DRA_short}} tool integration to your DevOps toolchain, complete these steps:
 
-1. [Create your app](/docs/apps?topic=creating-apps-getting-started).
+1. [Create your app](/docs/apps?topic=apps-getting-started).
 2. On App details page, click **Deploy your app** and follow the steps for configuring a DevOps toolchain. The steps vary, depending on which deployment target that you select.
 3. When you see the toolchain details appear on the App details page, click the toolchain name.
 4. On the toolchain's Overview page, click **Add a Tool**.

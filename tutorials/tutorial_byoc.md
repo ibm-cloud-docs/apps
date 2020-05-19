@@ -6,7 +6,7 @@ lastupdated: "2020-05-16"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -39,7 +39,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 * Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available.
 * Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
- * See [What makes a good app?](/docs/apps?topic=creating-apps-best-practice) for best practices for creating apps.
+ * See [What makes a good app?](/docs/apps?topic=apps-best-practice) for best practices for creating apps.
  * You must have a Git source code repository from any of the following providers: GitHub, GitHub Enterprise, Git lab, BitBucket, or Rational.
 
 ### For specific deployment targets
@@ -85,7 +85,7 @@ Enable your existing app for {{site.data.keyword.cloud_notm}} deployment by usin
 To enable your app for deployment, complete these steps:
 
 1. On the App details page, click **View repo** to work with your code locally.
-2. Follow the instructions for [using the CLI to enable your app for deployment](/docs/apps?topic=creating-apps-create-deploy-app-cli#byoc-cli).
+2. Follow the instructions for [using the CLI to enable your app for deployment](/docs/apps?topic=apps-create-deploy-app-cli#byoc-cli).
 3. After your app is enabled, continue using the {{site.data.keyword.cloud_notm}} console for the remaining steps.
 
 ## Adding services (optional)
@@ -102,7 +102,7 @@ After you add all the services that you want, the services are displayed in the 
 
 After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
 
-For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
+For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
 
 ## Deploying your app
 {: #toolchain-byoc}
@@ -136,7 +136,7 @@ If you have a DevOps toolchain that you want to connect to your app, complete th
 5. Run the build stage to begin a new build and deploy your app.
 6. Use the breadcrumbs in your browser to return to the App details page.
 
-For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
 
 ## Checking the deployment status
 {: #status-byoc}

@@ -6,7 +6,7 @@ lastupdated: "2020-05-16"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -79,7 +79,7 @@ After you add all the services that you want, the services are displayed in the 
 
 After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
 
-For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
+For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
 
 ## Deploying your app
 {: #toolchain-microservice}
@@ -102,7 +102,7 @@ The DevOps toolchain is created automatically, and the deployment process begins
   You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
   {: note}
 
-For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
 
 ## Checking the deployment status
 {: #status-microservice}
@@ -155,4 +155,4 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt
 ## Next steps
 {: #micro-next-steps}
 
-* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+* Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud. For more information, see [Developing apps locally](/docs/apps?topic=apps-create-deploy-app-cli#build-run-app-cli).

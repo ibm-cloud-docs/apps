@@ -6,7 +6,7 @@ lastupdated: "2020-05-16"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -62,7 +62,7 @@ Previously, the `mybluemix.net` domain was used for hosting apps in various depl
 
 The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
 
-For more information, see [Managing your domains](/docs/apps?topic=creating-apps-update-domain).
+For more information, see [Managing your domains](/docs/apps?topic=apps-update-domain).
 
 ## You have unsaved changes
 {: #ts_unsaved_changes}

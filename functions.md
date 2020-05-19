@@ -6,7 +6,7 @@ lastupdated: "2019-12-02"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial, cloud functions, faas, function as a service
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 {:new_window: target="_blank"}

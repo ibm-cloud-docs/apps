@@ -6,7 +6,7 @@ lastupdated: "2020-05-11"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -60,7 +60,7 @@ For more information about requirements for specific deployment targets, see the
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
 5. Select **Create a new app** as a starting point.
 6. Select **Backend** as the app type.
-  If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps/tutorials?topic=creating-apps-tutorial-mobile#create-mobile-basic) for instructions.
+  If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps/tutorials?topic=apps-tutorial-mobile#create-mobile-basic) for instructions.
   {: tip}
 7. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
 8. Click **Create**.
@@ -86,7 +86,7 @@ After you add all the services that you want, the services are displayed in the 
 
 After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
 
-For more information, see [Adding a service to your app](/docs/apps?topic=creating-apps-add-service).
+For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
 
 ## Deploying your app
 {: #deploy-scratch}
@@ -109,7 +109,7 @@ The DevOps toolchain is created automatically, and the deployment process begins
   You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
   {: note}
 
-For more information about deploying your app, see [Deploying apps](/docs/apps?topic=creating-apps-deploying-apps).
+For more information about deploying your app, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
 
 ## Checking the deployment status
 {: #status-scratch}
@@ -166,4 +166,4 @@ Download your app for local development where you can easily build, test, and de
 
 To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
 
-For more information, see [Developing apps locally](/docs/apps?topic=creating-apps-create-deploy-app-cli#build-run-app-cli).
+For more information, see [Developing apps locally](/docs/apps?topic=apps-create-deploy-app-cli#build-run-app-cli).

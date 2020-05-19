@@ -6,7 +6,7 @@ lastupdated: "2020-04-13"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 

@@ -6,7 +6,7 @@ lastupdated: "2020-04-20"
 
 keywords: apps, local, build, run, deploy, download app, ibmcloud dev code
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -108,5 +108,5 @@ Now that your app can run locally, you can add a service and modify some code.
 
 You can deploy your app to {{site.data.keyword.cloud_notm}} from the CLI. For more information, see the following topics:
 
-* [Automatically deploying your app](/docs/apps?topic=creating-apps-deploy-cli-auto#deploy-console-auto)
-* [Manually deploying your app](/docs/apps?topic=creating-apps-deploy-cli-manual#deploy-console-manual)
+* [Automatically deploying your app](/docs/apps?topic=apps-deploy-cli-auto#deploy-console-auto)
+* [Manually deploying your app](/docs/apps?topic=apps-deploy-cli-manual#deploy-console-manual)

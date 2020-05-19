@@ -6,7 +6,7 @@ lastupdated: "2020-04-20"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 
@@ -31,7 +31,7 @@ Previously, the `mybluemix.net` domain was used for hosting applications in vari
 
 The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
 
-For more information, see [Managing your domains](/docs/apps?topic=creating-apps-update-domain).
+For more information, see [Managing your domains](/docs/apps?topic=apps-update-domain).
 
 ## Where can I find a list of my apps?
 {: #cf-app}

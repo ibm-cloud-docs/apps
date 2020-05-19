@@ -6,7 +6,7 @@ lastupdated: "2020-04-20"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
-subcollection: creating-apps
+subcollection: apps
 
 ---
 {:new_window: target="_blank"}
@@ -33,9 +33,9 @@ The web app starter kits produce backend apps that serve web content such as HTM
 
 You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
-For more information, see [Creating an app with a starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-starterkit).
+For more information, see [Creating an app with a starter kit](/docs/apps/tutorials?topic=apps-tutorial-starterkit).
 
-If you want to create a web app that you can customize, see [Creating a custom app from a basic starter kit](/docs/apps/tutorials?topic=creating-apps-tutorial-scratch).
+If you want to create a web app that you can customize, see [Creating a custom app from a basic starter kit](/docs/apps/tutorials?topic=apps-tutorial-scratch).
 
 ## Microservice apps
 {: #microservice}
@@ -44,7 +44,7 @@ Microservice apps provide the foundation for building backend microservices, inc
 
 Select a microservice starter kit for your language and framework requirements. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
-For more information, see [Creating microservice apps](/docs/apps/tutorials?topic=creating-apps-tutorial-microservice).
+For more information, see [Creating microservice apps](/docs/apps/tutorials?topic=apps-tutorial-microservice).
 
 ## Mobile apps
 {: #mobile}
@@ -55,7 +55,7 @@ Mobile apps are different from the other patterns because they have a significan
 
 Additionally, you can create a custom mobile app by using a basic starter kit and selecting the mobile app type.
 
-For more information, see [Creating mobile apps](/docs/apps?topic=creating-apps-tutorial-mobile).
+For more information, see [Creating mobile apps](/docs/apps?topic=apps-tutorial-mobile).
 
 ## Language-based apps
 {: #languages}
