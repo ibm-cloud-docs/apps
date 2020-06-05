@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-05-16"
+lastupdated: "2020-06-05"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -37,7 +37,7 @@ You can connect your existing DevOps toolchain or create one, and continuously d
 For all deployment targets, ensure that you're aware of the following requirements:
 
 * Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available.
-* Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cloud-cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+* Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
  * See [What makes a good app?](/docs/apps?topic=apps-best-practice) for best practices for creating apps.
  * You must have a Git source code repository from any of the following providers: GitHub, GitHub Enterprise, Git lab, BitBucket, or Rational.
@@ -59,7 +59,7 @@ For more information about requirements for specific deployment targets, see the
 
 To create an app and connect it with your source repo, complete these steps:
 
-From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, click **Get a Starter Kit**.
+From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/dashboard){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
 3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 4. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
@@ -80,7 +80,7 @@ To change your Git URL, click the Actions icon ![Actions icon](../../icons/actio
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
 
-Enable your existing app for {{site.data.keyword.cloud_notm}} deployment by using the CLI. Use the [`ibmcloud dev enable`](/docs/cli?topic=cloud-cli-idt-cli#enable) command to generate a DevOps toolchain template that you check into your repository as the instruction set for what the DevOps toolchain is to create.
+Enable your existing app for {{site.data.keyword.cloud_notm}} deployment by using the CLI. Use the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command to generate a DevOps toolchain template that you check into your repository as the instruction set for what the DevOps toolchain is to create.
 
 To enable your app for deployment, complete these steps:
 

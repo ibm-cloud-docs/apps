@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-12-04"
+  years: 2018, 2020
+lastupdated: "2020-06-05"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -39,7 +39,7 @@ The process for adding the service credentials depends on your deployment target
 Many languages and frameworks provide standard libraries for both app-specific and environment-specific configurations. For more information, see the following programming guides:
 
 * [Java&trade;: Working with service credentials](/docs/java?topic=cloud-native-configuration)
-* [Configuring the Node.js environment](/docs/node?topic=nodejs-configure-nodejs)
+* [Configuring the Node.js environment](/docs/node?topic=node-configure-nodejs)
 * [Configuring the Spring environment](/docs/java?topic=java-spring-configuration)
 * [Configuring the Swift environment](/docs/swift?topic=swift-configuration)
 * [Configuring the Go environment](/docs/go?topic=go-configure-go-env)

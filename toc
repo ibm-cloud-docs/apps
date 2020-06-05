@@ -69,7 +69,7 @@ Creating apps
         [Go](/go/go-getting-started)
         [Java](/java/java-getting-started)
         [Swift](/swift/swift-getting-started)
-        [Node](/node/nodejs-getting-started)
+        [Node](/node/node-getting-started)
 
     at-events.md
     {: .navgroup-end}

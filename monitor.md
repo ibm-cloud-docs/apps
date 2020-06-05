@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-12-19"
+  years: 2019, 2020
+lastupdated: "2020-06-05"
 
 keywords: developer tools, building apps, developer entry point, get started coding, DevOps, toolchain, monitoring, monitor, health
 
@@ -37,4 +37,4 @@ To add the {{site.data.keyword.prf_hubshort}} tool integration to your DevOps to
 4. Select **{{site.data.keyword.prf_hubshort}}**.
 5. Click **Create Integration**. {{site.data.keyword.prf_hubshort}} is added to your toolchain.
 
-For more information, see the [{{site.data.keyword.prf_hubshort}} Getting started tutorial](/docs/services/AvailabilityMonitoring?topic=availability-monitoring-avmon_gettingstarted). 
+For more information, see the [{{site.data.keyword.prf_hubshort}} Getting started tutorial](/docs/AvailabilityMonitoring?topic=AvailabilityMonitoring-avmon_gettingstarted). 

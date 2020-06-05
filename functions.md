@@ -27,7 +27,7 @@ You can develop your serverless apps by using one of the following methods:
 * {{site.data.keyword.openwhisk_short}} command-line interface (CLI), which provides more control over your deployment and operations
 
 For more detailed information about {{site.data.keyword.openwhisk_short}}, check out these resources:
-* [{{site.data.keyword.openwhisk_short}} documentation](/docs/openwhisk?topic=cloud-functions-getting-started)
+* [{{site.data.keyword.openwhisk_short}} documentation](/docs/openwhisk?topic=openwhisk-getting-started)
 * [IBM Cloud Functions](https://www.ibm.com/cloud/functions){: external}
 * [FaaS (Function-as-a-Service)](https://www.ibm.com/cloud/learn/faas){: external}
 
@@ -67,4 +67,4 @@ Output:
 ### SDK
 {: #sdk}
 
-{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk?topic=cloud-functions-pkg_mobile_sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions.
+{{site.data.keyword.openwhisk_short}} provides a [mobile SDK](/docs/openwhisk?topic=openwhisk-pkg_mobile_sdk) for iOS and watchOS devices that enables mobile apps to easily send remote triggers and invoke remote actions.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-16"
+lastupdated: "2020-06-05"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -252,7 +252,7 @@ After you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse, y
 Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.cloud_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
 {: tsCauses}
 
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/runtimes/liberty?topic=liberty-liberty_runtime).
+You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/cloud-foundry?topic=cloud-foundry-liberty_runtime).
 {: tsResolve}
 
 ## Apps can't be staged by using custom buildpacks
@@ -290,19 +290,19 @@ You can use the [Git update](https://git-scm.com/docs/git-update-index){: extern
 
 If the build or deploy jobs fail, and you see the following message, you can delete images from your Kubernetes clusters by using CLI commands. `Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan.`
 
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your images by using `ibmcloud cr images`.
 * Delete any unused images by using `ibmcloud cr image-rm <respository>:<tag>`.
 * Rerun the build or deploy job that failed.
 
-For more information, see [Freeing up used storage and changing service plans or quota limits to stay within given quota limits](/docs/services/Registry?topic=registry-registry_quota#registry_quota_freeup).
+For more information, see [Freeing up used storage and changing service plans or quota limits to stay within given quota limits](/docs/Registry?topic=Registry-registry_quota#registry_quota_freeup).
 
 ## Accessing Kubernetes logs
 {: #access_kube_logs}
 
 If the app isn't running and you can't access the health endpoint, try looking at the logs in the cluster.
-* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) if you don't already have it.
+* Install the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started) if you don't already have it.
 * Log in to {{site.data.keyword.cloud_notm}} by using `ibmcloud login`, and point it to the space that you're in.
 * List your clusters by using `ibmcloud cs clusters`,
 * Point to your corresponding cluster by using `ibmcloud cs cluster-config <cluster-name>`.

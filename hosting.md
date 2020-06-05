@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-21"
+lastupdated: "2020-06-05"
 
 keywords: apps, application, migrating apps, hosting apps, migrating, hosting, migration
 
@@ -45,9 +45,9 @@ Check out the following table for a summary of your compute options.
 |--------|---------------|
 | [{{site.data.keyword.containerlong_notm}}](/docs/containers?topic=containers-getting-started) | Combines Docker containers, the Kubernetes technology, an intuitive user experience, and built-in security and isolation to automate the deployment, operation, scaling, and monitoring of containerized apps in a cluster of compute hosts. |
 | [{{site.data.keyword.cloud_notm}} Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) | The premier industry standard Platform-as-a-Service (PaaS) that ensures fast, easy, and reliable deployment of cloud-native apps. Cloud Foundry ensures that the build and deploy aspects of coding remain carefully coordinated with any attached services — resulting in quick, consistent, and reliable iterating of applications. Cloud Foundry has a Lite plan that allows quick deployments for testing purposes. |
-| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=cloud-functions-getting-started) | A Function-as-a-Service (FaaS) programming platform that is based on Apache OpenWhisk. |
-| [{{site.data.keyword.vmwaresolutions_short}}](/docs/services/vmwaresolutions?topic=vmware-solutions-getting-started) | Quickly and seamlessly integrate or migrate on-premises VMware&trade; workloads by using scalable, secure, and high-performance infrastructure and the industry-leading VMware&trade; hybrid virtualization technology. |
-| [{{site.data.keyword.BluVirtServers_short}}](/docs/vsi?topic=virtual-servers-about-public-virtual-servers) | Scalable virtual servers that are purchased with dedicated cores and memory allocations. |
+| [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk?topic=openwhisk-getting-started) | A Function-as-a-Service (FaaS) programming platform that is based on Apache OpenWhisk. |
+| [{{site.data.keyword.vmwaresolutions_short}}](/docs/vmwaresolutions?topic=vmwaresolutions-getting-started) | Quickly and seamlessly integrate or migrate on-premises VMware&trade; workloads by using scalable, secure, and high-performance infrastructure and the industry-leading VMware&trade; hybrid virtualization technology. |
+| [{{site.data.keyword.BluVirtServers_short}}](/docs/virtual-servers?topic=virtual-servers-about-public-virtual-servers) | Scalable virtual servers that are purchased with dedicated cores and memory allocations. |
 | [{{site.data.keyword.baremetal_short}}](/docs/bare-metal?topic=bare-metal-about-bm)  | Hourly or monthly, single-tenant servers that are dedicated to you and not shared in any part, including server resources, with other customers. |
 {: caption="Table 1. Compute options" caption-side="top"}
 
