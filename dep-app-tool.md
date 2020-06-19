@@ -39,10 +39,10 @@ Enabling a DevOps toolchain creates a team-based development environment for you
 * [{{site.data.keyword.cloud_notm}} Foundry](/docs/cloud-foundry-public?topic=cloud-foundry-public-getting-started) is the premier industry standard Platform-as-a-Service (PaaS) that ensures fast, easy, and reliable deployment of cloud-native apps. Cloud Foundry ensures that the build and deploy aspects of coding remain carefully coordinated with any attached services — resulting in quick, consistent, and reliable iterating of applications. Cloud Foundry has a Lite plan that allows quick deployments for testing purposes.
 
 ## Before you begin
-{: prereq-deploy-apps}
+{: #prereq-deploy-apps}
 
 ### For all deployment targets
-{: prereq-deploy-all}
+{: #prereq-deploy-all}
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
@@ -51,7 +51,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
-{: prereq-deploy-specific}
+{: #prereq-deploy-specific}
 
 For information about requirements for specific deployment targets, see the following table.
 

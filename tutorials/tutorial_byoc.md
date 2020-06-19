@@ -32,7 +32,7 @@ You can connect your existing DevOps toolchain or create one, and continuously d
 {: #prereqs-byoc}
 
 ### For all deployment targets
-{: prereq-byoc-deploy-all}
+{: #prereq-byoc-deploy-all}
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
@@ -43,7 +43,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
  * You must have a Git source code repository from any of the following providers: GitHub, GitHub Enterprise, Git lab, BitBucket, or Rational.
 
 ### For specific deployment targets
-{: prereq-byoc-deploy-specific}
+{: #prereq-byoc-deploy-specific}
 
 For more information about requirements for specific deployment targets, see the following table.
 

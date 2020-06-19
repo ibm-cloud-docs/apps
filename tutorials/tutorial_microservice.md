@@ -29,7 +29,7 @@ You can create an application from a Microservice Basic Starter. Use these start
 {: #prereqs-microservice}
 
 ### For all deployment targets
-{: prereq-micro-deploy-all}
+{: #prereq-micro-deploy-all}
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
@@ -38,7 +38,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
-{: prereq-micro-deploy-specific}
+{: #prereq-micro-deploy-specific}
 
 For more information about requirements for specific deployment targets, see the following table.
 

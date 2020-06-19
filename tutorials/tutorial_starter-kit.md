@@ -39,7 +39,7 @@ For more information, see [What are starter kits?](/docs/apps?topic=apps-starter
 {: #prereqs-starterkit}
 
 ### For all deployment targets
-{: prereq-starterkit-deploy-all}
+{: #prereq-starterkit-deploy-all}
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
@@ -48,7 +48,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
-{: prereq-starterkit-deploy-specific}
+{: #prereq-starterkit-deploy-specific}
 
 For more information about requirements for specific deployment targets, see the following table.
 
