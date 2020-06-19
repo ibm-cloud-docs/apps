@@ -137,7 +137,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ### Deploying your app automatically
 {: #deploy-cli-auto}
 
-If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [**ibmcloud dev edit**](/docs/cli/idt?topic=cloud-cli-idt-cli#edit) command from the app directory. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
+If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
 
 After you create a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
 
@@ -153,7 +153,7 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
     ```
     git push origin master
     ```
-4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli/idt?topic=cloud-cli-idt-cli#console) command from the app directory.
+4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command from the app directory.
 5. View the pipeline within the toolchain to verify that a new build started.
 
 ### Deploying your app manually
@@ -163,7 +163,7 @@ When you use [**ibmcloud dev create**](/docs/cli?topic=cli-idt-cli#create), you'
 
 You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completing the following steps:
 
-1. Run the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command.
+1. Run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
 
   For Cloud Foundry:
 
@@ -192,5 +192,5 @@ For more information about deploying your app to {{site.data.keyword.cloud_notm}
 ## Viewing your app
 {: #view-app-cli}
 
-1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command from the app directory. The app URL is opened in your default browser.
+1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command from the app directory. The app URL is opened in your default browser.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command. 

@@ -165,7 +165,7 @@ For apps that are deployed to a Kubernetes cluster, you can view the app's URL i
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cliview) command to view the URL of your app. Then, go to the URL in your browser.
 
 ### Viewing your app's Kubernetes cluster
 {: #view-kube-cluster-byoc}
@@ -177,4 +177,4 @@ If you want to view the cluster where your app is deployed, click **View Kuberne
 
 For apps that are deployed to Cloud Foundry, you can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
 
-If you are using the command line, run the [**ibmcloud dev view**](/docs/cli/idt?topic=cloud-cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.

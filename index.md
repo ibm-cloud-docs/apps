@@ -87,7 +87,7 @@ For more information, see [Deploying apps](/docs/apps?topic=apps-deploying-apps)
 ### Using the {{site.data.keyword.cloud_notm}} CLI
 {: #cli-getting-started}
 
-To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli/idt?topic=cloud-cli-idt-cli#deploy) command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
+To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
 
 Now you're set for iterative development and continuous delivery.
 
