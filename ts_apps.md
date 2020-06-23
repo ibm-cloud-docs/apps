@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-06-22"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -45,6 +45,22 @@ This message occurs if you previously created an app from a starter kit that has
 
 * Delete the app, and create a new one from a starter kit that isn't deprecated.
 * Or, if you already deployed the app and want to keep it, you can only add services to it. Because your code is already deployed, then your repo for that app is already set up.
+{: tsResolve}
+
+## Web browser says my downloaded .zip file might be dangerous
+{: #dangerous-file}
+{: troubleshoot}
+
+When I click **Download code** while I'm creating my app, the following message occurs, along with a **Discard** button:
+{: tsSymptoms}
+```
+<filename>.zip is not commonly downloaded and may be dangerous.
+```
+
+This message from your browser occurs most commonly when you try to download scripts, executables, and compressed files. When you click **Download code,** you're downloading a .zip file that contains the files for your app. The .zip file is safe for you to download.
+{: tsCauses}
+
+Click the arrow that's next to the **Discard** button, and then select **Keep**. The file is saved to your local drive.
 {: tsResolve}
 
 ## My apps are hosted in different domains
