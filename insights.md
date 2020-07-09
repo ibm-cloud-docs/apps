@@ -9,7 +9,7 @@ keywords: developer tools, building apps, developer entry point, DevOps, toolcha
 subcollection: apps
 
 ---
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}

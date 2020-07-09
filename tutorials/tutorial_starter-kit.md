@@ -12,7 +12,6 @@ subcollection: apps
 
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:note: .note}
@@ -26,7 +25,7 @@ You can use an {{site.data.keyword.cloud}} starter kit to quickly get your appli
 
 You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
 
-{{site.data.keyword.cloud_notm}} has developer consoles in different areas of interest. You can access these consoles from the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg). Each developer console provides starter kits that are relevant to the console's focus area. The consoles offer consistent, intuitive workflows for creating a working production-ready app in minutes.
+{{site.data.keyword.cloud_notm}} has developer consoles in different areas of interest. You can access these consoles from the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg). Each developer console provides starter kits that are relevant to the console's focus area. The consoles offer consistent, intuitive workflows for creating a working production-ready app in minutes.
 
 You can find starter kits in the following developer consoles:
 * [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}
@@ -167,6 +166,6 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?top
 
 Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud.
 
-To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
+To work with the code locally, click the Actions icon ![More Actions icon](../icons/actions-icon-vertical.svg), and then select **Run locally**.
 
 For more information, see [Developing apps locally](/docs/apps?topic=apps-create-deploy-app-cli#build-run-app-cli).

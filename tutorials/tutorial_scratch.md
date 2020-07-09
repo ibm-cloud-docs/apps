@@ -10,7 +10,6 @@ subcollection: apps
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -164,6 +163,6 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?top
 
 Download your app for local development where you can easily build, test, and deploy by using the {{site.data.keyword.cloud}} CLI. This is useful for debugging issues, and adding features or services, and when you are ready, you can redeploy your app to the cloud.
 
-To work with the code locally, click the Actions icon ![More Actions icon](../../icons/actions-icon-vertical.svg), and then select **Run locally**.
+To work with the code locally, click the Actions icon ![More Actions icon](../icons/actions-icon-vertical.svg), and then select **Run locally**.
 
 For more information, see [Developing apps locally](/docs/apps?topic=apps-create-deploy-app-cli#build-run-app-cli).

@@ -9,7 +9,7 @@ keywords: supported architecture, supported languages cloud, web app, microservi
 subcollection: apps
 
 ---
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}

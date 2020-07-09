@@ -14,7 +14,6 @@ subcollection: apps
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:tip: .tip}
-{:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 {:external: target="_blank" .external}
 

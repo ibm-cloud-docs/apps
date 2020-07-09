@@ -9,7 +9,7 @@ keywords: developer tools, building apps, developer entry point, get started cod
 subcollection: apps
 
 ---
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}

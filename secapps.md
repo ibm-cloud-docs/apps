@@ -12,7 +12,6 @@ subcollection: apps
 
 {:shortdesc: .shortdesc}
 {:tip: .tip}
-{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:note: .note}

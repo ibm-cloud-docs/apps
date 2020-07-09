@@ -9,7 +9,7 @@ keywords: apps, serverless, serverless app, functions, cli, api, sdk, create ser
 subcollection: apps
 
 ---
-{:new_window: target="_blank"}
+
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}

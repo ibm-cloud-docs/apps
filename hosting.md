@@ -11,7 +11,6 @@ subcollection: apps
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
 {:external: target="_blank" .external}
 
 # Choosing your hosting environment

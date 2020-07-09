@@ -10,7 +10,6 @@ subcollection: apps
 
 ---
 
-{: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:note: .note}
@@ -46,6 +45,6 @@ To delete a service, complete these steps:
 {: #services-remove-nextsteps}
 
 * From the App details page, you can navigate to service documentation and API references.
-* You can also click the Actions icon ![Actions icon](../../icons/actions-icon-vertical.svg) and either remove the service from the app, open the service dashboard, or delete the service.
+* You can also click the Actions icon ![Actions icon](../icons/actions-icon-vertical.svg) and either remove the service from the app, open the service dashboard, or delete the service.
 * [Deploy your app again](/docs/apps?topic=apps-deploying-apps#deploying-your-app-manually).
 * Learn more about [service availability](/docs/resources?topic=resources-services_region).

@@ -14,8 +14,8 @@ Creating apps
 
     {: .topicgroup}
     Related links
-        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications){: new_window}
-        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes){: new_window}
+        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications)
+        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}

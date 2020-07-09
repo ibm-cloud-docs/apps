@@ -10,7 +10,6 @@ subcollection: apps
 
 ---
 
-{: new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:note: .note}
@@ -61,6 +60,6 @@ After you connect a service to your app, you can navigate to the service documen
 ## Next steps
 {: #services-add-nextsteps}
 
-* You can click the Actions icon ![Actions icon](../../icons/actions-icon-vertical.svg) and either [remove the service](/docs/apps?topic=apps-remove-service#remove-service-only) from the app, open the service dashboard, or [delete the service](/docs/apps?topic=apps-remove-service#delete-service).
+* You can click the Actions icon ![Actions icon](../icons/actions-icon-vertical.svg) and either [remove the service](/docs/apps?topic=apps-remove-service#remove-service-only) from the app, open the service dashboard, or [delete the service](/docs/apps?topic=apps-remove-service#delete-service).
 * [Deploy your app again](/docs/apps?topic=apps-deploying-apps#deploying-your-app-manually).
 * Learn more about [service availability](/docs/resources?topic=resources-services_region).
