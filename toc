@@ -11,11 +11,6 @@ Creating apps
     patterns.md
     [What are cloud native apps?](https://www.ibm.com/cloud/learn/cloud-native)
     [What is DevOps?](https://www.ibm.com/cloud/learn/devops-a-complete-guide)
-
-    {: .topicgroup}
-    Related links
-        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications)
-        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes)
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -55,14 +50,13 @@ Creating apps
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Developer Tools commands](/cli/cloud-cli-getting-started)
+    [IBM Cloud Developer Tools commands](/cli/cli-getting-started)
 
     {: .topicgroup}
     IBM Cloud developer consoles
         [App Development](https://cloud.ibm.com/developer/appservice/dashboard)
         [Apple](https://cloud.ibm.com/developer/appledevelopment/dashboard)
         [Watson](https://cloud.ibm.com/developer/watson/dashboard)
-
 
     {: .topicgroup}
     IBM Cloud Programming Guides
@@ -72,6 +66,11 @@ Creating apps
         [Node](/node/node-getting-started)
 
     at-events.md
+    
+    {: .topicgroup}
+    Related links
+        [Strategies for resilient applications](/tutorials/solution-tutorials-strategies-for-resilient-applications)
+        [Continuous deployment to Kubernetes](/tutorials/solution-tutorials-continuous-deployment-to-kubernetes)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
