@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-22"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
 
@@ -60,7 +60,7 @@ To create an app and connect it with your source repo, complete these steps:
 
 From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/dashboard){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
-3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 4. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
 5. Click **Create**. The App details page is displayed.
 
@@ -164,7 +164,7 @@ For apps that are deployed to a Kubernetes cluster, you can view the app's URL i
 
 4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
 
-If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cliview) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ### Viewing your app's Kubernetes cluster
 {: #view-kube-cluster-byoc}

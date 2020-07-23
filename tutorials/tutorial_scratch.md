@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-22"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
 
@@ -56,7 +56,7 @@ For more information about requirements for specific deployment targets, see the
 1. From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
 3. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 5. Select **Create a new app** as a starting point.
 6. Select **Backend** as the app type.
   If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps/tutorials?topic=apps-tutorial-mobile#create-mobile-basic) for instructions.

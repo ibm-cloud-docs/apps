@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-22"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 
@@ -66,7 +66,7 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, and select a starter kit to view details about it. For example, select the **Node.js Express App** starter kit.
 2. Select the **Create** tab.
 3. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 5. Optional. To inspect the source code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 5. Click **Create**.
 

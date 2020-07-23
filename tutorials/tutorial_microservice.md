@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-22"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 
@@ -58,7 +58,7 @@ You can use a starter kit to create a microservice app. To locate the starter ki
 1. Select a microservice starter kit to view details about it.
 1. Select the **Create** tab.
 1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 1. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 1. Click **Create**.
 

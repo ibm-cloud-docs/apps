@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-07-22"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -38,7 +38,7 @@ To create a mobile app by using a starter kit, complete these steps:
 1. Select a mobile starter kit to view details about it.
 1. Select the **Create** tab.
 1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 1. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.
 1. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
 1. Click **Create**.
@@ -54,7 +54,7 @@ To create a custom mobile app, complete these steps:
   {: tip}
 
 2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
-3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/resources?topic=resources-tag).
+3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 4. Select **Create a new app** as a starting point.
 5. Select **Mobile** as the app type.
 6. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.

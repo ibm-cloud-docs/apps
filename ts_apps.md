@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-22"
+lastupdated: "2020-07-22"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -131,7 +131,7 @@ A Bad Gateway error usually happens when you go to a website that uses a proxy s
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
 
-If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status){: external} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/resources/connect_external_app?topic=resources-externalapp). If the service status is normal, try the following steps to solve the problem:
+If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status){: external} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/overview?topic=overview-locations). If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
 
   * Retry the action:

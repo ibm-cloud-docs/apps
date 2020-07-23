@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-16"
+lastupdated: "2020-07-22"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, connect service, service instance, credentials, starter kit
 
@@ -62,4 +62,4 @@ After you connect a service to your app, you can navigate to the service documen
 
 * You can click the Actions icon ![Actions icon](../icons/actions-icon-vertical.svg) and either [remove the service](/docs/apps?topic=apps-remove-service#remove-service-only) from the app, open the service dashboard, or [delete the service](/docs/apps?topic=apps-remove-service#delete-service).
 * [Deploy your app again](/docs/apps?topic=apps-deploying-apps#deploying-your-app-manually).
-* Learn more about [service availability](/docs/resources?topic=resources-services_region).
+* Learn more about [service availability](/docs/overview?topic=overview-services_region).
