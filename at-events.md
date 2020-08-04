@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-03"
 
 keywords: apps, event, security, IBM, activity tracker, applications, activity tracking events
 
@@ -39,7 +39,7 @@ The following table lists the actions that generate an event:
 |Action	|Description	|
 |-----|-------------|
 |bluemix-developer-experience.app.create |An event is generated when a user creates an app.|
-|bluemix-developer-experience.app.read |An event is generated when any of the following situations happen:<br><br>A user downloads the app code.<br><br>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.<br><br>The {{site.data.keyword.cloud_notm}} infrastructure reads credentials for services that are associated with an app.<br><br>A user views the list of apps. For example, a user views the list of apps in the {{site.data.keyword.dev_console}} console or through the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI).|
+|bluemix-developer-experience.app.read |An event is generated when any of the following situations happen:<br><br>A user downloads the app code.<br><br>A user downloads the credentials file by using the {{site.data.keyword.dev_console}} CLI.<br><br>The {{site.data.keyword.cloud_notm}} infrastructure reads credentials for services that are associated with an app.<br><br>A user views the list of apps. For example, a user views the list of apps in the {{site.data.keyword.dev_console}} console or through the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI).|
 |bluemix-developer-experience.app.update |An event is generated when any of the following situations happen:<br><br>Updates are made to the app. For example, a user modifies the name of the app.<br><br>A new service is created and added to an app.<br><br>An existing service is added to an app.<br><br>A service is removed from an app.<br><br>Code is generated for an app.<br><br>A DevOps toolchain is added through the {{site.data.keyword.cloud_notm}} console. For example, a user selects **Deploy your app** from the App details page.|
 |bluemix-developer-experience.app.delete |An event is generated when a user deletes an app. |
 {: caption="Table 1. Actions that generate events" caption-side="top"}

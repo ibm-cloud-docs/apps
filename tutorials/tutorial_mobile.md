@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 
@@ -26,7 +26,7 @@ subcollection: apps
 ## Before you begin
 {: #prereqs-mobile}
 
-Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 
 ## Creating a mobile app with a starter kit
 {: #create-mobile}

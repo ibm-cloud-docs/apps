@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-08-03"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 
@@ -21,7 +21,7 @@ subcollection: apps
 # Creating and deploying apps by using the CLI
 {: #create-deploy-app-cli}
 
-You can use the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} CLI to create and deploy your application. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
+You can use the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} Command Line Interface to create and deploy your application. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
 
 ## Before you begin
 {: #prereqs-app-cli}

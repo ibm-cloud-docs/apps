@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-06-05"
+lastupdated: "2020-08-03"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -22,10 +22,10 @@ subcollection: apps
 # Deploying apps
 {: #deploying-apps}
 
-{{site.data.keyword.cloud_notm}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
+{{site.data.keyword.cloud}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
 
-  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} command-line interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
+  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
   {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
@@ -46,7 +46,7 @@ Enabling a DevOps toolchain creates a team-based development environment for you
 For all deployment targets, ensure that you're aware of the following requirements:
 
 * Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available.
-* Install the [{{site.data.keyword.cloud_notm}} command-line interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands.
+* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
