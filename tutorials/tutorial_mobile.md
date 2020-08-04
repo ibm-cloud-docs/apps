@@ -131,6 +131,6 @@ If you are using Android as your mobile app's platform, complete these steps:
 
 You can learn more about mobile apps by exploring these tutorials:
 
- * [iOS mobile application with Push Notifications](/docs/tutorials?topic=solution-tutorials-ios-mobile-push-analytics)
- * [Android native mobile application with Push Notifications](/docs/tutorials?topic=solution-tutorials-android-mobile-push-analytics)
- * [Mobile application with a serverless backend](/docs/tutorials?topic=solution-tutorials-serverless-mobile-backend)
+ * [iOS mobile application with Push Notifications](/docs/solution-tutorials?topic=solution-tutorials-ios-mobile-push-analytics)
+ * [Android native mobile application with Push Notifications](/docs/solution-tutorials?topic=solution-tutorials-android-mobile-push-analytics)
+ * [Mobile application with a serverless backend](/docs/solution-tutorials?topic=solution-tutorials-serverless-mobile-backend)

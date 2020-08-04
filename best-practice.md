@@ -53,7 +53,7 @@ Extracting environment-specific dependencies into a set of property files is an 
 
 You can run more than one instance to avoid downtime in a single region. To deliver an even more robust app, consider a multi-region architecture.
 
-For more information, see [Strategies for resilient applications tutorial](/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
+For more information, see [Strategies for resilient applications tutorial](/docs/solution-tutorials?topic=solution-tutorials-strategies-for-resilient-applications).
 
 ## Ensure you're monitoring your apps
 {: #monitoring}

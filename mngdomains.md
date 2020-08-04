@@ -33,7 +33,7 @@ The subdomain for {{site.data.keyword.containershort_notm}} host names is `conta
 
 If you want to use a custom domain, you must register the custom domain as a wildcard domain, such as `*.custom_domain.net`. To use TLS, you must get a wildcard certificate. For more information, see [Multiple domains within a namespace](/docs/containers?topic=containers-ingress#multi-domains).
 
-Check out [this tutorial](/docs/tutorials?topic=solution-tutorials-scalable-webapp-kubernetes) that walks you through scaffolding a web app, running it locally in a container, and then deploying it to a Kubernetes cluster that was created with IBM Kubernetes Service. Additionally, the tutorial shows you how to bind a custom domain, monitor the health of the environment, and scale the app.
+Check out [this tutorial](/docs/solution-tutorials?topic=solution-tutorials-scalable-webapp-kubernetes) that walks you through scaffolding a web app, running it locally in a container, and then deploying it to a Kubernetes cluster that was created with IBM Kubernetes Service. Additionally, the tutorial shows you how to bind a custom domain, monitor the health of the environment, and scale the app.
 
 ## Changing your domain for Cloud Foundry apps
 {: #update-domain-cf}
