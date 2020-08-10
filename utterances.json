@@ -1,0 +1,215 @@
+{
+    "domain-change-faq": [
+        "happened to mybluemix.net",
+        "can't find mybluemix.net",
+        "can't view mybluemix.net",
+        "where is mybluemix.net",
+        "what happened to mybluemix.net",
+        "what is appdomain.cloud",
+        "new domain appdomain.cloud"
+    ],
+    "cf-app": [
+        "find a list of my apps",
+        "find a list of all my apps on Cloud",
+        "view a list of apps",
+        "view a list of cloud foundry apps",
+        "looking for app list",
+        "summary information for my apps ",
+        "list all apps that I've created",
+        "cloud foundry app listing",
+        "all the apps that I've created in Cloud Foundry",
+        "list of all apps deployed in CF"
+    ],
+    "cf-space": [
+        "can't select a Cloud Foundry space when running an app",
+        "deploying an app and can't select a CF space",
+        "can't I select a space when running an app",
+        "trying to deploy an app and can't select a space",
+        "cannot choose the space to deploy an app to",
+        "unable to choose a CF space when running apps",
+        "unable to select a space when deploy an app"
+    ],
+    "delete-apps": [
+        "do I delete apps",
+        "want to delete an app",
+        "need to remove an app in CF",
+        "removing cloud foundry apps",
+        "app deletion",
+        "delete apps",
+        "deleting apps in cloud foundry",
+        "removal of CF app",
+        "app removal"
+    ],
+    "app-stop": [
+        "stop a Cloud Foundry app",
+        "stop a CF app",
+        "stop my apps",
+        "stop an app running in CF",
+        "stopping a Cloud Foundry app",
+        "stop apps in CF",
+        "stopping apps in cloud foundry",
+        "want to stop a Cloud Foundry app"
+    ],
+    "toolchains": [
+        "what's toolchain",
+        "describe toolchain",
+        "tell me about toolchains",
+        "getting started with tool chain",
+        "create a toolchain from my app",
+        "more information about toolchains",
+        "all about toolchains and my apps"
+    ],
+    "toolchain-template": [
+        "extract a toolchain template from an existing toolchain",
+        "extract a toolchain templain from another toolchain",
+        "extract a toolchain template",
+        "use a toolchain-to-template in Cloud Foundry",
+        "extract a toolchain template from CF",
+        "to use the toolchain-to-template ",
+        "toolchain-to-template use"
+    ],
+    "cf-domains-faq": [
+        "change the domain for Cloud Foundry apps",
+        "change the CF domain",
+        "update the CF domain for an app",
+        "update the domain for Cloud Foundry apps",
+        "updating the domain within clud foundry",
+        "change my domain from mybluemix.net to appdomain.cloud",
+        "update domain from mybluemix.net to appdomain.cloud",
+        "changing domain to appdomain.cloud"
+    ],
+    "deprecated-starter-ts": [
+        "Cannot deploy an app from a starter kit",
+        "unale to deploy app from a starter kit",
+        "error trying to deploy an app created from a starter kit",
+        "Starter Kit De-Registered The starter kit associated with this app has been de-registered",
+        "error Starter Kit De-Registered when deploying an app",
+        "Starter Kit De-Registered error in CF",
+        "error message Starter Kit De-Registered given in cloud foundry"
+    ],
+    "dangerous-file": [
+        "Web browser says my downloaded zip file might be dangerous",
+        "browser saying a zip file may be dangerous",
+        "browser error when downloading zipped file",
+        "zip is not commonly downloaded and may be dangerous",
+        "downloading when creating my app gives an error message",
+        "error message zip is not commonly downloaded and may be dangerous",
+        "zip file may be dangerous error in my browser",
+        "error message when trying to download scripts"
+    ],
+    "domains-ts": [
+        "apps are hosted in different domains",
+        "what domains are available for IBM Cloud",
+        "difference between mybluemix.net domain and appdomain.cloud ",
+        "why do I have 2 different domains in Cloud",
+        "are mybluemix.net and appdomain.cloud domain the same",
+        "are appdomain.cloud domain and mybluemix.net the same"
+    ],
+    "ts_unsaved_changes": [
+        "You have unsaved changes. Are you sure you want to leave this page?",
+        "error message You have unsaved changes",
+        "I am getting an You have unsaved changes error",
+        "You have unsaved changes error in cloud foundry",
+        "what does You have unsaved changes mean",
+        "error You have unsaved changes in Cloud Foundry"
+    ],
+    "ts_vcap": [
+        "Can't access IBM Cloud services because of authorization errors in CF",
+        "unable to access CF services due to authorization",
+        "authorization error when I try to access Cloud Foundry",
+        "app accesses an IBM Cloud service failing with authorization error",
+        "can't deploy an app to an IBM Cloud service",
+        "can't deploy an app to an IBM Cloud service due to auhorization",
+        "Authorization error when app accesses a Cloud service"
+    ],
+    "ts_502_error": [
+        "502 Bad Gateway errors are received",
+        "502 Bad Gateway errors when I interact with apps",
+        "502 Bad Gateway mean",
+        "error message 502 Bad Gateway",
+        "getting  Bad Gateway error in cloud foundry apps",
+        "apps giving 502 Bad Gateway",
+        "Bad Gateway error mean"
+    ],
+    "ts_push": [
+        "Android apps can't receive Push Notifications",
+        "Android apps can't receive notifications ",
+        "Android app isn't receiving Push notificaions",
+        "not getting Push Notifications in my app",
+        "not receiving Push Notification for my app",
+        "IBM Cloud app isnt receiving Push Notifications",
+        "don't receive notifications in Cloud app"
+    ],
+    "ts_doublebytes": [
+        "Double-byte characters not displayed properly in Cloud app",
+        "Double byte characters not being displayed correctly in my app",
+        "double-byte chars specified in my app aren't displayed properly",
+        "double-byte chars are not displayed in Cloud Foundry",
+        "double byte chars specified aren't displayed correctly in my app",
+        "double byte character is not displayed correctly in my app"
+    ],
+    "ts_eclipse": [
+        "Configuration errors appear in the server.xml file after you import a Liberty app into Eclipse",
+        "configuration errors in the server.xml of my app",
+        "issue with configuration for server.xml",
+        "errors with server.xml configuration",
+        "configuration errors within the server.xml after importing app into Eclipse",
+        "configuration issue in the server xml of my Liberty app",
+        "error after importing a liberty app into Eclipse"
+    ],
+    "ts_bp_compilation": [
+        "Apps can't be staged by using custom buildpacks",
+        "not able to deploy an app to Cloud with a custom buildpack",
+        "can't deploy a CF app with a custom buildpack",
+        "The application failed to stage, so there are no instances to display",
+        "error The application failed to stage, so there are no instances to display.",
+        "error message application failed to stage, so there are no instances to display",
+        "error msg when deploying an app to Cloud with a custom buildpack"
+    ],
+    "ts_devops_to_bm": [
+        "Can't deploy an app from the Delivery Pipeline in IBM Cloud Continuous Delivery",
+        "not able to deploy an app with the Delivery Pipeline in Continuous Delivery ",
+        "error message Unable to detect a supported application type",
+        "Unable to detect a supported application type",
+        "Unable to detect a supported application type when deploying an app",
+        "can't deploy my app to the Delivery Pipeline "
+    ],
+    "exceed_quota": [
+        "Exceeded your storage quota for Kubernetes clusters",
+        "Status: unauthorized: You have exceeded your storage quota",
+        "Status: unauthorized: You have exceeded your storage quota. Delete one or more images, or review your storage quota and pricing plan",
+        "error message that exceeded storage quota",
+        "Exceeded my cluster storage quota",
+        "error message that exceeded storage quota for clusters",
+        "error message given You have exceeded your storage quota"
+    ],
+    "access_kube_logs": [
+        "accessing Kubernetes logs",
+        "how to access kubenetes log",
+        "view the logs for kubernetes cluster",
+        "how to look at the logs in the cluster",
+        "view the logs in the kubernetes cluster",
+        "find logs for kubernetes cluster",
+        "access the logs for the kubernetes cluster"
+    ],
+    "docker_not_found": [
+        "Starting docker fails with file not found message",
+        "error message in Docker with file not found",
+        "An error exec: docker: executable file not found in $PATH was encountered while the Docker image is building",
+        "docker error while the Docker image being rebuilt",
+        "getting error when trying to start Docker",
+        "Started docker and failing with file not found message",
+        "try to start Docker and get an error message",
+        "error exec: docker: executable file not found"
+    ],
+    "build_error": [
+        "Building an app fails with Docker error",
+        "trying to build an app and getting a docker error",
+        "build an app with the ibmcloud dev build command fails",
+        "getting  Docker username/password error error",
+        "build an app and get a docker error",
+        "isue with Docker username and password",
+        "Docker username and password error given",
+        "Building an app failing with Docker username and password error"
+    ]
+}
