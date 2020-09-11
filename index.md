@@ -2,11 +2,14 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-09-10"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
 subcollection: apps
+content-type: tutorial
+account-plan: lite
+completion-time: 15m
 
 ---
 
@@ -17,9 +20,12 @@ subcollection: apps
 {:tip: .tip}
 {:script: data-hd-video='script'}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Getting started tutorial
 {: #getting-started}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="15m"}
 
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need. Or, use your existing repository and bring your own code.
 {: shortdesc}
@@ -39,8 +45,9 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 * Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
-## Step 1. Create your app
+## Create your app
 {: #create-getting-started}
+{: step}
 
 Create an app by selecting one of the following entry points:
 
@@ -51,8 +58,9 @@ Create an app by selecting one of the following entry points:
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: external} for apps and services that you can create and use today.
 * [IBM Developer code patterns](https://developer.ibm.com/patterns/){: external} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
 
-## Step 2. Add services
+## Add services
 {: #resources-getting-started}
+{: step}
 
 When you use a starter kit to create your app, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
@@ -67,8 +75,9 @@ After you connect a service to your app, you can navigate to the service documen
 
 For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
 
-## Step 3. Deploy your app
+## Deploy your app
 {: #deploy-getting-started}
+{: step}
 
 You can deploy your app by using the {{site.data.keyword.cloud_notm}} console or the CLI.
 
