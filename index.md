@@ -104,4 +104,4 @@ For more information, see [Deploying apps](/docs/apps?topic=apps-deploying-apps)
 ## Related information
 {: #related-getting-started}
 
-[Programming guides](https://{DomainName}/docs/home/build){: external} are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.
+[Programming guides](https://{DomainName}/docs?tab=develop){: external} are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.

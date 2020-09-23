@@ -28,6 +28,6 @@ When you [create an app](/docs/apps?topic=apps-getting-started) by using a start
 
 For more information, see the [{{site.data.keyword.contdelivery_full}} Getting started tutorial](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
-For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI), see [Viewing a toolchain with the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing-toolchain-cli) and [Viewing a pipeline by using the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working#viewing-pipeline-cli).
+For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI), see [Viewing a toolchain with the CLI](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing-toolchain-cli) and [Viewing a pipeline by using the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working#viewing-pipeline-cli).
 
 For information about improved integration between DevOps continuous delivery and {{site.data.keyword.containerlong_notm}}, see [Connecting {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.contdelivery_full}}](https://www.ibm.com/cloud/blog/announcements/connecting-ibm-cloud-kubernetes-service-and-ibm-continuous-delivery){: external}.

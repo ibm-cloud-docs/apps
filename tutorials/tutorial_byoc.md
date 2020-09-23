@@ -106,7 +106,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 ## Deploying your app
 {: #toolchain-byoc}
 
-Establishing a link between your app, toolchain, and repo is a step toward organizing your product assets. It also helps aggregate a view of your source with your DevOps workflow, your running app instances, and dependent services across all of your deployment targets. For more information, see [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
+Establishing a link between your app, toolchain, and repo is a step toward organizing your product assets. It also helps aggregate a view of your source with your DevOps workflow, your running app instances, and dependent services across all of your deployment targets. For more information, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
 You can configure continuous delivery for your app by using either the {{site.data.keyword.cloud_notm}} console or the CLI.
 

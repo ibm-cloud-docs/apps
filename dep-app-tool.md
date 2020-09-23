@@ -100,7 +100,7 @@ To manually deploy your app from your DevOps toolchain, complete these steps:
 
 For more information, see:
 * [Building and deploying](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
-* [Creating toolchains](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
+* [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
 * [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: external}
 * [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: external}
 
