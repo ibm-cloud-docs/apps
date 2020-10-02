@@ -139,7 +139,7 @@ If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first c
     * Use a different browser.
     * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
   * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-getting-customer-support){: external} for more information.
+  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-using-avatar){: external} for more information.
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}

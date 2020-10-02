@@ -65,7 +65,7 @@ For more information, see [Strategies for resilient applications tutorial](/docs
 
 {{site.data.keyword.cloud_notm}} paid pricing plan offers a number of different account types with optional paid support. No matter the type of your account, if you plan to bring an app to production on {{site.data.keyword.cloud_notm}}, consider enrolling in this option.
 
-With or without paid support, you can get help as described at [support](/docs/get-support?topic=get-support-getting-customer-support), which offers insurance against unforeseen issues.
+With or without paid support, you can get help as described at [support](/docs/get-support?topic=get-support-using-avatar), which offers insurance against unforeseen issues.
 
 ## Avoid infrastructure APIs in your app
 
