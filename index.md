@@ -22,7 +22,7 @@ completion-time: 15m
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Getting started tutorial
+# Getting started with apps
 {: #getting-started}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="15m"}
