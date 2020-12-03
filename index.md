@@ -9,7 +9,7 @@ keywords: getting started apps, create app tutorial, add services, deploy apps, 
 subcollection: apps
 content-type: tutorial
 account-plan: lite
-completion-time: 15m
+completion-time: 30m
 
 ---
 
