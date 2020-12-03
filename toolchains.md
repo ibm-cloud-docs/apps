@@ -26,8 +26,8 @@ The core component of a DevOps toolchain is a version control repository like Gi
 
 When you [create an app](/docs/apps?topic=apps-getting-started) by using a starter kit, and then click **Deploy my app** on the App details page, a DevOps toolchain is created. The toolchain has a code repository, delivery pipeline, and web IDE. You can then build on this toolchain to collaboratively manage and deploy your app to separate environments for development, test, and production.
 
-For more information, see the [{{site.data.keyword.contdelivery_full}} Getting started tutorial](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
+For more information, see the [{{site.data.keyword.contdelivery_full}} Getting started tutorial](/docs/ContinuousDelivery?topic=ContinuousDelivery-getting-started).
 
-For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI), see [Viewing a toolchain with the CLI](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing-toolchain-cli) and [Viewing a pipeline by using the CLI](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working#viewing-pipeline-cli).
+For more information about managing DevOps toolchains and delivery pipelines by using the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI), see [Viewing a toolchain with the CLI](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started#viewing-toolchain-cli) and [Viewing a pipeline by using the CLI](/docs/ContinuousDelivery?topic=ContinuousDelivery-pipeline-working#viewing-pipeline-cli).
 
 For information about improved integration between DevOps continuous delivery and {{site.data.keyword.containerlong_notm}}, see [Connecting {{site.data.keyword.containerlong_notm}} and {{site.data.keyword.contdelivery_full}}](https://www.ibm.com/cloud/blog/announcements/connecting-ibm-cloud-kubernetes-service-and-ibm-continuous-delivery){: external}.

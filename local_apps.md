@@ -27,7 +27,7 @@ Download your app for local development where you can easily build, test, and de
 ## Before you begin
 
 * Install the [{{site.data.keyword.cloud_notm}}](/docs/cli?topic=cli-getting-started) Command Line Interface (CLI), which includes the {{site.data.keyword.dev_cli_short}} `ibmcloud dev` commands.
-* Set up [Git authentication](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-git_working#git_authentication) by adding a personal access token.
+* Set up [Git authentication](/docs/ContinuousDelivery?topic=ContinuousDelivery-git_working) by adding a personal access token.
 * Log in to the {{site.data.keyword.cloud_notm}} CLI. If your organization uses federated logins, use the `-sso` option; for example:
   ```bash
   ibmcloud login -sso

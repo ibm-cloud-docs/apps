@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-09-10"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
 

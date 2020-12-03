@@ -33,9 +33,9 @@ The web app starter kits produce backend apps that serve web content such as HTM
 
 You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
-For more information, see [Creating an app with a starter kit](/docs/apps/tutorials?topic=apps-tutorial-starterkit).
+For more information, see [Creating an app with a starter kit](/docs/apps?topic=apps-tutorial-starterkit).
 
-If you want to create a web app that you can customize, see [Creating a custom app from a basic starter kit](/docs/apps/tutorials?topic=apps-tutorial-scratch).
+If you want to create a web app that you can customize, see [Creating a custom app from a basic starter kit](/docs/apps?topic=apps-tutorial-scratch).
 
 ## Microservice apps
 {: #microservice}
@@ -44,7 +44,7 @@ Microservice apps provide the foundation for building backend microservices, inc
 
 Select a microservice starter kit for your language and framework requirements. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
 
-For more information, see [Creating microservice apps](/docs/apps/tutorials?topic=apps-tutorial-microservice).
+For more information, see [Creating microservice apps](/docs/apps?topic=apps-tutorial-microservice).
 
 ## Mobile apps
 {: #mobile}

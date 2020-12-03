@@ -59,7 +59,7 @@ For more information about requirements for specific deployment targets, see the
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 5. Select **Create a new app** as a starting point.
 6. Select **Backend** as the app type.
-  If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps/tutorials?topic=apps-tutorial-mobile#create-mobile-basic) for instructions.
+  If you select **Mobile** as the app type, see [Creating a custom mobile app](/docs/apps?topic=apps-tutorial-mobile#create-mobile-basic) for instructions.
   {: tip}
 7. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
 8. Click **Create**.

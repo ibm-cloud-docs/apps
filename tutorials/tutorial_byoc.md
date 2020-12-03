@@ -4,7 +4,7 @@ copyright:
   years: 2018, 2020
 lastupdated: "2020-09-09"
 
-keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code
+keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code, migrate code
 
 subcollection: apps
 
@@ -120,7 +120,7 @@ If you don't have a DevOps toolchain for this app, complete these steps:
 3. Provide a name for your toolchain.
 4. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
 5. Click **Create**.
-6. On the toolchain configuration page, add the tools that you want. For more information, see [Configuring tool integrations](/docs/services/ContinuousDelivery?topic=ContinuousDelivery-integrations).
+6. On the toolchain configuration page, add the tools that you want. For more information, see [Configuring tool integrations](/docs/ContinuousDelivery?topic=ContinuousDelivery-integrations).
 7. Continue to the next set of instructions to connect your new toolchain with your app.
 
 ### Connecting a toolchain to your app

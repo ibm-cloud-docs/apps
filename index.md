@@ -30,7 +30,7 @@ completion-time: 15m
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need. Or, use your existing repository and bring your own code.
 {: shortdesc}
 
-Whether you have [existing code](/docs/apps/tutorials?topic=apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps/tutorials?topic=apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
+Whether you have [existing code](/docs/apps?topic=apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps?topic=apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
 
 Do you need help with deciding where to start? The following diagram provides an overview for creating apps, whether you use a starter kit or bring your own code to {{site.data.keyword.cloud_notm}}.
 
@@ -51,9 +51,9 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 
 Create an app by selecting one of the following entry points:
 
-* [Preconfigured starter kits](/docs/apps/tutorials?topic=apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
-* [Blank starter kits](/docs/apps/tutorials?topic=apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
-* [Bring your own code](/docs/apps/tutorials?topic=apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
+* [Preconfigured starter kits](/docs/apps?topic=apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
+* [Blank starter kits](/docs/apps?topic=apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
+* [Bring your own code](/docs/apps?topic=apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
 * [{{site.data.keyword.cloud_notm}} (CLI)](/docs/apps?topic=apps-create-deploy-app-cli) creates and deploys your apps by using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](https://{DomainName}/catalog){: external} for apps and services that you can create and use today.
 * [IBM Developer code patterns](https://developer.ibm.com/patterns/){: external} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.

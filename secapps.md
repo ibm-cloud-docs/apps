@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-11-13"
+  years: 2015, 2020
+lastupdated: "2020-11-24"
 
 keywords: apps, application, ssl, certificates, access, restrict access, create, csr, upload, import
 
@@ -37,6 +37,9 @@ openssl req -out CSR.csr -new -newkey rsa:2048 -nodes -keyout privatekey.key
 
 OpenSSL SHA-512 implementation depends on compiler support for 64-bit integer type. You can use the SHA-1 option for apps that have compatibility issues with the SHA-256 certificate.
 {: tip}
+
+Be sure to submit a single request to delete or create crypto, and then expect a wait time of at least 10 minutes before you submit another request. If you don't allow for sufficient time between requests, it's possible for requests to be crossed or errors to occur in creating or updating the crypto.
+{: note}
 
 ### Required CSR contents
 
