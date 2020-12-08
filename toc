@@ -9,22 +9,23 @@ Creating apps
     index.md
     best-practice.md
     patterns.md
+    starter-kits.md
     [What are cloud native apps?](https://www.ibm.com/cloud/learn/cloud-native)
     [What is DevOps?](https://www.ibm.com/cloud/learn/devops-a-complete-guide)
     {: .navgroup-end}
 
+    {: .navgroup id="tutorial"}
+    tutorials/tutorial_starter-kit.md
+    tutorials/tutorial_scratch.md
+    tutorials/tutorial_byoc.md
+    create-deploy-cli.md
+    tutorials/tutorial_microservice.md
+    tutorials/tutorial_mobile.md
+    {: .navgroup-end}
+
     {: .navgroup id="howto"}
-    {: .topicgroup}
-    Creating apps
-        tutorials/tutorial_starter-kit.md
-        starter-kits.md
-        tutorials/tutorial_scratch.md
-        tutorials/tutorial_byoc.md
-        create-deploy-cli.md
-        tutorials/tutorial_microservice.md
-        tutorials/tutorial_mobile.md
-        functions.md
-        [Looking to use a language?](https://{DomainName}/docs?tab=develop)
+    [Looking to use a language?](https://{DomainName}/docs?tab=develop)
+    functions.md
 
     {: .topicgroup}
     Deploying apps
@@ -46,7 +47,6 @@ Creating apps
         toolchains.md
         insights.md
         monitor.md
-    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -66,6 +66,7 @@ Creating apps
         [Node](/node/node-getting-started)
 
     at-events.md
+    ha-dr.md
     
     {: .topicgroup}
     Related links

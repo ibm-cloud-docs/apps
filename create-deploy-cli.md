@@ -2,10 +2,13 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-12-07"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
-
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 subcollection: apps
 
 ---
@@ -17,11 +20,24 @@ subcollection: apps
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating and deploying apps by using the CLI
 {: #create-deploy-app-cli}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-You can use the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} Command Line Interface to create and deploy your application. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
+Use this tutorial to create and deploy an application using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} Command Line Interface. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
+{: shortdesc}
+
+## Objectives
+{: #objectives-cli}
+* Create an app using the CLI commands.
+* Build and run the app.
+* Add a service to the app/modify the app.
+* Deploy the app.
+* View the app.
 
 ## Before you begin
 {: #prereqs-app-cli}
@@ -34,7 +50,10 @@ You can use the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands th
   * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
 * If you plan to deploy to Cloud Foundry, use [**ibmcloud target --cf**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the Cloud Foundry org and space interactively, or use [**ibmcloud target --cf-api ENDPOINT -o ORG -s SPACE**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the specific org and space.
 
-## Creating an app from a starter kit
+## Creating an app
+{: step}
+
+### Creating an app from a starter kit
 {: #create-app-cli}
 
 Creating an app from a starter kit is useful if you don't already have existing code to begin with and would rather start from a language or a framework starter template.
@@ -60,7 +79,7 @@ Creating an app from a starter kit is useful if you don't already have existing 
 
 Creating the app and toolchain takes a few seconds to complete. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
-## Creating an app from your own code
+### Creating an app from your own code
 {: #byoc-cli}
 
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [**ibmcloud dev enable**](/docs/cli?topic=cli-idt-cli#enable) command. This command is in beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
@@ -88,6 +107,7 @@ This option can be used if you already have an existing codebase and want to gen
 
 ## Building your app and running it locally
 {: #build-run-app-cli}
+{: step}
 
 Regardless of which option you used to create your app, you can now build it and run it locally.
 
@@ -101,6 +121,7 @@ You can also use [compound commands](/docs/cli?topic=cli-idt-cli#compound), such
 
 ## Adding a service and modifying the code
 {: #resources-app-cli}
+{: step}
 
 Now that your app can run locally, you can add a service and modify some code. 
 
@@ -112,6 +133,7 @@ Now that your app can run locally, you can add a service and modify some code.
 
 ## Deploying your app
 {: #deploy-app-cli}
+{: step}
 
 {{site.data.keyword.cloud_notm}} provides a robust CLI and {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured.
 
@@ -190,6 +212,7 @@ For more information about deploying your app to {{site.data.keyword.cloud_notm}
 
 ## Viewing your app
 {: #view-app-cli}
+{: step}
 
 1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command from the app directory. The app URL is opened in your default browser.
 2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command. 

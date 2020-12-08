@@ -2,10 +2,13 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-10"
+lastupdated: "2020-12-07"
 
 keywords: apps, starter kit, create app starter kit, basic app, simple app, blank app
-
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 subcollection: apps
 
 ---
@@ -16,16 +19,18 @@ subcollection: apps
 {:screen: .screen}
 {:note: .note}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating an app with a starter kit
 {: #tutorial-starterkit}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-You can use an {{site.data.keyword.cloud}} starter kit to quickly get your application started and prepare it for future development. Select a starter kit and programming language, create an app, and then set up a DevOps toolchain to automatically deploy your app.
+Use this tutorial to create an app by using an {{site.data.keyword.cloud}} starter kit. You can create an app from a selection of starter kits, including a blank one if you want to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app.
 {: shortdesc}
 
-You can create an app from a selection of starter kits, including a blank one if you would like to customize the build options yourself. Either way, a DevOps toolchain is automatically created for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
-
-{{site.data.keyword.cloud_notm}} has developer consoles in different areas of interest. You can access these consoles from the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg). Each developer console provides starter kits that are relevant to the console's focus area. The consoles offer consistent, intuitive workflows for creating a working production-ready app in minutes.
+{{site.data.keyword.cloud_notm}} has developer consoles that you can access from the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg). Each developer console provides starter kits that are relevant to the console's focus area. The consoles offer consistent, intuitive workflows for creating a working production-ready app in minutes.
 
 You can find starter kits in the following developer consoles:
 * [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}
@@ -33,6 +38,14 @@ You can find starter kits in the following developer consoles:
 * [Apple](https://{DomainName}/developer/appledevelopment/starter-kits){: external}
 
 For more information, see [What are starter kits?](/docs/apps?topic=apps-starter-kits).
+
+## Objectives
+{: #objectives-starterkit}
+
+* Use a starter kit to create an app. 
+* Add services to an app (optional).
+* Deploy your app.
+* Verify the app.
 
 ## Before you begin
 {: #prereqs-starterkit}
@@ -60,6 +73,7 @@ For more information about requirements for specific deployment targets, see the
 
 ## Creating an app
 {: #create-starterkit}
+{: step}
 
 Starter kits are available in many languages and frameworks in the {{site.data.keyword.cloud_notm}} console. You can use the category filters, such as language and deployment target, to narrow the selection.
 
@@ -70,12 +84,11 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 5. Optional. To inspect the source code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 5. Click **Create**.
 
-Great start! You just created an app!
-
 If you want to view the Git repo for the starter kit, click **View sample repo**.
 
 ## Adding services (optional)
 {: #resources-starterkit}
+{: step}
 
 If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
@@ -92,6 +105,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 
 ## Deploying your app
 {: #deploy-starterkit}
+{: step}
 
 To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
@@ -115,6 +129,7 @@ For more information about deploying your app, see [Deploying apps](/docs/apps?t
 
 ## Checking the deployment status
 {: #status-starterkit}
+{: step}
 
 The DevOps toolchain for your app includes a Delivery Pipeline tool where you can check the deployment status, start builds, manage deployment, and view logs and history.
 
@@ -124,6 +139,7 @@ The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Viewing your app's GitLab repo
 {: #repo-starterkit}
+{: step}
 
 After your app is built and deployed, you can view its GitLab repo and URL.
 
@@ -131,6 +147,7 @@ On the App details page, click **View repo** to view the GitLab repo for your ap
 
 ## Verifying that your app is running
 {: #verify-starterkit}
+{: step}
 
 After your app is built and deployed, you can view the app's URL to make sure that it's running.
 

@@ -5,7 +5,10 @@ copyright:
 lastupdated: "2020-09-09"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
-
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 subcollection: apps
 
 ---
@@ -17,12 +20,24 @@ subcollection: apps
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating microservice apps
 {: #tutorial-microservice}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-You can create an application from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java&trade;, or Python with a choice of web frameworks. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
+Use this tutorial to create an application from a Microservice Basic Starter. Use these starters to build a microservice backend for Node, Java&trade;, or Python with a choice of web frameworks. You can see how to install the tools you need, build, and run the app locally and deploy it to the cloud.
 {: shortdesc}
+
+## Objectives
+{: #objectives-microservices}
+
+* Use a Microservice Basic Starter to create an app. 
+* Add services to an app (optional).
+* Deploy your app.
+* Verify the app.
 
 ## Before you begin
 {: #prereqs-microservice}
@@ -50,6 +65,7 @@ For more information about requirements for specific deployment targets, see the
 
 ## Creating your app
 {: #create-microservice}
+{: step}
 
 You can use a starter kit to create a microservice app. To locate the starter kits and create an app, complete these steps:
 
@@ -62,10 +78,9 @@ You can use a starter kit to create a microservice app. To locate the starter ki
 1. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 1. Click **Create**.
 
-Great start! You just created an app!
-
 ## Adding services (optional)
 {: #resources-microservice}
+{: step}
 
 If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
@@ -82,6 +97,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 
 ## Deploying your app
 {: #toolchain-microservice}
+{: step}
 
 To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
@@ -105,6 +121,7 @@ For more information about deploying your app, see [Deploying apps](/docs/apps?t
 
 ## Checking the deployment status
 {: #status-microservice}
+{: step}
 
 The DevOps toolchain for your app includes a Delivery Pipeline tool where you can check the deployment status, start builds, manage deployment, and view logs and history.
 
@@ -114,6 +131,7 @@ The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Viewing your app's GitLab repo
 {: #repo-microservice}
+{: step}
 
 After your app is built and deployed, you can view its GitLab repo and URL.
 
@@ -121,6 +139,7 @@ On the App details page, click **View repo** to view the GitLab repo for your ap
 
 ## Verifying that your app is running
 {: #verify-microservice}
+{: step}
 
 After your app is built and deployed, you can view the app's URL to make sure that it's running.
 

@@ -2,9 +2,13 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-12-07"
 
 keywords: scratch, developer tools, custom app, app tutorial, basic starter kit, blank starter kit, language, backend, mobile, blank starter kit
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 
 subcollection: apps
 
@@ -17,14 +21,23 @@ subcollection: apps
 {:tip: .tip}
 {:note: .note}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating a custom app from a blank starter kit
 {: #tutorial-scratch}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-You can create a custom application by using a blank starter kit and selecting the app type (mobile or backend), language, and framework adding services, and selecting your deployment target. 
+Use this tutorial to create a custom application by using a blank starter kit. When you create the app, you specify the type (mobile or backend), language, framework, and services, and you select your deployment target. 
 {: shortdesc}
 
-The blank starter kit is a versatile tool that you can use to create custom apps that you define by language, app type, framework, and services. Then, you set up continuous delivery and select the deployment target of your choice.
+## Objectives
+{: #objectives-scratch}
+* Create an app with a blank starter kit.
+* Add services to the app (optional).
+* Deploy the app.
+* Verify the app.
 
 ## Before you begin
 {: #prereqs-scratch}
@@ -52,6 +65,7 @@ For more information about requirements for specific deployment targets, see the
 
 ## Creating your app
 {: #create-scratch}
+{: step}
 
 1. From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
@@ -64,8 +78,6 @@ For more information about requirements for specific deployment targets, see the
 7. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
 8. Click **Create**.
 
-Great start! You just created an app!
-
 You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_notm}} (`ibmcloud dev`) commands, or add it to your code management repository.
 
 The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
@@ -73,6 +85,7 @@ The app code includes a `README.md` file that contains technical details about t
 
 ## Adding services (optional)
 {: #resources-scratch}
+{: step}
 
 You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
 
@@ -89,6 +102,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 
 ## Deploying your app
 {: #deploy-scratch}
+{: step}
 
 To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
@@ -112,6 +126,7 @@ For more information about deploying your app, see [Deploying apps](/docs/apps?t
 
 ## Checking the deployment status
 {: #status-scratch}
+{: step}
 
 The DevOps toolchain for your app includes a Delivery Pipeline tool where you can check the deployment status, start builds, manage deployment, and view logs and history.
 
@@ -121,6 +136,7 @@ The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Viewing your app's GitLab repo
 {: #repo-scratch}
+{: step}
 
 After your app is built and deployed, you can view its GitLab repo and URL.
 
@@ -128,6 +144,7 @@ On the App details page, click **View repo** to view the GitLab repo for your ap
 
 ## Verifying that your app is running
 {: #verify-scratch}
+{: step}
 
 After your app is built and deployed, you can view the app's URL to make sure that it's running.
 

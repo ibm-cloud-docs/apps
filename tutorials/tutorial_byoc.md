@@ -2,10 +2,13 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-12-07"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code, migrate code
-
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 subcollection: apps
 
 ---
@@ -16,16 +19,24 @@ subcollection: apps
 {:pre: .pre}
 {:note: .deprecated}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating apps from your own code repository
 {: #tutorial-byoc}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-If you have an application in an existing repository, you can use a blank starter kit to create an app record in {{site.data.keyword.cloud}}. Then, you can connect the app record to your source repository and your DevOps toolchain.
+If you have an application in an existing repository, use this tutorial to create an app record in {{site.data.keyword.cloud}}. You can start from the {{site.data.keyword.cloud_notm}} console or from any blank starter kit. After you provide the Git repo URL that contains your code, you connect the app record to your source repository and your DevOps toolchain.
 {: shortdesc}
 
-You can start from the {{site.data.keyword.cloud_notm}} console or from any blank starter kit. After you name your app and select a resource group, select the **Bring your own code** starting point, provide the Git repo URL that contains your code, and click **Create**.
-
-You can connect your existing DevOps toolchain or create one, and continuously deliver your app to the deployment target of your choice, such as Kubernetes or Cloud Foundry.
+## Objectives
+{: #objectives-byoc}
+* Create an app from your existing repository.
+* Enable your app.
+* Add services to your app (optional).
+* Deploy your app.
+* Verify your app.
 
 ## Before you begin
 {: #prereqs-byoc}
@@ -53,10 +64,11 @@ For more information about requirements for specific deployment targets, see the
 | {{site.data.keyword.cloud_notm}} Kubernetes Service / Knative | Knative is an extension of Kubernetes that hides many of the complex management tasks and adds serverless capabilities. The Knative deployment type is available only if Knative is installed on the cluster that you select.<br>1. Install the [IBM Cloud CLI, the IBM Cloud Kubernetes Service plug-in, and the Kubernetes CLI](/docs/containers?topic=containers-cs_cli_install).<br>2. Create a [standard Kubernetes cluster](https://{DomainName}/kubernetes/catalog/cluster) with 3 worker nodes that each have 4 cores and 16 GB memory (b3c.4x16) or more. For more information, see [Creating a standard classic cluster in the console](/docs/containers?topic=containers-clusters#clusters_ui). Ensure that you note the total monthly cost before you create the cluster.<br>3. Install the [Istio add-on](/docs/containers?topic=containers-istio).<br>4. Install the [Knative add-on](/docs/containers?topic=containers-serverless-apps-knative#knative-setup). |
 | Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](https://{DomainName}/kubernetes/overview).|
 
-## Creating an app with an existing repository
+## Creating an app by using an existing repository
 {: #create-byoc}
+{: step}
 
-To create an app and connect it with your source repo, complete these steps:
+To create an app record and connect it with your source repo, complete these steps:
 
 From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/dashboard){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
@@ -66,11 +78,13 @@ From the [{{site.data.keyword.cloud_notm}} App Development console](https://{Dom
 
 ## Viewing your Git repo
 {: #repo-byoc}
+{: step}
 
 You can view your Git repo by clicking **View repo** on the App details page.
 
 ## Editing your Git URL
 {: #repo-byoc-edit}
+{: step}
 
 You might want to edit the Git URL in your app if you manually renamed your Git repo and need to update the URL reference in your app so that it points to your renamed repo.
 
@@ -78,6 +92,7 @@ To change your Git URL, click the Actions icon ![Actions icon](../icons/actions-
 
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
+{: step}
 
 Enable your existing app for {{site.data.keyword.cloud_notm}} deployment by using the CLI. Use the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command to generate a DevOps toolchain template that you check into your repository as the instruction set for what the DevOps toolchain is to create.
 
@@ -89,6 +104,7 @@ To enable your app for deployment, complete these steps:
 
 ## Adding services (optional)
 {: #services-byoc}
+{: step}
 
 You can add services that enhance your app with the cognitive power of Watson, add mobile services, or security services.
 
@@ -105,6 +121,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 
 ## Deploying your app
 {: #toolchain-byoc}
+{: step}
 
 Establishing a link between your app, toolchain, and repo is a step toward organizing your product assets. It also helps aggregate a view of your source with your DevOps workflow, your running app instances, and dependent services across all of your deployment targets. For more information, see [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started).
 
@@ -139,6 +156,7 @@ For more information about deploying your app, see [Deploying apps](/docs/apps?t
 
 ## Checking the deployment status
 {: #status-byoc}
+{: step}
 
 The DevOps toolchain for your app includes a Delivery Pipeline tool where you can check the deployment status, start builds, manage deployment, and view logs and history.
 
@@ -148,6 +166,7 @@ The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Verifying that your app is running
 {: #verify-byoc}
+{: step}
 
 After your app is built and deployed, you can view the app's URL to make sure that it's running.
 

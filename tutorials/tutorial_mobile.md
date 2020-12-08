@@ -2,10 +2,13 @@
 
 copyright:
   years: 2018, 2020
-lastupdated: "2020-09-09"
+lastupdated: "2020-12-07"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
-
+content-type: tutorial
+services: apps
+account-plan: lite
+completion-time: 30m
 subcollection: apps
 
 ---
@@ -16,12 +19,22 @@ subcollection: apps
 {:pre: .pre}
 {:tip: .tip}
 {:external: target="_blank" .external}
+{:step: data-tutorial-type='step'}
 
 # Creating mobile apps
 {: #tutorial-mobile}
+{: toc-content-type="tutorial"} 
+{: toc-services="apps"} 
+{: toc-completion-time="30m"}
 
-{{site.data.keyword.cloud}} offers mobile starter kits to help you create a mobile application quickly. Select a language, framework, and tools from the mobile starter kits to start working with a preconfigured app. Or, you can use a basic starter kit to create a custom mobile app.
+Use this tutorial to create a mobile app using an {{site.data.keyword.cloud}} mobile starter kit. You can create a preconfigured app or use the blank starter kit to create a custom mobile app.
 {: shortdesc}
+
+## Objectives
+{: #objectives-mobile}
+* Create an app with a mobile starter kit.
+* Add services to the app (optional).
+* Download and run the app.
 
 ## Before you begin
 {: #prereqs-mobile}
@@ -30,8 +43,12 @@ subcollection: apps
 * Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
-## Creating a mobile app with a starter kit
+## Creating a mobile app 
 {: #create-mobile}
+{: step}
+
+### Creating a mobile app with a starter kit
+{: #create-mobile-starter}
 
 To create a mobile app by using a starter kit, complete these steps:
 
@@ -45,7 +62,7 @@ To create a mobile app by using a starter kit, complete these steps:
 1. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
 1. Click **Create**.
 
-## Creating a custom mobile app
+### Creating a custom mobile app
 {: #create-mobile-basic}
 
 To create a custom mobile app, complete these steps:
@@ -63,7 +80,7 @@ To create a custom mobile app, complete these steps:
 7. Select your pricing plan. You can use the free option for this tutorial.
 8. Click **Create**.
 
-## Creating a mobile app with the CLI
+### Creating a mobile app with the CLI
 {: #create-mobile-cli}
 
 To create a mobile app with the [{{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands](/docs/cli?topic=cli-getting-started), complete these steps:
@@ -80,6 +97,7 @@ The app is created in your current working directory.
 
 ## Adding services (optional)
 {: #resources-mobile}
+{: step}
 
 If a starter kit requires specific services, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
 
@@ -96,6 +114,7 @@ For more information, see [Adding a service to your app](/docs/apps?topic=apps-a
 
 ## Downloading the code
 {: #mobile-download-code}
+{: step}
 
 To download your app code and work with it locally, complete these steps:
 
@@ -105,6 +124,7 @@ To download your app code and work with it locally, complete these steps:
 
 ## Running your mobile app
 {: #run-mobile-app}
+{: step}
 
 ### Running your Swift app in Xcode
 {: #run_swift}
