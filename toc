@@ -32,7 +32,7 @@ Creating apps
         hosting.md
         dep-app-tool.md
         /containers/containers-tutorial-starterkit-kube
-        /containers/containers-tutorial-byoc-kube
+        /solution-tutorials/solution-tutorials-continuous-deployment-to-kubernetes
 
     {: .topicgroup}
     Configuring
