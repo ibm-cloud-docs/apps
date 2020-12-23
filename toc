@@ -21,6 +21,9 @@ Creating apps
     create-deploy-cli.md
     tutorials/tutorial_microservice.md
     tutorials/tutorial_mobile.md
+    tutorials/tutorial-scalable-web-app-node.md
+    tutorials/tutorial-scalable-web-app-spring.md
+    tutorials/tutorial-scalable-web-app-liberty.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
