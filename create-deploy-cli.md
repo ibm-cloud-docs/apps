@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-07"
+  years: 2018, 2021
+lastupdated: "2021-01-04"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
 content-type: tutorial
@@ -98,11 +98,18 @@ This option can be used if you already have an existing codebase and want to gen
 6. Select the resource group that you want to use (if necessary). 
 7. Select the option to create a new {{site.data.keyword.cloud_notm}} app that is linked to this Git repository. See **Important Notes** for details.
 8. Choose not to add services for now.
-9. Wait a few seconds for the operations to complete. 
-10. After the operations are completed, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
+9. Select a deployment option. If you want to deploy the app automatically, select a DevOps option. Otherwise, select the manual deployment option.
+  ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
+
+    You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
+    {: note}
+10. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
+  ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
+10. Wait a few seconds for the operations to complete. 
+11. After the operations are complete, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
 
  - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
- - To manually configure a toolchain and deployment files, see [Set up a DevOps pipeline for your app to deploy to a cluster](/docs/containers?topic=containers-tutorial-byoc-kube). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
+ - To manually configure a toolchain and deployment files, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
  - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app, and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
 
 ## Building your app and running it locally
