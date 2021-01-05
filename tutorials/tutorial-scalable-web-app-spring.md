@@ -4,7 +4,7 @@ copyright:
    years: 2020
 lastupdated: "2020-12-21"
 
-keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial, java spring tutorial, spring tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure
+keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial, java spring tutorial, spring tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
 subcollection: apps
 
@@ -23,7 +23,7 @@ completion-time: 45m
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Create and deploy a Java Spring application by using {{site.data.keyword.bplong_notm}}
+# Deploy a Java Spring app by using {{site.data.keyword.bplong_notm}}
 {: #tutorial-spring-webapp}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="45m"}

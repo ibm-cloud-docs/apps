@@ -4,7 +4,7 @@ copyright:
    years: 2020
 lastupdated: "2020-12-21"
 
-keywords: apps, scalable web apps, web apps, node apps, nodejs, tutorial, nodejs tutorial, node tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure
+keywords: apps, scalable web apps, web apps, node apps, nodejs, tutorial, nodejs tutorial, node tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
 subcollection: apps
 
@@ -23,7 +23,7 @@ completion-time: 45m
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
-# Create and deploy a Node.js Express application by using {{site.data.keyword.bplong_notm}}
+# Deploy a Node.js Express app by using {{site.data.keyword.bplong_notm}}
 {: #tutorial-node-webapp}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="45m"}
