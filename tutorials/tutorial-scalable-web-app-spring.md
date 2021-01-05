@@ -9,6 +9,7 @@ keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial,
 subcollection: apps
 
 content-type: tutorial
+services: schematics, terraform, openshift, containers
 account-plan: paid
 completion-time: 45m
 
