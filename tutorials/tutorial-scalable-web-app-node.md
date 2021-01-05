@@ -9,6 +9,7 @@ keywords: apps, scalable web apps, web apps, node apps, nodejs, tutorial, nodejs
 subcollection: apps
 
 content-type: tutorial
+services: schematics, terraform, openshift, containers
 account-plan: paid
 completion-time: 45m
 
