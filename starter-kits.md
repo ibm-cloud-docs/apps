@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-08-23"
+  years: 2019, 2021
+lastupdated: "2021-01-07"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -40,7 +40,7 @@ Creating an app from a starter kit automatically creates code for you that has c
 
 Portable code contains cloud enablement code for multiple cloud environments. You can produce code that follows best practices for a specific language and is specific to a use case. 
 
-* Use case logic provides functions for the core function of a particular use case. Examples might be code for a Watson Conversation chat bot, or code for a mobile visual recognition app.
+* Use case logic provides functions for the core function of a particular use case. Examples might be code for a Watson Conversation chat bot.
 * Language components are code components and files specific to the programming language you select for your starter kit. For example, node.js programmers need a package.json file for dependency management, and this file is automatically created for you.
 * Service enablement is code that enables your app to connect to and use the services you add. Credential management, initialization code, and service-specific SDKs are examples of service enablement items.
 * Cloud enablement is code that enables your app to run on {{site.data.keyword.cloud_notm}}. For example, Helm charts that enable your app to run on an {{site.data.keyword.cloud_notm}} Kubernetes cluster.
