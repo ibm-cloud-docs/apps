@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-01-04"
+lastupdated: "2021-02-10"
 
-keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, knative, openshift, kubernetes, cluster
+keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, openshift, kubernetes, cluster
 content-type: tutorial
 services: apps
 account-plan: lite
@@ -45,9 +45,6 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 * You must install the {{site.data.keyword.cloud_notm}} CLI and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI and Developer Tools commands](/docs/cli?topic=cli-getting-started). 
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy your app by using Knative:
-  * Create a paid Kubernetes cluster with at least three worker nodes with 16GM RAM each.
-  * Ensure that the Knative and Istio addons are installed into your Kubernetes cluster. For more information, see [Setting up Knative in your cluster](/docs/containers?topic=containers-serverless-apps-knative#knative-setup).
 * If you plan to deploy to Cloud Foundry, use [**ibmcloud target --cf**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the Cloud Foundry org and space interactively, or use [**ibmcloud target --cf-api ENDPOINT -o ORG -s SPACE**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the specific org and space.
 
 ## Creating an app
