@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-12-07"
+  years: 2018, 2021
+lastupdated: "2021-03-18"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 content-type: tutorial
@@ -153,6 +153,4 @@ If you are using Android as your mobile app's platform, complete these steps:
 
 You can learn more about mobile apps by exploring these tutorials:
 
- * [iOS mobile application with Push Notifications](/docs/solution-tutorials?topic=solution-tutorials-ios-mobile-push-analytics)
- * [Android native mobile application with Push Notifications](/docs/solution-tutorials?topic=solution-tutorials-android-mobile-push-analytics)
  * [Mobile application with a serverless backend](/docs/solution-tutorials?topic=solution-tutorials-serverless-mobile-backend)
