@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-02-10"
+lastupdated: "2021-03-26"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code, migrate code
 content-type: tutorial
@@ -60,8 +60,9 @@ For more information about requirements for specific deployment targets, see the
 | Deployment target | Prerequisites | 
 |--------|---------------|
 | {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](https://{DomainName}/account/cloud-foundry). [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](https://{DomainName}/account/cloud-foundry). |
-| {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. With either paid or free account plans, select this option to experiment with your starter kit in a Kubernetes or OpenShift environment. |
+| {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. With either paid or free account plans, select this option to experiment with your starter kit in a Kubernetes environment. |
 | Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](https://{DomainName}/kubernetes/overview).|
+| {{site.data.keyword.codeenginefull}} | Ensure that you have either a Pay-As-You-Go account or a Subscription account to use {{site.data.keyword.codeengineshort}} as your deployment target. If you are using a free Lite account, upgrade it before you use {{site.data.keyword.codeengineshort}}. [Learn more about accounts.](/docs/account) |
 
 ## Creating an app by using an existing repository
 {: #create-byoc}
@@ -87,7 +88,7 @@ You can view your Git repo by clicking **View repo** on the App details page.
 
 You might want to edit the Git URL in your app if you manually renamed your Git repo and need to update the URL reference in your app so that it points to your renamed repo.
 
-To change your Git URL, click the Actions icon ![Actions icon](../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
+To change your Git URL, click the Actions icon ![Actions icon](../../icons/actions-icon-vertical.svg), and then select **Edit Git URL**.
 
 ## Enabling your app for {{site.data.keyword.cloud_notm}}
 {: #enable-byoc-cli}
@@ -188,6 +189,15 @@ If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?top
 {: #view-kube-cluster-byoc}
 
 If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
+
+### Apps that are deployed to {{site.data.keyword.codeengineshort}}
+{: #view-codeengine-app-byoc}
+
+For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can view the app's status in either of the following ways:
+
+* On the App details page, click the **App URL** link.
+
+* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects), click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
 
 ### Apps that are deployed to Cloud Foundry
 {: #view-cf-app-byoc}
