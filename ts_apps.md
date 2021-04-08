@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-07-22"
+  years: 2015, 2021
+lastupdated: "2021-04-08"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -19,6 +19,7 @@ subcollection: apps
 {:tip: .tip}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:external: target="_blank" .external}
+{:video: .video}
 
 # Troubleshooting for creating apps
 {: #managingapps}
@@ -28,6 +29,39 @@ General problems with creating applications might include apps that can't be upd
 
 If you're unable to resolve your issue, you can use the [{{site.data.keyword.cloud_notm}} #developer-tools Slack channel](https://ibm-cloud-tech.slack.com/){: external} for more help. Join [{{site.data.keyword.cloud_notm}} Technology](https://slack-invite-ibm-cloud-tech.mybluemix.net/){: external} to request access. 
 {: tip}
+
+## My app doesn't deploy, and a "Setup failed error" occurs in my DevOps toolchain
+{: #setup-failed-toolchain-ts}
+{: troubleshoot}
+
+When I set up automatic deployment for my application, the deployment doesn't complete, even though the following message is displayed: `Success! Your DevOps toolchain is created.` The toolchain name and app url are missing from the App details page, so I can't locate my toolchain to find out what's happening.
+{: tsSymptoms}
+
+When I look at my resource list outside of my app to find my toolchain and open it, I see a "Setup failed" error for the GitHub tool integration in my DevOps toolchain. When I click the **Reconfigure** button on the GitHub tile, the following error occurs:
+  ```
+  The integration could not be set up. Check the settings and try again. Reason: User is not authorized with https://api.github.com.
+  ```
+
+Toolchains now include a public GitHub integration for Tekton pipelines. This integration requires you to grant access to your GitHub account for the DevOps integration. DevOps integration must be granted access to GitHub for each region where your toolchain is located.
+{: tsCauses}
+
+To grant access to your public GitHub account, complete these steps:
+{: tsResolve}
+1. From the App details page in your app, click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg), and then select **Resource List**.
+1. Open the **Developer Tools** category, and then select your toolchain. The toolchain integration page is displayed.
+1. Scroll to the GitHub tile, and notice the "Setup failed" error.
+1. Hover your mouse over the GitHub tile, and click **Reconfigure**.
+1. On the **Configure GitHub** page, click **Authorize**.
+1. On the **Authorize IBM Cloud Toolchains** page, click **Authorize IBM-Cloud**.
+1. On the **Configure GitHub** page, click **Save Integration**.
+
+  The GitHub tile no longer shows the error, and its status now shows as `Configured`.
+
+Now you can return to your app and see the deployment automation information by completing these steps:
+1. Click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg), and then select **Resource List**.
+1. Open the **Apps** category, and click your app. The App details page is displayed.
+1. Notice the deployment information, which includes the toolchain name and pipeline status.
+1. You can click the pipeline name to view the tool integrations. The error no longer occurs.
 
 ## Cannot deploy my app from a starter kit that is deprecated
 {: #deprecated-starter-ts}
@@ -126,7 +160,7 @@ If you receive `502 Bad Gateway` errors when you interact with apps on {{site.da
 You receive error messages that start with 502 Bad Gateway. For example, you might see `502 Bad Gateway: Registered endpoint failed to handle the request.`
 {: tsSymptoms}
 
-A Bad Gateway error usually happens when you go to a web site that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly. Then, you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
+A Bad Gateway error usually happens when you go to a website that uses a proxy server to store and relay the data from the main server that hosts the site. The main server and the proxy server might not connect properly. Then, you see the HTTP status code 502 in your browser window. This status code indicates that the site's main server didn't receive the HTTP implementation that it expected from the proxy server.
 {: tsCauses}
 
 Other less common causes of a Bad Gateway error are internet service provider (ISP) dropouts, bad firewall configurations, and browser cache errors.
