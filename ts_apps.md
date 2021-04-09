@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-08"
+lastupdated: "2021-04-09"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -53,15 +53,21 @@ To grant access to your public GitHub account, complete these steps:
 1. Hover your mouse over the GitHub tile, and click **Reconfigure**.
 1. On the **Configure GitHub** page, click **Authorize**.
 1. On the **Authorize IBM Cloud Toolchains** page, click **Authorize IBM-Cloud**.
-1. On the **Configure GitHub** page, click **Save Integration**.
+1. On the **Configure GitHub** page, click **Save Integration**. The GitHub tile no longer shows the error, and its status now shows as `Configured`.
 
-  The GitHub tile no longer shows the error, and its status now shows as `Configured`.
+  The following video demonstrates how to grant access:
+
+  ![Authorizing IBM Cloud Toolchains to access your public GitHub](images/github-tekton-auth-toolchain.mp4){: video controls loop height="400"}
 
 Now you can return to your app and see the deployment automation information by completing these steps:
 1. Click the **Navigation Menu** icon ![Navigation Menu icon](../icons/icon_hamburger.svg), and then select **Resource List**.
 1. Open the **Apps** category, and click your app. The App details page is displayed.
 1. Notice the deployment information, which includes the toolchain name and pipeline status.
 1. You can click the pipeline name to view the tool integrations. The error no longer occurs.
+
+  The following video demonstrates how to see your app deployment details:
+
+  ![Viewing your app deployment details after you grant GitHub access](images/github-tekton-auth-app.mp4){: video controls loop height="400"}
 
 ## Cannot deploy my app from a starter kit that is deprecated
 {: #deprecated-starter-ts}
