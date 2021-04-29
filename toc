@@ -79,5 +79,5 @@ Creating apps
     {: .navgroup id="help"}
     ts_apps.md
     faqs.md
-    [IBM Cloud Slack developer-tools channel](https://slack-invite-ibm-cloud-tech.mybluemix.net/)
+    [IBM Cloud Dev Tools Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/)
     {: .navgroup-end}
