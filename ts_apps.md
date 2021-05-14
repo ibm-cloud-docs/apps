@@ -8,6 +8,8 @@ keywords: apps, application, troubleshooting, debug apps, known issues, debug, h
 
 subcollection: apps
 
+content-type: troubleshoot
+
 ---
 
 {:tsSymptoms: .tsSymptoms}
