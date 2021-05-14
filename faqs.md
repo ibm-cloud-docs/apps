@@ -8,6 +8,8 @@ keywords: apps FAQs, apps frequently asked questions, applications FAQs, applica
 
 subcollection: apps
 
+content-type: faq
+
 ---
 
 {:shortdesc: .shortdesc}
