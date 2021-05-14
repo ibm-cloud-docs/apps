@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-04-29"
+lastupdated: "2021-05-13"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -115,8 +115,6 @@ Instead of hardcoding the credentials in your app, use connection parameters fro
 ```
 process.env.VCAP_SERVICES
 ```
-
-For more information about the commands that you can use in other program languages, see [Java](https://docs.run.pivotal.io/buildpacks/java/java-tips.html#env-var){: external} and [Ruby](https://docs.run.pivotal.io/buildpacks/ruby/ruby-tips.html#env-var){: external}.
 
 ## 502 Bad Gateway errors are received
 {: #ts_502_error}
