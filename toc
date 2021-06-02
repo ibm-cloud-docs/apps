@@ -48,7 +48,7 @@ Creating apps
     Integrating apps with DevOps
         toolchains.md
         insights.md
-        monitor.md
+        monitoring_logging.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
