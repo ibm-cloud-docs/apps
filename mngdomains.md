@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-08-23"
+  years: 2019, 2021
+lastupdated: "2021-05-19"
 
 keywords: apps, custom, domain, kubernetes, cloud foundry, add, subdomain, custom domain, dns, domainname, domain name, endpoint, update, migrate
 
@@ -22,6 +22,8 @@ Domains provide the URL route that is allocated to your organization in {{site.d
 {: shortdesc}
 
 To use a custom domain, you must register the custom domain on a public DNS server, and then configure the custom domain in {{site.data.keyword.cloud_notm}}. Next, you must map the custom domain to the {{site.data.keyword.cloud_notm}} system domain on the public DNS server. After your custom domain is mapped to the system domain, requests for your custom domain are routed to your app in {{site.data.keyword.cloud_notm}}.
+
+For general information, see [Getting started with Domain Name Registration](/docs/dns?topic=dns-getting-started).
 
 ## Changing your domain for Kubernetes apps
 {: #update-domain-kube}
