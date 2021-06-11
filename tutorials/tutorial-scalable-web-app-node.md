@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2020
-lastupdated: "2020-12-21"
+   years: 2020, 2021
+lastupdated: "2021-06-11"
 
 keywords: apps, scalable web apps, web apps, node apps, nodejs, tutorial, nodejs tutorial, node tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
@@ -32,7 +32,7 @@ completion-time: 45m
 In this tutorial, you learn how to create and deploy a scalable Node.js Express application. This scalable web app offers a one-click option to create an {{site.data.keyword.bplong}} workspace with your choice of preconfigured Terraform templates. The Terraform templates deploy your app to {{site.data.keyword.cloud_notm}} with options for the deployment target (Kubernetes or Red Hat&reg; OpenShift&reg;) and the DevOps toolchain pipeline structure.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/) is an open source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
+{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an open source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
 
 In this tutorial, you follow two easy steps to create a {{site.data.keyword.bpshort}} workspace and apply a Terraform execution plan. When you apply the plan, a Kubernetes or OpenShift cluster is created, and a Node.js Express application is deployed to it by using an {{site.data.keyword.cloud_notm}} DevOps toolchain.
 
@@ -54,12 +54,14 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 Click one of the following options for the cluster deployment target and toolchain pipeline type. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Create**.
 
 The following options use the [simple-helm-toolchain template](https://github.com/open-toolchain/simple-helm-toolchain){: external}, which uses a classic pipeline structure.
-  * [Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/simple-kube&terraform_version=terraform_v0.12){: external}
-  * [Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/simple-openshift&terraform_version=terraform_v0.12){: external}
+
+[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube.png "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/simple-kube&terraform_version=terraform_v0.12){: external}
+[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift.png "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/simple-openshift&terraform_version=terraform_v0.12){: external}
 
 The following options use the [secure-kube-toolchain template](https://github.com/open-toolchain/secure-kube-toolchain){: external}, which uses a "GitSecure" pipeline structure.
-  * [Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/secure-kube&terraform_version=terraform_v0.12){: external}
-  * [Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/secure-openshift&terraform_version=terraform_v0.12){: external}
+
+[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_kube_Secured.png "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/secure-kube&terraform_version=terraform_v0.12){: external}
+[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_Openshift_Secured.png "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-node/tree/master/terraform/secure-openshift&terraform_version=terraform_v0.12){: external}
 
 Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace. The Terraform engine version is v0.12.
 {: note}
