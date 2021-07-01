@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-06-30"
+lastupdated: "2021-07-01"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start
 
@@ -89,14 +89,9 @@ These resources are automatically provisioned for you by using the default value
 If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created.
 {: note}
 
-### Related information
-{: #devsecops-related}
-
 For more information about this workflow, see [Getting started with {{site.data.keyword.bplong_notm}} and Terraform](/docs/schematics?topic=schematics-getting-started).
-
-See the related tutorial [Deploy a secure app with DevSecOps best practices](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops).
 
 ## Next steps
 {: #devsecops-next-steps}
 
-You can now [Create your CD toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops#devsecops-cd-toolchain-intro) to continue the process of deploying a secure app by using DevSecOps best practices.
+You can now [Explore your CI toolchain](/docs/apps?topic=ContinuousDelivery-tutorial-cd-devsecops#devsecops-ci-toolchain-explore) and run the CI-PR and CI pipelines. Then continue through the remainder of the steps to continue the process of deploying a secure app by using DevSecOps best practices.
