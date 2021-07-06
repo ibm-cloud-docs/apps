@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-07-01"
+lastupdated: "2021-07-06"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start
 
@@ -78,7 +78,6 @@ These resources are automatically provisioned for you by using the default value
    {: important}
 
 1. For the `gitlab_token` variable, enter the personal access token that you obtained previously.
-1. Optional. After you enter all the required values for the variables, click **Save changes** to save those values for future use within the same workspace.
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Activity page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan**. 
    This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
