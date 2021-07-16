@@ -55,13 +55,13 @@ Click one of the following options for the cluster deployment target and toolcha
 
 The following options use the [simple-helm-toolchain template](https://github.com/open-toolchain/simple-helm-toolchain){: external}, which uses a classic pipeline structure.
 
-[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube.png "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/simple-kube&terraform_version=terraform_v0.12){: external}
-[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift.png "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/simple-openshift&terraform_version=terraform_v0.12){: external}
+[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/simple-kube&terraform_version=terraform_v0.12){: external}
+[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/simple-openshift&terraform_version=terraform_v0.12){: external}
 
 The following options use the [secure-kube-toolchain template](https://github.com/open-toolchain/secure-kube-toolchain){: external}, which uses a "GitSecure" pipeline structure.
 
-[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_kube_Secured.png "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/secure-kube&terraform_version=terraform_v0.12){: external}
-[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_Openshift_Secured.png "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/secure-openshift&terraform_version=terraform_v0.12){: external}
+[![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_kube_Secured.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/secure-kube&terraform_version=terraform_v0.12){: external}
+[![Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_Openshift_Secured.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-liberty/tree/master/terraform/secure-openshift&terraform_version=terraform_v0.12){: external}
 
 Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace. The Terraform engine version is v0.12.
 {: note}
