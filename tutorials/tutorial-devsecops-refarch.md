@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-08-17"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -60,13 +60,15 @@ These resources are automatically provisioned for you by using the default value
 {: #devsecops-schematics-workspace}
 {: step}
 
-1. Click one of the following options for the cluster deployment target. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created, and the Settings page is displayed.
+1. Click one of the following options for the cluster deployment target. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-kube){: external}
   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-openshift){: external}
 
   Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace.
   {: note}
+
+1. Verify the information, and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created, and the Settings page for the {{site.data.keyword.bpshort}} workspace is displayed.
 
 ## Apply the Terraform execution plan
 {: #devsecops-apply-plan}
@@ -78,6 +80,7 @@ These resources are automatically provisioned for you by using the default value
    {: important}
 
 1. For the `gitlab_token` variable, enter the personal access token that you obtained previously.
+1. For the `ibmcloud_api_key` variable, enter the {{site.data.keyword.cloud_notm}} API key that you obtained previously.
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Activity page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan**. 
    This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
@@ -88,7 +91,28 @@ These resources are automatically provisioned for you by using the default value
 If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created.
 {: note}
 
+## Update the environment properties value
+{: #devsecops-env-value}
+{: step}
+
+After the DevSecOps CI toolchain is created in the previous step, follow these steps to update the **ci-pipeline** Delivery Pipeline before you run the pipeline:
+
+1. Open the DevSecOps CI toolchain in a browser.
+1. Click the **ci-pipeline** Delivery Pipeline tile.
+1. Select the **Environment properties** menu.
+1. Click the edit icon next to "vault-secret".
+1. In the **Edit property** window, click the key icon. A **Secure property** window is displayed, and the data is refreshed with your Secrets Manager information.
+1. From the **Secret name** menu, select `GPG_Key` and click **OK**.
+1. From the **Edit property** window, click **Save**.
+
+Now that the value is updated, you can run the pipeline.
+
+## Related information
+{: #devsecops-related}
+
 For more information about this workflow, see [Getting started with {{site.data.keyword.bplong_notm}} and Terraform](/docs/schematics?topic=schematics-getting-started).
+
+For {{site.data.keyword.bpshort}} troubleshooting information, see [How can I find the root cause of why Schematics apply is failing?](/docs/schematics?topic=schematics-nullresource-errors).
 
 ## Next steps
 {: #devsecops-next-steps}
