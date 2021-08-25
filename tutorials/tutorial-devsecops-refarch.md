@@ -103,10 +103,10 @@ After the DevSecOps CI toolchain is created in the previous step, follow these s
 1. Open the DevSecOps CI toolchain in a browser.
 1. Click the Delivery Pipeline tile for your **ci-pipeline**.
 1. Select **Environment properties** in the navigation menu.
-1. Click the edit icon for the `vault-secret` property.
-1. In the **Edit property** window, click the key icon. A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
+1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `vault-secret` property.
+1. In the **Edit property** window, click the **Key** icon ![Key icon](../images/key-secret.svg)<!-- (../../icons/key-secret.svg)-->. A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
 1. In the **Secret name** dropdown, select `GPG_Key`, and click **OK**.
-1. In the **Edit property** window, click **Save**. The value is added.
+1. In the **Edit property** window, click **Save**. The value is added to the `vault-secret` property.
 
 ![vault-secret value](../images/devsecops-vault-secret.png "vault-secret value")
 
