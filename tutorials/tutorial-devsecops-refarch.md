@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-08-25"
+lastupdated: "2021-08-26"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -40,7 +40,7 @@ In this tutorial, you follow three easy steps to create a {{site.data.keyword.bp
 
 The automated infrastructure setup includes the creation of the following resources. These resources are automatically provisioned for you by using the default values from the DevSecOps CI and CD templates. You can find the default values in the **Variables** section of the {{site.data.keyword.bpshort}} workspace.
 
-* A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan).
+* A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan). If you use an existing cluster, the time frame for completing this tutorial is reduced by 20-30 minutes.
 * [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). If you already have a Lite {{site.data.keyword.cos_full_notm}} instance and bucket and want to use those resources, you can override the default values for `cos_instance_name` and `cos_bucket_name` in [step 2](#devsecops-apply-plan).
 * [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). Note that only one {{site.data.keyword.secrets-manager_short}} instance is permitted. If you already have a {{site.data.keyword.secrets-manager_short}} service, be sure to override the `sm_service_name` default value in [step 2](#devsecops-apply-plan).
 * [GPG image signing key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing).
@@ -84,7 +84,7 @@ The automated infrastructure setup includes the creation of the following resour
 1. Optional. If you already have a cluster and want to use it for this tutorial, you can override the `cluster_name` default value. If you override the `cluster_name` default value, you don't need to provide values for the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `kube_version`, `public_vlan_num`, or `private_vlan_num`.
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Jobs page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the correct state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan** to run your infrastructure code. 
-   This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
+   This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster. If you use an existing cluster, this step takes only a few minutes.
    {: note}
 1. On the {{site.data.keyword.bpshort}} Jobs page, you can view the log by expanding the job name.
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevSecOps CI toolchain. The URL is located near the end of the log file on a line that begins with "View the toolchain at:."
@@ -98,17 +98,17 @@ If you apply your plan a second time, the previously created Kubernetes or OpenS
 
 After the DevSecOps CI toolchain is created in the previous step, follow these steps to update the **ci-pipeline** Delivery Pipeline before you run it.
 
-![ci-pipeline](../images/devsecops-ci-pipeline.png "ci-pipeline")
+![ci-pipeline](../images/devsecops-ci-pipeline.png "ci-pipeline"){: caption="Figure 1. The Delivery Pipeline is named ci-pipeline." caption-side="bottom"}
 
 1. Open the DevSecOps CI toolchain in a browser.
 1. Click the Delivery Pipeline tile for your **ci-pipeline**.
 1. Select **Environment properties** in the navigation menu.
 1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `vault-secret` property.
-1. In the **Edit property** window, click the **Key** icon ![Key icon](../images/secret-key.svg)<!-- (../../icons/secret-key.svg)-->. A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
+1. In the **Edit property** window, click the **Key** icon ![Key icon](../../icons/secret-key.svg). A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
 1. In the **Secret name** dropdown, select `GPG_Key`, and click **OK**.
 1. In the **Edit property** window, click **Save**. The value is added to the `vault-secret` property.
 
-![vault-secret value](../images/devsecops-vault-secret.png "vault-secret value")
+![vault-secret value](../images/devsecops-vault-secret.png "vault-secret value"){: caption="Figure 2. The value is added to the vault-secret property." caption-side="bottom"}
 
 Now that the value is updated, follow these steps to run the pipeline.
 1. Click **Run Pipeline**.
