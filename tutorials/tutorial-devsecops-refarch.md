@@ -38,7 +38,7 @@ Use this tutorial for automated setup of the infrastructure for your CI and CD t
 
 In this tutorial, you follow three easy steps to create a {{site.data.keyword.bpshort}} workspace, apply a Terraform execution plan, and update the environment properties value. When you apply the plan, the {{site.data.keyword.bpshort}} workspace sets up your secure infrastructure. This infrastructure is shareable with your team, and it works for the DevSecOps CI and CD toolchain templates.
 
-The automated infrastructure setup includes the creation of the following resources. These resources are automatically provisioned for you by using the default values from the DevSecOps CI and CD templates. You can find the default values in the **Variables** section of the {{site.data.keyword.bpshort}} workspace.
+The automated infrastructure setup creates resources that are automatically provisioned by using the default values from the DevSecOps CI and CD templates. You can find the default values in the **Variables** section of the {{site.data.keyword.bpshort}} workspace. The following resources are created:
 
 * A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan). If you use an existing cluster, the time frame for completing this tutorial is reduced by 20-30 minutes.
 * [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). If you already have a Lite {{site.data.keyword.cos_full_notm}} instance and bucket and want to use those resources, you can override the default values for `cos_instance_name` and `cos_bucket_name` in [step 2](#devsecops-apply-plan).
@@ -98,13 +98,13 @@ If you apply your plan a second time, the previously created Kubernetes or OpenS
 
 After the DevSecOps CI toolchain is created in the previous step, follow these steps to update the **ci-pipeline** Delivery Pipeline before you run it.
 
-![ci-pipeline](../images/devsecops-ci-pipeline.png "ci-pipeline"){: caption="Figure 1. The Delivery Pipeline is named ci-pipeline." caption-side="bottom"}
+![ci-pipeline](../images/devsecops-ci-pipeline.png "ci-pipeline"){: caption="Figure 1. The ci-pipeline Delivery Pipeline." caption-side="bottom"}
 
 1. Open the DevSecOps CI toolchain in a browser.
 1. Click the Delivery Pipeline tile for your **ci-pipeline**.
 1. Select **Environment properties** in the navigation menu.
 1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `vault-secret` property.
-1. In the **Edit property** window, click the **Key** icon ![Key icon](../../icons/secret-key.svg). A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
+1. In the **Edit property** window, click the **Key** icon ![Key icon](../images/secret-key.svg). A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
 1. In the **Secret name** dropdown, select `GPG_Key`, and click **OK**.
 1. In the **Edit property** window, click **Save**. The value is added to the `vault-secret` property.
 
