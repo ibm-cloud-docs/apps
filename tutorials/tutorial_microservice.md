@@ -117,8 +117,8 @@ To deploy your app, complete the following steps:
 
 The DevOps toolchain is created automatically, and the deployment process begins.
 
-  You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
-  {: note}
+You can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
+{: note}
 
 For more information about deploying your app, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
 
