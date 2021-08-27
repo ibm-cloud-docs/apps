@@ -79,7 +79,7 @@ The automated infrastructure setup creates resources that are automatically prov
 
 1. For the `gitlab_token` variable, enter the personal access token that you obtained previously.
 1. For the `ibmcloud_api_key` variable, enter the {{site.data.keyword.cloud_notm}} API key that you obtained previously.
-1. For the `registry_namespace` variable, enter a container registry namespace value. To create a namespace, see [Container Registry Namespaces](https://{DomainName}/registry/namespaces).{: external}
+1. For the `registry_namespace` variable, enter a container registry namespace value. To create a namespace, see [Container Registry Namespaces](https://{DomainName}/registry/namespaces){: external}.
 1. Optional. If you already have a {{site.data.keyword.secrets-manager_short}} instance, enter it name for the `sm_service_name` variable. Otherwise, don't change this variable.
 1. Optional. If you already have a cluster and want to use it for this tutorial, you can override the `cluster_name` default value. If you override the `cluster_name` default value, you don't need to provide values for the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `kube_version`, `public_vlan_num`, or `private_vlan_num`.
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Jobs page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the correct state of the Terraform template.
