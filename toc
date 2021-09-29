@@ -25,7 +25,7 @@ Creating apps
     tutorials/tutorial-scalable-web-app-spring.md
     tutorials/tutorial-scalable-web-app-liberty.md
     tutorials/tutorial-devsecops-refarch.md
-    /ContinuousDelivery/ContinuousDelivery-tutorial-cd-devsecops
+    /devsecops/devsecops-tutorial-cd-devsecops
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
