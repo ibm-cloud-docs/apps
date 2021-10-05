@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-06-24"
+lastupdated: "2021-10-05"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, openshift, kubernetes, cluster
 content-type: tutorial
@@ -57,22 +57,22 @@ Creating an app from a starter kit is useful if you don't already have existing 
 
 1. Run the [**ibmcloud dev create**](/docs/cli?topic=cli-idt-cli#create) command in the directory of your choice.
 2. Select an application type of either **Backend Service / Web App** or **Mobile App**.
-  ![App type](images/cli-select-apptype.png "Select an app type"){: caption="Figure 1. App types in the CLI" caption-side="bottom"}
+   ![App type](images/cli-select-apptype.png "Select an app type"){: caption="Figure 1. App types in the CLI" caption-side="bottom"}
 3. Select a language.
-  ![Language](images/cli-select-lang.png "Select a language"){: caption="Figure 2. Languages in the CLI" caption-side="bottom"}
+   ![Language](images/cli-select-lang.png "Select a language"){: caption="Figure 2. Languages in the CLI" caption-side="bottom"}
 4. Select a starter kit to use as the basis for your app.
 5. Enter a name for your app, and select the resource group that you want to use (if necessary).
 6. Optional. Select a service to add to your app. During the app creation process, you are prompted if you want to add a service to your app.
-  1. Enter **Y**.
-  2. Select **Create a new service and add it to this application**.
-  3. Follow the prompts to select a service group, service, region, and pricing plan.
+   1. Enter **Y**.
+   2. Select **Create a new service and add it to this application**.
+   3. Follow the prompts to select a service group, service, region, and pricing plan.
 7. Select a deployment option. If you want to deploy the app automatically, select a DevOps option. Otherwise, select the manual deployment option.
-  ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
+   ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
 
     You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
     {: note}
 8. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
-  ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
+   ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
 
 Creating the app and toolchain takes a few seconds to complete. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
@@ -84,10 +84,10 @@ This option can be used if you already have an existing codebase and want to gen
 1. Log in to {{site.data.keyword.cloud_notm}} by running the **ibmcloud login** command, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: external} by running the following command in the directory of your choice.
 
-  ```
-  git clone https://github.com/IBM-Cloud/node-helloworld.git
-  ```
-  {: codeblock}
+   ```
+   git clone https://github.com/IBM-Cloud/node-helloworld.git
+   ```
+   {: codeblock}
 
 3. Navigate to the directory where you cloned the sample app, and run the [**ibmcloud dev enable**](/docs/cli?topic=cli-idt-cli#enable) command.
 4. Select to continue without committing changes for now (if necessary).
@@ -96,14 +96,14 @@ This option can be used if you already have an existing codebase and want to gen
 7. Select the option to create a new {{site.data.keyword.cloud_notm}} app that is linked to this Git repository. See **Important Notes** for details.
 8. Choose not to add services for now.
 9. Select a deployment option. If you want to deploy the app automatically, select a DevOps option. Otherwise, select the manual deployment option.
-  ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
+   ![Deployment options](images/cli-deploy-options.png "Select a deployment option for your app"){: caption="Figure 3. Deployment options in the CLI" caption-side="bottom"}
 
-    You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
-    {: note}
+   You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
+   {: note}
 10. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
-  ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
-10. Wait a few seconds for the operations to complete. 
-11. After the operations are complete, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
+   ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
+11. Wait a few seconds for the operations to complete. 
+12. After the operations are complete, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
 
  - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
  - To manually configure a toolchain and deployment files, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
@@ -145,19 +145,19 @@ Now that your app can run locally, you can add a service and modify some code.
 
 2.  Update your app code, if necessary. For example, if you're using an {{site.data.keyword.cloud_notm}} sample app and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
 
-  Review the `README.md` file, which contains details, such as build instructions.
+   Review the `README.md` file, which contains details, such as build instructions.
 
-  If your app is a Liberty app, you must build it before you deploy it again.
-  {: note}
+   If your app is a Liberty app, you must build it before you deploy it again.
+   {: note}
 
 3. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-  ```
-  ibmcloud login
-  ```
-  {: codeblock}
+   ```
+   ibmcloud login
+   ```
+   {: codeblock}
   
-  If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. For more information, see [Logging in with a federated ID](/docs/account?topic=account-federated_id).
-  {: tip}
+   If your credentials are rejected, you might be using a federated ID. To log in with a federated ID, use the `--sso` flag. For more information, see [Logging in with a federated ID](/docs/account?topic=account-federated_id).
+   {: tip}
 
 ### Deploying your app automatically
 {: #deploy-cli-auto}
@@ -190,14 +190,14 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completi
 
 1. Run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
 
-  For Cloud Foundry:
+   For Cloud Foundry:
 
     ```
     ibmcloud dev deploy
     ```
     {: codeblock}
 
-  For Kubernetes:
+   For Kubernetes:
 
     ```
     ibmcloud dev deploy -t container
@@ -205,7 +205,6 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completi
     {: codeblock}
 
 If you want to deploy your app to a different manual deployment type, run [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) from the app directory, and add the other deployment files.
-
 
 ### Related information
 {: #deploy-cli-related}
