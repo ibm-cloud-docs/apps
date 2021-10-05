@@ -147,7 +147,7 @@ For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can vie
 
 You can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
 
-If you are using the command line, run the [**ibmcloud dev view**]/docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
+If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #next-steps-deployapps}
