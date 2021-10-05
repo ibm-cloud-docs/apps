@@ -43,13 +43,13 @@ The automated infrastructure setup creates resources that are automatically prov
 * A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan). If you use an existing cluster, the time frame for completing this tutorial is reduced by 20-30 minutes.
 * [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). If you already have a Lite {{site.data.keyword.cos_full_notm}} instance and bucket and want to use those resources, you can override the default values for `cos_instance_name` and `cos_bucket_name` in [step 2](#devsecops-apply-plan).
 * [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). Note that only one {{site.data.keyword.secrets-manager_short}} instance is permitted. If you already have a {{site.data.keyword.secrets-manager_short}} service, be sure to override the `sm_service_name` default value in [step 2](#devsecops-apply-plan).
-* [GPG image signing key](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd-devsecops-image-signing).
-* A fully functional [DevSecOps CI toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops#devsecops-ci-toolchain-intro) that builds, tests, and deploys a sample Node.js application by using DevSecOps best practices of compliance and security.
+* [GPG image signing key](/docs/devsecops?topic=devsecops-cd-devsecops-image-signing).
+* A fully functional [DevSecOps CI toolchain](/docs/devsecops?topic=devsecops-tutorial-cd-devsecops#devsecops-ci-toolchain-intro) that builds, tests, and deploys a sample Node.js application by using DevSecOps best practices of compliance and security.
 
 ## Before you begin
 {: #apps-devsecops-prereqs}
 
-* To complete this tutorial, use a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-upgrading-account) where you are the owner or have [full Administrator access](/docs/account?topic=account-assign-access-resources).
+* To complete this tutorial, use a [Pay-As-You-Go or Subscription {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-upgrading-account) where you are the owner or have [full Administrator access](/docs/account?topic=account-assign-access-resources). If you already have an {{site.data.keyword.cloud_notm}} account and need to upgrade it, see [Upgrading your account](/docs/account?topic=account-upgrading-account).
 * [Install the {{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started) if you want to interact with elements of the toolchain or infrastructure after they are created.
 * Obtain a [GitLab Personal Access Token](https://us-south.git.cloud.ibm.com/-/profile/personal_access_tokens){: external}. Enter a name for your personal access token. Create your token in the same region as your CI toolchain. Be sure to copy and save the token because you need it later, and you cannot access it again.
 * Create an [{{site.data.keyword.cloud_notm}} API key](https://cloud.ibm.com/iam/apikeys){: external}. Be sure to copy and save or download the API key value because you need it later, and you cannot access it again.
@@ -125,6 +125,6 @@ For {{site.data.keyword.bpshort}} troubleshooting information, see [How can I fi
 ## Next steps
 {: #devsecops-next-steps}
 
-Continue to the "[Explore your CI toolchain](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops#devsecops-ci-toolchain-explore)" section of the [next tutorial](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-devsecops), and run the CI-PR and CI pipelines. Then, continue through the remainder of the steps in that tutorial to deploy a secure app.
+Continue to the "[Explore your CI toolchain](/docs/devsecops?topic=devsecops-tutorial-cd-devsecops#devsecops-ci-toolchain-explore)" section of the [next tutorial](/docs/devsecops?topic=devsecops-tutorial-cd-devsecops), and run the CI-PR and CI pipelines. Then, continue through the remainder of the steps in that tutorial to deploy a secure app.
 
 At any time, you can view all the resources that were created with this tutorial by clicking the **Menu** icon ![Menu icon](../../icons/icon_hamburger.svg) and selecting **Resource list**. You can view your {{site.data.keyword.bpshort}} workspace, cluster, {{site.data.keyword.cos_full_notm}} instance, Secrets Manager service, continuous delivery service, and toolchain.
