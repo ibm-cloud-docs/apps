@@ -103,12 +103,12 @@ After the DevSecOps CI toolchain is created in the previous step, follow these s
 1. Open the DevSecOps CI toolchain in a browser.
 1. Click the Delivery Pipeline tile for your **ci-pipeline**.
 1. Select **Environment properties** in the navigation menu.
-1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `vault-secret` property.
+1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `signing-key` property.
 1. In the **Edit property** window, click the **Key** icon ![Key icon](../images/secret-key.svg). A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
 1. In the **Secret name** dropdown, select `GPG_Key`, and click **OK**.
-1. In the **Edit property** window, click **Save**. The value is added to the `vault-secret` property.
+1. In the **Edit property** window, click **Save**. The value is added to the `signing-key` property.
 
-![vault-secret value](../images/devsecops-vault-secret.png "vault-secret value"){: caption="Figure 2. The value is added to the vault-secret property." caption-side="bottom"}
+![signing-key value](../images/devsecops-signing-key.png "signing-key value"){: caption="Figure 2. The value is added to the signing-key property." caption-side="bottom"}
 
 Now that the value is updated, follow these steps to run the pipeline.
 1. Click **Run Pipeline**.
