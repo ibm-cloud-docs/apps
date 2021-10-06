@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-18"
+lastupdated: "2021-10-06"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 content-type: tutorial
@@ -32,6 +32,7 @@ Use this tutorial to create a mobile app using an {{site.data.keyword.cloud}} mo
 
 ## Objectives
 {: #objectives-mobile}
+
 * Create an app with a mobile starter kit.
 * Add services to the app (optional).
 * Download and run the app.
@@ -69,8 +70,8 @@ To create a custom mobile app, complete these steps:
 
 1. From your [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
 
-  You can also create a custom mobile app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
-  {: tip}
+   You can also create a custom mobile app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+   {: tip}
 
 2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).

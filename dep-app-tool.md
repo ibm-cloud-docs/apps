@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2021
-lastupdated: "2021-03-26"
+lastupdated: "2021-10-06"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -25,8 +25,8 @@ subcollection: apps
 {{site.data.keyword.cloud}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
 
-  You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
-  {: tip}
+   You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud} } console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli)  commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI). For information about  deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps? topic=apps-create-deploy-app-cli).
+   {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
 
@@ -75,16 +75,16 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} consol
 {: note}
 
 1. On the App details page for your app, click **Deploy your app**.
-2. On the Deploy your app page, select a deployment target. Set up your deployment target according to the instructions for the target that you select:
-  * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 - 20 minutes for the cluster to be provisioned, and then select the region and cluster name.
-  * **Red Hat OpenShift on IBM Cloud**. If you have an available [OpenShift cluster](/docs/openshift?topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an available cluster, you must create one before you continue. Your cluster creation might take some time to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web console and other routes.
-  * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
-  * **Code Engine**. With this option, select your container registry region, container registry namespace, and region. Then, select a project name that exists within your {{site.data.keyword.cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain creates one for you during the deployment process. Optionally, you can create a project in the [{{site.data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects).
-3. Create an {{site.data.keyword.cloud_notm}} API key, or select an existing one from a secrets store.
-4. Complete the required fields for your deployment type, and click **Next**.
-5. Provide a name for your DevOps toolchain.
-6. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
-7. Click **Create**.
+1. On the Deploy your app page, select a deployment target. Set up your deployment target according to the instructions for the target that you select:
+   * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an  existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 -  20 minutes for the cluster to be provisioned, and then select the region and cluster name.
+   * **Red Hat OpenShift on IBM Cloud**. If you have an available [OpenShift cluster](/docs/openshift? topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an  available cluster, you must create one before you continue. Your cluster creation might take some time  to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component  take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web  console and other routes.
+   * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the  underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/ cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
+   * **Code Engine**. With this option, select your container registry region, container registry  namespace, and region. Then, select a project name that exists within your {{site.data.keyword. cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain  creates one for you during the deployment process. Optionally, you can create a project in the [{{site. data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects).
+1. Create an {{site.data.keyword.cloud_notm}} API key, or select an existing one from a secrets store.
+1. Complete the required fields for your deployment type, and click **Next**.
+1. Provide a name for your DevOps toolchain.
+1. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
+1. Click **Create**.
 
 The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipeline** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
 

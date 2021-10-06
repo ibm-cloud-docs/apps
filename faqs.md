@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-04-20"
+  years: 2019, 2021
+lastupdated: "2021-08-25"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -38,7 +38,7 @@ For more information, see [Managing your domains](/docs/apps?topic=apps-update-d
 {: #cf-app}
 {: faq}
 
-The My resources page  in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} provides summary information for the apps that you created. From the [My resources](https://cloud.ibm.com/resources) page, the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
+The Resource list in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} provides summary information for the apps that you created. From the [Resource list](https://cloud.ibm.com/resources), the **Apps** section contains all apps that you created but *not* deployed to Cloud Foundry. The **Cloud Foundry Apps** section contains all the apps that you created and deployed to Cloud Foundry.
 
 ## Why can’t I select a Cloud Foundry space when I try to deploy an app?
 {: #cf-space}
@@ -56,7 +56,7 @@ You most likely need to create a Cloud Foundry space first. If you are using the
 
 To delete an app that you created, complete these steps:
 
-1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **My resources**.
+1. From the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click the **Menu** icon ![Menu icon](../icons/icon_hamburger.svg), and select **Resource list**.
 2. Click the **Actions** icon ![Actions icon](../icons/action-menu-icon.svg) for the app that you want to delete, and click **Delete**.
 
 ## How do I stop a Cloud Foundry app?
@@ -66,7 +66,7 @@ To delete an app that you created, complete these steps:
 If you want to stop a Cloud Foundry app, complete the following steps:
 
 1. From the {{site.data.keyword.cloud_notm}} console, click **View resources** within the Resources summary section.
-1. On the My resources page, expand the sections and locate the service instance that you want to stop.
+1. On the Resource list page, expand the sections, and locate the service instance that you want to stop.
 1. Select the **Actions** ![List of actions icon](../icons/action-menu-icon.svg) menu, and then click **Stop**.
 
 ## What are toolchains?

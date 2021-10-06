@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-13"
+lastupdated: "2021-10-06"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -27,7 +27,7 @@ content-type: troubleshoot
 {: #managingapps}
 
 General problems with creating applications might include apps that can't be updated, or double-byte characters that aren't displayed. In many cases, you can recover from these problems by following a few easy steps.
-{:shortdesc}
+{: shortdesc}
 
 Have a casual question or just want to talk about all things starter kits? Come chat with the development team on [{{site.data.keyword.cloud_notm}} Dev Tools Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}. After you request your invitation, sign in and join the `#ask-your-question` channel.
 {: tip}
@@ -38,7 +38,8 @@ Have a casual question or just want to talk about all things starter kits? Come 
 
 When I try to deploy an app that I created from a starter kit, the following message is displayed:
 {: tsSymptoms}
-```
+
+```text
 Starter Kit De-Registered The starter kit associated with this app has been de-registered. The ability to download code and deploy is disabled.
 ```
 
@@ -55,7 +56,8 @@ This message occurs if you previously created an app from a starter kit that has
 
 When I click **Download code** while I'm creating my app, the following message occurs, along with a **Discard** button:
 {: tsSymptoms}
-```
+
+```text
 <filename>.zip is not commonly downloaded and may be dangerous.
 ```
 
@@ -114,7 +116,7 @@ The hardcoded credentials in the app might not be correct. Every time that the s
 Instead of hardcoding the credentials in your app, use connection parameters from the VCAP_SERVICES environment variable. The methods to use connection parameters from the VCAP_SERVICES environment variable vary depending on program languages. For example, for Node.js apps, you can use the following command:
 {: tsResolve}
 
-```
+```text
 process.env.VCAP_SERVICES
 ```
 
@@ -135,12 +137,12 @@ Other less common causes of a Bad Gateway error are internet service provider (I
 If you suspect that an {{site.data.keyword.cloud_notm}} service is down, first check the [{{site.data.keyword.cloud_notm}} status](https://cloud.ibm.com/status){: external} page. A workaround might be to [use the service in another {{site.data.keyword.cloud_notm}} region](/docs/overview?topic=overview-locations). If the service status is normal, try the following steps to solve the problem:
 {: tsResolve}
 
-  * Retry the action:
-    * Reload the page by pressing F5 on your keyboard, or by clicking **Refresh**. If this step doesn't work, clear your browser's cache and cookies, and then reload again.
-    * Use a different browser.
-    * Restart your router, your modem, and your computer. Rebooting these devices can clear up various errors that lead to the error 502.
-  * Wait and try again later. Temporary problems might occur with your internet service provider or the {{site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
-  * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site.data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-using-avatar){: external} for more information.
+   * Retry the action:
+       * Reload the page by pressing F5 on your keyboard, or by clicking **Refresh**. If this step doesn't    work, clear your browser's cache and cookies, and then reload again.
+       * Use a different browser.
+       * Restart your router, your modem, and your computer. Rebooting these devices can clear up various  errors that lead to the error 502.
+   * Wait and try again later. Temporary problems might occur with your internet service provider or the { {site.data.keyword.cloud_notm}} services. You can wait until the temporary problems are solved.
+   * If the problem still exists, contact {{site.data.keyword.cloud_notm}} support. See [Contacting {{site. data.keyword.cloud_notm}} Support](/docs/get-support?topic=get-support-using-avatar){: external} for  more information.
 
 ## Android apps can't receive {{site.data.keyword.mobilepushshort}}
 {: #ts_push}
@@ -172,17 +174,17 @@ The problem might occur if Unicode support isn't configured properly for the ser
 You can use the following code in your servlet or JSP file:
 {: tsResolve}
 
-  * In the servlet source file
-  ```java
-	response.setContentType("text/html; charset=UTF-8");
-	```
-  {: codeblock}
-
-  * In the JSP
-  ```jsp
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	```
-  {: codeblock}
+    * In the servlet source file
+    ```java
+	  response.setContentType("text/html; charset=UTF-8");
+	  ```
+    {: codeblock}
+  
+    * In the JSP
+    ```jsp
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  ```
+    {: codeblock}
 
 ## Node.js apps can't be deployed
 {: #ts_nodejs_deploy}
@@ -202,57 +204,63 @@ When you update a Node.js app or deploy your Node.js app to {{site.data.keyword.
 Possible causes are as follows:
 {: tsCauses}
 
-  * The start command isn't specified.
-  * Files that are required to deploy a Node.js app are either missing from the app or in a folder other than the root directory.
+   * The start command isn't specified.
+   * Files that are required to deploy a Node.js app are either missing from the app or in a folder other than the root directory.
 
 Use one of the following methods, depending on the cause of the problem:
 {: tsResolve}
 
-  * Specify the start command by one of the following methods:
-     * Use the Cloud Foundry command line interface. For example:
-      ```
-		  ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-		  ```
-      {: codeblock}
+   * Specify the start command by one of the following methods:
 
-    * Use the [package.json](https://www.npmjs.com/package/jsonfile){: external} file. For example:
-	    ```json
-		  {
+      * Use the Cloud Foundry command-line interface. For example:
+
+        ```text
+        ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+        ```
+        {: codeblock}
+
+      * Use the [package.json](https://www.npmjs.com/package/jsonfile){: external} file. For example:
+
+        ```json
+		    {
         ...
-  	    "scripts": {
-	 		  "start": "node app.js"
- 	    }
-	    }
-	    ```
-
-    * Use the `manifest.yml` file. For example:
-	    ```
-		  applications:
-      name: MyUniqueNodejs01
-      ...
-      command: node app.js
-      ...
-      ```
-
-  * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app.
-    The following example shows a simple `package.json` file:
-	```json
-	{
-        "name": "MyUniqueNodejs01",
-        "version": "0.0.1",
-        "description": "A sample package.json file",
-        "dependencies": {
-                "express": "3.4.x",
-                "jade": "1.1.x"
-        },
-        "engines": {
-                "node": "0.10.x"
-        },
         "scripts": {
-                  "start": "node app.js"
+        "start": "node app.js"
         }
- }
-    ```
+        }
+        ```
+        {: codeblock}
+
+      * Use the `manifest.yml` file. For example:
+
+        ```json
+        applications:
+        name: MyUniqueNodejs01
+        ...
+        command: node app.js
+        ...
+        ```
+        {: codeblock}
+
+   * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app. The following example shows a simple `package.json` file:
+   ```json
+    {
+         "name": "MyUniqueNodejs01",
+         "version": "0.0.1",
+         "description": "A sample package.json file",
+         "dependencies": {
+                 "express": "3.4.x",
+                 "jade": "1.1.x"
+         },
+         "engines": {
+                 "node": "0.10.x"
+         },
+         "scripts": {
+                   "start": "node app.js"
+         }
+    }
+   ```
+   {: codeblock}
 
 For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: external}.
 
@@ -333,7 +341,7 @@ If the app isn't running and you can't access the health endpoint, try looking a
 When you try to start Docker, the following error message is displayed:
 {: tsSymptoms}
 
-```
+```text
 An error exec: "docker": executable file not found in $PATH was encountered while the Docker image is building.
 ```
 {: screen}

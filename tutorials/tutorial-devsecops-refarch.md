@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-10-06"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -60,11 +60,11 @@ The automated infrastructure setup creates resources that are automatically prov
 
 1. Click one of the following options for the cluster deployment target. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
-  [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-kube){: external}
-  [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-openshift){: external}
-
-  Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace.
-  {: note}
+   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/ create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-kube){: external}
+   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/ create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-openshift){: external}
+ 
+   Based on which option you select, the corresponding Terraform template from this repository is  automatically imported into the new {{site.data.keyword.bpshort}} workspace.
+   {: note}
 
 1. Verify the information, and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created, and the Settings page for the {{site.data.keyword.bpshort}} workspace is displayed.
 
@@ -86,6 +86,7 @@ The automated infrastructure setup creates resources that are automatically prov
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan** to run your infrastructure code. 
    This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster. If you use an existing cluster, this step takes only a few minutes.
    {: note}
+
 1. On the {{site.data.keyword.bpshort}} Jobs page, you can view the log by expanding the job name.
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevSecOps CI toolchain. The URL is located near the end of the log file on a line that begins with "View the toolchain at:."
 
