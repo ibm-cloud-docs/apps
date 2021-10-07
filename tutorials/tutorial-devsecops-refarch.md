@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-07"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -60,8 +60,9 @@ The automated infrastructure setup creates resources that are automatically prov
 
 1. Click one of the following options for the cluster deployment target. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
-   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/ create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-kube){: external}
-   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/ create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-openshift){: external}
+   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-kube){: external}
+
+   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/ secure-openshift){: external}
  
    Based on which option you select, the corresponding Terraform template from this repository is  automatically imported into the new {{site.data.keyword.bpshort}} workspace.
    {: note}
