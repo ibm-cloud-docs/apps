@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-06"
+lastupdated: "2021-10-13"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -306,7 +306,7 @@ You can use the [Git update](https://git-scm.com/docs/git-update-index){: extern
  This problem might happen because the pipeline requires a `manifest.yml` file to deploy an app to {{site.data.keyword.cloud_notm}}.
  {: tsCauses}
 
- To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/cloud-foundry?topic=cloud-foundry-deploy_apps#appmanifest).
+ To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps#appmanifest).
  {: tsResolve}
 
 ## Exceeded your storage quota for Kubernetes clusters
