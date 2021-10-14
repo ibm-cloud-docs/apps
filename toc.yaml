@@ -1,0 +1,105 @@
+---
+toc:
+  properties:
+    subcollection: apps
+    version: 2
+    category: platform_services
+    audience: platform
+    href: /docs/apps
+    console-page: /developer/appservice/dashboard
+    product-page: https://www.ibm.com/cloud/learn/cloud-native
+    path: apps
+    label: Creating apps
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - index.md
+      - best-practice.md
+      - patterns.md
+      - starter-kits.md
+      links:
+      - link:
+          label: What is DevOps?
+          href: https://www.ibm.com/cloud/learn/devops-a-complete-guide
+
+  - navgroup:
+      id: tutorial
+      topics:
+      - tutorials/tutorial_starter-kit.md
+      - tutorials/tutorial_scratch.md
+      - tutorials/tutorial_byoc.md
+      - create-deploy-cli.md
+      - tutorials/tutorial_microservice.md
+      - tutorials/tutorial_mobile.md
+      - tutorials/tutorial-scalable-web-app-node.md
+      - tutorials/tutorial-scalable-web-app-spring.md
+      - tutorials/tutorial-scalable-web-app-liberty.md
+      - tutorials/tutorial-devsecops-refarch.md
+      - /devsecops/devsecops-tutorial-cd-devsecops
+
+  - navgroup:
+      id: howto
+      links:
+      - link:
+          label: Looking to use a language?
+          href: https://{DomainName}/docs?tab=develop
+      topics:
+      - functions.md
+      - local_apps.md
+      - topicgroup: 
+          label: Deploying apps
+          topics: 
+          - hosting.md
+          - dep-app-tool.md
+          - /containers/containers-tutorial-starterkit-kube
+          - /solution-tutorials/solution-tutorials-continuous-deployment-to-kubernetes
+      - topicgroup: 
+          label: Configuring
+          topics:
+          - service-add.md
+          - service-remove.md
+          - creds_overview.md
+          - mngdomains.md
+      - topicgroup: 
+          label: Integrating apps with DevOps
+          topics:
+          - toolchains.md
+          - insights.md
+          - monitoring_logging.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - /cli/cli-getting-started
+      - topicgroup: 
+          label: IBM Cloud developer consoles
+          links:
+          - link:
+              label: App Development
+              href: https://cloud.ibm.com/developer/appservice/dashboard
+          - link:
+              label: Apple
+              href: https://cloud.ibm.com/developer/appledevelopment/dashboard
+          - link:
+              label: Watson
+              href: https://cloud.ibm.com/developer/watson/dashboard
+      - topicgroup: 
+          label: IBM Cloud Programming Guides
+          topics:
+          - /go/go-getting-started
+          - /java/java-getting-started
+          - /swift/swift-getting-started
+          - /node/node-getting-started
+      - at-events.md
+      - ha-dr.md
+
+  - navgroup:
+      id: help
+      topics:
+      - ts_apps.md
+      - faqs.md
+      - link:
+          label: IBM Cloud Dev Tools Slack
+          href: https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com
