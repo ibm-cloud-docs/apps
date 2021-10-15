@@ -72,7 +72,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - /cli/cli-getting-started
       - topicgroup: 
           label: IBM Cloud developer consoles
           links:
@@ -92,6 +91,7 @@ toc:
           - /java/java-getting-started
           - /swift/swift-getting-started
           - /node/node-getting-started
+      - /cli/cli-getting-started
       - at-events.md
       - ha-dr.md
 
