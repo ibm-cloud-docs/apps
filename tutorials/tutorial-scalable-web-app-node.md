@@ -77,6 +77,7 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan**. 
    This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
    {: note}
+   
 1. Follow the progress of this step by clicking the **View log** link next to the corresponding step.
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevOps toolchain. The URL is located near the end of the log file on a line that begins with "View the toolchain at:."
 
