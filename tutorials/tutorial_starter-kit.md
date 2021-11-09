@@ -82,7 +82,7 @@ Starter kits are available in many languages and frameworks in the {{site.data.k
 3. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
 4. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 5. Optional. To inspect the source code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
-5. Click **Create**.
+6. Click **Create**.
 
 If you want to view the Git repo for the starter kit, click **View sample repo**.
 
