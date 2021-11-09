@@ -51,7 +51,7 @@ With {{site.data.keyword.openwhisk_short}}, you can expose your functions as web
 To expose an action as a web action, go to the **Endpoints** tab of your action, and select **Enable as Web Action**.
 
 Now, users can reach the action from a browser or cURL request, for example:
-```
+```curl
 curl https://openwhisk.cloud.ibm.com/api/v1/web/aaron.m.liberatore_dev/MyPackage/helloWorld.json?name=aaron
 ```
 {: codeblock}
