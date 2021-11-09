@@ -33,6 +33,7 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 
 ## Objectives
 {: #objectives-cli}
+
 * Create an app using the CLI commands.
 * Build and run the app.
 * Add a service to the app/modify the app.
@@ -71,6 +72,7 @@ Creating an app from a starter kit is useful if you don't already have existing 
 
     You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
     {: note}
+
 8. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
    ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
 
@@ -84,7 +86,7 @@ This option can be used if you already have an existing codebase and want to gen
 1. Log in to {{site.data.keyword.cloud_notm}} by running the **ibmcloud login** command, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: external} by running the following command in the directory of your choice.
 
-   ```
+   ```bash
    git clone https://github.com/IBM-Cloud/node-helloworld.git
    ```
    {: codeblock}
@@ -100,6 +102,7 @@ This option can be used if you already have an existing codebase and want to gen
 
    You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
    {: note}
+
 10. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
    ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
 11. Wait a few seconds for the operations to complete. 
@@ -143,15 +146,15 @@ Now that your app can run locally, you can add a service and modify some code.
 
 1. Change to the directory where your app code is located.
 
-2.  Update your app code, if necessary. For example, if you're using an {{site.data.keyword.cloud_notm}} sample app and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
+1.  Update your app code, if necessary. For example, if you're using an {{site.data.keyword.cloud_notm}} sample app and your app contains the `src/main/webapp/index.html` file, you can modify it and edit the `Thanks for creating ...` line. Ensure that the app runs locally before you deploy it to {{site.data.keyword.cloud_notm}}.
 
    Review the `README.md` file, which contains details, such as build instructions.
 
    If your app is a Liberty app, you must build it before you deploy it again.
    {: note}
 
-3. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
-   ```
+1. Log in to the {{site.data.keyword.cloud_notm}} CLI with your IBMid. If you have multiple accounts, you are prompted to select which account to use. If you do not specify a region with the `-r` flag, you must also select a region.
+   ```bash
    ibmcloud login
    ```
    {: codeblock}
@@ -167,15 +170,15 @@ If you didn't create a DevOps toolchain for your app and your app isn't yet in a
 After you create a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
 
 1. Prepare the changes to be committed.
-    ```
+    ```bash
     git add .
     ```
 2. Commit the changes with a brief message.
-    ```
+    ```bash
     git commit -m "made changes"
     ```
 3. Push the commits on the master branch to the remote repository.
-    ```
+    ```bash
     git push origin master
     ```
 4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command from the app directory.
@@ -192,14 +195,14 @@ You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completi
 
    For Cloud Foundry:
 
-    ```
+    ```bash
     ibmcloud dev deploy
     ```
     {: codeblock}
 
    For Kubernetes:
 
-    ```
+    ```bash
     ibmcloud dev deploy -t container
     ```
     {: codeblock}
