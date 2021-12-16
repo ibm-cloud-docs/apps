@@ -4,7 +4,7 @@ copyright:
    years: 2021
 lastupdated: "2021-12-16"
 
-keywords: apps, tutorial, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, terraform, schematics, satellite, quick start
+keywords: apps, tutorial, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, schematics, satellite, quick start
 
 subcollection: apps
 
