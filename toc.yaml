@@ -38,6 +38,7 @@ toc:
       - tutorials/tutorial-scalable-web-app-liberty.md
       - tutorials/tutorial-devsecops-refarch.md
       - /devsecops/devsecops-tutorial-cd-devsecops
+      - tutorials/tutorial-trysat.md
 
   - navgroup:
       id: howto
