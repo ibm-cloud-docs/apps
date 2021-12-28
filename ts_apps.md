@@ -180,6 +180,88 @@ You can use the following code in your servlet or JSP file:
    response.setContentType("text/html; charset=UTF-8");
    ```
    {: codeblock}
+  
+* In the JSP
+   ```jsp
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   ```
+   {: codeblock}
+
+## Node.js apps can't be deployed
+{: #ts_nodejs_deploy}
+{: troubleshoot}
+
+You might experience problems when you update a Node.js app or deploy a Node.js app to {{site.data.keyword.cloud_notm}}.
+
+When you update a Node.js app or deploy your Node.js app to {{site.data.keyword.cloud_notm}}, you might see one of the following error messages:
+{: tsSymptoms}
+
+`An app was not successfully detected by any available buildpack.`
+
+`Instance (index 0) failed to start accepting connections.`
+
+`Cannot get instances since staging failed.`
+
+Possible causes are as follows:
+{: tsCauses}
+
+   * The start command isn't specified.
+   * Files that are required to deploy a Node.js app are either missing from the app or in a folder other than the root directory.
+
+Use one of the following methods, depending on the cause of the problem:
+{: tsResolve}
+
+* Specify the start command by one of the following methods:
+
+   * Use the Cloud Foundry command-line interface. For example:
+
+      ```text
+      ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
+      ```
+      {: codeblock}
+
+   * Use the [package.json](https://www.npmjs.com/package/jsonfile){: external} file. For example:
+
+      ```json
+      {
+      ...
+      "scripts": {
+      "start": "node app.js"
+      }
+      }
+      ```
+      {: codeblock}
+
+   * Use the `manifest.yml` file. For example:
+
+      ```json
+      applications:
+      name: MyUniqueNodejs01
+      ...
+      command: node app.js
+      ...
+      ```
+      {: codeblock}
+
+* Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app. The following example shows a simple `package.json` file:
+   ```json
+    {
+         "name": "MyUniqueNodejs01",
+         "version": "0.0.1",
+         "description": "A sample package.json file",
+         "dependencies": {
+                 "express": "3.4.x",
+                 "jade": "1.1.x"
+         },
+         "engines": {
+                 "node": "0.10.x"
+         },
+         "scripts": {
+                   "start": "node app.js"
+         }
+    }
+   ```
+   {: codeblock}
 
 * In the JSP
    ```jsp

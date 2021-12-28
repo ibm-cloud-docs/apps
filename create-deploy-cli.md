@@ -40,10 +40,8 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
 
-## Creating an app
-{: step}
-
 ### Creating an app from a starter kit
+{: step}
 {: #create-app-cli}
 
 Creating an app from a starter kit is useful if you don't already have existing code to begin with and would rather start from a language or a framework starter template.
@@ -71,6 +69,7 @@ Creating the app and toolchain takes a few seconds to complete. The app is creat
 
 ### Creating an app from your own code
 {: #byoc-cli}
+{: step}
 
 This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command. This command is in beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
 
@@ -176,6 +175,7 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
 
 ### Deploying your app manually
 {: #deploy-cli-manual}
+{: step}
 
 When you use [`ibmcloud dev create`](/docs/cli?topic=cli-idt-cli#create), you're prompted to choose between a DevOps deployment or a manual deployment. When you choose the manual deployment option, the app is created and saved into your current directory, but it's not automatically deployed.
 
