@@ -2,7 +2,7 @@
 
 copyright:
    years: 2020, 2021
-lastupdated: "2021-08-26"
+lastupdated: "2021-12-30"
 
 keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial, java spring tutorial, spring tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
@@ -11,6 +11,7 @@ subcollection: apps
 content-type: tutorial
 services: schematics, terraform, openshift, containers
 account-plan: paid
+deployable: quickstart
 completion-time: 45m
 
 ---
@@ -51,7 +52,7 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 {: #spring-schematics-workspace}
 {: step}
 
-1. Click one of the following options for the cluster deployment target and toolchain pipeline type. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
+1. Click one of the following options for the cluster deployment target and toolchain pipeline type. This action takes you to the Deploy to {{site.data.keyword.cloud_notm}} page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
    The following options use the [simple-helm-toolchain template](https://github.com/open-toolchain/simple-helm-toolchain){: external}, which uses a classic pipeline structure.
 
@@ -76,7 +77,7 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Activity page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan**. This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
 1. Follow the progress of this step by clicking the **View log** link next to the corresponding step.
-1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevOps toolchain. The URL is located near the end of the log file on a line that begins with "View the toolchain at:."
+1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevOps toolchain. The URL is located near the end of the log file on a line that begins with `View the toolchain at:`.
 
 If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created.
 {: note}

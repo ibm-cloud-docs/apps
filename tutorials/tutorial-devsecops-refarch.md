@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021
-lastupdated: "2021-10-07"
+lastupdated: "2021-12-30"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -11,6 +11,7 @@ subcollection: apps
 content-type: tutorial
 services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
 account-plan: paid
+deployable: quickstart
 completion-time: 1h
 
 ---
@@ -22,6 +23,7 @@ completion-time: 1h
 {:tip: .tip}
 {:note: .note}
 {:important: .important}
+{:term: .term}
 {:external: target="_blank" .external}
 {:step: data-tutorial-type='step'}
 
@@ -34,9 +36,9 @@ completion-time: 1h
 Use this tutorial for automated setup of the infrastructure for your CI and CD toolchains by using a Terraform-based quick start template. The template uses DevSecOps best practices of compliance and security. The template uses an [{{site.data.keyword.bplong}} workspace](/docs/schematics?topic=schematics-about-schematics), which automates the creation of the required infrastructure for securely deploying your app to either Kubernetes or Red Hat&reg; OpenShift&reg;. The template uses the DevSecOps {{site.data.keyword.contdelivery_full}} toolchain pipeline structure. The toolchain is preconfigured for continuous delivery with inventory integration, change management, evidence collection, and deployment.
 {: shortdesc}
 
-{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is an open source software that is developed by HashiCorp that enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
+{{site.data.keyword.bplong_notm}} delivers Terraform-as-a-Service so that you can use a high-level scripting language to model the resources that you want in your {{site.data.keyword.cloud_notm}} environment, and enable Infrastructure as Code (IaC). [Terraform](https://www.terraform.io/){: external} is open source software that is developed by HashiCorp. Terraform enables predictable and consistent resource provisioning to rapidly build complex, multitier cloud environments.
 
-In this tutorial, you follow three easy steps to create a {{site.data.keyword.bpshort}} workspace, apply a Terraform execution plan, and update the environment properties value. When you apply the plan, the {{site.data.keyword.bpshort}} workspace sets up your secure infrastructure. This infrastructure is shareable with your team, and it works for the DevSecOps CI and CD toolchain templates.
+In this tutorial, you follow three easy steps to create a {{site.data.keyword.bpshort}} workspace, apply a Terraform execution plan, and update the environment properties value. When you apply the plan, the {{site.data.keyword.bpshort}} workspace sets up your secure infrastructure. This infrastructure is shareable with your team, and it works for the [DevSecOps](#x9892260){: term} CI and CD toolchain templates.
 
 The automated infrastructure setup creates resources that are automatically provisioned by using the default values from the DevSecOps CI and CD templates. You can find the default values in the **Variables** section of the {{site.data.keyword.bpshort}} workspace. The following resources are created:
 
@@ -58,7 +60,7 @@ The automated infrastructure setup creates resources that are automatically prov
 {: #devsecops-schematics-workspace}
 {: step}
 
-1. Click one of the following options for the cluster deployment target. This action takes you to the "Deploy to {{site.data.keyword.cloud_notm}}" page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
+1. Click one of the following options for the cluster deployment target. This action takes you to the Deploy to {{site.data.keyword.cloud_notm}} page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
    [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-kube)
 
@@ -89,7 +91,7 @@ The automated infrastructure setup creates resources that are automatically prov
    {: note}
 
 1. On the {{site.data.keyword.bpshort}} Jobs page, you can view the log by expanding the job name.
-1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevSecOps CI toolchain. The URL is located near the end of the log file on a line that begins with "View the toolchain at:."
+1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevSecOps CI toolchain. The URL is located near the end of the log file on a line that begins with `View the toolchain at:`.
 
 If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. However if you override the default cluster name, that cluster is used.
 {: important}
