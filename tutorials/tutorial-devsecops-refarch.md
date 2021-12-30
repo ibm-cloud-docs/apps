@@ -8,7 +8,7 @@ keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, au
 
 subcollection: apps
 content-type: tutorial
-services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
+services: schematics, terraform, openshift, containers, ContinuousDelivery
 account-plan: paid
 deployable: quickstart
 completion-time: 1h
