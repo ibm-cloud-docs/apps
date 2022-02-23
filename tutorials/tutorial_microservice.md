@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2021
-lastupdated: "2021-10-06"
+  years: 2016, 2022
+lastupdated: "2022-02-23"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 content-type: tutorial
@@ -47,7 +47,7 @@ Use this tutorial to create an application from a Microservice Basic Starter. Us
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
-* Depending on your [{{site.data.keyword.cloud}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
+* Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
 * Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
@@ -58,9 +58,9 @@ For more information about requirements for specific deployment targets, see the
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
-| {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](https://{DomainName}/account/cloud-foundry). [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](https://{DomainName}/account/cloud-foundry). |
+| {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](/account/cloud-foundry){: external}. [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](/account/cloud-foundry){: external}. |
 | {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. With either paid or free account plans, select this option to experiment with your starter kit in a Kubernetes environment. |
-| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](https://{DomainName}/kubernetes/overview).|
+| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](/kubernetes/overview){: external}.|
 | {{site.data.keyword.codeenginefull}} | Ensure that you have either a Pay-As-You-Go account or a Subscription account to use {{site.data.keyword.codeengineshort}} as your deployment target. If you are using a free Lite account, upgrade it before you use {{site.data.keyword.codeengineshort}}. [Learn more about accounts.](/docs/account) |
 
 ## Creating your app
@@ -69,11 +69,11 @@ For more information about requirements for specific deployment targets, see the
 
 You can use a starter kit to create a microservice app. To locate the starter kits and create an app, complete these steps:
 
-1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/starter-kits){: external}.
 1. Type `microservice` in the search bar to filter the list of starter kits.
 1. Select a microservice starter kit to view details about it.
 1. Select the **Create** tab.
-1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](/account/resource-groups){: external}.
 1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 1. Optional. To inspect your code before you add services or deploy your app, click **View source code**. The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 1. Click **Create**.
@@ -108,7 +108,7 @@ To deploy your app, complete the following steps:
    * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an  existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 -  20 minutes for the cluster to be provisioned, and then select the region and cluster name.
    * **Red Hat OpenShift on IBM Cloud**. If you have an available [OpenShift cluster](/docs/openshift? topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an  available cluster, you must create one before you continue. Your cluster creation might take some time  to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component  take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web  console and other routes.
    * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the  underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
-   * **Code Engine**. With this option, select your container registry region, container registry  namespace, and region. Then, select a project name that exists within your {{site.data.keyword.cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain  creates one for you during the deployment process. Optionally, you can create a project in the [{{site. data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects).
+   * **Code Engine**. With this option, select your container registry region, container registry  namespace, and region. Then, select a project name that exists within your {{site.data.keyword.cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain  creates one for you during the deployment process. Optionally, you can create a project in the [{{site. data.keyword.codeengineshort}} console](/codeengine/projects){: external}.
 3. Create an {{site.data.keyword.cloud_notm}} API key, or select an existing one from a secrets store.
 4. Complete the required fields for your deployment type, and click **Next**.
 5. Provide a name for your DevOps toolchain.
@@ -173,7 +173,7 @@ For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can vie
 
 * On the App details page, click the **App URL** link.
 
-* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects), click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
+* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](/codeengine/projects){: external}, click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
 
 ### Apps that are deployed to Cloud Foundry
 {: #view-cf-app-microservice}

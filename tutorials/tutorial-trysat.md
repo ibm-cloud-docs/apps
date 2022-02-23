@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021
-lastupdated: "2021-12-16"
+   years: 2021, 2022
+lastupdated: "2022-02-23"
 
 keywords: apps, tutorial, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, schematics, satellite, quick start
 
@@ -66,7 +66,7 @@ This solution is not an officially supported IBM product; any support is on an u
       * You might want to change the name of the {{site.data.keyword.satelliteshort}} location to something more    easy-to-remember, for example `try-sat-1`.
       * You might want to change the resource group for the {{site.data.keyword.satelliteshort}} location to suit your {{site.data.keyword.cloud_notm}} account.
    
-1. Track the creation of your AWS location by using the [{{site.data.keyword.bpshort}} workspace](https://{DomainName}/schematics/workspaces){: external}.
+1. Track the creation of your AWS location by using the [{{site.data.keyword.bpshort}} workspace](/schematics/workspaces){: external}.
    1. From the {{site.data.keyword.satelliteshort}} console, select **Manage in Schematics**.
    1. From the {{site.data.keyword.bpshort}} console, click the name of your workspace.
    1. Select **Jobs** from the navigation pane, and then find the current job row, and click **View log** to review the log details.

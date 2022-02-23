@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2020
-lastupdated: "2020-07-10"
+  years: 2016, 2022
+lastupdated: "2022-02-23"
 
 keywords: supported architecture, supported languages cloud, web app, microservices, mobile, programming languages, app types, common architecture, cloud app, developer console, app service
 
@@ -31,7 +31,7 @@ The web app starter kits produce backend apps that serve web content such as HTM
 * Basic - serves a static `index.html` file, default and empty stylesheet, and JavaScript file.
 * React - a rich framework to build user interfaces. The source files are in `src/client/app`, and are compiled with WebPack and served in the public directory.
 
-You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/starter-kits){: external}.
 
 For more information, see [Creating an app with a starter kit](/docs/apps?topic=apps-tutorial-starterkit).
 
@@ -42,7 +42,7 @@ If you want to create a web app that you can customize, see [Creating a custom a
 
 Microservice apps provide the foundation for building backend microservices, including a basic health endpoint and REST API. Generated apps include all the dependencies required both for the microservice itself, and for any attached cloud service.
 
-Select a microservice starter kit for your language and framework requirements. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+Select a microservice starter kit for your language and framework requirements. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/starter-kits){: external}.
 
 For more information, see [Creating microservice apps](/docs/apps?topic=apps-tutorial-microservice).
 
@@ -51,7 +51,7 @@ For more information, see [Creating microservice apps](/docs/apps?topic=apps-tut
 
 Mobile apps are different from the other patterns because they have a significant client-side component. The pattern might include direct connection to mobile services like push notifications, authentication, and mobile analytics. Mobile services are known as Mobile Backend as a Service or MBaaS pattern. They also might have a dedicated Backend-for-frontend.
 
-{{site.data.keyword.cloud_notm}} offers mobile starter kits for iOS Swift and Android. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+{{site.data.keyword.cloud_notm}} offers mobile starter kits for iOS Swift and Android. You can find starter kits on the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/starter-kits){: external}.
 
 Additionally, you can create a custom mobile app by using a basic starter kit and selecting the mobile app type.
 

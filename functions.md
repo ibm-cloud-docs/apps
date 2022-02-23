@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2020
-lastupdated: "2020-07-10"
+  years: 2018, 2022
+lastupdated: "2022-02-23"
 
 keywords: apps, serverless, serverless app, functions, cli, api, sdk, create serverless app, serverless app tutorial, cloud functions, faas, function as a service
 
@@ -34,12 +34,12 @@ For more detailed information about {{site.data.keyword.openwhisk_short}}, check
 ## Developing with the {{site.data.keyword.openwhisk_short}} UI
 {: #serverless-apps-ui}
 
-Try out {{site.data.keyword.openwhisk_short}} in your [browser](https://{DomainName}/functions/actions){: external}. Go to the [Concepts](https://{DomainName}/functions/learn){: external} page for a quick tour of the {{site.data.keyword.openwhisk_short}} UI.
+Try out {{site.data.keyword.openwhisk_short}} in your [browser](/functions/actions){: external}. Go to the [Concepts](/functions/learn){: external} page for a quick tour of the {{site.data.keyword.openwhisk_short}} UI.
 
 ## Developing with the CLI
 {: #openwhisk_start_configure_cli}
 
-To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](https://{DomainName}/functions/cli){: external}.
+To learn more about installing and developing with the {{site.data.keyword.openwhisk_short}} CLI, see [Setting up the {{site.data.keyword.openwhisk_short}} CLI](/functions/cli){: external}.
 
 ## Exposing APIs and data sets as web actions
 {: #expose-actions}

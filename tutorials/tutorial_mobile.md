@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-06"
+  years: 2018, 2022
+lastupdated: "2022-02-23"
 
 keywords: apps, mobile, mobile app, starter kit, developer tools, devops toolchain, toolchain, create mobile app, mobile starter kit, android, ios, swift, xcode
 content-type: tutorial
@@ -40,7 +40,7 @@ Use this tutorial to create a mobile app using an {{site.data.keyword.cloud}} mo
 ## Before you begin
 {: #prereqs-mobile}
 
-* Depending on your [{{site.data.keyword.cloud}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
+* Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
 * Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
@@ -53,11 +53,11 @@ Use this tutorial to create a mobile app using an {{site.data.keyword.cloud}} mo
 
 To create a mobile app by using a starter kit, complete these steps:
 
-1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+1. Go to the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/starter-kits){: external}.
 1. Type `mobile` in the search bar to filter the list of starter kits.
 1. Select a mobile starter kit to view details about it.
 1. Select the **Create** tab.
-1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+1. On the App details page for the starter kit, enter a name for your app, and select a resource group. If a resource group doesn't exist, you must [create one](/account/resource-groups){: external}.
 1. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 1. Select your language. For this tutorial, select **iOS Swift**. Some starter kits might be available in only one language.
 1. Select your pricing plan. Use the **Lite** option for this tutorial. If any services are required, they are automatically defined in the starter kit.
@@ -70,10 +70,10 @@ To create a custom mobile app, complete these steps:
 
 1. From your [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external}, click **Create an app** in the Apps tile.
 
-   You can also create a custom mobile app from the [App Development console](https://{DomainName}/developer/appservice/starter-kits){: external}.
+   You can also create a custom mobile app from the [App Development console](/developer/appservice/starter-kits){: external}.
    {: tip}
 
-2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+2. On the App details page, enter a name your app, and select a resource group. If a resource group doesn't exist, you must [create one](/account/resource-groups){: external}.
 3. Optional. Provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag).
 4. Select **Create a new app** as a starting point.
 5. Select **Mobile** as the app type.

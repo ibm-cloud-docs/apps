@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2020, 2021
-lastupdated: "2021-12-30"
+   years: 2020, 2022
+lastupdated: "2022-02-23"
 
 keywords: apps, scalable web apps, web apps, node apps, nodejs, tutorial, nodejs tutorial, node tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
@@ -46,7 +46,7 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 ## Before you begin
 {: #nodejs-prereqs}
 
-* Set up an [{{site.data.keyword.cloud_notm}} account](https://{DomainName}/registration). Depending on your {{site.data.keyword.cloud_notm}} account type, access to certain resources might be limited. Depending on your account plan limits, certain capabilities that are required by some DevOps toolchains might not be available. For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started) and [Upgrading your account](/docs/account?topic=account-upgrading-account).
+* Set up an [{{site.data.keyword.cloud_notm}} account](/registration){: external}. Depending on your {{site.data.keyword.cloud_notm}} account type, access to certain resources might be limited. Depending on your account plan limits, certain capabilities that are required by some DevOps toolchains might not be available. For more information, see [Setting up your {{site.data.keyword.cloud_notm}} account](/docs/account?topic=account-account-getting-started) and [Upgrading your account](/docs/account?topic=account-upgrading-account).
 
 ## Create a {{site.data.keyword.bpshort}} workspace
 {: #nodejs-schematics-workspace}

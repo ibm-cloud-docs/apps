@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-03-26"
+  years: 2018, 2022
+lastupdated: "2022-02-23"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code, migrate code
 content-type: tutorial
@@ -47,7 +47,7 @@ If you have an application in an existing repository, use this tutorial to creat
 
 For all deployment targets, ensure that you're aware of the following requirements:
 
-* Depending on your [{{site.data.keyword.cloud_notm}} account type](https://{DomainName}/registration), access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
+* Depending on your [{{site.data.keyword.cloud_notm}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
 * Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
    * See [What makes a good app?](/docs/apps?topic=apps-best-practice) for best practices for creating apps.
@@ -60,9 +60,9 @@ For more information about requirements for specific deployment targets, see the
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
-| {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](https://{DomainName}/account/cloud-foundry). [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](https://{DomainName}/account/cloud-foundry). |
+| {{site.data.keyword.cloud_notm}} Foundry | Ensure that you have access to a [Cloud Foundry org and space](/account/cloud-foundry){: external}. [Learn more](/docs/account?topic=account-orgsspacesusers) or [create a Cloud Foundry org](/account/cloud-foundry){: external}. |
 | {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. With either paid or free account plans, select this option to experiment with your starter kit in a Kubernetes environment. |
-| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](https://{DomainName}/kubernetes/overview).|
+| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-getting-started) or [create an OpenShift cluster](/kubernetes/overview){: external}.|
 | {{site.data.keyword.codeenginefull}} | Ensure that you have either a Pay-As-You-Go account or a Subscription account to use {{site.data.keyword.codeengineshort}} as your deployment target. If you are using a free Lite account, upgrade it before you use {{site.data.keyword.codeengineshort}}. [Learn more about accounts.](/docs/account) |
 
 ## Creating an app by using an existing repository
@@ -71,9 +71,9 @@ For more information about requirements for specific deployment targets, see the
 
 To create an app record and connect it with your source repo, complete these steps:
 
-From the [{{site.data.keyword.cloud_notm}} App Development console](https://{DomainName}/developer/appservice/dashboard){: external}, click **Get a Starter Kit**.
+From the [{{site.data.keyword.cloud_notm}} App Development console](/developer/appservice/dashboard){: external}, click **Get a Starter Kit**.
 2. Click the **Create App** tile, and then select the **Create** tab.
-3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag). If a resource group doesn't exist, you must [create one](https://{DomainName}/account/resource-groups){: external}.
+3. Name your app, select a resource group, and optionally provide tags to classify your app. For more information, see [Working with tags](/docs/account?topic=account-tag). If a resource group doesn't exist, you must [create one](/account/resource-groups){: external}.
 4. Select **Bring your own code**, and provide the URL to your Git repository. Your app and Docker image must be located in the same repo.
 5. Click **Create**. The App details page is displayed.
 
@@ -198,7 +198,7 @@ For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can vie
 
 * On the App details page, click the **App URL** link.
 
-* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](https://{DomainName}/codeengine/projects), click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
+* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](/codeengine/projects){: external}, click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
 
 ### Apps that are deployed to Cloud Foundry
 {: #view-cf-app-byoc}
