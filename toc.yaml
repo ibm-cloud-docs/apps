@@ -36,6 +36,8 @@ toc:
       - tutorials/tutorial-scalable-web-app-node.md
       - tutorials/tutorial-scalable-web-app-spring.md
       - tutorials/tutorial-scalable-web-app-liberty.md
+      - tutorials/tutorial-code-engine.md
+      - /ContinuousDelivery/ContinuousDelivery-tutorial-cd-code-engine
       - tutorials/tutorial-devsecops-refarch.md
       - /devsecops/devsecops-tutorial-cd-devsecops
       - tutorials/tutorial-trysat.md
@@ -92,7 +94,6 @@ toc:
           - /java/java-getting-started
           - /swift/swift-getting-started
           - /node/node-getting-started
-      - /cli/cli-getting-started
       - at-events.md
       - ha-dr.md
 
