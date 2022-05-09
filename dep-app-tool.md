@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-05-04"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -86,7 +86,7 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} consol
 1. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
 1. Click **Create**.
 
-The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipeline** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
+The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipelines** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Deploying your app manually
 {: deploy-console-manual}
