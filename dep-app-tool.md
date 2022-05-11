@@ -25,7 +25,7 @@ subcollection: apps
 {{site.data.keyword.cloud}} provides a web console where you can configure continuous delivery and deploy your application by using a DevOps toolchain. With a DevOps toolchain, you can automate deployments to many environments and quickly add monitoring, logging, insights, and alert services to help manage your app as it grows.
 {: shortdesc}
 
-You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI). For information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
+You can configure continuous delivery and deploy your app by using either the {{site.data.keyword.cloud}} console or the {{site.data.keyword.dev_cli_short}} [(**ibmcloud dev**)](/docs/cli?topic=cli-idt-cli) commands in the {{site.data.keyword.cloud_notm}} Command Line Interface (CLI). For more information about deploying your app by using the CLI, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
 {: tip}
 
 When you select a deployment target while you're creating an app, a DevOps toolchain is automatically created for your app. The toolchain includes a Delivery Pipeline that indicates your app’s deployment status. The new app is pushed to a GitLab repo that is part of the toolchain.
@@ -53,7 +53,7 @@ For all deployment targets, ensure that you're aware of the following requiremen
 ### For specific deployment targets
 {: #prereq-deploy-specific}
 
-For information about requirements for specific deployment targets, see the following table.
+For more information about requirements for specific deployment targets, see the following table.
 
 | Deployment target | Prerequisites | 
 |--------|---------------|
@@ -105,6 +105,28 @@ To manually deploy your app from your DevOps toolchain, complete these steps:
 If you make any changes to your app or the toolchain, such as adding or removing a service, be sure to deploy the app again.
 {: important}
 
+## Verifying that your app is running
+{: #verify-runningapp}
+
+After your app is built and deployed, you can view the app's URL to make sure that it's running. You can view the app's status in the following ways:
+
+* In the **Details** tile on the App details page, click the URL that is displayed in the **App URL** field.
+* Find the app's URL in the command line by running the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command.
+
+## Viewing the deployment target
+{: #deploy-target-view}
+
+After your app is built and deployed, you can view its deployment target from the App details page.
+
+In the **Details** tile, click the URL that is displayed in the **Deployment target** field. For example, if your app is deployed to a Kubernetes cluster, clicking the URL opens your cluster details in a separate browser tab.
+
+### Apps that are deployed to {{site.data.keyword.codeengineshort}}
+{: #view-codeengine-runningapp}
+
+For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can also view the app's status from the [{{site.data.keyword.codeengineshort}} console](/codeengine/projects){: external}.
+
+* On the Projects page in the {{site.data.keyword.codeengineshort}} console, click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
+
 ## Related information
 {: deploy-related-info}
 
@@ -113,49 +135,6 @@ For more information, see:
 * [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
 * [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: external}
 * [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: external}
-
-## Verifying that your app is running
-{: #verify-runningapp}
-
-After your app is built and deployed, you can view the app's URL to make sure that it's running. You can view the app's status in the following ways:
-
-* In the **Details** tile on the App details page, click the URL that is displayed in the **App URL** field.
-
-### Apps that are deployed to a Kubernetes cluster
-{: #view-kube-runningapp}
-
-For apps that are deployed to a Kubernetes cluster, you can view the app's URL in either the Delivery Pipeline or the command line.
-
-1. On the App details page, click the name of the Delivery Pipeline.
-2. On the Delivery Pipeline page, click **View logs and history** in the **Deploy Stage** tile.
-3. In the log file, find the app's URL:
-
-    At the end of the log file, search for the word `url` or `view`. For example, you might see a line in the log file that's similar to `urls: <my-app-devhost>.appdomain.cloud` or `VIEW THE APPLICATION AT: http://<ipaddress>:<port>`.
-
-4. Go to the URL in your browser. If the app is running, a message that includes `Congratulations` or `{"status":"UP"}` is displayed.
-
-If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
-
-### Viewing your app's Kubernetes cluster
-{: #view-kube-cluster-runningapp}
-
-If you want to view the cluster where your app is deployed, click **View Kubernetes cluster** on the App details page.
-
-### Apps that are deployed to {{site.data.keyword.codeengineshort}}
-{: #view-codeengine-runningapp}
-
-For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can view the app's status in either of the following ways:
-
-* On the App details page, click the **App URL** link.
-
-* On the Projects page in the [{{site.data.keyword.codeengineshort}} console](/codeengine/projects){: external}, click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
-
-### Apps that are deployed to Cloud Foundry
-{: #view-cf-runningapp}
-
-You can view the app's URL from the App details page by clicking **Visit App URL**. If the app is running, a message that includes `Congratulations` is displayed.
-
-If you are using the command line, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command to view the URL of your app. Then, go to the URL in your browser.
 
 ## Next steps
 {: #next-steps-deployapps}
