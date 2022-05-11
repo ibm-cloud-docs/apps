@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-05-04"
+lastupdated: "2022-05-11"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -79,19 +79,18 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} consol
    * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 -  20 minutes for the cluster to be provisioned, and then select the region and cluster name.
    * **Red Hat OpenShift on {{site.data.keyword.cloud_notm}}**. If you have an available [OpenShift cluster](/docs/openshift? topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an available cluster, you must create one before you continue. Your cluster creation might take some time to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web console and other routes.
    * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
-   * **Code Engine**. With this option, select your container registry region, container registry  namespace, and region. Then, select a project name that exists within your {{site.data.keyword.cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain  creates one for you during the deployment process. Optionally, you can create a project in the [{{site. data.keyword.codeengineshort}} console](/codeengine/projects){: external}.
+   * **Code Engine**. With this option, select your container registry region, container registry  namespace, and region. Then, select a project name that exists within your {{site.data.keyword.cloud_notm}} resource group. If you don't have a project, enter a project name, and the DevOps toolchain creates one for you during the deployment process. Optionally, you can create a project in the [{{site. data.keyword.codeengineshort}} console](/codeengine/projects){: external}.
 1. Create an {{site.data.keyword.cloud_notm}} API key, or select an existing one from a secrets store.
 1. Complete the required fields for your deployment type, and click **Next**.
-1. Provide a name for your DevOps toolchain.
-1. Select the region to create your toolchain in, and then select the [resource group](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains-iam-security) that provides access to your new toolchain.
-1. Click **Create**.
+1. On the Configure the DevOps toolchain page, provide a name for the DevOps toolchain.
+1. Select the region to create your toolchain in, and then click **Create**.
 
 The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipelines** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
 
 ## Deploying your app manually
 {: deploy-console-manual}
 
-Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub. With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo. 
+Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub. With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo.
 
 To manually deploy your app from your DevOps toolchain, complete these steps:
 
@@ -106,7 +105,6 @@ For more information, see:
 * [Creating toolchains](/docs/ContinuousDelivery?topic=ContinuousDelivery-toolchains_getting_started)
 * [Build from a pull request in the Continuous Delivery Pipeline](https://www.ibm.com/cloud/blog/build-from-a-pull-request-in-the-continuous-delivery-pipeline){: external}
 * [Get Help from the IBM Cloud Continuous Delivery Development Team on Slack](https://www.ibm.com/cloud/blog/reach-out-to-the-ibm-cloud-development-teams-on-slack){: external}
-
 
 ## Verifying that your app is running
 {: #verify-runningapp}
