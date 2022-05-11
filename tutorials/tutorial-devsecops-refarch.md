@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-05-11"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
