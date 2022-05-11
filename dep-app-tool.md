@@ -64,18 +64,17 @@ For information about requirements for specific deployment targets, see the foll
 
 ## Before you deploy
 
-Get started by [creating your app](/docs/apps?topic=apps-getting-started) from the {{site.data.keyword.cloud_notm}} console in either of the following ways:
- * Use the Apps tile on the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} to use a blank starter kit or to bring your own code.
- * Use a [starter kit](/developer/appservice/starter-kits){: external}.
+Get started by [creating your app](/docs/apps?topic=apps-getting-started) by using a [starter kit](/developer/appservice/starter-kits){: external} from the {{site.data.keyword.cloud_notm}} console.
 
 ## Deploying your app automatically
 {: deploy-console-auto}
 
-All toolchains that are created from the {{site.data.keyword.cloud_notm}} console are configured for automatic deployment.
-{: note}
+To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
-1. On the App details page for your app, click **Deploy your app**.
-1. On the Deploy your app page, select a deployment target. Set up your deployment target according to the instructions for the target that you select:
+To configure the settings for your deployment target, complete the following steps:
+
+1. In the **Deployment Automation** tile, click **Deploy your app**.
+1. On the Deployment Automation page, select a deployment target. Set up your deployment target according to the instructions for the target that you select:
    * **IBM Kubernetes Service**. With this option, you can either create a cluster or [deploy to an existing Kubernetes cluster](/docs/containers?topic=containers-app). If you create a cluster, allow 10 -  20 minutes for the cluster to be provisioned, and then select the region and cluster name.
    * **Red Hat OpenShift on {{site.data.keyword.cloud_notm}}**. If you have an available [OpenShift cluster](/docs/openshift? topic=openshift-openshift_apps), you can select it from the **Cluster name** list. If you don't have an available cluster, you must create one before you continue. Your cluster creation might take some time to complete. After the cluster state shows **Normal**, the cluster network and load-balancing component take about 10 more minutes to deploy and update the cluster domain that you use for the OpenShift web console and other routes.
    * **Cloud Foundry**. This option deploys your cloud-native app without you needing to manage the underlying infrastructure. For more information, see [Deploying apps to Cloud Foundry Public](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps).
@@ -85,7 +84,12 @@ All toolchains that are created from the {{site.data.keyword.cloud_notm}} consol
 1. On the Configure the DevOps toolchain page, provide a name for the DevOps toolchain.
 1. Select the region to create your toolchain in, and then click **Create**.
 
-The DevOps toolchain is created automatically, and the deployment process begins. You can view the deployment status in the **Delivery Pipelines** tile, or you can click the name of the Delivery Pipeline. The **Build Stage** and **Deploy Stage** tiles indicate the status.
+After you click **Create**, the Continuous Delivery service is enabled, the DevOps toolchain is created automatically, and the deployment process begins. Note that the deployment status continues to update in the **Delivery Pipelines** tile.
+
+The deployment process might take a while to complete. After the deployment is complete, the ci-pipeline status is **Success**, and the **App URL** field is populated.
+
+   Alternatively, you can deploy your app from the command line by running the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
+   {: tip}
 
 ## Deploying your app manually
 {: deploy-console-manual}
@@ -94,8 +98,12 @@ Continuous delivery is automatically enabled for some apps. You can enable conti
 
 To manually deploy your app from your DevOps toolchain, complete these steps:
 
-1. On the App details page for your app, click the Delivery Pipeline name.
-2. On the Delivery Pipeline page, you can start builds, change the deployment configuration, and view logs and history.
+1. In the **Delivery Pipelines** tile, click the name of the delivery pipeline, such as **ci-pipeline**. A new browser tab opens the pipeline dashboard.
+1. Click **Run pipeline**.
+1. On the Run pipeline page, click **Run**.
+
+If you make any changes to your app or the toolchain, such as adding or removing a service, be sure to deploy the app again.
+{: important}
 
 ## Related information
 {: deploy-related-info}
@@ -109,7 +117,9 @@ For more information, see:
 ## Verifying that your app is running
 {: #verify-runningapp}
 
-After your app is built and deployed, you can view the app's URL to make sure that it's running.
+After your app is built and deployed, you can view the app's URL to make sure that it's running. You can view the app's status in the following ways:
+
+* In the **Details** tile on the App details page, click the URL that is displayed in the **App URL** field.
 
 ### Apps that are deployed to a Kubernetes cluster
 {: #view-kube-runningapp}
