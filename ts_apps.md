@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-13"
+  years: 2015, 2022
+lastupdated: "2022-05-17"
 
 keywords: apps, application, troubleshooting, debug apps, known issues, debug, help, configuration, app, troubleshoot, error, errors, failure, failed, fail, issues, applications
 
@@ -78,9 +78,7 @@ My existing apps are hosted in the `mybluemix.net` domain, but my newer apps are
 
 A new host name option `*.appdomain.cloud` is available on cloud.ibm.com.
 
-Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}} or Cloud Foundry. Any apps that you have hosted on `mybluemix.net` are not impacted.
-
-The subdomain for Cloud Foundry apps is `cf.appdomain.cloud`. The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
+Previously, the `mybluemix.net` domain was used for hosting apps in various deployment targets, such as {{site.data.keyword.containerlong_notm}}. Any apps that you have hosted on `mybluemix.net` are not impacted.
 
 For more information, see [Managing your domains](/docs/apps?topic=apps-update-domain).
 
@@ -185,129 +183,6 @@ You can use the following code in your servlet or JSP file:
 	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	  ```
     {: codeblock}
-
-## Node.js apps can't be deployed
-{: #ts_nodejs_deploy}
-{: troubleshoot}
-
-You might experience problems when you update a Node.js app or deploy a Node.js app to {{site.data.keyword.cloud_notm}}.
-
-When you update a Node.js app or deploy your Node.js app to {{site.data.keyword.cloud_notm}}, you might see one of the following error messages:
-{: tsSymptoms}
-
-`An app was not successfully detected by any available buildpack.`
-
-`Instance (index 0) failed to start accepting connections.`
-
-`Cannot get instances since staging failed.`
-
-Possible causes are as follows:
-{: tsCauses}
-
-   * The start command isn't specified.
-   * Files that are required to deploy a Node.js app are either missing from the app or in a folder other than the root directory.
-
-Use one of the following methods, depending on the cause of the problem:
-{: tsResolve}
-
-   * Specify the start command by one of the following methods:
-
-      * Use the Cloud Foundry command-line interface. For example:
-
-        ```text
-        ibmcloud cf push MyUniqueNodejs01 -p app_path -c "node app.js"
-        ```
-        {: codeblock}
-
-      * Use the [package.json](https://www.npmjs.com/package/jsonfile){: external} file. For example:
-
-        ```json
-		    {
-        ...
-        "scripts": {
-        "start": "node app.js"
-        }
-        }
-        ```
-        {: codeblock}
-
-      * Use the `manifest.yml` file. For example:
-
-        ```json
-        applications:
-        name: MyUniqueNodejs01
-        ...
-        command: node app.js
-        ...
-        ```
-        {: codeblock}
-
-   * Ensure that a `package.json` file exists in your Node.js app so that the Node.js buildpack can recognize the app. Ensure that this file is in the root directory of your app. The following example shows a simple `package.json` file:
-   ```json
-    {
-         "name": "MyUniqueNodejs01",
-         "version": "0.0.1",
-         "description": "A sample package.json file",
-         "dependencies": {
-                 "express": "3.4.x",
-                 "jade": "1.1.x"
-         },
-         "engines": {
-                 "node": "0.10.x"
-         },
-         "scripts": {
-                   "start": "node app.js"
-         }
-    }
-   ```
-   {: codeblock}
-
-For more tips about Node.js apps, see [Tips for Node.js Applications](https://docs.cloudfoundry.org/buildpacks/node/node-tips.html){: external}.
-
-## Configuration errors appear in the `server.xml` file after you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse
-{: #ts_eclipse}
-{: troubleshoot}
-
-If you see configuration errors in the `server.xml` file after you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse, you might need to remove the `server.xml` file from the project.
-
-After you import an {{site.data.keyword.cloud_notm}} Liberty app into Eclipse, you see configuration errors within the `server.xml` file from Eclipse Problems view.
-{: tsSymptoms}
-
-Liberty buildpack uses the `server.xml` file to configure the app and generates a `runtime-vars.xml` file when the Liberty app is pushed to {{site.data.keyword.cloud_notm}}. When you import the app to Eclipse, the `runtime-vars.xml` file doesn't exist in your local environment.
-{: tsCauses}
-
-You can resolve this problem by removing the server.xml file from the project. The buildpack creates the `server.xml` file dynamically when you push the app as a WAR app. For more information, see [Liberty for Java](/docs/cloud-foundry?topic=cloud-foundry-liberty_runtime).
-{: tsResolve}
-
-## Apps can't be staged by using custom buildpacks
-{: #ts_bp_compilation}
-{: troubleshoot}
-
-You might not be able to deploy an app to {{site.data.keyword.cloud_notm}} with a custom buildpack if the scripts in the buildpack aren't executable files.
-
-When you deploy an app to {{site.data.keyword.cloud_notm}} with a custom buildpack, you see the error message, `The application failed to stage, so there are no instances to display.`
-{: tsSymptoms}
-
-This problem might happen if scripts, such as the detect script, the compile script, and the release script, aren't executable.
-{: tsCauses}
-
-You can use the [Git update](https://git-scm.com/docs/git-update-index){: external} command to change the permission of each script to executable. For example, you can type `git update --chmod=+x script.sh`.
-{: tsResolve}
-
-## Can't deploy an app from the Delivery Pipeline in {{site.data.keyword.cloud_notm}} Continuous Delivery
-{: #ts_devops_to_bm}
-{: troubleshoot}
-
- You might not be able to deploy your app with the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}} if the `manifest.yml` file isn't present in your app.
-
- When you deploy an app with the {{site.data.keyword.deliverypipeline}} in {{site.data.keyword.contdelivery_short}}, an error message `Unable to detect a supported application type` might display.
- {: tsSymptoms}
-
- This problem might happen because the pipeline requires a `manifest.yml` file to deploy an app to {{site.data.keyword.cloud_notm}}.
- {: tsCauses}
-
- To resolve this problem, you must create a `manifest.yml` file. For more information about how to create a `manifest.yml` file, see [Application manifest](/docs/cloud-foundry-public?topic=cloud-foundry-public-deployingapps#appmanifest).
- {: tsResolve}
 
 ## Exceeded your storage quota for Kubernetes clusters
 {: #exceed_quota}

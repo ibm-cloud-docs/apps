@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-01-07"
+  years: 2019, 2022
+lastupdated: "2022-05-17"
 
 keywords: developer tools, building apps, developer entry point, get started coding, starter kit
 
@@ -36,7 +36,7 @@ A snippet is a few lines of code that is often presented in an IDE. Snippets hel
 ## Portable code
 {: #portable-code}
 
-Creating an app from a starter kit automatically creates code for you that has consistent format and isn't dependent on the runtime. You can deploy the code into your target of choice, such as Kubernetes or Cloud Foundry, without making changes.
+Creating an app from a starter kit automatically creates code for you that has consistent format and isn't dependent on the runtime. You can deploy the code into your target of choice without making changes.
 
 Portable code contains cloud enablement code for multiple cloud environments. You can produce code that follows best practices for a specific language and is specific to a use case. 
 

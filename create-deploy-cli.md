@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2021
-lastupdated: "2021-10-05"
+  years: 2018, 2022
+lastupdated: "2022-05-17"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, openshift, kubernetes, cluster
 content-type: tutorial
@@ -46,7 +46,6 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 * You must install the {{site.data.keyword.cloud_notm}} CLI and other recommended plug-ins and tools. For more information, see [Getting started with the IBM Cloud CLI and Developer Tools commands](/docs/cli?topic=cli-getting-started). 
 * Docker is installed as part of the developer tools. Docker must be running for the build commands to work. You must create a Docker account, run the Docker app, and sign in.
 * If you plan to deploy your app to a Kubernetes or OpenShift cluster, you must create a cluster. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app) or [Deploying apps in OpenShift clusters](/docs/openshift?topic=openshift-openshift_apps).
-* If you plan to deploy to Cloud Foundry, use [**ibmcloud target --cf**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the Cloud Foundry org and space interactively, or use [**ibmcloud target --cf-api ENDPOINT -o ORG -s SPACE**](/docs/cli?topic=cli-ibmcloud_cli#ibmcloud_target) to target the specific org and space.
 
 ## Creating an app
 {: step}
@@ -192,20 +191,6 @@ When you use [**ibmcloud dev create**](/docs/cli?topic=cli-idt-cli#create), you'
 You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completing the following steps:
 
 1. Run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
-
-   For Cloud Foundry:
-
-    ```bash
-    ibmcloud dev deploy
-    ```
-    {: codeblock}
-
-   For Kubernetes:
-
-    ```bash
-    ibmcloud dev deploy -t container
-    ```
-    {: codeblock}
 
 If you want to deploy your app to a different manual deployment type, run [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) from the app directory, and add the other deployment files.
 
