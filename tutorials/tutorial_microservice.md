@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2022
-lastupdated: "2022-05-17"
+lastupdated: "2022-06-03"
 
 keywords: apps, microservice, developer tools, Node.js, Java, Python, DevOps toolchain, toolchain, cli, create microservice, microservice tutorial
 content-type: tutorial
@@ -48,7 +48,7 @@ Use this tutorial to create an application from a Microservice Basic Starter. Us
 For all deployment targets, ensure that you're aware of the following requirements:
 
 * Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
-* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets

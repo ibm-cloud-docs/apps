@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-06-03"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -42,7 +42,7 @@ You can create your app by using the {{site.data.keyword.cloud_notm}} console or
 {: #prereqs-getting-started}
 
 * Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
-* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ## Create your app
@@ -54,7 +54,7 @@ Create an app by selecting one of the following entry points:
 * [Preconfigured starter kits](/docs/apps?topic=apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
 * [Blank starter kits](/docs/apps?topic=apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
 * [Bring your own code](/docs/apps?topic=apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
-* [{{site.data.keyword.cloud_notm}} (CLI)](/docs/apps?topic=apps-create-deploy-app-cli) creates and deploys your apps by using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+* [{{site.data.keyword.cloud_notm}} (CLI)](/docs/apps?topic=apps-create-deploy-app-cli) creates and deploys your apps by using the {{dev_cli_short}} (`ibmcloud dev`) commands.
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](/catalog){: external} for apps and services that you can create and use today.
 * [IBM Developer code patterns](https://developer.ibm.com/patterns/){: external} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
 
