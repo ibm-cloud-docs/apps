@@ -49,7 +49,7 @@ Use this tutorial to create a custom application by using a blank starter kit. W
 For all deployment targets, ensure that you're aware of the following requirements:
 
 * Depending on your [{{site.data.keyword.cloud_notm}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
-* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{dev_cli_short}} (`ibmcloud dev`) commands.
+* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ### For specific deployment targets
@@ -79,7 +79,7 @@ For more information about requirements for specific deployment targets, see the
 7. Select the language and framework that you want to use for your app. Some starter kits might be available in only one language.
 8. Click **Create**.
 
-You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{dev_cli_short}} (`ibmcloud dev`) commands, or add it to your code management repository.
+You can view your app code before you deploy it by clicking **Download code** on the App details page. Your code is downloaded as a `.zip` file that contains the complete app code structure. You can extract the file and run the code locally by using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands, or add it to your code management repository.
 
 The app code includes a `README.md` file that contains technical details about the app. Check the `README.md` file to find out whether you need to take more actions to get your app up and running.
 {: tip}

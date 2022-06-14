@@ -41,7 +41,7 @@ Use this tutorial to create a mobile app using an {{site.data.keyword.cloud}} mo
 {: #prereqs-mobile}
 
 * Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
-* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{dev_cli_short}} (`ibmcloud dev`) commands.
+* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
 * Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
 
 ## Creating a mobile app 
@@ -84,7 +84,7 @@ To create a custom mobile app, complete these steps:
 ### Creating a mobile app with the CLI
 {: #create-mobile-cli}
 
-To create a mobile app with the [{{dev_cli_short}} (`ibmcloud dev`) commands](/docs/cli?topic=cli-getting-started), complete these steps:
+To create a mobile app with the [{{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands](/docs/cli?topic=cli-getting-started), complete these steps:
 
 1. Open a terminal and navigate to a directory where you would like to create your app.
 2. Run the `ibmcloud dev create` command.

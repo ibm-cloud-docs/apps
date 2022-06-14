@@ -28,7 +28,7 @@ subcollection: apps
 {: toc-services="apps"} 
 {: toc-completion-time="30m"}
 
-Use this tutorial to create and deploy an application using the {{dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} Command Line Interface. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
+Use this tutorial to create and deploy an application using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands that are included with the {{site.data.keyword.cloud}} Command Line Interface. The `ibmcloud dev` commands let you use a starter kit or cloud-enable your existing app code.
 {: shortdesc}
 
 ## Objectives
@@ -141,7 +141,7 @@ Now that your app can run locally, you can add a service and modify some code.
 {: #deploy-app-cli}
 {: step}
 
-{{site.data.keyword.cloud_notm}} provides a robust CLI and {{dev_cli_short}} (`ibmcloud dev`) commands to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured.
+{{site.data.keyword.cloud_notm}} provides a robust CLI and {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands to help simplify the developer's workflow. You can deploy your {{site.data.keyword.cloud_notm}} app in one of two ways, depending on how your app is configured.
 
 1. Change to the directory where your app code is located.
 
@@ -199,7 +199,7 @@ If you want to deploy your app to a different manual deployment type, run [**ibm
 
 For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
 
-* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{dev_cli_short}} commands](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
+* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} commands](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
 
 ## Viewing your app
 {: #view-app-cli}
