@@ -40,7 +40,7 @@ You can use an {{site.data.keyword.cloud}} starter kit with the {{site.data.keyw
 {{site.data.keyword.codeenginefull_notm}} is a fully managed, serverless platform that runs your containerized workloads, including web apps, micro-services, event-driven functions, or batch jobs in a fully managed Kubernetes-based infrastructure. The {{site.data.keyword.codeengineshort}} experience is designed so that you can focus on writing code and not on the infrastructure that is needed to host it. For more information, see [{{site.data.keyword.codeengineshort}}](/codeengine/overview).
 
 ## Before you begin
-{: #prereqs-starterkit}
+{: #codeengine-prereqs-starterkit}
 
 Ensure that you're aware of the following requirements:
 
