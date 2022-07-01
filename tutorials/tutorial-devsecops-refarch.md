@@ -32,8 +32,8 @@ In this tutorial, you follow three easy steps to create a {{site.data.keyword.bp
 
 The automated infrastructure setup creates resources that are automatically provisioned by using the default values from the DevSecOps CI and CD templates. You can find the default values in the **Variables** section of the {{site.data.keyword.bpshort}} workspace. The following resources are created:
 
-* A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan). If you use an existing cluster, the time frame for completing this tutorial is reduced by 20-30 minutes.
-* [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). If you already have a Lite {{site.data.keyword.cos_full_notm}} instance and bucket and want to use those resources, you can override the default values for `cos_instance_name` and `cos_bucket_name` in [step 2](#devsecops-apply-plan).
+* A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). 
+* [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). 
 * [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). Note that only one {{site.data.keyword.secrets-manager_short}} instance is permitted. If you already have a {{site.data.keyword.secrets-manager_short}} service, be sure to override the `sm_service_name` default value in [step 2](#devsecops-apply-plan).
 * [GPG image signing key](/docs/devsecops?topic=devsecops-devsecops-image-signing).
 * A fully functional [DevSecOps CI toolchain](/docs/devsecops?topic=devsecops-tutorial-cd-devsecops#devsecops-ci-toolchain-intro) that builds, tests, and deploys a sample Node.js application by using DevSecOps best practices of compliance and security.
@@ -67,17 +67,19 @@ The automated infrastructure setup creates resources that are automatically prov
 
 1. In the **Variables** section of the {{site.data.keyword.bpshort}} Settings page, enter the values for each variable. Required fields don't have default values. You can override default values.
 
-   If you override any of the following values, the Terraform execution plan uses the existing resources instead of creating new resources: `cluster_name`, `cos_instance_name`, `cos_bucket_name`, or `sm_service_name`.
+   If you override the `sm_service_name` value, the Terraform execution plan uses the existing resource instead of creating a new resource.
    {: important}
 
 1. For the `gitlab_token` variable, enter the personal access token that you obtained previously.
 1. For the `ibmcloud_api_key` variable, enter the {{site.data.keyword.cloud_notm}} API key that you obtained previously.
 1. For the `registry_namespace` variable, enter a container registry namespace value. To create a namespace, see [Container Registry Namespaces](/registry/namespaces){: external}.
+1. For the `kube_version` variable, run: `ibmcloud ks versions` on a command line to see available versions.
 1. Optional. If you already have a {{site.data.keyword.secrets-manager_short}} instance, enter it name for the `sm_service_name` variable. Otherwise, don't change this variable.
-1. Optional. If you already have a cluster and want to use it for this tutorial, you can override the `cluster_name` default value. If you override the `cluster_name` default value, you don't need to provide values for the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `kube_version`, `public_vlan_num`, or `private_vlan_num`.
+1. Optional. If you would like to adjust the size or location of your cluster, you can override the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `public_vlan_num`, or `private_vlan_num` (the default values are for the dal12/us-south datacenter).
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Jobs page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the correct state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan** to run your infrastructure code. 
-   This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster. If you use an existing cluster, this step takes only a few minutes.
+   
+   This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster. 
    {: note}
 
 1. On the {{site.data.keyword.bpshort}} Jobs page, you can view the log by expanding the job name.
@@ -86,8 +88,8 @@ The automated infrastructure setup creates resources that are automatically prov
 If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. However if you override the default cluster name, that cluster is used.
 {: important}
 
-## Update the environment properties value
-{: #devsecops-env-value}
+## Deploy the app
+{: #devsecops-deploy-app}
 {: step}
 
 Follow these steps to run the pipeline.
@@ -106,20 +108,21 @@ The pr-pipeline in the ci-toolchain is triggered. Verify that the pipeline is ru
 
    ![pr-pipeline](../images/pr-pipeline-run.png){: caption="Figure 1. pr-pipeline Dashboard" caption-side="bottom"}
 
-1. Open the DevSecOps CI toolchain in a browser.
-1. Click the Delivery Pipeline tile for your **ci-pipeline**.
-1. Select **Environment properties** in the navigation menu.
-1. Click the **Edit** icon ![Edit icon](../../icons/edit-tagging.svg) for the `signing-key` property.
-1. In the **Edit property** window, click the **Key** icon ![Key icon](../images/secret-key.svg). A **Secure property** window is displayed, and the provider is automatically refreshed with your Secrets Manager information.
-1. In the **Secret name** dropdown, select `GPG_Key`, and click **OK**.
-1. In the **Edit property** window, click **Save**. The value is added to the `signing-key` property.
+Notes:
+1. If any vulnerabilties are found, then the code-pr-finish step fails.
+1. To find the vulnerabilities, go to the `code-unit-tests` > `run-stage` to view the logs. (screenshot)
+1. Solve the vulnerabilties, and then the pr-pipeline will be triggered.
 
-![signing-key value](../images/devsecops-signing-key.png "signing-key value"){: caption="Figure 2. The value is added to the signing-key property." caption-side="bottom"}
+1. Go back to the app repo tile.
+1. In the nav pane, click **Merge requests**.
+1. Select the PR.
+1. Optional. Click the **Approve** button (If not you will see an error at the end of the ci-pipeline run). 
+1. Select "Delete source branch."
+1. Click **Merge**.
 
-Now that the value is updated, follow these steps to run the pipeline.
-1. Click **Run Pipeline**.
-1. On the Run Pipeline page, click **Run**.
-1. When you see a message about a new pipeline run being triggered, click **View the PipelineRun**. This process takes a while to complete, and you can view the log files for each stage of the pipeline run.
+Merging this PR automatically triggers the ci-pipeline. To verify, go back to the ci-pipeline tile in the toolchain and verify that the pipeline is running. Click the pipeline link to see the progress.
+
+This step deploys the app to the newly created cluster. The Application URL can be found at the bottom of the logfile in the `deploy-dev` > `run-stage` step of the ci-pipeline. 
 
 ## Related information
 {: #devsecops-related}
