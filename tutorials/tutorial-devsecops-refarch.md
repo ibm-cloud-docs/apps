@@ -8,7 +8,7 @@ keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, au
 
 subcollection: apps
 content-type: tutorial
-services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
+services: schematics, terraform, openshift, containers, ContinuousDelivery
 account-plan: paid
 deployable: quickstart
 completion-time: 1h
@@ -20,7 +20,7 @@ completion-time: 1h
 # Set up your DevSecOps infrastructure and CI toolchain for deploying a secure app
 {: #tutorial-apps-devsecops}
 {: toc-content-type="tutorial"}
-{: toc-services="schematics, terraform, openshift, containers, ContinuousDelivery, apps"}
+{: toc-services="schematics, terraform, openshift, containers, ContinuousDelivery"}
 {: toc-completion-time="1h"}
 
 Use this tutorial for automated setup and provisioning of the infrastructure for your CI and CD toolchains by using a Terraform-based quick start template. The template uses DevSecOps best practices of compliance and security. The template uses an [{{site.data.keyword.bplong}} workspace](/docs/schematics?topic=schematics-about-schematics), which automates the creation of the required infrastructure for securely deploying your app to either Kubernetes or Red Hat&reg; OpenShift&reg;. The template uses the DevSecOps {{site.data.keyword.contdelivery_full}} toolchain pipeline structure. The toolchain is preconfigured for continuous delivery with inventory integration, change management, evidence collection, and deployment.
@@ -56,7 +56,7 @@ The automated infrastructure setup creates resources that are automatically prov
 
    [![Deploy to OpenShift on IBM Cloud](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on IBM Cloud")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-openshift)
  
-   Based on which option you select, the corresponding Terraform template from this repository is  automatically imported into the new {{site.data.keyword.bpshort}} workspace.
+   Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace.
    {: note}
 
 1. Verify the information, and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created, and the Settings page for the {{site.data.keyword.bpshort}} workspace is displayed.
@@ -75,7 +75,7 @@ The automated infrastructure setup creates resources that are automatically prov
 1. For the `registry_namespace` variable, enter a container registry namespace value. To create a namespace, see [Container Registry Namespaces](/registry/namespaces){: external}.
 1. For the `kube_version` variable, run: `ibmcloud ks versions` on a command line to see available versions.
 1. Optional. If you already have a {{site.data.keyword.secrets-manager_short}} instance, enter it name for the `sm_service_name` variable. Otherwise, don't change this variable.
-1. Optional. If you would like to adjust the size or location of your cluster, you can override the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `public_vlan_num`, or `private_vlan_num` (the default values are for the dal12/us-south datacenter).
+1. Optional. If you want to adjust the size or location of your cluster, you can override the following variables: `datacenter`, `default_pool_size`, `machine_type`, `hardware`, `public_vlan_num`, or `private_vlan_num` (the default values are for the dal12/us-south datacenter).
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Jobs page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the correct state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan** to run your infrastructure code. 
    
@@ -85,7 +85,7 @@ The automated infrastructure setup creates resources that are automatically prov
 1. On the {{site.data.keyword.bpshort}} Jobs page, you can view the log by expanding the job name.
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevSecOps CI toolchain. The URL is located near the end of the log file on a line that begins with `View the toolchain at:`.
 
-If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. However if you override the default cluster name, that cluster is used.
+If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. However, if you override the default cluster name, that cluster is used.
 {: important}
 
 ## Deploy the app
@@ -109,20 +109,20 @@ The pr-pipeline in the ci-toolchain is triggered. Verify that the pipeline is ru
    ![pr-pipeline](../images/pr-pipeline-run.png){: caption="Figure 1. pr-pipeline Dashboard" caption-side="bottom"}
 
 Notes:
-1. If any vulnerabilties are found, then the code-pr-finish step fails.
+1. If any vulnerabilities are found, then the code-pr-finish step fails.
 1. To find the vulnerabilities, go to the `code-unit-tests` > `run-stage` to view the logs. (screenshot)
-1. Solve the vulnerabilties, and then the pr-pipeline will be triggered.
+1. Solve the vulnerabilities, and then the pr-pipeline is triggered.
 
 1. Go back to the app repo tile.
 1. In the nav pane, click **Merge requests**.
 1. Select the PR.
-1. Optional. Click the **Approve** button (If not you will see an error at the end of the ci-pipeline run). 
+1. Optional. Click the **Approve** button (If not you see an error at the end of the ci-pipeline run). 
 1. Select "Delete source branch."
 1. Click **Merge**.
 
 Merging this PR automatically triggers the ci-pipeline. To verify, go back to the ci-pipeline tile in the toolchain and verify that the pipeline is running. Click the pipeline link to see the progress.
 
-This step deploys the app to the newly created cluster. The Application URL can be found at the bottom of the logfile in the `deploy-dev` > `run-stage` step of the ci-pipeline. 
+This step deploys the app to the newly created cluster. The Application URL can be found at the bottom of the log file in the `deploy-dev` > `run-stage` step of the ci-pipeline. 
 
 ## Related information
 {: #devsecops-related}
