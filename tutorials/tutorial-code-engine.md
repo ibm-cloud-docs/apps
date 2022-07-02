@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-05-09"
+lastupdated: "2022-07-01"
 
 keywords: apps, starter kit, create app, basic app, simple app, blank app, IBM Cloud
 
@@ -171,6 +171,6 @@ To view and modify your toolchain, click the toolchain's name in the **Deploymen
 If you make any changes to your app or the toolchain, such as adding or removing a service, be sure to deploy the app again.
 {: important}
 
-To do so, open the ci-pipeline dashboard, and click **Run pipeline**. On the Run pipeline page, click **Run**.
+To do so, open the ci-pipeline dashboard, and click **Run pipeline**. On the Run pipeline page, select `manual-run` from the **Triggers** list, and then click **Run**.
 
 To view a related tutorial, see [Develop and deploy an app by using {{site.data.keyword.codeengineshort}}](/docs/ContinuousDelivery?topic=ContinuousDelivery-tutorial-cd-code-engine).
