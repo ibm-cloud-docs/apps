@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-07-01"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -97,7 +97,7 @@ To manually deploy your app from your DevOps toolchain, complete these steps:
 
 1. In the **Delivery Pipelines** tile, click the name of the delivery pipeline, such as **ci-pipeline**. A new browser tab opens the pipeline dashboard.
 1. Click **Run pipeline**.
-1. On the Run pipeline page, click **Run**.
+1. On the Run pipeline page, select `manual-run` from the **Triggers** list, and then click **Run**.
 
 If you make any changes to your app or the toolchain, such as adding or removing a service, be sure to deploy the app again.
 {: important}
