@@ -172,17 +172,17 @@ The problem might occur if Unicode support isn't configured properly for the ser
 You can use the following code in your servlet or JSP file:
 {: tsResolve}
 
-    * In the servlet source file
-    ```java
-	  response.setContentType("text/html; charset=UTF-8");
-	  ```
-    {: codeblock}
-  
-    * In the JSP
-    ```jsp
-	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	  ```
-    {: codeblock}
+* In the servlet source file
+   ```java
+   response.setContentType("text/html; charset=UTF-8");
+   ```
+   {: codeblock}
+
+* In the JSP
+   ```jsp
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   ```
+   {: codeblock}
 
 ## Exceeded your storage quota for Kubernetes clusters
 {: #exceed_quota}
