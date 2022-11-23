@@ -7,9 +7,8 @@ lastupdated: "2022-08-08"
 keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial, java spring tutorial, spring tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
 subcollection: apps
-
 content-type: tutorial
-services: schematics, terraform, openshift, containers
+services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
 account-plan: paid
 deployable: quickstart
 completion-time: 45m
@@ -21,6 +20,7 @@ completion-time: 45m
 # Deploy a Java Spring app by using {{site.data.keyword.bplong_notm}}
 {: #tutorial-spring-webapp}
 {: toc-content-type="tutorial"}
+{: toc-services="schematics, terraform, openshift, containers, ContinuousDelivery, apps"}
 {: toc-completion-time="45m"}
 
 In this tutorial, you learn how to create and deploy a scalable Java Spring application. This scalable web app offers a one-click option to create an {{site.data.keyword.bplong}} workspace with your choice of preconfigured Terraform templates. The Terraform templates deploy your app to {{site.data.keyword.cloud_notm}} with options for the deployment target (Kubernetes or Red Hat&reg; OpenShift&reg;) and the DevOps toolchain pipeline structure.

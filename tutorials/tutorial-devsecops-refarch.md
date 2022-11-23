@@ -7,7 +7,6 @@ lastupdated: "2022-05-11"
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
 subcollection: apps
-
 content-type: tutorial
 services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
 account-plan: paid
@@ -16,16 +15,7 @@ completion-time: 1h
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Set up your DevSecOps infrastructure and CI toolchain for deploying a secure app
 {: #tutorial-apps-devsecops}

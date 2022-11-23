@@ -15,17 +15,7 @@ completion-time: 30m
 
 ---
 
-{:step: data-tutorial-type='step'}
-{:shortdesc: .shortdesc}
-{:table: .aria-labeledby="caption"}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:download: .download}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Use a starter kit to create and deploy an app with {{site.data.keyword.codeengineshort}}
 {: #tutorial-code-engine}

@@ -13,19 +13,12 @@ completion-time: 30m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:script: data-hd-video='script'}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with apps
 {: #getting-started}
 {: toc-content-type="tutorial"}
-{: toc-completion-time="15m"}
+{: toc-completion-time="30m"}
 
 You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need. Or, use your existing repository and bring your own code.
 {: shortdesc}

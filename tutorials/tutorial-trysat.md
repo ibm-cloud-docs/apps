@@ -6,30 +6,21 @@ lastupdated: "2022-02-23"
 
 keywords: apps, tutorial, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, schematics, satellite, quick start
 
-subcollection: apps
-
 content-type: tutorial
-services: schematics, terraform, openshift, containers
+services: schematics, terraform, openshift, containers, ContinuousDelivery, apps
 account-plan: paid
 deployable: quickstart
 completion-time: 1.5h
+subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}  
-{:codeblock: .codeblock}  
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:term: .term}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating an {{site.data.keyword.satellitelong_notm}} environment on AWS by using scripts
 {: #tutorial-trysat}
 {: toc-content-type="tutorial"}
+{: toc-services="schematics, terraform, openshift, containers, ContinuousDelivery, apps"}
 {: toc-completion-time="1.5h"}
 
 This tutorial and set of scripts provide a mostly automated way to set up an {{site.data.keyword.satellitelong_notm}} location and Red Hat OpenShift cluster on Amazon Web Services (AWS). This is not a production-ready solution, but it provides a useful tool for proof-of-concepts, learning, and experimenting.

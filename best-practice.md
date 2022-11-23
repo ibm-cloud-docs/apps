@@ -10,13 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # What makes a good app?
 {: #best-practice}

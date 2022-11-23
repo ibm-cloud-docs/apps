@@ -13,13 +13,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:external: target="_blank" .external}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating an app with a starter kit
 {: #tutorial-starterkit}
