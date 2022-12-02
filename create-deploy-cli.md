@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-06-03"
+lastupdated: "2022-12-02"
 
 keywords: apps, create, build, deploy, cli, web app, microservice, deploy cli, build app local, developer tools, ibmcloud dev create, openshift, kubernetes, cluster
 content-type: tutorial
@@ -29,7 +29,7 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 
 * Create an app using the CLI commands.
 * Build and run the app.
-* Add a service to the app/modify the app.
+* Add a service to the app or modify the app.
 * Deploy the app.
 * View the app.
 
@@ -48,7 +48,7 @@ Use this tutorial to create and deploy an application using the {{site.data.keyw
 
 Creating an app from a starter kit is useful if you don't already have existing code to begin with and would rather start from a language or a framework starter template.
 
-1. Run the [**ibmcloud dev create**](/docs/cli?topic=cli-idt-cli#create) command in the directory of your choice.
+1. Run the [`ibmcloud dev create`](/docs/cli?topic=cli-idt-cli#create) command in the directory of your choice.
 2. Select an application type of either **Backend Service / Web App** or **Mobile App**.
    ![App type](images/cli-select-apptype.png "Select an app type"){: caption="Figure 1. App types in the CLI" caption-side="bottom"}
 3. Select a language.
@@ -65,17 +65,16 @@ Creating an app from a starter kit is useful if you don't already have existing 
     You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
     {: note}
 
-8. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
-   ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
+8. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain and enter a name for the DevOps toolchain. 
 
-Creating the app and toolchain takes a few seconds to complete. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
+Creating the app and toolchain takes a few seconds to complete. The app is created in the current directory. Only the deployment files that are relevant for your choice of deployment target are created. You can use the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory to add more deployment file types if you need them.
 
 ### Creating an app from your own code
 {: #byoc-cli}
 
-This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [**ibmcloud dev enable**](/docs/cli?topic=cli-idt-cli#enable) command. This command is in beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
+This option can be used if you already have an existing codebase and want to generate deployment and cloud enablement assets for a single microservice or web app by using the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command. This command is in beta, and not all languages or app structures are supported. Complete the following steps to use this function with a sample repository.
 
-1. Log in to {{site.data.keyword.cloud_notm}} by running the **ibmcloud login** command, and then target an org and space.
+1. Log in to {{site.data.keyword.cloud_notm}} by running the `ibmcloud login` command, and then target an org and space.
 2. Clone the [Hello World sample app](https://github.com/IBM-Cloud/node-helloworld){: external} by running the following command in the directory of your choice.
 
    ```bash
@@ -83,7 +82,7 @@ This option can be used if you already have an existing codebase and want to gen
    ```
    {: codeblock}
 
-3. Navigate to the directory where you cloned the sample app, and run the [**ibmcloud dev enable**](/docs/cli?topic=cli-idt-cli#enable) command.
+3. Navigate to the directory where you cloned the sample app, and run the [`ibmcloud dev enable`](/docs/cli?topic=cli-idt-cli#enable) command.
 4. Select to continue without committing changes for now (if necessary).
 5. Select to continue when you're prompted to proceed with the Node language that is detected.
 6. Select the resource group that you want to use (if necessary). 
@@ -95,12 +94,11 @@ This option can be used if you already have an existing codebase and want to gen
    You might need to set up SSH keys to complete this step. If you set a passphrase for your SSH key, you are required to enter this code.
    {: note}
 
-10. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain, enter a name for the DevOps toolchain, and enter a host name. Otherwise, follow the prompts for a manual deployment.
-   ![Manual deployment options](images/cli-manual-deploy-options.png "Select a manual deployment option for your app"){: caption="Figure 4. Manual deployment options in the CLI" caption-side="bottom"}
+10. If you selected a DevOps deployment option, follow the remaining prompts to select a region for your toolchain and enter a name for the DevOps toolchain. 
 11. Wait a few seconds for the operations to complete. 
 12. After the operations are complete, manually merge the deployment and cloud enablement files that are saved to the app directory. Merge new files marked `.merge` by using `git diff` or a similar tool.
 
- - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option to connect your local code to an existing app.
+ - If you already created an {{site.data.keyword.cloud_notm}} app by using the {{site.data.keyword.cloud_notm}} console, follow steps 2 - 5 in the previous section in your app directory. For step 6, select the option to connect your local code to an existing app.
  - To manually configure a toolchain and deployment files, see [Continuous Deployment to Kubernetes](/docs/solution-tutorials?topic=solution-tutorials-continuous-deployment-to-kubernetes). This tutorial can be useful if you're trying to configure a Continuous Delivery toolchain for more than one interrelated web apps or microservices.
  - If your existing codebase isn't already in a Git repository, follow steps 2 - 5 in the previous section in your app directory. For step 6, you can select the option create a new {{site.data.keyword.cloud_notm}} app, and deploy it to a DevOps toolchain (which has a newly created GitLab repository).
 
@@ -111,11 +109,11 @@ This option can be used if you already have an existing codebase and want to gen
 Regardless of which option you used to create your app, you can now build it and run it locally.
 
 1. Navigate to your app directory, and ensure that Docker is running on your system.
-2. Run the [**ibmcloud dev build**](/docs/cli?topic=cli-idt-cli#build) command to build your app.
-3. Run the [**ibmcloud dev run**](/docs/cli?topic=cli-idt-cli#run) command to start the app in the foreground. To stop the app and return the command prompt, press Ctrl+C.
+2. Run the [`ibmcloud dev build`](/docs/cli?topic=cli-idt-cli#build) command to build your app.
+3. Run the [`ibmcloud dev run`](/docs/cli?topic=cli-idt-cli#run) command to start the app in the foreground. To stop the app and return the command prompt, press Ctrl+C.
 4. View your app that is running locally by navigating to `http://localhost:3000` or a similar URL.
 
-You can also use [compound commands](/docs/cli?topic=cli-idt-cli#compound), such as **ibmcloud dev build/run**, to sequentially start a build followed by a run.
+You can also use [compound commands](/docs/cli?topic=cli-idt-cli#compound), such as `ibmcloud dev build/run`, to sequentially start a build followed by a run.
 {: tip}
 
 ## Adding a service and modifying the code
@@ -124,7 +122,7 @@ You can also use [compound commands](/docs/cli?topic=cli-idt-cli#compound), such
 
 Now that your app can run locally, you can add a service and modify some code. 
 
-1. Run the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory.
+1. Run the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory.
 2. Follow the prompts to create and connect a new data-related service to your app, such as {{site.data.keyword.cloudant_short_notm}}. You might need to select a region and plan for the service.
 3. You can choose to manually merge the configuration files that are saved to your app directory when you create the service. Or you can skip this step for now.
 4. Update your code. For example, modify the `/public/index.html` file or a similar file. If you're using the sample `ExpressJS` app, you can change the `Congratulations!` message to something like `Hello World!`.
@@ -157,7 +155,7 @@ Now that your app can run locally, you can add a service and modify some code.
 ### Deploying your app automatically
 {: #deploy-cli-auto}
 
-If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) command from the app directory. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
+If you didn't create a DevOps toolchain for your app and your app isn't yet in a Git repository, you can run the [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) command from the app directory. Follow the prompts for "Configure DevOps" and deploy to a new toolchain (and create a new GitLab repository).
 
 After you create a DevOps toolchain for your app, deploying a new build is as simple as committing and pushing your code to the repository in your toolchain. 
 
@@ -173,30 +171,28 @@ After you create a DevOps toolchain for your app, deploying a new build is as si
     ```bash
     git push origin master
     ```
-4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command from the app directory.
+4. View the DevOps toolchain for your app from the {{site.data.keyword.cloud_notm}} console. You can view toolchain details from the **App details** page in the {{site.data.keyword.cloud_notm}} console by running the [`ibmcloud dev console`](/docs/cli?topic=cli-idt-cli#console) command from the app directory.
 5. View the pipeline within the toolchain to verify that a new build started.
 
 ### Deploying your app manually
 {: #deploy-cli-manual}
 
-When you use [**ibmcloud dev create**](/docs/cli?topic=cli-idt-cli#create), you're prompted to choose between a DevOps deployment or a manual deployment. When you choose the manual deployment option, the app is created and saved into your current directory, but it's not automatically deployed.
+When you use [`ibmcloud dev create`](/docs/cli?topic=cli-idt-cli#create), you're prompted to choose between a DevOps deployment or a manual deployment. When you choose the manual deployment option, the app is created and saved into your current directory, but it's not automatically deployed.
 
 You can manually deploy your app to {{site.data.keyword.cloud_notm}} by completing the following steps:
 
-1. Run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command.
+1. Run the [`ibmcloud dev deploy`](/docs/cli?topic=cli-idt-cli#deploy) command.
 
-If you want to deploy your app to a different manual deployment type, run [**ibmcloud dev edit**](/docs/cli?topic=cli-idt-cli#edit) from the app directory, and add the other deployment files.
+If you want to deploy your app to a different manual deployment type, run [`ibmcloud dev edit`](/docs/cli?topic=cli-idt-cli#edit) from the app directory, and add the other deployment files.
 
 ### Related information
 {: #deploy-cli-related}
 
-For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see:
-
-* [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} commands](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}
+For more information about deploying your app to {{site.data.keyword.cloud_notm}} by using the CLI, see [Deploying to {{site.data.keyword.cloud_notm}} environments with {{site.data.keyword.dev_cli_short}} commands](https://www.ibm.com/cloud/blog/deploying-to-ibm-cloud-environments-with-ibm-cloud-developer-tools-cli){: external}.
 
 ## Viewing your app
 {: #view-app-cli}
 {: step}
 
-1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [**ibmcloud dev view**](/docs/cli?topic=cli-idt-cli#view) command from the app directory. The app URL is opened in your default browser.
-2. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [**ibmcloud dev console**](/docs/cli?topic=cli-idt-cli#console) command. 
+1. To view the URL of your app that's running on {{site.data.keyword.cloud_notm}}, run the [`ibmcloud dev view`](/docs/cli?topic=cli-idt-cli#view) command from the app directory. The app URL is opened in your default browser.
+1. To view details about your app's credentials, services, and toolchain from the {{site.data.keyword.cloud_notm}} console, run the [`ibmcloud dev console`](/docs/cli?topic=cli-idt-cli#console) command. 
