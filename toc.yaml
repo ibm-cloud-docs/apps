@@ -37,9 +37,10 @@ toc:
       - tutorials/tutorial-scalable-web-app-spring.md
       - tutorials/tutorial-scalable-web-app-liberty.md
       - tutorials/tutorial-code-engine.md
-      - /ContinuousDelivery/ContinuousDelivery-tutorial-cd-code-engine
+      - include: ../ContinuousDelivery/cd-code-engine.md
       - tutorials/tutorial-devsecops-refarch.md
-      - /devsecops/devsecops-tutorial-cd-devsecops
+      - include: ../devsecops/devsecops-tutorial.md
+        navtitle: Deploy a secure app with DevSecOps
       - tutorials/tutorial-trysat.md
 
   - navgroup:
@@ -56,8 +57,8 @@ toc:
           topics: 
           - hosting.md
           - dep-app-tool.md
-          - /containers/containers-tutorial-starterkit-kube
-          - /solution-tutorials/solution-tutorials-continuous-deployment-to-kubernetes
+          - include: ../containers/cs_tutorials_starter.md
+          - include: ../solution-tutorials/continuous-deployment-to-kubernetes.md
       - topicgroup: 
           label: Configuring
           topics:
@@ -90,10 +91,10 @@ toc:
       - topicgroup: 
           label: IBM Cloud Programming Guides
           topics:
-          - /go/go-getting-started
-          - /java/java-getting-started
-          - /swift/swift-getting-started
-          - /node/node-getting-started
+          - include: ../go/index.md
+          - include: ../java/index.md
+          - include: ../swift/index.md
+          - include: ../node/index.md
       - at-events.md
       - ha-dr.md
 
