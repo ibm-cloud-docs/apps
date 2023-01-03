@@ -91,10 +91,18 @@ toc:
       - topicgroup: 
           label: IBM Cloud Programming Guides
           topics:
-          - include: ../go/index.md
-          - include: ../java/index.md
-          - include: ../swift/index.md
-          - include: ../node/index.md
+          - link:
+              label: Java 
+              href: /java/java-getting-started
+          - link:
+              label: Go
+              href: /go/go-getting-started
+          - link:
+              label: Node
+              href: /node/node-getting-started
+          - link:
+              label: Swift
+              href: /swift/swift-getting-started
       - at-events.md
       - ha-dr.md
 
