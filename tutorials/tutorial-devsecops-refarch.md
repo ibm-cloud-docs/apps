@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2021, 2022
-lastupdated: "2022-05-11"
+   years: 2021, 2023
+lastupdated: "2023-01-12"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -35,7 +35,7 @@ The automated infrastructure setup creates resources that are automatically prov
 * A cluster in [{{site.data.keyword.containerlong}}](/docs/containers?topic=containers-clusters) or [Red Hat OpenShift on {{site.data.keyword.cloud_notm}}](/docs/openshift?topic=openshift-getting-started). If you already have a free or paid cluster and want to use it for this tutorial, you can override the `cluster_name` default value in [step 2](#devsecops-apply-plan). If you use an existing cluster, the time frame for completing this tutorial is reduced by 20-30 minutes.
 * [A standard {{site.data.keyword.cos_full_notm}} instance and bucket](/docs/cloud-object-storage?topic=cloud-object-storage-about-cloud-object-storage). If you already have a Lite {{site.data.keyword.cos_full_notm}} instance and bucket and want to use those resources, you can override the default values for `cos_instance_name` and `cos_bucket_name` in [step 2](#devsecops-apply-plan).
 * [{{site.data.keyword.secrets-manager_full}}](/docs/secrets-manager?topic=secrets-manager-getting-started). Note that only one {{site.data.keyword.secrets-manager_short}} instance is permitted. If you already have a {{site.data.keyword.secrets-manager_short}} service, be sure to override the `sm_service_name` default value in [step 2](#devsecops-apply-plan).
-* [GPG image signing key](/docs/devsecops?topic=devsecops-cd-devsecops-image-signing).
+* [GPG image signing key](/docs/devsecops?topic=devsecops-devsecops-image-signing).
 * A fully functional [DevSecOps CI toolchain](/docs/devsecops?topic=devsecops-tutorial-cd-devsecops#devsecops-ci-toolchain-intro) that builds, tests, and deploys a sample Node.js application by using DevSecOps best practices of compliance and security.
 
 ## Before you begin
