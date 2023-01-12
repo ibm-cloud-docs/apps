@@ -10,12 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
+{{site.data.keyword.attribute-definition-list}}
 
 # Manually adding service credentials to your deployment environment
 {: #credentials_overview}

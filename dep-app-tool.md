@@ -10,14 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Deploying apps
 {: #deploying-apps}

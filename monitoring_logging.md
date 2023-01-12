@@ -10,12 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:screen: .screen}
-{:pre: .pre}
+{{site.data.keyword.attribute-definition-list}}
 
 # Monitoring and logging in {{site.data.keyword.cloud_notm}}
 {: #monitoring_logging}

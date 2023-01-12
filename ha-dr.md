@@ -11,14 +11,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
-{:download: .download}
-
+{{site.data.keyword.attribute-definition-list}}
 
 # High availability and disaster recovery
 {: #ha-dr}

@@ -12,12 +12,7 @@ content-type: faq
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:faq: data-hd-content-type='faq'}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # FAQs
 {: #apps-faq}

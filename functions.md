@@ -10,11 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Creating serverless apps
 {: #serverless}

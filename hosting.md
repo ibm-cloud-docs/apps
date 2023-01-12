@@ -10,8 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
+{{site.data.keyword.attribute-definition-list}}
 
 # Choosing your hosting environment
 {: #hosting}

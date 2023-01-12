@@ -10,10 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:tip: .tip}
-{:codeblock: .codeblock}
-{:screen: .screen}
+{{site.data.keyword.attribute-definition-list}}
 
 # Managing your domains
 {: #update-domain}

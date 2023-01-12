@@ -10,14 +10,7 @@ subcollection: apps
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:tip: .tip}
-{:download: .download}
-{:deprecated: .deprecated}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 # {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
