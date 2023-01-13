@@ -2,7 +2,7 @@
 
 copyright:
    years: 2021, 2023
-lastupdated: "2023-01-12"
+lastupdated: "2023-01-13"
 
 keywords: tekton, pipeline, toolchain, CD, CI, Terraform, template, automate, automation, compliance, secure, compliant, shift-left, shift left, quick start, devsecops tutorial, devsecops
 
@@ -90,9 +90,22 @@ If you apply your plan a second time, the previously created Kubernetes or OpenS
 {: #devsecops-env-value}
 {: step}
 
-After the DevSecOps CI toolchain is created in the previous step, follow these steps to update the **ci-pipeline** Delivery Pipeline before you run it.
+Follow these steps to run the pipeline.
+1. Go to your newly created DevSecOps CI toolchain.
+1. Click the **Git** tile that starts with `compliance-app`.
+1. To trigger the pr-pipeline, update some text in the `README.md` file, and then start a PR against the `main` branch.
+1. <!-- put steps for editing here -->
+1. In the **Target Branch** field, change the branch name from `main` to something else. For example, `mybranch`.
+1. Ensure that the "Start a new merge request with these changes" checkbox is selected.
+1. Click **Commit changes**.
+1. Optional. On the New merge request page, add a description.
+1. Click **Create merge request**.
 
-![ci-pipeline](../images/devsecops-ci-pipeline.png "ci-pipeline"){: caption="Figure 1. The ci-pipeline Delivery Pipeline." caption-side="bottom"}
+The pr-pipeline in the ci-toolchain is triggered. Verify that the pipeline is running by completing these steps: 
+1. Return to your CI toolchain, and click the **Delivery Pipeline** tile for your `pr-pipeline`. On the pr-pipeline Dashboard page, you can see the pr-pipeline running.
+1. To view the progress, click the `pr-pipeline` link.
+
+   ![pr-pipeline](../images/pr-pipeline-run.png){: caption="Figure 1. pr-pipeline Dashboard" caption-side="bottom"}
 
 1. Open the DevSecOps CI toolchain in a browser.
 1. Click the Delivery Pipeline tile for your **ci-pipeline**.
