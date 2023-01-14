@@ -106,7 +106,7 @@ The pr-pipeline in the ci-toolchain is triggered. Verify that the pipeline is ru
 1. Return to your CI toolchain, and click the **Delivery Pipeline** tile for your `pr-pipeline`. On the pr-pipeline Dashboard page, you can see the pr-pipeline running.
 1. To view the progress, click the `pr-pipeline` link.
 
-   ![pr-pipeline](../images/pr-pipeline-run.svg){: caption="Figure 1. pr-pipeline Dashboard" caption-side="bottom"}
+   ![pr-pipeline](../images/pr-pipeline-run.png){: caption="Figure 1. pr-pipeline Dashboard" caption-side="bottom"}
 
 Notes:
 1. If any vulnerabilities are found, then the code-pr-finish step fails.
