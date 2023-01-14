@@ -23,6 +23,18 @@ General problems with creating applications might include apps that can't be upd
 Have a casual question or just want to talk about all things starter kits? Come chat with the development team on [{{site.data.keyword.cloud_notm}} Dev Tools Slack](https://ic-devops-slack-invite.us-south.devops.cloud.ibm.com/){: external}. After you request your invitation, sign in and join the `#ask-your-question` channel.
 {: tip}
 
+## Errors when applying Terraform plan using Schematics
+{: #terraform-apply-plan-errors}
+{: troubleshoot}
+
+Error when creating resource instance: This plan requires a paid account. You can upgrade by adding a credit card to your account or you can select the free plan if it's available.
+
+22: resource "ibm_resource_instance" "cos_instance"
+
+The IBM Cloud Infrastructure credentials could not be validated.
+
+62: resource "ibm_container_cluster" "cluster"
+
 ## Cannot deploy my app from a starter kit that is deprecated
 {: #deprecated-starter-ts}
 {: troubleshoot}
