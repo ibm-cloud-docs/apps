@@ -52,9 +52,9 @@ The automated infrastructure setup creates resources that are automatically prov
 
 1. Click one of the following options for the cluster deployment target. This action takes you to the Deploy to {{site.data.keyword.cloud_notm}} page where you create a {{site.data.keyword.bpshort}} workspace. Complete the required fields on that page, and then click **Next**.
 
-   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-kube)
+   [![Deploy to Kubernetes on IBM Cloud](../images/Deploy_to_kube_Secured.svg  "Deploy to Kubernetes on IBM Cloud")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-kube)
 
-   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-openshift)
+   [![Deploy to OpenShift on IBM Cloud](../images/Deploy_to_Openshift_Secured.svg  "Deploy to OpenShift on IBM Cloud")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/shift-left-compliance-module/tree/master/terraform/secure-openshift)
  
    Based on which option you select, the corresponding Terraform template from this repository is  automatically imported into the new {{site.data.keyword.bpshort}} workspace.
    {: note}
@@ -93,8 +93,7 @@ If you apply your plan a second time, the previously created Kubernetes or OpenS
 Follow these steps to run the pipeline.
 1. Go to your newly created DevSecOps CI toolchain.
 1. Click the **Git** tile that starts with `compliance-app`.
-1. To trigger the pr-pipeline, update some text in the `README.md` file, and then start a PR against the `main` branch.
-1. <!-- put steps for editing here -->
+1. To trigger the pr-pipeline, update some text in the `README.md` file, and then start a PR against the `main` branch.<!-- put steps for editing here -->
 1. In the **Target Branch** field, change the branch name from `main` to something else. For example, `mybranch`.
 1. Ensure that the "Start a new merge request with these changes" checkbox is selected.
 1. Click **Commit changes**.
