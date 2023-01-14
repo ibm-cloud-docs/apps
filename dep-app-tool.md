@@ -54,11 +54,12 @@ For more information about requirements for specific deployment targets, see the
 | {{site.data.keyword.codeenginefull}} | Ensure that you have either a Pay-As-You-Go account or a Subscription account to use {{site.data.keyword.codeengineshort}} as your deployment target. If you are using a free Lite account, upgrade it before you use {{site.data.keyword.codeengineshort}}. [Learn more about accounts.](/docs/account) |
 
 ## Before you deploy
+{: #deployingapps-before}
 
 Get started by [creating your app](/docs/apps?topic=apps-getting-started) by using a [starter kit](/developer/appservice/starter-kits){: external} from the {{site.data.keyword.cloud_notm}} console.
 
 ## Deploying your app automatically
-{: deploy-console-auto}
+{: #deploy-console-auto}
 
 To deploy your app, you must select your deployment target and configure continuous delivery. This process automatically creates a toolchain and starts the app deployment.
 
@@ -82,7 +83,7 @@ The deployment process might take a while to complete. After the deployment is c
    {: tip}
 
 ## Deploying your app manually
-{: deploy-console-manual}
+{: #deploy-console-manual}
 
 Continuous delivery is automatically enabled for some apps. You can enable continuous delivery to automate builds, tests, and deployments through the Delivery Pipeline and GitHub. With a properly configured toolchain, a build-deploy cycle automatically starts with each merge to the master branch in your repo.
 
@@ -118,7 +119,7 @@ For apps that are deployed to {{site.data.keyword.codeengineshort}}, you can als
 * On the Projects page in the {{site.data.keyword.codeengineshort}} console, click the project name, and then select **Applications**. Your app, its status, and its URL are listed.
 
 ## Related information
-{: deploy-related-info}
+{: #deploy-related-info}
 
 For more information, see:
 * [Building and deploying](/docs/ContinuousDelivery?topic=ContinuousDelivery-deliverypipeline_build_deploy)
