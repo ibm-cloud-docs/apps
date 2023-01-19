@@ -38,7 +38,6 @@ toc:
       - tutorials/tutorial-scalable-web-app-liberty.md
       - tutorials/tutorial-code-engine.md
       - include: ../ContinuousDelivery/cd-code-engine.md
-      - tutorials/tutorial-devsecops-refarch.md
       - include: ../devsecops/devsecops-tutorial.md
         navtitle: Deploy a secure app with DevSecOps
       - tutorials/tutorial-trysat.md
