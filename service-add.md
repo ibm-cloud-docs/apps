@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-07-22"
+  years: 2015, 2023
+lastupdated: "2023-01-20"
 
 keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, connect service, service instance, credentials, starter kit
 
@@ -14,6 +14,9 @@ subcollection: apps
 
 # Adding a service to your app
 {: #add-service}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 When you create an app from the {{site.data.keyword.cloud}} console, you can add services from the App details page. You can also provision them directly from the {{site.data.keyword.cloud_notm}} catalog, outside the context of your app.
 {: shortdesc}

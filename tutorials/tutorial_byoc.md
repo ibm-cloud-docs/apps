@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-06-03"
+  years: 2018, 2023
+lastupdated: "2023-01-20"
 
 keywords: byoc, code repository, continuous delivery, cli, deploy, create app custom repo, custom repo, existing repo, custom code, migrate code
 content-type: tutorial
@@ -20,6 +20,9 @@ subcollection: apps
 {: toc-content-type="tutorial"} 
 {: toc-services="apps"} 
 {: toc-completion-time="30m"}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 If you have an application in an existing repository, use this tutorial to create an app record in {{site.data.keyword.cloud}}. You can start from the {{site.data.keyword.cloud_notm}} console or from any blank starter kit. After you provide the Git repo URL that contains your code, you connect the app record to your source repository and your DevOps toolchain.
 {: shortdesc}

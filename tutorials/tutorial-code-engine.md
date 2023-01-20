@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022
-lastupdated: "2022-07-01"
+  years: 2022, 2023
+lastupdated: "2023-01-20"
 
 keywords: apps, starter kit, create app, basic app, simple app, blank app, IBM Cloud
 
@@ -23,6 +23,9 @@ completion-time: 30m
 {: toc-services="ContinuousDelivery"}
 {: toc-account-plan="paid"}
 {: toc-completion-time="30m"}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 You can use an {{site.data.keyword.cloud}} starter kit with the {{site.data.keyword.codeenginefull}} deployment target to quickly get your application started and prepare it for future development. The starter kit automatically creates a DevOps toolchain for deploying your app. You can also view the starter kit's Git repo for immediate inspection.
 {: shortdesc}

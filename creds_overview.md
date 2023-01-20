@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-05-17"
+  years: 2018, 2023
+lastupdated: "2023-01-20"
 
 keywords: apps, credentials, service, add service credentials, environment, deployment
 
@@ -14,6 +14,9 @@ subcollection: apps
 
 # Manually adding service credentials to your deployment environment
 {: #credentials_overview}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 You want your application logic to acquire sensitive service credentials, such as database API keys or passwords, from the environment in which your app runs. That way, you don't keep credentials in your source code repository.
 {: shortdesc}
