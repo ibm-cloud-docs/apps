@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-20"
+lastupdated: "2023-01-27"
 
 keywords: apps, deploy, deploying apps, toolchain, cli, cloud, devops, deployment, git, push, commit, console
 
@@ -136,7 +136,7 @@ For more information, see:
 * If you encounter errors with deployment to a Kubernetes cluster, check the troubleshooting topic for known issues like [exceeding storage quota](/docs/apps?topic=apps-managingapps#exceed_quota), or learn how to [access Kubernetes logs](/docs/apps?topic=apps-managingapps#access_kube_logs) to look for errors.
 
 * Access the service configuration in your code:
-	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. For more information, see [Accessing credentials](/docs/java?topic=java-spring-configuration).
+	- You can use the _@Value_ annotation, or use the Spring framework environment class _getProperty()_ method. s
 
 * Add new service credentials to your Kubernetes environment:
 	- When you add another service to your app after the DevOps toolchain is created, those service credentials aren't automatically updated to your deployed app and GitLab repository. You must [manually add the credentials to the deployment environment](/docs/apps?topic=apps-credentials_overview).
