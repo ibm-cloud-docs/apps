@@ -50,7 +50,6 @@ toc:
           href: https://{DomainName}/docs?tab=develop
       topics:
       - functions.md
-      - local_apps.md
       - topicgroup: 
           label: Deploying apps
           topics: 
@@ -87,21 +86,6 @@ toc:
           - link:
               label: Watson
               href: https://cloud.ibm.com/developer/watson/dashboard
-      - topicgroup: 
-          label: IBM Cloud Programming Guides
-          topics:
-          - link:
-              label: Java 
-              href: /java/java-getting-started
-          - link:
-              label: Go
-              href: /go/go-getting-started
-          - link:
-              label: Node
-              href: /node/node-getting-started
-          - link:
-              label: Swift
-              href: /swift/swift-getting-started
       - at-events.md
       - ha-dr.md
 
