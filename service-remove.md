@@ -4,7 +4,7 @@ copyright:
   years: 2020
 lastupdated: "2020-07-22"
 
-keywords: apps, services, remove service, application, service, instance, ibmcloud dev edit, disconnect service, service instance, credentials
+keywords: apps, services, remove service, application, service, instance, disconnect service, service instance, credentials
 
 subcollection: apps
 
