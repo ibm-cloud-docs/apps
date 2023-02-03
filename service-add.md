@@ -4,7 +4,7 @@ copyright:
   years: 2015, 2023
 lastupdated: "2023-01-20"
 
-keywords: apps, services, add service, application, service, instance, ibmcloud dev edit, connect service, service instance, credentials, starter kit
+keywords: apps, services, add service, application, service, instance, connect service, service instance, credentials, starter kit
 
 subcollection: apps
 
