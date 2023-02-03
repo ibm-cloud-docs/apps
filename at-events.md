@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2022
-lastupdated: "2022-06-03"
+  years: 2016, 2023
+lastupdated: "2023-02-03"
 
 keywords: apps, event, security, activity tracker, applications, activity tracking events
 
@@ -14,6 +14,9 @@ subcollection: apps
 
 # {{site.data.keyword.dev_console}} {{site.data.keyword.cloudaccesstrailshort}} events
 {: #at_events}
+
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created by using the `ibmcloud dev` commands. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+{: deprecated}
 
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} to track how users and applications interact with the {{site.data.keyword.dev_console}} in the {{site.data.keyword.cloud}}.
 {: shortdesc}
