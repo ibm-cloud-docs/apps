@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-08"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
 
@@ -96,8 +96,3 @@ To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli
 Now you're set for iterative development and continuous delivery.
 
 For more information, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
-
-## Related information
-{: #related-getting-started}
-
-[Programming guides](/docs?tab=develop){: external} are available per language to help you get up and running. You have many options for hosting your apps with {{site.data.keyword.cloud_notm}} infrastructure.
