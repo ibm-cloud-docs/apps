@@ -6,8 +6,8 @@ toc:
     category: platform_services
     audience: platform
     href: /docs/apps
-    console-page: /developer/appservice/dashboard
-    product-page: https://www.ibm.com/cloud/learn/cloud-native
+    console-page: "/devops/toolchains"
+    product-page: "https://www.ibm.com/cloud/continuous-delivery"
     path: apps
     label: Creating apps
 
@@ -74,18 +74,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - topicgroup: 
-          label: IBM Cloud developer consoles
-          links:
-          - link:
-              label: App Development
-              href: https://cloud.ibm.com/developer/appservice/dashboard
-          - link:
-              label: Apple
-              href: https://cloud.ibm.com/developer/appledevelopment/dashboard
-          - link:
-              label: Watson
-              href: https://cloud.ibm.com/developer/watson/dashboard
       - at-events.md
       - ha-dr.md
 
