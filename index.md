@@ -2,9 +2,9 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-15"
+lastupdated: "2023-02-17"
 
-keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial
+keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial, toolchain, devops, schematics, devsecops
 
 subcollection: apps
 content-type: tutorial
@@ -23,76 +23,40 @@ completion-time: 30m
 The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). The `ibmcloud dev` commands are also deprecated. On 31 March 2023, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
 {: deprecated}
 
-You can build enterprise-ready mobile and web applications in {{site.data.keyword.cloud}} and take advantage of cloud extensions that are hosted by {{site.data.keyword.cloud_notm}}. You have several options for getting started. Create an app with a starter kit that manages the process for you, or if you know what you want, start from scratch and build your app with the resources you need. Or, use your existing repository and bring your own code.
+You can use a variety of ways to build and deploy enterprise-ready applications in {{site.data.keyword.cloud_notm}}. Possible deployment targets include {{site.data.keyword.cloud_notm}} Kubernetes Service, Red Hat OpenShift on {{site.data.keyword.cloud_notm}}, and {{site.data.keyword.codeenginefull}}.
 {: shortdesc}
-
-Whether you have [existing code](/docs/apps?topic=apps-tutorial-byoc) that you want to modernize and bring to the cloud, or you're developing a [brand new application](/docs/apps?topic=apps-tutorial-starterkit), you can tap into the rapidly growing ecosystem of available services and runtime frameworks in {{site.data.keyword.cloud_notm}}.
-
-Do you need help with deciding where to start? The following diagram provides an overview for creating apps, whether you use a starter kit or bring your own code to {{site.data.keyword.cloud_notm}}.
-
-You can create your app by using the {{site.data.keyword.cloud_notm}} console or the command-line interface (CLI). If you want to use the CLI, see the [installing steps](/docs/cli?topic=cli-getting-started).
-
-![Developer experience overview](images/dev-journey.png "Overview of creating apps in {{site.data.keyword.cloud_notm}}"){: caption="Figure 1. Overview of creating apps in {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
 
 ## Before you begin
 {: #prereqs-getting-started}
 
-* Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
-* Install the [{{site.data.keyword.cloud_notm}} Command Line Interface (CLI)](/docs/cli?topic=cli-getting-started), which includes the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
-* Create a Docker account, run the Docker app, and sign in. Docker is installed as part of the developer tools. Docker must be running for the build commands to work.
+Depending on your [{{site.data.keyword.cloud}} account type](/registration){: external}, access to certain resources might be limited or constrained. Depending on your plan limits, certain capabilities that are required by some toolchains might not be available. For more information, see [Setting up your IBM Cloud account](/docs/account?topic=account-account-getting-started).
 
-## Create your app
+For more information about requirements for specific deployment targets, see the following table.
+
+| Deployment target | Prerequisites | 
+|--------|---------------|
+| {{site.data.keyword.cloud_notm}} Kubernetes Service / Helm | Create a free or paid cluster. One free Kubernetes cluster is available per account. For more information, see [Deploying apps to Kubernetes clusters](/docs/containers?topic=containers-app). Helm is a package manager for Kubernetes that allows you to package, configure, and deploy apps and services to {{site.data.keyword.cloud_notm}} Kubernetes Service. |
+| Red Hat OpenShift on {{site.data.keyword.cloud_notm}} | OpenShift is available only through a standard cluster, which requires you to have a billable account. [Learn more](/docs/openshift?topic=openshift-openshift_apps) or [create an OpenShift cluster](/kubernetes/overview){: external}.|
+| {{site.data.keyword.codeenginefull}} | Ensure that you have either a Pay-As-You-Go account or a Subscription account to use {{site.data.keyword.codeengineshort}} as your deployment target. If you are using a free Lite account, upgrade it before you use {{site.data.keyword.codeengineshort}}. [Learn more about accounts.](/docs/account) |
+{: caption="Table 1. Requirements for deployment targets" caption-side="bottom"}
+
+## View previously created apps
+{: #view-getting-started}
+
+With the deprecation of starter kits, you can no longer modify the apps that you already deployed from starter kits. However, you can still view them from the {{site.data.keyword.cloud_notm}} Resource list. From the {{site.data.keyword.cloud_notm}} console, select the ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**. Then, expand the **Developer tools** category.
+
+## Select an option for creating and deploying apps
 {: #create-getting-started}
-{: step}
 
-Create an app by selecting one of the following entry points:
+Several options are available for you to create and deploy apps on {{site.data.keyword.cloud_notm}}. You can use any of the following entry points to learn more.
 
-* [Preconfigured starter kits](/docs/apps?topic=apps-tutorial-starterkit) are use-case-specific and give you production-ready apps in various programming languages and architectural patterns.
-* [Blank starter kits](/docs/apps?topic=apps-tutorial-scratch) build apps based on your selection for type of app (mobile or backend), language and framework, services, and deployment target.
-* [Bring your own code](/docs/apps?topic=apps-tutorial-byoc) by linking to your own existing content repository. Your app and Docker image must be located in the same repo.
-* [{{site.data.keyword.cloud_notm}} (CLI)](/docs/apps?topic=apps-create-deploy-app-cli) creates and deploys your apps by using the {{site.data.keyword.dev_cli_short}} (`ibmcloud dev`) commands.
+* {{site.data.keyword.contdelivery_full}} uses DevOps toolchain templates to help you create and deploy apps. For more information, see [Toolchain availability, templates, and tutorials](/docs/ContinuousDelivery?topic=ContinuousDelivery-cd_about). You can find several DevOps-based tutorials in the “Tutorials” section of the [{{site.data.keyword.contdelivery_short}} docs](/docs/ContinuousDelivery).
+* [Set up continuous deployment with {{site.data.keyword.bpshort}} and DevOps toolchain](/schematics?topic=schematics-workspace-continuous-deployment).
+* View the [tutorials for deploying a secure app with DevSecOps](/docs/devsecops).
 * Browse or search the [{{site.data.keyword.cloud_notm}} catalog](/catalog){: external} for apps and services that you can create and use today.
 * [IBM Developer code patterns](https://developer.ibm.com/patterns/){: external} help you quickly create your app and deploy it to {{site.data.keyword.cloud_notm}}.
-
-## Add services
-{: #resources-getting-started}
-{: step}
-
-When you use a starter kit to create your app, the required services are automatically created and provisioned for you. You can connect more services to your app in the {{site.data.keyword.cloud_notm}} console from the App details page, which is displayed as soon as you create the app.
-
-If you want to create a new service instance or connect any existing services to your app, complete the following steps:
-
-1. On the App details page, click **Create service** or **Connect existing services**, depending on whether you already have services that you want to connect to this app.
-2. Select the kind of service you want, and follow the prompts to either add an existing service to your app or create a service instance.
-
-After you add all the services that you want, the services are displayed in the App details page.
-
-After you connect a service to your app, you can navigate to the service documentation and API references. Simply click the links within the **Services** card to view the related docs.
-
-For more information, see [Adding a service to your app](/docs/apps?topic=apps-add-service).
-
-## Deploy your app
-{: #deploy-getting-started}
-{: step}
-
-You can deploy your app by using the {{site.data.keyword.cloud_notm}} console or the CLI.
-
-### Using the {{site.data.keyword.cloud_notm}} console
-{: #console-getting-started}
-
-To deploy your app by using the console, complete the following steps:
-
-1. On the App details page, click **Deploy your app**.
-2. Select a deployment target, select the toolchain settings, and click **Create**. {{site.data.keyword.cloud_notm}} automatically creates an open toolchain complete with a Git repository and continuous delivery pipeline.
-3. Open the pipeline stage of your new toolchain to view the build and deployment process so that you can view your new app in minutes.
-
-For more information, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
-
-### Using the {{site.data.keyword.cloud_notm}} CLI
-{: #cli-getting-started}
-
-To deploy your app by using the CLI, run the [**ibmcloud dev deploy**](/docs/cli?topic=cli-idt-cli#deploy) command. For more information, see [Creating and deploying apps by using the CLI](/docs/apps?topic=apps-create-deploy-app-cli).
-
-Now you're set for iterative development and continuous delivery.
-
-For more information, see [Deploying apps](/docs/apps?topic=apps-deploying-apps).
+* Use the following tutorials to use {{site.data.keyword.bplong_notm}} to create and deploy apps:
+   * [Deploy a Node.js Express app by using {{site.data.keyword.bplong_notm}}](/docs/apps?topic=apps-tutorial-node-webapp)
+   * [Deploy a Java Spring app by using {{site.data.keyword.bplong_notm}}](/docs/apps?topic=apps-tutorial-spring-webapp)
+   * [Deploy a Java Liberty app by using {{site.data.keyword.bplong_notm}}](/docs/apps?topic=apps-tutorial-liberty-webapp)
+* Check out the Tutorials section in the navigation menu to find more ways to create and deploy apps.
