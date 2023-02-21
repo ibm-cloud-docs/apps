@@ -16,9 +16,6 @@ toc:
       id: learn
       topics:
       - index.md
-      - best-practice.md
-      - patterns.md
-      - starter-kits.md
       links:
       - link:
           label: What is DevOps?
@@ -27,12 +24,6 @@ toc:
   - navgroup:
       id: tutorial
       topics:
-      - tutorials/tutorial_starter-kit.md
-      - tutorials/tutorial_scratch.md
-      - tutorials/tutorial_byoc.md
-      - create-deploy-cli.md
-      - tutorials/tutorial_microservice.md
-      - tutorials/tutorial_mobile.md
       - tutorials/tutorial-scalable-web-app-node.md
       - tutorials/tutorial-scalable-web-app-spring.md
       - tutorials/tutorial-scalable-web-app-liberty.md
@@ -44,37 +35,13 @@ toc:
 
   - navgroup:
       id: howto
-      links:
-      - link:
-          label: Looking to use a language?
-          href: https://{DomainName}/docs?tab=develop
       topics:
-      - functions.md
-      - topicgroup: 
-          label: Deploying apps
-          topics: 
-          - hosting.md
-          - dep-app-tool.md
-          - include: ../containers/cs_tutorials_starter.md
-          - include: ../solution-tutorials/continuous-deployment-to-kubernetes.md
-      - topicgroup: 
-          label: Configuring
-          topics:
-          - service-add.md
-          - service-remove.md
-          - creds_overview.md
-          - mngdomains.md
-      - topicgroup: 
-          label: Integrating apps with DevOps
-          topics:
-          - toolchains.md
-          - insights.md
-          - monitoring_logging.md
+      - include: ../solution-tutorials/continuous-deployment-to-kubernetes.md
+      - toolchains.md
 
   - navgroup:
       id: reference
       topics:
-      - at-events.md
       - ha-dr.md
 
   - navgroup:
