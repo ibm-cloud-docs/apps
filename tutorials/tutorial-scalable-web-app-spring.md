@@ -1,8 +1,8 @@
 ---
 
 copyright:
-   years: 2020, 2022
-lastupdated: "2022-08-08"
+   years: 2020, 2023
+lastupdated: "2023-02-23"
 
 keywords: apps, scalable web apps, web apps, spring apps, java spring, tutorial, java spring tutorial, spring tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
@@ -49,15 +49,15 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 
    The following options use the [simple-helm-toolchain template](https://github.com/open-toolchain/simple-helm-toolchain){: external}, which uses a classic pipeline structure.
 
-   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/simple-kube&terraform_version=terraform_v1.0)
-   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/simple-openshift&terraform_version=terraform_v1.0)
+   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_kube.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/simple-kube&terraform_version=terraform_v1.3)
+   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}}](../images/Deploy_to_Openshift.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/simple-openshift&terraform_version=terraform_v1.3)
 
    The following options use the [secure-kube-toolchain template](https://github.com/open-toolchain/secure-kube-toolchain){: external}, which uses a "GitSecure" pipeline structure.
 
-   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_kube_Secured.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/secure-kube&terraform_version=terraform_v1.0)
-   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_Openshift_Secured.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/secure-openshift&terraform_version=terraform_v1.0)
+   [![Deploy to Kubernetes on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_kube_Secured.svg "Deploy to Kubernetes on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/secure-kube&terraform_version=terraform_v1.3)
+   [![Deploy to OpenShift on {{site.data.keyword.cloud_notm}} (secured)](../images/Deploy_to_Openshift_Secured.svg "Deploy to OpenShift on {{site.data.keyword.cloud_notm}}")](https://cloud.ibm.com/schematics/workspaces/create?repository=https://github.com/IBM-Cloud/Scalable-web-app-java/tree/master/terraform/secure-openshift&terraform_version=terraform_v1.3)
 
-   Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace. The Terraform engine version is v0.12.
+   Based on which option you select, the corresponding Terraform template from this repository is automatically imported into the new {{site.data.keyword.bpshort}} workspace. The Terraform engine version is v1.3.
    {: note}
 
 1. Verify the information, and then click **Create**. The {{site.data.keyword.bpshort}} workspace is created, and the Settings page for the {{site.data.keyword.bpshort}} workspace is displayed.
@@ -72,7 +72,7 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 1. Follow the progress of this step by clicking the **View log** link next to the corresponding step.
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevOps toolchain. The URL is located near the end of the log file on a line that begins with `View the toolchain at:`.
 
-If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created.
+If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. Also, if a pipelinerun in the toolchain fails then run the pipeline again.
 {: note}
 
 ## Related information
