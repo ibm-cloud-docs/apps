@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-01"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial, toolchain, devops, schematics, devsecops
 
@@ -20,7 +20,7 @@ completion-time: 30m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="30m"}
 
-The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](https://cloud.ibm.com/resources). The `ibmcloud dev` commands are also deprecated. On 31 March 2023, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
+The {{site.data.keyword.cloud}} starter kits are deprecated. As of 18 February 2023, new applications cannot be created, and the starter kits will be removed from the catalog. For current users, existing apps will continue to operate and will be supported until the End of Support date on 31 March 2023. On this date, the Applications Details page will no longer be accessible, but you will still be able to access your application code and toolchains through your [{{site.data.keyword.cloud_notm}} Resource List](/resources). The `ibmcloud dev` commands are also deprecated. On 31 March 2023, the App commands for the "dev" plug-in will be removed to coincide with the starter kit deprecation. To see the list of specific deprecated commands, run `ibmcloud dev` from the {{site.data.keyword.cloud_notm}} CLI. For more information, see the [deprecation announcement](https://www.ibm.com/cloud/blog/announcements/deprecation-of-ibm-cloud-starter-kits){: external}.
 {: deprecated}
 
 You can use a variety of ways to build and deploy enterprise-ready applications in {{site.data.keyword.cloud_notm}}. Possible deployment targets include {{site.data.keyword.cloud_notm}} Kubernetes Service, Red Hat OpenShift on {{site.data.keyword.cloud_notm}}, and {{site.data.keyword.codeenginefull}}.
@@ -43,7 +43,7 @@ For more information about requirements for specific deployment targets, see the
 ## View previously created apps
 {: #view-getting-started}
 
-With the deprecation of starter kits, you can no longer modify the apps that you already deployed from starter kits. However, you can still view them from the {{site.data.keyword.cloud_notm}} Resource list. From the {{site.data.keyword.cloud_notm}} console, select the ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**. Then, expand the **Developer tools** category.
+With the deprecation of starter kits, you can no longer modify the apps that you already deployed from starter kits. However, you can still view them from the [{{site.data.keyword.cloud_notm}} Resource List](/resources). From the {{site.data.keyword.cloud_notm}} console, select the ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**. Then, expand the **Developer tools** category.
 
 ## Select an option for creating and deploying apps
 {: #create-getting-started}
