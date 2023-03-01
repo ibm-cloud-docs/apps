@@ -2,7 +2,7 @@
 
 copyright:
    years: 2020, 2023
-lastupdated: "2023-02-23"
+lastupdated: "2023-03-01"
 
 keywords: apps, scalable web apps, web apps, liberty apps, java liberty, tutorial, java liberty tutorial, liberty tutorial, java tutorial, schematics tutorial, terraform tutorial, schematics workspace, kubernetes cluster, openshift cluster, deploy to ibm cloud, cluster deployment, devops toolchain, delivery pipeline, reference architecture, gitsecure, terraform, schematics
 
@@ -70,12 +70,11 @@ Both toolchain template options offer a code repository, delivery pipelines, and
 1. Optional. Click **Generate plan**. This action creates a Terraform execution plan and checks your configuration for syntax errors. On the {{site.data.keyword.bpshort}} Activity page, you can review log files for errors and {{site.data.keyword.cloud_notm}} resources that must be created, modified, or deleted to achieve the state of the Terraform template.
 1. After you enter all the values for the variables and are satisfied with the changes, click **Apply plan**. This step takes some time to complete (usually 20 - 30 minutes, but it can take longer), due to the creation of a new Kubernetes or OpenShift cluster.
 1. Follow the progress of this step by clicking the **View log** link next to the corresponding step.
+1. Go to the **Toolchains ci-pipeline Dashboard** page to check the status of your pipeline run. If the pipeline run is in **Failed** status, run the pipeline again. Click the pipeline run, and click **Run pipeline** > **Run**. 
 1. After the plan is applied, view the URL to the generated {{site.data.keyword.cloud_notm}} DevOps toolchain. The URL is located near the end of the log file on a line that begins with `View the toolchain at:`.
 
-If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. Also, if a pipelinerun in the toolchain fails then run the pipeline again.
+If you apply your plan a second time, the previously created Kubernetes or OpenShift cluster and any applications that are deployed to it are deleted, and a new cluster is created. 
 {: note}
-
-
 
 ## Related information
 {: #liberty-related}
