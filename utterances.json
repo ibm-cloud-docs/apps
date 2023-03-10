@@ -93,15 +93,6 @@
         "update domain from mybluemix.net to appdomain.cloud",
         "changing domain to appdomain.cloud"
     ],
-    "deprecated-starter-ts": [
-        "Cannot deploy an app from a starter kit",
-        "unale to deploy app from a starter kit",
-        "error trying to deploy an app created from a starter kit",
-        "Starter Kit De-Registered The starter kit associated with this app has been de-registered",
-        "error Starter Kit De-Registered when deploying an app",
-        "Starter Kit De-Registered error in CF",
-        "error message Starter Kit De-Registered given in cloud foundry"
-    ],
     "dangerous-file": [
         "Web browser says my downloaded zip file might be dangerous",
         "browser saying a zip file may be dangerous",
@@ -225,7 +216,6 @@
     "build_error": [
         "Building an app fails with Docker error",
         "trying to build an app and getting a docker error",
-        "build an app with the ibmcloud dev build command fails",
         "getting  Docker username/password error error",
         "build an app and get a docker error",
         "isue with Docker username and password",

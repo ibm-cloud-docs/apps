@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-01"
+lastupdated: "2023-03-10"
 
 keywords: getting started apps, create app tutorial, add services, deploy apps, create app, app tutorial, toolchain, devops, schematics, devsecops
 
@@ -43,7 +43,7 @@ For more information about requirements for specific deployment targets, see the
 ## View previously created apps
 {: #view-getting-started}
 
-With the deprecation of starter kits, you can no longer modify the apps that you already deployed from starter kits. However, you can still view them from the [{{site.data.keyword.cloud_notm}} Resource List](/resources). From the {{site.data.keyword.cloud_notm}} console, select the ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**. Then, expand the **Developer tools** category.
+You can view previously created apps from the [{{site.data.keyword.cloud_notm}} Resource List](/resources). From the {{site.data.keyword.cloud_notm}} console, select the ![Navigation Menu icon](../icons/icon_hamburger.svg "Menu") > **Resource list**. Then, expand the **Developer tools** category.
 
 ## Select an option for creating and deploying apps
 {: #create-getting-started}
