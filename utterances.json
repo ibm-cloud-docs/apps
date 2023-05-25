@@ -12,7 +12,6 @@
         "find a list of my apps",
         "find a list of all my apps on Cloud",
         "view a list of apps",
-        "view a list of cloud foundry apps",
         "looking for app list",
         "summary information for my apps",
         "where do i find the apps",
@@ -25,41 +24,23 @@
         "list all apps that I've created",
         "where can i get my previously created app",
         "where can i get my created apps",
-        "cloud foundry app listing",
-        "all the apps that I've created in Cloud Foundry",
-        "list of all apps deployed in CF"
     ],
     "cf-space": [
-        "can't select a Cloud Foundry space when running an app",
-        "deploying an app and can't select a CF space",
         "can't I select a space when running an app",
         "trying to deploy an app and can't select a space",
         "cannot choose the space to deploy an app to",
-        "unable to choose a CF space when running apps",
         "unable to select a space when deploy an app"
     ],
     "delete-apps": [
         "do I delete apps",
         "want to delete an app",
-        "need to remove an app in CF",
-        "removing cloud foundry apps",
-        "how to delete cloud foundry app",
         "delete app",
         "app deletion",
         "delete apps",
-        "deleting apps in cloud foundry",
-        "removal of CF app",
         "app removal"
     ],
     "app-stop": [
-        "stop a Cloud Foundry app",
-        "stop a CF app",
         "stop my apps",
-        "stop an app running in CF",
-        "stopping a Cloud Foundry app",
-        "stop apps in CF",
-        "stopping apps in cloud foundry",
-        "want to stop a Cloud Foundry app"
     ],
     "toolchains": [
         "what's toolchain",
@@ -77,21 +58,8 @@
         "extract a toolchain template from an existing toolchain",
         "extract a toolchain templain from another toolchain",
         "extract a toolchain template",
-        "use a toolchain-to-template in Cloud Foundry",
-        "extract a toolchain template from CF",
         "to use the toolchain-to-template ",
         "toolchain-to-template use"
-    ],
-    "cf-domains-faq": [
-        "change the domain for Cloud Foundry apps",
-        "change the CF domain",
-        "update the CF domain for an app",
-        "need to update the present domain",
-        "update the domain for Cloud Foundry apps",
-        "updating the domain within clud foundry",
-        "change my domain from mybluemix.net to appdomain.cloud",
-        "update domain from mybluemix.net to appdomain.cloud",
-        "changing domain to appdomain.cloud"
     ],
     "dangerous-file": [
         "Web browser says my downloaded zip file might be dangerous",
@@ -115,17 +83,10 @@
         "You have unsaved changes. Are you sure you want to leave this page?",
         "error message You have unsaved changes",
         "I am getting an You have unsaved changes error",
-        "You have unsaved changes error in cloud foundry",
         "what does You have unsaved changes mean",
-        "error You have unsaved changes in Cloud Foundry"
     ],
     "ts_vcap": [
-        "Can't access IBM Cloud services because of authorization errors in CF",
-        "unable to access CF services due to authorization",
-        "authorization error when I try to access Cloud Foundry",
-        "when I tried to start my app, I always got the error CF-NotAuthorized",
         "app accesses an IBM Cloud service failing with authorization error",
-        "You are not authorized to perform the requested action (CF-NotAuthorized)",
         "can't deploy an app to an IBM Cloud service",
         "can't deploy an app to an IBM Cloud service due to auhorization",
         "Authorization error when app accesses a Cloud service"
@@ -135,7 +96,6 @@
         "502 Bad Gateway errors when I interact with apps",
         "502 Bad Gateway mean",
         "error message 502 Bad Gateway",
-        "getting  Bad Gateway error in cloud foundry apps",
         "my cloud app has gone down",
         "my cloud app is down",
         "app is down",
@@ -155,7 +115,6 @@
         "Double-byte characters not displayed properly in Cloud app",
         "Double byte characters not being displayed correctly in my app",
         "double-byte chars specified in my app aren't displayed properly",
-        "double-byte chars are not displayed in Cloud Foundry",
         "double byte chars specified aren't displayed correctly in my app",
         "double byte character is not displayed correctly in my app"
     ],
@@ -171,7 +130,6 @@
     "ts_bp_compilation": [
         "Apps can't be staged by using custom buildpacks",
         "not able to deploy an app to Cloud with a custom buildpack",
-        "can't deploy a CF app with a custom buildpack",
         "The application failed to stage, so there are no instances to display",
         "error The application failed to stage, so there are no instances to display.",
         "error message application failed to stage, so there are no instances to display",
