@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2022-03-28"
+lastupdated: "2022-06-02"
 
 keywords: apps FAQs, apps frequently asked questions, applications FAQs, applications frequently asked questions
 
@@ -17,18 +17,8 @@ content-type: faq
 # FAQs
 {: #apps-faq}
 
-## What happened to mybluemix.net?
-{: #domain-change-faq}
-{: faq}
-
-A new host name option `*.appdomain.cloud` is available on cloud.ibm.com.
-
-Previously, the `mybluemix.net` domain was used for hosting applications in various deployment targets, such as {{site.data.keyword.containerlong_notm}}. Any apps that are hosted on `mybluemix.net` are not impacted.
-
-The subdomain for apps that you deploy to {{site.data.keyword.containerlong_notm}} is `containers.appdomain.cloud`.
-
 ## Where can I find a list of my apps?
-{: #cf-app}
+{: #list-app}
 {: faq}
 
 The [Resource list](/resources){: external} in the [{{site.data.keyword.cloud_notm}} console](https://{DomainName}){: external} provides summary information for the apps that you created. The **Apps** section in the Resource list contains all apps that you created.
